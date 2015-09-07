@@ -1,0 +1,326 @@
+\section{Reaalilukujen ominaisuuksia}  \label{reaalilukujen ominaisuuksia}
+\alku
+
+T‰ss‰ luvussa esitell‰‰n er‰it‰ reaalilukujoukkoihin liittyvi‰ matemaattisen analyysin 
+perusk‰sitteit‰. Samalla tuodaan esiin myˆs reaalilukujen yleisi‰ ominaisuuksia,
+vaihtoehtoisia m‰‰ritelmi‰ ja luokittelutapoja.
+
+\subsection*{Supremum ja infimum}
+
+\begin{Def} \label{supremum} \index{superemum|emph} \index{pienin yl‰raja|emph} 
+Luku $a \in \R$ on joukon $A \subset \R$ \kor{pienin yl‰raja} eli
+\kor{supremum}, jos p‰tee
+\begin{itemize}
+\item[(1)] $\quad x \le a\ \ \forall x \in A$.
+\item[(2)] $\quad b<a\,\ \impl\,\ \exists x \in A\ (x>b)$.
+\end{itemize}
+Merkit‰‰n $a = \sup A$. 
+\end{Def}
+\index{ylzy@yl‰raja (joukon)}%
+M‰‰ritelm‰ss‰ ehto (1) merkitsee, ett‰ $a$ on joukon $A$ \kor{yl‰raja}, ja ehto (2) kertoo, ett‰
+jos $b<a$, niin $b$ ei ole yl‰raja. Ehdot merkitsev‰t siis yhdess‰, ett‰ $a$ on yl‰rajoista 
+pienin mahdollinen. Jotta t‰llainen pienin yl‰raja voisi olla olemassa, on joukon $A$ oltava 
+ainakin
+\index{ylh‰‰lt‰ rajoitettu}%
+\kor{ylh‰‰lt‰ rajoitettu} (ehto (1) voimassa jollakin $a \in \R$) ja ei-tyhj‰ 
+(ehto (2) voimassa jollakin $a \in \R$). Sik‰li kuin $\sup A$ on olemassa, on m‰‰ritelm‰st‰ 
+varsin ilmeist‰, ett‰ se on yksik‰sitteinen. Jos $a=\sup A$ ja $a \in A$, niin sanotaan, ett‰ 
+$a$ on $A$:n \kor{maksimi} (= suurin luku).
+
+Jos M‰‰ritelm‰ss‰ \ref{supremum} vaihdetaan ep‰yht‰lˆiden suunnat, tulee m‰‰ritellyksi joukon 
+\index{infimum} \index{suurin alaraja}%
+$A$ \kor{suurin alaraja} eli \kor{infimum}, jota merkit‰‰n $\inf A$. Infimum voi olla olemassa
+\index{alhaalta rajoitettu}%
+vain, jos $A$ on ei-tyhj‰ ja \kor{alhaalta rajoitettu}, eli jos jollakin $a \in \R$ p‰tee 
+$\,x \ge a\ \ \forall x \in A$. Jos $a=\inf A$ ja $a \in A$, niin $a$ on $A$:n \kor{minimi} 
+(= pienin luku).
+\begin{Exa} Jos $A = \{x \in \R \mid x \le 1\}$, niin M‰‰ritelm‰n \ref{supremum} mukaan 
+$\ \sup A = 1$. Koska $1 \in A$, niin kyseess‰ on myˆs $A$:n maksimi. Koska $A$ ei ole alhaalta
+rajoitettu, ei lukua $\inf A$ ole olemassa. 
+\end{Exa}
+\begin{Exa} \label{sup-esimerkki} Reaalilukujoukon $A = \{\,x \in \R \mid x^2 < 2\,\}$ ja 
+rationaalilukujoukolla $B = \{\,x \in \Q \mid x^2 < 2\,\}$ on kummallakin sama pienin yl‰raja
+ja suurin alaraja: $\ \sup A = \sup B = \sqrt{2}$ ja $\ \inf A = \inf B = -\sqrt{2}$. Maksimia
+tai minimi‰ ei kummallakaan joukolla ole. \loppu 
+\end{Exa}
+Esimerkin \ref{sup-esimerkki} mukaan rajoitetun rationaalilukujoukon pienin yl‰raja tai suurin
+alaraja ei v‰ltt‰m‰tt‰ ole rationaalinen. Vastaava ilmiˆ on entuudestaan tuttu lukujonoista:
+Rationaalilukujonon raja-arvo ei v‰ltt‰m‰tt‰ ole rationaalinen. Lukujonoista tiedet‰‰n myˆs,
+ett‰ kasvavalle ja rajoitetulle rationaalilukujonolle on aina konstruoitavissa raja-arvo 
+reaalilukuna (eli ‰‰rettˆm‰n‰ desimaalilukuna, ks.\ Lauseen \ref{monotoninen ja rajoitettu jono}
+todistuskonstruktio). Vastaavalla tavalla on jokaiselle ei-tyhj‰lle ja ylh‰‰lt‰ rajoitetulle
+reaalilukujoukolle konstruoitavissa pienin yl‰raja reaalilukuna.
+\begin{*Lause} (\vahv{Supremum--lause}) \label{supremum-lause} Jokaisella ei-tyhj‰ll‰, ylh‰‰lt‰
+rajoitetulla reaalilukujoukolla on supremum. 
+\end{*Lause}
+\tod Tarkastellaan oletukset t‰ytt‰v‰‰ joukkoa $A \subset \R$. Koska $A$ on ei-tyhj‰, on
+olemasssa $c_1 \in \R$ siten, ett‰ $x>c_1$ jollakin $x \in A$, ts.\ $c_1$ ei ole $A$:n yl‰raja.
+Koska $A$ on ylh‰‰lt‰ rajoitettu, niin $A$:lla on yl‰raja $c_2 = c_1 + L \in \R$. Yleisyytt‰ 
+rajoittamatta voidaan edelleen olettaa, ett‰ $c_1$ ja $c_2$ ovat rationaalilukuja, tai jopa 
+kokonaislukuja. Konstruoidaan nyt kasvava rationaalilukujono $\seq{a_n}$ ja v‰henev‰ 
+rationaalilukujono $\seq{b_n}$ puolituskonstruktiolla seuraavasti:
+\begin{itemize}
+\item[1.] Asetetaan $a_0=c_1$, $b_0=c_2$ ja $n=1$.
+\item[2.] Asetetaan $c = (c_1 + c_2)/2$. Jos $c$ on $A$:n yl‰raja, niin asetetaan $c_2=c$,
+          muussa tapauksessa asetetaan $c_1=c$. 
+\item[3.] Asetetaan $a_n=c_1,\ b_n=c_2$.
+\item[4.] Lis‰t‰‰n indeksin $n$ arvoa yhdell‰\ ($n \leftarrow n+1$) ja siirryt‰‰n kohtaan 2.
+\end{itemize}
+Konstruktion mukaisesti jono $\seq{a_n}$ on kasvava ja rajoitettu ja jono $\seq{b_n}$ on
+v‰henev‰ ja rajoitettu, ja lis‰ksi $b_n-a_n=2^{-n}L$. Siis $\seq{a_n}$ ja $\seq{b_n}$
+suppenevat kohti yhteist‰ raja arvoa: $a_n \kohti a$ ja $b_n \kohti a$ jollakin $a\in\R$.
+Konstruktion perusteella jokainen $b_n$ on $A$:n yl‰raja ja mik‰‰n $a_n$ ei ole $A$:n yl‰raja,
+joten ilmeinen kandidaatti $A$:n pienimm‰ksi yl‰rajaksi on yhteinen raja-arvo $a$. Ensinn‰kin
+t‰m‰ on $A$:n yl‰raja, sill‰ jos $x \in A$, niin $x \le b_n\ \forall n$ (koska jokainen $b_n$ 
+oli yl‰raja), jolloin seuraa $\,x \le \lim_n b_n=a$ (Propositio \ref{jonotuloksia} (V1)).
+Siis p‰tee $x \in A\ \impl\ x \le a$, eli $a$ on $A$:n yl‰raja.
+
+Viel‰ on n‰ytett‰v‰, ett‰ $a$ on yl‰rajoista pienin, joten olkoon $b<a$. T‰llˆin koska 
+$a_n \kohti a$ ja $a>b$, niin jollakin $n$ on $a_n>b$. Silloin $b$ ei voi olla $A$:n yl‰raja, 
+koska edes $a_n$ ei ole. Siis mik‰‰n lukua $a$ pienempi luku ei ole $A$:n yl‰raja, eli 
+$a=\sup A$. \loppu
+
+Jos $A$ on ei-tyhj‰, alhaalta rajoitettu reaalilukujoukko, niin on ilmeist‰, ett‰ 
+$B = \{-x \mid x \in A\}$ on ylh‰‰lt‰ rajoitettu ja ett‰ $\inf A = - \sup B$. T‰st‰ ja 
+Lauseesta \ref{supremum-lause} seuraa v‰littˆm‰sti, ett‰ jokaisella ei-tyhj‰ll‰, alhaalta 
+rajoitetulla reaalilukujoukolla on infimum.
+
+\subsection*{Aksiomaattiset reaaliluvut}
+\index{reaaliluvut!d@aksiomaattisina lukuina|vahv}
+
+Edellisess‰ luvussa esitettyj‰, desimaalilukuihin tai Cauchyn jonoihin perustuvia reaaliluvun 
+m‰‰ritelmi‰ sanotaan \kor{konstruktiivisiksi}. Konstruktiivisille m‰‰ritelmille on 
+tunnusomaista, ett‰ mit‰‰n 'ulkopuolista maailmaa' suhteessa rationaalilukuihin ei oleteta. 
+P‰‰tet‰‰n vain kutsua tietyn tyyppisi‰ rationaalilukujen jonoja reaaliluvuiksi, ja m‰‰ritell‰‰n
+n‰iden lukujen v‰liset laskuoperaatiot sek‰ samastus- ja j‰rjestysrelaatiot palauttamalla kaikki
+operaatiot viime k‰dess‰ rationaalisiksi. Konstruktiivisen m‰‰rittelyn hyv‰ puoli on, ett‰ se 
+muistuttaa reaalilukujen todellista, laskennallista 'm‰‰rittely‰' laskinten ja tietokoneiden 
+avulla. Toisaalta kun reaaliluvuilla halutaan laskea symbolisesti, on reaaliluvut usein 
+helpompaa mielt‰‰ suoraan abstrakteina lukuina kuin konkreettisempien lukujen jonoina 
+(vrt.\ Esimerkki \ref{reaalinen geometrinen sarja} Luvussa \ref{reaaliluvut}). Abstrakti
+ajattelu vied‰‰n pisimm‰lle reaalilukujen \kor{aksiomaattisessa} m‰‰rittelyss‰, jossa
+yksinkertaisesti \pain{sovitaan}, ett‰ muitakin kuin rationaalilukuja on olemassa. Menettely on
+t‰llˆin samankaltainen kuin Luvun \ref{kunta} Esimerkiss‰ \ref{muuan kunta}, jossa luvun
+$\sqrt{2}\ $  'olemassaoloon' suhtauduttiin sopimuskysymyksen‰. Kuten konstruktiivisia
+m‰‰ritelmi‰, myˆs aksiomaattisia l‰hestymistapoja reaalilukuihin on monia samanarvoisia.
+M‰‰ritelmien yhteisen‰ l‰htˆkohtana on oletus, ett‰ reaaliluvut muodostavat j‰rjestetyn kunnan,
+joka on rationaalilukujen kunnan laajennus. N‰m‰ oletukset j‰tt‰v‰t mahdollisuuden, ett‰
+$\R = \Q$, joten tarvitaan viel‰ aksiooma, joka erottaa joukot toisistaan. Varsin usein
+k‰ytetty menettely on tehd‰ Lauseesta \ref{supremum-lause} aksiooma, eli asettaa
+\begin{itemize}
+\item[(A)] (\vahv{Supremum-aksiooma}) Jokaisella ylh‰‰lt‰ rajoitetulla reaalilukujoukolla on 
+           pienin yl‰raja.
+\end{itemize}
+Reaalilukujen konstruktiivisessa m‰‰rittelyss‰ (A) on siis tosi v‰itt‰m‰. 
+
+Toinen, myˆs usein k‰ytetty aksiomaattinen l‰hestymistapa on tehd‰ Lauseesta 
+\ref{Cauchyn kriteeri} aksiooma, eli asettaa
+\begin{itemize}
+\item[(B)] (\vahv{T‰ydellisyysaksiooma}) Jokainen reaalilukujen Cauchyn jono suppenee kohti 
+           reaalilukua.
+\end{itemize}
+T‰m‰kin on siis tosi v‰itt‰m‰ reaalilukujen konstruktiivisessa m‰‰rittelyss‰, ja aksioomat (A)
+ja (B) ovat myˆs kesken‰‰n vaihdannaiset: Jos oletetaan (A), niin (B) on tosi v‰itt‰m‰, ja 
+p‰invastoin.
+
+Kuten konstruktiivisessa, myˆs reaalilukujen aksiomaattisessa m‰‰rittelyss‰ l‰htˆkohtana ovat 
+siis aluksi rationaaliluvut. Perustuen aksioomaan (A) tai (B), rationaalilukujen joukko 
+\kor{t‰ydennet‰‰n} liitt‰m‰ll‰ joukkoon joko ylh‰‰lt‰ rajoitettujen rationaalilukujoukkojen 
+pienimm‰t yl‰rajat tai rationaalisten Cauchyn jonojen raja-arvot, jotka siis oletetun aksiooman
+mukaan ovat olemassa reaalilukuina. Koska t‰ydent‰minen on taka-ajatuksena myˆs
+index{tzy@t‰ydennyskonstruktio}%
+konstruktiivisessa m‰‰rittelyss‰, niin t‰t‰ on tapana kutsua \kor{t‰ydennyskonstruktioksi}.
+Rationaaliluvut voi siis t‰ydent‰‰ reaaliluvuiksi joko konstruktiivisesti 'rakentamalla' tai
+aksiomaattisesti 'olettamalla'.
+
+\subsection*{$\R$ on ylinumeroituva}
+\index{ylinumeroituva joukko|vahv}%
+
+Jos $a,b \in \R$ ja $a<b$, niin on helposti n‰ht‰viss‰, ett‰ lukujen $a,b$ v‰liin voidaan aina
+sijoittaa rationaaliluku, ts.\ lˆytyy $x \in \Q$ jolle p‰tee $a<x<b$. Samantien lukuja lˆytyy
+‰‰retˆn (numeroituva) m‰‰r‰, eik‰ konstruktiossa itse asiassa edes tarvita koko joukkoa $\Q$,
+vaan esim.\ ‰‰relliset desimaaliluvut (tai ‰‰relliset binaariluvut) riitt‰v‰t
+(Harj.teht.\,\ref{H-I-11: rationaaliluvut v‰lill‰}). Tuloksen perusteella sanotaan, ett‰ $\Q$
+\index{tihzy@tihe‰ (osajoukko)}%
+(tai mainitun tyyppinen $\Q$:n osajoukko) on $\R$:ss‰ \kor{tihe‰} (engl.\ dense). T‰st‰ 
+tuloksesta huolimatta on $\R$ joukkoa $\Q$ mahtavampi, sill‰ p‰tee (vrt. Luku \ref{jono})
+\begin{Lause} \label{R on ylinumeroituva} $\R$ on ylinumeroituva joukko. 
+\end{Lause}
+\tod Olkoon \seq{x^{(n)}} jono reaalilukuja, joille p‰tee $0 < x^{(n)} < 1\ \ \forall n$. 
+Kirjoitetaan jonon termit ‰‰rettˆmin‰ desimaalilukuina\,:
+\begin{align*}
+x^{(1)}\ &= 0.d_1^{(1)}d_2^{(1)}d_3^{(1)} \ldots \\
+x^{(2)}\ &= 0.d_1^{(2)}d_2^{(2)}d_3^{(2)} \ldots \\
+x^{(3)}\ &= 0.d_1^{(3)}d_2^{(3)}d_3^{(3)} \ldots \\
+          &\ \vdots
+\end{align*}
+M‰‰ritell‰‰n sitten ‰‰retˆn desimaaliluku $y = 0.d_1d_2 \ldots\ $ valitsemalla 
+\[
+d_n \in \{1,\ldots 8\},\ \ d_n \neq d_n^{(n)}, \quad n = 1,2, \ldots
+\] 
+T‰llˆin $0<y<1$ ja $y$ ei ole ‰‰rellinen desimaaliluku, joten $y$ ei samastu mihink‰‰n muuhun,
+merkkijonona v‰h‰nk‰‰n erilaiseen desimaalilukuun. Konstruktiosta seuraa t‰llˆin, ett‰ 
+$y \neq x^{(n)}\ \forall n$. P‰‰tell‰‰n, ett‰ mik‰‰n lukujoukon 
+$A = \{\,x \in \R \mid 0<x<1\,\}$ numerointiyritys ei kata kaikkia joukon $A$ lukuja, joten 
+edes $A$ ei ole numeroituva. \loppu
+
+Jos $a,b \in \R$ ja $a<b$, niin
+\[
+B = \{\,x \in \R \mid a<x<b\,\} = \{\,x = a + (b-a)t \mid t \in \R,\ 0<t<1\,\}.
+\]
+T‰st‰ ja Lauseen \ref{R on ylinumeroituva} todistuksesta voidaan p‰‰tell‰, ett‰ $B$ on 
+ylinumeroituva, toisin sanoen: kahden eri suuren reaaliluvun v‰liin mahtuu aina ylinumeroituva
+m‰‰r‰ reaalilukuja.
+
+\subsection*{Avoin ja suljettu v‰li}
+
+\index{vzy@v‰li}%
+Joukko $A\subset\R$ on \kor{v‰li} (engl.\ interval), jos $A$:ssa on enemm‰n kuin yksi alkio ja
+p‰tee $\,x,y \in A\ \ja\ x<z<y\ \impl\ z \in A$. V‰li voi olla joko \kor{‰‰rellinen}, eli
+joukkona ylh‰‰lt‰ ja alhaalta rajoitettu, tai \kor{‰‰retˆn} (ylh‰‰lt‰ ja/tai alhaalta
+\index{avoin v‰li} \index{suljettu v‰li}%
+rajoittamaton). ƒ‰rellisen v‰lin p‰‰tyypit ovat \kor{avoin} ja \kor{suljettu} v‰li, joiden
+merkinn‰t ja m‰‰ritelm‰t ovat
+\begin{align*}
+\text{avoin v‰li:}    \quad &(a,b)\     =\ \{\,x \in \R \mid a<x<b\,\} \\
+\text{suljettu v‰li:} \quad &[\,a,b\,]\ =\ \{\,x \in \R \mid a \le x \le b\,\}
+\end{align*}
+T‰ss‰ $a=\inf A$ ja ja $b=\sup A$ ovat v‰lin \kor{p‰‰tepisteet} ($a,b\in\R,\ a<b$). Avoimen
+v‰lin vaihtoehtoinen merkint‰tapa on $]a,b[$. V‰li voi myˆs olla muotoa $(a,b]$ tai $[a,b)$ 
+(vaihtoehtoiset merkinn‰t $]a,b]$ ja $[a,b[\,$), jolloin sanotaan, ett‰ v‰li on
+\index{puoliavoin v‰li}%
+\kor{puoliavoin} --- m‰‰ritelm‰t ovat ilmeiset. Muita kuin v‰lin p‰‰tepisteit‰ sanotaan v‰lin
+\index{siszy@sis‰piste}%
+\kor{sis‰pisteiksi}. Avoimen v‰lin kaikki pisteet ovat siis sis‰pisteit‰. Suljettu v‰li on
+aina ‰‰rellinen. Muun tyyppiset v‰llit voivat olla myˆs myˆs ‰‰rettˆmi‰, jolloin p‰‰tepisteen
+puuttuminen merkit‰‰n symbolilla $\pm\infty$\,:
+\begin{align*}
+(a,\infty)\  &=\ \{\,x \in \R \mid x>a\,\}, \\ 
+(-\infty,b]\ &=\ \{\,x \in \R \mid x \le b\,\}, \\
+(-\infty,\infty)\ &=\ \R.
+\intertext{Mainittakoon t‰ss‰ yhteydess‰ myˆs yleisesti k‰ytetyt merkinn‰t}
+(0,\infty)\       &=\ \R_+ \quad \text{(positiiviset reaaliluvut, 'R plus')}\,, \\
+(-\infty,0)\      &=\ \R_- \quad \text{(negatiiviset reaaliluvut, 'R miinus')}\,.
+\end{align*}
+
+\pain{Sul}j\pain{ettu}j\pain{en} v‰lien $[a_n, b_n],\ n =1,2, \ldots$ muodostamaa j\pain{onoa}
+sanotaan \kor{sis‰kk‰iseksi} (engl.\ nested = 'pesitetty'), jos 
+$[a_n, b_n] \supset [a_{n+1}, b_{n+1}]\ \ \forall n$. T‰llaiseen jonoon liittyen reaaliluvuilla 
+on seuraava hauska ominaisuus:
+\begin{itemize}
+\item[(C)] Jos $\{\,[a_n, b_n],\ n = 1,2, \ldots\,\}$ on jono sis‰kk‰isi‰ suljettuja v‰lej‰ ja
+           p‰tee $b_n - a_n \kohti 0$, niin on olemassa yksik‰sitteinen reaaliluku $x$ siten, 
+           ett‰ $x \in [a_n, b_n]\ \ \forall n \in \N$.
+\end{itemize}
+Reaalilukujen konstruktiivisen m‰‰rittelyn perusteella (C) on tosi v‰itt‰m‰, sill‰ $x$ m‰‰r‰ytyy
+jonojen $\seq{a_n}$ (kasvava ja rajoitettu) ja $\seq{b_n}$ (v‰henev‰ ja rajoitettu) yhteisen‰ 
+raja-arvona. Reaalilukujen aksiomaattisessa m‰‰rittelyss‰ t‰m‰ tulos voidaan myˆs ottaa 
+perusaksioomaksi (olettaen $a_n,b_n\in\Q$), jolloin edell‰ mainituista aksioomista (A),\,(B) 
+tulee tosia v‰itt‰mi‰.
+
+Jos $x \in \R$ ja $\delta\in\R,\ \delta > 0$, niin $x$:n 
+\index{ympyz@ymp‰ristˆ ($\delta$-ymp‰ristˆ)}%
+$\delta$-\kor{ymp‰ristˆ} m‰‰ritell‰‰n \pain{avoimena} v‰lin‰
+\[
+U_{\delta}(x)\ =\ (x-\delta,x+\delta).
+\]
+Termit 'p‰‰tepiste' ja 'ymp‰ristˆ' viittaavat ajatukseen, ett‰ reaaliluku on myˆs miellett‰viss‰
+'pisteeksi' jossakin 'paikassa'. T‰m‰ ajatus ei ole per‰isin algebrasta vaan \kor{geometriasta},
+toisesta matemaattisen ajattelun suuresta p‰‰haarasta. Geometrian perusteita k‰sitell‰‰n 
+l‰hemmin Luvussa II.
+
+\subsection*{Algebralliset ja transkendenttiset luvut}
+\index{algebrallinen luku|vahv} \index{transkendenttinen luku|vahv}%
+
+M‰‰ritelm‰ns‰ perusteella reaaliluvut jakautuvat luonnostaan rationaalisiin ja ei-rationaalisiin
+\index{irrationaalinen luku}%
+eli \kor{irrationaalisiin} lukuihin. Toinen, myˆs yleisesti k‰ytetty luokittelutapa on jakaa 
+reaaliluvut \kor{algebrallisiin} ja ei-algebrallisiin eli \kor{transkendenttisiin} lukuihin. 
+Lukua $x \in \R$ sanotaan algebralliseksi, jos se toteuttaa yht‰lˆn muotoa
+\[
+\sum_{k=0}^n a_k x^k\ =\ 0,
+\]
+miss‰ $n \in \N$ ja $a_k \in \Z,\ k = 0,1,\ldots,n$. Luku on siis algebrallinen, jos se on 
+jonkin \pain{kokonaislukukertoimisen} p\pain{ol}y\pain{nomin} \pain{nollakohta}.
+\begin{Exa} Juuriluvut ja niiden erikoistapauksena rationaaliluvut toteuttavat yht‰lˆn muotoa 
+$p x^m - q = 0$, miss‰ $m \in \N$ ja $p,q \in \Z$, joten t‰llaiset luvut ovat algebrallisia. 
+\loppu \end{Exa}
+Jos algebrallisten lukujen joukkoa merkit‰‰n symbolilla $\A$, niin esimerkin perusteella on siis
+\[ 
+\Q\ \subset\ \A\ \subset\ \R. 
+\]
+Kuten $\Q$, myˆs $\A$ on osoitettavissa numeroituvaksi joukoksi, joten reaalilukujen 'enemmistˆ'
+on transkendenttisia.\footnote[2]{Matematiikan lajia, joka tutkii lukujen, kuten reaalilukujen
+tai luonnollisten lukujen, ominaisuuksia mm.\ erilaisten luokittelujen n‰kˆkulmasta, sanotaan 
+\kor{lukuteoriaksi}. Lukuteorian tunnettuja tuloksia on esimerkiksi, ett‰ Neperin luku $e$ on 
+transkendenttinen (\hist{Charles Hermite}, 1873), samoin luku $\pi$ 
+(\hist{Ferdinand von Lindemann}, 1882). Molempien lukujen irrationaalisuus osoitettiin jo 
+1700-luvulla. 
+Sen sijaan niink‰‰n yksinkertaisia v‰itt‰mi‰ kuin
+\begin{itemize}
+\item[P1:] Luku $\,e + \pi\,$ ei ole rationaaliluku.
+\item[P2:] Luku $\,e \pi\,$ ei ole rationaaliluku.
+\end{itemize}
+ei ole viel‰ t‰t‰ kirjoitettaessa (2009) pystytty osoittamaan tosiksi (saati ep‰tosiksi). 
+--- Lukuteoria on  tunnettu monista helposti muotoiltavissa olevista, mutta usein vaikeasti 
+ratkaistavista matemaattisista p‰hkinˆist‰‰n.}
+
+\pagebreak
+\Harj
+\begin{enumerate}
+
+
+
+\item
+M‰‰rit‰ seuraavien joukkojen supremum, infimum, maksimi ja minimi, sik‰li kuin olemassa\,: 
+\newline
+a) \ $\{x\in\R \mid (x+1)(x-2)(x+4)>0\}\quad\ $ 
+b) \ $\{x\in\R \mid \abs{x}+\abs{x+2}<5\}$ \newline
+c) \ $\{x\in\R \mid \abs{x}\abs{x+2}<5\}\qquad\qquad\qquad\ \ $ 
+d) \ $\{n/(n+1) \mid n\in\N\}$ \newline 
+e) \ $\{(2-3n)/(5+n) \mid n\in\N\}\qquad\qquad\quad\ $
+f) \ $\{n^3 2^{-n} \mid n\in\N\}$
+
+\item
+a) Millaisille ei-tyhjille joukoille $A\subset\R$ p‰tee $\,\inf A = \sup A$\,? \newline
+b) N‰yt‰, ett‰ jos joukoille $A,B\subset\R$ p‰tee $\,x \in A\ \ja\ y \in B\ \impl\ x<y$, 
+niin $\sup A \le \inf B$. N‰yt‰ myˆs esimerkill‰, ett‰ voi olla $\sup A = \inf B$. \newline
+c) Olkoon $A\subset\R$ ylh‰‰lt‰ rajoitettu joukko ja $a=\sup A$. N‰yt‰, ett‰ jokaisella
+$\eps>0$ on olemassa $x \in A$ siten, ett‰ $x > a-\eps$.
+
+\item
+Olkoon \ a) $A=\{x\in\R \mid x^3<200\}$, \ b) $A=\{x\in\R \mid x^3<-400\}$. Seuraa Lauseen
+\ref{supremum-lause} todistuskonstruktiota algoritmina indeksiin $n=3$ asti valitsemalla 
+$c_0$:n ja $c_1$:n alkuarvot siten, ett‰ algoritmin tuottamille lukujonoille p‰tee: \ 
+a) $\seq{a_n}=a$, \ b) $\seq{b_n}=a$, miss‰ $\,a=\sup A\,$ ‰‰rettˆm‰n‰ binaarilukuna.
+
+\item \label{H-I-11: rationaaliluvut v‰lill‰}
+Olkoon $a,b\in\R$ ja $a<b$. N‰yt‰, ett‰ on olemassa ‰‰rettˆm‰n monta eri suurta ‰‰rellist‰ 
+desimaalilukua $x$, joille p‰tee $a<x<b$.
+
+\item
+M‰‰rit‰ kaikki v‰lit, joilla on ominaisuus: V‰lin p‰‰tepisteet --- sik‰li kuin niit‰ on --- 
+sis‰ltyv‰t joukkoon $\{-1,2\}$.
+
+\item
+Anna seuraaville joukoille yksinkertaisempi m‰‰ritelm‰ v‰lein‰, eli muodossa $(a,b)$, $[a,b]$,
+$(a,b]$ tai $[a,b)$.
+\begin{align*}
+&\text{a)}\ \ \bigcup_{n=1}^\infty \left(\frac{1}{3n}\,,\ \frac{n}{n+1}\right) \qquad
+ \text{b)}\ \ \bigcap_{n=1}^\infty \left(\frac{1}{3n}\,,\ \frac{n+1}{n}\right) \\
+&\text{c)}\ \ \bigcap_{n=1}^\infty \left[\,\frac{1}{3n}\,,\ \frac{n}{n+1}\,\right] \qquad
+ \text{d)}\ \ \bigcup_{n=1}^\infty \left[\,\frac{1}{3n}\,,\ \frac{n+1}{n}\,\right]
+\end{align*}
+
+\item
+N‰yt‰: \ a) Jos $x$ on irrationaalinen, niin samoin on $y=(3+x)/(x-2)$. \
+b) Jos $x \neq 0$ on algebrallinen luku, niin samoin on $x^{-1}$. \ c) Jos $x>0$ on
+algebrallinen luku, niin samoin on $\sqrt[m]{x}\,\ \forall m\in\N,\ m \ge 2$. \
+d) Jokainen rationaalikertoimisen polynomin nollakohta on algebrallinen luku.
+
+\item (*)
+Olkoon $\{\,[a_n,b_n],\ n=1,2,\ldots\,\}$ jono suljettuja v‰lej‰. N‰yt‰, ett‰ 
+$A=\bigcap_{n=1}^\infty [a_n,b_n]$ on joko tyhj‰ joukko, sis‰lt‰‰ t‰sm‰lleen yhden alkion, tai
+on suljettu v‰li.
+
+\end{enumerate}

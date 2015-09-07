@@ -1,0 +1,381 @@
+\section{Operaattorit grad, div, rot ja $\Delta$ \\
+         käyräviivaisissa koordinaatistoissa}
+\label{div ja rot käyräviivaisissa}
+\sectionmark{Operaatorit käyräviivaisissa}
+\alku
+\index{kzyyrzy@käyräviivaiset koordinaatistot!c@--differentiaalioperaattorit|vahv}
+\index{osittaisdifferentiaalioperaattori!vektorioperaattorit|vahv}
+
+Fysikaalisten symmetrioiden vuoksi vektorikenttä/skaalaarikenttä halutaan usein esittää 
+käyräviivaisessa  polaari-, lieriö- tai pallokoordinaatistossa. Tällöin myös
+vektoridifferentiaalioperaattorit on muunnettava karteesisesta ko.\ käyräviivaiseen 
+koordinaatistoon. Tarkastellaan esimerkkinä muunnosta tason polaarikoordinaatistoon.
+
+Ensinnäkin on tutkittava, miten operaattorit $\partial_x$ ja $\partial_y$ ilmaistaan
+polaarikoordinaatiston vastaavien operaattorien $\partial_r$ ja $\partial_\varphi$ avulla.
+Lähtökohtana on ketjusääntö (ks.\ Luku \ref{osittaisderivaatat}), jonka mukaan
+\begin{align*}
+&u(x,y)=v(r,\varphi)=v(r(x,y),\varphi(x,y)) \\
+&\impl \ \begin{cases}
+\partial_x u=\dfrac{\partial r}{\partial x}\,\partial_r v
+            +\dfrac{\partial \varphi}{\partial x}\,\partial_\varphi v, \\[2mm]
+\partial_y u=\dfrac{\partial r}{\partial y}\,\partial_r v
+            +\dfrac{\partial \varphi}{\partial y}\,\partial_\varphi v.
+\end{cases}
+\end{align*}
+Tässä on $\,r=r(x,y)=\sqrt{x^2+y^2}\,$, joten
+\[
+\frac{\partial r}{\partial x}=\frac{x}{r}=\cos\varphi,\quad 
+\frac{\partial r}{\partial y}=\frac{y}{r}=\sin\varphi.
+\]
+Derivoimalla implisiittisesti $x$:n suhteen (implisiittinen osittaisderivointi!) saadaan tällöin
+\begin{align*}
+x=r\cos\varphi \ &\impl \ 1=\frac{\partial r}{\partial x}\cos\varphi
+                           -r\sin\varphi\frac{\partial\varphi}{\partial x} \\
+                 &\impl \ 1=\cos^2\varphi-r\sin\varphi\frac{\partial\varphi}{\partial x} \\
+                 &\impl \ \frac{\partial\varphi}{\partial x}=-\frac{1}{r}\sin\varphi.
+\end{align*}
+Vastaavasti derivoimalla $y$:n suhteen saadaan
+\begin{align*}
+0=\frac{\partial r}{\partial y}\cos\varphi-r\sin\varphi\frac{\partial\varphi}{\partial y} 
+&=\sin\varphi\cos\varphi-r\sin\varphi\frac{\partial\varphi}{\partial y} \\
+  \impl \ \frac{\partial\varphi}{\partial y} 
+&= \frac{1}{r}\cos\varphi.
+\end{align*}
+Näin on saatu muunnoskaavat
+\[
+\boxed{
+\begin{aligned}
+\quad \partial_x &= \cos\varphi\,\partial_r-\frac{1}{r}\sin\varphi\,\partial_\varphi, \quad \\
+      \partial_y &= \sin\varphi\,\partial_r+\frac{1}{r}\cos\varphi\,\partial_\varphi.
+\end{aligned}}
+\]
+\begin{multicols}{2} \raggedcolumns
+Kun näiden lisäksi huomioidaan kantavektorien $\vec i,\vec j$ ja 
+$\vec e_r,\vec e_\varphi$ väliset muunnoskaavat
+\[ \begin{cases}
+\,\vec i = \cos\varphi \, \vec e_r - \sin\varphi \, \vec e_\varphi, \\
+\,\vec j = \sin\varphi \, \vec e_r + \cos\varphi \, \vec e_\varphi,
+\end{cases} \]
+niin operaattorille $\nabla$ saadaan ensin esitysmuoto 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,4)(0,1)
+\put(0,0.5){\vector(1,0){4}} \put(0,0.5){\vector(0,1){3.5}}
+\put(3.8,0){$x$} \put(0.2,3.8){$y$}
+\path(0,0.5)(3,2.5)
+\put(3,2.5){\vector(1,0){1}} \put(3,2.5){\vector(0,1){1}}
+\put(3.8,2){$\vec i$} \put(3.2,3.3){$\vec j$}
+\put(3,2.5){\vector(3,2){0.9}} \put(3,2.5){\vector(-2,3){0.6}}
+\put(1.9,3.3){$\vec e_\varphi$} \put(3.8,3.2){$\vec e_r$}
+\put(0,0.5){\arc{1}{-0.6}{0}} \put(3,2.5){\arc{1}{-0.6}{0}}
+\put(0.6,0.6){$\scriptstyle{\varphi}$} \put(3.6,2.6){$\scriptstyle{\varphi}$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+\begin{align*}
+\nabla \ =\  \vec i\,\partial_x + \vec j\,\partial_y
+        &=\ (\cos\varphi\,\vec e_r - \sin\varphi\,\vec e_\varphi)
+            (\cos\varphi\,\partial_r -\frac{1}{r}\sin\varphi\,\partial_\varphi) \\
+        &+\ (\sin\varphi \,\vec e_r + \cos\varphi \,\vec e_\varphi)
+           (\sin\varphi\, \partial_r+\frac{1}{r}\cos\varphi \, \partial_\varphi)
+\end{align*}
+ja sievennysten jälkeen
+\[
+\boxed{\kehys\quad 
+   \nabla = \vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi \quad
+                                                 \text{(polaarikoordinaatisto).} \quad}
+\]
+\begin{Exa} Laske funktion $u(x,y)=x/(x^2+y^2)$ gradientti polaarikoordinaatistossa.
+\end{Exa}
+\ratk Koska
+\[
+u(x,y)\,=\,\frac{x}{x^2+y^2}\,=\,\frac{r\cos\varphi}{r^2}
+                            \,=\,\frac{\cos\varphi}{r}\,=\,v(r,\varphi),
+\]
+niin em.\ muunnoskaavan mukaan
+\[
+\nabla u \,=\, \pder{v}{r}\,\vec e_r + \frac{1}{r}\pder{v}{\varphi}\,\vec e_\varphi
+         \,=\, \underline{\underline{
+                -\frac{1}{r^2}(\cos\varphi\,\vec e_r + \sin\varphi\,\vec e_\varphi)}}. \loppu
+\]
+
+Annetun vektorikentän $\vec F$ divergenssin laskemiseksi oletetaan, että $\vec F$ tunnetaan
+muodossa
+\[
+\vec F = F_r(r,\varphi,z)\,\vec e_r + F_\varphi(r,\varphi,z)\,\vec e_\varphi.
+\]
+Tällöin on
+\begin{align*}
+\nabla\cdot\vec F \,
+    &=\,\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
+        \cdot(F_r\vec e_r + F_\varphi\vec e_\varphi) \\[3mm]
+    &=\,(\vec e_r\,\partial_r)\cdot(F_r\vec e_r)\,
+     +\,(\vec e_r\,\partial_r)\cdot(F_\varphi\vec e_\varphi) \\
+    &+\,\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_r\vec e_r)
+     +\,\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_\varphi\vec e_\varphi).
+\end{align*}
+Tässä on huomioitava, että vektorit $\vec e_r$ ja $\vec e_\varphi$ eivät ole vakiovektoreita
+vaan riippuvat koordinaatista $\varphi$. Tarvitaan siis myös derivaatat 
+$\partial_\varphi\,\vec e_r$ ja $\partial_\varphi\,\vec e_\varphi\,$:
+\begin{align*}
+&\partial_\varphi\,\vec e_r = \partial_\varphi(\cos\varphi\,\vec i+\sin\varphi\,\vec j)
+                            = -\sin\varphi\,\vec i+\cos\varphi\,\vec j, \\
+&\partial_\varphi\,\vec e_\varphi =\partial_\varphi(-\sin\varphi\,\vec i+\cos\varphi\,\vec j)
+                                  = -\cos\varphi\,\vec i-\sin\varphi\,\vec j,
+\end{align*}
+eli
+\[
+ \boxed{\kehys\quad \partial_\varphi \vec e_r = \vec e_\varphi, \quad 
+                    \partial_\varphi \vec e_\varphi = -\vec e_r. \quad} 
+\]
+Käyttämällä näitä kaavoja ja tulon derivoimissääntöjä 
+(ks.\ Harj.teht.\,\ref{divergenssi ja roottori}:\,\ref{H-udif-4: nablaamissääntöjä}h)
+saadaan ym.\ lauseke puretuksi termeittäin:
+\begin{align*}
+(\vec e_r\,\partial_r)\cdot(F_r\vec e_r)\,
+    &=\,\partial_r F_r\,\vec e_r\cdot\vec e_r+F_r\,\vec e_r\cdot\partial_\varphi\vec e_r
+   \,=\,\partial_r F_r+F_r\,\vec e_r\cdot\vec e_\varphi  
+   \,=\,\partial_r F_r, \\[2mm]
+(\vec e_r\,\partial_r)\cdot(F_\varphi\vec e_\varphi)\,
+    &=\,\partial_r F_\varphi\,\vec e_r\cdot\vec e_\varphi
+                  +F_\varphi\,\vec e_r\cdot\partial_r\vec e_\varphi
+   \,=\, 0, \\ 
+\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_r\vec e_r)\,
+    &=\,\frac{1}{r}\,\bigl[\partial_\varphi F_r\,\vec e_\varphi\cdot\vec e_r
+                       +F_r\,\vec e_\varphi\cdot\partial_\varphi\,\vec e_r\bigr]
+   \,=\, \frac{1}{r}\,F_r\,\vec e_\varphi\cdot\vec e_\varphi
+   \,=\,\frac{1}{r}\,F_r\,, \\
+\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_\varphi\vec e_\varphi)\,
+    &=\,\frac{1}{r}\,\bigl[\partial_\varphi F_\varphi\,\vec e_\varphi\cdot\vec e_\varphi
+                       +F_\varphi\,\vec e_\varphi\cdot\partial_\varphi\,\vec e_\varphi\bigr]\, \\
+    &=\,\frac{1}{r}\,\bigl[\partial_\varphi F_\varphi-F_\varphi\,\vec e_\varphi\cdot\vec e_r\bigr]
+   \,=\,\frac{1}{r}\,\partial_\varphi F_\varphi.
+\end{align*}
+Lopputulos:
+\[
+\boxed{\kehys\quad \nabla\cdot\vec F = \partial_r F_r + \dfrac{1}{r}\,F_r
+                                       + \frac{1}{r}\,\partial_\varphi F_\varphi \quad
+                                         \text{(polaarikoordinaatisto)}. \quad}
+\]
+Kaksi ensimmäistä termiä yhdistämällä saadaa tälle vaihtoehtoinen nk.\ \kor{säilymislakimuoto}
+(engl.\ conservation form) 
+\[
+\boxed{\kehys\quad \nabla\cdot\vec F = \dfrac{1}{r}\,\partial_r(rF_r)
+                                       +\frac{1}{r}\,\partial_\varphi F_\varphi \quad
+                                        \text{(säilymislakimuoto)}. \quad}
+\]
+\begin{Exa} Vektorikentän $\,\vec F=r^{-1}\,\vec e_r$ divergenssi muualla kuin origossa on
+\[
+\nabla\cdot\vec F = \frac{1}{r}\,\partial_r\left(r\cdot\frac{1}{r}\right)=0,
+\]
+joten kenttä on lähteetön aluessa $A=\{(x,y)\in\Rkaksi \mid (x,y) \neq (0,0)\}$. \loppu
+\end{Exa}
+
+Seuraavassa taulukossa esitetään koottuna operaattorien $\nabla$, $\nabla\cdot$, $\nabla\times$
+ja $\Delta$ (säilymislakimuotoiset) laskusäännöt lieriö- ja pallokoordinaatistoissa. 
+\begin{center}
+\begin{tabular}{|ll|}
+\hline & \\
+\multicolumn{2}{|l|}{$\quad$\vahv{Lieriökoordinaatisto}}  \\ & \\ $\quad\nabla$ 
+&= \quad $\vec e_r\,\partial_r+\dfrac{1}{r}\,\vec e_\varphi\,\partial_\varphi
+         +\vec e_z\,\partial_z$ \\ & \\ $\quad\nabla\cdot\vec F$ 
+&= \quad $\dfrac{1}{r}\,\partial_r(rF_r)+\dfrac{1}{r}\,\partial_\varphi F_\varphi
+                       +\partial_z F_z$ \\ & \\ $\quad\nabla\times\vec F$ 
+&= \quad $\dfrac{1}{r}\,\begin{vmatrix}
+                        \vec e_r & r\vec e_\varphi & \vec e_z \\
+                        \partial_r & \partial_\varphi & \partial_z \\
+                        F_r & rF_\varphi & F_z
+                        \end{vmatrix}$ \\ & \\ $\quad\Delta$ 
+&= \quad $\dfrac{1}{r}\,\partial_r(r\partial_r)+\dfrac{1}{r^2}\partial_\varphi^2
+                       +\partial_z^2$ \\ & \\ \hline & \\
+\multicolumn{2}{|l|}{$\quad$\vahv{Pallokoordinaatisto}}  \\ & \\ $\quad\nabla$ 
+&= \quad $\vec e_r \, \partial_r+\dfrac{1}{r}\vec e_\theta \, \partial_\theta
+                      +\dfrac{1}{r\sin\theta} \vec e_\varphi \, \partial_\varphi$ \\ & \\
+         $\quad\nabla\cdot\vec F$ 
+&= \quad $\dfrac{1}{r^2}\partial_r(r^2F_r)
+         +\dfrac{1}{r\sin\theta}\partial_\theta(\sin\theta\,F_\theta)
+         +\dfrac{1}{r\sin\theta}\partial_\varphi F_\varphi$ \\ & \\ $\quad\nabla\times\vec F$
+&= \quad $\dfrac{1}{r^2\sin\theta}\,\begin{vmatrix}
+                                    \vec e_r & r\vec e_\theta & r\sin\theta \, \vec e_\varphi \\
+                                    \partial_r & \partial_\theta & \partial_\varphi \\
+                                    F_r & rF_\theta & r\sin\theta \, F_\varphi
+                                    \end{vmatrix}$ \\ & \\ $\quad\Delta$ 
+&= \quad $\dfrac{1}{r^2}\partial_r(r^2\partial_r)
+          +\dfrac{1}{r^2\sin\theta}\partial_\theta(\sin\theta \, \partial_\theta)
+          +\dfrac{1}{r^2\sin^2\theta} \partial_\varphi^2 \quad$ \\ & \\
+\hline
+\end{tabular}
+\end{center}
+\index{gradientti!d@käyräv. koordinaateissa}
+\index{divergenssi!a@käyräv. koordinaateissa}
+\index{roottori!a@käyräv. koordinaateissa}
+\index{Laplacen operaattori!a@käyräv. koordinaateissa}
+\index{differentiaalioperaattori!d@gradientti (nabla $\nabla$)}
+\index{differentiaalioperaattori!e@divergenssi $\nabla\cdot$}
+\index{differentiaalioperaattori!f@roottori $\nabla\times$}
+\index{differentiaalioperaattori!g@Laplacen operaattori}%
+\vspace{2mm}
+Taulukon mukaan Laplacen operaattorin muunnos tason karteesisesta koordinaatistosta 
+polaarikoordinaatistoon on
+\[
+\Delta\,=\,\partial_x^2+\partial_y^2\,
+        =\,\frac{1}{r}\,\partial_r(r\partial_r)+\frac{1}{r^2}\,\partial_\varphi^2\,
+        =\,\partial_r^2+\frac{1}{r}\,\partial_r+\frac{1}{r^2}\,\partial_\varphi^2.
+\]
+Tähän päädytään sieventämällä edellä kuvatulla tavalla operaattorilauseke
+\[
+\Delta\,=\,\nabla\cdot\nabla\,
+        =\, \left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
+           \cdot\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
+\]
+(Harj.teht.\,\ref{H-udif-5: Laplacen operaattori}).
+\begin{Exa} Olkoon kenttä $\vec F$ on pallosymmetrinen, eli pallokoordinaatistossa muotoa 
+$\vec F = F(r)\vec e_r$. Millainen on funktio $F(r)$, jos kenttä on origon ulkopuolella 
+lähteetön?
+\end{Exa}
+\ratk Taulukon mukaan kentän divergenssi on $\nabla\cdot\vec F = r^{-2}\partial_r(r^2 F(r))$, 
+joten origon ulkopuolella ($r>0$) on oltava
+\[ 
+\partial_r(r^2 F(r)) = 0 \,\ \impl\,\ r^2 F(r) = A \,\ \impl\,\ F(r) = \frac{A}{r^2}, \quad
+                                                 A\in\R. \loppu
+\]
+
+Polaari- tai pallosymmetrisessä tilanteessa, jossa lähde $\rho$ ja vektorikentän potentiaali $u$
+riippuvat vain radiaalikoordinaatista $r$, voidaan Poissonin yhtälö kirjoittaa tavallisena
+differentiaaliyhtälönä (vrt.\ taulukko edellä)\,:
+\begin{align*}
+\text{Polaarisymmetria}:\,\quad &\frac{1}{r}\frac{d}{dr}\left(r\frac{du}{dr}\right)\ \ 
+                                                =\, u''+\frac{1}{r}u'=-\rho(r). \\
+\text{Pallosymmetria}:   \qquad &\frac{1}{r^2}\frac{d}{dr}\left(r^2\frac{du}{dr}\right)
+                                                =\, u''+\frac{2}{r}u'=-\rho(r).
+\end{align*}
+Nämä ovat molemmat Eulerin tyyppiä (vrt.\ Luku \ref{vakikertoimiset ja Eulerin DYt}), joten ne
+ovat ratkaistavissa kvadratuureilla. Nopeimmin ratkaiseminen käy suoraan säilymislakimuodosta.
+\begin{Exa}
+\begin{multicols}{2} \raggedcolumns
+Lämpötila pyöreän vastuslangan poikkipinnalla toteuttaa yhtälön
+\[
+-\Delta u=Q=\text{vakio}.
+\]
+Määrää $u$, kun tiedetään, että ulkopinnalla $u(R)=0$.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(3,2)
+\put(1,1){\circle{2}}
+\dashline{0.2}(1,2)(3,2) \dashline{0.2}(1,0)(3,0)
+\put(2.25,0.9){$2R$}
+\put(2.5,0.7){\vector(0,-1){0.7}}
+\put(2.5,1.3){\vector(0,1){0.7}}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+\end{Exa}
+\ratk \ Lähdetään säilymislakimuodosta (polaarisymmetria):
+\begin{align*}
+&-\frac{1}{r}\frac{d}{dr}(ru')=Q \ \impl \ \frac{d}{dr}(ru')=-Qr \\
+&\impl \ ru'=-\frac{1}{2}Qr^2+A \ \impl \ u'=-\frac{1}{2}Qr+\frac{A}{r} \\
+&\impl \ u(r)=-\frac{1}{4}Qr^2+A\ln r+B\quad (A,B\in\R) \\
+&\impl \ A=0, \ B=\frac{1}{4}QR^2 \\ 
+&\impl \ u(r)=\underline{\underline{\frac{1}{4}\,Q(R^2-r^2)}}.
+\end{align*}
+Karteesisessa koordinaatistossa esitettynä ratkaisu on
+\[ 
+u(x,y) = \frac{Q}{4}\,(R^2-x^2-y^2). 
+\]
+Ratkaisusta oli jätettävä pois logaritminen termi $A\ln r = \tfrac{1}{2}A\ln(x^2+y^2)$, syystä
+että yhtälö $-\Delta u=Q$ ei muuten toteutuisi origossa (muualla kylläkin). \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske vektorikentän
+\[
+\vec F=(x^2+y^2+z^2)(x\vec i+y\vec j+z\vec k)
+\]
+divergenssi $\nabla\cdot\vec F$ \ a) karteesisessa koordinaatistossa, \ b) muuntamalla $\vec F$
+ensin pallokoordinaatistoon.
+
+\item
+Näytä, että seuraavat polaari- tai pallokoordinaatistossa määritellyt funktiot ovat 
+määrittelyjoukossaan harmonisia.
+\[
+\text{a)}\ \ u(r,\varphi)=\frac{\cos\varphi}{r} \qquad
+\text{b)}\ \ u(r,\varphi)=\frac{\sin 2\varphi}{r^2} \qquad
+\text{c)}\ \ u(r,\theta,\varphi)=\frac{\sin\theta\cos\varphi}{r^2}
+\]
+
+\item
+Vektorikentästä $\vec F=F_1\vec i+F_2\vec j+F_3\vec k$ tiedetään, että funktiot $F_i$ ovat
+$\R^3$:ssa differentioituvia ja että kenttä on $\R^3$:ssa pyörteetön. Määritä kentän karteesiset
+komponentit $F_i$, kun tiedetään lisäksi, että kenttä on pallokoordinaatistossa muotoa
+\[
+\vec F = r^3\sin^2\theta\,\vec e_r + F_\theta(r,\theta,\varphi)\,\vec e_\theta\,.
+\]
+
+\item \label{H-udif-5: Laplacen operaattori}
+Sievennä Lapalacen operaattorin lauseke polaarikoordinaatistossa, ts.\ näytä, että
+\[
+\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
+        \cdot\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
+ \,=\, \dfrac{1}{r}\,\partial_r(r\partial_r)+\dfrac{1}{r^2}\partial_\varphi^2\,.
+\]
+
+\item 
+Sähköjohtimessa kulkeva virta, jonka tiheys on $\vec J = J(r)\vec e_z$ (lieriökoordinaatisto),
+aiheuttaa magneettikentän muotoa $\vec H = H(r)\vec e_\varphi$, missä $H(0) = 0$. Määrää $H(r)$
+$J(r)$:n avulla Maxwellin yhtälöstä $\nabla\times\vec H=\vec J$.
+
+\item 
+Homogeenisesta materiaalista valmistetussa lieriön tai lieriökuoren muotoisen kappaleen
+poikkipinnalla
+\[
+A = \{(x,y)\in\R^2 \mid R_1^2 \le x^2 + y^2 \le R_2^2 \}
+\]
+lämpötila $u$ toteuttaa $A$:n sisäpisteissä Poissonin yhtälön $-u_{xx}-u_{yy}=q$, missä $q$ 
+riippuu vain polaarikoordinaatista $r$, sekä reunalla $\partial A$ annetut reunaehdot. Määrää
+$u$ seuraavissa tapauksissa:
+\vspace{1mm}\newline
+a) \ $R_1=0,\ R_2=R,\ q(r)=Q= $ vakio, $u(R)=u_0$ \newline
+b) \ $R_1=0,\ R_2=R,\ q(r)=Q= $ vakio, $u'(R)=-ku(R)$ \newline 
+c) \ $R_1=0,\ R_2=R,\ q(r)=Q(1-r^2/R^2),\ u'(R)=0$ \newline
+d) \ $R_1=R,\ R_2=2R,\ q(r)=0, u(R_1)=u_0,\ u'(R_2)=0$ \newline
+e) \ $R_1=R,\ R_2=2R,\ q(r)=Q= $ vakio, $u(R_1)=u(R_2)=0$
+
+\item 
+Homogeenisesta materiaalista valmistetussa pallon tai pallokuoren muotoisessa kapplaeessa
+\[
+A = \{(x,y,z)\in\R^3 \mid R_1^2 \le x^2 + y^2 + z^2 \le R_2^2 \}
+\]
+lämpötila $u$ toteuttaa $A$:n sisäpisteissä Poissonin yhtälön $-\Delta u=q$, missä $q$ riippuu
+vain pallokoordinaatista $r$, sekä reunalla $\partial A$ annetut reunaehdot. Määrää $u$ 
+edellisen tehtävän tapauksissa.
+
+\item (*)
+Johda pallokoordinaatiston kantavektorien derivoimiskaavat
+\begin{align*}
+\partial_\theta\vec e_r  &= \vec e_\theta\,, \qquad\quad 
+                            \partial_\theta\vec e_\theta=-\vec e_r\,, \qquad\,\
+                            \partial_\theta\vec e_\varphi=\vec 0\,, \\
+\partial_\varphi\vec e_r &= \sin\theta\vec e_\varphi\,, \quad
+                            \partial_\varphi\vec e_\theta=\cos\theta\vec e_\varphi\,, \quad
+                            \partial_\varphi\vec e_\varphi=-\sin\theta\vec e_r-\cos\theta\vec e_\theta 
+\end{align*}
+ja näiden avulla gradientin ja Laplacen operaattorin esitysmuodot pallokoordinaatistossa.
+
+\item (*) \index{zzb@\nim!Keplerin laki}
+(Keplerin laki) Avaruusalus, jonka massa $=m$, liikkuu tason keskeisvoimakentässä
+$\vec F=\nabla(k/r)$ ($k=$ vakio, $r=$ etäisyys origosta) siten, että aluksen
+polaarikoordinaatit ovat $r(t)$ ja $\varphi(t)$ hetkellä $t$. Kirjoita aluksen liikeyhtälö
+$m\vec r\,''=\vec F$ differentiaaliyhtälösysteeminä funktioille $r(t)$ ja $\varphi(t)$ ja
+näytä, että pätee \pain{Ke}p\pain{lerin} \pain{toinen} \pain{laki}
+\[
+[r(t)]^2\varphi'(t)=\text{vakio}.
+\]
+
+\end{enumerate}

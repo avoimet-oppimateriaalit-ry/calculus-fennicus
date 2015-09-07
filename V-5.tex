@@ -1,0 +1,517 @@
+\section{ƒ‰riarvot. Sileys} \label{‰‰riarvot}
+\alku
+
+Derivaatta on mit‰ mainioin tyˆkalu, kun halutaan luonnehtia tavallisia reaalifunktioita,
+jotka useimmiten ovat derivoituvia 'melkein kaikkialla'. T‰ss‰ ja seuraavassa luvussa
+tarkastellaan derivaatan k‰yttˆ‰ funktiotutkimuksessa.
+
+\subsection*{Paikalliset ‰‰riarvot}
+
+Aloitetaan m‰‰ritelm‰st‰.
+\begin{Def} \label{paikallinen ‰‰riarvo}
+\index{paikallinen maksimi, minimi, ‰‰riarvo|emph}
+\index{maksimi (funktion)!a@paikallinen|emph} 
+\index{minimi (funktion)!a@paikallinen|emph}
+\index{zyzy@‰‰riarvo (paikallinen)|emph}
+\index{suhteellinen ‰‰riarvo|emph}
+\index{oleellinen ‰‰riarvo(piste)|emph}
+\index{epzyozy@ep‰oleellinen ‰‰riarvo(piste)|emph}
+Funktiolla $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on pisteess‰ $c\in\DF_f$ \kor{paikallinen} eli
+\kor{suhteellinen ‰‰riarvo}, eli $c$ on $f$:n \kor{paikallinen ‰‰riarvopiste} 
+(‰‰ri\-arvokohta), jos jollakin $\delta>0$ ja $\forall x\in\R$ p‰tee
+$(c-\delta,c+\delta)\subset\DF_f$ ja
+\begin{align*}
+\text{joko:}\quad 0<\abs{x-c}<\delta \ &\impl \ f(x) \le f(c), \\
+ \text{tai:}\quad 0<\abs{x-c}<\delta \ &\impl \ f(x) \ge f(c).
+\end{align*}
+Edellisess‰ tapauksessa on kyseess‰ \kor{paikallinen maksimi}, j‰lkimm‰isess‰ 
+\kor{paikallinen minimi}. Jos lis‰ksi jollakin $\delta>0$ on $f(x) \neq f(c)$ aina
+kun $0<\abs{x-c}<\delta$, niin ‰‰riarvo (‰‰riarvopiste) on \kor{oleellinen}, muulloin
+\kor{ep‰oleellinen}.
+\end{Def}
+\begin{Exa} Funktio
+\[
+f(x)=\begin{cases}
+     \,\sin^2\dfrac{1}{x}\,, &\text{kun}\ x \neq 0, \\[2mm] \,0, &\text{kun}\ x=0
+     \end{cases}
+\]
+saavuttaa pienimm‰n arvonsa $f_{min}=0$ pisteess‰ $x=0$ sek‰ pisteiss‰ 
+\[
+a_n=\frac{1}{n\pi}\,, \quad n\in\Z,\ n \neq 0.
+\]
+Suurimman arvonsa $f_{max}=1$ funktio saavuttaa pisteiss‰ 
+\[
+b_n=\frac{1}{(n+\frac{1}{2})\pi}\,, \quad n\in\Z.
+\]
+Pisteet $a_n$ ja $b_n$ ovat myˆs M‰‰ritelm‰n \ref{paikallinen ‰‰riarvo} mukaisia oleellisia
+paikallisia minimi- ja maksimikohtia, sill‰ $f$:n m‰‰rittelyn ja $\sin$-funktion tunnettujen
+ominaisuuksien perusteella on $\,0<f(x)<1$ kaikissa muissa kuin mainituissa pisteiss‰ tai
+pisteess‰ $x=0$. T‰llˆin jos esim.\ $c=b_n\,,\ n\in\Z$, niin M‰‰ritelm‰n
+\ref{paikallinen ‰‰riarvo} paikallisen maksimin ehto on voimassa, kun valitaan $\delta$ siten,
+ett‰ $0<\delta<\abs{b_{n \pm 1}-b_n}$. Pisteess‰ $x=0$ on $f$:ll‰ M‰‰ritelm‰n
+\ref{paikallinen ‰‰riarvo} mukainen ep‰oleellinen paikallinen minimi, sill‰ jos valitaan mik‰
+tahansa $\delta>0$, niin $a_n\in(0,\delta)$ kun $n>(\pi\delta)^{-1}$, jolloin v‰lill‰
+$(0,\delta)$ on aina pisteit‰, joissa $f(x)=f(0)$. \loppu
+\end{Exa}
+Seuraavan lauseen mukaan derivoituvan funktion paikallinen ‰‰riarvokohta on v‰ltt‰m‰tt‰ myˆs
+derivaatan nollakohta. T‰h‰n liittyen sanotaankin derivaatan nollakohtia funktion
+\index{kriittinen piste}%
+\kor{kriittisiksi pisteiksi}.
+\begin{Lause} \label{‰‰riarvolause}
+Jos $c\in\DF_f$ on $f$:n paikallinen ‰‰riarvopiste ja $f$ on derivoituva $c$:ss‰, 
+niin $f'(c)=0$.
+\end{Lause}
+\tod V‰itt‰m‰n loogisesti ekvivalentti muoto on: Jos $f$ on $c$:ss‰ derivoituva ja 
+$f'(c) \neq 0$, niin $c$ ei ole $f$:n paikallinen ‰‰riarvopiste. Todistetaan v‰itt‰m‰ t‰ss‰
+muodossa, eli oletetaan, ett‰ $f'(c) = k \neq0$. Derivaatan m‰‰ritelm‰n perusteella
+(vrt.\ Luku \ref{derivaatta}) $f$ on t‰llˆin m‰‰ritelty v‰lill‰ $(c-\delta,c+\delta)$ jollakin
+$\delta>0$ ja ko. v‰lill‰ p‰tee 
+\[
+f(x)=f(c)+k(x-c)+g(x),
+\]
+miss‰ $\lim_{x\kohti c} g(x)/(x-c) =0$. T‰llˆin koska $k \neq 0$, niin Lauseen
+\ref{approksimaatiolause} mukaan jollakin $\delta>0$ (vastaten valintaa $\eps=|k|/2>0$
+ko.\ lauseessa) p‰tee myˆs
+\[
+\abs{g(x)/(x-c)} \le \tfrac{1}{2}\abs{k}\,\ 
+   \impl\,\ \abs{g(x)} \le \tfrac{1}{2}\abs{k}\abs{x-c}, \quad \text{kun}\ 0<\abs{x-c}<\delta.
+\] 
+N‰in ollen jos $k>0$, niin kolmioep‰yht‰lˆn nojalla
+\[
+\begin{cases}
+\,f(x)-f(c)\ \ge\ k(x-c) - \frac{k}{2}\,\abs{x-c}
+           \ =\ \frac{k}{2}\,(x-c)\ >\ 0 \quad \forall x\in(c,c+\delta), \\
+\,f(x)-f(c)\ \le\ k(x-c) + \frac{k}{2}\,\abs{x-c} 
+           \ =\ \frac{k}{2}\,(x-c)\ <\ 0 \quad \forall x\in(c-\delta,c).
+\end{cases}
+\]
+Jos $k<0$, p‰‰tell‰‰n samalla tavoin, ett‰ $f(x)-f(c)<0$ kun $x \in (c,c+\delta)$ ja 
+$f(x)-f(c)>0$ kun $x \in (c-\delta,c)$. M‰‰ritelm‰n \ref{paikallinen ‰‰riarvo} mukaan 
+kummassakaan tapauksessa $c$ ei ole $f$:n paikallinen ‰‰riarvopiste. \loppu
+\jatko \begin{Exa} (jatko) Esimerkin funktiolle p‰tee
+\[
+f'(x) = -\frac{2}{x^2}\,\sin\frac{1}{x}\cos\frac{1}{x}\,, \quad \text{kun}\ x \neq 0,
+\]
+joten $f'(a_n)=f'(b_n)=0$ Lauseen \ref{‰‰riarvolause} v‰itt‰m‰n mukaisesti. Pistees‰ $x=0$ ei
+$f$ ole derivoituva --- t‰m‰kin on sopusoinnussa Lauseen \ref{‰‰riarvolause} kanssa. \loppu
+\end{Exa}
+\begin{Exa} \label{kriittiset pisteet: esim} Rationaalifunktio $f(x)=x^2/(x+1)$ on derivoituva
+koko m‰‰rittelyjoukossaan, joten $f$:n mahdolliset paikalliset ‰‰riarvokohdat ovat v‰ist‰m‰tt‰
+kriittisi‰ pisteit‰. Koska
+\[
+f'(x) \,=\, \frac{2x}{1+x}-\frac{x^2}{(1+x)^2} 
+      \,=\, \frac{x^2+2x}{(x+1)^2}\,, \quad x \neq -1,
+\]
+niin kriittiset pisteet ovat $x=-2$ ja $x=0$. Osoittautuu, ett‰ edellisess‰ pisteess‰ $f$:ll‰
+on paikallinen maksimi, j‰lkimm‰isess‰ paikallinen minimi. (Ks.\ seuraavan luvun Esimerkki
+\ref{monotonisuus: esim}.) \loppu
+\end{Exa}
+
+\subsection*{ƒ‰riarvoteht‰v‰t}
+\index{zyzy@‰‰riarvoteht‰v‰|vahv}
+
+Kysymys funktion paikallisista ‰‰riarvokohdista nousee yleens‰ esiin osateht‰v‰n‰, kun halutaan
+ratkaista \kor{‰‰riarvoteht‰v‰}: On annettu funktio $f$ ja joukko $A\subset\DF_f$, ja haluttaa
+m‰‰ritt‰‰ $f$:n suurin ja/tai pienin arvo $A$:ssa. Sik‰li kuin teht‰v‰ ratkeaa, eli 
+suurin/pienin arvo on lˆydett‰viss‰, sanotaan ko.\ arvoa $f$:n
+\index{maksimi (funktion)!b@absoluuttinen} \index{minimi (funktion)!b@absoluuttinen}
+\index{absoluuttinen maksimi, minimi}%
+\kor{absoluuttiseksi} maksimiksi/minimiksi $A$:ssa. Absoluuttinen maksimi ja minimi lˆytyv‰t
+aina, jos joukko $A$ on \pain{‰‰rellinen}, sill‰ t‰llˆin kyse on vain valinnasta ‰‰rellisess‰
+joukossa. Jos $A$ on ‰‰retˆn joukko, esim.\ v‰li, on tilanne ongelmallisempi. Rajoitutaan t‰ss‰
+sovelluksissa usein esiintyv‰‰n perusteht‰v‰‰n, jossa $A$ on \pain{sul}j\pain{ettu} \pain{v‰li}
+ja $f$ on ko.\ \pain{v‰lill‰} j\pain{atkuva} M‰‰ritelm‰n \ref{jatkuvuus v‰lill‰} mukaisesti.
+T‰llˆin ‰‰riarvoteht‰v‰n ratkeavuuden takaa kummankin ‰‰riarvon osalta Weierstrassin lause
+(Lause \ref{Weierstrassin peruslause}).
+
+Jatkuvaa funktiota $f$ ja suljettua v‰li‰ $[a,b]$ koskevan ‰‰riarvoteht‰v‰n ratkaiseminen
+helpottuu k‰yt‰nnˆss‰ huomattavasti, jos $f$ on paitsi jatkuva myˆs derivoituva tai
+'melkein derivoituva' v‰lill‰ $(a,b)$. Tulos on muotoiltavissa Lauseen \ref{‰‰riarvolause}
+korollaarina seuraavasti.
+\begin{Kor} \label{‰‰riarvokorollaari} Olkoon $f$ on jatkuva v‰lill‰ $[a,b]$ ja olkoon
+$X\subset[a,b]$ joukko, jolle p‰tee
+\begin{align*}
+&\text{1.} \ \ a \in X\ \text{ja}\ b \in X, \\
+&\text{2.} \,\ \{c\in(a,b) \mid \text{$f$ derivoituva $c$:ss‰ ja $f'(c)=0$}\} \subset X, \\
+&\text{3.} \,\ \{c \in (a,b) \mid \text{$f$ ei derivoituva $c$:ss‰}\} \subset X.
+\end{align*}
+T‰llˆin $\D\ \underset{x\in [a,b]}{\max/\min} \; f(x)=\underset{x\in X}{\max/\min} \; f(x)$.
+\end{Kor}
+Korollaarin \ref{‰‰riarvokorollaari} ehdot t‰ytt‰v‰ joukko $X$ siis sis‰lt‰‰ v‰lin $[a,b]$
+p‰‰tepisteet ja lis‰ksi kaikki v‰lill‰ $(a,b)$ olevat $f$:n kriittiset pisteet sek‰ pisteet,
+joissa $f$ ei ole derivoituva. Yleens‰ joukko $X$ voidaan valita niin, ett‰ se on ‰‰rellinen,
+jolloin $f$:n maksimi- ja minimiarvojen haku pelkistyy korollaarin mukaisesti valinnaksi
+‰‰rellisess‰ joukossa $X$. --- Huomattakoon, ett‰ joukkoon $X$ (sik‰li kuin ‰‰rellinen) voidaan
+sen m‰‰rittelyn mukaisesti sis‰llytt‰‰ myˆs sellaisia pisteit‰, joissa $f$:n derivoituvuus
+on pelk‰st‰‰n ep‰ilyksen alaista. Haluttaessa vain selvitt‰‰ funktion maksimi- ja minimikohdat
+ja -arvot v‰lill‰ $[a,b]$ ei tarkempaa tutkimusta 'ep‰illyist‰' tarvita. Avoimeksi voidaan myˆs
+j‰tt‰‰ kysymys, ovatko joukkoon $X$ sis‰llytett‰v‰t pisteet $f$:n paikallisia ‰‰riarvokohtia
+vai eiv‰t.
+\begin{Exa} \label{‰‰riarvoesimerkki} M‰‰rit‰ funktion $f(x) = \max\,\{2-x,\,6x-3x^2\}$ 
+maksimi- ja minimikohdat ja -arvot v‰lill‰ $[0,3]$. 
+\end{Exa}
+\ratk Kysess‰ on jatkuva ja paloittain polynomiarvoinen funktio. Koska \newline
+$2-x = 6x-3x^2\ \ekv\ 3x^2-7x+2=0\ \ekv\ x=\tfrac{1}{3}\ \tai\ x=2$, niin p‰‰tell‰‰n, ett‰
+\[
+f(x) = \begin{cases} 
+       \,6x-3x^2,\ &\text{kun}\,\ \tfrac{1}{3} \le x \le 2, \\ 
+       \,2-x,\     &\text{kun}\,\ x \le \tfrac{1}{3}\,\ \text{tai}\,\ x \ge 2. 
+       \end{cases}
+\]
+V‰leill‰ $(0,\tfrac{1}{3})$ ja $(2,3)$ on $f'(x)=-1 \neq 0$. V‰lill‰ $(\tfrac{1}{3},2)$ on
+$f'(x)=6-6x$, joten t‰ll‰ v‰lill‰ on $f$:ll‰ kriittinen piste $c=1$. Pisteiss‰
+$x=\tfrac{1}{3}$ ja $x=2$ ei $f$ mahdollisesti (eik‰ todellisuudessakaan) ole derivoituva,
+muissa v‰lin $(0,3)$ pisteiss‰ on, joten Korollaarissa \ref{‰‰riarvokorollaari} voidaan valita
+$X=\{0,\tfrac{1}{3},1,2,3\}$. Laskemalla $f$:n arvot n‰iss‰ pisteiss‰ todetaan, ett‰
+$f_{max}=f(1)=3$, $f_{min}=f(3)=-1$. \loppu
+
+Esimerkiss‰ mahdollisia paikallisia ‰‰riarvokohtia v‰lill‰ $(0,3)$ ovat Lauseen 
+\ref{‰‰riarvolause} mukaan pisteet $\tfrac{1}{3},1,2$. Funktion l‰hempi tutkimus n‰iden
+pisteiden ymp‰ristˆss‰ (algebran keinoin tai jatkossa esitett‰vin menetelmin) osoittaa, ett‰
+$c=\tfrac{1}{3}$ on oleellinen paikallinen minimi, $c=1$ on oleellinen paikallinen maksimi ja
+$c=2$ ei ole paikallinen ‰‰riarvokohta.
+
+\subsection*{Toispuoliset derivaatat}
+\index{derivaatta!toispuolinen|vahv}
+\index{toispuolinen derivaatta|vahv}
+
+Jos Esimerkiss‰ \ref{‰‰riarvoesimerkki} tarkkaillaan niit‰ pisteit‰, joissa $f$ ei ole 
+derivoituva, n‰hd‰‰n ett‰ $f$:ll‰ on n‰iss‰kin pisteiss‰ \kor{toispuoliset} (engl. one-sided) 
+derivaatat seuraavan m‰‰ritelm‰n mieless‰ (vrt. toispuoliset raja-arvot Luvussa 
+\ref{funktion raja-arvo}).
+\begin{Def} \label{toispuoliset derivaatat} \index{derivoituvuus!a@vasemmalta, oikealta|emph}
+\index{vasemmalta derivoituva|emph} \index{oikealta derivoituva|emph}
+Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on pisteess‰ $x\in\DF_f$
+\kor{vasemmalta derivoituva}, jos $(x-\delta,x]\subset\DF_f$ jollakin $\delta>0$ ja $\exists$
+raja-arvo
+\[
+\dif_-f(x)=\lim_{\Delta x\kohti 0^-} \frac{f(x+\Delta x)-f(x)}{\Delta x},
+\]
+ja \kor{oikealta derivoituva}, jos $[x,x+\delta)\subset\DF_f$ jollakin $\delta>0$ ja $\exists$ 
+raja-arvo
+\[
+\dif_+f(x)=\lim_{\Delta x\kohti 0^+} \frac{f(x+\Delta x)-f(x)}{\Delta x}.
+\]
+\end{Def}
+M‰‰ritelmien \ref{toispuoliset derivaatat} ja \ref{derivaatan m‰‰ritelm‰} perusteella $f$ on
+pisteess‰ $x$ derivoituva t‰sm‰lleen kun $f$ on $x$:ss‰ sek‰ vasemmalta ett‰ oikealta
+derivoituva ja $\dif_-f(x)=\dif_+f(x)$ ($=f'(x)$).
+
+Jos $f$ on pisteess‰ $c$ jatkuva ja lis‰ksi sek‰ vasemmalta ett‰ oikealta derivoituva, niin 
+p‰tee (vrt.\ johdatus derivaattaan Luvussa \ref{derivaatta})
+\[
+\begin{cases}
+\,f(x)=f(x)+\dif_-f(c)(x-c)+g(x), \quad \text{kun}\ x \in (c-\delta,c], \\
+\,f(x)=f(x)+\dif_+f(c)(x-c)+g(x), \quad \text{kun}\ x \in [c,c+\delta),
+\end{cases}
+\]
+miss‰ $g(x)/(x-c) \kohti 0$, kun $x \kohti c^-$ tai $x \kohti c^+$. T‰st‰ n‰hd‰‰n oikeaksi
+\begin{Lause} \label{‰‰riarvolause 2} Jos $f$ on pisteess‰ $c$ jatkuva ja lis‰ksi sek‰ 
+vasemmalta ett‰ oikealta derivoituva, niin p‰tee
+\begin{itemize}
+\item[(a)] $\dif_-f(c)\,\dif_+f(c)<0 \ \impl \ f$:ll‰ on pisteess‰ $c$ paikallinen ‰‰riarvo,
+joka on
+\begin{itemize}
+\item[-] oleellinen maksimi,\,  jos $\dif_-f(c)>0$ ja $\dif_+f(c)<0$,
+\item[-] oleellinen minimi, \ \ jos $\dif_-f(c)<0$ ja $\dif_+f(c)>0$.
+\end{itemize}
+\item[(b)] $\dif_-f(c)\,\dif_+f(c)>0 \ \impl\ c$ ei ole $f$:n paikallinen ‰‰riarvopiste.
+\end{itemize}
+\end{Lause}
+\jatko \begin{Exa} (jatko) Esimerkiss‰ on $\dif_-f(\tfrac{1}{3})=-1,\ \dif_+f(\tfrac{1}{3})=4$
+ja $\dif_-f(2)=-6,\ \dif_+f(2)=-1$, joten Lauseen \ref{‰‰riarvolause 2} mukaan $f$:ll‰ on
+pisteess‰  $x=\tfrac{1}{3}$ oleellinen paikallinen minimi ja $x=2$ ei ole paikallinen
+‰‰riarvokohta. \loppu
+\end{Exa}
+Jos $f$ on pisteess‰ $c$ derivoituva ja $f'(c) \neq 0$, niin
+$\dif_-f(c)\,\dif_+f(c) = [f'(c)]^2 > 0$, joten Lauseen \ref{‰‰riarvolause 2} v‰itt‰m‰ (b)
+sis‰lt‰‰ myˆs Lauseen \ref{‰‰riarvolause} v‰itt‰m‰n muodossa
+\[
+f'(c) \neq 0 \qimpl \text{$f$:ll‰ ei ole paikallista ‰‰riarvoa $c$:ss‰}.
+\]
+Jos $\dif_-f(c)=0$ tai $\dif_+f(c)=0$ (myˆs kun $f'(c)=0$), voi $c$ olla paikallinen
+‰‰riarvopiste tai ei, riippuen tapauksesta.
+\begin{Exa} Funktioille
+$\displaystyle{\
+f(x)=\begin{cases}
+\,x^2,  &x<0, \\
+\,x,    &x\ge 0
+     \end{cases} \quad \text{ja} \quad
+g(x)=\begin{cases}
+-x^2, &x<0, \\
+\,x,    &x\ge 0
+     \end{cases}}$
+
+p‰tee $\dif_-f(0)=\dif_-g(0)=0$ ja $\dif_+f(0)=\dif_+g(0)=1$. Funktiolla $f$ on origossa
+(oleellinen) paikallinen minimi, $g$:ll‰ ei ole paikallista ‰‰riarvoa origossa.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5.5)(0,-2.5)
+\multiput(0,0)(6,0){2}{
+\put(0,0){\vector(1,0){4}} \put(3.8,-0.4){$x$}
+\put(2,-2){\vector(0,1){4}} \put(2.2,1.8){$y$}}
+\curve(0.586,2,1,1,1.5,0.25,2,0) \put(2,0){\line(1,1){2}}
+\curve(6.586,-2,7,-1,7.5,-0.25,8,0)\drawline(8,0)(10,2)
+\put(1.3,-3){$y=f(x)$} \put(7.3,-3){$y=g(x)$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{Exa}
+
+\subsection*{Sileys}
+\index{sileys(aste)|vahv}
+
+Seuraava m‰‰ritelm‰ yhdist‰v‰‰ suljetulla v‰lill‰ jatkuvuuden 
+(M‰‰ritelm‰ \ref{jatkuvuus v‰lill‰}) ja derivoituvuuden k‰sitteit‰.
+\begin{Def} \label{sileys}
+\index{jatkuvasti derivoituvuus|emph} \index{derivoituvuus!b@jatkuvasti derivoituvuus|emph}
+Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$ on \kor{jatkuvasti derivoituva} 
+(engl.\ continuously differentiable) \kor{suljetulla v‰lill‰} $[a,b]\subset\DF_f$, jos $f$ on
+derivoituva v‰lill‰ $(a,b)$, oikealta derivoituva pisteess‰ $a$, vasemmalta derivoituva 
+pisteess‰ $b$, ja derivaatta $f'$, m‰‰riteltyn‰ toispuolisena v‰lin $[a,b]$ p‰‰tepisteiss‰, on
+v‰lill‰ $[a,b]$ jatkuva funktio. Yleisemmin jos $m\in\N$, niin $f$ on v‰lill‰ $[a,b]$ $m$ 
+\kor{kertaa jatkuvasti derivoituva}, jos $f$ on $m$ kertaa derivoituva v‰lill‰ $(a,b)$, $m$ 
+kertaa oikealta derivoituva pisteess‰ $a$, $m$ kertaa vasemmalta derivoituva pisteess‰ $b$, ja
+derivaatat $f^{(k)}$, m‰‰riteltyn‰ toispuolisina v‰lin p‰‰tepisteiss‰, ovat v‰lill‰ $[a,b]$
+jatkuvia, kun $\,k=1 \ldots m$. Edelleen jos $A\subset\DF_f$ on puoliavoin tai avoin v‰li,
+niin sanotaan, ett‰ $f$ on $m$ kertaa jatkuvasti derivoituva $A$:ssa, jos $f$ on $m$ kertaa
+jatkuvasti derivoituva jokaisella $A$:n suljetulla osav‰lill‰. 
+\end{Def}
+Sovellettaessa m‰‰ritelm‰‰ suljetun v‰lin tapauksessa, kun $m \ge2$, ajatellaan derivaatat
+$f^{(k)}$, $k=1\ldots m-1$ m‰‰ritellyksi v‰lin p‰‰tepisteiss‰ palautuvasti (toispuolisina)
+alkaen indeksist‰ $k=1$. Indeksi‰ $m=0$ vastaava termi '$0$ kertaa jatkuvasti derivoituva'
+tulkitaan pelk‰ksi jatkuvuudeksi. 
+\begin{Exa} \label{sileysesimerkki} Olkoon $n\in\N$ ja tarkastellaan funktiota
+\[
+f(x) = \begin{cases} \,0, &\text{kun } x\leq 0, \\ \,x^n, &\text{kun†} x>0. \end{cases}
+\]
+Derivoimalla pistess‰ $x=0$ toispuolisesti todetaan, ett‰ $f$ on t‰ss‰ pistess‰ (ja siis koko
+$\R$:ss‰) $n-1$ kertaa derivoituva ja p‰tee
+\[
+f^{(k)}(x) = \begin{cases}
+             \,0,                           &\text{kun}\ x \le 0, \\[2mm]
+             \,\dfrac{n!}{(n-k)!}\,x^{n-k}, &\text{kun}\ x>0, \quad k=1 \ldots n-1.
+             \end{cases}
+\]
+Koska derivaatat $f^{(k)}(0)=0,\ k=1 \ldots n-1$ ovat $\R$:ss‰ jatkuvia ja koska $f^{(n-1)}$ 
+ei ole derivoituva pisteess‰ $x=0$, niin p‰‰tell‰‰n, ett‰ $f$ on $\R$:ss‰ t‰sm‰lleen $n-1$
+kertaa (ei $n$ kertaa) jatkuvasti derivoituva. \loppu
+\end{Exa}
+Jos $f$ on $m$ kertaa mutta ei $m+1$ kertaa jatkuvasti derivoituva v‰lill‰ $A$, niin 
+indeksi‰ $m$ kutsutaan usein $f$:n \kor{sileysasteeksi} (engl.\ degree of smoothness), ja 
+voidaan myˆs sanoa, ett‰ $f$ on \kor{sile‰ astetta $m$} ko.\ v‰lill‰. T‰llˆin 'sile‰ astetta
+nolla' tarkoittaa siis pelkk‰‰ jatkuvuutta. Esimerkiss‰ $f$:n sileysaste ($\R$:ss‰) on
+$m=n-1$. Jos sileysasteella ei ole yl‰rajaa, ts.\ $f$ on '‰‰rettˆm‰n sile‰', niin 
+sileysasteeksi voidaan merkit‰ $m=\infty$. Termill‰ \kor{sile‰} (ilman lis‰m‰‰reit‰) on usein
+juuri t‰m‰ merkitys. Esimerkiss‰ on $m=\infty$ esim.\ v‰lill‰ $[0,\infty)$.
+\begin{Exa} Polynomi on sile‰ (= '‰‰rettˆm‰n sile‰') jokaisella v‰lill‰, eli $\R$:ss‰, samoin
+trigonometriset funktiot $\sin$, $\cos$ ja $\Arctan$. Trigonometrinen funktio $\,\tan\,$ on
+sile‰ v‰leill‰ $((n-\tfrac{1}{2})\pi,(n+\tfrac{1}{2})\pi),\ n\in\Z$. \loppu
+\end{Exa}
+\begin{Exa} Potenssisarjan summana m‰‰ritelty funktio on sile‰ v‰lill‰ $(-\rho,\rho)$
+(eli v‰leill‰ $[a,b] \subset (-\rho,\rho)$), miss‰ $\rho=$ sarjan suppenemiss‰de, vrt.\ Luku 
+\ref{derivaatta}. \loppu
+\end{Exa}
+
+Edell‰ Esimerkiss‰ \ref{sileysesimerkki} m‰‰ritelty funktio $f$ on
+\index{paloittainen!c@sileys}
+\kor{paloittain sile‰} (engl.\ piecewise smooth) mill‰ tahansa indeksill‰ $m\in\N$ mitaten.
+T‰m‰ tarkoittaa, ett‰ olipa $m\in\N$ mik‰ tahansa, niin $f$ t‰ytt‰‰ seuraavan m‰‰ritelm‰n ehdot.
+\begin{Def} \label{paloittainen sileys} \index{jatkuvasti derivoituvuus|emph}
+\index{derivoituvuus!b@jatkuvasti derivoituvuus|emph}
+Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$ on \kor{$m$ kertaa paloittain jatkuvasti
+derivoituva} v‰lill‰ $[a,b]$, jos $\exists$ pisteet $c_k$, $k=0 \ldots n$, $n\in\N$ ja 
+funktiot $f_k$, $k=1 \ldots n$ siten, ett‰ p‰tee
+\begin{itemize}
+\item[(i)]   $a=c_0<c_1<\ldots<c_n=b$\, ja $\,(c_{k-1},c_k)\subset\DF_f, \quad k=1 \ldots n$,
+\item[(ii)]  $[c_{k-1},c_k]\subset\DF_{f_k}$ ja $f_k$ on $m$ kertaa jatkuvasti derivoituva
+             v‰lill‰ $[c_{k-1},c_k]$, $k=1\ldots n$,
+\item[(iii)] $f(x)=f_k(x)$, \,kun $x\in (c_{k-1},c_k), \quad k=1 \ldots n$.
+\end{itemize}
+\end{Def}
+\begin{Exa} Jos $a<0$ ja $b>0$, niin Esimerkin \ref{sileysesimerkki} funktiolle M‰‰ritelm‰n 
+\ref{paloittainen sileys} ehdot ovat voimassa jokaisella $m\in\N$, kun asetetaan $n=1$,
+$c_1=0$, $f_1(x)=0$ ja $f_2(x) = x^n$. \loppu 
+\end{Exa}
+Jos $f$ on v‰lill‰ $[a,b]$ paloittain sile‰ astetta $m$ mill‰ tahansa $m\in\N$, kuten 
+Esimerkiss‰ \ref{sileysesimerkki}, niin voidaan sanoa yksinkertaisesti, ett‰ $f$ on 
+\kor{paloittain sile‰} ilman lis‰m‰‰reit‰. Myˆs Esimerkin \ref{‰‰riarvoesimerkki} funktio on 
+t‰t‰ tyyppi‰.
+\begin{Exa}
+Funktio
+\[
+f(x)=\begin{cases}
+x^3, &x<0, \\
+x^5\sqrt{x}, &x\geq 0
+\end{cases}
+\]
+on v‰lill‰ $[-1,1]$ sile‰ astetta $m=2$ (t‰sm‰lleen) ja paloittain sile‰ astetta $m=5$ 
+(t‰sm‰lleen). T‰ss‰ paloittaista sileytt‰ rajoittaa, ett‰ $f$ on origossa vain viidesti 
+derivoituva oikealta. \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Tutki origon laatu mahdollisena paikallisena ‰‰riarvopisteen‰:
+\begin{align*}
+&\text{a)}\ \ f(x)=100+x^{99}-x^{98} \qquad
+ \text{b)}\ \ f(x)=x^4-x^3\cos x \\
+&\text{c)}\ \ f(x)=\begin{cases}
+                  x^3\sin\dfrac{1}{x}\,, &\text{kun}\ x \neq 0, \\[2mm]
+                  0,                     &\text{kun}\ x=0
+                  \end{cases} \quad\
+ \text{d)}\ \ f(x)=\begin{cases} 0.000001, &\text{kun}\ x=0, \\[2mm]
+                  x\cos\dfrac{1}{x}\,,    &\text{kun}\ x \neq 0
+                  \end{cases}
+\end{align*}
+
+\item
+M‰‰rit‰ seuraavien funktioiden maksimi- ja minimiarvot annetulla v‰lill‰ sek‰ pisteet
+joissa maksimi/minimi saavutetaan:
+\begin{align*}
+&\text{a)}\ f(x)=(x-1)^3(x+1)^3, \quad \text{v‰li}\ [-2,4] \\[4mm]
+&\text{b)}\ f(x)=\abs{x^5-80x+1}, \quad \text{v‰li}\ [-1,1] \\[2mm]
+&\text{c)}\ f(x)=\frac{2-x}{5-4x+x^2}\,,\quad \text{v‰li}\ [-100,2] \\
+&\text{d)}\ f(x)=\begin{cases}
+                 8x^2-16x-14, &\text{kun}\ x \le 2, \\ 3x^2-24x+22, &\text{kun}\ x>2,
+                 \end{cases} \quad \text{v‰li}\ [0,5] \\[1mm]
+&\text{e)}\ f(x)=\min\{2x^3-2x,\,3-2x\}, \quad \text{v‰li}\ [-1,2] \\[5mm]
+&\text{f)}\ f(x)=\abs{\sin x}-\cos x, \quad \text{v‰li}\ [0,2\pi] \\[5mm]
+&\text{g)}\ f(x)=x+5\sin x, \quad \text{v‰li}\ [0,2\pi]
+\end{align*}
+
+\item
+Mik‰ on lausekkeen $\sqrt{x}+2\sqrt{y}$ pienin arvo, kun $x,y \ge 0$ ja $x+y=5/6$\,?
+
+\item
+Suoran tien varressa, kohtisuorassa tiet‰ vastaan, on mainostaulu, jonka leveys on $10$ metri‰
+ja l‰hin et‰isyys tiell‰ kulkevien ajoradasta on $20$ m. Mik‰ on suurin kulma, jossa tiell‰
+liikkuja taulun n‰kee?
+
+\item
+Piste $P=(x,y)$ sijaitsee Cartesiuksen lehdell‰ $\,S: x^3+y^3=3xy$. Mik‰ on suurin mahdollinen
+$x$:n arvo, jos $y \ge 0$\,?
+
+\item 
+M‰‰rit‰ \vspace{1mm}\newline
+a) funktion $f(x,y)=(2x-y)(x+y-1)(x-y-1)$ maksimi- ja minimiarvot janalla, jonka p‰‰tepisteet
+ovat $(-1,0)$ ja $(3,1)$, \vspace{1mm}\newline
+b) funktion $f(x,y)=\abs{x^2+2y}+2x^2$ pienin arvo k‰yr‰ll‰ $S:\ xy=1$, \vspace{1mm}\newline
+c) funktion $f(x,y,z)=x+y+z(2x+y+z)(x+3y+z)(x+y+4z)$ pienin arvo suoralla $S:\ x=2y=3z$.
+
+\item
+Funktio $f$ on m‰‰ritelty yksikkˆkiekon nelj‰nneksess‰ 
+$A=\{(x,y)\in\R^2 \mid x^2+y^2 \le 1\ \&\ x \ge 0\ \&\ y \ge 0\}$ seuraavasti
+(napakoodinaatit!): $f(r,\phi)=(3r^2-2r)(2\phi^2-3\phi +1)$. Miss‰ $A$:n pisteiss‰ $f$ 
+saavuttaa suurimman ja miss‰ pienimm‰n arvonsa?
+
+\item
+M‰‰rit‰ napa- tai pallokoordinaatistoon siirtym‰ll‰ seuraavien funktioiden maksimi- ja 
+minimiarvot annetussa joukossa $A$. Anna myˆs karteesisessa koordinaatistossa pisteet, 
+joissa n‰m‰ arvot saavutetaan.
+\begin{align*}
+&\text{a)}\ f(x,y)=x^3y^4,\ \ A=\{(x,y)†\mid x^2+y^2 \le 1\} \\
+&\text{b)}\ f(x,y)=x^2y^4,\ \ A=\{(x,y)†\mid x^2+y^2 \le 25\} \\
+&\text{c)}\ f(x,y,z)=xyz^3,\ \ A=\{(x,y,z) \mid x^2+y^2+z^2 \le 1\}
+\end{align*}
+
+\item
+Mik‰ on funktion 
+\[
+f(x)=|x-3|^{111/11} + (x+1)^3|x+1| +\max\{1,x^2-2x+2\}
+\]
+sileysaste v‰lill‰ \ a) $[-2,0]$, \ b) [0,2], \ c) [2,4]\,?
+
+\item
+M‰‰rit‰ seuraavien funktioiden sileysasteet v‰lill‰ $[-1,1]$:
+\begin{align*}
+&\text{a)}\,\ x^2\abs{\sin x} \qquad
+ \text{b)}\,\ \abs{x}^3(1-\cos x) \qquad
+ \text{c)}\,\ \sin^2 x\abs{\tan x} \\
+&\text{d)}\,\ f(x) = \begin{cases} 
+                     \,1-\tfrac{1}{2}x^2, &\text{kun}\ x<0, \\
+                     \,\cos x,            &\text{kun}\ x \ge 0
+                     \end{cases} \quad\ \
+ \text{e)}\,\ f(x) = \begin{cases}
+                     \,\sin x,            &\text{kun}\ x \le 0, \\
+                     \,x-\tfrac{1}{6}x^3, &\text{kun}\ x>0
+                     \end{cases}
+\end{align*} 
+
+\item
+Olkoon $f_1(x)=2x^3-7x^2+9x$ ja $f_2(x)=ax^2+bx+c$. M‰‰rit‰ kertoimet $a,b,c$ siten, ett‰ 
+funktio
+\[
+f(x)=\begin{cases}
+     \,f_1(x),  &\text{kun}\ x \le 1, \\ \,f_2(x),  &\text{kun}\ x>1
+     \end{cases}
+\]
+on kahdesti jatkuvasti derivoituva v‰lill‰ $[0,2]$. Piirr‰ samaan kuvaan $f$:n kuvaaja ko.\
+v‰lill‰ sek‰ katkoviivalla $f_2$:n kuvaaja v‰lill‰ $[0,1]$ ja $f_1$:n kuvaaja v‰lill‰ $[1,2]$.
+
+\item (*)
+a) Funktiosta $f: \R \kohti \R$ tiedet‰‰n, ett‰ $f$ on derivoituva $\R$:ss‰ ja ett‰
+\[
+\lim_{x \kohti -\infty} f(x)=A_-\,, \quad \lim_{x \kohti\infty} f(x)=A_+\,,
+\]
+miss‰ $A_-\in\R$ ja $A_+\in\R$. N‰yt‰, ett‰ $f$ saavuttaa $\R$:ss‰ absoluuttisen
+maksimiarvon t‰sm‰lleen kun jossakin $f$:n kriittisess‰ pisteess‰ $c$ on \newline
+$f(c) \ge \max\{A_-\,,\,A_+\}$. \ b) Mill‰ $a$:n arvoilla funktio
+\[
+f(x)=\frac{x^4+ax^2}{(x^2+7)^2}
+\]
+saa absoluuttisen maksimiarvon jollakin $x\in\R$\,?
+
+\item (*)
+M‰‰rit‰ funktion $f(x)=4\abs{\cos x}-3\sin x+2\cos x\,$ kriittiset pisteet, derivaatan
+ep‰jatkuvuuskohdat, paikalliset ‰‰riarvokohdat ja absoluutiset maksimi- ja minimiarvot
+v‰lill‰ $[0,2\pi]$. Hahmottele k‰yr‰n $y=f(x)$ kulku.
+
+\item (*)
+M‰‰rittele v‰lill‰ $(0,\infty)$ funktio $g$ siten, ett‰ funktion $\,f(x)=x+a\sin x\,$
+pienin arvo v‰lill‰ $[0,a]$ on $f_{min}=g(a)$. Hahmottele $g$:n kuvaaja.
+
+\item (*) \label{H-V-5: jatkaminen polynomeilla}
+a) Olkoon $p_1$ ja $p_2$ polynomeja astetta $\le n$. N‰yt‰, ett‰ jos funktio
+\[
+f(x)=\begin{cases}
+     \,p_1(x),  &\text{kun}\ x<a,  \\ \,p_2(x),  &\text{kun}\ x \ge a
+     \end{cases}
+\]
+on $n$ kertaa jatkuvasti derivoituva v‰lill‰ $[a-1,a+1]$, niin $p_1=p_2$.\vspace{1mm}\newline
+b) Funktio $f$ olkoon $m$ kertaa jatkuvasti derivoituva v‰lill‰ $[a,b]$. N‰yt‰, ett‰ on
+olemassa yksik‰sitteiset polynomit $p_1$ ja $p_2$ astetta $\le m$ siten, ett‰ funktio
+\[
+g(x) = \begin{cases}
+       \,p_1(x), &\text{kun}\ x<a, \\ 
+       \,f(x), &\text{kun}\ x\in[a,b], \\ 
+       \,p_2(x), &\text{kun}\ x>b
+       \end{cases}
+\]
+on $m$ kertaa jatkuvasti derivoituva $\R$:ss‰.
+
+\item (*) \index{zzb@\nim!Vasikka-aitaus}
+(Vasikka-aitaus) Maanviljelij‰ haluaa aidata navettansa viereen suorakulmion muotoisen 
+aitauksen vasikoiden laidunmaaksi. Aitauksen mitat valitaan aidan kokonaispituuden ($x$ m) 
+funktiona siten, ett‰ laitumen pinta-ala on mahdollisimman suuri ja navetan $40$ m:n pituinen
+sein‰ k‰ytet‰‰n hyv‰ksi mahdollisimman hyvin. N‰in suunnitellussa aitauksessa olkoon
+$f(x)$ navetan sein‰n suuntaisen ja sein‰‰ vastaan kohtisuoran sivun pituuksien suhde.
+M‰‰rit‰ $f(x)$ v‰lill‰ $(0,\infty)$. Mik‰ on $f$:n sileysaste v‰lill‰ $[0,\infty)$, kun
+asetetaan $f(0)=f(0^+)$\,?
+
+\item (*) \index{zzb@\nim!Pisin heitto?}
+(Pisin heitto?) Jos ilmanvastusta ei huomioida, niin ilmaan heitetyn kappaleen lentorata
+noudattaa heittoparaabelia 
+\[
+y=h+kx-(1+k^2)\frac{x^2}{2a}\,,
+\]
+miss‰ $x$ mittaa vaakasuoraa et‰isyytt‰ l‰htˆpisteest‰, $y$ korkeutta maan
+pinnan tasosta ja vakiot $h$, $k$ ja $a$ ovat yksitt‰iselle heitolle ominaisia
+(ks.\ Luku \ref{parametriset k‰yr‰t}, Esimerkki \ref{heittoparaabeli}). Jos
+$h$ ja $a$ kiinnitet‰‰n, niin mill‰ $k$:n arvolla kappale lent‰‰ pisimm‰lle --- ja kuinka
+pitk‰lle? --- ennen kuin tˆrm‰‰ maahan?
+
+\end{enumerate}

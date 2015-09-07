@@ -1,0 +1,704 @@
+\section{Kiintopisteiteraatio. Newtonin menetelmä} \label{kiintopisteiteraatio}
+\sectionmark{Kiintopisteiteraatio}
+\alku
+\index{kiintopisteiteraatio|vahv}
+\index{suppeneminen!b@kiintopisteiteraation|vahv}
+
+Aiemmin Luvuissa \ref{jono}--\ref{monotoniset jonot} on tarkasteltu esimerkkejä palautuvista
+lukujonoista, jotka määräytyvät alkuarvosta $x_0\in\R$ ja (johonkin reaalifunktioon $f$
+liittyen) palautuskaavasta
+\begin{equation} \label{kp-iteraatio}
+x_{n+1}=f(x_n),\quad n=0,1,\ldots \tag{$\star$}
+\end{equation}
+Jatkossa tarkastellaan tällaisia lukujonoja ja niiden suppenemisen ehtoja eiempaa yleisemmältä
+kannalta.
+
+Oletetaan aluksi, että $f$ on jatkuva suljetulla välillä $[a,b]$ ja että 
+$x_n\in [a,b]\ \forall n$. Tällöin jos jono $\{x_n\}$ on suppeneva, niin on oltava 
+\[
+x_n\kohti c\in [a,b].
+\]
+Koska $f$ on välillä $[a,b]$ jatkuva, niin
+\[
+x_n\kohti c \ \impl \ f(x_n)\kohti f(c),
+\]
+joten kaavan \eqref{kp-iteraatio} mukaan
+\[
+c=f(c).
+\]
+Sanotaan, että $c$ on $f$:n
+\index{kiintopiste}%
+\kor{kiintopiste} (engl. fixed point) ja lukujen $x_n$ laskemista 
+palautuskaavasta \eqref{kp-iteraatio} sanotaan tämän vuoksi \kor{kiintopisteiteraatioksi} 
+(lat.\ itero = toistaa, tehdä uudelleen).
+
+Jos halutaan löytää annetun funktion $f$ kiintopiste, niin luonnollinen algoritmi (joskaan ei 
+aina toimiva, ks.\ tarkastelut jäljempänä) on kiintopisteiteraatio \eqref{kp-iteraatio}
+jostakin alkuarvauksesta $x_0$.
+\begin{multicols}{2} \raggedcolumns
+\begin{Exa} \label{kp-esim 1} Ratkaise (transkendenttinen) yhtälö $x=\cos x$ 
+kiintopisteiteraatiolla. 
+\end{Exa}
+\ratk Valitaan alkuarvaukseksi $x_0=0$, jolloin saadaan iteraatio 
+\[
+x_0=0,\quad x_{n+1}=\cos x_n,\quad n=0,1,\ldots
+\]
+Tämä suppenee hitaahkosti kohti funktion $f(x)=\cos x$ (ainoaa) kiintopistettä 
+$c = 0.7390851332..$
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,4)(-1,-1)
+\put(-1,0){\vector(1,0){5}} \put(3.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){4}} \put(0.2,2.8){$y$}
+\put(-0.5,-0.67){\line(3,4){2.2}} \put(1.4,2.4){$y=x$}
+\curve(
+   0,       2,
+0.75,  1.7552,
+ 1.5,  1.0806,
+2.25, 0.14147,
+   3,-0.83229)
+\put(2.25,0.5){$y=\cos x$}
+\dashline{0.1}(1.1,0)(1.1,1.47) \put(1.05,-0.4){$\scriptstyle{c}$}
+\put(1.5,0){\line(0,-1){0.15}} \put(1.45,-0.4){$\scriptstyle{1}$}
+\put(0,2){\line(-1,0){0.15}} \put(-0.4,1.9){$\scriptstyle{1}$} 
+\put(2.35,0){\line(0,-1){0.15}} \put(2.22,-0.4){$\scriptstyle{\frac{\pi}{2}}$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+\[
+\begin{array}{ll}
+x_1=1 \quad        &x_{10}=0.73140404.. \\
+x_2=0.5403.. \quad &x_{20}=0.73893775.. \\
+x_3=0.8575.. \quad &x_{30}=0.73908229.. \\
+%x_4=0.6542.. \quad &x_{40}=0.73908507.. \\
+%x_5=0.7934.. \quad &x_{50}=0.73908513.. \\
+\ \vdots                 &\ \vdots \qquad \loppu
+\end{array}
+\]
+Esimerkki herättää kysymyksen, millaisilla ehdoilla kiintopisteiteraatio \eqref{kp-iteraatio} 
+yleensä suppenee, ja kuinka nopeasti, jos $x_0 \neq c$. (Tapaus $x_0=c$ on triviaali, koska 
+tällöin $x_n=c\ \forall n$.) Suppenemistarkasteluille suunnan antakoon
+\begin{Exa} Olkoon $f$ ensimmäisen asteen polynomi. Tällöin jos $f(c)=c$, eli $c$ on
+kiintopiste, niin jollakin $k \in \R$ on $\,f(x) = c + k(x-c)$, jolloin iteraatiokaavan
+\eqref{kp-iteraatio} mukaan on
+\[
+x_{n+1} - c = k(x_n - c), \quad n = 0,1,\ldots \qimpl x_n-c = k^n(x_0-c), \quad n=1,2,\ldots
+\]
+Siis $x_n \kohti c$ alkuarvosta $x_0$ riippumatta, jos $\abs{k}<1$. Jos $\abs{k} \ge 1$, niin 
+$x_n \kohti c$ vain kun $x_0=c$. \loppu
+\end{Exa}
+Esimerkin mukaan $f$:n säännöllisyys (edes sileys) ei ole sovelias kriteeri
+kiintopisteiteraation suppenemiselle, vaan tarvitaan toisen tyyppisiä ehtoja. Seuraavissa
+kahdessa lauseessa asetetaan, esimerkin tulosta mukaillen, riittävät ehdot sekä
+kiintopisteiteraation suppenemiselle kohti haluttua kiintopistettä $c$ että iteraation
+epäonnistumiselle ($ x_n \not\kohti c$).
+\begin{Lause} \label{kp-lause 1} Jos (i) funktiolla $f$ on kiintopiste $c$, ja (ii) $f$ on 
+määritelty välillä $[c-a,c+a],\ a>0\,$  ja toteuttaa ehdon
+\[
+\abs{f(x)-f(c)} \le L\abs{x-c\,}, \quad x \in [c-a,c+a],
+\]
+missä $0 \le L<1$\footnote[2]{Ilman lisäehtoa $L<1$ Lauseen \ref{kp-lause 1} ehtoa (ii)
+sanotaan \kor{Lipschitz-ehdoksi pisteessä} $c$, vrt.\ Lipschitz-jatkuvuuden ehto suljetulla
+välillä: Määritelmä \ref{funktion l-jatkuvuus}. \index{Lipschitz-ehto (pisteessä)|av}}, niin
+\begin{itemize}
+\item[(1)] $c$ on $f$:n ainoa kiintopiste välillä $[c-a,c+a]$,
+\item[(2)] iteraatio \eqref{kp-iteraatio} suppenee kohti kiintopistettä jokaisella 
+$x_0\in [c-a,c+a]$ ja pätee
+\[ 
+\abs{x_n-c} \le L^n\abs{x_0-c\,}, \quad n=1,2,\ldots 
+\]
+\end{itemize}
+\end{Lause}
+\tod (1) \ Jos $c_1\in [c-a,c+a]$ on myös kiintopiste, niin
+\begin{align*}
+c=f(c)\ \ja\ c_1=f(c_1) &\qimpl\ \abs{c-c_1}=\abs{f(c)-f(c_1)} \,\le\, L\abs{c-c_1} \\
+                        &\qimpl\  (1-L)\,\abs{c-c_1} \le 0.
+\end{align*}
+Koska on $0 \le L < 1$, niin on oltava $c-c_1=0$.
+
+(2) \ Oletuksien perusteella pätee ensinnäkin
+\[
+\abs{f(x)-c\,} = \abs{f(x)-f(c)} \,\le\, L\abs{x-c\,} \le \abs{x-c} \le a, 
+                                          \quad \text{kun}\ x\in[c-a,c+a]. 
+\]
+Näin ollen jos $x_0 \in [c-a,c+a]$, niin  iteraatiolle \eqref{kp-iteraatio} pätee 
+$\,x_n \in [c-a,c+a]\ \forall n$, joten oletuksien perusteella voidaan arvioida
+\[
+\abs{x_n-c\,} = \abs{f(x_{n-1})-f(c)} \,\le\, L\abs{x_{n-1}-c\,} \,\le\, \ldots\ 
+                                      \,\le\, L^n\abs{x_0-c\,}.
+\]
+Koska $L<1$, niin $x_n \kohti c$. \loppu
+\begin{Lause} \label{kp-lause 2} Jos (i) funktiolla $f$ on kiintopiste $c$, ja (ii) $f$ on 
+määritelty välillä $[c-a,c+a],\ a>0\,$ ja toteuttaa ehdon
+\[
+\abs{f(x)-f(c)} \ge L\abs{x-c\,}, \quad x \in [c-a,c+a],
+\]
+missä $L>1$, niin kiintopisteiteraatio \eqref{kp-iteraatio} suppenee kohti kiintopistettä $c$ 
+ainoastaan siinä tapauksessa, että $x_n=c$ jollakin $n$. 
+\end{Lause}
+\tod Jos $x_k=c$, niin iteraatiokaavan \eqref{kp-iteraatio} mukaan on $x_n=c\ \forall n \ge k$,
+jolloin $x_n \kohti c$. Oletetaan siis, että $x_n \neq c\ \forall n$, jolloin väittämä on, että
+$x_n \not\kohti c$. Jos $\abs{x_n-c\,} > a\ \forall n$, niin tämä on tosi. Voidaan siis olettaa,
+että $x_n \in [c-a,c+a]$ jollakin $n$. Tällöin oletuksien mukaan
+\[
+\abs{x_{n+1}-c\,} = \abs{f(x_n)-f(c)} \ge L\abs{x_n-c\,}.
+\]
+Jos $x_{n+1} \in [c-a,c+a]$, voidaan edelleen arvioida $\abs{x_{n+2}-c\,} \ge L^2\abs{x_n-c\,}$,
+jne. Koska oletettiin, että $x_n \neq c$ ja $L>1$, niin päätellään, että jollakin 
+$m \in \N,\ m>n$ pätee
+\[
+\abs{x_m-c\,} \ge L^{m-n}\abs{x_n-c\,} > a.
+\]
+Edellä on päätelty, että jos $x_n \neq c\ \forall n$, niin mistä tahansa indeksistä $N$ 
+eteenpäin on aina löydettävissä jokin indeksi $n>N$ siten, että $\abs{x_n-c\,} > a$. Tällöin 
+$x_n \not\kohti c$. \loppu
+
+Jos $f$ on derivoituva kiintopisteen ympäristössä tai ainakin kiintopisteessä (niinkuin usein),
+niin Lauseissa \ref{kp-lause 1} ja \ref{kp-lause 2} asetettujen ehtojen pätevyyttä voidaan 
+tutkia helposti derivaatan avulla. Ensinnäkin jos oletetaan, että $f$ on jatkuvasti derivoituva
+välillä $[c-a,c+a]$, niin Differentiaalilaskun väliarvolauseen mukaan on 
+$f(x)-f(c) = f'(\xi)(x-c)$ jollakin $\xi \in (c-a,c+a)$, kun $x \in [c-a,c+a]$. Näin ollen
+voidaan päätellä:
+\begin{align*}
+&\max_{x \in [c-a,c+a]}\,\abs{f'(x)} = L<1 
+                      \qimpl \text{Lauseen \ref{kp-lause 1} ehdot voimassa}. \\
+&\min_{x \in [c-a,c+a]}\,\abs{f'(x)} = L>1 
+                      \qimpl \text{Lauseen \ref{kp-lause 2} ehdot voimassa}.
+\end{align*}
+\jatko\jatko \begin{Exa} (jatko) Esimerkissä on $\abs{f'(x)} = \abs{\sin x} \le L<1$ esim.\
+välillä $[c-0.5,c+0.5]$. Esimerkin iteraatiolle ovat näin ollen voimassa Lauseen
+\ref{kp-lause 1} ehdot (kun $a=0.5$) indeksistä $n=1$ alkaen. \loppu
+\end{Exa} \seur
+Jos Lauseiden \ref{kp-lause 1} ja \ref{kp-lause 2} ehdot asetetaan muodossa 'jollakin $a>0$', 
+ts.\ väliä $[c-a,c+a]$ ei kiinnitetä etukäteen, niin ehtojen toteutumiselle saadaan seuraava 
+yksinkertainen kriteeri:
+\begin{Prop} \label{kp-prop} Jos $f$ on derivoituva kiintopisteessä $c$, niin pätee:
+\begin{align*}
+\abs{f'(c)} < 1 \qekv \text{Lauseen \ref{kp-lause 1} ehdot voimassa jollakin $a>0$}. \\[1mm]
+\abs{f'(c)} > 1 \qekv \text{Lauseen \ref{kp-lause 2} ehdot voimassa jollakin $a>0$}.
+\end{align*}
+\end{Prop}
+\tod Jos $\abs{f'(c)}<1$, niin derivaatan määritelmän ja raja-arvon $(\eps,\delta)$-kriteerin 
+(Lause \ref{approksimaatiolause}) mukaan jokaisella $\eps>0$ on olemassa $\delta>0$ siten,
+että pätee
+\[
+\left|\frac{f(x)-f(c)}{x-c} - f'(c)\right| < \eps, \quad 
+                        \text{kun}\ \abs{x-c} < \delta\ \ja\ x \neq c.
+\]
+Kun tässä valitaan $\eps = (1-\abs{f'(c)})/2>0$ ja käytetään kolmioepäyhtälöä, niin nähdään, 
+että Lauseen \ref{kp-lause 1} oletukset ovat voimassa jokaisella $a \in (0,\delta)$ 
+(esim.\ $a=\delta/2$), kun valitaan $L = (1+\abs{f'(c)})/2<1$. Tämä todistaa ensimmäisen 
+väittämän osan \fbox{$\impl$}\,. Osa \fbox{$\Leftarrow$} seuraa, kun Lauseen \ref{kp-lause 1}
+oletuksen (ii) perusteella päätellään, että on oltava $|f'(c)| \le L < 1$ (Määritelmät
+\ref{derivaatan määritelmä} ja \ref{funktion raja-arvon määritelmä} sekä Lause
+\ref{jonotuloksia} [V1]). Toinen väittämä todistetaan vastaavasti. \loppu
+
+Proposition \ref{kp-prop} ja Lauseen \ref{kp-lause 1} mukaisesti kiintopisteiteraatio 
+\eqref{kp-iteraatio} suppenee kohti kiintopistettä $c$, jos $\abs{f'(c)}<1$ ja lisäksi $x_0$ on
+\pain{riittävän} \pain{lähellä} kiintopistettä. Jos taas $\abs{f'(c)}>1$, niin $x_n \kohti c$ on
+Lauseen \ref{kp-lause 2} mukaisesti tosi vain siinä (melko onnekkaassa) tapauksessa, että 
+\index{attraktiivinen (kiintopiste)}%
+$x_n=c$ jollakin $n$. Näiden tulosten perusteella kiintopistettä sanotaan \kor{attraktiiviseksi}
+\index{hylkivä (kiintopiste)} \index{repulsiivinen (kiintopiste)}%
+(eli puoleensa vetäväksi), jos $\abs{f'(c)}<1$ ja \kor{hylkiväksi} eli \kor{repulsiiviseksi},
+jos $\abs{f'(c)}>1$. Luokittelun ulkopuolelle (tapauskohtaisesti tutkittaviksi) jäävät siis 
+ainoastaan sellaiset kiintopisteet, joissa $f'(c)=\pm 1$.
+\begin{Exa}
+Funktion $f(x)=\sqrt{x+1}$ ainoa kiintopiste $c$ on
+\[
+c\geq 0 \ \ja \ c=\sqrt{c+1} \ \ekv \ c=\frac{1}{2}(\sqrt{5}+1).
+\]
+Koska
+\[
+f'(x) = \frac{1}{2\sqrt{1+x}}\ \impl\ 0 < f'(c) < \frac{1}{2}\,,
+\]
+niin kyseessä on attraktiivinen kiintopiste. Tarkempi tutkimus paljastaa, että 
+kiintopisteiteraatio $x_{n+1}=f(x_n)$ suppenee jokaisella $x_0 \in D_f = [-1,\infty)$. 
+\loppu \end{Exa}
+\begin{Exa} Funktiolla $f(x)=1-x^2$ on kaksi kiintopistettä:
+\[
+c=1-c^2 \ \ekv \ c=\frac{1}{2}(-1\pm\sqrt{5}).
+\]
+Koska $f'(c)=-2c=1\pm\sqrt{5}$, niin nähdään, että molemmat kiintopisteet ovat hylkiviä. Näin
+ollen päätellään (Lause \ref{kp-lause 2}), että kiintopisteiteraatio
+\[
+x_0 \in \R, \quad x_{n+1} = 1-x_n^2, \quad n=0,1,\ldots
+\]
+voi olla suppeneva vain jos $x_n=\frac{1}{2}(1\pm\sqrt{5})$ jollakin $n$. Tämä mahdollisuus on
+pois suljettu esim.\ jos $x_0\in\Q$, koska tällöin $\seq{x_n}$ on rationaalilukujono. \loppu
+\end{Exa}
+
+\subsection*{Asymptoottinen suppenemisnopeus}
+
+Tarkastellaan kiintopisteiteraatiota \eqref{kp-iteraatio} olettaen, että (i) $f$ on derivoituva
+kiintopisteessä $c$ ja $\abs{f'(c)}<1$, (ii) $x_n \kohti c$, ja (3) $x_n \neq c\ \forall n$. 
+Tällöin iteraatiokaavasta \eqref{kp-iteraatio} ja derivaatan määritelmästä seuraa
+\[
+\lim_{n\kohti\infty}\frac{x_{n+1}-c}{x_n-c} 
+                        = \lim_{n\kohti\infty}\frac{f(x_n)-f(c)}{x_n-c} = f'(c).
+\]
+Tällä perusteella voidaan sanoa, että luku $q=f'(c)$ määrää kiintopisteiteraation 
+\index{asymptoottinen suppenemisnopeus}%
+\kor{asymptoottisen suppenemisnopeuden}: Suurilla $n$:n arvoilla on likimain
+\[
+ x_n -c\ \sim\ \text{vakio} \times q^n \quad \text{($n$ suuri)}.
+\]
+Tästä nähdään myös, että jos $q>0$, niin jono $\seq{x_n}$ on asymptoottisesti (eli suurilla $n$)
+monotoninen. Jos $q<0$, niin jono on asymptoottisesti 'hyppelehtivä', vrt.\ kuvio.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(11,6)(0,-2)
+\multiput(0,0)(6,0){2}
+{
+\put(0,0){\vector(1,0){4}} \put(3.8,-0.4){$x$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$y$}
+}
+\curve(0.5,1.5,2,2.5,4,2.8) \put(0.2,2.6){$y=f(x)$}
+\curve(6.5,2.5,7.8,1.5,10,0.6) \put(6.2,2.8){$y=f(x)$}
+\put(0,0){\line(1,1){3.5}} \put(6,0){\line(1,1){3.5}} \put(3,3.6){$y=x$} \put(9,3.6){$y=x$}
+\put(1,-1.6){$0<q<1$} \put(7,-1.6){$-1<q<0$}
+\path(0.8,0)(0.8,1.8)(1.8,1.8)(1.8,2.4)(2.4,2.4)(2.4,2.6)(2.6,2.6)
+\dashline{0.1}(1.8,0)(1.8,1.8)
+\dashline{0.1}(2.4,0)(2.4,2.4)
+\dashline{0.2}(2.7,0)(2.7,2.7)
+\put(0.6,-0.6){$x_0$} \put(1.6,-0.6){$x_1$} \put(2.2,-0.6){$x_2$} \put(2.62,-0.3){$c$}
+\path(9.4,0)(9.4,0.8)(6.8,0.8)(6.8,2.2)(8.2,2.2)(8.2,1.3)(7.3,1.3)(7.3,1.8)(7.8,1.8)(7.8,1.5)
+(7.5,1.5)(7.5,1.7)
+\dashline{0.1}(6.8,0)(6.8,0.8)
+\dashline{0.1}(8.2,0)(8.2,2.2)
+\dashline{0.1}(7.3,0)(7.3,1.3)
+\dashline{0.1}(7.8,0)(7.8,1.8)
+%\dashline{0.1}(7.5,0)(7.5,1.5)
+\dashline{0.2}(7.6,0)(7.6,1.6)
+\put(9.2,-0.6){$x_0$} \put(6.6,-0.6){$x_1$} \put(8,-0.6){$x_2$} \put(7.52,-0.3){$c$}
+\end{picture}
+%\caption{Kiintopisteiteraation geometria}
+\end{center}
+\end{figure}
+\begin{Exa} Esimerkissä \ref{kp-esim 1} oli $\,f'(c)=-\sin c \approx -0.67$. Suppenemisen 
+verkkaisuus ja 'hyppelehtivyys' sai näin selityksensä. \loppu
+\end{Exa} 
+Kiintopisteiteraatio $x_{n+1}=f(x_n)$ suppenee asymptoottisesti erityisen nopeasti silloin, kun 
+kiintopisteessä on $f'(c)=0$. Jotta myös tämä tapaus tulisi tarkemmin tutkituksi, oletettakoon
+yleisemmin, että jollakin $m\in\N$ ja $A\in\R,\ A \neq 0$ on voimassa
+\[
+\lim_{x \kohti c}\,\frac{f(x)-f(c)}{(x-c)^m} \,=\, A.
+\]
+Jos oletetaan samoin kuin edellä, että kiintopisteiteraatiolle pätee $x_n \kohti c$ ja 
+$x_n \neq c\ \forall n$, niin oletuksen perusteella pätee
+\[
+\lim_{n\kohti\infty} \frac{x_{n+1}-c}{(x_n-c)^m}\ 
+                =\ \lim_{n\kohti\infty} \frac{f(x_n)-f(c)}{(x_n-c)^m}\ = A,
+\]
+jolloin suurilla $n$:n arvoilla on likimain
+\[
+x_{n+1}-c\ \approx A(x_n-c)^m \quad \text{($n$ suuri)}.
+\]
+Tämän perusteella sanotaan, että $m$ on suppenemisnopeuden (asymptoottinen) 
+\index{kertaluku!aa@suppenemisnopeuden}
+\kor{kertaluku}. --- Huomattakoon, että jos $f'(c) \neq 0$, niin ym.\ oletus on
+(derivaatan määritelmän nojalla, vrt.\ Luku \ref{derivaatta}) voimassa kun $m=1$ ja $A=f'(c)$.
+Suppenemista tässä tapauksessa (kun $\abs{A}<1$) sanotaankin
+\index{lineaarinen suppeneminen} \index{superlineaarinen (suppeneminen)}%
+\kor{lineaariseksi} (kertaluku $=1$), ja muissa tapauksissa \kor{superlineaariseksi}.
+Superlineaarisista tavallisin on tapaus $m=2$, jolloin sanotaan, että kiintopisteiteraatio
+suppenee \kor{kvadraattisesti}. \index{kvadraattinen!a@suppeneminen}
+\begin{Exa} \label{neliöjuuri a} Luvun \ref{monotoniset jonot} Esimerkissä 
+\ref{sqrt 2 algoritmina} tarkasteltiin tapauksessa $a=2$ palautuvaa lukujonoa
+\[
+x_0=a, \quad x_{n+1} = \frac{1}{2}\left(x_n + \frac{a}{x_n}\right), \quad n=0,1,\ldots
+\]
+Olkoon nyt yleisemmin $a>0,x_0>0$ ja tulkitaan lukujono kiintopisteiteraatioksi funktiolle 
+$f(x)=\frac{1}{2}(x+\frac{a}{x})$. Kiintopisteitä on kaksi: 
+\[
+c = \frac{1}{2}\left(c + \frac{a}{c}\right)\ \ekv\ c^2=a\ \ekv\ c=\pm\sqrt{a}.
+\]
+Näistä vain $c=\sqrt{a}$ on mahdollinen jonon $\seq{x_n}$ raja-arvo, kun $x_0>0$, koska tällöin
+on $x_n>0\ \forall n$. Tällä $c$:n arvolla nähdään, että
+\begin{align*}
+f(x)-f(c) = \frac{1}{2}\left(x + \frac{a}{x}\right) - \sqrt{a} 
+                       &= \frac{1}{2x}\,(x^2-2\sqrt{a}\,x+a) \\
+                       &= \frac{1}{2x}\,(x-c)^2.
+\end{align*}
+Tämän perusteella $(x-c)^{-2}[f(x)-f(c)] \kohti 1/(2c)$, kun $x \kohti c=\sqrt{a}$.
+Siis jos lukujono $\seq{x_n}$ suppenee, niin se suppenee kvadraattisesti. --- Tarkempi
+tutkimus osoittaa, että $x_n\kohti\sqrt{a}$ aina kun $x_0>0$. \loppu
+\end{Exa}
+
+\subsection*{Newtonin menetelmä}
+\index{Newtonin menetelmä|vahv}
+
+Jos funktio on derivoituva pisteessä $c$, niin sitä voidaan approksimoida pisteen $c$ 
+ympäristössä perustuen linearisaatioon (vrt. Luku \ref{derivaatta})
+\[
+f(x)\approx f(c)+f'(c)(x-c).
+\]
+Tähän linearisointiajatukseen perustuu epälineaaristen yhtälöiden ratkaisussa hyvin yleisesti 
+käytetty ja tehokas menetelmä, \kor{Newtonin menetelmä}. Newtonin menetelmässä etsitään 
+yhtälölle
+\[
+f(x)=0
+\]
+ratkaisua pisteen $x_0$ (alkuarvaus) lähistöltä. Algoritmissa $f$ linearisoidaan pisteessä $x_n$
+(aluksi $n=0$) ja ratkaistaan linearisoitu yhtälö
+\[
+f(x_n)+f'(x_n)(x-x_n)=0.
+\]
+Tämä ratkeaa, jos $f'(x_n)\neq 0$. Kun ratkaisua merkitään $x=x_{n+1}$, saadaan algoritmiksi
+\begin{equation} \label{N-iteraatio}
+\boxed{\quad x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)},\quad n=0,1,2,\ldots \quad} \tag{$\star\star$}
+\end{equation}
+Laskimien ja tietokoneohjelmien komentojen 'Solve' tai 'FindRoot' takana on yleensä joko tämä
+menetelmä tai jokin sen variaatio, kuten \kor{sekanttimenetelmä}, ks.\ kommentit edempänä.
+\begin{Exa} \label{neliöjuuri a - Newton} Jos $f(x)=x^2-a$, $a>0$, niin Newtonin algoritmi
+$f$:n nollakohdan $c=\sqrt{a}$ määrämiseksi on
+\[
+x_0>0, \quad x_{n+1}=x_n-\frac{x_n^2-a}{2x_n}
+                    =\frac{1}{2}\left(x_n+\frac{a}{x_n}\right),\quad n=0,1,2,\ldots
+\]
+Esimerkissä \ref{neliöjuuri a} oli siis kyse Newtonin menetelmästä. \loppu
+\end{Exa}
+Iteraatiokaavan \eqref{N-iteraatio} mukaisesti Newtonin algoritmi on kiintepistoiteraatio
+sovellettuna funktioon
+\[
+F(x)=x-\frac{f(x)}{f'(x)}.
+\]
+Algoritmin suosio perustuu siihen, että sikäli kuin iteraatio suppenee, suppeneminen on melko
+yleisin edellytyksin kvadraattista. Edellytys kvadraattiselle suppenemiselle on, että $f$
+\index{yksinkertainen!a@nollakohta (juuri)}%
+on nollakohdan $c$ lähellä riittävän säännöllinen ja että nollakohta on \kor{yksinkertainen},
+ts.\ $f'(c) \neq 0$. Seuraavan täsmällisen suppenemislauseen todistus perusuu
+differentiaalilaskennan väittämään, jota ei vielä ole käytettävissä. Sen vuoksi todistuksessa
+rajoitutaan toistaiseksi erikoistapaukseen, jossa $f$ on polynomi. (Yleisempi todistus,
+ks.\ Harj.teht.\,\ref{taylorin lause}:\ref{H-dif-4: Newtonin konvergenssi}.)
+\begin{Lause} \label{Newtonin konvergenssi} Jos $f$ on kahdesti jatkuvasti derivoituva välillä 
+$[c-a,c+a]$ jollakin $a>0$ ja $f(c)=0$ ja $f'(c)\neq 0$, niin Newtonin iteraatio 
+\eqref{N-iteraatio} suppenee $c$:tä kohti, kun $x_0$ on $c$:tä riittävän lähellä, ja pätee
+\[
+\lim_{n \kohti \infty} \frac{x_{n+1}-c}{(x_n-c)^2} = \frac{f''(c)}{2f'(c)}\,.
+\]
+\end{Lause}
+\underline{Todistus}, kun $f$ on polynomi: Koska $f(c)=0$, niin $f(x)=(x-c)g(x)$, missä
+$g$ on polynomi, ja samalla perusteella $g(x)-g(c)=(x-c)h(x)$ ja $f'(x)-f'(c)=(x-c)r(x)$,
+missä $h$ ja $r$ ovat polynomeja (Lause \ref{algebran pl}). Derivoimalla nähdään, että
+$f'(c)=g(c)$, joten saadaan hajotelmat
+\begin{align*}
+f(x)  \,&=\, (x-c)[g(c)+(x-c)h(x)] \,=\, f'(c)(x-c)+(x-c)^2h(x), \\
+f'(x) \,&=\, f'(c)+(x-c)r(x).
+\end{align*}
+Sijoittamalla nämä $F$:n lausekkeeseen ja huomioimalla, että $F(c)=c$, seuraa
+\begin{align*}
+F(x)-F(c)\ &=\ x-c - \frac{f(x)}{f'(x)} \\
+           &=\ x-c - \frac{f'(c)(x-c)+(x-c)^2h(x)}{f'(c)+(x-c)r(x)} \\
+           &=\ \frac{(x-c)^2[r(x)-h(x)]}{f'(c)+(x-c)r(x)}\,.
+\end{align*}
+Tämän perusteella
+\[
+\lim_{x \kohti c}\,\frac{F(x)-F(c)}{(x-c)^2} \,=\, \frac{r(c)-h(c)}{f'(c)}\,.
+\]
+Derivoimalla em.\ $f$:n ja $f'$:n hajotelmia nähdään edelleen, että $h(c)=\tfrac{1}{2}f''(c)$
+ja $r(c)=f''(c)$, joten väite seuraa. \loppu
+
+Lauseen \ref{Newtonin konvergenssi} perusteella Newtonin iteraation konvergenssi on lauseen
+oletuksin kvadraattista, tai jopa 'superkvadraattista' (jos $f''(c)=0$). Jos $f$ täyttää
+Lauseen \ref{Newtonin konvergenssi} säännöllisyysehdon mutta nollakohta $c$ on
+\index{kaksinkertainen nollakohta}%
+\kor{kaksinkertainen}, ts.\
+\[
+f(c)=f'(c)=0, \ f''(c)\neq 0,
+\]
+niin Newtonin algoritmi suppenee tässäkin tapauksessa (riittävän läheltä $c$:tä), mutta
+suppeneminen hidastuu lineaariseksi. Tarkemmin pätee tässä tapauksessa:
+$\lim_n (x_{n+1}-c)/(x_n-c) = 1/2$ 
+(Harj.teht.\,\ref{H-V-7: moninkertainen nollakohta ja Newton}; vrt.\ myös Esimerkki
+\ref{neliöjuuri a}, kun $a=0$). 
+\begin{Exa} Ratkaise Esimerkin \ref{kp-esim 1} yhtälö $x=\cos x$ Newtonin menetelmällä.
+\end{Exa}
+\ratk Kun valitaan $\,f(x)=x-\cos x$, niin Lauseen \ref{Newtonin konvergenssi} ehdot ovat
+voimassa ja $f''(c)=\cos c \neq 0$, joten Newtonin iteraatio suppenee (sikäli kuin suppenee)
+kvadraattisesti. Iteraatiokaava on
+\[
+x_{n+1}\ =\ x_n - \frac{x_n-\cos x_n}{1+\sin x_n}\
+         =\ \frac{x_n\sin x_n+\cos x_n}{1+\sin x_n},\quad n=0,1,2,\ldots
+\]
+Alkuarvauksella $x_0=0$ on tulos (vrt.\ Esimerkki \ref{kp-esim 1})
+\begin{align*}
+x_0    &= 0 \\
+x_1    &= 1 \\
+x_2    &= 0.7503638678.. \\
+x_3    &= 0.7391128909.. \\
+x_4    &= 0.7390851333.. \\
+x_5    &= 0.7390851332.. \\
+\vdots & \loppu
+\end{align*}
+
+Jos derivaatta $f'$ on nopeasti muuttuva $f$:n nollakohdan lähellä, voi Newtonin menetelmä
+olla hyvin herkkä alkuarvaukselle, eikä iteratio välttämättä suppene lainkaan. Laskentaohjelma
+antaa silloin tuloksen 'failed to converge'. Tällöin yleensä yksinkertaisesti vaihdellaan
+alkuarvoa $x_0$, kunnes onni kääntyy. Toinen mahdollisuus on käyttää jotakin varmempaa
+menetelmää hyvän alkuarvauksen hakuun, jolloin Newtonin iteraation tehtäväksi jää 
+'loppukiihdytys'. Esimerkiksi Bolzanon lauseen (Lause \ref{Bolzanon lause}) todistuksessa
+käytetty puolitus\-konstruktio on aloitusmenetelmänä oivallinen --- hidas mutta varma.
+\begin{Exa}
+Jos funktion $f(x)=x/(1+x^2)$ nollakohtaa haetaan Newtonin menetelmällä, tulee
+iteraatiokaavaksi
+\[
+x_{n+1}=F(x_n)=-\frac{2x_n^3}{1-x_n^2},\quad n=0,1,2,\ldots
+\]
+Suppenemisalueen rajalle joudutaan, jos valitaan $x_0=a\neq 0$ siten, että $x_1=-a$, jolloin 
+iteraatiokaavan mukaan on $x_n=(-1)^na$. Näin käy siis kun
+\[
+a=\frac{2a^3}{1-a^2} \ \ja \ a\neq 0 \ \ekv \ a=\pm \frac{1}{\sqrt{3}}\,.
+\]
+Jos $\abs{x_0}<1/\sqrt{3}$, niin iteraatio suppenee: $x_n\kohti 0$. (Suppenemisnopeuden
+kertaluku on $m=3$, sillä $\,\lim_{x \kohti 0}\,x^{-3}F(x)=-2$.) Jos $\abs{x_0}\geq 1/\sqrt{3}$,
+on tulos 'failed to converge'. Geometrisestikin nähdään, että jos $\abs{x_0}>1/\sqrt{3}$, niin
+itse asiassa $\abs{x_n}\kohti\infty$ (kuvassa $x_n\kohti -\infty$).
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12,4)(-6,-2)
+\put(-6,0){\vector(1,0){12}} \put(5.8,-0.4){$x$}
+\put(0,-1.5){\vector(0,1){3.5}} \put(0.2,1.8){$y$}
+\curve(
+   -6.0000,   -0.6000,
+   -5.5000,   -0.6423,
+   -5.0000,   -0.6897,
+   -4.5000,   -0.7423,
+   -4.0000,   -0.8000,
+   -3.5000,   -0.8615,
+   -3.0000,   -0.9231,
+   -2.5000,   -0.9756,
+   -2.0000,   -1.0000,
+   -1.5000,   -0.9600,
+   -1.0000,   -0.8000,
+   -0.5000,   -0.4706,
+         0,         0,
+    0.5000,    0.4706,
+    1.0000,    0.8000,
+    1.5000,    0.9600,
+    2.0000,    1.0000,
+    2.5000,    0.9756,
+    3.0000,    0.9231,
+    3.5000,    0.8615,
+    4.0000,    0.8000,
+    4.5000,    0.7423,
+    5.0000,    0.6897,
+    5.5000,    0.6423,
+    6.0000,    0.6000)
+\multiput(-2,0)(4,0){2}{\drawline(0,0)(0,-0.1)}
+\multiput(-1.15,0)(2.3,0){2}{\linethickness{0.6mm} \line(0,-1){0.15}}
+\drawline(-1.24,-0.89)(1.55,0)
+\drawline(1.55,0.97)(-4.64,0)
+\dashline{0.1}(-1.24,0)(-1.24,-0.89)
+\dashline{0.1}(1.55,0)(1.55,0.97)
+\dashline{0.1}(-4.64,0)(-4.64,-0.72)
+\put(-2.4,-0.6){$-1$} \put(1.93,-0.6){$1$}
+\put(-1.35,0.15){$x_0$} \put(1.4,-0.4){$x_1$} \put(-4.74,0.15){$x_2$}
+\put(-1.05,-1.6){$\underbrace{\hspace{2.3cm}}_{(-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}})}$}
+\put(1.1,-2.25){= suppenemisväli}
+\end{picture}
+%\caption{Newtonin menetelmä funktiolle $f(x)=x/(1+x^2)$}
+\end{center}
+\end{figure}
+\end{Exa}
+
+\subsection*{Sekanttimenetelmä}
+\index{sekanttimenetelmä|vahv}
+
+Jos funktion derivoituvuudessa on ongelmia, tai jos derivaattoja on hankala määrätä, voidaan
+käyttää Newtonin mentelmän lähisukulaista, \kor{sekanttimenetelmää}. Tässä ideana on käyttää
+pisteiden $(x_{n-1},f(x_{n-1}))$ ja $(x_n,f(x_n))$ kautta kulkevaa suoraa eli käyrän $y=f(x)$ 
+\index{sekantti (käyrän)}%
+\kor{sekanttia} funktion approksimointiin määrättäessä seuraavaa pistettä $x_{n+1}$. Lauseen 
+\ref{Newtonin konvergenssi} oletuksilla sekanttimenetelmän iteraatio suppenee lähes yhtä
+nopeasti kuin Newtonin.\footnote[2]{Sekanttimenetelmän asymptoottinen suppenemisnopeus on
+lineaarisen ja
+kvadraattisen suppenemisen välimuoto; tarkemmin on osoitettavissa, että Lauseen
+\ref{Newtonin konvergenssi} oletuksin pätee
+\[
+\lim_n \frac{|x_{n+1}-c|}{|x_n-c|^\alpha} = \left|\frac{f''(c)}{2f'(c)}\right|,
+\]
+missä $\alpha=\tfrac{1}{2}(\sqrt{5}+1) \approx 1.62$. (Potenssifunktio
+$f(x)=x^\alpha,\ \alpha\not\in\Q$ määritellään jäljempänä Luvussa
+\ref{yleinen eksponenttifunktio}.)} Algoritmin käyntiin saattamiseksi on sekanttimenetelmässä
+annettava kaksi alkuarvausta $x_0,x_1$.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12,6)
+\drawline(0,2)(5,2) \drawline(7,2)(12,2)
+\curve(0.5,1.7,3,3,4,6) \drawline(2,1.8)(4,5)
+\curve(7.5,1.7,10,3,11,6) \drawline(11.4,4.55)(8.9,1.8)
+\dashline{0.1}(9.9,2)(9.9,2.9)
+\dashline{0.1}(3.8,2)(3.8,4.65)
+\dashline{0.1}(2.38,2)(2.38,2.43)
+\put(2.28,1.6){$x_n$} \put(3.7,1.6){$x_{n-1}$} \put(9.8,1.6){$x_n$}
+\put(2,1){$x_{n+1}$} \put(9,1){$x_{n+1}$}
+\dashline{0.1}(2.12,1.3)(2.12,2)
+\dashline{0.1}(9.08,1.3)(9.08,2)
+\put(1,0){Sekanttimenetelmä} \put(9,0){Newton}
+\end{picture}
+\end{center}
+\end{figure}
+
+
+\Harj
+\begin{enumerate}
+
+\item
+Seuraavat yhtälöt voidaan ratkaista kiintopisteiteraatiolla. Määritä asymptoottiset 
+suppenemisnopeudet tarkasti (jos mahdollista) tai yhden desimaalin tarkkuudella:
+\begin{align*}
+&\text{a)}\ \ x=\frac{12}{1+x} \qquad\ \
+ \text{b)}\ \ x=\sqrt{3+x} \qquad
+ \text{c)}\ \ x=\frac{1}{2+x^2} \\
+&\text{d)}\ \ x=\sqrt[3]{x+9} \qquad 
+ \text{e)}\ \ x=\cos\frac{x}{3} \qquad\quad 
+ \text{f)}\ \ x=1+\frac{1}{4}\sin x
+\end{align*}
+
+\item
+Tutki, mitkä polynomin $p(x)=x^3+8x^2-44x-10$ nollakohdista voidaan tarkentaa
+kiintopisteiteraatiolla
+\[
+x_{n+1}=\frac{1}{44}(x_n^3+8x_n^2-10), \quad n=0,1,\ldots
+\]
+olettaen, että käytettävissä on riittävän hyvä alkuarvaus $x_0$. Miten tähän 
+iteraatiomenetelmään on päädytty?
+
+\item
+Yhtälön $x^3+x=1$ reaalista ratkaisua voidaan yrittää hakea kiintopisteiteraatiolla
+hajottamalla yhtälö muotoon
+\[
+\text{a)}\,\ x=1-x^3 \quad\ 
+\text{b)}\,\ x=x^{-2}-x^{-1} \quad\
+\text{c)}\,\ x=\sqrt[3]{1-x} \quad\
+\text{d)}\,\ x=\frac{1}{1+x^2}
+\]
+Tutki, miten iteraatiot (asymptoottisesti) suppenevat tai hajaantuvat olettaen, että
+alkuarvaus on hyvin lähellä kiintopistettä.
+
+\item
+a) Yhtälö $\,x=\cos x\,$ voidaan kirjoittaa muotoon $y=\Arccos y$ ja yrittää ratkaista 
+kiintopisteiteraatiolla $\,y_{n+1}=\Arccos y_n\,$. Toimiiko menetelmä? \newline
+b) Jos yhtälö ratkaistaan iteraatiolla $\,x_0=0,\ x_{n+1}=\cos x_n$, niin mitä lukua kohti ja 
+kuinka nopeasti iteraatio suppenee, jos funktioevaluaatioissa $x_n \map \cos x_n$ muuttujan
+yksikkö on aste, ts.\ $\cos x=\cos x\aste$\,? Kokeile valisemalla laskimeen astemoodi ja
+painelemalla \fbox{$\cos$} -- näppäintä!
+
+\item
+Näytä, että jos $x_0$ on rationaaliluku, niin kiintopisteiteraatio
+\[
+x_{n+1}=(x_n-2)^2, \quad n=0,1,\ldots
+\]
+suppenee vain, jos $x_0$ on jokin luvuista $0,1,2,3,4$.
+
+\item
+Johda Newtonin iteraatiokaava luvun $\sqrt[m]{a}$ määräämiseksi funktion $f(x)=x^m-a$
+nollakohtana ($a>0,\ m\in\N,\ m \ge 2$). Päättele suppeneminen kvadraattiseksi. Päättele myös 
+geometrisesti, että iteraatio suppenee aina kun $x_0>0$.
+
+\item
+Etsi seuraavien funktioiden nollakohdat annetulta väliltä neljän desimaalin tarkkuudella
+käyttäen Newtonin menetelmää:
+\begin{align*}
+&\text{a)}\ \ f(x)=x^3+2x-1, \quad c\in[0,1] \\
+&\text{b)}\ \ f(x)=x^4-8x^2-x+16, \quad c\in[1,3] \\
+&\text{c)}\ \ f(x)=\cos x-x^2, \quad c\in(-\infty,\infty) \\
+&\text{d)}\ \ f(x)=3\sin x-x-1, \quad c\in[0,\infty)
+\end{align*}
+
+\item
+Laske seuraavien funktioiden maksimi- ja minimiarvot tarkasti, jos mahdollista, muuten
+kuuden desimaalin tarkkuudella:
+\[
+\text{a)}\,\ \frac{\sin x}{1+x^2} \qquad 
+\text{b)}\,\ \frac{\cos x}{1+x^2} \qquad
+\text{c)}\,\ f(x)=\begin{cases} 
+             \dfrac{\sin x}{x}\,, &\text{kun}\ x \neq 0 \\ \,1, &\text{kun}\ x=0
+             \end{cases}
+\]
+
+\item
+Millä $a$:n arvoilla yhtälöllä $\cos x=ax$ on täsmälleen kaksi ratkaisua?
+
+\item
+Laske (likimäärin)\, a) funktion $f(x,y)=xy^2+y^4$ maksimiarvo ympyräviivalla
+$S:\ x^2+y^2=1$, \, b) funktion $f(x,y)=(x-y)(x+y)^2$ pienin ja suurin arvo ympyräviivalla 
+$x=2\cos t,\, y=1+2\sin t,\, t\in [0,2\pi)$.
+
+\item 
+Millaisen algoritmisen muodon saa jakolaskuoperaatio $a \map a^{-1}$, kun se suoritetaan 
+soveltamalla Newtonin iteraatiota funktioon $f(x)=x^{-1}-a$\,? Tarvitaanko algoritmissa 
+jakolaskuja? Kokeile, kun $a=3$.
+
+\item
+Funktioevaluaatio $y \map \Arctan y$ halutaan toteuttaa Newtonin menetelmään perustuvalla
+algoritmilla, joka sisältää $\R$:n kuntaoperaatioiden lisäksi ainoastaan funktioevaluaatioita 
+$x \map \cos x$ ja $x \map \sin x$. Esitä tällainen algoritmi.
+
+\item
+Laske luvulle $\sqrt{2}$ approksimaatio iteroimalla neljä kertaa sekanttimenetelmällä
+alkuarvauksista $x_0=2,\ x_1=1.5$ (funktio $f(x)=x^2-2$). Vertaa Newtonin menetelmään.
+
+\item (*) \label{H-V-7: kontraktiokuvauslause} \index{kontraktio(kuvaus)}
+\index{Kontraktiokuvauslause}
+Sanotaan, että funktio $f$ on \kor{kontraktio} välillä $[a,b]$, jos $f$ on välillä $[a,b]$
+Lipschitz-jatkuva vakiolla $L<1$. Todista \kor{Kontraktiokuvauslause}: Jos $f$ on kontraktio
+välillä $A=[a,b]$ ja lisäksi $f(A) \subset A$, niin pätee:
+\begin{itemize}
+\item[(i)]  $f$:llä on täsmälleen yksi kiintopiste $c$ välillä $A$.
+\item[(ii)] Kiintopisteiteraatio $x_{n+1}=f(x_n),\ n=0,1,\ldots$ suppenee kohti $c$:tä
+            jokaisella $x_0 \in A$.
+\end{itemize}
+\kor{Vihje}: Sovella ensin Bolzanon lausetta funktioon $g(x)=f(x)-x$.
+
+\item (*) \label{H-V-7: yksinkertaistettu Newton}
+Funktiosta $f$ tiedetään, että $f$ on (tuntemattoman) nollakohdan $c$ lähellä jatkuvasti
+derivoituva ja että $f'(c) \neq 0$. Etsitään nollakohtaa kiintopisteiteraatiolla
+\[
+x_{n+1}=x_n-kf(x_n), \quad n=0,1,\ldots
+\]
+Näytä, että jos $x_0$ on riittävän lähellä $c$:tä ja valitaan $k=1/f'(x_0)$, niin iteraatio
+suppenee kohti $c$:tä ainakin lineaarisesti. Näytä edelleen, että rajalla $x_0 \kohti c$
+suppeneminen muuttuu superlineaariseksi, ts.\ suurilla $n$ pätee $x_n-c \sim q^n$, missä
+$q \kohti 0$ kun $x_0 \kohti c$.
+
+\item (*) \label{H-V-7: moninkertainen nollakohta ja Newton}
+Näytä, että jos $f$ on polynomi ja $c$ on $f$:n $m$-kertainen nollakohta, $m \ge 2$, niin
+Newtonin iteraatio suppenee $c$:tä kohti aina kun alkuarvaus on riittävän lähellä $c$:tä 
+ja suppeneminen on asymptoottisesti lineaarista, tarkemmin 
+\[
+q = \lim_n \frac{x_{n+1}-c}{x_n-c} = \frac{1}{m}\,.
+\] 
+
+\item (*) \label{H-V-7: kuutiollisia iteraatioita} \index{kuutiollinen suppeneminen}
+Luku $\sqrt{a}$ voidaan määrätä iteraatioilla
+\begin{align*}
+&\text{a)}\ \ x_{n+1}=\frac{x_n^3+3ax_n}{3x_n^2+a}\,, \quad n=0,1\ldots \\
+&\text{b)}\ \ x_{n+1}=\frac{3x_n}{8}+\frac{3a}{4x_n}-\frac{a^2}{8x_n^3}\,, \quad n=0,1,\ldots
+\end{align*}
+Näytä, että jos $x_n\kohti\sqrt{a}$, niin suppeneminen on kummassakin tapauksessa
+\kor{kuutiollista} (kertaluku=3). Onko iteraatioilla muita kiintopisteitä ja minkälaatuisia ne
+ovat? Kokeile menetelmiä käytännössä, kun $a=2$, $x_0=1.5$, ja vertaa Esimerkin
+\ref{neliöjuuri a} kvadraattiseen menetelmään.
+
+\item (*) \index{zzb@\nim!Laskiainen, 1.\ lasku}
+(Laskiainen, 1.\ lasku) Lumilautailija haluaa rakentaa mäen, jota pitkin voi laskea $xy$-tason
+origosta pisteeseen $(5,-1)$ nopeinta mahdollista reittiä (gravitaation suunta $-\vec j$, ei
+kitkaa). Ryhdy konsultiksi käyttäen vanhaa tietoa\footnote[2]{Lyhimmän ajan käyrän eli
+\kor{brakistokronin} ongelman ratkaisi sveitsiläinen matemaatikko \hist{Johann Bernoulli}
+(1667-1748) v.\ 1697. Ratkaisemisessa kilpaili myös Johann B:n veli \hist{Jakob} (1654-1705),
+jonka mukaan mm.\ Bernoullin epäyhtälö (Propositio \ref{Bernoulli}) on nimetty.
+\index{Bernoulli, J.|av} \index{brakistokroni|av} \index{sykloidi!brakistokroni|av}},
+jonka mukaan oikea mäen profiili on sykloidin kaari
+\[
+\begin{cases} \,x=R(t-\sin t), \\ \,y=-R(1-\cos t). \end{cases}
+\]
+Laske siis $R$ ja esittele graafisesti ehdotuksesi optimaaliseksi mäeksi.
+
+\end{enumerate}

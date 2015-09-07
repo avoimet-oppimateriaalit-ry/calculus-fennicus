@@ -1,0 +1,23 @@
+\begin{picture}(0,0)%
+\includegraphics{kuvaII-9.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3604,3072)(1122,-1456)
+\put(2701,-556){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\alpha$}}}
+\put(2791,-1456){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$b$}}}
+\put(4006,164){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$a$}}}
+\put(2251,299){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$c$}}}
+\put(1936,-601){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}1}}}
+\put(1801,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\underbrace{\hspace{1.3cm}}_{\cos \alpha}$}}}
+\put(2251,-646){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\left\{\begin{array}{c} \vspace{0.9cm} \end{array} \right.$}}}
+\put(1396,-736){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\scriptstyle{\sin \alpha}$}}}
+\put(4726,389){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\cos \alpha = b/c$}}}
+\put(4726, 74){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\sin\alpha\,=a/c$}}}
+\end{picture}

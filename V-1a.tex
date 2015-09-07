@@ -1,0 +1,69 @@
+% Proposition \ref{jatkuvuuspropositio} todistus
+\tod Jos $x_n \in (a,c)\ \forall n$ ja $x_n \kohti c$, niin $f(x_n)=f_1(x_n)\ \forall n$, 
+jolloin $f_1$:n oletetun jatkuvuuden perusteella $f(x_n) = f_1(x_n) \kohti f_1(c)$. Ehto 
+$f(c)=f_1(c)$ on siis v‰ltt‰m‰tˆn $f$:n jatkuvuudelle $c$:ss‰. Valitsemalla 
+$x_n \in (c,b),\ x_n \kohti c$, seuraa vastaavasti, ett‰ ehto $f(c)=f_2(c)$ on samoin 
+v‰ltt‰m‰tˆn, jolloin on todistettu v‰itt‰m‰n osa \fbox{$\Rightarrow$}. 
+
+Osan \fbox{$\Leftarrow$} todistamiseksi olkoon $\seq{x_n}$ mik‰ tahansa jono, jolle p‰tee 
+$x_n \in (a,b)\ \forall n$ ja $x_n \kohti c$. T‰llˆin $f_1(x_n) \kohti f(c)$ ja 
+$f_2(x_n) \kohti f(c)$, koska $f_1$ ja $f_2$ ovat jatkuvia $c$:ss‰, ja koska oletuksen mukaan 
+$f_1(c)=f_2(c)=f(c)$. Olkoon nyt $\eps>0$. Koska $f_1(x_n) \kohti f(c)$ ja 
+$f_2(x_n) \kohti f(c)$, niin M‰‰ritelm‰n \ref{jonon raja} perusteella on olemassa indeksit 
+$N_1,N_2$, siten ett‰
+\[
+\abs{f_1(x_n)-f(c)} < \eps\,\ \text{kun}\ n>N_1\,, \quad 
+\abs{f_2(x_n)-f(c)} < \eps\,\ \text{kun}\ n>N_2\,.
+\]
+T‰llˆin jos $N = \max\{N_1,N_2\}$, niin p‰tee
+\[
+\abs{f(x_n)-f(c)} \le \max\{\abs{f_1(x_n)-f(c)},\,\abs{f_2(x_n)-f(c)}\} < \eps, 
+                                                          \quad \text{kun}\ n > N,
+\]
+sill‰ jokaisella $n$ on joko $f(x_n)=f_1(x_n)$ tai $f(x_n)=f_2(x_n)$. T‰ss‰ $\eps>0$ oli 
+mielivaltainen, joten M‰‰ritelm‰n \ref{jonon raja} perusteella $f(x_n) \kohti f(c)$. \loppu
+
+%k‰‰nteisfunktion jatkuvuuteen liittyv‰ esimerkki 
+Lause \ref{k‰‰nteisfunktion jatkuvuus} todistetaan myˆhemmin Luvussa \ref{weierstrassin lause}.
+T‰llˆin n‰hd‰‰n, ett‰ yleisempikin v‰itt‰m‰
+\[ 
+f:\ A \kohti B\,\ \text{jatkuva bijektio}\ \impl\ \inv{f}:\ B \kohti A\,\ \text{jatkuva bijektio} 
+\]
+on tosi esim.\ siin‰ tapauksessa, ett‰ $A$ koostuu ‰‰rellisen monesta erillisest‰ v‰list‰,
+kunhan jokainen v‰li on \pain{sul}j\pain{ettu}. Seuraavasta vastaesimerkist‰ n‰hd‰‰n, ett‰ t‰m‰ 
+rajoitus on v‰ltt‰m‰tˆn. 
+\begin{Exa}
+M‰‰ritell‰‰n funktio $f$ joukossa
+\begin{multicols}{2} \raggedcolumns
+\[
+D_f=A=[-1,0]\cup (1,2]
+\]
+seuraavasti:
+\[
+f(x)=\begin{cases}
+x &,\text{ kun } x\in [-1,0] \\
+x-1 \ &, \text{ kun } x\in (1,2]
+\end{cases}
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,4)(-2,-2)
+\put(-2,0){\vector(1,0){4}} \put(1.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){4}} \put(0.2,1.8){$y$}
+\drawline(-1,-1)(0,0)
+\drawline(1,0)(2,1)
+\put(-0.1,-0.1){$\bullet$}
+\end{picture}
+%\caption{$y=f(x)$}
+\end{center}
+\end{figure}
+\end{multicols}
+T‰llˆin $f$ on koko m‰‰rittelyjoukossaan jatkuva ja $f:A \kohti [-1,1]$ on bijektio, joten myˆs 
+$\inv{f}:[-1,1] \kohti A$ on bijektio (vrt. Luku \ref{k‰‰nteisfunktio}). Mutta \inv{f} ei ole 
+jatkuva pisteess‰ $x=0$. \loppu
+\end{Exa}
+Esimerkiss‰ on k‰‰nteisfunktion jatkuvuuden kannalta ongelmana, ett‰ m‰‰rittelyjoukon osav‰li 
+$(1,2]$ ei ole suljettu. Ongelmaa ei voi poistaa ottamalla $x=1$ mukaan m‰‰rittelyjoukkoon,
+sill‰ jos asetetaan $f(1)=0$, niin $f(0)=f(1)$, jolloin $f$ ei ole injektio, ja jos asetetaan 
+$f(1)=c \neq 0$, niin $f$ ei ole jatkuva pisteess‰ $x=1$.

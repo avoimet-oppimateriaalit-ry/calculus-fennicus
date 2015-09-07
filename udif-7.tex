@@ -1,0 +1,641 @@
+\section[Käänteisfunktiolause. Implisiittifunktiolause. \\ Kontraktiokuvauslause]
+{Käänteisfunktiolause. Implisiittifunktiolause. \\ Kontraktiokuvauslause}
+\label{käänteisfunktiolause} 
+\sectionmark{Käänteisfunktiolause}
+\alku
+
+Tässä luvussa tarkastellaan peruskysymystä epälineaarisen yhtälöryhmän ratkeavuudesta, kun 
+yhtälöitä ja tuntemattomia on yhtä monta. Olkoon $\mf(\mx)=(f_1(\mx),\ldots,f_n(\mx))$, \
+$\mx\in\DF_\mf\subset\R^n$ ja tarkastellaan yhtälöryhmää
+\begin{equation} \label{epälin yryhmä}
+\mf(\mx)=\my, \tag{$\star$}
+\end{equation}
+missä $\my\in\R^n$. Sikäli kuin yhtälöryhmällä on yksikäsitteinen ratkaisu $\mx\in\DF_\mf$
+jollakin $\my$, voidaan ratkaisu muodollisesti kirjoittaa
+\[
+\mx = \mf^{-1}(\my),
+\]
+\index{kzyzy@käänteisfunktio} \index{funktio B!i@käänteisfunktio}%
+missä $\mf^{-1}(\my)=(g_1(\my),\ldots,g_n(\my))$ on $\mf$:n \kor{käänteisfunktio}. Jos
+yhtälöryhmällä on yksikäsitteinen jokaisella $\my \in B$ ($B\subset\R^n$) ja
+$A=\mf^{-1}(B)=\{\mx\in\DF_\mf\ | \ \mf(\mx) \in B\}$, niin $\mf: A \kohti B$ on bijektio.
+\begin{Exa} \label{udif-7: esim 1} Olkoon $\mf(x,y)=(x+y,x^2-y^2),\ \mx=(x,y)\in\R^2$. Kun
+merkitään $\my=(u,v)$, niin yhtälöryhmä \eqref{epälin yryhmä} on
+\[
+\begin{cases} \,x+y =u, \\ \,x^2-y^2 =v. \end{cases}
+\]
+Jälkimmäisen yhtälön muodosta $u(x-y)=v$ nähdään, että jos $u \neq 0$, niin yhtälöryhmällä on
+yksikäsitteinen ratkaisu $x=\frac{1}{2}(u^2+v)/u$, $y=\frac{1}{2}(u^2-v)/u$. Suoralla
+$S:\,x+y=0$ on $\mf(x,y)=(0,0)$, joten tällä suoralla $\mf$ ei ole 1-1. Päätellään, että jos
+$A=\{(x,y)\in\R^2\ | \ x+y \neq 0\}\,$ ja $\,B=\{(u,v)\in\R^2\ |\ u \neq 0\}$, niin
+$\mf:\,A \kohti B$ on bijektio ja
+\[
+\inv{\mf}(\my) \,=\, \left(\frac{u^2+v}{2u}\,,\,\frac{u^2-v}{2u}\right), \quad 
+                     \my = (u,v) \in B. \loppu
+\]
+\end{Exa}
+
+\subsection*{Paikallinen käänteisfunktio. Käänteisfunktiolause}
+
+Esimerkissä \ref{udif-7: esim 1} yhtälöryhmä \eqref{epälin yryhmä} ratkesi täydellisesti.
+Tavallisemmin epälineaarisen yhtälöryhmän täydellinen ratkaiseminen on vaikeaa ellei
+mahdotonta, eikä myöskään mitään lineaaristen yhtälöryhmien teoriaan
+verrattavaa yleisempää ratkeavuusteoriaa ole. Sen sijaan voidaan suhteellisen yleisin ehdoin
+selvittää kysymys yhtälöryhmän p\pain{aikallisesta} ratkeavuudesta seuraavan (sovelluksissa
+tyypillisen, vrt.\ edellinen luku) ongelman asettelun mukaisesti: Jos $\ma \in \DF_\mf$ ja
+$\mb=\mf(\ma)$, niin onko (ja millä ehdoilla) yhtälöryhmällä \eqref{epälin yryhmä}
+yksikäsitteinen ratkaisu \pain{lähellä} \pain{$\ma$:ta}, kun $\my$ on samoin \pain{lähellä}
+\pain{$\mb$:tä}\,?
+\begin{Def} \label{paikallinen kääntyvyys} \index{paikallinen käänteisfunktio|emph}
+\index{kzyzy@käänteisfunktio!a@paikallinen|emph}
+Funktio $\mf:\DF_f\kohti\R^n$, $\DF_\mf\subset\R^n$, on \kor{paikallisesti kääntyvä} 
+(engl.\ locally invertible) pisteessä $\ma\in D_\mf$, jos $\exists\delta>0$ siten, että $\mf$
+on määritelty ympäristössä $U_\delta(\ma)=\{\mx\in\R^n \ | \ \abs{\mx-\ma}<\delta\}$ ja on
+tähän ympäristöön rajoitettuna kääntäen yksikäsitteinen kuvaus. Käänteisfunktiota
+\[
+\mx=\inv{\mf}(\my) \ \ekv \ \my=\mf(\mx) \ \ja \ \mx\in U_\delta(\ma)
+\]
+sanotaan $\mf$:n \kor{paikalliseksi} (lokaaliksi) \kor{käänteisfunktioksi}.
+\end{Def}
+\jatko \begin{Exa} (jatko) Ratkaisemalla yhtälöryhmä $\mf(\mx)=\my$ todettiin esimerkin
+funktio $\mf$ kääntyväksi rajoitettuna joukkoon $A=\{(x,y)\in\R^2\ | \ x+y \neq 0\}$.
+Myös Määritelmän \ref{paikallinen kääntyvyys} mukaisesti $\mf$ on paikallisesti kääntyvä
+jokaisessa pisteessä $\ma = (a,b) \in A$, sillä $A$ on avoin joukko, jolloin
+$\forall (a,b) \in A\ \exists \delta>0$ siten, että $U_\delta(a,b) \subset A$, jolloin $\mf$ on
+tähän ympäristöön rajoitettuna 1--1. (Tarkemmin pätee tässä: $U_\delta(a,b) \subset A$
+täsmälleen kun $\delta \le d$, missä $d=|a+b|/\sqrt{2}$, on pisteen $P=(a,b)$ etäisyys suorasta
+$S: x+y=0$.) \loppu
+\end{Exa}
+
+Yhden reaalimuuttujan funktion tapauksessa paikalliselle kääntyvyydelle voidaan helposti antaa
+riittävät ehdot derivaatan avulla. Oletetaan:
+\begin{itemize}
+\item[(i)]   $f$ on derivoituva välillä $(a-\delta,a+\delta)$ jollakin $\delta>0$.
+\item[(ii)]  $f'(x)$ on jatkuva pisteesä $x=a$.
+\item[(iii)] $f'(a) \neq 0$.
+\end{itemize}
+Näiden oletuksien perusteella on joko $f'(x)>0$ tai $f'(x)<0$ välillä $[a-\rho,a+\rho]$
+jollakin $\rho\in(0,\delta)$ (Propositio \ref{jatkuvan funktion jäykkyys}), jolloin $f$ on
+ko.\ välillä aidosti monotoninen (Lause \ref{monotonisuuskriteeri}) ja siis 1-1. Ehdot
+(i)--(iii) ovat siis riittävät $f$:n paikalliselle kääntyvyydelle pisteessä $a$. Koska $f$ on
+näillä ehdoilla sekä aidosti monotoninen että jatkuva välillä $[a-\rho,a+\rho]$, niin
+päätellään myös (Lause \ref{ensimmäinen väliarvolause}): Yhtälöllä $f(x)=y$ on yksikäsitteinen
+ratkaisu välillä $[a-\rho,a+\rho]$ aina kun $|y-f(a)|\le\eps$, missä
+$\eps \,=\, \min\{\,|f(a)-f(a-\rho)|,\,|f(a)-f(a+\rho)|\,\} \,>\, 0$. Edelleen ehdoilla
+(i)---(iii) pätee myös (Lause \ref{käänteisfunktion derivoituvuus}, $\delta=\rho$): $f$:n
+paikallinen käänteisfunktio $\inv{f}$ on derivoituva pisteessä $b=f(a)$ ja
+$\dif\inv{f}(b)=1/f'(a)$.
+\begin{Exa} Funktio $f(x)=x^2$ täyttää oletukset (i)--(iii) pisteissä $a \neq 0$, joten näissä
+pisteissä $f$ on paikallisesti kääntyvä. --- Tämä on selvää muutenkin, sillä $f$ tiedetään
+kääntyväksi väleillä $(-\infty,0]$ ja $[0,\infty)$. Välillä $(-\delta,\delta)$ ei $f$ ole 1-1
+millään $\delta>0$, joten $f$ ei ole paikallisesti kääntyvä pisteessä $a=0$. Funktio
+$f(x)=x^3$ on sen sijaan 1-1 välillä $(-\infty,\infty)$, joten $f$ on paikallisesti kääntyvä
+jokaisessa pisteessä, myös pisteessä $a=0$, jossa $f'(a)=0$. \loppu
+\end{Exa}
+Esimerkistä nähdään, että tapaus $f'(a)=0$ on $f$:n paikallisen kääntyvyyden kannalta avoin
+tapaus, eli $f$ voi olla paikallisesti kääntyvä pisteessä $a$ tai ei.
+
+\vspace{3mm}
+
+Edellä mainituilla väittämillä, perustuen oletuksiin (i)--(iii), on myös useamman muuttujan
+funktioita koskevat vastineet, jotka seuraavassa kootaan yhdeksi lauseeksi.
+Tämän \kor{Käänteisfunktiolauseen} todistus nojaa keskeisesti toiseen huomattavaan lauseeseen,
+\kor{Kontraktiokuvauslauseeseen}, joka esitetään ja todistetaan jäljempänä.
+Käänteiskuvauslauseen todistus esitetään vasta luvun lopussa.
+\begin{*Lause} \label{käänteiskuvauslause} \index{Kzyzy@Käänteisfunktiolause|emph}
+\vahv{(Käänteisfunktiolause)} Oletetaan, että funktio $\,\mf:\DF_\mf\kohti\R^n$,
+$\DF_\mf\subset\R^n$ täyttää ehdot: (i) $\exists\delta>0$ siten, että $f$ on differentioituva
+pisteen $\ma$ ympäristössä $U_\delta(\ma)\subset\DF_\mf$. (ii) Osittaisderivaatat
+$\partial f_i(\mx)/\partial x_j,\ i,j=1 \ldots n\,$ ovat jatkuvia pisteessä $\mx=\ma$.
+(iii) Jacobin matriisi $\mJ\mf(\mx)=(\partial f_i(\mx)/\partial x_j)$ on säännöllinen
+pisteessä $\mx=\ma$.
+Tällöin on olemassa $\rho\in(0,\delta)$ ja $\eps>0$ siten, että $\mf$ on 1-1 joukossa
+$K=\{\mx\in\R^n \ | \ |\mx-\ma| \le \rho\}$ ja yhtälöryhmällä $\,\mf(\mx)=\my\,$ on ratkaisu
+$\mx \in K$ aina kun $|\my-\mb|\le\eps$, missä $\mb=f(\ma)$. Lisäksi $\mf$:n paikallinen
+käänteisfunktio $\inv{\mf}$ on differentioituva pisteessä $\mb$ ja
+$\mJ\,\inv{\mf}(\mb)=\inv{[\mJ\,\mf(\ma)]}$.
+\end{*Lause}
+Kuviossa on joukot $\,B=\{\my\in\R^n\ | \ |\my-\mb|\le\eps\}\,$ ja $\,\inv{\mf}(B)$ rajattu
+yhtenäisellä viivalla ja joukot $K$ ja $\mf(K)$ pisteviivalla. Lauseen väittämän mukaisesti
+paikallinen käänteisfunktio $\mf^{-1}$ on määritelty $B$:ssä ja $\mf^{-1}(B) \subset K$.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,6)(0,0.5)
+\curvedashes[2mm]{0,1,2}
+\put(3,3){\bigcircle{6}}
+\curvedashes{}
+\put(12,3){\circle{3}}
+\curvesymbol{$\scriptscriptstyle{\bullet}$}
+\put(3,3){\bigcircle[-2]{4}}
+\curve(3.9,4.2,7.5,5,11.06,4.18)
+\curve(4.08,4.65,7.5,5.5,11.4,4.82)
+\put(7.5,5.7){$\mf$} \put(7.5,4.6){$\mf$}
+\put(2.9,2.9){$\bullet$} \put(11.9,2.9){$\bullet$}
+\put(3,3){\vector(3,1){2.8}} \put(12,3){\vector(1,2){0.68}} \put(3,3){\vector(3,-2){1.65}}
+\put(2.9,2.5){$\ma$} \put(11.8,2.5){$\mb$} \put(12.2,4.0){$\eps$} 
+\put(5.4,3.9){$\delta$} \put(4.3,2.3){$\rho$}
+\Thicklines
+\put(11.22,4.89){\vector(2,-1){0.2}}
+\put(10.87,4.27){\vector(2,-1){0.2}}
+\thinlines
+\renewcommand{\yscale}{1.3}
+\put(12,3){\bigcircle[-2]{3}}
+\renewcommand{\yscale}{1.9}
+\renewcommand{\yscalex}{0.5}
+\put(3,3){\bigcircle{2}}
+\end{picture}
+\end{center}
+\end{figure}
+\jatko\jatko \begin{Exa} (jatko) Esimerkissä $\mf$:n paikallinen kääntyvyys voidaan selvittää
+myös ratkaisematta yhtälöryhmää \eqref{epälin yryhmä}\,: Lauseen \ref{käänteiskuvauslause}
+mukaan $\mf$ on paikallisesti kääntyvä pisteessä $(a,b)$ aina kun $a+b \ne 0$, sillä
+\[
+\mJ\mf(a,b) = \begin{rmatrix} 1&1\\2a&-2b \end{rmatrix} 
+              \impl\quad \det\mJ(a,b)=-2(a+b) \neq 0,\ \ \text{kun}\ a+b \neq 0. \loppu
+\]
+\end{Exa} \seur
+\begin{Exa} (Vrt.\ Esimerkki \ref{yryhmä-esim} edellisessä luvussa.) \, Käänteisfunktiolauseen
+mukaan yhtälöryhmällä
+\[
+\mf(x,y)=\my \ \ekv \ \begin{cases}
+\ x^3-2xy^5-x= u \\
+-x^3y+2xy^2+y^5= v
+\end{cases}
+\]
+on pisteen $\,\ma=(2,1)$ lähiympäristössä yksikäsitteinen ratkaisu, kun $|\my-\mb|\le\eps$,
+missä $\mb=(2,3)$ ja $\eps>0$ on riittävän pieni. Pisteen $\mx=\ma$ lähiympäristössä on
+likimain
+\[
+\mf(\mx) \,\approx\, \begin{bmatrix} 2\\3 \end{bmatrix}
+ + \begin{rmatrix} 9&-20\\-10&5\end{rmatrix} \begin{bmatrix} x-2\\y-1 \end{bmatrix},
+\]
+joten ehdot $\mf(\mx)=\my$ ja $\my \in B:\,|\my-\mb|\le\eps\,\ekv\,(u-2)^2+(v-3)^2 \le \eps^2$
+vastaavat pisteen $\mx=\ma$ lähellä likimain ehtoa
+\begin{align*}
+[9(x-2)-20(y-1)]^2+[-10(x-2)+5(y-1)]^2    &\le \eps^2 \\
+\qekv 181(x-2)^2-460(x-2)(y-1)+425(y-1)^2 &\le \eps^2.
+\end{align*}
+Tämän mukaan joukkoa $\mf^{-1}(B)$ rajaa likimain toisen asteen käyrä --- Kyseessä on
+\index{ellipsi}%
+(vino) \kor{ellipsi}, jonka keskipiste on $\ma=(2,1)$, vrt.\ kuvio edellä. \loppu
+\end{Exa}
+
+\subsection*{Implisiittifunktiolause}
+
+Käänteisfunktiolauseen hieman yleisempi muoto on \kor{Implisiittifunktiolause}, jossa 
+tarkastellaan yhtälöryhmää muotoa
+\[
+\mF(\mx,\my)=\mo,
+\]
+missä $\mx\in\R^n$, $\my\in\R^p$ ja $\mF:D_\mF\kohti\R^p$, $D_\mF\subset\R^{n+p}$. Olkoon 
+annettu piste $(\mx,\my)=(\ma,\mb)$, jossa $\mF(\ma,\mb)=\mo$. Kysytään: Voidaanko $\my$ 
+ratkaista yhtälöryhmästä muodossa $\my=\mg(\mx)$ pisteen $(\ma,\mb)$ ympäristössä? 
+--- Riittävä ehto ratkeavuudelle saadaan jälleen tutkimalla $\mF$:n Jacobin matriisia
+\[
+\mJ\,\mF(\mx,\my)=\begin{bmatrix}
+\dfrac{\partial F_1}{\partial x_1} & \ldots & \dfrac{\partial F_1}{\partial x_n} & 
+\dfrac{\partial F_1}{\partial y_1} & \ldots & \dfrac{\partial F_1}{\partial y_p} \\ \vdots \\
+\dfrac{\partial F_p}{\partial x_1} & \ldots & \dfrac{\partial F_p}{\partial x_n} & 
+\dfrac{\partial F_p}{\partial y_1} & \ldots & \dfrac{\partial F_p}{\partial y_p}
+\end{bmatrix}.
+\]
+Kun kirjoitetaan tämä muotoon 
+\[
+\mJ\,\mF(\mx,\my)=[\mJ_\mx\mF(\mx,\my), \mJ_\my\mF(\mx,\my)],
+\]
+missä $\mJ_\mx\mF$ sisältää $\mJ\,\mF$:n ensimmäiset $n$ saraketta, niin ratkeavuuden kannalta
+kriittinen on matriisi $\mJ_\my\mF(\ma,\mb)$ (kokoa $p \times p$). Jos tämä on säännöllinen,
+niin ratkaiseminen yleensä onnistuu. Tarkemmin muotoiltuna tämä väittämä on mukaelma Lauseesta
+\ref{käänteiskuvauslause}, ja myös todistus (jota ei esitetä) noudattaa tämän lauseen
+todistuksen ajatuskulkua, ks.\ luvun loppu 
+\begin{*Lause} \label{implisiittifunktiolause} \index{Implisiittifunktiolause|emph} 
+\vahv{(Implisiittifunktiolause)} \ Oletetaan, että funktio $\,\mF(\mx,\my)$, \linebreak 
+missä $\mx\in\R^n$, $\my\in\R^p$ ja $\mF:\DF_\mF\kohti\R^p$, $\DF_\mF\subset\R^{n+p}$, täyttää
+ehdot: \ (i) $\exists\delta>0\,$ siten, että $\mF$ on differentioituva pisteen $(\ma,\mb)$
+ympäristössä $U_\delta(\ma,\mb) \subset D_\mF$. \ \linebreak (ii) Osittaisderivaatat
+$[\mJ_\mx\mF(\mx,\my)]_{ij}=\partial F_i(\mx,\my)/\partial x_j,\ i=1 \ldots p,\ j=1 \ldots n\,$
+ja $\,[\mJ_\my\mF(\mx,\my)]_{ij}=\partial F_i(\mx,\my)/\partial y_j$, $i,j=1 \ldots p\ $ ovat
+jatkuvia pisteessä $\,(\mx,\my)=(\ma,\mb)$. (iii) Matriisi $\mJ_\my\mF(\ma,\mb)$ on
+säännöllinen. Tällöin on olemassa $\rho\in(0,\delta)$ ja $\eps>0$ siten, että yhtälöryhmä
+$\mF(\mx,\my)=\mo$ ratkeaa ehdolla $|\my-\mb|\le\rho\,$ yksi-käsitteisesti muotoon
+$\my=\mg(\mx)$ aina kun $|\mx-\ma|\le\eps$. Lisäksi $\mg$ on differentioituva pisteessä $\ma$
+ja $\mJ\mg(\ma) = -[\mJ_\my\mF(\ma,\mb)]^{-1}\mJ_\mx\mF(\ma,\mb)$.
+\end{*Lause}
+Lauseen \ref{implisiittifunktiolause} erikoistapaaus on Lause \ref{käänteiskuvauslause},
+kun $\mF(\mx,\my)=\mx-\mf(\my)$ $(p=n)$. Jos $\mg$:n differentioituvuus oletetaan, niin Jacobin
+matriisin $\mJ\mg(\ma)$ laskusäännön voi johtaa implisiittisellä osittaisderivoinnilla 
+(Harj.teht.\,\ref{H-udif-7: implisiittifunktion derivoimissääntö}).
+\begin{Exa}
+Missä tasokäyrän $S:\ F(x,y)=x^2-2xy-y^2-1=0\,$ pisteissä voidaan käyrän yhtälöstä ratkaista
+paikallisesti a) $y$ $x$:n avulla, \, b) $x$ $y$:n avulla?
+\end{Exa}
+\ratk \ a) \, Ratkeavuusehto on $F_y(x,y)=-2x-2y\neq 0\ \ekv\ x+y\neq 0$. Koska 
+$x+y=0 \ \impl \ F(x,y)=2x^2-1$, niin poikkeuspisteitä ovat ainoastaan 
+$(1/\sqrt{2},-1/\sqrt{2})$ ja $(-1/\sqrt{2},1/\sqrt{2})$. Muissa pisteissä ratkaiseminen
+onnistuu.
+
+b) \, Ratkeavuusehto on $F_x(x,y)=2x-2y\neq 0\ \ekv\ y\neq x$. Tämä ehto toteutuu
+kaikissa käyrän pisteissä (koska $y=x \ \impl \ F(x,y)=-2x^2-1<0$), joten myös
+ratkaiseminen onnistuu kaikissa pisteissä. \loppu
+
+\begin{Exa} Yhtälöryhmä
+\[
+\begin{cases} \,2x^2+xy-yz=0 \\ \,2xz-2y^2+z^2=0 \end{cases}
+\]
+ratkaistaan pisteen $(x,y,z)=(1,2,2)$ ympäristössä muotoon $y=y(x),\ z=z(x)$. Laske
+$y'(1)$ ja $z'(1)$.
+\end{Exa}
+\ratk \ Pisteessä $(x,y,z)=(1,2,2)$ on
+\[
+\mJ_{y,z}\mF(x,y,z) = \begin{bmatrix} 
+                      \partial_y F_1 & \partial_z F_1 \\ \partial_y F_2 & \partial_z F_2 
+                      \end{bmatrix} 
+                   = \begin{bmatrix} x-z & -y \\ -4y & 2x+2z \end{bmatrix}
+                   = \begin{rmatrix} -1&-2\\-8&6 \end{rmatrix}.
+\]
+Tämä on säännöllinen matriisi, joten ratkaiseminen onnistuu väitetyllä tavalla. Koska 
+$\partial_x F_1=4x+y=6$ ja $\partial_x F_2=2z=4$, kun $(x,y,z)=(1,2,2)$, niin saadaan
+\[
+\mJ\mg(1)=\begin{bmatrix} y'(1)\\z'(1) \end{bmatrix}
+         = -\begin{rmatrix} -1&-2\\-8&6 \end{rmatrix}^{-1} \begin{bmatrix} 6\\4 \end{bmatrix}
+         = \begin{bmatrix} 2\\2 \end{bmatrix}. 
+\]
+Samaan tulokseen tullaan, kun derivoidaan implisiittisesti yhtälöt
+\[
+2x^2+xy(x)-y(x)z(x)=0, \quad 2xz(x)-2[y(x)]^2+[z(x)]^2=0,
+\]
+asetetaan $(x,y,z)=(1,2,2)$ ja ratkaistaan derivaatat $y'(1)$ ja $z'(1)$ syntyvästä
+(lineaarisesta) yhtälöryhmästä. \loppu
+
+\subsection*{*Kontraktiokuvauslause}
+
+\index{kiintopisteiteraatio|(}%
+Yhtälöryhmän $\mf(\mx)=\my$ paikallisessa ratkeavuusteoriassa lähtökohta on sama kuin
+ratkaisua käytännössä etsittäessä, eli kirjoitetaan yhtälöryhmä muotoon $\mx=\mF(\mx)$,
+jolloin kyse on siitä, onko $\mF$:llä y\pain{ksikäsitteinen}
+\index{kiintopiste}%
+\kor{kiintopiste} $\ma$:n lähellä. Kuten arvata saattaa, $\mF$ pyritään valitsemaan niin, että
+kiintopiste löytyy kiintopisteiteraatiolla. Iteraation suppenemiselle, ja samalla kiintopisteen
+yksikäsitteisyydelle annetun pisteen $\ma$ lähiympäristössä, antaa takeet
+\begin{*Lause} \label{kontraktiokuvauslause} \index{Kontraktiokuvauslause|emph}
+(\vahv{Kontraktiokuvauslause}\footnote[2]{Kontraktiokuvauslause tunnetaan myös nimellä 
+\kor{Banachin kiintopistelause}, syystä että lause on pätevä euklidisia avaruuksia $\R^n$ 
+yleisemmissä \kor{Banach-avaruuksissa}. Hyvin monet matemaattisten yhtälöiden ratkavuutta 
+koskevat väittämät nojaavat Kontraktiokuvauslauseeseen sen yleisemmissä muodoissa. Tällainen
+on esimerkiksi differentiaaliyhtälöiden ratkeavuutta koskeva Picardin-Lindelöfin lause
+(Luku \ref{Picard-Lindelöfin lause}). \index{Banachin kiintopistelause|av}})
+Olkoon $\mF:\DF_\mF\kohti\R^n,\ \DF_\mF\subset\R^n$ ja 
+$K=\{\,\mx\in\R^n \mid \abs{\mx-\ma} \le \rho\,\}\subset\DF_\mF$ jollakin $\ma\in\R^n$ ja 
+$\rho>0$. Tällöin jos \index{kontraktio(kuvaus)}%
+\begin{itemize}
+\item[(i)] $\mF$ on joukkoon $K$ rajoitettuna \kor{kontraktio(kuvaus)}, eli
+\[
+\abs{\mF(\mx)-\mF(\my)} \le L\abs{\mx-\my}, \quad \mx,\my\in K,\quad \text{missä}\,\ L<1,
+\]
+\item[(ii)] $\mF(K)\subset K$,
+\end{itemize}
+niin
+\begin{itemize}
+\item[(1)] $\mF$:llä on $K$:ssa täsmälleen yksi kiintopiste $\mc$.
+\item[(2)] Kiintopisteiteraatio $\mx_{k+1}=\mF(\mx_k)$, \ $k=0,1,\ldots$ \ 
+           \index{suppeneminen!b@kiintopisteiteraation|emph}%
+           suppenee kohti $\mc$:tä jokaisella $\mx_0\in K$. \newline
+\end{itemize}
+\end{*Lause}
+\tod Ensinnäkin oletuksesta $(ii)$ seuraa, että kiintopisteiteraatiolle $\mx_{k+1}=\mF(\mx_k)$
+pätee
+\[
+\mx_0\in K \ \impl \ \mx_k\in K \quad \forall k,
+\]
+joten oletuksen (i) perusteella
+\begin{align*}
+\abs{\mx_{k+1}-\mx_k} &= \abs{\mF(\mx_k)-\mF(\mx_{k-1})} \\
+&\le L\abs{\mx_k-\mx_{k-1}} \\
+& \ \ \vdots \\
+&\leq L^k \abs{\mx_1-\mx_0}.
+\end{align*}
+Tästä seuraa, että jos $l>k$, niin
+\begin{align*}
+\abs{\mx_l-\mx_k} &\le \abs{\mx_l-\mx_{l-1}}+\ldots + \abs{\mx_{k+1}-\mx_k} \\
+&\le \sum_{i=k}^{l-1} L^i\abs{\mx_1-\mx_0} \\
+&\le \abs{\mx_1-\mx_0}\sum_{i=k}^{\infty} L^i \\
+&=L^k(1-L)^{-1}\abs{\mx_1-\mx_0}.
+\end{align*}
+Siis yleisemmin
+\[
+\abs{\mx_k-\mx_l}<L^{\min \{k,l\}} (1-L)^{-1}\abs{\mx_1-\mx_0}.
+\]
+\index{Cauchyn!ea@jono $\R^n$:ssä}%
+Tämän mukaan $\{\mx_k\}$ on \kor{$\R^n$:n Cauchyn jono}, ts.\
+\[
+|\mx_k-\mx_l| \kohti 0, \quad \text{kun}\,\ \min\{k,l\} \kohti \infty.
+\]
+Kun tässä merkitään $\mx_k = ((\mx_k)_i,\ i=1 \ldots n)$, niin seuraa
+\[
+|(\mx_k)_i-(\mx_l)_i| \le |\mx_k-\mx_l| \kohti 0, \quad 
+               \text{kun}\,\ \min\{k,l\} \kohti \infty, \quad i=1 \ldots n.
+\]
+Siis reaalilukujono $\{(\mx_k)_i,\ k=0,1,\ldots\}$ on Cauchyn jono jokaisella $i$. Cauchyn
+kriteerin (Lause \ref{Cauchyn kriteeri}) mukaan on tällöin olemassa reaaliluvut
+$c_i,\ i=1 \ldots n$ siten, että $\lim_k (\mx_k)_i = c_i,\,\ i=1 \ldots n$, jolloin on myös
+$\lim_k|\mc_k-\mc|=0$, $\mc=(c_i)$ (vrt.\ Luku \ref{usean muuttujan jatkuvuus}). On siis
+päätelty, että jono $\seq{\mx_k}$ (ja yleisemminkin jokainen $\R^n$:n Cauchyn jono) suppenee:  
+\[
+\mx_k\kohti \mc\in \R^n.
+\]
+Mutta koska $K$ on määritelmänsä perusteella suljettu (itse asiassa kompakti, ks.\
+Määritelmä \ref{kompakti joukko - Rn}), niin $\mc\in K$. Tällöin koska $\mF$ on oletuksen (i)
+perusteella $K$:ssa jatkuva, niin seuraa $\mF(x_k)\kohti\mF(\mc)\,$, jolloin iteraatiokaavan 
+$\mx_{k+1}=\mF(\mx_k)$ perusteella on $\mc=\mF(\mc)$, eli $\mc$ on kiintopiste. On siis 
+osoitettu, että ainakin yksi kiintopiste $\mc\in K$ on olemassa, ja että kiintopisteiteraatio
+suppenee jokaisella $\mx_0\in K$ kohti jotakin $K$:ssa olevaa kiintopistettä. Lopuksi
+näytetään, että kiintopisteitä on $K$:ssa vain yksi: Olkoot $\mc_1$ ja $\mc_2\,$ $\mF$:n
+kiintopisteitä $K$:ssa, eli olkoon $\mc_1=\mF(\mc_1)$, $\mc_2=\mF(\mc_2)$ ja
+$\mc_1\,,\mc_2\in K$. Oletuksesta (i) seuraa silloin
+\[
+\abs{\mc_1-\mc_2} =   \abs{\mF(\mc_1)-\mF(\mc_2)} 
+                  \le L\abs{\mc_1-\mc_2} \qekv (1-L)\abs{\mc_1-\mc_2} \le 0.
+\]
+Koska tässä on $1-L>0$ (oletus (i)), niin on oltava $\abs{\mc_1-\mc_2}=0\ \ekv\ \mc_1=\mc_2$. 
+Kontraktiokuvauslause on näin todistettu. \loppu
+\index{kiintopisteiteraatio|)}
+
+\subsection*{*Käänteisfunktiolauseen todistus}
+\index{Kzyzy@Käänteisfunktiolause|vahv}
+
+Lähdetään differentiaalikehitelmästä
+\begin{equation} \label{K-lause a}
+\mf(\mx)=\mb+\mJ\mf(\ma)(\mx-\ma)+\mr(\mx), \quad \mb=\mf(\ma), \quad \mx\in K, \tag{a}
+\end{equation}
+missä $K=\{\mx\in\R^n \ | \ |\mx-\ma|\le\rho\}$, $\,\rho\in(0,\delta)$. Tämän perusteella on
+\begin{equation} \label{K-lause b}
+\mf(\mx_1)-\mf(\mx_2)=\mJ\mf(\ma)(\mx_1-\mx_2)+\mr(\mx_1)-\mr(\mx_2), \quad
+                                                  \mx_1,\mx_2 \in K. \tag{b}
+\end{equation}
+Kun tässä sovelletaan vasemmalla puolella $\R^n$ väliarvolausetta
+(Lause \ref{väliarvolause-Rn})  funktioihin $f_i=(\mf)_i$, niin seuraa
+\begin{equation} \label{K-lause c}
+f_i(\mx_1)-f_i(\mx_2) = [\nabla f_i(\boldsymbol{\xi}_i)]^T(\mx_1-\mx_2),
+                                                     \quad i=1 \ldots n, \tag{c}
+\end{equation}
+missä $\boldsymbol{\xi}_i\in K$ (tarkemmin $\boldsymbol{\xi}_i=t_i(\mx_1-\mx_2),\ t_i\in(0,1)$).
+Jatkuvuusoletuksien perusteella on tässä edelleen
+\begin{equation} \label{K-lause d}
+\nabla f_i(\boldsymbol{\xi}_i) = \nabla f_i(\ma)+\md_i, \quad |\md_i| \kohti 0 \,\ 
+                                 \text{kun}\ \rho \kohti 0, \quad i = 1 \ldots n. \tag{d}
+\end{equation}
+(Tässä sivuutetaan hieman teknisiä yksityiskohtia.) Yhdistämällä \eqref{K-lause b},
+\eqref{K-lause c} ja \eqref{K-lause d} nähdään, että
+\[
+\mr(\mx_1)-\mr(\mx_2)\,          =\,[\md_1 \ldots \md_n]^T(\mx_1-\mx_2),% \notag \\
+\]
+joten Cauchyn--Schwarzin epäyhtälön perusteella
+\begin{equation} \label{K-lause e}
+|\mr(\mx_1-\mr(\mx_2)| \,=\, \Bigl(\sum_{i=1}^n\scp{\md_i}{\mx_1-\mx_2}^2\Bigr)^{1/2}\,
+                       \,\le\,L|\mx_1-\mx_2|, \tag{e}
+\end{equation}
+missä
+\[
+L=\bigl(\sum_{i=1}^n|\md_i|^2\bigr)^{1/2} \kohti 0, \quad \text{kun}\ \rho \kohti 0.
+\]
+
+Koska $\mJ\mf(\ma)$ on säännöllinen, niin yhtälö \eqref{K-lause b} on toisin kirjoitettuna
+\begin{equation} \label{K-lause f}
+\mx_1-\mx_2 = [\mJ\mf(\ma)]^{-1}[\mf(\mx_1)-\mf(\mx_2)]
+             -[\mJ\mf(\ma)]^{-1}[\mr(\mx_1)-\mr(\mx_2)]. \tag{f}
+\end{equation}
+Kun tässä sovelletaan kolmioepäyhtälöä ja arviota \eqref{K-lause e}, niin seuraa
+\begin{align} \label{K-lause g}
+|\mx_1-\mx_2| 
+          &\le |[\mJ\mf(\ma)]^{-1}[\mf(\mx_1)-\mf(\mx_2)]|
+              +|[\mJ\mf(\ma)]^{-1}[\mr(\mx_1)-\mr(\mx_2)]|  \notag \\
+          &\le C|\mf(\mx_1)-\mf(\mx_2)| + CL|\mx_1-\mx_2|, \quad \mx_1,\mx_2 \in K, \tag{g}
+\end{align}
+missä $\,C=\norm{[\mJ\mf(\ma)]^{-1}}$ (ks.\ 
+Harj.teht.\,\ref{matriisialgebra}:\ref{H-m-1: matriisin normi}). Koska $\,C\,$ on vain
+matriisista $[\mJ\mf(\ma)]^{-1}$ riippuva vakio ja $L \kohti 0$ kun $\rho \kohti 0$, niin
+voidaan valita $\rho\in(0,\delta)$ siten, että pätee
+\begin{equation} \label{K-lause h}
+CL\le\frac{1}{2}\,, \tag{h}
+\end{equation}
+jolloin epäyhtälöistä \eqref{K-lause g} ja \eqref{K-lause h} seuraa
+\begin{equation} \label{K-lause i}
+|\mx_1-\mx_2| \,\le\, 2C|\mf(\mx_1)-\mf(\mx_2)| \quad \forall\ \mx_1,\mx_2 \in K. \tag{i}
+\end{equation}
+Tämän mukaan $\,\forall\,\mx_1,\mx_2 \in K$ pätee $\mf(\mx_1)=\mf(\mx_2)\,\impl\,\mx_1=\mx_2$,
+joten $\mf$ on $K$:ssa 1-1, kun $\rho\in(0,\delta)$ on valittu niin, että ehto
+\eqref{K-lause h} toteutuu. Käänteisfunktiolauseen 1.\ osaväittämä on näin todistettu.
+
+Käänteisfunktiolauseen toisen väittämän todistamiseksi osoitetaan, että kun $\rho$ on valittu
+em.\ tavalla, niin $\exists\,\eps>0$ siten, että Kontraktiokuvauslauseen ehdot
+toteutuvat, kun $|\my-\mb|\le\eps$ ja ratkaistava yhtälöryhmä kirjoitetaan muotoon
+\[
+\mf(\mx)=\my\,\ \ekv\,\ \mx=\mF(\mx), \quad \mF(\mx)=\mx-[\mJ\mf(\ma)]^{-1}[\,\mf(\mx)-\my\,],
+                                      \quad \mx \in K.
+\]
+--- Huomattakoon, että kiintopisteiteraatio $\mx_{k+1}=\mF(\mx_k)$ on tällöin sama kuin
+edellisessä luvussa tarkasteltu yksinkertaistettu Newtonin iteraatio sovellettuna yhtälöryhmään
+$\mf(\mx)-\my=\mo$ (alkuarvauksella $\mx_0=\ma$).
+
+Deifferentiaalikehitelmän \eqref{K-lause a} perusteella $\mF$:n lauseke saadaan muotoon
+\[
+\mF(\mx) = \ma + [\mJ\mf(\ma)]^{-1}(\my-\mb) - [\mJ\mf(\ma)]^{-1}\mr(\mx), \quad \mx \in K.
+\]
+Kun käytetään arviota \eqref{K-lause e} tässä lausekkeessa, niin seuraa
+\begin{align} \label{K-lause j}
+\abs{\mF(\mx_1)-\mF(\mx_2)}\ 
+    &=\ \left|[\mJ\mf(\ma)]^{-1}[\,\mr(\mx_1)-\mr(\mx_2)\,]\right| \notag \\[1mm]
+    &\le\ CL\abs{\mx_1-\mx_2}, \quad \mx_1,\mx_2\in K \tag{j}
+\end{align}
+ja koska $\mr(\ma)=\mo$, niin seuraa myös
+\begin{align} \label{K-lause k}
+\abs{\mF(\mx)-\ma}\ 
+    &=\ \left|[\mJ\mf(\ma)]^{-1}(\my-\mb)
+         -[\mJ\mf(\ma)]^{-1}[\,\mr(\mx)-\mr(\ma)\,]\right| \notag\\[1mm]
+    &\le\ C|\my-\mb|+CL|\mx-\ma|, \quad \mx\in K \tag{k}
+\end{align}
+($C$ kuten edellä). Valitaan nyt $\eps$ siten, että toteutuu
+\begin{equation} \label{K-lause l}
+0<\eps\le\frac{\rho}{2C}\,. \tag{l}
+\end{equation}
+Tällöin jos $\abs{\my-\mb}\le\eps$, niin epäyhtälöistä \eqref{K-lause j}, \eqref{K-lause k},
+\eqref{K-lause h} ja \eqref{K-lause l} seuraa
+\[
+\begin{cases} 
+\,\abs{\mF(\mx_1)-\mF(\mx_2)}\ 
+  \le\ \frac{1}{2}\abs{\mx_1-\mx_2}, \quad \mx_1\,,\mx_2 \in K, \\
+\,\abs{\mF(\mx)-\ma}\ \le \frac{\rho}{2}+\frac{\rho}{2} = \rho, \quad \mx \in K.
+\end{cases}
+\]
+Näistä ensimmäisen ehdon mukaan $\mF$ on kontraktiokuvaus $K$:ssa ja toisen ehdon mukaan
+$\mF(K) \subset K$, joten Kontraktiokuvauslauseen ehdot ovat täytetyt. Tämän lauseen mukaan
+yhtälöryhmällä $\mf(\mx)=\my\,\ekv\,\mx=\mF(\mx)$ on $K$:ssa yksikäsitteinen ratkaisu, kun
+$\rho$ ja $\eps$ on valittu em.\ tavalla ja $|\my-\mb|\le\eps$. Käänteisfunktiolauseen
+toinen väittämä on näin todistettu.
+
+Viimeisen osaväittämän todistamiseksi valitaan yhtälössä \eqref{K-lause f} 
+$\,\mx_1=\mx=\mf^{-1}(\my)$, missä $\,0<|\my-\mb|\le\eps\,$ (jolloin $\mx\neq\ma$) ja
+$\,\mx_2=\ma$, jolloin yhtälö saa muodon
+\begin{equation} \label{K-lause m}
+\mf^{-1}(\my)-\ma = [\mJ\mf(\ma)]^{-1}(\my-\mb)-[\mJ\mf(\ma)]^{-1}\mr(\mx). \tag{m}
+\end{equation}
+Epäyhtälön \eqref{K-lause i} mukaan on (samoilla $\mx$ ja $\my$)
+\[
+|\mx-\ma| \le 2C|\my-\mb|.
+\]
+Tämän sekä arvion $|[\mJ\mf(\ma)]^{-1}\mr(\mx)| \le C|\mr(\mx)|$ perusteella
+\[
+\frac{|[\mJ\mf(\ma)]^{-1}\mr(\mx)|}{|\my-\mb|} \le\,
+\frac{C|\mr(\mx)|}{|\mx-\ma|}\,\cdot\,\frac{|\mx-\ma|}{|\my-\mb|}
+\,\le\, 2C^2\,\frac{|\mr(\mx)|}{|\mx-\ma|}\,.
+\]
+Koska tässä $|\my-\mb| \kohti 0\,\impl\,|\mx-\ma| \kohti 0$ (edellisen epäyhtälön mukaan) ja
+koska $|\mr(\mx)|/|\mx-\ma| \kohti 0$, kun $|\mx-\ma| \kohti 0$, niin
+$|[\mJ\mf(\ma)]^{-1}\mr(\mx)|=\ord{|\my-\mb|}$. Yhtälö \eqref{K-lause m} voidaan siis
+kirjoittaa
+\[
+\mf^{-1}(\my)=\mf^{-1}(\mb)+[\mJ\mf(\ma)]^{-1}(\my-\mb)+\mr(\my), \quad 
+                                              |\mr(\my)|=\ord{|\my-\mb|}.
+\]
+Näin ollen $\mf^{-1}$ on differentioituva pisteessä $\mb$ ja 
+$\mJ\mf^{-1}(\mb)=[\mJ\mf(\ma)]^{-1}$. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Tarkastellaan funktiota $\mf(x,y)=(2x^2-y^2,-x^2+2y^2)$. a) Määritä $\mf$:n arvojoukko
+$\mf(\R^2)$. b) Millaisille joukoille $A\subset\R^2$ pätee: $f:\,A \kohti f(A)$ on bijektio?
+c) Näytä, että $\mf$ on paikallisesti kääntyvä pisteessä $(a,b)$, jos $ab \neq 0$. Onko tämä
+ehto myös välttämätön paikalliselle kääntyvyydelle? d) Määritä $\mf$:n paikallisten
+käänteisfunktioiden lausekkeet pisteissä $(1,1)$, $(-1,1)$, $(1,-1)$ ja $(-1,-1)$.
+
+\item
+Olkoon $\mf(x,y)=(x-y+e^{x+2y},x+y+e^{x-2y})$ ja olkoon $\mf^{-1}=\mf$:n paikallinen 
+käänteisfunktio origon ympäristössä. Edelleen olkoon \vspace{1mm}\newline
+a) \ $K_a(x_0,y_0)=\{(x,y)\in\R^2 \mid \abs{x-x_0} \le a\ \ja\ \abs{y-y_0} \le a\}$, \newline
+b) \ $K_a(x_0,y_0)=\{(x,y)\in\R^2 \mid (x-x_0)^2+(y-y_0)^2 \le a^2\}$, \vspace{1mm}\newline
+missä $a>0$ on pieni luku. Approksimoimalla $\mf$ affiinikuvauksella määritä likimäärin joukot
+$\mf\bigl(K_a(0,0)\bigr)$ ja $\mf^{-1}\bigl(K_a(1,1)\bigr)$. Piirrä kuviot!
+
+\item
+Näytä, että seuraavat funktiot ovat bijektioita kuvauksina $\mf:\,\R^2\kohti\R^2$. Määritä
+käänteisfunktion lauseke, mikäli mahdollista. Määritä myös pisteet, joissa $\mJ\mf$ on 
+singulaarinen. \vspace{1mm}\newline
+a) \ $\mf(x,y)=(x^3+y^3,x^3-y^3) \quad$ 
+b) \ $\mf(x,y)=((x+y)^3,(x-y)^3)$ \newline
+c) \ $\mf(x,y)=(x-y,x+y^3) \qquad\ $
+d) \ $\mf(x,y)=(e^x-y,x+x^3+y+y^3)$
+
+\item
+Olkoon $\mf=(e^x\cos y,e^x\sin y)$. \ a) Näytä, että $\mf$ on kaikkialla paikallisesti 
+kääntyvä. \ b) Määritä $\mf(A),\ A=\R\times[0,2\pi]$. Onko $\,\mf:\,A\kohti\mf(A)$ 1-1\,? \
+\linebreak c) Olkoon $A=\{(x,y)\in\R^2 \ | \ x^2+y^2<R^2\}$. Mikä on suurin $R$:n arvo, jolla
+$\mf:\,A\kohti\mf(A)$ on bijektio?
+
+\item
+Missä pisteissä $(x,y)$ toteutuvat Käänteisfunktiolauseen oletukset funktiolle
+$\mf(x,y)=(x^2+2y,y^2-2x)$\,? Määritä Jacobin matriisi $\mJ\mf^{-1}(u,v)$, $(u,v)=\mf(x,y)$
+näissä pisteissä.
+
+\item
+Tasossa liikkuvan robotin käsivarsi koostuu origoon kiinnitetystä olkavarresta (janasta)
+$OP$ ja pisteeseen $P$ kiinnitetystä kyynärvarresta $PQ$. Kummankin varren pituus $=1$.
+Kättä ($Q$) ohjataan säätämällä olkavarren ja $x$-akselin välistä napakulmaa $\varphi$ ja
+kyynärvarren ja olkavarren välistä kulmaa $\theta$. Kulmat ovat vaihdeltavissa väleillä 
+$\varphi\in[0,\pi]$ ja $\theta\in[-5\pi/6,5\pi/6]$ ($\theta>0$ vastapäivään).
+\vspace{1mm}\newline
+a) \ Määritä robotin käden sijainti funktiona $\mf(\varphi,\theta)$. \newline
+b) \ Mihin tason pisteisiin käsi ulottuu, eli mikä on $\mf$:n arvojoukko? 
+     Kuvio! \newline
+c) \ Totea, että $\mf$ ei ole 1--1. Missä pisteissä 
+     $(\varphi,\theta)\in(0,\pi)\times(-5\pi/6,5\pi/6)$ toteutuvat
+     Käänteisfunktiolauseen ehdot? \newline
+d) \ Robotin käsi halutaan siirtää pisteestä $(1.4,0.2)$ pisteeseen $(1.42,0.22)$.
+     Arvioi differentiaalin avulla, millaisilla kulman muutoksilla $\Delta\varphi$
+     ja $\Delta\theta$ tämä liike saadaan aikaan, kun käsivarsi on asennossa, jossa
+     $\theta<0$.
+
+\item \label{H-udif-7: implisiittifunktion derivoimissääntö}
+Johda implisiittifunktion $\my=\mg(\mx)$ (Lause \ref{implisiittifunktiolause}) Jacobin
+matriisin laskusääntö implisiittisellä osittaisderivoinnilla yhtälöryhmästä
+\[
+\mF(\mx,\mg(\mx))=\mo \qekv F_i\bigl(\mx,g_1(\mx),\ldots,g_p(\mx)\bigr)=0,\quad i = 1 \ldots p.
+\]
+
+\item
+Oletetaan, että yhtälöryhmä $F(x,y,u,v)=0,\ G(x,y,u,v)=0$ toteutuu, kun $(x,y,u,v)=(a,b,c,d)$,
+ja että ko.\ pisteen lähellä yhtälöryhmä ratkeaa sekä muotoon $(u,v)=\mg(x,y)$ että muotoon
+$(x,y)=\mh(u,v)$. Johda Implisiittifunktiolauseen viimeisestä osaväittämästä (ko.\ lauseen
+oletuksin) tulos $\mJ\mg(a,b)\mJ\mh(c,d)=\mI$. Millä muulla tavalla tämä on pääteltävissä?
+
+\item
+Olkoon $f$ säännöllinen funktio tyyppiä $f:\,\R^2\kohti\R$. Jos yhtälöryhmä
+%pisteessä $(x,y,z)=(a,b,c)$ on
+\[
+\begin{cases} \, f(f(x,y),z)=0 \\ \,f(x,f(y,z))=0 \end{cases}
+\]
+toteutuu, kun $(x,y,z)=(a,b,c)$, niin millaisella $f$:n osittaisderivaattoja $f_x$ ja $f_y$
+koskevalla ehdolla voidaan taata, että pisteen $(a,b,c)$ ympäristössä yhtälöryhmä ratkeaa
+muotoon $x=x(z),\ y=y(z)$\,? 
+
+\item
+Olkoon $a,b,c>0$. Näytä, että yhtälöryhmä
+\[
+\begin{cases}
+\,\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1 \\[2mm]
+\,\dfrac{(2x-a)^2}{a^2}+\dfrac{4y^2}{b^2}=1
+\end{cases}
+\]
+määrittelee pisteen $P=(a,b,c)$ ympäristössä parametrisen käyrän \newline 
+$S:\,x=f(z)\,\ja\,y=g(z)$. Mikä on $S$:n tangenttivektori pisteessä $P$\,?
+
+\item
+Näytä, että yhtälö tai yhtälöryhmä määrittelee annetun pisteen $P$ ympäristössä 
+implisiittifunktion annettua muotoa sekä ratkaise lisätehtävä: \vspace{1mm}\newline
+a) \ $x^6+2y^4-3x^2y=0,\,\ P=(1,1),\,\ y=f(x)$. \ Käyrän $y=f(x)$ tangentin yhtälö pisteessä 
+$P$\,? \vspace{1mm} \newline
+b) \ $\sin(yz)+y^2 e^z=x,\,\ P=(e\pi^2,\pi,1),\,\ z=f(x,y)$. \ Arvioi $f(27,3)$ \newline
+differentiaalin avulla. \vspace{1mm}\newline
+c) \ $ye^{xz}+\sin(x-y+z)=0,\,\ P=(0,0,0),\,\ z=f(x,y)$. \ Pinnan $z=f(x,y)$ tangenttitason
+yhtälö origossa? \vspace{1mm}\newline
+d) \ $x=z+y\sin z,\,\ P=(0,0,0),\,\ z=f(x,y)$. \ Laske $f_{xy}(0,0)$. \vspace{1mm}\newline
+e) \ $x-y-z+1=0\,\ja\,x^2+y^2-2z=0,\,\ P=(1,1,1),\,\ (x,y)=\mf(z)$. \ 
+Geometrinen tulkinta? \vspace{1mm}\newline
+f) \ $2x^2+3y^2+z^2=47\,\ja\,x^2+2y^2-z=0,\,\ P=(-2,1,6),\,\ (y,z)=(f(x),g(x))$. Laske
+$f'(-2)$ ja $g'(-2)$. \vspace{1mm}\newline
+g) \ $y^5+xy+z^2=4\,\ja\,e^{xz}=y^2,\,\ (3,1,0),\,\ (x,y)=(f(z),g(z))$. \ Laske $f'(0)$ ja 
+$g'(0)$. \vspace{1mm}\newline
+h) \ $2x^2+3y^2+z^2=47\,\ja\,x^2+2y^2-z=0,\,\ P=(-2,1,6),\,\ (y,z)=(f(x),g(x))$. Laske
+$f'(-2)$ ja $g'(-2)$.
+
+\item
+Näytä, että seuraavat yhtälöryhmät määrittelevät annettua muotoa olevan implisiittifunktion
+$\mg$ annetun pisteen lähellä, ja laske Jacobin matriisi $\mJ\mg$ ko.\ pisteessä.
+\begin{align*}
+&\text{a)}\ \ \begin{cases} \,x-u^3-v^3=0 \\ \,y-uv+v^2=0, \end{cases} \quad
+              (u,v)=\mg(x,y), \quad (x,y,u,v)=(2,0,1,1) \\
+&\text{b)}\ \ \begin{cases} \,xe^y-u^3z+\sin v=0 \\ \,x^3u^2+yv-uz\cos v=0, \end{cases} \quad 
+              \begin{aligned} &(u,v)=\mg(x,y,z), \\ &(x,y,z,u,v)=(1,0,1,1,0) \end{aligned} \\
+&\text{c)}\ \ \begin{cases} 
+              \,xy^2+zu+v^2=3 \\ \,x^3z+2y-uv=2 \\ \,xu+yv-xyz=1,
+              \end{cases} \quad 
+              \begin{aligned} &(x,y,z)=\mg(u,v), \\ &(x,y,z,u,v)=(1,1,1,1,1) \end{aligned}
+\end{align*}
+
+\item (*)
+Näytä, että funktio $\mf(x,y)=(2x-xy,4y-xy)$ on paikallisesti kääntyvä pisteessä $(a,b)$
+täsmälleen kun $a+2b \neq 4$.
+
+\item (*)
+Oletetaan, että yhtälö $F(x,y,z)=0$ määrittelee (Implisiittifunktiolauseen oletuksin)
+implisiittifunktiot $x=x(y,z)$, $y=y(z,x)$ ja $z=z(x,y)$. Näytä, että pätee:
+\[
+\pder{x}{y}\cdot\pder{y}{z}\cdot\pder{z}{x}=-1.
+\]
+Tarkista säännön pätevyys, kun $F(x,y,z)=x^3y^2z-1$. Muotoile ja todista vastaava yleisempi
+väittämä koskien yhtälön $F(x_1,\ldots,x_n)=0$ määrittelemiä implisiittifunktioita 
+($n$ kpl, $n \ge 2$).
+
+\end{enumerate}

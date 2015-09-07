@@ -1,0 +1,326 @@
+\section{Potenssisarja} \label{potenssisarja}
+\alku
+
+Sarjaa muotoa
+\[
+\sum_{k=0}^\infty a_k x^k\ =\ a_0 + a_1\,x + a_2\,x^2 + \ldots
+\]
+sanotaan \kor{potenssisarja}ksi (engl.\ power series). Luvut $a_k$ ovat nimelt‰‰n 
+\kor{potenssisarjan kertoimet}, ja symbolia $x$, joka myˆs edustaa reaalilukua, sanotaan sarjan
+\kor{muuttuja}ksi. Termi 'muuttuja' kertoo, ett‰ $x$:n lukuarvo voi vaihdella. Kyseess‰ ei siis
+ole pelk‰st‰‰n lukujono, vaan pikemminkin joukko lukujonoja, miss‰ kertoimet $a_k$ ajatellaan 
+kiinnitetyiksi ja muuttujalle $x$ sallitaan erilaisia (reaali)arvoja.\footnote[1]{Tapauksessa
+$x=0$ potenssisarja tulkitaan lukujonoksi $\{a_0,a_0,\ldots\}$, eli sarjamerkinn‰ss‰ sovitaan,
+ett‰ $0^0=1$.}
+
+Kuten tullaan havaitsemaan, potenssisarja on matemaattisessa analyysiss‰ hyvin keskeinen k‰site
+ja tyˆkalu. T‰ss‰ luvussa tutkitaan toistaiseksi vain sarjan suppenemiskysymyst‰, jonka luonteva
+muotoilu on: Mill‰ $x$:n arvoilla sarja suppenee? Koska suppenevan sarjan tapauksessa summa 
+yleens‰ riippuu $x$:n arvosta, ilmaistaan t‰m‰ kirjoittamalla sarjan summaksi $s(x)$, luetaan
+'$s$ $x$'.
+\begin{Exa} Perusmuotoinen geometrinen sarja $\sum_{k=0}^\infty x^k$ on esimerkki 
+potenssisarjasta. Sarja suppenee t‰sm‰lleen kun $x \in (-1,1)$, ja sarjan summa on t‰llˆin 
+$s(x) = 1/(1-x)$. \loppu 
+\end{Exa}
+Esimerkin perusteella potenssisarjaa voi pit‰‰ geometrisen sarjan yleistyksen‰. Osoittautuukin,
+ett‰ suppenevuustarkasteluissa geometrinen sarja on hyv‰ vertailukohta. T‰llaiseen vertailuun 
+perustuu esimerkiksi seuraava, potenssisarjojen suppenemisteorian keskeisin tulos.
+\begin{Lause} \vahv{(Potenssisarjan suppeneminen)} \label{suppenemiss‰de} Potenssisarjalle 
+$\sum_{k=0}^\infty a_k x^k$ on voimassa jokin seuraavista vaihtoehdoista:
+\begin{itemize}
+\item[(a)] Sarja suppenee vain kun $x=0$.
+\item[(b)] $\exists \rho\in\R_+$ siten, ett‰ sarja suppenee, myˆs itseisesti, kun 
+           $x\in (-\rho,\rho)$ ja hajaantuu aina kun $\abs{x}>\rho$. T‰llˆin $\rho$ on sarjan
+           \kor{suppenemiss‰de}.
+\item[(c)] Sarja suppenee itseisesti $\forall x\in\R$.
+\end{itemize}
+\end{Lause}
+\tod Riitt‰‰ osoittaa, ett‰ (b) tai (c) toteutuu silloin kun (a) ei. Oletetaan siis, ett‰ sarja
+suppenee jollakin $x_0 \in \R$, $x_0 \neq 0$. T‰llˆin on oltava (vrt.\ Korollaari 
+\ref{sarjan suppenemiskorollaari} ja Lause \ref{suppeneva jono on rajoitettu}\,)
+\[
+a_nx_0^n\kohti 0 \ \impl \ \abs{a_nx_0^n}\leq C\quad \forall n \quad (C\in\R_+).
+\]
+T‰st‰ seuraa, ett‰ jos $\abs{x}<\abs{x_0}$, niin
+\[
+\abs{a_nx^n}\leq C\abs{x/x_0}^n,
+\]
+jolloin majoranttiperiaatteen nojalla sarja suppenee itseisesti geometrisen sarjan 
+($q=\abs{x/x_0}<1$) tavoin. Siis on todettu: Jos sarja suppenee kun $x=x_0\neq 0$, niin se 
+suppenee itseisesti $\forall x\in (-\abs{x_0},\abs{x_0})$. T‰st‰ seuraa edelleen, ett‰ jos sarja
+hajaantuu kun $x=x_1$, niin se hajaantuu aina kun $\abs{x}>\abs{x_1}$, sill‰ muutoin se jo 
+todetun perusteella olisi sek‰ suppeneva ett‰ hajaantuva, kun $x=x_1$. On siis p‰‰telty: Jos (a)
+ei ole voimassa, niin joko (c) sarja suppenee jokaisella $x \in \R$, jolloin se suppenee 
+jokaisella $x \in \R$ myˆs itseisesti, tai (b) sarja suppenee kun $\abs{x} < \rho$ ja hajaantuu
+kun $\abs{x} > \rho$, miss‰ $\rho$ m‰‰ritell‰‰n (vrt.\ Lause \ref{supremum-lause})
+\[
+\rho=\sup\,\{x \in \R \mid \text{sarja $\sum_{k=0}^\infty a_k x^k$ suppenee}\}.
+\]
+Lause on n‰in todistettu. \loppu
+
+Lauseen vaihtoehdoissa (a), (c) voidaan sopia merkint‰tavoista
+\[
+\text{(a) } \rho=0,\quad \text{(c) } \rho=\infty.
+\]
+Sik‰li kuin potenssisarjan suppenemiss‰de pystyt‰‰n m‰‰r‰‰m‰‰n, ratkaisee 
+Lause \ref{suppenemiss‰de} siis sarjan suppenemiskysymyksen t‰ydellisesti, lukuun ottamatta 
+muuttujan arvoja  $x = \rho$ ja $x = -\rho$, kun $\rho \in \R_+\,$. N‰m‰ on selvitett‰v‰ 
+tapauskohtaisesti, vrt.\ Esimerkki \ref{suppenemisv‰lej‰} j‰ljemp‰n‰. Keskeisimm‰ss‰ 
+laskennallisessa ongelmassa, eli suppenemiss‰teen m‰‰r‰‰misess‰, auttaa usein seuraava tulos:
+\begin{Lause} \vahv{(Suppenemiss‰teen laskukaava)} \label{suppenemiss‰teen laskukaava}
+Jos potenssisarjassa $\sum_{k=0}^\infty a_k x^k$ on $a_k \neq 0\ \forall k \ge 1$ ja on 
+olemassa raja-arvo
+\[
+\rho=\lim_{k\kohti\infty} \left|\frac{a_k}{a_{k+1}}\right|,
+\]
+miss‰ $\rho\in\R_+$, $\rho=0$ tai $\rho=\infty$, niin sarjan suppenemiss‰de $=\rho$.
+\end{Lause}
+\tod Olkoon ensin $\abs{x} < \rho$. Valitaan $q$ siten, ett‰ $\abs{x} < q < \rho$ 
+(esim.\ $q = (\abs{x}+\rho)/2$). T‰llˆin koska $\abs{a_k}/\abs{a_{k+1}} \kohti \rho$ ja 
+$q < \rho$, niin jostakin indeksist‰ $k=m$ alkaen on $\abs{a_k}/\abs{a_{k+1}} \ge q$ 
+(lukujonon suppenemisen m‰‰ritelm‰ss‰ valittu $\eps = \rho-q$). T‰llˆin voidaan p‰‰tell‰
+\[
+\abs{a_{k+1}} \le q^{-1}\,\abs{a_k},\quad k = m,m+1, \ldots 
+               \qimpl \abs{a_k} \le q^{m-k}\abs{a_m}, \quad k \ge m,
+\]
+jolloin
+\[
+\abs{a_k x^k} \le q^{m-k}\abs{a_m}\abs{x}^k = q^m\,\abs{a_m}\left(\frac{\abs{x}}{q}\right)^k 
+                                            = C\left(\frac{\abs{x}}{q}\right)^k, \quad k \ge m.
+\]
+T‰ss‰ on $\abs{x}/q < 1$, joten p‰‰tell‰‰n majoranttiperiaatteen nojalla, ett‰ sarja 
+$\sum_{k=0}^\infty a_k x^k$ suppenee itseisesti, indeksist‰ $k=m$ eteenp‰in geometrisen sarjan
+tavoin. Siis jos $\rho \in \R_+$, niin sarja suppenee itseisesti kun $\abs{x} < \rho$. Jos 
+oletettu raja-arvo on $\rho = \infty$, niin ym.\ p‰‰ttelyss‰ voidaan $\rho \in \R_+$ valita 
+miten tahansa, joten t‰ss‰ tapauksessa myˆs suppenemiss‰de $= \infty$.
+
+Jos $\rho\in\R_+$ ja $\abs{x} > \rho$, niin n‰hd‰‰n samalla tavoin kuin yll‰, ett‰ indeksin $m$
+ollessa riitt‰v‰n suuri p‰tee jokaisella $k \ge m$
+\[
+\abs{a_k x^k} \ge q^{m-k}\abs{a_m}\abs{x}^k = q^m\,\abs{a_m}\left(\frac{\abs{x}}{q}\right)^k 
+                                            = C\left(\frac{\abs{x}}{q}\right)^k, \quad k \ge m.
+\]
+miss‰ nyt $\rho < q < \abs{x}$. N‰inollen $\abs{a_k x^k}\kohti \infty$ kun $k \kohti \infty$, 
+jolloin sarja $\sum_k a_k x^k$ ei ole Cauchyn jono ja siis hajaantuu. Siis jos $\rho \in \R_+$,
+niin sarja suppenee kun $\abs{x} < \rho$ ja hajaantuu kun $\abs{x} > \rho$, eli sarjan 
+suppenemiss‰de $= \rho$. Jos $\rho = 0$, niin sarja todetaan samalla p‰‰ttelyll‰ hajaantuvaksi
+aina kun $x \neq 0$, eli t‰ss‰ tapauksessa suppenemiss‰de $= 0$. Lause on n‰in todistettu. \loppu
+\begin{Exa} M‰‰rit‰ potenssisarjan suppenemiss‰de, kun kertoimet ovat
+\[
+\text{a) } a_k=k!\quad \text{b) } a_k=(-1)^k (k+1)^{-1}\quad 
+\text{c) } a_k=k^2\cdot 3^{-k}\quad \text{d) } a_k=1/k!\,.
+\]
+\end{Exa}
+\ratk Lauseen \ref{suppenemiss‰teen laskukaava} perusteella
+\begin{align*}
+\text{a) } \rho &= \lim_k 1/(k+1) = 0, \qquad\quad\,\   
+\text{b) } \rho = \lim_k\,(k+2)/(k+1) = 1, \\
+\text{c) } \rho &= \lim_k\,3k^2/(k+1)^2 = 3, \qquad     
+\text{d) } \rho = \lim_k\,(k+1) = \infty. \qquad\loppu
+\end{align*}
+Jos potenssisarja suppenee, kun $x \in A$, ja hajaantuu, kun $x \not\in A$, niin joukkoa 
+$A\ (A\subset\R)$ sanotaan ko.\ sarjan \kor{suppenemisv‰li}ksi. Lauseen \ref{suppenemiss‰de}
+mukaisesti $A$ on jokin vaihtoehdoista $(-\rho,\rho)$, $[-\rho,\rho)$, $(-\rho,\rho]$, 
+$[-\rho,\rho]$, miss‰ $\rho=$ suppenemiss‰de. 
+\begin{Exa} \label{suppenemisv‰lej‰} M‰‰rit‰ potenssisarjan  $\sum_{k=0}^\infty a_k x^k$ 
+suppenemisv‰li, kun 
+\[
+\text{a)}\ a_k = 1, \quad \text{b)}\ a_k = 1/(k+1), \quad 
+\text{c)}\ a_k = (-1)^k/(k+1), \quad \text{d)}\ a_k = 1/(k+1)^2.
+\]
+\end{Exa}
+\ratk Lauseen \ref{suppenemiss‰teen laskukaava} laskukaava antaa suppenemiss‰teeksi $\rho = 1$
+kaikissa tapauksissa, joten sarjat suppenevat, kun $\abs{x} < 1$, ja hajaantuvat, kun 
+$\abs{x} > 1$. Tapauksissa $x = \pm 1$ esimerkkisarjat edustavat jo entuudestaan tuttuja 
+geometrisen, harmonisen, alternoivan ja yliharmonisen sarjan tyyppej‰. Tulokset yhdist‰m‰ll‰ 
+saadaan vastaukseksi
+\[
+\text{a)}\ (-1,1), \quad \text{b)}\ [-1,1), \quad \text{c)}\ (-1,1], 
+\quad \text{d)}\ [-1,1]. \loppu
+\]
+\begin{Exa} Mik‰ on sarjan
+\[
+\sum_{k=0}^\infty (-1)^k (k^2+1) \dfrac{x^{2k}}{2^k}\ =\ 1 - x^2 + \dfrac{5}{4} x^4 - \ldots
+\]
+suppenemisv‰li? 
+\end{Exa}
+\ratk Lauseen \ref{suppenemiss‰teen laskukaava} laskukaava suppenemiss‰teelle ei sovellu 
+suoraan, koska sarja on muotoa $\sum_{k=0}^\infty a_k x^k$, miss‰ $a_k = 0$ parittomilla 
+indeksin arvoilla. Teht‰v‰ ratkeaa kuitenkin yksinkertaisesti vaihtamalla muuttujaksi $y=x^2$,
+jolloin sarja saa muodon $\sum_{k=0}^\infty b_k y^k$. Lause \ref{suppenemiss‰teen laskukaava}
+soveltuu t‰h‰n sarjaan, sill‰
+\[
+\lim_k \left|\dfrac{b_k}{b_{k+1}}\right|\ 
+               =\ \lim_k \dfrac{(k^2 +1)\,2^{-k}}{[(k+1)^2 + 1]\,2^{-k-1}}\ =\ 2.
+\]
+Siis sarja suppenee, kun $\abs{y} = x^2 < 2$, ja hajaantuu, kun $\abs{y} = x^2 > 2$. 
+Suppenemiss‰de muuttujan $x$ suhteen on n‰inollen $\rho = \sqrt{2}$. Muuttujan arvoilla 
+$x=\pm\sqrt{2}$ sarja n‰hd‰‰n hajaantuvaksi, joten suppenemisv‰li on $(-\sqrt{2},\sqrt{2})$.
+\loppu
+\begin{Exa} Mill‰ arvoilla $x \in \R_+$ suppenee sarja 
+\[ 
+\sum_{k=0}^\infty \dfrac{x^{2k-1/2}}{k!}\ 
+          =\ \dfrac{1}{\sqrt{x}} + x\sqrt{x} + \dfrac{x^3\sqrt{x}}{2} + \ldots \ \ ?
+\]
+\end{Exa}
+\ratk Sik‰li kuin sarja suppenee, niin raja-arvojen yhdistelys‰‰ntˆjen 
+(Lause \ref{raja-arvojen yhdistelys‰‰nnˆt}) nojalla summa $s(x)$ on kirjoitettavissa
+\[
+s(x)\ =\ \dfrac{1}{\sqrt{x}} \sum_{k=0}^\infty \dfrac{(x^2)^k}{k!}\,.
+\]
+P‰‰tell‰‰n, ett‰ sarja suppenee t‰sm‰lleen sellaisilla arvoilla $x\in\R_+$, joilla potenssisarja
+$\sum_{k=0}^\infty x^{2k}/k!$ suppenee. Muuttujan vaihdolla $y=x^2$ ja Lauseen 
+\ref{suppenemiss‰teen laskukaava} avulla todetaan ko.\ potenssisarjan suppenemiss‰teeksi 
+$\rho = \infty$, joten kysytty sarja suppenee jokaisella $x \in \R_+$. \loppu
+\begin{Exa} \label{potenssilimes ja potenssisarja} P‰‰ttele potenssisarjojen teorian avulla 
+raja-arvotulos
+\[ \abs{q} < 1 \qimpl \lim_k k^m q^k = 0\ \ \ \forall m \in \N. \] 
+\end{Exa}
+\ratk Koska (vrt.\ Lause \ref{raja-arvojen yhdistelys‰‰nnˆt})
+\[
+\lim_k \dfrac{k^m}{(k+1)^m}\ =\ \lim_k \dfrac{1}{(1+1/k)^m}\ =\ 1,
+\]
+niin Lauseen \ref{suppenemiss‰teen laskukaava} mukaan potenssisarjan 
+$\sum_{k=1}^\infty k^m x^k$ suppenemiss‰de on $\rho = 1$. Koska sarja siis suppenee kun $x=q$,
+seuraa v‰ite Korollaarista \ref{sarjan suppenemiskorollaari}. \loppu
+
+P‰‰tet‰‰n potenssisarjojen ensiesittely seuraavaan kauniiseen tulokseen, jolla tulee olemaan 
+myˆhemp‰‰ k‰yttˆ‰.
+\begin{Lause} \label{potenssisarjan skaalaus} Jos $m \in \Z$, niin potenssisarjoilla 
+$\sum_{k=1}^\infty a_k x^k$ ja $\sum_{k=1}^\infty k^m a_k x^k$ on sama suppenemiss‰de. 
+\end{Lause}
+%\tod Jos potenssisarjan $\sum_{k=0}^\infty a_k x^k$ kertoimilla on Lauseessa 
+%\ref{suppenemiss‰teen laskukaava} oletettu raja-arvo-ominaisuus, niin jokaisella $m \in \Z$ 
+%p‰tee (vrt.\ Esimerkki \ref{potenssilimes ja potenssisarja})
+%\[
+%\lim_k \left|\dfrac{k^m a_k}{(k+1)^m a_{k+1}}\right|\ 
+%         =\ \lim_k \left(\dfrac{k^m}{(k+1)^m}\right) \lim_k \left|\dfrac{a_k}{a_{k+1}}\right|\
+%         =\ 1 \cdot \rho\ =\ \rho,
+%\]
+%joten v‰ite on t‰ss‰ tapauksessa tosi Lauseen \ref{suppenemiss‰teen laskukaava} perusteella. 
+%Yleisempi p‰‰ttely on esim.\ seuraava: 
+\tod Olkoon sarjan $\sum_{k=0}^\infty a_k x^k$ suppenemiss‰de
+$ = \rho \neq 0$ ja olkoon $\abs{x} < \rho$. Valitaan $q$ siten, ett‰ $\abs{x} < q < \rho$ ja 
+kirjoitetaan
+\[
+\abs{k^m a_k x^k}\ =\ k^m \left(\dfrac{\abs{x}}{q}\right)^k \abs{a_k}\,q^k.
+\]
+Koska $\abs{x}/q < 1$, niin t‰ss‰ on (vrt.\ Esimerkki \ref{potenssilimes ja potenssisarja})
+\[ 
+k^m \left(\dfrac{\abs{x}}{q}\right)^k \kohti 0 \quad \text{kun}\ k \kohti \infty. 
+\]
+N‰inollen $k^m (\abs{x}/q)^k \le C$ jollakin $C \in \R_+$ ja siis 
+$\abs{k^m a_k x^k} \le C \abs{a_k}\,q^k \ \forall k \in \N$. Oletuksen perusteella sarja 
+$\sum_{k=1}^\infty \abs{a_k}\,q^k$ on suppeneva (koska oli $0 < q < \rho$), joten 
+majoranttiperiaatteen nojalla sarja $\sum_{k=1}^\infty k^m a_k x^k$ suppenee, kun 
+$\abs{x} < \rho$. On siis p‰‰telty, ett‰ jos sarjan $\sum_{k=1}^\infty k^m a_k x^k$ 
+suppenemiss‰de $= \rho_1$, niin $\rho_1 \ge \rho$ jos $\rho \in \R_+$ ja $\rho_1 = \infty$ 
+jos $\rho = \infty$. P‰‰ttely toimii myˆs toisinp‰in: Kun kirjoitetaan 
+$b_k = k^m a_k\ \ekv\ a_k = k^{-m} b_k$, niin seuraa samalla tavoin, ett‰ $\rho \ge \rho_1$ jos
+$\rho_1 \in \R_+$ ja $\rho = \infty$ jos $\rho_1 = \infty$. Yhdist‰m‰ll‰ p‰‰telm‰t todetaan, 
+ett‰ on oltava $\rho_1 = \rho$ kaikissa tapauksissa (myˆs kun $\rho=0$). \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+M‰‰rit‰ seuraavien potenssisarjojen suppenemiss‰teet:
+\[
+\text{a)}\ \  \sum_{k=0}^\infty \frac{k^2}{k+1}x^k \quad\ 
+\text{b)}\ \ \sum_{k=0}^\infty (k-2)2^{k+1}x^k \quad\
+\text{c)}\ \  \sum_{k=1}^\infty (-1)^k (\frac{x}{k})^k
+\]
+
+\item
+M‰‰rit‰ seuraavien potenssisarjojen suppenemisv‰lit:
+\[
+\text{a)}\ \ \sum_{k=1}^\infty \frac{1}{\sqrt{k}} x^k \quad\ 
+\text{b)}\ \ \sum_{k=1}^\infty \frac{(-1)^k}{\sqrt{k}} 3^k x^k \quad\
+\text{c)} \ \ \sum_{k=1}^\infty \frac{\sqrt{k+1}}{k^2} 2^k x^k
+\]
+
+\item
+Totea seuraavat sarjat joko suppeneviksi tai hajaantuviksi potenssisarjojen teoriaan vedoten:
+\[
+\text{a)}\ \ \sum_{k=1}^\infty (-1)^k k^{-10} \pi^k e^{-k} \quad\ 
+\text{b)}\ \ \sum_{k=1}^\infty \frac{k!}{(3k)^k} \quad\
+\text{c)}\ \ \sum_{k=1}^\infty \frac{(2k)^k}{k!}
+\]
+
+\item
+M‰‰rit‰ seuraavien potenssisarjojen suppenemisv‰lit:
+\[
+\text{a)}\ \ \sum_{k=0}^\infty \frac{2^k}{k} x^{2k} \quad\ 
+\text{b)}\ \ \sum_{k=1}^\infty \frac{1}{k^3 3^k} x^{3k} \quad \
+\text{c)}\ \ \sum_{k=0}^\infty \frac{1}{k^{1/3} 3^k} x^{3k}
+\]
+
+\item
+Potenssisarjassa $\sum_{k=0}^\infty a_k x^k$ on $a_k=1$, kun $k=m!\,$ ja $m\in\N$, muulloin on
+$a_k=0$. \ a) Mik‰ on sarjan suppenemisv‰li? \ b) a-kohdan perusteella sarja suppenee, kun 
+$x=1/10$. Laske summa $20$ merkitsev‰n numeron tarkkuudella.
+
+\item
+Potenssisarjan kertoimista tiedet‰‰n, ett‰ $k \le a_k \le k^2\ \forall k\in\N$. Mik‰ on sarjan
+suppenemisv‰li?
+
+\item
+Olkoon potenssisarjojen $\sum_k a_k x^k$ ja $\sum_k b_k x^k$ suppenemiss‰teet $\rho_1$ ja
+$\rho_2$. Mit‰ voidaan sanoa sarjan $\sum_k(a_k+b_k)\,x^k$ suppenemiss‰teest‰, jos \newline
+a) $\rho_1=\rho_2=\infty$, \ b) $\rho_1=0,\ \rho_2 \neq 0$, \ c) $\rho_1=\rho_2\in[0,\infty)$,
+\ d) $a_k b_k \ge 0\ \forall k$, \ e) ei aseteta lis‰ehtoja?
+
+\item
+M‰‰rit‰ muuttujan vaihdolla seuraaville sarjoille joukko $A\subset\R$ siten, ett‰ sarja 
+suppenee t‰sm‰lleen kun $x \in A$:
+\[
+\text{a)}\ \ \sum_{k=1}^\infty \frac{1}{k} (2x+1)^k \quad\ 
+\text{b)}\ \ \sum_{k=1}^\infty \frac{(-1)^k}{k}(x^2-4x+3)^k
+\]
+
+\item
+Oletetaan Lauseen \ref{suppenemiss‰teen laskukaava} laskukaava p‰tev‰ksi potenssisarjalle 
+$\sum_k a_k x^k$. Todista Lause \ref{potenssisarjan skaalaus} t‰m‰n avulla.
+
+\item
+N‰yt‰, ett‰ sarjoilla $\sum_{k=0}^\infty a_k x^k$, $\sum_{k=0}^\infty (k+2)^2 a_k x^k$ ja 
+$\sum_{k=1}^\infty \frac{k^2+1}{k} a_k x^k$ on kaikilla sama suppenemiss‰de. 
+
+\item (*)
+Esit‰ jokin rationaalikertoiminen potenssisarja, jonka suppenemisv‰li on 
+$[-\sqrt{e},\sqrt{e}\,]$ ($e=$ Neperin luku).
+
+% Teht‰v‰ vanhasta luvusta I-12 (ei kuulu t‰h‰n lukuun)
+\item (*) (Hidas sarja) \label{H-I-12: hidas sarja}
+Halutaan arvioida yliharmonisen sarjan $\sum_{k=1}^\infty k^{-5/4}$ suppenemisnopeus ja lˆyt‰‰
+toimiva algoritmi sarjan summan $s$ laskemiseksi halutulla tarkkuudella. \newline
+a) \ N‰yt‰ Bernoullin ep‰yht‰lˆn avulla, ett‰ jokaisella $k\in\N$ p‰tee
+\[
+a_k = \frac{(k+1)^{1/4}}{k^{1/4}}-1\ <\ \frac{1}{4k}\,, \quad 
+b_k = 1-\frac{k^{1/4}}{(k+1)^{1/4}}\ >\ \frac{1}{4(k+1)}\,.
+\]
+b) \ P‰‰ttele a-kohdan tuloksesta, ett‰
+\[
+\frac{1}{4(k+1)^{5/4}}\ <\ \frac{1}{k^{1/4}}-\frac{1}{(k+1)^{1/4}}\ 
+                        <\ \frac{1}{4k^{5/4}}\,, \quad k\in\N.
+\]
+c) \ P‰‰ttele b-kohdan tuloksesta, ett‰
+\[
+\frac{4}{(n+1)^{1/4}}\ <\ \sum_{k=n}^\infty \frac{1}{k^{5/4}}\ 
+                       <\ \frac{4}{n^{1/4}}\,, \quad n\in\N.
+\]
+d) \ Halutaan laskea $s$ suoraan osasummiin perustuvalla approksimaatiolla $s \approx s_n$ 
+siten, ett‰ virhe on enint‰‰n $10^{-4}$. L‰htien c-kohdan tuloksesta arvioi tarvittava 
+laskenta-aika (aikayksikkˆ: vuosi!) koneella, joka summeeraa sarjaa $10^{10}$ termi‰/s. \newline
+e) \ c-kohdan tuloksesta voidaan johtaa myˆs approksimaatio 
+\[
+s\ =\ s_n + \sum_{k=n+1}^\infty \frac{1}{k^{5/4}}\ \approx\ s_n+\frac{4}{(n+1)^{1/4}}\ =\ s_n^*.
+\]
+P‰‰ttele virhearvio
+\[
+0\ <\ s_n^*-s\ <\ \frac{4}{(n+1)^{1/4}}-\frac{4}{(n+2)^{1/4}}\ <\ \frac{1}{(n+1)^{5/4}}\,.
+\]
+f) \ Arvioi, kauanko laskeminen d-kohdassa korkeintaan kest‰‰, kun k‰ytet‰‰n e-kohdan 
+parannettua algoritmia. --- Ent‰ jos vaaditaan, ett‰ virhe on enint‰‰n $10^{-15}$\,?
+
+\end{enumerate}

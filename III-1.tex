@@ -1,0 +1,283 @@
+\section{Osoitinkunta} \label{osoitinkunta}
+\alku
+\index{osoitinkunta|vahv}
+\index{laskuoperaatiot!d@osoittimien|vahv}
+
+Lähtökohtana on euklidinen taso ja siihen pystytetty karteesinen koordinaatisto,
+koordinaatteina $(x,y)$. Kutsutaan tällä kertaa \kor{osoittimeksi} suuntajanaa, jolla on 
+tietty pituus ja suunta. Pituutta merkitään symbolilla $r$ ja suunta mitataan $x$-akselin
+suunnasta vastapäivään kiertäen
+\index{vaihekulma}%
+\kor{vaihekulmalla} (napakulmalla) $\varphi$. Merkitään
+\[
+\ptp = r \vkulma{\varphi}\,.
+\]
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-25.pstex_t}
+\end{center}
+\end{figure}
+Osoitin on siis toistaiseksi täsmälleen samanlainen olio kuin vektori: sillä on pituus ja 
+suunta. Osoittimet myös samastetaan kuten vektorit. On huomioitava ainoastaan, että
+$\varphi$ ja $\varphi+2\pi$ vastaavat samaa suuntaa, joten samastussäännöt ovat
+\index{samastus '$=$'!f@osoittimien}% 
+\[
+r_1\vkulma{\varphi_1}=r_2\vkulma{\varphi_2} \qekv
+\begin{cases}
+\,r_1=r_2=0\ \ \text{tai} \\ 
+\,r_1=r_2>0\,\ \wedge\,\ \varphi_1-\varphi_2=k \cdot 2\pi,\ \ k\in\Z.
+\end{cases}
+\]
+Tapauksessa $r=0$ samastetaan siis kaikki suunnat, kuten nollavektorissa. Osoitinta
+kutsutaankin tässä tapauksessa
+\index{nollaosoitin}%
+\kor{nollaosoittimeksi} ja merkitään
+\[
+0 \vkulma{\varphi} = \pointer{0}.
+\]
+Osoittimien joukkoa merkitään jatkossa $\Pkunta$:llä:
+\[
+\Pkunta=\{\ptp = r\vkulma{\varphi} \mid r\in[0,\infty),\ \varphi\in\R\}.
+\]
+
+Osoittimien yhteenlaskuoperaatio $(+)$ määritellään samalla tavoin kuin vektoreille, eli
+kolmiodiagrammin avulla:
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-26.pstex_t}
+\end{center}
+\end{figure}
+Myös skalaareilla eli reaaliluvuilla kertominen suoritetaan samoin kuin vektoreilla.
+Erityisesti jos $\lambda \in \R$ ja $\lambda > 0$, niin
+\[
+\lambda(r \vkulma{\varphi}) = \lambda r \vkulma{\varphi}\,, \quad \lambda > 0.
+\]
+Tapauksessa $\lambda=0$ on kertolaskun tulos nollaosoitin. Jos $\lambda \in \R$ ja 
+$\lambda < 0$, niin määritellään (vrt. vektorit)
+\begin{align*}
+\lambda (r \vkulma{\varphi}) &= \abs{\lambda} \cdot (-1) (r \vkulma{\varphi}) \\
+                             &= \abs{\lambda} r \vkulma{(\varphi + \pi)}\,, \quad \lambda < 0.
+\end{align*}
+Tässä $r\vkulma(\varphi + \pi)$ on yhteenlaskun määritelmän mukaisesti osoittimen 
+$\ptp = r \vkulma{\varphi}\,$
+\index{vastaosoitin}%
+\kor{vastaosoitin}:
+\[
+-\ptp = (-1)\ptp = r\vkulma{(\varphi + \pi)}\,.
+\]
+Tähänastisen perusteella osoittimien yhteenlaskusta ja skaalauksesta muodostuva algebra 
+$(\Pkunta,+,\R)$ näyttää yksinkertaisesti tason vektoriavaruudelta. Näin onkin toistaiseksi,
+ja vektorianalogia voidaan viedä hiukan pidemmällekin: Otetaan käyttöön tason vektoriavaruuden
+ortonormeerattua kantaa $\{\vec i, \vec j\}$ vastaava osoitinkanta, jossa kantaosoittimia
+merkittäköön
+\begin{multicols}{2} \raggedcolumns
+\begin{align*}\vec i\ \vast\ \ptr &= 1 \vkulma{0}, \\
+\vec j\ \vast\ \pti &= 1 \vkulma{\pi/2}.
+\end{align*}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(2,2.5)(0,0)
+\put(0,0){\vector(1,0){2}} \put(1.75,-0.5){$\ptr$}
+\put(0,0){\vector(0,1){2}} \put(0.2,1.6){$\pti$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Jos nyt $\ptp = r \vkulma{\varphi} \in \Pkunta$, niin $\ptp$ voidaan ilmaista kantaosoittimien 
+avulla yksikäsitteisesti muodossa
+\begin{align} \label{vaellus1}
+\ptp = r \vkulma{\varphi}\, &=\, r\cos{\varphi}\,\ptr + r\, \sin{\varphi}\,\pti \notag \\ 
+                            &=\, x \ptr + y \pti.
+\end{align}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-27.pstex_t}
+\end{center}
+\end{figure}
+Toisaalta jos tunnetaan $\ptp$:n koordinaatit $x,y$ osoitinkannassa, niin esitysmuoto 
+$\ptp = r \vkulma{\varphi}$ saadaan lasketuksi kaavoilla
+\begin{equation} \label{vaellus2}
+r=\sqrt{x^2+y^2}\,, \quad \begin{cases}
+                          \,\cos{\varphi} = x/r, \\ \,\sin{\varphi} = y/r.
+                          \end{cases}
+\end{equation}
+Tämän mukaan $\varphi$ määräytyy $2\pi$:n monikertaa vaille yksikäsitteisesti, jos $r>0$
+(eli $(x,y)\neq(0,0)$), joten osoitin määräytyy sovittujen samastussääntöjen nojalla
+yksikäsitteisesti. Jatkossa käytetään osoittimen eri esityismuodoista nimityksiä
+\begin{align*}
+\ptp = r \vkulma{\varphi} \qquad\qquad &\text{\kor{polaarimuoto} (polaariesitys)}, \\
+\ptp = x \ptr + y \pti    \qquad       &\text{\kor{komponenttimuoto}}.
+\end{align*} 
+Siirtyminen esitysmuodosta toiseen tapahtuu siis säännöillä \eqref{vaellus1} ja
+\eqref{vaellus2}. Koska komponenttiesitys luo kääntäen yksikäsitteisen vastaavuuden
+$\Pkunta \vast \Rkaksi$, niin osoittimia voidaan ajatella abstraktisti myös reaalilukujen
+pareina:
+\[
+\ptp = x\ptr+y\pti\ \vast\ (x,y)\in\Rkaksi.
+\]
+
+Osoittimen komponenttimuoto on erityisen kätevä yhteenlaskussa:
+\[
+\boxed{\begin{aligned}
+\quad \ptp_1 &= r_1 \vkulma{\theta_1} \ \ja \ \ptp_2 = r_2 \vkulma{\theta_2} \\
+             &\impl\ \ptp_1 + \ptp_2 = (r_1 \cos{\theta_1} + r_2 \cos{\theta_2})\,\ptr 
+                                     + (r_1 \sin{\theta_1} + r_2 \sin{\theta_2})\,\pti.
+                                                                            \akehys\quad
+\end{aligned} } \]
+Polaarimuotoon päästään tästä takaisin säännöillä (\ref{vaellus2}) --- lopputulosta ei
+yleisessä muodossa kannata kirjoittaa.
+
+Tähän asti osoitinavaruuden ja tason vektoriavaruuden välinen analogia on täydellinen.
+Tultaessa osoittimien \pain{kertolaskuun} tiet kuitenkin eroavat. Osoittimille ei määritellä
+skalaarituloa eikä ristituloakaan, vaan toisen tyyppinen tulo, jota jatkossa sanotaan
+\index{osoitintulo}%
+\kor{osoitintuloksi}. Määritelmä on:
+\[
+\boxed{\kehys\quad \ptp_1 = r_1 \vkulma{\varphi_1} \ \ja \ \ptp_2 = r_2 \vkulma{\varphi} \qimpl 
+                 \ptp_1\cdot\ptp_2 = r_1 r_2 \vkulma{(\varphi_1 + \varphi_2)}. \quad}
+\]
+Osoitintulo on siis funktio tyyppiä $\,\Pkunta \times \Pkunta \kohti \Pkunta$ --- kyse on
+hieman omalaatuisesta reaalilukujen kertolaskun (pituudet) ja yhteenlaskun (suunnat)
+yhdistelmästä (vrt.\ Harj.teht.\,\ref{kunta}:\ref{H-I-2: Big Ben}).
+
+Osoitintulon määritelmästä seuraa suoraan normaali vaihdantalaki
+\[
+\ptp_1\ptp_2 = \ptp_2\ptp_1
+\]
+(tässä jätetty kertomerkki pois tavalliseen tapaan). Myös liitäntälaki on voimassa
+(Harj.teht.\,\ref{H-III-1: osoitintulon liitäntälaki}). Lisäksi nähdään, että
+\index{ykkösosoitin}%
+\kor{ykkösosoitin}, eli kertolaskun ykkösalkio, on
+\[
+\pointer{1} = \ptr = 1 \vkulma{0}\,.
+\]
+Jokaisella $\ptp \in \Pkunta, \ \ptp \neq \pointer{0}$, on myös
+\index{kzyzy@käänteisosoitin}%
+\kor{käänteisosoitin} $\ptpinv$, joka toteuttaa
+\[
+\ptp\cdot\ptpinv = \pointer{1} = 1 \vkulma{0}\,.
+\]
+Nimittäin jos $\ptp = r \vkulma{\varphi},\ r \neq 0$, niin 
+\begin{multicols}{2} \raggedcolumns
+\[
+\ptpinv = r^{-1}\vkulma{-\varphi}\,.
+\]
+\begin{figure}[H]
+%\begin{center}
+\import{kuvat/}{kuvaII-28.pstex_t}
+%\end{center}
+\end{figure}
+\end{multicols}
+Osoitintulon määritelmästä seuraa välittömästi, että jokaisella $n\in\N$ pätee potenssiin 
+korotuksen laskusääntö
+\[
+\boxed{\kehys\quad (\ptp)^n = r^n\vkulma{n\varphi}. \quad}
+\]
+Tapauksessa $\ptp\neq\pointer{0}$ tämä on pätevä jokaisella $n\in\Z$, kun sovitaan normaaliin 
+tapaan, että
+\[
+(\ptp)^0=\pointer{1}, \quad\ (\ptp)^{-n}=[\ptpinv]^n,\ \ n\in\N \quad (\ptp\neq\pointer{0}).
+\]
+\begin{Exa} Määritä osoitinyhtälön $(\ptp)^3=-\ptp$ kaikki ratkaisut.
+\end{Exa}
+\ratk Osoitintulon määritelmän ja samastussääntöjen nojalla päätellään
+\begin{align*}
+      &(\ptp)^3=-\ptp \\[2mm]
+\qekv &r^3\vkulma{3\varphi} \,=\, r\vkulma{(\varphi+\pi)} \\[2mm]
+\qekv &r^3=r=0 \quad \text{tai} \quad 
+       r^3=r>0\ \ \ja\ \ 3\varphi=(\varphi+\pi)+k \cdot 2\pi,\,\ \ k\in\Z \\[1mm]
+\qekv &r=0 \quad \text{tai} \quad r=1\ \ \ja\ \ \varphi=\frac{\pi}{2}+k\cdot\pi,\ \ k\in\Z.
+\end{align*}
+Tapauksessa $r=1$ saadaan erilaisia osoittimia vain $k$:n arvoilla $0,1$, joten ratkaisut
+ovat
+\[
+\ptp=\pointer{0},\ \ptp=\pm\pti. \loppu
+\]
+
+Osoitintulon ja osoittimien yhteenlaskun määritelmistä seuraa vielä, että pätee myös
+osittelulaki
+\[
+\ptp \cdot (\ptq_1 + \ptq_2) = \ptp \cdot \ptq_1 + \ptp \cdot \ptq_2\,.
+\]
+Tämä on seuraus siitä, että jos $\ptp = r \vkulma{\varphi}$, niin kertolasku $\ptp \cdot \ptq$
+voidaan kirjoittaa muotoon
+\[
+\ptp \cdot \ptq = r (1\vkulma{\varphi}) \cdot \ptq.
+\]
+Tässä osoittimella $(1\vkulma{\varphi})$ kertominen on sama kuin kierto kulman $\varphi$
+verran. Sekä tälle operaatiolle että skalaarilla $r$ kertomiselle pätee yhteenlaskun suhteen 
+osittelulaki (vrt.\ ristitulon vastaavan osittelulain todistus Luvussa \ref{ristitulo}), joten 
+väitetty osittelulaki seuraa.
+
+Kun nyt $\Pkunta$:ssä on tullut määritellyksi sekä yhteenlasku että kertolasku, jotka 
+toteuttavat normaalit vaihdanta-, liitäntä- ja osittelulait, ja lisäksi on konstruoitu
+yhteenlaskun nolla-alkio ja vasta-alkio sekä kertolaskun ykkösalkio ja käänteisalkio, niin on 
+tullut osoitetuksi, että $(\Pkunta,+,\cdot)$ on itse asiassa \pain{kunta}. Nähdään siis, että 
+osoitintulon mukaan ottaminen muuttaa osoitinalgebran varsin radikaalisti. Osoittimia voikin
+luonnehtia 'pyöriviksi luvuiksi', joita vain lasketaan yhteen kuten vektoreita. --- Erillistä
+skalaarilla kertomisoperaatiota ei osoitintulon määrittelyn jälkeen enää tarvita, sillä
+skalaarin $\lambda\in\R$ voi tulkita osoittimeksi
+\[
+\pointer{\lambda} \,=\, \begin{cases}
+                        \,\lambda \vkulma{0},        &\text{jos }\ \lambda \ge 0, \\
+                        \,\abs{\lambda}\vkulma{\pi}, &\text{jos }\ \lambda <0,
+                        \end{cases}
+\]
+jolloin skaalaus on osoitintulon erikoistapaus: $\lambda\ptp=\pointer{\lambda}\ptp$.
+ 
+Osoitintulolle saadaan varsin yksinkertainen esitystapa myös komponenttimuodossa. Nimittäin
+jos
+\begin{align*}
+\ptp_1 &= r_1 \cos{\varphi_1} \ptr + r_1 \sin{\varphi_1} \pti = x_1 \ptr + y_1 \pti, \\
+\ptp_2 &= r_2 \cos{\varphi_2} \ptr + r_2 \sin{\varphi_2} \pti = x_2 \ptr + y_2 \pti,
+\end{align*}
+niin osoitintulon määritelmästä ja trigonometristen funktioiden yhteenlaskukaavoista 
+(ks.\ Luku \ref{trigonometriset funktiot}) seuraa
+\begin{align*}
+\ptp_1 \cdot \ptp_2 &= r_1r_2 \cos({\varphi_1 + \varphi_2})\,\ptr 
+                                + r_1r_2 \sin({\varphi_1 + \varphi_2})\,\pti \\
+                    &= r_1r_2 (\cos{\varphi_1} \cos{\varphi_2} 
+                                - \sin{\varphi_1} \sin{\varphi_2})\,\ptr \\
+                    & \qquad + r_1r_2 (\sin{\varphi_1} \cos{\varphi_2} 
+                                + \cos{\varphi_1} \sin{\varphi_2})\,\pti \\
+                    &= (x_1x_2-y_1y_2)\ptr + (x_1y_2 + y_1x_2)\pti.
+\end{align*}
+Näin ollen osoitintuloa vastaa $\Rkaksi$:ssä määritelty tulo
+\begin{equation} \label{kertolasku}
+\boxed{\kehys\quad (x_1,y_1) \cdot (x_2,y_2) = (x_1x_2-y_1y_2,\,x_1y_2 + y_1x_2). \quad}
+\end{equation}
+Yhdessä jo aiemmin määritellyn (vektorien) yhteenlaskun kanssa, ts.
+\begin{equation} \label{yhteenlasku}
+\boxed{\kehys\quad (x_1,y_1) +(x_2,y_2) = (x_1 + x_2,\,y_1 + y_2) \quad}
+\end{equation}
+on lukupareista saatu aikaan algebra $(\Rkaksi,+,\cdot)$, joka siis on kunta (!). Kunnan
+$(\Rkaksi,+,\cdot)\,$ nolla- ja ykkösalkiot ovat
+\[
+(0,0)\vastaa\pointer{0}, \quad (1,0)\vastaa\pointer{1}.
+\]
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-III-1: osoitintulon liitäntälaki}
+Todista osoitintulon liitäntälaki $\,(\ptp_1\ptp_2)\ptp_3=\ptp_1(\ptp_2\ptp_3)$.
+
+\item
+Näytä suoraan osoitintulon määritelmästä, että pätee: \newline
+a) \ $-\ptp=(-\pointer{1})\ptp \quad$ 
+b) \ $\pointer{0}\ptp=\pointer{0} \quad$
+c) \ $\ptp\ptq=\pointer{0}\ \impl\ \ptp=\pointer{0}\ \tai\ \ptq=\pointer{0}$
+
+\item
+Määritä seuraavien osoitinyhtälöiden kaikki ratkaisut: \newline
+a) \ $(\ptp)^2=-\pointer{1} \quad$ 
+b) \ $2(\ptp)^3=\pointer{1} \quad$
+c) \ $(\ptp)^4+3\ptp=\pointer{0} \quad$
+d) \ $(\ptp)^4=4\vkulma\pi$
+
+\item
+Olkoon $(x,y)\in\Rkaksi,\ (x,y) \neq (0,0)$. Lähtien lukuparien tulon määritelmästä 
+määritä $(a,b)\in\Rkaksi$ siten, että $(x,y)\cdot(a,b)=(1,0)$, ts.\ $(a,b)=(x,y)^{-1}$.
+ 
+\end{enumerate}

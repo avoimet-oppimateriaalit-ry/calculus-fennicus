@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[finnish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{theorem}
+\usepackage{graphicx}
+\usepackage{apropos}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{amscd}
+\usepackage{curves}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{float}
+\usepackage{import}
+\usepackage{rotating}
+%\usepackage{jpheader}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{\medskipamount}
+\setlength{\textwidth}{35em}
+
+\usepackage{jpheader}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+\theoremheaderfont{\rmfamily\scshape}
+
+%\includeonly{kansi1,esi}
+%\includeonly{kansi,esi,I-0,I-1a,taka}
+
+\begin{document}
+
+\frontmatter
+
+\include{kansi}
+\include{esi}
+
+\tableofcontents
+
+\mainmatter
+
+\newcommand{\alku}{\setcounter{Exa}{0} \setcounter{equation}{0}}
+\newcommand{\jatko}{\addtocounter{Exa}{-1}}
+\newcommand{\seur}{\addtocounter{Exa}{1}}
+
+\include{I-0}
+\include{I-1}
+\include{I-2}
+\include{I-3}
+\include{I-4}
+\include{I-5}
+\include{I-6}
+\include{I-7}
+\include{I-8}
+\include{I-9}
+\include{I-10}
+\include{I-11}
+\include{I-12} %yhdistetty vanhat I-12 ja I-13
+\include{II-0}
+\include{II-1}
+\include{II-2}
+\include{II-3}
+\include{II-4}
+\include{II-5} %vanha Funktion käsite -> II-5a
+\include{II-6} %vanha Trigonometriset funktiot -> II-6a
+\include{II-7}
+\include{II-8} %yhdistetty vanhat I-7 ja I-8, osia -> I-8a
+\include{III-0}
+\include{III-1}
+\include{III-2}
+\include{III-3}
+\include{III-4}
+\include{IV-0}
+\include{IV-1} 
+\include{IV-2} %yhdistetty vanhat IV-2 ja IV-4, vanha IV-4 -> IV-4a
+\include{IV-3}
+\include{IV-4} %yhdistetty vanhat IV-5 ja IV-6, poistokamaa -> IV-5a
+\include{IV-5}
+\include{V-0}
+\include{V-1} %poistokamaa -> V-1a
+\include{V-2}
+\include{V-3} %yhdistetty vanhat V-4 ja V-5[-> V-4a], vanha V-3 poistettu (osa -> V-6)
+\include{V-4} %= vanha V-8, poistokamaa -> V-5a
+\include{V-5} %= vanha V-6 (muunneltu)
+\include{V-6} %= vanha V-7 (muunneltu)
+\include{V-7} %yhdistetty vanhat V-9 ja V-10 
+\include{V-8} %= vanha VI-2
+\include{V-9} %yhdistetty vanhat VI-3,VI-4,VI-5
+\include{exp-0}
+\include{exp-1}
+\include{exp-2}
+\include{exp-3}
+\include{exp-4}
+\include{dif-0}
+\include{dif-1}
+\include{dif-2}
+\include{dif-3}
+\include{dif-4}
+\include{dif-5}
+\include{dif-6}
+\include{dif-7}
+
+\backmatter
+
+\include{taka}
+
+\end{document}

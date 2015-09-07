@@ -1,0 +1,324 @@
+\section{Usean muuttujan Taylorin polynomit} \label{usean muuttujan taylorin polynomit}
+\alku \sectionmark{Usean muuttujan Taylor}
+\index{Taylorin polynomi!a@usean muuttujan|vahv}
+
+Tarkastellaan kahden muuttujan funktiota $f=f(x,y)$ pisteitä $(x_0,y_0)$ ja $(x,y)$
+yhdistävällä janalla $S$. Tällä janalla $f$ voidaan tulkita yhden muuttujan funktiona
+\[
+g(t)=f(x_0+h_xt,y_0+h_yt),\quad t\in [0,1],
+\]
+missä on merkitty
+\[
+h_x=x-x_0,\quad h_y=y-y_0.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,3)
+\path(0,0)(6,3) \put(3,1.5){\vector(2,1){0.1}}
+\put(0.9,0.4){$\bullet$} \put(0.55,0.8){$t=0$} \put(0.8,0){$(x_0,y_0)$}
+\put(4.9,2.4){$\bullet$} \put(4.55,2.8){$t=1$} \put(4.8,2){$(x,y)$}
+\put(3,1.1){$t$} \put(2.5,1.5){$S$} \curve(2.4,1.6,2.2,1.4,2,1)
+\end{picture}
+\end{center}
+\end{figure}
+Oletetaan, että funktion $f$ osittaisderivaatat $\partial^\alpha$ ovat kertalukuun 
+$\abs{\alpha}=n+1$ asti olemassa ja jatkuvia janalla $S$. Tällöin voidaan osittaisderivoinnin
+ketjusäännöistä päätellä, että funktio $g$ on $n+1$ kertaa jatkuvasti derivoituva välillä 
+$[0,1]$, jolloin Taylorin lauseen mukaan pätee jokaisella $t\in (0,1]$
+\[
+g(t)=\sum_{k=0}^n \frac{1}{k!}g^{(k)}(0)\,t^k+\frac{1}{(n+1)!}g^{(n+1)}(\xi)\,t^{n+1},
+\]
+missä $\xi\in (0,t)$. Kun erityisesti valitaan $t=1$, on tulos
+\begin{equation} \label{udif-9: eq1}
+f(x,y)=g(1)=\sum_{k=0}^n\frac{1}{k!}g^{(k)}(0)+\frac{1}{(n+1)!}g^{(n+1)}(\xi). \tag{$\star$}
+\end{equation}
+Tässä voidaan derivaatta $g'(t)$ laskea ketjusäännön perusteella muodossa
+\begin{align*}
+g'(t) &= h_x f_x(x_0+h_xt,y_0+h_yt)+h_y f_y(x_0+h_xt,y_0+h_yt) \\
+      &=[\,(h_x\partial_x+h_y\partial_y)f\,](x_0+h_xt,y_0+h_yt).
+\end{align*}
+Soveltamalla tätä sääntöä uudelleen nähdään, että
+\[
+g^{(k)}(t)=[\,(h_x\partial_x+h_y\partial_y)^kf\,](x_0+h_xt,y_0+h_yt). 
+\]
+Tässä $h_x$ ja $h_y$ tulkitaan derivoitaessa vakioiksi (koska derivointi kohdistuu muuttujaan
+$t$). Tuloksen perusteella $f(x,y)$:n lauseke \eqref{udif-9: eq1} voidaan tulkita
+\kor{kahden muuttujan Taylorin kaavana}
+\[
+\boxed{\begin{aligned}\ykehys
+f(x,y)   &= T_n(x,y,x_0,y_0)+R_n(x,y), \quad \text{missä} \\
+\quad T_n(x,y,x_0,y_0) 
+         &= \sum_{k=0}^n \frac{1}{k!}\,[\,(h_x\partial_x+h_y\partial_y)^kf\,](x_0,y_0), \\
+R_n(x,y) &=\frac{1}{(n+1)!}\,[\,(h_x\partial_x + h_y\partial_y)^{n+1}f\,](x(\xi),y(\xi)),\\[2mm]
+h_x      &= x-x_0,\quad h_y=y-y_0, \\
+x(\xi)   &= x_0+h_x\xi,\quad y(\xi)=y_0+h_y\xi,\quad \xi\in (0,1). \akehys\quad
+\end{aligned}}
+\]
+Tässä $T_n(x,y,x_0,y_0)$ on $f$:n \kor{Taylorin polynomi} astetta $n$ pisteessä $(x_0,y_0)$ ja
+\index{jzyzy@jäännöstermi (Lagrangen)}%
+$R_n$ on \kor{jäännöstermi}. Huomioimalla, että (binomikaavan perusteella, vrt.\
+Luku \ref{osittaisderivaatat})
+\[
+(h_x\partial_x+h_y\partial_y)^k f 
+        = \sum_{l=0}^k \binom{k}{l}h_x^{k-l}h_y^l\partial_x^{k-l}\partial_y^l f, \quad
+          \binom{k}{l}=\frac{k!}{(k-l)!\,l!}\,,
+\]
+saadaan polynomille $T_n(x,y,x_0,y_0)$ konkreettisempi esitysmuoto
+\[
+\boxed{\quad T_n(x,y,x_0,y_0)=\sum_{k=0}^n\sum_{l=0}^k \frac{1}{(k-l)!\, l!}\,
+   \frac{\partial^k f}{\partial x^{k-l}\partial y^l}(x_0,y_0)\,(x-x_0)^{k-l}(y-y_0)^l. \quad}
+\]
+Tästä ja helposti todennettavasta derivointikaavasta
+\[
+\left[\frac{\partial^{i+j}}{\partial x^i\partial y^j}(x-x_0)^m(y-y_0)^n\right]_
+                                  {\left|\begin{array}{l} 
+                                   \scriptstyle{x=x_0} \\ 
+                                   \scriptstyle{y=y_0} \end{array}\right.}
+=\begin{cases} m!\,n!, &\text{jos $i=m$ ja $j=n$}, \\ 0, &\text{muulloin} \end{cases}
+\]
+nähdään, että polynomi $p(x,y)=T_n(x,y,x_0,y_0)$ toteuttaa ehdot
+\[
+\partial^\alpha p(x_0,y_0)=\partial^\alpha f(x_0,y_0),\quad \abs{\alpha}\leq n.
+\]
+Taylorin polynomi myös määräytyy yksikäsitteisesti näistä ehdoista, kuten yhden muuttujan
+tapauksessa (vrt.\ Luku \ref{taylorin lause}).
+\begin{Exa}
+Määrää funktion
+\[
+f(x,y)=e^{-x}+xy+y^2+\cos x\,\cos y
+\]
+Taylorin polynomi $T_2(x,y,0,0)$.
+\end{Exa}
+\ratk Derivoimalla todetaan
+\begin{align*}
+&f(0,0)=2, \quad f_x(0,0)=-1, \quad f_y(0,0)=0, \\
+&f_{xx}(0,0)=0, \quad f_{xy}(0,0)=f_{yx}(0,0)=f_{yy}(0,0)=1,
+\end{align*}
+joten
+\begin{align*}
+T_2(x,y,0,0) &= 2 +(-1) \cdot x + 0 \cdot y
+                  +\frac{1}{2!0!} \cdot 0 \cdot x^2 
+                  +2\cdot\frac{1}{1!1!} \cdot 1 \cdot xy
+                  +\frac{1}{0!2!} \cdot 1 \cdot y^2 \\
+             &= 2-x+xy+\frac{1}{2}y^2. \loppu
+\end{align*}
+
+Taylorin kaava siis pätee, kunhan $f$:n osittaisderivaatat ovat kertalukuun $n+1$ asti jatkuvia
+tarkastelupisteen $(x,y)$ ja pisteen $(x_0,y_0)$ välisellä yhdysjanalla. Taylorin kaava
+on siten kahdenkin muuttujan  tapauksessa johtoajatukseltaan yksiulotteinen. Jos halutaan, että
+kaava pätee tarkastelupisteen liikkuessa jossakin joukossa $A$ pisteen $(x_0,y_0)$
+ympäristössä, niin onkin oletettava, $f$:n riittävän säännöllisyyden lisäksi, että $A$ on
+\index{tzy@tähden muotoinen}%
+pisteen $(x_0,y_0)$ suhteen nk. \kor{tähden muotoinen} (engl.\ star-shaped). Tämä tarkoittaa,
+että jokaiseen pisteeseen $(x,y)\in A$ on pisteestä $(x_0,y_0)$ 'näköyhteys', eli pisteiden
+välinen yhdysjana on kokonaisuudessaan joukossa $A$. Näin ajatellen voidaan Taylorin kaavasta
+johtaa seuraava yleinen polynomiapproksimaatiotulos kahden muuttujan funktiolle.
+\begin{Lause} \label{Taylor-R2} \index{Taylorin lause!c@kahden muuttujan|emph}
+Jos funktion $f=f(x,y)$ osittaisderivaatat ovat kertalukuun $n+1$ asti jatkuvia pisteen 
+$(x_0,y_0)$ suhteen tähden muotoisessa ja kompaktissa joukossa $A$, niin jokaisella 
+$(x,y)\in A$ pätee
+\[
+f(x,y)=T_n(x,y,x_0,y_0)+\Ord{h^{n+1}}, \quad h=\sqrt{(x-x_0)^2+(y-y_0)^2}.
+\]
+Jos $f$:n osittaisderivaatat ovat $A$:ssa jatkuvia  kertalukuun $n$ asti, niin 
+\[
+f(x,y)=T_n(x,y,x_0,y_0)+\ord{h^n}, \quad (x,y) \in A.
+\]
+\end{Lause}
+\tod Jos $f$:n osittaisderivaatat ovat kertalukuun $n+1$ jatkuvia kompaktissa joukossa $A$,
+niin ne ovat myös rajoitettuja (ks.\ Lause \ref{weierstrass - Rn}):
+\[
+\abs{\partial^\alpha f(x,y)}\leq C_\alpha\quad\forall\,(x,y) \in A,\quad \abs{\alpha}\leq n+1.
+\]
+Valitsemalla $\,C=\max_{\abs{\alpha}=n+1} C_\alpha\,$ seuraa Taylorin kaavan jäännöstermille arvio
+\begin{align*}
+\abs{R_n(x,y)} &\le \frac{C}{(n+1)!}\sum_{l=0}^{n+1} 
+                                    \binom{n+1}{l}\abs{x-x_0}^{n+1-l}\abs{y-y_0}^l \\
+               &=\frac{C}{(n+1)!}\,\left(\abs{x-x_0}+\abs{y-y_0}\right)^{n+1} \\
+               &\le \frac{C(\sqrt{2})^{n+1}}{(n+1)!}\,h^{n+1}=\Ord{h^{n+1}}, \quad (x,y) \in A.
+\end{align*}
+Astetta heikompien säännöllisyysoletusten ollessa voimassa päätellään vastaavasti
+(vrt.\ Lause \ref{Taylorin approksimaatiolause})
+\begin{align*}
+f(x,y) &= T_{n-1}(x,y,x_0,y_0)+R_{n-1}(x,y) = T_n(x,y,x_0,y_0)+\ord{h^n}. \loppu
+\end{align*}
+
+Tapauksessa $n=1$ Lauseen \ref{Taylor-R2} jälkimmäinen väittämä on: Jos $f$, $f_x$,
+$f_y$ ovat jatkuvia pisteen $(x_0,y_0)$ (tähden muotoisessa) ympäristössä, niin
+\begin{align*}
+f(x,y) &= T_1(x,y,x_0,y_0)+\ord{h} \\
+&= f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)+\ord{h}.
+\end{align*}
+Tulos on ennestään tuttu, sillä tehdyin oletuksin $f$ on differentioituva pisteessä $(x_0,y_0)$
+(vrt.\ Luku \ref{gradientti}). Lauseen \ref{Taylor-R2} jälkimmäistä väittämää voidaan käyttää
+hyväksi myös määrättäessa $f$:n Taylorin polynomia: Väittämän mukaan riittää löytää mikä
+tahansa polynomi $p(x,y)$, jolle pätee
+\[
+f(x,y)-p(x,y)=\ord{h^{n}},\quad h=\sqrt{(x-x_0)^2+(y-y_0)^2}.
+\]
+Tällainen polynomi on välttämättä yksikäsitteinen --- siis $\ p(x,y)=T_n(x,y,x_0,y_0)$
+(vrt.\ Propositio \ref{Taylor-prop}).
+\jatko \begin{Exa} (jatko) Esimerkin funktiolle pätee
+\begin{align*}
+f(x,y)&=1-x+\frac{1}{2}x^2+\Ord{\abs{x}^3}+xy+y^2
+                          +(1-\frac{1}{2}x^2)(1-\frac{1}{2}y^2)+\ordoO{x^4+y^4} \\
+&= 2-x+xy+\frac{1}{2}y^2+\Ord{\abs{x}^3+\abs{y}^3} \\
+&= 2-x+xy+\frac{1}{2}y^2+\Ord{h^3},
+\end{align*}
+joten myös tällä perusteella on
+\[
+T_2(x,y,0,0)=2-x+xy+\frac{1}{2}y^2. \loppu
+\]
+\end{Exa}
+
+\subsection*{Monen muuttujan Taylorin polynomit}
+
+Em.\ tarkastelut yleistyvät helposti kolmen ja useamman muuttujan funktioihin. Kolmen muuttujan
+funktion $f=f(x,y,z)$ Taylorin polynomi määritellään
+\begin{align*}
+T_n(x,y,z,x_0,y_0,z_0) 
+    &= \sum_{k=0}^n \frac{1}{k!}(h_x\partial_x+h_y\partial_y+h_z\partial_z)^kf(x_0,y_0,z_0), \\
+h_x &= x-x_0,\quad h_y=y-y_0,\quad h_z=z-z_0.
+\end{align*}
+Yleisemmin jos $f=f(\mx)=f(x_1,\ldots,x_d)$, niin $f$:n Taylorin polynomi astetta $n$ pisteessä 
+$\ma=(a_1,\ldots,a_d)\in\R^d$ on
+\[ \boxed{
+\quad T_n(\mx,\ma)
+  =\sum_{k=0}^n\frac{1}{k!}\bigl[\bigl(\sum_{i=1}^d h_i\partial_i\bigr)^kf\bigr](\ma),\quad
+                               h_i=x_i-a_i,\quad i=1\ldots d. \quad}
+\]
+Mainittakoon ilman tarkempia perusteluja, että tämä lauseke on purettavissa seuraavaan muotoon,
+joka ei ulkonäöltään juuri poikkea yhden muuttujan tilanteesta
+(vrt.\ myös tapaus $d=2$ edellä):
+\[ \boxed{ \begin{aligned}
+\quad &T_n(\mx,\ma)=\sum_{\abs{\alpha}\le n}\frac{\ygehys 1}{\alpha !}\,
+                             \partial^\alpha f(\ma)\,(\mx-\ma)^\alpha, \quad \\
+      &\alpha ! = \prod_{i=1}^d \alpha_i\,!\,, \quad 
+                  \mx^\alpha = \prod_{i=1}^d x_i^{\alpha_i}, \\
+      &\alpha   = (\alpha_1, \ldots, \alpha_d), \quad \mx = (x_1, \ldots, x_d). \akehys
+\end{aligned} } \]
+Kaavassa summaus käy yli kaikkien erilaisten moni-indeksien 
+(eli järjestettyjen indeksijoukkojen), joille $\abs{\alpha} = \alpha_1 + \ldots \alpha_d \le n$.
+
+Taylorin polynomi  $p(\mx)=T_n(\mx,\ma)$ määräytyy aina myös yksikäsitteisesti polynomina 
+astetta $n$, joka toteuttaa ehdot
+\[
+\partial^\alpha p(\ma)=\partial^\alpha f(\ma),\quad \abs{\alpha}\leq n.
+\]
+Sikäli kuin $f$ ja $f$:n osittaisderivaatat kertalukuun $n$ asti ovat jatkuvia pisteen $\ma$
+ympäristössä, niin riittää myös löytää (keinolla millä hyvänsä) polynomi $p$ astetta $n$,
+jolle pätee
+\[ 
+f(\mx) = p(\mx) + \ord{\abs{\mx-\ma}^n}.
+\]
+Tällöin on $p(\mx)=T_n(\mx,\ma)$.
+
+\subsection*{Polynomi $T_2(\mx,\ma)$ -- Hessen matriisi}
+
+Monen muuttujan Taylorin polynomeja lasketaan harvemmin astelukua $n=2$ pidemmälle.
+Em.\ kaavan mukaan $f$:n toisen asteen Taylorin polynomi on
+\[
+T_2(\mx,\ma) 
+= f(\ma)+\sum_{i=1}^d \partial_i f(\ma)(x_i-a_i)
+        + \frac{1}{2} \sum_{i=1}^d\sum_{j=1}^d \partial_i\partial_j f(\ma)(x_i-a_i)(x_j-a_j).
+\]
+Tämän voi esittää matriisimuodossa
+\[
+T_2(\mx,\ma)=f(\ma)+[\Nabla f(\ma)]^T(\mx-\ma)+\frac{1}{2}(\mx-\ma)^T\mH(\ma)(\mx-\ma),
+\]
+missä $\Nabla f(\ma)$ on gradientti ja $\mH(\ma)$ on $f$:n toisen kertaluvun
+osittaisderivaatoista koostuva nk.\
+\index{Hessen matriisi}%
+\kor{Hessen matriisi} (engl.\ Hessian)\,:
+\[
+[\,\mH(\ma)\,]_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}(\ma),\quad i,j=1\ldots d.
+\]
+\begin{Exa}
+Määrää funktion
+\[
+f(x_1,\ldots,x_d)=\prod_{i=1}^d e^{c_i x_i}
+\]
+Taylorin polynomi $T_2(\mx,\mo)$.
+\end{Exa}
+\ratk Koska
+\[
+f(\mo)=1,\quad \frac{\partial f}{\partial x_i}(\mo)=c_i\,,\quad i=1\ldots d, \quad
+\frac{\partial^2 f}{\partial x_i\partial x_j} = c_i c_j\,,\quad i,j=1\ldots d,
+\]
+niin
+\begin{align*}
+T_2(\mx,\mo) &= 1+\left(\sum_{i=1}^d x_i\,
+                \frac{\partial}{\partial x_i}\right)f(\mo)+\frac{1}{2}\left(\sum_{i=1}^d 
+                         x_i\,\frac{\partial}{\partial x_i}\right)^2f(\mo) \\
+             &= 1 + \sum_{i=1}^d c_i x_i+\frac{1}{2}\sum_{i,j=1}^d c_i c_j x_i x_j\,.
+\end{align*}
+Kun merkitään $\mc=[c_1,\ldots,c_d]^T$ ja $\mH=(c_ic_j)=\mc\mc^T$ 
+($=f$:n Hessen matriisi origossa), niin tulos saadaan muotoon
+\begin{align*}
+T_2(\mx,\mo) \,&=\, 1 + \mc^T\mx + \frac{1}{2} \mx^T\mH\mx \\
+             \,&=\, 1 + \mc^T\mx + \frac{1}{2} (\mc^T\mx)^2.
+\end{align*}
+Lyhyempää tietä samaan tulokseen tullaan, kun huomataan käyttää reaalifunktion
+$\exp(x)$ ominaisuuksia:
+\begin{align*}
+f(\mx) = \exp({\mc^T\mx}) &= 1+\mc^T\mx+\frac{1}{2}(\mc^T\mx)^2+\Ord{\abs{\mc^T\mx}^3} \\
+                          &= 1+\mc^T\mx+\frac{1}{2}(\mc^T\mx)^2+\Ord{\abs{\mx}^3}. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske seuraavien funktioiden Taylorin polynomit annettua astetta $n$ annetussa pisteessä.
+Käytä tilaisuuden tullen apuna yhden muuttujan Taylorin polynomeja.
+\vspace{3mm} \newline
+a) \ $\D f(x,y)=2x^4-5y^3+2xy^2,\,\ (0,0),\,\ n=3$ \vspace{3mm}\newline
+b) \ $\D f(x,y)=\sqrt{x^3y}\,,\,\ (1,4),\,\ n=4$ \vspace{1.5mm}\newline
+c) \ $\D f(x,y)=\frac{1}{2+x-2y}\,,\,\ (2,1),\,\ n=3$ \vspace{1.5mm}\newline
+d) \ $\D f(x,y)=y^2\ln x,\,\ (1,0),\,\ n=4$ \vspace{3mm}\newline
+e) \ $\D f(x,y)=\sin(xy),\,\ (0,0),\,\ n\in\N$ \vspace{3mm}\newline
+f) \ $\D f(x,y)=e^{xy}\sin y,\,\ (0,0),\,\ n=3$ \vspace{3mm}\newline
+g) \ $\D f(x,y)=\cos(x+\sin y),\,\ (0,0),\,\ n=4$ \vspace{1.5mm}\newline
+h) \ $\D f(x,y)=\int_0^{x+y^2-1} e^{-t^2}\,dt+\int_0^{\pi/2} \cos(xt^2+yt)\,dt,\,\ 
+                                             (0,1),\,\ n=2$ \vspace{1.5mm}\newline
+i) \ $\D x^2+2y^2+3z^2=6\ \ekv\ z=f(x,y),\,\ (1,1,1),\,\ n=2$ \vspace{3mm}\newline
+j) \ $\D x+xy^2+2z-\sin z=0\ \ekv\ z=f(x,y),\,\ (0,0,0),\,\ n=2$ \vspace{3mm}\newline
+k) \ $\D f(x,y,z)=e^{xyz},\,\ (0,0,0),\,\ n\in\N$ \vspace{1.5mm}\newline
+l) \ $\D f(x,y,z)=\frac{1}{x+y+z}\,,\,\ (1,0,0),\,\ n=3$ \vspace{1.5mm}\newline
+m) \ $\D f(\mx)=\cos(x_1 + \ldots + x_n),\,\ \mo,\,\ n=2$ \vspace{1.5mm}\newline
+n) \ $\D f(\mx)=\frac{1}{x_1 + \ldots + x_n}\,,\,\ (1,\ldots,1),\,\ n=2$
+
+\item
+Laske funktion $f(x,y)=\ln(1+x^2+y^2)$ osittaisderivaatta $f_{xxxxxxyy}(0,0)$ Taylorin
+polynomien avulla.
+
+\item
+Arvioi, kuinka suuri on seuraavien approksimaatioiden virhe enintään kiekossa
+$A:\,x^2+y^2 \le a^2\ (a>0)$.
+\begin{align*}
+&\text{a)}\ \ e^{x+2y} \approx 1+x+2y \qquad\quad\,
+ \text{b)}\ \ e^{x+2y} \approx 1+x+2y+\frac{1}{2}\,x^2+2xy+2y^2 \\
+&\text{b)}\ \ \cos(xy)\approx 1-\frac{1}{2}\,x^2y^2 \qquad
+ \text{d)}\ \ 2xy+2\cos(x-y) \approx 2+x^2+y^2
+\end{align*}
+
+\item
+Määritä funktion toisen asteen Taylorin polynomi ja sen avulla Hessen matriisi
+origossa:
+\begin{align*}
+&\text{a)}\ \ x\sin(x+y) \qquad
+ \text{b)}\ \ xy\cos(x-y) \qquad\quad
+ \text{c)}\ \ e^{x+y}+e^{x-y} \\
+&\text{d)}\ \ \frac{1-x+x^2}{1+y-y^2} \qquad\
+ \text{e)}\ \ \cos(x+y-2z) \qquad
+ \text{f)}\ \ \frac{e^{xy}+e^{yz}+e^{xz}}{1+x+y+z}
+\end{align*}
+
+\item
+Yhtälö $x^y = y^x\ \ekv\ y \ln x = x \ln y$ määrittelee käyrän, mahdollisesti useampia, pisteen
+$(a, a)$ $(a > 0)$ ympäristössä. Tutki asiaa approksimoimalla funktiota 
+$f(x, y) =  y \ln x - x \ln y$ ensimmäisen, toisen ja kolmannen asteen Taylorin polynomilla 
+pisteessä $(a, a)$.
+
+\end{enumerate}

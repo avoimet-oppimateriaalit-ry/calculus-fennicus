@@ -1,0 +1,191 @@
+\section{Eksponenttifunktion sovellusesimerkkejä}
+\label{eksponenttifunktio fysiikassa}
+\alku
+\index{differentiaaliyhtälö!a@eksponenttifunktion|vahv}
+
+Fysiikassa esiintyy koko joukko nk.\ eksponentiaalisia ilmiöitä, joissa fysikaalisen suureen 
+muuttumista paikan ($x$) tai ajan ($t$) funktiona kuvaa eksponenttifunktio. Seuraavassa viisi
+esimerkkiä.
+\index{zza@\sov!Radioaktiivinen hajoaminen}%
+\begin{Exa}: \label{radioaktiivisuus} \vahv{Radioaktiivinen hajoaminen}.\ Olkoon $A(t)$ tiettyä
+lajia olevien radioaktiivisten ytimien lukumäärä hetkellä $t$. Jos merkitään
+\[
+A(t)=A_0 E(t),\quad t\geq 0,
+\]
+missä $A_0=A(0)$, niin $E(0)=1$. Jos oletetaan, että sama laki on sovellettavissa jokaisella 
+ajan hetkellä, on oltava
+\[
+A(t_1+t_2) = A_0 E(t_1+t_2) = A(t_1)E(t_2) = A_0 E(t_1)E(t_2), \quad t_1,t_2 \ge 0.
+\]
+Siis funktiolla $E(t)$ on ominaisuudet
+\[
+E(0)=1, \quad E(t_1+t_2)=E(t_1)E(t_2), \quad t_1,t_2 \ge 0.
+\]
+Päätellään, että $E$ on eksponenttifunktio ja $A(t)$ siis esitettävissä muodossa
+\[ A(t) = A_0 e^{-at}, \quad t \ge 0, \]
+missä $a$ (mittayksikkö 1/s) on ytimille ominainen vakio (dimensiottomana positiivinen). 
+\pain{Puoliintumisaika} $t_{1/2}$ määritellään ehdosta $A(t_{1/2}) = A_0/2$, jolloin on oltava
+\[ 
+e^{-a\,t_{1/2}} = \dfrac{1}{2} \qekv a\,t_{1/2} 
+                = \ln 2 \qekv t_{1/2} = \dfrac{\ln 2}{a}\,. \loppu 
+\]
+\end{Exa} 
+\index{zza@\sov!Szy@Säteilyn vaimeneminen}
+\begin{Exa}: \label{säteilyvaimennus} \vahv{Säteilyn vaimeneminen}.\ Olkoon $I(x)$
+radioaktiivisen säteilyn intensiteetti vaimentavassa (homogeenisessa) väliaineessa kuljetun
+matkan $x$ funktiona. Jos merkitään
+\[
+I(x)=I_0E(x),\quad x \ge 0,
+\]
+missä $I_0=I(0)$, niin päätellään samoin kuin edellisessä esimerkissä, että $E$ on 
+eksponenttifunktio, eli
+\[ 
+I(x) = I_0 e^{-ax}, \quad x \ge 0,
+\]
+missä $a$ on väliaineelle ominainen vaimennusvakio (mittayksikkö 1/m). Matka jonka kuluessa 
+säteilyn intensiteetti on vaimentunut puoleen alkuintensiteetistä, eli nk.\ 
+p\pain{uoliarvomatka} on
+\[ 
+d_{1/2} = \dfrac{\ln 2}{a}. \loppu 
+\]
+\end{Exa}
+Em.\ esimerkeissä nojattiin suoraan eksponenttifunktion perusaksioomaan E4. Useammin
+eksponenttifunktioon päädytään sovellustilanteissa niin, että tarkasteltavan fysikaalisen
+suureen $y(x)$ (tai $y(t)$) todetaan toteuttavan eksponenttifunktion differentiaaliyhtälön
+\begin{equation} \label{dy1}
+y' = ay,
+\end{equation}
+missä $a$ on (dimensiollinen) vakio. Jos oletetaan, että muuttujan ($x$) fysikaalisesti 
+relevantit arvot ovat (dimensiottomina) ei-negatiivisia ja että tunnetaan arvo $y(0) = y_0$, 
+niin kyseessä on alkuarvotehtävä: On etsittävä funktio $y=y(x)$, joka on jatkuva välillä
+$[0,\infty)$, derivoituva välillä $(0,\infty)$ ja toteuttaa
+\[
+\begin{cases} \,y' = ay, \quad x>0, \\ \,y(0) = y_0. \end{cases}
+\]
+Ratkaisu on $\,y(x)=y_0 e^{ax},\ x \ge 0$. 
+\index{zza@\sov!Szyhkzza@Sähköpiiri: RC}%
+\begin{Exa}: \vahv{Sähköpiiri: RC}.\ Kondensaattorin kapasitanssi on $\,C$ ja varaus $q_0$.
+Hetkellä $t=0$ (aikayksikkö s) kondensaattoria ryhdytään purkamaan vastuksen $R$ läpi, jolloin
+varaus hetkellä $t \ge 0$ on $q(t)$. Matemaattinen malli?
+\end{Exa}
+\ratk Jos vastuksen läpi kulkeva virta hetkellä $t$ on $i(t)$, niin piiriyhtälöt ovat
+\[ 
+q(t)/C = Ri(t), \quad i(t) = -q'(t), \quad t>0. 
+\]
+Eliminoimalla $i(t)$ päädytään alkuarvotehtävään
+\[ 
+\begin{cases} \,q' = -aq, \quad t>0, \\ \,q(0) = q_0, \end{cases} 
+\]
+missä $a = RC$. Ratkaisu on
+\[
+q(t) = q_0 e^{-t/\tau}, \quad t \ge 0, 
+\]
+missä $\tau = 1/(RC)$ on piirille ominainen nk.\ \pain{aikavakio} (mittayksikkö s). \loppu  
+
+Sovelluksissa eksponenttifunktion differentiaaliyhtälöstä \eqref{dy1} esiintyy usein myös
+variaatio
+\begin{equation} \label{dy2}
+y' = ay + b,
+\end{equation}
+missä $a$ ja $b$ ovat vakioita. Olettaen, että $a \neq 0$, tämän eräs ratkaisu on 
+$y_0(x) = -b/a = \text{vakio}$. Kun yleisempää ratkaisua haetaan muodossa
+$y(x) = y_0(x) + v(x)$, niin todetaan, että funktio $v$ toteuttaa eksponenttifunktion
+differentiaaliyhtälön \eqref{dy1}. Differentiaaliyhtälön \eqref{dy2} yleinen ratkaisu,
+kun $a \neq 0$, on siis
+\[ 
+y(x) = -b/a + C e^{ax}, \quad x\in\R.
+\]
+Sovellustilanteessa vakio $C$ määrätään alkuehdosta.
+
+
+\begin{Exa}: \index{zza@\sov!Szyhkzzb@Sähköpiiri: LR}
+\vahv{Sähköpiiri: LR}.\ Induktanssi $\,L$ ja vastus $\,R$ on kytketty sarjaan. Hetkellä $t=0$ s
+piiri kytketään vakiojännitteeseen $E$, jolloin piiriin syntyy virta $i(t)$ ($i(0)=0$).
+Matemaattinen malli vastuksen yli vaikuttavalle jännitteelle $y(t)\,$?
+\end{Exa}
+\ratk Piiriyhtälöt ovat
+\[ 
+L\,i'(t) + R\,i(t) = E, \quad R\,i(t) = y(t), \quad t>0. 
+\]
+Eliminoimalla $i(t)$ päädytään differentiaaliyhtälöön \eqref{dy2}, missä
+$a = -R/L,\ b = ER/L$. Alkuarvo on $y(0)=0$. Alkuarvotehtävän ratkaisu saadaan valitsemalla
+em.\ yleisessä ratkaisussa $C = b/a$, jolloin
+\[ 
+y(t) = (b/a)(e^{at}-1) = E(1-e^{-t/\tau}), \quad t \ge 0,
+\]
+missä $\tau = L/R$ (aikavakio, yksikkö s). \loppu
+\index{zza@\sov!Jzyzy@Jäähtymislaki}%
+\begin{Exa}: \vahv{Jäähtymislaki}.\ Hetkellä $t$ (yksikkö s) on kappaleen lämpötila $u(t)$ ja
+lämpöenergia $U(t) = cu(t)$ ($c =$ lämpökapasiteetti). Miten kappale jäähtyy alkulämpötilasta
+$u(0)=u_0$, jos oletetaan, että lämpövirta ympäröivään ilmaan on $Q(t) = k[u(t)-u_1]$, missä
+$u_1 < u_0$ on ulkoilman lämpötila?
+\end{Exa}
+\ratk Energian säilymislaki on
+\begin{align*}
+U' = -Q &\qekv cu' = -k(u-u_1) \\
+        &\qekv u' = au + b, \quad a = -k/c,\ b = ku_1/c.
+\end{align*}
+Differentiaaliyhtälön yleinen ratkaisu $u(t) = -b/a + C e^{at} = u_1 + C e^{at}$ toteuttaa 
+alkuehdon $u(0)=u_0$, kun $C=u_0-u_1$, joten
+\[ 
+u(t) = u_1 + (u_0-u_1) e^{-t/\tau}, \quad t \ge 0, 
+\]
+missä $\,\tau = -a^{-1} = c/k\,$ on jäähtymisen aikavakio (yksikkö s). \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Plutoniumin Pu$^{239}$ puolintumisaika on $25400$ vuotta. Paljonko $1000$ kg:sta plutoniumia
+on jäljellä miljoonan vuoden kuluttua?
+
+\item
+Positiivisen $x$ akselin suuntaan etenevästä säteilystä pääsee välillä $[0,3]$ olevan
+säteilysuojauksen läpi $3\%$ säteilyn intensiteetistä. Suojaus on rakennettu kahdesta
+materiaalikerroksesta siten, että välillä $[0,1]$ olevassa materiaalissa 1 on säteilyn 
+vaimennusvakio kolme kertaa niin suuri kuin välillä $[1,3]$ olevassa materiaalissa 2. Paljonko
+jälkimmäistä materiaalikerrosta on vahvistettava, jotta säteilystä pääsisi läpi ainoastaan
+$1\%$\,?
+ 
+\item
+Vuotuinen korkoprosentti on $5$ ja korko liitetään pääomaan a) jatkuvan koronkoron mukaisesti,
+b) puolivuosittain. Mikä on eri tavoin saatujen pääomien suhde $50$ vuoden kuluttua?
+
+\item
+Keittokattilan alkulämpötila on $96\aste$C. Kattilan annetaan ensin jäähtyä huoneen lämmössä
+($20\aste$C), kunnes sen lämpötila on $40\aste$C. Tämän jälkeen kattila sijoitetaan 
+jääkaappiin, jossa lämpötila on $6\aste$C. Jos ensimmäisen jäähdytysvaiheen kesto on $32$ min,
+niin kauanko kattilan on oltava jääkaapissa, jotta se on jäähtynyt lämpötilaan $7\aste$C? 
+Oletetaan, että huoneessa ja jääkaapissa pätee sama eksponentiaalinen jäähtymislaki.
+
+\item
+Kupillinen kahvia, jonka lämpötila on aluksi $80\aste$C, jäähtyy ulkoilmassa siten, että $5$ 
+minuutin kuluttua kahvin lämpötila on $60\aste$C ja $10$ minuutin kuluttua $44\aste$C. Mikä on
+ulkoilman lämpötila?
+ 
+\item
+Vaakasuoralla maan pinnalla on kuution muotoinen vesisäiliö, jonka särmän pituus on $10$ m.
+Säiliö on täynnä vettä. Hetkellä $t=0$ avataan säiliön pohjaventtiili, jolloin säiliö alkaa
+tyhjentyä nopeudella $kH(t)$, missä $H(t)$ on veden korkeus säiliössä (yksikkö m) hetkellä
+$t$ (yksikkö h=tunti) ja $k$ on venttiilin asennosta riippuva kerroin (yksikkö 
+$\text{m}^2/\text{h}$). Tunnin kuluttua venttiilin avaamisesta havaitaan, että $8\%$
+vedestä on virrannut pois. Tällöin venttiiliä avataan lisää, jolloin virtausnopeus
+hetkellisesti kaksinkertaistuu. Venttiili jätetään tämän jälkeen uuteen asentoonsa. Määritä
+säiliössä olevan veden määrä $m(t)$ (kuutiometreinä) ajan $t$ funktiona välillä $[0,\infty)$.
+
+\item
+Kappale on hetkellä $t=0$ s levossa veden pinnalla ja lähtee vajoamaan noudattaen liikelakia
+\[
+v'(t)=0.8g-kv(t),
+\]
+missä $v$ on vajoamisnopeus, $g=10\,\text{m}/\text{s}^2$ ja $k$ on vakio. Määritä
+$v(t),\ t \ge 0$ (aikayksikkö s), kun tiedetään, että kappale vajoaa hyvin syvässä 
+vedessä (asymptoottisella) nopeudella  $3.2\ \text{m}/\text{s}$.
+
+\item (*) Edellisessä tehtävässä kappaleen vajoamissyvyys ennen pohjakosketusta toteuttaa
+\[
+\begin{cases} \,h'(t) = v(t), \quad t>0, \\ \,h(0)=0. \end{cases}
+\]
+Millä syvyydellä kappaleen vajoamisnopeus on $99.9\ \%$ nopeuden asymptoottisesta arvosta?
+
+\end{enumerate}

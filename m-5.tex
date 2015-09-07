@@ -1,0 +1,558 @@
+\section{Determinantti} \label{determinantti} 
+\alku
+\index{determinantti|vahv}
+
+Olkoon $\ma_1,\ldots,\ma_n\in\R^n$ $n$ kappaletta pystyvektoreita kokoa $n$. Asetetaan
+\begin{Def} \label{determinantin määritelmä} \index{determinanttifunktio|emph}
+Reaaliarvoinen funktio $V(\ma_1,\ldots,\ma_n), \ \ma_i\in\R^n$, on (normeerattu)
+\kor{determinanttifunktio}, jos pätee:
+\begin{itemize}
+\item[(i)]   $V$ on lineaarinen jokaisen vektorin $\ma_i$ suhteen.
+\item[(ii)]  Jos järjestetty indeksijoukko $(i_1,\ldots,i_n)$ on saatu joukosta $(1,2,\ldots,n)$
+             vaihtamalla kahden alkion paikkaa, niin
+             \[
+             V(\ma_{i_1},\ldots,\ma_{i_n})=-V(\ma_1,\ldots,\ma_n).
+             \]
+\item[(iii)] Jos $[\me_i]_j=\delta_{ij}$, niin $V(\me_1,\ldots,\me_n)=1$.
+\end{itemize}
+\end{Def}
+\pain{Selityksiä}:
+\begin{itemize}
+\item[(i)]   Lineaarisuus tarkoittaa, että jokaisella 
+             $k\in\{1,\ldots,n\}$ ja $\forall\lambda,\mu\in\R$ pätee
+             \begin{align*}
+             V(\ma_1,\ldots,\lambda\ma_k &+ \mu\mb_k,\ldots,\ma_n)\\
+             &=\lambda V(\ma_1,\ldots,\ma_k,\ldots,\ma_n)
+              +\mu V(\ma_1,\ldots,\mb_k,\ldots,\ma_n).
+             \end{align*}
+\item[(ii)]  \index{vaihtoszyzy@vaihtosääntö!b@determinantin}%
+             Tämä \kor{vaihtosääntö} tarkoittaa, että determinantin arvo vaihtuu vastaluvukseen,
+             kun järjestetyssä joukossa $(\ma_1,\ldots,\ma_n)$ kahden vektorin paikka 
+             vaihdetaan (Luvusta \ref{inverssi} tuttu parivaihto). Jos vaihdettavat vektorit
+             ovat samat, ei determinantin arvo luonnollisesti muutu, joten vaihtosäännöstä
+             \index{nollasääntö!b@determinantin}%
+             seuraa \kor{nollasääntö}
+             \[
+             \ma_i=\ma_j\,,\,\ i \neq j \qimpl V(\ma_1,\ldots,\ma_n)=0.
+             \]
+             Jos yleisemmin $p=(i_1,\ldots,i_n)$ on indeksijoukon $(1,\ldots,n)$ permutaatio,
+             niin $p$ on joko parillinen tai pariton, eli $p$ saadaan joko parilllisella tai
+             parittomalla määrällä parivaihtoja (vrt.\ Luku \ref{inverssi}). Vaihtosääntö
+             yleistyy siis säännöksi: Parillisessa permutaatiossa determinantin arvo säilyy,
+             parittomassa vaihtuu vastaluvukseen.
+\item[(iii)] Tämä on normeerausehto. Ilman tätä ehtoa determinanttifunktio voitaisiin kertoa
+             mielivaltaisella vakiolla, jolloin seuraava väittämä ei olisi tosi.
+\end{itemize}
+\begin{Prop}
+Determinanttifunktio on funktio, ts.\ $V(\ma_1,\ldots\ma_n)\in\R$ on yksikäsitteisesti määrätty,
+kun $\ma_1,\ldots,\ma_n\in\R^n$.
+\end{Prop}
+\tod Lasketaan determinanttifunktion arvo annetuilla säännöillä (i)--(iii). Merkitään 
+$[\ma_j]_i=a_{ij}$, jolloin
+\[
+\ma_j=\sum_{i=1}^n a_{ij}\me_i
+\]
+ja siis
+\[
+V(\ma_1,\ldots,\ma_n)=V\Bigl(\,\sum_{i=1}^n a_{i1}\me_i,\ldots,\sum_{i=1}^n a_{in}\me_i\Bigr).
+\]
+Käyttämällä toistuvasti lineaarisuusominaisuutta (i) nähdään, että tämä purkautuu summaksi
+\[
+V(\ma_1,\ldots,\ma_n)
+=\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n a_{i_11} \cdots a_{i_nn} V(\me_{i_1},\ldots,\me_{i_n}).
+\]
+Tässä on $n^n$ termiä, mutta nollasäännön perusteella summasta voidaan jättää pois kaikki ne 
+termit, joissa sama indeksi $i_k$ esiintyy kahdesti. Näin muodoin
+\[
+V(\ma_1,\ldots,\ma_n)=\sum_p a_{i_11} \cdots a_{i_nn}V(\me_{i_1},\ldots,\me_{i_n}),
+\]
+missä summaus käy läpi kaikki joukon $(1,\ldots,n)$ eri permutaatiot $p=(i_1,\ldots,i_n)$
+($n!$ kpl). Säännöistä (ii) ja (iii) seuraa edelleen, että 
+$V(\me_{i_1},\ldots,\me_{i_n})=\sigma_p=\pm 1$ riippuen siitä, onko permutaatio $p$ parillinen
+vai pariton. Siis
+\begin{equation} \label{determinantin laskukaava}
+\boxed{\kehys\Ykehys \quad V(\ma_1,\ldots,\ma_n)
+                           =\sum_p\sigma_p\,a_{i_11}a_{i_22} \cdots a_{i_nn} \quad}
+\end{equation}
+ja näin muodoin $V(\ma_1,\ldots,\ma_n)$ on yksikäsitteisesti määrätty. \loppu
+
+Determinanttifunktion ominaisuudet (i)--(iii) voi päätellä käänteisesti laskukaavasta
+\eqref{determinantin laskukaava}, joten tämä kaava on käypä myös determinanttifunktion 
+määritelmänä. Kaavalle saadaan hieman selkeämpi muoto, kun merkitään (vrt.\ Luku \ref{inverssi})
+\[
+\mI_p = [\me_{i_1} \ldots \me_{i_n}], \quad \Lambda_p = \{(i,j) \mid [\mI_p]_{ij}=1\}, \quad
+                                                        p=(i_1, \ldots,i_n).
+\]
+Tällöin nähdään, että kaava \eqref{determinantin laskukaava} on sama kuin
+\begin{equation} \label{determinantin laskukaava 2}
+V(\ma_1,\ldots,\ma_n) = \sum_p \sigma_p \prod_{(i,j)\in\Lambda_p} a_{ij}.
+\end{equation}
+Determinantin arvoa käytännössä laskettaessa kaavat 
+\eqref{determinantin laskukaava}--\eqref{determinantin laskukaava 2} ovat petollisia, sillä
+pelkkiä kertolaskuja tarvitaan niitä käyttäen peräti $(n-1)n!$ kpl. --- Kaavoja käytetäänkin
+algoritmeina yleensä vain tapauksissa $n=2$ ja $n=3$. Teoreettista käyttöä kaavoilla 
+\eqref{determinantin laskukaava}--\eqref{determinantin laskukaava 2} on sen sijaan 
+yleisemminkin, kuten nähdään jatkossa.
+
+\subsection*{Matriisin determinantti}
+\index{matriisin ($\nel$neliömatriisin)!ha@$\nel$determinantti|vahv}
+
+\kor{Matriisin determinantti} määritellään yksinkertaisesti ajattelemalla, että 
+determinanttifunktiossa $V(\ma_1,\ldots,\ma_n)$ vektorit $\ma_j$ ovat (neliö)matriisin $\mA$ 
+sarakkeet. Determinanttia merkitään $\det\mA$ (toisinaan $\abs{\mA}$), ja määritelmä on siis
+\[
+\det\mA=V(\ma_1,\ldots,\ma_n), \quad \mA=[\ma_1 \ldots \ma_n].
+\]
+Tämän mukaisesti on kaavassa \eqref{determinantin laskukaava 2} $\,\sigma_p = \det\mI_p$.
+
+Determinantti on siis määritelty vain neliömatriiseille. Jos $\mA$ on annettu taulukkona, niin
+determinanttia merkitään taulukkoa rajoittavin pystyviivoin:
+\[
+\det\mA=\begin{vmatrix}
+a_{11} & \ldots & a_{1n} \\
+\vdots &  & \vdots \\
+a_{n1} & \ldots & a_{nn}
+\end{vmatrix}, \quad \mA=(a_{ij}).
+\]
+Normeeraussäännön (iii) mukaan yksikkömatriisin determinantti on
+\[
+\det\mI=1.
+\]
+Kaavasta \eqref{determinantin laskukaava} seuraa myös helposti sääntö
+\[
+\det(\lambda\mA)=\lambda^n\det\mA, \quad \lambda \in \R.
+\]
+Myös seuraavat kaksi determinantin ominaisuutta ovat määritelmästä johdettavissa, mutta nämä
+ovat vähemmän ilmeisiä. --- Kyseessä ovat determinanttiopin keskeisimmät väittämät.
+\begin{Lause} Matriisin determinantille pätee
+\[
+\boxed{\kehys \quad \det\mA\mB = \det\mA\,\det\mB, \quad\ \det\mA^T = \det\mA. \quad}
+\]
+\end{Lause}
+\tod Olkoon $\mA=[\ma_1 \ldots \ma_n]$ ja $\mB=[\mb_1 \ldots \mb_n]=(b_{ij})$. Käyttämällä Luvun
+\ref{matriisialgebra} purkukaavoja voidaan kirjoittaa
+\[
+\mA\mB 
+= [\mA\mb_1 \ldots \mA\mb_n] 
+= \Bigl[\,\sum_{i_1=1}^n b_{i_11}\ma_{i_1}\,\ldots\,\sum_{i_n=1}^n b_{i_nn}\ma_{i_n}\Bigr],
+\]
+jolloin determinantin lineaarisuussäännön (i) perusteella seuraa
+\[
+\det\mA\mB 
+= \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n b_{i_11}\ldots b_{i_nn}\det\,[\ma_{i_1} \ldots \ma_{i_n}].
+\]
+Tästä summasta voidaan nollasäännön perusteella jälleen jättää pois kaikki termit, joissa sama
+indeksi $i_k$ esiintyy kahdesti. Jäljelle jäävissä termeissä on $p=$ $(i_1,\ldots,i_n)$ joukon 
+$(1,\ldots,n)$ permutaatio, jolloin vaihtosäännön (ii) mukaan
+\[
+\det\,[\ma_{i_1} \ldots \ma_{i_n}] = \sigma_p\det\,[\ma_1 \ldots \ma_n] 
+                                  = \sigma_p\det\mA, \quad p=(i_1,\ldots,i_n).
+\]
+Tässä $\sigma_p$ on määritelty kuten kaavassa \eqref{determinantin laskukaava}, joten
+\[
+\det\mA\mB = \det\mA\,\sum_p \sigma_p\,b_{i_11}\ldots b_{i_nn} = \det\mA\det\mB.
+\]
+
+Determinantin transponointisäännön todistamiseksi toetaan ensinnäkin, että tämä pätee kaikille
+permutaatiomatriiseille $\mI_p$. Nimittäin koska $\mI_p^T\mI_p=\mI$, niin jo todistetun tulon
+determinanttisäännön perusteella on
+\[
+\det\mI_p^T\det\mI_p = 1.
+\]
+Koska tässä on $\det\mI_p=\pm 1$ ja $\det\mI_p^T=\det\mI_q=\pm 1$, niin päätellään, että on
+oltava $\det\mI_p^T=\det\mI_p$. Kun huomioidaan tämä ja kirjoitetaan $\mI_p^T=\mI_q$, niin
+laskukaavan \eqref{determinantin laskukaava 2} perusteella on
+\[
+\det\mA^T = \sum_p \det\mI_p \prod_{(i,j)\in\Lambda_p} a_{ji}
+          = \sum_q \det\mI_q \prod_{(i,j)\in\Lambda_q} a_{ij} = \det\mA. \loppu
+\]
+
+Säännöstä $\det\mA^T=\det\mA$ voidaan päätellä, että determinantin vaihtösääntö ja nollasääntö
+pätevät myös muodossa: $\det\mA$ vaihtuu vastaluvukseen, jos $\mA$:n kaksi riviä vaihdetaan 
+keskenään, ja $\det\mA=0$, jos $\mA$:n kaksi riviä ovat samat.
+  
+Jos $\mA$ on säännöllinen matriisi, niin soveltamalla tulon determinanttisääntöä tuloon 
+$\inv{\mA}\mA=\mI$ nähdään, että
+\[
+\boxed{\kehys\quad \det\inv{\mA}=\inv{(\det\mA)}. \quad}
+\]
+Nähdään myös, että pätee
+\[
+\mA \text{ säännöllinen } \impl \ \det\mA \neq 0,
+\]
+mikä on loogisesti sama kuin
+\[
+\det\mA=0 \ \impl \ \mA \text{ singulaarinen.}
+\]
+Tämä implikaatio pätee käänteiseenkin suuntaan, ja tässä onkin determinanttiteorian tärkein 
+tulos sovellutusten kannalta. Itse tulos on suora seuraus edellisen luvun tulohajotelmista, 
+tulon determinanttisäännöstä ja kolmiomatriisin determinanttisäännöstä, joka esitetään 
+jäljempänä (Propositio \ref{kolmiomatriisin determinantti}).
+\begin{Lause} \label{determinanttilause} \index{determinanttikriteeri|emph}
+\vahv{(Determinanttikriteeri)} Neliömatriisille pätee
+\[
+\mA \text{ singulaarinen } \ekv \ \det\mA=0.
+\]
+\end{Lause}
+
+\subsection*{Determinantin laskeminen}
+
+Laskukaavaa \eqref{determinantin laskukaava} käytetään yleensä vain tapauksissa $n=2,3\,$:
+\begin{align*}
+&n=2: \qquad \begin{vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \\
+\end{vmatrix}\ =\ a_{11}a_{22}-a_{21}a_{12}\,. \\[2mm]
+&n=3: \qquad \begin{vmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{vmatrix}\
+=\ \begin{array}{l} \\ a_{11}a_{22}a_{33}+a_{31}a_{12}a_{23}+a_{21}a_{32}a_{13} \\
+                       -a_{31}a_{22}a_{13}-a_{11}a_{32}a_{23}-a_{21}a_{12}a_{33}\,.
+\end{array}
+\end{align*}
+
+Nämä voi helposti johtaa myös suoraan  Määritelmästä \ref{determinantin määritelmä}. Esimerkiksi:
+\begin{align*}
+\begin{vmatrix} 
+a_{11} & a_{12} \\ a_{21} & a_{22} 
+\end{vmatrix}\ 
+       &=\ V\left(\begin{bmatrix} a_{11}\\a_{21} \end{bmatrix}\,,\,
+                  \begin{bmatrix} a_{12}\\a_{22} \end{bmatrix}\right) \\[2mm]
+       &=\ V\left(a_{11}\begin{bmatrix} 1\\0 \end{bmatrix}
+                 +a_{21}\begin{bmatrix} 0\\1 \end{bmatrix}\,,\
+                  a_{12}\begin{bmatrix} 1\\0 \end{bmatrix}
+                 +a_{22}\begin{bmatrix} 0\\1 \end{bmatrix}\right) \\[2mm]
+       &=\ a_{11}a_{12}\begin{vmatrix} 1&1\\0&0 \end{vmatrix}
+          +a_{11}a_{22}\begin{vmatrix} 1&0\\0&1 \end{vmatrix}
+          +a_{21}a_{12}\begin{vmatrix} 0&1\\1&0 \end{vmatrix}
+          +a_{21}a_{22}\begin{vmatrix} 0&0\\1&1 \end{vmatrix} \\[4mm]
+       &=\ a_{11}a_{12}\cdot 0 + a_{11}a_{22}\cdot 1 + a_{21}a_{12}\cdot (-1) 
+         + a_{21}a_{22}\cdot 0 
+        =\ a_{11}a_{22}-a_{21}a_{12}\,.   
+\end{align*} 
+Tapauksessa $\,n=3\,$ voi laskukaavan muistaa ryhmittelemällä yhteenlaskettavat termit
+kaavan \eqref{determinantin laskukaava 2} mukaisesti seuraavasti
+\index{Sarrus'n sääntö}%
+(nk. \kor{Sarrus'n sääntö})\,:
+\[
+\begin{aligned}
+\text{etumerkki } + \qquad
+\begin{vmatrix}
+\bullet & \cdot & \cdot \\ 
+\cdot & \bullet & \cdot \\
+\cdot & \cdot & \bullet
+\end{vmatrix} \quad
+\begin{vmatrix}
+\cdot & \bullet & \cdot \\ 
+\cdot & \cdot & \bullet \\
+\bullet & \cdot & \cdot
+\end{vmatrix} \quad
+\begin{vmatrix}
+\cdot & \cdot & \bullet \\ 
+\bullet & \cdot & \cdot  \\
+\cdot & \bullet & \cdot
+\end{vmatrix} \\[5mm]
+\text{etumerkki } - \qquad
+\begin{vmatrix}
+\cdot & \cdot & \bullet \\ 
+\cdot & \bullet & \cdot \\
+\bullet & \cdot & \cdot
+\end{vmatrix} \quad
+\begin{vmatrix}
+\bullet & \cdot & \cdot \\ 
+\cdot & \cdot & \bullet \\
+\cdot & \bullet & \cdot
+\end{vmatrix} \quad
+\begin{vmatrix}
+\cdot & \bullet & \cdot \\ 
+\bullet & \cdot & \cdot  \\
+\cdot & \cdot & \bullet
+\end{vmatrix} \\
+\end{aligned}
+\]
+\begin{Exa}
+\[
+\begin{detmatrix} 1&1&3 \\ 2&0&2 \\ 3&-1&1 \end{detmatrix} \quad = 
+         \quad \begin{array}{l} 
+               \\ 1\cdot 0\cdot 1+1\cdot 2\cdot 3+2\cdot (-1)\cdot 3 \\
+                  -3\cdot 0\cdot 3-1\cdot (-1)\cdot 2-2\cdot  1\cdot 1 \ =\ 0. 
+               \end{array}
+\]
+Matriisina tämä on siis singulaarinen. \loppu
+\end{Exa}
+Sarrus'n sääntö rajoittuu determinantteihin kokoa $3 \times 3$. Hieman isompia determinantteja
+käsivoimin purettaessa on seuraava nk. \kor{alideterminanttisääntö} laskukaavoja 
+\eqref{determinantin laskukaava}--\eqref{determinantin laskukaava 2} huomattavasti
+helppokäyttöisempi. Sääntö on yleispätevä, ja se on myös käypä determinanttifunktion
+määritelmänä (ks.\ Harj.teht.\,\ref{H-m-5: alidet-tod}).
+\begin{Lause} \label{alideterminanttisääntö} \index{alideterminanttisääntö|emph}
+\vahv{(Alideterminanttisääntö)} Jos $\mA$ on neliömatriisi kokoa $n \times n$, niin jokaisella 
+$k \in \{1, \ldots, n\}$ pätee
+\begin{align*}
+\det\mA &= \sum_{i=1}^n (-1)^{k+i} a_{ik} \det\mA^{(i,k)} \\
+        &= \sum_{j=1}^n (-1)^{k+j} a_{kj} \det\mA^{(k,j)},
+\end{align*}
+missä $\mA^{(i,j)}$ on matriisi kokoa $(n-1) \times (n-1)$, joka saadaan poistamalla $\mA$:sta
+$i$:s rivi ja $j$:s sarake.
+\end{Lause}
+\tod Tarkastellaan väitetyistä purkusäännöistä ensimmäistä, kun $k=1$. Determinantin
+lineaarisuussäännön (i) perusteella voidaan kirjoittaa
+\[
+\det\mA = \sum_{i=1}^n a_{i1} \det\mA_i,
+\]
+missä $\mA_i$ on saatu matriisista $\mA$ korvaamalla ensimmäinen sarake yksikkövektorilla
+$\me_i$. Vaihdetaan matriisissa $\mA_i$ ensin ensimmäinen ja $i$:s rivi keskenään ja 
+permutoidaan tämän jälkeen rivit n:o $2 \ldots i$ siten, että $i$:s rivi siirtyy toiseksi
+riviksi muiden rivien järjestyksen muuttumatta. Jälkimmäisessä operaatiossa tarvitaan $i-2$
+parittaista rivin vaihtoa, joten vaihtoja kertyy kaikkiaan $i-1$ kpl. Jos vaihtojen jälkeen
+saatavaa matriisia merkitään $\tilde{\mA}_i$, niin on siis 
+$\,\det\mA_i=(-1)^{i-1}\det\tilde{\mA}_i$. Vaihtojen seurauksena on $\tilde{\mA}_i\,$:n 
+ensimmäinen sarake $=\me_1$ ja $\tilde{\mA}_i^{(1,1)}=\mA^{(i,1)}$. Determinantin laskukaavasta
+\eqref{determinantin laskukaava} nähdään tällöin, että 
+$\det\tilde{\mA}_i=\det\tilde{\mA}_i^{(1,1)}=\det\mA^{(i,1)}$. Yhdistämällä päätelmät seuraa
+\[ 
+\det\mA = \sum_{i=1}^n (-1)^{i-1} a_{i1}\det\mA^{(i,1)} 
+        = \sum_{i=1}^n (-1)^{i+1} a_{i1}\det\mA^{(i,1)}.
+\]
+Väitetyistä purkusäännöistä ensimmäinen on näin todistettu tapauksessa $k=1$. Muut väitetyt
+säännöt palautuvat tähän tapaukseen vaihto- ja transponointisääntöjen avulla. \loppu
+
+Determinantteja $\det\mA^{(i,j)}$ sanotaan determinantin $\det\mA$ \kor{alideterminanteiksi} 
+--- siitä Lauseen \ref{alideterminanttisääntö} purkusääntöjen nimi.
+\begin{Exa}
+Kun valitaan $k=1$ ja kehitetään determinantti ensimmäisen sarakkeen mukaan, niin saadaan
+\[
+\begin{detmatrix}
+1&2&-2&1 \\
+2&-1&1&1 \\
+0&1&0&1 \\
+1&0&2&2
+\end{detmatrix}=
+1 \cdot \begin{detmatrix}
+-1&1&1 \\
+1&0&1 \\
+0&2&2
+\end{detmatrix}
+-2 \cdot \begin{detmatrix}
+2&-2&1 \\
+1&0&1 \\
+0&2&2
+\end{detmatrix}
+-1 \cdot \begin{detmatrix}
+2&-2&1 \\
+-1&1&1 \\
+1&0&1
+\end{detmatrix}.
+\]
+Alideterminantit voidaan kehittää Sarrus'n säännöllä tai alideterminanttisäännöllä. Sovelletaan 
+jälkimmäistä siten, että kaksi ensimmäistä alideterminanttia kehitetään ensimmäisen sarakkeen 
+mukaan $(k=1)$ ja viimeinen kolmannen rivin mukaan $(k=3)$:
+\begin{align*}
+&\begin{detmatrix} -1&1&1\\1&0&1\\0&2&2\end{detmatrix} 
+   \,=\,(-1)\,\cdot \begin{detmatrix} 0&1\\2&2 \end{detmatrix}
+          -1  \cdot \begin{detmatrix} 1&1\\2&2 \end{detmatrix}
+   \,=\, (-1) \cdot (-2) -1 \cdot 0 \,\,= 2, \\[3mm]
+&\begin{detmatrix} 2&-2&1\\1&0&1\\0&2&2 \end{detmatrix} 
+   \,=\,   2 \cdot \begin{detmatrix} 0&1\\2&2 \end{detmatrix}
+          -1 \cdot \begin{detmatrix} -2&1\\2&2 \end{detmatrix}
+   \,=\, 2 \cdot (-2) - 1 \cdot (-6) \,=\, 2, \\[3mm]
+&\begin{detmatrix} 2&-2&1\\-1&1&1\\1&0&1 \end{detmatrix} 
+   \,=\,   1 \cdot \begin{detmatrix} -2&1\\1&1\end{detmatrix}
+          +1 \cdot \begin{detmatrix} 2&-2\\-1&1\end{detmatrix}
+   \,=\, 1 \cdot (-3) + 1 \cdot 0 \,=\, -3.
+\end{align*}
+Determinantin arvoksi tulee $1\cdot 2-2\cdot 2-1\cdot (-3)=1$. \loppu
+\end{Exa}
+Alideterminanttisäännöllä voidaan yleinen, kokoa $n\times n$ oleva determinantti purkaa lopulta
+alideterminanteiksi kokoa $2\times 2$. Tarvittava laskuoperaatioiden määrä on kuitenkin
+edelleen suuruusluokkaa $W \sim n!$ (ks.\ Harj.teht.\,\ref{H-m-5: alidet-työ}), joten suurilla
+$n$:n arvoilla on tämäkin menetelmä kelvoton --- Miten siis ylipäänsä on mahdollista laskea
+esimerkiksi determinantti kokoa $n=100$\,? Vastaukseen johtaa seuraava tulos, joka on helposti
+todistettavissa alideterminanttisäännöllä.
+\begin{Prop} \label{kolmiomatriisin determinantti}
+Kolmiomatriisin $\mA=\{a_{ij}\}$ determinantti on matriisin lävistäjäalkioiden tulo:
+\[
+\det\mA=\prod_{i=1}^n a_{ii}.
+\]
+\end{Prop}
+\tod Kun alideterminanttisäännössä valitaan $k=1$ ja kehitetään determinantti joko ensimmäisen
+rivin (alakolmio) tai ensimmäisen sarakkeen (yläkolmio) mukaan, niin $a_{11}$ on ko.\ 
+rivin/sarakkeen ainoa nollasta poikkeava alkio, joten Lauseen \ref{alideterminanttisääntö}
+mukaan
+\[
+\det\mA=a_{11}\det\mA^{(1,1)}.
+\]
+Tässä $\mA^{(1,1)}$ on jälleen kolmiomatriisi, joten sama sääntö soveltuu yhä uudelleen ja 
+johtaa väitettyyn lopputulokseen. \loppu
+
+Propositioon \ref{kolmiomatriisin determinantti} perustuen voidaan determinantin arvo laskea
+--- kuinkas muuten --- Gaussin algoritmilla. Nimittäin jos algoritmi menee läpi ilman 
+tukioperaatioita (rivien/sarakkeiden vaihtoja), niin se johtaa $LU$-hajotelmaan
+\[
+\mA=\mL\mU,
+\]
+missä $[\mL]_{kk}=1$ ja $[\mU]_{kk}=a_{kk}^{(k-1)},\ k=1 \ldots n$ (vrt. edellinen luku). 
+Tällöin on tulon determinanttisäännön ja Proposition \ref{kolmiomatriisin determinantti} mukaan
+\[
+\det\mA = \det\mL\,\det\mU = \prod_{k=1}^n a_{kk}^{(k-1)}.
+\]
+Determinantin arvo on siis yksinkertaisesti tukialkioiden tulo Gaussin algoritmin 
+eliminaatiovaiheessa (!). Jos eliminaatiovaiheessa tehdään tukioperaatioita, tulee determinantin
+arvoksi
+\[
+\det\mA=(-1)^m\prod_{k=1}^n[\mU]_{kk},
+\]
+missä m on tehtyjen rivien/sarakkeiden vaihtojen kokonaismäärä.
+
+Gaussin algoritmia käyttäen tulee siis determinantin laskemisen työmääräksi 
+$W \sim \frac{1}{3}n^3$ (kerto- ja yhteenlaskua) --- eli tämä on suurilla $n$:n arvoilla
+huomattavasti tehokkaampi menetelmä kuin mikään edellä esitetyistä vaihtoehdoista. Puhtaasti
+numeerisissa laskuissa, ja suurilla $n$, determinantilla ei olekaan juuri käytännön merkitystä
+--- selvittäähän Gaussin algoritmi matriisin säännöllisyyskysymyksen muutenkin. Determinantin
+käsite on kuitenkin käyttökelpoinen erinäisissä lineaarialgebran teoreettisissa tarkasteluissa,
+ja myös symbolisessa laskennassa determinantilla on käyttöä. Symbolisen laskennan ongelma voi
+olla esimerkiksi sellainen, että tarkasteltava matriisi riippuu jostakin parametrista
+(muuttujasta) $s$, ts.\ $\mA=(a_{ij}(s))=\mA(s)$, ja halutaan vaikkapa selvittää, millä $s$:n
+arvoilla $\mA(s)$ on singulaarinen. Jos $\mA$ ei ole kooltaan kovin suuri, niin 
+determinanttiehto
+\[
+\det\mA(s) = 0
+\]
+on ratkaisun lähtökohtana luonnollinen ja (etenkin käsinlaskussa) usein käytetty.
+
+\subsection*{Cramerin sääntö}
+
+Determinantin muista käyttömuodoista on syytä vielä mainita (ilman todistusta, ks.\ 
+Harj.teht.\,\ref{H-m-5: Cramer}) seuraavat kaksi laskusääntöä.
+
+\begin{Lause} (\vahv{Cramerin\footnote[2]{Sveitsiläinen matemaatikko \hist{Gabriel Cramer}
+(1704--1752) oli determinanttiteorian uran\-uurtajia teoksellaan ``Introduction
+$\grave{\text{a}}$ l'analyse des lignes courbes alg$\acute{\text{e}}$brigues'' (1750).
+\index{Cramer, G.|av}} sääntö}) \label{Cramerin sääntö} \index{Cramerin sääntö|emph}
+Jos $\mA$ on säännöllinen neliömatriisi kokoa $n \times n$, niin yhtälöryhmän $\mA \mx = \mb$
+ratkaisu on
+\[
+\mx=(x_i), \quad x_i=\frac{\det\mA^{(i)}}{\det\mA}\,, \quad i=1\,\ldots\,n,
+\]
+missä $\mA^{(i)}$ saadaan $\mA$:sta korvaamalla $i$:s sarake $\mb$:llä.
+\end{Lause}
+\begin{Lause} \label{käänteismatriisin determinanttikaava} Säännöllisen matriisin $\mA$ 
+käänteismatriisi on 
+\[
+\mA^{-1}=\mB^T, \quad [\mB]_{ij}= (-1)^{i+j}\,\frac{\det\mA^{(ij)}}{\det\mA}\,.
+\]
+\end{Lause}
+Cramerin säännöllä on pienikokoisia yhtälöryhmiä ratkaistaessa edelleen jonkin verran käyttöä 
+käsinlaskussa. Etenkin jos kerroinmatriisin alkiot ovat kokonaislukuja, voidaan säännöllä 
+minimoida (käsinlaskussa vaivalloiset) jakolaskut. Myös symbolisessa (käsin)laskennassa
+\mbox{Cramerin} säännöllä on käyttöä samaan tapaan kuin determinantilla yleensä. 
+--- Numeerisessa matriisilaskennassa sen sijaan \linebreak Cramerin säännöllä on kyseenalainen
+kunnia esiintyä 'maailman huonoimpana' lineaarisen yhtälöryhmän ratkaisualgoritmina.
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-m-5: ortogonaalisen matriisin determinantti}
+Näytä, että ortogonaalisen matriisin determinantilla on vain kaksi mahdollista arvoa:
+Joko $\det\mA=1$ tai $\det\mA=-1$.
+
+\item
+Laske Sarrus'n säännöllä:
+\[
+\text{a)}\ \ \begin{detmatrix} 2&3&-1\\-1&2&0\\1&4&3 \end{detmatrix} \qquad
+\text{b)}\ \ \begin{detmatrix} 0&-2&-3\\1&0&-2\\3&4&0 \end{detmatrix} \qquad
+\text{c)}\ \ \begin{detmatrix} -3&7&2\\-5&4&0\\9&-1&-6 \end{detmatrix}
+\]
+
+\item
+Olkoon $\alpha,\beta,\gamma\in\R$. Laske
+\[
+\text{a)}\ \ \begin{detmatrix}
+             1&\alpha&\alpha^2\\1&\beta&\beta^2\\1&\gamma&\gamma^2
+             \end{detmatrix} \qquad
+\text{b)}\ \ \left| \begin{array}{lll}
+             \alpha+\beta&\alpha+2\beta&\alpha+3\beta \\
+             \alpha+3\beta&\alpha+\beta&\alpha+2\beta \\
+             \alpha+2\beta&\alpha+3\beta&\alpha+\beta
+             \end{array} \right| \qquad
+\text{c)}\ \ \left| \begin{array}{lll}
+             2&\alpha&\alpha^2 \\ 1&\alpha^2&\alpha \\ \alpha&\alpha^3&1
+             \end{array} \right|
+\]
+
+\item
+Laske a) alideterminanttikehitelmällä, b) ja c) Gaussin algortimilla, d) molemmilla:
+\begin{align*}
+&\text{a)}\ \ \begin{detmatrix} 1&-1&0&2\\2&1&0&0\\1&1&2&2\\0&0&1&1 \end{detmatrix} \qquad\,\
+ \text{b)}\ \ \begin{detmatrix} 5&4&2&1\\2&3&1&-2\\-5&-7&-3&9\\1&-2&-1&4 \end{detmatrix} \\[3mm]
+&\text{c)}\ \ \begin{detmatrix}
+              2&1&0&0&4\\0&1&1&0&0\\0&0&1&1&0\\0&0&0&1&1\\3&0&0&0&5 
+              \end{detmatrix} \qquad
+ \text{d)}\ \ \begin{detmatrix} 1&1&4&5\\1&1&5&4\\2&4&1&1\\4&2&1&1 \end{detmatrix}
+\end{align*}
+
+\item
+Laske $\det\mB$, kun
+$\displaystyle{\
+\mB=(-5\mA\mA^T)^7 \quad\text{ja} \quad  
+\mA=\begin{rmatrix} 13&8&6\\-13&-8&-4\\8&5&5 \end{rmatrix}.
+}$
+
+\item
+Määritä kaikki reaaliset tai kompleksiset $\lambda$:n arvot, joilla seuraavat matriisit ovat
+singulaarisia.
+\begin{align*}
+&\text{a)}\ \ \begin{bmatrix} 2-\lambda&-4 \\ 2&6-\lambda \end{bmatrix} \qquad
+ \text{b)}\ \ \begin{bmatrix} 
+              \lambda-2&3&1 \\ \lambda-4&3&2 \\ \lambda-6&\lambda&3 
+              \end{bmatrix} \\[3mm]
+&\text{c)}\ \ \begin{bmatrix}
+              1&3-\lambda&4 \\ 4-\lambda&2&-1 \\ 1&\lambda-6&2
+              \end{bmatrix} \qquad
+ \text{d)}\ \ \begin{bmatrix}
+              1-\lambda&-1&2 \\ 1&2-\lambda&-13 \\ -2&1&1+\lambda
+              \end{bmatrix}
+\end{align*}
+
+\item
+Olkoon $\ma_1, \ldots, \ma_n\in\R^n$, ja määritellään
+\[
+\mb_k=\ma_k, \quad \mb_j=\ma_j+\beta_j\ma_k, \quad j=1 \ldots n,\ j \neq k,
+\]
+missä $1 \le k \le n$ ja $\beta_j\in\R$. Näytä determinanttifunktion $V$ ominaisuuksien 
+perusteella, että pätee $\,V(\mb_1, \ldots, \mb_n)=V(\ma_1, \ldots, \ma_n)$. Miten tämä tulos 
+liittyy Gaussin algoritmiin sovellettuna matriisiin $\mA=[\ma_1 \ldots \ma_n]^T\,$?
+
+\item \index{neliömatriisi!f@tridiagonaalinen} \index{tridiagonaalinen matriisi}
+Neliömatriisi $\mA=(a_{ij})$ olkoon kokoa $n \times n$ ja \kor{tridiagonaalinen}, ts.\
+$a_{ij}=0$, kun $\abs{i-j} \ge 2$. Edelleen olkoon $a_{ii}=1,\ i=1 \ldots n$, ja 
+$a_{ij}=\lambda$, kun $\abs{i-j}=1$. \ a) Näytä, että determinantille $D_n=\det\mA$ pätee
+palautuskaava $D_n=D_{n-1}-\lambda^2 D_{n-2}$. \ b) Laske $D_n,\ n=2 \ldots 10$, kun
+$\lambda=2$. c) Jos $\lambda=1$, niin millä $n$:n arvoilla $\mA$ on singulaarinen?
+
+\item (*) \label{H-m-5: alidet-työ}
+Näytä, että jos determinantti kokoa $n \ge 3$ lasketaan alideterminanttisäännöllä, niin
+tarvittava kertolaskujen lukumäärä on
+\[
+W_n = n!\sum_{k=1}^{n-1} \frac{1}{k!}\,.
+\]
+
+\item (*) \label{H-m-5: alidet-tod}
+Määritellään determinanttifunktio $V(\ma_1,\ldots,\ma_n)=\det[\ma_1 \ldots \ma_n]$ palautuvasti
+käyttäen Lauseen \ref{alideterminanttisääntö} ensimmäistä purkusääntöä ($k=1$) sekä sääntöä
+$\,\det a=a\,$ determinantille kokoa $n=1$. \vspace{1mm}\newline
+a) Näytä induktiolla, että mainitulla tavalla määritellyllä funktiolla on determinanttifunktion
+ominaisuudet (i)--(iii). \vspace{1mm}\newline
+b) Näytä, että jos $p=(i_1,\ldots,i_n)$ on joukon $(1,\ldots,n)$ permutaatio ja
+$\mI_p=[\me_{i_1} \ldots \me_{i_n}]$, niin a-kohdan määritelmän mukaisesti on joko
+$\det\mI_p=1$ tai $\det\mI_p=-1$. Päättele, että edellisessä tapauksessa permutaatio $p$ on
+parillinen (eli saavutettavissa parillisella määrällä parivaihtoja) ja jälkimmäisessä pariton
+--- siis jokainen permutaatio on jompaa kumpaa tyyppiä.
+
+\item (*) \label{H-m-5: Cramer}
+Valitsemalla $\mb=b_j\me_j,\ j=1 \ldots n\,$ johda Cramerin sääntö alideterminanttisäännöstä. 
+Todista edelleen Lause \ref{käänteismatriisin determinanttikaava} lähtien Cramerin säännöstä.
+
+\end{enumerate} 

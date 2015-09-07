@@ -1,0 +1,496 @@
+\section{Vektorikentät: Divergenssi ja roottori} \label{divergenssi ja roottori}
+\sectionmark{Divergenssi ja roottori}
+\alku
+\index{osittaisdifferentiaalioperaattori!vektorioperaattorit|vahv}
+
+Tässä luvussa tarkastellaan funktioita, jotka riippuvat kahdesta tai kolmesta fysikaalisesta
+p\pain{aikka}muuttujasta ($x,y$ tai $x,y,z$), mahdollisesti lisäksi fysikaalisesta
+\pain{aika}muuttujasta $t$. Funktiot voivat olla joko \pain{skalaarifunktioita}, eli
+reaaliarvoisia (tai skalaariarvoisia, kirjaimellisesti 'skaalaajafunktioita') tai
+vektoriarvoisia, eli
+\index{vektorikenttä} \index{funktio A!i@vektorikenttä}%
+\kor{vektorikenttiä} (engl.\ vector field). Jatkossa ajatellaan ainoastaan fysikaalisia
+vektorikenttiä, joissa on joko kaksi (tasokenttä) tai kolme (avaruuskenttä) komponenttia.
+Skalaarifunktiot, joita
+\index{skalaarikenttä}%
+kutsutaan myös \kor{skalaarikentiksi}, voivat siis olla tyyppiä $f(x,y)$, $f(x,y,z)$,
+$f(x,y,t)$ tai $f(x,y,z,t)$ (joskus aikamuuttuja halutaan kirjoittaa ensimmäiseksi,
+esim.\ $f(t,x,y,z)$) ja vektorikentät esim.\ tyyppiä
+\[ 
+\vec F(x,y,z,t) = F_1(x,y,z,t)\,\vec i + F_2(x,y,z,t)\,\vec j + F_3(x,y,z,t)\,\vec k. 
+\]
+Fysikaalisia vektorikenttiä ovat esim. virtaavan nesteen, kaasun, yms.\ nopeusvektoreiden 
+muodostama \pain{virtauskenttä}, (esim.\ gravitaatioon liittyvä) \pain{voimakenttä}, 
+sähkömagneettisiin ilmiöihin liittyvät \pain{sähkökenttä} ja \pain{ma}g\pain{neettikenttä}, ym.
+Tällaiset fysikaaliset kentät ovat joko \pain{staattisia} tai \pain{d}y\pain{naamisia}, riippuen
+siitä onko muuttujien joukossa myös aika ($t$) vai ei. Vektorikenttä kuvataan usein graafisesti
+'nuolikenttänä' (kuvassa virtauskenttä).
+
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12,5.5)
+\path(0,0.5)(5,0.5)(5,2.5)(7,2.5)(7,0.5)(12,0.5)
+\path(0,5)(12,5)
+\Thicklines
+\multiput(0,1)(0,0.5){8}{\vector(1,0){1}}
+\multiput(1.5,1)(0,0.5){8}{\vector(1,0){1}}
+\multiput(3,3.5)(0,0.5){3}{\vector(1,0){1}}
+\multiput(3,1)(0,0.5){3}{\vector(4,1){0.5}}
+\multiput(3,2.5)(0,0.5){2}{\vector(4,1){1}}
+\multiput(3.8,1.2)(0,0.5){2}{\vector(1,1){0.5}}
+\put(3.8,2.2){\vector(2,1){0.5}}
+\multiput(5,3)(0,0.5){4}{\vector(1,0){2}}
+\multiput(8,3.5)(0,0.5){3}{\vector(1,0){1}}
+\multiput(8,2.5)(0,0.5){2}{\vector(4,-1){1}}
+\put(8,2){\vector(2,-1){0.5}}
+\put(8.8,1.6){\vector(1,-4){0.15}}
+\put(8.6,0.8){\vector(-4,-1){0.5}}
+\put(8,1){\vector(-1,3){0.15}}
+\multiput(9.5,2.5)(0,0.5){5}{\vector(1,0){1}}
+\put(9.5,2){\vector(4,-1){1}}
+\multiput(11,1)(0,0.5){8}{\vector(1,0){1}}
+\path(5,0.5)(7,0.5)
+\multiput(1,0.5)(1,0){11}{\line(-1,-1){0.25}}
+\end{picture}
+%\caption{Esimerkki virtauskentästä}
+\end{center}
+\end{figure}
+\index{differentiaalioperaattori!c@osittaisderivoinnin}%
+Vektorikenttään kohdistuvina differentiaalioperaattorit 
+$\,\partial_x,\partial_y,\partial_z,\partial_t\,$ ymmärretään samalla tavoin kuin skalaarin ja
+vektorin kertolaskussa, eli operaattorit kohdistuvat vektorikentän jokaiseen komponenttiin. 
+Esim.
+\[ 
+\partial_x\vec F(x,y,z,t) 
+        = \pder{F_1}{x}\,\vec i + \pder{F_2}{x}\,\vec j + \pder{F_3}{x}\,\vec k.
+\]
+
+\subsection*{Gradienttikentät}
+\index{gradienttikenttä|vahv}
+
+Jos $f$ on skalaarifunktio (skalaarikenttä) edellä mainittua tyyppiä, niin funktion
+gradientti ymmärretään vain paikkamuuttujiin $x,y$ tai $x,y,z$ kohdistuvana. Gradientti toimii
+tällöin differentiaalioperaattorina, joka muuntaa skalaarifunktion vektoriarvoiseksi funktioksi
+eli vektorikentäksi. Monet fysikaaliset vektorikentät ovat tällaisia \kor{gradienttikenttiä}.
+Jos $\vec F$ on gradienttikenttä ja
+\[
+\vec F=-\nabla u
+\]
+(miinusmerkki fysikaalisista mukavuussyistä), niin sanotaan, että $u$ on kentän $\vec F$ 
+\index{potentiaali (vektorikentän)} \index{skalaaripotentiaali}%
+\kor{(skalaari)potentiaali}.
+\begin{Exa} Fysikaalisia esimerkkejä potentiaaleista ja gradienttikentistä ovat esimerkiksi\,:
+
+\vspace{3mm}
+\begin{tabular}{ll}
+\pain{Potentiaali} & \pain{Gradienttikenttä} \\ \\
+$u=$ gravitaatiopotentiaali \hspace{2cm} & $\vec G=-\nabla u=$ gravitaatiokenttä \\ \\
+$u=$ sähköpotentiaali & $\vec E=-\nabla u=$ sähkökenttä \\ \\
+$u=$ lämpötila & $\vec J=-\lambda\nabla u=$ lämpövirran tiheys
+\end{tabular}
+\vspace{2mm}
+
+\index{Fourierb@Fourier'n laki}%
+Yhteyttä $\vec J=-\lambda\nabla u$ sanotaan lämpöopissa \pain{Fourier'n} \pain{laiksi}. Sen 
+mukaan siis lämpöenergia virtaa lämpötilan negatiivisen gradientin $-\nabla u$ suuntaan ja 
+virtatiheys (yksikkö W/m$^2$) on gradientin itseisarvoon verrannollinen. 
+Verrannollisuuskerrointa sanotaan materiaalin \pain{lämmön}j\pain{ohtavuudeksi}. \loppu
+\end{Exa}
+
+\subsection*{Divergenssi ja roottori. Laplacen operaattori}
+\index{differentiaalioperaattori!e@divergenssi $\nabla\cdot$|vahv}
+\index{differentiaalioperaattori!f@roottori $\nabla\times$|vahv}
+\index{differentiaalioperaattori!g@Laplacen operaattori|vahv} 
+\index{divergenssi|vahv} \index{roottori|vahv} \index{Laplacen operaattori|vahv}
+
+Differentiaalioperaattori $\nabla=\partial_x\vec i+\partial_y\vec i+\partial_z\vec k$ voidaan 
+myös ymmärtää operaattorina, jonka kohteena ovat vektoriarvoiset funktiot eli vektorikentät. 
+Tällöin operaattori $\nabla$ operoi kohdefunktioon $\vec F$ joko pistetulon (skalaaritulon) tai
+ristitulon (vektoritulon) välityksellä. Kun kohdefunktioksi oletetaan
+\[
+\vec F(x,y,z)=F_1(x,y,z)\vec i + F_2(x,y,z)\vec j + F_3(x,y,z)\vec k,
+\]
+niin tulevat näin määritellyksi kentän $\vec F$ \kor{divergenssi} (engl. divergence)
+\[
+\boxed{\kehys\quad \nabla\cdot\vec F
+           =\partial_x F_1+\partial_y F_2+\partial_z F_3 \quad\text{(divergenssi)}\quad}
+\]
+ja \kor{roottori} (engl.\ curl)
+\[
+\boxed{\quad \nabla\times\vec F=\begin{vmatrix}
+\vec i & \vec j & \vec k \\
+\partial_x & \partial_y & \partial_z \\
+F_1 & F_2 & F_3
+\end{vmatrix} \quad\text{(roottori)}.\quad}
+\]
+Roottorin laskukaavan purettu muoto on
+\[ \nabla \times \vec F = (\partial_y F_3 - \partial_z F_2)\vec i 
+                        - (\partial_x F_3 - \partial_z F_1)\vec j
+                        + (\partial_x F_2 - \partial_y F_1)\vec k. 
+\]
+Divergenssiä ja roottoria merkitään myös symboleilla div ja rot (tai $\Vect{\text{rot}}$). 
+Tavallisia lukutapoja ovat 'nabla piste' ja 'nabla risti', vastaten gradientin $\nabla f$ 
+lukutapaa 'nabla f'.
+\begin{Exa} Funktion $\vec F(x,y,z)=x^2\vec i+y^2z\vec j-(2xz+yz^2)\vec k$ divergenssi ja 
+roottori ovat
+\begin{align*}
+\nabla\cdot\vec F  &= 2x+2yz-2x-2yz=0, \\
+\nabla\times\vec F &= (\partial_y F_3-\partial_z F_2)\vec i
+                     +(\partial_z F_1-\partial_x F_3)\vec j
+                     +(\partial_x F_2-\partial_y F_1)\vec k \\
+                   &= -(y^2+z^2)\vec i+2z\vec j. \loppu
+\end{align*}
+\end{Exa}
+Piste- ja ristitulojen kautta tulevat määritellyksi myös mm.\ operaattoritulot 
+\[
+(1)\ \ \nabla\cdot\nabla \qquad (2)\ \ \nabla(\nabla\cdot\,) \qquad
+(3)\ \ \nabla\times(\nabla\times\,) \qquad (4)\ \ \nabla\times\nabla
+\]
+Näistä viimeinen on nollaoperaattori:
+\[
+\boxed{\kehys\quad \nabla\times\nabla=\vec 0. \quad }
+\]
+Nollaoperaattori on myös $\nabla\cdot(\nabla\times\,)$, ts.\ pätee (vrt.\ Luku \ref{ristitulo})
+\[
+\boxed{\kehys\quad \nabla\cdot\nabla\times\vec F = (\nabla\times\nabla)\cdot\vec F = 0. \quad}
+\]
+Operaattorien (1), (2) ja (3) välillä on yhteys
+(Harj.teht.\,\ref{H-udif-4: nablaamissääntöjä}f --- vrt.\ Luku \ref{ristitulo})
+\[
+\boxed{\kehys\quad \nabla\times(\nabla\times\vec F)=\nabla(\nabla\cdot\vec F)
+                                                   -(\nabla\cdot\nabla)\vec F. \quad}
+\]
+Operaattoria $\nabla\cdot\nabla$, joka voi operoida sekä skalaariin että vektoriin, sanotaan 
+\kor{Laplacen operaattoriksi}. Tämä on hyvin yleinen differentiaalioperaattori erilaisissa 
+fysiikan laeissa (ks.\ huomautukset jäljempänä), siksi sille on vakiintunut erillinen symboli 
+$\Delta$. Myös merkintää $\nabla^2$ käytetään. Lukutapoja ovat 'Laplace' tai 'nabla toiseen'. 
+Määritelmä on siis
+\begin{align*}
+\nabla\cdot\nabla &= (\vec i \, \partial_x+\vec j \, \partial_y +\vec k \, \partial_z)\cdot
+                     (\vec i \, \partial_x+\vec j \, \partial_y +\vec k \, \partial_z) \\
+                  &=\partial_x^2+\partial_y^2+\partial_z^2=\Delta.
+\end{align*}
+
+\subsection*{Operaattorit $\nabla\star$ ja $\vec u\cdot\nabla$}
+\index{differentiaalioperaattori!h@$\nabla\star$, $\vec u\cdot\nabla$|vahv}
+
+Yleisiä 'nablaamissääntöjä' voidaan usein yksinkertaistaa käyttämällä operaattorimerkintää
+$\nabla\star$, missä '$\star$' voi olla 'piste' ($\nabla\cdot$), 'risti' ($\nabla\times$) tai
+'tyhjä' ($\nabla$). Viimeksi mainitussa tapauksessa tulkitaan kohde aina skalaarikentäksi,
+ts.\ $\nabla\vec F=\nabla F$. Operaattorimerkintä $\nabla\star$ on kätevä esimerkiksi tulon
+derivoimissäännön yleistyksessä: Jos $f=f(x,y,z)$ on skalaarikenttä ja $\vec F$
+kolmiulotteinen vektorikenttä, niin pätee
+\[
+\boxed{\kehys\quad \nabla\star(f\vec F)=\nabla f\star\vec F + f\nabla\star\vec F. \quad}
+\] 
+(Tapauksessa $\star=$ 'tyhjä' tämä tulkitaan: $\nabla(fF)=F\nabla f+f\nabla F$.)
+Perustelu jätetään harjoitustehtäväksi (Harj.teht.\,\ref{H-udif-4: nablaamissääntöjä}abc). 
+
+\index{muuttuvakertoiminen diff.-oper.}%
+\kor{Muuttuvakertoimisista} vektoridifferentiaalioperaattoreista on syytä mainita
+sovelluksissa yleinen operaattori
+\[
+\vec u\cdot\nabla  = u_1\partial_x + u_2\partial_y + u_3\partial_z,
+\]
+missä $\vec u=\vec u(x,y,z)$ (tai $\vec u=\vec u(x,y,z,t)$) on vektorikenttä. Tämä on
+skalaarinen operaattori, joka voi kohdistua skalaari- tai vektorikenttään. Edellisessä
+(ei jälkimmäisessä) tapauksessa $\vec u\cdot\nabla f$ on laskettavissa myös kaksivaiheisesti:
+\[
+f \map \nabla f \map \vec u\cdot\nabla f.
+\]
+Muuttuvakertoimisia operaattoreita yhdisteltäessä on huomioitava, että derivointi kohdistuu 
+tällöin myös kertoimiin (vrt.\ Luku \ref{osittaisderivaatat}).
+
+\subsection*{Vectorikentän lähde. Poissonin ja Laplacen yhtälöt}
+
+Kun $\vec F$ on jokin fysikaalinen kenttä, kuten sähkö-, magneetti-, virtaus- ym.\ kenttä, 
+sanotaan divergenssiä
+\[
+\nabla\cdot\vec F=\rho
+\]
+\index{lzy@lähde (vektorikentän)}%
+kentän $\vec F$ \kor{lähteeksi}. Kentän ja lähteen $\rho$ välinen yhteys on tällaisissa 
+sovellutuksissa luonnonlaki, jossa lähde tulkitaan kentän $\vec F$ aiheuttajaksi --- siitä nimi
+'lähde'. Tyypillinen lähtökohta onkin, että lähde on tunnettu ja kenttä halutaan määrätä. 
+Esimerkiksi gravitaatiokenttää määrättäessä on $\rho$ verrannollinen massatiheyteen ja 
+sähkökentän tapauksessa varaustiheyteen.
+
+Jos vektorikentän $\vec F$ lähde $\rho$ on tunnettu ja lisäksi tiedetään, että $\vec F$ on 
+gradienttikenttä, eli on olemassa potentiaali $u$ siten, että $\vec F = -\nabla u$ 
+(näin on esim.\ gravitaatio- ja sähkökentän tapauksessa), niin kentän ja lähteen välinen yhteys
+$\nabla\vec F=\rho$ voidaan kirjoittaa muotoon
+\[
+-\Delta u=\rho.
+\]
+\index{Poissonin yhtälö}%
+Tätä sanotaan \kor{Poissonin yhtälöksi}. Sellaisissa pisteissä, joissa kenttä $\vec F$ on 
+\index{lzy@lähteetön vektorikenttä} \index{vektorikenttä!a@lähteetön}%
+\kor{lähteetön}, eli $\nabla\cdot\vec F=0$, toteuttaa kentän potentiaali
+\index{Laplacen yhtälö}% 
+\kor{Laplacen yhtälön}\footnote[2]{Laplacen ja Poissonin yhtälöiden nimet viittaavat 
+ranskalaisiin matemaatikko-fyysikkoihin \hist{P.S. de Laplace} (1749-1827) ja 
+\hist{S.D. Poisson} (1781-1840), jotka tutkivat tämän tyyppisten yhtälöiden teoriaa. Yhtälöiden
+käytännöllisen ratkaisemisen perustan loi samoihin aikoihin vaikuttanut \hist{J.B.J. Fourier} 
+(1768-1830). Myös Fourier oli matemaatikko-fysiikko, joka tutki erityisesti 
+lämmönjohtumisilmiöitä. Näistä tutkimuksista alkunsa saaneet \kor{Fourier-sarjat} ja 
+\kor{Fourier-muunnokset} ovat tehneet Fourier'n nimestä kuolemattoman.
+\index{Laplace, P. S. de|av} \index{Poisson, S. D.|av} \index{Fouriera@Fourier, F. B. J.|av} }
+\[
+\Delta u=0.
+\]
+\index{harmoninen funktio}%
+Funktiota, joka toteuttaa Laplacen yhtälön, sanotaan \kor{harmoniseksi}.
+ 
+Sovellustilanteissa Poissonin tai Laplacen yhtälö esiintyy tyypillisesti
+\index{reuna-arvotehtävä}% 
+\kor{reuna-arvo\-tehtävässä} (engl.\ boundary value problem), jossa tarkasteltavan (avoimen)
+joukon $A$ --- tai niinkuin tällaisissa yhteyksissä useammin sanotaan, \kor{alueen} $A$ 
+($A\subset\Rkaksi$ tai $A\subset\Rkolme$) 
+\index{reuna (joukon, alueen)} \index{reunaehto}% 
+--- \kor{reunalla} $\partial A$ asetetaan jokin \kor{reunaehto}. Sovellustilanteessa reunaehto
+määräytyy fysikaalisin perustein. Esimerkiksi jos reunalla asetetaan nk.\ (homogeeninen) 
+\index{Dirichletb@Dirichlet'n (reuna)ehto}%
+\kor{Dirichlet'n ehto}, niin saadaan reuna-arvotehtävän perusmuoto:
+\[
+\begin{cases} 
+-\Delta u=\rho &\text{$A$:n sisäpisteissä}, \\ \,u=0 &\text{reunalla $\partial A$.}
+\end{cases}
+\]
+Tämä on osoitettavissa tietyin (funktiota $\rho$ ja reunaviivaa/pintaa $S=\partial A$ koskevin) 
+säännöllisyysehdoin yksikäsitteisesti ratkeavaksi. Itse ratkaisemisen on yleensä tapahduttava
+numeerisin (likimääräisin) keinoin, muutamia poikkeustilanteita lukuun ottamatta.
+\begin{Exa}
+Jos $A$ on $R$-säteinen kiekko ($A\subset\Rkaksi$) tai kuula ($A\subset\Rkolme$) ja $\rho=Q=$ 
+vakio, niin reuna-arvotehtävän
+\[
+\begin{cases} 
+-\Delta u=Q &\text{$A$:n sisäpisteissä}, \\ \,u=0 &\text{reunalla $\partial A$}
+\end{cases}
+\]
+ratkaisu on kummassakin tapauksessa toisen asteen polynomi:
+\begin{align*}
+A\subset\Rkaksi: \qquad u(x,y)   &= \frac{Q}{4}(R^2-x^2-y^2). \\
+A\subset\Rkolme: \quad  u(x,y,z) &= \frac{Q}{6}(R^2-x^2-y^2-z^2). \loppu
+\end{align*}
+\end{Exa}
+
+Poissonin ja Laplacen yhtälöt ovat esimerkkejä yhtälöistä, joista käytetään yleisnimeä 
+\index{osittaisdifferentiaaliyhtälö}
+\index{differentiaaliyhtälö!r@osittaisdifferentiaaliyhtälö}%
+\kor{osittaisdifferentiaaliyhtälö} (engl.\ partial differential equation, lyh.\ PDE).
+Paitsi Poissonin ja Laplacen yhtälöissä, Laplacen operaattori esiintyy monissa muissakin 
+fysiikan osittaisdifferentiaaliyhtälöissä. Mainittakoon tässä ainoastaan ajasta riippuvia 
+ilmiöitä kuvaavat \kor{diffuusioyhtälö} ja \kor{aaltoyhtälö}, joiden perusmuodot ovat 
+(sovelluksissa näistä esiintyy erilaisia variaatioita):
+\index{diffuusioyhtälö} \index{aaltoyhtälö}%
+\begin{align*}
+\text{Diffuusioyhtälö}: \quad   &\,u_t=\Delta u. \\
+\text{Aaltoyhtälö}: \qquad\,\   &u_{tt}=\Delta u.
+\end{align*}
+Diffuusioyhtälön tyyppiä on esimerkiksi (aikariippuva) 
+\pain{lämmön}j\pain{ohtumis}y\pain{htälö}. \index{lzy@lämmönjohtumisyhtälö}%
+
+\subsection*{Pyörrekenttä.  Maxwellin yhtälöt}
+
+Fysikaalisen vektorikentän roottoria
+\[
+\nabla\times\vec F=\vec \omega
+\]
+\index{pyzz@pyörrekenttä}%
+sanotaan kentän $\vec F$ \kor{pyörrekentäksi}. Pyörrekentillä on fysikaalinen merkitys 
+esimerkiksi virtausmekaniikassa, mutta erityisen keskeisellä sijalla ne ovat sähkömagneettisten
+kenttien teoriassa. Tämä nähdään jo sähkömagneettisten kenttien perusyhtälöistä, 
+\kor{Maxwellin yhtälöistä} (\vahv{J.C. Maxwell}, 1864): \index{Maxwellin yhtälöt}
+\[
+\left\{\begin{aligned}
+\nabla\times\vec E &= -\frac{\partial \vec B}{\partial t}\,, \\
+\nabla\times\vec H &=  \frac{\partial \vec D}{\partial t}+\vec J, \\[2mm]
+\nabla\cdot\vec D &=\rho, \\[3mm]
+\nabla\cdot\vec B &= 0.
+\end{aligned}\right.
+\]
+Tässä esiintyvien kenttien nimet ovat:
+\begin{align*}
+\vec E: \quad &\text{sähkökenttä} \qquad\qquad \vec D: \quad \text{sähkövuon tiheys} \\
+\vec H: \quad &\text{magneettikenttä} \qquad\, \vec B: \quad \text{magneettivuon tiheys} \\
+\rho  : \quad &\text{varaustiheys} \qquad\qquad \vec J: \quad \text{virtatiheys}
+\end{align*}
+Maxwellin yhtälöitä ratkaistaessa on huomioitava kenttien $\vec E,\vec D$ ja $\vec H,\vec B$
+keskinäinen riippuvuus, joka on väliaineelle ominainen. Yksinkertisimmillaan riippuvuudet ovat
+ilmaistavissa kahden materiaalivakion $\epsilon,\mu$ avulla muodossa 
+\[
+\vec D=\epsilon\vec E, \quad \vec B=\mu\vec H.
+\]
+
+\index{pyzz@pyörteetön vektorikenttä} \index{vektorikenttä!b@pyörteetön}%
+Vektorikenttää $\vec F$ sanotaan \kor{pyörteettömäksi} sellaisessa alueessa, jossa 
+$\nabla\times\vec F=\vec 0$. Kaikki gradienttikentät, eli skalaaripotentiaalin avulla 
+ilmaistavat kentät, ovat pyörteettömiä (koska $\nabla\times\nabla=\vec 0$). Maxwellin
+yhtälöiden mukaan sähkökenttä $\vec E$ on pyörteetön \pain{stationaarisessa} tilanteessa, jossa
+kentät ovat ajasta riippumattomia. Sekä lähteetön että pyörteetön on esimerkiksi 
+gravitaatiokenttä tyhjässä (massattomassa) avaruudessa, ja yleisemminkin gradienttikenttä 
+lähteettömässä alueessa.
+
+\subsection*{Roottori tasossa}
+\index{differentiaalioperaattori!f@roottori $\nabla\times$|vahv}
+\index{roottori|vahv}
+
+Jos tason vektorikenttä tulkitaan ($z$-koordinaatista riippumattomaksi ja $xy$-tason
+suuntaiseksi) avaruuden vektorikentäksi, niin kentän roottori on
+\[
+\nabla\times[F_1(x,y)\,\vec i+F_2(x,y)\,\vec j\,] =(\partial_x F_2-\partial_y F_1)\,\vec k.
+\]
+Tässä on tapana kirjoittaa
+\[
+\text{rot}\,\vec F = \frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}
+                   \quad (\text{tason vektorikenttä}),
+\]
+jolloin roottori tasossa tulee määritellyksi skalaarisena operaattorina (kuten div). 
+\begin{Exa} Maxwellin yhtälöiden mukaan stationaarisessa tilanteessa magneettikentän $\vec H$
+pyörrekenttä on sähkövirran tiheys $\vec J$. Jos oletetetaan tyypillinen sovellustilanne,
+jossa virta kulkee suorassa, $z$-akselin suuntaisessa johtimessa, niin $\vec J$ on muotoa
+\[
+\vec J(x,y,z)=\begin{cases} 
+              \,I(x,y)\vec k, &\text{kun}\ (x,y) \in A, \\ \,\vec 0, &\text{muulloin}.
+              \end{cases}
+\]
+Tässä $A\subset\Rkaksi$ edustaa johtimen poikkileikkausta ja $I$ on (skalaarinen) virran tiheys
+johtimessa. Magneettikenttä on $xy$-tason suuntainen ja $z$-koordinaatista riippumaton,
+ts.\ muotoa $\vec H = H_1(x,y)\vec i + H_2(x,y)\vec j$, jolloin Maxwellin yhtälö 
+$\nabla\times\vec H=\vec J$ pelkistyy johtimen poikkipinnalla skalaariseksi yhtälöksi
+\[
+\text{rot}\,\vec H = \partial_x H_2 - \partial_y H_1 = I(x,y).
+\]
+Johtimen ulkopuolella magneettikenttä on pyörteetön: $\text{rot}\,\vec H=0$. \loppu
+\end{Exa}
+
+\subsection*{*Navier--Stokesin virtausyhtälöt}
+\index{Navier--Stokesin yhtälöt|vahv}
+
+Nesteen tai kaasun (esim.\ veden tai ilman) virtausta hallitsevat perusyhtälöt ovat nk.\
+\index{szy@säilymislaki}%
+\kor{säilymislakeja} (engl.\ conservation laws), jotka ilmaisevat matemaattisesti
+(osittaisdifferentiaaliyhtälöinä) \pain{massan}, \pain{liikemäärän} ja \pain{ener}g\pain{ian}
+säilymisen virtauksessa. Massan ja liikemäärän säilymislaeissa esiintyvät vektori- ja
+skalaarikentät ovat
+\begin{align*}
+\vec u: \quad &\text{virtausnopeus} \\
+     p: \quad &\text{paine} \\
+  \rho: \quad &\text{(massa)tiheys}
+\end{align*}
+Jos virtaavan aineen massatiheys voidaan olettaa vakioksi (esim.\ vesi, monissa
+virtaustilanteissa myös ilma) ja lisäksi virtaus on ulkoisista voimista vapaa, niin liikemäärän
+ja massan säilymislait voidaan kirjoittaa \kor{Navier--Stokesin yhtälöinä}
+(\vahv{C.-L. Navier, G.G. Stokes}, 1822) 
+\[
+\left\{ \begin{aligned}
+\vec u_t-\nu\Delta\vec u+(\vec u\cdot\nabla)\vec u+\rho^{-1}\nabla p &= \vec 0, \\
+                                               \nabla\cdot\vec u &=0.
+\end{aligned} \right.
+\]
+Tässä $\nu$ on virtaavan aineen (kinemaattinen) \pain{viskositeetti}.
+%\footnote[2]{Virtausmekaniikan yhtälöiden numeerinen ratkaiseminen
+%tietokoneilla on nykyisin arkipäivää lentokoneiden aerodynamiikassa, laivojen
+%hydrodynamiikassa, meteorologiassa, ym.\ sovelluksissa. Yhtälöihin liittyy silti myös avoimia
+%matemaattisia ongelmia. Esimerkiksi Navier--Stokesin yhtälöiden nk.\ globaalia (ajassa ja
+%paikassa rajoittamatonta) ratkeavuutta (tai vastaesimerkillä: ratkeamattomuutta) säännöllisestä
+%alkutilanteesta ei ole pystytty osoittamaan matemaattisesti. --- Kyseessä on eräs tunnettu
+%''miljoonan dollarin ongelma'', jonka ratkaisjalle on yhdysvaltalainen Clay-instituutti
+%luvannut mainitun suuruisen palkkion.}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske divergenssi ja roottori: \vspace{2mm}\newline
+a) \ $x\vec i+y\vec j+z\vec k \qquad$
+b) \ $yz\vec i+xz\vec j+xy\vec k \qquad$
+c) \ $xy^2\vec i-yz^2\vec j+zx^2\vec k$ \vspace{1mm}\newline
+d) \ $f(x)\vec i+g(y)\vec j+h(z)\vec k \qquad$
+e) \ $f(y,z)\vec i+g(x,z)\vec j+h(x,y)\vec k$
+ 
+\item 
+Olkoon
+$\vec F(x,y,z)=(x y-z^2)\,\vec i + x y z \,\vec j + (x-y^2-z^2)\,\vec k$. \vspace{1mm}\newline
+a) Laske $\,\nabla\cdot\vec F$, $\,\nabla(\nabla\cdot\vec F)$, $\,\nabla\times\vec F$, 
+$\,\nabla\times(\nabla\times\vec F)\,$ ja $\,\Delta \vec F$ ja tarkista, että pätee
+$\,\nabla\times(\nabla\times\vec F) 
+            = \nabla(\nabla\cdot\vec F)-\Delta\vec F$. \vspace{1mm}\newline
+b) Laske $(\vec F\cdot\nabla)\vec F$ ja $(\vec F\times\nabla)\cdot\vec F$.
+
+\item \label{H-udif-4: nablaamissääntöjä}
+Olkoon $\vec F$ ja $\vec G$ tason tai avaruuden (mahdollisesti ajasta riippuvia) vektorikenttiä
+ja $f$ ja $g$ skalaarikenttiä. Perustele seuraavat säännöt
+(oletetaan riittävä derivoituvuus): \vspace{1mm}\newline
+a) \ $\nabla(fg)=g\nabla f+f\nabla g\qquad\qquad\qquad\ \ \ $
+b) \ $\nabla\cdot(f\vec F)=\vec F\cdot\nabla f+f\,\nabla\cdot\vec F$ \vspace{1mm}\newline
+c) \ $\nabla\times(f\vec F)=\nabla f\times\vec F+f\,\nabla\times\vec F\qquad\ $
+d) \ $\D\partial_t(\nabla\star\vec F)=\nabla\star\vec F_t$ \vspace{1mm}\newline
+e) \ $\nabla\cdot(\vec F\times\vec G)=(\nabla\times\vec F)\cdot\vec G
+                                        -(\nabla\times\vec G)\cdot\vec F$ \vspace{1mm}\newline
+f) \ $\nabla\times(\nabla\times\vec F)
+                  =\nabla(\nabla\cdot\vec F)-\Delta\vec F$ \vspace{1mm}\newline
+g) \ $\square(\vec F\circ\vec G) = (\square\vec F)\circ\vec G+\vec F\circ\square\vec G \,\ $
+     ja $\,\ \square(f\vec F)=(\square f)\vec F+f\square\vec F$, \newline
+     kun $\,\ \square\in\{\partial_x,\partial_y,\partial_z,\partial_t\}\,\ $ ja
+     $\,\ \circ\in\{\,\cdot\,,\times\,\}$ \vspace{1mm}\newline
+h) \ $(\vec u\,\square)\circ f\vec F 
+      = \square f\,\vec u\circ\vec F+f\vec u\circ\,\square\vec F$,\, kun
+     $\,\ \square\in\{\partial_x,\partial_y,\partial_z,\partial_t\}\,\ $ ja
+     $\,\ \circ\in\{\,\cdot\,,\times\,\}$ \newline
+
+\item
+a) Näytä, että seuraavat funktiot ovat määrittelyjoukossaan harmonisia:
+\begin{align*}
+&xy,\ \ x^2-y^2,\ \ x^3-3xy^2,\ \ x^3y-xy^3,\ \ \ln(x^2+y^2),\ \ \Arctan\frac{y}{x} \\
+&e^{ax}(A\sin ay+B\cos ay)\ \ (a,A,B\in\R)
+\end{align*}
+b) Monen muuttujan Laplacen operaattori määritellään
+$\Delta=\partial_1^2+ \ldots + \partial_n^2$. Tutki, millaisille reaalifunktioille $f$ pätee: 
+$f\bigl(\abs{\mx})=f(\sqrt{x_1^2 + \ldots + x_n^2}\,\bigr)$ on harmoninen muualla kuin origossa.
+
+\item
+Seuraavilla osittaisdifferentiaaliyhtälöillä väitetään olevan annettua muotoa olevia ratkaisuja.
+Tarkista väittämät (funktiot $f$ ja $g$ oletetaan kahdesti derivoituviksi).
+\vspace{1mm}\newline
+a) \ $u_{tt}=c^2u_{xx}\,,\ \ u(x,t)=f(x+ct)+g(x-ct)$ \vspace{1mm}\newline
+b) \ $u_{xx}+u_{yy}=2u_{xy}\,,\ \ u(x,y)=xf(x+y)+yg(x+y)$ \vspace{1mm}\newline
+c) \ $u_t=u_{xx}\,,\ \ u(x,t)=e^{-\omega^2 t}(A\sin\omega x+B\sin\omega x)\ \ (\omega,A,B\in\R)$
+\vspace{1mm}\newline
+d) \ $u_t=u_{xx}\,,\ \ u(x,t)=t^{-1/2}e^{-x^2/4t}$ \vspace{1mm}\newline
+e) \ $u_t=u_{xx}+u_{yy}\,,\ \ u(x,y,t)=t^{-1}e^{-(x^2+y^2)/4t}$
+
+\item
+Näytä, että osittaisdifferentiaaliyhtälön $u_{xy}=0$ yleinen ratkaisu $\R^2$:ssa on
+$u(x,y)=f(x)+g(y)$, missä $f:\,\R\kohti\R$ ja $g:\,\R\kohti\R$ ovat mitä tahansa $\R$:ssä 
+derivoituvia funktioita.
+
+\item (*)
+Todista (olettaen riittävä derivoituvuuus)\,:
+\[
+\nabla\times(\vec F\times\vec G)=(\nabla\cdot\vec G)\vec F+(\vec G\cdot\nabla)\vec F
+                                -(\nabla\cdot\vec F)\vec G-(\vec F\cdot\nabla)\vec G.
+\]
+
+\item (*)
+Olkoon $A\subset\R^2$ tasasivuinen kolmio, jonka kärjet ovat $(0,0)$, $(a,0)$ ja
+$(a/2,\sqrt{3}a/2)$ $(a>0)$. Näytä, että reuna-arvotehtävällä
+\[
+\begin{cases} 
+-\Delta u=Q &\text{$A$:n sisäpisteissä}, \\ \,u=0 &\text{reunalla $\partial A$}
+\end{cases}
+\]
+($Q=$ vakio) on polynomiratkaisu.
+
+\item (*)
+Tarkastellaan Maxwellin yhtälöitä homogeenisessa väliaineessa, jossa $\rho=0$, $\vec J=\vec 0$
+ja kenttien $\vec D,\vec E$ ja $\vec B,\vec H$ välillä on yhteydet $\vec D=\epsilon\vec E$ ja 
+$\vec B=\mu\vec H$ ($\epsilon$ ja $\mu$ materiaalivakioita). Näytä, että kaikki mainitut
+kentät, sikäli kuin riittävän säännöllisiä, toteuttavat vektorimuotoisen aaltoyhtälön
+\[
+\vec F_{tt}=c^2\Delta\vec F,
+\]
+missä $c=(\epsilon\mu)^{-1/2}$ (= valon nopeus väliaineessa). 
+
+\end{enumerate}

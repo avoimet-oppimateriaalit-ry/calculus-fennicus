@@ -1,0 +1,355 @@
+\section{Pintaintegraalit} \label{pintaintegraalit}
+\alku
+\index{pintaintegraali|vahv}
+
+
+\kor{Pintaintegraalilla} tarkoitetaan integraalia muotoa
+\[
+I(f,A,\mu)=\int_A f\,d\mu,
+\]
+
+missä $A$ on pinnan $S \subset \R^ 3$ osa ja $\mu$ 
+\index{pinta-alamitta!b@kaarevan pinnan}
+\kor{pinta-alamitta pinnalla} $S$.
+Jatkossa käytetään kaarevan pinnan pinta-alamitan yhteydessä merkintää $d\mu=dS$. Tämän mitan
+suhde tason (Jordanin) pinta-alamittaan on samantyyppinen kuin kaarenpituusmitan suhde $\R$:n
+pituusmittaan. Pintaintegraali on näin ajatellen tasointegraalin yleistys, ja etenkin
+sovelluksissa termiä saatetaan käyttää tasointegraaleistakin puhuttaessa
+(vrt.\ Luku \ref{pinta- ja tilavuusintegraalit}).
+
+Kuten käyrän kaarenpituusmitta, voidaan myös kaarevan pinnan pinta-alamitta määritellä pintaa
+'oikaisevien' approksimaatioiden kautta. Luonteva menettely on approksimoida pintaa 
+\pain{kolmion} \pain{muotoisilla} \pain{taso}p\pain{innoilla}. Kun kolmiot sijoitetaan verkoksi,
+jonka solmupisteet ovat pinnalla, niin verkkoa tihennettäessä tulee kolmioiden yhteenlasketun
+pinta-alan lähestyä $A$:n pinta-alamittaa $\mu(A)$. Jos tämä sovitaan mitallisuuden 
+määritelmäksi, niin pinnan kolmioapproksimaatioita voi käyttää pinta-alan numeeriseen 
+laskemiseen 'suoraan määritelmästä'. Tällaisilla approksimaatioilla on muutakin käyttöä, 
+esimerkiksi esitettäessä pintoja graafisesti (tietokonegrafiikka) tai jopa konstruoitaessa 
+todellisia pintoja (esim.\ kaarevat peilipinnat).
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-37.pstex_t}
+\end{center}
+\end{figure}
+Suoran 'numeronmurskauksen' vaihtoehtona pinta-alaa ja pintaintegraaleja on jälleen mahdollista
+käsitellä myös differentiaalilaskennan keinoin, jolloin pintaintegraalille saadaan laskukaava
+tasointegraalina. Fubinin lauseen avulla tämä palautuu edelleen yksiulotteisiksi integraaleiksi,
+jotka suotuisissa (käytännössä kylläkin harvinaisissa) oloissa voidaan laskea suljetussa
+muodossa. Pintaintegraalin laskukaavaa johdettaessa on luonnollinen lähtökohta pinnan 
+\index{parametrinen pinta}%
+parametrisointi eli esittäminen \kor{parametrisena pintana}
+(vrt.\ Luku \ref{parametriset käyrät}). Jos parametrisointi esitetään vektorimuodossa 
+\[
+\vec r = \vec r\,(u,v) = x(u,v)\vec i + y(u,v)\vec j + z(u,v)\vec k
+\]
+ja oletetaan, että $(x(u,v),y(u,v),z(u,v)) \in A\ \ekv\ (u,v) \in B \subset \R^2$, niin 
+pintaintegraali on muunnettavissa muotoon
+\[
+\int_A f\,dS=\int_B g\,d\mu', \quad g(u,v)=f(x(u,v),y(u,v),z(u,v)),
+\]
+missä $\mu'$ on pinnan $S$ pinta-alamitan vastine parametritasossa. Muunnos parametritasoon on
+jälleen muotoa
+\[
+d\mu'=J\,dudv,
+\]
+missä $J=J(u,v)$ on (yleensä laskettavissa oleva) muuntosuhde. Kun muuntosuhde tunnetaan, on
+laskukaava valmis:
+\[
+\int_A f\,dS=\int_B gJ\,dudv.
+\]
+
+Muuntosuhteen laskemiseksi tutkitaan suorakulmion 
+\[
+\Delta B=[u_0,u_0+\Delta u]\times [v_0,v_0+\Delta v] \subset B
+\]
+muuntumista. Oletetaan funktiot $x(u,v), y(u,v), z(u,v)$ riittävän säännöllisiksi niin, että 
+voidaan käyttää linearisoivaa approksimaatiota
+\[
+\vec r\,(u,v) \approx \vec r\,(u_0,v_0)+(u-u_0)\frac{\partial\vec r}{\partial u}(u_0,v_0)
+                                       +(v-v_0)\frac{\partial\vec r}{\partial v}(u_0,v_0).
+\]
+Tämän mukaisesti $\Delta B$ kuvautuu pintaa pisteessä $P_0\vastaa\vec r\,(u_0,v_0)$ sivuavalle
+tangenttitasolle. Kuva on tämän tason suunnikas, jonka virittävät vektorit
+\[
+\vec v_1=\Delta u\,\partial_u\vec r,\quad \vec v_2=\Delta v\,\partial_v\vec r.
+\]
+Suunnikaan pinta-ala on 
+$|\vec v_1\times\vec v_2|=|\partial_u\vec r\times\partial_v\vec r\,||\Delta u||\Delta v|$,
+joten päätellään, että muuntosuhde on\footnote[2]{Muuntosuhteen laskukaava on tarkemmin
+perusteltavissa olettaen, että funktioiden $x(u,v), y(u,v), z(u,v)$ osittaisderivaatat ovat
+jatkuvia perussuorakulmiossa $T \supset B$,}
+\[
+J=\left|\frac{\partial\vec r}{\partial u}\times\frac{\partial\vec r}{\partial v}\right|.
+\]
+Jos pinta on annettu muodossa $z=f(x,y)$, eli
+$\,\vec r=\vec r\,(x,y)=x\vec i+y\vec j+f(x,y)\vec k$, niin
+\begin{align*}
+\partial_x\vec r\times\partial_y\vec r 
+               &= \begin{vmatrix} 
+                  \vec i & \vec j & \vec k \\ 1 & 0 & f_x \\ 0 & 1 & f_y 
+                  \end{vmatrix} 
+                = -f_x\vec i-f_y\vec j+\vec k \\
+\impl \ J(x,y) &= \sqrt{1+[f_x(x,y)]^2+[f_y(x,y)]^2}.
+\end{align*}
+Koska tässä $\vec n=(-f_x\vec i-f_y\vec j+\vec k\,)/J=n_x\vec i+n_y\vec j+n_z\vec k$ on pinnan
+yksikkönormaalivektori, niin tuloksen voi esittää myös muodossa $J(x,y)=1/\abs{n_z(x,y)}$.
+
+$R$-säteisellä pallopinnalla on
+\begin{align*}
+\vec r = \vec r\,(\theta,\varphi)
+      &= R\sin\theta\cos\varphi\,\vec i+R\sin\theta\sin\varphi\,\vec j+R\cos\theta\,\vec k \\
+\impl\ J(\theta,\varphi) 
+      &= \abs{\partial_\theta\vec r\times\partial_\varphi\vec r\,}
+       = R^2\sin\theta.
+\end{align*}
+Yleisemmällä pyörähdyspinnalla, joka syntyy käyrän $K:\,y=f(x),\ x\in[a,b]$ pyörähtäessä
+$x$-akselin tai käyrän $K:\,y=f(z),\ z\in[a,b]$ $z$-akselin ympäri (ks.\ kuviot alla) voidaan
+muuntosuhde laskea vastaavaan tapaan
+(Harj.teht.\,\ref{H-Uint-9: pyörähdyspintojen muuntosuhteet}). Tulokset koottuna:
+\index{muuntosuhde integraalissa!e@pintaintegraalissa}
+\index{kzyyrzy@käyräviivaiset koordinaatistot!d@--integraalit}%
+\vspace{2mm}
+\begin{center}
+\begin{tabular}{lll}
+Pinta & Muuttujat & $\quad$Muuntosuhde \\ \hline \\
+$\vec r=\vec r\,(u,v)$ & $u,v$ & $\quad \abs{\partial_u\vec r \times \partial_v\vec r\,}$ \\ \\
+$z=f(x,y)$ & $x,y$ & $\quad \sqrt{1+[f_x(x,y)]^2+[f_y(x,y)]^2}$ \\ \\
+pallopinta $\,r=R$& $\theta,\varphi$ & $\quad R^2\sin\theta$ \\ \\
+\parbox{3.5cm}{pyörähdyspinta: 
+$y=f(x) \hookrightarrow\ \curvearrowleft \negthickspace\negthickspace \longrightarrow_x$} & 
+$x,\varphi$ & $\quad |f(x)|\sqrt{1+[f'(x)]^2}$ \\ \\
+\parbox{3.5cm}{pyörähdyspinta: 
+$z=f(r) \hookrightarrow$\ \raisebox{-0.2cm}{$\circlearrowleft$}$\negthinspace \negthinspace 
+\negmedspace \negthinspace \uparrow^z$} & $r,\varphi$ & $\quad r\sqrt{1+[f'(r)]^2}$
+
+\end{tabular}
+\end{center}
+\begin{multicols}{2}
+\begin{figure}[H]
+\vspace{1cm}
+\begin{center}
+\import{kuvat/}{kuvaDD-2.pstex_t}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaDD-4.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+\begin{Exa}
+$R$-säteiselle pallopinnalle on jakautunut tasaisesti massa $m$. Laske hitausmomentti 
+$z$-akselin suhteen.
+\end{Exa}
+\ratk
+\begin{align*}
+I &= \int_A \rho_0(x^2+y^2)\,dS \\
+&= \int_B \rho_0 R^2\sin^2\theta\cdot R^2\sin\theta\,d\theta d\varphi 
+   \qquad \left(\,B=[0,\pi]\times[0,2\pi]\,\right) \\
+&= \rho_0 R^4 \int_0^{2\pi} d\varphi \cdot \int_0^\pi \sin^3 \theta\,d\theta \\
+&= 2\pi\rho_0R^4\sijoitus{\theta=0}{\theta=\pi} (-\cos\theta+\frac{1}{3}\cos^3\theta) \\
+&= \frac{8\pi}{3}\rho_0 R^4.
+\end{align*}
+Koska
+\begin{align*}
+m =\int_A \rho_0\,dS
+ &= \rho_0 R^2 \int_0^{2\pi} d\varphi \cdot \int_0^{\pi} \sin\theta\,d\theta \\
+ &= \rho_0\cdot 4\pi R^2,
+\end{align*}
+niin $\displaystyle{I=\underline{\underline{\frac{2}{3}mR^2}}}$. \loppu
+\begin{Exa}
+Laske $\int_A f\,dS$, kun $f(x,y,z)=xy\ $ ja
+\[
+A = \left\{(x,y,z)\in\R^3 \mid z=x^2+\frac{1}{2}y^2 \; \ja \; (x,y)\in B\right\},
+    \quad B=[0,1]\times [0,1].
+\]
+\end{Exa}
+\ratk
+\begin{align*}
+\int_A f\,dS &= \int_B xy\sqrt{1+4x^2+y^2}\,dxdy \\
+&=\int_0^1 x\left(\int_0^1 y\sqrt{1+4x^2+y^2}\,dy\right)dx \\
+&=\int_0^1 x\left[\sijoitus{y=0}{y=1}\frac{1}{3}(1+4x^2+y^2)^{3/2}\right]dx \\
+&=\int_0^1 \left[\frac{1}{3}x(2+4x^2)^{3/2}-\frac{1}{3}x(1+4x^2)^{3/2}\right]\,dx
+\end{align*}
+\begin{align*}
+\quad &=\ \sijoitus{0}{1}\left[\frac{1}{60}(2+4x^2)^{5/2}-\frac{1}{60}(1+4x^2)^{5/2}\right] \\
+      &= \underline{\underline{\frac{1}{60}\bigl(36\sqrt{6}-25\sqrt{5}-4\sqrt{2}+1\bigr)}}.
+\loppu \\
+\end{align*}
+
+\begin{multicols}{2} \raggedcolumns
+\begin{Exa}
+Katkaistun suoran ympyräkartion korkeus $=h$, pohjan säde $=R$ ja katkaisukohdassa säde $=r$.
+Laske vaipan ala $\mu(A)$.
+\end{Exa}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-38.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+\ratk Tässä on kyseessä pyörähdyspinta, joka syntyy, kun jana
+\[
+K:\,y=f(x)=r+(R-r)\frac{x}{h}, \quad x\in [0,h]
+\]
+pyörähtää $x$-akselin ympäri. Parametreilla $(x,\varphi) \in B=[0,1]\times[0,2\pi]$ laskien
+saadaan
+\begin{align*}
+\mu(A) &= \int_B f(x)\sqrt{1+[f'(x)]^2}\,dxd\varphi \\
+&= 2\pi \int_0^h\sqrt{1+\left(\frac{R-r}{h}\right)^2}\,\left[\,r+(R-r)\frac{x}{h}\,\right]dx \\
+&=\pi(R+r)h\,\sqrt{1+\left(\frac{R-r}{h}\right)^2} \\[3mm]
+&=\underline{\underline{\pi(R+r)\sqrt{h^2+(R-r)^2}}}. \Akehys \loppu
+\end{align*}
+
+\begin{Exa}
+Laske viivoitinpinnan
+\[
+\vec r\,(u,v)=v[\,\cos (\omega u)\vec i+\sin (\omega u)\vec j\,]+u\vec k, \quad
+(u,v)\in [0,H]\times [0,L]
+\]
+pinta-ala.
+\end{Exa}
+\begin{multicols}{2} \raggedcolumns
+\ratk
+\begin{align*}
+\partial_u\vec r\times\partial_v\vec r
+          &= \begin{detmatrix} 
+             \vec i & \vec j & \vec k \\
+             -\omega v\sin (\omega u) & \omega v\cos (\omega u) & 1 \\
+             \cos (\omega u) & \sin (\omega u) & 0 
+             \end{detmatrix} \\
+          &= -\sin (\omega u)\vec i+\cos (\omega u)\vec j -\omega v\vec k \\[2mm]
+\impl \ J &= \abs{\partial_u\vec r\times\partial_v\vec r\,}=\sqrt{1+\omega^2 v^2}.
+\end{align*}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-39.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+
+\begin{align*}
+\mu(A) &= \int_0^H\left(\int_0^L \sqrt{1+\omega^2 v^2}\,dv\right)du \\
+&= H\int_0^L \sqrt{1+\omega^2 v^2}\,dv \\
+&\qquad [\ \text{sijoitus}\ \ \omega v=\sinh t,\quad dv=\inv{\omega}\cosh t\,dt,\quad 
+                              \alpha=\text{arsinh}\, (\omega L)\ ] \\
+&=H\inv{\omega}\int_0^\alpha \cosh^2 t\,dt \\
+&=H\inv{\omega}\sijoitus{0}{\alpha} \left(\frac{1}{2}\sinh t\cosh t+\frac{1}{2}\,t\right) \\
+&=\underline{\underline{
+    \frac{1}{2}\left[\ln (\omega L +\sqrt{\omega^2 L^2+1})
+                                   +\omega L\sqrt{\omega^2 L^2+1}\right]H\inv{\omega}}}. \loppu
+\end{align*}
+
+\subsection*{Avaruuskulma}
+\index{avaruuskulma|vahv}
+
+Olkoon $V\subset\R^3$ avaruuden osajoukko, käytännössä esim.\ kiinteä kappale, pinta tai pinnan
+osa. Määritellään pallokoordinaatistossa joukko $B\subset[0,\pi]\times[0,2\pi]$ ehdolla
+\[
+B=\{\,(\theta,\varphi)\ | \ P=(r,\theta,\varphi) \in V\ \text{jollakin}\ r>0\,\}.
+\]
+Tällöin $V$ näkyy origosta suuntaan $\vec e_r(\theta,\varphi)$ täsmälleen kun
+$(\theta,\varphi) \in B$. Olkoon $A$ yksikköpallon $S$ osa, joka vastaa
+pallonpintakoordinaattien $(\theta,\varphi)$ joukkoa $B$. Tällöin sanotaan, että $V$ näkyy
+origosta \kor{avaruuskulmassa} (engl.\ solid angle)
+\[
+\Omega=\int_A dS=\int_B \sin\theta\,d\theta d\varphi.
+\]
+Tämän suurin arvo (kun $A=S$) on $4\pi$.
+\begin{Exa}
+Missä avaruuskulmassa lieriöpinta
+\[
+A=\{(x,y,z)\in\R^2 \; | \; x^2+y^2=R^2, \; 0\leq z\leq H\}
+\]
+näkyy origosta?
+\end{Exa}
+\ratk Kyseisellä pinnalla pallonpintakoordinaatit saavat arvot
+\[
+(\theta,\varphi) \in B=[\theta_0,\pi/2]\times[0,2\pi],\quad 
+                 \cos\theta_0=\frac{R}{\sqrt{R^2+H^2}}\,,
+\]
+joten
+\[
+\Omega = \int_B \sin\theta\,d\theta d\varphi
+       = \int_0^{2\pi} d\varphi\cdot\int_{\theta_0}^{\pi/2} \sin\theta\,d\theta
+       = 2\pi\cos\theta_0
+       =\underline{\underline{2\pi\,\frac{H}{\sqrt{R^2+H^2}}}}\,. \loppu
+\]
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-Uint-9: pyörähdyspintojen muuntosuhteet} 
+Halutaan laskea pinta-alamitan muuntosuhde $J$ pyörähdyspinnalle, joka syntyy, kun
+a) $xy$-tason käyrä $K: y=f(x)$ pyörähtää $x$-akselin ympäri, b) $yz$-tason käyrä
+$K: y=f(z)$ pyörähtää $z$-akselin ympäri. Laske muuntosuhde
+parametrisaatioille \vspace{1mm}\newline
+a) \ $y=f(x)\cos\varphi,\,\ z=f(x)\sin\varphi$, \newline 
+b) \ $x=r\cos\varphi,\,\ y=r\sin\varphi,\,\ z=f(r)$.
+
+\item
+Laske sen pinnan ala, jonka lieriö $\,L:\, x^2+y^2=a^2$ ($a>0$) leikkaa \vspace{1mm}\newline
+a) kartiosta $\,z^2=x^2+y^2$, \newline
+b) satulapinnasta $\,az=xy$, \newline
+c) paraboloidista $\,az=x^2+y^2$. 
+
+\item
+Laske pinta-ala $\mu(A)$, kun $A$ on \vspace{1mm}\newline
+a) joukon $V=\{(x,y,z)\in\R^3 \mid x^2+y^2 \le z \le \sqrt{x^2+y^2}\,\}$ 
+   reunapinta $\partial V$, \newline
+b) parametrinen pinta $\,x=8u^2,\ y=v^2,\ z=4uv,\ (u,v)\in[0,1]\times[0,3]$.
+
+\item
+a) Laske puolipallon (pinnan) keskiö. \vspace{1mm}\newline
+b) Pinnalle $S:\,x^2+y^2=R^2,\ 0 \le z \le H$ on jakautunut tasaisesti massa $m$. Laske
+lieriökoordinaateilla hitausmomentit koordinaattiakselien suhteen.
+
+\item \index{Guldinin sääntö}
+Olkoon $f(x) \ge 0$, kun $x\in[a,b]$ ja $S$ pinta, joka syntyy, kun käyrä
+$K:\,y=f(x)\ \ja\ x\in[a,b]$ pyörähtää $x$-akselin ympäri. Todista \kor{Guldinin sääntö}:
+$S$:n pinta-ala = $K$:n pituus kertaa $K$:n keskiön pyörähdyksessä kulkema matka.
+
+\item
+Laske, missä avaruuskulmassa kohde näkyy origosta: \vspace{1mm}\newline
+a) \ $R$-säteinen kiekko tasolla $z=a>0$, keskipiste $z$-akselilla. \newline
+b) \ $R$-säteinen kuula, jonka keskipisteen etäisyys origosta $=a \ge R$. \newline
+c) \ Puolikartion rajaama joukko $A:\,z\ge\sqrt{x^2+y^2}+a,\ a \ge 0$. \newline
+d) \ Pararaboloidi $\,z=x^2+y^2+a, \ a\in\R$.
+
+\item (*) \index{Vivian'in ikkuna} 
+\kor{Vivian'in ikkunaksi} sanotaan sitä pintaa $A,$ jonka lieriö $x^2+y^2=Rx$ erottaa pallosta
+$x^2 + y^2 + z^2 = R^2$. Laske ko.\ pinnan ala.
+
+\item (*)
+Olkoon $A\subset\R^3$ lieriöiden
+\[
+S_1:\ x^2+y^2=R^2, \quad S_2:\ y^2+z^2=R^2, \quad S_3:\ x^2+z^2=R^2
+\]
+sisään jäävä joukko. Laske $A$:n reunapinnan $\partial A$ pinta-ala.
+
+\item (*) \index{zzb@\nim!N:s ydinvoimala} 
+(N:s ydinvoimala) Voimalaitoksen jäähdytystornin vaipan ulkopinnan parametriesitys on
+(vrt.\ Esimerkki \ref{parametriset käyrät}:\,\ref{jäähdytystorni})
+\[
+\begin{cases}
+\,x=a[(2-2v)\cos u-v\sin u], \\
+\,y=a[v\cos u +(2-2v)\sin u], \\
+\,z=3av,
+\end{cases}
+\]
+missä $a$=50 m ja $(u,v)\in B= [0,2\pi]\times [0,1]$. Vaippa on valmistettu betonista ja sen
+paksuus on 20 cm. Laske tarvittavan betonin määrälle likiarvo käyttäen pintaintegraalia.
+
+\item (*)
+a) Levy
+\[
+A=\{\,(x,y,z) \ | \ \frac{x^2}{a^2}+\frac{y^2}{b^2} \le 1,\ z=c\,\} \quad (a,b,c>0)
+\]
+näkyy origosta avaruuskulmassa $\Omega$. Johda $\Omega$:lle laskukaava muotoa
+$\Omega=\int_0^{2\pi} f(\varphi)\,d\varphi$. \ b) Laske, missä avaruuskulmassa avaruusneliö
+\[
+K=\{\,(x,y,z) \ | \ 0 \le x,y \le 1,\ z=1\,\}
+\]
+näkyy origosta.
+
+\end{enumerate}

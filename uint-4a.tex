@@ -1,0 +1,64 @@
+\subsection*{Muuntosuhde}
+
+Tutkitaan muunnettua integraalia $\int_B g\,d\mu'$. Oletetaan, ett‰ $B$ on rajoitettu ja
+$g(\mt)$ rajoitettu $B$:ss‰, jolloin integraalin perusm‰‰ritelm‰n mukaan on
+$\int_B g\,d\mu'=\int_T g_0\,d\mu'$, miss‰ $T \supset B$ on $n$-ulotteinen suorakulmainen
+peruss‰rmiˆ ja $g_0=g$:n nollajatko $B$:n ulkopuolelle. Olkoon edelleen 
+$\mathcal{T}_h=\{T_k\}\,$ $T$:n jako osas‰rmiˆihin, joiden s‰rmien pituus on enint‰‰n $h$.
+Jatkossa erotetaan $T$:st‰ nollamittainen osajoukko $S$ ja merkit‰‰n
+$T'=\{\,\mt \in T\ |\ \mt \notin S\,\}$ ja
+$\mathcal{T}_h'= \{\,T_k\in\mathcal{T}_h\ |\ T_k \subset T'\,\}$ (mahdollisesti $S=\emptyset$,
+jolloin $T'=T$ ja $\mathcal{T}_h'=\mathcal{T}_h$). Oletetaan $\mpu$ m‰‰ritellyksi
+kuvauksena $\mpu: T \kohti \mpu(T) \supset A$ ja injektiiviseksi osajoukkoon $T'$ rajoitettuna.
+Merkit‰‰n $\Delta A_k=\mpu(T_k)$.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-27.pstex_t}
+\end{center}
+\end{figure}
+Jatkossa tehd‰‰n viel‰ osas‰rmiˆit‰ $T_k\in\mathcal{T}_h'$ (ja vain n‰it‰!) koskien kaksi
+oletusta: 
+
+1. Oletetaan, ett‰ $g_0$ on s‰rmiˆiss‰ $T_k\in\mathcal{T}_h'$ likimain vakio, tarkemmin
+\[
+\max_{\mt_1,\mt_2 \in T_k}|g_0(\mt_1)-g_0(\mt_2)| \,\le\, \eps(h) \kohti 0, \quad 
+                                                        \text{kun}\,\ h \kohti 0. 
+\]
+T‰ss‰ oletetaan, ett‰ $\eps(h)$ riippuu vain tiheysparametrista $h$ (ei $k$:sta tai muulla
+tavoin $\mathcal{T}_h$:sta). (Kyseess‰ on tasaisen jatkuvuuden ehto, vrt.\
+Luku \ref{jatkuvuuden logiikka}.)
+
+2. Oletetaan, ett‰ kuvaukseen $\mpu$ on liitett‰viss‰
+\index{muuntosuhde integraalissa}%
+nk.\ \kor{muuntosuhde} (mittasuhde, suurennussuhde) funktiona $J(\mt),\ \mt \in T'$, jolle
+p‰tee jokaisella $T_k\in\mathcal{T}_h'$
+\[
+\max_{\mt \in T_k}\left|\frac{\mu(\Delta A_k)}{\mu(T_k)}-J(\mt)\right| 
+   \,\le\,\delta(h) \kohti 0 \quad \text{kun}\,\ h \kohti 0.
+\]
+Myˆs t‰ss‰ oletetaan, ett‰ $\delta(h)$ riippuu vain $h$:sta.
+
+Kun valitaan $\mt_k \in T_k$ jokaisella $T_k\in\mathcal{T}_h'$, niin tehtyjen oletusten
+perusteella voidaan arvioida
+\begin{align}
+\int_B g\,d\mu' &= \int_T g_0\,d\mu' \tag{a} \\
+                &= \sum_{T_k\in\mathcal{T}_h} \int_{T_k} g_0\,d\mu' \tag{b} \\
+                &\approx \sum_{T_k\in\mathcal{T}_h'} \int_{T_k} g_0\,d\mu' \tag{c} \\
+                &\approx \sum_{T_k\in\mathcal{T}_h'} g_0(\mt_k)\mu'(T_k) \tag{d} \\
+                &\approx \sum_{T_k\in\mathcal{T}_h'} g_0(\mt_k)J(\mt_k)\mu(T_k) \tag{e} \\
+                &\approx \sum_{T_k\in\mathcal{T}_h'} \int_{T_k} g_0(\mt)J(\mt)\,d\mu \tag{f} \\
+                &\approx \sum_{T_k\in\mathcal{T}_h} \int_{T_k} g_0(\mt)J(\mt)\,d\mu \tag{g} \\
+                &= \int_T g_0(\mt)J(\mt)\,d\mu \tag{h} \\
+                &= \int_B g(\mt)J(\mt)\,d\mu. \tag{i}
+\end{align}
+T‰ss‰ on vedottu integraalin m‰‰ritelm‰‰n (a,i), integraalin additiivisuuteen (b,h),
+oletukseen: $T=T' \cup S$, miss‰ $S$ on nollamittainen (c,g) ja em.\ oletuksiin koskien
+funktioita $g_0(\mt)$ ja $J(\mt)$ (d,e,f). Sik‰li kuin n‰iden approksimaatioiden virhe
+$\kohti 0$, kun $h \kohti 0$, niin ko.\ rajalla p‰‰dyt‰‰n 
+muunnoskaavaan\footnote[2]{Muunnoskaavan t‰sm‰lliset perustelut sivuutetaan. Kaava edellytt‰‰
+tehtyjen oletuksien lis‰ksi, ett‰ $g(\mt)J(\mt)$ on integroituva yli $B$:n Jordan-mitan $\mu$
+suhteen. --- Muuntosuhde on m‰‰ritelt‰viss‰ aina, kun kuvaus $\mpu$ on riitt‰v‰n s‰‰nnˆllinen,
+ks.\ laskukaava j‰ljemp‰n‰.}
+\begin{equation} \label{muuntokaava}
+\boxed{\kehys\quad \int_A f(\mx)\,dx_1\ldots dx_n=\int_B g(\mt)J(\mt)\,dt_1\ldots dt_n. \quad}
+\end{equation}

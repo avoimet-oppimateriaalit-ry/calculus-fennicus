@@ -1,0 +1,618 @@
+\section{Käyrän tangentti ja normaali} \label{derivaatta geometriassa}
+\alku \sectionmark{Tangentti ja normaali}
+\index{tangentti (käyrän)|vahv} \index{normaali(vektori)!a@suoran, käyrän|vahv}
+\index{kzyyrzy@käyrä|vahv} \index{parametrinen käyrä|vahv}
+
+Derivaatan tavanomainen geometrinen tulkinta euklidisessa tasossa on:
+\index{kulmakerroin}%
+\[
+\boxed{\kehys\quad \text{Derivaatta}=\text{tangentin kulmakerroin}. \quad}
+\]
+Käyrän $y=f(x)$ sivuaja eli \kor{tangentti} pisteessä $(c,f(c))$ on pisteiden $(c,f(c))$ ja 
+$(c+\Delta x,f(c+\Delta x))$ kulkevan suoran eli
+\index{sekantti (käyrän)}%
+\kor{sekantin} 'raja-arvo', kun 
+$\Delta x\kohti 0$. Pisteen $(c,f(c))$ kautta kulkeva suora, joka on tangenttia vastaan 
+kohtisuora, on käyrän $y=f(x)$ \kor{normaali} ko. pisteessä.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,8)(-1,-1)
+\put(-1,0){\vector(1,0){10}} \put(8.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){8}} \put(0.2,6.8){$y$}
+\Thicklines
+\curve(
+   -1.0000,    0.4586,
+   -0.5000,    0.7987,
+         0,    1.0117,
+    0.5000,    1.1249,
+    1.0000,    1.1657,
+    1.5000,    1.1614,
+    2.0000,    1.1394,
+    2.5000,    1.1269,
+    3.0000,    1.1514,
+    3.5000,    1.2402,
+    4.0000,    1.4206,
+    4.5000,    1.7200,
+    5.0000,    2.1657,
+    5.5000,    2.7851,
+    6.0000,    3.6054,
+    6.5000,    4.6542,
+    7.0000,    5.9586)
+\thinlines
+\put(3.28,0.9){\line(1,1){3.8}}
+\put(1.8,0.66){\line(3,1){6}}
+\put(2.6,4.5){\line(1,-3){1.3}}
+\put(2,4.7){normaali}
+\put(7,3){tangentti}
+\put(7,5){sekantti}
+\dashline{0.1}(3.67,0)(3.67,1.25)
+\dashline{0.1}(6,0)(6,3.6)
+\put(3.57,-0.5){$c$} \put(5.9,-0.5){$c+\Delta x$}
+\put(6.5,6.1){$y=f(x)$}
+\end{picture}
+%\caption{Derivaatan geometrinen tulkinta}
+\end{center}
+\end{figure}
+Tangentin ja normaalin yhtälöt ovat
+\begin{align*}
+\text{Tangentti}\,: &\qquad y-f(c) = f'(c)(x-c). \\
+\text{Normaali}\,:  &\qquad x-c = -f'(c)(y-f(c)).
+\end{align*}
+\index{kohtisuora leikkaus!a@käyrien}%
+Sanotaan, että kaksi käyrää \kor{leikkaavat kohtisuorasti}, jos leikkauspisteessä tangentit
+ovat kohtisuorassa toisiaan vastaan.
+\begin{Exa}
+Suora kulkee pisteen $(4,0)$ kautta ja leikkaa käyrän $y=x^2$ kohtisuorasti. Suoran yhtälö?
+\end{Exa}
+\ratk Suora on käyrän normaali leikkauspisteessä. Jos leikkauspiste on $(t,t^2)$, niin suoran 
+yhtälö on siis
+\[
+x-t=-2t(y-t^2).
+\]
+Tämä kulkee pisteen $(4,0)$ kautta ehdolla
+\[
+2t^3+t-4=0 \ \impl \ t\approx 1.12817390.
+\]
+Suoran yhtälö: $\ y=k(x-4)$, $\ k\approx -0.44319409$. \loppu
+\begin{Exa} \label{kohtisuora leikkaus} \index{kohtisuora leikkaus!b@käyräparvien}
+Näytä, että \kor{käyräparvet} \index{kzyyrzy@käyräparvi}
+\[
+xy=a,\quad x^2-y^2=b,
+\]
+missä $a,b\in\R$, $a\neq 0$, leikkaavat toisensa kohtisuorasti.
+\end{Exa}
+\ratk Yhteisissä pisteissä $(x,y)$ on oltava $x\neq 0$, $y\neq 0$, koska $xy=a\neq 0$. Kun 
+merkitään
+\[
+xy=a \ \ekv \ y=y(x)\quad (x\neq 0),
+\]
+niin implisiittisesti derivoimalla saadaan
+\begin{align*}
+\frac{d}{dx}[xy(x)]&=y(x)+xy'(x)=\frac{d}{dx}a=0 \\
+&\impl \ y'(x)=-y(x)/x=-y/x.
+\end{align*}
+Vastaavasti voidaan merkitä
+\[
+x^2-y^2=b \ \ekv \ y=y(x),
+\]
+jolloin kyse on kaksihaaraisesta implisiittifunktiosta. Molemmille haaroille pätee 
+derivoimissääntö
+\begin{align*}
+\frac{d}{dx}\left(x^2-[y(x)]^2\right)&= 2x-2y(x)y'(x)=\frac{d}{dx}b=0 \\
+&\impl \ y'(x)=x/y(x)=x/y.
+\end{align*}
+Käyrien yhteisissä pisteissä $(x,y)$ tangenttien kulmakertoimien tulo on siis 
+\[
+-\frac{y}{x}\cdot\frac{x}{y} = -1,
+\]
+joten tangentit ovat kaikissa leikkauspisteissä kohtisuorat. \loppu
+\index{zza@\sov!Heijastuslaki}%
+\begin{Exa}: \vahv{Heijastuslaki}. Halutaan määrittää toistaiseksi tuntemattomalla välillä
+$\,A\subset\R\,$ funktio $\,x \in A \map y(x) \ge 0\,$ ja vastaava käyränkaari
+\[
+S = \{\,(x,y) \in \Rkaksi \mid x \in A\ \ja\ y = y(x) \ge 0\,\}
+\]
+siten, että jokainen pisteestä $(-c,0)$ lähtenyt ja käyrästä heijastunut valonsäde kulkee
+pisteen $(c,0)$ kautta ($c>0$). Muotoile ongelma differentiaaliyhtälöksi muotoa
+\[ 
+F(x,y,y') = 0, 
+\]
+\index{ellipsi}%
+ja etsi ratkaisuja \kor{ellipsin} kaarien
+\[
+y=y(x) \ \ekv \ \frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\]
+joukosta ($a,b\in\R_+$).
+\end{Exa}
+\ratk Valonsäteen heijastuessa pisteessä $P=(x,y)$ on tulokulma sama kuin heijastuskulma
+käyrän tangenttiin nähden.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5)(-5,-1)
+\put(-5,0){\vector(1,0){10}} \put(4.8,-0.4){$x$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$y$}
+\path(-4,0)(1,3)(4,0)
+\dashline{0.1}(1,3)(4,3)
+\put(1,3){\line(5,-1){3}}\put(1,3){\line(-5,1){3}}
+\put(4,2.4){\line(-2,3){0.1}}
+\put(4,2.4){\line(-3,-2){0.15}}
+\put(0,0){\vector(1,0){1}} \put(0,0){\vector(0,1){1}} \put(0.9,-0.5){$\vec i$}
+\put(0.2,0.8){$\vec j$}
+\multiput(-4,0)(8,0){2}{\line(0,-1){0.1}} \put(-4.4,-0.5){$-c$} \put(3.9,-0.5){$c$}
+\put(-4.2,0.2){$A$} \put(3.9,0.2){$B$} \put(0.8,3.3){$P=(x,y)$} \put(4.2,2.2){$\vec t$}
+\put(0.9,2.9){$\bullet$}
+\put(1,3){\arc{3}{0}{0.197}}
+\put(1,3){\arc{1}{0.197}{0.785}}
+\put(1,3){\arc{1}{2.6}{3.35}}
+\put(2.65,2.75){$\scriptstyle{\beta}$} \put(1.6,2.55){$\alpha$} \put(0.2,2.8){$\alpha$}
+\end{picture}
+%\caption{Valonsäteen heijastuminen}
+\end{center}
+\end{figure}
+Käyrän tangentin suuntainen vektori heijastuspisteessä on (vrt.\ kuvio)
+\[
+\vec t=\vec i +y'\vec j,
+\]
+ja vektorit $\overrightarrow{AP}$ ja $\overrightarrow{PB}$ ovat (kuvio)
+\[
+\overrightarrow{AP}=(x+c)\vec i+y\vec j,\quad \overrightarrow{PB}=(c-x)\vec i -y\vec j.
+\]
+Vaadittu heijastusehto on
+\begin{align*}
+&\frac{\overrightarrow{AP}\cdot\vec t}{\abs{\overrightarrow{AP}}}=
+\frac{\overrightarrow{PB}\cdot\vec t}{\abs{\overrightarrow{PB}}} \\
+&\ekv \ \frac{(c+x)+yy'}{\sqrt{(c+x)^2+y^2}}=\frac{(c-x)-yy'}{\sqrt{(c-x)^2+y^2}}\,.
+\end{align*}
+Neliöön korottamalla ja sieventämällä tämä yksinkertaistuu yhtälöksi
+\[
+F(x,y,y') = xy^2(y')^2-(c^2-x^2+y^2)yy'-xy^2=0.
+\]
+Kokeillaan, toteutuuko tämä, kun
+\[
+y^2=b^2-\frac{b^2}{a^2}x^2 \ \impl \ y'=-\frac{b^2}{a^2}\,x/y.
+\]
+Näillä sijoituksilla differentiaaliyhtälö pelkistyy yhtälöksi
+\[
+\left(\frac{c^2+b^2}{a^2}-1\right) b^2x=0,
+\]
+joka toteutuu $\forall x$ ehdolla $\,a^2=c^2+b^2$. Tässä $b\in\R_+$ on vapaasti valittavissa,
+joten ongelman ratkaisuja ovat
+\[
+y=y(x) = b\,\sqrt{1-\frac{x^2}{a^2}}\,,\quad x\in[-a,a]=A,\,\ a=\sqrt{c^2+b^2},\,\ b\in\R_+.
+\]
+\index{polttopiste (ellipsin)}%
+Nämä ovat erimuotoisia ellipsin puolikaaria, joiden \kor{polttopisteinä} ovat $(\pm c,0)$. 
+Kuvassa on $c=1$. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,4)(-5,0)
+\put(-5,0){\vector(1,0){10}} \put(4.8,-0.4){$x$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$y$}
+\curve(
+   -4.26,    0,
+   -4.2000,    0.4243,
+   -4.1000,    0.7714,
+   -4.0000,    1.0000,
+   -3.9000,    1.1811,
+   -3.6000,    1.5875,
+   -3.3000,    1.8855,
+   -3.0000,    2.1213,
+   -2.7000,    2.3141,
+   -2.4000,    2.4739,
+   -2.1000,    2.6067,
+   -1.8000,    2.7166,
+   -1.5000,    2.8062,
+   -1.2000,    2.8775,
+   -0.9000,    2.9317,
+   -0.6000,    2.9698,
+   -0.3000,    2.9925,
+         0,    3.0000,
+    0.3000,    2.9925,
+    0.6000,    2.9698,
+    0.9000,    2.9317,
+    1.2000,    2.8775,
+    1.5000,    2.8062,
+    1.8000,    2.7166,
+    2.1000,    2.6067,
+    2.4000,    2.4739,
+    2.7000,    2.3141,
+    3.0000,    2.1213,
+    3.3000,    1.8855,
+    3.6000,    1.5875,
+    3.9000,    1.1811,
+    4.0000,    1.0000,
+    4.1000,    0.7714,
+    4.2000,    0.4243,
+    4.26,    0)
+\curve(
+  -3.3541,                  0,
+  -3.3300,             0.1795,
+  -3.3000,             0.2683,
+  -3.2000,             0.4494,
+  -3.1000,             0.5727,
+  -3.0000,             0.6708,
+  -2.7000,             0.8899,
+  -2.4000,             1.0479,
+  -1.8000,             1.2657,
+  -1.2000,             1.4007,
+  -0.6000,             1.4758,
+        0,             1.5000,
+   0.6000,             1.4758,
+   1.2000,             1.4007,
+   1.8000,             1.2657,
+   2.4000,             1.0479,
+   2.7000,             0.8899,
+   3.0000,             0.6708,
+   3.1000,             0.5727,
+   3.2000,             0.4494,
+   3.3000,             0.2683,
+   3.3300,             0.1795,
+   3.3541,                  0)
+\multiput(-3,0)(6,0){2}{\line(0,-1){0.1}} \put(-3.4,-0.5){$-1$} \put(2.9,-0.5){$1$}
+\put(-0.075,2.925){$\scriptstyle{\bullet}$} \put(0.2,2.6){$1$}
+\put(0.5,1.6){$b=\tfrac{1}{2}$} \put(1,3){$b=1$}
+\end{picture}
+%\caption{$c=1$}
+\end{center}
+\end{figure}
+
+\subsection*{Parametrisen käyrän tangentti}
+
+Parametrisen käyrän, eli vektoriarvoisen funktion $t \in A\ \map \vec r\,(t) \in \R^d$, missä
+$A \subset \R$ ja $d=2$ tai $d=3$ (vrt.\ Luku \ref{parametriset käyrät}), derivaatta $\dvr(t)$ 
+määritellään tavanomaiseen tapaan, eli
+\[ 
+\dvr(t) = \lim_{\Delta t \kohti 0}\dfrac{1}{\Delta t}\left[\vec r\,(t+\Delta t)-\vec r\,(t)\right]
+        = \begin{cases} \begin{aligned}
+          x'(t)\vec i + y'(t)\vec j \quad\quad\quad\quad\ \ &\text{(tasokäyrä)} \\
+          x'(t)\vec i + y'(t)\vec j + z'(t)\vec k \quad     &\text{(avaruuskäyrä)}
+          \end{aligned} \end{cases} \]
+sellaisissa pisteissä, joissa funktiot $x(t)$, $y(t)$ ja $z(t)$ ovat derivoituvia. Määritelmän
+mukaan derivaattavektori on pisteiden $P \vastaa \vec r\,(t)$ ja
+$Q \vastaa \vec r\,(t + \Delta t)$ kulkevan suoran suuntavektorin raja-arvo, sikäli kuin pisteet
+$P$ ja $Q$ ovat erillisiä $\abs{\Delta t}$:n ollessa riittävän pieni. Viimeksi mainittu ehto on
+voimassa ainakin, jos
+\begin{equation} \label{pysähtymättömyysehto}
+ \abs{\dvr(t)} \neq 0,
+\end{equation}
+sillä linearisoivan approksimaatioperiaatteen mukaisesti pätee
+\[
+\abs{\vec r\,(t+\Delta t)-\vec r\,(t)}\ =\ \abs{\dvr(t)}\abs{\Delta t}+g(t,\Delta t), \quad 
+                                    \lim_{\Delta t \kohti 0} \frac{g(t,\Delta t)}{\Delta t}=0,
+\]
+jolloin ehdolla \eqref{pysähtymättömyysehto} on tässä vasen puoli $\neq 0$, kun
+$\Delta t \in (-\delta,\delta)$ jollakin (riittävän pienellä) $\delta>0$. Ehdolla 
+\eqref{pysähtymättömyysehto} voidaan siis vektori $\dvr(t) \neq \vec 0$ tulkita käyrän 
+\index{tangenttivektori (käyrän)}%
+$S = \{P(t) \vastaa \vec r\,(t) \mid t \in A\}$ \kor{tangenttivektoriksi} pisteessä 
+$P(t) \vastaa \vec r\,(t)$. Vektorin $\dvr(t)$ suuntainen yksikkövektori $\tv(t)$ on nimeltään 
+\kor{yksikkötangenttivektori}: \index{yksikkövektori!a@yksikkötangenttivektori}%
+\begin{equation} \label{yksikkötangenttivektori} 
+\boxed{\kehys\quad \tv(t) = \dfrac{\dvr(t)}{\abs{\dvr(t)}} \quad 
+                     (\text{yksikkötangenttivektori}, \,\ \abs{\dvr(t)} \neq 0\,). \quad} 
+\end{equation}
+Huomattakoon, että yksikkötangenttivektori annetussa käyrän pisteessä $P$ on puhtaasti
+g\pain{eometrinen} käsite: Mahdollisia $\tv$:n arvoja (sikäli kuin $\tv$ yleensä on 
+määritelty) on vain kaksi. Ehdon \eqref{pysähtymättömyysehto} ollessa voimassa parametrisointi 
+valitsee näistä toisen kaavan \eqref{yksikkötangenttivektori} mukaisesti, muuten $\tv$ 
+\pain{ei} \pain{rii}p\pain{u} p\pain{arametrisoinnista}. 
+
+Yksikkötangenttivektori voidaan tulkita selkeämmin geometrisesti, kun merkitään
+\[
+\Delta\vec r=\vec r\,(t+\Delta t)-\vec r\,(t).
+\]
+Jos pisteet $P \vastaa \vec r\,(t)$ ja $Q \vastaa \vec r\,(t + \Delta t)$ ovat erillisiä, niin 
+$\Delta\vec r$ on pisteiden $P$ ja $Q$ kautta kulkevan käyrän sekantin suuntavektori. Ehdon 
+\eqref{pysähtymättömyysehto} voimassa ollessa tarkkenee approksimaatio 
+$\abs{\Delta\vec r\,} \approx \abs{\dvr(t)}\abs{\Delta t}$ rajalla $\Delta t \kohti 0$, jolloin 
+yksikkötangenttivektorin molemmat arvot saadaan toispuolisina raja-arvoina
+\begin{multicols}{2} \raggedcolumns
+\[
+\tv_\pm = \lim_{\Delta t\kohti 0^\pm} \frac{\Delta\vec r}{\abs{\Delta\vec r\,}}\,.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(8,3)(0,1)
+\put(0,3){\vector(3,-2){3}}
+\put(0,3){\vector(1,0){7}}
+\put(3,1){\vector(2,1){4}}
+\curve(1,0.8,3,1,5,1.7,7,3,8,4)
+\put(3,1){\vector(4,1){3.5}}
+\put(6,3.2){$\scriptstyle{\vec r(t+\Delta t)}$}
+\put(2.6,1.4){$\scriptstyle{\vec r(t)}$}
+\put(6.3,1.5){$\scriptstyle{\tv}$}
+\put(5.5,2.5){$\scriptstyle{\Delta\vec r}$}
+\put(2.95,0.95){$\scriptstyle{\bullet}$}
+\put(6.94,2.93){$\scriptstyle{\bullet}$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Tutkittaessa käyrän geometriaa parametrisoinnin avulla asetetaan ehto
+\eqref{pysähtymättömyysehto} usein lähtökohtaisesti 'mukavuusehtona' koko tarkasteltavalla 
+välillä, jolloin kaava \eqref{yksikkötangenttivektori} on käytettävissä. Tyypillisesti 
+oletetaan, että $\vec r\,(t)$:n koordinaattifunktiot $x(t)$, $y(t)$, $z(t)$ ovat
+j\pain{atkuvasti} \pain{derivoituvia} suljetulla välillä $A = [a,b]$ ja että ehto
+\eqref{pysähtymättömyysehto} on voimassa koko välillä, mukaanlukien päätepisteet, joissa
+derivaatta $\dvr$ tulkitaan toispuoliseksi.
+\begin{Exa} Ruuviviivan 
+$\,\vec r\,(\varphi)=R\cos\varphi\vec i+R\sin\varphi\vec j+a\varphi\vec k\ (R>0,\ a \neq 0)$
+yksikkötangenttivektori pisteessä $\,P(\varphi) = (x(\varphi),y(\varphi),z(\varphi))\,$ on
+\[ 
+\tv(\varphi) = \pm \dfrac{-R\sin\varphi\vec i + R\cos\varphi\vec j + a\vec k}{\sqrt{R^2+a^2}}
+                = \pm \dfrac{1}{\sqrt{R^2+a^2}}\,(-y\vec i + x\vec j + a\vec k).  
+\]
+Tässä on $\,\abs{\dvr(\varphi)} = \sqrt{R^2+a^2} =$ vakio. \loppu 
+\end{Exa}
+\begin{Exa} Käyrä $\,y=x^2,\,z=x^3\,$ leikkaa tason $T$ kohtisuorasti pisteessä $(1,1,1)$. 
+Tason yhtälö? 
+\end{Exa}
+\ratk Käyrän eräs parametrisointi on 
+\[ 
+x(t)=t,\ y(t)=t^2,\ z(t)=t^3\ \ekv\ \vec r\,(t) = t\vec i + t^2\vec j + t^3\vec k. 
+\]
+Taso $T$ kulkee pisteen $(1,1,1) \vastaa \vec r\,(1)$ kautta ja sen normaalivektori on 
+$\vec n = \dvr(1) = \vec i + 2\vec j + 3\vec k$, joten tason yhtälö on 
+(vrt.\ Luku \ref{suorat ja tasot})
+\[ 
+(x-1)+2(y-1)+3(z-1) = 0 \qekv x+2y+3z-6 = 0. \loppu 
+\]
+
+\subsection*{Nopeusvektori}
+\index{nopeusvektori|vahv}
+
+Jos parametrisessa käyrässä $t \map \vec r\,(t)$ parametri $t$ on fysikaalinen aikamuuttuja ja 
+$\vec r\,(t)$ on avaruudessa liikkuvan pisteen (partikkelin yms.) paikka hetkellä $t$, niin
+ko.\ pisteen \pain{no}p\pain{eus}(vektori) ja \pain {ratano}p\pain{eus} eli \pain{vauhti} 
+määritellään:
+\[ \boxed{\begin{aligned} 
+  \ykehys\quad \text{\pain{No}p\pain{eusvektori}:} \quad   
+           &\vec v(t) = \dvr(t) = x'(t)\vec i + y'(t)\vec j + z'(t)\vec k. \quad \\
+  \text{\pain{Vauhti}:} \quad\quad\quad\quad\ 
+           &v(t) = \abs{\dvr(t)}. \akehys
+          \end{aligned} } \]
+Aikaparametrisoinnissa ehto \eqref{pysähtymättömyysehto} on siis 'pysähtymiskielto'.
+\begin{Exa} \label{ympyräliike} Partikkeli liikkuu pitkin origokeskistä $R$-säteistä 
+ympyräviivaa siten, että napakulma hetkellä $t$ on $\varphi(t)$. Nopeus ja vauhti hetkellä 
+$t$\,? 
+\end{Exa}
+\ratk Partikkelin paikkavektori hetkellä $t$ on 
+$\vec r\,(t) = R\cos\varphi(t)\vec i + R\sin\varphi(t)\vec j$, joten
+\[ 
+\vec v(t) = R\varphi'(t)\,[-\sin\varphi(t)\vec i + \cos\varphi(t)\vec j\,] 
+          = \begin{cases} \begin{aligned} 
+            v(t)\tv_+(t), \quad &\text{jos}\ \varphi'(t) \ge 0, \\
+            v(t)\tv_-(t), \quad &\text{jos}\ \varphi'(t) < 0,
+            \end{aligned} \end{cases} 
+\]
+missä $v(t) = R\abs{\varphi'(t)}$ on vauhti ja 
+$\tv_\pm(t) = \pm[-\sin\varphi(t)\vec i + \cos\varphi(t)\vec j\,]$ on liikkeen suuntainen
+yksikkövektori = liikeradan yksikkötangenttivektori. \loppu
+\begin{Exa}: \vahv{Sykloidi}. \index{sykloidi} \index{zza@\sov!Sykloidi}
+$R$-säteinen pyörä vierii liukumatta pitkin $x$-akselia siten, että pyörän keskipisteen
+liikenopeus on $v_0\vec i$, $v_0=\text{vakio}$. Pyörän ulkokehän piste $P$ on hetkellä $t=0$
+origossa. Mikä on $P$:n nopeus ajan funktiona?
+\end{Exa}
+\ratk 
+\begin{multicols}{2} \raggedcolumns
+Pisteen $P$ liikerata on sykloidi, jonka aikaparametrisaatio on 
+(vrt.\ Luku \ref{parametriset käyrät})
+\begin{align*}
+x(t) &= v_0t-R\sin \varphi(t), \\
+y(t) &= R-R\cos \varphi(t),
+\end{align*}
+missä
+\[
+R\varphi(t)=v_0t,
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,2)(0,1)
+\put(0,0){\vector(1,0){4}} \put(3.8,-0.5){$x$}
+\put(0,0){\vector(0,1){3}} \put(0.2,2.8){$y$}
+\put(2,1.25){\circle{2.5}}
+\dashline{0.2}(0,2.5)(4,2.5) \put(-0.5,2.4){$\scriptstyle{2R}$}
+\dashline{0.1}(2,1.25)(0.8,1.6)
+\put(2,1.25){\vector(1,0){1}} \put(2.6,1.4){$\scriptstyle{v_0\vec i}$}
+\dashline{0.1}(2,0)(2,1.25)
+\put(2,1.25){\arc{0.6}{1.59}{3.43}}
+\put(1.2,0.85){$\scriptstyle{\varphi(t)}$}
+\put(1.93,1.18){$\scriptstyle{\bullet}$} \put(0.73,1.53){$\scriptstyle{\bullet}$} 
+\put(0.5,1.7){$\scriptstyle{P}$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+joten $P$:n paikkavektori hetkellä $t$ on
+\[
+\vec r\,(t)=\left[v_0t-R\sin\frac{v_0t}{R}\right]\,\vec i 
+                + R\left[1-\cos\frac{v_0t}{R}\right]\,\vec j.
+\]
+Nopeus ja vauhti hetkellä $t$ ovat
+\begin{align*}
+&\vec v(t) = \dvr(t) = v_0\left[\left(1-\cos\frac{v_0t}{R}\right)\vec i 
+                                   + \sin\frac{v_0t}{R}\vec j\right], \\
+&v(t) = \abs{\dvr(t)} = \abs{v_0}\sqrt{2-2\cos(\frac{v_0t}{R})}
+                      = 2\abs{v_0}\Bigl|\sin\dfrac{v_0t}{2R}\Bigr|.
+\end{align*}
+Vauhdin minimiarvo $v_{\text{min}} = 0$ saavutetaan aina kun piste $P$ koskettaa $x$-akselia ja
+maksimiarvo $v_{\text{max}} = 2\abs{v_0}$ aina kun $P$ on korkeudella $2R$. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(8,3)(-0.5,0)
+\put(0,0){\vector(1,0){7.5}} \put(7.3,-0.5){$x$}
+\put(0,0){\vector(0,1){3}} \put(0.2,2.8){$y$}
+\dashline{0.2}(0,2)(7.5,2) \put(-0.5,1.9){$\scriptstyle{2R}$}
+\curve(
+      0,         0,
+    0.0206,    0.1224,
+    0.1585,    0.4597,
+    0.5025,    0.9293,
+    1.0907,    1.4161,
+    1.9015,    1.8011,
+    2.8589,    1.9900,
+    3.8508,    1.9365,
+    4.7568,    1.6536,
+    5.4775,    1.2108,
+    5.9589,    0.7163,
+    6.2055,    0.2913,
+    6.2794,    0.0398,
+    6.2849,    0.0234,
+    6.3430,    0.2461,
+    6.5620,    0.6534,
+    7.0106,    1.1455)
+\put(6.05,-0.4){$\scriptstyle{2\pi R}$}
+\end{picture}
+\end{center}
+\end{figure}
+
+\pagebreak
+
+\Harj
+\begin{enumerate}
+
+\item
+Määritä seuraavien tasokäyrien tangentin ja normaalin yhtälöt perusmuodossa $ax+by+c=0$
+annetussa pisteessä: \newline
+a) \ $y=x^3-2x^2+x+1, \quad (x,y)=(2,3)$ \newline
+b) \ $y=\ln x, \quad (x,y)=(e,1)$ \newline
+c) \ $x^2y^3-x^3y^2=12, \quad (x,y)=(-1,2)$ \newline
+d) \ $x\sin(xy-y^2)=x^2-1, \quad (x,y)=(1,1)$ \newline
+e) \ $x^y=y^x, \quad (x,y)=(2,4)$
+
+\item
+a) Määritä $a,b,c$ siten, että käyrät $y=x^2+ax+b$ ja $y=cx-x^2$ sivuavat toisiaan (eli niillä
+on yhteinen tangentti) pisteessä $(1,3)$. \vspace{1mm}\newline
+b) Määritä pisteen $(-4,23/2)$ kautta kulkevien käyrän $9y=x^2$ normaalien yhtälöt.
+\vspace{1mm}\newline
+c) Mihin käyrän $y=x^3$ pisteeseen asetettu normaali leikkaa $x$-akselin pisteessä $(4,0)$?
+\vspace{1mm}\newline
+d) Määritä käyrien $y=\sinh x$ ja $y=\cosh x$ pisteseen $x=a$ asetettujen tangenttien ja
+normaalien leikkauspisteet. \vspace{1mm}\newline
+e) Suora kulkee pisteen $(3,0)$ kautta ja leikkaa käyrän $y=e^x$ kohtisuorasti. Määritä suoran
+yhtälö, tarvittaessa numeerisin apukeinoin. \vspace{1mm}\newline
+f) Mikä suora leikkaa kohtisuorasti käyrät $y=e^x$ ja $y=\ln x$\,? Mikä on käyrien lyhin
+etäisyys?
+
+\item \index{logaritminen spiraali}
+a) Määritä \kor{logaritmisen spiraalin} $\,r=e^\varphi,\ \varphi\in\R\,$ (napakoordinaatit)
+tangentin ja normaalin yhtälöt pisteessä $(r,\varphi)=(1,0)$. \vspace{1mm}\newline
+b) Näytä implisiittisellä derivoinnilla, että käyrällä $\,S:\ x^5+x^2y^3+y^5=1\,$
+on ainakin yksi vaakasuora (eli $x$-akselin suuntainen) ja yksi pystysuora
+($y$-akselin suuntainen) tangentti. Missä käyrän pisteissä nämä sijaitsevat?
+ 
+\item
+a) Millä ehdolla käyrät $y=e^{ax}$ ja $y=e^{bx}$ leikkaavat kohtisuorasti? Missä kulmassa
+käyrät leikkaavat, jos $a=1$ ja $b=2$\,? \vspace{1mm}\newline
+b) Laske käyrien $y=\Arcsin x$ ja $y=\Arccos x$ (tangenttien) välinen kulma käyrien 
+leikkauspisteessä. \vspace{1mm}\newline
+c) Näytä, että sikäli kuin käyrät $y=ae^x$ ja $y=\sqrt{b-2x}\ $ ($a,b\in\R$) leikkaavat, niin
+ne leikkaavat kohtisuorasti. Millä ehdolla käyrät leikkaavat?
+
+\item
+Avaruussuora $S$ on avaruuskäyrän
+\[
+\vec r\,(t)=7\sqrt{2}\cos t\,\vec i+\sqrt{2}\sin t(3\vec i-2\vec j+6\vec k)
+\]
+tangentti pisteessä $(4,2,-6)$. Määritä $S$:n yhtälö parametrimuodossa.
+
+\item
+Määritä seuraavien avaruuskäyrien yksikkötangenttivektori annetussa käyrän pisteessä $P$ sekä
+sen avaruustason yhtälö, jonka käyrä leikkaa kohtisuorasti $P$:ssä: \newline
+a) \ $\vec r=t^3\,\vec i+(2t-t^2)\,\vec j+(3t-2t^4)\,\vec k,\quad P=(1,1,1)$ \newline
+b) \ $\vec r=e^t\,\vec i-\ln(t+1)\,\vec j-\cos t\,\vec k,\quad P=(1,0,-1)$ \newline
+c) \ $x=2\sqrt{2}\cos t,\ y=\sqrt{2}\sin t,\ z=4t,\quad P=(-2,1,3\pi)$
+
+\item
+Näytä, että ruuviviivan $\vec r\,(t)=\cos t\,\vec i+\sin t\,\vec j+t\,\vec k,\ t\in\R$
+tangenttien ja $xy$-tason leikkauspisteet muodostavat tasokäyrän
+\[
+x=\cos t+t\sin t, \quad y=\sin t-t\cos t, \quad t\in\R.
+\]
+
+\item
+Tasolla liikuu pistemäinen kappale siten, että hetkellä $t$ kappale on pisteessä 
+$P(t)=(x(t),y(t))$, missä $x(t)=\sin f(t)$, $y(t)=1-\cos f(t)$, ja edelleen 
+\[
+f(t)=\begin{cases} \,t^2(3-t)^2, &\text{kun}\ t\in[0,3], \\ 0, &\text{muulloin}. \end{cases}
+\] 
+Millä ajan hetkillä kappaleen vauhti (=nopeuden itseisarvo) on suurimmillaan, ja millainen
+geometrinen jälki kappaleen liikkeestä jää?
+
+\item (*)
+Määritä (tarvittaessa numeerisin keinoin) suoran $S$ yhtälö tiedoista: \newline
+a) \ $S$ sivuaa käyriä $y=x^2$ ja $y=\ln x$. \newline
+b) \ $S$ leikkaa kohtisuorasti käyrät $y=x^2$ ja $y=\ln x$.
+
+\item (*)
+Avaruuskäyrä
+\[
+S: \quad \begin{cases} \,x^3+2y^3=3x^2yz, \\ \,y^3+z^3=2xy \end{cases}
+\]
+leikkaa kohtisuorasti avaruustason $T$ pistessä $(1,1,1)$. Määritä $T$:n yhtälö
+perusmuodossa $ax+by+cz+d=0$.
+
+\item (*) \index{zzb@\nim!Palloaberraatio}
+(Palloaberraatio) Avaruudessa $xy$-tasoa pitkin negatiivisen $y$-akselin suuntaan etenevä
+valonsäde heijastuu pisteessä $P$ pallopeilistä 
+\[
+S:\quad x^2+(y-R)^2+z^2=R^2, \quad 0 \le y \le R, 
+\]
+jolloin heijastunut säde leikkaa $y$-akselin pisteessä $y=c$. Laske $c$:n lauseke 
+$P$:n $x$-koordinaatin funktiona. Totea, että pienillä suhteen $|x|/R$ arvoilla on likimain
+$c(x) \approx R/2$ ja että poikkeama (nk.\ palloaberraatio) on likimain
+\[
+c(x)-\frac{R}{2} \,\approx\, -\frac{3R}{4}\left(\frac{x}{R}\right)^2.
+\]
+
+\item (*) \label{H-dif-2: tutka} \index{zzb@\nim!Tutka}
+(Tutka) Origosta lähtevät radioaallot  heijastuvat pyörähdyspinnasta, jonka symmetria-akseli on
+$y$-kaseli ja profiili $xy$-tasossa on käyrä $y=y(x)$, $x\in \R$. Profiili on valittu siten,
+että  heijastuneet aallot kulkevat positiivisen $y$-akselin suuntaan heijastuspisteestä
+riippumatta. Näytä, että tämä ehto voidaan esittää differentiaaliyhtälönä 
+\[
+(xy'-y)^2=x^2+y^2.
+\]
+Etsi mahdolliset polynomiratkaisut muotoa $y(x)=ax^2+b$.
+
+\item (*) \index{zzb@\nim!Polttolasi}
+(Polttolasi) Lasista on valmistettu linssi, jonka optinen akseli (symmetria-akseli) on
+$y$-akseli ja profiili $xy$-tasossa on
+\[
+A=\{(x,y)\in\Rkaksi \mid x\in[-a,a]\ \ja\ f(x) \le y \le b\},
+\]
+\begin{multicols}{2} \raggedcolumns
+missä $f$ on parillinen funktio ja $f(0)=0$. Käyrän $y=f(x)$ muoto halutaan sellaiseksi, että
+linssi kokoaa kaikki negatiivisen $y$-akselin suuntaan kulkevat, linssin läpäisseet valonsäteet
+pisteeseen $(0,-c)$. Taittumislaki linssin kaarevalla pinnalla on $k\sin\alpha_1=\sin\alpha_2$,
+missä $\alpha_1$ on säteen tulokulma (lasissa) pinnan normaalin suhteen, $\alpha_2$ on 
+lähtökulma, ja $k>1$ on lasin ja ilman välinen taitekerroin. 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{picture}(5,5.5)(0,0.5)
+\thicklines
+\put(3,6){\arc{6}{0.785}{2.356}}
+\path(0.879,3.879)(5.121,3.879)
+\thinlines
+\path(4,5.5)(4,3.172)(3,1)
+\path(3.333,5.057)(4.667,1.286)
+\put(4,3.172){\arc{1}{1.231}{2.002}} \put(4,3.172){\arc{2.1}{-1.911}{-1.571}}
+\put(3.6,4.5){$\alpha_1$} \put(3.75,2.2){$\alpha_2$} 
+\put(2.93,0.93){$\scriptstyle{\bullet}$} \put(2.3,0.9){$-c$}
+\put(3,3){\vector(1,0){2.5}} \put(3,0.5){\vector(0,1){5}}
+\put(5.7,2.9){$x$} \put(3.2,5.5){$y$}
+\end{picture}
+\end{figure}
+\end{multicols}
+Näytä, että funktion $y=f(x)$ on toteutettava differentiaaliyhtälö
+\[
+\left[k^2x^2+(k^2-1)(y+c)^2\right](y')^2-2x(y+c)y'=x^2.
+\]
+
+\end{enumerate}

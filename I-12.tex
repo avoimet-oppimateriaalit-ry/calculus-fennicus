@@ -1,0 +1,625 @@
+\section{Klassinen sarjaoppi. Potenssisarja} \label{potenssisarja}
+\sectionmark{Klassinen sarjaoppi}
+\alku
+\index{sarjaoppi (klassinen)|vahv}
+
+Kerrattakoon aiemmista luvuista, että merkinnällä
+\[
+\sum_{k=1}^\infty a_k\ =\ a_1 + a_2 + a_3 + \ldots
+\]
+tarkoitetaan joko sarjaa, eli lukujonoa 
+$\,\{a_1,\,a_1 + a_2,\,\ldots\} = \{s_1,s_2,\,\ldots\}$, tai sikäli kuin $\seq{s_n}$ suppenee
+(kohti reaalilukua), myös \kor{sarjan summaa} eli raja-arvoa $\,s = \lim_n s_n$. Kerrattakoon
+myös, että lukuja $a_k$ sanotaan sarjan \kor{termeiksi} ja lukujonon $\seq{s_n}$ termejä sarjan
+\kor{osasummiksi}. Sarjoilla on paljon käyttöä sovelluksissa ja myös matemaattisessa
+ajattelussa. Tässä luvussa tarkastellaan sarjojen suppenevuusteoriaa aiempaa yleisemmältä
+kannalta sekä tutkitaan eräitä sarjojen tavallisia erikoistyyppejä. Sarjan termit $a_k$
+oletetaan jatkossa reaaliluvuiksi.
+
+\subsection*{Positiiviterminen sarja}
+\index{sarja!b@positiiviterminen|vahv}%
+
+Suppenemisteorian kannalta 'ystävällismielisin', sarja on \kor{positiiviterminen}
+sarja $\sum_ka_k$, jonka termit ovat positiiviset, tai yleisemmin ei-negatiiviset:
+$a_k \ge 0\ \forall k$. Esimerkkejä on tarkasteltu jo Luvussa \ref{monotoniset jonot}.
+Positiivitermisen sarjan osasummien jono on kasvava, joten sarja suppenee täsmälleen kun
+ko.\ lukujono on rajoitettu (Lause \ref{monotoninen ja rajoitettu jono}).
+Suppenemistarkastelua voidaan usein helpottaa edelleen vertaamalla sarjan termejä
+yksinkertaisempaan sarjaan, joka jo tiedetään suppenevaksi tai hajaantuvaksi. Seuraavat
+vertailuperiaatteet ovat hyödyllisiä.
+\begin{Lause} \label{sarjojen vertailu} 
+\index{majoranttiperiaate|emph} \index{minoranttiperiaate|emph}
+Jos $0 \le a_k \le b_k\ \forall k$, niin pätee
+\begin{align*}
+\text{\vahv{Majoranttiperiaate:}}\quad &\sum_k b_k\ \text{suppenee} 
+                                     \qimpl \sum_k a_k\ \text{suppenee} \\
+\text{\vahv{Minoranttiperiaate:}}\quad &\sum_k a_k\ \text{hajaantuu} 
+                                     \qimpl \sum_k b_k\ \text{hajaantuu}
+\end{align*}
+\end{Lause}
+\tod Jos sarjojen $\sum_ka_k$ ja $\sum_kb_k$ osasummien jonot ovat vastaavasti $\seq{s_n}$ ja
+$\seq{t_n}$, niin oletuksen perusteella on $s_n \le t_n\ \forall n$. Majoranttiperiaate seuraa
+tällöin päättelyllä
+\[
+\seq{t_n}\ \text{suppenee}\ \impl\ \seq{t_n}\ \text{rajoitettu}\ 
+                            \impl\ \seq{s_n}\ \text{rajoitettu}\
+                            \impl\ \seq{s_n}\ \text{suppenee}.
+\]
+Minoranttiperiaate seuraa vastaavalla päättelyllä -- tai vain toteamalla vertailuperiaatteet
+loogisesti yhtäpitäviksi (vrt.\ Luku \ref{logiikka}). \loppu
+\begin{Exa} Suppeneeko vai hajaantuuko sarja
+\[
+\text{a)}\,\ \sum_{k=1}^\infty \frac{(k+3)^2}{k^4}\,, \quad 
+\text{b)}\,\ \sum_{k=0}^\infty\,\frac{2k+50}{k^2 + 1}\ ?
+\] 
+\end{Exa}
+\ratk a) Koska
+\[
+0 < a_k = \frac{(k+3)^2}{k^4} 
+        = \frac{1}{k^2}+\frac{6}{k^3}+\frac{9}{k^4} \le \frac{16}{k^2}, \quad k \ge 1,
+\]
+ja koska vertailusarja $\sum_{k=1}^\infty 16k^{-2}=16\sum_{k=1}^\infty k^{-2}$ tiedetään 
+suppenevaksi (Luku \ref{monotoniset jonot}, Esimerkki \ref{kaksi sarjaa}), niin
+majoranttiperiaatteen nojalla sarja suppenee.
+
+b) Kun kirjoitetaan
+\[
+a_k\ =\ \dfrac{2k+50}{k^2 + 1}\ =\ \dfrac{1}{k} \cdot \dfrac{2 + 50\,k^{-1}}{1 + k^{-2}}\ 
+                                =\ \dfrac{1}{k} \cdot c_k\,,
+\]
+niin nähdään, että $c_k \kohti 2$, joten jostakin indeksistä $k=m$ alkaen (itse asiassa kun 
+$k \ge 50$) on $1 \le c_k \le 3$. Tällöin on
+\[
+\dfrac{1}{k}\ \le\ a_k\ \le\ \dfrac{3}{k}, \quad k=m,\,m+1,\,\ldots\,,
+\]
+joten päätellään majorantti- ja minoranttiperiaatteiden avulla, että tarkasteltava sarja 
+suppenee/hajaantuu täsmälleen kun sarja $\sum_{k=m}^\infty\, 1/k$ suppenee/hajaantuu. Tämä 
+vertailusarja osoittautuu hajaantuvaksi (Lause \ref{harmoninen sarja} jäljempänä), joten 
+tarkasteltava sarja siis hajaantuu myös. \loppu
+
+\subsection*{Harmoninen, aliharmoninen ja yliharmoninen sarja}
+
+Positiivitermistä sarjaa
+\[
+\sum_{k=1}^\infty \dfrac{1}{k^\alpha}\ 
+                      =\ 1 + \dfrac{1}{2^\alpha} + \dfrac{1}{3^\alpha} + \ldots\,,
+\]
+\index{sarja!c@harmoninen} \index{sarja!d@ali-, yliharmoninen}
+\index{harmoninen sarja} \index{aliharmoninen sarja} \index{yliharmoninen sarja}%
+missä $\alpha$ on rationaaliluku\footnote[2]{Toistaiseksi $x^\alpha\ (x \in \R,\ x>0)$ on 
+määritelty vain, kun $\alpha \in \Q$.}, sanotaan \kor{harmoniseksi}, jos $\alpha = 1$, 
+\kor{aliharmoniseksi}, jos $\alpha < 1$, ja \kor{yliharmoniseksi}, jos $\alpha > 1$. Majorantti-
+ja minoranttiperiaatteita käytettäessä tämä sarjatyyppi on usein hyvä vertailukohta. 
+\begin{Lause} \label{harmoninen sarja} Harmoninen ja aliharmoninen sarja hajaantuvat. 
+Yliharmoninen sarja suppenee. 
+\end{Lause}
+\tod Tarkastellaan ensin harmonista sarjaa
+\[
+\sum_{k=1}^\infty \dfrac{1}{k}\ =\ 1 + \dfrac{1}{2} + \dfrac{1}{3} + \ldots\,.
+\]
+Arvioidaan osasummia $s_4$, $s_8$, $s_{16}$ jne.\ seuraavasti:
+\begin{align*}
+s_4     &=\ 1 + \dfrac{1}{2} + \left( \dfrac{1}{3} + \dfrac{1}{4} \right)\ 
+         >\ \dfrac{3}{2} + 2 \cdot \dfrac{1}{4}\ =\ 2, \\
+s_8     &=\ s_4 + \left( \dfrac{1}{5} + \ldots + \dfrac{1}{8} \right)\ 
+         >\ 2 + 4 \cdot \dfrac{1}{8}\ =\ \dfrac{5}{2}, \\
+        &\ \vdots
+\end{align*}
+Päätellään, että jos $n = 2^m,\ m \in \N,\ m \ge 2$, niin $s_n > 1 + m/2$, joten harmonisen
+sarjan osasummien osajono $\{s_4, s_8, s_{16}, \ldots\}$ on hajaantuva. Siis sarja hajaantuu:
+$s_n \kohti \infty$. Tällöin myös aliharmoninen sarja hajaantuu minoranttiperiaatteen nojalla,
+sillä lukujen $k^\alpha,\ \alpha \in \Q$ määritelmästä (ks.\ Luku \ref{kunta}) seuraa helposti, 
+että $k > k^\alpha\ \ekv\ k^{-\alpha} > k^{-1}$, kun $\alpha < 1$ ja $k \ge 2$.
+
+Yliharmonisen sarjan tapauksessa merkitään $\alpha = 1 + \delta,\ \delta > 0$ ja arvioidaan 
+osasummia $s_3, s_7$, jne.\ seuraavasti:
+\begin{align*}
+s_3\ &=\ 1 + \left( \dfrac{1}{2^\alpha} + \dfrac{1}{3^\alpha} \right)\ 
+                            <\ 1 + 2 \cdot \dfrac{1}{2^\alpha}\ =\ 1 + \dfrac{1}{2^\delta}, \\
+s_7\ &=\ s_3 + \left( \dfrac{1}{4^\alpha} + \ldots \dfrac{1}{7^\alpha} \right)\ 
+                            <\ 1 + \dfrac{1}{2^\delta} + 4 \cdot \dfrac{1}{4^\alpha}\
+                            =\ 1 + \dfrac{1}{2^\delta} + \left(\dfrac{1}{2^\delta}\right)^2, \\
+     &\ \vdots
+\end{align*}
+(Tässä on käytetty arviota $(k/j)^\alpha > 1\ \ekv\ k^{-\alpha} < j^{-\alpha}$, kun $k/j>1$ ja
+$\alpha > 0$.) Päätellään, että jos $n = 2^m - 1,\ m \in \N,\ m \ge 2$, niin
+\[
+s_n\ <\ 1 + \dfrac{1}{2^\delta} + \ldots + \left(\dfrac{1}{2^\delta}\right)^{m-1} 
+     <\ \ \sum_{k=0}^\infty \left(\dfrac{1}{2^\delta}\right)^k\ 
+     =\ \dfrac{2^\delta}{2^\delta - 1}\,.
+\]                                                               
+Siis sarjan osasummien jono on rajoitettu, joten sarja suppenee. \loppu
+
+Huomautettakoon, että tapauksessa $\,\alpha = 2\,$ Lauseen \ref{harmoninen sarja} väittämä on
+jo aiemmin todistettu muilla keinoin (ks.\ Luku \ref{monotoniset jonot}).
+\begin{Exa} Yliharmoninen sarja $\sum_{k=1}^\infty k^{-5/4}$ suppenee, mutta suppeneminen on niin
+hidasta, että pelkästään osasummia laskemalla ei sarjan summaa saada selville tarkasti.
+Paremmilla algoritmeilla
+(ks.\ Harj.teht.\,\ref{numeerinen integrointi}:\ref{H-int-9: hidas sarja}) tulos on
+\[
+s\ =\ \sum_{k=1}^\infty \dfrac{1}{k^{5/4}}\ 
+   =\ 1 + \dfrac{1}{2^{5/4}} + \dfrac{1}{3^{5/4}} + \ldots\ =\ 4.5951118258\,.. \loppu
+\]
+\end{Exa}
+\begin{Exa} Hajaantuvan aliharmonisen sarjan $\sum_{k=1}^\infty 1/\sqrt{k}$ osasummille
+pätee suurilla $n$:n arvoilla arvio (ks.\ Harj.teht.\,\ref{H-I-12: teleskooppiarvio})
+\[
+s_n = \sum_{k=1}^n \frac{1}{\sqrt{k}} \,\approx\, 2\sqrt{n}. \loppu
+\]
+\end{Exa}
+
+\subsection*{Vuorotteleva sarja}
+\index{sarja!e@vuorotteleva (alternoiva)|vahv}
+\index{vuorotteleva sarja|vahv}
+\index{alternoiva sarja|vahv}
+
+Sarjaa sanotaan \kor{vuorotteleva}ksi eli \kor{alternoiva}ksi (engl.\ alternating), jos sen 
+termien etumerkki vaihtuu aina indeksistä seuraavaan siirryttäessä. Vuorotteleva sarja on siis
+muotoa $\sum_k (-1)^k a_k$, missä jonon $\seq{a_k}$ termit ovat samanmerkkiset.
+\begin{Exa} \label{muuan vuorotteleva sarja} Sarja
+\[
+\sum_{k=0}^\infty (-1)^k \dfrac{1}{\sqrt{k+1}}\ 
+=\ \left\{1\,,\ 1-\frac{1}{\sqrt{2}}\,,\ 1-\frac{1}{\sqrt{2}}
+                                          +\frac{1}{\sqrt{3}}\,,\,\ldots\,\right\}
+\]
+on vuorotteleva. \loppu \end{Exa}
+Esimerkkisarjaan soveltuu seuraava yleisempi väittämä.
+\begin{Lause} \label{alternoiva sarja} Jos vuorottelevalle sarjalle 
+$\,\sum_{k=0}^\infty (-1)^k a_k\,$ pätee \ (i) $\,a_k>0\ \forall k$, (ii) jono $\seq{a_k}$
+on vähenevä, ts.\ $\,a_0\ \ge\ a_1\ \ge\ a_2\ \ge\ \ldots\,$ ja \ (iii) $\,\lim_k a_k = 0$,
+niin sarja suppenee. Lisäksi approksimoitaessa sarjan summaa $s$ osasummilla $s_n$ on voimassa
+arvio
+\[ 
+\abs{s - s_n}\ \le\ a_{n+1}\,. 
+\] 
+\end{Lause}
+\tod Tarkastellaan sarjan osasummia $\,s_n = \sum_{k=0}^n (-1)^k a_k\,$ erikseen parillisilla
+ja parittomilla indeksin arvoilla. Koska
+\begin{align*}
+s_{2n}    &=\ (a_0-a_1) + \ldots + (a_{2n-2}-a_{2n-1}) + a_{2n} \\    
+          &=\ a_0 - (a_1 - a_2) - \ldots - (a_{2n-1} - a_{2n}), \\[2mm]
+s_{2n+1}\ &=\ (a_0 - a_1) + \ldots + (a_{2n} - a_{2n+1}) \\
+          &=\ a_0 - (a_1 - a_2) - \ldots - (a_{2n-1}-a_{2n}) - a_{2n+1}.
+\end{align*}
+niin oletuksista (i)--(ii) seuraa, että $\,0 \le s_n \le a_0\,$ sekä parillisilla että
+parittomilla $n$:n arvoilla. Siis $\seq{s_n}$ on rajoitettu jono. Samoin nähdään, että jono 
+$\seq{s_{2n}}$ on vähenevä ja $\seq{s_{2n+1}}$ on kasvava, joten molemmat suppenevat. Koska
+edelleen $\,s_{2n} - s_{2n+1} = a_{2n+1} \kohti 0$ oletuksen (iii) mukaan, niin jonoilla
+$\seq{s_{2n}}$ ja $\seq{s_{2n+1}}$ on yhteinen raja-arvo. Tästä on helposti pääteltävissä,
+että koko jono $\seq{s_n}$ suppenee.
+
+Väittämän toisen osan todistamiseksi olkoon ensin $n$ pariton. Tällöin
+\begin{align*}
+s - s_n\ &=\ a_{n+1} - (a_{n+2} - a_{n+3}) -\ \ldots \\
+         &=\ (a_{n+1} - a_{n+2}) + (a_{n+3} - a_{n+4}) +\ \ldots,
+\end{align*}
+joten oletusten perusteella $\,0 \le s - s_n \le a_{n+1}$. Jos $n$ on parillinen, niin 
+päätellään vastaavasti, että $\,- a_{n+1} \le s - s_n \le 0$. Siis molemmissa tapauksissa pätee
+väitetty arvio. \loppu
+
+\jatko \begin{Exa} (jatko) Esimerkkisarja on Lauseen \ref{alternoiva sarja} perusteella
+suppeneva. Summaksi saadaan (numeerisin keinoin) $\,s=0.6048986434\,..\,$ Tässä
+tapauksessa arvio $\abs{s-s_n} \le a_{n+1}$ tarkentuu suurilla $n$:n arvoilla muotoon
+$\abs{s-s_n} \approx \tfrac{1}{2}a_{n+1}$, vrt.\ taulukko alla. (\,Tarkemmin on
+osoitettavissa: $\,\lim_n\abs{s-s_n}/a_{n+1}=\tfrac{1}{2}.\,$)
+\begin{align*}
+s - s_{100}        &=\ -0.049628\,.. \qquad\quad a_{101}\ \ =\ 0.099503\,.. \\
+s - s_{101}        &=\ +0.049386\,.. \qquad\quad a_{102}\ \ =\ 0.099014\,.. \\[2mm]
+s - s_{1000}       &=\ -0.015799\,.. \qquad\quad a_{1001}\  =\ 0.031606\,.. \\
+s - s_{1001}       &=\ +0.015791\,.. \qquad\quad a_{1002}\  =\ 0.031591\,.. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Cauchyn kriteeri sarjoille}
+
+Mikäli sarja ei ole positiiviterminen tai vuorotteleva, on suppenemisteoriassa yleensä
+turvattava Lauseeseen \ref{Cauchyn kriteeri}. Tämän mukaan sarja $\sum_{k=1}^\infty a_k$
+suppenee  (kohti reaalilukua) täsmälleen, kun sen osasummien $s_n = \sum_{k=1}^n a_k$
+muodostama jono on Cauchyn jono. Koska $s_m - s_n = \sum_{k=n+1}^m a_k$, kun $m>n$, niin
+Cauchyn jonon määritelmän perusteella pätee siis
+\begin{Lause} (\vahv{Cauchyn kriteeri sarjoille}) \label{Cauchyn sarjakriteeri}
+\index{Cauchyn!d@kriteeri sarjoille|emph} Sarja $\sum_{k=1}^n a_k$ suppenee täsmälleen, kun
+jokaisella $\eps > 0$ on olemassa $N \in \N$ siten, että pätee
+\[ 
+\abs{\sum_{k=n+1}^m a_k\,}\ <\ \eps, \quad \text{kun}\ m>n>N. 
+\] 
+\end{Lause}
+Kun kriteerissä valitaan $m=n+1$, niin päädytään seuraaviin ilmeisiin (keskenään loogisesti
+yhtäpitäviin) johtopäätöksiin:
+\begin{Kor} \label{Cauchyn korollaari 1} Jos sarja $\,\sum_k a_k\,$ suppenee,
+niin $\,a_k \kohti 0$. 
+\end{Kor}
+\begin{Kor} \label{Cauchyn korollaari 2} Jos $\,a_k \not\kohti 0$, niin sarja 
+$\,\sum_k a_k\,$ hajaantuu. 
+\end{Kor}
+Jos sarjan termien etumerkit vaihtelevat, niin sarjan suppenemiskysymyksen voi yrittää
+ratkaista yksinkertaisesti vertaamalla positiivitermiseen sarjaan, josta etumerkkien vaihtelu
+on poistettu. Onnistuessaan tämä yritys perustuu seuraavaan lauseeseen. Ensin määritelmä:
+\begin{Def} \index{itseinen suppeneminen|emph} Sarja $\sum_k a_k$ suppenee \kor{itseisesti}
+(engl.\ absolutely), jos sarja $\sum_k \abs{a_k}$ suppenee.
+\end{Def}
+\begin{Lause} Jos sarja suppenee itseisesti, niin se suppenee. 
+\end{Lause}
+\tod Kolmioepäyhtälön nojalla on
+\[ 
+\abs{\sum_{k=n+1}^m a_k\,}\ \le\ \sum_{k=n+1}^m \abs{a_k} \quad (m>n). 
+\]
+Koska sarja $\sum_k \abs{a_k}$ suppenee, on tässä Lauseen \ref{Cauchyn sarjakriteeri} mukaan
+jokaisella $\eps > 0$ löydettävissä $N \in \N$ siten, että oikea puoli $< \eps$ kun $n>N$, 
+jolloin saman kriteerin perusteella myös sarja $\sum_k a_k$ suppenee. \loppu
+\begin{Exa} Jos $\seq{b_k}$ on lukujono, jolle pätee $\,b_k \in [-1,1]\ \forall k$, niin sarja
+\linebreak $\ \sum_{k=1}^\infty b_k/k^2$ suppenee itseisesti (majoranttiperiaate ja Lause 
+\ref{harmoninen sarja}). Sarja siis suppenee, valittiinpa luvut $b_k$ väliltä $[-1,1]$ miten
+tahansa. \loppu
+\end{Exa}
+\begin{Exa} Sarja $\,\sum_{k=1}^\infty (-1)^k/\sqrt{k}\,$ suppenee
+(Lause \ref{alternoiva sarja}) mutta ei itseisesti (Lause \ref{harmoninen sarja}). \loppu
+\end{Exa}
+
+\subsection*{Potenssisarja} 
+\index{potenssisarja|vahv} \index{sarja!f@potenssisarja|vahv}%
+
+Sarjaa muotoa
+\[
+\sum_{k=0}^\infty a_k x^k\ =\ a_0 + a_1\,x + a_2\,x^2 + \ldots
+\]
+sanotaan \kor{potenssisarja}ksi (engl.\ power series). Luvut $a_k$ ovat nimeltään 
+\index{kerroin (potenssisarjan)}%
+\kor{potenssisarjan kertoimet}, ja symbolia $x$, joka myös edustaa reaalilukua, sanotaan sarjan
+\kor{muuttuja}ksi. Termi 'muuttuja' kertoo, että $x$:n lukuarvo voi vaihdella. Kyseessä ei siis
+ole pelkästään lukujono, vaan pikemminkin joukko lukujonoja, missä kertoimet $a_k$ ajatellaan 
+kiinnitetyiksi ja muuttujalle $x$ sallitaan erilaisia (reaali)arvoja.\footnote[2]{Tapauksessa
+$x=0$ potenssisarja tulkitaan lukujonoksi $\{a_0,a_0,\ldots\}$, eli sarjamerkinnässä sovitaan,
+että $0^0=1$.}
+
+Kuten tullaan havaitsemaan, potenssisarja on matematiikassa hyvin keskeinen käsite ja työkalu.
+Tässä tutkitaan toistaiseksi vain sarjan suppenemiskysymystä, jonka luonteva muotoilu on: Millä
+$x$:n arvoilla sarja suppenee? Koska suppenevan sarjan tapauksessa summa yleensä riippuu $x$:n
+arvosta, ilmaistaan tämä kirjoittamalla sarjan summaksi $s(x)$, luetaan '$s$ $x$'.
+\begin{Exa} Perusmuotoinen geometrinen sarja $\sum_{k=0}^\infty x^k$ on esimerkki 
+potenssisarjasta. Sarja suppenee täsmälleen kun $x \in (-1,1)$, ja sarjan summa on tällöin 
+$s(x) = 1/(1-x)$. \loppu 
+\end{Exa}
+Esimerkin perusteella potenssisarjaa voi pitää geometrisen sarjan yleistyksenä. Osoittautuukin,
+että suppenevuustarkasteluissa geometrinen sarja on hyvä vertailukohta. Tällaiseen vertailuun 
+perustuu esimerkiksi seuraava, potenssisarjojen suppenemisteorian keskeisin tulos.
+\begin{Lause} \vahv{(Potenssisarjan suppeneminen)} \label{suppenemissäde}
+\index{potenssisarja!a@suppenemissäde|emph} \index{suppenemissäde|emph} Potenssisarjalle
+$\sum_{k=0}^\infty a_k x^k$ on voimassa jokin seuraavista vaihtoehdoista:
+\begin{itemize}
+\item[(a)] Sarja suppenee vain kun $x=0$.
+\item[(b)] $\exists \rho\in\R_+$ siten, että sarja suppenee, myös itseisesti, kun 
+           $x\in (-\rho,\rho)$ ja hajaantuu aina kun $\abs{x}>\rho$. Tällöin $\rho$ on sarjan
+           \kor{suppenemissäde}.
+\item[(c)] Sarja suppenee itseisesti $\forall x\in\R$.
+\end{itemize}
+\end{Lause}
+\tod Riittää osoittaa, että (b) tai (c) toteutuu silloin kun (a) ei. Oletetaan siis, että sarja
+suppenee jollakin $x_0 \in \R$, $x_0 \neq 0$. Tällöin on oltava (ks.\ Korollaari
+\ref{Cauchyn korollaari 1} ja Lause \ref{suppeneva jono on rajoitettu}\,)
+\[
+a_nx_0^n\kohti 0 \ \impl \ \abs{a_nx_0^n}\leq C\quad \forall n \quad (C\in\R_+).
+\]
+Tästä seuraa, että jos $\abs{x}<\abs{x_0}$, niin
+\[
+\abs{a_nx^n}\leq C\abs{x/x_0}^n,
+\]
+jolloin majoranttiperiaatteen nojalla sarja suppenee itseisesti geometrisen sarjan 
+($q=\abs{x/x_0}<1$) tavoin. Siis on todettu: Jos sarja suppenee kun $x=x_0\neq 0$, niin se 
+suppenee itseisesti $\forall x\in (-\abs{x_0},\abs{x_0})$. Tästä seuraa edelleen, että jos sarja
+hajaantuu kun $x=x_1$, niin se hajaantuu aina kun $\abs{x}>\abs{x_1}$, sillä muutoin se jo 
+todetun perusteella olisi sekä suppeneva että hajaantuva, kun $x=x_1$. On siis päätelty: Jos (a)
+ei ole voimassa, niin joko (c) sarja suppenee jokaisella $x \in \R$, jolloin se suppenee 
+jokaisella $x \in \R$ myös itseisesti, tai (b) sarja suppenee kun $\abs{x} < \rho$ ja hajaantuu
+kun $\abs{x} > \rho$, missä $\rho$ määritellään (vrt.\ Lause \ref{supremum-lause})
+\[
+\rho=\sup\,\left\{x \in \R \mid \text{sarja $\sum_{k=0}^\infty a_k x^k$ suppenee}\right\}.
+\]
+Lause on näin todistettu. \loppu
+
+Lauseen vaihtoehdoissa (a), (c) voidaan sopia merkintätavoista
+\[
+\text{(a)} \,\ \rho=0, \qquad \text{(c)}\,\ \rho=\infty.
+\]
+Sikäli kuin potenssisarjan suppenemissäde pystytään määräämään, ratkaisee siis
+Lause \ref{suppenemissäde} sarjan suppenemiskysymyksen täydellisesti, lukuun ottamatta 
+muuttujan arvoja  $x = \rho$ ja $x = -\rho$, kun $\rho \in \R_+\,$. Nämä on selvitettävä 
+tapauskohtaisesti, vrt.\ Esimerkki \ref{suppenemisvälejä} jäljempänä. Keskeisimmässä 
+laskennallisessa ongelmassa, eli suppenemissäteen määräämisessä, auttaa usein seuraava tulos:
+\begin{Lause} \vahv{(Potenssisarjan suppenemissäde)} \label{suppenemissäteen laskukaava}
+\index{potenssisarja!a@suppenemissäde|emph} \index{suppenemissäde|emph} Jos potenssisarjassa
+\newline
+$\sum_{k=0}^\infty a_k x^k$ on $a_k \neq 0\ \forall k\,$ ja on olemassa raja-arvo
+\[
+\rho=\lim_{k\kohti\infty} \left|\frac{a_k}{a_{k+1}}\right|,
+\]
+missä $\rho\in\R_+$, $\rho=0$ tai $\rho=\infty$, niin sarjan suppenemissäde $=\rho$.
+\end{Lause}
+\tod Olkoon ensin $\rho>0$ ja $\abs{x} < \rho$. Valitaan $q$ siten, että $\abs{x} < q < \rho$ 
+(esim.\ $q = (\abs{x}+\rho)/2$). Tällöin koska $\abs{a_k}/\abs{a_{k+1}} \kohti \rho$ ja 
+$q < \rho$, niin jostakin indeksistä $k=m$ alkaen on $\abs{a_k}/\abs{a_{k+1}} \ge q$ 
+(lukujonon suppenemisen määritelmässä valittu $\eps = \rho-q$ ja $m>N$). Tällöin voidaan
+päätellä
+\[
+\abs{a_{k+1}} \le q^{-1}\,\abs{a_k},\quad k = m,m+1, \ldots 
+               \qimpl \abs{a_k} \le q^{m-k}\abs{a_m}, \quad k \ge m,
+\]
+jolloin
+\[
+\abs{a_k x^k} \le q^{m-k}\abs{a_m}\abs{x}^k = q^m\,\abs{a_m}\left(\frac{\abs{x}}{q}\right)^k 
+                                            = C\left(\frac{\abs{x}}{q}\right)^k, \quad k \ge m.
+\]
+Tässä on $\abs{x}/q < 1$, joten päätellään majoranttiperiaatteen nojalla, että sarja 
+$\sum_{k=0}^\infty a_k x^k$ suppenee itseisesti, indeksistä $k=m$ eteenpäin geometrisen sarjan
+tavoin. Siis jos $\rho \in \R_+$, niin sarja suppenee itseisesti kun $\abs{x} < \rho$. Jos 
+oletettu raja-arvo on $\rho = \infty$, niin ym.\ päättelyssä voidaan $\rho \in \R_+$ valita 
+miten tahansa, joten tässä tapauksessa myös suppenemissäde $= \infty$.
+
+Jos $\rho\in\R_+$ ja $\abs{x} > \rho$, niin nähdään samalla tavoin kuin yllä, että indeksin $m$
+ollessa riittävän suuri pätee jokaisella $k \ge m$
+\[
+\abs{a_k x^k} \ge q^{m-k}\abs{a_m}\abs{x}^k = q^m\,\abs{a_m}\left(\frac{\abs{x}}{q}\right)^k 
+                                            = C\left(\frac{\abs{x}}{q}\right)^k, \quad k \ge m.
+\]
+missä nyt $\rho < q < \abs{x}$. Näin ollen $\abs{a_k x^k}\kohti \infty$ kun $k \kohti \infty$, 
+jolloin sarja $\sum_k a_k x^k$ hajaantuu (Korollaari \ref{Cauchyn korollaari 2}). Siis jos
+$\rho \in \R_+$, niin sarja suppenee kun $\abs{x} < \rho$ ja hajaantuu kun $\abs{x} > \rho$,
+eli sarjan suppenemissäde $= \rho$. Jos $\rho = 0$, niin sarja todetaan samalla päättelyllä
+hajaantuvaksi aina kun $x \neq 0$, eli tässä tapauksessa suppenemissäde $= 0$. Lause on näin
+todistettu. \loppu
+\begin{Exa} Määritä potenssisarjan suppenemissäde, kun kertoimet ovat
+\[
+\text{a) } a_k=k! \quad \text{b) } a_k=(-1)^k (k+1)^{-1}\quad 
+\text{c) } a_k=k^2\cdot 3^{-k} \quad \text{d) } a_k=1/k!
+\]
+\end{Exa}
+\ratk Lauseen \ref{suppenemissäteen laskukaava} perusteella
+\begin{align*}
+\text{a) } \rho &= \lim_k 1/(k+1) = 0 \qquad\quad\,\   
+\text{b) } \rho = \lim_k\,(k+2)/(k+1) = 1 \\
+\text{c) } \rho &= \lim_k\,3k^2/(k+1)^2 = 3 \qquad     
+\text{d) } \rho = \lim_k\,(k+1) = \infty \qquad\loppu
+\end{align*}
+Jos potenssisarja suppenee, kun $x \in A$, ja hajaantuu, kun $x \not\in A$, niin joukkoa 
+$A\ (A\subset\R)$ sanotaan ko.\ sarjan
+\index{potenssisarja!ab@suppenemisväli} \index{suppenemisväli}%
+\kor{suppenemisväli}ksi. Lauseen \ref{suppenemissäde}
+mukaisesti $A$ on jokin vaihtoehdoista $(-\rho,\rho)$, $[-\rho,\rho)$, $(-\rho,\rho]$, 
+$[-\rho,\rho]$, missä $\rho=$ suppenemissäde. 
+\begin{Exa} \label{suppenemisvälejä} Määritä potenssisarjan  $\sum_{k=0}^\infty a_k x^k$ 
+suppenemisväli, kun 
+\[
+\text{a)}\ a_k = 1 \quad \text{b)}\ a_k = 1/(k+1) \quad 
+\text{c)}\ a_k = (-1)^k/(k+1) \quad \text{d)}\ a_k = 1/(k+1)^2
+\]
+\end{Exa}
+\ratk Lauseen \ref{suppenemissäteen laskukaava} laskukaava antaa suppenemissäteeksi $\rho = 1$
+kaikissa tapauksissa, joten sarjat suppenevat, kun $\abs{x} < 1$, ja hajaantuvat, kun 
+$\abs{x} > 1$. Tapauksissa $x = \pm 1$ esimerkkisarjat edustavat jo entuudestaan tuttuja 
+geometrisen, harmonisen, alternoivan ja yliharmonisen sarjan tyyppejä. Tulokset yhdistämällä 
+saadaan vastaukseksi
+\[
+\text{a)}\ (-1,1), \quad \text{b)}\ [-1,1), \quad \text{c)}\ (-1,1], 
+\quad \text{d)}\ [-1,1]. \loppu
+\]
+\begin{Exa} Määritä suppenemisväli potenssisarjalle
+\[
+\sum_{k=0}^\infty (-1)^k (k^2+1) \dfrac{x^{2k}}{2^k}\ =\ 1 - x^2 + \dfrac{5}{4} x^4 - \ldots
+\]
+\end{Exa}
+\ratk Lauseen \ref{suppenemissäteen laskukaava} laskukaava suppenemissäteelle ei sovellu 
+suoraan, koska sarja on muotoa $\sum_{k=0}^\infty a_k x^k$, missä $a_k = 0$ parittomilla 
+indeksin arvoilla. Tehtävä ratkeaa kuitenkin yksinkertaisesti vaihtamalla muuttujaksi $t=x^2$,
+jolloin sarja saa muodon $\sum_{k=0}^\infty b_k t^k$. Lause \ref{suppenemissäteen laskukaava}
+soveltuu tähän sarjaan, sillä
+\[
+\lim_k \left|\dfrac{b_k}{b_{k+1}}\right|\ 
+               =\ \lim_k \dfrac{(k^2 +1)\,2^{-k}}{[(k+1)^2 + 1]\,2^{-k-1}}\ =\ 2.
+\]
+Siis sarja suppenee, kun $\abs{t} = x^2 < 2$, ja hajaantuu, kun $\abs{t} = x^2 > 2$. 
+Suppenemissäde muuttujan $x$ suhteen on näin ollen $\rho = \sqrt{2}$. Muuttujan arvoilla 
+$x=\pm\sqrt{2}$ sarja nähdään hajaantuvaksi, joten suppenemisväli on $(-\sqrt{2},\sqrt{2})$.
+\loppu
+\begin{Exa} Millä arvoilla $x \in \R_+$ suppenee sarja 
+\[ 
+\sum_{k=0}^\infty \dfrac{x^{2k-1/2}}{k!}\ 
+          =\ \dfrac{1}{\sqrt{x}} + x\sqrt{x} + \dfrac{x^3\sqrt{x}}{2} + \ldots \ \ ?
+\]
+\end{Exa}
+\ratk Sikäli kuin sarja suppenee, niin sekä osasummista että raja-arvosta $s(x)$ voidaan
+erottaa skaalaustekijä $1/\sqrt{x}$ (vrt.\ Lause \ref{raja-arvojen yhdistelysäännöt}),
+jolloin
+\[
+s(x)\ =\ \dfrac{1}{\sqrt{x}} \sum_{k=0}^\infty \dfrac{(x^2)^k}{k!}\,.
+\]
+Tässä $\sum_{k=0}^\infty x^{2k}/k!\,$ on tavanomainen potenssisarja, joka suppenee 
+$\forall x\in\R$, joten kysytty sarja suppenee jokaisella $x \in \R_+$. \loppu
+
+Päätetään potenssisarjojen ensiesittely tulokseen, jolla on myöhempää käyttöä.
+\begin{Lause} \label{potenssisarjan skaalaus} Potenssisarjoilla $\sum_{k=1}^\infty k^m a_k x^k$
+on sama suppenemissäde $\forall m\in\Z$. 
+\end{Lause}
+\tod Olkoon sarjan $\sum_ka_kx^k$ ($m=0$) suppenemissäde joko $\rho\in\R_+$ tai $\rho=\infty$
+ja olkoon $0<|x|<\rho$. Valitaan $q\in(0,1)$ siten, että $|x|/q<\rho$ 
+(esim.\ $q=2|x|/(|x|+\rho)$, jos $\rho\in\R_+$, tai $q=1/2$, jos $\rho=\infty$), ja
+kirjoitetaan
+\[
+k^m|a_k||x|^k = (k^mq^k)|a_k|\left(\frac{|x|}{q}\right)^k, \quad k \ge 1,\ m\in\Z.
+\]
+Tässä lukujono $\seq{k^mq^k,\ k=1,2,\ldots}$ on rajoitettu (koska se on suppeneva, ks.\
+Harj.teht.\,\ref{H-I-12: raja-arvotulos}), joten jollakin $C\in\R_+$ pätee
+\[
+k^m|a_k||x|^k \le C|a_k|\left(\frac{|x|}{q}\right)^k, \quad k=1,2,\ldots
+\]
+Oletuksen mukaan sarja $\sum_k|a_k|(|x|/q)^k$ suppenee (koska oli $|x|/q<\rho$), joten
+majoranttiperiaatteen nojalla myös sarja $\sum_kk^m|a_k||x|^k$ suppenee. On päätelty, että jos
+sarjan $\sum_ka_kx^k$ supenemissäde on $\rho \neq 0$, niin myös sarja $\sum_kk^ma_kx^k$
+suppenee itseisesti aina kun $|x|<\rho$ ja jokaisella $m\in\Z$.
+
+Kirjoittamalla $k^ma_k=b_k,\ a_k=k^{-m}b_k$ nähdään, että em.\ päättely on tarkasteltujen
+sarjojen $\sum_ka_kx^k$ ja $\sum_kk^ma_kx^k\ (m\in\Z)$ suhteen symmetrinen, ts.\ jos kumman
+tahansa suppenemissäde on $\rho \neq 0$, niin toinenkin suppenee itseisesti kun $|x|<\rho$.
+Tästä seuraa, että suppenemissäteiden on oltava kaikissa tapauksissa (myös kun $\rho=0$)
+samat, sillä muu johtaisi loogiseen ristiriitaan tehtyjen päätelmien kanssa. \loppu  
+
+\Harj
+\begin{enumerate}
+
+\item
+Tiedetään, että $a_1=3$, $a_2=5$, $a_3=7$, $a_4=-6$ ja $\sum_{k=1}^\infty a_k=4$. Laske \newline
+$\sum_{k=1}^\infty(a_k+a_{k+1}+a_{k+2}+a_{k+3})$.
+
+\item
+Luokittele seuraavat sarjat suppeneviksi tai hajaantuviksi. Jos sarjassa on parameri $\alpha$,
+niin oleta $\alpha\in\Q$ ja luokittele sarja eri $\alpha$:n arvoilla.
+\begin{align*}
+&\text{a)}\ \ \sum_{k=1}^\infty \frac{1}{k^2-k+3} \qquad\quad\
+ \text{b)}\ \ \sum_{k=1}^\infty \frac{k-1}{k^2+1} \qquad\quad\ \
+ \text{c)}\ \ \sum_{k=1}^\infty \frac{100+k}{9901+k-k^3} \\
+&\text{d)}\ \ \sum_{k=1}^\infty \frac{\sqrt{k+1}-\sqrt{k}}{k} \qquad 
+ \text{e)}\ \ \sum_{k=0}^\infty \frac{1}{\sqrt{k^2+100}} \qquad
+ \text{f)}\ \ \sum_{k=1}^\infty \left(\sqrt{\frac{k+1}{k}}-1\right) \\
+&\text{g)}\ \ \sum_{k=1}^\infty \frac{\sqrt{k+1}\sqrt[3]{k+2}}{k^2+k+1} \quad\
+ \text{h)}\ \ \sum_{k=1}^\infty \frac{1+k!}{(1+k)!} \qquad\quad\
+ \text{i)}\ \ \sum_{k=1}^\infty \frac{2+k!}{(2+k)!} \\
+&\text{j)}\ \sum_{k=0}^\infty (-1)^k\left(\sqrt{k+7}-\sqrt{k+1}\right) \quad\
+ \text{k)}\ \sum_{k=1}^\infty \frac{3(-1)^k+1}{k} \quad\
+ \text{l)}\ \sum_{k=1}^\infty \frac{(-1)^k}{\sqrt[100]{k}} \\
+&\text{m)}\ \ \sum_{k=1}^\infty \left(\frac{1}{k}-\frac{1}{k+\abs{\alpha}}\right) \qquad
+ \text{n)}\ \ \sum_{k=1}^\infty \frac{1}{k^\alpha+k^{2\alpha}} \qquad 
+ \text{o)}\ \ \sum_{k=1}^\infty \frac{\sqrt{k^\alpha+1}-1}{k} \\
+&\text{p)}\ \ \sum_{k=1}^\infty (\sqrt{k^{2\alpha}+1}-k^\alpha) \qquad
+ \text{q)}\ \ \sum_{k=1}^\infty \frac{k^\alpha+1}{k^{2\alpha}+1} \qquad
+ \text{r)}\ \ \sum_{k=1}^\infty \frac{(-1)^k k^{4\alpha+3}+1}{k^{\alpha+2}}
+\end{align*}
+
+\item
+Arvioi, montako termiä on sarjoista otettava seuraavissa laskukaavoissa, jotta $\pi$
+saadaan oikein $10$ desimaalin tarkkuudella:
+\[
+\pi\ =\ \sum_{k=0}^\infty \frac{4(-1)^k}{2k+1}\ 
+     =\ 2\sqrt{3}\sum_{k=0}^\infty \frac{(-1)^k}{3^k(2k+1)}\
+     =\ 2\sqrt{3}\sqrt{\sum_{k=0}^\infty \frac{(-1)^k}{(k+1)^2}}
+\]
+
+\item
+a) Näytä vuorotteleva sarja $\sum_{k=0}^\infty (-1)^k/\sqrt{k+1}$ suppenevaksi
+majoranttiperiaatteen avulla ryhmittelemällä sarjan peräkkäiset termit yhteen niin, että
+sarjasta tulee positiiviterminen. \vspace{1mm}\newline
+b) Tarkastellaan sarjaa $\sum_{k=1}^\infty a_k$, missä
+\[
+a_{2p-1}=\frac{1}{\sqrt{p+1}-1}\,, \quad a_{2p}=-\frac{1}{\sqrt{p+1}+1}\,, \quad p=1,2,\ldots
+\]
+Mitkä Lauseen \ref{alternoiva sarja} oletuksista ovat voimassa tälle sarjalle\,? Ratkaise
+sarjan suppenemiskysymys  ryhmittelemällä sarjan peräkkäiset termit parittain yhteen, eli
+tutkimalla sarjaa $\sum_{p=1}^\infty b_p = \sum_{p=1}^\infty (a_{2p-1}+a_{2p})$.
+
+\item
+Osoita oikeaksi tai vääräksi: \newline
+a) \ $\sum_k a_k$ suppenee $\,\ \impl\,$ $\seq{a_k}$ on rajoitettu jono \newline
+b) \ $\sum_k a_k$ suppenee ja $\sum_k b_k$ suppenee $\ \,\impl\,$ $\sum_k(a_k+b_k)$ 
+     suppenee \newline
+c) \ $\sum_k a_k$ hajaantuu ja $\sum_k b_k$ hajaantuu $\,\ \impl\,$ $\sum_k(a_k+b_k)$ 
+     hajaantuu \newline
+d) \ $\sum_k a_k$ suppenee ja $\sum_k b_k$ hajaantuu $\,\ \impl\,$ $\sum_k(a_k+b_k)$ 
+     hajaantuu \newline
+e) \ $\sum_k a_k$ suppenee ja $\seq{b_k}$ rajoitettu $\,\ \impl\,$ $\sum_k a_k b_k$
+     suppenee \newline
+f) \ $\sum_k \abs{a_k}$ suppenee ja $\seq{b_k}$ rajoitettu $\,\ \impl\,$
+     $\sum_k \abs{a_k b_k}$ suppenee \newline
+g) \ $\sum_k a_k$ suppenee $\,\ \impl\,$ $\sum_k a_k^2$ suppenee \newline
+h) \ $\sum_k a_k^2$ suppenee $\,\ \impl\,$ $\sum_k a_k$ suppenee \newline
+i) \ $\,\sum_k a_k$ suppenee itseisesti $\,\ \impl\,$ $\sum_k a_k^4$ suppenee
+
+\item \index{suhdetesti (sarjaopin)}
+Klassisen sarjaopin \kor{suhdetesti} positiivitermisille sarjoille on väittämä: Jos on 
+olemassa raja-arvo
+\[
+\lim_k \frac{a_{k+1}}{a_k} = L\in\R,
+\]
+niin sarja $\sum_k a_k$ suppenee, jos $L<1$, ja hajaantuu, jos $L>1$. Todista!
+
+\item \index{juuritesti (sarjaopin)}
+Klassisen sarjaopin \kor{juuritesti} positiivitermisille sarjoille on väittämä: Jos on
+olemassa raja-arvo
+\[
+\lim_k \sqrt[k]{a_k} = L\in\R,
+\]
+niin sarja $\sum_k a_k$ suppenee, jos $L<1$, ja hajaantuu, jos $L>1$. Todista!
+
+\item \label{H-I-12: raja-arvotulos}
+Todista potenssisarjojen teorian (Lauseet \ref{suppenemissäde} ja 
+\ref{suppenemissäteen laskukaava}) ja Korollaarin \ref{Cauchyn korollaari 1} avulla
+raja-arvotulos
+\[
+\lim_k k^m q^k = 0, \quad -1 < q < 1,\ m\in\N.
+\]
+
+\item
+Olkoon potenssisarjojen $\sum_k a_k x^k$ ja $\sum_k b_k x^k$ suppenemissäteet $\rho_1$ ja
+$\rho_2$. Mitä varmaa voidaan sanoa sarjan $\sum_k(a_k+b_k)\,x^k$ suppenemissäteestä, jos \ 
+a) $\rho_1<\rho_2$, \ b) $\rho_2=\rho_1\in\R_+$, \ c) $\rho_1=\rho_2=\infty$, \
+d) $\rho_1=\rho_2=0$\,?
+
+\item
+a) Potenssisarjan kertoimista tiedetään, että $k \le a_k \le k^2\ \forall k\in\N$. Mikä on
+sarjan suppenemisväli? \newline
+b) Potenssisarjan kertoimet ovat $a_k=1$, kun $k=m!\,$ ja $m\in\N$, muulloin on $a_k=0$. Mikä
+on sarjan summa $20$ merkitsevän numeron tarkkuudella, kun $x=1/10$, ja mikä on sarjan
+suppenemisväli? 
+
+\item
+Määritä seuraavien potenssisarjojen suppenemisvälit:
+\begin{align*}
+&\text{a)}\ \  \sum_{k=0}^\infty \frac{k^2}{k+1}x^k \quad\
+ \text{b)}\ \ \sum_{k=0}^\infty (k-2)2^{k+1}x^k \quad\
+ \text{c)}\ \  \sum_{k=1}^\infty (-1)^k (\frac{x}{k})^k \\
+&\text{d)}\ \ \sum_{k=1}^\infty \frac{1}{\sqrt{k}} x^k \quad\ 
+ \text{e)}\ \ \sum_{k=1}^\infty \frac{(-1)^k}{\sqrt{k}} 3^k x^k \quad\
+ \text{f)} \ \ \sum_{k=1}^\infty \frac{\sqrt{k+1}}{k^2} 2^k x^k \\
+&\text{g)}\ \ \sum_{k=1}^\infty \frac{2^k}{k} x^{2k} \quad\ 
+ \text{h)}\ \ \sum_{k=1}^\infty \frac{1}{k^3 3^k} x^{3k} \quad \
+ \text{i)}\ \ \sum_{k=1}^\infty \frac{1}{k^{1/3} 3^k} x^{3k}
+\end{align*}
+
+\item
+Totea seuraavat sarjat joko suppeneviksi tai hajaantuviksi potenssisarjojen teoriaan vedoten:
+\[
+\text{a)}\,\ \sum_{k=1}^\infty (-1)^k k^{-10} \pi^k e^{-k} \quad\ 
+\text{b)}\,\ \sum_{k=1}^\infty \frac{k!}{(3k)^k} \quad\
+\text{c)}\,\ \sum_{k=1}^\infty \frac{(2k)^k}{k!}
+\]
+
+\item
+Määritä muuttujan vaihdolla seuraaville sarjoille joukko $A\subset\R$ siten, että sarja 
+suppenee täsmälleen kun $x \in A$:
+\[
+\text{a)}\ \ \sum_{k=1}^\infty \frac{1}{k} (2x+1)^k \quad
+\text{b)}\ \ \sum_{k=1}^\infty (x^2-3x+1)^k \quad 
+\text{c)}\ \ \sum_{k=1}^\infty \frac{(-1)^k}{k}(x^2-4x+3)^k
+\]
+
+\item
+Todista Lause \ref{potenssisarjan skaalaus} Lauseen \ref{suppenemissäteen laskukaava} avulla
+siinä tapuksessa, että raja-arvo $\lim_k |a_k/a_{k+1}|$ on olemassa.
+
+\item
+Näytä, että sarjoilla $\sum_{k=0}^\infty a_k x^k$, $\sum_{k=0}^\infty (k-2)^2 a_k x^k$ ja 
+$\sum_{k=1}^\infty k^{-2}(k+2)^3 a_k x^k$ on kaikilla sama suppenemissäde.
+
+\item (*) \label{H-I-12: teleskooppiarvio}
+Näytä, että sarjan $\sum_{k=1}^\infty 1/\sqrt{k}$ osasummille $s_n$ pätee
+\[
+2\sqrt{n+1}-2 \,<\, s_n \,\le\, 2\sqrt{n}-1, \quad n\in\N.
+\]
+\kor{Vihje}: Vertaa teleskooppisummiin!
+
+\item (*)
+Todista: Jos positiivitermisen sarjan $\sum_k a_k$ termien jono $\seq{a_k}$ on vähenevä ja sarja
+suppenee, niin $\,\lim_k ka_k=0$.
+
+\item (*)
+Esitä jokin rationaalikertoiminen potenssisarja, jonka suppenemisväli on 
+$(-\sqrt[3]{e},\sqrt[3]{e}\,]$ ($e=$ Neperin luku).
+
+\end{enumerate}

@@ -1,0 +1,802 @@
+\section{Suorien, tasojen ja pintojen geometriaa} \label{suorat ja tasot}
+\sectionmark{Suorat, tasot ja pinnat}
+\alku
+
+Kun geometrian tehtäviä ratkotaan algebran keinoin käyttäen hyväksi (yleensä karteesista) 
+koordinaatistoa, puhutaan
+\index{analyyttinen geometria}%
+\kor{analyyttisestä geometriasta}. Vektorit, skalaari- ja 
+ristituloineen, tarjoavat moniin tehtäviin kätevän apuneuvon.
+
+Jos $O$ on Euklidisen avaruuden ($\Ekaksi$ tai $\Ekolme$) origo ja $P$ on ko.\ avaruuden 
+piste, sanotaan vektoria $\overrightarrow{OP}$ tästedes pisteen $P$
+\index{paikkavektori}%
+\kor{paikkavektoriksi} ja merkitään
+\[
+\vec r = \overrightarrow{OP} \quad \text{(paikkavektori)}.
+\]
+Käytetään myös vastaavuusmerkintää
+\[ 
+\vec r \vastaa P \ \ekv \ \vec r = \overrightarrow{OP}.
+\]
+\subsection*{Suora}
+\index{suora|vahv}
+
+Jos $P_0=(x_0,y_0) \vastaa \vec r_0 = x_0\vec i + y_0\vec j$ on euklidisen tason piste ja 
+$\vec v=\alpha\vec i + \beta\vec j$ on tason vektori, $\vec v \neq \vec 0$, niin pistejoukko
+\index{parametri(sointi)!a@suoran|(}%
+\[
+S=\{P \in \Ekaksi \ | \ P \vastaa \vec r = \vec r_0 + t\vec v \quad \text{jollakin} \ t \in \R\}
+\]
+on suora, jonka
+\index{suuntavektori}%
+\kor{suuntavektori} $=\vec v$ \ ja joka kulkee pisteen $P_0$ kautta.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(9.5,5.5)(-1,-0.5)
+\put(0,0){\vector(0,1){2}} \put(0,0){\vector(2,1){8}}
+\Thicklines
+\put(0,2){\vector(4,1){3}}
+\thinlines
+\path(-1,1.75)(9,4.25)
+\put(-0.1,1.9){$\bullet$} \put(-0.1,-0.1){$\bullet$} \put(7.9,3.9){$\bullet$}
+\put(-0.1,-0.5){$O$} \put(0.2,1.6){$\vec r_0$} \put(-0.1,2.2){$P_0$} \put(2.7,2.9){$\vec v$} 
+\put(8.2,3.5){$P$}
+\put(7.5,3.2){$\vec r$}
+\end{picture}
+\end{center}
+\end{figure}
+Sanotaan, että yhtälö
+\begin{equation} \label{suora par}
+\vec r = \vec r_0 + t\vec v
+\end{equation}
+on suoran $S$ \kor{parametrimuotoinen yhtälö} tai \kor{parametrisointi} (parametrisaatio) ja
+että $t$ on \kor{parametri}. Yleisemmin näillä termeillä tarkoitetaan, että 
+\index{parametri(sointi)!a@suoran|)}%
+tarkasteltavan pistejoukon (tässä suoran) jokainen piste saadaan annetusta esitysmuodosta
+jollakin parametrin arvolla. Tässä tapauksessa jokaista suoran pistettä vastaa yksikäsitteinen 
+parametrin $t$ arvo ja kääntäen, ts.\ parametrisointi \eqref{suora par} luo kääntäen 
+yksikäsitteisen vastaavuuden $S\ \vast\ \R$.
+
+Kun kirjoitetaan $\vec r = x \vec i + y \vec j$, niin yhtälölle \eqref{suora par} saadaan 
+\kor{koordinaattimuoto}
+\begin{equation} \label{suora komp taso}
+\left\{ \begin{array}{ll}
+x=x_0 + \alpha t, \\
+y=y_0 + \beta t.
+\end{array} \right.
+\end{equation}
+Eliminoimalla $t$ seuraa tästä $x$:n ja $y$:n välinen riippuvuus
+\begin{equation} \label{suora perus}
+ax+by+c=0,
+\end{equation}
+missä $a=\beta$, $b=-\alpha$ ja $c=-\beta x_0+\alpha y_0$. Tämä on suoran yhtälön
+\index{perusmuoto!a@tason suoran yhtälön}%
+\kor{perusmuoto} (ei-parametrinen muoto). Perusmuotoisen yhtälön \eqref{suora perus}
+voi ilmaista myös vektoreiden avulla, sillä kun asetetaan
+\[
+\vec n = a \vec i + b \vec j \ \ (= \beta\vec i-\alpha\vec j\,),
+\]
+niin yhtälö on sama kuin
+\begin{equation} \label{suora norm}
+\vec n \cdot (\vec r - \vec r_0) = 0.
+\end{equation}
+Tässä $\vec n$ on $S$:n
+\index{normaali(vektori)!a@suoran, käyrän}%
+\kor{normaalivektori}, ts.\ $S$:n suuntavektoria $\vec v$ vastaan
+kohtisuora ($\vec 0$:sta poikkeava) vektori. Normaalivektorin avulla suoran yhtälö voidaan
+siis kirjoittaa suoraan ehtona $\vec r - \vec r_0 \perp \vec n$, kuten geometrisestikin
+on helppo päätellä.
+%\begin{figure}[H]
+%\begin{center}
+%\import{kuvat/}{kuvaII-17.pstex_t}
+%\end{center}
+%\end{figure}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,6)(-1,-0.5)
+\put(0,0){\vector(1,2){2}} \put(0,0){\vector(2,1){6}} \put(2,4){\vector(1,4){0.3}}
+\put(-1,4.75){\line(4,-1){10}} \put(2,4){\vector(4,-1){4}}
+\path(1.84,4.04)(1.88,4.2)(2.04,4.16)
+\put(5.8,3.2){$\vec r-\vec r_0$}
+\put(-0.1,-0.5){$O$} \put(9.3,2.1){$S$}
+\put(2,3.55){$\vec r_0$} \put(2.5,5){$\vec n$} \put(5.95,2.55){$\vec r$} 
+\end{picture}
+\end{center}
+\end{figure}
+\begin{Exa}
+Suoran yhtälöstä $3x-2y+5=0$ nähdään heti, että suoran normaalivektori on
+$\vec n=3\vec i -2\vec j$. Siis suoran eräs suuntavektori on $\vec v = 2\vec i + 3\vec j$. 
+Koska esimerkiksi $P_0=(1,4)$ on suoralla, saadaan suoralle parametrisoitu esitys
+\eqref{suora par}, missä
+\[
+\vec r_0 = \vec i + 4\vec j, \quad \vec v = 2\vec i + 3 \vec j.
+\]
+Parametrisoinnin koordinaattimuoto \eqref{suora komp taso} on tässä tapauksessa
+\[
+\left\{ \begin{array}{ll}
+x=1+2t, \\
+y=4+3t.
+\end{array}\right. 
+\]
+Mainittu piste $P_0$ vastaa siis tässä parametrin arvoa $t=0$. \loppu
+\end{Exa}
+Parametrisointi \eqref{suora par} toimii myös avaruussuoralle. Jos
+$\vec r_0=x_0\vec i + y_0 \vec j + z_0 \vec k$ ja 
+$\vec v = \alpha \vec i + \beta \vec j + \gamma \vec k$, niin koordinaattimuotoiset
+suoran yhtälöt ovat
+\begin{equation} \label{suora komp avaruus}
+\left\{ \begin{array}{ll}
+x = x_0 + \alpha t, \\ 
+y = y_0 + \beta t, \\
+z = z_0 + \gamma t.
+\end{array} \right.
+\end{equation}
+Eliminoimalla $t$ jää jäljelle kaksi ei-parametrista yhtälöä.
+\begin{Exa}
+Suora kulkee pisteiden $A=(1,1,1)$ ja $B=(1,-2,3)$ kautta. Mikä on suoran yhtälö?
+\end{Exa}
+\ratk Eräs suoran suuntavektori on
+\[
+\vec v = \overrightarrow{AB} = -3\vec j + 2\vec k
+\]
+ja siis eräs parametriesitys on muotoa \eqref{suora par}, missä esimerkiksi
+\[
+\vec r_0 = \overrightarrow{OA} = \vec i + \vec j + \vec k.
+\]
+Koordinaattimuodossa
+\[
+\left\{ \begin{array}{ll}
+x=1, \\
+y=1-3t, \\
+z=1+2t.
+\end{array} \right.
+\]
+Eliminoimalla $t$ saadaan saadaan suoran ei-parametrisiksi yhtälöiksi
+\[
+\left\{ \begin{array}{ll}
+x &= 1, \\
+2y+3z &=5.
+\end{array} \right.
+\]
+Nämä voidaan kirjoittaa myös muotoon
+\[
+\left\{ \begin{array}{ll}
+\vec n_1 \cdot (\vec r - \vec r_0)=0, \\
+\vec n_2 \cdot (\vec r - \vec r_0)=0,
+\end{array} \right.
+\]
+missä $\vec n_1 = \vec i$ ja $\vec n_2=2\vec j + 3\vec k$ ovat suoran normaalivektoreita.
+Tämä vastaa tason suoran yhtälöä \eqref{suora norm}. \loppu
+%\begin{figure}[H]
+%\begin{center}
+%\import{kuvat/}{kuvaII-18.pstex_t}
+%\end{center}
+%\end{figure}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5.5)(-1,0)
+\put(0,0){\vector(1,2){2}} \put(0,0){\vector(2,1){6}} 
+\put(2,4){\vector(1,4){0.3}} \put(2,4){\vector(-2,-1){1}}
+\put(-2,5){\line(4,-1){11}} \put(2,4){\vector(4,-1){4}}
+\path(1.84,4.04)(1.88,4.2)(2.04,4.16)
+\path(1.84,4.04)(1.72,3.98)(1.88,3.94)
+\Thicklines 
+\put(1,4.25){\vector(-4,1){2}} 
+\thinlines
+\put(0.93,4.18){$\scriptstyle{\bullet}$} \put(-1.07,4.68){$\scriptstyle{\bullet}$}
+\put(1,4.4){$A$} \put(-1,4.9){$B$} \put(-0.95,4.25){$\vec v$} 
+\put(5.8,3.2){$\vec r-\vec r_0$}
+\put(-0.1,-0.5){$O$} \put(9.3,2.1){$S$}
+\put(2,3.55){$\vec r_0$} \put(5.95,2.55){$\vec r$} 
+\put(2.5,5){$\vec n_1$} \put(0.9,3.1){$\vec n_2$}
+\end{picture}
+\end{center}
+\end{figure}
+\begin{Exa}
+Hävittäjä A nousee kentältä, joka on pisteessä $(5,7,0)$ (yksikkö=km), suuntaan 
+$-\vec i - 2\vec j + \vec k$ ja hävittäjä B nousee toiselta kentältä, joka on pisteessä 
+$(1,-9,0)$, suuntaan $-\vec i + \vec j + 2\vec k$. Kuinka lähelle toisiaan koneet voivat joutua
+(pahin mahdollinen skenaario)\,?
+\end{Exa}
+\ratk Tässä on kyse nk. kahden suoran ongelmasta, jossa on etsittävä suorien lyhin etäisyys $d$.
+Suorat ovat
+\begin{align*}
+S_1: \ \vec r &= 5\vec i + 7\vec j + t(-\vec i - 2\vec j + \vec k) =\vec r_1+t\vec v_1, \\
+S_2: \ \vec r &= \vec i - 9\vec j + s(-\vec i + \vec j + 2\vec k)\ =\vec r_2+s\vec v_2.
+\end{align*}
+Lyhin etäisyys on $d=\abs{\overrightarrow{PQ}}$, missä $P \in S_1$, $Q \in S_2$ ja 
+vektori $\Vect{PQ}$ on molempia suoria vastaan kohtisuora, ts. 
+\[
+\Vect{PQ}\cdot\vec v_1=\Vect{PQ}\cdot\vec v_2=0.
+\]
+Kun tässä $P \vastaa \vec r(t)$ ja $Q \vastaa \vec r(s)$ esitetään parametrisointien
+mukaisesti, niin
+\begin{align*}
+\Vect{PQ} &= \vec r_2-\vec r_1+s\vec v_2-t\vec v_1 \\
+                    &= (-4+t-s)\vec i + (-16+2t+s)\vec j + (-t+2s)\vec k,
+\end{align*}
+joten saadaan yhtälöryhmä
+\begin{align*} 
+&\begin{cases}
+\,-1\cdot(-4+t-s)-2\cdot(-16+2t+s)+1\cdot(-t+2s) = 0 \\
+\,-1\cdot(-4+t-s)+1\cdot(-16+2t+s)+2\cdot(-t+2s) = 0
+\end{cases} \\
+&\quad\qekv \begin{cases}
+             \,6t-s = 36 \\ \,t-6s = -12
+            \end{cases}
+\end{align*}
+Ratkaisemalla $t,s$ saadaan
+\[
+t=\frac{228}{35}\,, \quad s=\frac{108}{35}\,.
+\]
+Näillä arvoilla on
+\[
+\overrightarrow{PQ} = \frac{1}{35}(-20\vec i+4\vec j-12\vec k).
+\]
+Koska komponentin $\vec k$ kerroin on negatiivinen, lentää kone A kohtaamistilanteessa 
+korkeammalla. Koneiden etäisyys on siis pahimman skenaarion mukaan
+\[
+d=\abs{\overrightarrow{PQ}} = 4/ \sqrt{35} \approx 0.676 = 676 \text{ m},
+\]
+ja pisteet $P$ ja $Q$ saadaan erikseenkin suorien parametriesityksistä:
+\begin{align*}
+S_1:\ \vec r\left(t=\frac{228}{35}\right) &\vastaa P \approx (-1.514,-6.029,6.514), \\
+S_2:\ \vec r\left(s=\frac{108}{35}\right) &\vastaa Q \approx (-2.086,-5.914,6.171). \loppu
+\end{align*}
+
+\subsection*{Taso}
+\index{taso|vahv}
+
+Tarkastellaan avaruuden tasoa $T$, joka kulkee pisteiden $P_0=(x_0,y_0,z_0)$,
+$P_1=(x_1,y_1,z_1)$ ja $P_2=(x_2,y_2,z_2)$ kautta. Oletetaan, että pisteet eivät ole
+samalla suoralla, jolloin vektorit
+\begin{align*}
+\vec v_1 &= \overrightarrow{P_0P_1} = \alpha_1 \vec i + \beta_1 \vec j + \gamma_1 \vec k, \\
+\vec v_2 &= \overrightarrow{P_0P_2} = \alpha_2 \vec i + \beta_2 \vec j + \gamma_2 \vec k
+\end{align*}
+ovat lineaarisesti riippumattomat. Näiden, tason $T$
+\index{suuntavektori}%
+\kor{suuntavektoreiden} avulla saadaan
+tasolle parametrisoitu esitysmuoto
+\begin{equation} \label{taso par}
+\vec r = \vec r_0 + t_1 \vec v_1 + t_2 \vec v_2, \quad t_1, t_2 \in \R.
+\end{equation}
+\index{parametri(sointi)!b@tason}%
+Tässä siis reaalisia parametreja on kaksi. Jos parametri halutaan nähdä 'yhtenä', niin
+parametriksi on tulkittava $\mathbf{t}=(t_1,t_2)\in\Rkaksi$. Parametrisointi \eqref{taso par}
+luokin kääntäen yksikäsitteisen vastaavuuden $T\vast\Rkaksi$, ja $\{P_0,\vec v_1,\vec v_2\}$
+voidaan tulkita $T$:n koordinaatistoksi, vrt.\ Luku \ref{tasonvektorit}. 
+
+Yhtälön \eqref{taso par} koordinaattimuoto on
+\[
+\left\{ \begin{array}{lll}
+x &= x_0 + \alpha_1 t_1 + \alpha_2 t_2, \\
+y &= y_0 + \beta_1 t_1 + \beta_2 t_2,   \\
+z &= z_0 + \gamma_1 t_1 + \gamma_2 t_2.
+\end{array} \right.
+\]
+Parametrien eliminointi käy kuitenkin helpommin vektorimuodosta \eqref{taso par}, kun otetaan 
+käyttöön vektori
+\[
+\vec n = \vec v_1 \times \vec v_2.
+\]
+Tämä on molempia vectoreita $\vec v_1, \vec v_2$ vastaan kohtisuora, eli kyseessä on
+tason
+\index{normaali(vektori)!b@tason, hypertason}%
+\kor{normaalivektori}. Kertomalla yhtälö \eqref{taso par} skalaarisesti vektorilla
+$\vec n$ ja huomioimalla, että $\vec n \cdot \vec v_1 = \vec n \cdot \vec v_2 = 0$, seuraa
+tasolle yhtälö
+\begin{equation} \label{taso norm}
+\vec n \cdot (\vec r - \vec r_0)=0,
+\end{equation}
+joka siis on aivan samaa muotoa kuin tason suoran yhtälö \eqref{suora norm}. Jos
+\[
+\vec n = a\vec i + b \vec j + c\vec k, \quad d=-\vec n \cdot \vec r_0\,,
+\]
+niin \eqref{taso norm} on edelleen sama kuin
+\begin{equation} \label{taso perus}
+ax+by+cz+d=0.
+\end{equation}
+\index{perusmuoto!b@avaruustason yhtälön}%
+Tämä on tason yhtälön \kor{perusmuoto}. Perusmuodosta nähdään siis suoraan, mikä on tason
+normaalivektori.\footnote[2]{Tason \kor{normaali} on jokainen avaruussuora, jonka suuntavektori
+= tason normaalivektori. Termiä käytetään usein myös normaalivektorista puhuttaessa. Esim:
+'Yksikkövektori $\vec n$ on tason normaali.'}
+\begin{Exa}
+Taso $T_1$ kulkee pisteiden $A=(1,1,2)$, $B=(0,3,-1)$ ja $C=(-2,-2,-3)$ kautta. Taso $T_2$ 
+kulkee pisteen $(-1,-1,-1)$ kautta ja sen normaalivektori on 
+$\vec n_2 = \vec i - \vec j - \vec k$. Määrää tasojen yhtälöt perusmuodossa \eqref{taso perus}
+ja tasojen leikkaussuoran parametriesitys muodoissa \eqref{suora par} ja
+\eqref{suora komp avaruus}.
+\end{Exa}
+\ratk Tason $T_2$ yhtälö on
+\[
+\vec n_2 \cdot (\vec r + \vec i + \vec j + \vec k) = 0,
+\]
+eli
+\[
+T_2: \quad x-y-z-1=0.
+\]
+Tason $T_1$ normaalivektori on
+\[
+\vec n_1 = \Vect{AB} \times \Vect{AC} =
+\left| \begin{array}{ccc}
+\vec i & \vec j & \vec k \\
+-1 & 2 & -3 \\
+-3 & -3 & -5
+\end{array} \right| =
+-19\vec i + 4\vec j + 9\vec k,
+\]
+joten valitsemalla esimerkiksi $\vec r_0 \vastaa A$ saadaan tason $T_1$ yhtälöksi
+\[
+T_1: \quad \vec n_1 \cdot (\vec r - \vec i - \vec j - 2\vec k) = 0 \qekv -19x+4y+9z-3=0.
+\]
+Leikkaussuoran $S$ suuntavektori on
+\[
+\vec v = \vec n_1 \times \vec n_2 =
+\left| \begin{array}{ccc}
+\vec i & \vec j & \vec k \\
+-19 & 4 & 9 \\
+1 & -1 & -1 
+\end{array} \right| =
+5 \vec i - 10 \vec j + 15 \vec k.
+\]
+Suuntavektoriksi kelpaa myös $\frac{1}{5}\vec v = \vec i - 2 \vec j + 3 \vec k$. Vielä tarvitaan
+yksi suoran piste $P_0 \vastaa \vec r_0$. Tämä löydetään esim. tasojen $T_1, T_2$ ja (sopivasti
+valitun) kolmannen tason $T_3$ leikkauspisteenä. Valitaan kolmanneksi tasoksi $yz$-taso
+\[
+T_3: \ x=0,
+\]
+jolloin $P_0=(x_0,y_0,z_0)$ ratkeaa (jos ratkeaa) yhtälöryhmästä
+\[
+\left\{ \begin{array}{ll}
+-19x_0+4y_0+9z_0 &= \ 3 \\
+x_0-y_0-z_0 &= \ 1 \\
+x_0 &= \ 0
+\end{array} \right.
+\]
+Ratkaisu on $P_0=(0,-\frac{12}{5},\frac{7}{5})$, ja suoran $S$ parametriesitys näin muodoin 
+\[
+\vec r = \frac{1}{5}(-12 \vec j + 7 \vec k) + t(\vec i - 2 \vec j + 3 \vec k),
+\]
+eli koordinaattimuodossa
+\[
+S: \quad \left\{ \begin{array}{ll}
+x &= \ t, \\
+y &= \ -\frac{12}{5}-2t, \\
+z &= \ \frac{7}{5} + 3t.
+\end{array} \right. \loppu
+\]
+\begin{Exa} \label{pisteen etäisyys tasosta} Määritä annetun pisteen $P=(x_0,y_0,z_0)$ etäisyys
+tasosta \newline $T:\ ax+by+cz+d=0$.
+\end{Exa}
+\ratk Jos $Q$ on pistettä $P$ lähinnä oleva piste tasolla $T$, niin ilmeisesti jollakin $t\in\R$
+on $\overrightarrow{PQ}=t\vec n$, missä $\vec n=a\vec i+b\vec j+c\vec k$ on tason 
+normaalivektori. Siis $Q=(x_0+ta,y_0+tb,z_0+tc)$ jollakin $t$. Koska $Q \in T$, niin $T$:n
+yhtälön perusteella
+\[
+0\,=\,a(x_0+ta)+b(y_0+tb)+c(y_0+tc)+d\,=\,ax_0+by_0+cz_0+d+t\abs{\vec n}^2.
+\]
+Ratkaisemalla tästä $t$ saadaan etäisyyden laskukaavaksi
+\[
+h\,=\,\abs{t}{\abs{\vec n}}\,=\,\frac{\abs{ax_0+by_0+cz_0+d}}{\sqrt{a^2+b^2+c^2}}\,.
+\]
+Tason pisteen $(x_0,y_0)$ etäisyys suorasta $S:\ ax+by+c=0$ saadaan samasta kaavasta 
+asettamalla ensin $c=0$ ja sitten $d$:n tilalle $c$. \loppu
+
+\subsection*{Ympyrä ja pallo}
+\index{ympyrä|vahv} \index{pallo(pinta)|vahv}
+
+Ympyrä on (harpin olomuodossa) euklidisen tason alkuperäisiä olioita. Jos ympyrän keskipiste
+on $P_0\vastaa\vec r_0$ ja säde $R$, niin \kor{ympyrän} (ympyräviivan) \kor{yhtälö} on
+\[
+\abs{\vec r-\vec r_0} = R.
+\]
+Tämä on myös \kor{pallon} (pallopinnan)\footnote[2]{Ympyrällä ja pallolla saatetaan tarkoittaa 
+myös euklidisen avaruuden 'täyteistä' joukkoa
+\[
+K = \{P\vastaa\vec r\, \mid \abs{\vec r-\vec r_0} \le R\}.
+\]
+Tämän täsmällisempi nimitys tasossa on \kor{kiekko} (engl.\ disc; ympyrä = circle), avaruudessa
+\kor{kuula} (engl.\ ball; pallopinta = sphere). \index{kiekko|av} \index{kuula|av}} yhtälö.
+Neliöitynä ja koordinaattien avulla kirjoitettuna yhtälöt ovat
+\begin{align*}
+\text{Ympyrä:} \quad &(x-x_0)^2+(y-y_0)^2=R^2. \\
+\text{Pallo:}  \quad &(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=R^2.
+\end{align*}
+\index{tangentti (käyrän)}%
+\kor{Ympyrän tangentti} on suora, jolla on ympyrän kanssa täsmälleen yksi yhteinen piste. 
+Sanotaan, että tangentti \kor{sivuaa} ympyrää ko.\ pisteessä. Jos sivuamispiste on annettu
+piste $Q$, niin tangentti konstruoidaan geometrisesti piirtämällä ensin suora $S_1$ pisteen
+$Q$ ja ympyrän keskipisteen kautta, jolloin tangentti $S_2$ on tätä vastaan kohtisuora. 
+Sanotaan, että suora $S_1$ on
+\index{normaali(vektori)!a@suoran, käyrän}%
+\kor{ympyrän normaali} pisteessä $Q$ tai että suora $S_1$
+leikkaa ympyrän \kor{kohtisuorasti}. Yleisemminkin voidaan ympyräviivan ja suoran välinen 
+\index{leikkauskulma}%
+\kor{leikkauskulma} määritellä ko.\ suoran ja leikkauspisteeseen asetetun tangentin
+suuntavektoreiden välisenä kulmana.
+
+Vastaavalla tavalla kuin ympyrän tangentti määritellään
+\index{tangenttitaso}%
+\kor{pallon tangenttitaso}. Pallon keskipisteen kautta kulkeva suora on
+\index{normaali(vektori)!c@pinnan}%
+\kor{pallon normaali}, eli se on kohtisuora tangenttitasoa
+vastaan pallon ja suoran leikkauspisteessä. Jos pallolla ja tasolla $T$ on enemmän kuin yksi 
+yhteinen piste, on yhteisten pisteiden joukko
+\index{avaruusympyrä}%
+\kor{avaruusympyrä} (ympyrä tasolla $T$). Jos $T$
+kulkee pallon keskipisteen kautta, sanotaan leikkausviivaa pallon
+\index{isoympyrä}%
+\kor{isoympyräksi}.
+\kor{Avaruusympyrän tangentti} on ympyrän kanssa samassa tasossa oleva, ympyrää sivuava
+avaruussuora.
+\begin{Exa} Pallon keskipiste on $(x_0,y_0,z_0)$ ja säde $=R$. Millä ehdolla taso 
+$T:\ ax+by+cz+d=0$ sivuaa palloa\,?
+\end{Exa}
+\ratk Taso $T$ sivuaa palloa täsmälleen, kun pallon keskipisteen etäisyys tasosta $=R$.
+Esimerkin \ref{pisteen etäisyys tasosta} perusteella ehto on
+\[
+\abs{ax_0+by_0+cz_0+d\,} =R\sqrt{a^2+b^2+c^2}. \loppu
+\]
+\begin{Exa} Yhtälöryhmä
+\[ \begin{cases}
+\,x^2+y^2+y^2=R^2 \\ \,x+y-z=1
+\end{cases} \]
+määrittelee origokeskisen pallon ja tason leikkausviivan $S$. Koska tason etäisyys origosta on
+$h=1/\sqrt{3}$ (Esimerkki \ref{pisteen etäisyys tasosta}), niin päätellään, että $S$ on 
+avaruusympyrä jos $R>1/\sqrt{3}$, piste jos $R=1/\sqrt{3}$, ja tyhjä joukko jos $R<1/\sqrt{3}$.
+Ensiksi mainitussa tapauksessa $S$:n keskipiste on origon kautta kulkevalla suoralla, jonka 
+suuntavektori on tason normaalivektori $\vec n=\vec i+\vec j-\vec k$. \loppu
+\end{Exa}
+
+\subsection*{Lieriö ja kartio}
+\index{lieriö|vahv} \index{kartio|vahv}
+
+Olkoon $S$ avaruussuora, joka kulkee pisteen $P_0 \vastaa \vec r_0$ kautta ja jonka suuntavektori
+on yksikkövektori $\vec e$. Tällöin pisteen $P \vastaa \vec r$ etäisyys suorasta $S$ voidaan
+laskea kaavalla
+\[
+d = \abs{\vec r-\vec r_0}\abs{\sin\kulma(\vec r-\vec r_0,\vec e\,)} 
+  = \abs{(\vec r-\vec r_0)\times\vec e\,}.
+\]
+Pinta, jolla tämä etäisyys on vakio $=R$ ($R>0$) on nimeltään \kor{lieriö}, tarkemmin
+\kor{ympyrälieriö}. Suora $S$ on lieriön \kor{akseli} ja $R=$ lieriön \kor{säde}. Asettamalla
+kaavassa $d=R$ ja neliöimällä saadaan lieriön yhtälölle muoto
+\begin{equation} \label{lieriön y}
+\abs{(\vec r-\vec r_0)\times\vec e\,}^2 = R^2.
+\end{equation}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{picture}(14,5)(-4,-1.5)
+\put(0,-1.118){\line(2,1){6}} \put(-0.894,0.671){\line(2,1){6}}
+\put(0,0){\vector(2,1){2}} \put(0,0){\vector(4,1){4.472}}
+\dashline{0.1}(2.2,1.1)(4.6,2.3) \put(3,1.8){$S$}
+\put(4.5,0.8){$\vec r-\vec r_0$}
+\put(0,-0.5){$P_0$} \put(-0.07,-0.07){$\scriptstyle{\bullet}$}
+\put(1.7,1.1){$\vec e$}
+\put(0,0){\vector(-1,1){0.61}} \put(-0.4,0.5){$R$}
+\renewcommand{\xscale}{.447} \renewcommand{\yscale}{.894}
+\renewcommand{\xscaley}{-.447} \renewcommand{\yscalex}{.223}
+\multiput(0,0)(4.6,2.3){2}{
+\scaleput(0,0){
+\curve(
+ 0.0,    -1.0,
+-0.342, -0.940,
+-0.643, -0.766,
+-0.866, -0.5,
+-0.940, -0.342,
+-1.0,    0.0,
+-0.940,  0.342,
+-0.866,  0.5,
+-0.643,  0.766,
+-0.342,  0.940,
+ 0.0,    1.0)}
+\curvedashes[1mm]{0,1,2}
+\scaleput(0,0){
+\curve(
+0.0,   -1.0,
+0.342, -0.940,
+0.643, -0.766,
+0.866, -0.5,
+0.940, -0.342,
+1.0,    0.0,
+0.940,  0.342,
+0.866,  0.5,
+0.643,  0.766,
+0.342,  0.940,
+0.0,    1.0)}}
+\end{picture}
+\end{figure}
+\begin{Exa} Olkoon lieriön akseli origon kautta kulkeva, yksikkövektorin
+$\vec e=\frac{1}{3}(\vec i+2\vec j-2\vec k)$ suuntainen suora ja säde $R=2$. Tällöin on
+$\vec r_0=\vec 0$ ja 
+\[
+\vec r\times\vec e\,=\,\frac{1}{3}\left|\begin{array}{rrr}
+                                        \vec i&\ \vec j&\vec k\\x&\ y&z\\1&\ 2&-2
+                                        \end{array}\right|
+                  \,=\,\frac{1}{3}\left[(-2y-2z)\vec i+(2x+z)\vec j+(2x-y)\vec k\right],
+\]
+joten lieriön yhtälö on
+\begin{align*}
+&\qquad \frac{1}{9}[(2y+2z)^2+(2x+z)^2+(2x-y)^2]\,=\,4 \\[1mm]
+&\ekv\quad 8x^2+5y^2+5z^2-4xy+4xz+8yz=36. \loppu
+\end{align*}
+\end{Exa}
+
+Jos yhtälössä \eqref{lieriön y} korvataan ristitulo pistetulolla ja kirjoitetaan $R$:n tilalle
+$\gamma\abs{\vec r -\vec r_0}$, missä $\gamma\in(0,1)$, niin yhtälö saa muodon
+\begin{equation} \label{kartion y}
+\abs{(\vec r-\vec r_0)\cdot\vec e\,}^2 = \gamma^2\abs{\vec r -\vec r_0}^2 \qekv
+\abs{\cos\kulma(\vec r-\vec r_0,\vec e\,)}=\gamma.
+\end{equation}
+Tämä yhtälö määrittelee \kor{kartion}, tarkemmin \kor{ympyräkartion}. Piste 
+$P_0\vastaa \vec r_0$ on kartion \kor{kärki}. Kartio koostuu kahdesta
+\index{puolikartio}%
+\kor{puolikartiosta}, joiden yhtälöt ovat
+\[
+\cos\kulma(\vec r-\vec r_0,\vec e\,)=\pm\gamma.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{picture}(14,4)(-4,-0.5)
+\put(0,0){\vector(2,1){2}} \put(0,0){\vector(4,1){3.5}}
+\put(3.5,0.4){$\vec r-\vec r_0$}
+\put(0,-0.5){$P_0$} \put(-0.07,-0.07){$\scriptstyle{\bullet}$} 
+\put(1.7,1.1){$\vec e$}
+\path(-1,-0.813)(4,3.26) 
+\put(0,0){\line(-4,-1){1.3}} \put(3.5,0.875){\line(4,1){1.5}}
+\renewcommand{\xscale}{.447} \renewcommand{\yscale}{.894}
+\renewcommand{\xscaley}{-.447} \renewcommand{\yscalex}{.223}
+\put(4.025,2.012){
+\scaleput(0,0){
+\curve(
+ 0.0,    -1.0,
+-0.342, -0.940,
+-0.643, -0.766,
+-0.866, -0.5,
+-0.940, -0.342,
+-1.0,    0.0,
+-0.940,  0.342,
+-0.866,  0.5,
+-0.643,  0.766,
+-0.342,  0.940,
+ 0.0,    1.0)}
+\curvedashes[1mm]{0,1,2}
+\scaleput(0,0){
+\curve(
+0.0,   -1.0,
+0.342, -0.940,
+0.643, -0.766,
+0.866, -0.5,
+0.940, -0.342,
+1.0,    0.0,
+0.940,  0.342,
+0.866,  0.5,
+0.643,  0.766,
+0.342,  0.940,
+0.0,    1.0)}}
+\end{picture}
+\end{figure}
+Koordinaattien $x,y,z$ avulla esitettynä yhtälöt \eqref{lieriön y} ja \eqref{kartion y}
+voidaan kumpikin kirjoittaa muotoon
+\[
+Ax^2+By^2+Cz^2+Dxy+Exz+Fyz+Gx+Hy+Iz+J=0,
+\]
+missä $A,B,$ jne.\ ovat reaalilukuja (vrt.\ esimerkki edellä). Tämä merkitsee, että lieriö ja 
+kartio, myös pallo, ovat nk.\ 
+\index{toisen asteen pinta}%
+\kor{toisen asteen pintoja}. Toisen asteen pinnan ja avaruustason 
+(esim.\ koordinaattitason) leikkausviiva on ko.\ tason
+\index{toisen asteen käyrä}%
+\kor{toisen asteen käyrä}. Tällainen on
+esimerkiksi ympyrä. Yleinen toisen asteen käyrän yhtälö $xy$-tasolla on muotoa
+\[
+Ax^2+By^2+Cxy+Dx+Ey+F=0.
+\]
+Toisen asteen käyrien ja pintojen yleisempi luokittelu on matemaattinen ongelma, johon palataan
+myöhemmin toisessa asiayhteydessä.
+
+\pagebreak
+\Harj
+\begin{enumerate}
+
+\item
+a) Näytä, että yhtälöt esittävät samaa suoraa:
+\[
+\begin{cases} \,x=3+2t, \\ \,y=-11-6t \end{cases} \quad \text{ja} \quad
+\begin{cases} \,x=-1-t, \\ \,y=1+3t \end{cases}
+\]
+b) Määritä suorien leikkauspiste:
+\[
+\begin{cases} \,x=3+2t, \\ \,y=-1-3t \end{cases} \quad \text{ja} \quad
+\begin{cases} \,x=-1-t, \\ \,y=2(1+t) \end{cases}
+\]
+c) Määritä suoran $\,x=3+t,\ y=-2-t,\ z=4-2t\,$ ja koordinaattitasojen
+leikkauspisteet.
+
+\item
+Määritä $\alpha$ siten, että vektori $\,\vec i+2\vec j+\alpha\vec k$ sekä avaruussuorat
+\[
+2(x-1)=1-y=2z-3 \quad \text{ja} \quad \begin{cases} x=17,\\y=7+3t,\\z=2t \end{cases}
+\]
+ovat saman tason suuntaiset.
+
+\item
+Määritä pisteet $P_1 \in S_1$ ja $P_2 \in S_2$ suorilla $\,S_1:\ x=-y=z$ ja 
+$S_2:\ x+y-1=0,\ z=0$ siten, että vektori $\Vect{P_1P_2}$ on yhdensuuntainen vektorin
+$2\vec i-\vec j-\vec k$ kanssa.
+
+\item
+Suora $S$ kulkee pisteen $(-1,1,3)$ ja sen janan keskipisteen kautta, jonka $xy$- ja $xz$-tasot
+leikkaavat suorasta $\,x-1=2(y+1)=z+3$. Määritä $S$:n suuntavektori.
+
+\item
+Määritä $\alpha$ siten, että suorat $\,2(x-1)=y+1=2\alpha(z-1)$ ja $x+1=y-1=z$ leikkaavat.
+Mikä on suorien lyhin etäisyys, jos $\alpha=1$\,?
+
+\item
+Määritä suorien
+\[
+\vec r=2\vec i+5\vec k+t(\vec i-2\vec j+2\vec k) \quad \text{ja} \quad
+\begin{cases} 3x-2y=12\\x+2z=6 \end{cases}
+\]
+lyhin etäisyys ja lähinnä toisiaan olevat pisteet.
+
+\item
+Määritä sen suoran parametrimuotoinen yhtälö, joka leikkaa kohtisuorasti suorat
+\[
+\begin{cases} x=1+t, \\ y=1-2t, \\ z=t \end{cases} \quad \text{ja} \quad
+\begin{cases} x=-1, \\ y=2s, \\ z=1-2s. \end{cases}
+\]
+
+\item
+Laske pisteen $(2,3,-1)$ etäisyys suorasta
+\[
+\text{a)}\,\ \vec r=\vec i+2\vec j+3\vec k+t(\vec i-2\vec j+2\vec k) \qquad
+\text{b)}\,\ \begin{cases} 3x-y+z=0\\x-2y+8=0 \end{cases}
+\]
+
+\item
+a) Esitä tason $T$ yhtälö perusmuodossa $\,ax+by+cz+d=0$, kun parametrimuotoiset
+yhtälöt ovat
+\[ 
+T:\ \begin{cases}
+     x=2+2t_1+t_2, \\ y=-1+3t_1+2t_2, \\ z=3-t_1+t_2.
+     \end{cases}
+\]
+b) Taso kulkee pisteen $P=(1,-13,-5)$ kautta ja sen suuntavektorit ovat
+$\vec v_1=\vec i-\vec j$ ja $\vec v_2=\vec i+\vec j+\vec k$. Onko piste $Q=(3,-1,2)$
+tasossa?
+
+\item
+Määritä tason yhtälö (perusmuoto!), kun tiedetään, että taso sisältää suoran
+$x=3+t,\ y=1-2t,\ z=-2+t$ ja a) kulkee pisteen (0,2,1) kautta, b) on vektorin
+$3\vec i+\vec j-2\vec k$ suuntainen
+
+\item
+Määritä seuraavien tasojen yhteiset pisteet: \newline
+a) \ $x+y-z+2=0,\ 2x+y+2z-4=0,\ x-y+3z-2=0$ \newline
+b) \ $x+y+z-6=0,\ x+2y-z-2=0,\  x+4y-5z+5=0$ \newline
+c) \ $x+2y-2z-1=0,\ x-y+z-2=0,\ x+5y-5z=0$
+
+\item Taso sisältää suoran $S_1:\ \vec r=(1+t)\vec i+(1+2t)\vec j+(1+3t)\vec k$ ja on suoran
+$S_2:\ \vec r=(1+t)\vec i+(-1+t)\vec j+\vec k$ suuntainen. Johda tason yhtälö perusmuodossa.
+Johda samoin sen tason yhtälö, joka sisältää suoran $S_2$ ja on $S_1$:n suuntainen.
+
+\item
+Johda sen tason yhtälö, joka puolittaa pisteen $P_0=(x_0,y_0,z_0)$ ja tason $T:\ ax+by+cz+d=0$
+väliset janat.
+
+\item
+Määritä pisteen $(3,4,-2)$ kohtisuora projektio tasolla, jonka normaalivektori on
+$\vec i-2\vec j+\vec k$ ja joka kulkee pisteen $(1,1,1)$ kautta.
+
+\item
+Määritä pisteen $(3,2,-4)$ peilikuvapiste tason $\,x+y-2z+5=0$ suhteen.
+
+\item 
+Määritä origon suurin mahdollinen etäisyys pisteiden $(0,1,0)$ ja $(2,2,-1)$ kautta
+kulkevasta tasosta. Mikä taso antaa maksimietäisyyden?
+
+\item
+Määritä tasojen $\,x+y+z=3$ ja $3x-2y-z=1$ leikkaussuoran kautta kulkevat tasot, jotka
+puolittavat tasojen välisen kulman.
+
+\item
+Kheopsin pyramidin (alkuperäinen) korkeus on $147$ m ja neliön muotoisen 
+poh\-jan sivun pituus $230$ m. Sijoita pyramidi koordinaatistoon niin, että se
+tuntee olonsa mahdollisimman mukavaksi, ja määritä tässä koordinaatistossa pyramidin
+sivutasojen yhtälöt, mittayksikkönä $100$ m. Laske myös vierekkäisten sivujen välinen 
+diedrikulma (vrt.\ Harj.teht \ref{ristitulo}:\ref{H-I-7:oktaedri}).
+
+\item
+Vektorin $2\vec i-\vec j+3\vec k$ suuntaan kulkeva valonsäde heijastuu tasosta $T$ pisteessä
+$(1,2,-1)$. Heijastunut säde kulkee pisteen $(2,5,-3)$ kautta. Mikä on tason yhtälö?
+
+\item
+Positiivisen $z$-akselin suunnasta tuleva valonsäde osuu pisteessä $(1,2,3)$ tasolla
+$3x+2y+z=10$ olevaan peiliin. Määritä heijastuneen säteen suunta. Missä pisteessä heijastunut
+säde leikkaa (jos leikkaa) $xy$-tason?
+
+\item
+Painovoima vaikuttaa negatiivisen $z$-akselin suuntaan. Pisara putoaa pisteestä $(1,1,3)$ 
+tasolle $\,3x-4y+12z=12$ ja alkaa valua tasoa pitkin alaspäin. Missä pisteessä pisara kohtaa
+$xy$-tason?
+
+\item
+Tasangolta $z=0$ kohoaa vuorenrinne pitkin tasoa $x+2y+4z=0$. Rinteen pisteestä $P$, joka on 
+korkeudella $h=10$, lähtee liikkeelle pistemäinen lumivyöry. Se etenee suoraviivaisesti 
+rinnettä alas painovoimalakien mukaisesti. Tasangolle saavuttuaan se jatkaa suoraviivaista
+liikettään vaakasuoraan, kunnes osuu mökkiin, joka on pisteessä $Q=(10,40,0)$.
+Mikä oli piste $P$?
+
+\item \index{zzb@\nim!Haukka ja kaksi kanaa} 
+(Haukka ja kaksi kanaa) Universaalikoordinaatistossa maan pinta on 
+taso $x+2y-3z=0$. Maan pinnalla käyskentelee kaksi pistemäistä kanaa $A$ ja 
+$B$. Kanoja vaanii pistemäinen haukka, joka lentää maan pinnan suuntaisella
+tasolla korkeudella $h=5$. Pistemäinen aurinko loistaa suunnassa
+$-4\vec i +\vec k $. Hetkellä $H$ tapahtuu seuraavaa: Kanalta $A$ pääsee säikähtynyt 
+'kot' sen huomatessa haukan varjon päällään. Kotkotuksen kuulee kana $B$,
+joka vilkaisee samassa taivaalle ja näkee haukan suunnassa $\vec i -\vec j +\vec k $.
+Määritä vektori $\Vect{AB}$ kyseisellä hetkellä $H$.
+
+\item
+Missä kulmassa tason suora $y=4x$ leikkaa ympyräviivan \newline
+$x^2+y^2-2x-4y+4=0$\,?
+
+\item
+Avaruuskolmion kärjet ovat $(0,0,0)$, $(3,2,1)$ ja $(2,-1,3)$. Laske kolmion sisään piirretyn
+(eli kaikkia sivuja sivuavan) ympyrän keskipiste ja säde.
+
+\item
+Avaruuden $E^3$ kolmen pisteen paikkavektorit ovat $\vec a$, $\vec b$ ja $\vec c$. Esitä
+menettely, jolla voidaan määrittää pisteiden kautta kulkevan ympyrän keskipisteen paikkavektori.
+Sovella menettelyä, kun pisteet ovat $(1,2,3)$, $(2,-5,3)$ ja $(-1,3,-6)$. Määritä myös
+ympyrän säde ja ympyrän tason normaalivektori.
+
+\item
+Määritä avaruusympyrän
+\[ \begin{cases}
+\,x^2+y^2+z^2=49 \\ \,x+2y-z=10
+\end{cases} \]
+tangentti pisteessä $(-2,3,-6)$.
+
+\item
+Lieriön säde on $R=2$ ja akseli on pisteen $P_0=(1,1,1)$ kautta kulkeva suora, jonka 
+suuntavektori on $-\vec i+\vec j+\vec k$. Määritä lieriön yhtälö toisen asteen pinnan yhtälön
+perusmuodossa. Mitkä ovat lieriön ja suoran $x=y=z$ leikkauspisteet, ja mikä lieriön piste on
+lähinnä origoa?
+
+\item
+Lieriöllä ja kartiolla on yhteisenä akselina suora $S:\ x=2y=-2z$ ja kumpikin kulkee pisteen
+$(1,0,0)$ kautta. Kartion kärkenä on piste $(-2,-1,1)$. Laske lieriön säde ja kartion
+(sivuprofiilin) aukeamiskulma sekä saata kummankin pinnan yhtälöt toisen asteen pinnan
+yhtälön perusmuotoon. Määritä edelleen molempien pintojen ja $xy$-tason leikkauskäyrien
+yhtälöt ja hahmottele näiden käyrien muoto.
+
+\item (*)
+Kuution, jonka sivun pituus $=4$, yksi kärki on origossa ja kolme muuta positiivisilla
+koordinaattiakseleilla. Kuutiota katsotaan kaukaa vektorin $\vec i+2\vec j+3\vec k$
+osoittamasta suunnasta kuvakulmassa, jossa $z$-akseli näkyy pystysuorana. Laske, millaisena
+kuutio näkyy tästä kuvakulmasta. Kuva!
+
+\item (*)
+Millä tavoin saadaan selville avaruustasot, jotka sivuavat kolmea annettua palloa? Montako
+tällaista tasoa on, jos pallot eivät leikkaa tai sivua toisiaan eikä mikään palloista ole 
+toisen sisällä?
+
+\item (*)
+Näytä, että yhtälö $K:\ xy+yz+xz=0$ määrittelee kartion, ja määritä se $K$:n piste, joka on
+lähinnä pistettä $(-1,2,3)$.
+
+\item (*)
+Kartion kärki on origossa, symmetria-akseli on vektorin $\vec i-2\vec j+2\vec k$ suuntainen
+ja $y$-akseli on kartiopinnalla. Taso $T$ kulkee pisteen $(1,1,1)$ kautta ja sivuaa kartiota
+pitkin avaruussuoraa. Määritä $T$:n yhtälö (kaksi ratkaisua!).
+
+\end{enumerate}

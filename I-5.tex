@@ -1,0 +1,501 @@
+\section{ƒ‰rettˆm‰t desimaaliluvut} \label{desimaaliluvut}
+\alku
+\index{zyzy@‰‰retˆn desimaaliluku|vahv}
+
+Matematiikan arkip‰iv‰ss‰ hyvin yleisesti kohdattava lukujono on
+\kor{‰‰retˆn desimaaliluku}\footnote[2]{Vaihtoehtoinen nimitys on \kor{p‰‰ttym‰tˆn}
+desimaaliluku. \index{pzyzy@p‰‰ttym‰tˆn desimaaliluku|av}} (engl.\ infinite decimal). T‰m‰ on
+ilmiasultaan merkkijono muotoa
+\[
+e d_{-m} d_{-m+1} \ldots d_0 . d_1 d_2 d_3 \ldots\ =\ x_0.d_1 d_2 d_3 \ldots\,,
+\]
+miss‰
+\index{desimaali, -luku, -piste} \index{kokonaisluvut!a@kokonaislukuosa (desim.-luvun)}%
+\begin{itemize}
+\item[-] $\quad$ '$e$' on \kor{etumerkki}, joko $e = +$ tai $e = -\ $ (\ 'tyhj‰' = +\,)
+\item[-] $\quad$ '$.$' on \kor{desimaalipiste} 
+                           (tai 'desimaalipilkku', $d_0$:n ja $d_1$:n v‰liss‰)
+\item[-] $\quad \ \ m\in\N\cup\{0\}$
+\item[-] $\quad \ \ x_0\ =\ e d_{-m} d_{-m+1} \ldots d_0\,\in\,\Z\ =$\ \ desimaaliluvun 
+                    \kor{kokonaislukuosa}
+\item[-] $\quad \ \ d_n,\,\ n=1,2,\ldots\ =$\ \ desimaaliluvun \kor{desimaalit}
+                    ($d_n\,\in\,\{0, \ldots, 9\}$)
+\end{itemize}
+\begin{Exa}
+\begin{align*}
+141&.42135623730950488 \ldots \qquad (\,e = +,\ m = 2,\ x_0 = 141\,) \\
+- 0&.00314159265358979 \ldots \qquad (\,e = -,\ m = 0,\ x_0 =0\,) \qquad \loppu
+\end{align*}
+\end{Exa}
+
+ƒ‰retˆn desimaaliluku on siis p‰‰osin numerojono, jossa numeroiden lis‰ksi on erillinen 
+etumerkki ja desimaalipiste, jonka sijainti numerojonossa m‰‰ritt‰‰ kokonaislukuosan $x_0$. 
+T‰llaisen merkkijonon \pain{tulkitaan} \pain{tarkoittavan} rationaalilukujonoa
+\[
+\{\,x_0, x_1, \ldots\,\} = \{\,x_n\,\}_{n=0}^{\infty}\,,
+\]
+miss‰ $x_0$ on kokonaislukuosa ja
+\[
+x_n\ =\ x_0 \pm \bigl(\, d_1 \cdot 10^{-1} + \cdots + d_n \cdot 10^{-n}\,\bigr)
+     =\ x_0 \pm \sum_{k=0}^n d_k \cdot 10^{-k}, \quad n\in\N,
+\]
+miss‰ summalausekkeen etumerkki valitaan $e$:n mukaan. Tulkinnan mukaisesti ‰‰retˆn
+desimaaliluku on siis itse asiassa \pain{sar}j\pain{a}, jonka ensimm‰inen termi on $x_0$ ja
+muut $\pm d_k \cdot 10^{-k}$, $k=1,2,\ldots\,$ Sarjan osasummat ovat indeksist‰ $n=1$
+l‰htien nk.\ 
+\index{zyzy@‰‰rellinen desimaaliluku}%
+\kor{‰‰rellisi‰} (tai p‰‰ttyvi‰, ks.\ alaviite) \kor{desimaalilukuja}, jotka jatkossa merkit‰‰n
+\[
+x_n\ =\ x_0. d_1 \ldots d_n \quad (n\in\N).
+\]
+T‰ll‰ tarkoitetaan siis lukua $\,\pm(|x_0| + \sum_{k=0}^n d_k \cdot 10^{-k})$, miss‰ etumerkki
+on erikseen asetettu (sama kuin $x_0$:ssa, jos $x_0 \neq 0$). Kirjoittamalla luku muotoon
+\[
+x_n\ =\ \pm 10^{-n} \left(|x_0| \cdot 10^n + \sum_{k=0}^n d_k \cdot 10^{n-k}\right)
+\]
+n‰hd‰‰n, ett‰ $x_n=p/10^{n}$, miss‰ $p = e d_{-m} \ldots d_0 d_1 \ldots d_n \in \Z$ on 
+kokonaisluku. Toisaalta jos l‰htˆkohtana on luku $x=p/10^n,\ p\in\Z$, niin esitt‰m‰ll‰ $p$ 
+kymmenj‰rjestelm‰ss‰ n‰hd‰‰n, ett‰ $x$ on saatettavissa muotoon $x = x_0.d_1 \ldots d_n$.
+Siis ko.\ muotoa olevat ‰‰relliset desimaaliluvut muodostavat t‰sm‰lleen $\Q$:n osajoukon 
+\[
+\Q_n = \{\,p/10^n \mid p \in \Z\,\}.
+\]
+Kun t‰m‰n mukaisesti asetetaan $\Q_0=\Z$, niin p‰tee
+\[
+\Z = \Q_0 \subset \Q_1 \subset \Q_2 \subset \ldots \subset \Q.
+\]
+Lukujoukossa $\Q_n$ luvut ovat tasav‰lein siten, ett‰ per‰kk‰isten lukujen $x,y$ et‰isyys on
+$|x-y|=10^{-n}$. Kuvassa on lukujoukkoja $\Q_0,\Q_1,\Q_2$ 
+havainnollistettu geometrisesti.\footnote[2]{Lukujen 'geometrisointia' tarkastellaan myˆhemmin 
+Luvussa \ref{geomluvut}. T‰ss‰ vaiheessa pidet‰‰n geometrisen havainnollistamisen perusideoita 
+tunnettuina.}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12,3)(0,0)
+\path(0,0)(12,0)
+\path(0,1)(12,1)
+\path(0,2)(12,2)
+\multiput(1,0)(5,0){3}{\line(0,1){0.2}}
+\multiput(1,1)(5,0){3}{\line(0,1){0.2}}
+\multiput(0,1)(0.5,0){25}{\line(0,1){0.1}}
+\multiput(1,2)(5,0){3}{\line(0,1){0.2}}
+\multiput(0,2)(0.5,0){25}{\line(0,1){0.1}}
+\multiput(0,2)(0.05,0){241}{\line(0,1){0.05}}
+\put(12.5,0){$\Q_0$}
+\put(12.5,1){$\Q_1$}
+\put(12.5,2){$\Q_2$}
+\put(5.9,-0.5){$0$} \put(0.6,-0.5){$-1$} \put(10.9,-0.5){$1$}
+\end{picture}
+\end{center}
+\end{figure}
+Jatkossa ‰‰rettˆmiin desimaalilukuihin viitataan joko tavanomaisilla lukusymboleilla
+$x,y,z$ jne., tai vaihtoehtoisesti symboleilla $\x,\y,\z$ jne., kun halutaan tehd‰ ero 
+'oikeisiin' lukuihin, erityisesti rationaalilukuihin. ƒ‰rettˆmien desimaalilukujen joukkoa
+merkit‰‰n symbolilla $\DD\,$:
+\[
+\DD = \{\text{‰‰rettˆm‰t desimaaliluvut}\}.
+\]
+Yksitt‰isen desimaaliluvun tapauksessa pidet‰‰n merkkijonoesityst‰ ko.\ desimaaliluvun 
+'nimen‰', jolloin merkinn‰ss‰
+\[
+\x\ =\ x_0. d_1 d_2 \ldots\ =\ \{\,x_n\,\}_{n=0}^{\infty} 
+\]
+ensimm‰inen '$=$' nime‰‰ ja toinen tulkitsee (antaa merkityssis‰llˆn).
+\jatko  \begin{Exa} (jatko) Tehdyin merkint‰sopimuksin voidaan kirjoittaa
+\begin{align*}
+x\ &=\ 141.421356 \ldots \\ 
+   &=\ \{\,141,141.4,141.42, \ldots\,\} \\
+   &=\ \{\,141,\ \dfrac{1414}{10}\,,\ \dfrac{14142}{100}\,,\ \ldots\,\} \\
+   &=\ \{\,x_0,\,x_1,\,x_2,\,\ldots\,\} \\[3mm]
+y\ &=\ -0.00314159 \ldots \\
+   &=\ \{\,0,\,0.0,\,0.00,\,-0.003,\,-0.0031,\, \ldots\,\} \\
+   &=\ \{\,0,\ 0,\ 0,\ -\dfrac{3}{1000}\,,\ -\dfrac{31}{10000}\,,\ \ldots\,\} \\
+   &=\ \{\,y_0,\,y_1,\,y_2,\,\ldots\,\} \quad \loppu
+\end{align*}
+\end{Exa}
+
+Jokainen ‰‰retˆn desimaaliluku $x\in\DD$ on siis merkitykselt‰‰n lukujono 
+$\seq{x_n}_{n=0}^\infty\,$, miss‰ $x_n\in\Q_n\ \forall n$. M‰‰ritelm‰ns‰ mukaisesti lukujono 
+$\seq{x_n}$ on m‰‰r‰tt‰viss‰ asettamalla ensin $x_0\in\Z$ ja sitten $x_1,x_2, \ldots\,$ 
+palautuvasti muodossa
+\[
+x_n\ =\ \begin{cases}
+         x_{n-1} + d_n \cdot 10^{-n}, \quad \text{jos $e\ =\ +$}\,, \\
+         x_{n-1} - d_n \cdot 10^{-n}, \quad \text{jos $e\ =\,\ $ --}\ ,
+        \end{cases}
+\]
+miss‰ $e$ on $x$:n etumerkki ja $d_n\in\{0, \ldots ,9\}\ \forall n\in\N$. T‰m‰n mukaan on
+joko $x_n \ge x_{n-1}\ \forall n\in\N\,$ tai $\,x_n \le x_{n-1}\ \forall n\in\N$, riippuen 
+etumerkist‰ $e$. T‰llaiset 'yksitoikkoiset' jonot ovat huomattavan t‰rke‰ lukujonojen
+erikoistapaus, joten asetetaan niit‰ varten
+\begin{Def} \label{monotoninen jono} \index{lukujono!c@monotoninen|emph}
+\index{monotoninen!a@lukujono|emph}
+\index{aidosti kasvava, v‰henev‰, monotoninen!a@lukujono|emph}
+Lukujono $\{\,a_n,\ n=m,m+1, \ldots\,\}$ on
+\begin{itemize}
+\item[-] \kor{kasvava},\ \ \ \ jos $\ a_{n+1} \ge a_n\ \ \forall n \ge m$
+\item[-] \kor{v‰henev‰},\ \    jos $\ a_{n+1} \le a_n\ \ \forall n \ge m$
+\end{itemize}
+Lukujono on \kor{aidosti} kasvava, jos $\,a_{n+1} > a_n\ \forall n \ge m$ ja aidosti v‰henev‰,
+jos $\,a_{n+1} < a_n\ \forall n \ge m$. Jos lukujono on (aidosti) kasvava tai v‰henev‰, se on 
+(aidosti) \kor{monotoninen}.
+\end{Def}
+ƒ‰retˆn desimaaliluku on siis lukujonona monotoninen: kasvava etumerkin ollessa $e=+$ ja 
+v‰henev‰, kun etumerkki on $e=-$. Seuraavan tuloksen mukaan t‰m‰ kasvu tai v‰heneminen kuitenkin
+'hiipuu' nopeasti $n$:n kasvaessa.
+\begin{Prop} \label{desim} Jos $x = \{\,x_n\,\}_{n=0}^{\infty} \in \DD$, niin jokaisella
+$k\in\N\cup\{0\}$ ja jokaisella $n\in\N$, $n>k$ p‰tee $\abs{x_n-x_k}<10^{-k}$, tarkemmin
+\[
+\abs{x_n - x_k}\ \le\ 10^{-k}-10^{-n}.
+\]
+\end{Prop}
+\tod Kun $n > k \ge 0$, on
+\begin{align*}
+\abs{x_n - x_k}\ =\ \sum_{j=k+1}^n d_j \cdot 10^{-j}\
+                 &\le\ \sum_{j=k+1}^n 9 \cdot 10^{-j} \\
+                 &=\ 9 \cdot 10^{-k-1} \sum_{i=0}^{n-k-1} \Bigl(\frac{1}{10}\Bigr)^i \\
+                 &=\ 10^{-k} \cdot \dfrac{9}{10} \cdot 
+                                    \dfrac{1 - (\frac{1}{10})^{n-k}}{1-\frac{1}{10}} \\
+                 &=\ 10^{-k} - 10^{-k}\left(\frac{1}{10}\right)^{n-k} \\[2mm] 
+                 &=\ 10^{-k}-10^{-n}. \loppu
+\end{align*}
+Kun Proposition \ref{desim} tuloksen ohella huomioidaan lukujonon $\seq{x_n}$ monotonisuus, niin
+n‰hd‰‰n, ett‰ jokaiselle ‰‰rettˆm‰lle desimaaliluvulle $\x=\seq{x_n}$ p‰tee
+\[
+0 \le k < n \qimpl \begin{cases} 
+                   \,x_k \le x_n < x_k + 10^{-k}, \quad &\text{jos etumerkki $e\ =\ +$}\,, \\
+                   \,x_k - 10^{-k} < x_n \le x_k, \quad &\text{jos etumerkki $e\ =\,\ $ --}\,.
+                   \end{cases}
+\]
+T‰m‰n mukaan termien $x_n$ liikkumavara supistuu nopeasti indeksin $n$ kasvaessa.
+
+\subsection*{Jakokulma-algoritmi}
+\index{jakokulma-algoritmi|vahv}%
+
+Edell‰ on todettu, ett‰ ‰‰rettˆm‰t desimaaliluvut ovat lukujonoina $\seq{x_n}$ sek‰ monotonisia
+ett‰ 'hiipuvia'. Voi myˆs k‰yd‰ niin, ett‰ jono $\{x_n\}$ ei ainoastaan 'hiivu', vaan 
+\kor{l‰hestyy rationaalilukua} $x \in \Q$ siin‰ mieless‰, ett‰ $\abs{x_n-x}$ tulee yh‰ 
+pienemm‰ksi $n$:n kasvaessa. Milloin t‰llainen 'l‰hestyminen' on yleens‰ mahdollista, 
+selvitet‰‰n myˆhemmiss‰ luvuissa. T‰ss‰ vaiheessa asetetaan kysymys toisin p‰in: Jos on annettu
+$x\in\Q$, niin miten lˆydet‰‰n ‰‰retˆn desimaaliluku $\x=\seq{x_n}$ siten, ett‰ $\abs{x_n-x}$ 
+tulee yh‰ pienemm‰ksi $n$:n kasvaessa\,? Vastauksen antaa tunnettu 
+\kor{jakokulma-algoritmi}\footnote[2]{\kor{Algoritmi} on t‰sm‰llinen ja toteutuskelpoinen
+(ohjelmointikelpoinen) toimintaohje jonkin laskennallisen p‰‰m‰‰r‰n saavuttamiseksi. Jos 
+p‰‰m‰‰r‰n‰ on lukujono $\{\,a_n,\ n=1,2, \ldots\,\}$, on algoritmia seuraamalla saatava 
+‰‰rellisell‰ m‰‰r‰ll‰ laskutoimituksia vastaus kysymykseen $a_n=\,$?, olipa indeksi $n \in \N$
+mik‰ hyv‰ns‰ annettu luku. \index{algoritmi|av}}. Algoritmissa konstruoidaan desimaalivastine
+luvulle $|x|$ ja varustetaan t‰m‰ $x$:n mukaisella etumerkill‰, joten voidaan rajoittua
+tapaukseen $x \ge 0$. Valitaan t‰llˆin $x_n\in\Q_n,\ n=0,1,2,\ldots$ siten, ett‰ jokaisella
+$n$ toteutuu ehto
+\begin{equation} \label{jakoehto 1}
+x_n \le x < x_n + 10^{-n}.
+\end{equation}
+Jos $x$ ei ole ‰‰rellinen desimaaliluku, ts.\ $x\not\in\Q_n\ \forall n$, niin ehdon
+\eqref{jakoehto 1} mukaisesti on $x_n < x < x_n+10^{-n}\,\ \forall n$. Jos $x\in\Q_k$
+jollakin $k$, niin $x_n\in\Q_n$ myˆs kun $n>k$, jolloin ehdosta \eqref{jakoehto 1}
+seuraa, ett‰ $x_n=x$ jokaisella $n \ge k$. Molemmissa tapauksissa $x_n+10^{-n}$ on $x$:‰‰
+l‰hinn‰ oleva, $x$:‰‰ aidosti suurempi luku joukossa $\Q_n$. On ilmeist‰, ett‰ n‰in
+konstruoitu lukujono $\seq{x_n}$ on yksik‰sitteinen, toteuttaa
+\begin{equation}  \label{jakoehto 2}
+\abs{x_n - x}\ <\ 10^{-n}, \quad n=0,1, \ldots
+\end{equation}
+ja m‰‰r‰ytyy yksik‰sitteisesti myˆs t‰st‰ ehdosta $x$:n etumerkist‰ riippumatta.
+
+Jos $x \ge 0$, niin ehdon \eqref{jakoehto 1} toteuttavan lukujonon konstruoiminen 
+jakokulma-algoritmilla k‰y seuraavasti: Olkoon $x = r/s$, miss‰ $r\in\N\cup\{0\}$ ja 
+$s \in \N$. T‰llˆin voidaan ensinn‰kin kirjoittaa
+\[
+\dfrac{r}{s} = x_0 + \dfrac{r_1}{s}\,,
+\]
+miss‰ $x_0 \in \N \cup \{0\}$ ja $r_1 \in \{\,0, \ldots, s-1\,\}$. Luvut $x_0$ ja $r_1$ ovat
+ilmeisen yksik‰sitteiset. Koska $0\,\le\,r_1/s\,<\,1\ \impl\ 0\,\le\,10\,r_1/s\,<\,10$, on 
+edelleen lˆydett‰viss‰ yksik‰sitteiset $d_1 \in \{\,0, \ldots, 9\,\}$ ja 
+$r_2 \in \{\,0, \ldots, s-1\,\}$ siten, ett‰
+\[
+\dfrac{10\,r_1}{s} = d_1 + \dfrac{r_2}{s}\,.
+\]
+Jatkamalla n‰in saadaan yleiseksi algoritmiksi
+\[
+\boxed{\quad \dfrac{10\,r_k}{s} = d_k + \dfrac{r_{k+1}}{s}, \quad 
+                     k = 1,2, \ldots \quad \quad \text{(jakokulma-algoritmi)} \quad}
+\]
+T‰ss‰ $d_k \in \{\,0, \ldots, 9\,\}$ ja luvut $r_{k+1} \in \{\,0, \ldots, s-1\,\}$ ovat 
+\index{jakoj‰‰nnˆs}%
+nk.\ \kor{jakoj‰‰nnˆksi‰}. Jos algoritmi katkaistaan indeksiin $k=n$, on luvulle $x$ saatu
+esitysmuoto
+\begin{align*}
+x\ =\ x_0 + \dfrac{r_1}{s}\ 
+  &=\ x_0 + d_1 \cdot 10^{-1} + 10^{-1} \cdot \dfrac{r_2}{s} \\ 
+  &\ \ \vdots \\
+  &=\ (\,x_0 + d_1 \cdot 10^{-1} + \ldots + d_n \cdot 10^{-n}\,) 
+                                          + 10^{-n} \cdot \dfrac{r_{n+1}}{s} \\
+  &=\ x_n + 10^{-n} \cdot \dfrac{r_{n+1}}{s}\ .
+\end{align*}
+T‰ss‰ on $\ 0\,\le\,10^{-n}\,r_{n+1}/s\,<\,10^{-n}$, joten ehto \eqref{jakoehto 1} toteutuu
+algoritmin m‰‰ritt‰m‰lle lukujonolle $\{\,x_0,\,x_0.d_1,\,x_0.d_1d_2,\,\ldots\,\} = \seq{x_n}$.
+
+Jos $\x\in\DD$ on jakokulma-algoritmin tuottama desimaalilukuvastine rationaaliluvulle $x$, on
+tapana muitta mutkitta kirjoittaa $x = \x$, eli \pain{samastaa} $x$ ja $\x$. Jatkossa
+noudatetaan t‰t‰ sopimusta. T‰m‰n mukaisesti siis jokaiselle rationaaliluvulle luotu 'kopio'
+‰‰rettˆmien desimaalilukujen joukossa, eli p‰tee $\DD \supset \Q$.
+\begin{Exa} Tehdyn sopimuksen mukaan
+\begin{align*}
+50/3    &= 16.66666666666666666666666666666666666666 \ldots\,\in \DD, \\
+311/125 &= 2.488000000000000000000000000000000000000 \ldots\,\in \DD, \\
+245/17  &= 14.41176470588235294117647058823529411764 \ldots\,\in \DD. \quad\loppu 
+\end{align*} \end{Exa}
+Esimerkiss‰ luku $311/125$ on ‰‰rellinen desimaaliluku. T‰llaisessa tapauksessa jakoj‰‰nnˆs
+$r_k = 0$ jollakin $k$ (t‰ss‰ kun $k=4$), jolloin algoritmi antaa $r_n = d_n = 0$ kun $n \ge k$.
+\index{jaksollinen desimaaliluku}%
+Muissakin esimerkeiss‰ algoritmin antama desimaaliluku on \kor{jaksollinen}, eli jollakin
+$k,m \in \N$ muotoa
+\[
+\x\ =\ x_0.d_1 d_2 \ldots d_k d_{k+1} \ldots d_{k+m} d_{k+1} \ldots d_{k+m} \ldots,
+\]
+jolloin jaksollisuus alkaa indeksist‰ $k+1$ ja jakson pituus $=m$. Jakokulma-algoritmi antaa 
+itse asiassa \pain{aina} jaksollisen tuloksen, sill‰ koska jakoj‰‰nnˆksell‰ $r_n$ on vain $s-1$
+erilaista $0$:sta poikkeavaa arvoa, niin jollakin $n=k+1\in \{\,1, \ldots,s\,\}$ ja 
+$m \in \{\,1, \ldots, s-1\,\}$ on oltava $r_{n+m} = r_{n}$. T‰llˆin algoritmi antaa 
+$r_{n+m} = r_n$ ja $d_{n+m} = d_n$ myˆs kun $n > k+1$, jolloin tulos on ym.\ jaksollista muotoa.
+Jaksollisuus alkaa siis viimeist‰‰n indeksist‰ $n=s$ ja jakson pituus on enint‰‰n $m=s-1$. 
+
+Jatkossa merkit‰‰n jaksollisten desimaalilukujen joukkoa symbolilla $\DD_p\,$:
+\[
+\DD_p = \{\text{jaksolliset desimaaliluvut}\}.
+\]
+\index{jaksoton desimaaliluku}%
+Jos $x\in\DD$ ja $x\not\in\DD_p$, niin sanotaan, ett‰ $x$ on \kor{jaksoton}.
+
+\subsection*{ƒ‰rettˆm‰t binaariluvut}
+\index{zyzy@‰‰retˆn desimaaliluku!48@‰‰retˆn binaariluku|vahv}%
+
+\kor{ƒ‰rettˆmill‰ binaariluvuilla} tarkoitetaan merkki/lukujonoja muotoa
+\[
+x\ =\ eb_m b_{m+1} \ldots b_0 . b_1 b_2 \ldots\ =\ \{x_n\}_{n=0}^{\infty},
+\]
+\index{bitti}%
+miss‰ $b_n$:t ovat binaarij‰rjestelm‰n numeroita eli \kor{bittej‰}, $b_n \in \{\,0,1\,\}$, ja
+\[
+x_n\ =\ x_0 \pm \sum_{k=1}^n b_k \cdot 2^{-k},
+\]
+miss‰ $x_0 = e b_m b_{m+1} \ldots b_0$ on kokonaislukuosa (binaarimuodossa) ja summalausekkeen
+etumerkki on sama kuin $x$:ss‰. Jos lukuj‰rjestelm‰n kantalukuna on $8$ tai $16$, puhutaan 
+\index{oktaaliluku} \index{heksadesimaaliluku}%
+vastaavasti (‰‰rettˆmist‰) \kor{oktaali}- ja \kor{heksadesimaaliluvuista}. Tietokoneiden ja 
+laskinten k‰ytt‰min‰ lukuj‰rjestelmin‰ n‰m‰ mainitut ovat tavallisia. --- Kaikki mit‰ edell‰
+on sanottu ‰‰rettˆmist‰ desimaaliluvuista, on helposti muunnetavissa mainittuja (ja muitakin)
+lukuj‰rjestelmi‰ koskevaksi.
+
+\subsection*{Desimaaliluvun skaalaus}
+\index{skaalaus (desimaaliluvun)|vahv}
+
+Toistaiseksi ‰‰rettˆmille desimaaliluvuille ei m‰‰ritell‰ muita laskuoperaatioita kuin
+\kor{merkin vaihto} ja \kor{skaalaus} = kertominen luvuilla $10^m,\ m\in\Z$. Skaalaus
+luvulla $10^m$ tarkoittaa yksinkertaisesti desimaalipisteen paikan siirt‰mist‰ joko $m$
+desimaalia eteenp‰in ($m>0$) tai $|m|$ numeroa taaksep‰in ($m<0$). J‰lkimm‰isess‰ tapauksessa
+lis‰t‰‰n kokonaislukuosaan tarvittaessa riitt‰v‰ m‰‰r‰ 'etunollia'. Luvulla $10^0=1$ 
+skaalattaessa j‰‰ desimaaliluku ennalleen. Skaalaukselle p‰tev‰t vaihdanta- ja
+liit‰nt‰lait 
+\[
+10^m \cdot (10^n \cdot x) \,=\, 10^{m+n} \cdot x 
+                          \,=\, 10^n \cdot (10^m \cdot x), \quad m,n\in\Z.
+\]
+Kun merkin vaihto tulkitaan samaksi kuin kertominen luvulla $-1$ (kuten kunta-algebrassa),
+niin merkin vaihto ja skaalaus yhdist‰m‰ll‰ tulee m‰‰ritellyksi skaalaus luvuilla
+$\pm 10^m,\ m\in\Z$. 
+\jatko\jatko \begin{Exa} (jatko)
+\begin{align*}
+ 10^{-4} \cdot 141.421356 \ldots\  &=\ 0.0141421356 \ldots \\
+ -10^4 \cdot (-0.00314159 \ldots)\ &=\ 31.4159 \ldots
+\end{align*}
+\end{Exa} \seur
+
+\subsection*{Liukuluvut}
+\index{liukuluku|vahv}%
+
+\kor{Liukuluvuiksi} (engl.\ floating point number, ruots.\ flyttal) sanotaan 
+kymmenj‰rjestelm‰ss‰ ‰‰rellisi‰ desimaalilukuja muotoa
+\[
+\pm 10^{\beta} \cdot 0 . d_1 \ldots d_n,
+\]
+miss‰ $\beta\in\Z$ ja $n\in\N$ on \pain{kiinte‰}. Numeerisessa laskennassa liukulukuja
+k‰ytet‰‰n ‰‰rettˆmien desimaalilukujen \kor{approksimaatioina}, eli likim‰‰r‰isin‰
+vastineina. Approksimointi tapahtuu kirjoittamalla desimaaliluku ensin skaalaustekij‰n
+avulla muotoon $x=\pm 10^\beta \cdot 0.d_1d_2..$, miss‰ $\beta\in\Z$ ja $d_1 \neq 0$
+(mahdollista aina kun $x \neq 0$) ja katkaisemalla n‰in saatu luku desimaaliin $d_n$.
+Sanotaan, ett‰ n‰in saadut numerot $d_1 \ldots d_n$ ovat desimaaliluvun $n$ ensimm‰ist‰ 
+\index{merkitsev‰t numerot}%
+\kor{merkitsev‰‰ numeroa} (engl.\ significant digits), ja ett‰ ko.\ liukuluku
+on desimaaliluvun
+\index{katkaistu desimaaliluku}%
+\kor{katkaistu} (engl.\ truncated) muoto. Katkaisun vaihtoehtona 
+\index{pyzz@pyˆristys (desimaaliluvun)}%
+approksimaatiossa voidaan k‰ytt‰‰ \kor{pyˆristyst‰} (engl. rounding), yleens‰ l‰himp‰‰n
+samaa tyyppi‰ olevaan liukulukuun (nk.\ normaalipyˆristys). Tieto desimaalipisteen paikasta
+suhteessa ensimm‰iseen merkitsev‰‰n numeroon sis‰ltyy lukuun $\beta \in \Z$. Kun ‰‰retˆn
+desimaaliluku ilmoitetaan $n$ \kor{merkitsev‰n numeron tarkkuudella}, tarkoitetaan luvun
+(katkaisutua tai pyˆristetty‰) liukulukuapproksimaatiota.
+\begin{Exa} Yhdeks‰n ($n=9$) merkitsev‰n numeron tarkkuudella on
+\begin{align*}
+0.0001414213562373095   \ldots \quad \approx \quad\, 10^{-3} &\cdot 0.141421356 \\
+-172/3\ = \ -57.333333333 \ldots \quad \approx \quad   -10^2 &\cdot 0.573333333 
+\end{align*} 
+T‰ss‰ katkaisu ja normaalipyˆristys antavat saman tuloksen. \loppu
+\end{Exa}
+
+Tietokoneet ja laskimet operoivat numeerisissa laskuissa aina liukuluvuilla, esim.\ 
+binaarij‰rjestelm‰‰n perustuvilla. T‰llˆin sek‰ merkitsevien numeroiden m‰‰r‰ ett‰ $\beta$:n
+sis‰lt‰mien numeroiden m‰‰r‰ on rajoitettu koneelle ominaisesti. Mahdollisia
+\index{koneluku}%
+\kor{konelukuja} (engl.\ machine numbers) on siten aina ‰‰rellinen m‰‰r‰.
+\begin{Exa} Koneluvut ovat muotoa $\ \pm 2^{\beta} \cdot 0 .\,b_1 \ldots b_{30}$, miss‰ 
+$\beta = \pm \beta_1 \ldots \beta_{10}$, $b_k, \beta_k \in \{\,0,1\,\}$. Yhden luvun 
+tallettamiseen tarvitaan $42$ bitti‰ (numerot ja etumerkit), ja erilaisia lukuja on
+\[
+2^{30} \cdot (2^{11} - 1) + 1\ =\ 2197949513729\ \ \text{kpl.} \quad \quad \loppu
+\]
+\end{Exa}
+
+Tietokoneen/laskimen suorittamia peruslaskuoperaatioita (yhteen-, v‰hennys-, kerto- ja 
+jakolasku) koneluvuilla sanotaan \kor{liukulukuoperaatioiksi} (engl.\ floating point operation,
+lyh.\ flop). N‰m‰ poikkeavat hiukan tavanomaisista laskuoperaatioista, koska tulos on yleens‰
+(etenkin kerto- ja jakolaskuissa) katkaistava tai pyˆristett‰v‰ koneluvuksi. Laskutoimitusten
+\index{pyzz@pyˆristys (desimaaliluvun)!pyˆristysvirhe}%
+likim‰‰r‰isyydest‰ aiheutuvat \kor{pyˆristysvirheet} (engl.\ roundoff errors) voivat vahvistua
+tai kasautua per‰kk‰isiss‰ laskutoimituksissa. Yksitt‰isess‰kin laskutoimituksessa voi tapahtua
+kohtalokas
+\index{merkitsev‰t numerot!merkitsevien numeroiden kato}%
+\kor{merkitsevien numeroiden kato}, kuten seuraava yksinkertainen esimerkki osoittaa.
+\begin{Exa} Olkoon $a$ ja $b$ annettuja lukuja. Halutaan laskea
+\[
+x=\frac{1}{a}\left(1-\frac{1}{1+b}\right).
+\]
+Mik‰ arvo saadaan $x$:lle, jos $a=10^{-20},\ b=2 \cdot 10^{-20}$, ja koneluvut ovat muotoa 
+$\pm 10^{\beta} \cdot 0 . d_1 \ldots d_{15}$ (kymmenj‰rjestelm‰), miss‰ $-99 \le \beta \le 99$\,?
+\end{Exa}
+\ratk Suoraan annettuun lausekkeeseen perustuva algoritmi on:
+\[
+y=1+b,\ \ z=1/y,\ \ u=1-z,\ \ x=u/a.
+\]
+Koska $y$:n tarkka arvo on $\,y = 1.00000000000000000002$,
+niin kone sijoittaa muistipaikkaan '$y$' t‰m‰n luvun katkaistun (tai pyˆristetyn)
+liukulukumuodon $y = 10^1 \cdot 0.100000000000000 = 1$. Laskun muut vaiheet ovat t‰m‰n j‰lkeen
+virheettˆmi‰, ja lopputulokseksi saadaan $x=0$. \loppu
+
+Esimerkiss‰ vaarattoman n‰kˆinen pyˆristys johtaa suureen virheeseen lopputuloksessa. Ongelma 
+poistuu, jos laskut suoritetaan 
+\index{kaksoistarkkuus}%
+\kor{kaksoistarkkuudella} (engl.\ double precision), eli k‰ytt‰m‰ll‰ liukulukuesityst‰, jossa
+talletetaan $15$:n sijasta $30$ merkitsev‰‰ numeroa. T‰llˆin saadaan tulos $x=2$, joka on 
+varsin l‰hell‰ tarkkaa arvoa $x=1.999999999999999999960000000000000000000799999\ldots$
+Kaksoistarkkuuteen (tai useampikertaiseen tarkkuuteen) siirtyminen on yleinen menettely
+pyˆristysvirheiden uhatessa. Toinen vaihtoehto on algoritmin parempi suunnittelu.
+\jatko \begin{Exa} (jatko) Laskettava lauseke yksinkertaistuu kunta-algebran keinoin muotoon
+\[
+x=\frac{b}{a(1+b)}\,.
+\]
+T‰ss‰ approksimaatio $1+b \approx 1$ ei aiheuta merkitt‰v‰‰ virhett‰. \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+a) N‰yt‰, ett‰ jos luvuilla $p,q\in\N$ ei ole yhteisi‰ tekijˆit‰, niin $x=p/q\in\Q$ on 
+‰‰rellinen desimaaliluku t‰sm‰lleen kun on olemassa $\,m,n\in\N\cup\{0\}\,$ siten, ett‰ 
+$q=2^m \cdot 5^n$. \ b) Ilmoita luku $x=(2/5)^{10}$ ‰‰rellisen‰ desimaalilukuna. \ 
+c) Millaisia rationaalilukuja ovat ‰‰rellisten desimaalilukujen vastineet
+lukuj‰rjestelm‰ss‰, jonka kantaluku on $60$\,? \ d) Luvulla $1111111/5400$ on
+$60$-j‰rjestelm‰ss‰ ‰‰rellist‰ desimaalilukua vastaava esitysmuoto. M‰‰rit‰ t‰m‰
+k‰ytt‰m‰ll‰ luvuille $n=0 \ldots 59$ symboleja $(n)$ $60$-j‰rjestelm‰ss‰.
+
+\item \label{H-I-5: monotonisten jonojen yhdistely}
+N‰yt‰, ett‰ jos lukujonot $\seq{a_n}$ ja $\seq{b_n}$ ($n\in\N$) ovat kasvavia, niin \
+\mbox{a) myˆs} lukujono $\seq{a_n+b_n}$ on kasvava, \ b) jos lis‰ksi $a_n \ge 0\ \forall n$ ja
+$b_n \ge 0\ \forall n$, niin lukujono $\seq{a_n b_n}$ on kasvava. \ c) N‰yt‰ esimerkill‰,
+ett‰ jos b)-kohdassa lis‰ehto $b_n \ge 0\ \forall n$ poistetaan, niin lukujono $\seq{a_n b_n}$
+voi olla aidosti v‰henev‰.
+
+\item
+Desimaaliluvuista $x=\seq{x_n}\in\DD$ ja $y=\seq{y_n}\in\DD$ tiedet‰‰n, ett‰
+$x=23.4569 \ldots$ ja $y=23.4567 \ldots$ Kuinka suuri luku $x_n-y_n$ on t‰m‰n tiedon
+perusteella v‰hint‰‰n ja kuinka suuri enint‰‰n, kun $n=10$\,?
+
+\item
+Muotoile ja todista Proposition \ref{desim} vastine ‰‰rettˆmille binaariluvuille.
+
+\item
+Laske jakokulma-algoritmin avulla seuraavien rationaalilukujen vastineet jaksollisina 
+desimaalilukuina:
+\ a) $1/11$, \ b) $31/13$, \ c) $19/17$.
+
+\item
+Jakokulma-algoritmin mukainen luvun $x\in\Q$ vastine ‰‰rettˆm‰n‰ desimaalilukuna olkoon
+jaksollinen siten, ett‰ jakson pituus $=m$ ja jaksollisuus alkaa desimaalista $d_k$. Anna 
+esimerkki luvusta $x=r/s,\ r,s\in\N$, jolle p‰tee \ 
+a) $\,m=1,\ k=5$, \,\ b) $\,m=s-1,\ k=s$, \,\ c) $\,m=s-1,\ k=1$.
+
+\item
+Kymmenj‰rjestelm‰n luku $7/11$ samastuu $2$-kantaisessa lukuj‰rjestelm‰ss‰ ‰‰rettˆm‰‰n 
+binaarilukuun ja $3$-kantaisessa j‰rjestelm‰ss‰ ‰‰rettˆm‰‰n triaarilukuun. M‰‰rit‰ n‰m‰ 
+jakokulma-algoritmilla. \kor{Huomaa}, ett‰ jakoj‰‰nnˆst‰ ei algoritmissa kerrota kymmenell‰ vaan
+kantaluvulla, siis $2$:lla tai $3$:lla. Jatka laskua, kunnes jaksollisuus ilmenee\,!
+
+\item
+Halutaan laskea $y=(x+a)^2-(x+b)^2$ kun $x=1/7,\ a=0.1457 \cdot 10^{-6}$ ja 
+$b=0.6973 \cdot 10^{-6}$. \ a) M‰‰rit‰ $y$ nelj‰n merkitsev‰n numeron tarkkuudella muokkaamalla
+$y$:n lauseke ensin sellaiseen muotoon, ett‰ merkitsevien numeroiden katoa ei tapahdu. \ b) Jos
+k‰ytet‰‰n alkuper‰ist‰ lauseketta, niin mill‰ tarkkuudella laskut on suoritettava, jotta
+p‰‰st‰‰n mainittuun tarkkuuteen lopputuloksessa\,?
+
+\item
+Jos $x=7 \cdot 10^{-8}$, niin monenko merkitsev‰n numeron tarkkuudella on
+\[
+\text{a)} \quad \frac{1}{8+3x} \approx 0.125 \qquad \text{b)} \quad (1+x)^3 \approx 1+3x\ ?
+\]
+
+\item
+Muokkaa seuraavat lausekkeet niin, ett‰ alttius merkitsevien numeroiden kadolle poistuu. Laske
+sitten lausekkeiden arvot kymmenen merkitsev‰n numeron tarkkuudella.
+\begin{align*}
+&\text{a)} \quad 10^{20}\left(\frac{1}{1+x}-\frac{1}{1+2x}\right), \quad 
+                                                 x = \frac{6}{7} \cdot 10^{-20} \\
+&\text{b)} \quad 10^{40}\left(\frac{1}{1+x}-\frac{1}{1-2x}+3x\right), \quad 
+                                                 x = \frac{2}{7} \cdot 10^{-20} \\
+&\text{c)} \quad 10^{60}\left(\frac{1+x}{1-x}-\frac{1-x}{1+x}-4x\right), \quad
+                                                 x = \frac{5}{7} \cdot 10^{-20} \\
+&\text{d)} \quad 10^{80}\left(\frac{1+x}{1-x}+\frac{1-x}{1+x}+\frac{2}{1+2x^2}-4\right), \quad
+                                                 x = \frac{3}{7} \cdot 10^{-20} \\
+&\text{e)} \quad 10^{120}\left(\frac{1+x}{1-x}+\frac{1-x}{1+x}
+                                              -\frac{2}{1-2x^2+2x^4}\right), \quad
+                                                 x = \frac{4}{7} \cdot 10^{-20}
+\end{align*}
+
+\item (*) \index{zzb@\nim!Mummon nelilaskin} 
+(Mummon nelilaskin) Nelilaskin pystyy n‰ytt‰m‰‰n luvun, jossa on kahdeksan numeroa, etumerkki
+ja mahdollinen desimaalipiste numeroiden v‰liss‰, esim.\ $-0.0000999$. Montako erilaista
+rationaalilukua laskin kykenee n‰ytt‰m‰‰n tarkasti?
+
+\item (*) \label{H-I-4.8}
+Olkoon $x=\seq{x_n}\in\DD$ ja $y=\seq{y_n}\in\DD$. N‰yt‰, ett‰ jos $x_k < y_k$ jollakin
+$k\in\N\cup\{0\}$, niin a) $x_n < y_n$ jokaisella $n \ge k$, \ b) $x_n \le y_n$ jokaisella $n$.
+
+\item (*)
+Ikuisesti laskeva tietokone tuottaa bittijonon $\{b_n\}_{n=1}^\infty$ seuraavalla algoritmilla:
+
+1. Asetetaan $A=0$, $B=1$, $n=0$.\newline
+2. Asetetaan 
+\begin{align*}
+&n\leftarrow n+1 \text{ (uusi arvo=vanha arvo}+1\text{)} \\
+&C=\frac{1}{2}(A+B)\quad\text{ja} \\
+&b_n=1\,\ \text{ja}\,\ A=C, \quad \text{jos}\ \ 3 \cdot C \le 1 \\
+&b_n=0\,\ \text{ja}\,\ B=C, \quad \text{jos}\ \ 3 \cdot C > 1
+\end{align*}
+Ilmoitetaan $b_n$ ja palataan kohtaan 2.
+
+a) Millaiset luvut $b_n,$ $n=1\ldots 4,$ kone ilmoittaa? \newline
+b) Jos laskun lopputulos (i‰isen odottelun j‰lkeen) tulkitaan ‰‰rettˆm‰n‰ binaarilukuna 
+$\x=0.b_1b_2\ldots$, niin mink‰ rationaaliluvun $x$ binaariesitys on kyseess‰\,? Perustele\,!
+
+\end{enumerate}

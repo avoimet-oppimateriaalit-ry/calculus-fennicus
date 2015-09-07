@@ -1,0 +1,747 @@
+\section{Osittaisderivaatat} \label{osittaisderivaatat}
+\alku
+\index{osittaisderivaatta|vahv}
+
+Kahden tai useamman muuttujan funktion \kor{osittaisderivaatalla} (engl. partial derivative) 
+tarkoitetaan yksinkertaisesti funktion derivaattaa jonkin muuttujan suhteen muiden muuttujien
+pysyessä vakioina raja-arvoprosessissa. Osittaisderivaatan symboli on $\partial$, joka luetaan
+samoin kuin tavallinen derivaatta eli 'dee' (engl.\ 'partial'). Esimerkiksi kahden muuttujan
+funktion $f(x,y)$ osittaisderivaattoja merkitään
+\begin{align*}
+\frac{\partial f}{\partial x} (x,y) 
+         &= \lim_{\Delta x\kohti 0} \frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}\,, \\
+\frac{\partial f}{\partial y} (x,y) 
+         &= \lim_{\Delta y\kohti 0} \frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}\,.
+\end{align*}
+Vähemmän tilaa vieviä (ja laskentaakin nopeuttavia) merkintätapoja ovat
+\[
+\partial_x f, \ \partial_y f,\quad \text{tai} \quad f_x, \ f_y.
+\]
+Näistä ensimmäinen merkintätapa viittaa siihen tosiasiaan, että kuten tavallinen derivaatta,
+myös osittaisderivaatta on 'funktion funktio' eli operaattori. \mbox{Alaindeksoitu} merkintä on 
+tavallinen etenkin silloin, kun muuttujat ovat fysikaalisia paikka- ja aikamuuttujia.
+
+Osittaisderivaatta käyttäytyy monessa suhteessa kuten tavallinen derivaatta. Se on esimerkiksi
+derivoitavan funktion suhteen \kor{lineaarinen}:
+\index{lineaarisuus!a@derivoinnin}%
+\[
+\partial_x\bigl[\lambda f(x,y)+\mu g(x,y)\bigr]
+              =\lambda\partial_x f(x,y)+\mu\partial_x g(x,y),\quad \lambda,\mu\in\R.
+\]
+Osittaisderivoinnille pätee myös mm.\ tulon derivoimissääntö
+\[
+\frac{\partial}{\partial x} (fg)
+              =\frac{\partial f}{\partial x} g + f\frac{\partial g}{\partial x}\,,
+\]
+sillä tämänkin säännön kannalta kyse on tavallisesta derivoinnista yhden valitun muuttujan 
+suhteen.
+\begin{Exa} \label{osder-esim 1} Funktion
+\[
+f(x,y) = \begin{cases} 
+          \,0, &\text{kun}\ (x,y)=(0,0), \\ \,xy/(x^2+y^2)\,, &\text{muulloin}
+         \end{cases}
+\]
+osittaisderivaatat muualla kuin origossa ovat
+\[
+f_x(x,y) = \frac{y^3-x^2y}{(x^2+y^2)^2}\,, \quad
+f_y(x,y) = \frac{x^3-xy^2}{(x^2+y^2)^2}\,, \quad (x,y)\neq(0,0).
+\]
+Tässä on käytetty tavallisia (yhden muuttujan) rationaalifunktion derivoimissääntöjä. Koska
+$f(x,0)=f(0,y)=0,\ x,y\in\R$, niin $f$:llä on osittaisderivaatat myös origossa:
+\[
+f_x(0,0)=f_y(0,0)=0. \loppu
+\]
+\end{Exa}
+Esimerkin funktio on origossa epäjatkuva (ks.\ edellinen luku, Esimerkki \ref{udif-1: esim 1}).
+--- Siis funktio voi olla epäjatkuva yksittäisessä pisteessä, vaikka
+osittaisderivaatat ovat olemassa kaikkialla. Tämä ero yhden muuttujan funktioihin (joille
+derivaatan olemassaolo pisteessä takaa jatkuvuuden ko.\ pisteessä) selittyy
+sillä, että osittaisderivaattojen raja-arvoissa pistettä lähestytään vain koordinaattiakselien
+suunnissa, kun usean muuttujan jatkuvuuden määritelmässä (ks.\ edellinen luku) mahdollisia
+lähestymissuuntia on äärettömän monta. Usean muuttujan funktion derivoituvuus eli nk.\
+\kor{differentioituvuus} onkin määriteltävä koordinaatistosta riippumattomana
+'joka suuntaan derivoituvuutena', jotta se vastaa yhden muuttujan derivoituvuuden käsitettä.
+Määritelmä asetetaan seuraavassa luvussa.
+
+Funktion osittaisderivaattoja voidaan (funktioina) derivoida edelleen eri muuttujien suhteen,
+jolloin saadaan
+\index{kertaluku!d@osittaisderivaatan}%
+\kor{toisen kertaluvun} osittaisderivaattoja, näitä derivoimalla
+\kor{kolmannen kertaluvun} osittaisderivaattoja, jne. Korkeamman kertaluvun
+osittaisderivaattoja merkitään
+\begin{align*}
+\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right) 
+       &= \frac{\partial^2 f}{\partial x^2}
+        =\partial_x(\partial_x f)=(f_x)_x =f_{xx}, \\[1mm]
+\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) 
+       &= \frac{\partial^2 f}{\partial x\partial y}
+        =\partial_x(\partial_y f)=(f_y)_x =f_{yx}, \\[1mm]
+\frac{\partial}{\partial x}\left(\frac{\partial^2 f}{\partial x\partial y}\right) 
+       &= \frac{\partial^3 f}{\partial x^2\partial y}
+        =\partial_x^2(\partial_y f)=(f_y)_{xx}=f_{yxx}, \\[1mm]
+\frac{\partial^2}{\partial y^2}\left(\frac{\partial^2 f}{\partial x^2}\right) 
+       &= \frac{\partial^4 f}{\partial y^2\partial x^2}
+        =\partial_y^2(\partial_x^2 f)=(f_{xx})_{yy}=f_{xxyy}\,, \quad \text{jne.}
+\end{align*}
+\begin{Exa} \label{osder-esim 2} Funktion $f(x,y)=\ln (x^2+y^2)$ osittaiderivaatat toiseen
+kertalukuun asti pisteissä $(x,y)\neq(0,0)$ (eli $f$:n määrittelyjoukossa) ovat
+\begin{align*}
+f_x    &= \frac{2x}{x^2+y^2}\,,\quad f_y=\frac{2y}{x^2+y^2}\, \\
+f_{xx} &= \frac{2(y^2-x^2)}{(x^2+y^2)^2}\,,\quad f_{yy} = -f_{xx}, \quad
+          f_{xy} = f_{yx}=-\frac{4xy}{(x^2+y^2)^2}\,. \loppu
+\end{align*}
+\end{Exa}
+Esimerkin tuloksessa $\,f_{xy}=f_{yx}\,$ on kyse yleisemmästä osittaisderivoinnin
+\kor{vaihtosäännöstä} \index{vaihtoszyzy@vaihtosääntö!c@osittaisderivoinnin}
+\index{osittaisderivaatta!a@vaihtosääntö}%
+\begin{equation} \label{vaihtosääntö}
+\boxed{\quad\kehys f_{xy}=f_{yx} \quad \text{(vaihtosääntö)}.\quad}
+\end{equation}
+Sääntö on pätevä lievin säännöllisyysehdoin, jotka yleensä voidaan olettaa. Ko.\ ehdot sekä
+säännön perustelu esitetään luvun lopussa (Lause \ref{osittaisderivoinnin vaihtosääntö}).
+Vaihtosäännön mukaan derivointijärjestys on vapaa myös korkeamman kertaluvun
+osittaisderivaatoissa; esim.\ $f_{xxy}=f_{xyx}=f_{yxx}$.
+
+\subsection*{Monen muuttujan osittaisderivaatat}
+\index{osittaisderivaatta!b@monen muuttujan|vahv}
+
+Vaihtosääntö \eqref{vaihtosääntö} pätee myös useamman kuin kahden muuttujan tapauksessa, koska
+kahden muuttujan suhteen derivoitaessa funktio voidaan ajatella vain ko.\ muuttujista
+riippuvaksi. Siis jos funktion $f(x_1,\ldots,x_n)$ osittaiderivaatat
+$\partial f/\partial x_k$ ja $\partial^2 f/(\partial x_k\partial x_l)$ ovat olemassa ja
+jatkuvia, kun $k,l=1 \ldots n,\ k \neq l$, niin
+\[
+\frac{\partial^2 f}{\partial x_k\partial x_l}
+    =\frac{\partial^2 f}{\partial x_l\partial x_k},\quad k,l\in\{1,\ldots,n\},\,\ k \neq l.
+\]
+Koska derivointijärjestys näin muodoin on vapaa (lievin ehdoin, jotka yleensä oletetaan),
+riittää korkeammissa osittaisderivaatoissa vain tietää, kuinka monta kertaa kunkin muuttujan
+suhteen derivoidaan. Yleistä osittaisderivaattaa merkitään tällöin käyttäen nk.\
+\index{indeksi!c@moni-indeksi} \index{moni-indeksi}%
+\kor{moni-indeksiä} (engl.\ multi-index), eli järjestettyä indeksijoukkoa (indeksivektoria)
+muotoa
+\[
+\alpha=(\alpha_1,\ldots,\alpha_n),\quad \alpha_i\in\N\cup\{0\}.
+\]
+Tällöin $\partial^\alpha f$ tarkoittaa osittaisderivaattaa
+\[
+\partial^\alpha f
+=\frac{\partial^{\abs{\alpha}} f}{\partial x_1^{\alpha_1}\cdots\partial x_n^{\alpha_n}}
+=\partial_1^{\alpha_1}\cdots\partial_n^{\alpha_n} f,
+\]
+\index{kertaluku!d@osittaisderivaatan}%
+missä $\partial_i=\partial/\partial x_i$, ja osittaisderivaatan \kor{kertalukua} on merkitty
+\[
+\abs{\alpha}=\sum_{i=1}^n \alpha_i.
+\]
+Jos moni-indeksissä $\alpha$ on $\alpha_k=0$, ei ko.\ muuttujan suhteen derivoida, ts.\
+$\partial_k^0 f=f$.
+\begin{Exa} Jos $x_1=x$ ja $x_2=y$, niin vaihtosääntö huomioiden
+\begin{align*}
+\partial^{(1,1)}f(x,y)    &= \partial_x\partial_y f(x,y) = f_{xy}(x,y), \\
+\partial^{(0,2)}f(x,y)    &= (\partial_y)^2 f(x,y) = f_{yy}(x,y), \\
+\partial^{(2,1)}f(x,y)    &= (\partial_x)^2\partial_y f(x,y) = f_{xxy}(x,y). \loppu
+\end{align*}
+\end{Exa}
+\begin{Exa} Tulon derivoimissääntöä ja lineaarisuussääntöä soveltaen
+\begin{align*}
+\partial^{(1,1)}(fg)(x,y) &= \partial_x\partial_y (fg)(x,y) \\
+                         &= \partial_x\left(f_yg+fg_y\right)(x,y) \\
+                         &= \left(f_{xy}g+f_xg_y+f_yg_x+fg_{xy}\right)(x,y). \loppu
+\end{align*}
+\end{Exa}
+\begin{Exa} \vahv{Neliömuoto}. \label{neliömuoto} \index{neliömuoto}
+Yleinen $\R^n$:n nk. \kor{neliömuoto} (engl. quadratic form) on funktio muotoa
+\[
+f(x_1,\ldots,x_n)=\frac{1}{2}\sum_{i,j=1}^n a_{ij}x_ix_j,\quad a_{ij}\in\R,
+\]
+tai matriisialgebran merkinnöin
+\[
+f(\mx)=\frac{1}{2}\mx^T\mA\mx,\quad \mx=(x_i), \ \mA=(a_{ij}).
+\]
+Tässä voidaan olettaa, että $a_{ij}=a_{ji}$ ($\mA$ symmetrinen), koska $f$ riippuu vain 
+summista $a_{ij}+a_{ji}$ (\,$a_{ij}x_ix_j+a_{ji}x_jx_i=(a_{ij}+a_{ji})x_ix_j$\,). Kun tehdään tämä
+oletus, niin tietystä muuttujasta $x_k$ riippuvat termit erottuvat muodossa
+\[
+f(x_1,\ldots,x_n)=\frac{1}{2}a_{kk}x_k^2+\sum_{j\neq k} a_{kj} x_kx_j+ [\ldots],
+\]
+missä $[\ldots]$ ei sisällä muuttujaa $x_k$. Näin ollen
+\[
+\frac{\partial f}{\partial x_k}=\sum_{j=1}^n a_{kj} x_j = [\mA\mx]_k,\,\ k=1\ldots n
+              \qimpl \left(\frac{\partial f}{\partial x_i}\right) = \mA\mx.
+\]
+Toisen kertaluvun osittaisderivaatat ovat
+\[
+\left(\frac{\partial^2 f}{\partial x_i\partial x_j}\right) = \left(a_{ij}\right) = \mA.
+\]
+Korkeamman kertaluvun osittaisderivaatat häviävät. \loppu
+\end{Exa}
+
+\subsection*{Osittaisdifferentiaalioperaattorit}
+\index{differentiaalioperaattori!c@osittaisderivoinnin|vahv}
+\index{osittaisdifferentiaalioperaattori|vahv}
+
+Kun osittaisderivaatoilla lasketaan, on usein kätevää ajatella symbolit $\partial_x$,
+$\partial_y$, jne.\ derivoinnin yksittäisistä kohteista irrotetuiksi operaattoreiksi.
+Esimerkiksi jos $\partial^\alpha$ ja $\partial^\beta$ ovat $n$ muuttujan
+differentaalioperaattoreita, niin riittävän säännöllisille funktioille $f$ pätee vaihtosäännön
+perusteella
+\[
+\partial^\alpha\left[\partial^\beta f(x)\right] = \partial^\beta\left[\partial^\alpha f(x)\right]
+                                                = \partial^{\alpha+\beta} f(x).
+\]
+(Tässä $\alpha+\beta$ on moni-indeksien summa vektoreina.) Tämän voi ilmaista lyhyemmin
+pelkästään operaattoreita koskevana laskusääntönä
+\[
+\partial^\alpha\partial^\beta=\partial^\beta\partial^\alpha=\partial^{\alpha+\beta}.
+\]
+\index{operaattoritulo} \index{kommutoivat operaattorit}%
+Tällöin $\partial^\alpha\partial^\beta$ tarkoitaa \kor{operaattorituloa} eli kaksivaiheista
+(yhdistettyä) operaatiota $f \map \partial^\beta f \map \partial^\alpha\partial^\beta f$.
+Vaihtosäännön perusteella differentiaalioperaattorit $\partial^\alpha$ ja $\partial^\beta$ siis
+\kor{kommutoivat}, eli pätee vaihdantalaki
+$\partial^\alpha\partial^\beta=\partial^\beta\partial^\alpha$. --- Huomattakoon, että operaattori
+$\partial^\alpha$ on määritelmänsä mukaisesti itsekin $(\abs{\alpha}-1)$-kertainen
+operaattoritulo, jonka tekijöitä ovat yksittäiset differentiaalioperaattorit 
+$\partial_k=\partial/\partial x_k$.
+
+Operaattoritulon (eli yhdistetyn operaattorin) ohella toinen yleinen
+differentiaalioperaattorien yhdistelytapa on
+\index{lineaariyhdistely}%
+\kor{lineaariyhdistely}. Tässä periaate on sama kuin funktioilla yleensä:
+\[
+(\lambda\partial^\alpha+\mu\partial^\beta)f=\lambda\partial^\alpha f+\mu\partial^\beta f,\quad 
+\lambda,\mu\in\R.
+\]
+\begin{Exa}
+Kun määritellään kahden muuttujan funktioille differentiaalioperaattori
+$A=\partial_x+\partial_y$, niin
+\begin{align*}
+A^2 &= (\partial_x+\partial_y)(\partial_x+\partial_y) \\
+    &= \partial_x(\partial_x+\partial_y)+\partial_y(\partial_x+\partial_y) \\
+    &= (\partial_x)^2+\partial_x\partial_y+\partial_y\partial_x + (\partial_y)^2 \\
+    &= (\partial_x)^2+2\partial_x\partial_y + (\partial_y)^2.
+\end{align*}
+Tämän mukaisesti on $\,A^2 f= A(Af)=f_{xx}+2f_{xy}+f_{yy}$. Yleisemminkin $A^k,\ k\in\N$
+purkautuu binomikaavalla, esim.\
+\[
+A^3 f=f_{xxx}+3f_{xxy}+3f_{xyy}+f_{yyy}. \loppu
+\]
+\end{Exa}
+Lineaarisen yhdistelyn kaavassa voivat kertoimet $\lambda,\mu$ olla myös muuttuvia, ts.\
+\index{muuttuvakertoiminen diff.-oper.}%
+funktioita. Muodostettaessa tällaisten \kor{muuttuvakertoimisten} operaattorien tuloja
+derivointi kohdistuu myös kertoimiin, jolloin tulos muuttuu vakiokertoimisesta tapauksesta.
+Operaattorituloja purettaessa tarvitaan tällöin myös tulon derivoimissääntöä.
+\begin{Exa} Määritellään kahden muttujan funktioille differentiaalioperaattorit
+$\ A=x\partial_x+y\partial_y\,$ ja $\,B=y^2\partial_x-x^2\partial_y$. Tällöin
+\begin{align*}
+AB &= (x\partial_x+y\partial_y)(y^2\partial_x-x^2\partial_y) \\
+   &= x\partial_x(y^2\partial_x)-x\partial_x(x^2\partial_y)
+                                +y\partial_y(y^2\partial_x)-y\partial_y(x^2\partial_y) \\
+   &= xy^2(\partial_x)^2-2x^2\partial_y-x^3\partial_x\partial_y+2y^2\partial_x
+                        +y^3\partial_y\partial_x-x^2y(\partial_y)^2 \\
+   &= xy^2(\partial_x)^2-x^2y(\partial_y)^2+(y^3-x^3)\partial_x\partial_y
+                        +2y^2\partial_x-2x^2\partial_y, \\[2mm]
+BA &= AB-y^2\partial_x+x^2\partial_y. \loppu
+\end{align*}
+\end{Exa}
+Esimerkissä differentiaalioperaattorit eivät kommutoi, ts. $AB \neq BA$. Muuttuvakertoimisessa
+tapauksessa tämä on pääsääntö. Vakiokertoimiset operaattorit sen sijaan kommutoivat aina 
+(vaihtosäännön ehdoin).
+
+\subsection*{Ketjusäännöt}
+\index{osittaisderivaatta!c@ketjusäännöt|vahv}
+\index{ketjusääntö (os.-derivoinnin)|vahv}
+
+Jos funktiossa $f(x_1,\ldots,x_n)$ muuttujista $x_i$ tehdään muuttujan $t$ funktioita, ts.\
+$x_i=x_i(t)$, niin saadaan yhdistetty funktio $F(t)=f(x_1(t),\ldots,x_n(t))$. Tälle pätee
+seuraava yhdistetyn funktion derivoimissäännön yleistys, josta käytetään nimeä
+\kor{ketjusääntö} (engl.\ chain rule).
+\begin{equation} \label{ketjusääntö a}
+\boxed{
+\begin{aligned}
+\ykehys &F(t) = f\bigl(x_1(t),\ldots,x_n(t)\bigr) \quad \\
+  \quad &\impl \ F'(t) = \sum_{k=1}^n \frac{\partial f}{\partial x_i}\,x_i'(t) 
+               \quad \text{(ketjusääntö)}. \quad
+\end{aligned}} \tag{2a}
+\end{equation}
+Jos $t$:n tilalla on vektorimuuttuja $(u_1,\ldots,u_m)$, niin ketjusäännön yleisempi muoto on
+\begin{equation} \label{ketjusääntö b}
+\boxed{
+\begin{aligned} \ykehys\quad 
+F(u_1,\ldots,u_m) &= f\bigl(x_1(u_1,\ldots,u_m),\ldots,x_n(u_1,\ldots,u_m)\bigr) \quad \\
+\impl \ \frac{\partial F}{\partial u_k} &= \sum_{i=1}^n \frac{\partial f}{\partial x_i}
+\frac{\partial x_i}{\partial u_k} \quad \text{(yleinen ketjusääntö)}.
+\end{aligned}} \tag{2b}
+\end{equation}
+Lauseessa \ref{ketjusääntö} jäljempänä esitetään riittävät sännöllisyysehdot ketjusäännön
+\eqref{ketjusääntö a} pätevyydelle tapauksessa $n=2$. Vastaavat ehdot ja todistus yleiselle
+säännölle \eqref{ketjusääntö b} ($n,m\in\N$) ovat tästä tapauksesta helposti yleistettävissä.
+\begin{Exa} Funktio $y(x)$ on alkuarvotehtävän 
+\[ \begin{cases} y' = f(x,y), \\ y(0)=1 \end{cases} \]
+ratkaisu. Määritä $y$:n Taylorin polynomi $T_2(x,0)$, kun tiedetään, että $f(0,1)=2$,
+$f_x(0,1)=-2$ ja $f_y(0,1)=4$.
+\end{Exa}
+\ratk Differentiaaliyhtälön ja alkuehdon perusteella on $y'(0)=f(0,y(0))=f(0,1)=2$, jolloin
+differentiaaliyhtälön ja ketjusäännön \eqref{ketjusääntö a} perusteella on edelleen
+\[ 
+y''(x) = \frac{d}{dx} f(x,y(x)) = f_x(x,y(x)) + f_y(x,y(x))y'(x), 
+\]
+joten $y''(0) = -2 + 4 \cdot 2 = 6$. Siis kysytty Taylorin polynomi on
+\[ 
+T_2(x,0) = y(0) + y'(0)\,x + \tfrac{1}{2}\,y''(0)\,x^2 = 1+2x+3x^2. \loppu 
+\]
+
+\subsection*{Implisiittinen (osittais)derivointi}
+\index{osittaisderivaatta!d@implisiittinen osittaisdervointi|vahv}
+\index{implisiittinen osittaisderivointi|vahv}
+
+Eräs ketjusääntöjen \eqref{ketjusääntö a}--\eqref{ketjusääntö b} sovellus on yleinen 
+implisiittisen derivoinnin tai osittaisderivoinnin periaate. Olkoon esimerkiksi $F$ kahden
+muuttujan funktio ja oletetaan, että yhtälö
+\[
+F(x,y)=0
+\]
+määrittelee derivoituvan funktion $y=y(x)$. Silloin on $F(x,y(x))=0$, joten säännön 
+\eqref{ketjusääntö a} perusteella (oletetaan $F$:n riittävä säännöllisyys)
+\[
+0 = \frac{d}{dx} F(x,y(x)) = F_x(x,y(x))+F_y(x,y(x))y'(x).
+\]
+Sikäli kuin $F_y(x,y(x))\neq 0$, voidaan tästä ratkaista $y'(x)\,$:
+\[
+y'(x)=-\frac{F_x(x,y)}{F_y(x,y)}\,, \quad y=y(x).
+\]
+\begin{Exa} Yhtälö
+\[
+F(x,y)=xy^3-e^{-xy^2}+y+\sin(y\cos x)=0
+\]
+määrittelee origon ympäristössä funktion $y(x)$. Jos halutaan laskea $y'(0)$, on ensin
+laskettava $y(0)=y_0$ ratkaisemalla (numeerisin keinoin)
+\[
+y+\sin y=1 \ \impl \ y=y_0.
+\]
+Tämän jälkeen seuraa ketjusäännöstä \eqref{ketjusääntö a}
+\[
+F_x(0,y_0)+F_y(0,y_0)y'(0)=0,
+\]
+missä
+\begin{align*}
+F_x &= y^3+y^2e^{-xy^2}-y\sin x\cos (y\cos x) \\
+F_y &= 3xy^2+2xye^{-xy^2}+1+\cos x\cos (y\cos x) \\
+&\impl \ y'(0)=-\frac{y_0^3+y_0^2}{1+\cos y_0}. \loppu
+\end{align*}
+\end{Exa}
+
+Kun implisiittifunktiossa on useampia muuttujia, voidaan ketjusääntöä \eqref{ketjusääntö b} 
+käyttää \kor{implisiittiseen osittaisderivointiin}. Esimerkiksi jos yhtälö
+\[
+F(x,y,z)=0
+\]
+määrittelee funktion $z=z(x,y)$, niin säännön \eqref{ketjusääntö b} mukaan pätee
+\begin{align*}
+0 &= \partial_x F(x,y,z(z,y))=\frac{\partial F}{\partial x} + \frac{\partial F}{\partial z}
+\frac{\partial z}{\partial x}, \\
+0 &= \partial_y F(x,y,z(z,y))=\frac{\partial F}{\partial y} + \frac{\partial F}{\partial z}
+\frac{\partial z}{\partial y}.
+\end{align*}
+Sikäli kuin on $F_z(x,y,z) \neq 0$, voidaan tästä ratkaista $\partial z/\partial x$ ja
+$\partial z/\partial y$.
+\begin{Exa} Pisteen $(x,y,z)=(1,2,0)$ ympäristössä määritellään
+\[
+z=f(x,y) \ \ekv \ 4x^2-y^2+z^2+e^z=1.
+\]
+Implisiittisesti derivoimalla saadaan
+\[
+8x+(2z+e^z)\frac{\partial z}{\partial x} = 0,\quad 
+-2y+(2z+e^z)\frac{\partial z}{\partial y} = 0.
+\]
+Tässä on $\partial z / \partial x = f_x(x,y)$ ja $\partial z / \partial y = f_y(x,y)$, joten 
+sijoittamalla $x=1$, $y=2$, $z=0$ saadaan
+\[
+f_x(1,2)=-8,\quad f_y(1,2)=4.
+\]
+Derivoimalla edelleen implisiittisesti voidaan laskea $f$:n korkeamman kertaluvun 
+osittaisderivaattoja. Esimerkiksi
+\begin{align*}
+0\,&=\,\partial_y\left(8x+(2z+e^z)\pder{z}{x}\right)\,
+    =\,(2+e^z)\pder{z}{x}\pder{z}{y}+(2z+e^z)\frac{\partial^2 z}{\partial x \partial y} \\
+\impl\ 
+    0\,&=\,3\cdot(-8)\cdot 4 + 1\cdot f_{xy}(1,2)\ \impl\ f_{xy}(1,2)= 96. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Derivointi integraalin alla}
+\index{osittaisderivaatta!e@derivointi integraalin alla|vahv}
+\index{derivointi integraalin alla|vahv}
+
+Halutaan johtaa derivoimissääntö funktiolle $F$, joka on määritelty integraalin avulla muodossa
+\[
+F(x) = \int_a^b f(x,t)\,dt.
+\]
+Koska integraalin lineaarisuuden nojalla pätee
+\[
+\frac{F(x+\Delta x)-F(x)}{\Delta x} = \int_a^b \frac{f(x+\Delta x,t)-f(x,t)}{\Delta x}\,dt,
+\]
+niin näyttäisi, että derivointi on vietävissä integraalin alle osittaisderivoinniksi 
+muutettuna:
+\begin{equation} \label{d-int a}
+\boxed{\quad\kehys F(x) =\int_a^b f(x,t)\,dt\,\ \impl\,\ 
+                   F'(x)=\int_a^b \partial_x f(x,t)\,dt. \quad} \tag{3a}
+\end{equation}
+Useamman muuttujan tapauksessa tämä vastaa sääntöä
+\begin{equation} \label{d-int b}
+\boxed{\quad\kehys \frac{\partial}{\partial x_k}\int_a^b f(x_1,\ldots,x_n,t)\,dt 
+              = \int_a^b \frac{\partial}{\partial x_k}f(x_1,\ldots,x_n,t)\,dt. \quad} \tag{3b}
+\end{equation}
+Säännöt \eqref{d-int a}--\eqref{d-int b} ovat todella voimassa melko yleispätevästi, joten
+niitä voidaan pitää (kuten vaihtosääntöä \eqref{vaihtosääntö}) käytännössä sovellettavina
+pääsääntöinä, joista on vain harvinaisia poikkeuksia 
+(ks.\ Harj.teht.\,\ref{H-udif-1: poikkeus}a). --- Epäselvissä tapauksissa on sääntöjen
+\eqref{d-int a}--\eqref{d-int b} perustelussa viime kädessä nojattava suoraan derivaatan
+määritelmään (ks.\ Harj.teht.\,\ref{H-udif-1: Gamman derivaatta}). Siinä tapauksessa, että
+kyseessä on tavanomainen (Riemannin) integraali välillä $[a,b]$, rittävät takeet säännön
+\eqref{d-int a} pätevyydelle antaa Lause \ref{derivointi integraalin alla} alla.
+\begin{Exa} $\displaystyle{F(x)=\int_1^2 \frac{e^{-xt}}{t}\,dt, \quad F'(0)=\,?}$ 
+\end{Exa}
+\ratk Sääntö \eqref{d-int a} on pätevä (ks.\ Lause \ref{derivointi integraalin alla}), joten
+\[
+F'(0)= \left[\int_1^2 \partial_x\left(\frac{e^{-xt}}{t}\right)\,dt\right]_{x=0} 
+     = \left[\int_1^2(-e^{-xt})\,dt\right]_{x=0} = \int_1^2 (-1)\,dt = -1. \loppu
+\]
+
+\subsection*{Osittaisderivoinnin sääntöjen perustelut}
+
+Seuraavassa perustellaan osittaisderivoinnin vaihtosääntö \eqref{vaihtosääntö}, ketjusääntö
+\eqref{ketjusääntö a} ja derivoinnin ja integroinnin vaihtosääntö \eqref{d-int a}, rajoittuen
+viimeksi mainitussa tapauksessa tavalliseen Riemannin integraaliin välillä $[a,b]$.
+Jatkuvuusoletuksissa viitataan edellisen luvun määritelmiin.
+\begin{Lause} \label{osittaisderivoinnin vaihtosääntö}
+\index{osittaisderivaatta!a@vaihtosääntö|emph}
+\index{vaihtoszyzy@vaihtosääntö!c@osittaisderivoinnin|emph}
+\vahv{(Osittaisderivoinnin vaihtosääntö)} \ Jos kahden muuttujan funktio $f$ on jatkuva ja
+osittaisderivaatat $f_x$ ja $f_y$ olemassa ja jatkuvia pisteen $(x,y)$ ympäristössä
+$U_\delta(x,y)\subset\DF_f$ ja lisäksi osittaisderivaatat $f_{xy}$ ja $f_{yx}$ ovat olemassa
+ko.\ ympäristössä ja jatkuvia pisteessä $(x,y)$, niin $f_{xy}(x,y)=f_{yx}(x,y)$. 
+\end{Lause}
+\tod Tarkastellaan jonoa $\seq{(\Delta x_n,\Delta y_n)}$, jolle pätee
+$(\Delta x_n,\Delta y_n)\kohti(0,0)$ ja
+$\abs{\Delta x_n}^2+\abs{\Delta y_n}^2 < \delta^2\ \forall n$, jolloin
+$(x+\Delta x_n,y+\Delta y_n) \in U_\delta(x,y)\ \forall n$. Tutkitaan lauseketta
+\[
+\delta_n[f]=f(x+\Delta x_n,y+\Delta y_n)-f(x,y+\Delta y_n)-f(x+\Delta x_n,y)+f(x,y).
+\] 
+Ryhmittelemällä tämän lausekkeen termejä eri tavoin, merkitsemällä
+\[
+F_n(t)=f(t,y+\Delta y_n)-f(t,y), \quad G_n(t)=f(x+\Delta x_n,t)-f(x,t)
+\]
+ja käyttämällä Differentiaalilaskun väliarvolausetta
+(ks.\ Harj.teht.\,\ref{H-udif-2: perusteluja}) seuraa
+\begin{align*}
+\delta_n[f]\ &=\ F_n(x+\Delta x_n)-F_n(x) \\
+             &=\ F_n'(\xi_n)\Delta x_n \\
+             &=\ \partial_x [f(t,y+\Delta y_n)-f(t,y)]_{t=\xi_n}\Delta x_n \\
+             &=\ [f_x(\xi_n,y+\Delta y_n)-f_x(\xi_n,y)]\Delta x_n \\
+             &=\ \bigl[\partial_y [f_x(\xi_n,y)]_{y=\eta_n}\Delta y_n\bigr]\Delta x_n \\
+             &=\ f_{xy}(\xi_n,\eta_n)\Delta x_n\Delta y_n, \\[2mm]
+\delta_n[f]\ &=\ G_n(y+\Delta y_n)-G_n(y) \\
+             &=\ G_n'(\eta'_n)\Delta y_n \\
+             &=\ \partial_y [f(x+\Delta x_n,t)-f(x,t)]_{t=\eta'_n}\Delta y_n \\
+             &=\ [f_y(x+\Delta x_n,\eta'_n)-f_y(x,\eta'_n)]\Delta y_n \\
+             &=\ \bigl[\partial_x [f_y(x,\eta'_n)]_{x=\xi'_n}\Delta x_n\bigr]\Delta y_n \\
+             &=\ f_{yx}(\xi'_n,\eta'_n)\Delta x_n\Delta y_n.
+\end{align*}
+Tässä on $|\xi_n-x|,|\xi'_n-x|\le|\Delta x_n|$ ja $|\eta_n-y|,|\eta'_n-y|\le|\Delta y_n|$
+(Harj.teht.\,\ref{H-udif-2: perusteluja}), joten $(\xi_n,\eta_n)\kohti(x,y)$ ja
+$(\xi'_n,\eta'_n)\kohti(x,y)$, koska $(\Delta x_n,\Delta y_n)\kohti(0,0)$. Näin ollen ja koska
+$f_{xy}$ ja $f_{yx}$ ovat oletuksen mukaan jatkuvia pisteessä $(x,y)$, niin seuraa
+\[
+f_{xy}(\xi_n,\eta_n) \kohti f_{xy}(x,y) \quad \text{ja} \quad
+f_{yx}(\xi'_n,\eta'_n) \kohti f_{yx}(x,y), \quad \text{kun}\ n\kohti\infty.
+\]
+Mutta em.\ tulosten mukaan on tässä $f_{xy}(\xi_n,\eta_n)=f_{yx}(\xi'_n,\eta'_n)\ \forall n$,
+joten on oltava myös $f_{xy}(x,y)=f_{yx}(x,y)$. \loppu
+
+\begin{Lause} \label{ketjusääntö} \index{osittaisderivaatta!c@ketjusäännöt|emph}
+\index{ketjusääntö (os.-derivoinnin)|emph}
+\vahv{(Ketjusääntö)} Jos yhdistetyssä funktiossa
+$\,F(t)=f(x(t),y(t))\,$ $f(x,y)$ on jatkuva pisteen $(x(t),y(t))$ ympäristössä
+$U_\delta(x(t),y(t))$, osittaisderivaatat $f_x$ ja $f_y$ ovat olemassa ko.\ ympäristössä ja
+jatkuvia pisteessä $(x(t),y(t))$, ja derivaatat $x'(t)$ ja $y'(t)$ ovat olemassa, niin pätee
+derivoimissääntö
+\[
+F'(t)=f_x(x(t),y(t))x'(t)+f_y(x(t),y(t))y'(t).
+\]
+\end{Lause}
+\tod Olkoon $\eps>0$ riittävän pieni (tarkempi ehto hetimiten) ja tarkastellaan jonoa
+$\seq{\Delta t_n}$, jolle pätee $0<|\Delta t_n|<\eps\ \forall n$ ja
+$\Delta t_n \kohti 0\ (n\kohti\infty)$. Kirjoitetaan $x(t)=x$, $y(t)=y$ ja
+$x(t+\Delta t_n)=x+\Delta x_n$, $y(t+\Delta t_n)=y+\Delta y_n$, $n=1,2,\ldots$
+Koska $x'(t)$ ja $y'(t)$ ovat olemassa, niin
+\[
+\Delta x_n = x'(t)\Delta t_n+\ord{|\Delta t_n|}, \quad
+\Delta y_n = y'(t)\Delta t_n+\ord{|\Delta t_n|}.
+\]
+Näin ollen $\eps>0$ voidaan valita niin, että toteutuu $(\Delta x_n)^2+(\Delta y_n)^2<\delta^2$
+$\forall n$ kun $|\Delta t_n|<\eps\ \forall n$, jolloin
+$(x+\Delta x_n,y+\Delta y_n) \in U_\delta(x,y)\ \forall n$. Olettaen näin pätee
+Differentiaalilaskun väliarvolauseen perusteella
+\begin{align*}
+F(t+\Delta t_n)&-F(t) = f(x+\Delta x_n,y+\Delta y_n)-f(x,y) \\
+        &= [f(x+\Delta x_n,y+\Delta y_n)-f(x,y+\Delta y_n)]+[f(x,y+\Delta y_n)-f(x,y)] \\
+        &= f_x(\xi_n,y+\Delta y_n)\Delta x_n+f_y(x,\eta_n)\Delta y_n,
+\end{align*}
+missä $\xi_n\in[x,x+\Delta x_n]$ tai $\xi_n\in[x+\Delta x_n,x]$ ja vastaavasti
+$\eta_n\in[y,y+\Delta y_n]$ tai $\eta_n\in[y+\Delta y_n,y]$. (Jos $\Delta x_n=0$, asetetaan
+$\xi_n=x$, vast.\ $\eta_n=y$ jos $\Delta y_n=0$.) Jakamalla puolittain $\Delta t_n$:llä
+seuraa $\Delta x_n/\Delta t_n \kohti x'(t)$ ja $\Delta y_n/\Delta t_n \kohti y'(t)$, kun
+$n\kohti\infty$, ja jatkuvuusoletuksien nojalla $f_x(\xi_n,y+\Delta y_n) \kohti f_x(x,y)$ ja
+$f_y(x,\eta_n) \kohti f_y(x,y)$. Näin ollen raja-arvo
+$\lim_{\Delta t \kohti 0}[F(t+\Delta t)-F(t)]/\Delta t = F'(t)$ on olemassa ja väitetty
+derivoimissääntö on pätevä. \loppu
+
+Seuraavan lauseen jatkuvuusoletuksissa viittataan Määritelmään
+\ref{jatkuvuus kompaktissa joukossa - Rn}. Todistus nojaa jatkuvuuden syvällisempään
+logiikkaan (tasaiseen jatkuvuuteen, vrt.\ Luku \ref{jatkuvuuden logiikka}). Esitetään
+todistuksesta vain helpotettu versio, joka perustuu hieman vahvennettuihin oletuksiin.
+\begin{*Lause} \label{derivointi integraalin alla} \index{derivointi integraalin alla|emph}
+\index{osittaisderivaatta!e@derivointi integraalin alla|emph}
+(\vahv{Derivointi integraalin alla}) Jos
+$f(x,t)$ on jatkuva ja $\partial_x f=f_x(x,t)$  olemassa ja jatkuva suorakulmiossa
+$K_\delta=[c-\delta,c+\delta]\times[a,b]$ jollakin $\delta>0$,
+niin derivoimissääntö \eqref{d-int a} on pätevä, kun $x=c$.
+\end{*Lause}
+\tod (helpotettu) Oletetaan lisäksi, että $f_x$ toteuttaa Lipschitz-ehdon
+\begin{equation} \label{dint-a: L-ehto}
+|f_x(x_1,t)-f_x(x_2,t)| \le L|x_1-x_2| \quad 
+                        \forall\,(x_1,t),\,(x_2,t) \in K_\delta. \tag{$\star$}
+\end{equation}
+Jos $0<\abs{\Delta x}\le\delta$, niin oletusten ($f$ jatkuva, $f_x$ olemassa) ja
+Differentiaalilaskun väliarvolauseen nojalla
+\begin{multline*}
+f(c+\Delta x,t)-f(c,t)-f_x(c,t)\Delta x\ =\ [f_x(\xi,t)-f_x(c,t)]\Delta x, \\[1mm]
+        \text{missä}\,\ \xi\in(c-\abs{\Delta x},\,c+\abs{\Delta x})\subset(c-\delta,c+\delta).
+\end{multline*}
+Tämän ja Lipschitz-ehdon \eqref{dint-a: L-ehto} perusteella voidaan arvioida
+\[
+\left|\frac{f(c+\Delta x,t)-f(c,t)}{\Delta x}-f_x(c,t)\right| 
+                \le L\abs{\xi-c} \le L\abs{\Delta x}, \quad t\in[a,b].
+\]
+Näin ollen, ja koska $f(c+\Delta x,t)$, $f(c,t)$ ja $f_x(c,t)$ ovat ($t$:n suhteen) 
+Riemann-integroituvia välillä $[a,b]$ oletusten ja Analyysin peruslauseen nojalla, päätellään
+\begin{align*}
+&\int_a^b \frac{f(c+\Delta x,t)-f(c,t)}{\Delta x}\,dt 
+              = \int_a^b f_x(c,t)\,dt + \ordoO{\abs{\Delta x}} \\
+&\qimpl F'(c) = \lim_{\Delta x \kohti 0} \int_a^b \frac{f(c+\Delta x,t)-f(c,t)}{\Delta x}\,dt 
+              = \int_a^b f_x(c,t)\,dt. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske osittaisderivaatat kaikkien muuttujien suhteen:
+\begin{align*}\ \
+&\text{a)}\ \ xy^3+x\sin(xy) \qquad
+ \text{b)}\ \ \ln\sin(x-2y) \qquad
+ \text{c)}\ \ \Arcsin\frac{y}{x} \\
+&\text{d)}\ \ x^y \qquad
+ \text{e)}\ \ \log_y x \qquad
+ \text{f)}\ \ z^{xy} \qquad
+ \text{g)}\ \ z^{x^y} \qquad
+ \text{h)}\ \ e^{xy(s^2+st)}
+\end{align*}
+
+\item
+Missä pisteissä seuraavilla funktioilla on molemmat osittaisderivaatat?
+\[
+\text{a)}\ \ \sqrt{x^2+y^2} \qquad
+\text{b)}\ \ (x+y)\abs{x+y} \qquad
+\text{c)}\ \ \sqrt{|x^2-y^2|}
+\]
+
+\item
+Laske \vspace{1mm}\newline
+a) \ $(3\partial_x-2\partial_y)^2 (x^2+xy), \quad (x,y)=(0,0)$ \vspace{1mm}\newline
+b) \ $(\partial_x+\partial_y)(\partial_y+\partial_z)\,xy^2z^3, \quad 
+                                                   (x,y,z)=(1,1,1)$ \vspace{1mm}\newline
+c) \ $\partial_x xy \partial_y xy^2, \quad (x,y)=(2,1)$ \vspace{1mm}\newline
+d) \ $(x\partial_y-y\partial_x)^2 (xy-y^2), \quad (x,y)=(1,1)$ \vspace{1mm}\newline
+e) \ $(\partial_1+\ldots+\partial_n)(x_1^2+\ldots+x_n^2), \quad 
+                                   (x_1,\ldots,x_n)=(1,2,\ldots,n)$ \vspace{1mm}\newline
+f) \ $\partial_1\cdots\partial_n \ln(x_1^2+\ldots+x_n^2), \quad 
+                                    (x_1,\ldots,x_n)=(1,1,\ldots,1)$
+
+\item
+Laske funktion $f$ osittaisderivaatat annetussa pisteessä $P$. Jos on annettu $m$, laske myös
+korkeamman kertaluvun osittaisderivaatat kertalukuun $m$ asti. Kohdissa j)--m) käytä
+implisiittistä osittaisderivointia. \vspace{1mm}\newline
+a) \ $f(x,y)=x-y+2,\,\ P=(3,2),\,\ m=2$ \vspace{1mm}\newline
+b) \ $f(x,y)=xy+x^2,\,\ P=(2,0),\,\ m=2$ \vspace{1mm}\newline
+c) \ $f(x,y)=\Arctan(y/x),\,\ P=(-1,1)$ \vspace{1.2mm}\newline
+d) \ $f(x,y)=\sin(x\sqrt{y}),\,\ P=(\pi/3,4)$ \vspace{1mm}\newline
+e) \ $f(x,y)=1/\sqrt{x^2+y^2},\,\ P=(-3,4)$ \vspace{1.1mm}\newline
+f) \ $f(x,y,z)=xyz,\,\ P=(1,-1,2),\,\ m=3$ \vspace{1mm}\newline
+g) \ $f(x,y,z)=\ln(1+e^{xyz}),\,\ P=(2,0,-1)$ \vspace{1mm}\newline
+h) \ $f(x,y,z)=x^{y\ln z},\,\ P=(e,2,e)$ \vspace{1mm}\newline
+i) \ $\,f(x_1,x_2,x_3,x_4)=(x_1-x_2^2)/(x_3+x_4^2),\,\ P=(3,1,-1,-2)$ \vspace{1mm}\newline
+j) \ $\,z=f(x,y): \ x^2-2y^2-3yz^3-z=0,\,\ P:\ x=2,\ y=z=-1$ \vspace{1mm}\newline
+k) \ $z=f(x,y): \ \cos xyz=\sin(x-y+2z),\,\ P:\ x=y=1,\ z=\pi/2$ \vspace{1mm}\newline
+l) \ $\,z=f(x,y): \ 2xz^3-xyz=1,\,\ P:\ x=y=z=1,\,\ m=2$ \vspace{1mm}\newline
+m) \ $u=f(x,y,z): \ xyzu+xyu^2+xu^3=1,\,\ P:\ x=u=1,\ z=y=-1$
+
+\item
+Laske funktion $f(x,y)$ osittaisderivaattojen avulla lausekkeet $A^2f$, $B^2f$ ja 
+$(AB-BA)f$, kun
+\begin{align*}
+&\text{a)}\ \ A=\partial_x+\partial_y\,,\,\ B=\partial_x-\partial_y \quad\ 
+ \text{b)}\ \ A=2\partial_x+\partial_y\,,\,\ B=\partial_x+3\partial_y \\
+&\text{c)}\ \ A=y\partial_x\,,\,\ B=x\partial_y \qquad\qquad\ \
+ \text{d)}\ \ A=x\partial_x+y\partial_y\,,\,\ B=y\partial_x-x\partial_y
+\end{align*}
+
+\item
+Näytä, että pätee:
+\begin{align*}
+&\text{a)}\ \ \left[(\partial_x)^2+(\partial_y)^2\right] \ln(x^2+y^2)=0, \quad (x,y)\neq(0,0) \\
+&\text{b)}\ \ \left[(\partial_x)^2+(\partial_y)^2+(\partial_z)^2\right] 
+                                     \dfrac{1}{\sqrt{x^2+y^2+z^2}}=0, \quad (x,y,z)\neq(0,0,0)
+\end{align*}
+
+\item
+Laske sekä suoraan että ketjusäännön avulla: \vspace{1mm}\newline
+a) \ $\partial u/\partial t$, kun $u=\sqrt{x^2+y^2}\,,\ x=e^{st},\ y=1+s^2\cos t$ \newline
+b) \ $\partial z/\partial x$, kun $z=\Arctan(u/v),\ u=2x+y,\ v=2x-y$ \newline
+c) \ $d z/d t$, kun $z=txy^2,\ x=t+\ln(y+t^2),\ y=e^t$
+
+\item
+Oletetaan, että tunnetaan funktion $f(x,y)$ osittaisderivaattojen lausekkeet $f_x(x,y)$,
+$f_y(x,y)$, $f_{xx}(x,y)$, jne. Laske näiden avulla:
+\begin{align*}
+&\text{a)}\ \ \frac{\partial}{\partial x} f(2x,3y) \qquad
+ \text{b)}\ \ \frac{\partial}{\partial x} f(2y,3x) \qquad
+ \text{c)}\ \ \frac{\partial}{\partial y} f(yf(x,t),f(y,t)) \\
+&\text{d)}\ \ \frac{\partial^2}{\partial s\partial t} f(t\sin s,t\cos s) \qquad
+ \text{e)}\ \ \frac{\partial^3}{\partial t^2\partial s} f(s^2-t,s+t^2)
+\end{align*}
+
+\item
+Funktiosta $y(x)$ tiedetään, että $y$ toteuttaa välillä $(-a,a)$ differentiaaliyhtälön
+$y'=f(x,y)$ ja että $y(0)=0$. Funktiosta $f(x,y)$ tiedetään, että $f$ on origon ympäristössä
+säännöllinen ja $f(0,0) = 1$, $f_x(0,0) = -1$, $f_y(0,0) = 2$, $f_{xx}(0,0) = 4$,
+$f_{xy}(0,0) = -2$, $f_{yy}(0,0) = -6$. Määritä funktion $y(x)$ kolmannen asteen Taylorin
+polynomi $T_3(x,0)$.
+
+\item \index{eksakti differentiaaliyhtälö}
+Sanotaan, että differentiaaliyhtälö $f(x,y)+g(x,y)y'=0$ on \kor{eksakti}, jos $f(x,y)=F_x(x,y)$
+ja $g(x,y)=F_y(x,y)$ jollakin $F$. Päättele, että eksaktin differentiaaliyhtälön yleinen
+ratkaisu on $F(x,y)=C$. Sovella ratkaisuideaa:
+
+a) \ $e^{x^2}(y'+2xy)=0 \qquad\qquad\ $
+b) \ $3x^2+6xy^2+(6x^2y+4y^3)y'=0$ \newline
+c) \ $ e^{-y}+(1-xe^{-y})y'=0 \qquad$
+d) \ $2x(x+\cos^2y)+(2y-x^2\sin 2y)y'=0$
+
+\item
+Laske $f'(0)$:
+\begin{align*}
+&\text{a)}\ \ f(x)=\int_0^1 \frac{e^{xt}}{1+t^2}\,dt \qquad\qquad
+ \text{b)}\ \ f(x)=\int_1^2 \ln t\,e^{-xt^2}\,dt \\
+&\text{c)}\ \ f(x)=\int_0^\pi \sin xt\cos t\,dt \qquad\
+ \text{d)}\ \ f(x)=\int_0^1 \ln(1+xt+t^2)e^{-xt}\,dt
+\end{align*}
+
+\item
+Funktio $f$ määritellään origon ymäristössä kaavalla
+\[
+f(x,y)=\int_0^1 \frac{\sin xt\cos yt}{1+x+y+t}\,dt.
+\]
+Laske $f$:n osittaisderivaatat toiseen kertalukuun asti origossa.
+
+\item \label{H-udif-1: poikkeus}
+a) Olkoon $F(x)=\int_0^\infty x^3 e^{-x^2 t}\,dt,\ x\in\R$. Näytä, että $F$ on kaikkialla 
+derivoituva, mutta $F'(0)$ ei ole laskettavissa derivoimalla integraalin alla. \newline
+b) Totea, että derivoimissäännön \eqref{d-int a} mukaan
+\[
+\frac{d}{dx} \int_1^\infty \frac{e^{-xt}}{t}\,dt = -\frac{e^{-x}}{x}\,, \quad x>0.
+\]
+Varmista tulos vaihtamalla integroimismuuttujaksi $s=xt$.
+
+\item
+Laske seuraavat integraalit derivoimalla annettua funktiota $F(x),\ x>0$.
+\begin{align*}
+&\text{a)}\ \ I_n=\int_0^\infty t^n e^{-t}\,dt, \quad n\in\N, \quad 
+                    F(x)=\int_0^\infty e^{-xt}\,dt \\
+&\text{b)}\ \ I_n=\int_0^\infty \frac{1}{(t^2+1)^n}\,dt, \quad n=2,3,4, \quad
+                    F(x)=\int_0^\infty \frac{1}{t^2+x^2}\,dt \\
+&\text{c)}\ \ I_n(x)=\int_0^1 t^{x-1}(\ln t)^n\,dt,\quad n\in\N,\quad F(x)=\int_0^1 t^{x-1}\,dt
+\end{align*}
+
+\item \label{H-udif-2: perusteluja}
+Mihin (yhden muuttujan) funktioihin Lauseen \ref{osittaisderivoinnin vaihtosääntö}
+todistuksessa sovelletaan Differentiaalilaskun väliarvolausetta ja millä väleillä? --- Tarkista
+väliarvolauseen soveltuvuus lauseen oletusten perusteella, ja tarkista myös päättelyn toimivuus
+siinä tapauksessa, että $\Delta x_n=0$ tai $\Delta y_n=0$.
+
+\item(*)
+Tutki, mitkä Lauseen \ref{osittaisderivoinnin vaihtosääntö} oletuksista ovat voimassa, kun
+$(x,y)=(0,0)$ ja
+\[
+f(x,y) = \begin{cases}
+         0, &\text{kun}\ (x,y)=(0,0) \\[2mm] \dfrac{x^3y-xy^3}{x^2+y^2}\,, &\text{muulloin}
+         \end{cases}
+\]
+Päteekö vaihtosääntö?  
+
+\item (*) 
+Näytä, että jos funktio $f(x,y)$ ja osittaisderivaatat $f_x$ ja $f_y$ ovat jatkuvia avoimessa
+suorakulmiossa $A=(a,b)\times(c,d)$ ja $f_{xx}=f_{xy}=f_{yx}=f_{yy}=0$ $A$:ssa, niin
+$f(x,y)=a+bx+cy,\ (x,y) \in A$ jollakin $(a,b,c)\in\R^3$ (eli $f$ on ensimmäisen asteen
+polynomi).
+
+\item (*)
+Lentokone lentää ylöspäin pitkin avaruuskäyrää 
+\[
+S:\ y=x^2,\ z=\frac{1}{3}(2x+y^2),
+\]
+missä $z>0$ on korkeus maan pinnasta (yksiköt km). Ilman lämpötila lentoradan lähellä on
+(yksikkö $^\circ$C)
+\[
+T(x,y,z)=-10(z^2-z+1)+(2x^2+3y)/(1+z^2).
+\]
+Ulkoilman lämpötilaa mitataan myös koneessa --- olkoon mittaustulos $T(t)$ hetkellä $t$ (min).
+Eräällä hetkellä kone on pisteessä $(1,1,1)$ ja sen vauhti on $6$ km/min. Mikä on kyseisellä
+hetkellä mittarilukemasta $T(t)$ laskettu ulkolämpötilan hetkellinen muuttumisnopeus $T'(t)$
+(yksikkö $^\circ$C/min)?
+
+\item (*)
+Olkoon
+\[
+F(x,y)=\int_0^\infty \frac{e^{-xt}-e^{-yt}}{t}\,dt, \quad x>0,\ y>0.
+\]
+Laskemalla $\partial F/\partial x$ ja $\partial F/\partial y$ näytä, että $F(x,y)=\ln(y/x)$.
+
+\item (*)
+Laske $y(0)$ ja $y'(0)$, kun $y(x)$ määritellään pisteen $x=0$ ympäristössä kaavalla
+\[
+\int_0^1 \frac{e^{xyt}}{x+y+t}\,dt = \ln 2.
+\]
+
+\item (*) \label{H-udif-1: Gamman derivaatta}
+Totea, että laskusäännön \eqref{d-int a} mukaan $\Gamma$-funktion
+$\Gamma(x) =\int_0^\infty t^{x-1}e^{-t}\,dt$ derivaatta on
+\[
+\Gamma'(x)=\int_0^\infty t^{x-1}\ln t\,e^{-t}\,dt, \quad x>0.
+\]
+Varmista tämä derivoimissääntö suoraan derivaatan määritelmästä näyttämällä, että on olemassa
+vain $x$:stä riippuva vakio $C(x)$ siten, että pätee
+\[
+\left|\,\frac{\Gamma(x+\Delta x)-\Gamma(x)}{\Delta x}
+    -\int_0^\infty t^{x-1}\ln t\,e^{-t}\,dt\right|\,\le\,C(x)|\Delta x|,
+\]           
+kun $\,x>0\,$ ja $\,|\Delta x| \le x/2$. \kor{Vihje}: Todista ensin aputulos:
+\[
+\abs{e^x-1-x} \le \frac{1}{2}\,x^2 e^{\abs{x}}, \quad x\in\R.
+\]
+
+\end{enumerate}

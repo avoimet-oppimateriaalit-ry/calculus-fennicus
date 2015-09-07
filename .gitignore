@@ -1,0 +1,8 @@
+*.aux
+*.dvi
+*.idx
+*.ind
+*.log
+*.ps
+*.toc
+.DS_Store

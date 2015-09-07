@@ -1,0 +1,537 @@
+\section{Käyräviivaiset koordinaatistot} \label{koordinaatistot}
+\alku
+\index{koordinaatisto!c@käyräviivainen|vahv}
+\index{kzyyrzy@käyräviivaiset koordinaatistot|vahv}
+
+Euklidinen taso ja avaruus ovat matemaattisina käsitteinä aineettomia tai \kor{iso\-trooppisia} 
+siinä mielessä, että mikään piste tai suunta ei niissä ole erikoisasemassa. Erityisesti voidaan
+karteesisen koordinaatiston origo, ja myös koordinaattiakselien suunnat 
+ortogonaalisuusehtojen puitteissa, valita mielivaltaisesti, ilman että avaruuden geometriset 
+lait siitä muuttuisivat. Sovellettaessa geometrista ajattelua fysikaaliseen maailmaan törmätään
+kuitenkin siihen realiteettiin, että maailmassa yleensä on materiaa, joka ei jakaudu tasaisesti.
+Voi esimerkiksi esiintyä eri materiaalien välisiä rajapintoja. Fysikaalinen ongelma voi olla
+ei-isotrooppinen myös siinä vaikuttavien ulkoisten voimien (kuten gravitaation) vuoksi. 
+Tällaisissakin tilanteissa ongelmassa voi kuitenkin olla \kor{symmetrioita}, millä tarkoitetaan,
+että vaikka koko avaruus ei ole isotrooppinen, niin fysikaalisen ongelman geometria kuitenkin on
+johonkin suuntaan tai joihinkin suuntiin liikuttaessa sama. Esimerkiksi 'pannukakkumaailmassa',
+jossa puoliavaruus
+\[
+\mathit{E}_-^{\mathit{3}} = \{P=(x,y,z) \in \Ekolme \ | \ z \leq 0 \}
+\]
+on homogeenisen materian täyttämä ja muu osa avaruudesta on tyhjää (tai homogeenista toista 
+ainetta), geometria säilyy samana liikuttaessa tasoilla, joilla $z=$ vakio. Toisin sanoen: 
+geometria on koordinaateista $x,y$ riippumaton. Tässä on kyseessä \kor{tasosymmetrinen} tilanne.
+Hieman realistisemmassa (vaikka edelleen maakeskisessä) 'pallomaailmassa', jossa materian 
+täyttämää palloa ympäröi homogeeninen avaruus, geometria on puolestaan \kor{pallosymmetrinen}.
+Lopulta 'tekniikan maailmassa', jossa avaruuden homogeenisuuden rikkoo yksinäinen, 
+poikkipinnaltaan pyöreä kappale (maitohinkki, putki, koaksiaalikaapeli ym.) tilanne on 
+\kor{lieriösymmetrinen}.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-19.pstex_t}
+\end{center}
+\end{figure}
+Lieriösymmetrian vastine $\Ekaksi$:ssa on \kor{ympyräsymmetria} (pyörähdyssymmetria).
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-20.pstex_t}
+\end{center}
+\end{figure}
+Em.\ tasosymmetrisessä tilanteessa on karteesinen koordinaatisto probleeman 
+geometriaan sopiva, kunhan yksi kantavektoreista (esim.\ $\vec k$) valitaan symmetriatason
+normaaliksi. Muissa esimerkkitilanteissa sen sijaan tulee kyseeseen siirtyminen sellaiseen 
+\kor{käyräviivaiseen} (engl. curvilinear) koordinaatistoon, jossa jokin koordinaateista on vakio 
+materiaalirajapinnalla. Koordinaatistoa sanotaan käyräviivaiseksi, jos
+\index{koordinaattiakseli!a@--viiva}%
+\kor{koordinaattiviivat},
+eli $\Ekaksi$:n tai $\Ekolme$:n pistejoukot, joilla vain yksi koordinaateista on muuttuva, eivät
+kaikki ole suoria. Seuraavassa esitellään fysiikan kolme tavallisinta käyräviivaista 
+koordinaatistoa, jotka liittyvät em. esimerkkitilanteisiin. Nämä ovat:
+\index{polaarikoordinaatisto|see{napak.}}%
+\index{sylinterikoordinaatisto|see{lieriök.}}%
+\begin{itemize}
+\item  \kor{napa}- eli \kor{polaarikoordinaatisto} ($\Ekaksi$)
+\item  \kor{lieriö}- eli \kor{sylinterikoordinaatisto} ($\Ekolme$)
+\item  \kor{pallokoordinaatisto} ($\Ekolme$)
+\end{itemize}
+Tällaisia koordinaatistoja sovellettaessa (niinkuin yleensäkin matematiikkaa sovellettaessa) 
+tehdään yleensä käytännön ongelmatilannetta koskevia yksinkertaistavia olettamuksia eli 
+idealisaatioita -- joskus voimakkaita.
+
+\subsection*{Napakoordinaatisto}
+\index{napakoordinaatisto|vahv}
+
+Napakoordinaatistossa euklidisen tason pisteen $P$ koordinaatit ilmoitetaan origon ($O$) ja 
+$P$:n välisellä etäisyydellä $r$ ja nk. 
+\index{napakulma}%
+\kor{napakulmalla} $\varphi$, joka mittaa vektorin $\overrightarrow{OP}$ ja positiivisen
+$x$-akselin (karteesinen koordinaatisto) välistä kulmaa, positiivisena $x$-akselista lähtien
+vastapäivään ja negatiivisena myötäpäivään. Kaikki tason pisteet saadaan, kun napakulma
+valitaan esim.\ väliltä $[0,2\pi)$ tai $(-\pi,\pi]$. Koska origossa napakulma $\varphi$ ei ole
+määritelty, niin sovitaan, että $O=(0,\varphi)\ \forall\varphi$.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-21.pstex_t}
+\end{center}
+\end{figure}
+Muunnoskaavat napakoordinaatistosta karteesiseen ovat
+\[
+\boxed{\kehys\quad x=r\cos{\varphi}, \quad y=r\sin{\varphi} \quad}
+\]
+ja päinvastaiseen suuntaan esimerkiksi
+\[
+\boxed{\kehys\quad r=\sqrt{x^2 + y^2}\,, \quad \sin{\varphi}=y/\sqrt{x^2 + y^2}. \quad}
+\]
+Tässä on $\varphi$:n määräämiseksi osattava 'kääntää' trigonometrinen sini. Kun huomioidaan myös
+$x$:n ja $y$:n etumerkit, niin kulma $\varphi$ määräytyy yksikäsitteisesti esim.\ välillä 
+$[0,2\pi)$, kun $r>0$. 
+\begin{Exa}
+Millainen pistejoukko on
+\[
+S=\{P=(r,\varphi) \in \Ekaksi \mid r=2\cos\varphi, \ 
+                   \varphi\in[-\tfrac{\pi}{2}\,,\tfrac{\pi}{2}]\}\,?
+\]
+\end{Exa}
+\ratk Jos $r > 0$, niin
+\begin{align*}
+r=2\cos{\varphi} \ &\ekv \ r^2=2r\cos{\varphi} \\
+&\ekv x^2+y^2=2x \\
+&\ekv (x-1)^2+y^2=1.
+\end{align*}
+Myös origo on käyrässä mukana $(r=0, \ \varphi=\pm\frac{\pi}{2})$, joten kyseessä on ympyrä,
+jonka säde $=1$ ja keskipiste $=(1,0)$. \loppu
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-22.pstex_t}
+\end{center}
+\end{figure}
+
+\begin{multicols}{2} \raggedcolumns
+Napakoordinaatistossa koordinaattiviivat, joilla $r=\text{vakio}$, ovat origokeskisiä ympyröitä
+ja viivat, joilla $\varphi=\text{vakio}$, ovat origosta lähteviä puolisuoria. Koska nämä 
+leikkaavat toisensa kohtisuorasti (ks.\ kuvio), niin voidaan sanoa, että polaarikoordinaatisto
+on \kor{suorakulmainen}, vaikkakaan ei suoraviivainen koordinaatisto.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,4.5)(-1,-0.5)
+\put(-1,0){\line(1,0){5}}
+\put(0,-1){\line(0,1){5}}
+\put(0,0){\arc{6}{-1.7}{0.15}}
+\put(0,0){\line(2,3){2.5}}
+\dashline{0.2}(0.3,3.4)(3.3,1.4)
+\put(1.59,2.43){$\scriptstyle{\bullet}$}
+\put(1.56,2.8){$P$}
+\put(3.5,0.5){$r=\text{vakio}$}
+\path(2.93,0.6)(3.3,0.6)
+\put(3,3){$\varphi=\text{vakio}$}
+\path(2.08,3.1)(2.8,3.1)
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Kun napakoordinaatistossa tarkastellaan vektoreita, ilmaistaan nämä yleensä tarkkailupisteen
+$P$ mukana 'pyörivässä' kannassa $\{\vec e_r,\vec e_\varphi\}$, missä kantavektorit ovat 
+koordinaattiviivojen yksikkötangenttivektorit $P$:ssä. Suunnat valitaan siten, että
+vektorit osoittavat ko.\ koordinaattiviivalla muuttuvan koordinaatin kasvun suuntaan:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(8,4)(0,-0.4)
+\put(0,0){\vector(1,0){8}} \put(7.8,-0.4){$x$} \put(-0.07,-0.07){$\scriptstyle{\bullet}$}
+\put(0,0){\line(3,1){6}} \put(5.93,1.93){$\scriptstyle{\bullet}$}
+\put(6,2){\vector(-1,3){0.33}} \put(6,2){\vector(3,1){1}}
+%\put(6,2){\arc{0.6}{-1.9}{-0.35}} \put(6.05,2.1){$\scriptstyle{\bullet}$}
+\path(6.15,2.05)(6.1,2.2)(5.95,2.15) 
+\put (-0.1,-0.5){$O$} \put(5.95,1.6){$P$}
+\put(0,0){\arc{2}{-0.33}{0}} \put(0.95,0.28){\vector(-1,4){0.01}} \put(1.2,0.15){$\varphi$}
+\put(5.8,3){$\vec e_\varphi$} \put(7,2){$\vec e_r$}
+\end{picture}
+\end{center}
+\end{figure}
+Jos pisteen $P$ napakoordinaatit ovat $(r,\varphi)$, niin kantavektorit ovat (vrt.\ kuva)
+\[
+\boxed{\kehys\quad \vec e_r=\cos\varphi\vec i+\sin\varphi\vec j, \quad
+                   \vec e_\varphi=-\sin\varphi\vec i+\cos\varphi\vec j. \quad}
+\]
+Jos $P$ ajatellaan kiinnitetyksi, voidaan mikä tahansa tason vektori esittää kannassa 
+$\{\vec e_r, \vec e_\varphi\}$, eli $\{P,\vec e_r,\vec e_\varphi\}$ on tason koordinaatisto. 
+Toisaalta jos $P$:tä muutetaan siten, että koordinaatti $\varphi$ muuttuu, niin muuttuvat myös 
+$\vec e_r$ ja $\vec e_\varphi$. Koordinaatisto $\{P, \vec e_r, \vec e_\varphi\}$ poikkeaa siis 
+tässä mielessä vastaavasta suoraviivaisesta koordinaatistosta $\{P, \vec i, \vec j\}$, jossa 
+kantavektorit $\vec i,\vec j$ pysyvät vakioina referenssipisteen $P$ muuttuessa. 
+
+Tyypillinen fysikaalinen sovellustilanne pisteen $P$ mukana 'pyörivälle' koordinaatistolle 
+$\{P,\vec e_r,\vec e_\varphi\}$ syntyy, kun $P$ edustaa \pain{keskeisvoimakentässä} liikkuvaa
+kappaletta (esim.\ planeetta, avaruusalus). 
+\begin{Exa} \index{zza@\sov!Ceres ja Dawn} \vahv{Ceres ja Dawn}. Karteesisen koordinaatiston
+origossa on kääpiöplaneetta, ja planeetasta suuntaan $3\vec i+4\vec j$ olevassa pisteessä $P$
+on avaruusluotain, jonka massa on $m=1200$ kg. Luotain kiertää planeettaa tasossa $z=0$
+olevalla ympyräradalla vastapäivään positiivisen $z$-akselin suunnasta katsottuna.
+Tarkasteluhetkellä luotaimen ionimoottori käynnistetään, jolloin luotaimeen vaikuttaa planeetan
+vetovoiman $\vec G=-78\vec e_r$ lisäksi moottorin työntövoima $\vec T=450(-\vec i + \vec j)$
+(yksiköt N=kg\,m/s$^2$). Mihin suuntaan luotaimen liikerata kaartuu, ja mikä on luotaimen
+kiihtyvyys liikeradan suuntaan\,?
+\end{Exa}
+\ratk Pisteessä $P$ on $\vec e_r = \frac{1}{5}(3\vec i + 4\vec j)$, ja luotaimen liikesuunta on 
+$\,\vec e_\varphi = \frac{1}{5}(-4\vec i + 3\vec j)$. Koska
+\[ \begin{cases}
+(\vec T + \vec G) \cdot \vec e_r\,    = \frac{450}{5}[(-1) \cdot 3 + 1 \cdot 4] - 78 = 12, \\
+(\vec T + \vec G) \cdot \vec e_\varphi = \frac{450}{5}[(-1)\cdot(-4)+1 \cdot 3] + 0  = 630,
+\end{cases} \] 
+niin luotaimeen vaikuttava kokonaisvoima koordinaatistossa $\{P,\vec e_r,\vec e_\varphi\}$ on
+\[
+\vec F = \vec T + \vec G = 12 \vec e_r + 630 \vec e_\varphi 
+                         = F_r\vec e_r + F_\varphi\vec e_\varphi.
+\]
+Koska $F_r>0$, niin rata kaartuu oikealle (poispäin planeetasta). Ratakiihtyvyys määräytyy
+Newtonin liikelaista: $\,a_\varphi = F_\varphi/m \approx$ \underline{\underline{$0.53$ m/s$^2$}}.
+\loppu
+
+\subsection*{Lieriökoordinaatisto}
+\index{lieriökoordinaatisto|vahv}
+
+\begin{multicols}{2} \raggedcolumns
+Lieriökoordinaatisto on napakoordinaatiston vastine kolmessa dimensiossa. Karteesisista 
+koordinaateista $x,y,z$ jätetään $z$ ennalleen ja muunnetaan $(x,y) \map (r,\varphi)$ samalla 
+tavoin kuin napakoordinaatistoon siirryttäessä. Lieriökoordinaatiston 'pyöriviä'
+kantavektoreita merkitään $\vec e_r, \vec e_\varphi, \vec e_z$. Tässä $\vec e_r,\vec e_\varphi$
+ovat samat kuin polaarikoordinaatistossa ja $\,\vec e_z = \vec k\,$ kuten karteesisessa 
+koordinaatistossa. Kanta $\{\vec e_r,\vec e_\varphi,\vec e_z\}$ on ortonormeerattu oikeakätinen
+systeemi.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,6)(-2,-2)
+\put(0,0){\vector(1,0){3}} \put(2.8,-0.4){$y$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$z$}
+\put(0,0){\vector(-3,-2){2}} \put(-2.3,-1.7){$x$}
+\path(0,0)(1.5,-1)(1.5,2)
+\dashline{0.1}(1.5,2)(0,3)
+\put(1.43,1.93){$\scriptstyle{\bullet}$} 
+\put(1.5,2){\vector(4,-3){0.7}} \put(2,1){$\vec e_r$}
+\put(1.5,2){\vector(0,1){1}} \put(1.6,3.1){$\vec e_z$}
+\put(1.5,2){\vector(2,1){0.8}} \put(2.4,2.3){$\vec e_\varphi$}
+\put(1.67,2){\begin{turn}{-90} 
+   $\overbrace{\hspace{3cm}}^{\displaystyle{\text{\begin{turn}{90}$z$\end{turn}}}}$ \end{turn}}
+\put(-0.4,-0.1){\begin{turn}{-33.7} 
+   $\underbrace{\hspace{1.8cm}}_{\displaystyle{\text{\begin{turn}{33.7}$r$\end{turn}}}}$
+\end{turn}}
+\put(0,0){\arc{0.8}{0.588}{2.56}} 
+\put(0.33,-0.23){\vector(1,1){0.01}} \put(-0.15,-0.7){$\varphi$}
+%\put(1.5,-1){\arc{0.6}{3.75}{4.7}} \put(1.35,-0.9){$\scriptscriptstyle{\bullet}$}
+\path(1.35,-.9)(1.35,-.75)(1.5,-.85)
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+\begin{Exa}
+\index{ruuviviiva}%
+\kor{Ruuviviiva} on avaruuden $\Ekolme$ pistejoukko
+\[
+S=\{P=(r,\varphi,z) \ | \ r=R, \ z=a\varphi\} \quad (a \neq 0). \loppu
+\]
+\end{Exa}
+Lieriökoordinaatiston koordinaattiviivat ovat $\Ekolme$:n pistejoukkoja, joissa kaksi 
+koordinaateista $r,\varphi,z$ saa vakioarvon. Näille saadaan seuraavat geometriset luonnehdinnat
+(vrt.\ kuvio edellä):
+\begin{align*}
+&S_r\       (\varphi,z\ \text{vakioita}): \quad \text{$z$-akselilta lähtevä, 
+                                                      $xy$-tason suuntainen puolisuora}, \\
+&S_\varphi\ (r,z \text{vakioita})\,\ :  \quad \text{ympyrä $xy$-tason suuntaisella tasolla}, \\
+&S_z\       (r,\varphi\ \text{vakioita})\, : \quad \text{$z$-akselin suuntainen suora}.
+\end{align*}
+\index{koordinaattiakseli!c@--pinta}%
+\kor{Koordinaattipinnoiksi} sanotaan sellaisia $\Ekolme$:n pistejoukkoja, joilla yksi
+koordinaateista saa vakioarvon. Lieriökoordinaatistossa näiden geometriset luonnehdinnat ovat
+\begin{align*}
+&r=\ \text{vakio}:       \quad\, \text{lieriö, akselina $z$-akseli}, \\
+&\varphi=\ \text{vakio}: \quad   \text{$z$-akseliin rajoittuva puolitaso}, \\
+&z=\ \text{vakio}:       \quad   \text{$xy$-tason suuntainen taso}.
+\end{align*}
+
+\subsection*{Pallokoordinaatisto}
+\index{pallokoordinaatisto}
+
+Pisteen $P=(x,y,z)$ \kor{pallokoordinaatit} ovat (ks.\ kuvio)
+\begin{itemize}
+\item[-] $P\,$:n etäisyys origosta: $\ r=\sqrt{x^2+y^2+z^2}$
+\item[-] paikkavektorin $\vec r = \overrightarrow{OP}$ ja positiivisen $z$-akselin 
+         (vektorin $\vec k$) muodostama kulma $\theta$, $\ 0 \leq \theta \leq \pi$
+\item[-] kulma $\varphi\,,\ 0 \le \varphi < 2\pi$, jonka muodostavat positiivinen $x$-akseli
+         (vektori $\vec i$) ja vektorin $\vec r = \overrightarrow{OP}$ ortogonaaliprojektio 
+         $xy$-tasolle
+\end{itemize}
+Koordinaatteja $\theta, \varphi$ sanotaan
+\index{pallonpintakoordinaatit}%
+\kor{pallonpintakoordinaateiksi}. 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(8,6)(-2,-2)
+\put(0,0){\vector(1,0){3}} \put(2.8,-0.4){$y$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$z$}
+\put(0,0){\vector(-3,-2){2}} \put(-2.3,-1.7){$x$}
+\dashline{0.1}(0,0)(1.5,-1)
+\dashline{0.1}(1.5,-1)(1.5,2)
+\dashline{0.1}(1.5,2)(0,3)
+\put(1.43,1.93){$\scriptstyle{\bullet}$} 
+\put(1.5,2){\vector(1,-1){0.65}} \put(2.2,1){$\vec e_\theta$}
+\put(1.5,2){\vector(3,4){0.67}} \put(1.6,3.1){$\vec e_r$}
+\put(1.5,2){\vector(2,1){0.8}} \put(2.4,2.3){$\vec e_\varphi$}
+\put(-1.7,3){\begin{turn}{-90} 
+$\underbrace{\hspace{3cm}}_{\displaystyle{\text{\begin{turn}{90}
+                                               $r\cos\theta$\end{turn}}}}$ \end{turn}}
+\put(-0.7,0){\begin{turn}{-33.7} 
+$\underbrace{\hspace{1.8cm}}_{\displaystyle{\text{\begin{turn}{33.7}$r\sin\theta$\end{turn}}}}$
+\end{turn}}
+\put(0,0){\arc{0.8}{0.588}{2.56}} 
+\put(0.33,-0.23){\vector(1,1){0.01}} \put(-0.15,-0.7){$\varphi$}
+\path(0,0)(1.5,2)
+\put(1.7,2){\begin{rotate}{-127} 
+$\overbrace{\hspace{2.5cm}}^{\displaystyle{\text{\begin{turn}{127}$r$\end{turn}}}}$ \end{rotate}}
+\put(0,0){\arc{0.8}{-1.57}{-0.93}}
+\put(0.1,0.5){$\theta$}
+%\put(0,3){\arc{0.6}{0.6}{1.57}} \put(0.03,2.75){$\scriptscriptstyle{\bullet}$}
+%\put(1.5,-1){\arc{0.6}{3.75}{4.7}} \put(1.35,-0.9){$\scriptscriptstyle{\bullet}$}
+\path(0,2.85)(0.15,2.75)(0.15,2.9)
+\path(1.35,-.9)(1.35,-.75)(1.5,-.85)
+\put(1.4,2.2){$P$}
+\end{picture}
+\end{center}
+\end{figure}
+Muunnoskaavat ovat
+\[
+\boxed{\quad
+\begin{array}{ll}
+\ykehys x &= \ r \sin{\theta} \cos{\varphi}, \quad \\
+        y &= \ r \sin{\theta} \sin{\varphi}, \\
+        z &= \ r \cos{\theta}. \akehys
+\end{array}
+}
+\]
+
+Pallokoordinaatiston koordinaattiviivat ovat seuraavaa tyyppiä:
+\begin{align*}
+&S_r\ (\theta,\varphi\ \text{vakioita}): \quad \text{origosta lähtevä puolisuora}, \\
+&S_\theta\ (r,\varphi\ \text{vakioita}):  \quad \text{origokeskinen, $z$-akseliin rajoittuva
+                                                                              puoliympyrä}, \\
+&S_\varphi\ (r,\theta\ \text{vakioita}): \quad \text{ympyrä $xy$-tason suuntaisella tasolla}.
+\end{align*}
+Koordinaattipinnat voidaan luokitella seuraavasti:
+\begin{align*}
+&r=\ \text{vakio}:       \quad\, \text{origokeskinen pallo}, \\
+&\theta=\ \text{vakio}:  \quad   \text{puolikartio, kärkenä origo}, \\
+&\varphi=\ \text{vakio}: \quad   \text{$z$-akseliin rajoittuva puolitaso}.
+\end{align*}
+
+Myös pallokoordinaatistossa koordinaattiviivat leikkaavat toisensa kohtisuorasti, ts.\
+koordinaattiviivojen tangentit (ks.\ edellinen luku) ovat leikkauspisteessä parittain
+kohtisuorat. Koordinaattiviivojen yksikkötangenttivektoreista (tangenttien suuntavektoreista)
+muodostettua avaruuden vektorien kantaa merkitään $\{\vec e_r, \vec e_\theta, \vec e_\varphi\}$
+ja määritellään (vrt. kuvio edellä)
+\[
+\boxed{
+\begin{array}{ll}
+\ykehys\quad \vec e_r &= \ \sin{\theta} \cos{\varphi} \vec i + \sin{\theta}\sin{\varphi} \vec j 
+                                                           + \cos{\theta} \vec k, \quad \\[4pt]
+\quad   \vec e_\theta &= \ \cos{\theta} \cos{\varphi} \vec i + \cos{\theta}\sin{\varphi} \vec j 
+                                                             - \sin{\theta} \vec k, \\[4pt]
+\quad  \vec e_\varphi &= \ -\sin{\varphi} \vec i + \cos{\varphi} \vec j. \akehys
+\end{array}
+}
+\]
+Tässä $\vec e_\varphi$ on sama kuin polaari- ja lieriökoordinaatistoissa ja $\vec e_r$:n 
+lauseke seuraa välittömästi edellä esitetyistä koordinaattien muunnoskaavoista:
+\begin{align*}
+\vec e_r\,=\,\frac{1}{\abs{\vec r\,}}\vec r\,
+               &=\,\frac{1}{r}(x\vec i+y\vec j+z\vec k) \\
+               &=\,\sin{\theta} \cos{\varphi} \vec i + \sin{\theta}\sin{\varphi} \vec j 
+                                                                  + \cos{\theta} \vec k.
+\end{align*}
+Tämän jälkeen $\vec e_\theta$ on laskettavissa tiedosta, että 
+$\{\vec e_r,\vec e_\theta,\vec e_\varphi\}$ on ortonormeerattu, oikeakätinen systeemi: 
+\[
+\vec e_\theta=\vec e_\varphi\times\vec e_r.
+\]
+\begin{Exa} Pisteen $P$ karteesiset koordinaatit ovat $(x,y,z)=(-2,-3,-6)$. Määritä $P$:n
+pallokoordinaatit sekä vektorin $\vec v=\vec i-\vec j$ koordinaatit $(v_r,v_\theta,v_\varphi)$
+pallokoordinaatiston kannassa $\{\vec e_r,\vec e_\theta,\vec e_\varphi\}$ ko.\ pisteessä.
+\end{Exa}
+\ratk Jos merkitään $\vec r=\overrightarrow{OP}=-2\vec i-3\vec j-6\vec k$, niin
+$r=\abs{\vec r\,}=7$ ja
+\[
+\vec e_r = \frac{1}{r}\,\vec r =\frac{1}{7}(-2\vec i-3 \vec j-6\vec k).
+\]
+Tällöin
+\begin{align*}
+\cos\theta\,&= \vec e_r\cdot\vec k = -\frac{6}{7}\,, \quad \sin\theta=\frac{\sqrt{13}}{7}\,, \\
+\cos\varphi &= \frac{\vec i\cdot(-2\vec i-3\vec j)}{\sqrt{2^2+3^2}}=-\frac{2}{\sqrt{13}}\,,
+                                                 \quad \sin\varphi =-\frac{3}{\sqrt{13}}\,,
+\end{align*}
+joten $P$:n pallokoordinaatit ovat
+\[
+(r,\theta,\varphi) \approx (7,\,149.0\aste,\,236.3\aste).
+\]
+Kantavektoreiden $\vec e_\theta,\vec e_\varphi$ tarkat arvot ovat
+\begin{align*}
+\vec e_\theta  &=\,-\frac{6}{7}\left(-\frac{2}{\sqrt{13}}\right)\vec i
+                  -\frac{6}{7}\left(-\frac{3}{\sqrt{13}}\right)\vec j
+                  -\frac{\sqrt{13}}{7}\vec k \\
+               &=\,\frac{1}{7\sqrt{13}}\,(12\vec i+18\vec j-13\vec k), \\
+\vec e_\varphi &=\,\frac{1}{\sqrt{13}}\,(3\vec i-2\vec j),
+\end{align*}
+joten kysytyt $\vec v$:n koordinaatit ovat
+\begin{align*}
+&v_r       = \vec v\cdot\vec e_r       =  \frac{1}{7}          \approx  0.143, \\
+&v_\theta  = \vec v\cdot\vec e_\theta  = -\frac{6}{7\sqrt{13}} \approx -0.238, \\
+&v_\varphi = \vec v\cdot\vec e_\varphi =  \frac{5}{\sqrt{13}}  \approx  1.387.
+\end{align*}
+Tarkistus:
+\[
+v_r^2+v_\theta^2+v_\varphi^2\,=\,\frac{1274}{13 \cdot 49}\,
+                              =\,2\,=\,\abs{\vec v\,}^2. \quad\text{OK!} \loppu
+\]
+
+%\begin{multicols}{2} \raggedcolumns
+\index{zza@\sov!Lentosuunta}
+\begin{Exa}: \vahv{Lentosuunta}. Lentokone lähtee päiväntasaajan pisteestä $A:$ $90^\circ$ 
+läntistä pituutta ja lentää pitkin isoympyrää, joka kulkeee pisteen  $B:$ $45^\circ$ itäistä
+pituutta, $60^\circ$ pohjoista leveyttä, kautta. Määritä koneen lentosuunta pisteessä $B$ sekä
+kannassa $\{\vec i, \vec j, \vec k\}$ että suhteessa ilmansuuntiin pisteessä $B$.
+\end{Exa}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-23.pstex_t}
+\end{center}
+\end{figure}
+%\end{multicols}
+\ratk Oletetaan pallon säteeksi $R=1$, jolloin (ks.\ kuva)
+\begin{align*}
+\Vect{OA} &= - \vec j, \\
+\Vect{OB} &= \sin{30^\circ}\cos{45^\circ} \vec i 
++ \sin{30^\circ}\sin{45^\circ} \vec j + \cos{30^\circ} \vec k \\
+&= \frac{1}{2\sqrt{2}} \vec i + \frac{1}{2\sqrt{2}} \vec j +
+\frac{\sqrt{3}}{2} \vec k.
+\end{align*}
+Koneen lentorata on tasossa, joka kulkee pisteiden $O, A, B$ kautta, joten tason
+normaalivektori on
+\[
+\vec n = \Vect{OA} \times \Vect{OB} 
+       = -\frac{\sqrt{3}}{2}\vec i + \frac{1}{2\sqrt{2}}\vec k.
+\]
+Koska lentorata pisteessä $B$ on myös kohtisuorassa vektoria $\Vect{OB}$ vastaan, on
+lentosuunnan oltava sama kuin vektorilla
+\[
+\vec n\times\Vect{OB} 
+   = \left|\begin{array}{ccc}
+     \vec i & \vec j & \vec k \\
+     -\tfrac{\sqrt{3}}{2} & 0 & \tfrac{1}{2\sqrt{2}} \\
+     \tfrac{1}{2\sqrt{2}} & \tfrac{1}{2\sqrt{2}} & \tfrac{\sqrt{3}}{2}
+     \end{array} \right|
+   = -\frac{1}{8}\vec i + \frac{7}{8}\vec j - \frac{1}{4}\sqrt{\frac{3}{2}}\vec k.
+\]
+Tämän vektorin pituus on $\sqrt{56}/8$, joten lentosuunnan osoittava yksikkövektori on
+\[
+\underline{\underline{\vec v\,^0 = \frac{1}{\sqrt{56}}(-\vec i + 7\vec j -\sqrt{6}\vec k)}}.
+\]
+Itään osoittava yksikkövektori pisteessä $B$ on
+\[
+\vec e_\varphi \,=\, - \sin{45^\circ} \vec i + \cos{45^\circ} \vec j 
+               \,=\, \frac{1}{\sqrt{2}}(-\vec i + \vec j),
+\]
+ja etelään osoittava yksikkövektori on
+\begin{align*}
+\vec e_\theta &= \cos{30^\circ} \cos{45^\circ} \vec i +
+\cos{30^\circ} \sin{45^\circ} \vec j - \sin{30^\circ}\vec k \\
+&= \frac{1}{2}\sqrt{\frac{3}{2}}\,(\vec i + \vec j) - \frac{1}{2} \vec k.
+\end{align*}
+Koska
+\begin{align*}
+\vec v\,^0 \cdot \vec e_\varphi &= \frac{2}{\sqrt{7}}\ \approx\, \cos{41^\circ}, \\
+\vec v\,^0 \cdot \vec e_\theta &= \sqrt{\frac{3}{7}}\, \approx\, \cos{49^\circ},
+\end{align*}
+on lentosuunta $B$:ssä kaakosta hieman itään päin. \loppu
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-24.pstex_t}
+\end{center}
+\end{figure}
+
+\Harj
+\begin{enumerate}
+
+\item
+Seuraavassa on annettu piste $P$ joko karteesisessa, lieriö- tai pallokoordinaatistossa.
+Laske $P$:n koordinaatit muissa kahdessa koordinaatistossa (tarkasti, jos mahdollista,
+muuten likiarvoina). \vspace{1mm}\newline 
+$P=(x,y,z): \quad$ 
+a)\, $(1,1,1) \qquad\,$ 
+b)\, $(2,3,-1) \qquad$ 
+c)\, $(-1,-\sqrt{3},-5)$ \newline
+$P=(r,\varphi,z): \quad$
+d)\, $(\sqrt{2},\frac{\pi}{2},1) \quad\,$ 
+e)\, $(1,\frac{\pi}{3},-1) \qquad$
+f)\, $(6\sqrt{2},\frac{7\pi}{4},3)$ \newline
+$P=(r,\theta,\varphi): \quad $
+g)\, $(1,\frac{\pi}{2},\pi) \qquad$
+h)\, $(\sqrt{3},\frac{3\pi}{4},\frac{3\pi}{4}) \quad$
+i)\, $(3,\frac{2\pi}{3},\frac{5\pi}{6})$
+
+\item
+a) Tutki, millainen on polaarikoordinaattien avulla ilmaistu tasokäyrä
+\[
+S=\{P=(r,\varphi) \mid r=\cos\varphi+\sin\varphi,\ 
+                       \varphi\in[-\tfrac{\pi}{4},\tfrac{3\pi}{4}]\}.
+\]
+b) Tason ympyrän $S$ keskipiste on $(x_0,y_0)$ ja säde $=R$. Näytä, että
+$P=(x,y) \in S$ täsmälleen kun jollakin $\varphi\in[0,2\pi)$ pätee
+\[ 
+\begin{cases} \,x=x_0+R\cos\varphi, \\ \,y=y_0+R\sin\varphi. \end{cases}
+\]
+Mikä on vastaava väittämä koskien avaruuden pallopintaa, jonka keskipiste on $(x_0,y_0,z_0)$
+ja säde $R$\,?
+%$\,S:\ (x-x_0)^2+(y-y_0)^2+(z-z_0)^2=R^2$\,?
+
+\item
+Pisteiden $P_1$ ja $P_2$ pallokoordinaatteja $(r_1,\theta_1,\varphi_1)$ ja 
+$(r_2,\theta_2,\varphi_2)$ verrataan joukon 
+$[0,\infty)\times[0,\pi]\times[0,2\pi)\subset\Rkolme$ alkioina. Luettele tapaukset,
+joissa vertailu antaa tuloksen $P_1=P_2$, vaikka koordinaatit eivät ole samat.
+
+\item
+Pisteessä $P$, jonka karteesiset koordinaatit tunnetaan, vaikuttaa voima $\vec F$.
+Muunna $\vec F$ annettuun kantaan ko.\ pisteessä. \vspace{1mm}\newline
+a)\, $P=(-2,3,6), \quad \vec F=\vec i-\vec j+\vec k, \quad 
+                        \{\vec e_r,\vec e_\varphi,\vec e_z\}$ \newline
+b)\, $P=(-2,3,6), \quad \vec F=\vec i+\vec j+\vec k, \quad 
+                        \{\vec e_r,\vec e_\theta,\vec e_\varphi\}$ \newline
+c)\, $P=(6,-6,-3), \quad \vec F=-9\vec e_r\ \text{(pallok.)}, \quad 
+                        \{\vec i,\vec j,\vec k\}$ \newline
+d)\, $P=(-6,-6,3), \quad \vec F=-9\vec e_r\ \text{(lieriök.)}, \quad 
+                        \{\vec e_r,\vec e_\theta,\vec e_\varphi\}$ \newline
+e)\, $P=(-1,\sqrt{3},-2\sqrt{3}), \quad \vec F=\vec e_\theta-\vec e_\varphi\
+                         \text{(pallok.)}, \quad \{\vec i,\vec j,\vec k\}$
+
+\item
+Karteesisen koordinaatiston origo on maapallon keskipisteessä ja vektori $\vec k$ osoittaa
+pohjoisnavalle päin. Maapallon pinnalla eteläisen pallonpuoliskon pisteessä, jonka
+pallonpintakoordinaatit ovat $\theta=135\aste,\ \varphi=120\aste$, laiva on matkalla
+luoteeseen ja lentokone koilliseen. Määritä laivan ja lentokoneen liikesuunnat
+yksikkövektoreina a) pallokoordinaatistossa vektorien $\{\vec e_\theta,\vec e_\varphi\}$ 
+avulla, b) karteesisessa koordinaatistossa vektorien $\{\vec i,\vec j,\vec k\}$ avulla.
+
+\item
+Helsingistä $(60^{\circ}N,25^{\circ}E)$ lennetään lyhintä tietä Tokioon 
+ $(36^{\circ}N,140^{\circ}E)$. Miten pitkä on matka ja mihin 
+ilmansuuntaan on Helsingistä lähdettävä? Maapallon säde on $6370$ km.
+
+\item (*)
+Pallokoordinaatin $\theta $ avulla ilmaistu puolikartio $\theta =30^{\circ} $
+leikataan tasolla $T: y+z-4=0$. Ilmaise syntyvä leikkauskäyrä  $S\subset E^3$ ensin 
+pallokoordinaattien $(r,\theta ,\varphi)$ avulla. Muunna sitten käyrä tason $T$ 
+napakoordinaatistoon, jossa origo on pisteessä $(0,0,4)$ ja napakulmaa mitataan sunnasta
+$\vec i$, ja edelleen $T$:n vastaavaan karteesiseen koordinaatistoon. Hahmottele käyrä 
+viimeksi mainitussa koordinaatistossa.
+
+\end{enumerate}

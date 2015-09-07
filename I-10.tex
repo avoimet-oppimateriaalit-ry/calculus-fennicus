@@ -1,0 +1,422 @@
+\section{Cauchyn jonot} \label{Cauchyn jonot}
+\alku
+
+T‰ss‰ luvussa 'lukujono' tarkoittaa reaalilukujen jonoa. Tarkastelun kohteena on lukujonojen
+(myˆs rationaalilukujonojen) teorian edelleen avoin kysymys, joka kuuluu:
+T‰sm‰lleen millaisilla, jonoa itse‰‰n koskevilla ehdoilla lukujono $\seq{a_n}$ suppenee, ts.\
+raja-arvo $\lim_na_n=a$ on olemassa M‰‰ritelm‰n \ref{jonon raja} mukaisesti reaalilukuna?
+Toistaiseksi tunnetut suppenemisen ehdot Lauseissa \ref{monotoninen ja rajoitettu jono} ja
+\ref{monotoninen ja rajoitettu jono - yleistys} ovat riitt‰vi‰, eiv‰t v‰ltt‰m‰ttˆmi‰.
+Etsitt‰ess‰ suppenemiskysymyksen t‰ydellista ratkaisua, ts.\ sek‰ v‰ltt‰m‰ttˆmi‰ ett‰ riitt‰vi‰
+ehtoja suppnemiselle, ratkaisun avaimeksi osoittautuu
+\index{Cauchyn!a@jono|emph} \index{lukujono!f@Cauchyn jono|emph}
+\begin{Def} \label{Cauchyn jono} (\vahv{Cauchyn}\footnote[2]{Ranskalainen matemaatikko 
+\hist{Augustin Louis Cauchy} (1789-1857) kuuluu matemaatikoiden t‰htikaartiin kautta
+aikojen. Cauchy t‰smensi merkitt‰v‰sti matematiikan k‰sitteistˆ‰ ja loi pohjaa uusille
+tutkimussuunnille. H‰nen laaja tuotantonsa ulottui myˆs fysiikkaan, mm.\ kiinte‰n aineen
+kimmoteoriaan. \index{Cauchy, A. L.|av}} 
+\vahv{jono}) Lukujono $\{a_n\}$ on \kor{Cauchy} eli \kor{Cauchyn jono}, jos jokaisella
+$\eps > 0$ on olemassa $N\in\N$ siten, ett‰ p‰tee
+\[
+\abs{a_n - a_m}\ < \eps \quad \text{kun}\ \,n,m > N.
+\]
+\end{Def}
+
+\begin{Exa} N‰yt‰, ett‰ sarjan $\,\sum_{k=0}^\infty (-1)^k/(k+1)^2\,$ osasummien jono
+\[
+\seq{s_n} = \left\{1,\,1-\frac{1}{2^2},\,1-\frac{1}{2^2}+\frac{1}{3^2},\ldots\right\}
+          = \left\{1,\,\frac{3}{4},\,\frac{7}{9},\ldots\right\}
+\]
+on Cauchyn jono. \end{Exa}
+\ratk Jos $\,0 \le m < n$, niin kolmioep‰yht‰lˆ‰ soveltaen voidaan arvioida \newline
+(ks.\ Harj.teht.\,\ref{monotoniset jonot}:\ref{H-I-8: kaksi sarjaa})
+\[
+\abs{s_n-s_m} \,=\, \left|\sum_{k=m+1}^n \frac{(-1)^k}{(k+1)^2}\right|
+              \,\le\, \sum_{k=m+1}^n \frac{1}{(k+1)^2} \,<\, \frac{1}{m+1}\,.
+\]
+N‰in ollen jos $\eps>0$ ja valitaan $N\in\N$ siten, ett‰ $1/(N+1)<\eps$ (mahdollista
+jokaisella $\eps>0$), niin
+\[
+\abs{s_n-s_m} \,<\, \max\left\{\frac{1}{n+1},\,\frac{1}{m+1}\right\} \,<\, \eps,
+                    \quad \text{kun}\ n,m >N.
+\]
+Siis $\seq{s_n}$ on Cauchy. \loppu
+\begin{Exa} Jos $a \neq 0$, niin lukujono $\seq{a_n}=\seq{(-1)^n a}$ ei ole Cauchy.
+Nimitt‰in jos $0 < \eps \le 2\abs{a}$, niin M‰‰ritelm‰n \ref{Cauchyn jono} ehto ei
+toteudu mill‰‰n $N\in\N$, koska $\abs{a_n - a_m}=2\abs{a} \ge \eps\,$ aina kun $n-m$
+on pariton. \loppu \end{Exa}
+ 
+Cauchyn jonoilla on samankaltaisia ominaisuuksia kuin suppenevilla jonoilla. N‰ytet‰‰n
+ensinn‰kin:
+\begin{Lause} \label{suppeneva jono on Cauchy} Suppeneva jono on Cauchy. \end{Lause}
+\tod Jos $\lim_na_n=a\in\R$ M‰‰ritelm‰n \ref{jonon raja} mukaisesti, niin jokaisella $\eps>0$
+on olemassa $N\in\N$ siten, ett‰ p‰tee $\abs{a_n - a} < \eps/2\,$ kun $n>N$. T‰llˆin on
+kolmioep‰yht‰lˆn nojalla
+\begin{align*}
+\abs{a_n - a_m}\ &=\ \abs{(a_n - a) + (a - a_m)} \\
+                 &\le\ \abs{a_n-a}+\abs{a_m-a}\ <\ \frac{\eps}{2} + \frac{\eps}{2} = \eps, 
+                                                   \quad \text{kun}\ n,m > N. \loppu 
+\end{align*}%
+Suppenevia lukujonoja koskevilla Lauseilla \ref{suppeneva jono on rajoitettu} ja 
+\ref{raja-arvojen yhdistelys‰‰nnˆt} on seuraavat vastineet Cauchyn jonoille:
+\begin{Lause} \label{Cauchyn jono on rajoitettu} Cauchyn jono on rajoitettu.
+\end{Lause}
+\begin{Lause} \label{Cauchyn jonojen yhdistelys‰‰nnˆt} 
+\index{Cauchyn!b@jonojen yhdistely|emph} (\vahv{Cauchyn jonojen yhdistelys‰‰nnˆt})
+Jos lukujonot $\{a_n\}$ ja $\{b_n\}$ ovat Cauchyn jonoja ja $\lambda\in\R$, niin myˆs lukujonot
+$\{a_n + b_n\}$, $\{\lambda a_n\}$ ja $\{a_n b_n\}$ ovat Cauchyn jonoja. Jos lis‰ksi 
+$\abs{b_n} \ge \delta > 0\ \ \forall n$, niin myˆs $\{a_n/b_n\}$ on Cauchyn jono.
+\end{Lause}
+N‰iden lauseiden todistukset (jotka sivuutetaan, ks.\ Harj.teht.\,\ref{H-I-9: todistuksia})
+ovat hyvin samanlaisia kuin mainittujen vastinlauseiden. Esimerkiksi Lauseen 
+\ref{Cauchyn jono on rajoitettu} v‰itt‰m‰‰n p‰‰dyt‰‰n, kun vertailukohdaksi otetaan raja-arvon
+sijasta jonon termi $a_m$, miss‰ indeksi $m$ valitaan siten, ett‰ p‰tee 
+$\abs{a_n - a_m} < 1$ kun $n>m$, vrt.\ M‰‰ritelm‰ \ref{Cauchyn jono} ja Lauseen 
+\ref{suppeneva jono on rajoitettu} todistus.
+
+P‰‰tulos jatkossa on
+\begin{*Lause} \label{Cauchyn kriteeri} \index{Cauchyn!c@suppenemiskriteeri|emph}
+\index{suppeneminen!a@lukujonon|emph} (\vahv{Cauchyn suppenemiskriteeri})
+Reaalilukujono $\seq{a_n}$ suppenee kohti reaalilukua t‰sm‰lleen kun $\seq{a_n}$ on Cauchy. 
+\end{*Lause}
+\jatko\jatko \begin{Exa} (jatko) Lauseen \ref{Cauchyn kriteeri} perusteella esimerkin
+sarja suppenee. Osasummia riittt‰v‰n pitk‰lle laskemalla selvi‰‰, ett‰ sarjan summa katkaistuna
+$10$ merkitsev‰‰n numeroon on
+\[
+\sum_{k=0}^\infty \frac{(-1)^k}{(k+1)^2} \,=\, 0.8224670334\ldots \loppu
+\]
+\end{Exa} \seur
+Koska jo tiedet‰‰n, ett‰ jokainen suppeneva jono on Cauchy (Lause 
+\ref{suppeneva jono on Cauchy}), niin Lauseen \ref{Cauchyn kriteeri} todistamiseksi riitt‰‰
+n‰ytt‰‰ todeksi implikaatio
+\begin{equation} \label{Cauchyn jonon suppenevuus}
+\seq{a_n}\ \text{on Cauchy}\ \ \impl\ \ \seq{a_n}\ \text{suppenee}. \tag{$\star$}
+\end{equation}
+Todistus on useampivaiheinen. Ensin on tutkittava lukujonon raja-arvon m‰‰ritelm‰‰
+tarkemmin \kor{osajonon} k‰sitteen pohjalta. Seuraavassa n‰m‰ tarkastelut ja niihin perustuva
+v‰itt‰m‰n \eqref{Cauchyn jonon suppenevuus} todistus erotetaan omaksi 
+osaluvukseen\footnote[2]{Merkint‰ (*) luvun tai osaluvun otsikossa kertoo 
+(t‰ss‰ ja jatkossa), ett‰ kyse on n‰kˆkulmaa laajentavasta --- usein myˆs muuta teksti‰ 
+haastavammasta --- tekstin osasta.}.
+
+\subsection*{*Osajonot}
+
+\begin{Def} \index{osajono|emph} \index{lukujono!g@osajono|emph} 
+Lukujono $\{b_k\}_{k=1}^{\infty}$ on jonon $\{a_n\}_{n=m}^{\infty}$ \kor{osajono}
+(engl.\ subsequence), jos on olemassa indeksit $\ m \le n_1 < n_2 < \ldots\ $ siten, ett‰
+\[
+b_k = a_{n_k}, \quad k = 1,2, \ldots
+\]  \end{Def}
+
+\begin{Exa} Jos $\x = \{x_n\}_{n=p}^{\infty}$ on jaksollinen desimaaliluku, niin jollakin
+$m \in \N$ ja riitt‰v‰n suurella $k \in \N$ osajono
+\[
+\{x_k, x_{k+m}, x_{k+2m}, \ldots \}\ =\ \{x_{k+(l-1)m}\}_{l=1}^{\infty}
+\]
+on geometrinen sarja, vrt.\ Luku \ref{jonon raja-arvo}. T‰ss‰ siis osajonon indeksin‰ on $l$ ja
+$n_l = k + (l-1)m$. \loppu 
+\end{Exa}
+\begin{Exa} Lukujono $\{\,a_n = (-1)^n,\ \ n=0,1,2, \ldots\,\}$ ei suppene, mutta sill‰ on
+(kohti rationaalilukua) suppenevia osajonoja, esim.\ $\{\,a_0, a_2, a_4, \ldots\,\}$. \loppu 
+\end{Exa}
+\begin{Exa} Rajatta kasvavan lukujonon $\seq{n} = \{1,2,3,\ldots\}$ jokainen osajonokin on
+rajatta kasvava. \loppu
+\end{Exa}
+Osajonon k‰sitett‰ valaisee hieman seuraava 'l‰mmittelylause'.
+\begin{Lause} \label{suppenevat osajonot} $\lim_na_n=a\in\R$ t‰sm‰lleen kun $\lim_k b_k = a\,$
+jokaiselle jonon $\{a_n\}$ osajonolle $\{b_k\}$.
+\end{Lause}
+\tod V‰itt‰m‰n osa \ \fbox{$\impl$} \ on ilmeinen, sill‰ M‰‰ritelm‰n \ref{jonon raja} 
+perusteella osajono suppenee v‰hint‰‰n yht‰ nopeasti kuin itse jono. T‰st‰ huolimatta osa 
+\fbox{$\limp$} on viel‰kin ilmeisempi, sill‰ osajonoksi kelpaa myˆs itse jono $\{a_n\}$. \loppu
+
+Seuraava tulos, jossa osajonon k‰site on keskeinen, on avain jatkon kannalta. Tuloksessa 
+tulkitaan proposition $a_n \kohti a$ negaatio ($a_n \not\kohti a$) M‰‰ritelm‰‰n \ref{jonon raja}
+perustuen. --- Huomattakoon, ett‰ kyse ei ole negaatiosta 'ei suppene' (kohti mit‰‰n lukua),
+koska $a_n \not\kohti a$ on tosi myˆs, kun $a_n \kohti b \neq a$.
+\begin{*Lause} \label{negaatioperiaate} Jos $\seq{a_n}$ on lukujono ja $a\in\R$, niin
+$\,a_n \not\kohti a\,$ t‰sm‰lleen kun $\exists\,\eps > 0\,$ ja osajono 
+$\,\{\,a_{n_1},a_{n_2}, \ldots\,\}\,$ siten, ett‰ 
+$\,\abs{a_{n_k}-a} \ge \eps\ \ \forall k \in \N$.
+\end{*Lause}
+\tod L‰hdet‰‰n raja-arvon m‰‰ritelm‰st‰ (M‰‰ritelm‰ \ref{jonon raja})
+\begin{align*}
+a_n \kohti a \quad                 &\ekv \quad \forall \eps > 0\ \,\text{p‰tee}\ [\,\ldots\,]
+\intertext{ja ryhdyt‰‰n negaation purkuun: Ensinn‰kin (vrt.\ Luku \ref{logiikka})} 
+a_n \not\kohti a \quad             &\ekv \quad \text{jollakin}\ \eps > 0\ \,
+                                               \text{ei p‰de}\ [\,\ldots\,]
+\intertext{T‰ss‰ on $\,\ [\,\ldots\,]\,=\,[\ \exists N\ \in \N\ $ siten, ett‰ 
+$\ \{\,\ldots\,\}\ ]$, \ joten}
+\text{ei p‰de}\ [\,\ldots\,] \quad &\ekv \quad \not\exists N \in \N\ \ 
+                                               \text{siten, ett‰}\ \{\,\ldots\,\} \\[3mm]
+                                   &\ekv \quad ei\,\{\,\ldots\,\}\ \ \forall N \in \N.
+\intertext{T‰ss‰ on $\,\ \{\,\ldots\,\}\,=\,\{\,\abs{a_n-a} < \eps\ \ \forall n>N\,\}$, \ 
+joten}
+ei\,\{\,\ldots\,\} \quad           &\ekv \quad \abs{a_n-a} \ge \eps\ \ \text{jollakin}\ n>N.
+\end{align*}
+Siis on p‰‰telty:
+\[
+a_n \not\kohti a \quad \ekv \quad \text{jollakin}\ \eps>0\ 
+    \text{p‰tee:}\quad \forall\ N \in \N\ (\,\abs{a_n-a} \ge \eps\ \text{jollakin}\ n>N\,)\,.
+\]
+Kyseisell‰ $\eps$ voidaan nyt  menetell‰ seuraavasti:
+\begin{itemize}
+\item[1.] Valitaan $\,N=1\ \,\,$   ja $\,n_1>N\,$ siten, ett‰ $\,\abs{a_{n_1}-a} \ge \eps$.
+\item[2.] Valitaan $\,N=n_1\,$     ja $\,n_2>N\,$ siten, ett‰ $\,\abs{a_{n_2}-a} \ge \eps$.
+\item[$\ \vdots$]
+\end{itemize}
+Konstruktiota voidaan jatkaa loputtomasti, joten saadaan osajono
+$\{\,a_{n_1},a_{n_2}, \ldots\,\}$ (ks.\ kuva alla). T‰ll‰ on vaadittu ominaisuus, joten on
+todistettu v‰itt‰m‰n osa \ \fbox{$\impl$}\,. Osa \ \fbox{$\limp$} \ on ilmeinen raja-arvon
+m‰‰ritelm‰n perusteella. \loppu
+
+\begin{figure}[H]
+\import{kuvat/}{kuvaI-1.pstex_t}
+\end{figure}
+
+Kun Lausetta \ref{negaatioperiaate} sovelletaan Cauchyn jonoon, saadaan johdetuksi 
+mielenkiintoinen tulos.
+\begin{*Lause} \label{Cauchyn jonon vaihtoehdot} Jos lukujono $\{a_n\}$ on Cauchyn jono, niin 
+jokaisella $x\in\R$ on voimassa t‰sm‰lleen yksi seuraavista vaihtoehdoista:
+\begin{itemize}
+\item[1.] $\,a_n \kohti x$.
+\item[2.] $\exists\,\eps>0$ ja $N \in \N$ siten, ett‰ $\ a_n\ < x - \eps\ $ aina kun $\ n>N$.
+\item[3.] $\exists\,\eps>0$ ja $N \in \N$ siten, ett‰ $\ a_n\ > x + \eps\ $ aina kun $\ n>N$.
+\end{itemize} 
+\end{*Lause}
+\tod Ensinn‰kin on joko $a_n \kohti x$ (vaihtoehto 1) tai $a_n \not\kohti x$.
+J‰lkimm‰isess‰ vaihtoehdossa on Lauseen \ref{negaatioperiaate} mukaan lˆydett‰viss‰ luku 
+$\eps>0$ ja osajono $\{\,b_k = a_{n_k},\ k = 1, 2, \ldots\,\}$ siten, ett‰ 
+$\,\abs{b_k - x} \ge 2 \eps\ \,\forall k$. (T‰ss‰ on luvun $\eps$ tilalle kirjoitettu $2 \eps$
+mukavuussyist‰.) Koska $\{a_n\}$ on Cauchyn jono, on myˆs olemassa lukua $\eps$ vastaava
+indeksi $N$ siten, ett‰ p‰tee $\abs{a_n - a_m} < \eps$ kun $n,m > N$. Valitaan nyt osajonossa
+$\{b_k\}$ indeksi $k$ siten, ett‰ $n_k > N$, ja kirjoitetaan
+\[
+a_n\ =\ b_k + (a_n - b_k).
+\]
+T‰ss‰ on $b_k = a_m,\ m = n_k > N$, joten $\abs{a_n - b_k} < \eps$, kun $n > N$. Myˆs oli
+$\abs{b_k - x} \ge 2 \eps$, joten on oltava joko $b_k \ge x + 2 \eps$ tai $b_k \le x - 2 \eps$.
+Jos  $b_k \ge x + 2 \eps$ (kuten kuvassa alla), niin arvioidaan
+\[
+a_n\ \ge x + 2 \eps - \abs{a_n - a_k}\ >\ x + 2 \eps - \eps\ =\ x + \eps, \quad \text{kun}\ n>N.
+\]
+Jos  $b_k \le x - 2 \eps$, niin arvioidaan
+\[
+a_n\ \le x - 2 \eps + \abs{a_n - a_k}\ <\ x - 2 \eps + \eps\ =\ x -\eps, \quad \text{kun}\ n>N.
+\]
+Lause on n‰in todistettu. \loppu
+\vspace{5mm}
+\begin{figure}[H]
+\import{kuvat/}{kuvaI-2.pstex_t}
+\end{figure}
+
+Lauseen \ref{Cauchyn jonon vaihtoehdot} mukaan Cauchyn jonon on 'valittava puolensa' annetun
+luvun --- esimerkiksi rationaaliluvun --- suhteen, ellei ko.\ luku ole jonon raja-arvo.
+K‰ytt‰en t‰t‰ tulosta 'tyˆhevosena' voidaan nyt todistaa v‰itt‰m‰
+\eqref{Cauchyn jonon suppenevuus} ja siis myˆs Lause \ref{Cauchyn kriteeri}. Todistus on
+muuten olennaisesti sama kuin Lauseen \ref{monotoninen ja rajoitettu jono} todistus, paitsi
+ett‰ monotonisuuden sijasta vedotaan Lauseeseen \ref{Cauchyn jonon vaihtoehdot}. 
+\begin{*Lause} \label{Cauchyn jono suppenee} Cauchyn jono suppenee. \end{*Lause}
+\tod Olkoon $\seq{a_n}$ Cauchyn jono. Jos $a_n \kohti x\in\Q$, niin lauseen v‰itt‰m‰ on tosi
+, joten voidaan olettaa, ett‰ $\seq{a_n}$ ei suppene kohti rationaalilukua. T‰llˆin on
+ensinn‰kin jokaisen kokonaisluvun $x \in \Z$ kohdalla voimassa Lauseen
+\ref{Cauchyn jonon vaihtoehdot} vaihtoehdoista joko 2 tai 3. Koska Cauchyn jono on rajoitettu
+(Lause \ref{Cauchyn jono on rajoitettu}), niin silloin on lˆydett‰viss‰ yksik‰sitteinen
+$x_0 \in \Z$ siten, ett‰ $a_n > x_0 + \eps_1$ kun $n > N_1$ ja $a_n < x_0 + 1 - \eps_2$ kun
+$n > N_2$ (t‰ss‰ $\eps_1,\eps_2 > 0$ ja $N_1,N_2 \in \N$), jolloin 
+\[
+x_0\ <\ a_n\ <\ x_0 + 1, \quad \text{kun}\ n>N = \max \{N_1,N_2\}.
+\]
+Oletetaan jatkossa, ett‰ $x_0 \ge 0$ (muussa tapauksessa tutkitaan jonoa $\seq{-a_n}$).
+Jatkamalla p‰‰ttely‰ vastaavasti on lˆydett‰viss‰ yksik‰sitteiset
+$d_k \in \{0,\ldots,9\}$, $ k = 1,2,\ldots$ ja vastaavat ‰‰relliset desimaaliluvut 
+$x_k = x_0.d_1 \ldots d_k$ ja indeksit $N_k \in \N$ siten, ett‰ p‰tee
+\[
+x_k\ <\ a_n\ <\ x_k + 10^{-k}, \quad \text{kun}\ n>N_k, \quad k=0,1,2,\ldots
+\]
+T‰m‰n mukaan on $\lim_n (a_n-x_n)=0$ eli $\lim_n a_n =\x=\seq{x_n}\in\R$ M‰‰ritelmien
+\ref{jonon raja - desim} ja \ref{reaaliluvut desimaalilukuina} mukaisesti. Lauseen
+\ref{suppeneminen kohti reaalilukua} perusteella $\lim_na_n=\x$ myˆs M‰‰ritelm‰n
+\ref{jonon raja} mukaisesti. \loppu
+
+\subsection*{Reaaliluvut Cauchyn jonoina}
+\index{reaalilux@reaalilukujen!a@laskuoperaatiot|vahv}
+\index{laskuoperaatiot!b@reaalilukujen|vahv}
+\index{reaalilux@reaalilukujen!b@j‰rjestysrelaatio|vahv}
+\index{jzy@j‰rjestysrelaatio!c@$\R$:n|vahv}
+
+M‰‰ritelm‰ \ref{jonon raja - desim} tulkitsee ‰‰rettˆm‰n desimaaliluvun 'suppenevan itseens‰'
+lukujonona. T‰llainen n‰kˆkulma voidaan ottaa yleisemminkin rationaalilukujen Cauchyn jonoihin,
+jolloin saadaan seuraava vaihtoehtoinen m‰‰ritelm‰ reaaliluvuille (vrt.\ M‰‰ritelm‰t
+\ref{reaaliluvut desimaalilukuina} ja \ref{samastus DD}).
+\begin{Def} \label{reaaliluvut Cauchyn jonoina} \index{reaaliluvut!c@Cauchyn jonoina|emph}
+(\vahv{Reaaliluvut Cauchyn jonoina}) Reaaliluvut ovat rationaalilukujen Cauchyn jonoja. Kaksi
+reaalilukua $a=\seq{a_n}$ ja $b=\seq{b_n}$ ovat samat t‰sm‰lleen kun $\lim_n\,(a_n - b_n) = 0$. 
+\end{Def}
+M‰‰ritelm‰n mukaisesti reaaliluvut ovat rationaalilukujen Cauchyn jonojen muodostamia 
+\pain{ekvivalenssiluokkia} (tai samastusluokkia, vrt.\ Luku \ref{logiikka}), joiden sis‰ll‰ 
+eri jonot samastetaan m‰‰ritelm‰n kriteerill‰. Jokaiseen samastusluokkaan kuuluu ‰‰rettˆm‰n
+monta erilaista jonoa; esim.\ jonot $\seq{a_n}$ ja $\seq{a_n + n^{-k}}$ kuuluvat samaan
+luokkaaan jokaisella $k\in\N$. Ellei kyseess‰ ole ‰‰rellinen desimaaliluku, on samaan 
+samastusluokkaan kuuluvista Cauchyn jonoista t‰sm‰lleen yksi M‰‰ritelm‰n
+\ref{reaaliluvut desimaalilukuina} mukainen reaaliluvun 'edustaja', ts.\ ‰‰retˆn desimaaliluku.
+
+M‰‰ritelm‰‰n \ref{reaaliluvut Cauchyn jonoina} perustuen on laskuoperaatioiden m‰‰rittely 
+reaaliluvuille varsin yksinkertaista: Jos $a=\seq{a_n}$ ja $b=\seq{b_n}$ ovat reaalilukuja 
+(eli $\seq{a_n}$ ja $\seq{b_n}$ ovat rationaalilukujen Cauchyn jonoja), niin myˆs jonot
+$\seq{a_n + b_n}$ ja $\seq{a_n b_n}$ ovat Cauchyn jonoja 
+(Lause \ref{Cauchyn jonojen yhdistelys‰‰nnˆt}) ja edustavat sellaisenaan lukuja $a+b$ ja $ab$.
+Vastaavasti jos $b \neq 0$ (eli $b_n \not\kohti 0$), niin jostakin indeksist‰ $n=m$ alkaen on
+$\abs{b_n} \ge \delta>0$ (Lause \ref{Cauchyn jonon vaihtoehdot}), jolloin $\seq{a_n/b_n}$ on
+ko.\ indeksist‰ eteenp‰in Cauchy (Lause \ref{Cauchyn jonojen yhdistelys‰‰nnˆt}) ja edustaa
+lukua $a/b$.
+
+Myˆs j‰rjestysrelaation m‰‰rittely k‰y Cauchyn jonojen avulla helposti, sill‰ jos
+$a=\seq{a_n}$, niin vaihtoehdot $a=0$, $a>0$ ja $a<0$ m‰‰r‰ytyv‰t asettamalla $x=0$ Lauseessa
+\ref{Cauchyn jonon vaihtoehdot}\,: $\,a=0$ vaihtoehdossa 1, $a<0$ vaihtoehdossa 2, ja $a>0$
+vaihtoehdossa 3. Yleisemmin lukujen $a$ ja $b$ suuruusj‰rjestys ratkaistaan vertaamalla lukua
+$a-b=\seq{a_n-b_n}$ lukuun $0$ mainitulla tavalla.
+
+Jos M‰‰ritelm‰ \ref{reaaliluvut Cauchyn jonoina} tulkitaan laskennallisesti, niin yksitt‰ist‰
+Cauchyn jonoa voi pit‰‰ algoritmina, joka tuottaa reaaliluvulle jonon rationaalisia 
+approksimaatioita. Algoritmi on yleisesti sit‰ parempi, mit‰ nopeammin jono suppenee 
+(tai 'suippenee') suhteessa tarvittavien (rationaalisten) laskuoperaatioiden m‰‰r‰‰n. Cauchyn
+jonoille voidaan siis asettaa myˆs laatukriteereit‰!
+\begin{Exa} Er‰s rationaalilukujen Cauchyn jonojen ekvivalenssiluokka on $\sqrt{2}$. T‰h‰n
+luokkaan kuuluva ‰‰retˆn desimaaliluku, eli lukujono $\{1,1.4,1.414,\ldots\}$ vastaa
+algoritmina edellisen luvun Esimerkin \ref{neliˆjuuri 2} kymmenjakoalgoritmia. Toinen samaan
+ekvivalenssiluokkaan kuuluva lukujono on Luvun \ref{monotoniset jonot} Esimerkiss‰
+\ref{sqrt 2 algoritmina} tarkasteltu. T‰m‰ on algoritmina kymmenjakoa selv‰sti tehokkaampi.
+\loppu \end{Exa}
+
+\subsection*{*Bolzanon--Weierstrassin lause}
+
+Asiayhteyden vuoksi esitett‰kˆˆn viel‰ osajonon k‰sitteeseen liittyv‰ lause, joka kuuluu
+modernin matemaattisen analyysin peruskiviin.
+
+\begin{*Lause} \label{B-W} \index{Bolzanon--Weierstrassin lause|emph}
+(\vahv{Bolzano-Weierstrass}\footnote[2]{Bolzanon-Weierstrassin lauseella on monia muotoja.
+Perusidean esitti ensimm‰isen‰ t\v{s}ekkil‰inen matemaatikko, filosofi ja pappi
+\hist{Bernard Bolzano} (1781-1848) v.\ 1817, mutta tulos j‰i v‰h‰lle huomiolle. Saksalainen
+\hist{Karl Weierstrass} (1815-1897), jota on pidetty 'modernin matemaattisen analyysin is‰n‰',
+todisti lauseen myˆhemmin tuntematta Bolzanon tyˆt‰. \index{Bolzano, B.|av} 
+\index{Weierstrass, K.|av}}) \ Jokaisella rajoitetulla reaalilukujonolla on suppeneva osajono. 
+\end{*Lause}
+\tod Todistus on perusidealtaan puolituskonstruktio, jossa looginen p‰‰ttely nojaa
+kaksipaikkaiseen predikaattiin
+\[
+Q(x,y): \quad x \le a_n \le y \quad 
+\text{‰‰rettˆm‰n monella indeksin $n$ arvolla.}
+\]
+Koska $\{a_n\}$ on rajoitettu jono, on lˆydett‰viss‰ luvut $a$ ja $b=a+L$ siten, ett‰ $Q(a,b)$
+on tosi. Valitaan jokin indeksi $n_1$ siten, ett‰ $a \le a_n \le b$ kun $n=n_1$, ja tutkitaan
+seuraavaksi, onko $Q(a,(a+b)/2)$ tosi. Jos on, asetetaan $b$:n uudeksi arvoksi $(a+b)/2$. Jos
+ei, on proposition $Q((a+b)/2,b)$ oltava tosi (koska $Q(a,b)$ oli tosi). T‰ss‰ tapauksessa
+asetetaan $a$:n uudeksi arvoksi $(a+b)/2$. Toisen luvuista $a,b$ tultua n‰in uudelleen
+m‰‰ritellyksi tiedet‰‰n, ett‰ $Q(a,b)$ on j‰lleen tosi. Etsit‰‰n nyt indeksi $n_2 > n_1$ siten,
+ett‰ $a \le a_n \le b$ kun $n=n_2$ (mahdollista, koska $Q(a,b)$ oli tosi). Etenem‰ll‰ samalla
+tavoin saadaan konstruoiduksi alkuper‰isen jonon osajono
+$\{\,b_k = a_{n_k},\ k = 1,2,\ldots\,\}$, jolla on konstruktion perusteella ominaisuus
+$\abs{b_k - b_l}\ \le\ 2^{-N} L \quad \text{kun}\ k,l > N$. N‰in ollen jos jokaisella $\eps>0$
+valitaan $N\in\N$ siten, ett‰ $\,2^{-N}L<\eps$, niin 
+$\abs{b_k-b_l}<\eps$ kun $\,k,l>N$. M‰‰ritelm‰n \ref{Cauchyn jono} mukaan $\{b_k\}$ on Cauchyn
+jono ja n‰in ollen suppee (Lause \ref{Cauchyn jono suppenee}). \loppu
+
+\subsection*{*Ep‰konstruktiivinen p‰‰ttely}
+\index{epzy@ep‰konstruktiivinen p‰‰ttely|vahv}
+
+Lauseen \ref{B-W} todistukseen k‰tkeytyy filosofinen ongelma,
+joka esiintyy matemaattisessa ajattelussa yleisemminkin: Jos predikaatissa $Q(x,y)$
+ajatellaan $x$ ja $y$ kiinnitetyiksi (sidotuiksi), niin proposition $P = Q(x,y)$ totuusarvon
+selville saamiseksi on k‰yt‰v‰ kirjaimellisesti l‰pi j\pain{okainen} jonon $\seq{a_n}$ termi,
+ts.\ on suoritettava \pain{‰‰rettˆm‰n} \pain{monta} lukujen vartailua. T‰m‰ ei tietenk‰‰n ole 
+k‰yt‰nnˆss‰ mahdollista. Matemaattisessa analyysiss‰ katsotaan kuitenkin myˆs t‰llainen nk.\ 
+\kor{ep‰konstruktiivinen} p‰‰ttely luvalliseksi. (Viime k‰dess‰ 'luvan' antavat joukko-opin 
+perusaksioomat.) Ep‰konstruktiiviselle todistukselle on tunnus\-omaista, ett‰ todistusta ei voi
+seurata 'laskemalla', ellei k‰ytett‰viss‰ ole jotakin lis‰tietoa, ts.\ ellei tehd‰ 
+lis‰oletuksia. Esimerkiksi aiemmin esitetty Lauseen \ref{monotoninen ja rajoitettu jono}
+todistus on myˆs ep‰konstruktiivinen, sill‰ t‰m‰kin sis‰lt‰‰ kuvitelman kaikkien jonon termien
+vertaamisesta kiinte‰‰n lukuun. Ep‰konstruktiivisia ovat itse asiassa myˆs Lauseiden 
+\ref{negaatioperiaate} ja \ref{Cauchyn jonon vaihtoehdot} todistukset, sill‰ 
+'olemassa olevaksi' v‰itetty luku $\eps$ konstruoidaan todistuksissa vain loogisena 
+v‰ltt‰m‰ttˆmyyten‰. Mit‰‰n laskennallisesti toimivaa ideaa luvun m‰‰ritt‰miseksi ei anneta ---
+eik‰ tehtyjen yleisten oletusten puitteissa olisi mahdollistakaan antaa.
+
+Kaikissa mainituissa todistuksissa filosofiset ongelmat poistuvat (tai ainakin v‰henev‰t), jos
+oletetaan tarkasteltava lukujono sellaiseksi, ett‰ todistuksen sis‰lt‰m‰t loogiset askeleet
+voidaan toteuttaa (yksi kerrallaan) \pain{‰‰rellisell‰} \pain{m‰‰r‰ll‰} (viime k‰dess‰)
+\pain{rationaalisia} laskuoperaatioita tai vertailuja. T‰llaista lukujonoa voi kutsua
+vaikkapa \kor{ennustettava}ksi. Esimerkiksi Lukujen \ref{jono} --- \ref{reaaliluvut}
+esimerkkijonot, tai yleisemmin kaikki 'ennustettavasti m‰‰ritellyt' yksitt‰iset lukujonot, ovat
+t‰llaisia. Lis‰oletuksen ollessa voimassa voidaan todistuksissa esitettyj‰ ajatuskonstruktioita
+seurata myˆs laskennallisesti. Lauseen \ref{negaatioperiaate} tapauksessa t‰m‰ tapahtuu esim.\ 
+hakemalla k‰yp‰‰ $\eps$:n arvoa jonosta $\,\{\,\eps_n = 10^{-n},\ n = 1,2, \ldots\,\}$.
+Lis‰oletuksen perusteella voidaan mill‰ tahansa kiinte‰ll‰ $n \in \N$ ratkaista ‰‰rellisell‰
+laskutyˆll‰, onko $\eps = \eps_n$ k‰yp‰ valinta. Ellei ole, asetetaan $n \leftarrow n+1$, ja 
+jatketaan laskemista. Ennustettavuusoletuksen perusteella laskun tiedet‰‰n p‰‰ttyv‰n johonkin
+indeksiin, vaikkei etuk‰teen tiedet‰, mihin. 
+
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-I-9: todistuksia}
+a) Todista Lause \ref{Cauchyn jono on rajoitettu}. \newline
+b) Todista Lauseen \ref{Cauchyn jonojen yhdistelys‰‰nnˆt} v‰itt‰m‰t koskien lukujonoja
+$\seq{a_n+b_n}$ ja $\seq{\lambda a_n}$. \newline
+c) Todista Lauseen \ref{Cauchyn jonojen yhdistelys‰‰nnˆt} v‰itt‰m‰ koskien lukujonoa
+$\seq{a_n b_n}$. \newline
+d) Todista: Jos $\seq{a_n}$ on Cauchy ja $\abs{a_n} \ge \delta>0\ \forall n$, niin 
+$\seq{a_n^{-1}}$ on Cauchy. \newline
+e) Todista Lauseen \ref{Cauchyn jonojen yhdistelys‰‰nnˆt} v‰itt‰m‰ koskien lukujonoa
+$\seq{a_n/b_n}$.
+
+\item
+Olkoon $\{a_k,\ k=0,1,\ldots\}$ lukujono ja $b_n=\sum_{k=0}^n 2^{-k}a_k,\ n=0,1,\ldots\,$
+N‰yt‰, ett‰ jos $\seq{a_k}$ on rajoitettu, niin $\seq{b_n}$ on Cauchy.
+
+\item
+Olkoon $\seq{a_n}$ rationaalilukujono. N‰yt‰ todeksi tai ep‰todeksi: \newline
+a) \ $a_n^3 \kohti 4\,\ \impl\,\ \seq{a_n}$ on Cauchy, $\quad$
+b) \ $a_n^4 \kohti 3\,\ \impl\,\ \seq{a_n}$ on Cauchy.
+
+\item
+Jos $\seq{b_k}$ on jonon $\seq{a_n,\ n=1,2, \ldots}$ suppeneva osajono, niin mitk‰ ovat
+mahdolliset osajonon raja-arvot seuraavissa tapauksissa?
+\[
+\text{a)}\ \ a_n = \frac{(n+1)^n}{(-n)^n} \qquad 
+\text{b)}\ \ a_n = \frac{n^3+(-1)^n(n-1)^3}{(n+2)^3+(-1)^n n^3}
+\]
+
+\item
+a) Olkoon luvun $1/7\,$ $n$:s desimaali $=a_n$ ja luvun $1/17\,$ $n$:s desimaali $=b_n\,$.
+M‰‰rit‰ lukujonon $\seq{a_n+b_n}$ suppenevien osajonojen mahdolliset raja-arvot. \
+b) Olkoon $d_n =$ tunnetun jaksottoman desimaaliluvun $\pi=3.14159628..\,$ $n$:s desimaali.
+Esit‰ kymmenen lukujonoa, joista v‰hint‰‰n kaksi on jonon $\seq{d_n}$ suppenevia osajonoja.
+Perustele!
+
+\item \label{H-I-9: suppenevat osajonot}
+a) N‰yt‰ Lause \ref{suppenevat osajonot} p‰tev‰ksi myˆs, kun $a=\infty$, \ b) N‰yt‰, ett‰
+lukujono ei ole rajoitettu t‰sm‰lleen kun jonolla on osajono, joka on aidosti monotoninen ja
+joko rajatta kasvava tai rajatta v‰henev‰.
+
+\item (*)
+Todista: \ Jos $\seq{a_n}$ ja $\seq{b_n}$ ovat rajoitettuja lukujonoja, niin on olemassa 
+aidosti kasvava indeksijono $\seq{n_k}$ siten, ett‰ jonot $\seq{a_{n_k}\,,\ k=1,2, \ldots}$
+ja $\seq{b_{n_k}\,,\ k=1,2, \ldots}$ ovat molemmat suppenevia.
+
+\item (*) K‰ytt‰en Cauchyn jonoihin perustuvaa reaaliluvun m‰‰ritelm‰‰ n‰yt‰, ett‰
+$(\R,+,\cdot,<)$ on j‰rjestetty kunta.
+
+\item (*) \index{satunnaisluku(jono)}
+\kor{Satunnaisluku}jono on rationaalilukujono $\{a_n,\ n=1,2,\ldots\}$, jolle p‰tee 
+$0 \le a_n \le 1\ \forall n$ ja jolla on ominaisuus: Jos $0 \le x < y \le 1$ ja $N_n =$ niiden
+indeksien $k\in\N$ lukum‰‰r‰, joille p‰tee $k \le n$ ja $x \le a_k \le y$ ($n\in\N$), niin
+$\lim_n N_n/n = y-x$. Bolzanon-Weierstrassin lauseen mukaan jonolla $\seq{a_n}$ on suppeneva
+osajono. N‰yt‰, ett‰ p‰tee vahvempi tulos: Jos $0 \le x \le 1$, niin lˆytyy osajono, jonka
+raja-arvo $=x$. 
+
+\item (*)
+N‰yt‰, ett‰ jokaisella reaalilukujonolla on monotoninen osajono.
+
+\end{enumerate}

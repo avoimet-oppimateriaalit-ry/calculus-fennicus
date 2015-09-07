@@ -1,0 +1,674 @@
+\section{Differentiaalilaskun väliarvolause} \label{väliarvolause 2}
+\alku
+
+Seuraava lause kuuluu matemaattisen analyysin huomattavimpiin ja myös hyvin usein käytettyihin
+perustuloksiin. Lause on väliarvolauseiden sarjan toinen --- vrt.\ Ensimmäinen väliarvolause 
+Luvussa \ref{jatkuvuuden käsite} (Lause \ref{ensimmäinen väliarvolause}). 
+\begin{Lause} \label{toinen väliarvolause}
+\index{Differentiaalilaskun väliarvolause|emph}
+\index{vzy@väliarvolauseet!b@differentiaalilaskun|emph} 
+\vahv{(Toinen väliarvolause -- Differentiaalilaskun väliarvolause)} Jos $f:\DF_f\kohti\R$, 
+$\DF_f\subset\R$, on jatkuva välillä $[a,b]\subset\DF_f$ ja derivoituva välillä $(a,b)$, niin 
+jollakin $\xi\in (a,b)$ on
+\[
+f(b)-f(a)=f'(\xi)(b-a).
+\]
+\end{Lause} 
+\vspace{1mm}
+\begin{multicols}{2} \raggedcolumns
+Lauseen väittämä on geometrisesti hyvin uskottava (vrt.\ kuvio), mutta todistuksessa joudutaan 
+kuitenkin tekemisiin jatkuvuuden syvällisemmän logiikan kanssa.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,3.5)
+\put(0,0){\vector(1,0){6}} \put(5.8,-0.4){$x$}
+\put(0,0){\vector(0,1){3.5}} \put(0.2,3.3){$y$}
+% f(x)=0.5(x+1)+0.2(x-1)(x-2.5)(x-5)
+\curve(
+    1.0000,    1.0000,
+    1.2500,    1.3534,
+    1.5000,    1.6000,
+    1.7500,    1.7406,
+    2.0000,    1.8000,
+    2.2500,    1.7969,
+    2.5000,    1.7500,
+    2.7500,    1.6781,
+    3.0000,    1.6000,
+    3.2500,    1.5344,
+    3.5000,    1.5000,
+    3.7500,    1.5156,
+    4.0000,    1.6000,
+    4.2500,    1.7719,
+    4.5000,    2.0500,
+    4.7500,    2.4531,
+    5.0000,    3.0000)  
+\put(0.9,0.85){$\bullet$}\put(4.9,2.85){$\bullet$}
+\drawline(1,1)(5,3)
+\drawline(3,1.1)(5,2.1)
+\dashline{0.2}(4,0)(4,1.6)
+\dashline{0.2}(1,1)(1,0) \dashline{0.2}(5,3)(5,0)
+\put(0.9,-0.5){$a$} \put(4,-0.5){$\xi$} \put(4.9,-0,5){$b$}
+\put(1,2.5){$y=f(x)$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Lauseen \ref{toinen väliarvolause} todistamiseksi palautetaan väittämä ensinnäkin 
+yksinkertaisemmaksi määrittelemällä
+\[
+g(x)=f(x)-f(a)\cdot\frac{b-x}{b-a}-f(b)\cdot\frac{x-a}{b-a}, \quad x\in [a,b].
+\]
+Tällöin on $g(a)=g(b)=0$ ja pätee
+\[
+f(b)-f(a) = f'(\xi)(b-a) \qekv g'(\xi) = 0.
+\]
+Lauseen \ref{toinen väliarvolause} väittämä saa näin seuraavan pelkistetymmän muodon 
+(vrt.\ Ensimmäinen väliarvolause ja sen pelkistetty muoto, Bolzanon lause, Luvussa 
+\ref{jatkuvuuden käsite})\,:
+\begin{Lause} \label{Rollen lause} \vahv{(Rollen lause)} \index{Rollen lause|emph}
+Jos $f$ on jatkuva välillä $[a,b]$ ja derivoituva välillä $(a,b)$ ja $f(a)=f(b)=0$, niin
+$f'(\xi)=0$ jollakin $\xi\in (a,b)$. 
+\end{Lause}
+\tod Koska $f$ on jatkuva välillä $[a,b]$, niin Weierstrassin lauseen 
+(Lause \ref{Weierstrassin peruslause}) perusteella $f$ saavuttaa minimi- ja maksimiarvonsa 
+välillä $[a,b]$. Kun suljetaan pois ilmeinen tapaus $f(x)=0 \ \forall x\in [a,b]$ (jolloin
+$f'(\xi)=0 \ \forall \xi\in (a,b)$), niin on oltava
+\begin{align*}
+\text{joko:} \quad f(\xi) &= f_{\text{min}}<0, \quad \xi\in (a,b), \\
+\text{tai:} \quad f(\xi) &= f_{\text{max}}>0, \quad \xi\in (a,b).
+\end{align*}
+Kummassakin tapauksessa on oltava $f'(\xi)=0$ (Lause \ref{ääriarvolause}). Lause 
+\ref{Rollen lause} on näin todistettu, ja tämän välittömänä seurauksena myös Lause 
+\ref{toinen väliarvolause}. --- Huomattakoon, että todistus oli verrattain mutkaton vain siksi, 
+että siinä oli 'kova ydin' (Weierstrassin lause). \loppu
+\begin{Exa} Funktio $f(x)=\sqrt{\abs{x}}$ toteuttaa Lauseen \ref{toinen väliarvolause} ehdot
+välillä $[0,1]$, ja väitetty $\xi$ on yksikäsitteinen: $\xi=\tfrac{1}{4}\in(0,1)$. Välillä
+$[-1,1]$ Lauseen \ref{toinen väliarvolause} ehdot eivät toteudu, koska $f$ ei ole derivoituva
+pisteessä $x=0$. Väitettyä pistettä $\xi$ (jossa olisi oltava $f'(\xi)=0$) ei tässä tapauksessa
+myöskään ole. \loppu
+\end{Exa}
+Differentiaalilaskun väliarvolauseella on hyvin monia käyttömuotoja tutkittaessa derivoituvien
+(tai 'melkein derivoituvien') funktioiden ominaisuuksia. Jatkossa esitellään näistä 
+käyttömuodoista keskeisimmät.
+
+\subsection*{Funktion monotonisuus}
+\index{funktio B!a@monotoninen|vahv} \index{monotoninen!b@reaalifunktio|vahv}
+
+Yksinkertaisissa tapauksissa voidaan pelkin algebran keinoin selvittää, millä väleillä annettu
+funktio on monotoninen (kasvava tai vähenevä, vrt.\ Luku \ref{yhden muuttujan funktiot}).
+Yleisemmin tehtävä helpottuu huomattavasti, kun otetaan käyttöön seuraava Lauseesta
+\ref{toinen väliarvolause} johdettava väittämä.
+\begin{Lause} \label{monotonisuuskriteeri}
+Olkoon $f$ jatkuva välillä $[a,b]$ ja olkoon $X\subset (a,b)$ äärellinen pistejoukko siten,
+että pätee
+\begin{itemize}
+\item[(1)] $f$ on derivoituva jokaisessa pisteessä $x\in (a,b),\ x \notin X$.
+\item[(2)] On voimassa $(\star)\ \forall x\in (a,b),\ x\notin X$, missä ($\star$) on jokin 
+           seuraavista vaihtoehdoista:
+           \[
+           \begin{array}{ll}
+           \text{(a)}\quad f'(x)\geq 0, \quad &\text{(b)}\quad f'(x)>0, \\
+           \text{(c)}\quad f'(x)\leq 0, \quad &\text{(d)}\quad f'(x)<0. \\ 
+           \end{array}
+           \]
+\end{itemize}
+Tällöin $f$ on (a) kasvava, (b) aidosti kasvava, (c) vähenevä, (d) aidosti vähenevä välillä 
+$[a,b]$.
+\end{Lause}
+\tod Ol. $x_1,x_2\in [a,b]$, $x_1<x_2$. Koska joukko $X$ on äärellinen, niin voidaan valita 
+pistejoukko $\{t_1,\ldots,t_{n-1}\}\subset X$ (mahdollisesti tyhjä joukko) siten, että
+\[
+x_1=t_0<t_1<\ldots <t_n=x_2\ \ \text{ja}\ \ (t_{k-1},t_k)\cap X=\emptyset, \ k=1\ldots n.
+\]
+Tällöin kun kirjoitetaan $f(x_2)-f(x_1)$ teleskooppisummaksi ja sovelletaan Lausetta
+\ref{toinen väliarvolause}, niin seuraa
+\[
+f(x_2)-f(x_1) \,=\, \sum_{k=1}^n [f(t_k)-f(t_{k-1})]
+              \,=\, \sum_{k=1}^n f'(\xi_k)(t_k-t_{k-1}), \quad \xi_k\in (t_{k-1},t_k),
+\]
+jolloin tehtyjen oletuksien perusteella päätellään
+\[
+f(x_2)-f(x_1)=\begin{cases}
+\ge 0 &\text{(a)}, \\
+> 0   &\text{(b)}, \\
+\le 0 &\text{(c)}, \\
+< 0   &\text{(d)}. \\
+\end{cases} \quad\loppu
+\]
+
+Sovellettaessa Lausetta \ref{monotonisuuskriteeri} voidaan joukkoon $X$ aina lukea $f'$:n 
+nollakohdat, sikäli kuin niitä on äärellinen määrä. Äärellinen määrä $f'$:n nollakohtia ei siis
+häiritse funktion (aitoakaan) monotonisuutta, kunhan $f'$:n merkki ei nollakohdissa vaihdu.
+\begin{Exa} Funktio
+$\D f(x)=\begin{cases} 
+         \,x^3, &\text{kun}\ -1\leq x\leq 1, \\ \,x, &\text{kun} \quad 1<x\leq 2
+         \end{cases}$
+
+on jatkuva välillä $[-1,2]$ ja derivoituva välillä $(-1,2)$ lukuunottamatta pistettä $x=1$.
+Kun valitaan $X=\{0,1\}$, niin Lauseen \ref{monotonisuuskriteeri} oletus (b) on voimassa,
+joten $f$ on välillä $[-1,2]$ aidosti kasvava. \loppu
+\end{Exa}
+\begin{Exa} \label{monotonisuus: esim} Edellisen luvun Esimerkin
+\ref{kriittiset pisteet: esim} mukaan funktiolle $f(x)=x^2/(x+1)$ pätee: $f'(x)>0$
+väleillä $(-\infty,-2)$ ja $(0,\infty)$ ja $f'(x)<0$ väleillä $(-2,-1)$ ja $(-1,0)$. Lauseen
+\ref{monotonisuuskriteeri} perusteella päätellään, että $f$ on aidosti kasvava väleillä
+$(-\infty,-2]$ ja $[0,\infty)$ (eli näiden välien suljetuilla osaväleillä) ja vastaavasti
+aidosti vähenevä väleillä $[-2,-1)$ ja $(-1,0]$. 
+(Samaan tulokseen tullaan pelkin algebran keinoinkin, mutta työläämmin:
+Harj.teht.\,\ref{yhden muuttujan funktiot}:\ref{H-IV-1: funktioalgebran haasteita}b.)
+\loppu \end{Exa}
+
+\subsection*{Kriittisen pisteen laatu}
+\index{kriittinen piste!a@luokittelu|vahv}
+
+Lauseen \ref{monotonisuuskriteeri} monotonisuuskriteereillä voidaan yleensä selvittää helposti,
+onko funktion kriittinen piste paikallinen ääriarvokohta (ja minkälaatuinen) vai ei. Nimittäin
+asia selviää (ellei $f$ ole poikkeuksellisen 'pahantapainen') tutkimalla derivaatan merkkiä 
+kriittisen pisteen lähiympäristössä. Esimerkiksi jos $f'(x)<0$ välillä $(c-\delta_1,c)$ ja 
+$f'(x)>0$ välillä $(c,\,c+\delta_2)$ joillakin $\delta_1\,,\delta_2>0$, niin $f$ on välillä 
+$[c-\delta_1,c]$ aidosti vähenevä ja välillä $[c,c+\delta_2]$ aidosti kasvava, jolloin $c$:n 
+on oltava paikallinen minimikohta. Päättelyssä riittää, että $f$ on pisteessä $c$ jatkuva, ts.\
+derivoituvuutta ei tarvitse olettaa (vrt.\ Lause \ref{ääriarvolause 2}).
+\jatko \begin{Exa} (jatko) Esimerkissä $f$:n kriittiset pisteet ovat $-2$ ja $0$. Derivaatan
+merkin perusteella päätellään, että $x=-2$ on $f$:n paikallinen maksimikohta ja $x=0$ on
+paikallinen minimikohta. \loppu
+\end{Exa}
+
+\subsection*{Funktion (käyrän) kaareutuvuus}
+\index{kaareutuvuus (funktion, käyrän)|vahv}
+
+Jos $f'(x)$:n merkki kertoo, onko $f$ kasvava tai vähenevä, niin $f''(x)$:n merkki puolestaan 
+kertoo funktion $f$ (tai käyrän $y=f(x)$) \kor{kaareutumissuunnan}. Jos $f$ on derivoituva
+avoimella välillä $(a,b)$, niin sanotaan, että $f$ on ko.\ välillä \kor{ylös}(päin) 
+\kor{kaareutuva} (egl.\ concave up), jos $f'$ on ko.\ välillä aidosti kasvava, ja
+\kor{alas}(päin) \kor{kaareutuva} (engl.\ concave down), jos $f'$ on aidosti vähenevä välillä
+$(a,b)$. Jos $f$ on kahdesti derivoituva, lukuunottamatta mahdollisesti äärellistä
+pistejoukkoa, niin $f$:n kaareutumissuunta voidaan päätellä $f''$:n merkistä Lauseen
+\ref{monotonisuuskriteeri} mukaisesti. Kaareutuvuuden geometrinen tulkinta on ilmeinen,
+vrt.\ kuvio.\footnote[2]{Kaareutuvuuden synonyyminä käytetään matemaattisissa teksteissä
+myös termiä \kor{kuperuus} (ylös tai alas), mutta tällöin saattaa jäädä epäselväksi, kumpaa
+kaareutumissuuntaa tarkoitetaan. Kaareutuvuuden (kuperuuden) käsite voidaan määritellä 
+yleisemmin myös derivaatoista riippumatta, jolloin käytetään useammin termejä \kor{konveksi}
+ja \kor{konkaavi}. Funktiota $f$ sanotaan konveksiksi välillä $[a,b]\in\DF_f$, jos $f$:llä on
+ominaisuus
+\[ 
+f\bigl(\,tx_1 + (1-t)x_2\bigr) \le t f(x_1) + (1-t)f(x_2), \quad 
+                   \text{kun}\ x_1,x_2\in[a,b]\ \text{ja}\ t \in [0,1]. 
+\]
+Jos tässä ehdossa epäyhtälö toteutuu muodossa '$<$' aina kun $x_1 \neq x_2$ ja $t \in (0,1)$,
+niin $f$ on välillä $[a,b]$ \kor{aidosti konveksi}. Geometrisesti aito konveksisuus
+tarkoittaa, että jos $x_1,\,x_2\in[a,b]$ ja $x_1 < x_2$, niin funktion $f$ kuvaaja on
+pisteiden $(x_1,f(x_1))$ ja $(x_2,f(x_2))$ kautta kulkevan suoran alapuolella avoimella
+välillä $(x_1,x_2)$. Välillä $[a,b]$ jatkuva ja välillä $(a,b)$ ylös kaareutuva (riittävästi
+derivoituva) funktio on määritelmien mukaisesti aidosti konveksi. Alaspäin kaareutuvuutta
+vastaava käsite konkaavius määritellään vastaavasti.\index{kuperuus|av}
+\index{konveksi, konkaavi|av} \index{aidosti konveksi|av}} 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,4.5)(0,-1)
+\multiput(0,0)(6,0){2}{
+\put(0,0){\vector(1,0){4}} \put(3.8,-0.4){$x$}
+\put(0,0){\vector(0,1){3}} \put(0.2,2.8){$y$}
+}
+\curve(0.5,0.5,2.5,1.3,4,3) \put(1,2){$y=f(x)$}
+\curve(6.5,0.5,8,2.8,10,2.6) \put(8,2){$y=f(x)$}
+\put(1.3,-1){$f''>0$} \put(7.3,-1){$f''<0$}
+\put(0.3,-1.6){(ylös kaareutuva)} \put(6.4,-1.6){(alas kaareutuva)}
+\end{picture}
+\end{center}
+\end{figure}
+Pistettä, jossa kaareutumissuunta vaihtuu, sanotaan (funktion/käyrän)
+\index{kzyzy@käännepiste}
+\kor{käännepisteeksi} (engl.\ inflection point). Jos $f''$ on jatkuva käännepisteessä $c$, niin
+on oltava $f''(c)=0$.
+\begin{Exa} Derivoimalla todetaan, että kolmannen asteen polynomilla 
+$f(x)=x^3+ax^2+bx+c\ (a,b,c\in\R)$ on täsmälleen yksi käännepiste: $\,x=-\tfrac{1}{3}a$.
+Välillä $(-\infty,-\tfrac{1}{3}a)$ $f$ on alas ja välillä $(-\tfrac{1}{3}a,\infty)$ ylös
+kaareutuva. \loppu
+\end{Exa}
+
+\subsection*{Lipschitz-jatkuvuus}
+
+Luvussa \ref{jatkuvuuden käsite} määritelty funktion jatkuvuus voidaan tulkita funktiota
+koskevaksi \pain{minimi}oletukseksi, kun halutaan taata fuktioevaluaation $x \map f(x)$
+luotettavuus. Seuraavassa esitellään 'pelkkää jatkuvuutta' vahvempi jatkuvuuden laji, jolla
+jatkossa on silloin tällöin (etenkin teoreettista) käyttöä.
+\begin{Def} \label{funktion l-jatkuvuus} \index{Lipschitz-jatkuvuus|emph}
+Funktio $f$ on \kor{Lipschitz-jatkuva} eli \kor{Lipschitz}\footnote[2]{\hist{Rudolf Lipschitz}
+(1832-1903) oli saksalainen matemaatikko.\index{Lipschitz, R.|av}} \kor{välillä}
+$[a,b]\subset\DF_f$, jos jollakin $L\in\R_+$ pätee
+\[
+\abs{f(x_1)-f(x_2)}\leq L\abs{x_1-x_2} \quad \forall x_1,x_2\in [a,b].
+\]
+\end{Def}
+Määritelmän lukua $L$ sanotaan $f$:n \kor{Lipschitz-vakioksi} välillä $[a,b]$. Vakio $L$ ei
+ole yksikäsitteinen, sillä jos $L$ on $f$:n Lipschitz-vakio, niin määritelmän mukaan samoin
+on jokainen $L_1 > L$. Jos $f$ on Lipschitz välillä $[a,b]$, niin $f$:n pienin
+Lipschitz-vakion arvo on pienin yläraja (määritelmän perusteella rajoitetulle)
+reaalilukujoukolle
+\[
+A = \left\{ y = \frac{\abs{f(x_1)-f(x_2)}}{\abs{x_1-x_2}}\ 
+                              \Big\vert\ x_1,x_2 \in [a,b]\ \ja\ x_1 \neq x_2\right\},
+\]
+ts.\ $\ L_{min} = \sup A$ (vrt.\ Luku \ref{reaalilukujen ominaisuuksia}).
+
+Lipschitz-jatkuvuus on käsitteenä lähellä derivoituvuutta, ja Lipschitz-jatkuvia funktioita
+voikin luonnehtia 'melkein derivoituviksi'.
+\begin{Exa} Funktio $f(x)=\abs{x}$ on jokaisella välillä Lipschitz-jatkuva vakiolla $L=1$
+(= pienin $L$:n arvo), sillä kolmioepäyhtälön nojalla
+\[
+\abs{f(x_1)-f(x_2)} \,=\, \abs{\abs{x_1}-\abs{x_2}} 
+                    \,\le\, \abs{x_1-x_2}, \quad x_1,\,x_2\in\R. \loppu
+\]
+\end{Exa}
+Esimerkin funktio on myös paloittain jatkuvasti derivoituva jokaisella välillä
+(Määritelmä \ref{paloittainen sileys}, $\,m=1$). Yhdessä jatkuvuuden kanssa tämä on
+yleisemminkin riittävä tae Lipschitz-jatkuvuudelle:
+\begin{Lause} \label{Lipschitz-kriteeri} Jos $f$ on välillä $[a,b]$ jatkuva ja paloittain
+jatkuvasti derivoituva, niin $f$ on Lipschitz-jatkuva välillä $[a,b]$.
+\end{Lause}
+Todistuksen (Harj.teht.\,\ref{H-V-6: Lipschitz-kriteeri}) johdannoksi näytettäköön toteen
+seuraava väittämä, jonka osavättämän (ii) Lause \ref{Lipschitz-kriteeri} yleistää. Todistus
+on tyypillinen esimerkki Diferentiaalilaskun väliarvolauseen soveltamisesta.
+\begin{Lause} \label{Lipschitz-kriteeri 1}
+Jos $f$ on välillä $[a,b]$ jatkuvasti derivoituva, niin
+\begin{align*}
+\text{(i)}  \quad 
+            &\dif_+f(a) = f'(a^+),\,\ \dif_-f(b) = f'(b^-), \\
+\text{(ii)} \quad 
+            &\text{$f$ on välillä $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on} \\
+            &L=\max_{x\in [a,b]} \abs{f'(x)}.
+\end{align*}
+\end{Lause}
+\tod (i) Olkoon $\seq{x_n}$ jono, jolle pätee $a < x_n \le b\ \forall n$ ja $x_n \kohti a^+$. 
+Tällöin Lauseen \ref{toinen väliarvolause} mukaan jokaisella $n$ on olemassa 
+$\xi_n \in (a,x_n)$ siten, että
+\[
+\frac{f(x_n)-f(a)}{x_n-a} = f'(\xi_n).
+\]
+Tässä $\xi_n \kohti a^+$ kun $x_n \kohti a^+$, joten toispuolisen derivaatan $\dif_+f(a)$ 
+määritelmän ja $f'$:n oletetun toispuolisen jatkuvuuden perusteella seuraa
+\[
+\dif_+f(a) = \lim_{x_n\kohti a^+}\,\frac{f(x_n)-f(a)}{x_n-a} 
+           = \lim_{x_n\kohti a^+} f'(\xi_n) = f'(a^+).
+\]
+Väittämän (i) toinen osa todistetaan vastaavasti.
+
+(ii) Jos $x_1,x_2\in [a,b]$ ja $x_1<x_2$, niin Lauseen \ref{toinen väliarvolause} mukaan
+\[
+f(x_2)-f(x_1)=f'(\xi)(x_2-x_1),\quad \xi\in (x_1,x_2).
+\]
+Koska $f'$ on jatkuva välillä $[a,b]$, niin Weierstrassin lauseen (Lause
+\ref{Weierstrassin peruslause}) mukaan $\abs{f'(x)}$ saavuttaa välillä $[a,b]$ maksimiarvonsa.
+Kun tämä merkitään $=L$, niin nähdään, että $L$ kelpaa $f$:n Lipschitz-vakion arvoksi.
+Valitsemalla $x_1$ ja $x_2$ $\abs{f'(x)}$:n maksimikohdan läheltä (vrt.\ osaväittämän (i)
+todistus) nähdään myös helposti, että tämä $L$:n arvo on pienin mahdollinen. \loppu
+\begin{Exa} Jos $0<a<b$, niin funktio $f(x)=\sqrt{x}$ on Lauseen \ref{Lipschitz-kriteeri 1}
+mukaan välillä $[a,b]$ Lipschitz-jatkuva vakiolla $L=1/(2\sqrt{a})$. Väleillä $[0,b]$ $f$ ei
+ole Lipschitz-jatkuva (ainoastaan jatkuva), sillä jos valitaan $x_1=0$ ja $x_2>0$, niin
+\[
+\frac{\abs{f(x_1)-f(x_2)}}{\abs{x_1-x_2}} = \frac{1}{\sqrt{x_2}} \kohti \infty, \quad
+                                            \text{kun}\ x_2 \kohti 0^+. \loppu
+\]
+\end{Exa}
+
+\subsection*{Differentiaaliyhtälö $y'=f(x)$. Integraalifunktio}
+\index{differentiaaliyhtälö|vahv} \index{integraalifunktio|vahv}
+
+Derivoimissääntöjen perusteella 'vakion derivaatta on nolla', ts.\ jos $f(x)=C$, $x\in(a,b)$
+jollakin $C\in\R$, niin $f'(x)=0,\ x\in(a,b)$. Differentiaalilaskun väli\-arvo\-lauseesta 
+seuraa, että väittämä pätee myös käänteisesti muodossa: \pain{vain} vakion derivaatta $=0$. 
+Tämä yksinkertainen tulos osoittautuu seuraamuksiltaan huomattavaksi.
+\begin{Lause} (\vahv{Integraalilaskun\footnote[2]{\kor{Integraalilaskenta} on matematiikan
+laji, jota tarkastellaan perusteellisemmin Luvussa \ref{Integraali}.} peruslause}) 
+\label{Integraalilaskun peruslause} \index{Integraalilaskun peruslause|emph}
+Jos $f$ on derivoituva välillä $(a,b)$ ja $f'(x)=0\ \forall x\in(a,b)$, niin jollakin $C\in\R$
+on $f(x)=C,\ x\in(a,b)$.
+\end{Lause}
+\tod Jos $c\in(a,b)$ ja $x\in(a,b),\ x \neq c$, niin Differentiaalilaskun väliarvolauseen
+oletukset ovat voimassa välillä $[c,x]$ ($x>c$) tai välillä $[x,c]$ ($x<c$). Näin ollen
+$f(x)-f(c)=f'(\xi)(x-c)$ jollakin $\xi\in(c,x)\subset(a,b)$ tai $\xi\in(x,c)\subset(a,b)$.
+Koska $f'(\xi)=0\ \forall\xi\in(a,b)$, niin seuraa $f(x)=f(c)=C,\ x\in(a,b)$. \loppu
+
+Lause \ref{Integraalilaskun peruslause} voidaan tulkita väittämänä, joka koskee hyvin
+yksinkertaista (itse asiassa kaikkein yksinkertaisinta) \kor{differentiaaliyhtälöä}
+\[
+y'=0.
+\]
+Tässä $y(x)$ on tarkasteltavalla välillä $(a,b)$ derivoituva (tuntematon)
+funktio\footnote[3]{Differentiaaliyhtälöissä käytetään yleensä funktiosymbolia $y$ (ei $f$),
+koska kyseeessä on epäsuorasti määritelty funktio (tai funktiojoukko), vrt.\ 
+implisiittifunktiot (Luku \ref{käänteisfunktio}).}. 
+Differentiaaliyhtälön \kor{ratkaisu} on jokainen funktio $y(x)$, joka toteuttaa yhtälön ko.\
+välillä. Lauseen \ref{Integraalilaskun peruslause} mukaan diferentiaaliyhtälön $y'=0$ jokainen
+ratkaisu on vakio, eli ko.\ differentiaaliyhtälön \kor{yleinen ratkaisu} välillä $(a,b)$ on
+\[
+y(x)=C, \quad x\in(a,b),
+\]
+missä $C$ on nk.\ \kor{määräämätön vakio} ($C\in\R$). 
+
+Em.\ tulos on helposti yleistettävissä koskemaan differentiaaliyhtälöä
+\[
+y'(x)=f(x), \quad x\in(a,b),
+\]
+missä $f$ on tunnettu funktio välillä $(a,b)$.
+\begin{Kor} \label{toiseksi yksinkertaisin dy} Jos $F$ on välillä $(a,b)$ derivoituva funktio
+ja $\,F'(x)=f(x)$, $x\in(a,b)$, niin differentiaaliyhtälön $y'=f(x)$ yleinen ratkaisu välillä
+$(a,b)$ on
+\[
+y(x)=F(x)+C, \quad x\in(a,b).
+\]
+\end{Kor}
+\tod Jos $y$ differentiaaliyhtälön ratkaisu ja merkitään $u(x)=y(x)-F(x)$, niin
+$\,u'(x)=f(x)-f(x)=0$, $x\in(a,b)$, jolloin Lauseen \ref{Integraalilaskun peruslause} mukaan
+on oltava
+\[
+u(x)=C\,\ \ekv\,\ y(x)=F(x)+C, \quad x\in(a,b). \loppu
+ \]
+\begin{Exa} \label{V-6: dyex1} Differentiaaliyhtälön
+\[
+y'=x^3-2x, \quad x\in\R
+\]
+(tässä $(a,b)=(-\infty,\infty)$) ratkaisemiseksi on etsittävä funktio $F$, jolle pätee
+$F'(x)=x^3-2x,\ x\in\R$. Derivoimissääntöjen perusteella nähdään, että voidaan valita
+$F(x)=\frac{1}{4}x^4-x^2$, joten yleinen ratkaisu on
+\[
+y(x)=\frac{1}{4}x^4-x^2+C. \loppu
+\]
+\end{Exa}
+\begin{Exa} Mikä on differentiaaliyhtälön
+\[
+y''=0, \quad x\in\R
+\]
+yleinen ($\R$:ssä kahdesti derivoituva) ratkaisu?
+\end{Exa}
+\ratk Jos merkitään $u(x)=y'(x)$, niin differentiaaliyhtälö pelkistyy muotoon $u'=0$, joten
+$u(x)=C_1\,,\ x\in\R$ (Lause\ref{Integraalilaskun peruslause}), ja näin ollen
+$y'=C_1\,,\ x\in\R$. Korollaarin \ref{toiseksi yksinkertaisin dy} ja derivoimissääntöjen mukaan
+on tällöin oltava
+\[
+y(x)=C_1x+C_2\,, \quad x\in\R.
+\]
+Tässä $C_1$ ja $C_2$ ovat molemmat määräämättömiä (toisistaan riippumattomia) vakioita, joten
+yleinen ratkaisu koostuu kaikista polynomeista astetta $\le 1$. \loppu
+
+Differentiaaliyhtälön $y'=f(x)$ ratkaisuja sanotaan funktion $f$ \kor{integraalifunktioiksi}.
+Integraalifunktio on siis määräämätöntä vakiota, nk.\ 
+\index{integroimisvakio}%
+\kor{integroimisvakiota} vaille
+yksikäsitteinen. Sovelluksissa integroimisvakio määräytyy usein (sovelluksesta peräisin
+olevasta) 
+\index{alkuehto (DY:n)} \index{alkuarvotehtävä}%
+\kor{alkuehdosta} muotoa $y(x_0)=y_0$. Kyseessä on tällöin nk.\ \kor{alkuarvotehtävä}
+(engl.\ initial value problem)
+\[ \begin{cases}
+   \,y'=f(x), \quad x\in(a,b), \\ \,y(x_0)=y_0,
+   \end{cases} \]
+missä $x_0\in(a,b)$ ja $y_0\in\R$ on annettu. Ratkaisu on
+\[
+y(x)=F(x)-F(x_0)+y_0\,,
+\]
+missä $F$ on (mikä tahansa) $f$:n integraalifunktio. Ratkaisu on yksikäsitteinen, sillä
+$F(x)-F(x_0)$ ei muutu, jos $F$:ään lisätään vakio.
+\jatko \begin{Exa} (jatko) Alkuarvotehtävän
+\[ \begin{cases}
+   \,y''=0, \quad x\in\R, \\ \,y(1)=0,\ y'(1)=2
+   \end{cases} \]
+yksikäsitteinen ratkaisu on $y(x)=2x-2$. \loppu
+\end{Exa}
+
+Annetun funktion $f$ 'integroiminen' eli integraalifunktion etsiminen on hyvin perinteinen
+matematiikan taitolaji, jonka laajempi esittely kuuluu integraalilaskun yhteyteen
+(ks.\ Luvut \ref{integraalifunktio}--\ref{osamurtokehitelmät} jäljempänä). Toistaiseksi
+todettakoon ainoastaan, että derivoimissääntöjen perusteella helposti integroitavissa
+ovat mm.\ trigonometriset funktiot $\,\sin\,$ ja $\,\cos$, samoin polynomit (vrt.\ Esimerkki
+\ref{V-6: dyex1}). Myös funktio, joka on määritelty välillä $(-\rho,\rho)$ suppenevan
+potenssisarjan summana on ko.\ välillä (yllättävänkin) helposti integroitavissa. Esimerkki
+valaiskoon asiaa.
+\begin{Exa} Funktion $f(x)=x^2/(1-x)$ integraalifunktio ei ole (lausekkeena) esitettävissä
+toistaiseksi tunnettujen funktioiden avulla. Välillä $(-1,1)$ on integraalifunktio
+kuitenkin määrättävissä, sillä tällä välillä pätee
+\[
+f(x)=\frac{x^2}{1-x}=x^2\sum_{k=0}^\infty x^k=\sum_{k=0}^\infty x^{k+2}, \quad x\in(-1,1).
+\]
+Potenssisarjan derivoimissäännön (Lause \ref{potenssisarja on derivoituva}) perusteella
+päätellään, että $f$:n integraalifunktio välillä $(-1,1)$ on
+\[
+F(x)\,=\,C+\sum_{k=0}^\infty \frac{x^{k+3}}{k+3}\,
+      =\,C+\frac{x^3}{3}+\frac{x^4}{4}+ \ldots \loppu
+\]
+\end{Exa}
+
+\subsection*{l'Hospitalin säännöt}
+
+\kor{l'Hospitalin säännöillä} tarkoitetaan derivointiin perustuvia raja-arvojen
+laskusääntöjä muotoa
+\[
+\lim_{x \kohti a^\pm} \frac{f(x)}{g(x)} = \lim_{x \kohti a^\pm} \frac{f'(x)}{g'(x)}\,.
+\]
+Hankalien raja-arvojen laskemisessa nämä säännöt ovat varteenotettava --- myös helposti
+muistettava --- vaihtoehto esim.\ muuttujan vaihdolle (vrt.\ Luku \ref{funktion raja-arvo}).
+Säännöt pätevät lievin lisäehdoin sellaisissa tapauksissa, joissa $f(a)/g(a)$ on joko muotoa
+$0/0$ tai $\infty/\infty$.
+
+l'Hospitalin sääntöjen taustalla on jälleen Differentiaalilaskun väliarvolause, tarkemmin
+seuraava nk.\ \kor{yleistetty väliarvolause}, joka sekin on Rollen lauseesta johdettavissa
+(Harj.teht.\,\ref{H-V-6: yleistetty väliarvolause}).
+\begin{Lause} \label{yleistetty väliarvolause} 
+\index{vzy@väliarvolauseet!b@differentiaalilaskun|emph}
+\index{Differentiaalilaskun väliarvolause!yleistetty väliarvolause|emph} Jos $f$ ja $g$ ovat
+molemmat jatkuvia välillä $[a,b]$ ja derivoituvia välillä $(a,b)$ ja lisäksi $g'(x) \neq 0$
+$\forall x\in(a,b)$, niin on olemassa $\xi\in(a,b)$ siten, että
+\[
+\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(\xi)}{g'(\xi)}\,.
+\]
+\end{Lause}
+\begin{Lause} (\vahv{l'Hospitalin\footnote[2]{Ranskalainen markiisi ja matemaatikko
+\hist{Guillaume de l'Hospital} (1661-1704) tunnetaan ennen muuta hänen julkaisemastaan
+ensimmäisestä differentiaalilaskennan oppikirjasta (1696).
+\index{l'Hospital G. de|av}} säännöt}) \label{Hospital} \index{l'Hospitalin säännöt|emph}
+\begin{itemize}
+\item[1.] Olkoot $f$ ja $g$ derivoituvia välillä $(a,a+\delta),\ \delta>0$, ja olkoon
+          $g'(x) \neq 0$ tällä välillä. Edelleen olkoon
+          $\lim_{x \kohti a^+}f(x)=\lim_{x \kohti a^+}g(x) = 0$. Tällöin pätee
+          \[
+          \lim_{x \kohti a^+} \frac{f(x)}{g(x)} = \lim_{x \kohti a^+} \frac{f'(x)}{g'(x)} = A
+          \]
+          sikäli kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
+\item[2.] Olkoot $f$ ja $g$ derivoituvia välillä $(M,\infty),\ M\in\R$, ja olkoon
+          $g'(x) \neq 0$ tällä välillä. Edelleen olkoon
+          $\lim_{x\kohti\infty}f(x)=\lim_{x\kohti\infty}g(x)=0$. Tällöin pätee
+          \[
+          \lim_{x\kohti\infty} \frac{f(x)}{g(x)} = \lim_{x\kohti\infty} \frac{f'(x)}{g'(x)} = A
+          \]
+          sikäli kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
+\item[3.] Säännöt 1--2 ovat päteviä myös, kun funktioiden $f$ ja $g$ raja-arvoja koskevat
+          oletukset muutetaan muotoon: $\,\lim|f(x)|=\lim|g(x)|=\infty$.
+\end{itemize}
+\end{Lause}
+\tod \ Sääntö 1. Asetetaan $f(a)=g(a)=0$, jolloin oletusten perusteella $f$ ja $g$ ovat
+jatkuvia välillä $[a,b]$, kun $a<b<a+\delta$. Näin ollen jos $a<x<a+\delta$, niin
+Lauseen \ref{yleistetty väliarvolause} perusteella pätee jollakin $\xi\in(a,x)$
+\[
+\frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(\xi)}{g'(\xi)}\,.
+\]
+Tässä $\xi \kohti a^+$ kun $x \kohti a^+$, joten sääntö seuraa.
+
+Sääntö 2. Tehdään muuttujan vaihto $x=1/t$ ja sovelletaan 1.\ sääntöä:
+\[
+\lim_{x\kohti\infty}\frac{f(x)}{g(x)} 
+   \,=\, \lim_{t \kohti 0^+} \frac{f(\tfrac{1}{t})}{g(\tfrac{1}{t})}
+   \,=\, \lim_{t \kohti 0^+} \frac{-\tfrac{1}{t^2}f'(\tfrac{1}{t})}
+                                 {-\tfrac{1}{t^2}g'(\tfrac{1}{t})}
+   \,=\, \lim_{t \kohti 0^+} \frac{f'(\tfrac{1}{t})}{g'(\tfrac{1}{t})}
+   \,=\, \lim_{x\kohti\infty} \frac{f'(x)}{g'(x)}\,.
+\]
+Sääntö 3. Myös tämä perustuu Lauseeseen \ref{yleistetty väliarvolause}, mutta todistus on
+melko työläs. Todistus sivuutetaan (ks.\ Harj.teht\,\ref{H-V-6: Hospital 3}). \loppu
+
+Lauseen \ref{Hospital} säännöillä on ilmeiset vastineensa raja-arvoille 
+$\lim_{x \kohti a^-}f(x)/g(x)$ ja $\lim_{x \kohti -\infty}f(x)/g(x)$. Säännöt ovat samoin pätevät
+raja-arvolle $\lim_{x \kohti a}f(x)/g(x)$ ($a\in\R$) olettaen, että $f$ ja $g$ ovat 
+derivoituvia väleillä $(a-\delta,a)$ ja $(a,a+\delta)$ ja $g'(x) \neq 0$ näillä väleillä.
+\begin{Exa} l'Hospitalin 1. säännöllä laskien saadaan 
+(vrt.\ Esimerkki \ref{funktion raja-arvo}:\ref{raja-arvo muuttujan vaihdolla})
+\[
+\lim_{x \kohti 81} \frac{\sqrt{x}-9}{\sqrt[4]{x}-3} 
+  \,=\, \lim_{x \kohti 81} \frac{\tfrac{1}{2}x^{-1/2}}{\tfrac{1}{4}x^{-3/4}}
+  \,=\, \lim_{x \kohti 81} 2x^{1/4} \,=\, 6.
+\] 
+Samaa sääntöä soveltaen seuraa myös
+\[
+\lim_{x \kohti 0} \frac{\sin x}{x} \,=\, \lim_{x \kohti 0}\frac{\cos x}{1} \,=\, 1.
+\]
+Tämä lasku kuitenkin kätkee kehäpäätelmän: Raja-arvoa laskettaessa käytetään
+derivoimissääntöä, joka perustui ko.\ raja-arvoon (!) (ks.\ Luku \ref{kaarenpituus}). \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Määritä seuraavien funktioiden kriittiset pisteet ja välit, joilla funktiot ovat aidosti
+kasvavia tai väheneviä. Määritä myös funktioiden absoluuttiset minimi- ja maksimiarvot
+määrittelyjoukossaan, sikäli kuin olemassa. Hahmottele funktioiden kuvaajat.
+\begin{align*}
+&\text{a)}\ f(x)=1-6x+9x^2-5x^3 \qquad
+ \text{b)}\ f(x)=x^4+x \qquad
+ \text{c)}\ f(x)=\frac{9+x^2}{1+x} \\
+&\text{d)}\ f(x)=\frac{x^4+x+1}{x^4+1} \qquad 
+ \text{e)}\ f(x)=x\sqrt{4-x^2} \qquad
+ \text{f)}\ f(x)=\sqrt{3x^2-x^3} \\
+&\text{g)}\ f(x)=\frac{x^2}{\sqrt{4-x^2}} \qquad
+ \text{h)}\ f(x)=\frac{x}{\sqrt{x^4+1}} \qquad
+ \text{i)}\ f(x)=x-\sin x \\
+&\text{j)}\ f(x)=x+2\cos x \qquad
+ \text{k)}\ f(x)=x-\frac{2}{\sin x} \qquad
+ \text{l)}\ f(x)=x-2\tan x \\
+&\text{m)}\ f(x)=1-\frac{1}{2}x^2-\cos x
+\end{align*}
+
+\item
+a) Määritä funktion $f(x)=3x^4-2x^3+15x^2+10x-20$ pienin Lipschitz-vakio välillä $[0,6]$. \
+b) Näytä, että jos $f$ on Lipscitz-jatkuva välillä $[a,b]$ vakiolla $L$, niin käyrän
+$S: y=f(x)$ kaari välillä $[a,b]$ on suoristuva ja kaarenpituudelle pätee arvio
+$s \le \sqrt{1+L^2}\,(b-a)$. \ c) Näytä, että jos $f$ ja $g$ ovat Lipschitz-jatkuvia
+välillä $[a,b]$ vakioilla $L_1$ ja $L_2$, niin $\alpha f+\beta g$ on välillä $[a,b]$
+Lipschitz-jatkuva vakiolla $L=\abs{\alpha}L_1+\abs{\beta}L_2$ $(\alpha,\beta\in\R)$.
+
+\item \label{H-V-6: Lipschitz-kriteeri}
+Näytä, että jos $f$ on jatkuva ja paloittain jatkuvasti derivoituva välillä $[a,b]$, niin
+$f$ on välillä $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on
+$L=\max_{x\in[a,b]} g(x)$, missä $g(a)=\abs{\dif_+f(a)}$, $\,g(b)=\abs{\dif_-f(b)}$ ja
+$g(x)=$ $\max\{\abs{\dif_-f(x)},\,\abs{\dif_+f(x)}\},\ x\in(a,b)$.
+Laske tulosta soveltaen funktioiden $\,f(x)=\abs{x-1}+\abs{x}+\abs{x+1}\,$ ja
+$\,g(x)=\max\{2x^3-2x,\,-2x^2-4x,\,3-2x\}\,$ pienin Lipschitz-vakio välillä $[-2,2]$.
+
+\item
+Määritä seuraavien funktioiden käännepisteet ja kaareutumissuunnat eri $\R$:n
+osaväleillä: \vspace{1mm}\newline
+a) \ $f(x)=3x^5+35x^4+100x^2-200x\ \quad$   b) \ $f(x)=3x^5-10x^4+10x^2$ \newline
+c) \ $f(x)=2x^3+x+1-1/x\ \qquad\qquad\quad$ d) \ $f(x)=x/(x^2+1)$
+
+\item
+Johda kaava $\,\Arcsin x + \Arccos x=\frac{\pi}{2},\ x\in(-1,1)\,$ derivoimissäännöistä ja
+Lauseesta \ref{Integraalilaskun peruslause}.
+
+\item
+Ratkaise (yleinen ratkaisu tai alkuarvotehtävän ratkaisu) joko lausekkeena tai potenssisarjan
+avulla:
+\begin{align*}
+&\text{a)}\,\ y'=4x^7-5x^3+3,\,\ x\in\R \qquad
+ \text{b)}\,\ y'=\frac{x^5-1}{x-1}\,,\,\ x\in(1,\infty),\,\ y(1)=1 \\[1mm]
+&\text{c)}\,\ y'=\sqrt{x}-\sqrt[3]{x},\,\ x\in(0,\infty) \quad\,\ \
+ \text{d)}\,\ y'=\frac{1}{\sqrt{x}}\,,\,\ x\in(0,\infty),\,\ y(1)=-1 \\[1mm]
+&\text{e)}\,\ y'=\sin x+\cos x,\,\ x\in\R \qquad\,\ \
+ \text{f)}\,\ y'=\frac{\cot x}{\sin x}\,,\,\ x\in(0,\pi),\,\ y(\tfrac{\pi}{2})=1 \\[1mm]
+&\text{g)}\,\ y'=\sum_{k=1}^\infty \frac{x^k}{k}\,,\,\ x\in(-1,1) \qquad\,\
+ \text{h)}\,\ y'=\sum_{k=0}^\infty \frac{x^k}{k!}\,,\,\ x\in\R,\,\ y(0)=1 \\
+&\text{i)}\,\ y'=\sum_{k=0}^\infty \frac{(-1)^k}{k!}x^k,\,\ x\in\R \qquad\,\ \
+ \text{j)}\,\ y'=\frac{1}{1+x}\,,\,\ x\in(-1,1),\,\ y(0)=2 \\
+&\text{k)}\,\ y'=\frac{1}{1-x^2}\,,\,\ x\in(-1,1) \qquad\,\
+ \text{l)}\,\ y'=\frac{2+3x}{1-x^2}\,,\,\ x\in(-1,1),\,\ y(0)=0
+\end{align*}
+
+\item
+Näytä, että jos $y(x)$ on $\R$:ssä $n$ kertaa derivoituva ($n\in\N$) ja $y^{(n)}=0$, niin
+$y$ on polynomi astetta $\le n$. Mikä on $y(x)$:n lauseke alkuehdoilla $y(x_0)=c_0$,
+$y'(x_0)=c_1\,,\ \ldots,\ y^{(n-1)}(x_0)=c_{n-1}$\,?
+
+\item
+Näytä Korollaarin \ref{toiseksi yksinkertaisin dy} avulla, että välillä $(-1,1)$ pätee:
+\[
+\Arctan x=\sum_{k=0}^\infty \frac{(-1)^{k}}{2k+1}\,x^{2k+1}
+         = x-\frac{x^3}{3}+\frac{x^5}{5}- \ldots
+\]
+
+\item \label{H-V-6: yleistetty väliarvolause}
+Todista Lause \ref{yleistetty väliarvolause} soveltamalla Rollen lausetta funktioon
+\[
+h(x) = [f(b)-f(a)][g(x)-g(a)]-[g(b)-g(a)][f(x)-f(a)].
+\]
+Miksei voi olla $g(a)=g(b)$\,?
+
+\item
+Yritä laskea l'Hospitalin säännöllä raja-arvo $\,\lim_{x\kohti\infty} x/\sqrt{x^2+1}$.
+
+\item
+Laske l'Hospitalin säänöillä:
+\begin{align*}
+&\text{a)}\ \lim_{x \kohti -3} \frac{x^2+3x}{x^2-9} \qquad
+ \text{b)}\ \lim_{x \kohti 3^-} \frac{\abs{x^2-4x+3}}{2x^2-5x-3} \qquad
+ \text{c)}\ \lim_{t \kohti 8} \frac{t^{2/3}-4}{t^{1/3}-2} \\
+&\text{d)}\ \lim_{y \kohti 1} \frac{y-4\sqrt{y}+3}{y^2-1} \qquad
+ \text{e)}\ \lim_{x\kohti\infty} \frac{2x^2+x+3}{1-x^2} \qquad
+ \text{f)}\ \lim_{x \kohti 0} \frac{\sin 2x}{\sin 3x} \\
+&\text{g)}\ \lim_{x \kohti 0} \frac{1-\cos 4x}{1-\cos 3x} \qquad
+ \text{h)}\ \lim_{x \kohti 0} \frac{x-\sin x}{x^3} \qquad
+ \text{i)}\ \lim_{x \kohti 0} \frac{2-x^2-2\cos x}{x^4} \\
+&\text{j)}\ \lim_{x \kohti 0} \frac{x-\sin x}{x-\tan x} \qquad
+ \text{k)}\ \lim_{x \kohti 0^+} \frac{\sin^2 x}{\abs{x-\tan x}} \qquad
+ \text{l)}\ \lim_{t \kohti 0} \frac{3\sin t-\sin 3t}{3\tan t-\tan 3t} \\
+&\text{m)}\ \lim_{x \kohti 1^-} \frac{\Arccos x}{\sqrt{1-x^2}} \qquad
+ \text{n)}\ \lim_{x \kohti \infty} x(2\Arctan x-\pi)
+\end{align*}
+
+\item (*)
+Olkoon $f$ ja $g$ Lipschitz-jatkuvia välillä $[a,b]$. Todista: \ a) $fg$ on Lipschitz
+välillä $[a,b]$.\, b) Jos lisäksi $g(x) \neq 0\ \forall x\in[a,b]$, niin $f/g$ on Lipschitz
+välillä $[a,b]$.
+
+\item (*)
+a) Funktio $y(x)$ on alkuarvotehtävän
+$y'=\frac{1}{1+x^7}\,,\,\ x\in(-1,1),\,\ y(0)=1$
+ratkaisu. Laske $y(\tfrac{1}{2})$ kahdeksan merkitsevän numeron tarkkuudella.
+\vspace{1mm}\newline
+b) Määritä differentiaaliyhtälön $y'=\frac{1}{\sqrt{x}\,(1+x)}$
+yleinen ratkaisu sarjamuotoisena välillä $(0,1)$.
+
+\item (*) \label{H-V-6: Hospital 3}
+Halutaan todistaa, että laskusääntö 
+\[
+\lim_{x \kohti a^+} \frac{f'(x)}{g'(x)} = A\in\R \qimpl
+\lim_{x \kohti a^+} \frac{f(x)}{g(x)} = A
+\]
+(Lause \ref{Hospital}: 1.\ sääntö, kun $A\in\R$) on pätevä myös, kun funktioiden $f$ ja $g$
+raja-arvoja koskeva oletus muutetaan muotoon: $\,\lim_{x \kohti a^+}\abs{f(x)}=\infty$ ja
+$\lim_{x \kohti a^+}\abs{g(x)}=\infty$. Tarkista ja täydennä todistukseksi päättely: \newline
+Jos $a<x<t<a+\delta$, niin jollakin $\xi\in(x,t)$ pätee
+\begin{align*}
+\frac{f(x)-f(t)}{g(x)-g(t)}\,
+  &=\, \frac{f'(\xi)}{g'(\xi)} \\[2mm]
+\qimpl\ \ \frac{f(x)}{g(x)}-A\,
+  &=\, \frac{f'(\xi)}{g'(\xi)}-A
+     + \frac{1}{g(x)}\left(f(t)-g(t)\,\frac{f'(\xi)}{g'(\xi)}\right) \\[2mm]
+\qimpl \left|\frac{f(x)}{g(x)}-A\right|\,
+  &\le\, \left|\frac{f'(\xi)}{g'(\xi)}-A\right|
+       + \frac{1}{|g(x)|}\left(|f(t)|+|g(t)|\left|\frac{f'(\xi)}{g'(\xi)}\right|\right).
+\end{align*}
+Jos nyt $\eps>0$, niin viimeksi kirjoitetussa epäyhtälössä voidaan valita ensin $t$ ja sitten
+$x$ niin, että epäyhtälön oikea puoli on pienempi kuin $\eps$.
+
+\end{enumerate}

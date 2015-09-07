@@ -1,0 +1,415 @@
+\section{Avaruusintegraalit} \label{avaruusintegraalit}
+\alku
+\index{avaruusintegraali|vahv}
+
+Integraalia muotoa
+\[
+\int_A f\,d\mu,\quad A\subset\R^3,\quad f=f(x,y,z),
+\]
+\index{tilavuusmitta} \index{Jordan-mitta!c@tilavuusmitta}
+\index{mitta, mitallisuus!a@Jordan-mitta}%
+missä $\mu$ on $\R^3$:n \kor{tilavuusmitta}, sanotaan \kor{avaruusintegraaliksi} 
+(myös tilavuusintegraaliksi, engl.\ volume integral). Tilavuusmitta ja -integraali määritellään
+samalla periaattella kuin tasossa, vain sillä erotuksella, että perussuorakulmion tilalla on
+suorakulmainen perussärmiö, jonka mitaksi oletetaan (tilavuusmitan aksiooma)
+\[
+T=[a_1,b_1] \times [a_2,b_2] \times [a_3,b_3]: \quad \mu(T)=(b_1-a_1)(b_2-a_2)(b_3-a_3).
+\]
+Jordan-mittana (ulko- ja sisämittojen avulla, vrt. Luku \ref{tasointegraalit}) määritelty 
+tilavuusmitta on siirto-, peilaus- ja kiertoinvariantti, ts.\ se on valitusta (karteesisesta)
+koordinaatistosta riippumaton.
+
+Kuten tasointegraalit, avaruusintegraalitkin voidaan laskea suoraan numeerisesti integraalin
+määritelmästä. Jos $\mathcal{T}_h$ on särmiön $T\supset A$ jako osasärmiöihin, joiden särmät
+ovat enintään $h$:n pituiset, vaatii jakoon liittyvän Riemannin summan laskeminen yleisesti
+$N\sim h^{-3}$ laskuoperaatiota, kun vastaava luku tasossa on  $N\sim h^{-2}$ ja yhdessä
+dimensiossa $N\sim h^{-1}$. Tarkkuus riippuu kaikissa tapauksissa tiheysparametrista $h$
+olennaisesti samalla tavalla (esimerkiksi $\text{virhe}\sim h^2$), joten samaan tarkkuuteen
+pyrittäessä työmäärä kasvaa voimakkaasti integraalin dimension kasvaessa. (Sama ilmiö vaivaa
+kaikkia numeerisen integroinnin menetelmiä --- ja numeerisia laskentamenetelmiä yleisemminkin.)
+Riemannin summiin perustuvista menetelmistä
+\index{keskipistesääntö} \index{yhdistetty!a@keskipistesääntö}%
+tarkin on jälleen (yhdistetty) \kor{keskipistesääntö}, joka integroi kussakin osasärmiössä
+tarkasti ensimmäisen asteen polynomin.
+\begin{Exa} Olkoon $A = [0,1] \times [0,1] \times [0,1]$ ja laskettava
+$\int_A 3x^2 y^2 z^2\,d\mu$. Kun $A$ jaetaan suorakulmaisiin särmiöihin kokoa 
+$h \times h \times h$ ja kunkin särmiön yli integroidaan keskipistesäännöllä, niin laskettavaksi
+tulee summa, jossa on $N=h^{-3}$ termiä. Tällä tavoin saadaan integraalille seuraavat likiarvot
+(tarkka arvo $=1/9$, vrt.\ Esimerkki \ref{tasointegraalit}:\,\ref{keskipistesääntö tasossa})\,:
+\begin{center}
+\begin{tabular}{lll}
+$h$    & $N$       &  Likiarvo  \\  \hline  \\
+0.1    & $10^3$    &  0.110279859.. \\
+0.01   & $10^6$    &  0.111102777.. \\
+0.001  & $10^9$    &  0.111111027.. \\
+0.0001 & $10^{12}$ &  0.111111110.. \qquad\qquad\loppu
+\end{tabular}
+\end{center}
+\end{Exa}
+
+Myös avaruusintegraalin voi palauttaa peräkkäisiksi yksiulotteisiksi integraaleiksi, jolloin 
+integraalin voi suotuisissa oloissa laskea suljetussa muodossa. Ensinnäkin jos 
+$T=[a_1,b_1]\times[a_2,b_2]\times[a_3,b_3]$ on suorakulmainen särmiö, ja merkitään
+$Q=[a_1,b_1]\times[a_2,b_2]$, niin seuraten Fubinin lauseen todistuksessa käytettyä ajatusta
+saadaan iteraatiokaava
+\[ 
+\int_T f\,d\mu = \int_Q F(x,y)\,dxdy, \quad F(x,y) = \int_{a_3}^{b_3} f(x,y,z)\,dz. 
+\]
+Kun tässä edelleen käytetään Fubinin lauseen laskukaavaa, on tuloksena kolminkertainen 
+iteraatiokaava
+\[
+\int_T f\,d\mu = \int_{a_1}^{b_1}\left\{\int_{a_2}^{b_2}\left[\int_{a_3}^{b_3} 
+                                                     f(x,y,z)\,dz\right]dy\right\}dx.
+\]
+\jatko \begin{Exa} (jatko) Esimerkin integraali purkautuu kolmen integraalin tuloksi:
+\begin{align*}
+\int_{A} f\,d\mu &= \int_0^1\left\{\int_0^1\left[\int_0^1 3x^2 y^2 z^2\,dz\right]dy\right\}dx \\
+                 &= 3\int_0^1 x^2\left\{\int_0^1 y^2\left[\int_0^1 z^2\,dz\right]dy\right\}dx \\
+                 &= 3\int_0^1 x^2\,dx \int_0^1 y^2\,dy \int_0^1 z^2\,dz
+                  = 3\cdot\frac{1}{3}\cdot\frac{1}{3}\cdot\frac{1}{3} = \frac{1}{9}\,. \loppu
+\end{align*}
+\end{Exa}
+
+Jos $A \subset \R^3$ on yleisempi joukko kuin suorakulmainen särmiö, niin määritellään kuten
+tasossa
+\[ 
+\int_A f\,d\mu = \int_T f_0\,d\mu, 
+\]
+missä $f_0$ on $f$:n nollajatko suorakulmaiseen särmiöön $T \supset A$. Soveltamalla tässä 
+ym.\ iteraatiokaavaa saadaan erilaisia $A$:n muotoon sovitettuja integraalin purkukaavoja.
+Esimerkiksi jos $A$ esitetään muodossa
+\[
+A=\{(x,y,z)\in\R^3 \ | \ x\in B\subset\R \ \ja \ (y,z)\in C(x)\subset\R^2\},
+\]
+niin saadaan purkukaava
+\begin{equation} \label{siivutuskaava}
+\int_A f\,d\mu=\int_B\left[\int_{C(x)} f(x,y,z)\,dydz\right]dx, \tag{$\star$}
+\end{equation}
+missä sisemmän tasointegraalin voi edelleen purkaa edellisen luvun menetelmin. Purkusäännön
+\eqref{siivutuskaava} voi havainnollistaa geometrisesti 'siivutusperiaatteena', jossa $A$
+jaetaan osiin
+\[
+\Delta A=\{(x,y,z)\in A \ | \ x\in\Delta B\},
+\]
+jolloin on likimäärin (vrt. kuvio)
+\[
+\int_{\Delta A} f\,d\mu\approx\left[\int_{C(x)} f(x,y,z)\,dydz\right]\mu(\Delta B)\quad
+                                                     (\mu=\text{pituusmitta}).
+\]
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-23.pstex_t}
+\end{center}
+\end{figure}
+Ajatellen, että avaruusintegraali viime kädessä palautuu peräkkäisiksi yksiulotteisiksi 
+integraaleiksi, käytetään avaruusintegraaleille usein merkintöjä
+\[
+\int_A f\,dxdydz\quad\text{tai}\quad \iiint f\,dxdydz,
+\]
+missä siis on merkitty $d\mu=dxdydz$.\footnote[2]{Sovelluksissa (etenkin fysiikassa)
+avaruusintegraalin mittamerkintä on usein $dV$.}
+%Tälle 'differentiaaliselle tilavuudelle' käytetään myös
+%usein merkintää $dV$ (etenkin fysiikassa).
+\begin{Exa}
+$A=\text{tetraedri}$, jonka kärjet ovat $(0,0,0)$, $(1,0,0)$, $(0,1,0)$ ja $(0,0,1)$. Laske
+$\int_A f\,dxdydz$, kun $f(x,y,z)=xyz$.
+\end{Exa}
+\ratk Purkukaavan \eqref{siivutuskaava} nojalla on ensinnäkin
+\[
+\int_A f\,dxdydz = \int_0^1\left[\int_{C(x)} xyz\,dydz\right]dx,
+\]
+missä $yz$-tason joukko $C(x)$ märäytyy ehdoista $y \ge 0$, $z \ge 0$ ja
+\[
+x+y+z \le 1\,\ \ekv\,\ y+z \le 1-x,
+\]
+eli $C(x)$ on kolmio, jonka kärjet ovat pisteissä $(0,0,0)$, $(0,1-x,0)$ ja $(0,0,1-x)$.
+Soveltaen sisempään integraaliin edellisen luvun purkusääntöjä saadaan
+\begin{align*}
+\int_A f\,dxdydz 
+&= \int_0^1\left\{\int_0^{1-x}\left[\int_0^{1-x-y} xyz\,dz\right]dy\right\}dx \\
+&= \int_0^1\left\{\int_0^{1-x}\left[\sijoitus{z=0}{z=1-x-y}
+                                   \frac{1}{2}xyz^2\right]dy\right\}dx \\
+&= \int_0^1\left[\int_0^{1-x} \frac{1}{2}xy(1-x-y)^2\,dy\right]dx \\
+(\text{os.\ int.}) \quad 
+&= \int_0^1\left[\sijoitus{y=0}{y=1-x} -\frac{1}{6}xy(1-x-y)^3 + \int_0^{1-x}
+                 \frac{1}{6} x(1-x-y)^3\,dy \right]dx   \\
+&= \int_0^1\left[\sijoitus{y=0}{y=1-x} -\frac{1}{24}x(1-x-y)^4 \right]dx \\
+&= \int_0^1 \frac{1}{24} x(1-x)^4\,dx \\
+(\text{os.\ int.}) \quad
+&= \sijoitus{0}{1} -\frac{1}{120}x(1-x)^5 + \int_0^1 \frac{1}{120} (1-x)^5\,dx \\
+&= \sijoitus{0}{1} -\frac{1}{720}(1-x)^6 = \underline{\underline{\frac{1}{720}}}\,. \loppu
+\end{align*}
+
+Purkusääntö \eqref{siivutuskaava} on erityisen kätevä silloin kun $f$ ei riipu muuttujista
+$y,z$. Tällöin integraali palautuu suoraan 1-ulotteiseksi edellyttäen, että joukkojen $C(x)$
+pinta-alamitta on helposti määrättävissä:
+\[
+\int_A f\,dxdydz=\int_B f(x)\,\mu(C(x))\,dx,\quad f=f(x)\quad (\mu=\text{pinta-alamitta}).
+\]
+\begin{Exa} \label{3-pallon tilavuus} Laske $R$-säteisen pallon tilavuus.
+\end{Exa}
+\ratk Käytetään purkukaavaa \eqref{siivutuskaava}, jolloin 
+\[ 
+B=[-R,R], \quad C(x)=\{(y,z)\in\R^2 \ | \ y^2+z^2\leq R^2-x^2\}.
+\]
+Koska $C(x)$ on kiekko, jonka säde $=\sqrt{R^2-x^2}$, niin $\mu(C(x))=\pi(R^2-x^2)$.
+Siis
+\[
+\mu(A) = \int_A\,d\mu = \int_{-R}^R \pi(R^2-x^2)\,dx 
+                      = \sijoitus{-R}{R}\pi\left(R^2 x - \frac{1}{3}\,x^3\right)
+                      = \frac{4}{3}\,\pi R^3. \loppu
+\]
+\begin{Exa} \label{puolipallon momentti} Laske $\int_A x\ dxdydz$, kun 
+$A=\{(x,y,z) \ | \ x^2+y^2+z^2\leq R^2, \ x\geq 0\}$ (puolipallo).
+\end{Exa}
+\ratk Purkukaavassa \eqref{siivutuskaava} on tässä $B = [0,R]$ ja $C(x)$ on sama kuin
+edellisessä esimerkissä, joten saadaan
+\begin{align*}
+\int_A f\,dxdydz &= \int_B f(x)\,\mu(C(x))\,dx \\
+&=\int_0^R x\cdot\pi(R^2-x^2)\,dx \\
+&=\pi\sijoitus{0}{R} \left(\frac{1}{2}R^2x^2-\frac{1}{4}x^4\right)
+ =\underline{\underline{\frac{1}{4}\pi R^4}}. \loppu
+\end{align*}
+\begin{Exa}
+Suorien $x=0$, $y=0$ ja käyrän $y=e^{-x}$ rajaama tasoalue pyörähtää $x$-akselin ympäri,
+jolloin syntyy avaruuden $\R^3$ joukko $A$. Laske tilavuus $\mu(A)$.
+\end{Exa} 
+\ratk $A$ ei ole rajoitettu, joten kyseessä on epäoleellinen integraali. Kaavassa
+\eqref{siivutuskaava} on $B=[0,\infty)$ ja $C(x)$ on kiekko, jonka säde $=e^{-x}$, joten
+\[
+\mu(A)=\int_A dxdydz = \int_0^\infty \pi(e^{-x})^2\,dx
+                     = \int_0^\infty \pi e^{-2x}\,dx 
+                     = \sijoitus{0}{\infty} -\frac{\pi}{2}e^{-2x} 
+                     = \underline{\underline{\frac{\pi}{2}}}\,. \loppu
+\]
+\begin{Exa} Kaksi $R$-säteistä lieriötä leikkaa kohtisuorasti toisensa. Mikä on molempien
+lieriöiden sisään jäävän joukon $A$ tilavuusmitta?
+\end{Exa}
+\ratk Olkoon toisen lieriön akseli $z$-akseli ja toisen $y$-akseli, jolloin
+\[
+A=\{(x,y,z)\in\R^3 \mid x^2+y^2 \le R^2\ \ja\ x^2+z^2 \le R^2\}.
+\]
+Kun leikataan tämä $yz$-tason suuntaisilla tasoilla, niin todetaan, että
+\begin{align*}
+A    &= \{(x,y,z)\in\R^3 \mid x\in [-R,R]\ \ja\ (y,z)\in C(x)\}, \quad \text{missä} \\[2mm]
+C(x) &= \{(y,z)\in\R^2 \ | \ x^2+y^2\leq R^2 \ \ja \ x^2+z^2\leq R^2\} \\
+     &= \{(y,z)\in\R^2 \ | \ y^2\leq R^2-x^2 \ \ja \ z^2\leq R^2-x^2\}.
+\end{align*}
+Poikkileikkaus $C(x)$ on tämän mukaan neliö, jonka sivun pituus $=2\sqrt{R^2-x^2}$.
+Kaavan \eqref{siivutuskaava} mukaan on siis
+\[
+\mu(A) = \int_{-R}^R \mu(C(x))\,dx
+       = \int_{-R}^R 4(R^2-x^2)\,dx
+       = 4\sijoitus{-R}{R}(R^2x-\frac{1}{3}x^3)
+       = \underline{\underline{\frac{16}{3}R^3}}. \loppu
+\]
+
+\pagebreak
+\subsection*{Avaruusintegraalit $\R^n$:ssä}
+\index{avaruusintegraali!a@$n$-ulotteinen|vahv}
+
+Yleinen \kor{$n$-ulotteinen avaruusintegraali} on muotoa $I(f,A,\mu)=\int_A f\,d\mu$,
+\index{tilavuusmitta!a@$n$-ulotteinen} \index{Jordan-mitta!d@$n$-ulotteinen tilavuusmitta}
+\index{mitta, mitallisuus!a@Jordan-mitta}%
+missä $A\subset\R^n$, $f=f(\mx)=f(x_1,\ldots,x_n)$, ja $\mu$ on \kor{$n$-ulotteinen 
+tilavuusmitta} (Jordan-mitta). Tämän ominaisuuksiin kuuluu, että $n$-ulotteisen suorakulmaisen
+särmiön mitta on (aksiooma)
+\[ 
+\mu(T)=\prod_{i=1}^n (b_i-a_i), \quad 
+                 T=[a_1,b_1] \times [a_2,b_2] \times \cdots \times [a_n,b_n]. 
+\]
+Integraalin vaihtoehtoiset merkintätavat
+\[
+\int_A f\,dx_1\cdots dx_n,\quad \iint\cdots\int f\,dx_1\cdots dx_n.
+\]
+viittaavat jälleen siihen tosiseikkaan, että integraali on palautettavissa peräkkäisiksi 
+yksiulotteisiksi integraaleiksi. Iteraatiokaavan perusmuoto tapauksessa $A=T$ on
+\[
+\int_T f\,d\mu=\int_{a_1}^{b_1}\left[\int_{a_2}^{b_2} \cdots \left[\int_{a_n}^{b_n} 
+                                             f(x_1,\ldots,x_n)\,dx_n\right]\cdots\right]dx_1.
+\]
+\begin{Exa}
+Laske neliulotteisen $R$-säteisen pallon (kuulan) tilavuus $\mu(A)$.
+\end{Exa}
+\ratk Kun kirjoitetaan
+\[
+A=\{(x_1,x_2,x_3,x_4)\in\R^4 \ | \ x_1\in [-R,R] \ \ja \ (x_2,x_3,x_4)\in C(x_1)\},
+\]
+niin (vrt. purkukaava \eqref{siivutuskaava} edellä)
+\[
+\int_A d\mu=\int_{-R}^R \mu(C(x_1))\,dx_1,
+\]
+missä $\mu$ on $\R^3$:n tilavuusmitta. Tässä $C(x_1)\subset\R^3$ on pallo, jonka säde on 
+$\sqrt{R^2-x_1^2}$, joten
+\begin{align*}
+\mu(A) &= \int_{-R}^R \frac{4}{3}\pi(R^2-x_1^2)^{3/2}\,dx_1\quad (\text{sij. } x_1=R\sin t) \\
+       &= \frac{4\pi}{3}R^4\int_{-\pi/2}^{\pi/2} \cos^4 t\,dt
+        = \frac{4\pi}{3}R^4\cdot\frac{3\pi}{8}        
+        = \underline{\underline{\frac{1}{2}\pi^2 R^4}}. \loppu
+\end{align*}
+
+Mitä tulee $n$-ulotteisen Jordan-mitan teoreettisiin ominaisuuksiin, todettakoon ainoastaan
+(ilman todistusta), että nämä ominaisuudet ovat vastaavat kuin tasossa. Esimerkiksi mitta on
+siirto- ja kiertoinvariantti ja määriteltävissä ylä- ja alaintegraalien avulla, vrt.\ Luku
+\ref{tasointegraalit}. Pätee myös Lauseen \ref{jatkuvan funktion integroituvuus tasossa}
+yleistys:
+\begin{*Lause} \label{jatkuvan funktion integroituvuus Rn:ssä}
+\index{Riemann-integroituvuus!b@jatkuvan funktion|emph} Jos $f$ on jatkuva särmiössä
+$T=[a_1,b_1] \times [a_2,b_2] \times \cdots \times [a_n,b_n]$ ja $A \subset T$ on mitallinen,
+niin $f$ on Riemann-integroituva yli $A$:n.
+\end{*Lause} 
+
+\subsection*{*Suuntaissärmiön $K\subset\R^n$ tilavuus}
+\index{tilavuus!c@$\R^n$:n suuntaissärmiön|vahv}
+
+Palautettakoon mieliin Luvusta \ref{affiinikuvaukset}, että avaruuden $\R^n$ $n$-ulotteinen
+suuntaissärmiö, jonka kärki on pisteessä $\mx_0$ ja kärjestä lähtevät särmävektorit ovat
+$\ma_i$, on joukko
+\[
+K=\{\mx\in\R^n \mid \mx=\mx_0+\sum_{i=1}^n t_i\ma_i,\ t_i\in[0,1],\ i=1 \ldots n\}.
+\]
+Jos kirjoitetaan $\ma_i=\sum_{j=1}^n a_{ij}\me_j$ ja muodostetaan kertoimista $a_{ij}$ matriisi
+$\mA$, niin tapauksissa $n=2$ ja $n=3$ tiedetään, että $K$:n pinta-ala ($n=2$) tai tilavuus
+($n=3$) on laskettavissa kaavalla $\mu(K)=\abs{\text{det}\mA}$ (ks.\ Luku \ref{ristitulo}).
+Näytetään, että tämä pätee yleisesti.
+\begin{Prop} \label{suuntaissärmiön tilavuuskaava} Avaruuden $\R^n$ $n$-ulotteisen 
+suuntaissärmiön $K$ tilavuusmitta on $\mu(K)=\abs{\text{det}\mA}$, missä matriisin $\mA$ riveinä
+ovat $K$:n särmävektoreiden $\ma_i$ kertoimet $a_{ij}$ kannassa $\{\me_1,\ldots,\me_n\}$.
+\end{Prop}
+\tod Pidetään tunnettuna, että $\R^n$:n tilavuusmitta on kiertoinvariantti. Tällöin 
+kantavektori $\me_n$ voidaan valita vektoreiden $\ma_i,\ i=1 \ldots n-1$ virittämää hypertasoa
+(aliavaruutta) vastaan kohtisuoraksi, jolloin on $a_{in}=0$, kun $i=1 \ldots n-1$. Kierto
+ei vaikuta myöskään determinantin $\det\mA$ arvoon, sillä kierto vastaa muunnosta
+$\mA^T=[\ma_1,\ldots,\ma_n] \ext [\mC\ma_1,\ldots,\mC\ma_n]=\mC\mA^T$ eli $\mA \ext \mA\mC^T$,
+missä $\det\mC=1$. Oletetussa koordinaatistossa voidaan suuntaissärmiö esittää muodossa
+\[
+K=\{\mx\in\R^n \mid \mx=\mx_0+t_n a_{nn}\me_n+\my,\,\ t_n\in[0,1]\,\ja\,\my \in A(t_n)\},
+\]
+missä $A(t_n)\subset\R^{n-1}$ on $(n-1)$-ulotteinen suuntaissärmiö, jonka särmävektorit ovat 
+$\mb_i=\sum_{j=1}^{n-1} a_{ij}\me_j,\ i=1 \ldots n-1$, ja kärki on pisteessä
+$\my_0(t_n)=t_n\sum_{j=1}^{n-1} a_{nj}\me_j$. Koska $\R^{n-1}$:n tilavuusmitta on 
+siirtoinvariantti, niin joukon $A(t_n)$ mitta on $t_n$:stä riippumaton; merkitään
+$\mu(A(t_n))=V_{n-1}$. Purkukaavaa \eqref{siivutuskaava} vastaten $K$:n mitta on tällöin
+\[
+\mu(K)=\int_0^{\abs{a_{nn}}}\left[\int_{A(t_n)} dx_1 \ldots dx_{n-1}\right]dx_n
+      =\abs{a_{nn}}V_{n-1}\,.
+\]
+Jos merkitään $\mu(K)=V_n$, niin on siis saatu palautuskaava
+\[
+V_n=\abs{a_{nn}}V_{n-1}\,.
+\]
+Toisaalta jos merkitään $D_n=\abs{\text{det}\mA}$ ja huomioidaan, että $a_{in}=0$ kun 
+$i \neq n$, niin alideterminanttisäännön (Lause \ref{alideterminanttisääntö}) perusteella
+saadaan vastaava palautuskaava
+\[
+D_n=\abs{a_{nn}}D_{n-1}\,.
+\]
+Koska palautuskaavat ovat samaa muotoa ja koska $V_n=D_n$ kun $n=2,3$, niin päätellään, että
+$V_n=D_n\ \forall n$. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske tilavuus $\mu(A)$, kun $A\subset\R^3$ on määritelty annetuilla ehdoilla. 
+\vspace{1mm}\newline
+a) \ $0 \le x \le 1\ \ja\ 0 \le y \le x\ \ja\ 0 \le z \le 1-x^2$ \newline
+b) \ $0 \le y \le 1\ \ja\ 0 \le x \le y\ \ja\ 0 \le z \le 1-x^2$ \newline
+c) \ $x,y \ge 0\ \ja\ x+y \le 1\ \ja\ 0 \le z \le 1-x^2-y^2$ \newline
+d) \ $1 \le x \le 2\ \ja\ 0 \le y \le x\ \ja\ 0 \le z \le 1/(x+y)$ \newline
+e) \ $0 \le z \le 1-x^2-2y^2$ \newline
+f) \ $0 \le x \le \sqrt[4]{\pi}\ \ja\ 0 \le y \le x\ \ja\ 0 \le z \le x^2\sin(y^4)$ \newline
+g) \ $x^2 \le z \le 1-y^2$ \newline
+h) \ $x^2+y^2 \le 8\ \ja\ y-4 \le z \le 8-x$
+
+\item
+a)--e) Laske edellisen tehtävän tapauksissa a)--e) integraalit $\,\int_A x\,d\mu$,
+$\,\int_A y\,d\mu$ ja $\int_A z\,d\mu$.
+
+\item
+Laske $\int_A f(x,y,z)\,dxdydz$ annetuilla $f$ ja $A$: \vspace{1mm}\newline
+a) \ $f:\ xyz,\ \ A:\ 0 \le x \le 1\ \ja -2 \le y \le 0\ \ja\ 1 \le z \le 4$ \newline
+b) \ $f:\ x^2+y^2+z^2,\ \ A:\ 0 \le x,y,z \le a\ \ (a>0)$ \newline
+c) \ $f:\ (1-x-y)^5,\ \ A:\ x,y,z \ge 0\ \ja\ x+y+z \le 1$ \newline
+d) \ $f:\ xyz^4,\ \ A:\ x,y,z \ge 0\ \ja\ x+y+z \le 1$ \newline
+e) \ $f:\ 3+2xy,\ \ A:\ z \ge 0\ \ja\ x^2+y^2+z^2 \le 4$ \newline
+f) \ $f:\ x,\ \ A:\ x,y,z \ge 0\ \ja\ (x/a)+(y/b)+(z/c) \le 1\ \ (a,b,c>0)$ \newline
+g) \ $f:\ xy+z^2,\ \ A:\ 0 \le z \le 1-\abs{x}-\abs{y}$ \newline
+h) \ $f:\ yz^2e^{-xyz},\ \ A:\ 0 \le x,y,z \le 1$ \newline
+i) \ $\,f:\ y,\ \ A:\ 0 \le x,y,z \le 1\ \ja\ 1-y \le z \le 2-x-y$ \newline
+j) \ $\,f:\ (x+y+z)^{-3},\ \ A:\ 1 \le z \le 2\ \ja\ 0 \le y \le z\ 
+                                                \ja\ 0 \le x \le y+z$ \newline
+k) \ $f:\ \cos x\cos y\cos z,\ \ A:\ x,y,z \ge 0\ \ja\ x+y+z \le \pi$
+
+\item
+Perustuen joukon $A\subset\R^3$ esitysmuotoon
+\[
+A=\{(x,y,z)\in\R^3 \ | \ (x,y)\in B\subset\R^2 \ \ja \ z\in C(x,y)\subset\R\,\}
+\]
+johda purkukaava
+\[
+\int_A f\,d\mu=\int_B\left[\int_{C(x,y)} f(x,y,z)\,dz\right]dxdy.
+\]
+Sovella kaavaa, kun $A=\{\,(x,y,z)\in\R^3\ | \ x,y,z \ge 0\ \ja\ x^2+y+z \le 1\,\}$ \ ja
+$f(x,y,z)=xy^2$.
+
+\item
+Tetredria $K\subset\R^3$ rajoittavat tasot $z=0$, $x=2y$, $x=-y$ ja $y+z=a$ ($a>0$). Laske
+$\int_K z^2\,dxdydz$.
+
+\item
+Teltan pohja on $xy$-tasolla oleva kiekko, jonka säde on $R=2$ m, ja teltan jokainen
+$xz$-tason suuntainen poikkileikkaus on tasakylkinen kolmio, jonka korkeus on $h=2$ m. Laske
+teltan tilavuus.
+
+\item \label{H-uint-3: ellipsoidin tilavuus}
+Näytä, että ellipsoidin $\,S: x^2/a^2+y^2/b^2+z^2/c^2=1$ sisään jäävän joukon $A\subset\R^3$
+tilavuus on $\mu(A)=4\pi abc/3$ 
+(vrt.\ Harj.teht.\,\ref{pinta-ala ja kaarenpituus}:\ref{H-int-8: ellipsin pinta-ala}).
+
+\item
+Olkoon $a,b>0,\ a \neq b$. Laske lieriöiden $S_1:\,x^2+y^2=a^2$ ja $S_2:\,x^2+z^2=b^2$ sisään
+jäävän joukon $A\subset\R^3$ tilavuus $\mu(A)$ yksiulotteisena integraalina. Voiko integraalin
+laskea suljetussa muodossa?
+
+\item
+Joukko $\{(x,y,z)\in\R^3 \mid \sqrt{x^2+y^2} \le z \le a\}$ edustaa täydessä viinilasissa
+olevaa viiniä. Lasiin upotetaan varovasti $R$-säteinen kuula, jolloin viiniä valuu ulos,
+kunnes kuula uppoaa kokonaan tai pysähtyy lasiin. Millä suhteen $R/a$ arvolla viiniä valuu
+ulos eniten?
+
+\item
+Olkoon $A=[0,1]\times[0,1]\times\ldots\times[0,1]\subset\R^n$. Laske 
+$\int_A f(\mx)\,dx_1 \ldots dx_n$, kun \vspace{1mm}\newline
+a) \ $f(\mx)=\sum_{i=1}^n x_i, \quad$
+b) \ $f(\mx)=\prod_{i=1}^n x_i, \quad$
+c) \ $f(\mx)=e^{-(x_1+x_2+\,\cdots\,+x_n)}$.
+
+\item
+Olkoon $K\subset\R^n$ $n$-simpleksi, jonka kärjet ovat origo ja pisteet $(a,0,\ldots,0)$,
+$(0,a,0,\ldots,0),\ \ldots , (0,\ldots,0,a)$ ($a>0$). Näytä, että $K$:n $n$-ulotteinen tilavuus
+on $\mu(K)=a^n/n!\,$.
+
+\item
+Suuntaissärmiön $K\subset\R^4$ särmävektorit ovat $\,[1,1,1,1]^T$, $\,[0,1,1,0]^T$, \newline
+$[0,0,1,1]^T$ ja $[1,1,0,1]^T$. Laske $K$:n neliulotteinen tilavuus $\mu(K)$.
+
+\item (*)
+Seuraavissa integraaleissa integroidaan erään joukon $A\subset\R^3$ yli. Määritä ensin $A$ ja
+laske sitten integraalin arvo valitsemalla sopiva integroimisjärjestys.
+\[
+\text{a)}\ \int_0^1\left[\int_z^1\left(\int_0^x e^{x^3}\,dy\right)dx\right]dz \quad
+\text{b)}\ \int_0^1\left[\int_0^{1-x}\left(\int_y^1 
+                                   \frac{\sin(\pi z)}{z(2-z)}\,dz\right)dy\right]dx
+\]
+
+\item (*)
+Kolmen $R$-säteisen lieriön akselit leikkaavat toisensa kohtisuorasti samassa pisteessä.
+Näytä, että kaikkien kolmen lieriön sisään jäävän joukon $A$ tilavuusmitta on
+$\mu(A)=8(2-\sqrt{2})R^3$.
+
+\item (*) 
+a) Laske $\R^n$:n $R$-säteisen pallon (kuulan) $n$-ulotteinen tilavuus, kun $n=5$ ja $n=6$. \
+b) Millä $n$:n arvolla yksikköpallon ($R=1$) tilavuus on suurin? Perustele!
+
+\end{enumerate}

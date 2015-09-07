@@ -1,0 +1,653 @@
+\section{Tason vektorit} \label{tasonvektorit}
+\alku
+\index{vektoria@vektori (geometrinen)!a@tason \Ekaksi|vahv}%
+
+\kor{Vektori} on matemaattisena käsitteenä hieman kaksijakoinen. Se voi olla lähtökohtaisesti 
+geometrinen olio, jolloin se sovelluksissa ajatellaan usein fysikaalisena, 'maailmassa 
+vaikuttavana'. Tällaisia 'fysiikkavektoreita' ovat mm.
+\begin{itemize}
+\item  paikka, nopeus, kiihtyvyys, kulmanopeus
+\item  voima, momentti
+\item  X-kentän voimakkuus, X=gravitaatio, sähkö, magneetti...
+\end{itemize}
+Toisaalta vektori voidaan tulkita myös algebrallisesti, jolloin päädytään geometris-fysikaalista
+vektoria yleisempään (myös abstraktimpaan) vektorikäsitteeseen. Jäljempänä nähdään ensimmäisiä
+esimerkkejä myös tällaisista 'matematiikkavektoreista' (myöhemmin esimerkkejä tulee paljon 
+lisää). Jatkossa lähtökohta vektorin käsitteeseen on kuitenkin aluksi geometrinen.
+
+Euklidisessa tasossa \Ekaksi\, vektori määritellään geometrisesti \kor{suuntajanana}, ts. 
+janana, jolla on suunta. Ajatus on tällöin, että jana sisältyy sen toisesta päätepisteestä 
+lähtevään puolisuoraan. Puolisuoran ilmaisema suunta kuvataan janan päähän merkityllä
+nuolenkärjellä:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(13,6)(0,-0.5)
+%\Thicklines
+\put(1,3){\line(2,1){5}} \put(0,0){\line(4,1){4}}
+\put(9,3){\vector(2,1){3}} \put(12,1){\vector(-4,-1){3}}
+\put(0.95,3.1){\line(1,-2){0.1}} \put(0.9,2.5){$A$}
+\put(3.95,4.6){\line(1,-2){0.1}} \put(3.9,4.0){$B$}
+\put(3.975,1.1){\line(1,-4){0.05}} \put(3.925,0.5){$A$}
+\put(0.975,0.35){\line(1,-4){0.05}} \put(0.925,-0.25){$B$}
+\put(8.9,2.5){$A$} \put(11.9,4){$B$}\put(11.925,0.5){$A$} \put(8.925,-0.25){$B$}
+\put(6.5,4){$\hookrightarrow$}
+\put(6.5,0){$\hookrightarrow$}
+\end{picture}
+\end{center}
+\end{figure}
+Vektorilla tarkoitetaan täsmällisemmin vain suuntajanan sisältävää \pain{osatietoa} 
+\[
+\{\text{(janan) pituus, suunta}\}.
+\] 
+Tiettyyn suuntajanaan liittyvä vektori merkitään $\overrightarrow{AB}$, yleisemmin 
+käytetään vektorimerkintöjä $\vec a, \vec b, \vec v$ jne.
+
+Huomattakoon, että vektori $\overrightarrow{AB}$ siis \pain{ei} 'tiedä', missä piste
+$A$ sijaitsee euklidisessa tasossa. Näin ollen 'vektoria saa siirtää', kunhan 'ei kierrä
+eikä venytä'. (Fysikaalinen vastine: Voiman vaikutus on sama vaikutuspisteestä
+riippumatta.) 
+
+Jos tunnetaan vektorit $\vec a=\overrightarrow{AB}$ ja $\vec b=\overrightarrow{BC}$,
+niin tunnetaan myös $\vec c=\overrightarrow{AC}$\,:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,5)
+%\Thicklines
+\put(0,0){\vector(2,3){2}} \put(2,3){\vector(4,1){4}} \put(0,0){\vector(3,2){6}}
+\put(-0.1,-0.1){$\bullet$} \put(1.9,2.9){$\bullet$} \put(5.9,3.9){$\bullet$}
+\put(-0.2,0.3){$A$} \put(1.9,3.2){$B$} \put(5.9,4.2){$C$}
+\put(0.9,1.8){$\vec a$} \put(4.8,3.8){$\vec b$} \put(4,2.8){$\vec c$}
+\end{picture}
+\end{center}
+\end{figure}
+\index{laskuoperaatiot!c@tason vektoreiden|(}%
+Sanotaan, että $\vec c$ on vektoreiden $\vec a, \vec b$ \kor{summavektori} ja merkitään
+\[
+\vec c=\vec a+\vec b.
+\]
+Summa määrätään siis geometrisesti kolmiodiagrammilla. Näin määritellylle vektorien 
+yhteenlaskulle pätevät tavanomaiset vaihdanta- ja liitäntälait:
+\begin{itemize}
+\item[(V1)] $\quad \vec a+\vec b = \vec b+\vec a$
+\item[(V2)] $\quad (\vec a+\vec b\,)+\vec c = \vec a+(\vec b+\vec c\,)$
+\end{itemize}
+Tässä ei ole kyse aksioomista (vrt.\ vastaavat kunta-aksioomat, Luku \ref{kunta}) vaan
+väittämistä, joiden todistus on geometrinen:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,5)
+%\Thicklines
+\put(0,0){\vector(2,3){2}} \put(2,3){\vector(4,1){4}}
+\dashline{0.2}(0,0)(4,1) \dashline{0.2}(4,1)(6,4)
+\put(3.9,0.975){\vector(4,1){0.1}} \put(5.9,3.85){\vector(2,3){0.1}}
+\put(1.2,2.2){$\vec a$} \put(5.2,4){$\vec b$} \put(3.5,1.1){$\vec b$} \put(5.8,3.3){$\vec a$}
+
+\put(6,0){\vector(2,3){2}} \put(8,3){\vector(4,1){4}}
+\dashline{0.2}(6,0)(12,4) \put(11.9,3.933){\vector(3,2){0.1}} \put(12,4){\vector(1,-1){2}}
+\put(6,0){\vector(4,1){8}}
+\dashline{0.2}(8,3)(14,2) \put(13.9,2.0167){\vector(4,-1){0.1}}
+\put(7.2,2.2){$\vec a$} \put(11.2,4){$\vec b$} \put(13.6,2.5){$\vec c$} 
+\put(12,1.1){$\vec a+\vec b+\vec c$}
+\put(12.9,2.3){$\scriptstyle{\vec b+\vec c}$} \put(11.5,3.3){$\scriptstyle{\vec a+\vec b}$}
+\end{picture}
+\end{center}
+\end{figure}
+Vektorin $\vec a = \overrightarrow{AB}$
+\index{itseisarvo}%
+\kor{itseisarvo} (arkisemmin 'pituus') on
+\[
+\abs{\vec a}=|\overrightarrow{AB}|=\abs{AB}=\text{janan }AB\text{ pituus}.
+\]
+Tälle pätee \kor{kolmioepäyhtälö} (vrt.\ Lause \ref{kolmioepäyhtälö})
+\index{kolmioepäyhtälö!b@tason vektoreiden}%
+\[
+\abs{\vec a+\vec b} \le \abs{\vec a}+\abs{\vec b}.
+\]
+Jos $\lambda \in \R$, niin $\lambda \vec a$ tarkoittaa
+\index{skaalaus (vektorin)}%
+\kor{skaalattua} vektoria, jolle pätee:
+\begin{itemize}
+\item[(1)] $\quad |\lambda \vec a|=|\lambda||\vec a|$
+\item[(2)] $\quad \lambda \vec a \uparrow\uparrow \vec a,
+                                 \text{ jos } \lambda > 0, \text{ ja }
+                  \lambda \vec a \uparrow\downarrow \vec a, \text{ jos } \lambda<0$
+\end{itemize}
+Tässä $\uparrow\uparrow$ tarkoittaa yhdensuuntaisuutta ja $\uparrow\downarrow$ 
+vastakkaissuuntaisuutta. Vektorin skaalausta $\vec a \map \lambda \vec a \ (\lambda \in \R)$
+sanotaan vektorialgebrassa yleisemmin \kor{skalaarilla kertomiseksi}. Skaalaajia eli
+reaalilukuja kutsutaan siis tässä laskuoperaatiossa
+\index{skalaari}%
+\kor{skalaareiksi}. Skalaarilla kertomisen ja yhteenlaskun
+määritelmistä on pääteltävissä (Harj.teht.\,\ref{H-II-1: perusteluja}a), että seuraavat
+'luonnonmukaiset' säännöt ovat voimassa (vrt.\ kunta-aksioomat Luvussa \ref{kunta})\,:
+\begin{itemize}
+\item[(V3)] $\quad (\lambda + \mu)\vec a = \lambda \vec a + \mu \vec a$
+\item[(V4)] $\quad \lambda(\mu \vec a\,) = (\lambda \mu)\vec a$
+\item[(V5)] $\quad \lambda(\vec a + \vec b\,)= \lambda \vec a + \lambda \vec b$
+\item[(V6)] $\quad 1 \vec a =  \vec a$
+\end{itemize}
+Operaation $\vec a \kohti \lambda \vec a$ määritelmän mukaisesti on $|0 \vec a|=0$.
+Tällaista vektoria sanotaan
+\index{nollavektori}%
+\kor{nollavektoriksi} ja merkitään $\,0 \vec a = \vec 0$.
+Nollavektorin suunta on epämääräinen  (ei määritelty). Nollavektori on vektorien
+yhteenlaskun nolla-alkio, ts.\ pätee
+\begin{itemize}
+\item[(V7)] $\quad \vec a + \vec 0 = \vec a\ \forall \vec a$ 
+\end{itemize}
+Jokaisella vektorilla $\vec a$ on myös
+\index{vastavektori}%
+\kor{vastavektori} $-\vec a$, jolle pätee
+\begin{itemize} 
+\item[(V8)] $\quad \vec a + (-\vec a\,) = \vec 0$
+\end{itemize}
+Nimittäin kun säännössä (V3) valitaan $\lambda=1, \mu=-1$ ja käytetään nollavektorin
+määritelmää ja sääntöä (V6), niin seuraa
+\[
+-\vec a = (-1)\,\vec a.
+\]
+Vastavektorin avulla tulee määritellyksi myös vektorien vähennyslasku:
+\[
+\vec a - \vec b = \vec a + (-\vec b\,).
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,2.3)(2,0.5)
+%\Thicklines
+\put(4,0){\vector(2,3){2}} \put(4,0){\vector(4,1){4}} \put(8,1){\vector(-1,1){2}}
+\dashline{0.2}(4,0)(2,2) \put(2.1,1.9){\vector(-1,1){0.1}} 
+\dashline{0.2}(6,3)(2,2) \put(2.1,2.025){\vector(-4,-1){0.1}}
+\put(5.8,2.3){$\vec a$} \put(7.6,0.4){$\vec b$} \put(6.5,2.7){$\vec a-\vec b$} 
+\put(2.7,1.4){$\vec a+(-\vec b\,)$}
+\end{picture}
+\end{center}
+\end{figure}
+Säännöt (V1)--(V8), yhdessä nollavektorin ja vastavektorin määritelmien kanssa, muodostavat
+(tason vektoreiden)) \kor{vektorialgebran} laskulait.
+\index{laskuoperaatiot!c@tason vektoreiden|)}
+\begin{Exa} \label{kolmion keskipiste}
+Laskulaeista (V1)--(V8) seuraava identiteetti
+\[
+\vec a + \frac{2}{3} \left( \frac{1}{2}\vec b - \vec a \right)\ 
+             =\ \vec b + \frac{2}{3} \left( \frac{1}{2}\vec a - \vec b \right)\
+             =\ \frac{2}{3} \left[ \vec b + \frac{1}{2}\left( \vec a - \vec b \right) \right]\
+             =\ \frac{1}{3} \left( \vec a + \vec b \right)
+\]
+voidaan lukea: Kolmion keskijanat leikkaavat toisensa samassa pisteessä, joka jakaa keskijanat
+suhteessa $2:1$ (vrt.\ kuvio). Leikkaupistettä sanotaan 
+\index{keskizza@keskiö (kolmion)}%
+kolmion \kor{keskiöksi} (keskipisteeksi). \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6.5,4.6)(0,0)
+%\Thicklines
+\put(0,0){\vector(1,2){2}} \put(0,0){\vector(1,0){6}}
+\path(2,4)(6,0)(1,2)
+\drawline(2,4)(3,0) \drawline(0,0)(4,2) \put(0,0){\vector(2,1){2.67}}
+\put(1.4,3.5){$\vec a$} \put(5.5,-0.5){$\vec b$}
+\put(0,-0.5){$A$} \put(1.9,4.2){$B$} \put(6.2,-0.1){$C$}
+\put(1.2,1.2){$\scriptstyle{\frac{1}{3}(\vec a+\vec b\,)}$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{Exa}
+
+\subsection*{Vektoriavaruus}
+\index{vektoric@vektoriavaruus|vahv}%
+
+Jos tason vektorien joukkoa merkitään symbolilla $V$, niin edellä olevilla määritelmillä on 
+syntynyt algebra, joka merkittäköön $(V,\R)$. Laskusääntöjen (V1)--(V8) (yleisemmin:
+aksioomien) ollessa voimassa sanotaan, että kyseessä on (lineaarinen) \kor{vektoriavaruus}.
+Käsitteeseen siis sisältyvät
+\index{laskuoperaatiot!ca@ yleisen vektoriavaruuden}
+\begin{itemize}
+\item  vektorien muodostama joukko $V$ (jossa operoidaan)
+\item  vektorien yhteenlasku (+)
+\item  nk. \kor{skalaarien} muodostama \kor{kertojakunta}, tässä = $\R$
+\item  skalaarin ja vektorin kertolasku
+\end{itemize}
+\index{skalaari} \index{kertojakunta}%
+Lyhennetty sanonta '$V$ on vektoriavaruus' tarkoittaa koko tätä algebraa, jolloin 
+kertojakunta on juuri $\R$, tai muuten asiayhteydestä selvä. Sanonnat \kor{reaalikertoiminen}
+vektoriavaruus tai yleisemmin \kor{$\K$-kertoiminen} vektoriavaruus kiinnittävät kertojakunnan
+tarkemmin. Kertojakunnan ei siis tarvitse olla $\R$, vaan se voisi olla esim. $\K=\Q$ tai 
+$\K=\G=\{\text{geometriset luvut}\}$. Lineaarinen vektoriavaruus on hyvin keskeinen käsite
+matematiikassa, ja sillä on keskeinen rooli myös monissa matematiikan sovelluksissa.
+
+\subsection*{Kanta ja koordinaatisto}
+\index{kanta|vahv} \index{koordinaatisto|vahv}%
+
+Olkoon $\vec v \in V$ mielivaltainen tason vektori ja $\vec a, \vec b \in V$ kaksi vektoria, 
+joille pätee
+\[
+\vec a, \vec b \neq \vec 0 ,\quad \vec a \neq \lambda \vec b \quad \forall \ \lambda \in \R.
+\] 
+Tällöin voidaan geometrisella konstruktiolla (ks.\ kuvio) löytää yksikäsitteiset $x,y \in \R$
+siten, että
+\[
+\vec v = x \vec a + y \vec b.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,4.5)(0,-0.5)
+%\Thicklines
+\put(0,0){\vector(1,1){4}} \put(0,0){\vector(1,0){2}} \put(0,0){\vector(3,1){6}}
+\put(0,0){\vector(1,0){4}} \put(0,0){\vector(1,1){2}}
+\dashline{0.2}(6,2)(2,2) \dashline{0.2}(6,2)(4,0)
+\put(3.1,3.6){$\vec b$} \put(0.9,1.6){$y\vec b$} \put(1.5,-0.5){$\vec a$} 
+\put(3.3,-0.5){$x\vec a$} \put(5.5,2.2){$\vec v$}
+\end{picture}
+\end{center}
+\end{figure}
+Sanotaan tällä perusteella, että $\vec v$ on $\vec a$:n ja $\vec b$:n
+\index{lineaariyhdistely}%
+\kor{lineaariyhdistely} (lineaarinen yhdistely, \kor{lineaarikombinaatio}) ja että
+$x \vec a$ ja $y \vec b$ ovat $\vec v$:n
+\index{komponentti (vektorin)}%
+(vektori)\kor{komponentit} $\vec a$:n ja $\vec b$:n suuntaan. 
+
+Kun siis kaksi em.\ ehdot täyttävää vektoria on valittu, on koko $V$ esitettävissä muodossa
+\[
+V=\{x \vec a + y \vec b \mid x,y \in \R\}.
+\]
+Sanotaan, että vektoripari $\{ \vec a, \vec b \}$ on $V$:n \kor{kanta}\footnote[2]{Kanta on
+vektoreiden j\pain{är}j\pain{estett}y joukko, joten merkintä $(\vec a,\vec b)$ olisi
+loogisempi. Erinäisten sekaannusten välttämiseksi käytetään tässä yhteydessä kuitenkin
+yleisemmin aaltosulkeita.} ja että $x,y$ ovat vektorin $\vec v = x \vec a + y \vec b \in V$
+\index{koordinaatti (vektorin)}%
+\kor{koordinaatit} kannassa $\{\vec a,\vec b\,\}$. Jos koordinaatit esitetään lukuparina
+$(x,y)$ (pari = kahden alkion järjestetty joukko), niin on synnytetty yhteys $V$:n ja
+tällaisten lukuparien joukon välille. Merkitään jälkimmäistä joukkoa symbolilla $\Rkaksi$,
+äännetään 'R kaksi':
+\[
+\Rkaksi = \{ (x,y) \mid x \in \R\,\ja\,y \in \R \}.\index{karteesinen tulo|av}%
+\footnote[3]{Joukko $\R^2$ voidaan myös  merkitä $\R\times\R$, jolloin käytetään
+joukko-opillista \kor{karteesisen tulon} merkintää
+\[
+A \times B = \{ (x,y) \mid x \in A\,\ja\,y \in B \}.
+\] 
+Tämä luetaan '$A$:n ja $B$:n karteesinen tulo', tai vain '$A$ risti $B$'. Joukon
+$A \times B$ alkiot ovat siis pareja. Näiden välinen samastusrelaatio on
+\[
+(x_1,y_1) = (x_2,y_2) \qekv  x_1=x_2\ \wedge\ y_1=y_2.
+\] }
+\]
+
+Em. sopimuksilla on itse asiassa luotu \kor{kääntäen yksikäsitteinen} (=molempiin suuntiin 
+yksikäsitteinen)
+\index{vastaavuus ($\ensuremath  {\leftrightarrow }$)}%
+\kor{vastaavuus} $V$:n ja $\Rkaksi$:n välille. Merkitään tätä: 
+\[
+V \vast \Rkaksi.
+\]
+Vastaavuuteen liittyen nimetään $\Rkaksi$ kantaan $\{\vec a, \vec b\,\}$ liittyväksi $V$:n
+\index{koordinaattiavaruus}% 
+\kor{koordinaatti-avaruudeksi}. Nimitys jo viittaa siihen, että myös $\Rkaksi$ on tulkittavissa
+\index{vektorib@vektori (algebrallinen)!a@$\R^2$:n}%
+lineaariseksi vektoriavaruudeksi. Nimittäin kaikki vektoriavaruuden laskulait ovat voimassa,
+kun yhteenlasku ja skalaarilla kertominen $\Rkaksi$:ssa määritellään
+\index{laskuoperaatiot!cb@vektoriavaruuden $(\Rkaksi,\R)$}
+\begin{align*}
+(x_1,y_1)+(x_2,y_2)& = (x_1+x_2,y_1+y_2), \\
+\lambda(x,y) &= (\lambda x, \lambda y).
+\end{align*}
+Nämä operaatiot myös vastaavat $V$:n laskutoimituksia, sillä
+\begin{align*}
+\vec v_1=x_1 \vec a + y_1 \vec b, \ \vec v_2= x_2 \vec a + y_2 \vec b \ 
+                               &\impl \ \vec v_1 + \vec v_2 = (x_1+x_2)\vec a 
+                                                                        + (y_1+y_2)\vec b, \\
+\vec v = x \vec a +y \vec b \  &\impl \ \lambda \vec v = (\lambda x)\vec a +(\lambda y)\vec b.
+\end{align*}
+
+Vektoriavaruus $(\Rkaksi,\R)$, mainituin laskuoperaatioin, on esimerkki (lajissaan ensimmäinen)
+algebrallisten vektoreiden muodostamasta vektoriavaruudesta. Tämä avaruus on
+siis geometrisista tulkinnoista vapaa. Toisaalta tulkitsemalla $(\Rkaksi,\R)$ tason vektorien
+koordinaattiavaruudeksi (valitussa kannassa) saadaan vektorien laskuoperaatiot muunnetuksi 
+algebralliseen muotoon. Esimerkiksi yhteenlaskussa tällainen laskukaavio on
+\[
+\begin{array}{cccccc}
+&\vec v_1   &  &\vec v_2   &     &\vec v_1+\vec v_2 \\
+&\downarrow &  &\downarrow &     &\uparrow \\ 
+&(x_1,y_1)  &  &(x_2,y_2)  &\map &(x_1+x_2,y_1+y_2)
+\end{array}
+\]
+Kaavion etuna on, että itse laskuoperaatiossa ei tarvita mitään tietoa vektorien 'ulkonäöstä'.
+Monia geometrian tuloksia voidaan tällä tavoin johtaa algebran keinoin (vrt.\ Esimerkki 
+\ref{kolmion keskipiste} edellä).
+
+Koordinaattiavaruus $\Rkaksi$ voidaan yhtä hyvin liittää myös siihen alkuperäiseen 
+pisteavaruuteen $\Ekaksi$, josta koko vektoriajatus oli lähtöisin. Nimittäin jos vektoreita 
+ajatellaan $\Ekaksi$:n suuntajanoina, 'joita voi siirrellä', niin voidaan yhtä hyvin ajatella,
+että jokainen vektori vastaa yksikäsitteistä suuntajanaa, jonka lähtöpiste on kiinteä piste $O$.
+Näin on synnytetty $\Ekaksi$:n ja $V$:n kääntäen yksikäsitteinen vastaavuus:
+\[
+P \in \Ekaksi \ \leftrightarrow \ \overrightarrow{OP} \in V.
+\]
+Kun nyt tulkitaan myös edellä valitut kantavektorit $\vec a, \vec b$ pisteestä $O$ alkaviksi
+suuntajanoiksi, niin euklidiseen tasoon on luotu \kor{koordinaatisto}\footnote[2]{Ajatuksen 
+koordinaatiston avulla tapahtuvasta geometrian aritmetisoimisesta toi matematiikkaan 
+ranskalainen filosofi-matemaatikko \hist{Ren\'e Descartes} (1596-1650) tutkielmassaan 
+''La g\'eom\'etrie'', joka ilmestyi laajemman filosofisen teoksen liitteenä vuonna 1637. 
+Tutkielma merkitsi \kor{analyyttisen geometrian} alkua, ja enteili yleisemminkin geometrian 
+'algebralisoitumista' --- trendiä, joka erityisesti tietokoneiden aikakaudella on entisestään
+vahvistunut. \index{Descartes, R.|av}}, jota merkitään $\{O,\vec a,\vec b\}$. Pistettä $O$
+sanotaan koordinaatiston 
+\index{origo}%
+\kor{origoksi}.
+
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,4)(-2,-0.2)
+%\Thicklines
+\put(0,0){\vector(3,2){4}} \put(0,0){\vector(-2,3){2}}
+\put(-0.1,-0.5){$O$} \put(-1.7,2.8){$\vec a$} \put(3.5,2.6){$\vec b$}
+\end{picture}
+\end{center}
+\end{figure}
+\index{koordinaatti (pisteen)}%
+Jos $P \in \Ekaksi$ ja $\Vect{OP} = x \vec a + y \vec b$, niin sanotaan, että \kor{pisteen}
+$P$ \kor{koordinaatit} valitussa koordinaatistossa $\{O,\vec a,\vec b\,\}$ ovat 
+$(x,y)$. Koordinaatiston ollessa kiinitetty voidaan koordinaattiparia $(x,y)$ haluttaessa 
+pitää $P$:n 'nimenä', jolloin on lupa kirjoittaa muitta mutkitta
+\[
+P=(x,y).
+\]
+Näin on luotu kääntäen yksikäsitteinen vastaavuus $\Ekaksi \ \leftrightarrow \ \Rkaksi$.
+\begin{Exa} Olkoon $T$ tason (aito) kolmio, jonka kärkikipisteet ovat $0,A,B$. Merkitään 
+$\vec a=\Vect{OA}$, $\vec b=\Vect{OB}$. Tällöin $T$:n kärkipisteet, $T$:n sivujen 
+keskipisteet ja $T$:n keskiö koordinaattistossa $\{O,\vec a,\vec b\,\}$ ovat
+(vrt.\ Esimerkki \ref{kolmion keskipiste})
+\begin{align*}
+&\text{kärkipisteet:} \quad O=(0,0), \quad A=(1,0), \quad B=(0,1), \\
+&\text{sivujen keskipisteet:} \quad O'=(1/2,1/2), \quad A'=(0,1/2), \quad B'=(1/2,0), \\
+&\text{keskiö:} \quad C=(1/3,1/3). \quad\loppu
+\end{align*}
+\end{Exa}
+Koordinaatistoon tarvitaan siis ensinnäkin referenssipiste $O$. Tästä nk. origosta valitaan
+kaksi suuntaa, jotka määrääväät vektoreiden $\vec a, \vec b$ suunnat. Vielä päätetään, että 
+mitattaessa etäisyyttä $O$:sta on pituusyksikkö $\alpha$ mentäessä $\vec a$:n suuntaan ja 
+$\beta$ mentäessä $\vec b$:n suuntaan. Tässä $\alpha,\beta \in \R$ ja $\alpha,\beta>0$. Kun nyt
+valitaan $\vec a$ ja $\vec b$ siten, että $|\vec a|=\alpha$ ja $|\vec b|=\beta$, ovat $\vec a$
+ja $\vec b$ yksikäsitteisesti määrätyt ja koordinaatisto siis valmis. Origon kautta kulkevia
+suoria
+\begin{align*}
+S_1=\{ P \in \Ekaksi \ | \ \overrightarrow{OP} = \lambda \vec a, \ \lambda \in \R \}, \\
+S_2=\{ P \in \Ekaksi \ | \ \overrightarrow{OP} = \mu \vec b, \ \mu \in \R \},
+\end{align*}
+\index{suuntavektori} \index{koordinaattiakseli}%
+joiden \kor{suuntavektoreina} ovat $\vec a, \vec b$, sanotaan \kor{koordinaattiakseleiksi}.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,6)(-3,-2)
+\Thicklines
+\put(0,0){\vector(3,2){4}} \put(0,0){\vector(-1,1){2}}
+\thinlines
+\put(0.3,-0.1){$O=(0,0)$} \put(-2.1,1.4){$\vec a$} \put(3.5,2.7){$\vec b$}
+\put(-3,-2){\line(3,2){8}} \put(2,-2){\line(-1,1){5}}
+\put(-1.8,2){$(1,0)$} \put(4,2.2){$(0,1)$}
+\put(2.2,-2){$S_1$} \put(-2.5,-2){$S_2$}
+\put(-0.07,-0.07){\piste} \put(3.93,2.6){\piste} \put(-2.07,1.93){\piste}
+\end{picture}
+\end{center}
+\end{figure}
+
+\subsection*{Lineaarinen riippumattomuus}
+\index{lineaarinen riippumattomuus|vahv}
+
+Koordinaatiston kantavektoreista $\vec a,\vec b$ edellä tehdyt oletukset
+($\vec a,\vec b \neq \vec 0$ ja $\vec a,\vec b$ eivät saman- tai vastakkaissuuntaiset) 
+voidaan asettaa lyhyemmin ehtona
+\begin{equation} \label{lin riippumattomat}
+x \vec a + y \vec b = \vec 0 \qimpl x=y=0. \tag{$\star$}
+\end{equation}
+Jos tason vektoreilla on ominaisuus \eqref{lin riippumattomat}, niin sanotaan, että 
+$\{\vec a,\vec b\,\}$ on \kor{lineaarisesti} \kor{riippumaton} (vektori)\kor{systeemi}
+(= joukko) tai että $\vec a$ ja $\vec b$ ovat lineaarisesti riippumattomat. Tason
+vektoriavaruuden $V$ kannaksi kelpaa siis mikä tahansa lineaarisesti riippumaton
+vektorisysteemi $\{\vec a,\vec b\,\}$.
+
+Jos vektorit $\vec a,\vec b$ eivät ole lineaarisesti riippumattomat, niin ne ovat
+\index{lineaarinen riippuvuus}%
+\kor{lineaarisesti riippuvat}. Ehdon  \eqref{lin riippumattomat} mukaisesti näin on, jos
+\[
+x\vec a + y\vec b=\vec 0 \quad \text{jollakin}\ (x,y) \neq (0,0).
+\]
+Tämä ehto puolestaan toteutuu täsmälleen kun joko
+(i) $\vec a = \vec 0 \,\impl\, x\vec a+0\vec b=\vec 0$ $\forall x\in\R$,
+(ii) $\vec b = \vec 0 \,\impl\, 0\vec a+y\vec b=\vec 0\ \forall y\in\R$, tai
+(iii) $\vec a$ ja $\vec b$ ovat yhdensuuntaiset (= saman- tai vastakkaissuuntaiset, ol.\
+$\vec a \neq \vec 0$ ja $\vec b \neq \vec 0\,$), jolloin 
+$\exists\lambda\in\R,\ \lambda \neq 0$ siten, että $\vec a + \lambda\vec b = \vec 0$. 
+\begin{Exa} Tason vektoreista $\vec a, \vec b$ tiedetään, että $\vec a-\vec b$ ja 
+$\vec a+2\vec b$ ovat lineaarisesti riippuvat. Voidaanko päätellä, että myös $\vec a$ ja 
+$\vec b$ ovat lineaarisesti riippuvat\,? \end{Exa}
+\ratk Annetun tiedon mukaan on jollakin $(x,y) \neq (0,0)$
+\[
+x(\vec a-\vec b)+y(\vec a+2\vec b\,)=\vec 0.
+\]
+Vektorialgebran säännöillä tämä saadaan muotoon
+\[
+\vec 0 = (x+y)\vec a+(-x+2y)\vec b = x'\vec a+y'\vec b.
+\]
+Koska
+\[
+\begin{cases} \,x' = 0 \\ \,y' = 0 \end{cases} \qekv \begin{cases} \,\ x+y = 0 \\ -x+2y = 0 
+\end{cases} \qekv \begin{cases} \,x =0 \\ \,y = 0 \end{cases}
+\]
+ja tiedetään, että $(x,y) \neq (0,0)$, niin päätellään, että $(x',y') \neq (0,0)$. Koska siis
+jollakin $(x',y') \neq (0,0)$ on $x'\vec a+y'\vec b=\vec 0$, niin vastaus on: Voidaan\,! \loppu
+
+\subsection*{Koordinaatiston vaihto}
+\index{koordinaatisto!a@koordinaatiston vaihto|vahv}%
+
+Kun tason geometrisia tehtäviä ratkotaan vektorialgebran keinoin, on tehtävään sopivan 
+koordinaatiston valinta yleensä ratkaisemisen ensimmäinen askel (vrt.\ Esimerkki 
+\ref{kolmion keskipiste} edellä). Jos valittu koordinaatisto osoittautuu ratkaisun kuluessa
+epämukavaksi, voidaan suorittaa \kor{koordinaatiston vaihto}. Koordinaatiston vaihto koostuu
+\index{origon siirto} \index{kanta!b@kannan vaihto}%
+\kor{origon siirrosta} ja vektoriavaruuden \kor{kannan vaihdosta}, tai pelkästään jommasta
+kummasta. Kuvassa pisteen $P$ koordinaatit ovat $(x,y)$ koordinaatistossa $\{O,\vec a,\vec b\,\}$
+ja $(x',y')$ koordinaatistossa $\{O',\vec c,\vec d\,\}$.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,6)(-3,-2)
+\Thicklines
+\put(-2,-2){\vector(1,1){3}} \put(-2,-2){\vector(-1,1){2}}
+\put(4.5,2){\vector(-1,-4){0.5}} \put(4.5,2){\vector(1,0){3}}
+\thinlines
+\put(-2,-2){\vector(1,2){2.5}} \put(4.5,2){\vector(-4,1){4}}
+\put(-1.9,-2.3){$O$} \put(-4.1,-0.6){$\vec a$} \put(1,0.4){$\vec b$}
+\put(7.3,2.2){$\vec c$} \put(4.3,0){$\vec d$} \put(4.5,2.2){$O'$}
+\put(0.5,3.2){$P=(x,y)=(x',y')$}
+\end{picture}
+\end{center}
+\end{figure}
+Vektorien yhteenlaskudiagrammin mukaan on
+\[
+\Vect{OP}=\Vect{OO'}+\Vect{O'P}\,\ \ekv\,\ x\vec a+y\vec b=\Vect{OO'}+(x'\vec c+y'\vec d\,).
+\]
+Olkoon tässä $\Vect{OO'}=\alpha\,\vec a+\beta\,\vec b$, eli $O'=(\alpha,\beta)$
+koordinaatistossa $\{O,\vec a,\vec b\,\}$, ja
+\[
+\vec c=\lambda_1\vec a+\mu_1\vec b, \quad \vec d=\lambda_2\vec a+\mu_2\vec d,
+\]
+eli vektoreiden $\vec c,\vec d\,$ koordinaatit kannassa $\{\vec a,\vec b\}$ ovat
+$(\lambda_1,\mu_1)$ ja $(\lambda_2,\mu_2)$. Tällöin em.\ yhtälö sievenee vektorialgebran
+säännöillä muotoon
+\[
+(x-\lambda_1 x'-\lambda_2 y'-\alpha)\,\vec a+(y-\mu_1 x'-\mu_2 y'-\beta)\,\vec b\,=\,\vec 0.
+\]
+Koska vektorit $\vec a$ ja $\vec b$ ovat lineaarisesti riippumattomat, niin seuraa
+\[
+\begin{cases} \,x-\lambda_1 x'-\lambda_2 y'-\alpha=0\\ \,y-\mu_1 x'-\mu_2 y'-\beta =0 \end{cases}
+\ \ekv \quad
+\begin{cases} \,\lambda_1 x'+\lambda_2 y'=x-\alpha \\ \,\mu_1 x'+\mu_2 y'=y-\beta \end{cases}
+\]
+Ratkaisemalla tästä $(x',y')$ koordinaattien $(x,y)$ avulla --- yhtälöryhmä ratkeaa 
+aina kun $\vec c\,$ ja $\vec d$ ovat lineaarisesti riippumattomat --- saadaan selville 
+\index{koordinaattimuunnos}%
+\kor{koordinaattimuunnoksen} $(x,y) \ext (x',y')$ laskukaavat. Yhtälöryhmästä nähdään myös 
+suoraan, miten käänteinen muunnos $(x',y') \ext (x,y)$ on laskettava. 
+\begin{Exa} Olkoon
+\[
+\Vect{OO'}=\vec a - \vec b, \quad \vec c=2\vec a+\vec b, \quad \vec d=\vec a-2\vec b.
+\]
+Em.\ laskun kulku on tällöin
+\begin{align*}
+&x\vec a+y\vec b\ =\ (\vec a-\vec b\,)+x'(2\vec a+\vec b\,)+y'(\vec a-2\vec b\,) \\
+&\qekv (x-2x'-y'-1)\,\vec a + (y-x'+2y'+1)\,\vec b = \vec 0 \\
+&\qekv \begin{cases} \,2x'+y'=x-1 \\ \,x'-2y'=y+1 \end{cases}
+\end{align*}
+Ratkaisemalla saadaan koordinaattimuunnoksen laskukaavoiksi
+\[
+\begin{cases} \,x=2x'+y'+1\\ \,y=x'-2y'-1 \end{cases}\ \ekv \quad
+\begin{cases} \,x'=\frac{1}{5}(2x+y-1) \\ \,y'=\frac{1}{5}(x-2y-3) \end{cases} \loppu
+\]
+\end{Exa}
+
+\subsection*{Dimensio. Aliavaruus}
+\index{dimensio|vahv} \index{aliavaruus|vahv}
+
+Koska tason vektoriavaruuden kannassa on oltava kaksi lineaarisesti riippumatonta vektoria, niin
+sanotaan, että $V$ on $2$-\kor{ulotteinen} vektoriavaruus tai että $V$:n \kor{dimensio}
+(ulotteisuus) on $2$. Merkitään
+\[
+\text{dim } V=2.
+\]
+Myös koodinaattiavaruus $\Rkaksi$ on vektoriavaruutena $2$-ulotteinen. Nimittäin jos merkitään
+\[
+\ma=(1,0), \quad \mb=(0,1),
+\]
+niin $\Rkaksi$:n vektorialgebran mukaan on $(x,y)=x\ma + y\mb$, eli jokainen
+$\mv v = (x,y) \in \Rkaksi$ voidaan esittää yksikäsitteisesti $\ma$:n ja $\mb$:n
+lineaariyhdistelynä. Siis $\{\ma,\mb\}$ on $\Rkaksi$:n kanta, ja koska kannassa on kaksi
+vektoria, niin $\text{dim}(\Rkaksi)=2$.
+
+Tason tai $\Rkaksi$:n vektoreista voidaan muodostaa myös $1$-\kor{ulotteisia} vektoriavaruuksia.
+Tason vektoreiden tapauksessa nämä ovat kaikki ilmaistavissa jonkin vektorin
+$\vec a \in V, \  \vec a \neq \vec 0$ avulla muodossa
+\[
+W=\{\vec v = x\vec a,\ x\in\R\}.
+\]
+Koska ilmeisesti pätee
+\begin{align*}
+\vec v_1, \vec v_2 \in W &\qimpl \vec v_1 + \vec v_2 \in W, \\
+\vec v \in W             &\qimpl \lambda\vec v \in W \ \ \forall\,\lambda \in \R,
+\end{align*}
+on $W$ itsekin vektoriavaruus. Sen kantaan tarvitaan vain yksi vektori, esim $\vec a$, joten 
+$\text{dim } W=1$. Koska myös $W \subset V$, sanotaan, että $W$ on $V$:n (aito) \kor{aliavaruus}
+(engl.\ subspace) ja että $\vec a$
+\index{virittää (aliavaruus)}%
+\kor{virittää} (engl.\ span) $W$:n. Aliavaruuden $W$ geometrinen vastine on origon kautta
+kulkeva suora $S\subset\Ekaksi$. Tämä on
+\index{pisteavaruus}%
+\kor{$1$-ulotteinen pisteavaruus}.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,3)
+\put(0,0){\line(4,1){10}}
+\put(3.9,0.9){$\bullet$} \put(3.9,0.5){$O$}
+\Thicklines \put(4,1){\vector(4,1){4}} \thinlines
+\put(7.9,1.5){$\vec a$}
+\curve(1,0.25,1.3,0.1,1.6,0.1) \put(1.8,0){$S\leftrightarrow W$}
+\end{picture}
+\end{center}
+\end{figure}
+Vastaavuus
+\[
+P \in S \ \leftrightarrow \ \Vect{OP} = x \vec a \in W \ \leftrightarrow \ x \in \R
+\]
+synnyttää kääntäen yksikäsitteisen vastaavuuden $\R$:n ja pisteavaruuden $S$ välille. Lukujen 
+geometrisointi lukusuoran pisteiksi (vrt.\ Luku \ref{geomluvut}) perustui juuri tähän 
+vastaavuuteen.
+    
+\Harj
+\begin{enumerate}
+
+\item \label{H-II-1: perusteluja}
+a) Perustele vektorialgebran säännöt (V4)--(V6) geometrisesti. \vspace{1mm}\newline
+b) Vektoreille pätee kolmioepäyhtälö
+$\abs{\vec a+\vec b} \le \abs{\vec a}+\abs{\vec b}$. Päättele geometriaan enempää
+turvautumatta, että pätee myös $\,\abs{\vec a}-\abs{\vec b} \le \abs{\vec a+\vec b}$. 
+%\vspace{1mm}\newline
+
+\item
+Tason vektoreista $\vec a,\vec b$ oletetaan, että $\vec a,\vec b\neq\vec 0$ ja että
+$\vec a$ ja $\vec b$ eivät ole yhdensuuntaiset. Millä vektorin $\vec c$ arvoilla voidaan
+vektoreita $\vec a+\vec b$, $\vec a+\vec c$ ja $\vec b+2\vec c\,$ 'siirtelemällä' muodostaa
+kolmio?
+
+\item
+Todista Harjoitustehtävän \ref{geomluvut}:\ref{H-II-1: yhdenmuotoisuus}b väittämä
+vektorialgebran avulla.
+
+\item
+Nelikulmiossa $ABCD$ on $\Vect{AB} = \vec{a},\ \Vect{AD} = \vec{b}$ ja
+$\Vect{BC} = (1/2)(\vec{a} + \vec{b}\,)$. Laske vektorien $\vec{a}$ ja $\vec{b}$
+avulla vektori $\Vect{AE}$, missä $E$ on nelikulmion lävistäjien leikkauspiste.
+
+\item
+Suunnikkaassa ABCD kärki $A$ yhdistetään sivun $CD$ keskipisteeseen $P$ ja kärki $B$ sivun
+$AD$ keskipisteeseen $R$. Yhdysjanat leikatkoot pisteessä $X$. Lausu vektori $\Vect{AX}$
+vektoreiden $\vec u=\Vect{AB}$ ja $\vec v=\Vect{AD}$ avulla.
+
+\item
+Kolmiossa $ABC$ merkitään $\vec a=\Vect{AB},\ \vec b=\Vect{AC}$. \ a) Päättele geometrisesti,
+että vektori $\vec c=\abs{\vec b}\vec a+\abs{\vec a}\vec b$ puolittaa kulman $BAC$. \
+b) Piste $D$ on janalla $BC$ ja jana $AD$ puolittaa kulman $BAC$. Todista vektorilaskulla
+\kor{kulmanpuolittajalause}: Janojen $BD$ ja $DC$ pituuksien suhde
+$=\abs{\vec a}/\abs{\vec b}$.
+
+\item
+Olkoot pisteet $M$ ja $N$ kolmioiden $ABC$ ja $DEF$ keskiöt. Näytä, että \newline
+$\Vect{AD}+\Vect{BE}+\Vect{CF}=3\Vect{MN}$.
+
+\item
+Kolmion $ABC$ sivut $BC$, $CA$ ja $AB$ jakautuvat pisteissä $A^*$, $B^*$ ja $C^*$ suhteessa
+$m:n$. Todista, että kolmioiden $ABC$ ja $A^*B^*C^*$ keskiöt yhtyvät.
+
+\item
+Olkoon $\{\vec a,\vec b\,\}$ tason vektoriavaruuden kanta ja olkoon $\vec u=2\vec a+3\vec b$,
+$\vec v=-3\vec a+2\vec b$ ja $\vec w=-\vec a-2\vec b$. Määritä vektorin $2\vec u-\vec v+\vec w$
+koordinaatit kannassa $\{\vec a,\vec b\,\}$. Piirrä kuva!
+
+\item
+Vektorit $\vec a,\vec b$ muodostavat tason vektoriavaruuden $V$ kannan. Näytä, että myös 
+vektorit $\vec u=\vec a+\vec b$, $\vec v=\vec a-2\vec b$ muodostavat kannan. Laske 
+vektorin $\vec w=\vec a-\vec b$ koor\-di\-naa\-tit tässä kannassa.
+
+\item
+Kolmiossa $ABC$ piste $O$ puolittaa sivun $AB$, piste $E_1$ jakaa sivun $BC$ suhteessa $1:2$
+ja piste $E_2$ sivun $CA$ suhteessa $1:3$. Määritä kolmion kärkipisteiden koordinaatit siinä
+koordinaatistossa, jonka origo on piste $O$ ja kantavektorit ovat $\Vect{OE}_1$ ja
+$\Vect{OE}_2\,$.
+
+\item 
+Jos $\vec a,\vec b$ ovat lineaarisesti riippumattomat tason vektorit, niin millä $t$:n arvoilla
+($t\in\R$) vektorit $\vec a-t\vec b$ ja $t\vec a-2\vec b$ ovat myös lineaarisesti
+riippumattomat\,?
+
+\item
+Pisteen $P$ koordinaatit ovat $(x,y)$ koordinaatistossa $\{O,\vec a,\vec b\,\}$ ja $(x',y')$ 
+koordinaatistossa $\{O',\vec c,\vec d\,\}$. Johda koordinaattimuunnoksen laskukaavat molempiin
+suuntiin, kun \newline
+a) \ $O'=O$, $\,\vec c=\vec a+\vec b\,$ ja $\,\vec d=\vec a-\vec b$. \newline
+b) \ $\Vect{O'O}=\vec c+2\vec d$, $\,\vec c=2\vec a+3\vec b\,$ ja $\,\vec d=-\vec a+2\vec b$. 
+
+\item
+Olkoon $\vec a=\Vect{OA}$ ja $\vec b=\Vect{OB}$. Johda kordinaattimuunnoksen laskukaavat 
+koordinaatistosta $\{O,\vec a,\vec b\,\}$ koordinaatistoon $\{O',\vec c,\vec d\,\}$,
+kun $O'=$ kolmion $OAB$ keskiö ja $\vec c=\Vect{O'A},\ \Vect d=\Vect{O'B}$. Mitkä ovat kolmion
+kärkipisteiden ja sivujen keskipisteiden koordinaatit jälkimmäisessä koordinaatistossa?
+
+\end{enumerate}

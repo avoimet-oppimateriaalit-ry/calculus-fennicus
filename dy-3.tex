@@ -1,0 +1,414 @@
+\section{Palautuvat toisen kertaluvun DY:t}
+\label{toisen kertaluvun dy}
+\alku
+
+Yleinen toisen kertaluvun normaalimuotoinen differentiaaliyhtälö $y''=f(x,y,y')$ ratkeaa
+kvadratuureilla eräissä erikoistapauksissa. Näistä tarkastellaan tässä vain kahta
+(sovelluksissa melko yleistä) tapausta, joissa $f$ ei riipu joko $y$:stä tai $x$:stä, jolloin 
+differentiaaliyhtälö on joko muotoa $y''=f(x,y')$ tai $y''=f(y,y')$. Kummassakin tapauksessa on
+kyse \pain{ensimmäiseen} \pain{kertalukuun} p\pain{alautuvasta} differentiaaliyhtälöstä. Sikäli 
+(ja vain sikäli) kuin ko.\ 1.\ kertaluvun DY on separoituva, sellaiseksi palautuva tai muuten
+kvadratuureilla ratkaistavissa, ratkeaa alkuperäinen DY kvadratuureilla.
+
+\index{differentiaaliyhtälö!la@$y''=f(x,y')$}%
+Differentiaaliyhtälö $y''=f(x,y')$ palautuu välittömästi 1.\ kertalukuun, sillä sijoituksella
+$y'=u$ tämä voidaan kirjoittaa ryhmäksi
+\[
+\begin{cases} \,u'=f(x,u), \\ \,y'=u. \end{cases}
+\]
+Jos tässä ensimmäinen yhtälö on ratkaistavissa muotoon $u=U(x,C_1)$, ratkeaa jälkimmäinen
+yhtälö yhdellä kvadratuurilla muotoon $y(x)=Y(x,C_1,C_2)$. Kvadratuureilla ratkeava on esim.\
+muotoa $y''=f(y')$ oleva DY, ks.\ sovellusesimerkki luvun lopussa. Siirrytään tässä
+tarkastelemaan mainittua toista erikoistapausta.
+
+\subsection*{Differentiaaliyhtälö $y''=f(y,y')$}
+\index{differentiaaliyhtälö!m@$y''=f(y,y')$|vahv}
+
+Tässäkin tapauksessa muunnetaan ratkaistava DY ensin ryhmäksi sijoituksella $y'=u\,$:
+\[ 
+\begin{cases} \,u'=f(y,u), \\ \,y'=u. \end{cases}
+\]
+Esitetään tässä $u$ yhdistettynä funktiona muodossa $u=u(x)=U(y(x))=U(y)$. (Jos ratkaisu on
+$y=Y(x)$, niin $U(y)=(u \circ Y^{-1})(y)$ väleillä, joilla $Y$ on kääntyvä.)
+Mainituin merkinnöin ja em.\ differentiaaliyhtälöiden perusteella seuraa
+\begin{align*}
+f(y,U(y)) &= \frac{du}{dx} = \frac{d}{dx}U(y(x)) = \frac{dU}{dy}\cdot\frac{dy}{dx} 
+                           = \frac{dU}{dy}\cdot u(x) = \frac{dU}{dy}\cdot U(y) \\
+          &\qimpl \frac{dU}{dy} =  \frac{f(y,U)}{U}\,.
+\end{align*}
+Sikäli kuin saatu ensimmäisen kertaluvun DY on ratkaistavissa muotoon $U(y)=V(y,C_1)$, voidaan
+edelleen $y$ ratkaista separoituvasta (autonomisesta) yhtälöstä
+\[
+y' = U(y) = V(y,C_1).
+\]
+Alkuperäinen toisen kertaluvun DY on näin purettu kahdeksi peräkkäiseksi ensimmäisen
+kertaluvun DY:ksi, joista jälkimmäinen on separoituva.
+
+Em.\ ratkaisutavasta saadaan käytännössä helpommin muistettava, kun kirjoitetaan
+yksinkertaisesti $u(x)=u(y)$ (eli ajatellaan $y$ muuttujaksi $x$:n sijasta),
+ja suoritetaan differentiaaliyhtälöryhmässä muodollinen jakolasku puolittain:
+\[ \left. \begin{aligned}
+\frac{du}{dx} &= f(y,u)\ \\ \frac{dy}{dx} &= u 
+          \end{aligned} \right\} \qimpl \frac{du}{dy} =  \frac{f(y,u)}{u}\,.
+\]
+\begin{Exa} Ratkaise diferentiaaliyhtälö $\,y''=yy'$. \end{Exa}
+\ratk Tässä on $f(y,u)=yu$, joten em.\ ratkaisutavalla saadaan
+\begin{align*}
+\frac{du}{dy}= y &\qimpl u=\int y\,dy=\frac{1}{2}\,y^2+\frac{C_1}{2} \\
+                 &\qekv \frac{dy}{dx}=\frac{1}{2}\,y^2+\frac{C_1}{2}
+                  \qimpl x= \int \frac{2}{y^2+C_1}\,dy, \quad C_1\in\R.
+\end{align*}
+Tästä eteenpäin on eroteltava tapaukset $C_1>0$, $C_1=0$ ja $C_1<0$. Ensinnäkin jos $C_1>0$,
+niin kirjoitetaan $C_1$:n tilalle $C_1^2\ (C_1>0)$, jolloin saadaan
+\begin{align*}
+x &= \frac{2}{C_1^2}\int\frac{1}{(y/C_1)^2+1}\,dy
+   = \frac{2}{C_1}\Arctan\frac{y}{C_1}-\frac{2C_2}{C_1} \\
+  &\qimpl\quad \underline{\underline{y(x)
+                  =C_1\tan\left(\frac{C_1 x}{2}+C_2\right), \quad C_1>0,\ C_2\in\R}}.
+\end{align*}
+Tapauksessa $C_1<0$ saadaan vastaavasti kirjoittamalla $C_1$:n tilalle $-C_1^2$
+\begin{align*}
+x &= \frac{2}{C_1^2}\int\frac{1}{(y/C_1)^2-1}\,dy
+   = -\frac{2}{C_1}\artanh\frac{y}{C_1}-\frac{2C_2}{C_1} \\
+  &\qimpl\quad \underline{\underline{y(x)
+                  =-C_1\tanh\left(\frac{C_1 x}{2}+C_2\right), \quad C_1>0,\ C_2\in\R}}.
+\end{align*}
+Lopulta tapauksessa $C_1=0$ ovat ratkaisut
+\[
+x = \int \frac{2}{y^2}\,dy = -\frac{2}{y}-C \qimpl \underline{\underline{y(x)
+                           = -\frac{2}{x+C}\,, \quad C\in\R}}.
+\]
+Näiden lisäksi on vielä otettava mukaan autonomisten differentiaaliyhtälöiden
+$\,y'=\tfrac{1}{2}(y^2+C_1)\,$ erikoisratkaisut, kun $C_1=-C^2 \le 0\,$:
+\[
+\underline{\underline{y(x)=C, \quad C\in\R}}. \loppu
+\]
+
+\subsection*{Differentiaaliyhtälö $y''=f(y)$}
+\index{differentiaaliyhtälö!n@$y''=f(y)$|vahv}
+
+Myös edellä tarkastellun DY-tyypin erikoistapaus $y''=f(y)$ on sovelluksissa yleinen. Em.\
+ratkaisukaavion mukaisesti tämä palautuu separoituviksi 1. kertaluvun yhtälöiksi, joten yhtälö
+ratkeaa aina kvadratuureilla.
+\index{harmoninen värähtely} \index{zza@\sov!Harmoninen värähtely}%
+\begin{Exa}: \vahv{Harmoninen värähtely}. \ Kappale, jonka massa $=m$, on kiinnitetty jouseen,
+jonka jousivakio $=k$. Hetkellä $t$ kappaleen etäisyys tasapaino\-asemasta on $y(t)$, jolloin
+liikeyhtälö on
+\[
+my''=-ky.
+\]
+Ratkaise $y(t)$ alkuehdoilla $\,y(0)=0$, $y'(0)=v_0$.
+\end{Exa}
+\ratk Tässä on $f(y)=-(k/m)y$, joten saadaan
+\begin{align*}
+\frac{du}{dy} &= \frac{f(y)}{u}=-\frac{ky}{mu} \\
+              &\impl\ mu\frac{du}{dy}+ky=0 \\
+              &\ekv\ \frac{d}{dy}\left(\frac{1}{2}\,mu^2+\frac{1}{2}\,ky^2\right)=0 \\
+              &\ekv\ \frac{1}{2}\,mu^2+\frac{1}{2}\,ky^2=C.
+\end{align*}
+Tässä välituloksessa on $u=y'=$ kappaleen nopeus, $E_k=\tfrac{1}{2}mu^2=$ 
+\pain{liike-ener}g\pain{ia}, ja $E_p=\tfrac{1}{2}ky^2=$ jousen p\pain{otentiaaliener}g\pain{ia}.
+Tulos tunnetaan \pain{ener}g\pain{ia}p\pain{eriaatteena}: Kokonaisenergia = vakio. Koska
+alkuhetkellä on $y=0,\ u=v_0$, niin on oltava
+\[
+C=\frac{1}{2}\,mv_0^2.
+\]
+Jatkamalla saadusta energian säilymislaista tällä $C$:n arvolla, kirjoittamalla
+\[
+T=\sqrt{\frac{m}{k}},\quad L=v_0T,
+\]
+olettamalla, että $\abs{y}<L$, ja käyttämällä alkuehtoa $y(0)=0$ saadaan
+\[
+T\frac{dy}{dt}=\sqrt{L^2-y^2} \qimpl \int_0^{y(t)} \frac{1}{\sqrt{L^2-y^2}}\,dy 
+              = \int_0^t \frac{1}{T}\,dt=\frac{t}{T}\,.
+\]
+Välillä $\,t/T\in(-\pi/2,\pi/2)\,$ ratkaisu on kirjoitettavissa muodossa
+\[
+\Arcsin (y/L) = t/T\,\ \ekv\,\ y(t)=L\sin (t/T),\quad t/T\in (-\pi/2,\pi/2).
+\]
+Lopputuloksesta nähdään, että rajoitus $t/T\in (-\pi/2,\pi/2)$ voidaan poistaa. Saatiin siis
+kaikkilla $t$:n arvoilla pätevä ratkaisu $\,y(t)=v_0 T\sin(t/T)$, missä $T=\sqrt{m/k}$. \loppu
+
+\begin{Exa}: \vahv{Räjähdys}. \index{zza@\sov!Rzyjzy@Räjähdys} \ Nopeaa kemiallista rekatiota
+kuvaa DY-systeemi
+\[
+u'=3y^2,\,\ y'=u,
+\]
+missä $u=u(t)$ ja $y=y(t)$ ($t=$ aika). Oletetaan alkuehdot $y(0)=1$ ja $u(0)=0$. Laske
+reaktioon kuluva aika $T$, ts.\ määritä suurin $T$ siten, että alkuarvotehtävällä on ratkaisu
+välillä $(0,T)$.
+\end{Exa}
+\ratk Derivoimalla jälkimmäinen yhtälö ja eliminoimalla $u$ nähdään, että $y$ toteuttaa
+differentiaaliyhtälön $y''=3y^2$. Ratkaisussa lähdetään kuitenkin alkuperäisestä 
+systeemimuodosta, sillä se on valmiiksi ratkaisukaavioon sopiva:
+\begin{align*}
+\frac{du}{dy}=\frac{3y^2}{u}\ &\impl\ u\frac{du}{dy}-3y^2=0 \\
+                              &\ekv\ \frac{d}{dy}\left(\frac{1}{2}\,u^2-y^3\right)=0 \\
+                              &\ekv\ \frac{1}{2}\,u^2-y^3=C.
+\end{align*}
+Koska $y=1$ ja $u=0$, kun $t=0$, niin $C=-1$, joten
+\[
+u=y'=\sqrt{2}\sqrt{y^3-1}\quad (y\geq 1).
+\]
+Separoimalla ja integroimalla, ja käyttämällä alkuehtoa $y(0)=1$, saadaan
+\[
+\frac{1}{\sqrt{2}}\int_1^{y(t)}\frac{dx}{\sqrt{x^3-1}}=\int_{0}^t dx 
+                                                      =t\ \ekv\ y(t)=\inv{\Phi}(t),
+\]
+missä
+\[
+\Phi(s)=\frac{1}{\sqrt{2}}\int_1^s\frac{dx}{\sqrt{x^3-1}},\quad s\geq 1.
+\]
+Funktio $\Phi$ ei ole alkeisfunktio, mutta koska $x^3-1=(x-1)(x^2+x+1)>3(x-1)$, kun $x>1$,
+niin
+\[
+\frac{1}{\sqrt{x^3-1}} < \frac{1}{\sqrt{3}}\frac{1}{\sqrt{x-1}}, \quad \text{kun}\ x>1,
+\]
+joten (majoranttiperiaatteen nojalla, ks.\ Luku \ref{integraalin laajennuksia}) $\Phi(s)$ on
+määritelty suppenevana integraalina jokaisella $s>1$. Edelleen koska
+\[
+\frac{1}{\sqrt{x^3-1}} \sim \frac{1}{x^{3/2}}, \quad \text{kun}\ x \gg 1,
+\]
+niin $\Phi$:llä on raja-arvo, kun $s\kohti\infty$, ja myös tämä on laskettavissa suppenevana
+integraalina:
+\[
+\lim_{s\kohti\infty} \Phi(s) =\int_1^\infty \frac{dx}{\sqrt{x^3-1}}=\Phi_\infty.
+\]
+Koska $\Phi'(s)=1/\sqrt{s^3-1}>0$ kun $s>1$, niin $\Phi$ on välillä $[1,\infty)$ aidosti
+kasvava. Siis $\Phi:[1,\infty) \map [0,\Phi_\infty)$ on bijektio, ja näin ollen 
+$y(t)=\inv{\Phi}(t)$ on myös bijektio:
+\begin{multicols}{2} \raggedcolumns
+\[
+y:[0,T)\Kohti [1,\infty),
+\]
+missä
+\begin{align*}
+T = \Phi_\infty &= \frac{1}{\sqrt{2}}\int_1^\infty \frac{dx}{\sqrt{x^3-1}} \\[2mm]
+                &\approx \underline{\underline{1.71732}}. \loppu
+\end{align*}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,4)(-1,0)
+\put(0,0){\vector(1,0){3}} \put(2.8,-0.4){$t$}
+\put(0,0){\vector(0,1){3}} \put(0.2,2.8){$y$}
+\curve(0,1,1.2,1.7,1.6,3)
+\dashline{0.2}(1.72,0)(1.72,3)
+\put(1,0){\line(0,-1){0.1}}
+\put(0,1){\line(-1,0){0.1}}
+\put(0.9,-0.5){$1$} \put(-0.4,0.9){$1$} \put(1.7,-0.5){$T$}
+\end{picture}
+%\caption{$y=\inv{\Phi(\sqrt{2}x)}$}
+\end{center}
+\end{figure}
+\end{multicols}
+
+\subsection*{Sovellusesimerkki: Ketjuviiva}
+\index{differentiaaliyhtälö!o@ketjuviivan|vahv}
+\index{ketjuviiva|vahv}
+\index{zza@\sov!Ketjuviiva|vahv}
+
+\begin{multicols}{2} \raggedcolumns
+\pain{Tehtävän kuvaus}
+
+Ketju on asetettu riippumaan siten, että ketjun päät ovat pisteissä $(b,b)$ ja $(-b,b)$, $b>0$,
+ja ketju kulkee origon kautta. Gravitaation suunta $=-\vec j$ ja ketjun paino pituusyksikköä 
+kohti $=\rho$.
+\input{plots/ketjuviiva.tex}
+\end{multicols}
+\pain {Tehtävä}\ \, Määritä ketjun muoto, eli \kor{ketjuviiva}
+\[
+y=y(x),\quad x\in [-b,b].
+\]
+\pain{Ratkaisu} 
+
+Koska tehtävän kuvaus on fysikaalinen, tarvitaan ensin fysikaalisista periaatteista johdettu 
+\pain{matemaattinen} \pain{malli}. Tämän johtamiseksi tarkastellaan pientä ketjun palaa välillä
+$[x,x+\Delta x]$. Kuvaan on merkitty ketjunpalaan vaikuttavat vaakasuorat sidosvoimat $(T)$,
+pystysuorat sidosvoimat $(F)$ ja gravitaatiovoima $(\Delta G)$. Koska kyseessä on ketju, ei
+sidosmomentteja (taivutusmomentteja) ole. 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,10)(0,0)
+\put(0,0){\line(1,0){10}}
+\curve(2.6,3.4,4.6,5.1,6.6,7.4)
+\curve(3,3,5,4.7,7,7)
+\curvedashes[0.15cm]{0,1,2}
+\curve(6.8,7.2,7.3,7.8688,7.8, 8.575)
+\curve(2.8,3.2,2.3,2.8687,1.8,2.575)
+\drawline(2.6,3.4)(3,3) \drawline(6.6,7.4)(7,7)
+\dashline{0.1}(6.8,0)(6.8,7.2) \dashline{0.1}(6.8,7.2)(2.8,7.2) \dashline{0.1}(2.8,7.2)(2.8,0)
+%\linethickness{0.5mm}
+\put(2.8,3.2){\vector(-1,0){2.8}} \put(2.8,3.2){\vector(0,-1){1.8}}
+\put(6.8,7.2){\vector(1,0){2.8}} \put(6.8,7.2){\vector(0,1){1.8}}
+\put(4.8,4.9){\vector(0,-1){2}} \put(5,3){$\Delta G$}
+\put(2.8,7.3){$\overbrace{\hspace{4cm}}^{\textstyle{\Delta x}}$}
+\put(1.7,5.1){$\Delta y \begin{cases} \vspace{3.45cm} \end{cases}$}
+\put(3,1.4){$F(x)$} \put(0,3.4){$T(x)$}
+\put(7,8.7){$F(x+\Delta x)$} \put(7.8,6.7){$T(x+\Delta x)$}
+\put(2.7,-0.5){$x$} \put(6.7,-0.5){$x+\Delta x$}
+\end{picture}
+%\caption{Pieni ketjun pala välillä $[x,x+\Delta x]$}
+\end{center}
+\end{figure}
+Tasapainoyhtälöt ovat
+\begin{alignat*}{2}
+T(x+\Delta x)-T(x)        &= 0,                      &\quad &\text{(vaakasuunta)} \\
+F(x+\Delta x)-F(x)        &= \Delta G,               &\quad &\text{(pystysuunta)} \\
+F(x)\Delta x-T(x)\Delta y &= \Ord{\Delta G\Delta x}. &\quad &\text{(momenttitasapaino)} \\
+\end{alignat*}
+Ketjun palan pituus on likimain (vrt.\ Luku \ref{pinta-ala ja kaarenpituus})
+\begin{align*}
+\Delta s \cong \sqrt{(\Delta x)^2+(\Delta y)^2} 
+                 &= \sqrt{1+\Bigl(\frac{\Delta y}{\Delta x}\Bigr)^2}\,\Delta x \\
+                 &\approx \sqrt{1+[y'(x)]^2}\,\Delta x,
+\end{align*}
+joten gravitaatiovoima $\Delta G$ on likimain
+\[
+\Delta G=\rho g \Delta s \approx \rho g \sqrt{1+[y'(x)]^2} \Delta x.
+\]
+Jakamalla $(\Delta x)$:llä saadaan rajalla $\Delta x\kohti 0$ seuraava matemaattinen malli:
+\[
+\left\{ \begin{aligned}
+T' &= 0, \\
+F' &= \rho g \sqrt{1+(y')^2}, \\
+F-Ty' &= 0.
+\end{aligned} \right.
+\]
+Ensimmäisen ja kolmannen yhtälön perusteella
+\[
+T(x)=T_0=\text{vakio},\quad F(x)=T_0 y'(x).
+\]
+Sijoittamalla keskimmäiseen yhtälöön saadaan ketjuviivan differentiaaliyhtälö:
+\[
+ay''=\sqrt{1+(y')^2},\quad a=\frac{T_0}{\rho g}.
+\]
+Tästä tulee separoituva sijoituksella $u(x)=y'(x)\,$:
+\begin{align*}
+au'=\sqrt{1+u^2}\ &\impl\ \int\frac{du}{\sqrt{1+u^2}}=\int\frac{dx}{a} \\
+                  &\impl\ \text{arsinh} \, u = \frac{x}{a}-\frac{c}{a}\quad (C=-\frac{c}{a}) \\
+                  &\ekv\ u(x) = \sinh \left(\frac{x-c}{a}\right).
+\end{align*}
+Tästä ja ehdosta $y(0)=0$ seuraa
+\[
+y(x)=\int_0^x u(t)\,dt = a\cosh \left(\frac{x-c}{a}\right)-a\cosh\frac{c}{a}.
+\]
+Koska $y(b)=y(-b)$, niin on oltava $c=0$, eli
+\[
+y(x)=a\left(\cosh\frac{x}{a}-1\right).
+\]
+Ehto $y(b)=b$ (joka enää on käyttämättä) johtaa transkendenttiseen yhtälöön
+\[
+\cosh \alpha =\alpha +1,\quad \alpha=b/a.
+\]
+Ratkaisu (ketjuviiva) on siis
+\[
+y(x)=\frac{b}{\alpha}\left(\cosh\frac{\alpha x}{b}-1\right),\quad 
+                                          \cosh \alpha=\alpha+1, \quad \alpha>0.
+\]
+Vakion $\alpha$ numeerinen arvo on
+\[
+\alpha=1.6161375137743..
+\]
+
+Em.\ ratkaisusta nähdään, että y\pain{leinen} \pain{ket}j\pain{uviiva} (gravitaation 
+vaikuttaessa suunnassa $-\vec j\,$) on muotoa
+\[
+y(x) = a\cosh\left(\frac{x-c}{a}\right)+C,
+\]
+missä $a\in\R_+$ ja $c,C\in\R$ ovat määräämättömiä vakioita. Vakiot määräytyvät esimerkiksi
+antamalla (kuten esimerkissä) kolme pistettä, joiden kautta ketju kulkee. Tunnettu voi myös
+olla ripustuspisteessä vaikuttava vaakasuora tukivoima $T_0$ ja/tai ketjun pituus, joka välillä
+$[x_1,x_2]$ on (vrt.\ Luku \ref{pinta-ala ja kaarenpituus})
+\begin{align*}
+L= \int_{x_1}^{x_2}\sqrt{1+[y'(x)]^2}\,dx 
+                &= \int_{x_1}^{x_2}\sqrt{1+\sinh^2\left(\frac{x-c}{a}\right)}\,dx \\
+                &= \int_{x_1}^{x_2}\cosh\left(\frac{x-c}{a}\right)\,dx 
+                               = a\sijoitus{x_1}{x_2}\sinh\left(\frac{x-c}{a}\right). \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Ratkaise kvadratuureilla (yleinen ratkaisu tai alkuarvotehtävän ratkaisu). Alkuarvotehtävissä
+määritä myös suurin väli, jolla ratkaisu on pätevä.
+\begin{align*}
+&\text{a)}\ \ y''=(y')^2 \quad
+ \text{b)}\ \ 2yy''=1+(y')^2 \quad
+ \text{c)}\ \ y^2y''=y' \quad
+ \text{d)}\ \ y''=(y')^3e^y \\
+&\text{e)}\ \ y'y'''=2(y'')^2 \quad
+ \text{f)}\ \ x^2y''=(y')^2 \quad
+ \text{g)}\ \ y''=2x(y')^2 \quad
+ \text{h)}\ \ x^3y''=2(y')^2 \\
+&\text{i)}\ \ (1+y^2)y''=y'+(y')^3,\ y(0)=1,\ y'(0)=-1 \\
+&\text{j)}\ \ y''=1-(y')^2,\ y(0)=0,\ y'(0)=-1 \\
+&\text{k)}\ \ y^3y''=-1,\ y(0)=1,\ y'(0)=-1 \\
+&\text{l)}\ \ \sqrt{y}y''=1,\ y(0)=1,\ y'(0)=-2 \\
+&\text{m)}\ \ 3y^2y'y''=-1,\ y(0)=y'(0)=1 \\
+&\text{n)}\ \ 2yy''-3(y')^2=4y^2,\ y(0)=2,\ y'(0)=4 \\
+&\text{o)}\ \ 2x^2y''y'''=-1,\ y(1)=0,\ y'(1)=1,\ y''(1)=2 \\
+&\text{p)}\ \ 2y^{(4)}+3(y'')^2=0,\ y(0)=y'(0)=0,\ y''(0)=y'''(0)=-1
+\end{align*}
+
+\item
+Määritä se yhtälön $yy''+2(y')^2=0$ ratkaisukäyrä, joka sivuaa suoraa $y=x$ pisteessä $(1,1)$.
+
+\item
+Millaisille käyrille $y=y(x)$ pätee: Käyrän kaarenpituus välillä $[0,x]$ on verrannollinen
+lukuun $y'(x)\,$?
+
+\item
+Määritä käyrät $S: y=y(x)$, joiden (merkkiselle) kaarevuudelle pisteessä $P=(x,y) \in S$ pätee
+laskukaava
+\[
+\kappa \,=\, \frac{y''}{[1+(y')^2]^{3/2}} \,=\, y^{-1}\sin\alpha\cos\alpha,
+\]
+missä $\alpha\in[0,\pi)$ on käyrän tangentin suuntakulma pisteessä $P$.
+
+\item
+Pitkin $x$-akselia liikkuvaan kappaleeseen, jonka massa $=m$, vaikuttaa $x$-akselin suuntainen 
+voima $\vec F=f(x)\vec i$, missä $x=x(t)$ on kappaleen paikka hetkellä $t$. Johda 
+liikeyhtälöstä $mx''=f(x)$ energiaperiaate
+\[
+\frac{1}{2}\,mv_2^2-\frac{1}{2}\,mv_1^2\,=\,\int_{x_1}^{x_2} f(x)\,dx,
+\]
+missä $v_i=$ kappaleen vauhti pisteessä $x_i$ ($i=1,2$).  
+
+\item (*) %\index{zzb@\nim!Heiluri}
+Matemaattisessa heilurissa pistemäinen massa heiluu painottoman sauvan (pituus $R$)
+varassa, jolloin liikeyhtälö on $R\theta '' = -g \sin\theta$, missä $\theta=\theta(t)$ on
+heilahduskulma mitattuna tasapainoasemasta.\vspace{1mm}\newline 
+a) Kertomalla liikeyhtälö $\theta'$:lla johda energiaperiaate muotoa $F(\theta,\theta')$=vakio.
+\newline
+b) Käyttäen a-kohdan tulosta määrää $\theta(t),\, t\ge 0$ alkuehdoilla 
+\[
+\theta(0)=0,\, \theta'(0) = \frac{1}{T}\,, \quad T=\frac{1}{2}\sqrt{\frac{R}{g}}\,.
+\]
+(Tässä erikoistapauksessa $\theta(t)$ on alkeisfunktio!)
+
+\item (*) \index{zzb@\nim!Jzy@Jänis ja huuhkaja}
+(Jänis ja huuhkaja) Hetkellä $H$ jänis lähtee origosta juoksemaan pitkin positiivista
+$y$-akselia vauhdilla $v$ (vakio). Pisteessä $(4,0)$ oleva huuhkaja huomaa samalla hetkellä
+jäniksen ja lähtee lentämään matalalla siten, että lentosuunta on koko ajan jänistä kohti.
+Johda huuhkajan lentokäyrälle $y=y(x)$ differentiaaliyhtälö kertalukua $2$ olettaen, että 
+huuhkajan lentovauhti on a) $v$, b) $2v$. Huomioiden myös alkuehdot määritä
+lentokäyrä. Missä pisteessä (jos missään) huuhkaja tavoittaa jäniksen?
+
+\item (*) \label{H-dy-3: nopein liuku} \index{sykloidi!brakistokroni} \index{brakistokroni}
+\index{zzb@\nim!Laskiainen, 2.\ lasku}%
+(Laskiainen, 2.\ lasku) Lumilautailija laskee origosta pisteeseen $\,P=(a,-b)\,$ pitkin käyrää
+$y=-y(x)$ ($a>0$, $b \ge 0$, gravitaation suunta $-\vec j\,$). Jos laskijan alkuvauhti $=0$
+eikä kitkaa ole, niin energiaperiaatteen mukaan laskijan vauhti pisteessä $(x,-y(x))$ määräytyy
+yhtälöstä $\frac{1}{2}[v(x)]^2=gy(x)$, missä $g$ on maan vetovoiman kiihtyvyys. \ a) Näytä,
+että laskuaika pisteeseen $P$ on
+\[
+t=\int_0^a \sqrt{\frac{1+[y'(x)]^2}{2gy(x)}}\,dx.
+\]
+b) Tästä lausekkeesta on osoitettavissa, että lasku on nopein mahdollinen, jos $y(x)$ toteuttaa
+differentiaaliyhtälön $\,2yy''+1+(y')^2=0$. Näytä, että tämä nopeimman laskun käyrä
+(\kor{brakistokroni}) on sykloidin kaari.
+
+\end{enumerate}

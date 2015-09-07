@@ -1,0 +1,561 @@
+\section{Funktiot $e^x$ ja $\ln x$} \label{exp(x) ja ln(x)}
+\alku
+\index{funktio C!f@$\exp$ ($e^x$, $e^z$)|vahv}
+
+Edellisessä luvussa eksponenttifunktio $E(x)$ konstruoitiin jatkamalla tunnettu funktio
+$\,b^x,\ x\in\Q$. Tällä tavoin tuli varmistetuksi, että eksponenttifunktioita on olemassa,
+että luku $b=E(1)$ määrää $E(x)$:n yksikäsitteisesti, ja että eksponenttifunktion arvot
+voidaan laskea numeerisesti suoraan määritelmästä käsin. Mitä \pain{ei} tullut varmistetuksi
+on esimerkiksi, onko $E(x)$ mahdollisesti myös derivoituva, eikä vain jatkuva. Yleisemminkin
+jäi avoimeksi, kuinka säännöllisestä funktiosta on ylipäänsä kyse. Seuraavassa etsitään
+vastausta näihin kysymyksiin lähestymällä eksponenttifunktiota toisesta suunnasta.
+
+Lähtökohdaksi otetaan eksponenttifunktion aksiooman E3 (ks.\ edellinen luku) vahvistaminen
+muotoon \index{eksponenttifunktio!a@aksioomat}
+\begin{itemize}
+\item[(E3')]  $E$ on derivoituva pisteessä $x=0$.
+\end{itemize}
+Koska tiedetään, että $E(0)=1$ (Lause \ref{eksponenttifunktion ominaisuudet} (b)), niin
+aksiooman E3' mukaan on olemassa luku $a\in\R$ siten, että
+\[
+E'(0) \,=\, \lim_{x \kohti 0} \frac{E(x)-1}{x} \,=\, a.
+\]
+Kun yhdistetään tämä tulos ja aksiooma E4, niin seuraa
+\[
+\lim_{\Delta x \kohti 0} \frac{E(x+\Delta x)-E(x)}{\Delta x}
+ \,=\, \lim_{\Delta x \kohti 0} E(x)\,\frac{E(\Delta x)-1}{\Delta x} \,=\, aE(x), \quad x\in\R.
+\]
+Siis $E$ on derivoituva jokaisessa pisteessä $x\in\R$ ja
+\index{derivoimissäännöt!g@eksponenttifunktio}%
+\[
+E'(x)=aE(x), \quad x\in\R.
+\]
+On päätelty, että jos aksioomat E1,\,E2,\,E3',\,E4 toteuttava funktio $E(x)$ on
+olemassa, niin tämä on derivoituva $\R$:ssä ja jollakin $a\in\R$ ratkaisu probleemalle
+\[ 
+\text{(P)} \quad \begin{cases} \,y'=ay, \quad x\in\R, \\ \,y(0)=1. \end{cases}
+\]
+Tässä on kyse alkuarvotehtävästä, jossa on ratkaistava differentiaaliyhtälö
+$y'=ay$ alkuehdolla $y(0)=1$ (vrt.\ Luvussa \ref{väliarvolause 2} tarkasteltu
+vastaava probleema differentiaaliyhtälölle $y'=f(x)$).
+\index{differentiaaliyhtälö!a@eksponenttifunktion}%
+\begin{Lause} \label{exp-dy} Probleemalla (P) on ratkaisu $y(x)=E(x)$, missä
+\[ 
+E(x) = \sum_{k=0}^\infty \frac{(ax)^k}{k!} = 1 + ax + \frac{(ax)^2}{2} + \ldots 
+\]
+Tämä ratkaisu on yksikäsitteinen, ja $E(x)$ on eksponenttifunktio.
+\end{Lause}
+\tod Potenssisarjan derivoimissäännöstä (Lause \ref{potenssisarja on derivoituva}) nähdään
+välittömästi, että väitetty $y(x)$ on probleeman (P) ratkaisu. Nähdään myös, että funktiolla
+$E(x)$ on eksponenttifunktiolta vaadittavat ominaisuudet (E1)--(E3), sillä $E(0)=1$ ja $E$
+on määritelty koko $\R$:ssä suppenevan potenssisarjan summana, siis derivoituvana ja jopa
+sileänä funktiona.
+
+Näytetään seuraavaksi, että $E(x)$ toteuttaa myös eksponenttifunktion aksiooman (E4). Tätä
+silmällä pitäen tarkastellaan ensin funktiota
+\[
+u(x) = E(x)E(-x), \quad x\in\R.
+\]
+Koska $E'=aE$, niin tulon derivoimissääntöä käyttäen todetaan, että
+\begin{equation} \label{exp-apuy 1}
+u'(x)=0, \quad x\in\R.
+\end{equation}
+Koska $u(0)=1$ ja siis $u'=0$, niin seuraa, että $u(x)=1\ \forall x\in\R$
+(Lause \ref{Integraalilaskun peruslause}). Siis $E(x)E(-x)=1\ \forall x\in\R$, ja näin ollen 
+$E(x) \neq 0\ \forall x\in\R$ ja
+\begin{equation} \label{exp-apuy 2}
+E(-x) = [E(x)]^{-1}, \quad x\in\R.
+\end{equation}
+Olkoon seuraavaksi $t\in\R$ kiinnitetty ja tarkastellaan funktiota
+\[
+u(x) = E(t+x)E(-t)E(-x), \quad x\in\R.
+\]
+Derivoimalla muuttujan $x$ suhteen ja käyttämällä differentiaaliyhtälöä $E'=aE$ todetaan, että 
+jälleen pätee \eqref{exp-apuy 1}. Koska tuloksen \eqref{exp-apuy 2} mukaan on $u(0)=1$, niin 
+päätellään kuten edellä ja käyttämällä uudelleen tulosta \eqref{exp-apuy 2}, että
+\[
+u(x)=E(t+x)E(-t)E(-x)=1\,\ \ekv\,\ E(t+x)= E(t)E(x), \quad x\in\R.
+\]
+Tämä pätee jokaisella $t\in\R$, joten aksiooma E4 on voimassa funktiolle $E(x)$. Siis 
+$E(x)$ on eksponenttifunktio (jokaisella $a\in\R$).
+
+Enää on todistamatta probleeman (P) ratkaisun yksikäsitteisyys. Tätä silmällä pitäen
+olkoon $y(x)$ (P):n (mikä tahansa) ratkaisu ja tarkastellaan funktiota
+\[
+u(x)=y(x)E(-x), \quad x\in\R.
+\]
+Derivoimalla ja käyttämällä differentiaaliyhtälöitä $y'=ay$ ja $E'=aE$ todetaan, että jälleen 
+pätee \eqref{exp-apuy 1}. Koska $u(0)=1$, niin seuraa
+\[
+u(x)=y(x)E(-x)=1\,\ \ekv\,\ y(x)=E(x), \quad x\in\R. \loppu
+\]
+
+Sanotaan jatkossa \kor{peruseksponenttifunktioksi}, symboli $\,\exp$, probleeman (P) ratkaisua,
+kun $a=1$. Määritelmä potenssisarjana on siis
+\[
+\boxed{\quad \exp(x) = \sum_{k=0}^\infty \frac{x^{\ygehys k}}{\agehys k!}\,. \quad}
+\]
+Jos merkitään $e=\exp(1)$, niin edellisen luvun merkinnöin voidaan kirjoittaa
+\[
+\boxed{\quad\kehys \exp(x) = e^x. \quad}
+\]
+Tässä $e$ on todellakin Neperin luku, sillä pätee (ks.\ Propositiot \ref{Neperin jonot} ja
+\ref{e:n sarja})
+\[
+\exp(1) = \sum_{k=0}^\infty \frac{1}{k!} = \lim_{n\kohti\infty}\left(1+\frac{1}{n}\right)^n
+                                         = e = 2.71828182845905..
+\]
+Tässä jälkimmäinen raja-arvotulos on erikoistapaus yleisemmästä tuloksesta
+(ks.\ Harj.teht.\,\ref{H-exp-2: eksoottisia raja-arvoja})
+\[
+\boxed{\Akehys\quad \lim_n \Bigl(1+\frac{\ygehys x}{n}\Bigr)^n = e^x, \quad x\in\R. \quad }
+\]
+
+Peruseksponenttifunktion $e^x$ määritelmästä seuraa derivoimissääntö
+\[
+\boxed{\kehys\quad \dif e^x = e^x. \quad}
+\]
+Monet funktion $e^x$ ominaisuuksista voidaan helposti johtaa tästä säännöstä tai 
+potenssisarjaesityksestä. Esimerkiksi potenssisarjaesityksestä seuraa 
+\[
+e^x > x^m/m!\ \ \forall m \in \N, \quad \text{kun}\ x>0, 
+\]
+mistä on edelleen helposti pääteltävissä raja-arvotulokset
+\begin{equation} \label{exp-raja-arvot}
+\boxed{\quad \lim_{x\kohti\infty} x^{\ygehys -\alpha}e^x = \infty 
+  \qekv \lim_{x\kohti\infty}x^\alpha e^{-x} = 0 \quad \forall \alpha \in \R_{\agehys}. \quad}
+\end{equation}
+Näiden mukaan funktio $e^x$ kasvaa nopeammin, ja funktio $e^{-x}$ vähenee nopeammin, kuin mikään
+potenssifunktio, kun $x\kohti\infty$. Potenssisarjan perusteella voidaan myös $e^x$:n 
+numeroarvoja laskea helposti, sillä pienillä $\abs{x}$:n arvoilla (esim.\ kun $\abs{x} \le 1$) 
+sarja suppenee nopeasti ja suuremmilla taas voidaan käyttää kaavaa $e^x = (e^{x/n})^n$. 
+Derivoimissäännöstä (myös potenssisarjasta) nähdään, että funktio $e^x$ on $\R$:ssä 
+mielivaltaisen monta kertaa derivoituva (sileä) funktio. 
+\begin{Exa} Jatka funktio $f(x)=(e^x-1-x)/x^2$ pisteeseen $x=0$.
+\end{Exa}
+\ratk $e^x$:n potenssisarjasta nähdään, että
+\[
+f(x)= \frac{1}{2!} + \frac{x}{3!} + \frac{x^2}{4!} + \ldots\ 
+                           =\ \sum_{k=0}^\infty \frac{x^k}{(k+2)!}\,, \quad x \neq 0.
+\]
+Kun asetetaan $f(0)=1/2$, niin $\forall x\in\R$ pätee siis
+\[
+f(x)\,=\,\sum_{k=0}^\infty \frac{x^k}{(k+2)!} 
+    \,=\,\begin{cases}
+         \,\dfrac{e^x-1-x}{x^2}\,, &\text{kun}\ x \neq 0, \\ \tfrac{1}{2}\,, &\text{kun}\ x=0.
+         \end{cases} 
+\]
+Tässä potenssisarjan suppenemissäde on $\rho=\infty$, joten $f$ ei ole vain jatkuva, vaan
+$\R$:ssä (myös pisteessä $x=0$\,!) mielivaltaisen monta kertaa derivoituva. \loppu
+
+Edellisessä luvussa todettiin, että yleinen eksponenttifunktio on muotoa $E(x)=b^x$, missä 
+$b=E(1) \in \R_+$. Laskuissa usein kätevämpi on peruseksponenttifunktiosta johdettu 
+vaihtoehtoinen esitystapa
+\[
+\boxed{\kehys\quad E(x)=e^{ax}, \quad E(1)=b=e^a. \quad}
+\]
+Luku $a\in\R$ määräytyy yksikäsitteisesti yhtälöstä $e^a=b$, koska $e^x:\ \R\kohti\R_+$ on 
+bijektio. Jokainen eksponenttifunktio on siis muotoa $E(x)=e^{ax}$ jollakin $a\in\R$. 
+
+Todettakoon vielä lähtökohtana olleesta probleemasta (P), että sen ratkaisuina saadaan siis 
+kaikki eksponenttifunktiot $y(x)=e^{ax}$, kun $a$:n arvoa vaihdellaan. Jos ratkaisuksi
+halutaan tietty eksponenttifunktio $E(x)$, niin $a$ määräytyy joko em.\ tavalla luvun
+$b=E(1)$ kautta tai ehdosta $E'(0)=a$. Jos $a$ on kiinnitetty, niin differentiaaliyhtälön
+$y'=ay$ y\pain{leinen} \pain{ratkaisu} (=kaikkien ratkaisujen joukko) on
+(Harj.teht.\,\ref{H-exp-2: exp-dy})
+\[
+y(x)=Ce^{ax}, \quad C\in\R.
+\]
+Alkuehdon $y(0)=y_0$ toteuttava ratkaisu on tämän mukaan yksikäsitteinen ja saadaan
+valitsemalla $C=y_0$.
+
+\subsection*{Logaritmifunktio}
+\index{logaritmifunktio|vahv}
+\index{funktio C!g@$\log$, $\ln$|vahv}
+
+Koska eksponenttifunktio $E:\R\kohti\R_+$ on bijektio kun $E(1)=b\neq 1$, on sillä 
+käänteisfunktio, jota sanotaan \kor{logaritmifunktioksi}. Käänteisfunktiota merkitään
+symbolilla $\log_b\,$:
+\[
+y=b^x \ \ekv \ x=\log_b y.
+\]
+\index{luonnollinen logaritmi}%
+Peruseksponenttifunktion $e^x$ käänteisfunktiota sanotaan \kor{luonnolliseksi logaritmiksi}, 
+symbolina $\ln$ (toisinaan $\log$):
+\[
+\boxed{\kehys\quad y=e^x \ \ekv \ x=\ln y. \quad}
+\]
+Luonnollinen logaritmi, samoin kuin muutkin logaritmifunktiot, on koko määrittelyjoukossaan 
+($=\R_+$) jatkuva ja aidosti kasvava, ja $\ln x \kohti \infty$ kun $x\kohti\infty$ ja 
+$\ln x \kohti -\infty$ kun $x\kohti 0^+$. Sijoituksilla $x = \pm \ln t\ \ekv\ t = e^{\pm x}$ 
+voidaan raja-arvotuloksista \eqref{exp-raja-arvot} päätellä, että rajoilla $x\kohti\infty$ ja
+$x\kohti 0^+$ funktio $\abs{\ln x}$ kasvaa hitaammin kuin mikään potenssifunktio:
+\begin{equation} \label{ln-raja-arvot}
+\boxed{\quad \lim_{\akehys x\kohti\infty}x^{\ykehys -\alpha}\ln x\ =
+             \lim_{x\kohti 0^+}x^\alpha \ln x = 0 \quad \forall \alpha\in\R_+. \quad}
+\end{equation}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(8,4)(-1,-1)
+\put(-1,0){\vector(1,0){8}} \put(6.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){5}} \put(0.2,2.8){$y$}
+\put(1,0){\line(0,-1){0.1}}
+\put(0,1){\line(-1,0){0.1}}
+\put(0.93,-0.4){$\scriptstyle{1}$}
+\put(-0.4,0.9){$\scriptstyle{1}$}
+\put(5,1.3){$\scriptstyle{y=\ln x}$}
+\curve(
+    0.2500,   -1.3863,
+    0.7500,   -0.2877,
+    1.2500,    0.2231,
+    1.7500,    0.5596,
+    2.2500,    0.8109,
+    2.7500,    1.0116,
+    3.2500,    1.1787,
+    3.7500,    1.3218,
+    4.2500,    1.4469,
+    4.7500,    1.5581,
+    5.2500,    1.6582,
+    5.7500,    1.7492,
+    6.2500,    1.8326,
+    6.7500,    1.9095)
+\end{picture}
+%\caption{$y=\ln x$}
+\end{center}
+\end{figure}
+Eksponentti- ja logaritmifunktioilla laskettaessa käytetään yleisimmin 
+peruseksponenttifunktiota $e^x$ ja sen käänteisfunktiota $\ln x$. Useimmin tarvittavat, suoraan
+määritelmästä ja eksponenttifunktion ominaisuuksista seuraavat kaavat ovat
+(Harj.teht.\,\ref{H-exp-2: kaavat})\,:
+\begin{alignat}{3}
+e^{\ln x} &= x,               &\quad &x\in\R_+.            \label{exp-kaava 1}\\
+\ln(xy)   &= \ln x + \ln y,   &\quad &x,y\in\R_+.         \label{exp-kaava 2}\\
+\ln (1/x) &= -\ln x,          &\quad &x\in\R_+.           \label{exp-kaava 3}\\
+\ln x^y   &= y\ln x,          &\quad &x\in\R_+, \ y\in\R. \label{exp-kaava 4}
+\end{alignat}
+Kaavat \eqref{exp-kaava 1} ja \eqref{exp-kaava 4} yhdistämällä saadaan laskukaava
+\begin{equation} \label{exp-kaava 5}
+\boxed{\kehys\rule{0mm}{4.5mm}\kehys\quad x^y=e^{y\ln x}, \quad x\in\R_+\,,\ y\in\R. \quad}
+\end{equation}
+Kaavasta \eqref{exp-kaava 1}, eksponenttifunktion derivoimissäännöstä ja yhdistetyn funktion 
+derivoimissäännöstä saadaan johdetuksi logaritmifunktion $\ln x$ derivoimissääntö:
+\index{derivoimissäännöt!h@logaritmifunktio}% 
+\[ 
+1=\dif x = \dif e^{\ln x} = e^{\ln x} \dif \ln x 
+         = x \dif \ln x \qimpl \dif \ln x = 1/x, \quad x>0. 
+\]
+Tämän perusteella on $\dif \ln(-x) = (-1)/(-x) = 1/x,\ x<0$, joten saadaan yleisempi sääntö
+\begin{equation} \label{exp-kaava 6}
+\boxed{\kehys\quad \dif \ln \abs{x} = \dfrac{1}{x}\,, \quad x \neq 0. \quad} 
+\end{equation}
+\begin{Exa} Kaavan \eqref{exp-kaava 5} ja säännön \eqref{exp-kaava 6} perusteella
+\[ 
+\dif x^x = \dif e^{x\ln x} = e^{x\ln x}\dif(x\ln x) = (\ln x + 1)\,x^x, \quad x>0.
+\]
+Tuloksesta nähdään, että $f(x)=x^x$ on aidosti vähenevä välillä $(0,1/e]$ ja aidosti kasvava
+välillä $[1/e,\infty)$. Siis $f$:n absoluuttinen minimiarvo on $f_{min}=f(1/e)=e^{-1/e}$.
+Rajalla $x \kohti 0^+$ on $f(0^+)=1$ (Harj.teht.\,\ref{H-exp-2: raja-arvoja}e). \loppu
+\end{Exa}
+\begin{multicols}{2} \raggedcolumns
+\begin{Exa} Matemaatikon mökki on kahden tien risteyksessä. Selvitä mökin sijainti, kun 
+tiedetään, että kummallakin tiellä on oheinen viitta. 
+\vspace{1cm}
+\[ 
+\boxed{ \rule[-2cm]{0mm}{2.5cm} } \boxed{ \quad x^y = y^x \quad } 
+\]
+\end{Exa}
+\end{multicols}
+\ratk Tie \,1\, on ilmeisesti puolisuora $y=x$, $x>0$. Tiellä \,2\, taas ovat esim.\ pisteet 
+$(2,4)$ ja $(4,2)$. Teiden leikkauspisteen selvittämiseksi käytetään ensin kaavoja 
+\eqref{exp-kaava 1} ja \eqref{exp-kaava 4} (ol.\ $x,y\in\R_+$):
+\[
+x^y=y^x\ \ekv\ e^{y\ln x} = e^{x\ln y}\ \ekv\ y\ln x = x\ln y\ 
+                                        \ekv\ \ln y/y = \ln x/x.
+\]
+Säännöstä \eqref{exp-kaava 6} ja Luvun \ref{derivaatta} derivoimissäännöistä seuraa
+\[ 
+\dif \ln x/x = x^{-2}(1 - \ln x), \quad x>0, 
+\]
+joten funktio $f(x)=\ln x/x$ on aidosti kasvava välillä $(0,e]$ ja aidosti vähenevä välillä 
+$[e,\infty)$. Näin ollen, jos $x\in\R_+$ ja $x>1$, $x\neq e$, niin yhtälöllä $f(y)=f(x)$ on 
+kaksi ratkaisua $y$, joista toinen on $y=x$ (ks.\ kuvio). Kun $x=e$ tai $x \le 1$, on ainoa 
+ratkaisu $y=x$. Päätellään, että mökki on pisteessä $(e,e)$. \loppu
+\begin{multicols}{2} \raggedcolumns
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,5)(0,-2)
+\put(0,0){\vector(1,0){5}} \put(4.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){5}} \put(0.2,2.8){$y$}
+\put(1,0){\line(0,-1){0.1}}
+\put(0,2){\line(-1,0){0.1}}
+\put(1.0,-0.3){$\scriptstyle{1}$}
+\put(-0.4,1.9){$\scriptstyle{2}$}
+\put(1.0,-1.0){$\scriptstyle{y=2e\,\ln x/x}$}
+\dashline{0.1}(2.7183,0)(2.7183,2)
+\dashline{0.1}(4.5,1.8171)(1.87,1.8171) \dashline{0.1}(4.5,1.8171)(4.5,0)
+\put(2.64,-0.2){$\scriptstyle{e}$} \put(4.42,-0.2){$\scriptstyle{x}$}
+%\curve(
+%    0.5000,   -1.5367,
+%    1.0000,         0,
+%    1.5000,    1.4696,
+%    2.0000,    1.8842,
+%    2.5000,    1.9926,
+%    3.0000,    1.9909,
+%    3.5000,    1.9459,
+%    4.0000,    1.8842,
+%    4.5000,    1.8171,
+%    5.0000,    1.7500)
+\curve(
+     0.7500,   -2.0853,
+     1.0000,         0,
+     1.2500,    0.9705,
+     1.5000,    1.4696,
+     1.7500,    1.7385,
+     2.0000,    1.8842,
+     2.2500,    1.9594,
+     2.5000,    1.9926,
+     2.7500,    1.9999,
+     3.0000,    1.9909,
+     3.2500,    1.9716,
+     3.5000,    1.9459,
+     3.7500,    1.9162,
+     4.0000,    1.8842,
+     4.2500,    1.8509,
+     4.5000,    1.8171,
+     4.7500,    1.7834,
+     5.0000,    1.7500)
+\end{picture}
+%\caption{$y=(e/x)\ln x$}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,5)(0,0)
+\put(0,0){\vector(1,0){5}} \put(4.8,-0.4){$x$}
+\put(0,0){\vector(0,1){5}} \put(0.2,4.8){$y$}
+\put(1,0){\line(0,-1){0.1}}
+\put(0,1){\line(-1,0){0.1}}
+\put(0.93,-0.4){$\scriptstyle{1}$}
+\put(-0.4,0.9){$\scriptstyle{1}$}
+\put(0,0){\line(1,1){4}}
+\put(1.4,1){$\scriptstyle{\text{tie 1}}$}
+\put(4.7,2){$\scriptstyle{\text{tie 2}}$}
+\curve(
+   2.7183,             2.7183,
+   3.2183,             2.3356,
+   3.7183,             2.0981,
+   4.2183,             1.9360,
+   4.7183,             1.8182)
+\curve(
+   2.7183,             2.7183,
+   2.3356,             3.2183,
+   2.0981,             3.7183,
+   1.9360,             4.2183,
+   1.8182,             4.7183)
+\end{picture}
+%\caption{$y^x=x^y$}
+\end{center}
+\end{figure}
+\end{multicols}
+\begin{Exa}
+$f(x)=\ln\left|\dfrac{1-\cos x}{\sin x}\right|, \quad f'(x)=\,$?
+\end{Exa}
+\ratk Säännön \eqref{exp-kaava 6} ja Lukujen \ref{derivaatta}--\ref{kaarenpituus}
+derivoimissääntöjen perusteella
+\begin{align*}
+\dif f(x)&=\frac{\sin x}{1-\cos x}\cdot \left[1-\frac{(1-\cos x)\cos x}{\sin^2 x}\right] \\
+         &=\frac{\sin x}{1-\cos x}\cdot\frac{\sin^2 x+\cos^2 x-\cos x}{\sin^2 x} \\
+         &=\frac{1}{\sin x}\,. \loppu
+\end{align*}
+
+Esimerkin tulos, ja muunnoksella $x\hookrightarrow\pi/2-x$ saatava vastaava tulos, on syytä 
+panna korvan taakse:
+\[ \boxed{
+\begin{aligned}
+\ykehys\quad \dif\ln\left|\dfrac{1-\cos x}{\sin x}\right|\ 
+                 &=\ \dfrac{1}{\sin x}\,, \quad\quad x\in\R,\ \ \sin x\neq 0, \\[1mm]
+             \dif\ln\left|\dfrac{1-\sin x}{\cos x}\right|\ 
+                 &=\ -\dfrac{1}{\cos x}\,, \quad x\in\R,\ \ \cos x\neq 0. \quad\akehys
+\end{aligned} } \]
+Tässä on itse asiassa
+$\,\D \dfrac{1-\cos x}{\sin x} = \dfrac{\sin x}{1+\cos x}=\tan\dfrac{x}{2}\,$
+(ks.\ Harj.teht.\,\ref{trigonometriset funktiot}:\ref{H-II-5: trigtuloksia}b).
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-exp-2: exp-dy}
+Näytä, että differentiaaliyhtälön $y'=ay$ yleinen ratkaisu $\R$:ssä on $y(x)=Ce^{ax}$.\,
+\kor{Vihje}: Tutki funktiota $u(x)=e^{-ax}y(x)$.
+
+\item \label{H-exp-2: kaavat}
+a)--d) Perustele laskukaavat (5)--(8).
+
+\item \label{H-exp-2: raja-arvoja}
+Määritä tai näytä oikeaksi raja-arvot
+\begin{align*}
+&\text{a)}\ \lim_{x \kohti 0} \frac{e^{2x}-1-2x}{x^2} \qquad\qquad
+ \text{b)}\ \lim_{x \kohti 0} \frac{1-6x+18x^2-e^{-6x}}{x^3} \\
+&\text{c)}\ \lim_{x \kohti 0} \frac{3e^x-e^{-x}-2e^{2x}}{x^2} \qquad\
+ \text{d)}\ \lim_{x\kohti\infty} x\left(e^{4/x}-e^{1/x}\right) \\[2mm]
+&\text{e)}\ \lim_{x \kohti 0^+} x^x=1 \qquad 
+ \text{f)}\ \lim_{x \kohti 0^+} x^{x^x}=0 \qquad
+ \text{g)}\ \lim_{x \kohti 0^+} x^{\sqrt{x}}=1
+\end{align*}
+
+\item
+Derivoi seuraavat funktiot: \newline
+a) \ $2^x \quad$ 
+b) \ $e^{\sqrt{x}} \quad$ 
+c) \ $\pi^{1/x} \quad$ 
+d) \ $\ln(\ln x)\quad$
+e) \ $x^{2x} \quad$ 
+f) \ $x^{x^x}$
+
+\item
+Määritä seuraavien funktioiden paikalliset ääriarvokohdat ja absoluuttiset maksimi- ja 
+minimarvot, sikäli kuin olemassa. Hahmottele myös kuvaajat. \newline
+a) \ $x\ln x,\quad$ b) \ $\sqrt[10]{\abs{x}}\ln\abs{x},\quad$ c) \ $\abs{x}e^{1/x^2},\quad$
+d) \ $x^{-\pi}\ln x,\quad$ e) \ $x^{1/x}$. 
+
+\item
+a) \ Millä $a$:n arvoilla funktio $f(x)=2\ln x +x^2-ax+1$ on aidosti kasvava välillä
+$(0,\infty)\,$? \newline
+b) \ Näytä, että jos $0<a<b$, niin 
+$\,\displaystyle{1-\frac{a}{b}\,<\,\ln \frac{b}{a}\,<\,\frac{b}{a}-1}$. \newline
+c) \ Todista laskukaavat $\ \log_a b\cdot\log_b a=1\ $ ja $\ \log_b a\cdot\log_c b=\log_c a$.
+
+\item
+Määritä funktion $f(t)=e^{-x}\sin x$ paikalliset ääriarvokohdat sekä absoluuttiset maksimi-
+ja minimiarvot välillä $[0,\infty)$ sekä hahmottele $f$:n kuvaaja.
+
+\item
+Päättele, että kiintopisteiteraatio $x_{n+1}=e^{-x_n},\, n=0,1,\dots$
+suppenee jokaisella $x_0\in\R$. Määritä kiintopiste iteroimalla ensin
+kolme kertaa alkuarvauksesta $x_0=0$ ja kiihdyttämällä sen jälkeen Newtonin menetelmällä.
+
+\item
+Näytä, että differentiaaliyhtälön $y''-y'=0$ yleinen ($\R$:ssä kahdesti derivoituva) ratkaisu on
+$y(x)=C_1 e^x +C_2\,,\ C_1\,,C_2\in\R$.
+
+\item
+a) Näytä, että funktiolle
+\[
+f(x) = \begin{cases}
+       e^{-\frac{1}{x^2}}, &\text{kun}\ x \neq 0 \\ 0, &\text{kun}\ x=0
+       \end{cases}
+\]
+pätee $f^{(k)}(0)=0\ \forall k\in\N$. Hahmottele funktion kuvaaja. \vspace{1mm}\newline
+b) Halutaan määritellä funktio $f$ ehdoilla \vspace{2mm}\newline
+(i) \   $\,\ f(x)>0\,$ kun $\,x\in(0,1)$ \newline
+(ii)\   $\,\ f(x)=0\,$ kun $\,x \le 0\,$ tai $\,x \ge 1$ \newline
+(iii) \ $f$ on koko $\R$:ssä sileä, eli mielivaltaisen monta kertaa derivoituva \vspace{2mm}
+\newline
+Näytä, että eräs vaatimukset täyttävä funktio on
+\[
+f(x)=\begin{cases} 
+     e^{-\frac{1}{x(1-x)}}, &\text{kun}\ x\in(0,1) \\ 0, &\text{muulloin}
+     \end{cases}
+\]
+Hahmottele tämän kuvaaja. \vspace{1mm}\newline
+c) Näytä, että funktio
+\[
+f(x)=\begin{cases} 
+     0,             &\text{kun}\ x/\pi\in\Z \\ e^{-\cot^2 x}, &\text{muulloin}
+     \end{cases}
+\]
+on koko $\R$:ssä mielivaltaisen monta kertaa derivoituva (sileä) funktio. Hahmottele $f$:n
+kuvaaja välillä $[0,\pi]$.
+
+\item (*)
+Millä $k$:n arvoilla käyrällä $y=\ln|x|$ ja suoralla $y=k(x-1)+1$ on täsmälleen yksi yhteinen
+piste?
+
+\item (*)
+Millä $a$:n arvoilla yhtälöllä $\,e^x=x+ax^2\,$ on reaalisia ratkaisuja a) ei yhtään, 
+b) vain yksi, c) täsmälleen kaksi, d) kolme tai enemmän? Määritä ratkaisut numeerisin keinoin
+tapauksissa $a=1$ ja $a=2$.
+
+\item (*)
+a) Näytä, että
+\[
+1+x\,\le\,e^x\,\le\,1+x+(e-2)\,x^2 \quad \forall\,x\in[0,1].
+\]
+b) Olkoon $a \ge 1$ ja $n\in\N,\ n\ge\ln a$. Näytä, että
+\[
+1+\frac{\ln a}{n}\,\le\,\sqrt[n]{a}\,\le\,1+\frac{\ln a}{n}+(e-2)\left(\frac{\ln a}{n}\right)^2.
+\]
+Kuinka suuri on approksimaation $\,\sqrt[n]{a} \approx 1+\ln a/n\,$ virhe todellisuudessa, kun
+$a=\pi$ ja $n=100\,$?
+
+\item (*)
+Näytä, että differentiaaliyhtälön $y'=2xy$ yleinen ratkaisu $\R$:ssä on
+$y(x)=Ce^{x^2},\ C\in\R$.
+
+\item (*) \index{Hermiten!a@polynomi}
+\kor{Hermiten polynomi} $H_n(x)$ määritellään derivoimiskaavalla
+\[
+D^ne^{-x^2}=H_n(x)e^{-x^2}, \quad n\in\N\cup\{0\}.
+\]
+Näytä, että pätee palautuskaava
+\[
+H_{n+1}(x)=-2xH_n(x)-2nH_{n-1}(x), \quad n\in\N.
+\]
+ 
+\item (*) \label{H-exp-2: eksoottisia raja-arvoja}
+Tarkastellaan funktioita
+\[
+f(x)=\left(1+\frac{1}{x}\right)^x,\,\ x\in(0,\infty), \qquad
+g(x)=\left(1-\frac{1}{x}\right)^x,\,\ x\in[1,\infty).
+\]
+a) Näytä, että $f$ ja $g$ ovat määrittelyväleillään aidosti kasvavia. \newline
+b) Näytä, että
+\begin{align*}
+&\lim_{x\kohti\infty}\left(1+\frac{1}{x}\right)^x
+    =\lim_{n\kohti\infty}\left(1+\frac{1}{n}\right)^n=e, \\
+&\lim_{x\kohti\infty}\left(1-\frac{1}{x}\right)^x
+    =\lim_{n\kohti\infty}\left(1-\frac{1}{n}\right)^n=\frac{1}{e}\,.
+\end{align*}
+c) Näytä, että 
+$\,\displaystyle{\lim_{n\kohti\infty}\left(1+\frac{x}{n}\right)^n=e^x\ \forall x\in\R}$.
+
+\item (*) \index{zzb@\nim!Matemaatikon mökki}
+(Matemaatikon mökki) Matemaatikon mökki on koordinaatistossa, jonka origo on Helsingissä,
+positiivinen $x$-akseli osoittaa itään ja pituusyksikkö $=100$ km. Mökki on erään tien
+varressa kohdassa, jossa tie on itä-länsi-suuntainen. Määritä mökin sijainti, kun tiedetään,
+että tien yhtälö on
+\[
+(2x)^y=y^{3x} \quad (x,y>0)
+\]
+ja lisäksi tiedetään, että tien päätepiste a) on Helsinki, b) ei ole Helsinki.
+
+\item (*) \label{H-exp-2: kosini ja sini} \index{zzb@\nim!Pieniä ihmeitä}
+(Pieniä ihmeitä) Olkoon $A\in\R$. Halutaan löytää $\R$:ssä derivoituvat funktiot $u$ ja $v$,
+jotka ratkaisevat alkuarvotehtävän
+\[
+\text{(P)} \quad \begin{cases} 
+                 \,u'=-v,\,\ v'=u, \quad x\in\R, \\ \,u(0)=A,\,\ v(0)=0. 
+                 \end{cases}
+\]
+a) Totea: Eräs ratkaisu on $u(x)=A\cos x,\ v(x)=A\sin x$. \newline
+b) Todista: Jos $u$ ja $v$ ovat mikä tahansa (P):n ratkaisu, niin
+\[
+[u(x)]^2+[v(x)]^2\,=\,A^2\ \ \forall x\in\R.
+\]
+c) Näytä: Jos $A=0$, niin (P):n ainoa ratkaisu on $u(x)=v(x)=0$. \newline
+d) Päättele: a-kohdan ratkaisu on ainoa (P):n ratkaisu. \newline
+d) Näytä: (P):n ratkaisu on myös
+\[
+u(x)=A\sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}\,, \qquad
+v(x)=A\sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}\,.
+\]
+e) Päättele: Jokaisella $x\in\R$ pätee
+\[
+\cos x\,=\,\sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}\,, \qquad
+\sin x\,=\,\sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}\,.
+\]
+
+\end{enumerate}

@@ -1,0 +1,638 @@
+\section{Usean muuttujan ääriarvotehtävät} \label{usean muuttujan ääriarvotehtävät}
+\alku
+\index{zyzy@ääriarvotehtävä|vahv}
+
+Aloitetaan määritelmästä.
+\begin{Def} \label{usean muuttujan ääriarvot}
+\index{paikallinen maksimi, minimi, ääriarvo|emph}
+\index{maksimi (funktion)!a@paikallinen|emph}
+\index{minimi (funktion)!a@paikallinen|emph}
+\index{zyzy@ääriarvo (paikallinen)|emph}
+\index{laakapiste|emph}
+Funktiolla $f:\DF_f\kohti\R$, $D_f\subset\R^n$, on pisteesä $\mc\in\DF_f$
+\kor{paikallinen maksimi}, jos jollakin $\delta>0$ pätee
+\[
+0<\abs{\mx-\mc}<\delta \ \impl \ x\in\DF_f \text{ ja } f(\mx)<f(\mc),
+\]
+ja \kor{paikallinen minimi}, jos jollakin $\delta>0$ pätee
+\[
+0<\abs{\mx-\mc}<\delta \ \impl \ x\in\DF_f \text{ ja } f(\mx)>f(\mc).
+\]
+Jos $f$:llä on pisteessä $\mc$ paikallinen maksimi tai minimi, niin $f$:llä on 
+\kor{paikallinen ääriarvo} pisteessä $\mc$. Jos $\mc\in\DF_f$ ei ole funktion $f$ paikallinen
+ääriarvokohta, mutta jollakin $\delta>0$ pätee
+\begin{align*}
+\text{joko}\,:\quad &0<\abs{\mx-\mc}<\delta\ \impl \ x\in\DF_f \text{ ja } f(\mx) \le f(\mc),\\
+\text{tai}\,: \quad &0<\abs{\mx-\mc}<\delta\ \impl \ x\in\DF_f \text{ ja } f(\mx) \ge f(\mc),
+\end{align*}
+niin sanotaan, että $\mc$ on $f$:n \kor{laakapiste}.
+\end{Def}
+\begin{Exa} \label{udif-8.1} Funktiolla $f(x,y)=ax^2+by^2$ on origossa paikallinen
+ääriarvokohta, jos $ab>0$. Kyseessä on paikallinen minimi, jos $a>0$ ja $b>0$, ja paikallinen
+maksimi, jos $a<0$ ja $b<0$. Jos on $ab=0$, niin origo on laakapiste. Tapauksessa $ab<0$ ei
+origo ole ääriarvokohta eikä laakapiste. \loppu
+\end{Exa}
+Funktion paikallista ääriarvoa sanotaan myös
+\index{suhteellinen ääriarvo}%
+\kor{suhteelliseksi}, jolloin funktion maksimia/minimiä koko tarkastelun kohteena olevassa
+joukossa (esim.\ koko määrittelyjoukossa) sanotaan
+\index{maksimi (funktion)!b@absoluuttinen} \index{minimi (funktion)!b@absoluuttinen}
+\index{absoluuttinen maksimi, minimi} \index{globaali ääriarvo}%
+\kor{absoluuttiseksi}. Myös termiä \kor{globaali} ääriarvo käytetään, etenkin jos kyse on 
+funktion koko määrittelyjoukosta.
+\jatko \begin{Exa} (jatko) Jos joukko $A \subset \R^2$ sisältää origon, niin tapauksessa $ab>0$
+on $f(0,0)=0$ funktion absoluuttinen minimi/maksimi $A$:ssa. \loppu
+\end{Exa}  
+
+Gradientin avulla voidaan helposti paikallistaa reaaliarvoisen funktion paikalliset minimit ja 
+maksimit, jos funktio on differentioituva. Nimittäin Luvun \ref{gradientti} tarkastelujen 
+perusteella seuraava tulos on varsin ilmeinen:
+\begin{Prop} \label{ääriarvopropositio-Rn}
+Jos $f:\DF_f\kohti\R$, $\DF_f\subset\R^n$, on differentioituva pisteessä $\mc\in\DF_f$ ja $\mc$
+on$f$:n paikallinen ääriarvo- tai laakapiste, niin $\Nabla f(\mc)=\mo$.
+\end{Prop}
+\index{kriittinen piste}%
+Gradientin nollakohtia sanotaan yleisemmin funktion \kor{kriittisiksi pisteiksi}.
+\begin{Exa} \label{saari uudelleen}
+Etsi funktion $f(x,y)=x^2+2y^2+2xy+4x+14y$ kriittiset pisteet. 
+(Vrt. Luku \ref{kahden ja kolmen muuttujan funktiot}, Esimerkki \ref{saari}.)
+\end{Exa} 
+\ratk 
+\[
+\nabla f(x,y)=\vec 0 \qekv \begin{cases} 
+                           \,\partial_x f(x,y)= 2x+2y+4=0, \\ 
+                           \,\partial_y f(x,y)= 2x+4y+14=0 
+                           \end{cases}\ \ekv \quad \begin{cases} \,x=3, \\ \,y=-5. \end{cases}
+\]
+Ainoa kriittinen piste on siis $(3,-5)$. \loppu
+
+Esimerkissä kriittinen piste on funktion absoluuttinen minimi, kuten selvitettiin Luvussa 
+\ref{kahden ja kolmen muuttujan funktiot} pelkin algebran keinoin. --- Kriitisen pisteen
+ei yleisemmin tarvitse olla paikallinen ääriarvokohta tai laakapiste. Esimerkiksi funktion
+\[
+f(x,y)=x^2-y^2
+\]
+\index{satulapiste}%
+kriittinen (origo) on nk.\ \kor{satulapiste} (engl. saddle point) --- termi ei kaivanne
+lähempää määrittelyä. Funktion kriittisten pisteiden luokittelu ääriarvokohdiksi,
+laakapisteiksi tai satulapisteiksi on ongelma, jonka (algebrallisella) ratkaisulla on
+yleisempääkin mielenkiintoa. Asiaan palataan hieman myöhemmin. Tässä yhteydessä rajoitutaan
+ääriarvotehtäviin, joissa kriittisten pisteiden luokittelulla ei ole keskeistä merkitystä.
+
+\subsection*{Rajoitettu optimointi} 
+\index{rajoitettu optimointi|vahv}
+
+Sovelluksissa esiintyvät usean muuttujan ääriarvotehtävät voidaan yleensä muotoilla 
+\kor{rajoitetun optimoinnin} (engl.\ constrained optimization) ongelmina. Tyypillisessä 
+rajoitetun optimoinnin ongelmassa halutaan etsiä reaaliarvoisen funktion
+$f(\mx),\ \DF_f\subset\R^n$ minimi tai maksimi joukossa $A$, jonka määritelmä asetetaan
+muodossa
+\[ 
+\mx \in A \qekv g_i(\mx) \ge 0, \quad i=1 \ldots m. 
+\]
+Sovelluksissa kyse on yleensä jonkin käytännön kannalta tärkeän (kuten taloudellisen hyödyn tai
+tappion) maksimointi tai minimointi, eli
+\index{optimointi} \index{rajoitusehto (optimoinnin)}%
+\kor{optimointi}, tehtävän asettelussa väistämättömien \kor{rajoitusehtojen} voimassa ollessa.
+--- Optimointialgoritmien suunnittelun (tai käytön)
+kannalta on huomion arvoista, että epäyhtälörajoitteisiin voi sisältyä myös yhtälörajoitteita
+muodossa
+\[ 
+g(\mx)= 0 \qekv \begin{cases} \ \ g(\mx) &\ge 0, \\ -g(\mx) &\ge 0. \end{cases} 
+\]
+\index{lineaarinen rajoite}%
+Rajoitteita sanotaan \kor{lineaarisiksi}, jos funktiot $g_i$ ovat ensimmäisen asteen polynomeja
+(affiinikuvauksia). Jos myös $f$ on tätä tyyppiä, on kyse
+\index{lineaarinen optimointi!lineaarinen ohjelmointi}%
+\kor{lineaarisen ohjelmoinnin} ongelmasta, vrt.\ luku \ref{affiinikuvaukset}.
+
+Tarkastellaan esimerkkinä kahden muuttujan tilannetta, jossa optimointiongelman asettelu on
+\[
+f(x,y)=\min/\max\,! \quad \text{ehdoilla} \quad g_i(x,y) \ge 0, \quad i=1 \ldots m.
+\]
+Oletetaan jatkossa, että sekä $f$ että rajoitefunktiot $g_i$ ovat määriteltyjä ja 
+differentioituvia $\R^2$:ssa. Ongelman voi purkaa kahteen osaan: Ratkaistaan ensin 
+\kor{rajoittamaton} ongelma käymällä läpi $f$:n kaikki kriittiset pisteet. Kriittisistä 
+\index{kzyypzy@käypä (kriittinen piste)}%
+pisteistä \kor{käypiä} ovat ne, joissa asetetut rajoitusehdot ovat voimassa. Oletetaan, että
+näitä on äärellinen määrä, jolloin voidaan suorittaa valinta: Valitaan pisteistä se, jossa $f$
+saa pienimmän/suurimman arvonsa. 
+
+Optimointitehtävää ei ole vielä ratkaistu, vaan hankalampi vaihe on vasta edessä: On määrättävä
+erikseen funktion minimi/maksimi tarkasteltavan joukon $A$
+\index{reuna (joukon, alueen)}%
+\kor{reunalla} $\partial A$, joka määritellään
+\[ 
+(x,y) \in \partial A \qekv g_i(x,y)=0 \quad \text{jollakin}\ i. 
+\]
+Kuvassa on koko optimointiongelma kuvattuna yhden rajoitusehdon ($m=1$) tapauksessa.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(11,7)(0,-2)
+\closecurve(1,0.4,6,1.8,5,4,0.3,3.5)
+\put(1.12,2.48){$\bullet$} \put(3.12,1.45){$\bullet$} \put(6,1.8){$\bullet$} 
+\put(3.15,-0.84){$\bullet$}
+\put(0,-2){$\vec\nabla f=\vec 0$} \put(0.2,-1.5){\vector(1,4){1}} 
+\put(0.2,-1.5){\vector(1,1){3}} 
+\put(0.2,-1.5){\vector(4,1){3}}
+\put(2,2.5){$g(x,y)>0$} \put(6.5,4.4){$g(x,y)=0$}
+\put(7.8,1.9){\vector(-1,0){1.6}} 
+\put(8,1.7){\parbox{3cm}{$f=\min/\max\, ! \,$, kun $g(x,y)=0$}}
+\put(3.5,-0.85){(ei käypä)}
+\curve(5,4,5.8,4.5,6,4.5,6.3,4.5)
+\end{picture}
+\end{center}
+\end{figure}
+
+\index{sidottu ääriarvotehtävä} \index{zyzy@ääriarvotehtävä!a@sidottu ääriarvotehtävä}%
+Optimointiongelmaa yhden tai useamman yhtälörajoitteen alaisena sanotaan \kor{sidotuksi} 
+ääriarvotehtäväksi. Kahden muuttujan tapauksessa ongelma ratkeaa luontevasti, jos oletetaan,
+että jokainen rajoitusehto määrittelee parametrisen käyrän muotoa
+\[ 
+g_i(x,y)=0 \ \ekv \ x=x_i(t), \ y=y_i(t),\ t \in \R, \quad i = 1 \ldots m, 
+\]
+ja oletetaan vielä, että reuna $\partial A$ voidaan pilkkoa käyränkaariksi
+\[ 
+\partial A_i = \{(x,y) \in \R^2 \mid x = x_i(t),\ y = y_i(t),\ t \in [a_i,b_i]\}, 
+\]
+jotka yhdessä peittävät $\partial A$:n ja joiden yhteisiä pisteitä ovat enintään päätepisteet
+$(x_i(a_i),y_i(a_i))$ ja $(x_i(b_i),y_i(b_i))$. Optimointiongelman jäljellä oleva osa on näillä
+oletuksilla palautettu yhden muuttujan rajoitetuiksi optimointiongelmiksi:
+\[ 
+F_i(t) = f\bigl(x_i(t),y_i(t)\bigr) = \text{min/max\ !} \quad \text{kun} \quad 
+                                      a_i \le t \le b_i\,, \quad i = 1 \ldots m.
+\]
+Nämä ongelmat ratkeavat normaaliin tapaan, eli etsimällä funktioiden $F_i$ kriittiset pisteet
+(= derivaatan nollakohdat) avoimilta väleiltä $(a_i,b_i)$ ja tutkimalla erikseen päätepisteet
+$a_i,b_i$. Sikäli kuin funktioilla $F_i$ on käypiä kriittisiä pisteitä äärellinen määrä, on 
+löydetty äärellinen pistejoukko, josta optimoitavan funktion ääriarvot välttämättä löytyvät.
+\begin{Exa} \label{esim: rajoitettu optimointi} Ratkaise rajoitetut optimointitehtävät
+\begin{align*} 
+&f(x,y) = 6x^2-4xy+9y^2+16x-22y = \text{min\ !} \quad \text{ja} \quad f(x,y) = \text{max\ !} \\
+&\text{kun} \quad x \ge 0,\quad  x^2+(y-1)^2 \le 1.
+\end{align*}
+\end{Exa}
+\ratk Kriittisiä pisteitä on yksi:
+\[ 
+\nabla f(x,y) = \vec 0 \qekv \begin{cases} 
+                             \ 12x-4y+16=0, \\ -4x+18y-22=0 \end{cases} 
+                       \qekv \begin{cases} \,x=-1, \\ \,y=1. \end{cases} 
+\]
+Tämä ei ole käypä, joten siirrytään tutkimaan funktiota tarkasteltavan joukon $A$ reunalla 
+$\partial A$:
+\[ 
+(x,y) \in \partial A \qekv x=0 \quad \text{tai} \quad x^2+(y-1)^2=1. 
+\]
+Tämä jakautuu kahteen osaan:
+\begin{align*}
+&\partial A_1\,: \quad x=0\,\ \ja\,\ x^2 + (y-1)^2 \le 1 \qekv x=0\,\ \ja\,\ y \in [0,2]. \\
+&\partial A_2\,: \quad x^2 + (y-1)^2 = 1\,\ \ja\,\ x \ge 0.
+\end{align*}
+Reunan osa $\partial A_1$ on jana, jolla
+\[ 
+F_1(y) = f(0,y) = 9y^2-22y. 
+\]
+Funktion $F_1$ kriittinen piste $y=11/9$ on käypä, joten merkitään muistiin $f$:n arvo tässä 
+pisteessä sekä janan $\partial A_1$ päätepisteissä:
+\[
+f(0,11/9) = -121/9 = -13.4444.., \quad f(0,0)=0, \quad f(0,2) = -8. 
+\]
+Siirrytään reunan osalle $\partial A_2$. Tämä on puoliympyrän kaari, joka parametrisoituu 
+muodossa
+\[ 
+x = \sin t, \quad y=1-\cos t, \quad t \in [0,\pi]. 
+\]
+Tutkittava funktio on näin ollen
+\begin{align*}
+ F_2(t) &= f(\sin t,1-\cos t) \\
+        &= 6\sin^2t+4\sin t\cos t+9\cos^2 t+12\sin t+4\cos t-13, \quad t \in [0,\pi].
+\end{align*}
+Funktion $F_2$ kriittiset pisteet löytyvät ratkaisemalla yhtälö
+\[ 
+F_2'(t)= \ldots = -3\sin 2t + 4\cos 2t + 12\cos t - 4\sin t = 0. 
+\]
+Numeerisin keinoin saadaan ainoaksi käyväksi ratkaisuksi
+\[ 
+t = 0.927295 .., \quad\ (x(t),y(t)) = (0.800000..,0.400000..) = (4/5,2/5). 
+\]
+Tässä pisteessä on $F_2(0.927295..) = 8$. Koska reunan osien $\partial A_1$ ja $\partial A_2$
+päätepisteet ovat samat, niin on päätelty, että $f$:n pienin ja suurin arvo löytyvät joukosta
+$\{-121/9,\,0,\,-8,\,8\}$. Optimointitehtävien ratkaisut ovat siis
+\begin{align*}
+&f_{\text{min}} = -121/9 = -13.4444.. \quad 
+                               \text{pisteessä}\ (x,y) = (0,11/9) = (0,\,1.1111..), \\
+&f_{\text{max}} = 8 \quad \text{pisteessä}\ (x,y) = (4/5,\,2/5) = (0.8,\,0.4). \loppu
+\end{align*}
+
+\subsection*{Lagrangen kertojien menetelmä}
+\index{Lagrangen!c@kertojien menetelmä|vahv}
+
+Edellä esitettyä ratkaisutapaa voi periaatteessa soveltaa useammankin muuttujan rajoitettuun
+optimointitehtävään. Ongelmaksi kuitenkin muodostuvat sidotut ääriarvotehtävät, joita joudutaan
+ratkaisemaan optimoitaessa kohdefunktiota tarkasteltavan joukon reunalla. Useamman kuin kahden
+muuttujan tapauksessa tällaisten tehtävien ratkaiseminen parametrisoimalla, eli vapaiden
+muuttujien lukumäärää vähentämällä, on usein hankalaa. Kolmen tai useamman muuttujan sidotuissa 
+ääriarvotehtävissä käytetäänkin yleensä toista, paljon elegantimpaa ja yleispätevämpää
+menetelmää, jota keksijänsä \hist{J. L. Lagrangen} (1736-1813) mukaan sanotaan 
+\kor{Lagrangen kertojien} (engl.\ Lagrange multipliers) \kor{menetelmäksi}. 
+
+Tarkastellaan aluksi jälleen kahden muuttujan tilannetta. Olkoon etsittävä funktion $f(x,y)$ 
+paikalliset ääriarvokohdat käyrällä $S$, jonka määrittelee sidosehto $g(x,y)=0$. Olkoon 
+$P=(x_0,y_0) \in S$ eräs tällainen ääriarvokohta ja olkoon $\vec t\,$ $S$:n tangenttivektori
+pisteessä $P$. Tällöin on oltava
+\begin{multicols}{2} \raggedcolumns
+\[
+\vec t\cdot\nabla f(x_0,y_0)=0.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,2)
+\curve(0,0,1,0.5,3.5,1.2)
+\put(0.9,0.4){$\bullet$}
+\put(1,0.5){\vector(3,1){2}}
+\put(2.8,1.3){$\vec t$}
+\put(0.9,0){$P$}
+\put(3.7,1.15){$g(x,y)=0$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Toisaalta koska käyrä $g(x,y)=0$ funktion $g$ tasa-arvokäyrä, niin pätee myös 
+(vrt.\ Luku \ref{gradientti})
+\[
+\vec t\cdot\nabla g(x_0,y_0)=0.
+\]
+Näin ollen, sikäli kuin $\nabla g(x_0,y_0)\neq\vec 0$ (mikä jatkossa oletetaan --- pisteet, 
+joissa $g(x_0,y_0)=0$ ja $\nabla g(x_0,y_0)=\vec 0$, on tutkittava erikseen), on oltava jollakin
+$\lambda\in\R$
+\[
+\nabla f(x_0,y_0)+\lambda\nabla g(x_0,y_0)=\vec 0.
+\]
+Kysyttyjä paikallisia ääriarvopisteitä voidaan siis hakea ratkaisemalla yhtälöryhmä
+\[
+\begin{cases}
+\,f_x(x,y)+\lambda g_x(x,y)=0, \\
+\,f_y(x,y)+\lambda g_y(x,y)=0, \\
+\,g(x,y)=0.
+\end{cases}
+\]
+Tässä on kolme tuntematonta ja kolme yhtälöä, joten ainakin muodollinen puoli on kunnossa.
+
+Em.\ yhtälöryhmään päädytään helpommin muistettavalla tavalla, kun määritellään funktio
+\[
+F(x,y,\lambda)=f(x,y)+\lambda g(x,y).
+\]
+Tässä on siis rajoitusehdossa esiintyvä funktio $g$ tuotu mukaan kertoimella $\lambda$ ---
+\kor{Lagrangen kertojalla} --- painotettuna. Ym.\ yhtälöryhmään päädytään nyt yksinkertaisesti,
+kun haetaan $F$:n kriittiset pisteet ehdoista
+\[
+\begin{cases}
+\,\partial_x F(x,y,\lambda)=0, \\
+\,\partial_y F(x,y,\lambda)=0, \\
+\,\partial_\lambda F(x,y,\lambda)=0.
+\end{cases}
+\]
+Em.\ geometrinen perustelu toimii myös kolmen muuttujan tapauksessa. Nimittäin jos 
+$P=(x_0,y_0,z_0)$ on funktion $f(x,y,z)$ paikallinen ääriarvopiste pinnalla $S:\,g(x,y,z)=0$,
+niin jokaiselle pinnan tangenttivektorille $\vec t$ pisteessä $P$ on oltava voimassa
+\[
+\vec t\cdot\nabla f(x_0,y_0,z_0)=0.
+\]
+Tällöin $\nabla f(x_0,y_0,z_0)$ on pinnan $S$ normaali, joten jollakin $\lambda\in\R$
+\[
+\nabla f(x_0,y_0,z_0)+\lambda\nabla g(x_0,y_0,z_0)=\vec 0
+\]
+(olettaen, että $\nabla g(x_0,y_0,z_0)\neq\vec 0\,$). Ääriarvopisteet löytyvät tällöin funktion
+\[
+F(x,y,z,\lambda)=f(x,y,z)+\lambda g(x,y,z)
+\]
+kriittisten pisteiden joukosta.
+\begin{Exa}
+Hae funktion $f(x,y,z)=xy+yz-xz$ ääriarvot yksikköpallon pinnalla.
+\end{Exa}
+\ratk Rajoitusehto on $x^2+y^2+z^2=1$, joten haetaan funktion
+\[
+F(x,y,z,\lambda)=xy+yz-xz+\lambda(x^2+y^2+z^2-1)
+\]
+kriittisiä pisteitä:
+\[
+\begin{cases}
+\,\partial_x F =y-z+2\lambda x = 0, \\
+\,\partial_y F =x+z+2\lambda y = 0, \\
+\,\partial_z F =y-x+2\lambda z = 0, \\
+\,\partial_\lambda F =x^2+y^2+z^2-1 = 0.
+\end{cases}
+\]
+Kolme ensimmäistä yhtälöä on matriisimuodossa
+\[
+\begin{bmatrix} 2\lambda & 1 & -1 \\ 1 & 2\lambda & 1 \\ -1 & 1 & 2\lambda \end{bmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}=\mo.
+\]
+Tälle haetaan ei-triviaalia ratkaisua, joten kerroinmatriisin on oltava singulaarinen. 
+Kerroinmatriisin determinantti on
+\[
+\det(\mA)=8\lambda^3-6\lambda-2=2(\lambda-1)(2\lambda+1)^2,
+\]
+joten on oltava joko $\lambda=1$ tai $\lambda=-1/2$. Kun $\lambda=1$, tulee yhtälöryhmäksi
+\[
+\begin{rmatrix} 2 & 1 & -1 \\ 1 & 2 & 1 \\ -1 & 1 & 2 \end{rmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}=\mo \ \underset{\text{(Gauss)}}{\ekv} \ 
+\begin{rmatrix} 2 & 1 & -1 \\ 0 & \frac{3}{2} & \frac{3}{2} \\ 0 & 0 & 0 \end{rmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}=\mo.
+\]
+Tämän ratkaisu yhdessä rajoitusehdon $x^2+y^2+z^2=1$ kanssa on
+\[
+(x,y,z)=t(1,-1,1),\quad t=\pm 1/\sqrt{3}\,,
+\]
+ja funktion $f$ arvo näissä pisteissä on
+\[
+f\left(\pm\frac{1}{\sqrt{3}},\mp\frac{1}{\sqrt{3}},\pm\frac{1}{\sqrt{3}}\right)
+=\underline{\underline{-1}}.
+\]
+Jos $\lambda=-1/2$, niin yhtälöryhmäksi tulee
+\[
+\begin{rmatrix} -1 & 1 & -1 \\ 1 & -1 & 1 \\ -1 & 1 & -1 \end{rmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}=\mo \ \ekv \
+\begin{rmatrix} -1 & 1 & -1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{rmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}=\mo.
+\]
+Rajoitusehdon toteuttavia ratkaisuja ovat $\,(x,y,z)=(t-s,t,s)$, missä $t,s\in\R$
+toteuttavat
+\[
+(t-s)^2+t^2+s^2=1 \ \ekv \ 2(t^2+s^2-ts)=1.
+\]
+Funktion $f$ arvoksi näissä pisteissä tulee
+\begin{align*}
+f(x,y,z) &= (t-s)t+ts-(t-s)s \\
+&= t^2+s^2-ts=\underline{\underline{1/2}}.
+\end{align*}
+Siis
+\begin{alignat*}{2}
+f_{\min} &= -1  \quad & &\text{pisteissä } \ \pm\frac{1}{\sqrt{3}}(1,-1,1), \\
+f_{\max} &= 1/2 \quad & 
+         &\text{käyrällä}\ S:\,(x,y,z)=(t-s,t,s),\ \ (t,s)\in\R^2,\ t^2+s^2-ts=1/2.
+\end{alignat*}
+Maksimipisteet muodostavat yksikköpallon isoympyrän tasolla $T: x-y+z=0$. \loppu
+
+Lagrangen kertojien menetelmä toimii, poikkeustilanteita lukuunottamatta, myös useamman 
+rajoitusehdon tapauksessa. Jos on haettava funktion $f(x_1,\ldots,x_n)$ ääriarvot 
+rajoitusehdoilla
+\[
+g_i(x_1,\ldots,x_n)=0,\quad i=1\ldots m<n,
+\]
+niin nämä löydetään funktion
+\[
+F(\mx,\boldsymbol{\lambda})=f(\mx)+\sum_{i=1}^m \lambda_i g_i(\mx)
+\]
+kriittisten pisteiden joukosta. Esimerkiksi tapauksessa $n=3$, $m=2$ on tutkittava funktiota
+\[
+F(x,y,z,\lambda,\mu)=f(x,y,z)+\lambda g_1(x,y,z)+\mu g_2(x,y,z).
+\]
+Menetelmän idean voi tässäkin tapauksessa perustella geometrisesti: Rajoitusehtojen voi olettaa
+määrittelevän avaruuskäyrän $K$, joka on pintojen
+\[
+S_1: \ g_1(x,y,z)=0,\quad S_2: \ g_2(x,y,z)=0
+\]
+leikkaus. Jos pintojen normaalit käyrän pisteessä $(x_0,y_0,z_0)$ ovat
+\[
+\vec n_i=\nabla g_i(x_0,y_0,z_0),\quad i=1,2,
+\]
+niin käyrän $K$ tangentti $\vec t$ on näitä kumpaakin vastaan kohtisuora. Ääriarvoehto on samaa
+muotoa kuin yhden rajoitusehdon tapauksessa, eli on oltava
+\[
+\vec t\cdot\nabla f(x_0,y_0,z_0)=0.
+\]
+Koska tässä $\vec t$ siis on kohtisuorassa vektoreita $\vec n_1$ ja $\vec n_2$ vastaan, niin
+sikäli kuin $\vec n_1$ ja $\vec n_2$ ovat lineaarisesti riippumattomat, on oltava
+$\nabla f(x_0,y_0,z_0)=\lambda\vec n_1+\mu\vec n_2$ jollakin $(\lambda,\mu)\in\R^2$ eli
+\[
+\nabla f(x_0,y_0,z_0)=\lambda\nabla g_1(x_0,y_0,z_0)+\mu\nabla g_2(x_0,y_0,z_0).
+\]
+\begin{Exa}
+Minimoi $\,f(x,y,z)=x+2y-z\,$ ehdoilla $x^2+y^2+z^2=12$ ja $x+y+z=1$. 
+\end{Exa}
+\ratk Etsitään funktion 
+\[ 
+F(x,y,z,\lambda,\mu)=x+2y-z+\lambda(x^2+y^2+z^2-12)+\mu(x+y+z-1)
+\]
+kriittiset pisteet:
+\[
+\begin{cases}
+ \,2\lambda x+\mu = -1 \\ 
+ \,2\lambda y+\mu = -2 \\ 
+ \,2\lambda z+\mu = 1 \\
+ \,z^2+y^2+z^2 = 12 \\ 
+ \,x+y+z = 1
+\end{cases} 
+\impl \ \ \begin{cases} \,2\lambda(x+y+z)+3\mu=-2 \\ \,x+y+z=1 \end{cases}
+\impl \ \ 2\lambda=-3\mu-2.
+\]
+Yhtälöryhmän kolmesta ensimmäisestä ja neljännestä yhtälöstä seuraa myös
+\[ 
+4\lambda^2(x^2+y^2+z^2)=(\mu+1)^2+(\mu+2)^2+(\mu-1)^2=48\lambda^2 . 
+\]
+Tässä on edellisen tuloksen perusteella $48\lambda^2 = 12(3\mu+2)^2$, joten seuraa
+\begin{align*}
+105\mu^2+140\mu+42=0\,\ 
+                 &\impl\quad\ (\mu,\lambda)=\begin{cases}
+                                         (-0.877485, \ \phantom{-}0.316228), \\
+                                         (-0.455848, \ -0.316228)
+                                         \end{cases} \\
+                 &\impl\,\ (x,y,z)=\begin{cases}
+                                   (-0.19371, \ -1.77485, \ \phantom{-}2.96856), \\
+                                   (\phantom{-}0.86038, \ \phantom{-}2.44152, \ -2.30190).
+                                   \end{cases}
+\end{align*}
+Näistä ensimmäinen piste antaa minimiarvon $f_{\min}=\underline{\underline{-6.71197}}$.
+\loppu
+
+Lagrangen kertojien menetelmää käytettäessä ei syntyvän epälineaarisen yhtälöryhmän
+ratkaiseminen luonnollisesti aina onnistu käsinlaskulla. Ratkaisut etsitään silloin
+numeerisin keinoin, tavallisimmin Newtonin menetelmällä. Numeeriseen ratkaisemiseen
+yhdistettynä Lagrangen kertojien menetelmä näyttääkin itse asiassa parhaat puolensa, 
+sillä ratkaisualgoritmista tulee tällä tavoin hyvin suoraviivainen ja helposti 
+(konevoimin) toteutettava. 
+\begin{Exa} Esimerkissä \ref{esim: rajoitettu optimointi} ratkaistiin sidosehdon 
+parametrisoinnilla ääriarvotehtävä
+\begin{align*}
+&f(x,y)=6x^2-4xy+9y^2+16x-22y = \text{max !} \\
+&\text{ehdolla} \quad g(x,y)=x^2+(y-1)^2-1=0.
+\end{align*}
+Lagrangen kertojaa käytettäessä etsitään funktion
+\[
+F(x,y,\lambda) = 6x^2-4xy+9y^2+16x-22y + \lambda[x^2+(y-1)^2-1]
+\]
+kriittiset pisteet eli ratkaistaan yhtälöryhmä
+\[
+\begin{cases}
+\,6x-2y+x\lambda-8=0, \\ -2x+9y+(y-1)\lambda-11=0, \\ \,x^2+(y-1)^2-1=0.
+\end{cases}
+\]
+Kun ratkaisussa käytetään Newtonin menetelmää, saadaan iteraatiokaavaksi
+\[
+\begin{bmatrix} x_{k+1} \\ y_{k+1} \\ \lambda_{k+1} \end{bmatrix}
+= \begin{bmatrix} x_k \\ y_k \\ \lambda_k \end{bmatrix}
+- \begin{bmatrix} 
+  \lambda_k+6 & -2 & x_k \\ -2 & \lambda_k+9 & y_k-1 \\ 2x_k & 2y_k-2 & 0
+  \end{bmatrix}^{-1}
+  \begin{bmatrix}
+  6x_k-2y_k+x_k\lambda_k-8 \\ -2x_k+9y_k+(y_k-1)\lambda_k-11 \\ x_k^2+(y_k-1)^2-1
+  \end{bmatrix}.
+\]
+Alkuarvauksella $(x_0,y_0,\lambda_0)=(1,0.5,0)$ saadaan
+\begin{center}
+\begin{tabular}{llll}
+$k$ & $x_k$      & $y_k$      & $\lambda_k$  \\ \hline \\
+$0$ & $1.000000$ & $0.500000$ & $\phantom{-1}0.0000$ \\
+$1$ & $1.000000$ & $0.750000$ & $-12.5000$ \\
+$2$ & $0.815287$ & $0.136146$ & $-14.9283$ \\
+$3$ & $0.818006$ & $0.376563$ & $-14.8590$ \\
+$4$ & $0.800355$ & $0.399765$ & $-14.9999$ \\
+$5$ & $0.800000$ & $0.400000$ & $-15.0000$
+\end{tabular}
+\end{center}
+\end{Exa}
+Suppeneminen oli hieman onnekasta, sillä alkuarvaus osoittautui Lagrangen kertojan osalta
+kehnoksi. Parempi alkuarvaus olisi voitu laskea esim.\ seuraavasti (yleisempi menettely: ks.\
+Harj.teht.\,\ref{H-udif-8: lambdan alkuarvaus}):
+\begin{align*}
+&\vec a=\nabla f(x_0,y_0)=26\vec i-17\vec j, \quad \vec b=\nabla g(x_0,y_0)=2\vec i-\vec j, \\
+&\vec a+\lambda\vec b \approx \vec 0\,\ \impl\,\ 
+\lambda \approx -\frac{\vec a\cdot\vec b}{|\vec b\,|^2} = -13.8 = \lambda_0. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Määritä funktion suurin ja pienin arvo annetuilla rajoitusehdoilla. Käytä
+sidosehdoissa (mikäli niitä on) parametrisointia. \vspace{1mm}\newline
+a) \ $x-x^2+y^2, \quad 0 \le x \le 2,\,\ 0 \le y \le 1$ \newline
+b) \ $xy-2x, \quad -1 \le x \le 1,\,\ 0 \le y \le 1$ \newline
+c) \ $xy-x^3y^2, \quad 0 \le x,y \le 1$ \newline
+d) \ $xy(a-2x-y), \quad \abs{x} \le a,\,\ \abs{y} \le a$ \newline
+e) \ $xy(1-x-2y), \quad x,y \ge 0,\,\ x+y \le 1$ \newline 
+f) \ $x^2-2y^2-xy-x, \quad x,y \ge -1,\,\ x+y \le 1$ \newline
+g) \ $xy-x^2, \quad x^2+y^2 \le 1$ \newline
+h) \ $3+x-x^2-y^2, \quad 2x^2+y^2 \le 1$ \newline
+i) \ $y^2-2x^2, \quad x^2-y \le 1,\,\ x+y \le 1$ \newline 
+j) \ $xy+x-y, \quad x^2+y^2 \le 1,\,\ x+y+1 \ge 0,\,\ x-y-1 \le 0$ \newline
+k) \ $x^3+3y^3, \quad 0 \le xy \le 1,\,\ x^2+y^2 \le 4$ \newline
+l) \ $\sin x+\sin y-\sin(x+y), \quad 0 \le x,y \le \pi$ \newline
+m) \ $\sin x\cos y, \quad x,y \ge 0,\,\ x+y \le 2\pi$ \newline
+n) \ $\sin x\sin y\sin(x+y), \quad x,y \ge 0,\,\ x+y \le \pi$ \newline
+o) \ $(x-3y)e^y, \quad \abs{x} \le 1,\,\ \abs{y} \le 1$ \newline
+p) \ $xe^{-x^2-y^2}, \quad x^2+y^2 \le R^2$ \newline
+q) \ $(x+2y)e^{-x^2-y^2}, \quad (x,y)\in\R^2$ \newline
+r) \ $xy^2e^{-xy}, \quad x,y \ge 0$ \newline
+s) \ $(2x-y)(1+x^2+y^2)^ {-1}, \quad (x,y)\in\R^2$ \newline
+t) \ $(1+2x+3y)(1+x^2+y^2)^{-1}, \quad (x,y)\in\R^2$ \newline
+u) \ $xy^2+yz^2, \quad x^2+y^2+z^2 \le 1$ \newline
+v) \ $xy+yz, \quad x^2+y^2+z^2 \le 1$ \newline
+x) \ $xy^2z^3, \quad x^2+y^2+z^2 \le 1$ \newline
+y) \ $xyze^{-x^2-2y^2-3z^2}, \quad (x,y,z)\in\R^3$ \newline
+z) \ $(x+y+z)e^{-x^2-2y^2-3z^2}, \quad (x,y,z)\in\R^3$ \newline
+å) \ $(x+2y+3z+4u)e^{-x^2y^2z^2u^2}, \quad (x,y,z,u)\in\R^4$
+
+\item
+Halutaan määrätä funktion $f(x,y,z)=xy+z^2$ minimi- ja maksimiarvo pallopinnalla
+$S:\,x^2+y^2+z^2=1$. Ratkaise tehtävä \ a) parametrisoimalla $S$ pallonpintakoordinaateilla, \
+b) Lagrangen kertojien avulla. \ c) Mitkä ovat $f$:n minimi- ja maksimiarvot ehdolla
+$x^2+y^2+z^2 \le 1$\,?
+
+\item
+Määritä Lagrangen kertojien avulla funktion
+\[
+\text{a)}\ \ f(x,y,z)=x^2+y^2+z^2 \qquad \text{b)}\ \ f(x,y,z)=xy
+\]
+pienin ja suurin arvo pallon $S_1:\,x^2+y^2+z^2+4x+4y=0$ ja lieriön $S_2:\, x^2+y^2+2x+2y=6$ 
+leikkauskäyrällä.
+
+\item
+Ratkaise seuraavat sidotut ääriarvotehtävät Lagrangen kertojien avulla. \vspace{1mm}\newline
+a) \ $x^2+y^2=$ min!/max! käyrällä $S:\,x^2+8xy+7y^2=45$ \newline
+b) \ $x^2+y^2=$ min!/max! käyrällä $S:\,x^4+x^2y^2+5y^4=95$ \newline
+c) \ $x^3y^5=$ max! ehdolla $x+y=8$ \newline
+d) \ $x+2y-3x=$ min!/max! pallopinnalla $x^2+y^2+z^2=1$ \newline
+e) \ $x^2+y^2+z^2=$ min! ehdolla $xyz^2=2$ \newline
+f) \ $xyz=$ min!/max! pallopinnalla $x^2+y^2+z^2=12$ \newline
+g) \ $x=$ min!/max! käyrällä $S:\,z=x+y\,\ja\,x^2+2y^2+2z^2=8$ \newline
+h) \ $x^2+y^2+z^2=$ min!/max! käyrällä $S:\,z^2=x^2+y^2\,\ja\,x-2z=3$ \newline
+i) \ $z=$ min!/max! käyrällä $S:\,x^2+y^2=8\,\ja\,x+y+z=1$ \newline
+j) \ $x^3+y^3+z^3=$ min!/max! käyrällä $S:\,x+y+z=3\,\ja\,x^2+y^2+z^2=27$ \newline
+k) \ $\ma^T\mx=$ min!/max! ehdolla $\abs{\mx}=1\,\ (\ma,\mx\in\R^n)$ \newline
+l) \ $x_1^{2m} + \ldots + x_n^{2m}=$ min! ehdolla $x_1 + \ldots + x_n=a \neq 0\,\ (m\in\N)$
+
+\item
+Ratkaise Lagrangen kertojaa käyttäen: \vspace{1mm}\newline
+a) \ \ Mikä on origon lyhin etäisyys käyrästä $S:\,x^2+8xy+7y^2=45\,$? \newline
+b) \   Mikä pinnan $S:\,xy+2yz+3xz=0$ piste $Q$ on lähinnä pistettä 
+       $\phantom{\text{b) \ \ }} P=(-2,2,-2)\,$?
+
+\item
+Tetraedrin yksi kärki on origossa ja muut kolme kärkeä ovat origosta suuntiin $\vec i$,
+$\vec i-\vec j+\vec k$ ja $-\vec i+\vec j+\vec k$. Lisäksi origon etäisyys tetraedrin
+vastakkaisesta sivutahkosta $=3$. Mikä on tetraedrin pienin tilavuus näillä ehdoilla?
+
+\item
+a) Näytä, että suorakulmaisista särmöistä, joilla on sama sivutahkojen yhteenlaskettu
+pinta-ala, kuutio on tilavuudeltaan suurin. \vspace{1mm}\newline
+b) Kanneton suorakulmaisen särmiön muotoinen laatikko valmistetaan kahdesta eri materiaalista
+siten, että pohjamateriaali on (pintayksikköä kohti) viisi kertaa kalliimpaa kuin laatikon
+seinämien materiaali. Miten laatikon mitat on valittava, kun halutaan minimoida 
+materiaalikustannukset ehdolla, että laatikon tilavuus $=a^3$\,?
+
+\item
+a) Ellipsoidin muotoinen jalokivi
+\[
+A: \quad \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\,\le\,1
+\]
+halutaan hioa suorakulmaisen särmiön muotoiseksi. Miten särmiön mitat on valittava, jotta
+kiveä menisi hukkaan mahdollisimman vähän? \vspace{1mm}\newline
+b) Näytä, että jos $\alpha,\beta$ ja $\gamma$ ovat kolmion kulmat, niin
+\[
+\sin\frac{\alpha}{2}\sin\frac{\beta}{2}\sin\frac{\gamma}{2}\,\le\,\frac{1}{8}\,.
+\]
+
+\item
+Laske (tarvittaessa numeerisin keinoin) funktion $f(x,y)=(x-y^2)e^{xy}$ pienin ja suurin
+arvo joukossa \ a) $A:\,x^2+y^2 \le 4$, \ b) $A:\,x^4+y^4 \le 16$.
+
+\item (*) \index{aritmeettinen keskiarvo} \index{geometrinen keskiarvo}
+          \index{keskiarvo!b@aritmeettinen, geometrinen}
+Todista väittämä: Lukujen $a_k \ge 0,\ k=1 \ldots n\,$ \kor{geometrinen keskiarvo} on enintään
+yhtä suuri kuin \kor{aritmeettinen keskiarvo}, ts.\ 
+\[
+\sqrt[n]{a_1 \cdots a_n}\,\le\,\frac{1}{n}(a_1+ \ldots + a_n).
+\]
+\kor{Vihje}: Aseta sopiva sidosehto!
+
+\item (*)
+Etsi funktion $f(x,y,z)=(x+2y)e^{xz}+xyz+y^3$ ääriarvokohdat pallopinnalla
+$S:\,(x-3)^2+(y+3)^2+(z+4)^2=16$. Menetelmä: Lagrangen kertojat ja Newton!
+
+\item (*) \label{H-udif-8: lambdan alkuarvaus}
+Yleisessä Lagrangen kertojien menetelmässä etsitään funktion
+$F(\mx,\boldsymbol{\lambda})=f(\mx)+\sum_{i=1}^m \lambda_i g_i(\mx),\ \mx\in\R^n,\ m<n$
+kriittistä pistettä $(\mc,\boldsymbol{\mu})$. Oletetaan, että eräässä $\mc$:n ympäristössä
+$U_\delta(\mc)$ vektorit $\Nabla g_i(\mx),\ i=1 \ldots m\,$ ovat lineaarisesti riippumattomat
+ja että on käytettävissä alkuarvaus $\mx_0 \in U_\delta(\mc)$. Näytä, että jos alkuarvaus
+$\boldsymbol{\lambda}_0$ määrätään $\mx_0$:n avulla laskemalla
+\[
+|\Nabla f(\mx_0)-\sum_{i=1}^m\lambda_i\Nabla g_i(\mx_0)|^2 = \text{min!} 
+                \ \ \impl\ \ (\lambda_i)=\boldsymbol{\lambda}_0,
+\]
+($|\cdot| = \R^n$:n euklidinen normi), niin pätee:
+$\mx_0=\mc\ \impl\ \boldsymbol{\lambda}_0=\boldsymbol{\mu}$. Millaiseen 
+$\boldsymbol{\lambda}_0$:n laskukaavaan tämä menettely johtaa tapauksessa $m=1$\,? Sovella
+menettelyä sidottuun ääriarvotehtävään
+\begin{align*}
+&f(x,y,z)=x^2+y^2+z^2 = \text{min!} \\
+&\text{ehdoilla} \quad x^3y+xy^3+2=0, \quad x^3y+y^3z+xz^3+1=0,
+\end{align*}
+kun alkuarvaus on $(x_0,y_0,z_0)=(1,-1,1)$. Määritä $F$:n kriittinen piste likimäärin yhdellä
+Newtonin iteraation askeleella.
+
+\end{enumerate}

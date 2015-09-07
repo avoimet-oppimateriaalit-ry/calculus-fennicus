@@ -1,0 +1,545 @@
+\section{Riemannin integraali} \label{riemannin integraali}
+\alku
+\index{mzyzyrzy@m‰‰r‰tty integraali|vahv}
+
+Tarkastellaan suljetulla v‰lill‰ $[a,b]$ m‰‰ritelty‰ funktiota $f$, joka olkoon 
+\index{rajoitettu!c@funktio}%
+\kor{rajoitettu}, ts.\ on olemassa $M\in\R_+$ siten, ett‰ p‰tee
+\[
+\abs{f(x)}\leq M\quad\forall x\in [a,b].
+\]
+V‰lin $[a,b]$ yleist‰ 
+\index{jako (osav‰leihin)}%
+\kor{jakoa} merkit‰‰n jatkossa symbolilla $\X$. Kuten edellisess‰ luvussa,
+jako tarkoittaa ‰‰rellist‰ j‰rjestetty‰ joukkoa $\X=\{x_0,x_1,\ldots,x_n\}$, miss‰ 
+$n\in\N$ ja
+\[
+a=x_0<x_1<\ldots <x_n=b.
+\]
+Jaon $\X$ keskeisin parametri on
+\index{tiheysparametri}%
+\kor{tiheysparametri}, joka m‰‰ritell‰‰n
+\[
+h_{\X}=\max_{k=1\ldots n} (x_k-x_{k-1}).
+\]
+Jakoon $\X$ liittyen otetaan viel‰ k‰yttˆˆn 
+\index{vzy@v‰lipiste(istˆ)}%
+\kor{v‰lipisteistˆ} $\Xi_\X=\{\xi_1,\ldots,\xi_n\}$,
+miss‰ $\xi_k\in [x_{k-1},x_k]$, $k=1\ldots n$ (muuten $\Xi_\X$ on vapaasti valittavissa).
+
+Em. merkinnˆin liitet‰‰n jokaiseen pariin $(\X,\Xi_\X)$ reaaliluku $\sigma(f,\X,\Xi_\X)$, joka
+m‰‰ritell‰‰n
+\[
+\sigma(f,\X,\Xi_\X)=\sum_{k=1}^n f(\xi_k)(x_k-x_{k-1}).
+\]
+Edellisen luvun tapaan k‰ytet‰‰n raja-arvomerkint‰‰ $\Lim_{h_\X\kohti 0} \sigma(f,\X,\Xi_\X)=A$
+kuvaamaan sellaista tilannetta, jossa summa l‰hestyy aina samaa raja-arvoa $A$ ($A\in\R$), kun
+$h_\X\kohti 0$. Kuten funktion raja-arvo, myˆs raja-arvo 'Lim' voidaan m‰‰ritell‰
+kahdella tavalla, joko lukujonojen avulla tai '$(\eps,\delta)$-m‰‰ritelm‰n‰', vrt.\
+M‰‰ritelm‰ \ref{funktion raja-arvon m‰‰ritelm‰} ja Lause \ref{approksimaatiolause}.
+J‰lkimm‰inen m‰‰rittelytapa muotoiltakoon j‰lleen lauseena. (Todistus sivuutetaan, vrt.\
+Lauseen \ref{approksimaatiolause} todistus.)
+\begin{Def} \label{raja-arvo Lim} \index{raja-arvo!f@m‰‰r‰tyn integraalin|emph}
+$\ \Lim_{h_\X\kohti 0} \sigma(f,\X,\Xi_\X)=A \in\R,\ $
+jos jokaiselle jonolle $\seq{\sigma(f,\X_n,\Xi_{\X_n})}$, jolle p‰tee $h_{\X_n} \kohti 0$,
+on voimassa $\,\lim_{n\kohti\infty} \sigma(f,\X_n,\Xi_{\X_n}) = A$.
+\end{Def}
+\begin{*Lause} \label{Lim-kriteeri} \vahv{(Lim: $(\eps,\delta)$-kriteeri)} 
+$\ \Lim_{h_\X\kohti 0} \sigma(f,\X,\Xi_\X)=A\ $
+t‰sm‰lleen kun jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett‰ jokaiselle parille
+$(\X,\Xi_\X)$, jolle $h_\X<\delta$, p‰tee
+\[
+\abs{\sigma(f,\X,\Xi_\X)-A}<\eps.
+\]
+\end{*Lause}
+M‰‰ritelm‰n \ref{raja-arvo Lim} mukaisesti raja-arvo 'Lim' tarkoittaa kaikista mahdollisista
+summista $\sigma(f,\X,\Xi)$ poimittujen, ehdon $h_{\X_n} \kohti 0$ t‰ytt‰vien (ei muita ehtoja!)
+\pain{luku}j\pain{ono}j\pain{en} $\seq{\sigma(f,\X_n,\Xi_{\X_n})}$ y\pain{hteist‰}
+\pain{ra}j\pain{a-arvoa}. Sik‰li kuin t‰llainen yhteinen raja-arvo on olemassa, M‰‰ritelm‰
+\ref{raja-arvo Lim} tarjoaa myˆs algoritmin sen laskemiseksi: Valitaan mik‰ tahansa jono
+tihenevi‰ (esim.\ tasav‰lisi‰) jakoja $X_n$, liitet‰‰n kuhunkin $\X_n$ jokin v‰lipisteistˆ 
+$\Xi_n$ (esim.\ osav‰lien keskipisteet tai toinen p‰‰tepisteist‰) ja lasketaan
+$A=\lim_{n}\sigma(f,\X_n,\Xi_{\X_n})=\lim_n A_n$.
+% T‰ss‰ $A_n$ on laskettavissa jokaisella
+%$n\in\N$  ($n$ funktioevaluaatiota ja summaus!), joten kyseess‰ on toimiva algoritmi.
+
+Edellisess‰ luvussa todettiin, ett‰ jos $f$:ll‰ on v‰lill‰ $(a,b)$ integraalifunktio $F$, ja $F$
+on lis‰ksi jatkuva v‰lill‰ $[a,b]$, niin jokaisella $\X$ on olemassa v‰lipisteistˆ $\Xi_\X$
+siten, ett‰ p‰tee
+\[
+\sigma(f,\X,\Xi_\X)=F(b)-F(a)=\sijoitus{a}{b} F(x)=\int_a^b f(x)\, dx.
+\]
+Edelleen n‰ytettiin, ett‰ sik‰li kuin m‰‰r‰tty integraali $\int_a^b f(x)\,dx$ m‰‰ritell‰‰n t‰ll‰
+tavoin (mainituin
+oletuksin) ja lis‰ksi oletetaan, ett‰ $f$ on Lipschitz-jatkuva v‰lill‰ $[a,b]$, niin sek‰
+jokaiselle jaolle $X$ ett‰ jokaiselle v‰lipisteistˆlle $\Xi_\X$ p‰tee
+(Lause \ref{summakaavalause})
+\[
+\sigma(f,\X,\Xi_\X)=\int_a^b f(x)\, dx + \ordoO{h_\X}.
+\]
+M‰‰ritelm‰n \ref{raja-arvo Lim} (tai Lauseen \ref{Lim-kriteeri}) perusteella todetaan, ett‰
+mainituilla (melko voimakkailla) oletuksilla p‰tee
+\[
+\Lim_{h_\X\kohti 0} \sigma(f,\X,\Xi_\X)=\int_a^b f(x)\,dx.
+\]
+Yleisemmin, jos $f$ mahdollisesti ei t‰yt‰ mainittuja ehtoja, niin tehd‰‰n t‰st‰ laskukaavasta
+integraalifunktiosta riippumaton \pain{m‰‰r‰t}y\pain{n} \pain{inte}g\pain{raalin}
+\pain{m‰‰ritelm‰}. 
+\begin{Def} \label{Riemannin integraali} \index{Riemannin!a@integraali|emph}
+\index{Riemann-integroituvuus|emph} \vahv{(Riemannin\footnote[2]{Saksalainen matemaatikko 
+\hist{Georg Friedrich Bernhard Riemann} (1826-1866) on 1800-luvun (ja kaikkienkin aikojen)
+matematiikan suuria nimi‰. Riemann oli 'puhdas matemaatikko' selvemmin kuin edelt‰j‰ns‰,
+joista huomattavimmatkin (esim.\ Euler, Lagrange, Cauchy, Gauss) tutkivat matematiikan ohella
+fysiikkaa tai muita matematiikan sovelluksia. Riemannin tyˆt koskivat integraalien lis‰ksi mm.\
+kompleksifunktioiden teoriaa (\kor{Riemannin pinnat}), alkulukujen jakautumista, ja geometrian
+matemaattisia  perusteita. Monet Riemannin tuloksista olivat uraa uurtavia ja n‰yttiv‰t suuntaa
+myˆhemm‰lle matematiikan tutkimukselle, joka 1800-luvulta l‰htien erkaantui yh‰ selvemmin 
+fysiikasta. \index{Riemann, G. F. B.|av}} integraali)} Olkoon $f$ m‰‰ritelty ja rajoitettu
+v‰lill‰ $[a,b]$. Jos
+\[
+\Lim_{h_\X\kohti 0} \sigma(f,\X,\Xi_\X)=A\quad (A \in \R),
+\]
+niin sanotaan, ett‰ $f$ on \kor{Riemann-integroituva} (tai integroituva Riemannin mieless‰)
+v‰lill‰ $[a,b]$. Lukua $A$ sanotaan $f$:n \kor{Riemannin integraaliksi} (Riemann-integraaliksi)
+v‰lill‰ $[a,b]$ ja merkit‰‰n
+\[
+A=\int_a^b f(x)\, dx.
+\]
+\end{Def}
+M‰‰ritelm‰‰n liittyen sanotaan summia
+\index{Riemannin!b@summa}%
+$\sigma(f,\X,\Xi_\X)$ \kor{Riemannin summiksi}. Jatkossa
+sanotaan yksinkertaisesti, ett‰ $f$ on \kor{integroituva} v‰lill‰ $[a,b]$, jos $f$ on sek‰
+m‰‰ritelty, rajoitettu ett‰ Riemann-integroituva ko.\ v‰lill‰ .
+\begin{Exa} \label{Riemann-ex1}
+Olkoon $c\in\R$ ja m‰‰ritell‰‰n
+\[
+f(x)=\begin{cases}
+0, &\text{ kun } x<1/2 \\
+c, &\text{ kun } x=1/2 \\
+1, &\text{ kun } x>1/2
+\end{cases}
+\]
+Tutki $f$:n integroituvuutta v‰lill‰ $[0,1]$.
+\end{Exa}
+\ratk Jos $\X=\{x_0,\ldots ,x_n\}$, $n \ge 2$, on v‰lin $[0,1]$ jako, niin jollakin $j\in\N$
+on $x_{j-1}<1/2<x_{j+1}$. T‰llˆin on $f(\xi_k)=0$ kun $k\leq j-1$ ja $f(\xi_k)=1$ kun 
+$k\geq j+2$, joten
+\begin{align*}
+\sigma(f,\X,\Xi_\X) &= \sum_{k=j}^{j+1}f(\xi_k)(x_k-x_{k-1})+\sum_{k=j+2}^n (x_k-x_{k-1}) \\
+&=f(\xi_j)(x_j-x_{j-1})+f(\xi_{j+1})(x_{j+1}-x_j)+(1-x_{j+1}).
+\end{align*}
+Kun $h_\X \kohti 0$, niin $1-x_{j+1} \kohti 1/2$, koska $\,0<x_{j+1}-1/2<x_{j+1}-x_{j-1}<2h_\X$,
+ja kolmioep‰yht‰lˆn nojalla
+\begin{align*}
+\abs{f(\xi_j)(x_j-x_{j-1})+f(\xi_{j+1})(x_{j+1}-x_j)} 
+                     &\le \max \{\abs{c},1\}(x_{j+1}-x_{j-1}) \\
+                     &\le 2\max \{\abs{c},1\} h_\X \kohti 0.
+\end{align*}
+Siis $f$ on integroituva v‰lill‰ $[0,1]$ ja $\D\int_0^1 f(x)\, dx=\frac{1}{2}\,$. \loppu
+
+\begin{Exa} \label{Riemann-ex2}
+Dirichlet'n funktio
+\[
+f(x)=\begin{cases}
+1, &\text{jos}\ x\in\Q \\
+0, &\text{muulloin}
+\end{cases}
+\]
+ei ole integroituva v‰lill‰ $[0,1]$, sill‰ jos valitaan $\Xi_\X\subset\Q$, niin 
+$\sigma(f,\X,\Xi_\X)=1$ ja jos valitaan $\Xi_\X\cap\Q=\emptyset$, niin $\sigma(f,\X,\Xi_\X)=0$,
+olipa $\X$ mik‰ hyv‰ns‰. \loppu
+\end{Exa}
+Esimerkeist‰ n‰hd‰‰n, ett‰ kaikki integroituvat funktiot eiv‰t ole jatkuvia eiv‰tk‰ kaikki
+rajoitetut funktiot ole integroituvia. Esimerkiss‰ \ref{Riemann-ex1} integraalin arvo ei riipu
+funktion arvosta ep‰jatkuvuuspisteess‰. --- Yleisemminkin p‰tee, ett‰ jos $f$ on v‰lill‰ $[a,b]$
+integroituva, niin integraalin arvo ei muutu, jos $f$ m‰‰ritell‰‰n uudelleen ‰‰rellisen monessa
+pisteess‰ (tai jopa suppenevassa jonossa pisteit‰, ks.\ 
+Harj.teht.\,\ref{H-int-5: funktion poikkeutus}). Integraali on siis 'tunnoton' funktion
+yksitt‰isille pistearvoille samaan tapaan kuin funktion raja-arvo.
+
+N‰ytet‰‰n nyt, ett‰ edellisess‰ luvussa todetut m‰‰r‰tyn integraalin keskeiset ominaisuudet,
+eli additiivisuus integroimisv‰lin suhteen, lineaarisuus integroitavan funktion suhteen ja
+integraalien vertialuperiaate, pysyv‰t voimassa myˆs M‰‰ritelm‰n \ref{Riemannin integraali}
+mukaisille integraaleille.
+\begin{Lause} \label{integraalin additiivisuus} \index{additiivisuus!a@integraalin}
+\vahv{(Integraalin additiivisuus)} Jos $f$ on integroituva v‰leill‰ $[a,b]$ ja $[b,c]$
+$(a<b<c)$, niin $f$ on integroituva v‰lill‰ $[a,c]$, ja
+\[
+\int_a^c f(x)\, dx=\int_a^b f(x)\, dx+\int_b^c f(x)\, dx.
+\]
+\end{Lause}
+\tod Tarkastellaan Riemannin summia $\sigma(f,\X,\Xi_\X)$ v‰lill‰ $[a,c]$. Oletetaan aluksi,
+ett‰ $b\in\X$, ja jaetaan summa kahteen osaan:
+\begin{align*}
+\sigma(f,\X,\Xi_\X) &= \sum_{k:\,x_k\leq b} f(\xi_k)(x_k-x_{k-1}) 
+                         + \sum_{k:\,x_k> b} f(\xi_k)(x_k-x_{k-1}).
+\end{align*}
+M‰‰ritelmien \ref{Riemannin integraali} ja \ref{raja-arvo Lim} mukaan
+\begin{align*}
+\sum_{k:\,x_k\leq b} f(\xi_k)(x_k-x_{k-1}) 
+                &\kohti \int_a^b f(x)\, dx, \quad \text{kun}\ h_\X \kohti 0, \\
+\sum_{k:\,x_k> b} f(\xi_k)(x_k-x_{k-1})    
+                &\kohti \int_b^c f(x)\, dx, \quad \text{kun}\ h_\X \kohti 0,
+\end{align*}
+koska $f$ oli integroituva v‰leill‰ $[a,b]$ ja $[b,c]$. P‰‰tell‰‰n siis, ett‰ rajoituksen 
+$b\in\X$ ollessa voimassa p‰tee
+\[
+h_\X\kohti 0 \ \impl \ \sigma(f,\X,\Xi_\X)\kohti\int_a^b f(x)\, dx+\int_b^c f(x)\, dx.
+\]
+Tarkastellaan seuraavaksi Riemannin summaa $\sigma(f,\X,\Xi_\X)$, miss‰ $\X=\{x_k\}$ ja 
+$x_{m-1}<b<x_m$ jollakin $m$ (jolloin $b\not\in\X$). Verrataan t‰t‰ summaan 
+$\sigma(f,\X',\Xi_{\X'})$, miss‰ $\X'$ on saatu $\X$:st‰ lis‰‰m‰ll‰ vain jakopiste $b$ ja
+$\Xi_{\X'}$ on valittu siten, ett‰ v‰lipisteet $\xi_k\in \Xi_{\X}$ ja $\xi_l'\in\Xi_{\X'}$ ovat
+samat jaoille yhteisill‰ osav‰leill‰, eli jos $[x_{k-1},x_k]=[x_{l-1}',x_l']$. T‰llˆin on
+$x_{m-1}'=x_{m-1}$, $x_m'=b$ ja $x_{m+1}'=x_m$, joten
+\begin{align*}
+\sigma(f,\X,\Xi_\X)&-\sigma(f,\X',\Xi_{\X'}) \\[1mm]
+                   &=f(\xi_m)(x_m-x_{m-1})-f(\xi_m')(b-x_m)-f(\xi_{m+1}')(x_{m+1}-b).
+\end{align*}
+Jos $\abs{f(x)}\leq M \ \forall x\in [a,c]$, niin kolmioep‰yht‰lˆ‰ k‰ytt‰en p‰‰tell‰‰n
+\begin{align*}
+|\sigma(f,\X,\Xi_\X)-\sigma(f,\X',\Xi_{\X'})|
+         &\,\le\, 2M(x_m-x_{m-1}) \\[1mm]
+         &\,\le\, 2Mh_\X \kohti 0,\quad \text{kun}\ h_X \kohti 0.
+\end{align*}
+Summalla $\sigma(f,\X,\Xi_\X)$ on siis sama raja-arvo riippumatta siit‰, onko $b\in\X$ tosi vai
+ei. \loppu
+
+Kun k‰ytet‰‰n edellisess‰ luvussa sovittua integroimisrajojen vaihtos‰‰ntˆ‰
+\[
+\int_b^a f(x)\, dx=-\int_a^b f(x)\, dx,
+\]
+niin n‰hd‰‰n, ett‰ Lauseen \ref{integraalin additiivisuus} v‰itt‰m‰ on tosi lukujen $a,b,c$
+suuruussuhteista rippumatta, kunhan $f$ on integroituva v‰leill‰ $[\min\{a,b\},\max\{a,b\}]$ ja
+$[\min\{b,c\},\max\{b,c\}]$.
+\begin{Lause} \label{integraalin lineaarisuus} \index{lineaarisuus!b@integroinnin|emph}
+\vahv{(Integraalin lineaarisuus)} Jos $f$ ja $g$ ovat integroituvia v‰lill‰ $[a,b]$, niin
+$\alpha f+\beta g$ on integroituva v‰lill‰ $[a,b]$ jokaisella $\alpha,\beta\in\R$ ja
+\[
+\int_a^b [\alpha f(x)+\beta g(x)]\,dx = \alpha\int_a^b f(x)\, dx + \beta\int_a^b g(x)\,dx.
+\]
+\end{Lause}
+\tod Jos $\seq{X_n}$ ja $\seq{\Xi_n}$ ovat jako- ja v‰lipisteistˆt v‰lill‰ $[a,b]$, niin
+vastaaville Riemannin summille p‰tee
+\[
+\sigma(\alpha f+\beta g,X_n,\Xi_n)\,=\,\alpha\,\sigma(f,X_n,\Xi_n)+\beta\,\sigma(g,X_n,\Xi_n),
+                                       \quad \alpha,\beta\in\R.
+\]
+V‰itetty lineaarisuuss‰‰ntˆ seuraa t‰st‰ M‰‰ritelm‰n \ref{Riemannin integraali} ja lukujonojen
+raja-arvojen yhdistelys‰‰ntˆjen (Lause \ref{raja-arvojen yhdistelys‰‰nnˆt}) nojalla, kun
+oletetaan $\lim_nh_{X_n}=0$. \loppu
+\begin{Lause} \label{integraalien vertailuperiaate} \index{vertailuperiaate!a@integraalien|emph}
+\vahv{(Integraalien vertailuperiaate)} Jos $f$ ja $g$ ovat integroituvia v‰lill‰ $[a,b]$,
+niin p‰tee
+\[
+f(x)\leq g(x)\quad\forall x\in [a,b] \ \impl \ \int_a^b f(x)\, dx\leq\int_a^b g(x)\, dx.
+\]
+\end{Lause}
+\tod Myˆs t‰m‰ v‰itt‰m‰ palautuu lukujonojen teoriaan: Vertailuperiaate on ilmeisen p‰tev‰
+Riemannin summille $\,\sigma(f,X_n,\Xi_n)\,$ ja $\,\sigma(g,X_n,\Xi_n)$, joten se p‰tee myˆs
+raja-arvoille (Propositio \ref{jonotuloksia}\,[V1]). \loppu 
+
+ 
+\subsection*{*Riemannin yl‰- ja alaintegraalit}
+
+M‰‰ritelm‰ \ref{Riemannin integraali} Riemann-integroituvuudelle on sik‰li konkreettiinen, ett‰
+se antaa suoraan myˆs integraalin numeeriseen laskemiseen soveltuvan algoritmin. Seuraavassa
+l‰hestyt‰‰n Riemannin integraalia toisella, hieman abstraktimmalla tavalla, mik‰
+johtaa vaihtoehtoiseen Riemann-integroituvuuden kriteeriin (Lause \ref{Riemann-integroituvuus}).
+Jatkossa t‰m‰ kriteeri osoittautuu k‰tev‰ksi erilaisissa teoreettisissa tarkasteluissa
+(ks.\ myˆs Harj.teht.\,\ref{H-int-5: tasav‰linen jako}--\ref{H-int-5: itseisarvon ja tulon
+integroituvuus}).
+
+Olkoon $f$ v‰lill‰ $[a,b]$ m‰‰ritelty ja rajoitettu funktio ja $\X = \{x_k,\ k = 0 \ldots n\}$
+v‰lin $[a,b]$ jako. Koska $f$ on rajoitettu, niin joukot 
+$Y_k = \{f(x) \mid x \in [x_{k-1},x_k]\}$ ovat rajoitettuja. Siis on olemassa luvut 
+(vrt.\ Luku \ref{reaalilukujen ominaisuuksia})
+\[ 
+\overline{f}_k = \sup Y_k, \quad \underline{f}_k = \inf Y_k, \quad k = 1 \ldots n.  
+\]
+Funktion $f$ jakoon $\X$ liittyviksi
+\index{Riemannin!c@yl‰- ja alasumma}%
+\kor{Riemannin yl‰- ja alasummiksi} sanotaan summia
+\begin{align*}
+\overline{\sigma}(f,\X)\ 
+          &=\ \sum_{k=1}^n \overline{f}_k (x_k-x_{k-1}) \quad\ \text{(yl‰summa)}, \\
+\underline{\sigma}(f,\X)\ 
+          &=\ \sum_{k=1}^n \underline{f}_k (x_k-x_{k-1}) \quad\ \text{(alasumma)}. 
+\end{align*}
+Huomattakoon, ett‰ jos $f$ on jatkuva v‰lill‰ $[a,b]$, niin $f$ saavuttaa maksimi- ja 
+minimiarvonsa jokaisella osav‰lill‰ $[x_{k-1},x_k]\subset[a,b]$ 
+(Lause \ref{Weierstrassin peruslause}), jolloin $\overline{f}_k=f(\xi_k)$ ja 
+$\underline{f}_k=f(\eta_k)$ joillakin $\xi_k,\eta_k\in[x_{k-1},x_k]$. T‰ss‰ tapauksessa siis
+Riemannin yl‰- ja alasummat ovat Riemannin summien erikoistapauksia.
+
+Olkoon nyt $\mathcal{X}$ v‰lin $[a,b]$ kaikkien mahdollisten jakojen $\X$ joukko. T‰llˆin
+reaalilukujoukot $\{\overline{\sigma}(f,\X) \mid \X \in \mathcal{X}\}$ ja 
+$\{\underline{\sigma}(f,\X) \mid \X \in \mathcal{X}\}$ ovat rajoitettuja, sill‰ jos
+$\abs{f(x)} \le M,\ x \in [a,b]$, niin $\abs{\overline{f}_k} \le M$ ja 
+$\abs{\underline{f}_k} \le M\ \ \forall k$, jolloin
+\[ 
+\abs{\overline{\sigma}(f,\X)},\ \abs{\underline{\sigma}(f,\X)}\ 
+                       \le\ M \sum_{k=1}^n (x_k-x_{k-1})\ =\ M(b-a). 
+\]
+Mainituilla lukujoukoilla on siis sek‰ supremum ett‰ infimum.
+\begin{Def} \label{yl‰- ja alaintegraali} \index{Riemannin!d@yl‰- ja alaintegraali|emph}
+Jos $f$ on m‰‰ritelty ja rajoitettu v‰lill‰ $[a,b]$ ja
+$\mathcal{X}$ on v‰lin $[a,b]$ kaikkien mahdollisten jakojen $\X$ joukko, niin funktion $f$ 
+\kor{Riemannin yl‰- ja alaintegraalit} v‰lill‰ $[a,b]$ m‰‰ritell‰‰n
+\begin{align*} \label{yl‰- ja alaintegraalit}
+\overline{\int_a^b} f(x)\,dx 
+       &= \inf_{\X \in \mathcal{X}} \overline{\sigma}(f,\X) \quad\ \text{(yl‰integraali)}, \\
+\underline{\int_a^b} f(x)\,dx 
+       &= \sup_{\X \in \mathcal{X}} \underline{\sigma}(f,\X) \quad\ \text{(alaintegraali)}.
+\end{align*}
+\end{Def}
+M‰‰ritelm‰n \ref{yl‰- ja alaintegraali} mukaisesti siis jokainen v‰lill‰ $[a,b]$ m‰‰ritelty ja
+rajoitettu funktio on ko.\ v‰lill‰ sek‰ 'yl‰integroituva' ett‰ 'alaintegroituva'.
+\begin{Exa} Jos $f(x)=1$, kun $x\in\Q$, ja $f(x)=0$ muulloin, niin
+\[ 
+\overline{\int_0^1} f(x)\, dx = 1, \quad \underline{\int_0^1} f(x)\,dx = 0. \loppu
+\]
+\end{Exa}
+Esimerkki johdattelee seuraavaan hyvin eleganttiin Riemann-integroituvuuden kriteeriin.
+Todistus esitet‰‰n luvun lopussa.
+\begin{*Lause} \label{Riemann-integroituvuus} \vahv{(Riemann-integroituvuus)} 
+\index{Riemann-integroituvuus|emph}
+V‰lill‰ $[a,b]$ m‰‰ritelty ja rajoitettu funktio $f$ on ko.\ v‰lill‰ Riemann-integroituva
+t‰sm‰lleen kun $f$:n yl‰- ja alaintegraalit ko.\ v‰lill‰ ovat samat, jolloin $f$:n Riemannin
+integraali $=$ yl‰- ja alaintegraalien yhteinen arvo. 
+\end{*Lause}
+
+Seuraavassa esitet‰‰n kaksi Riemannin yl‰- ja alasummia koskevaa v‰itt‰m‰‰, joilla on
+teoreettisissa tarkasteluissa k‰yttˆ‰ yhdess‰ Lauseen \ref{Riemann-integroituvuus} kanssa.
+Ensinn‰kin n‰ytet‰‰n, ett‰ jaon
+\index{tihennys (jaon)}%
+\kor{tihennyksess‰} yl‰summa pienenee tai pysyy samana ja
+vastaavasti alasumma suurenee tai pysyy samana.
+\begin{Lause} \label{jaon tihennys} Jos $X$ ja $X'$ ovat v‰lin $[a,b]$ jakoja ja $X' \supset X$ 
+(eli $X'$ on $X$:n tihennys), niin
+\[
+\underline{\sigma}(f,X) \le \underline{\sigma}(f,X') \le
+\overline{\sigma}(f,X') \le \overline{\sigma}(f,X).
+\]
+\end{Lause}
+\tod Tihennys voidaan ajatella suoritetuksi lis‰‰m‰ll‰ jakoon $X$ yksi piste kerrallaan,
+kunnes p‰‰dyt‰‰n jakoon $X'$. V‰itt‰m‰ on tosi, jos se on tosi jokaiselle t‰llaiselle
+osatihennykselle. Olkoon siis $X = \{x_k,\ k = 0 \ldots n\}$ ja olkoon $X'=X\cup\{x_k'\}$,
+miss‰ $x_k' \in (x_{k-1},x_k)$. T‰llˆin jos $\overline{f}_k$ ja $\underline{f}_k$ m‰‰ritell‰‰n
+kuten edell‰ (jakoon $X$ liittyen) ja merkit‰‰n
+\[
+\alpha_k = \sup_{x\in[x_{k-1},\,x_k']} f(x), \quad \beta_k = \sup_{x\in[x_k',\,x_k]} f(x),
+\]
+niin $\alpha_k \le \overline{f}_k$ ja $\beta_k \le \overline{f}_k$
+(vrt.\ Harj.teht.\,\ref{reaalilukujen ominaisuuksia}:\ref{H-I-11: sup ja inf}c), joten
+\[
+\alpha_k(x_k'-x_{k-1})+\beta_k(x_k-x_k')\,\le\,\overline{f}_k(x_k-x_{k-1}).
+\]
+Koska jaot ovat samat v‰lin $[x_{k-1},x_k]$ ulkopuolella, niin p‰‰tell‰‰n, ett‰ on oltava
+$\overline{\sigma}(f,X') \le \overline{\sigma}(f,X)$. Vastaavalla tavalla n‰ytet‰‰n, ett‰
+$\underline{\sigma}(f,X) \le \underline{\sigma}(f,X')$. Yl‰- ja alasummien m‰‰ritelm‰n 
+perusteella on myˆs $\underline{\sigma}(f,X') \le \overline{\sigma}(f,X')$, joten v‰ite 
+seuraa. \loppu
+
+Seuraava v‰itt‰m‰ konkretisoi yl‰- ja alaintegraalit lukujonojen avulla. V‰itt‰m‰ nojaa
+oleellisesti edelliseen.  
+\begin{*Lause} \label{yl‰- ja alaintegraalit raja-arvoina} Olkoon $f$ m‰‰ritelty ja rajoitettu
+v‰lill‰ $[a,b]$. T‰llˆin jokaiselle jonolle $\seq{X_n}$ v‰lin $[a,b]$ jakoja, jolle
+$h_{X_n} \kohti 0$, p‰tee
+\[
+\lim_n \overline{\sigma}(f,X_n)=\overline{\int_a^b} f(x)\,dx, \qquad
+\lim_n \underline{\sigma}(f,X_n)=\underline{\int_a^b} f(x)\,dx.
+\]
+\end{*Lause}
+\tod Olkoon $\seq{\X_n}$ oletusten mukainen jono ja olkoon $\eps>0$. Yl‰integraalin m‰‰ritelm‰n
+nojalla on olemassa v‰lin $[a,b]$ jako $X = \{x_k,\ k = 0 \ldots K\}$ siten, ett‰
+\[
+0\ \le\ \overline{\sigma}(f,X)-\overline{\int_a^b} f(x)\,dx\ <\ \frac{\eps}{2}\,.
+\]
+Merktit‰‰n $X_n'=X_n \cup X$, jolloin $X_n'$ on jakojen $X_n$ ja $X$ tihennys. 
+Tihennyksess‰ $X_n \ext X_n'$ jakautuvat jaon $X_n$ synnytt‰mist‰ osav‰leist‰ t‰sm‰lleen ne,
+joiden sis‰pisteen‰ on ainakin yksi joukon $X$ piste. T‰llaisia osav‰lej‰ on enint‰‰n $K-1$, 
+ja n‰ist‰ kunkin pituus on enint‰‰n $h_{X_n}$. Koska vain n‰m‰ osav‰lit vaikuttavat erotukseen
+$\overline{\sigma}(f,X_n)-\overline{\sigma}(f,X_n')$, niin merkitsem‰ll‰ mainittujen osav‰lien
+osuuksia summissa $\overline{\sigma}(f,X_n)$ ja $\overline{\sigma}(f,X_n')$ symboleilla
+$\overline{\sigma}_0(f,X_n)$ ja $\overline{\sigma}_0(f,X_n')$ ja olettaen, ett‰
+$|f(x)| \le M,\ x\in[a,b]$, voidaan Lauseen \ref{jaon tihennys} ja kolmioep‰yht‰lˆm perusteella
+arvioida
+\begin{align*}
+0\le\overline{\sigma}(f,X_n)-\overline{\sigma}(f,X_n')
+ &\,=\,\left|\overline{\sigma}_0(f,X_n)-\overline{\sigma}_0(f,X_n')\right| \\ 
+ &\,\le\,\left|\overline{\sigma}_0(f,X_n)\right|+\left|\overline{\sigma}_0(f,X_n')\right|
+  \,\le\, (K-1) \cdot 2M \cdot h_{X_n}\,.
+\end{align*}
+Toisaalta koska $X_n'$ on myˆs $X$:n tihennys, niin p‰tee (Lause \ref{jaon tihennys})
+\[
+\overline{\sigma}(f,X_n')\le\overline{\sigma}(f,X).
+\] 
+Yhdist‰m‰ll‰ ep‰yht‰lˆt seuraa
+\begin{align*}
+\overline{\int_a^b} f(x)\,dx\,
+                \le\,\overline{\sigma}(f,X_n)\,
+               &\le\,\overline{\sigma}(f,X_n')+2M(K-1)\,h_{X_n} \\[2mm]
+               &\le\,\overline{\sigma}(f,X)+2M(K-1)\,h_{X_n} \\
+               &<\,\overline{\int_a^b} f(x)\,dx +\frac{\eps}{2}+2M(K-1)\,h_{X_n}\,.
+\end{align*}
+Koska $h_{X_n} \kohti 0$ kun $n\kohti\infty$ ja koska $K$ on $n$:st‰ riippumaton, niin t‰ss‰ 
+on $\,2M(K-1\,h_{X_n}<\eps/2\,$ jostakin indeksist‰ $N$ eteenp‰in, jolloin seuraa
+\[
+\overline{\int_a^b} f(x)\,dx\,\le\,\overline{\sigma}(f,X_n)\,
+                                <\,\overline{\int_a^b} f(x)\,dx + \eps, \quad n>N.
+\]
+T‰ss‰ $\eps>0$ oli mielivaltainen ja $N\in\N$, joten lukujonon suppenemisen m‰‰ritelm‰n nojalla
+on todistettu v‰itt‰m‰n yl‰summia koskeva osa. Alasummia koskeva osav‰itt‰m‰ todistetaan 
+vastaavalla tavalla. \loppu
+
+Esimerkkin‰ Lauseiden \ref{Riemann-integroituvuus} ja \ref{yl‰- ja alaintegraalit raja-arvoina}
+soveltamisesta todistettakoon
+\begin{Lause} \label{integroituvuus osav‰lill‰} \vahv{(Integroituvuus osav‰lill‰)}
+Jos v‰lill‰ $[a,b]$ m‰‰ritelty ja rajoitettu funktio $f$ on ko.\ v‰lill‰  Riemann-integroituva,
+niin $f$ on Riemann-integroituva myˆs jokaisella osav‰lill‰ $[c,d]\subset[a,b]$.
+\end{Lause}
+\tod Olkoon $\seq{X_n}$ jono v‰lin jakoja siten, ett‰ $h_{X_n} \kohti 0$ ja
+$c,d \in X_n\ \forall n$. T‰llˆin $X_n$ sis‰lt‰‰ jokaisella $n$ v‰lin $[c,d]$ jaon $X_n'$,
+jolle $h_{X_n'} \le h_{X_n} \kohti 0$. Kun merkit‰‰n $X_n=$ $\{x_k,\ k=0 \ldots n\}$ ja
+$X_n'=\{x_k,\ k=l-1 \ldots m\}$, niin
+\begin{align*}
+\overline{\sigma}(f,X_n)-\underline{\sigma}(f,X_n)
+&\,=\, \sum_{k=1}^n (\overline{f}_k-\underline{f}_k)(x_k-x_{k-1})
+ \,\ge\, \sum_{k=l}^m (\overline{f}_k-\underline{f}_k)(x_k-x_{k-1}) \\
+&\,=\, \overline{\sigma}(f,X_n')-\underline{\sigma}(f,X_n') \,\ge\,0.
+\end{align*}
+Koska t‰ss‰ p‰tee oletusten ja Lauseiden \ref{Riemann-integroituvuus} ja 
+\ref{yl‰- ja alaintegraalit raja-arvoina} perusteella 
+\[
+\overline{\sigma}(f,X_n)-\underline{\sigma}(f,X_n) 
+\kohti \overline{\int_a^b} f(x)\,dx - \underline{\int_a^b} f(x)\,dx = 0,
+\]
+niin $\,\overline{\sigma}(f,X_n')-\underline{\sigma}(f,X_n') \kohti 0$ (Propositio
+\ref{jonotuloksia} [V2]). Koska myˆs $h_{X_n'} \kohti 0$, niin Lauseen
+\ref{yl‰- ja alaintegraalit raja-arvoina} perusteella $f$:n yl‰- ja alaintegraalit v‰lill‰ 
+$[c,d]$ ovat samat, eli $f$ on Riemann-integroituva ko.\ v‰lill‰
+(Lause \ref{Riemann-integroituvuus}). \loppu
+
+\vahv{Lauseen \ref{Riemann-integroituvuus} todistus}. \ \fbox{$\impl$} Oletetaan, ett‰ $f$ on
+Riemann-integroituva v‰lill‰ $[a,b]$ M‰‰ritelm‰n \ref{Riemannin integraali} mukaisesti. Olkoon
+$\seq{X_n}$ jono v‰lin $[a,b]$ jakoja, jolle $h_{X_n} \kohti 0$. Valitaan indeksi $n$ ja
+merkit‰‰n $X_n = \{x_k,\ k = 0 \ldots K\}$. Nyt voidaan jokaisella $k = 1 \ldots K$ valita
+$\xi_k,\xi_k'\in[x_{k-1},x_k]$ siten, ett‰ p‰tee
+\begin{align*}
+0\,&\le\,\overline{f}_k-f(\xi_k)\,<\,2^{-n}, \quad\ 
+                \overline{f}_k=\sup_{x\in[x_{k-1},\,x_k]} f(x), \\
+0\,&\le\,f(\xi_k')-\underline{f}_k\,<\,2^{-n}, \quad\ 
+                \underline{f}_k=\inf_{x\in[x_{k-1},\,x_k]} f(x).
+\end{align*}
+T‰llˆin
+\begin{align*}
+0\,&\le\,\overline{\sigma}(f,X_n)-\sigma(f,\Xi_n,X_n)\,
+                                <\,2^{-n}(b-a), \quad\ \Xi_n=\{\xi_k\}, \\
+0\,&\le\,\sigma(f,\Xi_n',X_n)-\underline{\sigma}(f,X_n)\,
+                                <\,2^{-n}(b-a), \quad\ \Xi_n'=\{\xi_k'\}.
+\end{align*}
+Koska t‰ss‰ $\sigma(f,\Xi_n,X_n) \kohti A\in\R$ ja $\sigma(f,\Xi_n',X_n) \kohti A$ oletuksen
+mukaan, niin seuraa, ett‰ myˆs $\overline{\sigma}(f,X_n) \kohti A$ ja 
+$\underline{\sigma}(f,X_n) \kohti A$. Lauseen \ref{yl‰- ja alaintegraalit raja-arvoina} mukaan
+$A$ on t‰llˆin $f$:n yl‰- ja alaintegraalien yhteinen arvo.
+
+\fbox{$\Leftarrow$} Oletetetaan, ett‰ $f$:n yl‰- ja alaintegraaleilla v‰lill‰ $[a,b]$ on
+yhteinen arvo $A$. T‰llˆin jos $\seq{X_n}$ on jono v‰lin $[a,b]$ jakoja ja $h_{X_n} \kohti 0$,
+niin Lauseen \ref{yl‰- ja alaintegraalit raja-arvoina} perusteella 
+$\overline{\sigma}(f,X_n) \kohti A$ ja $\underline{\sigma}(f,X_n) \kohti A$. T‰llˆin myˆs 
+$\sigma(f,\Xi_{\X_n},X_n) \kohti A\ \forall\,\Xi_{X_n}$, koska 
+$\underline{\sigma}(f,X_n)\le\sigma(f,\Xi_{X_n},X_n)\le\overline{\sigma}(f,X_n)$
+(Propositio \ref{jonotuloksia}\,[V2]). Siis $f$ on integroituva M‰‰ritelm‰n
+\ref{Riemannin integraali} mukaisesti. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+a) Olkoon $f(x)=x^2$, kun $x\in\Z$, ja $f(x)=0$, kun $x\in\R,\ x\not\in\Z$. N‰yt‰, ett‰ $f$ on
+integroituva jokaisella v‰lill‰ $[a,b]\subset\R$ ja ett‰ $\int_a^b f(x)\,dx=0$. \newline
+b) Olkoon $f(x)=1$, kun $x\in\{\,2^{-k},\ k=0,1,\ldots\,\}$ ja $f(x)=0$ muulloin. Laskemalla
+yl‰summat $\overline{\sigma}(f,X_n)$, miss‰ $X_n$ on v‰lin $[0,1]$ tasav‰linen jako $2^n$
+osav‰liin, n‰yt‰, ett‰ $\int_0^1 f(x)\,dx=0$.
+
+\item
+a) Todista: Jos $f$ on integroituva v‰lill‰ $[-a,a]$, niin p‰tee
+\begin{align*}
+&f\,\ \text{parillinen}   \qimpl \int_{-a}^a f(x)\,dx = 2\int_0^a f(x)\,dx, \\
+&f\,\ \text{pariton} \quad\qimpl \int_{-a}^a f(x)\,dx =0.
+\end{align*}
+b) Todista: Jos $f$ on $L$-jaksoinen ja interoituva v‰lill‰ $[0,L]$, niin $f$ on integroituva
+v‰lill‰ $[a,a+L]$ jokaisella $a\in\R$ ja
+\[
+\int_{a}^{a+L} f(x)\,dx=\int_0^L f(x)\,dx.
+\]
+
+\item \label{H-int-5: Riemann-1}
+Olkoon
+$\ \D f(x)= \begin{cases}
+            1/x, &\text{kun}\ x>0 \\ 0, &\text{kun}\ x=0
+\end{cases}$ \vspace{1mm}\newline
+a) Totea, ett‰ $f$ on m‰‰ritelty v‰lill‰ $[0,1]$ mutta ei rajoitettu. \newline
+b) N‰yt‰, ett‰ $f$ ei ole Riemann-integroituva v‰lill‰ $[0,1]$ konstruoimalla jono Riemannin
+summia, jolle p‰tee $\,h_{\X_n} \kohti 0\,$ ja $\,\sigma(\X_n,\Xi_{X_n}) \kohti \infty$.
+
+\item
+N‰yt‰, ett‰ jos $f$ on integroituva jokaisella v‰lill‰ $[a,b]\subset\R$ ja integraali jokaisen
+v‰lin yli $=0$, niin $f(x)=0$ jokaisessa pisteess‰, jossa $f$ on joko vasemmalta tai oikealta
+jatkuva.
+
+\item %\label{H-int-5: v‰itt‰mi‰}
+N‰yt‰ Proposition \ref{jaon tihennys} avulla, ett‰ mik‰‰n Riemannin alasumma ei voi olla
+suurempi kuin yl‰summa, ts.\ kaikille v‰lin $[a,b]$ jaoille $\X,\X'$ p‰tee
+$\underline{\sigma}(f,\X)\le\overline{\sigma}(f,\X')$.
+%b) Todista Korollaari \ref{integroituvuuskorollaari}. 
+
+\item (*) \label{H-int-5: tasav‰linen jako}
+N‰yt‰, ett‰ M‰‰ritelm‰ \ref{Riemannin integraali} ei muutu, jos v‰lin $[a,b]$ jaot $X_n$
+raja-arvossa 'Lim' (M‰‰ritelm‰ \ref{raja-arvo Lim}) rajoitetaan tasav‰lisiksi. Voidaanko myˆs
+v‰lipisteistˆjen $\Xi_{\X_n}$ valintaa rajoittaa (esim.\ $\Xi_{\X_n}\subset\X_n$)
+Riemann-integroituvuuden m‰‰ritelm‰n muuttumatta?
+
+\item (*) \label{H-int-5: Riemann-2}
+N‰yt‰, ett‰ jos $f$ on m‰‰ritelty v‰lill‰ $[a,b]$ mutta ei ole rajoitettu, niin on olemassa
+jono Riemannin summia, jolle p‰tee $h_{\X_n} \kohti 0$ ja
+$\left|\sigma(\X_n,\Xi_{X_n})\right| \kohti \infty$ (vrt.\ Harj.teht. \ref{H-int-5: Riemann-1}).
+--- Mik‰ M‰‰ritelm‰n \ref{Riemannin integraali} oletus on siis tarpeeton?
+
+\item (*) \label{H-int-5: funktion poikkeutus}
+Olkoon $X$ suppenevan reaalilukujonon termeist‰ muodostettu (‰‰rellinen tai numeroituva) joukko,
+olkoon $f$ m‰‰ritelty ja rajoitettu v‰lill‰ $[a,b]$ ja olkoon $g$ m‰‰ritelty v‰lill‰ $[a,b]$
+siten, ett‰ $g(x)=f(x)$, kun $x \not\in X$. Joukosta $\{g(x) \mid x\in X\cap[a,b]\}\subset\R$ 
+tiedet‰‰n ainoastaan, ett‰ se on rajoitettu. N‰yt‰, ett‰ jos $f$ on v‰lill‰ $[a,b]$ 
+Riemann-integroituva, niin samoin on $g$ ja $\int_a^b g(x)\,dx=\int_a^b f(x)\,dx$.
+
+\item (*) \label{H-int-5: monotonisuus ja integroituvuus}
+a) Olkoon $f$ m‰‰ritelty ja rajoitettu v‰lill‰ $[a,b]$ ja $\mathcal{X}$ v‰lin $[a,b]$ jakojen
+joukko. Liitet‰‰n jokaiseen $\X = \{x_k,\ k = 0 \ldots n\} \in \mathcal{X}$ luku
+\[
+\delta(f,\X)=\sum_{k=1}^n (\overline{f}_k-\underline{f}_k),
+\]
+miss‰ $\overline{f}_k$ ja $\underline{f}_k$ ovat $f$:n supremum ja infimum osav‰lill‰ 
+$[x_{k-1},x_k]$. N‰yt‰, ett‰ jos joukko $\{\delta(f,\X)\,|\,\X \in \mathcal{X}\}$ on 
+rajoitettu, niin $f$ on Riemann-integroituva v‰lill‰ $[a,b]$. \vspace{1mm}\newline
+b) N‰yt‰  ett‰ jos $f$ on m‰‰ritelty ja monotoninen (kasvava tai v‰henev‰) v‰lill‰ $[a,b]$, niin
+$f$ on Riemann-integroituva v‰lill‰ $[a,b]$.
+
+\item (*) \label{H-int-5: itseisarvon ja tulon integroituvuus}
+a) N‰yt‰, ett‰ jos $f$ on m‰‰ritelty, rajoitettu ja Riemann-integroituva v‰lill‰ $[a,b]$, niin
+myˆs seuraavat funktiot ovat Riemann-integroituvia v‰lill‰ $[a,b]$:
+\[
+f_+(x)=\max\{f(x),0\}, \quad f_-(x)=\min\{f(x),0\}.
+\]
+b) N‰yt‰, ett‰ seuraavista v‰itt‰mist‰ ensimm‰inen on tosi, toinen ep‰tosi:
+\begin{align*}
+f\ \ \text{Riemann-integroituva}       &\qimpl \abs{f}\,\ \text{Riemann-integroituva}, \\
+\abs{f}\,\ \text{Riemann-integroituva} &\qimpl \,f\,\ \ \text{Riemann-integroituva}.
+\end{align*}
+c) N‰yt‰, ett‰ jos $f$ ja $g$ ovat v‰lill‰ $[a,b]$ m‰‰riteltyj‰, rajoitettuja ja
+Riemann-integroituvia, niin samoin on tulo $fg$. \kor{Vihje}: Kirjoita $f=f_++f_-$,
+$g=g_++g_-$ (ks.\ a)-kohta).
+
+\end{enumerate}

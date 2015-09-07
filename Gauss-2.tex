@@ -1,0 +1,398 @@
+\section{Gaussin lause} \label{gaussin lause}
+\alku
+
+Lähdetään tarkastelemaan integraalikaavan
+\[
+\int_a^b f'(x)\,dx=f(b)-f(a)
+\]
+yleistämistä, ensin yhdessä dimensiossa. Olkoon $A\subset\R$ äärellinen yhdistelmä 
+pistevieraita, suljettuja välejä:
+\[
+A=\bigcup_{i=1}^n A_i,\quad A_i=[a_i,b_i],\quad A_i\cap A_j=\emptyset,\; i\neq j.
+\]
+Tällöin ym.\ kaava voidaan kirjoittaa muotoon
+\begin{align*}
+\int_A f'\,dx &= \sum_{i=1}^n [f(b_i)-f(a_i)] \\
+&= \sum_{x\in\partial A} \omega(x)f(x),
+\end{align*}
+missä $\partial A$ on $A$:n reuna (koostuu pisteistä $a_i$, $b_i$, $i=1\ldots n$) ja $w(x)$ saa
+arvoja $\pm 1$ seuraavan säännön mukaan:
+\[
+\omega(x)=\begin{cases} +1, &\text{jos } (x-\delta,x)\subset A\,\text{ jollakin } \delta>0, \\
+                        -1, &\text{jos } (x,x+\delta)\subset A\,\text{ jollakin } \delta>0.
+\end{cases}
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,1.5)
+\multiput(0,1)(6,0){2}{\line(1,0){4}} \multiput(2,1)(6,0){2}{\line(0,1){0.1}} 
+\multiput(1.9,1.2)(6,0){2}{$x$}
+\multiput(0,0)(7.5,0){2}{\multiput(0.5,0.9)(0.2,0){7}{\line(1,1){0.2}}}
+\multiput(1,1.2)(7.5,0){2}{$A$}
+\put(1,0){$\omega(x)=+1$} \put(7,0){$\omega(x)=-1$}
+\end{picture}
+\end{center}
+\end{figure}
+Siirrytään nyt kahteen dimensioon. Olkoon $f=f(x,y)$ määritelty ja jatkuvasti derivoituva 
+joukossa $A\subset\R^2$ (josta tehdään hetimiten yksinkertaistavia olettamuksia) ja 
+tarkastellaan integraalia
+\[
+\int_A \frac{\partial f}{\partial x}\,dxdy.
+\]
+Jatkossa oletetaan, että joukko $A$ on suljettu ja jaettavissa äärellisen moneen yksinkertaista
+muotoa olevaan osaan $A_i$ siten, että osat koskettavat toisiaan enintään reunoillaan, ts.
+\[
+A=\bigcup_{i=1}^n A_i,\quad A_i\cap A_j=\partial A_i\cap \partial A_j, \; i\neq j.
+\]
+Osat $A_i$ oletetaan edelleen kaikki $y$-projisoituviksi. Tarkemmin sanoen, oletetaan, että
+jokainen $A_i$ on muotoa
+\[
+A_i=\{\,(x,y)\in\R^2 \ | \ a_i(y)\leq x\leq b_i(y) \; \ja \; y\in [c_i,d_i]\,\},
+\]
+missä funktiot $a_i(y)$, $b_i(y)$ ovat välillä $[c_i,d_i]$  jatkuvia.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-1.pstex_t}
+\end{center}
+\end{figure}
+Joukkoa $A$ koskeva oletus siis on, että $A$:n ositus ym. tavalla on mahdollinen. Ajatellen 
+sovelluksissa kohdattavia 'käytännön joukkoja' ei oletus ole kovin rajoittava, vrt.\ kuvio.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-2.pstex_t}
+\end{center}
+\end{figure}
+Kun $A$:n ositus em. tavalla on tehty, voidaan tarkastelun kohteena oleva integraali purkaa
+osiin additiivisuusperiaatteella (sillä $\mu(A_i\cap A_j)=0$, $i\neq j$)\,:
+\[
+\int_A \frac{\partial f}{\partial x}\,dxdy
+           =\sum_{i=1}^n \int_{A_i}\frac{\partial f}{\partial x}\,dxdy.
+\]
+Tässä on Fubinin lauseen mukaan
+\begin{align*}
+\int_{A_i} \frac{\partial f}{\partial x}\,dxdy 
+&= \int_{c_i}^{d_i}\left(\int_{a_i(y)}^{b_i(y)}\frac{\partial f}{\partial x}\,dx\right)dy \\
+&=\int_{c_i}^{d_i} [f(b_i(y),y)-f(a_i(y),y)]\,dy = \int_{S_i} \omega_i(x,y)f(x,y)\,dy,
+\end{align*}
+missä $S_i\subset \partial A_i$ ja funktio $w_i$ määritellään kuten kuviossa.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-3.pstex_t}
+\end{center}
+\end{figure}
+Kun saatu tulos
+\[
+\int_{A_i} \frac{\partial f}{\partial x}\,dxdy=\int_{S_i}\omega_i(x,y)f(x,y)\,dy
+\]
+summataan yli $i$:n ja huomataan, että
+\[
+i\neq j \; \ja \; (x,y)\in S_i\cap S_j \; \impl \; \omega_i(x,y)+\omega_j(x,y)=0,
+\]
+niin nähdään, että oikealla puolella viivaintegraalit yli osajoukkojen $A_i$ yhteisten 
+(eli $A$:n sisään jäävien) reunaviivojen kuomoutuvat. Käyttäen kummallakin puolella integraalin 
+additiivisuusperiaatetta saadaan tulos näin ollen muotoon
+\[
+\int_A \frac{\partial f}{\partial x}\,dxdy=\int_{\partial A} \omega^{(x)}f\,dy,
+\]
+missä $\omega^{(x)}(x,y)=0\,$ $x$-akselin suuntaisilla reunaviivan $\partial A$ osilla ja muuten
+$\omega^{(x)}(x,y)$ saa arvoja $\pm 1$ kuvion mukaisesti.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-4.pstex_t}
+\end{center}
+\end{figure}
+Olettaen, että $A$ on jaettavissa samalla tavoin $x$-projisoituviin osiin, saadaan vastaavasti
+integraalikaava
+\[
+\int_A \frac{\partial f}{\partial y}\,dxdy=\int_{\partial A} \omega^{(y)}f\,dx,
+\]
+missä $\omega^{(y)}(x,y)=0\ $ $y$-akselin suuntaisilla reunaviivan $\partial A$ osilla ja muuten
+$\omega^{(y)}(x,y)$ saa arvoja $\pm 1$ kuvion mukaisesti.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-5.pstex_t}
+\end{center}
+\end{figure}
+Huomattakoon, että saaduissa integraalikaavoissa reunaviivan $\partial A$ yli laskettavat
+integraalit ovat p\pain{olkuinte}g\pain{raale}j\pain{a} (vrt. edellinen luku). Nämä purkautuvat
+äärellisiksi summiksi, joissa kukin termi on määrätty integraali yli suljetun välin, mitan
+ollessa tavallinen $\R$:n pituusmitta. Kaavoissa ei siis edellytetä edes reunaviivan
+$\partial A$ suoristuvuutta. Olettamalla reunaviivalle lisää säännöllisyyttä saadaan tulokset
+kuitenkin helpommin muistettavaan muotoon. 
+
+Em.\ ositukset jakavat reunaviivan $\partial A$ osiin, jotka ovat joko muotoa
+\[
+S_i=\{\,(x,y)\in\R^2 \ | \ x=f_i(y) \ \ja \ y\in [a_i,b_i]\,\}
+\]
+tai muotoa
+\[
+S_i=\{\,(x,y)\in\R^2 \ | \ y=g_i(x) \ \ja \ x\in [c_i,d_i]\,\}.
+\]
+Oletetaan tässä, että funktiot $f_i$ ovat jatkuvia suljetuilla väleillä $[a_i,b_i]$ ja että
+derivaatat $f'_i$ ovat jatkuvia avoimilla väleillä $(a_i,b_i)$. Vastaavasti oletetaan, että
+funktiot $g_i$ ovat jatkuvia suljetuilla väleillä $[c_i,d_i]$ ja derivaatat $g'_i$ jatkuvia
+avoimilla väleillä $(c_i,d_i)$. (Nämäkään lisäoletukset eivät ole käytännön kannalta kovin
+rajoittava, vrt.\ osituskuvio edellä.) Jatkossa sanottakoon joukkoa $A$, joka totetuttaa kaikki
+\index{perusalue}%
+tehdyt oletukset \kor{perusalueeksi}. Perusalue on siis joukko, joka on jaettavissa äärellisen
+moneen $x$-projisoituvaan osaan, samoin äärellisen moneen $y$-projisoituvaan osaan siten, että
+näiden osien reunaviivalla $\partial A$ sijaitsevat reunakäyrät toteuttavat tehdyt
+säännöllisyysoletukset. Perusalue on kompakti joukko
+(vrt.\ Luku \ref{usean muuttujan jatkuvuus}).
+ 
+Jos $A$ on perusalue, niin reunalla $\partial A$ on, erillisiä pisteitä lukuunottamatta, 
+\index{ulkonormaali}%
+määritelty reunan \kor{ulkonormaali}, eli reunaa vastaan kohtisuora, joukosta $A$ poispäin
+osoittava yksikkövektori, jota merkittäköön
+\[
+\vec n(x,y)=n_x(x,y)\vec i+n_y(x,y)\vec j,\quad \abs{\vec n}=1.
+\]
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-6.pstex_t}
+\end{center}
+\end{figure}
+Niissä pisteissä $(x_i,y_i)\in\partial A$, joissa ulkonormaali $\vec n$ on määritelty, on
+funktion $\omega^{(x)}$ määritelmän mukaisesti
+\[
+\omega^{(x)}(x,y) = \begin{cases} 
+                      +1,     &\text{jos } n_x(x,y)>0, \\ 
+                      \ \ 0,  &\text{jos}\ n_x(x,y)=0, \\
+                      -1,     &\text{jos } n_x(x,y)<0,
+                    \end{cases} 
+\]
+ja $\omega^{(y)}(x,y)$ määräytyy vastaavasti $n_y(x,y)$:n perusteella. Kun nämä yhteydet otetaan
+lukuun, niin voidaan kirjoittaa (vrt.\ kuvio),
+\[
+\omega^{(x)}dy=n_x\,ds,\quad \omega^{(y)}dx=n_y\,ds,
+\]
+\begin{multicols}{2} \raggedcolumns
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-7.pstex_t}
+\end{center}
+\end{figure}
+\begin{align*}
+\\
+\abs{n_x} &= \sin\theta=\frac{dy}{ds} \\
+\abs{n_y} &= \cos\theta=\frac{dx}{ds}
+\end{align*}
+\end{multicols}
+\index{Greenin kaavat}%
+jolloin saadaan helposti muistettavat \kor{Greenin tasokaavat}
+\[
+\boxed{\begin{aligned}
+\quad \int_A \frac{\ykehys\partial f}{\partial x}\,dxdy &= \int_{\partial A} n_xf\,ds, \\
+      \int_A \frac{\partial f}{\akehys\partial y}\,dxdy &= \int_{\partial A} n_yf\,ds.
+\end{aligned} \qquad \text{(Greenin tasokaavat)}\quad }
+\]
+Korostettakoon vielä, että näissä kaavoissa kaarenpituusmitta on otettu käyttöön vain
+muistisäännön vuoksi. Todellisuudessa integraalit kaavojen oikealla puolella ovat
+polkuintegraaleja.
+
+Tarkastellaan seuraavaksi $A$:ssa määriteltyä vektorikenttää
+\[
+\vec F(x,y)=F_1(x,y)\vec i+F_2(x,y)\vec j,
+\]
+joka olkoon jatkuvasti derivoituva. Soveltaen Greenin tasokaavoja saadaan
+\begin{align*}
+\int_A \nabla\cdot\vec F\,dxdy &= \int_A \frac{\partial F_1}{\partial x}\,dxdy
+                                 +\int_A \frac{\partial F_2}{\partial y}\,dxdy \\
+                               &= \int_{\partial A} (n_xF_1+n_yF_2)\,ds
+                                = \int_{\partial A} \vec n\cdot\vec F\, ds. 
+\end{align*}
+Näin on johdettu
+\begin{Lause} \vahv{(Gaussin lause tasossa}) \label{Gaussin lause tasossa}
+\index{Gaussin lause (kaava)|emph} Jos $A \subset \R^2$ on perusalue ja
+$\vec F$ on $A$:ssa määritelty, jatkuvasti derivoituva vektorikenttä, niin pätee
+\[
+\boxed{\kehys\quad \int_A \nabla\cdot\vec F\,dxdy=\int_{\partial A}\vec n\cdot\vec F\,ds. \quad }
+\]
+\end{Lause}
+
+Lauseen \ref{Gaussin lause tasossa} laskukaavalla, jota sanotaan jatkossa
+\kor{Gaussin tasokaavaksi}, on vastine myös kolmessa (ja useammassakin) dimensiossa. Olkoon
+$V\subset\R^3$ ja oletetaan, että $V$ on jaettavissa äärellisen moneen $xy$-projisoituvaan,
+$yz$-projisoituvaan, ja $xz$-projisoituvaan osaan samaan tapaan kuin edellä. Esimerkiksi
+$xy$-projisoituvat osat $V_i$ ovat tällöin muotoa
+\[ 
+V_i = \{\,(x,y,z) \in \R^3\ | \ (x,y) \in B_i\ \ja\ a_i(x,y) \le z \le b_i(x,y)\,\}. 
+\]
+Tässä joukot $B_i \subset \R^2$ oletetaan edelleen tason perusalueiksi, ja lisäksi oletetaan,
+että funktiot $a_i$ ja $b_i$ ovat $B_i$:ssa jatkuvia ja $B_i$:n sisäpisteissä jatkuvasti 
+derivoituvia (osittaisderivaatat jatkuvia). Joukkoa $V$, joka toteuttaa nämä ja vastaavat
+oletukset koskien $yz$- ja $xz$-projisoituvia osituksia, sanotaan $\R^3$:n perusalueeksi. Jos
+$V$ on nämä ehdot täyttävä, niin vastaavaan tapaan kuin tasossa nähdään oikeaksi
+integraalikaava
+\[
+\int_V \frac{\partial f}{\partial z}\,dxdydz = \int_{\partial V} \omega^{(z)} f\,dxdy,
+\]
+missä $\omega^{(z)}$ saa arvoja $0,\pm 1$ vastaavalla periaatteella kuin tasossa. Tässä
+voidaan kirjoittaa $dxdy=\abs{n_z}dS$, missä $n_z$ on $\partial V$:n yksikkönormaalivektorin
+$\,z$-komponentti ja $dS$ viittaa $\partial V$:n pinta-alamittaan 
+(vrt.\ Luku \ref{pintaintegraalit}). Kun huomioidaan myös $\omega^{(z)}$:n merkinvaihtelu,
+niin integraalikaavalle saadaan muoto
+\[
+\int_V \frac{\partial f}{\partial z}\,dxdydz = \int_{\partial V} n_z f\,dS,
+\]
+missä $\vec n$ on $\partial V$:n ulkonormaali (yksikkövektori). Tämä on yksi kolmesta
+\index{Greenin kaavat}%
+\kor{Greenin avaruuskaavasta} --- muut kaksi ovat ilmeisiä. Yhdistämällä nämä kaavat seuraa
+\begin{Lause} \vahv{(Gaussin lause avaruudessa)} \label{Gaussin lause avaruudessa}
+\index{Gaussin lause (kaava)|emph} Jos $V\subset\R^3$ on perusalue ja
+$\vec F$ on $V$:ssä määritelty, jatkuvasti derivoituva vektorikenttä, niin pätee
+\[
+\boxed{\quad \int_V \nabla\cdot\vec F\,dxdydz
+                    =\int_{\partial V} \vec n\cdot\vec F\,dS. \quad}
+\]
+\end{Lause}
+Myös tässä \kor{Gaussin avaruuskaavassa} pinnan $\partial A$ pinta-alamitta palvelee vain
+muistisääntönä. Todellisuudessa kaavan oikea puoli koostuu tasointegraaleista, kuten kaavan
+johdosta ilmenee.
+
+Gaussin avaruuskaavassa kirjoitetaan oikea puoli usein muotoon
+\[
+\int_{\partial A} \vec n\cdot\vec F\,dS = \int_{\partial A} \vec F \cdot d\vec a,
+\]
+missä $d\vec a=\vec n\,dS$ on 'vektoroitu' mitta. Vastaavasti voidaan tasokaavassa kirjoittaa
+\[
+\vec n\cdot\vec F\,ds=\vec F\cdot d\vec n,\quad d\vec n=\vec n\,ds.
+\]
+\begin{Exa} Olkoon $V = \{(x,y,z) \in \R^3 \mid x^2+y^2+z^2 \le R^2\}$ ja 
+$\vec F(x,y,z) = x\vec i + 2y\vec j + 3z\vec k$. Laske integraali 
+$\int_{\partial V} \vec n\cdot\vec F\,dS$ kahdella eri tavalla.
+\end{Exa}
+\ratk a) Pinnalla $\partial V$ on $\vec n = (x\vec i + y\vec j + z\vec k)/R$, joten
+pallonpintakoordinaattien avulla suoraan laskien saadaan
+\begin{align*}
+\int_{\partial V} 
+\vec n\cdot &\vec F\,dS = \int_{\partial V} R^{-1}(x^2+2y^2+3z^2)\,dS \\
+            &= \int_0^\pi\int_0^{2\pi} R^{-1}
+               (R^2\sin^2\theta\cos^2\varphi+2R^2\sin^2\theta\sin^2\varphi
+                                            +3\cos^2\theta)\,R^2\sin\theta\,d\theta d\varphi \\
+            &=   R^3\int_0^\pi \sin^3\theta\,d\theta\,\int_0^{2\pi}\cos^2\varphi\,d\varphi
+               +2R^3\int_0^\pi \sin^3\theta\,d\theta\,\int_0^{2\pi}\sin^2\varphi\,d\varphi \\
+            &\phantom{=\ R^3\int_0^\pi 
+                            \sin^2\theta\,d\theta\,\int_0^{2\pi}\cos^2\varphi\,d\varphi}
+               +3R^3\int_0^\pi \cos^2\theta\sin\theta\,d\theta\,\int_0^{2\pi}\,d\varphi \\
+            &= R^3\left(\frac{4}{3}\cdot\pi + 2\cdot\frac{4}{3}\cdot\pi 
+                                            + 3\cdot\frac{2}{3}\cdot 2\pi\right)
+             = \underline{\underline{8\pi\,R^3}}.
+\end{align*}
+
+b) Gaussin (avaruus)kaavan mukaan
+\begin{align*}
+\int_{\partial V} \vec n\cdot\vec F\,dS = \int_V \nabla\cdot\vec F\,dxdydz 
+                                       &= \int_V 6\ dxdydz \\ 
+                                       &= 6\mu(V) = 6\cdot\frac{4}{3}\,\pi\,R^3 
+                                        = \underline{\underline{8\pi\,R^3}}. \loppu
+\end{align*}
+
+\subsection*{Yleistetty Gaussin lause}
+\index{Gaussin lause (kaava)!a@yleistetty|vahv}
+
+Samaan tapaan kuin edellä johdettaessa Gaussin tasokaava Greenin kaavoista voidaan
+päätellä, että Gaussin tasokaava on voimassa myös, jos pistetulon paikalla on kaavan
+kummallakin puolella ristitulo, eli kaava pysyy voimassa muunnoksin
+\[
+\nabla\cdot\vec F \ext \nabla\times\vec F, \quad \vec n\cdot\vec F \ext \vec n\times\vec F.
+\]
+Edelleen kaava pätee myös muunnoksin
+\[
+\nabla\cdot\vec F \ext \nabla f, \quad \vec n\cdot\vec F \ext f\vec n.
+\]
+Gaussin avaruuskaava (Lause \ref{Gaussin lause avaruudessa}) pätee samoin muunnoksin. 
+Käyttämällä merkintöjä $d\vec n=\vec n\,ds$ (taso) $d\vec a=\vec n\,dS$ (avaruus) ja 
+yleiskertomerkkiä $\ast$ voi tulokset yhdistää muotoon
+\[
+\boxed{ \begin{aligned}
+\ykehys \int_A \nabla\ast\vec F\,dxdy 
+                &= \int_{\partial A} d\vec n\ast\vec F \quad \text{(taso)}, \\
+\quad \int_V \nabla\ast\vec F\,dxdydz 
+                &= \int_{\partial V} d\vec a\ast\vec F \quad \text{(avaruus)}. \akehys\quad
+\end{aligned} }
+\]
+Tapauksessa $\ast=$ 'tyhjä' (skalaarin ja vekorin kertolasku) on tässä vektorikenttä $\vec F$
+tulkittava skalaarikentäksi: $\vec F\hookrightarrow f$. Tulokset, jotka siis pätevät Gaussin 
+lauseen oletuksin, tunnetaan \kor{yleistettynä Gaussin lauseena}.
+\begin{multicols}{2} \raggedcolumns
+\begin{Exa}
+Veteen upotetun kappaleen $V\subset\R^3$ reunapinnalla $\partial V$ vaikuttaa paine
+\[
+\vec f(x,y,z)=-\rho_0gz\,\vec n
+\]
+($\rho_0=$ veden tiheys). Mikä on kappaleeseen kohdistuva kokonaisvoima $\vec F\,$?
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-10.pstex_t}
+\end{center}
+\end{figure}
+\end{Exa}
+\end{multicols}
+\ratk Yleistetyn Gaussin lauseen ($\ast=$ 'tyhjä') mukaan
+\begin{align*}
+\vec F &= -\rho_0 g \int_{\partial V} z\,\vec n\,dS = -\rho_0 g \int_V \nabla z\,dV \\
+       &= -\rho_0 g\,\vec e_z \int_V dV = \underline{\underline{-m(V)g\,\vec e_z}},
+\end{align*}
+missä $m(V)=$ kappaleen syrjäyttämän vesimäärän massa. Tulos tunnetaan \newline
+\pain{Arkhimedeen} \pain{lakina}. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item 
+a) Laske $\int_A (\partial f/\partial y)\,dxdy$, kun $A$ on origokeskinen yksikkökiekko ja
+$f(x,y)=2x-3y^2+(x^2+y^2-1)\sin(1+xy)$. \vspace{1mm}\newline
+b) Laske $\int_{\partial A} \vec F \cdot d\vec n$, kun $A$ on ellipsin $\,S:\,x^2/a^2+y^2/b^2=1$
+sisään jäävä alue ja $\vec F=(x+e^y)\vec i+(\sin x+2y)\vec j$.
+
+\item 
+Olkoon $V=\{(x,y,z)\in\R^3 \mid \abs{x}\le 1\,\ja\,\abs{y}\le 1\,\ja\,\abs{z}\le 1\}$ ja
+$\vec F(x,y,z)=x\,\vec i + y^2\,\vec j-\,\vec k$. Laske integraalit 
+$\int_{\partial V} d\vec a\cdot\vec F$ ja $\int_{\partial V} d\vec a\times\vec F$ \ 
+a) suoraan pintaintegraaleina, \ b) avaruusintegraaleina käyttäen yleistettyä Gaussin lausetta.
+
+\item 
+Olkoon $V=\{(x,y,z)\in \R^3 \mid x^2+y^2+z^2\le 1\,\ja\,x\ge 0\,\ja\,y\ge 0\}$.
+Laske $\int_{\partial V} [(x+y)\,\vec i -2xz\,\vec j+(y-z)\,\vec k]\times d \vec a$ \ 
+a) suoraan, \ b) tilavuusintegraaliksi muuntamalla. 
+
+\item
+Laske $\int_{\partial V} \vec F \cdot d\vec a$ ja $\int_{\partial V} \vec F \times d\vec a$, 
+kun $\vec F(x,y,z)=3xz^2\vec i-x\vec j-y\vec k\,$ ja
+$V=\{(x,y,z)\in\R^3 \mid 0 \le x \le 1 \,\ja\, y \ge 0 \,\ja\, y^2+z^2 \le 1\}$.
+
+\item
+Olkoon $\vec F$ säännöllinen vektorikenttä ja $u$ säännöllinen skalaarikenttä perusalueessa
+$V\subset\R^3$. Näytä, että $\int_{\partial V} \nabla\times\vec F \cdot d\vec a=0$ ja
+$\int_{\partial V} \nabla u\times d\vec a=\vec 0$. 
+
+\item 
+Jos $A\subset \R^2$ ja $V\subset \R^3$ ovat perusalueita, niin mikä geometrinen merkitys on
+seuraavilla integraaleilla? \vspace{1mm}\newline
+$\D
+\text{a)}\ \ \frac{1}{2} \int_{\partial A} \vec r \cdot d\vec n \qquad
+\text{b)}\ \ \frac{1}{3} \int_{\partial V}\vec r \cdot d\vec a \qquad
+\text{c)}\ \ \frac{1}{2\mu(V)} \int_{\partial V} (x^2+y^2+z^2)\,d\vec a$
+
+\item \label{H-pot-1: osittaisintegrointi}
+Olkoon $u$, $f$ ja $\vec F$ riittävän säännöllisiä skalaari- ja vektorikenttiä perus\-alueessa
+$V\subset\R^3$. Näytä, että pätee
+\[
+\int_V \nabla u\ast\vec F\,dxdydz = \int_{\partial V} u\,d\vec a\ast\vec F -
+\int_V u\nabla\ast\vec F\,dxdydz,
+\]
+missä $\vec F=f$, jos $\ast=$ 'tyhjä'. Mikä on kaavan $2$-ulotteinen vastine? Entä 
+$1$-ulotteinen vastine, kun $V=[a,b]\,$?
+
+\item (*) \index{zzb@\nim!Zeppeliini}
+(Zeppeliini) Tyynellä säällä ilman paine $p(x,y,z)$ ja tiheys $\rho(x,y,z)$ toteuttavat
+tasapainolain
+\[
+\frac{\partial p}{\partial z} = -g\rho,
+\]
+missä $z=$ korkeus maan pinnasta ja $g=$ maan vetovoiman kiihtyvyys. Jos $V\subset\R^3$ on
+ilmassa leijuva ilmalaiva, niin päteekö Arkhimedeen laki?
+
+\end{enumerate}

@@ -1,0 +1,637 @@
+\section{Gradientti} \label{gradientti}
+\alku
+\index{gradientti|vahv}
+\index{differentiaalioperaattori!d@gradientti (nabla $\nabla$)|vahv}
+
+Palautettakoon mieliin Luvusta \ref{differentiaali}, että jos yhden muuttujan funktio $f$ on
+derivoituva pisteessä $x$, niin pätee
+\[
+f(x+\Delta x)=f(x)+df(x,\Delta x) + o(\abs{\Delta x}),
+\]
+missä $df(x,\Delta x)= f'(x)\Delta x$ on $f$:n differentiaali. Vastaava tulos kahden muuttujan
+funktiolle $f(x,y)$ on kehitelmä muotoa
+\[
+f(x+\Delta x,y+\Delta y)=f(x,y)+df(x,y,\Delta x,\Delta y)+\ord{h}, \quad 
+                       h=\sqrt{(\Delta x)^2+(\Delta y)^2}.
+\]
+Sikäli kuin tämä on pätevä jossakin pisteen $(x,y)$ ympäristössä, sanotaan jälleen, että
+$df(x,y,\Delta x,\Delta y)$ on $f$:n
+\index{differentiaali}%
+\kor{differentiaali} pisteessä $(x,y)$. Differentiaalin
+lausekkeen johtamiseksi oletetaan, kuten ketjusäännössä edellä (Lause \ref{ketjusääntö}), että
+$f$ on jatkuva pisteen $(x,y)$ ympäristössä $U_\delta(x,y)$ ja osittaisderivaatat $f_x$ ja $f_y$
+ovat olemassa ko.\ ympäristössä  ja jatkuvia pisteessä $(x,y)$. Tällöin pätee
+(vrt.\ Lauseen \ref{ketjusääntö} todistus) 
+\begin{align*}
+f(x+\Delta x,&y+\Delta y)-f(x,y) \\
+             &= [f(x+\Delta x,y+\Delta y)-f(x,y+\Delta y)] + [f(x,y+\Delta y)-f(x,y)] \\
+             &= f_x(\xi,y+\Delta y)\Delta x+f_y(x,\eta)\Delta y \\
+             &= f_x(x,y)\Delta x + f_y(x,y)\Delta y + r(x,y,\Delta x,\Delta y),
+\end{align*}
+missä
+\[
+r(x,y,\Delta x,\Delta y) = [f_x(\xi,y+\Delta y)-f_x(x,y)]\Delta x 
+                         + [f_y(x,\eta)-f_y(x,y)]\Delta y.
+\]
+Koska tässä on $\abs{\xi-x}\le\abs{\Delta x}$ ja $\abs{\eta-y}\le\abs{\Delta y}$ ja $f_x$ ja
+$f_y$ ovat jatkuvia pisteessä $(x,y)$, niin $f_x(\xi,y+\Delta y)-f_x(x,y)=\ord{1}$ ja
+$f_y(x,\eta)-f_y(x,y)=\ord{1}$, kun $h \kohti 0$. Siis 
+(vrt.\ suuruusluokka-algebran säännöt Luvussa \ref{taylorin polynomien sovelluksia})
+\[
+r(x,y,\Delta x,\Delta y) = \ord{1}\Delta x + \ord{1}\Delta y = \ord{h}, \quad
+                                           h=\sqrt{(\Delta x)^2+(\Delta y)^2}.
+\]
+On päätelty, että pätee kehitelmä
+\begin{equation} \label{grad-2}
+\boxed{\kehys\quad 
+f(x+\Delta x,y+\Delta y)=f(x,y)+f_x(x,y)\Delta x+f_y(x,y)\Delta y+o(h). \quad}
+\end{equation}
+Etsitty differentiaalin lauseke (tehdyin oletuksin) on näin muodoin
+\[ 
+df(x,y,\Delta x,\Delta y)) = f_x(x,y)\Delta x + f_y(x,y)\Delta y.  
+\]
+\begin{Exa} \label{grad-ex1} Arvioi $f(1.01,1.98)$ differentiaalin
+$df(1,2,0.01,-0.02)$ avulla, kun $f(x,y)=xy-2y^3$.
+\end{Exa}
+\ratk Tässä on $f_x(x,y) = y$ ja $f_y(x,y)=x-6y^2$, joten
+\begin{align*}
+f(1.01,1.98) &= f(1+0.01,2-0.02) \\
+             &\approx f(1,2) + f_x(1,2)\cdot 0.01 + f_y(1,2)\cdot(-0.02) \\
+             &= -14 + 2\cdot 0.01 + (-23)\cdot (-0.02) = -13.52.
+\end{align*}
+Tarkka arvo on $f(1.01,1.98)=-13.524984$. \loppu
+
+Kun differentiaalikehitelmässä \eqref{grad-2} otetaan käyttöön vektorimerkintä
+\[ 
+\Delta \vec r = \Delta x\,\vec i + \Delta y\,\vec j, 
+\]
+ja käytetään myös muuttujien $x,y$ tilalla vektorimerkintää $\vec r = x\vec i + y\vec j$, niin
+kehitelmä voidaan kirjoittaa muodossa
+\begin{equation} \label{grad-3}
+f(\vec r + \Delta \vec r) 
+         = f(\vec r) + \nabla f(\vec r)\cdot\Delta\vec r + o(\abs{\Delta\vec r}),
+\end{equation}
+missä $\nabla f$ on $f$:n \kor{gradientti}, joka määritellään
+\[
+\boxed{\kehys\quad \nabla f(x,y)=f_x(x,y)\vec i+f_y(x,y)\vec j. \quad}
+\]
+Myös kolmen muuttujan funktiolle on johdettavissa differentiaalikehitelmä muotoa \eqref{grad-3}
+samalla tavoin kuin edellä. Tällöin on 
+$\Delta\vec r = \Delta x\,\vec i + \Delta y\,\vec j + \Delta z\,\vec k$, ja gradientti 
+määritellään
+\[
+\boxed{\kehys\quad \nabla f(x,y,z)=f_x(x,y,z)\vec i+f_y(x,y,z)\vec j+f_z(x,y,x)\vec k. \quad}
+\]
+
+Ym.\ tulosten perusteella gradienttia voi pitää 'yleistettynä derivaattana'. Yhden muuttujan
+derivaattaoperaattoria $\dif=d/dx$ vastaa siis kahden ja kolmen muuttujan tapauksessa 
+vektorimuotoinen differentiaalioperaattori
+\[
+\nabla=\begin{cases}
+\vec i\,\partial_x+\vec j\,\partial_y &(d=2), \\
+\vec i\,\partial_x+\vec j\,\partial_y+\vec k\,\partial_z &(d=3).
+\end{cases}
+\]
+Gradientille käytetään myös symbolia 'grad'. Lukutapoja ovat 'gradientti', 'grad' ja 'nabla'.
+\begin{Exa} Funktion $f(x,y,z)=x^2+3y^2+xyz$ gradientti on
+\begin{align*}
+\nabla f &= (\vec i\,\partial_x + \vec j\,\partial_y + \vec k\,\partial_z)(x^2+3y^2+xyz) \\
+         &= (2x+yz)\vec i +(6y+xz)\vec j+xy\vec k. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Monen muuttujan gradientti}
+\index{gradientti!a@monen muuttujan|vahv}
+
+Edellä johdetut differentiaalikehitelmät ovat helposti yleistettävissä koskemaan yleisempää
+$n$ muuttujan funktioita. Tällöin on kätevintä siirtyä matriisialgebran merkintätapoihin, eli
+indeksoidaan muuttujat,
+\[
+x \ext x_1,\quad y \ext x_2,\quad \ldots,
+\]
+ja kirjoitetaan $\vec r\,$:n paikalle pystyvektori $\mx\,$:
+\[
+\vec r \ext \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}=\mx,\quad 
+\Delta\vec r \ext \Delta\mx.
+\]
+Näillä merkinnöillä differentiaalikehitelmä \eqref{grad-3} saa muodon
+\[
+f(\mx+\Delta\mx)
+     =f(\mx)+\sum_{k=1}^n \frac{\partial f}{\partial x_k}(\mx)\Delta x_k+o(\abs{\Delta\mx}),
+\]
+missä $\abs{\cdot}$ tarkoittaa $\R^n$:n euklidista normia. Tulos voidaan kirjoittaa 
+matriisialgebran kielellä muotoon
+\begin{equation} \label{grad-4}
+\boxed{\begin{aligned}
+\ykehys\quad f(\mx+\Delta\mx)&=f(\mx)+\scp{\Nabla f(\mx)}{\Delta\mx}
+                              +o(\abs{\Delta\mx}), \\[2mm]
+             \Nabla f(\mx)   &=\left[\frac{\partial f}{\partial x_1}(\mx),
+                                     \frac{\partial f}{\partial x_2}(\mx),\ldots,
+                                     \frac{\partial f}{\partial x_n}(\mx)\right]^T.\Akehys\quad
+       \end{aligned} }
+\end{equation}
+
+Kehitelmässä \eqref{grad-4} on termi
+$df(\mx,\Delta\mx) = \scp{\Nabla f(\mx)}{\Delta\mx} = (\Nabla f(\mx))^T\Delta\mx$ 
+\index{differentiaali}%
+jälleen \kor{differentiaali}. Muuttujien lukumäärästä riippumatta voi differentiaalia käyttää 
+funktion arvon muutosten arviointiin samaan tapaan kuin Esimerkissä \ref{grad-ex1} edellä.
+\begin{Exa} Ristikkorakenteen (ks.\ Luku \ref{yhtälöryhmät}) kuormitus aiheuttaa yksittäisen 
+sauvan päätepisteiden $P$ ja $Q$ siirtymät
+\begin{align*}
+&\vec u = \overrightarrow{PP'}=u_1\vec i+u_2\vec j+u_3\vec k, \\
+&\vec v = \overrightarrow{QQ'}=v_1\vec i + v_2\vec j+v_3\vec k.
+\end{align*}
+Olettaen, että $\abs{\vec u},\abs{\vec v}\ll\abs{\vec a}$, $\vec a=\overrightarrow{QP}$,
+määritä sauvan venymä likimäärin differentiaalin avulla.
+\end{Exa}
+\ratk Venymä on kuuden muuttujan funktio
+\[
+f(u_1,u_2,u_3,v_1,v_2,v_3) = \abs{\vec a+\vec u-\vec v}-\abs{\vec a}.
+\]
+Tässä on
+\begin{align*}
+\abs{\vec a+\vec u-\vec v\,}^2\,
+             &=\,(\vec a+\vec u-\vec v)\cdot (\vec a+\vec u-\vec v) \\
+             &=\,\abs{\vec a\,}^2+2\vec a\cdot(\vec u-\vec v)+\abs{\vec u-\vec v\,}^2,
+\end{align*}
+joten
+\[
+f(u_1,\ldots,v_3) 
+ =\left[\abs{\vec a}^2+\sum_{k=1}^3 2a_k(u_k-v_k)+\sum_{k=1}^3 (u_k-v_k)^2\right]^{1/2}
+                                                 -\ \abs{\vec a}.
+\]
+Tällöin on $f(\mo)=0$ ja
+\[
+\frac{\partial f}{\partial u_k}(\mo)
+              =\frac{a_k}{\abs{\vec a}}\,,\quad \frac{\partial f}{\partial v_k}(\mo)
+              =-\frac{a_k}{\abs{\vec a}}\,, \quad k=1,2,3,
+\]
+joten differentiaalikehitelmän \eqref{grad-4} mukaan
+\[ 
+f(u_1,\ldots,v_3) \approx \sum_{k=1}^3 \frac{a_k}{\abs{\vec a}}\,(u_k-v_k) 
+                        = \underline{\underline{\vec t\cdot (\vec u-\vec v)}},
+\]
+missä $\vec t=\vec a/\abs{\vec a\,}$ on $\vec a$:n suuntainen yksikkövektori. \loppu
+
+\subsection*{Differentioituvuus}
+\index{gradientti!b@differentioituvuus|vahv}
+
+Kehitelmä \eqref{grad-4} on pätevä olettaen, että $f$ on jatkuva $\mx$:n ympäristössä
+\[ 
+U_\delta(\mx) = \{\mx' \in \R^n \mid |\mx'-\mx|<\delta\}, \quad \delta>0 
+\]
+ja lisäksi osittaisderivaatat $\partial f/\partial x_k,\ k=1 \ldots n\,$ ovat olemassa ko.\
+ympäristössä ja jatkuvia pisteessä $\mx$. Tällaisista taustaoletuksista päästään eroon, kun
+asetetaan seuraava yleisempi \kor{differentioituvuuden} ja samalla gradientin määritelmä.
+\begin{Def} \label{differentioituvuus} \index{differentioituvuus|emph}
+Funktio $f:D_f\kohti\R$, $D_f\subset\R^n$, on \kor{differentioituva} pisteessä $\mx\in D_f$, 
+jos $f$ on määritelty pisteen $\mx$ jossakin ympäristössä ja on olemassa pystyvektori 
+$\mathbf{h}\in\R^n$ siten, että pätee 
+\[
+f(\mx+\Delta\mx)= f(\mx)+\mathbf{h}^T\Delta\mx+o(\abs{\Delta\mx}), \quad 
+                      \text{kun}\,\ \abs{\Delta\mx}\kohti 0.
+\]
+Tällöin $\mathbf{h}$ on $f$:n \kor{gradientti} pisteessä $\mx$, merkitään
+$\mathbf{h}=\Nabla f(\mx)$.
+\end{Def}
+Jos $f$ on differentioituva, niin gradientti on laskettavissa osittaisderivaattojen avulla
+kaavan \eqref{grad-4} mukaisesti:
+\begin{Prop} Jos $f$ on differentioituva pisteessä $\mx \in \R^n$, niin osittaisderivaatat
+$\partial f/\partial x_k,\ k=1\ldots n\,$ ovat olemassa pisteesä $\mx$, ja pätee
+$[\Nabla f(\mx)]_k=\partial f(\mx)/\partial x_k,\ k=1 \ldots n$.
+\end{Prop}
+\tod Kun kehitelmässä \eqref{grad-4} asetetaan $\Delta\mx=\Delta x_k\me_k$ 
+($\me_k=$ euklidinen yksikkövektori), niin kehitelmä voidaan kirjoittaa muotoon
+\[
+f(x_1,\ldots,x_{k-1},x_k+\Delta x_k,x_{k+1},\ldots,x_n) - f(x_1,\ldots,x_n) 
+                  = [\Nabla f(\mx)]_k\Delta x_k+o(\abs{\Delta x_k}).
+\]
+Jakamalla $(\Delta x_k)$:lla ja antamalla $\Delta x_k\kohti 0$ seuraa
+$[\Nabla f(\mx)]_k=\partial f(\mx)/\partial x_k$. \loppu
+
+Yhteenvetona edellä esitetystä voidaan todeta, että funktion jatkuvuus pisteen $\mx$
+ympäristössä, osittaisderivaattojen olemassaolo ko.\ ympäristössä ja jatkuvuus pisteessä $\mx$
+rittävät yhdessä takaamaan differentioituvuuden; toisaalta differentioituvuus pisteessä $\mx$
+takaa vain osittaisderivaattojen olemassaolon kyseisessä pisteessä, ei muualla. Vertaamalla
+edellisen luvun tarkasteluihin nähdäänkin nyt, että differentioituvuus on usean muuttujan
+derivoituvuuden luontevin määritelmä. Nimittäin ensinnäkin kehitelmän \eqref{grad-4}
+perusteella on ilmeistä, että differentioituvuudesta seuraa välittömästi jatkuvuus ko.\
+pisteessä, kuten yhden muuttujan tapauksessa (vrt.\ Luku \ref{derivaatta})). Toiseksi nähdään,
+että myös osittaisderivoinnin ketjusääntöjä perusteltaessa voidaan ulkofunktiota koskevat
+jatkuvuus- ym. oletukset korvata differentioituvuudella. Nimittäin jos tarkastellaan Lauseen
+\ref{ketjusääntö} funktiota $F(t)=f(x(t),y(t))$, merkitään $x(t)=x$, $y(t)=y$,
+$x(t+\Delta t)=x+\Delta x$, $y(t+\Delta t)=y+\Delta y$ ja oletetaan, että $f$ on 
+differentioituva pisteessä $(x,y)$, niin kehitelmän \eqref{grad-2} perusteella
+\[
+\frac{F(t+\Delta t)-F(t)}{\Delta t} = f_x(x,y)\frac{\Delta x}{\Delta t}
+                                    + f_y(x,y)\frac{\Delta y}{\Delta t} 
+                                    + (\Delta t)^{-1}\ord{h}.
+\]
+Jos edelleen derivaatat $x'(t)$ ja $y'(t)$ ovat olemassa, niin tässä on
+\[
+h=\sqrt{(\Delta x)^2+(\Delta y)^2} = \sqrt{[x'(t)]^2+[y'(t)]^2}\Delta t + \ord{\abs{\Delta t}},
+\]
+joten
+\[
+(\Delta t)^{-1}\ord{h} = (\Delta t)^{-1}\ord{\abs{\Delta t}} \kohti 0, \quad 
+                                                           \text{kun}\ \Delta t \kohti 0.
+\]
+Näin muodoin seuraa ketjusääntö $F'(t)=f_x(x,y)x'(t)+f_y(x,y)y'(t)$.
+
+Yhden muuttujan derivoituvuuden ja useamman muuttujan differentioituvuuden vastaavuudesta 
+kertoo myös seuraava Differentiaalilaskun väliarvolauseen yleistys. Todistus jätetään
+harjoitustehtäväksi (Harj.teht.\,\ref{H-udif-3: differentioituvuus}c).
+\begin{Lause} (\vahv{$\R^n$:n väliarvolause}) \label{väliarvolause-Rn}
+\index{vzy@väliarvolauseet!d@$\R^n$:n|emph}
+Olkoon $\ma,\mb\in\R^n,\ \ma\neq\mb$ ja olkoon $f(\mx)$ jatkuva pisteessä $\mx(t)=t\ma+(1-t)\mb$ 
+jokaisella $t\in[0,1]$ ja differentioituva pisteessä $\mx(t)$ jokaisella $t\in(0,1)$. Tällöin
+jollakin $\xi\in(0,1)$ pätee 
+\[
+f(\mb)-f(\ma)=\scp{\Nabla f\bigl(\mx(\xi)\bigr)}{\mb-\ma}.
+\]
+\end{Lause}
+
+\subsection*{Suunnatut derivaatat}
+\index{osittaisderivaatta!f@suunnattu derivaatta|vahv}
+\index{gradientti!c@suunnattu derivaatta|vahv}
+\index{suunnattu derivaatta|vahv}
+
+Gradienttia käytetään usean muuttujan funktioita tutkittaessa samaan tapaan kuin derivaattaa
+yhden muuttujan tapauksessa. Gradientin avulla voidaan erityisesti laskea, millä tavoin
+funktion arvot muuttuvat lähellä annettua pistettä $\mx$, kun ko.\ pisteestä siirrytään
+jonkin $\R^n$:n yksikkövektorin osoittamaan suuntaan. Nimittäin jos $\me$ on tällainen vektori,
+eli
+\[ 
+\me = (e_i), \quad \abs{\me}^2 = \sum_{i=1}^n e_i^2 = 1, 
+\]
+niin asettamalla $\Delta\mx = \Delta t\,\me$ kehitelmässä \eqref{grad-4} saadaan tulos
+\begin{equation} \label{grad-6}
+f(\mx+\Delta t\,\me)=f(\mx)+\partial_{\me}f(\mx)\Delta t+\ord{\abs{\Delta t}},
+\end{equation}
+missä 
+\[
+\boxed{\quad \partial_{\me}f(\mx)
+          =\sum_{k=1}^n e_k\frac{\partial f}{\partial x_k}(\mx)=\scp{\Nabla f(\mx)}{\me}. \quad}
+\]
+Näin määritelty $\partial_{\me}f$ voidaan nimetä $f$:n \kor{suunnatuksi derivaataksi} suuntaan
+$\me$, sillä määritelmän \eqref{grad-6} mukaan on
+\[
+\partial_{\me}f(\mx)=\lim_{\Delta t\kohti 0}\frac{f(\mx+\Delta t\,\me)-f(\mx)}{\Delta t} 
+                    = g'_{\me}(0), \quad g_{\me}(t) = f(\mx + t\me). 
+\]
+Erityisesti jos valitaan $\me=\me_k$ (euklidinen yksikkövektori), niin 
+$\partial_{\me}f = \partial f/\partial x_k$. Siis osittaisderivaatat ovat suunnattujen 
+derivaattojen erikoistapauksia.
+
+Kahden tai kolmen muuttujan tapauksessa voidaan kehitelmä \eqref{grad-6} kirjoittaa haluttaessa
+muotoon
+\[
+f(\vec r+\Delta t\,\vec e\,)=f(\vec r\,)+\vec e\cdot\nabla f(\vec r\,)\Delta t+\ord{\abs{\Delta t}},
+\]
+jolloin suunnattu derivaatta on differentiaalioperaattori
+\[
+\partial_e = \vec e\cdot\nabla=\begin{cases}
+\,e_x\partial_x+e_y\partial y &(d=2), \\
+\,e_x\partial_x+e_y\partial y+e_z\partial z &(d=3). 
+\end{cases}
+\]
+
+Jos monen muuttujan tapauksessa on $\Nabla f(\mx) \neq \boldsymbol{0}$, niin suunnaksi $\me$ 
+voidaan valita $\me = \pm [\Nabla f(\mx)]/\abs{\Nabla f(\mx)}$, jolloin on vastaavasti 
+$\partial_{\me}f(\mx) = \pm \abs{\Nabla f(\mx)}$. Koska toisaalta Cauchyn-Schwarzin epäyhtälön
+perusteella on
+\[ 
+\abs{\partial_{\me}f(\mx)} =   \left|\,\sum_{k=1}^n e_k \frac{\partial f}{x_k}\,\right| 
+                           \le \abs{\me}\abs{\Nabla f(\mx)} = \abs{\Nabla f(\mx)}, 
+\]
+niin on päätelty, että suunnatun derivaatan suurin arvo $=\abs{\Nabla f(\mx)}$ gradientin
+suuntaan ja pienin arvo $=-\abs{\Nabla f(\mx)}$ vastakkaiseen suuntaan. Siis\,:
+\[ \boxed{\begin{aligned}
+\quad &\text{Funktio kasvaa voimakkaimmin gradientin suuntaan, vähenee}\quad\ykehys \\
+      &\text{voimakkaimmin negatiivisen gradientin suuntaan, ja muuttuu} \\
+      &\text{vähiten suuntiin $\me$, joille $\scp{\Nabla f}{\me}=0$}.\akehys
+\end{aligned} } \] 
+\begin{Exa} Laske funktion $f(x,y,z)=x^3-2x^2yz+4yz^2-2x-y+z$ derivaatta suuntaan 
+$\vec e = (\vec i - 2\vec j - \vec k)/\sqrt{6}$ pisteessä $(1,-1,2)$ sekä määritä suunta
+$\vec n$, johon funktio kasvaa nopeimmin ko.\ pisteessä.
+\end{Exa}
+\ratk Gradientti on
+\begin{align*}
+&\nabla f(x,y,z) = (3x^2-4xyz-2)\vec i + (-2x^2z+4z^2-1)\vec j + (-2x^2y+8yz+1)\vec k \\
+&\impl\quad \nabla f(1,-1,2) = 9\vec i + 11\vec j - 13\vec k.
+\end{align*}
+Derivaatta suuntaan $\vec e$ on
+\[ \vec e\cdot\nabla f(1,-1,2) = \frac{1}{\sqrt{6}}\,[1 \cdot 9 -2 \cdot 11 - 1 \cdot (-13)] 
+                               = \underline{\underline{0}}. 
+\]
+Nopeimman kasvun suunta on
+\begin{align*}
+\vec n = \frac{\nabla f(1,-1,2)}{\abs{\nabla f(1,-1,2)}} 
+      &= \frac{1}{\sqrt{371}}\,(9\vec i + 11\vec j -13\vec k) \\
+      &\approx \underline{\underline{0.47\vec i + 0.57\vec j - 0.67\vec k}}. \loppu
+\end{align*}
+\begin{Exa} Kolmion kärjet ovat pisteissä $P_1=(1,0)$, $P_2=(0,2)$ ja $P_3=(2,3)$. Kolmion 
+kutakin kärkeä liikutetaan sama (pieni) matka $\Delta s$ siten, että $P_1$ siirtyy suuntaan 
+$\vec j$, $P_2$ suuntaan $-\vec i$ ja $P_3$ suuntaan $\vec e$. Miten suunta $\vec e$ on 
+valittava, jotta kolmion pinta-ala \ a) muuttuisi mahdollisimman vähän, \ 
+b) kasvaisi mahdollisimman paljon, \ c) pienenisi mahdollisimman paljon\,? 
+\end{Exa}
+\ratk Jos kolmion kärjet muutoksen jälkeen ovat $P_1=(x_1,y_1)$, $P_2=(x_2,y_2)$ ja 
+$P_3=(x_3,y_3)$, niin pinta-ala on (vrt.\ Luku \ref{ristitulo})
+\begin{align*}
+f(\mx)=f(x_1,y_1,x_2,y_2,x_3,y_3) 
+    &= \frac{1}{2}\begin{vmatrix} x_3-x_1 & y_3-y_1 \\ x_2-x_1 & y_2-y_1 \end{vmatrix} \\ 
+    &= \frac{1}{2}\,(x_3-x_1)(y_2-y_1)-\frac{1}{2}\,(x_2-x_1)(y_3-y_1).
+\end{align*}
+Jos $\,\vec e = \cos\varphi\vec i + \sin\varphi\vec j$, niin kärkien siirtymää kuvaa vektori
+\[
+\Delta \mx = \Delta s\,[0,1,-1,0,\cos\varphi,\sin\varphi]^T.
+\]
+Funktion $f$ gradientti on
+\begin{align*}
+           &\Nabla f(\mx) = \frac{1}{2}\,[y_3-y_2,x_2-x_3,y_1-y_3,x_3-x_1,y_2-y_1,x_1-x_2]^T \\
+\impl\quad &\Nabla f(1,0,0,2,2,3) = \frac{1}{2}\,[1,-2,-3,1,2,1]^T.
+\end{align*}
+Differentiaalin avulla arvioitu pinta-alan muutos on siis
+\[
+\Delta f \approx \scp{\Nabla f(1,0,0,2,2,3)}{\Delta\mx} 
+         = \frac{\Delta s}{2}\,(1+2\cos\varphi+\sin\varphi).
+\]
+Pinta-ala muuttuu vähiten, kun $1+2\cos\varphi+\sin\varphi=0$, eli kun joko $\vec e=-\vec j$
+($\varphi=3\pi/2$) tai $\vec e=(-4\vec i+3\vec j\,)/5$. Pinta-ala muuttuu eniten, kun 
+\[
+D_\varphi(1+2\cos\varphi+\sin\varphi)=-2\sin\varphi+\cos\varphi=0,
+\]
+eli kun $\vec e=\pm(2\vec i + \vec j\,)/\sqrt{5}$. Näihin suuntiin on vastaavasti
+$\Delta f \approx \frac{\Delta s}{2}(1\pm\sqrt{5})$.
+
+Vastaus:
+\[
+\text{a)}\,\ \vec e = -\vec j\,\ \text{tai}\,\ \vec e = \frac{1}{5}(-4\vec i+3\vec j), \,\
+\text{b)}\,\ \vec e = \frac{1}{\sqrt{5}}(2\vec i + \vec j), \,\
+\text{c)}\,\ \vec e = -\frac{1}{\sqrt{5}}(2\vec i + \vec j). \loppu
+\]
+
+\subsection*{Tasa-arvopinnat}
+\index{tasa-arvopinta|vahv}
+
+Samaan tapaan kuin derivaatan avulla voidaan määrätä käyrän tangentti ja normaali 
+(vrt.\ Luku \ref{derivaatta geometriassa}), voidaan osittaisderivaattojen avulla määrätä 
+\index{tangenttitaso} \index{normaali(vektori)!c@pinnan}%
+\kor{pinnan tangenttitaso} ja tämän tason normaali, eli \kor{pinnan normaali}
+(suora tai vektori). Jos pinnan $S\subset\Ekolme$ yhtälö on 
+\[ 
+S: \ F(x,y,z)=0, 
+\]
+niin pinnan normaali (ja normaalin avulla tangenttitaso) annetussa pisteessä voidaan laskea 
+nopeimmin ajattelemalla, että pinta on funktion $F$ \pain{tasa-arvo}p\pain{inta}. On ilmeistä,
+että yksikkövektori $\vec t$ on $F$:n tasa-arvopinnan tangenttivektori pisteessä
+$(x_0,y_0,z_0)$ täsmälleen, kun $F$:n suunnattu derivaatta $\vec t\,$:n suuntaan häviää ko.\
+pisteessä, eli kun $\vec t \cdot \nabla F(x_0,y_0,z_0)=0$. Tämän perusteella on
+$\vec n = \nabla F(x_0,y_0,z_0)$ pinnan normaalivektori ko.\ pisteessä. Samaan tulokseen
+tullaan, jos tarkasteltava pinta on pisteen $(x_0,y_0,z_0)$ kautta kulkeva $F$:n
+tasa-arvopinta, jonka yhtälö on $\,F(x,y,z) = c = F(x_0,y_0,z_0)$. On siis päätelty, että
+\[ \boxed{ \begin{aligned}
+           \ykehys\quad &\vec n = \nabla F(x_0,y_0,x_0)\ 
+                            \text{on funktion}\ F\ \text{tasa-arvopinnan} \quad \\
+                        &\text{normaalivektori pisteessä}\ (x_0,y_0,z_0). \akehys
+           \end{aligned} } 
+\]
+\begin{Exa} Määritä pinnan
+\[ 
+S:\ F(x,y,z) = x^2+y^2+z^2-xy-yz-xz = 1. 
+\]
+tangenttitason yhtälö pisteessä $(1,1,2)$.
+\end{Exa}
+\ratk Funktion $F$ gradientti on
+\[ 
+\nabla F(x,y,z) = (2x-y-z)\vec i + (2y-x-z)\vec j + (2z-y-x)\vec k, 
+\]
+joten pinnan normaalivektori pisteessä $(1,1,2)$ on
+\[ 
+\vec n = \nabla F(1,1,2) = -\vec i - \vec j + 2\vec k. 
+\]
+Tangenttitason yhtälö pisteessä $(1,1,2)\vastaa\vec r_0$ on
+\[
+T:\ (\vec r-\vec r_0)\cdot\vec n = 0\ \ekv\ \underline{\underline{x+y-2z+2=0}}. \loppu
+\]
+\begin{Exa} \label{udif-3: pintaesim} Jos pinnan yhtälö on annettu muodossa $S:\ z=f(x,y)$,
+niin kirjoittamalla yhtälö muotoon $F(x,y,z)=z-f(x,y)=0$ saadaan normaalivektoriksi pisteessä
+$(x,y,z) \in S\,$:
+\[
+\vec n = \nabla F(x,y,z) = -f_x(x,y)\vec i-f_y(x,y)\vec j+\vec k. \loppu
+\]
+\end{Exa}
+\begin{Exa} Määritä käyrän
+\[
+\begin{cases} \,x^2-y^2+z^2=1, \\ \,x^2+y^2-2z^2=0 \end{cases}
+\]
+tangenttivektori pisteessä $(1,1,1)$. \end{Exa}
+\ratk Kyseessä on kahden pinnan leikkauskäyrä. Pinnat ovat funktioiden $F_1(x,y,z)=x^2-y^2+z^2$
+ja $F_2(x,y,z)=x^2+y^2-2z^2$ tasa-arvopintoja, joiden normaalivektorit pintojen yhteisessä 
+pisteessä $(x,y,z)=(1,1,1)$ ovat
+\begin{align*}
+\vec n_1\,&=\,\nabla F_1(x,y,z)\,
+           =\,2x\,\vec i - 2y\,\vec j + 2z\,\vec k\,=\,2(\vec i-\vec j+\vec k), \\
+\vec n_2\,&=\,\nabla F_2(x,y,z)\,
+           =\,2x\,\vec i + 2y\,\vec j - 4z\,\vec k\,=\,2(\vec i+\vec j-2\vec k).
+\end{align*}
+Kysytty tangenttivektori $\vec t$ on näitä vastaan kohtisuora, eli esimerkiksi
+\[
+\vec t = \frac{1}{4}\,\vec n_1\times\vec n_2 
+       = \underline{\underline{\vec i+3\vec j+2\vec k}}. \loppu
+\]
+
+\subsection*{Parametrisen pinnan normaali}
+\index{normaali(vektori)!c@pinnan|vahv}
+\index{parametrinen pinta|vahv}
+
+Tarkastellaan $\R^3$:n parametrisoitua pintaa (vrt.\ Luku \ref{parametriset käyrät})
+\[
+S:\ \vec r=\vec r(u,v)\ \ekv\ 
+                        \begin{cases} \,x=x(u,v),\\ \,y=y(u,v), \\ \,z=z(u,v). \end{cases}
+\]
+Jos oletetaan, että tässä funktiot $x$, $y$ ja $z$ ovat differentioituvia pisteessä $(u,v)$,
+niin on ilmeistä, että vektorit
+\begin{align*}
+\vec t_u &= \lim_{\Delta u\kohti 0} \frac{\vec r(u+\Delta u,v)-\vec r(u,v)}{\Delta u}
+          =\frac{\partial\vec r}{\partial u}(u,v), \\
+\vec t_v &= \lim_{\Delta v\kohti 0} \frac{\vec r(u,v+\Delta v)-\vec r(u,v)}{\Delta v}
+          =\frac{\partial\vec r}{\partial v}(u,v)
+\end{align*}
+\index{tangenttivektori (pinnan)}%
+ovat pinnan tangenttitason suuntaisia eli \kor{pinnan tangenttivektoreita} pisteessä 
+$P\vastaa\vec r(u,v)$. Parametrisaatiolta on sopivaa odottaa, että nämä vektorit
+ovat lineaarisesti riippumattomat, jolloin pinnan normaalivektori pisteessä $P$ on
+\[
+\boxed{\quad\kehys 
+  \vec n=\frac{\partial \vec r}{\partial u}\times\frac{\partial \vec r}{\partial v} \quad
+         \text{(parametrisen pinnan normaali)}. \quad}
+\]
+\begin{Exa} (Vrt.\ Esimerkki \ref{udif-3: pintaesim}.) Jos pinnan yhtälö on $S:\ z=f(x,y)$,
+niin parametrisoidusta esityksestä
+\[ 
+S:\ \vec r(x,y)\,=\,x\,\vec i+y\,\vec j+f(x,y)\,\vec k
+\]
+saadaan $S$:n tangentti- ja normaalivektoreiksi pisteessä $(x,y,f(x,y))\,$:
+\begin{align*}
+\vec t_x\,&=\,\partial_x\vec r(x,y)\,=\,\vec i+f_x(x,y)\,\vec k, \\
+\vec t_y\,&=\,\partial_y\vec r(x,y)\,=\,\vec j+f_y(x,y)\,\vec k, \\
+\vec n\   &=\,\vec t_x \times \vec t_y\,=\,-f_x(x,y)\,\vec i -f_y(x,y)\,\vec j+\vec k. \loppu
+\end{align*}
+\end{Exa}
+\begin{Exa} (Vrt.\ Esimerkki \ref{parametriset käyrät}:\,\ref{jäähdytystorni}.) Määritä
+parametrisen pinnan
+\[
+S:\ \begin{cases} \,x=(2-2v)\cos u-v\sin u, \\ \,y=v\cos u+(2-2v)\sin u, \\ \,z=3v \end{cases}
+\]
+normaali pisteessä $(x,y,z)=(2,0,0)$.
+\end{Exa}
+\ratk Koska $(2,0,0)\vastaa \vec r=2\vec i=\vec r(0,0)$, niin lasketaan
+\begin{align*}
+\vec t_u(0,0) &\,=\, \frac{\partial\vec r}{\partial u}(0,0)
+               \,=\, \frac{\partial x}{\partial u}(0,0)\vec i
+                     +\frac{\partial y}{\partial u}(0,0)\vec j
+                     +\frac{\partial z}{\partial u}(0,0)\vec k=2\vec j, \\
+\vec t_v(0,0) &\,=\, \frac{\partial\vec r}{\partial v}(0,0)
+               \,=\, -2\vec i +\vec j +3\vec k \\[2mm]
+\impl\ \vec n &\,=\, \vec t_u\times\vec t_v
+               \,=\,6\vec i +4\vec k 
+               \,\uparrow\uparrow\, \underline{\underline{3\vec i+2\vec k}}. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske funktion arvolle likiarvo annetussa pisteessä käyttäen differentiaalia.
+\begin{align*}
+&\text{a)}\ \ x^2y^3, \quad (3.1,0.9) \qquad\qquad\qquad\qquad\
+ \text{b)}\ \ \Arctan(y/x), \quad (3.01,2.98) \\[0.5mm]
+&\text{c)}\ \ 24\,(x^2+xy+y^2)^{-1}, \quad (2.1,1.9) \qquad
+ \text{d)}\ \ \sin(\pi xy+\ln y), \quad (0.01,1.05) \\
+&\text{e)}\ \ \sqrt{x+2y+3z}\,, \quad (1.9,1.8,1.1) \qquad\,\
+ \text{f)}\ \ xe^{y+z^2}, \quad (2.05,-3.92,1.97)
+\end{align*}
+
+\item
+Suorakulmaisen särmiön muotoisen laatikon särmät on mitattu $1\%$:n tarkkuudella. Arvioi,
+kuinka suuri vaikutus ($\%$) mittausvirheillä on enintään mittausten perusteella
+laskettuun laatikon a) tilavuuteen, b) pohjan pinta-alaan, c) lävistäjään.
+
+\item
+Pisteen $A$ etäisyys tarkkailupisteestä $B$ on pyritty selvittämään kolmiomittauksella
+valitsemalla toinen tarkkailupiste $C$ ja mittaamalla kulmat $ABC$ ja $ACB$. Mittaustulokset
+ovat: $\kulma ACB=45 \pm 0.1\aste$, $\kulma ABC=105 \pm 0.1\aste$ ja pisteiden $B$ ja $C$
+välimatkaksi on mitattu $265 \pm 0.5$ m. Laske kysytty etäisyys $d$ ja arvioi virhe $\Delta d$
+differentiaalin avulla (maksimivirhe).
+
+\item
+Tornin korkeus mitataan kulmamittauksella kahdesta pisteestä $A$ ja $B$, jotka ovat
+samassa suunnassa tornista katsoen. Mitatut kulmat ovat $50 \pm 1\aste$ ja $35 \pm 1\aste$.
+Lisäksi pisteiden $A$ ja $B$ välimatkaksi on mitattu $100 \pm 1$ m. Mikä on tornin
+korkeuden laskettu arvo ja kuinka suuri voi mittausvirhe korkeintaan olla differentiaalin
+perusteella arvioiden?
+
+\item
+Suunnistaja, joka on kartan origossa, on matkalla rastille, joka on kartan mukaan suunnassa
+$\varphi=30\aste$ (polaarikoordinaatti). Sateen ja hikoilun vuoksi karttapaperi on kutistunut
+$x$-suunnassa $1\%$ ja $y$-suunnassa $0.6\%$. Arvioi, kuinka monta $\%$ suunnistajan on syytä
+korjata rastin suuntaa ja kartalta mitattua eäisyyttä päästäkseen oikeisiin arvoihin.
+
+\item Nelikulmion pinta-ala on funktio $f(\mx) = f(x_1, y_1, x_2, y_2, x_3, y_3, x_4, y_4)$,
+missä $(x_i, y_i)$, $i = 1,\ldots,4$ ovat nelikulmion kärkipisteet. Laske $\nabla f$ 
+pisteessä ${\bf x} = (0,0,1,0,1,1,0,1)$ ja differentiaalin avulla likimäärin sen nelikulmion
+pinta-ala, jonka kärjet ovat pisteissä $\,(0.03, -0.05)$, $(1.02,-0.02)$, $(0.96, 1.01)$, 
+$(-0.01, 0.98)$.
+
+\item \label{H-udif-3: differentioituvuus}
+a) Olkoon $f(0,0)=0$ ja $f(x,y)=xy\sin(1/\sqrt{x^2+y^2}\,)$ muulloin. Näytä, että $f$ on
+origossa differentioituva mutta $f_x$ ja $f_y$ eivät ole origossa jatkuvia.\vspace{1mm}\newline
+b) Olkoon $f(x,y)=0$ kun $x=0$ tai $y=0$ ja $f(x,y)=\abs{xy}^\alpha(x^2+y^2)^\beta$ muulloin 
+($\alpha,\beta\in\R$). Määritä $A\subset\R^2$ ja $B\subset\R^2$ siten, että $f$ on
+differentioituva origossa täsmälleen kun $(\alpha,\beta) \in A$ ja differentioituva jokaisessa
+pisteessä $(x,y)\in\R^2$ täsmälleen kun $(\alpha,\beta) \in B$. \vspace{1mm}\newline
+c) Todista Lause \ref{väliarvolause-Rn} tarkastelemalla funktiota
+$F(t)=f\bigl(t\ma+(1-t)\mb\bigr)$.
+
+\item
+Laske suunnattu derivaatta annetussa pisteessä sekä annettuun että funktion nopeimman kasvun
+suuntaan: \vspace{1mm}\newline
+a) \ $e^{xy+y},\ \ (0,0),\ \ \vec i+\vec j$ \vspace{0.8mm}\newline
+b) \ $\sin(\pi xy)\cos(\pi y^2),\ \ (1,2),\ \ \vec i-2\vec j$ \vspace{0.3mm}\newline
+c) \ $xy^2z^3,\ \ (-3,2,1),\ \ 6\vec i-2\vec j+3\vec k$ \vspace{0.8mm}\newline
+d) \ $ xy^2+yz^3,\ \ (3,-2,-1),\ \ \vec 2i+\vec 2j-3\vec k$
+
+\item
+Seuraavassa on annettu funktio $f(x,y)$ ja piste $(x_0,y_0)$. Määritä kussakin tapauksessa \,
+(i) gradientti $\nabla f(x_0,y_0)$, \, (ii) käyrän $f(x,y)=f(x_0,y_0)$ tangentin yhtälö
+pisteessä $(x_0,y_0)$, \, (iii) pinnan $z=f(x,y)$ tangenttitason yhtälö pisteessä
+$(x_0,y_0,z_0),\ z_0=f(x_0,y_0)$. \vspace{2mm}\newline
+a) \ $ f(x,y)=x^2-y^2,\,\ (2,-1)$ \quad
+b) \ $f(x,y)=x^2/(x+y),\,\ (1,1)$ \vspace{1mm}\newline
+c) \ $f(x,y)=e^{x^2y+x^2},\,\ (2,0)$ \qquad
+d) \ $f(x,y)=\ln(x^2+y^2),\,\ (1,-2)$
+
+\item 
+Määritä seuraavien pintojen tangenttitaso annetussa pisteessä $P$ sekä ne pintojen pisteet,
+joissa tangenttitaso on $xy$-tason suuntainen. \vspace{2mm}\newline
+a) \ $x^2-2xy-y^2+z^2-2x-2y-3z= 0, \quad P=(0,0,0)$ \vspace{1mm}\newline
+b) \ $xy+yz-2xz+z^3=1, \quad P=(1,1,1)$ \vspace{1mm}\newline
+c) \ $e^{x+2y-z}=x+y^2+2z+1, \quad P=(0,0,0)$
+
+\item
+Määritä seuraavien funktioiden tasa-arvopinnan normaali ja ko.\ pinnan tangenttitason yhtälö
+annetussa pisteessä. \vspace{2mm}\newline
+a) \ $f(x,y,z)=x^2y+y^2z+z^2x,\ \ (1,-1,1)$ \vspace{1mm}\newline
+b) \ $f(x,y,z)=\cos(x+2y+3z),\ \ (\pi/2,\pi,\pi)$ \vspace{1mm}\newline
+c) \ $f(x,y,z)=ye^{-x^2},\ \ (0,1,1)$ \vspace{1mm}\newline
+d) \ $f(x,y,z)=\sin x\sin 2y\sin 3z\sin(3x-2y+z),\ \ (\pi/6,\pi/6,\pi/6)$
+
+\item
+Määritä avaruuskäyrän tangenttivektori annetussa pisteessä $P\,$:
+\begin{align*}
+&\text{a)}\ \ \begin{cases} 
+              \,x^2-y^2+2z^2=13, \\ \,3x+2y-z=3,
+              \end{cases} \quad P=(-2,3,-3) \\
+&\text{b)}\ \ \begin{cases} 
+              \,x^3-xyz^3+yz^5=1, \\ \,xy^2+yz+2xz^3=0,
+              \end{cases} \quad P=(1,2,-1)
+\end{align*}
+
+%\item (*) \label{H-DD-2: tulon ja osamäärän gradientti}
+%a) Näytä, että jos $n$ muuttujan funktiot $f$ ja $g$ ovat differentioituvia pisteessä 
+%$\mx\in\R^n$, niin myös $u=fg$ on differentioituva $\mx$:ssä ja pätee tulon derivoimissääntö 
+%$\Nabla u(\mx)=(g\Nabla f+f\Nabla g)(\mx)$. \ b) Näytä, että lisäehdolla $g(\mx) \neq 0$
+%myös $v=f/g$ on differentioituvua $\mx$:ssä. Mikä on $\Nabla v(\mx)$:n lauseke?
+
+\item (*)
+Kepin päät ovat pisteissä $A=(1,1,-2)$ ja $B=(-1,-2,4)$. Keppiä liikutetaan niin, että sen päät
+liukuvat pitkin käyriä 
+\[
+S_1: \begin{cases} \,x^3+y^2+z=0, \\ \,x+y^2+z^3=-5 \end{cases} \ \text{ja} \quad
+S_2: \begin{cases} \,x^3+y^2+z=7, \\ \,x+y^2+z^3=67 \end{cases}
+\]
+(kepin pituus säilyy). Olkoon kepin päät pienen siirron jälkeen pisteissä $A' \in S_1$ ja
+$B' \in S_2$. Laske suhteen $|AA'|/|BB'|$ raja-arvo, kun $|AA'| \kohti 0$.
+ 
+\item (*)
+Suora, jonka eräs piste on $A$, liikkuu siten, että suora on koko ajan $xy$-tason suuntainen,
+piste $A$ liikkuu vakionopeudella $z$-akselia pitkin ylöspäin, ja samalla suora pyörii
+vakiokulmanopeudella $z$-akselin ympäri vastapäivään, positiivisen $z$-akselin suunnasta 
+katsoen. Suora on $x$ akselin suuntainen täsmälleen kun $A$ on jossakin pisteistä 
+$(0,0,3n),\ n\in\Z$. Määritä suoran liikkuessaan piirtämän (viivoitin)pinnan parametrinen
+esitys sekä ko. pinnan normaali ja tangenttitaso siinä pinnan ja suoran $x=1,\, y=2$ 
+leikkauspisteessä, joka on lähinnä $xy$-tasoa.
+
+\item (*) \index{zzb@\nim!Jyrkin lasku}
+(Jyrkin lasku) Tasosta kohoaa tunturi. Sektorissa $\,A:\,0 \le y \le 2x$ on tunturin korkeus
+tasosta (yksiköt km)
+\[
+h(x,y) = e^{(-x^2-2xy+y^2)/100}, \quad (x,y) \in A.
+\]
+Laskettelija Jyrki lähtee pisteestä $(3,6)$ ja laskee sukset suunnattuina joka hetki niin, että
+lasku on jyrkin mahdollinen. Laske Jyrkin laskureitti!
+
+\end{enumerate}

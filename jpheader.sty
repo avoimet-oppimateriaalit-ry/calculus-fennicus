@@ -1,0 +1,24 @@
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+
+\newcommand{\teos}{\textrm{\small Pitkäranta: Calculus Fennicus}}
+
+\renewcommand{\sectionmark}[1]{\markboth{\textrm{\small \thesection.\ #1}}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\textrm{\small \thechapter.\ #1}}{}}
+
+%\setlength{\headheight}{15pt}
+%\setlength{\headsep}{15pt}
+%\setlength{\footskip}{36pt}
+
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\plainheadrulewidth}{0pt}
+%\renewcommand{\plainfootrulewidth}{0pt}
+
+\lhead[\fancyplain{}{\leftmark}]{\fancyplain{}{\teos}}
+\chead[]{}
+\rhead[\fancyplain{}{\teos}]{\fancyplain{}{\leftmark}}
+
+\lfoot[\fancyplain{\thepage}{\thepage}]{}
+\cfoot[]{}
+\rfoot[]{\fancyplain{\thepage}{\thepage}}

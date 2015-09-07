@@ -1,0 +1,491 @@
+\section[Tuettu Gaussin algoritmi. Singulaariset yhtälöryhmät]
+{Tuettu Gaussin algoritmi. Singulaariset \\ yhtälöryhmät} 
+\label{tuettu Gauss}
+\sectionmark{Tuettu Gaussin algoritmi}
+\alku
+\index{Gaussin algoritmi (eliminaatio)!a@tuettu|vahv}
+\index{tuettu Gaussin algoritmi|vahv}
+\index{singulaarinen yhtälöryhmä|vahv}
+
+Jos Gaussin algoritmissa tullaan $k-1$ eliminaatioaskeleen jälkeen tilanteeseen, jossa
+tukialkio $a_{kk}^{(k-1)} = 0$, niin algoritmissa päästään eteenpäin käyttämällä nk.\
+\kor{tuentaa} (engl. pivoting). Tuennassa yksinkertaisesti vaihdetaan matriisin rivien
+ja/tai sarakkeiden järjestystä (vastaten yhtälöiden tai tuntemattomien järjestyksen vaihtoa
+yhtälöryhmässä).
+Pyrkimyksenä on löytää jokin sellainen 
+järjestys, jossa tukialkiosta tulee nollasta poikkeava, jolloin Gaussin algoritmia voidaan 
+jatkaa. Tarkastellaan aluksi nk.\ \kor{osittaista} eli
+\index{rivituenta (Gaussin alg.)}%
+\kor{rivituentaa}, jossa menettely on
+seuraava: Käydään läpi $k$:nnessa sarakkeessa lävistäjän alapuolella olevat alkiot
+\[
+a_{ik}^{(k-1)}, \quad i=k+1 \ldots n.
+\]
+Valitaan (jos mahdollista) indeksi $i=l$ siten, että $a_{lk}^{(k-1)} \neq 0$, ja suoritetaan
+yhtälöryhmässä (eli matriisissa $\mA^{(k-1)}$ ja vektorissa $\mb^{(k-1)}$) rivinvaihto
+\[
+k\,\text{:s rivi} \ \leftrightarrows\ l\,\text{:s rivi}.
+\]
+Tämä vastaa yhtälöryhmän yhtälöiden järjestyksen vaihtoa. Gaussin algoritmista nähdään, että 
+sikäli kuin rivien uudelleen järjestely suoritetaan riveillä $i = k \ldots n$, ei järjestyksen
+vaihto häiritse itse algoritmia. Toisin sanoen, lopputulos on sama, jos rivit vaihdetaan jo 
+alkuperäisessä yhtälöryhmässä ja sen jälkeen suoritetaan $k-1$ eliminaatioaskelta 
+(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Tukioperaation jälkeen uusi tukialkio on nollasta
+poikkeava, jolloin Gaussin algoritmia voidaan jatkaa.\footnote[2]{\kor{Automaattisessa}
+rivituennassa suoritetaan rivien vaihto ennen jokaista eliminaatioaskelta niin, että
+tukialkioksi tulee alkioista $a_{ik}^{(k-1)},\ i=k \ldots n$ itseisarvoltaan suurin. Tämä
+vähentää pyöristysvirheiden kasautumista ratkaisulagoritmin kuluessa (liukulukulaskennassa).
+Monissa tietokoneohjelmistojen 'black box'--ratkaisijoissa käytetään automaattista rivituentaa
+(esim.\ Mathematica: {\tt LinearSolve}).}
+
+Em. tukioperaatio epäonnistuu vain siinä tapauksessa, että on
+\[
+a_{ik}^{(k-1)} = 0, \quad i = k \ldots n.
+\]
+Gaussin algoritmi on tällöin osoittanut alkuperäisen matriisin $\mA$ singulaariseksi. Nimittäin
+koska tällöin tuntematon $x_k$ ei esiinny lainkaan muunnetun yhtälöryhmän riveillä 
+$i=k \ldots n$, niin yhtälöryhmälle $\mA \mx = \mo$ saadaan monikäsitteinen ratkaisu antamalla
+$x_k$:lle mielivaltainen arvo, asettamalla $x_{k+1}=\ldots=x_n=0$, ja ratkaisemalla 
+$x_i, \ i=1 \ldots k-1\,$ muunnetusta yhtälöryhmästä takaisinsijoituksella ($x_k$:n avulla). 
+Siis $\mA$ on singulaarinen (Korollaari \ref{singulaarisuuskriteeri}).
+
+Osittaisen tukioperaation epäonnistuttua (ja siis matriisin osoittauduttua singulaariseksi) 
+voidaan Gaussin algoritmia vielä jatkaa käyttämällä nk.\ 
+\index{tzy@täydellinen tuenta (Gaussin alg.)}%
+\kor{täydellistä tuentaa}, jossa käydään läpi kaikki matriisialkiot rivistä $k$ ja sarakkeesta
+$k$ alkaen, eli alkiot
+\[
+a_{ij}^{(k-1)}, \quad i,j = k \ldots n.
+\]
+Oletetaan, että jollakin $(l,m)$ on $a_{lm}^{(k-1)} \neq 0$. (Mahdollisesti valitaan alkioista
+itseisarvoltaan suurin kuten automaattisessa rivituennassa, vrt.\ alaviite edellä.)
+\[
+\left.
+\begin{matrix} 0 & & \ldots & & a_{km}^{(k-1)} & \ldots & a_{kn}^{(k-1)} \\ 
+               \vdots & & & & \vdots & & \\ 
+               a_{lk}^{(k-1)} & & \ldots & & a_{lm}^{(k-1)} & & 
+               \\ \vdots & & & & & & 
+               \\ a_{nk}^{(k-1)} & & & & & & \end{matrix}
+\right\rfloor
+\]
+Suoritetaan tällöin rivien ja sarakkeiden vaihto
+\[
+k\,\text{:s rivi} \ \leftrightarrows\ l\,\text{:s rivi}, \quad k\,\text{:s sarake} \ 
+                    \leftrightarrows\ m\,\text{:s sarake}.
+\]
+Sarakkeiden vaihto vastaa yhtälöryhmässä tuntemattomien uudelleen indeksointia. Indekseihin 
+$j \ge k$ sovellettuna tämäkään tukioperaatio ei häiritse itse algoritmia, ts.\ operaatio 
+voidaan ajatella suoritetuksi jo yhtälöryhmän alkuperäisessä muodossa 
+(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Sikäli kuin tukioperaatio onnistuu oletetulla
+tavalla, on operaation jälkeen uusi tukialkio $a_{lm}^{(k-1)} \neq 0$, jolloin Gaussin
+algoritmia voidaan jatkaa. Muussa tapauksessa on tultu tilanteeseen, jossa $a_{ij}^{(k-1)} = 0$
+kun $i = k \ldots n\,$ ja $j = 1 \ldots n$. Gaussin algoritmi on tällöin päättynyt 
+\index{perusmuoto!c@singulaarisen yhtälöryhmän}
+\index{singulaarinen yhtälöryhmä!perusmuotoinen}%
+\kor{perusmuotoiseen singulaariseen yhtälöryhmään}, joka on siis jollakin 
+$k \in \{0, \ldots, n-1\}$ muotoa
+\[
+\begin{bmatrix}
+u_{11} & \ldots &  & & u_{1n} \\
+0 & \ddots \\
+\vdots & &  u_{kk} & \ldots & u_{kn} \\
+0 & &  0 & \ldots & 0 \\
+\vdots &  & \vdots & & \vdots \\
+0 & &  0  & \ldots & 0
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\
+\vdots \\
+y_k \\
+\vdots \\
+\vdots \\
+y_n
+\end{bmatrix} =
+\begin{bmatrix}
+c_1 \\
+\vdots \\
+c_k \\
+\vdots \\
+\vdots \\
+c_n \\
+\end{bmatrix}.
+\]
+Tässä $\mU=\{u_{ij}\}$ on yläkolmiomatriisi, jonka $n-k$ viimeistä riviä ovat nollarivejä ja 
+$u_{ii} \neq 0$, kun $i=1 \ldots k$ (jos $k=0$, niin $\mU=\mA=\mo$). Kertoimet $u_{ij}$ ja $c_i$
+on saatu alkuperäisestä  yhtälöryhmästä $\mA \mx = \mb$ tuetulla Gaussin algoritmilla, eli 
+eliminaatioita ja tukioperaatioita (rivien ja sarakkeiden vaihtoja) yhdistelemällä. Vektori 
+$\my$ sisältää alkuperäiset tuntemattomat $x_i$ uudessa, sarakkeiden vaihtojen määrämässä 
+järjestyksessä. Jos algoritmin kuluessa on käytetty vain rivituentaa, on $\my = \mx$.
+
+Yllämainitusta perusmuotoisesta yhtälöryhmästä nähdään, että sillä on ratkaisu täsmälleen kun
+\[
+c_{k+1}= \ldots = c_n = 0.
+\]
+Tällöin ratkaisu on monikäsitteinen: $y_i, \ i= k+1 \ldots n$, voidaan valita mielivaltaisesti,
+minkä jälkeen $y_1, \ldots, y_k$ määräytyvät takaisinsijoituksella.
+\begin{Exa}
+Seuraavassa sovelletaan täysin tuettua Gaussin algoritmia singulaariseen yhtälöryhmään.
+\begin{align*}
+\begin{bmatrix}
+0&0&3 \\
+1&2&0 \\
+2&4&0
+\end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} &= 
+\begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} \\[5mm]
+\begin{bmatrix}
+4&2&0 \\
+2&1&0 \\
+0&0&3
+\end{bmatrix}
+\begin{bmatrix} x_2 \\ x_1 \\ x_3 \end{bmatrix} &= 
+\begin{bmatrix} b_3 \\ b_2 \\ b_1 \end{bmatrix} 
+\quad (\text{rivien vaihto}\ 1 \leftrightarrows 3,\ \ 
+\text{sarakkeiden vaihto}\ 1 \leftrightarrows 2\,) \\[5mm]
+\begin{bmatrix}
+4&2&0 \\
+0&0&0 \\
+0&0&3
+\end{bmatrix}
+\begin{bmatrix} x_2 \\ x_1 \\ x_3 \end{bmatrix} &= 
+\begin{bmatrix} b_3 \\ b_2 - b_3/2 \\ b_1 \end{bmatrix} 
+\quad \text{(eliminaatio)} \\[5mm]
+\begin{bmatrix}
+4&0&2 \\
+0&3&0 \\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix} x_2 \\ x_3 \\ x_1 \end{bmatrix} &= 
+\begin{bmatrix} b_3 \\ b_1 \\ b_2 - b_3/2 \end{bmatrix} 
+\quad (\text{rivien ja sarakkeiden vaihto}\ 2 \leftrightarrows 3\,)
+\end{align*}
+Nähdään, että saadulla perusmuotoisella yhtälöryhmällä on ratkaisu täsmälleen, kun
+\[
+b_2-b_3/2=0\,\ \ekv\,\ b_3 = 2b_2,
+\]
+ja yleinen ratkaisu on tällöin
+\[
+\left\{ \begin{aligned} 
+x_1\ &=\ t, \\ x_2\ &=\ -t/2 + b_3/4\ =\ (b_2 - t)/2, \\ x_3\ &=\ b_1/3 
+\end{aligned} \right. \qquad\quad (t \in \R). \quad\loppu
+\]
+\end{Exa}
+Esimerkin tuloksen olisi voinut nähdä suoremminkin. Yleisen algoritmin etuna on kuitenkin, että
+se toimii aina, myös silloin kun laskija ei 'näe'.
+
+\subsection*{Neliöatriisin yleinen tulohajotelma}
+\index{matriisin ($\nel$neliömatriisin)!g@$\nel$yleinen tulohajotelma|vahv}
+\index{tulohajotelma (neliömatriisin)|vahv}
+
+Tuetunkin Gaussin algoritmin avulla voidaan määrätä matriisin $\mA$ käänteismatriisi, sikäli 
+kuin $\mA$ on säännöllinen. Kun tukioperaatiot ajatellaan tehdyksi ennen Gaussin algoritmin 
+soveltamista, niin ensinnäkin rivituennat vastaavat yhtälöryhmän muunnosta
+\[
+\mA\mx=\mb \qekv \mV\mA\mx = \mV\mb,
+\]
+missä $\mV=\mI_p$ on rivien lopullista järjestystä $p$ vastaava permutaatiomatriisi.
+--- Kerrattakoon Luvusta \ref{inverssi}, että jos rivinvaihdot vastaavat vaihtomatriiseja
+$\mV_i,\ i=1 \ldots m$, niin
+\[
+\mV = \mV_m \cdots \mV_2\mV_1
+\]
+(käänteinen järjestys!) ja $\mV^{-1}=\mV^T=\mV_1\mV_2 \cdots \mV_m$. Sarakkeiden vaihtojen
+lopputulos taas vastaa muunnosta $\my=\mW^T\mx\ \ekv\ \mx=\mW\my$, missä permutaatiomatriisi
+$\mW=\mI_q$ vastaa sarakkeiden lopullista järjestystä $q$. Jos sarakkeiden vaihtoja vastaavat
+vaihtomatriisit ovat $\mW_i,\ i=1 \ldots l$, niin
+\[
+\mW=\mW_1\mW_2 \ldots \mW_l
+\]
+(sama järjestys kuin vaihdoissa!) ja $\mW^{-1}=\mW^T=\mW_l\mW_{l-1} \ldots \mW_1$. Kun kaikki
+tuennat huomioidaan, niin yhtälöryhmä muuntuu muotoon
+\[
+\mA\mx=\mb \qekv \mV\mA\mx=\mV\mb \qekv (\mV\mA\mW)(\mW^T\mx) = \mV\mb \qekv \mB\my=\mc,
+\]
+missä $\mc=\mV\mb$ (yhtälöt vaihdetussa järjestyksessä $p$), $\my=\mW^T\mx$ (tuntemattomat
+vaihdetussa järjestyksessä $q$) ja
+\[
+\mB=\mV\mA\mW\ \ekv\ \mA = \mV^T\mB\mW^T.
+\]
+Kun muunnettuun yhtälöryhmään $\mB\my=\mc$ sovelletaan Gaussin algoritmia, ei tuentaa enää 
+tarvita. Eliminaation lopputuloksena $\mB$ muuntuu yläkolmiomatriisiksi $\mU$, jolloin on kaksi
+vaihtoehtoa:
+\begin{itemize}
+\item[a)] $[\mU]_{kk} \neq 0,\ k=1\,\ldots\,n$. Tällöin eliminaatiovaihe menee läpi 
+          kokonaisuudessaan, $\mU$ on säännöllinen, $\mB$:lle saadaan $LU$-hajotelma
+          \[
+          \mB = \mL\mU,
+          \]
+          ja $\mA$:lle vastaavasti tulohajotelma
+          \begin{equation} \label{G-tulohajotelma}
+          \boxed{\quad\gehys \mA = \mV^T\mL\mU\mW^T.\quad} \tag{$\star$}
+          \end{equation}
+          Tällöin $\mA$ on säännöllinen ja
+          \[
+          \inv{\mA} = \mW\inv{\mU}\inv{\mL}\mV = \mW\inv{\mB}\mV.
+          \]
+\item[b)] $[\mU]_{ii} \neq 0,\ i=1\,\ldots\,k<n$, $[\mU]_{i,i,}=0,\ i=k \ldots n$
+          (ol.\ $\mA\neq\mo$). Tällöin $\mU$ on em.\ singulaarista perusmuotoa, eli
+          $[\mU]_{ij}=0$, kun $i>k, \ j=1 \ldots n$, ja eliminaatioalgoritmi pysähtyy
+          riville $k$. Pysähtyminen vastaa sitä, että matriisissa $\mL$ astetetaan
+          \[
+          [\mL]_{ij} = \delta_{ij}, \quad 
+                      \text{kun} \quad i \in \{k+1, \ldots, n\}, \ j \in \{1, \ldots, n\}.
+          \]
+          Kun $\mL$ määrätään muilta osin samalla tavoin kuin säännöllisen matriisin 
+          tapauksessa, nähdään, että tulohajotelma \eqref{G-tulohajotelma} on edelleen pätevä.
+\end{itemize}
+Kysymys neliömatriisin säännöllisyydestä tai singulaarisuudesta on näin muodoin ratkaistu 
+Gaussin algoritmilla seuraavasti: Jokainen neliömatriisi voidaan esittää tulomuodossa 
+\eqref{G-tulohajotelma}, missä $\mU$ on yläkolmiomatriisi ja $\mL,\mV,\mW$ ovat säännöllisiä
+ matriiseja. Matriisi $\mU$ on joko säännöllinen tai singulaarinen, mikä ratkaisee myös $\mA$:n
+laadun.
+\jatko
+\begin{Exa} (jatko) Tässä on
+\begin{align*}
+\mA &= \begin{bmatrix} 0&0&3 \\1&2&0 \\2&4&0 \end{bmatrix}, \quad
+\mV  = \begin{bmatrix} 1&0&0\\0&0&1\\0&1&0 \end{bmatrix} 
+       \begin{bmatrix} 0&0&1\\0&1&0\\1&0&0 \end{bmatrix}
+     = \begin{bmatrix} 0&0&1\\1&0&0\\0&1&0 \end{bmatrix}, \\[5mm]
+\mW &= \begin{bmatrix} 0&1&0\\1&0&0\\0&0&1 \end{bmatrix} 
+       \begin{bmatrix} 1&0&0\\0&0&1\\0&1&0 \end{bmatrix}
+     = \begin{bmatrix} 0&0&1\\1&0&0\\0&1&0 \end{bmatrix}, \quad \mB = \mV\mA\mW 
+     = \begin{bmatrix} 4&0&2\\0&3&0\\2&0&1 \end{bmatrix},
+\end{align*}
+\[
+\my=\mW^T\mx = \begin{bmatrix} 0&1&0\\0&0&1\\1&0&0 \end{bmatrix} 
+               \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
+             = \begin{bmatrix} x_2 \\ x_3 \\ x_1 \end{bmatrix}, \quad
+\mc = \mV\mb = \begin{bmatrix} b_3 \\ b_1 \\ b_2 \end{bmatrix}.
+\]
+Muunnetusta yhtälöryhmästä
+\[
+\begin{bmatrix} 4&0&2\\0&3&0\\2&0&1 \end{bmatrix} 
+\begin{bmatrix} x_2 \\ x_3 \\ x_1 \end{bmatrix} =
+\begin{bmatrix} b_3 \\ b_1 \\ b_2 \end{bmatrix}
+\]
+päästään yläkolmiomuotoon yhdellä eliminaatioaskeleella. Koska tukioperaatiot on suoritettu jo
+etukäteen, ei niitä enää eliminaation yhteydessä tarvita. \loppu
+\end{Exa}
+
+\subsection*{Säännöllisyysaste}
+
+Jos $\mA$ on singulaarinen, niin em. tuetun Gaussin algoritmin lopetusindeksiä $k$ sanotaan 
+\index{matriisin ($\nel$neliömatriisin)!ca@säännöllisyysaste (rangi)}
+\index{szyzy@säännöllisyysaste (rangi)} \index{rangi (säännöllisyysaste)}%
+$\mA$:n \kor{säännöllisyysasteeksi} eli \kor{rangiksi} (engl. rank), merkitään $k=r(\mA)$. 
+Luku $n-r(\mA)$ siis kertoo, kuinka monta nollariviä on $\mA$:n tulohajotelman perusmuotoisessa
+singulaarisessa yläkolmiomatriisissa $\mU$. Jos $\mA$ on säännöllinen, niin $r(\mA)=n$, jolloin
+myös $r(\mA^T)=n$. Yleisemminkin pätee
+\[
+\boxed{\quad r(\mA^T)=r(\mA). \quad}
+\]
+Myös tämän voi perustella Gaussin algoritmin antaman tulohajotelman avulla (sivuutetaan
+perustelut).
+
+\subsection*{Yhtälöryhmä kokoa $m \times n$}
+
+Gaussin algoritmi soveltuu myös sellaiseen lineaariseen yhtälöryhmään $\mA \mx = \mb$, jossa 
+yhtälöiden ja tuntemattomien lukumäärät eivät ole samat, ts.\ $\mA$ on kokoa 
+$m \times n,\ m \neq n\ (\mb\in\R^m)$.  Kun tuettua Gaussin algoritmia sovelletaan tällaiseen 
+yhtälöryhmään, on lopputulos jälleen muunnettu perusmuotoinen yhtälöryhmä $\mU \my = \mc$, missä 
+$\mU = \{u_{ij},\ i = 1 \ldots m,\ j = 1 \ldots n\}$ on yläkolmiomatriisi (ts.\ $u_{ij} = 0$ kun $i>j$), ja jollakin $k$, $\ 0 \le k \le \min\{m,n\}$, pätee
+\[ 
+u_{ii} \neq 0,\ \text{kun}\ i = 1 \ldots k, \quad 
+u_{ij} = 0,\ \text{kun}\ i = k+1 \ldots m,\ j = 1 \ldots n. 
+\]  
+\index{matriisin ($\nel$neliömatriisin)!ca@säännöllisyysaste (rangi)}
+\index{szyzy@säännöllisyysaste (rangi)} \index{rangi (säännöllisyysaste)}%
+Indeksiä $k$ sanotaan jälleen $\mA$:n \kor{säännöllisyysasteeksi} eli \kor{rangiksi}. Jos $k$ on
+suurin mahdollinen, eli jos $k = \min\{m,n\}$, niin sanotaan, että $\mA$:lla on \kor{täysi} 
+säännöllisyysaste (engl.\ full rank). Tässä tapauksessa (täydellisesti tuettua) Gaussin 
+eliminaatiota voidaan jatkaa, kunnes algoritmi törmää matriisin $\mA$ 'laitaan' ($m>n$) tai 
+'pohjaan' ($m<n$). Muunnettu yhtälöryhmä $\mU \my = \mc$ voidaan esittää 
+\index{lohkomatriisi}%
+\kor{lohkomatriisi}muodossa
+\[
+\begin{rmatrix} \mU_{11} & \mU_{12} \\ \mU_{21} & \mU_{22} \end{rmatrix} 
+\begin{rmatrix} \my_1 \\ \my_2 \end{rmatrix}\ =\ \begin{rmatrix} \mc_1 \\ \mc_2 \end{rmatrix},
+\]
+missä $\mU_{11} = \{u_{ij},\ i,j = 1 \ldots k\}$ on säännöllinen yläkolmiomatriisi, $\mU_{12}$
+on kokoa $k \times (n-k)$, $\mU_{21}$ on nollamatriisi kokoa $(m-k) \times k$, $\mU_{22}$ on 
+nollamatriisi kokoa $(m-k) \times (n-k)$, ja $\mc_1$ on $k$-vektori. Koska $\mU_{21}$ ja 
+$\mU_{22}$ ovat nollamatriiseja, niin yhtälöryhmän avautuu muotoon 
+\[
+\left\{ \begin{aligned} 
+\mU_{11}\,\my_1 + \mU_{12}\,\my_2\ &=\ \mc_1, \\ \mathbf{0}\ &=\ \mc_2. 
+\end{aligned} \right.
+\]
+Tästä nähdään, että sikäli kuin $k<m$ (näin on aina kun $m>n$), on yhtälöryhmällä sekä 
+välttämätön että riittävä
+\[ 
+\text{\kor{ratkeavuusehto}:} \quad \mathbf{0}\ =\ \mc_2. 
+\]
+Jos $k<n$ (näin on aina kun $m<n$), ei ratkaisu ole tälläkään ehdolla yksikäsitteinen, sillä 
+ratkaisussa voidaan asettaa $\my_1 = \mU_{11}^{-1}(\mc_1 - \mU_{12}\,\my_2)$, olipa 
+$\my_2 \in \R^{n-k}$ mikä tahansa. Päätellään siis erityisesti, että yhtälöryhmä $\mA \mx = \mb$
+kokoa $m \times n$, $m \neq n$, on aina singulaarinen: Joko ratkaisua ei ole jokaisella 
+$\mb \in \R^m$, tai ratkaisu ei ole yksikäsitteinen. Edellinen tilanne vallitsee aina kun $m>n$,
+jälkimmäinen aina kun $m<n$. 
+\begin{Exa} Määritä singulaarisen yhtälöryhmän
+\[
+\left\{ \begin{array}{rrrrl} 
+x_1 & + x_2 & +  x_3 & = & b_1 \\ 2x_1 & + x_2 &        & = & b_2 \\ -x_1 & & + x_3 & = & b_3 \\
+    & + x_2 & + 2x_3 & = & b_4 \\   x_1 & - x_2 & - 3x_3 & = & b_5 
+\end{array} \right.
+\]
+ratkeavuusehdot, yleinen ratkaisu ja kerroinmatriisin säännöllisyysaste. \end{Exa}
+\ratk Tässä on $m=5$ ja $n=3$. Gaussin algoritmissa selvitään ilman tuentaa:
+\begin{align*}
+\begin{rmatrix} 1&1&1\\2&1&0\\-1&0&1\\0&1&2\\1&-1&-3 \end{rmatrix} 
+      \begin{rmatrix} b_1\\b_2\\b_3\\b_4\\b_5 \end{rmatrix} \quad &\longmapsto \quad
+\begin{rmatrix} 1&1&1\\0&-1&-2\\0&1&2\\0&1&2\\0&-2&-4 \end{rmatrix}
+      \begin{rmatrix} b_1\\-2b_1+b_2\\b_1+b_3\\b_4\\-b_1+b_5 \end{rmatrix} \\ 
+&\longmapsto \quad 
+\begin{rmatrix} 1&1&1\\0&-1&-2\\0&0&0\\0&0&0\\0&0&0 \end{rmatrix} 
+     \begin{rmatrix} b_1\\-2b_1+b_2\\-b_1+b_2+b_3\\-2b_1+b_2+b_4\\3b_1-2b_2+b_5 \end{rmatrix}
+\end{align*}
+Saadun singulaarisen perusmuodon mukaan kerroinmatriisin säännöllisyysaste on $k=2$.
+Ratkeavuusehdot voidaan lukea yhtälöryhmän kolmelta viimeiseltä riviltä:
+\[ \left\{
+\begin{array}{rrrrrrl} 
+-b_1 & +b_2 & +b_3 & & & = & 0 \\ -2b_1 & +b_2 & & +b_4 & & = & 0 \\ 
+3b_1 & -2b_2 & & & +b_5 & = & 0 
+\end{array} \right. \]
+eli
+\[
+\begin{rmatrix} 1&0&0&-2&3\\0&1&0&1&-2\\0&0&1&1&-1 \end{rmatrix} 
+\begin{rmatrix} b_5\\b_4\\b_3\\b_2\\b_1 \end{rmatrix} = \begin{rmatrix} 0\\0\\0 \end{rmatrix}.
+\]
+Koska tässä vasemmalla oleva matriisi on perusmuotoinen yläkolmio (ellei olisi, sovellettaisiin
+ensin Gaussin algoritmia), niin nähdään, että $b_1$ ja $b_2$ voidaan valita vapaasti, minkä 
+jälkeen $b_3$, $b_4$ ja $b_5$ määräytyvät:
+\[
+\begin{cases}
+\,b_3 = b_1-b_2, \\ \,b_4 = 2b_1-b_2, \\ \,b_5 = -3b_1+2b_2.
+\end{cases}
+\]
+Näiden ehtojen voimassa ollessa saadaan yleinen ratkaisu takaisinsijoituksella:
+\[
+\begin{cases}
+\,x_1 = -b_1+b_2+t, \\ x_2 = 2b_1-b_2-2t, \\ x_3 = t 
+\end{cases} \quad (t \in \R).
+\]
+Ratkaisu ei ole yksikäsitteinen, koska kerroinmatriisin säännöllisyysaste ei ole täysi:
+$r(\mA)=2<\min\{m,n\}=3$. \loppu
+
+\subsection*{Lauseen \ref{säännöllisyyskriteerit} todistus}
+
+Tulohajotelman \eqref{G-tulohajotelma} perusteella pätee
+\[
+\mA\mx=\mb \qekv \mU\my=\mC\mb, \qquad \my=\mW\mx,\ \ \mC=\mL^{-1}\mV.
+\]
+Jos $\mA$ on singulaarinen, niin $\mU$:n riveistä ainakin $n$:s on nollarivi, jolloin 
+yhtälöryhmän $\,\mU\my=\mC\mb\,$ $n$:s yhtälö saa muodon $\,0=[\mC\mb]_n\,$. Jos on
+$\mb=\mv{0}$, niin yhtälöryhmällä on monikäsitteinen ratkaisu, missä $y_n$ on vapaasti
+valittavissa. Jokaista ratkaisua $\my\neq\mo$ ($y_n \neq 0$) vastaa yhtälöryhmän $\mA\mx=\mo$
+ratkaisu $\mx=\mW^T\my\neq\mo$. Jos taas $\mb\in\R^n$ valitaan siten, että $[\mC\mb]_n \neq 0$,
+niin mainittu yhtälö ei toteudu, jolloin on $\mU\my\neq\mC\mb\ \forall\my\in\R^n$. Tällöin on
+myös $\,\mA\mx\neq\mb$, $\mx=\mW^T\my$, $\my\in\R^n$ (koska $\mU\my=\mC\mb\ \ekv\ \mA\mx=\mb$).
+Siis $\,\mA\mx\neq\mb\ \forall\mx\in\R^n$. On päätelty:
+\[
+\mA\ \text{singulaarinen} 
+       \qimpl \begin{cases} 
+               \text{\ jollakin $\mx\neq\mv{0}$\,\ \ on} &\mA\mx=\mv{0}, \\
+               \text{\ jollakin $\mb\in\R^n$ on}\        &\mA\mx\neq\mb\,\ \forall \mx\in\R^n.
+               \end{cases}
+\]
+Nämä väittämät ovat samanarvoisia kuin Lauseen \ref{säännöllisyyskriteerit} osaväittämät 
+E1$\,\impl\,$E0 ja E2$\,\impl\,$E0, jotka siis ovat tosia. Koska E0$\,\impl\,$E1 ja
+E0$\,\impl\,$E2 olivat tosia jo Proposition \ref{kerroinmatriisi} mukaan, niin lause on
+todistettu. \loppu
+
+\pagebreak
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-m-4: tuentakysymys}
+a) Näytä, että tuetun Gaussin algoritmin kuluessa suoritetut tukioperaatiot (rivien ja
+sarkkeiden vaihdot) voidaan suorittaa ennen eliminaatioita lopputuloksen
+muuttumatta. \vspace{1mm}\newline
+b) Olkoon $\mA$ matriisi kokoa $n \times n$ ja olkoon $\mA_k$ matriisi kokoa $k \times k$, joka
+koostuu $\mA$:n alkioista $a_{ij},\ i,j=1 \ldots k$. Näytä, että yhtälöryhmä $\mA\mx=\mb$
+ratkeaa Gaussin algoritmilla ilman tukioperaatioita täsmälleen kun $\mA_k$ on säännöllinen
+matriisi jokaisella $k=1 \ldots n$.
+
+\item 
+Muunna singulaariseen perusmuotoon tuetulla Gaussin algoritmilla, määritä ratkaisut tai totea
+ratkeamattomuus:
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&2&3\\3&2&1\\1&1&1 \end{rmatrix}
+              \begin{rmatrix} x\\y\\z \end{rmatrix} =
+              \begin{rmatrix} 8\\4\\3 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 0&1&1\\1&2&1\\2&4&2 \end{rmatrix}
+              \begin{rmatrix} x_1\\x_2\\x_3 \end{rmatrix} =
+              \begin{rmatrix} 5\\6\\12 \end{rmatrix} \\[5mm] 
+&\text{c)}\ \ \begin{rmatrix} 0&1&-1&1\\1&1&0&0\\1&0&1&-1\\1&2&-1&1 \end{rmatrix}
+              \begin{rmatrix} x_1\\x_2\\x_3\\x_4 \end{rmatrix} =
+              \begin{rmatrix} -1\\1\\1\\0 \end{rmatrix} \\[5mm]
+&\text{d)}\ \ \begin{rmatrix}
+              1&0&1&1&0&0\\0&1&1&0&1&2\\1&1&2&1&1&2\\1&0&1&0&1&3\\0&0&0&0&1&3\\1&1&2&0&2&5
+              \end{rmatrix}
+              \begin{rmatrix} x_1\\x_2\\x_3\\x_4\\x_5\\x_6 \end{rmatrix} =
+              \begin{rmatrix} 1\\1\\2\\0\\0\\1 \end{rmatrix}
+ \end{align*}
+
+\item
+Määritä $\mA$:n säännöllisyysaste, kaikki yhtälöryhmän $\mA\mx=\mo$ ratkaisut sekä
+tulohajotelma $\mA=\mV^T\mL\mU\mW^T$, kun $\mA=$
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&2&-1\\-2&-4&2\\-1&-2&1 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 1&1&1\\2&2&1\\3&3&2 \end{rmatrix} \qquad
+ \text{c)}\ \ \begin{rmatrix} 2&2&1\\3&3&2\\4&4&3 \end{rmatrix} \\[1mm]
+&\text{d)}\ \ \begin{rmatrix} 2&1&1&1\\4&2&2&3\\0&0&0&1\\1&2&2&0 \end{rmatrix} \qquad
+ \text{e)}\ \ \begin{rmatrix} 1&1&1&1\\2&1&2&1\\0&1&0&1\\1&0&1&1 \end{rmatrix} \qquad
+ \text{f)}\ \ \begin{rmatrix} 1&-2&1&0\\-1&2&-1&1\\2&-4&2&4\\1&1&-1&-1 \end{rmatrix}
+\end{align*}
+
+\item
+Saata seuraavat yhtälöryhmät tuetulla Gaussin algoritmilla singulaariseen perusmuotoon.
+Määritä ratkeavuusehdot ja yleinen ratkaisu sekä edelleen kerroinmatriisin tulohajotelma
+$\mA = \mV^T\mL\mU\mW^T$.
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&-2&2\\-1&2&1\\5&-10&4 \end{rmatrix}
+              \begin{bmatrix} x_1\\x_2\\x_3 \end{bmatrix}
+            = \begin{bmatrix} b_1\\b_2\\b_3 \end{bmatrix} \quad\
+ \text{b)}\ \ \begin{rmatrix} 0&1&-4&-3\\1&0&2&1\\3&2&-2&-3\\2&1&0&-1 \end{rmatrix}
+              \begin{bmatrix} x_1\\x_2\\x_3\\x_4 \end{bmatrix}
+            = \begin{bmatrix} b_1\\b_2\\b_3\\b_4 \end{bmatrix} \\[2mm]
+&\text{c)}\ \ \begin{rmatrix}
+              1&2&-1&2&2\\2&4&-2&0&4\\-1&-2&1&-2&-2\\-1&-2&0&-3&-3\\-2&-4&4&-2&-2
+              \end{rmatrix} 
+              \begin{bmatrix} x_1\\x_2\\x_3\\x_4\\x_5 \end{bmatrix}
+            = \begin{bmatrix} b_1\\b_2\\b_3\\b_4\\b_5 \end{bmatrix}
+\end{align*}
+
+\item
+Muunna singulaariseen perusmuotoon ja ratkaise, mikäli mahdollista:
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&0&4\\-1&3&4 \end{rmatrix}
+              \begin{rmatrix} x_1\\x_2\\x_3 \end{rmatrix} =
+              \begin{rmatrix} 1\\3 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 2&1\\4&6\\3&5 \end{rmatrix} \begin{rmatrix} x\\y \end{rmatrix} =
+              \begin{rmatrix} 1\\4\\-2 \end{rmatrix} \\[3mm]
+&\text{c)}\ \ \begin{bmatrix} 1&2&2\\2&4&6\\3&6&8\\1&1&1 \end{bmatrix}
+              \begin{bmatrix} x_1\\x_2\\x_3 \end{bmatrix} =
+              \begin{bmatrix} 2\\2\\4\\1 \end{bmatrix} \qquad
+ \text{d)}\ \ \begin{bmatrix} 2&1&4\\6&3&8\\4&2&7\\2&1&3 \end{bmatrix}
+              \begin{bmatrix} x\\y\\z \end{bmatrix} =
+              \begin{bmatrix} 0\\4\\1\\1 \end{bmatrix} \\[3mm] 
+&\text{e)}\ \ \begin{rmatrix} 1&4&7&-3\\-2&3&-6&1\\0&11&8&-5 \end{rmatrix}
+              \begin{rmatrix} x_1\\x_2\\x_3\\x_4 \end{rmatrix} =
+              \begin{rmatrix} 1\\3\\5 \end{rmatrix}
+\end{align*}
+
+\item 
+Olkoon \ a) \ $\D \mA = \begin{rmatrix} 1&2&3&4\\2&3&4&1\\3&4&1&2 \end{rmatrix}$,  \ \ 
+b) \ $\D \mA = \begin{rmatrix} 1&3&5&-2\\3&-2&7&5\\2&-5&2&7 \end{rmatrix}$. \vspace{1mm}\newline
+Määritä Gaussin algoritmilla ratkeavuusehdot ja yleinen ratkaisu yhtälöryhmille $\mA\mx=\mb$
+($\mb\in\R^3$) ja $\mA^T\mx=\mb$ ($\mb\in\R^4$).
+
+\end{enumerate}

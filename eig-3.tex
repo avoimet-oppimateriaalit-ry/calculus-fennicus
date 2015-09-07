@@ -1,0 +1,348 @@
+\section{Pinnan kaarevuus} \label{pinnan kaarevuus}
+\alku
+\index{kaarevuus (pinnan)|vahv}
+
+Palautettakoon mieliin käyräteoriasta, että \pain{kä}y\pain{rän} \pain{kaarevuus} kertoo, miten
+nopeasti käyrän yksikkötangenttivektori, tai vaihtoehtoisesti kaaretumissuuntaan osoittava
+päänormaalivektori, muuttuu käyrää pitkin kuljettaessa, ks.\ Luku \ref{käyrän kaarevuus},
+kaavat \eqref{kaarevuuskaava a}--\eqref{kaarevuuskaava b}. 
+\begin{multicols}{2} \raggedcolumns
+Jos halutaan määrätä tasokäyrän kaarevuus annetussa käyrän pisteessä $P$, niin laskukaavojen
+kannalta mukavin on koordinaatisto, jonka origo on $P$:ssä ja $x$-akseli käyrän
+tangentin suuntainen (kuvio). Olkoon käyrän yhtälö tässä koordinaatistossa $y=f(x)$, missä $f$
+on kahdesti jatkuvasti derivoituva pisteen $x=0$ lähellä. Tällöin
+käyrän yksikkönormaalivektori $P$:n lähellä on
+\[
+\vec n(x) = \frac{1}{\sqrt{1+[f'(x)]^2}}\,[-f'(x)\vec i+\vec j\,].
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,4)(0,0.5)
+\curve(0,0,1,1.5,2,1.4)\curve(2,1.4,3,1.5,4,3)
+\put(0.9,1.4){$\bullet$}
+\put(1,1.5){\vector(3,2){2.4}} \put(1,1.5){\vector(-2,3){1.6}}
+\put(1,1.5){\vector(3,2){1.2}} \put(1,1.5){\vector(-2,3){0.8}}
+\put(1.1,1.1){$P$} \put(3.1,3.3){$x$} \put(-0.4,4){$y$}
+\put(1.9,2.5){$\vec i$} \put(0.4,2.8){$\vec j$}
+\put(0.5,0.93){\vector(-3,2){1.2}} \put(-0.7,1.9){$\vec n(x)$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+
+Kuvion tilanteessa käyrä on koordinaatistossa $(x,y)$ alaspäin kaartuva $P$:n lähellä
+($f''(0)<0$), joten tässä tapauksessa käyrän päänormaalivektori $P$:n lähellä $=-\vec n(x)$.
+Kun huomioidaan, että $f'(0)=0$, seuraa derivoimalla
+\[
+\frac{d\vec n}{dx}(0)=-f''(0)\,\vec i.
+\]
+Valitussa koordinaatistossa siis käyrän (merkkinen) kaarevuus $P$:ssä on $\kappa=f''(0)$
+(vrt.\ Luvun \ref{käyrän kaarevuus} kaavat \eqref{kaarevuuskaava b} ja
+\eqref{tasokäyrän kaarevuus} päänormaalivektorille $\vec n$\,).
+
+\vspace{2mm}
+\begin{multicols}{2} \raggedcolumns
+Tarkastellaan nyt pintaa, jonka yhtälö on $z=f(x,y)$. Vastaavasti kuin edellä oletetaan tässä
+koordinaatisto valituksi siten, että $xy$-taso on pinnan tangenttitaso origossa (kuvio).
+Oletetaan myös, että $f$:n osittaisderivaatat ovat toiseen kertalukuun asti jatkuvia pisteen
+$(x,y)=(0,0)$ lähellä.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaDD-6.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+Oletettuun tilanteeseen voidaan ajatella päästyn siten, että on valittu annetun pinnan jokin
+piste $P$, siirretty koordinaatiston origo ko.\ pisteeseen, ja sen jälkeen valittu tässä 
+pisteessä (kierretty) koordinaatisto, jossa $xy$-taso on pinnan tangenttitaso $P$:ssä.
+
+Pinnan normaali pisteessä $(x,y,f(x,y))$ on (vrt.\ Luku \ref{gradientti})
+\[
+\vec n(x,y)=\frac{-f_x\vec i-f_y\vec j+\vec k}{\sqrt{1+f_x^2+f_y^2}}\,.
+\]
+Kordinaatiston valinnan perusteella on $f_x(0,0)=f_y(0,0)=0$, joten seuraa
+\begin{align*}
+\frac{\partial\vec n}{\partial x}(0,0) &= -a_{11}\vec i-a_{12}\vec j, \\
+\frac{\partial\vec n}{\partial y}(0,0) &= -a_{12}\vec i-a_{22}\vec j,
+\end{align*}
+missä
+\[
+\mA=\begin{bmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{bmatrix}
+   =\begin{bmatrix} f_{xx}(0,0) & f_{xy}(0,0) \\ f_{xy}(0,0) & f_{yy}(0,0) \end{bmatrix}.
+\]
+
+\index{kaarevuusmatriisi}%
+Matriisia $\mA$ sanotaan (tehdyin oletuksin) pinnan \kor{kaarevuusmatriisiksi} tarkastellussa
+pisteessä ja mainitulla tavalla valituissa koordinaateissa $(x,y)$ pinnan tangenttitasossa.
+Luvut $a_{11}$ ja $a_{22}$ ilmaisevat pinnan kaarevuuden koordinaattiakselien suunnassa: Origon 
+lähellä käyrät $S_1: \ y=0, \ z=f(x,0)$ ja $S_2: \ x=0, \ z=f(0,y)$ ovat likimain ympyräviivoja,
+joiden keskipisteet ovat pisteissä $(0,0,1/a_{11})$ ja $(0,0,1/a_{22})$. Luku $a_{12}$ on pinnan
+\index{kierevyys (pinnan)}%
+\kor{kierevyys} origossa. Kierevyys kertoo, kuinka nopeasti (ja mihin suuntaan) pinnan normaali
+'kaatuu sivulle' koordinaattiviivojen suuntaan kuljettaessa (vrt.\ avaruuskäyrän kierevyys:
+Harj.teht.\,\ref{käyrän kaarevuus}:\ref{H-dif-3: kierevyys}).
+
+Kaarevuusmatriisi luonnollisesti riippuu tarkastelun kohteena olevasta pinnan pisteestä, mutta
+se riippuu myös valitusta koordinaatistosta $(x,y)$ pinnan tangenttitasossa. Onkin syytä tutkia,
+miten kaarevuusmatriisi muuttuu, kun koordinaattiakseleita $x,y$ kierretään $z$-akselin ympäri,
+eli kun tehdään koordinaattimuunnos
+\[
+\mC\begin{bmatrix} \xi \\ \eta \end{bmatrix}=\begin{bmatrix} x \\ y \end{bmatrix} \ \ekv \ 
+\begin{bmatrix} \xi \\ \eta \end{bmatrix} = \mC^T \begin{bmatrix} x \\ y \end{bmatrix},
+\]
+missä $\mC$ on ortogonaalinen matriisi (kokoa $2 \times 2$). Vastaus tähän kysymykseen saadaan,
+kun ajatellaan funktio $f(x,y)$ approksimoiduksi origon lähellä Taylorin kaavan mukaisesti:
+\[
+f(x,y)=\tfrac{1}{2}\,a_{11}\,x^2+\tfrac{1}{2}\,a_{22}\,y^2+a_{12}\,xy+\ldots
+\]
+Vain kehitelmän näkyvillä termeillä on merkitystä kaarevuuden kannalta, sillä jäännöstermin 
+toisen kertaluvun osittaisderivaatat häviävät origossa. Päätellään siis, että kaarevuusmatriisi
+muuntuu koordinaatiston kierrossa samalla tavoin kuin neliömuoto. Toisin sanoen, kierretyssä
+$(\xi,\eta)$-koordinaatistossa kaarevuusmatriisi on
+\[
+\mB=\mC^T\mA\mC.
+\]
+Jos tässä erityisesti valitaan $\mC$:n pystyriveiksi $\mA$:n ortonormeeratut ja positiivisesti
+suunnistetut ominaisvektorit, niin $\mB$ on diagonaalinen:
+\[
+\mB=\begin{bmatrix} \kappa_1 & 0 \\ 0 & \kappa_2 \end{bmatrix}.
+\]
+\index{pzyzy@pääkaarevuus(koordinaatisto)}%
+Sanotaan, että $\,\mB$:n lävistäjäalkiot $\kappa_1,\kappa_2$ ovat pinnan \kor{pääkaarevuudet} 
+(engl.\ principal curvatures) tarkasteltavassa pisteessä, ja että koordinaatisto $(\xi,\eta)$ on
+ko.\ pisteessä \kor{pääkaarevuuskoordinaatisto}. Kun valitaan $\zeta=z$, niin koordinaatistossa
+$(\xi,\eta,\zeta)$ pinnan yhtälö on siis origon ympäristössä muotoa
+\[
+\zeta=\frac{1}{2}\,\kappa_1\xi^2+\frac{1}{2}\,\kappa_2\eta^2\,+\,\ldots
+\]
+Riittävän säännöllinen pinta on siis jokaisen pisteensä $P$ lähiympäristössä likimain joko 
+(a) \pain{elli}p\pain{tinen} p\pain{araboloidi} ($\kappa_1\kappa_2>0$), (b) p\pain{arabolinen} 
+\pain{lieriö} tai \pain{taso} ($\kappa_1\kappa_2=0$; taso jos $\kappa_1=\kappa_2=0$)
+tai (c) \pain{h}yp\pain{erbolinen} p\pain{arabolidi}
+($\kappa_1\kappa_2<0$), vrt.\ toisen asteen pintojen luokittelu edellä. Tämän
+jaottelun mukaisesti sanotaan, että $P$ on pinnan
+\index{elliptinen piste (pinnan)} \index{hyperbolinen piste (pinnan)}
+\index{parabolinen piste (pinnan)}% 
+(a) \kor{elliptinen}, (b) \kor{parabolinen}, tai (c) \kor{hyperbolinen} piste. 
+
+Jos pinnan piste $P$ on pääkaarevuuskoordinaatiston $(\xi,\eta,\zeta)$ origo em.\ tavalla ja 
+pintaa tarkastellaan positiivisen $\zeta$-akselin (eli pinnan normaalin) suunnasta, niin 
+elliptisessä tapauksessa pinta kaartuu joka suuntaan joko tarkkailijaa kohti (jos $\kappa_1>0$
+ja $\kappa_2>0$) tai tarkkailijasta poispäin (jos $\kappa_1<0$ ja $\kappa_2<0$). Hyperbolisessa
+tapauksessa pinta kaartuu toiseen pääkaarevuussuuntaan tarkkailijaa kohti ja toiseen 
+tarkkailijasta poispäin, eli $P$ on nk.\
+\index{satulapiste}%
+\kor{satulapiste}. Parabolisessa tapauksessa pinta
+taas kaartuu oleellisesti vain toiseen pääkaarevuussuuntaan. Kaikissa tapauksissa kaartuminen
+tapahtuu pääkaarevuussuuntiin siten, että $\xi\zeta$-tason ja pinnan leikkausviiva on origon
+lähellä likimain ympyräviiva, jonka keskipiste on $Q_1=(0,0,1/\kappa_1)$, ja vastaavasti 
+$\eta\zeta$-tason ja pinnan leikkausviiva on likimain ympyräviiva, jonka keskipiste on 
+$Q_2=(0,0,1/\kappa_2)$. Lukuja $R_i=1/\abs{\kappa_i}$ (voi olla myös $R_i=\infty$) sanotaan
+\index{pzyzy@pääkaarevuussäde} \index{kaarevuussäde} \index{kaarevuuskeskiö}%
+tämän mukaisesti \kor{pääkaarevuussäteiksi} ja pisteitä $Q_i$ \kor{kaarevuuskeskiöiksi}.
+Kaarevuuskeskiöt voi mieltää geometrisesti niin, että pinnan normaali kiertyy likimain 
+kaarevuuskeskiön ympäri, kun normaalin ja pinnan leikkauspiste siirtyy tarkasteltavasta 
+pisteestä $P$ vastaavaan pääkaarevuussuuntaan. Tämän mukaisesti piste $P$ on siis elliptinen
+täsmälleen kun kaarevuuskeskiöt ovat pinnan samalla puolella ja äärellisen matkan päässä ja 
+hyperbolinen täsmälleen kun kaarevuuskeskiöt ovat eri puolilla pintaa ja äärellisen matkan 
+päässä.
+\begin{Exa} Liikuttaessa pallopinnalla
+\[
+S:\ (x-x_0)^2+(y-y_0)^2+(z-z_0)^2=R^2
+\]
+mihin tahansa suuntaan kiertyy pallon keskipisteestä $Q=(x_0,y_0,z_0)$ poispäin osoittava 
+normaalivektori $\vec n$ keskipisteen ympäri. Molemmat kaarevuuskeskiöt ovat siis pisteessä $Q$.
+Päätellään, että jos karteesisen koordinaatiston $(\xi,\eta,\zeta)$ origo on pallopinnalla ja 
+$\xi\eta$-taso on pallopinnan tangenttitaso, niin jokainen tällainen koordinaatisto on 
+pääkaarevuuskoordinaatisto. Jos normaalivektori $\vec n$ on valittu mainitulla tavalla, niin 
+kaarevuusmatriisi on
+\[
+\mA=\begin{rmatrix} -\frac{1}{R} & 0 \\[1mm] 0 & -\frac{1}{R} \end{rmatrix}.
+\]
+Pinnan jokainen piste on elliptinen. \loppu
+\end{Exa}
+\begin{Exa} \vahv{Torus}. $xy$-tason ympyräviiva
+\[
+K=\{(x,y)\in\R^2 \mid (x-R)^2+y^2=a^2\}, \quad \text{missä} \quad 0<a<R,
+\]
+\index{torus}%
+pyörähtää avaruudessa $y$-akselin ympäri. Laske näin syntyvän pinnan, \kor{toruksen},
+pääkaarevuudet sen $xy$-tasolla olevassa pisteessä $P=(x,y,0)$.
+\end{Exa}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,6)(-1,-1.5)
+\put(-1,0){\vector(1,0){10}} \put(8.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){5.8}} \put(0.2,4.6){$y$}
+\put(4,0){\bigcircle{4}}
+\put(0,3){\line(4,-3){4}} \put(2.4,0){\line(0,1){1.2}}
+\put(2.4,1.2){\vector(-4,3){0.8}} \put(2.4,1.2){\vector(3,4){0.6}}
+\put(2.65,2){$\vec\tau$} \put(1.35,1.4){$\vec n$}
+\put(2.3,-0.4){$x$} \put(3.85,-0.5){$R$} \put(3.2,0.75){$a$} \put(-0.4,2.9){$c$}
+\put(1.4,2.1){$d$}
+\put(3.9,-0.1){$\bullet$} \put(-0.1,2.9){$\bullet$} \put(2.3,1.1){$\bullet$}
+\put(2.65,1.1){$P$} \put(4.05,0.3){$Q_1$} \put(0.15,3.15){$Q_2$}
+%\put(1.5,0){\line(0,1){3.765}} \put(7,0){\line(0,1){3.3179}}
+%\put(1.4,-0.5){$a$} \put(6.9,-0.5){$b$}
+%\put(3,1.5){$A$} \put(8,3.7){$y=f(x)$}
+\end{picture}
+\end{center}
+\end{figure}
+\ratk \ Geometrisesti voidaan päätellä, että pääkaarevuussuunnat pisteessä $P$ ovat $\vec\tau$
+ja $\vec k$, missä $\,\vec\tau\,$ on $xy$-tason suuntainen $S$:n yksikötangenttivektori ja
+$\vec k$ on $xy$-tason normaali. Nimittäin kun pisteestä $P$ liikutaan suuntaan $\,\vec\tau\,$,
+kiertyy pinnan normaali pisteen $Q_1=(R,0,0)$ ympäri. Suuntaan $\,\vec k\,$ liikuttaessa
+normaali taas kiertyy $y$-akselilla olevan pisteen $Q_2=(0,c,0)$ ympäri (ks.\ kuvio), koska
+$y$-akseli on pinnan symmetria-akseli. Pisteet $Q_1,\,Q_2$ ovat siis kaarevuuskeksiöt. Kun
+pinnan normaali $\vec n$ valitaan osoittamaan pisteestä $Q_1$ poispäin, niin näin valitussa
+pääkaarevuuskoordinaatistossa $(\xi,\eta,\zeta)$ on $Q_1=(0,0,-a)$ ja (ks.\ kuvio)
+\[
+Q_2 = \begin{cases} (0,0,d), &\text{jos $x<R$}, \\ (0,0,-d), &\text{jos $x>R$}, \end{cases}
+\]
+missä $d$ on pisteen $P$ etäisyys $y$-akselista suuntaan $\pm\vec n$. Tapauksessa $x<R$ 
+päätellään yhdenmuotoisten kolmioiden avulla että (ks.\ kuvio)
+\[
+\frac{a+d}{R}=\frac{a}{R-x} \qimpl d=\frac{ax}{R-x}\,,
+\]
+joten pääkaarevuudet ovat tässä tapauksessa
+\[
+\underline{\underline{\kappa_1=-\frac{1}{a}\,, \quad 
+                      \kappa_2=\frac{1}{a}\left(\frac{R}{x}-1\right)}}.
+\]
+Nämä todetaan päteviksi myös tapauksessa $x \ge R$. Piste $P=(x,y,0)$ on tämän mukaisesti
+elliptinen kun $x>R$, parabolinen kun $x=R$, ja hyperbolinen kun $x<R$. \loppu
+
+\begin{Exa}
+Määritä pinnan $\,S:\ z=\sin xy\,$ pääkaarevuudet ja pääkaarevuuskoordinaatisto origossa.
+\end{Exa}
+\ratk \ Pinnan tangenttitaso origossa on $xy$-taso, ja kaarevuusmatriisi origossa on
+\[
+\mA=\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
+\]
+Tämän ominaisarvot ovat $\lambda_1=+1$ ja $\lambda_2=-1$ sekä vastaavat ominaisvektorit
+$[1,1]^T$ ja $[-1,1]^T$. Siis pääkaarevuudet ovat $\kappa_1=+1$ ja $\kappa_2=-1$, ja
+pääkaarevuuskoordinaatiston kantavektorit ovat
+\[
+\vec e_1 = (\vec i + \vec j)/\sqrt{2}, \quad \vec e_2 = (-\vec i + \vec j)/\sqrt{2}.
+\]
+Tässä koordinaatistossa pinnan yhtälö on sarjamuodossa
+\begin{align*}
+z &= xy - \frac{(xy)^3}{3!} + \ldots \\
+  &= \frac{1}{2}(\xi^2-\eta^2) - \frac{1}{48}(\xi^2-\eta^2)^3 + \ldots
+\end{align*}
+Pinta on siis origon lähellä likimain hyperbolinen paraboloidi (satulapinta), eli origo on
+pinnan hyperbolinen piste. \loppu
+\begin{Exa}
+Määritä pinnan $S:\ z=xy-y^2\,$ pääkaarevuudet ja -suunnat pisteessä $P=(1,1,0)$.
+\end{Exa}
+\ratk \ Jos $z(x,y)=xy-y^2$, niin $\,z_x(1,1)=1$ ja $z_y(1,1)=-1$, joten pinnan
+yksikkönormaalivektori pisteessä $(1,1,0)$ on
+\[
+\vec n=\frac{1}{\sqrt{3}}(-\vec i+\vec j+\vec k).
+\]
+Yksikkötangenttivektoreita ovat
+\[
+\vec t_1 = \frac{1}{\sqrt{2}}(\vec i+\vec j), \quad
+\vec t_2 = \vec n\times\vec t_1=\frac{1}{\sqrt{6}}(-\vec i+\vec j-2\vec k),
+\]
+ja $\{\vec t_1,\vec t_2,\vec n\}$ on ortonormeerattu, positiivisesti suunnistettu systeemi. 
+Suoritetaan koordinaattimuunnos $(x,y,z)\hookrightarrow (\xi,\eta,\zeta)\,$ koordinaatistoon 
+$\{P,\vec t_1,\vec t_2,\vec n\}\,$:
+\[
+\begin{rmatrix} 
+      \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{3}} \\[2mm]
+      \frac{1}{\sqrt{2}} &  \frac{1}{\sqrt{6}} &  \frac{1}{\sqrt{3}} \\[2mm]
+                       0 & -\frac{2}{\sqrt{6}} &  \frac{1}{\sqrt{3}}
+      \end{rmatrix}
+\begin{bmatrix} \xi \\[2mm] \eta \\[2mm] \zeta \end{bmatrix} 
+= \begin{bmatrix} x-1 \\[2mm] y-1 \\[2mm] z \end{bmatrix} \qekv
+\begin{cases}
+    \,x &= \frac{\xi}{\sqrt{2}}-\frac{\eta}{\sqrt{6}}-\frac{\zeta}{\sqrt{3}}+1, \\[2mm]
+    \,y &= \frac{\xi}{\sqrt{2}}+\frac{\eta}{\sqrt{6}}+\frac{\zeta}{\sqrt{3}}+1, \\[2mm]
+    \,z &= \phantom{\frac{\xi}{\sqrt{2}}}-\frac{2\eta}{\sqrt{6}}+\frac{\zeta}{\sqrt{3}}\,.
+\end{cases}
+\]
+Sijoitus yhtälöön $\,z=y(x-y)\,$ antaa
+\begin{align*}
+&-\frac{2}{\sqrt{6}}\,\eta+\frac{1}{\sqrt{3}}\,\zeta
+  =\left(\frac{1}{\sqrt{2}}\,\xi+\frac{1}{\sqrt{6}}\,\eta+\frac{1}{\sqrt{3}}\,\zeta+1\right)
+   \left(-\frac{2}{\sqrt{6}}\,\eta-\frac{2}{\sqrt{3}}\,\zeta\right) \\[2mm]
+&\ekv \quad 3\sqrt{3}\,\zeta+\sqrt{6}\,\xi\zeta+2\sqrt{2}\,\eta\zeta+\zeta^2
+            +\sqrt{3}\,\xi\eta+\eta^2=0.
+\end{align*}
+Tämä määrää implisiittisesti funktion $\zeta=\zeta(\xi,\eta)$, jolle 
+$\zeta(0,0)=\zeta_\xi(0,0)=\zeta_\eta(0,0)=0$. Implisiittisesti derivoimalla saadaan lasketuksi
+toisen kertaluvun osittaisderivaatat (vrt.\ Harj.teht.\,\ref{H-eig-3: kaarevuusmatriisi}):
+\[
+\zeta_{\xi\xi}(0,0)=0,\quad \zeta_{\xi\eta}(0,0)=-\frac{1}{3}\,,\quad 
+\zeta_{\eta\eta}(0,0)=-\frac{2}{3\sqrt{3}}\,.
+\]
+Kaarevuusmatriisi valitussa koordinaatistossa on siis
+\[
+\mA=\begin{rmatrix} 0 & -\frac{1}{3} \\ -\frac{1}{3} & -\frac{2}{3\sqrt{3}} \end{rmatrix}.
+\]
+$\mA$:n ominaisarvot ovat 
+\[
+\lambda_1=\frac{1}{3\sqrt{3}}\,, \quad \lambda_2=-\frac{1}{\sqrt{3}}\,,
+\]
+ja ominaisvektorit ovat suorilla
+\[
+\lambda_1:\ \xi+\sqrt{3}\,\eta=0, \quad \lambda_2:\ \sqrt{3}\,\xi-\eta=0.
+\]
+Näiden suorien suuntavektoreita ovat
+\begin{align*}
+&\vec v_1 = \sqrt{3}\,\vec t_1-\vec t_2 = \frac{2}{\sqrt{6}}(2\vec i+\vec j+\vec k), \\
+&\vec v_2 = \vec t_1+\sqrt{3}\,\vec t_2 = \sqrt{2}\,(\vec j-\vec k).
+\end{align*}
+Siis pääkaarevuudet ja -suunnat alkuperäisessä koordinaatistossa ovat
+\begin{alignat*}{2}
+\kappa_1 &=\underline{\underline{\frac{1}{3\sqrt{3}}}}\,,\quad 
+         &&\text{suunta }\ \underline{\underline{2\vec i+\vec j+\vec k}}, \\
+\kappa_2 &=\underline{\underline{-\frac{1}{\sqrt{3}}}}\,,\quad 
+         &&\text{suunta }\ \underline{\underline{\vec j-\vec k}}.
+\end{alignat*}
+Piste $P$ on pinnan hyperbolinen piste. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item 
+Määritä pinnan pääkaarevuudet ja pääkaarevuuskoordinaatisto annetussa pisteessä:
+\vspace{1mm}\newline
+a) \ $z=(x+y)(x-2y),\,\ (0,0,0) \quad\ \ $
+b) \ $z=2\sin xy + \cos(x+y),\,\ (0,0,1)$ \newline
+c) \ $z=1-x+2y+e^{x-2y},\,\ (0,0,2) \quad\ $
+d) \ $x^2+2y^2-2xy+z^2=1,\,\ (0,0,-1)$ \newline
+e) \ $\cos(x+y)+\sin(x+y+z)-\cos z=0,\,\ (0,0,0)$
+
+\item
+Käyrä $K: y=5\sin x$ pyörähtää avaruudessa $x$-akselin ympäri. Määritä syntyvän pyörähdyspinnan 
+pääkaarevuussäteet ja -suunnat pisteessä \vspace{1mm}\newline
+a) \ $(\pi/6,5/2,0), \quad$
+b) \ $(\pi/2,4,-3), \quad$ 
+c) \ $(3\pi/4,-5/2,-5/2)$.
+
+\item \label{H-eig-3: kaarevuusmatriisi}
+Tarkastellaan pintaa $\,S: F(x,y,z)=0$, missä $F$:n osittaisderivaatat ovat jatkuvia toiseen
+kertalukuun asti. Näytä, että jos taso $T: z=z_0$ on $S$:n tangenttitaso pisteessä
+$P=(x_0,y_0,z_0) \in S$ ja $F_z(P) \neq 0$, niin $S$:n kaarevuusmatriisi pisteessä $P$ on
+\[
+\mA=-\frac{1}{F_z(P)} \begin{bmatrix} F_{xx}(P)&F_{xy}(P)\\F_{xy}(P)&F_{zz}(P) \end{bmatrix}.
+\]
+
+\item (*)
+Määritä pinnan pääkaarevuudet ja pääkaarevuuskoordinaatisto annetussa pisteessä:
+\vspace{1mm}\newline
+a) \ $9x^2+4y^2+z^2=14,\,\ (1,-1,1) \quad\ $
+b) \ $2x^2-2y^2-z^2=1,\,\ (1,0,-1)$ \newline
+c) \ $xy+2yz-3xz=0,\,\ (1,1,1) \qquad\ $
+d) \ $xy^2z^3=1,\,\ (1,1,1)$
+
+\item (*)
+Suora $S_t$ liikkuu avaruudessa parametrin $t\in\R$ mukaan siten, että suora kulkee pisteen
+$(0,0,2t)$ kautta ja suoran suuntavektori on $\vec a(t)=\cos t\,\vec i+\sin t\,\vec j$. Määritä
+suoran synnyttämän viivoitinpinnan pääkaarevuudet ja pääkaarevuussuunnat origossa.
+
+\end{enumerate}

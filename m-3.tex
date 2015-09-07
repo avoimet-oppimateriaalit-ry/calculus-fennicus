@@ -1,0 +1,597 @@
+\section{Gaussin algoritmi} \label{Gaussin algoritmi}
+\alku
+\index{Gaussin algoritmi (eliminaatio)|vahv}
+
+Lineaarisia yhtälöryhmiä, jotka eivät ole kooltaan aivan hirmuisia (esim. $n<10^4$) ratkotaan
+käytännössä usein \kor{Gaussin algoritmilla} eli \kor{Gaussin eliminaatiolla}. Algoritmilla on
+monia variaatioita, ja niillä monia nimiä, mutta pääidea on kaikissa sama.
+
+Lähdetään ratkaisemaan yhtälöryhmää
+\[
+\left\{
+\begin{alignedat}{3}
+a_{11} &x_1 + a_{12} &x_2 + \ldots + a_{1n}         &x_n  \ &= \ &b_1,    \\
+a_{21} &x_1 + a_{22} &x_2 + \ldots + a_{2n}         &x_n  \ &= \ &b_2,    \\
+       &\vdots       & \vdots \qquad \qquad \quad \ &\vdots &    &\vdots \\
+a_{i1} &x_1 + a_{i2} &x_2 + \ldots + a_{in}         &x_n  \ &= \ &b_i,    \\
+       &\vdots       & \vdots \qquad \qquad \quad \ &\vdots &    &\vdots \\
+a_{n1} &x_1 + a_{n2} &x_2 + \ldots + a_{nn}         &x_n  \ &= \ &b_n. \
+\end{alignedat}
+\right.
+\]
+Gaussin algoritmissa oletetaan, että yhtälöryhmällä on ratkaisu $(x_i)$ ja toimitaan ikäänkuin
+ratkaisu olisi sijoitettu tuntemattomien paikalle. Ratkaisun ei tarvitse olla yksikäsitteinen
+--- tämä selviää algoritmin kuluessa. Samoin selviää, onko ratkaisua ylipäänsä olemassa.
+
+Gaussin algoritmissa yhtälöryhmä muunnetaan askelittain yksinkertaisempaan muotoon. Muunnetut
+yhtälöryhmät ovat alkuperäisen kanssa ekvivalenttisia (eli muunnokset voidaan tehdä molempiin 
+suuntiin), joten mitään informaatiota ei laskentaprosessin kuluessa menetetä.
+
+Olettaen, että $a_{11} \neq 0$ (tapaukseen $a_{11} = 0$ palataan myöhemmin), Gaussin algoritmin
+ensimmäinen nk.\ 
+\index{eliminaatioaskel (Gaussin alg.)}%
+\kor{eliminaatioaskel} on: Ratkaistaan 1. yhtälöstä
+\[
+x_1=-\sum_{j=2}^n \frac{a_{1j}}{a_{11}}\,x_j + \frac{b_1}{a_{11}}
+\]
+ja sijoitetaan tämä lauseke muihin yhtälöihin $x_1$:n paikalle. Sievennysten jälkeen on 
+tuloksena alkuperäisen kanssa ekvivalenttinen yhtälöryhmä 
+\[
+\left\{
+\begin{alignedat}{2}
+a_{11} x_1 + a_{12} &x_2 + \ldots +       a_{1n}  &x_n   &= b_1, \\
+       a_{22}^{(1)} &x_2 + \ldots + a_{2n}^{(1)}  &x_n   &= b_2^{(1)}, \\
+                    & \vdots \qquad \qquad  \quad \ \vdots & &  \quad \vdots \\
+       a_{i2}^{(1)} &x_2 + \ldots + a_{in}^{(1)}  &x_n  &=  b_i^{(1)}, \\
+                    & \vdots \qquad \qquad  \quad \ \vdots & &  \quad \vdots \\
+       a_{n2}^{(1)} &x_2 + \ldots + a_{nn}^{(1)}  &x_n   &=  b_n^{(1)}. \
+\end{alignedat}
+\right.
+\]
+Tässä ensimmäinen yhtälö on jätetty alkuperäiseen muotoonsa ja on merkitty
+\begin{align*}
+a_{ij}^{(1)} &= a_{ij} - a_{i1}a_{1j}/a_{11}, \quad i,j = 2 \ldots n, \\
+b_i^{(1)} &= b_i - a_{i1}b_1/a_{11}, \quad i = 2 \ldots n.
+\end{align*}
+Taulukkomuodossa laskien tämä muunnos toteutuu, kun kerrotaan 1. yhtälö puolittain luvulla 
+$-a_{i1}/a_{11}$, lasketaan tulos puolittain yhteen $i$:nnen yhtälön kanssa, ja korvataan 
+tuloksella aiempi $i$:s yhtälö, $i=2 \ldots n$. 
+
+Ensimmäisen eliminaatioaskeleen jälkeinen yhtälöryhmä on matriisimuodossa
+\[
+\begin{bmatrix}
+a_{11} & a_{12}       & \ldots & a_{1n} \\
+     0 & a_{22}^{(1)} & \ldots & a_{2n}^{(1)} \\
+\vdots & \vdots       &        & \vdots \\
+     0 & a_{n2}^{(1)} & \ldots & a_{nn}^{(1)}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix} =
+\begin{bmatrix}
+b_1 \\ \ b_2^{(1)} \\ \vdots \\ \ b_n^{(1)}
+\end{bmatrix}.
+\]
+Koska tässä yhtälöryhmässä $x_1$ esiintyy vain ensimmäisessä yhtälössä, voidaan tämä yhtälö 
+jättää jatkossa omaan rauhaansa ja tarkastella supistettua yhtälöryhmää
+\[
+\begin{bmatrix}
+a_{22}^{(1)} & a_{23}^{(1)} & \ldots & a_{2n}^{(1)} \\
+a_{33}^{(1)} & a_{33}^{(1)} & \ldots & a_{3n}^{(1)} \\
+\vdots & \vdots      &      & \vdots \\
+a_{n2}^{(1)} & a_{n3}^{(1)} & \ldots & a_{nn}^{(1)}
+\end{bmatrix}
+\begin{bmatrix}
+x_2 \\ x_3 \\ \vdots \\ x_n
+\end{bmatrix} =
+\begin{bmatrix}
+b_2^{(1)} \\ b_3^{(1)} \\ \vdots \\ b_n^{(1)}
+\end{bmatrix}.
+\]
+Jos $a_{22}^{(1)} \neq 0$, suoritetaan tähän yhtälöryhmään samanlainen eliminaatiomuunnos kuin
+edellä, jolloin se muuntuu muotoon
+\[
+\begin{bmatrix}
+a_{22}^{(1)} & a_{23}^{(1)} & \ldots & a_{2n}^{(1)} \\
+0 & a_{33}^{(2)} & \ldots & a_{3n}^{(2)} \\
+\vdots & \vdots      &      & \vdots \\
+0 & a_{n3}^{(2)} & \ldots & a_{nn}^{(2)}
+\end{bmatrix}
+\begin{bmatrix}
+x_2 \\ x_3 \\ \vdots \\ x_n
+\end{bmatrix} =
+\begin{bmatrix}
+b_2^{(1)} \\ b_3^{(2)} \\ \vdots \\ b_n^{(2)}
+\end{bmatrix}.
+\]
+Tässä $x_2$ esiintyy vain ensimmäisessä yhtälössä, joten yhtälöryhmä supistuu jälleen. 
+Yleisesti on $k-1$ eliminaatioaskeleen jälkeen koko yhtälöryhmä saatu muotoon
+\[
+\left[\begin{array}{llllll}
+a_{11}  &  a_{12} & \ldots & a_{1k} & \ldots & a_{1n} \\
+0       &  a_{22}^{(1)} & \ldots & a_{2k}^{(1)} & \ldots & a_{2n}^{(1)} \\
+\vdots  & \vdots        & \ddots \\
+0       & 0             & \ldots & a_{kk}^{(k-1)} & \ldots & a_{kn}^{(k-1)} \\
+\vdots  & \vdots        &        & \vdots \\
+0       & 0             & \ldots & a_{nk}^{(k-1)} & \ldots & a_{nn}^{(k-1)}
+\end{array}\right]
+\begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_k \\ \vdots \\ x_n
+\end{bmatrix} =
+\left[\begin{array}{l}
+b_1 \\ b_2^{(1)} \\ \vdots \\ b_k^{(k-1)} \\ \vdots \\ b_n^{(k-1)}
+\end{array}\right].
+\]
+Edellytyksenä tähän muotoon pääsemiseksi on siis, että
+\[
+a_{ll}^{(l-1)} \neq 0, \quad l=1 \ldots k-1,
+\]
+missä $a_{11}^{(0)}=a_{11}$. Alkiota $a_{kk}^{(k-1)}$ sanotaan seuraavan eli $k$:nnen 
+eliminaatioaskeleen
+\index{tukialkio (Gaussin alg.)}%
+\kor{tukialkioksi} (engl.\ pivot element). Mikäli kaikki tukialkiot ovat
+nollasta poikkeavia ja myös $a_{nn}^{(n-1)} \neq 0$, päädytään $n-1$ askeleen jälkeen
+yhtälöryhmään, jonka kerroinmatriisi on säännöllinen kolmiomatriisi:
+\[
+\left[\begin{array}{llllll}
+a_{11} & a_{22} & \ldots & a_{1n} \\
+0      & a_{22}^{(1)} & \ldots & a_{2n}^{(1)} \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \ldots  & a_{nn}^{(n-1)}
+\end{array}\right]
+ \begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix} =
+\left[\begin{array}{l}
+b_1 \\ b_2^{(1)} \\ \vdots \\ b_n^{(k-1)}
+\end{array}\right].
+\]
+Kuten pian nähdään, algoritmin läpimeno tällä tavoin osoittaa, että alkuperäisen yhtälöryhmän
+kerroinmatriisi $\mA$ on säännöllinen. Joka tapauksessa muunnettu yhtälöryhmä ratkeaa helposti
+purkamalla se lopusta lukien, vrt.\ Lauseen \ref{kolmiomatriisi} todistus edellä. Tätä 
+algoritmin vaihetta kutsutaan
+\index{takaisinsijoitus (Gaussin alg.)}%
+\kor{takaisinsijoitukseksi}.
+\begin{Exa} \label{ristikkoesimerkki} (Ks.\ Luku \ref{yhtälöryhmät}, Esimerkki \ref{ristikko}) 
+Ratkaise Gaussin eliminaatiolla yhtälöryhmä
+\[
+\begin{rmatrix} 3&-1&0&0&-1&1\\1&-3&0&2&-1&1\\0&0&3&1&-1&-1\\0&-2&1&3&-1&-1\\1&-1&1&1&-4&0\\
+                -1&1&\ \ 1&\ \ 1&0&-4\end{rmatrix}
+\begin{rmatrix} x_1\\x_2\\x_3\\x_4\\x_5\\x_6 \end{rmatrix} 
+\ =\ F \begin{rmatrix} 0\\1\\0\\0\\0\\0 \end{rmatrix} 
+   + G \begin{rmatrix} 0\\0\\0\\1\\0\\0 \end{rmatrix},
+\]
+missä $F,G\in\R$. 
+\end{Exa}
+\ratk Ratkaisu on $\mx=F\mx_1+G\mx_2$, missä $\mA\mx_1=\mb_1=[0\ 1\ 0\ 0\ 0\ 0]^T$ ja 
+$\mA\mx_2=\mb_2=[0\ 0\ 0\ 1\ 0\ 0]^T$, joten on ratkaistava kaksi lineaarista yhtälöryhmää. 
+Gaussin algoritmilla voidaan molemmat yhtälöryhmät käsitellä samanaikaisesti: Kirjoitetaan 
+yhtälöryhmät taulukkomuotoon
+\[ 
+       \left[\begin{array}{rrrrrr} 
+             3&-1&0&0&-1&1\\1&-3&0&2&-1&1\\0&0&3&1&-1&-1\\
+             0&-2&1&3&-1&-1\\ 1&-1&1&1&-4&0\\-1&1&\ \ 1&\ \ 1&0&-4 
+             \end{array} \right.
+\left. \left|\begin{array}{rr} 
+             \ \ 0&0\\1&0\\0&0\\0&1\\0&0\\0&\ \ 0 
+             \end{array} \right. \right]
+\]
+ja ulotetaan eliminaatio koko taulukkoon. Seuraavassa muunnettu taulukko kunkin 
+eliminaatioaskeleen jälkeen.
+\begin{align*}
+&(k=1) \qquad \left[\begin{array}{rrrrrr}
+                    3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3}\\
+                    0&0&3&1&-1&-1\\0&-2&1&3&-1&-11 \\
+                    0&-\frac{2}{3}&1&1&-\frac{11}{3}&-\frac{1}{3} \\[0.5mm]
+                    0&\frac{2}{3}&1&1&-\frac{1}{3}&-\frac{11}{3} 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr} 
+                    \ \ 0&0\\1&0\\0&0\\0&1\\0&0\\0&\ \ 0 
+                    \end{array} \right. \right] \\[5mm]
+&(k=2) \qquad \left[\begin{array}{rrrrrr} 
+                    3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3}\\0&0&3&1&-1&-1\\
+                    0&0&1&\frac{3}{2}&-\frac{1}{2}&\ \ -\frac{3}{2}\\[0.5mm]
+                    0&0&1&\frac{1}{2}&-\frac{7}{2}&-\frac{1}{2}\\[0.5mm]
+                    0&0&1&\frac{3}{2}&-\frac{1}{2}&-\frac{7}{2} 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    0&0\\1&0\\0&0\\-\frac{3}{4}&1\\-\frac{1}{4}&0\\ \frac{1}{4} & \ \ 0
+                    \end{array} \right. \right] \\[5mm]
+&(k=3) \qquad \left[\begin{array}{rrrrrr} 
+                    3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3}\\0&0&3&1&-1&-1\\
+                    0&0&0&\frac{7}{6}&-\frac{1}{6}&-\frac{7}{6}\\[0.5mm]
+                    0&0&0&\frac{1}{6}&-\frac{19}{6}&-\frac{1}{6}\\[0.5mm]
+                    0&0&0&\frac{7}{6}&-\frac{1}{6}&-\frac{19}{6} 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    0&0\\1&0\\0&0\\-\frac{3}{4}&1\\-\frac{1}{4}&0\\ \frac{1}{4} & \ \ 0
+                    \end{array} \right. \right] \\[5mm]
+&(k=4) \qquad \left[\begin{array}{rrrrrr} 
+                   3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3}\\0&0&3&1&-1&-1\\
+                   0&0&0&\frac{7}{6}&-\frac{1}{6}&-\frac{7}{6}\\[0.5mm]
+                   0&0&0&0&-\frac{22}{7}&0\\0&0&0&0&0&\ -2
+                   \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    0&0\\1&0\\0&0\\-\frac{3}{4}&1\\-\frac{1}{7}&-\frac{1}{7}\\1&-1
+                    \end{array} \right. \right]
+\end{align*}
+Askelta $k=5$ ei tässä tapauksessa tarvita, koska on $a_{65}^{(4)}=0$.
+
+Ratkaisu saadaan tästä takaisinsijoituksella. --- Käytetään tässä kuitenkin toista, laskutyön
+kannalta samanarvoista mahdollisuutta, jossa eliminaatioalgoritmia käytetään uudelleen 
+'takaperin'. Koska kerroinmatriisi on yläkolmio, niin takaisin päin eliminoitaessa muuttuu
+matriisissa kullakin eliminaatioaskeleella vain tukialkion kohdalla oleva sarake, tai tarkemmin
+tämän lävistäjän yläpuolinen osa. Eliminaatiovaiheet takaisin päin ovat seuraavat.
+\begin{align*}
+&(k=5) \qquad \left[\begin{array}{rrrrrr}
+                    3&-1&0&0&-1&0\\[0.5mm] 0&-\frac{8}{3}&0&2&-\frac{2}{3}&0\\[0.5mm]
+                    0&0&3&1&-1&0\\[0.5mm] 0&0&0&\frac{7}{6}&-\frac{1}{6}&0\\[0.5mm]
+                    0&0&0&0&-\frac{22}{7}&0\\0&0&\ \ 0&\ \ 0&0&-2 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    \frac{1}{2}&-\frac{1}{2}\\[0.5mm]\frac{4}{3}&-\frac{1}{3}\\[0.5mm]
+                    -\frac{1}{2}&\frac{1}{2}\\[0.5mm]-\frac{4}{3}&\frac{19}{12}\\[0.5mm]
+                    \ \ \ -\frac{1}{7}&\ -\frac{1}{7}\\ 1&-1
+                    \end{array} \right. \right] \\[5mm]
+&(k=4) \qquad \left[\begin{array}{rrrrrr}
+                  3&-1&0&0&0&0\\[0.5mm] 0&-\frac{8}{3}&0&2&0&0\\[0.5mm] 0&0&3&1&0&0\\[0.5mm]
+                  0&0&0&\frac{7}{6}&0&0\\[0.5mm] 0&0&0&0&-\frac{22}{7}&0\\0&0&\ \ 0&\ \ 0&0&-2 
+                  \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    \frac{6}{11}&-\frac{5}{11}\\[0.5mm]\frac{15}{11}&-\frac{10}{33}\\[0.5mm]
+                    -\frac{5}{11}&\frac{6}{11}\\[0.5mm]\ -\frac{175}{132}&\frac{35}{22}\\[0.5mm]
+                    -\frac{1}{7}&-\frac{1}{7}\\ 1&-1
+                    \end{array} \right. \right] \\[5mm]
+&(k=3) \qquad \left[\begin{array}{rrrrrr} 
+                  3&-1&0&0&0&0\\[0.5mm] 0&-\frac{8}{3}&0&0&0&0\\[0.5mm] 0&0&3&0&0&0\\[0.5mm]
+                  0&0&0&\frac{7}{6}&0&0\\[0.5mm] 0&0&0&0&-\frac{22}{7}&0\\0&0&\ \ 0&\ \ 0&0&-2 
+                  \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    \frac{6}{11}&-\frac{5}{11}\\[0.5mm]\frac{40}{11}&-\frac{100}{33}\\[0.5mm]
+                    \frac{15}{22}&-\frac{9}{11}\\[0.5mm]-\frac{175}{132}&\frac{35}{22}\\[0.5mm]
+                    -\frac{1}{7}&-\frac{1}{7}\\ 1&-1
+                    \end{array} \right. \right] \\[5mm]
+&(k=2) \qquad \left[\begin{array}{rrrrrr} 
+                     3&0&0&0&0&0\\[0.5mm] 0&-\frac{8}{3}&0&0&0&0\\[0.5mm] 0&0&3&0&0&0\\[0.5mm]
+                     0&0&0&\frac{7}{6}&0&0\\[0.5mm] 0&0&0&0&-\frac{22}{7}&0\\
+                     0&0&\ \ 0&\ \ 0&0&-2 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    -\frac{9}{11}&\frac{15}{22}\\[0.5mm]\frac{40}{11}&-\frac{100}{33}\\[0.5mm]
+                    \frac{15}{22}&-\frac{9}{11}\\[0.5mm]-\frac{175}{132}&\frac{35}{22}\\[0.5mm]
+                    -\frac{1}{7}&-\frac{1}{7}\\1&-1
+                    \end{array} \right. \right]
+\intertext{Lopuksi diagonaalisen systeemin ratkaisu:}
+&\phantom{(k=2)} \qquad 
+              \left[\begin{array}{rrrrrr} 
+                    1&\,\ \ 0&\,\ \ 0&\,\ \ 0&\,\ \ 0&\,\ \ 0\\[0.5mm] 0&1&0&0&0&0\\[0.5mm] 
+                    0&0&1&0&0&0\\[0.5mm]
+                    0&0&0&1&0&0\\[0.5mm] 0&0&0&0&1&0\\[0.5mm] 0&0&0&0&0&1 
+                    \end{array} \right.
+       \left. \left|\begin{array}{rr}
+                    -\frac{3}{11}&\frac{5}{22}\\[0.5mm]-\frac{15}{11}&\frac{25}{22}\\[0.5mm]
+                    \frac{5}{22}&\ -\frac{3}{11}\\[0.5mm]\ -\frac{25}{22}&\frac{30}{22}\\[0.5mm]
+                    \frac{1}{22}&\frac{1}{22}\\[0.5mm]-\frac{1}{2}&\frac{1}{2}
+                    \end{array} \right. \right].
+\end{align*}
+
+Kysytty yhtälöryhmän ratkaisu on näin muodoin
+\[ 
+\begin{bmatrix} x_1\\x_2\\x_3\\x_4\\x_5\\x_6 \end{bmatrix}\ =\
+               \frac{F}{22} \begin{rmatrix} -6\\-30\\5\\-25\\1\\-11 \end{rmatrix}
+              +\frac{G}{22} \begin{rmatrix} 5\\25\\-6\\30\\1\\11 \end{rmatrix}. \quad \loppu
+\]
+
+\subsection*{Gaussin algoritmin työmäärä}
+\index{Gaussin algoritmi (eliminaatio)!c@työmäärä|vahv}
+
+Gaussin algoritmi koostuu siis kahdesta vaiheesta, eliminaatiovaiheesta ja 
+takaisinsijoituksesta. Englannin kielessä käytetään myös termejä 'forward sweep' ja
+'backward sweep'. Näistä ensimmäinen 'pyyhkäisy' on työmäärää (laskenta-aikaa) ajatellen 
+huomattavasti raskaampi. Tämä nähdään eliminaatiovaiheen yleisestä algoritmimuodosta, joka on
+\begin{align*}
+a_{ij}^{(k)} &= a_{ij}^{(k-1)} - a_{ik}^{(k-1)}a_{kj}^{(k-1)}/a_{kk}^{(k-1)}, \quad 
+                                                                         i,j = k+1 \ldots n, \\
+b_i^{(k)} &= b_i^{(k-1)} - a_{ik}^{(k-1)}b_k^{(k-1)}/a_{kk}^{(k-1)}, \quad i = k+1 \ldots n.
+\end{align*}
+Tässä on jakolaskut $\,a_{ik}^{(k-1)}/a_{kk}^{(k-1)}\,,\ i=k+1 \ldots n\,$ syytä laskea ensin,
+jolloin algoritmi on ohjelmointikielellä
+\begin{align*}
+l_{ik}\ &\leftarrow\ a_{ik}/a_{kk}\,, \qquad\ \ i=k+1 \ldots n, \\
+a_{ij}\ &\leftarrow\ a_{ij} - l_{ik}a_{kj}\,, \quad\, i,j=k+1 \ldots n, \\
+b_i\    &\leftarrow\ b_i - l_{ik}b_k\,, \qquad i=k+1 \ldots n.
+\end{align*}
+Työmäärää arvioitaessa pidettäköön työyksikkönä laskuoperaatiota, joka koostuu yhdestä 
+kertolaskusta (tai jakolaskusta) ja yhdestä yhteen- tai vähennyslaskusta. Algoritmista nähdään,
+että algoritmin työläin osa koostuu muunnoksista $\,a_{ij}^{(k)} \leftarrow a_{ij}^{(k-1)}$.
+Näiden vaatima työmäärä koko eliminaatiovaiheessa on mainittuina operaatioina
+\[
+W = (n-1)^2+(n-2)^2 + \cdots + 1 = \frac{1}{6}(n-1)n(2n-1).
+\]
+Muut algoritmin osat, kuten muunnokset $b_i^{(k)} \leftarrow b_i^{(k-1)}$ ja takaisinsijoitukset
+ovat työmäärältään suuruusluokkaa $\ordoO{n^2}$, joten Gaussin algoritmin työmäärä on
+\[
+\boxed{\quad W\ =\ \frac{1}{3}\,n^3 + \ordoO{n^2}. \quad}
+\]
+Tästä nähdään, että esimerkiksi tuhannen yhtälön yhtälöryhmän ($W \approx 0.3 \cdot 10^9$) 
+ratkaiseminen tietokoneella ei ole ongelma laskenta-ajan kannalta. Sen sijaan yhtälöryhmä
+kokoa $n=10^6$ ($W \approx 0.3 \cdot 10^{18}$) saattaa jo olla ylivoimainen tehtävä. ---
+Näinkin suuria yhtälöryhmiä ratkotaan nykyisin, mutta silloin käytetään yleensä hyväksi
+kerroinmatriisin erikoisominaisuuksia. Toinen, perinteisesti suosittu vaihtoehto on käyttää
+tehtävään sopivia
+\kor{iteratiivisia} (likimääräisiä) ratkaisutapoja. Suhteessa iteratiivisiin menetelmiin
+sanotaan Gaussin algoritmiin perustuvaa ratkaisua \kor{suoraksi} ratkaisutavaksi.
+Kohtuullisilla $n$:n arvoilla yhtälöryhmän suora ratkaisu Gaussin algoritmilla on edelleen
+kilpailukykyinen menetelmä, ja tietokoneiden suorituskyvyn kasvaessa se on myös voittanut alaa
+iteratiivisilta menetelmiltä. Etenkin silloin kun algoritmi menee läpi em. suoraviivaisella
+tavalla se on myös hyvin helppo ohjelmoida.
+
+\subsection*{Neliömatriisin $LU$-hajotelma}
+\index{LU@$LU$-hajotelma (neliömatriisin)|vahv}
+\index{matriisin ($\nel$neliömatriisin)!f@$\nel$$LU$-hajotelma|vahv}
+
+Gaussin eliminaatiolla, sikäli kuin se onnistuu edellä kuvatulla tavalla, saadaan yhtälöryhmälle
+$\mA\mx=\mb$ ratkaisu jokaisella $\mb\in\R^n$, joten Lauseen \ref{säännöllisyyskriteerit}
+perusteella kerroinmatriisin on oltava säännöllinen. Ko.\ lauseeseen (jota ei vielä ole 
+todistettu) ei kuitenkaan tarvitse vedota, sillä kerroinmatriisin säännöllisyys tulee Gaussin
+algoritmilla suoraan todistetuksi. Päättely on seuraava: Ensinnäkin todetaan, että Gaussin
+algoritmin eliminaatiovaihe muuntaa alkuperäisen yhtälöryhmän
+\[
+\mA \mx = \mb
+\]
+muotoon
+\[
+\mU \mx = \mc = \mR \mb,
+\]
+missä $\mU$ on muunnettu kerroinmatriisi, eli yläkolmiomatriisi, jonka lävistäjäalkiot ovat 
+$a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. Matriisi $\mR$ ei ole eliminaatiovaiheen jälkeen 
+suoraan nähtävissä, mutta se saadaan selville tarkastelemalla yhtälöryhmää
+\[
+\mL \my = \mb,
+\]
+missä $\mL$ on alakolmiomatriisi, joka määritellään
+\[
+[\mL]_{ik} = \begin{cases}
+\,0, &\text{jos}\ i<k, \\
+\,1, &\text{jos}\ i=k, \\
+\,l_{ik}=a_{ik}^{(k-1)}/a_{kk}^{(k-1)}\,, &\text{jos}\ i>k.
+\end{cases}
+\]
+Tässä siis $a_{ik}^{(k-1)}, \ i=k \ldots n$, ovat muunnetun kerroinmatriisin alkioita $k-1$ 
+eliminaatioaskeleen jälkeen:
+\[
+\begin{array}{ccc}
+a_{k-1,k-1}^{(k-2)} \\
+0 & a_{kk}^{(k-1)} \\
+\vdots & \vdots \\
+0 & a_{ik}^{(k-1)} & \rightarrow\ l_{ik} = a_{ik}^{(k-1)}/a_{kk}^{(k-1)} \\
+\vdots & \vdots \\
+0 & a_{nk}^{(k-1)}
+\end{array}
+\]
+Matriisin $\mL$ muodosta nähdään, että jos em.\ yhtälöryhmään sovelletaan Gaussin algoritmia, 
+niin jo eliminaatiovaihe antaa ratkaisun $\my=\mL^{-1}\mb$. Toisaalta nähdään vertaamalla 
+Gaussin algoritmeja sovellettuna yhtälöryhmiin $\mL\my=\mb$ ja $\mA\mx=\mb$, että 
+eliminaatiovaiheen muunnokset $b_i^{(k)} \leftarrow b_i^{(k-1)}$ ovat kummassakin tapauksessa 
+täsmälleen samat. Siis on päätelty:
+\[
+\my = \inv{\mL} \mb = \mR \mb.
+\]
+Koska tämä pätee $\forall \mb \in \R^n$, on $\mR=\inv{\mL}$ 
+(Propositio \ref{matriisien yhtäsuuruus}), ja näin ollen
+\[
+\mA \mx = \mb \ \ekv \ \mL \mU \mx = \mb
+\]
+Siis $\mA \mx = \mL \mU \mx \ \forall \mx \in \R^n$, joten
+\[
+\boxed{\kehys\quad \mA=\mL\mU. \quad}
+\]
+Tätä sanotaan matriisin \kor{$LU$-hajotelmaksi} (engl. $LU$-decomposition). Sen laskemiseksi ei
+siis tarvita muuta kuin Gaussin algoritmin eliminaatiovaihe, kunhan muistetaan tallettaa 
+matriisi $\mL$, eli luvut
+\[
+[\mL]_{ik} = l_{ik} = a_{ik}^{(k-1)}/a_{kk}^{(k-1)}, \quad i=k+1 \ldots n, \ k=1  \ldots n-1.
+\]
+Nämä tulevat eliminaation kuluessa joka tapauksessa lasketuksi, mutta ilman talletusta $\mL$ ei
+jää näkyviin (koska yhtälöryhmän ratkaisualgoritmi laskee valmiiksi vektorin 
+$\inv{\mL} \mb = \mR \mb$).
+\jatko \begin{Exa} (jatko) Seuraamalla eliminaatiovaiheita ($k=1\,\ldots\,4$) nähdään, että
+esimerkin yhtälöryhmässä kerroinmatriisin $LU$-hajotelma on
+\[
+\mA =\begin{rmatrix} 
+     1&0&0&0&0&0 \\ \frac{1}{3}&1&0&0&0&0 \\ 0&0&1&0&0&0 \\ 
+     0&\frac{3}{4}&\frac{1}{3}&1&0&0 \\[0.5mm]
+     \frac{1}{3}&\frac{1}{4}&\frac{1}{3}&\frac{1}{7}&1&0 \\[0.5mm] 
+     -\frac{1}{3}&-\frac{1}{4}&\frac{1}{3}&1&0&1
+     \end{rmatrix}
+     \begin{rmatrix} 
+     3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3} \\[0.5mm]
+     0&0&3&1&-1&-1\\0&0&0&\frac{7}{6}&-\frac{1}{6}&-\frac{7}{6} \\[0.5mm] 
+     0&0&0&0&-\frac{22}{7}&0\\0&0&0&0&0&-2 
+     \end{rmatrix} = \mL\mU. \loppu
+\]
+\end{Exa} 
+
+Matriisin $LU$-hajotelma siis onnistuu Gaussin eliminaatiolla, jos 
+$\,a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. Tällöin $\mL$ ja $\mU$ ovat säännöllisiä 
+(Lause \ref{kolmiomatriisi}), joten $\mA$ on säännöllinen ja
+\[
+\inv{\mA} = \inv{\mU} \inv{\mL}.
+\]
+Mainittu tukialkioita koskeva ehto on siis riittävä ehto matriisin säännöllisyydelle. 
+Seuraavassa luvussa nähdään, että kun Gaussin algoritmia hieman muunnellaan, se ratkaisee 
+neliömatriisin säännöllisyyskysymyksen yleisessäkin tapauksessa. 
+
+\subsection*{Käänteismatriisin laskeminen}
+
+Sikäli kuin Gaussin eliminaatio yhtälöryhmälle $\mA \mx = \mb$ onnistuu edellä kuvatulla tavalla
+(tukialkiot $\neq 0$), niin kerroinmatriisi on siis säännöllinen, jolloin yhtälöryhmän ratkaisu
+voidaan kirjoittaa $\mx=\mA^{-1}\mb$. Jos halutaan laskea myös käänteismatriisi $\mA^{-1}$
+eikä vain ratkaisua $\mx$, niin eräs (etenkin käsinlaskussa luonteva) menettely on soveltaa
+Gaussin algoritmia \pain{s}y\pain{mbolisesti} siten, että $\mb$:n alkioille $\,b_i$ ei anneta
+numeroarvoja. Algoritmia käyttäen ratkaisu saadaan tällöin muotoon $\mx = \mB \mb$, jolloin 
+on $\mA^{-1}=\mB$.
+\begin{Exa} Laske matriisin
+\[ 
+\mA\ =\ \begin{rmatrix} 1&1&0 \\ 1&0&1 \\ 1&-1&-1 \end{rmatrix} 
+\]
+käänteismatriisi. 
+\end{Exa}
+\ratk Eliminaatiolla ja takaisinsijoituksella saadaan
+\begin{align*}
+&\begin{rmatrix} 1&1&0 \\ 1&0&1 \\ 1&-1&-1 \end{rmatrix} 
+ \begin{rmatrix} x_1 \\ x_2 \\ x_3 \end{rmatrix}\ =\ 
+ \begin{rmatrix} b_1 \\ b_2 \\ b_3 \end{rmatrix} \\[5mm] \map \quad 
+&\begin{rmatrix} 1&1&0 \\ 0&-1&1 \\ 0&0&-3 \end{rmatrix} 
+ \begin{rmatrix} x_1 \\ x_2 \\ x_3 \end{rmatrix}\ =\ 
+ \begin{cmatrix}  b_1 \\ -b_1 + b_2 \\ 3b_1 - 2b_2 + b_3 \end{cmatrix} \\[5mm] \map \quad
+&\begin{rmatrix} 1&0&0 \\ 0&1&0 \\ 0&0&1 \end{rmatrix}   
+ \begin{rmatrix} x_1 \\ x_2 \\ x_3 \end{rmatrix}\ =\ 
+ \dfrac{1}{3} \begin{cmatrix}  
+              b_1 + b_2 + b_3 \\ 2b_1 - b_2 - b_3 \\ -b_1 + 2b_2 - b_3 
+              \end{cmatrix}.
+\end{align*}
+Tuloksesta voidaan lukea käänteismatriisi:
+\[ 
+\begin{rmatrix} x_1 \\ x_2 \\ x_3 \end{rmatrix}\
+    =\ \dfrac{1}{3} \begin{rmatrix} 1&1&1 \\ 2&-1&-1 \\ -1&2&-1 \end{rmatrix}
+                    \begin{rmatrix} b_1 \\ b_2 \\ b_3 \end{rmatrix}
+    =\ \mA^{-1}\mb. \loppu
+\]
+Edellistä suoraviivaisempi tapa laskea käänteismatriisi on käyttää hyväksi matriisialgebran
+identieettiä (vrt.\ Luku \ref{matriisialgebra})
+\[
+\mA^{-1}\ =\ \mA^{-1} \mI\ =\ \mA^{-1}\,[\me_1 \ldots \me_n]\ 
+                           =\  [\mA^{-1}\me_1 \ldots \mA^{-1}\me_n].
+\]
+Tämän mukaisesti $\mA^{-1}$:n sarakkeet voidaan laskea ratkaisemalla lineaarinen yhtälöryhmä
+$\mA \mx = \mb$ kun $\mb = \me_i,\ i = 1 \ldots n$. Koska Gaussin algoritmissa voidaan käsitellä
+yhtä aikaa useita eri vektoreita $\mb$ (vrt.\ Esimerkki \ref{ristikkoesimerkki}), voidaan myös 
+$\mA^{-1}$:n sarakkeet määrätä kaikki yhdellä kertaa. Käänteismatriisin laskeminen voidaan 
+tällöin kuvata kaksivaiheisena operaationa (eliminaatio ja takaisinsijoitus)
+\[
+ [\,\mA \mid \mI\ ]\ \map\ [\,\mU \mid \mL^{-1}\,]\ \map\ [\,\mI \mid \mA^{-1}\ ].
+\]
+Vastaavalla tavalla menetellään itse asiassa em.\ symbolisessa laskussa, sillä kun kirjoitetaan
+$\mb = \sum_{i=1}^n b_i \me_i$, niin pätee (vrt.\ Luku \ref{matriisialgebra})
+\[
+\mA^{-1} \mb\ =\ \sum_{i=1}^n b_i \mA^{-1} \me_i\ =\ [\mA^{-1} \me_1 \ldots \mA^{-1} \me_n]\,\mb.
+\]
+
+\jatko \begin{Exa} (jatko) Esimerkin lasku toisin organisoituna:
+\begin{align*}
+[\,\mA \mid \mI\ ]\ 
+    &=\  \left[ \begin{array}{rrr} 1&1&0 \\ 1&0&1 \\ 1&-1&-1 \end{array} \left\vert 
+                 \begin{array}{rrr} 1&0&0 \\ 0&1&0 \\ 0&0&1 \end{array} \right. \right] \quad 
+     \map \quad 
+         \left[ \begin{array}{rrr} 1&1&0 \\ 0&-1&1 \\ 0&0&-3 \end{array} \left\vert
+                \begin{array}{rrr} 1&0&0 \\ -1&1&0 \\ 1&-2&1 \end{array} \right. \right] \\[5mm]
+    &\,\map \quad 
+         \left[ \begin{array}{rrr} 1&0&0 \\[0.5mm] 0&1&0 \\[0.5mm] 0&0&1 \end{array} \left\vert
+                \begin{array}{rrr} \frac{1}{3} & \frac{1}{3} & \frac{1}{3} \\[0.5mm] 
+                                   \frac{2}{3} & -\frac{1}{3} & -\frac{1}{3} \\[0.5mm]
+                                  -\frac{1}{3} & \frac{2}{3} & -\frac{1}{3} \end{array} \right.
+         \right]\ =\ [\,\mI \mid \mA^{-1}\ ]. \quad \loppu
+\end{align*}
+\end{Exa}
+Käänteismatriisi voidaan myös laskea käyttäen $LU$-hajotelmaan perustuvaa kaavaa
+$\mA^{-1}=\mU^{-1}\mL^{-1}$, eli laskemalla ensin ym.\ tavalla erikseen käänteismatriisit 
+$\mL^{-1}$ ja $\mU^{-1}$ ja sitten näiden tulo. Sekä tällä tavoin että ym.\ algoritmin 
+mukaisesti laskien tulee työmääräksi $W=n^3+\ordoO{n^2}$ 
+(Harj.teht.\,\ref{H-m-3: työmääriä 2}) --- siis noin kolminkertainen työmäärä verrattuna
+$LU$-hajotelman laskemiseen tai yksittäisen yhtälöryhmän ratkaisuun. Osoittautuukin, että 
+yhtälöryhmiä numeerisesti ratkaistaessa ei käänteismatriisin laskeminen yksinkertaisesti 
+kannata. Nimittäin vaikka ratkaistaisiin useita yhtälöryhmiä kerroinmatriisin 
+pysyessä samana (esim.\ vaihteleva kuormitus ristikkorakenteessa, vrt.\ Luku 
+\ref{yhtälöryhmät}), niin Gaussin algoritmin eliminaatiovaiheen toistaminen pystytään
+välttämään pelkän $LU$-hajotelman avulla: Kun hajotelman matriisit $\mL$ ja $\mU$ tallennetaan, 
+niin yhtälöryhmä $\mA \mx = \mb$ voidaan purkaa kahdeksi peräkkäiseksi yhtälöryhmäksi:
+\[ 
+\mL\mU\mx=\mb \qekv \mL \my = \mb, \quad \mU \mx = \my. 
+\]
+Nämä ratkeavat eteen- ja takaisinsijoituksilla, jolloin yhtälöryhmän ratkaisemisen työmääräksi
+tulee $W \sim n^2$ (ks.\ Harj.teht.\,\ref{H-m-3: työmääriä 1}b). Jos $\mA^{-1}$ olisi
+tallennettu, olisi työmäärä sama, joten käänteismatriisin laskemisella ei voiteta mitään (!). 
+
+\Harj
+\begin{enumerate}
+
+
+\item
+Kirjoita seuraavat yhtälöryhmät taulukkomuotoon ja ratkaise Gaussin algoritmilla. Laske myös
+kerroinmatriisien $LU$-hajotelmat.
+\begin{align*}
+&\text{a)}\ \ \begin{cases} \,x+y=33 \\ \,2x+4y=100 \end{cases} \qquad\qquad
+ \text{b)}\ \ \begin{cases} \,x+ay=1 \\ \,ax+y=2 \end{cases} \quad (a \neq \pm 1) \\[2mm]
+&\text{c)}\ \ \begin{cases} 
+              \,x_1+3x_2-x_3=4 \\ \,-x_1+x_2+2x_3=7 \\ \,2x_1+6x_2+2x_3=20
+              \end{cases} \quad
+ \text{d)}\ \ \begin{cases}
+              \,x_1+2x_2+3x_3=1 \\ \,x_1+x_2-x_3=2 \\ \,x_1-6x_3=4
+              \end{cases} \\[2mm]
+&\text{e)}\ \ \begin{cases} 
+              \,x_1+x_2+2x_3=-1 \\ \,-x_1+x_2=1 \\ \,3x_1-x_2+3x_3=-3
+              \end{cases} \quad\,
+ \text{f)}\ \ \begin{cases}
+              \,x_1-x_2+4x_3=8 \\ \,x_1-2x_2+3x_3=0 \\ \,-2x_1+4x_2-5x_3=8
+              \end{cases} \\[2mm]
+&\text{g)}\ \ \begin{cases}
+              \,2x_1-x_2=1 \\ \,-x_1+2x_2-x_3=2 \\ \,-x_2+2x_3-x_4=-1 \\ \,-x_3+2x_4=1
+              \end{cases} \quad\ \
+ \text{h)}\ \ \begin{cases}
+              \,2x_1-x_2-x_4=-4 \\ \,-x_1+2x_2-x_3=1 \\ \,-x_2+2x_3-x_4=4 \\ \,-x_1-x_3+3x_4=10
+              \end{cases}
+\end{align*}
+
+\item
+Olkoon
+\[
+\mA   = \begin{bmatrix} 1&2&3&1\\2&1&1&1\\1&2&1&0\\0&1&1&2 \end{bmatrix}, \quad
+\mb_1 = \begin{bmatrix} 1\\1\\1\\1 \end{bmatrix}, \quad
+\mb_2 = \begin{bmatrix} 5\\3\\4\\0 \end{bmatrix}
+\]
+Ratkaise Gaussin algoritmilla yhtälöryhmät $\mA\mx=\mb_1$ ja $\mA\mx=\mb_2$ ja laske matriisin
+$\mA$ $LU$-hajotelma.
+
+\item
+Olkoon
+\[
+\mA=\begin{bmatrix} 1&0&0&1\\1&1&0&2\\1&0&1&0\\1&1&2&1 \end{bmatrix}.
+\]
+Laske käänteismatriisi $\mA^{-1}$ Gaussin algoritmilla \vspace{1mm}\newline 
+a) ratkaisemalla yhtälöryhmä $\mA\mx=\mb$ yleisellä $\mb\in\R^4$ (symbolinen lasku), \newline
+b) ratkaisemalla taulukkomuodossa yhtälöryhmät $\mA\mx=\me_i,\ i=1 \ldots 4$
+
+\item
+Näytä, että jos lineaarisen yhtälöryhmän kerroimatriisi $\mA$ on symmetrinen, niin Gaussin 
+algoritmi säilyttää symmetrisenä sen matriisin osan, johon eliminaatio ei ole vielä edennyt,
+ts.\ $(k-1)$:n eliminaatioaskeleen jälkeen pätee
+\[
+a_{ji}^{(k-1)}=a_{ij}^{(k-1)} \quad \forall\,i,j \ge k.
+\]
+Päättele, että Gaussin algoritmin vaatima laskutyö on symmetrisen kerroinmatriisin tapauksessa
+$W=\frac{1}{6}\,n^3+\ordoO{n^2}$.
+
+\item \label{H-m-3: työmääriä 1}
+Olkoon $\mA,\mB$ matriiseja kokoa $n \times n$, $\mL,\mU$ ala- ja yläkolmiomatriiseja samaa
+kokoa ja $\mb\in\R^n$. Näytä oikeaksi seuraavat laskuoperaatioiden työmääriä koskevat arviot
+(työyksikkö = kertolasku + yhteenlasku).
+\begin{align*}
+\text{a)} \qquad\qquad\qquad &\mA,\mb\,\map\ \mA\mb \qquad\qquad\qquad\, n^2+\ordoO{n} \\
+\text{b)} \qquad\qquad\qquad &\mL,\mb\ \map\ 
+                              \mL^{-1}\mb \qquad\qquad\quad\ \tfrac{1}{2}\,n^2+\ordoO{n} \\
+\text{c)} \qquad\qquad\qquad &\mA,\mB \map\ \mA\mB \qquad\qquad\qquad   n^3+\ordoO{n^2} \\
+\text{d)} \qquad\qquad\qquad &\mL,\mU\,\map\ 
+                              \mL\mU \qquad\qquad\qquad  \tfrac{1}{3}\,n^3+\ordoO{n^2}
+\end{align*}
+
+\item (*) \label{H-m-3: työmääriä 2}
+Näytä, että laskuoperaation $\mA\map\mA^{-1}$ työmäärä Gaussin algoritmin eri vaihtoehdoissa on
+($\mA$ kokoa $n \times n$, työyksikkö = kertolasku + yhteenlasku)
+\begin{align*}
+\text{a)} \qquad &[\,\mA \mid \mI\ ]\ \map\ [\,\mI \mid \mA^{-1}\ ] \qquad n^3+\ordoO{n^2} \\
+\text{b)} \qquad &\mA\map\mA^{-1}\ = \mU^{-1}\mL^{-1} \qquad\, n^3+\ordoO{n^2}
+\end{align*}
+
+\end{enumerate}
+

@@ -1,0 +1,497 @@
+\section{Separoituva differentiaaliyhtälö} \label{separoituva DY}
+\alku
+\index{differentiaaliyhtälö!h@separoituva|vahv}
+\index{separoituva DY|vahv}
+
+Ensimmäisen kertaluvun normaalimuotoinen differentiaaliyhtälö on \kor{separoituva}, jos se on
+muotoa
+\[
+y'=\frac{f(x)}{g(y)}\,,
+\]
+eli jos muuttujat $x$ ja $y$ erottuvat (separoituvat) oikealla puolella. Kirjoittamalla $g(y)$:n
+tilalle $1/g(y)$ ja/tai $f(x)$:n tilalle $1/f(x)$ saadaan separoituvuudelle muita 
+ilmenemismuotoja. Oletettu muoto on kätevä lähinnä ratkeavuusoletuksien muotoilun kannalta.
+Jatkossa oletetaan funktioista $f$ ja $g$, että joillakin $x_1<x_2$ ja $y_1<y_2$ pätee
+\begin{itemize}
+\item[(i)] $f$ on jatkuva välillä $[x_1,x_2]$ ja $g$ on jatkuva välillä $[y_1,y_2]$,
+\item[(ii)] $g(y)\neq 0\quad\forall y\in [y_1,y_2]$.
+\end{itemize}
+Valitaan nyt $x_0\in (x_1,x_2)$, $y_0\in (y_1,y_2)$ (avoimet välit!) ja tarkastellaan 
+alkuarvotehtävää
+\begin{equation} \label{separ 1}
+\begin{cases} 
+\,y'=f(x)/g(y), \quad x\in(x_0-\delta,x_0+\delta) \\ \,y(x_0)=y_0
+\end{cases} \tag{$\star$}
+\end{equation}
+Tässä valitaan $\delta$ ensinnäkin niin, että toteutuu
+\[
+0 < \delta \le \delta_1 = \min \{x_0-x_1,x_2-x_0\},
+\]
+jolloin $[x_0-\delta,x_0+\delta]\subset [x_1,x_2]$. Jatkossa tehdään myös toinen oletus, joka
+koskee alkuarvotehtävän \eqref{separ 1} ratkeavuutta. Tämäkin ehto rajoittaa $\delta$:n
+valintaa, mutta toistaiseksi jätetään avoimeksi, miten. Oletus muotoillaan seuraavasti:
+\begin{itemize}
+\item[(iii)] Alkuarvotehtävällä \eqref{separ 1} on välillä $(x_0-\delta,x_0+\delta)$ 
+             derivoituva ratkaisu $y(x)$, ja pätee 
+             $y(x)\in[y_1,y_2]\,\ \forall x\in(x_0-\delta,x_0+\delta)$.
+\end{itemize}
+
+Tehtyjen oletuksien (i)--(iii) perusteella funktiot $f(x)$, $y(x)$ ja $g(y(x))$ ovat
+jatkuvia välillä $(x_0-\delta,x_0+\delta)$ ja $g(y(x)) \neq 0$ ko.\ välillä. Tähän ja Analyysin
+peruslauseeseen vedoten voidaan päätellä
+\begin{align*}
+y'(x)=\frac{f(x)}{g(y(x))} 
+           &\qekv g(y(x))y'(x)=f(x) \\
+           &\qekv \frac{d}{dx}\int_{y_0}^{y(x)} g(t)\,dt
+                     =\frac{d}{dx}\int_{x_0}^x f(t)\,dt,\quad x\in (x_0-\delta,x_0+\delta)
+\end{align*}
+eli
+\begin{align*}
+y'(x)= \frac{f(x)}{g(y(x))} \qekv
+       &\frac{d}{dx}[G(y(x))-F(x)]=0,\quad x\in (x_0-\delta,x_0+\delta), \\
+       &G(y)=\int_{y_0}^y g(t)dt,\quad F(x)=\int_{x_0}^x f(t)dt.
+\end{align*}
+Tämän mukaan on oltava $G(y(x))-F(x)=C=$ vakio välillä $(x_0-\delta,x_0+\delta)$
+(Lause \ref{Integraalilaskun peruslause}). Toisaalta koska $G(y(x_0))=G(y_0)=0$ ja $F(x_0)=0$,
+niin $C=0$, joten on päätelty:
+\[
+G(y(x))=F(x),\quad x\in (x_0-\delta,x_0+\delta).
+\]
+Varmistetaan nyt, että tämä yhtälö määrittelee implisiittisesti funktion $y(x)$. Ensinnäkin
+oletuksista (i)--(ii) funktiolle $g$ ja Lauseesta \ref{Weierstrassin peruslause} seuraa, että
+\[
+\text{joko:}\ \  g(y) \ge c>0 \ \ \forall y\in [y_1,y_2], \qquad
+\text{tai:}\ \   g(y) \le -c<0\ \ \forall y\in [y_1,y_2].
+\]
+(Tässä $c$:n suurin arvo $=|g(y)|$:n minimiarvo välillä $[y_1,y_2]$.) Tämän perusteella funktio
+$G(y)$ on joko aidosti kasvava tai aidosti vähenevä välillä $[y_1,y_2]$, siis $G$ on 1--1 ko.\
+välillä.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,4)(-1,0)
+\multiput(0,0)(7,0){2}{
+\put(0,0){\vector(1,0){6}} \put(5.8,0.2){$x$}
+\put(0,0){\vector(0,1){4}} \put(0.2,3.8){$y$}
+}
+\curve(1,1.5,3,2,5,3)
+\dashline{0.2}(3,0)(3,2) \dashline{0.2}(3,2)(0,2)
+\put(4.55,3.2){$x=G(y)$}
+\put(-0.4,1.9){$y_0$} \put(-0.4,1.4){$y_1$} \put(-0.4,2.9){$y_2$}
+\put(0,1.5){\line(1,0){0.1}} \put(0,3){\line(1,0){0.1}} 
+\put(2.9,-0.5){$x_0$} 
+\curve(8,3,10,2,12,1.5)
+\dashline{0.2}(10,0)(10,2) \dashline{0.2}(10,2)(7,2)
+\put(7.5,3.2){$x=G(y)$}
+\put(6.6,1.9){$y_0$} \put(6.6,1.4){$y_1$} \put(6.6,2.9){$y_2$}
+\put(7,1.5){\line(1,0){0.1}} \put(7,3){\line(1,0){0.1}}
+\put(9.9,-0.5){$x_0$} 
+\end{picture}
+\end{center}
+\end{figure}
+Koska siis $G$ on 1--1 välillä $[y_1,y_2]$ ja koska oletuksen (iii) mukaan $y(x)\in[y_1,y_2]$
+kun $x\in(x_0-\delta,x_0+\delta)$, niin voidaan kirjoittaa
+\[
+G(y(x))=F(x) \ \ekv \ y(x)=\inv{G}(F(x)),\quad x\in(x_0-\delta,x_0+\delta).
+\]
+Oletuksien (i)--(iii) voimassa ollessa on näin muodoin päätelty:
+\[
+y'(x)=\frac{f(x)}{g(y(x))} \qekv y(x)=\inv{G}(F(x)),\quad x\in(x_0-\delta,x_0+\delta).
+\]
+Lähtemällä saadusta ratkaisukaavasta nähdään em.\ päättelyketjusta, että kaavan mukainen
+$y(x)$ on alkuarvotehtävän \eqref{separ 1} yksikäsitteinen (derivoituva) ratkaistu, sikäli kuin
+oletukseen (iii) sisältyvä ehto $y(x)\in[y_1,y_2]\ \forall x\in(x_0-\delta,x_0+\delta)$ on 
+voimassa. On siis enää varmistettava, että myös tämä ehto toteutuu saadulle (ainoalle 
+mahdolliselle) ratkaisulle $y(x)=G^{-1}(F(x))$.
+
+Todetaan ensinnäkin, että em.\ arvioista funktiolle $g(y)$ sekä integraalien 
+vertailuperiaatteesta (Lause \ref{integraalien vertailuperiaate}) seuraa
+\[
+\Bigl|\int_{y_0}^{y(x)} g(t)dt\Bigr| \,\ge\, c\,\abs{y(x)-y_0} \quad 
+                                            \forall x\in (x_0-\delta,x_0+\delta).
+\]
+Toisaalta oletuksen (i) ja Lauseiden \ref{Weierstrassin peruslause} ja
+\ref{integraalien vertailuperiaate} perusteella pätee
+\[
+\Bigl|\int_{x_0}^x f(t)dt\Bigr|\,\le\,M\abs{x-x_0}, \quad x\in[x_1,x_2],
+\]
+missä $M=\max_{x\in[x_1,x_2]}|f(x)|$. Yhdistämällä arviot seuraa
+\begin{align*}
+c\,\abs{y(x)-y_0}        &\,\le\, \abs{G(y(x))} \,=\, \abs{F(x)} \,\le\, M\abs{x-x_0} \\
+  \impl \ \abs{y(x)-y_0} &\,\le\, \frac{M}{c}\abs{x-x_0} \,<\, \frac{M\delta}{c}
+                                                   \quad \forall x\in (x_0-\delta,x_0+\delta).
+\end{align*}
+Näin ollen kun valitaan $\delta$ siten, että toteutuu
+\[
+0<\delta\le\min\{\delta_1,\delta_2\}, \quad \delta_2 = \frac{c}{M}\min \{y_0-y_1,y_2-y_0\},
+\]
+niin oletuksen (iii) toteutuminen on varmistettu ja näin todistettu
+\begin{Lause} \label{separoituvan DY:n ratkaisu} \index{differentiaaliyhtälön!h@ratkeavuus|emph}
+Jos $x_0\in (x_1,x_2)$ ja $\,y_0\in (y_1,y_2)$,
+niin oletuksien (i),\,(ii) ollessa voimassa on olemassa $\delta>0$ siten, että 
+alkuarvotehtävällä \eqref{separ 1} on yksikäsitteinen ratkaisu $y(x)$ välillä 
+$(x_0-\delta,x_0+\delta)\subset [x_1,x_2]$. Ratkaisukaava ko.\ välillä on
+\[
+\int_{y_0}^{y(x)} g(t)dt = \int_{x_0}^x f(t)dt.
+\]
+\end{Lause}
+Helposti muistettava, muodollinen menettely separoituvan differentiaaliyhtälön yleisen ratkaisun
+hakemiseksi on kaavio
+\begin{align*}
+\frac{dy}{dx} = \frac{f(x)}{g(y)} \quad &\impl \quad g(y)\,dy = f(x)\,dx \\
+                                        &\impl\,\ \int g(y)\,dy = \int f(x)\,dx.
+\end{align*}
+Tässä ensimmäinen vaihe on 'separointi' ja toinen 'integrointi'. Menettely on pätevä Lauseen
+\ref{separoituvan DY:n ratkaisu} ehdoin, ja alkuehdon $y(x_0)=y_0$ toteuttava ratkaisu saadaan
+siis muuttamalla määräämättömät integraalit määrätyiksi.
+\begin{Exa} Aiemmin Luvussa \ref{exp(x) ja ln(x)} ratkaistussa alkuarvotehtävässä
+\[
+\left\{ \begin{aligned}
+&y' = y,\quad x\in\R, \\
+&y(0) = y_0
+\end{aligned} \right.
+\]
+differentiaaliyhtälö on em.\ separoituvaa tyyppiä ($f(x)=1,\ g(y)=1/y$), joten ratkaisukaava on
+Lauseen \ref{separoituvan DY:n ratkaisu} mukaan
+\[
+\int_{y_0}^{y(x)} \frac{1}{t}\,dt = \int_0^x dt.
+\]
+Kaava on pätevä, jos joko $y_0,y(x)\in(0,\infty)$ tai $y_0,y(x)\in(-\infty,0)$, jolloin
+ratkaisuksi saadaan
+\[
+\ln (y/y_0)=x \ \ekv \ y(x)=y_0e^x, \quad x\in\R.
+\]
+Saatu ratkaisu on käypä myös tapauksessa $y_0=0$, johon  separointimenettely ei sovellu. \loppu
+\end{Exa}
+\begin{Exa}
+Määritä differentiaaliyhtälön $\,1+y^2+xyy'=0\,$ yleinen ratkaisu.
+\end{Exa}
+\ratk Separoimalla ja integroimalla saadaan
+\begin{align*}
+\frac{ydy}{1+y^2} = -\frac{dx}{x} \ &\impl\ \int \frac{ydy}{1+y^2} = -\int \frac{dx}{x} \\
+                                    &\impl\ \frac{1}{2}\ln (1+y^2) = - \ln\abs{x} +C.
+\end{align*}
+Kun kirjoitetaan $C$:n tilalle $\ln C,\ C>0$, saadaan sieventämällä
+\[
+x^2(1+y^2)=C^2.
+\]
+Ratkaisemalla tästä $y=y(x)$ saadaan kaksihaarainen ratkaisu
+\[
+y(x)=\pm\frac{1}{x}\sqrt{C^2-x^2},\quad C>0.
+\]
+Tämä on pätevä väleillä $(-C,0)$ ja $(0,C)$. \loppu
+
+Esimerkissä vaihto $C\ext\ln C$ perustui siihen, että $\ln C$ saa kaikki mahdolliset
+reaaliarvot, kun $C\in\R_+$. Tällaisilla manipulaatioilla voidaan ratkaisu usein saattaa
+yksinkertaisempaan muotoon.
+\begin{Exa} \label{muuan separoituva dy}
+Ratkaise differentiaaliyhtälö $\,y'=\sin y$.
+\end{Exa}
+\begin{align*}
+\text{\ratk}\quad \frac{dy}{\sin y} = dx 
+                       &\qimpl \int\frac{dy}{\sin y} = \int dx \\
+                       &\qimpl \ln\Bigl|\tan\frac{1}{2}y\Bigr| = x +\ln C,\quad C>0 \\
+                       &\qekv \Bigl|\tan\frac{1}{2}y\Bigr| = Ce^x,\quad C>0 \\
+                       &\qekv \tan\frac{1}{2} y = Ce^x,\quad C\neq 0 \quad 
+                                                       (\,\pm C \hookrightarrow C) \\[2mm]
+                       &\qekv y(x) = 2\arctan(Ce^x), \quad C \neq 0 \\[3mm]
+                       &\qekv y(x) = 2\Arctan(Ce^x)+2n\pi, \quad C \neq 0,\ n\in\Z.
+\end{align*}
+
+Saatu ratkaisu on käypä myös kun $C=0$, sillä $y(x)=2n\pi$ on alkuperäisen
+differentiaaliyhtälön ratkaisu jokaisella $n\in\Z$. Nämä ratkaisut voidaan lukea yleiseen
+ratkaisuun kuuluviksi, vaikka separointimenettely ei niihin suoraan ulotu. Yleiseen ratkaisuun
+kuulumattomia erikoisratkaisuja ovat lisäksi
+\[
+y(x)=(2n+1)\pi, \quad n\in\Z.
+\]
+Nämä ovat em.\ ratkaisufunktioiden raja-arvoja, kun $C\kohti\pm\infty$.
+\loppu
+
+\subsection*{Autonominen differentiaaliyhtälö}
+\index{differentiaaliyhtälö!i@autonominen|vahv}
+\index{autonominen DY|vahv}
+
+Separoituvaa differentiaaliyhtälöä muotoa
+\[
+y'=f(y),
+\]
+missä siis $f$ ei riipu vapaasta muuttujasta $x$, sanotaan \kor{autonomiseksi}. Kuten 
+Esimerkissä 3 edellä, jokaista $f$:n nollakohtaa $y_i$ vastaa vakioratkaisu
+\[
+y(x)=y_i.
+\]
+Tämä on erikoisratkaisu tai mahdollisesti yleiseen ratkaisulausekkeeseen sisällytettävissä
+oleva, vrt.\ esimerkit edellä. Separointimenettelyllä ei tällaisia ratkaisuja saada suoraan,
+koska funktio $g(y)=1/f(y)$ ei ole jatkuva $f$:n nollakohtien ympäristössä 
+(vrt.\ Lause \ref{separoituvan DY:n ratkaisu}). 
+\begin{Exa} Ratkaise differentiaaliyhtälöt $\,y'=y(1-y)$.
+\end{Exa}
+\ratk Separoimalla ja integroimalla saadaan
+\begin{align*}
+dx = \frac{dy}{y(1-y)}\ &\impl\ \int dx = x = \int \frac{1}{y(1-y)}\,dy 
+                                            = \int \left(\frac{1}{y}+\frac{1}{1-y}\right)dy \\
+                        &\impl\ x = \ln\left|\frac{y}{1-y}\right|+\ln C, \quad C>0.
+\end{align*}
+Tämän mukaan on
+\begin{align*}
+\frac{y}{1-y} = \pm C^{-1}e^x &\qekv y(x) = \frac{e^x}{e^x \pm C}\,, \quad C>0 \\
+                              &\qekv y(x) = \frac{e^x}{e^x+C}\,,\quad C\neq 0.
+\end{align*}
+Rajoitus $C \neq 0$ voidaan poistaa saadusta yleisen ratkaisun lausekkeesta, koska myös $y(x)=1$
+on ratkaisu. Tämä on kaikkien ratkaisujen yhteinen raja-arvo (asymptoottinen ratkaisu), kun
+$x\kohti\infty$. Ratkaisu on edelleen myös $y(x)=0$, joka saadaan yleisen ratkaisulausekkeen
+raja-arvona, kun $C\kohti\infty$. \loppu
+\begin{Exa}: \vahv{Logistinen kasvumalli}. \index{zza@\sov!Logistinen kasvumalli} \ Jos
+fysikaalisen suureen (esim.\ väkiluvun) kasvua ajan $t$ funktiona kuvaa autonominen
+differentiaaliyhtälö
+\[
+y'=ay-by^2,
+\]
+missä $a$ ja $b$ ovat (dimensiottomina) positiivisia vakioita, niin kasvumallia 
+(myös differentiaaliyhtälöä) sanotaan
+\index{differentiaaliyhtälö!j@logistinen} \index{logistinen DY}%
+\kor{logistiseksi}. Sijoituksella $y(t)=(a/b)\,u(t)$ logistinen DY muuntuu muotoon
+\[
+u'=a(u-u^2).
+\]
+Ratkaisu separoimalla (vrt.\ edellinen esimerkki):
+\[
+a\,dt = \frac{du}{u(1-u)} \qimpl u(t)=\frac{e^{at}}{e^{at} + C}\,, \quad C\in\R. 
+\]
+Ratkaisu on fysikaalisesti järkevä (kasvava) vain kun $C>0$. Tässä tapauksessa voidaan 
+kirjoittaa $C=e^{at_0},\ t_0\in\R$. Kun vielä merkitään $\tau=1/a$ (aikavakio), niin ratkaisut
+saadaan muotoon
+\[
+y(t)=A\,Y\left(\frac{t-t_0}{\tau}\right), \quad A=a/b, \quad \tau=1/a, \quad 
+Y(t)=\frac{e^{t}}{e^{t}+1} \quad (t_0\in\R). \loppu
+\]
+\end{Exa}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5)(0,-0.5)
+\put(-1,0){\vector(1,0){12}} \put(10.8,-0.5){$t$}
+\put(0,-1){\vector(0,1){5}} \put(0.2,3.8){$y(t)$}
+\put(0,3){\line(-1,0){0.1}} \put(-0.6,2.9){$A$}
+\put(5,0){\line(0,-1){0.1}} \put(4.9,-0.5){$t_0$}
+\put(3,0){\line(0,-1){0.1}} \put(2.6,-0.5){$t_0-\tau$}
+\put(7,0){\line(0,-1){0.1}} \put(6.6,-0.5){$t_0+\tau$}
+\curve(
+-1.0,  0.1423,
+ 0.0,  0.2276,
+ 1.0,  0.3576,
+ 2.0,  0.5473,
+ 3.0,  0.8068,
+ 4.0,  1.1326,
+ 5.0,  1.5000,
+ 6.0,  1.8674,
+ 7.0,  2.1932,
+ 8.0,  2.4527,
+ 9.0,  2.6424,
+10.0,  2.7724,
+11.0,  2.8577)
+\end{picture}
+\end{center}
+\end{figure}
+
+\subsection*{Differentiaaliyhtälö $\,y'=f(y/x)$}
+\index{differentiaaliyhtälö!k@tasa-asteinen|vahv}
+\index{tasa-asteinen DY|vahv}
+
+\kor{Tasa-asteinen} differentiaaliyhtälö $y'=f(y/x)$ muuntuu sijoituksella
+\[
+u(x)=y(x)/x \ \impl \ y(x)=xu(x) \ \impl \ y'=xu'+u
+\]
+yhtälöksi
+\[
+xu'=f(u)-u.
+\]
+Tämä on separoituva, joten tasa-asteinen yhtälö on \pain{se}p\pain{aroituvaksi} 
+p\pain{alautuva}. Jos $f(u_0)-u_0=0$, niin erikoisratkaisu on
+\[
+u(x)=u_0 \qimpl y(x)=u_0x.
+\]
+Yleinen ratkaisu löydetään separoimalla.
+\begin{Exa}
+Ratkaise differentiaaliyhtälö
+\[
+y'=\frac{x+y}{x-y}\,.
+\]
+\end{Exa}
+\ratk Tämä on tasa-asteinen, joten tehdään sijoitus $u=y/x$\,:
+\[
+\impl\ x\frac{du}{dx} \,=\, \frac{1+u}{1-u}-u \,=\, \frac{1+u^2}{1-u}\,.
+\]
+Separoimalla ja integroimalla seuraa
+\begin{align*}
+\int\frac{dx}{x} = \ln\abs{x} &= \int\frac{1-u}{1+u^2}\,du \\
+                              &= \Arctan u-\frac{1}{2}\ln (1+u^2)+\ln C \\
+              \ekv\ \Arctan u &= \ln\left(\frac{\abs{x}\sqrt{1+u^2}}{C}\right) \\
+     \ekv\ \Arctan\frac{y}{x} &= \ln\left(\frac{\sqrt{x^2+y^2}}{C}\right)\quad (C>0).
+\end{align*}
+Siirtymällä napakoordinaatistoon saadaan ratkaisulle helpompi muoto
+\[
+\varphi = \ln\frac{r}{C} \ \ekv \ r=Ce^\varphi\quad (C>0).
+\]
+Ratkaisut ovat nk.\
+\index{logaritminen spiraali}%
+\kor{logaritmisia spiraaleja}. \loppu
+\input{plots/logspiraalit.tex}
+
+\subsection*{Differentiaaliyhtälö $\,y'=f(ax+by+c)$}
+\index{differentiaaliyhtälö!l@$y'=f(ax+by+c)$|vahv}
+
+Differentiaaliyhtälö $y'=f(ax+by+c)$, missä $a,b,c\in\R$ ja $b \neq 0$, on myös separoituvaksi
+palautuva. Tässä luonteva sijoitus on
+\[
+u=ax+by+c \ \impl \ y=\frac{1}{b}(u-ax-c),
+\]
+jolloin
+\[
+\frac{dy}{dx}=\frac{1}{b}\left(\frac{du}{dx}-a\right),
+\]
+ja näin ollen $u$:lle saadaan separoituva (itse asiassa autonominen) DY
+\[
+u'=bf(u)+a.
+\]
+\begin{Exa}
+Ratkaise differentiaaliyhtälö
+\[
+y'=(x-y)^2+1.
+\]
+\end{Exa}
+\ratk Sijoituksella
+\[
+x-y=u \ \ekv \ y=x-u \ \impl \ y'=1-u'
+\]
+saadaan differentiaaliyhtälöksi
+\[
+u'=-u^2.
+\]
+Separoimalla saadaan yleiseksi ratkaisuksi $u(x)=1/(x+C)$, joten alkuperäisen yhtälön yleinen
+ratkaisu on
+\[
+y(x)=x-\frac{1}{x+C}\,.
+\]
+Tämän lisäksi on muunnetun yhtälön ratkaisua $u(x)=0$ vastaava erikoisratkaisu
+\[
+y(x)=x. \loppu
+\]
+
+\Harj
+\begin{enumerate}
+
+\item 
+Määritä seuraavien separoituvien tai sellaisiksi palautuvien differentiaaliyhtälöiden
+yleiset ratkaisut tai ratkaise alkuarvotehtävä. Alkuarvotehtävän tapauksessa selvitä myös,
+millä välillä ratkaisu on pätevä.
+\begin{align*}
+&\text{a)}\ \ x^2 y'=y^2 \qquad 
+ \text{b)}\ \ y'=-2xy \qquad 
+ \text{c)}\ \ y'=(1-y)^2 \qquad
+ \text{d)}\ \ y'=y^2-1 \\[2mm]
+&\text{e)}\ \ (1+x)y'=1+y \qquad
+ \text{f)}\ \ 1+y^2-xy'=0 \qquad
+ \text{g)}\ \ (1+x^3)y'=x^2y \\[2mm]
+&\text{h)}\ \ (1-x^2)y'=1-y^2 \qquad
+ \text{i)}\ \ y'=\tan y \qquad
+ \text{j)}\ \ xy'=\cot y \\[2mm]
+&\text{k)}\ \ (x-3)y'=-y,\ y(-1)=1 \qquad
+ \text{l)}\ \ y'=y^2,\ y(0)=4 \\[2mm]
+&\text{m)}\ \ y'+5x^4y^2=0,\ y(0)=1 \qquad
+ \text{n)}\ \ y'-5x^4y^2=0,\ y(0)=1 \\[2mm] 
+&\text{o)}\ \ y'\Arctan y=1,\ y(1)=1 \qquad
+ \text{p)}\ \ y'\sin x=y\ln y,\ y(\pi/2)=1 \\[2mm]
+&\text{q)}\ \ (1+e^x)yy'=e^x,\ y(1)=1 \qquad
+ \text{r)}\ \ \cos^2 x\cos(\ln y)y'=y,\ y(\pi/4)=2 \\[1mm]
+&\text{s)}\ \ y'=\frac{y}{x-y} \qquad
+ \text{t)}\ \ (3x+y)y'=y \qquad
+ \text{u)}\ \ xyy'=x^2+y^2 \\
+&\text{v)}\ \ (2x^2+y^2)y'=2xy \qquad
+ \text{x)}\ \ xy'=y+\tan\frac{y-x}{x} \qquad
+ \text{y)}\ \ y'=e^{x-2y} \\  
+&\text{z)}\ \ xy'=xe^{y/x}+y,\ y(1)=0 \qquad
+ \text{å)}\ \ xy'=y\ln\frac{y}{x},\ y(1)=1 \\
+&\text{ä)}\ \ (x+y)y'=1-x-y,\ y(0)=1 \qquad 
+ \text{ö)}\ \ y'=(2x+y+3)^2,\ y(0)=0
+\end{align*}
+
+\item
+Ratkaise alkuarvotehtävä $\,e^y y'=x+e^y-1,\ y(0)=y_0$ sijoituksella $u=x+e^y$. Millä $y_0$:n
+arvoilla ratkaisu on pätevä koko $\R$:ssä?
+
+\item
+Määritä differentiaaliyhtälön $y'=2x\abs{y-1}$ ratkaisukäyrät, jotka sivuavat $x$-akselia.
+
+\item
+Määritä seuraavien käyräparvien kohtisuorat leikkaajat.
+\[
+\text{a)}\,\ y=Cx^2 \quad\
+\text{b)}\,\ y=e^x+C \quad\
+\text{c)}\,\ x^2+2y^2=C^2 \quad\
+\text{d)}\,\ e^{x+y}=(x+C)^2
+\]
+
+\item
+Määritä käyrät, joilla on ominaisuus: käyrän ja sen normaalin leikkauspisteen etäisyys ko.\
+normaalin ja $x$-akselin leikkauspisteestä $=a=$ vakio.
+
+\item \index{integraaliyhtälö}
+Määritä välillä $[0,\infty)$ jatkuva funktio $y(x)$, joka toteuttaa \kor{integraaliyhtälön}
+\[
+1+\int_0^x \frac{y(t)}{t^2+1}\,dt = y(x), \quad x \ge 0.
+\]
+
+\item \index{zzb@\nim!Hypetia, Utopia ja Apatia}
+(Hypetia, Utopia ja Apatia) H:n, U:n ja A:n valtakunnissa oli elintaso $=1$ vuonna 2000 ja
+$=1.01$ vuonna 2001. Ennusta ko.\ valtakuntien elintasot vuonna $2100$, kun tiedetään, että
+elintason kasvunopeus on H:ssa suoraan verrannollinen elintason neliöön, U:ssa suoraan
+verrannollinen elintasoon ja A:ssa kääntäen verrannollinen elintasoon.
+
+\item 
+Vuonna 1960 oli maapallon väkiluku 3.0 mrd ja ja kasvunopeus tuolloin 50 milj./v. Jos
+oletetaan, että väkiluku $y(t) \kohti 12$ mrd kun $t\kohti\infty$, niin mikä olisi väkiluvun
+pitänyt olla vuonna 2000 logistisen kasvumallin mukaan? (Todellinen väkiluku oli 6.1 mrd.)
+
+\item
+Laskuvarjohyppääjän putoamisnopeus noudattaa varjon auettua liikelakia $\,mv'=mg-av-bv^2$,
+missä $m=80$ kg, $g=9.8\ \text{m/s}^2$, $a=120$ kg/s ja $b=4.0$ kg/m. Määritä $v(t),\ t \ge 0$
+(aikayksikkö = s), kun varjon aukeamishetkellä $t=0$ putoamisnopeus on $20$ m/s. 
+Miten rajanopeus $v_\infty=\lim_{t\kohti\infty}v(t)$ saadaan helpoimmin selville? Hahmottele
+$v(t)$ aikaväleillä $[0,1]$ ja $[0,60]$.
+
+\item
+Avaruudessa suuntaan $-\vec k$ etenevät valonsäteet heijastuvat pyörähdyspinnasta
+$S:\,z=u(r),\ r=\sqrt{x^2+y^2}\,$ siten, että jokainen heijastunut säde kulkee origon
+kautta. Funktion $u(r)$ on tällöin toteutettava tasa-asteinen differentiaaliyhtälö
+$\,ru'=\sqrt{r^2+u^2}+u$
+(vrt.\ Harj.teht.\,\ref{derivaatta geometriassa}:\ref{H-dif-2: tutka}). Ratkaise!
+
+\item (*)
+Differentiaaliyhtälö
+\[
+y'=f\left(\frac{2x-y+1}{x-2y+1}\right)
+\]
+palautuu tasa-asteiseksi sijoituksilla $x=x_0+t$, $y=y_0+u$, kun $x_0$ ja $y_0$ valitaan
+sopivasti. Ratkaise yhtälö tällä tavoin, kun $f(x)=x$.
+
+\item (*)
+Seuraavat differentiaaliyhtälöt palautuvat tasa-asteisiksi sijoituksilla \newline
+$x=t^\alpha$, $y=z^\beta$, kun $\alpha$ ja $\beta$ valitaan sopivasti. Ratkaise! \newline
+a)\ \  $42(x^2-xy^2)y'+y^3=0 \quad$ b)\ \ $(x^2y^2-1)y'+2xy^3=0$
+
+\item (*)
+Lieriön muotoisessa astiassa on vettä $200$ litraa. Astian pohjaan avataan aukko, jonka
+pinta-ala $=20$ cm$^2$. Vesi purkautuu aukosta nopeudella $v=\sqrt{2gh}$, missä
+$g=9.8$ m/s$^2$ ja $h=$ veden korkeus astiassa kyseisellä hetkellä. (Purkausnopeus oletetaan
+samaksi aukon eri kohdissa.) Laske, missä ajassa astia tyhjenee, kun veden korkeus on aluksi
+$\,h=1$ m.
+
+\item (*)
+Käyrällä $S: y=y(x),\ x \ge 0$, missä $y(x)$ on jatkuvasti derivoituva välillä $[0,\infty)$,
+on ominaisuus: Käyrän kaarenpituus välillä $[0,x]$ on sama kuin käyrän ja $x$-akselin välisen
+alueen pinta-ala ko.\ välillä. Määritä kaikki käyrät, jotka toteuttavat tämän ehdon ja lisäksi
+alkuehdon $y(0)=2$.
+
+\end{enumerate}

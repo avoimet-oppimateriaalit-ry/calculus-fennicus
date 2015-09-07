@@ -1,0 +1,20 @@
+\begin{picture}(0,0)%
+\includegraphics{kuvat/kuvaUint-6.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(1575,1731)(91,-1186)
+\put(1306,-1186){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x_k$}}}
+\put(406,-1186){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x_{k-1}$}}}
+\put( 91,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$y_l$}}}
+\put( 91,344){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$y_{l+\nu}$}}}
+\put(1666,240){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\left.\begin{array}{c}\vspace{0.05cm} \end{array} \right\} \leq h$}}}
+\put(1666,-200){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\left.\begin{array}{c}\vspace{0.8cm} \end{array} \right\} L(x_k-x_{k-1})$}}}
+\put(1666,-800){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\left.\begin{array}{c}\vspace{0.5cm} \end{array} \right\} \leq h$}}}
+\end{picture}

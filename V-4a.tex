@@ -1,0 +1,203 @@
+\section{Potenssisarjan derivointi} \label{potsarjan derivaatta}
+\alku
+
+Edellisen luvun tarkastelujen perusteella voidaan todeta p‰‰s‰‰ntˆn‰, ett‰ tavanomaiset
+(algebran keinoin m‰‰ritellyt) funktiot ovat yleens‰ derivoituvia m‰‰rittelyjoukossaan,
+lukuunottamatta mahdollisia erillisi‰ pisteit‰, joita voi olla ‰‰rellinen tai numeroituva
+m‰‰r‰. T‰ss‰ luvussa n‰ytet‰‰n, ett‰ p‰‰s‰‰nnˆst‰ eiv‰t tee poikkeusta myˆsk‰‰n funktiot,
+jotka on m‰‰ritelty potenssisarjojen summina. T‰llaisten funktioiden myˆt‰ derivoituvien
+funktioiden joukko laajeneekin merkitt‰v‰sti, kuten tullaan n‰kem‰‰n myˆhemmiss‰ luvuissa.
+
+Olkoon reaalifunktio $f$ m‰‰ritelty muodossa
+\[
+f(x) = \sum_{k=0}^\infty a_k x^k.
+\]
+Oletetaan, ett‰ t‰ss‰ potenssisarjan suppenemiss‰de on joko $\rho\in\R_+$ tai $\rho=\infty$.
+T‰llˆin suurin avoin v‰li, joka sis‰ltyy $f$:n m‰‰rittelyjoukkoon, on $(-\rho,\rho)$
+(vrt.\ Luku \ref{potenssisarja}). Jatkossa n‰ytet‰‰n, ett‰ $f$ on derivoituva koko t‰ll‰
+v‰lill‰ ja ett‰ derivaatta voidaan laskea yksinkertaisesti derivoimalla sarja termeitt‰in,
+ts.\ p‰tee
+\[
+f'(x) = \sum_{k=1}^\infty k a_k x^{k-1}, \quad x \in (-\rho,\rho).
+\]
+Derivoinnin tuloksena saadun sarjan suppenemiss‰de on myˆs $\rho$ (Lause
+\ref{potenssisarjan skaalaus}), joten $f'$ on edelleen derivoituva v‰lill‰ $(-\rho,\rho)$,
+ja derivoinnin tulos on siis
+\[
+f''(x) = \sum_{k=2}^\infty k(k-1)\,a_k x^{k-2}, \quad x \in (-\rho,\rho).
+\]
+Myˆs t‰m‰n sarjan suppenemiss‰de $=\rho$ (Korollaari \ref{potenssisarjan yleinen skaalaus}),
+joten $f''$ on v‰lill‰ $(-\rho,\rho)$ edelleen derivoituva, jne. P‰‰tell‰‰n, ett‰
+potenssisarjan summana m‰‰ritelty funktio on avoimella suppenemisv‰lill‰‰n itse asiassa
+mielivaltaisen monta kertaa derivoituva funktio (!). P‰‰telm‰ persutui siis potenssisarjojen
+suppenemisteoriaan ja seuraavaan v‰itt‰m‰‰n, joka on todistettavissa suoraan derivaatan
+m‰‰ritelm‰st‰ l‰htien eli aiemmista derivoimiss‰‰nnˆist‰ riippumattomana tuloksena.
+\begin{Lause} \label{potenssisarja on derivoituva} \vahv{(Potenssisarjan derivaatta)}\, Jos 
+potenssisarjan $\sum_{k=0}^\infty a_k x^k$ suppenemiss‰de on $\rho>0$, niin sarjan summana 
+m‰‰ritelty funktio $f(x)$ on derivoituva v‰lill‰ $(-\rho,\rho)$ ja ko.\ v‰lill‰ p‰tee 
+$f'(x)=\sum_{k=1}^\infty k a_k x^{k-1}$. 
+\end{Lause}
+\tod Olkoon $x\in (-\rho,\rho)$ ja valitaan $\Delta x \neq 0$, siten ett‰
+\[
+\abs{x}+\abs{\Delta x} \le \rho_0<\rho.
+\]
+Binomikaavan mukaan
+\begin{align*}
+(x+\Delta x)^k\ &=\ \sum_{l=0}^k \binom{k}{l} (\Delta x)^l x^{k-l} \\
+                &=\ x^k + kx^{k-1}\Delta x + \sum_{l=2}^k \binom{k}{l} (\Delta x)^l x^{k-l}.
+\end{align*}
+Kirjoitetaan t‰ss‰ viimeinen termi summeerausindeksin vaihdolla muotoon
+\begin{align*}
+\sum_{l=2}^k \binom{k}{l} (\Delta x)^l x^{k-l}\ 
+              &= \sum_{i=0}^{k-2} \binom{k}{i+2} (\Delta x)^{i+2} x^{k-2-i} \\
+              &=\ (\Delta x)^2 \sum_{i=0}^{k-2} \binom{k}{i+2} (\Delta x)^i x^{k-2-i},
+\end{align*}
+ja edelleen
+\[
+\sum_{i=0}^{k-2} \binom{k}{i+2} (\Delta x)^i\,x^{k-2-i} 
+                = \sum_{i=0}^{k-2} c_i\,\binom{k-2}{i} (\Delta x)^i\,x^{k-2-i},
+\]
+miss‰
+\[
+c_i = \binom{k}{i+2} \binom{k-2}{i}^{-1} 
+    = \frac{k!}{(k-i-2)!\,(i+2)!} \cdot \frac{(k-i-2)!\,i!}{(k-2)!} 
+    = \frac{k(k-1)}{(i+1)(i+2)}\,.
+\]
+Koska
+\[
+c_i \le \frac{1}{2}\,k(k-1) < \frac{1}{2}\,k^2, \quad i = 0 \ldots k-2,
+\]
+ja oli $\abs{x}+\abs{\Delta x} \le \rho_0$, niin saadaan jokaisella $k \ge 2$ arvio
+\begin{align*}
+\left|\frac{(x+\Delta x)^k - x^k}{\Delta x} - kx^{k-1}\right|\ 
+ &=\ \abs{\Delta x} \left|\sum_{i=0}^{k-2} c_i\,\binom{k-2}{i} (\Delta x)^i\,x^{k-2-i}\right| \\
+ &\le\ \abs{\Delta x} \sum_{i=0}^{k-2} c_i\,\binom{k-2}{i} \abs{\Delta x}^i\,\abs{x}^{k-2-i} \\
+ &\le\ \frac{1}{2}k^2\abs{\Delta x} 
+               \sum_{i=0}^{k-2} \binom{k-2}{i} \abs{\Delta x}^i\,\abs{x}^{k-2-i} \\
+ &= \frac{1}{2}k^2\abs{\Delta x}(\abs{x}+\abs{\Delta x})^{k-2} \\
+ &\le \frac{1}{2}k^2\abs{\Delta x}\rho_0^{k-2}.
+\end{align*}
+N‰in ollen
+\begin{align*}
+\left| \frac{f(x+\Delta x)-f(x)}{\Delta x} - \sum_{k=1}^\infty ka_kx^{k-1} \right|\ 
+       &=\ \left|\sum_{k=2}^\infty a_k
+                 \left[\frac{(x+\Delta x)^k - x^k}{\Delta x} - kx^{k-1}\right]\right| \\
+       &\le\ \sum_{k=2}^\infty \abs{a_k}
+             \left|\frac{(x+\Delta x)^k - x^k}{\Delta x} - kx^{k-1}\right| \\
+       &\le\ \abs{\Delta x}\sum_{k=2}^\infty \frac{1}{2}k^2\abs{a_k}\rho_0^{k-2}.
+\end{align*}
+T‰ss‰ oikealla oleva sarja suppenee Lauseen \ref{potenssisarjan skaalaus} perusteella, koska
+$\rho_0<\rho$, joten
+\[
+\left|\frac{f(x+\Delta x)-f(x)}{\Delta x} - \sum_{k=1}^\infty ka_kx^{k-1}\right| 
+       \le\ C\,\abs{\Delta x}, \quad\ C = \sum_{k=2}^\infty \frac{1}{2}k^2\abs{a_k}\rho_0^{k-2}.
+\]
+Saatu arvio on p‰tev‰, kun $x \in (-\rho,\rho)$ ja $\abs{\Delta x} < \delta$, miss‰ esim.\ 
+\[ 
+\delta = \frac{1}{2}\,(\rho-\abs{x}) > 0. 
+\]
+Siis $f$ on jokaisessa pisteess‰ $x \in (-\rho,\rho)$ derivoituva ja
+\[
+f'(x) = \lim_{\Delta x \kohti 0}\,\frac{f(x+\Delta x)-f(x)}{\Delta x}\ 
+      =\ \sum_{k=1}^\infty ka_kx^{k-1}. \loppu
+\]
+\begin{Exa} Laske sarjan $\,\sum_{k=1}^\infty k q^k\,$ summa, kun $\abs{q}<1$. \end{Exa}
+\ratk Dervivomalla funktio
+\[ 
+g(x) = \sum_{k=0}^\infty x^k = \frac{1}{1-x}\,, \quad x \in (-1,1) 
+\]
+toisaalta rationaalifunktiona ja toisaalta Lauseen \ref{potenssisarja on derivoituva} 
+perusteella seuraa
+\[ 
+g'(x) \,=\, \frac{1}{(1-x)^2} \,=\, \sum_{k=1}^\infty kx^{k-1} 
+                              \,=\, x^{-1}\sum_{k=1}^\infty kx^k, \quad x \in (-1,1). 
+\]
+Kun $x=q$, niin p‰tee siis
+\[
+\frac{1}{(1-q)^2} \,=\, q^{-1}\sum_{k=1}^\infty kq^k 
+                  \qimpl \sum_{k=1}^\infty kq^k \,=\, \frac{q}{(1-q)^2} \loppu
+\]
+\begin{Exa} M‰‰rittele potenssisarjana v‰lill‰ $(-1,1)$ funktio, jolle p‰tee
+\[
+F(0)=0, \quad F'(x) = \frac{1}{1+x}, \quad x \in (-1,1).
+\]
+\ratk Jos $F(x)=\sum_{k=0}^\infty a_k x^k,\ x \in (-1,1)$, ja sarjan suppenemiss‰de on
+$\rho \ge 1$, niin Lauseen \ref{potenssisarja on derivoituva} mukaan
+\[
+F'(x) = \sum_{k=1}^\infty ka_k x^{k-1} 
+      = \sum_{l=0}^\infty (l+1)\,a_{l+1}\,x^l 
+      = \sum_{k=0}^\infty (k+1)\,a_{k+1}\,x^k, \quad x \in (-1,1).
+\]
+Koska 
+\[
+F'(x) = \frac{1}{1+x} = \sum_{k=0}^\infty (-1)^k x^k, \quad x \in (-1,1),
+\]
+niin ehto $F'(x)=1/(1+x),\ x \in (-1,1)$ toteutuu, kun valitaan 
+\[
+(k+1)\,a_{k+1}=(-1)^k,\ k=0,1,\ldots \qekv a_k = \frac{(-1)^{k+1}}{k},\ k=1,2,\ldots
+\]
+Ehto $F(0)=0$ toteutuu valinnalla $a_0=0$, joten
+\[
+F(x) = \sum_{k=1}^\infty (-1)^{k+1}\,\frac{x^k}{k} = x - \frac{x^2}{2} + \frac{x^3}{3} - \ldots
+\]
+Sarjan suppenemiss‰de on $\rho=1$ (Lause \ref{potenssisarjan skaalaus}), joten $F$ t‰ytt‰‰
+asetetut ehdot. \loppu
+\end{Exa}
+\begin{Exa} Jos $a \in \R$, niin funktio
+\[
+y(x) = \sum_{k=0}^\infty \frac{a^k}{k!}\,x^k = \sum_{k=0}^\infty \frac{(ax)^k}{k!}
+\]
+on m‰‰ritelty kaikkialla suppenevana potenssisarjana ($\rho=\infty$). Derivoimalla sarja
+termeitt‰in n‰hd‰‰n, ett‰
+\[
+y'(x) = a \sum_{k=1}^\infty \frac{(ax)^{k-1}}{(k-1)!} 
+      = a \sum_{l=0}^\infty \frac{(ax)^l}{l!} = ay(x), \quad x\in\R.
+\]
+Funktio $y(x)$ on siis (ainakin er‰s) ratkaisu ongelmaan
+\[ 
+\begin{cases} y'=ay, \quad y=y(x),\ x\in\R \\ y(0)=1 \end{cases} \loppu
+\]
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske $f''(x)$ potenssisarjana, kun
+\[
+f(x)=\sum_{k=1}^\infty \frac{x^k}{k!(k-1)!}\,.
+\]
+
+\item \label{H-V-4: cos ja sin potenssisarjoina}
+M‰‰ritell‰‰n funktiot
+\[
+u(x)=\sum_{k=0}^\infty (-1)^k \frac{x^{2k}}{(2k)!}, \quad
+v(x)=\sum_{k=0}^\infty (-1)^k \frac{x^{2k+1}}{(2k+1)!}, \quad x\in\R.
+\]
+N‰yt‰, ett‰ $u'=-v$ ja $v'=u$.
+ 
+\item
+Seuraavat funktiot ovat rationaalifunktioita v‰lill‰ $(-1,1)$. Laske funktioiden lausekkeet
+potenssisarjaa $\sum_{k=0}^\infty x^k$ derivoimalla.
+\begin{align*}
+&\text{a)}\ f(x)=\sum_{k=2}^\infty kx^k \qquad 
+ \text{b)}\ f(x)=\sum_{k=3}^\infty (-1)^k kx^k \qquad
+ \text{c)}\ f(x)=\sum_{k=1}^\infty k^2 x^k \\
+&\text{d)}\ f(x)=\sum_{k=0}^\infty (k+2)^2 x^k \quad\ \
+ \text{e)}\ f(x)=\sum_{k=1}^\infty k^3 x^k \quad\ \
+ \text{f)}\ f(x)=\sum_{k=0}^\infty (k+1)^3 x^k 
+\end{align*}
+
+\item (*)
+a) N‰yt‰, ett‰ jos potenssisarja $\sum_k a_k x^k$ suppenee v‰lill‰ $(-\rho,\rho)$ ja
+funktio $g$ on derivoituva v‰lill‰ $(a,b)\subset(-\rho,\rho)$, niin funktion
+\[
+f(x) = \sum_{k=0}^\infty x^k g(x), \quad x\in(a,b)
+\]
+derivaatta v‰lill‰ $(a,b)$ on laskettavissa derivoimalla sarja
+termeitt‰in.\vspace{1mm}\newline
+b) M‰‰rit‰ $f'(x)$ ja $f''(x)$ v‰lill‰ $(0,\infty)$, kun
+\[
+f(x) = \sum_{k=1}^\infty \frac{1}{k!}\,x^{k+\tfrac{1}{2}}, \quad x \ge 0.
+\]
+\end{enumerate}

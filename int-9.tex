@@ -1,0 +1,504 @@
+\section{Numeerinen integrointi} \label{numeerinen integrointi}
+\alku
+\index{numeerinen integrointi|vahv}
+
+\kor{Numeerisella integroinnilla} tarkoitetaan määrätyn integraalin, eli reaaliluvun
+\[
+I(f,a,b)=\int_a^b f(x)\,dx
+\]
+laskemista numeerisin keinoin (likimäärin). Jatkossa integroitavalle funktiolle $f$ asetetaan
+melko voimakkaita säännöllisyysvaatimuksia. Vähimmäisvaatimus on, että $f$ jatkuva välillä
+$[a,b]$, jolloin $f$ on ko.\ välillä myös Riemann-integroituva
+(Lause \ref{Analyysin peruslause}).
+
+Numeerisen integroinnin menetelmät ovat yleensä nk.\
+\index{kvadratuuri!numeerinen} \index{numeerinen kvadratuuri}%
+\kor{numeerisia kvadratuureja}
+(tai kvadratuurisääntöjä, engl.\ quadrature rule)\footnote[2]{Kvadratuuri tarkoittaa
+kirjaimellisesti 'neliöimistä'. Termi viittaa integraalin ja pinta-alan väliseen yhteyteen.},
+joissa integraalia approksimoidaan äärellisenä summana muotoa
+\begin{equation} \label{yleinen kvadratuuri}
+\int_a^b f(x)\,dx\approx\sum_{i=1}^N w_i f(x_i).
+\end{equation}
+\index{kvadratuuripiste, -paino}%
+Tässä pisteitä $x_i,\ i=1 \ldots N$ (yleensä $x_i\in[a,b]$) sanotaan \kor{kvadratuuripisteiksi}
+ja lukuja $w_i$ \kor{kvadratuuripainoiksi}. Kvadratuuripisteitä ja -painoja valittaessa 
+integroimisväli jaetaan usein ensin osaväleihin $[x_{k-1},x_k],\ k=1 \ldots n\,$ 
+(kuten määrätyn integraalin määrittelyssä alunperin). Tällöin integraalin additiivisuuden
+nojalla on
+\begin{equation} \label{integraalin hajotelma}
+I(f,a,b)=\int_a^b f(x)\,dx = \sum_{k=1}^n \int_{x_{k-1}}^{x_k} f(x)\,dx = \sum_{k=1}^n I_k\,.
+\end{equation}
+Jos integroitava funktio on säännöllinen ja osavälit $[x_{k-1},x_k]$ riittävän lyhyitä, voidaan
+osaintegraalit
+\[
+I_k=\int_{x_{k-1}}^{x_k} f(x)\,dx
+\]
+laskea likimäärin käyttämällä suhteellisen yksinkertaista kvadratuuria muotoa 
+\eqref{yleinen kvadratuuri}, missä $a=x_{k-1}$ ja $b=x_{k}$. Perustana kvadratuurin
+yksinkertaistumiselle lyhyellä välillä on Taylorin lause, jonka mukaan säännöllinen funktio on
+likimain (matala-asteinen) polynomi lyhyellä välillä (ks.\ Luku \ref{taylorin lause}). 
+Numeerisen integroinnin virheanalyysin lähtöajatuksena onkin juuri vertailu polynomeihin.
+
+Jatkossa ajatellaan väli $[a,b]$ alkuperäisen integroimisvälin lyhyeksi osaväliksi ja $f$ ko.\
+välillä (riittävän) säännölliseksi. Tällaisten lähtöoletusten vallitessa yksinkertaisimmat
+numeeriset kvadratuurit ovat:
+
+\vspace{3mm}
+
+\begin{tabular}{ll}
+\kor{Keskipistesääntö}: \index{keskipistesääntö}
+        \quad & $\displaystyle{\int_a^b f(x)\,dx\approx (b-a)f(\frac{a+b}{2})}$. \\ \\
+\kor{Puolisuunnikassääntö}: \index{puolisuunnikassääntö}
+        \quad & $\displaystyle{\int_a^b f(x)\,dx\approx \frac{1}{2}(b-a)[f(a)+f(b)]}$. \\ \\
+\kor{Simpsonin sääntö}: \index{Simpsonin sääntö}
+        \quad & $\displaystyle{\int_a^b f(x)\,dx\approx 
+                         \frac{1}{6}(b-a)\left[f(a)+4f(\frac{a+b}{2})+f(b)\right]}$.
+\end{tabular}
+
+\vspace{4mm}
+
+Näistä etenkin Simpsonin sääntö (osaväleillä käytettynä) on laskinten ja tietokoneiden
+yleisesti käyttämä numeerisen integroinnin menetelmä.\footnote[2]{Simpsonin sääntö on
+numeerisen integroinnin klassikko, jota on aikanaan käytetty paljon käsinlaskussakin. Säännön
+keksi englantilainen matemaatikko \hist{Thomas Simpson} (1710-1761). \index{Simpson, T.|av}}
+Puolisuunnikassääntöön viitataan usein myös nimellä
+\index{trapetsi}%
+\kor{Trapetsi}. Nimensä mukaisesti sääntö
+antaa integraalin arvoksi \kor{puolisuunnikkaan} (trapetsin) pinta-alan:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5)(0,0)
+\put(0,0){\vector(1,0){9}} \put(8.8,-0.4){$x$}
+\put(1.5,-1){\vector(0,1){6}} \put(1.7,4.8){$y$}
+\put(3.9,-0.5){$a$} \put(6.9,-0.5){$b$} 
+\put(5.3,1.3){$A$} \put(8,3.7){$y=f(x)$}
+\thicklines
+\put(4,0){\line(0,1){2.8}} \put(7,0){\line(0,1){3.3179}} 
+\put(4,0){\line(1,0){3}} \drawline(4,2.8)(7,3.3179)
+\thinlines
+\curve(
+    1.0000,    3.0000,
+    1.5000,    3.7635,
+    2.0000,    4.0000,
+    2.5000,    3.8848,
+    3.0000,    3.5679,
+    3.5000,    3.1733,
+    4.0000,    2.8000,
+    4.5000,    2.5211,
+    5.0000,    2.3843,
+    5.5000,    2.4117,
+    6.0000,    2.6000,
+    6.5000,    2.9202,
+    7.0000,    3.3179,
+    7.5000,    3.7130,
+    8.0000,    4.0000)
+\end{picture}
+\end{center}
+\end{figure}
+
+Kun ym.\ sääntöjä käytetään osaväleillä hajotelmassa \eqref{integraalin hajotelma}, niin
+tuloksena on alkuperäisen integraalin approksimaatio muotoa \eqref{yleinen kvadratuuri}.
+
+Sanotaan tällöin, että kyseessä on \kor{yhdistetty} (engl. composite) kvadratuuri.
+\index{yhdistetty!a@keskipistesääntö}%
+Esimerkiksi \kor{yhdistetty keskipistesääntö} on kvadratuuri muotoa \eqref{yleinen kvadratuuri},
+missä valitaan
+\[
+x_i=\frac{1}{2}(x_{i-1}+x_i), \quad w_i=x_{i}-x_{i-1}\,, \quad i=1 \ldots n=N.
+\]
+Yhdistetty keskipistesääntö on siis eräs integraalia approksimoivista Riemannin summista.
+Suoraan Riemannin summiin perustuvista approksimaatioista tämä on yleensä tarkin 
+(ks.\ virhearviot jäljempänä).
+
+Jos hajotelmassa \eqref{integraalin hajotelma} jako on tasavälinen ja vastaavassa yhdistetyssä
+kvadratuurissa \eqref{yleinen kvadratuuri} merkitään $\,h=x_i-x_{i-1}$ (= peräkkäisten
+kvadratuuripisteiden väli) ja $f_i=f(x_i)$, niin \kor{yhdistetty trapetsi} saa muodon
+\index{yhdistetty!b@trapetsi, Simpson}%
+\[
+\int_a^b f(x)\,dx\approx h\left[\frac{1}{2}f_0+f_1+\cdots + f_{n-1}+\frac{1}{2}f_n\right]
+\]
+ja \kor{yhdistetty Simpsonin sääntö} muodon
+\[
+\int_a^b f(x)\,dx
+       \approx \frac{h}{3}\left[\,f_0+4f_1+2f_2+\cdots +2f_{2n-2}+ 4f_{2n-1}+f_{2n}\,\right].
+\]
+Yhdistetyssä Simpsonin säännössä joka toinen kvadratuuripiste on osavälijaon jakopiste ja joka
+toinen (suurimmalla painokertoimella varustettu) on osavälin keskipiste. 
+
+\begin{Exa} \label{Trapetsi vastaan Simpson 1}
+Kun integraalia
+\[
+\int_0^1 xe^{-x^2}/(x+1)\,dx
+\]
+approksimoidaan käyttäen tasavälistä yhdistettyä trapetsia ja Simpsonia, saadaan seuraavat
+tulokset:
+\begin{center}
+\begin{tabular}{lll}
+pisteitä & Trapetsi & Simpson \\ \hline \\
+3 & 0.17578506065833 & 0.20372346078015 \\
+21 & 0.20230210857337 & 0.20256800959472 \\
+201 & 0.20256528212086 & 0.20256794027440 \\
+2001 \quad & 0.20256791368608 \quad & 0.20256794026753
+\end{tabular}
+\end{center}
+Tässä Simpson on Trapetsia selvästi nopeampi. Tämä on odotettavissa, koska integroitava funktio
+on sileä, ks.\ virhearviot jäljempänä. \loppu
+\end{Exa}
+\begin{Exa} \label{Trapetsi vastaan Simpson 2}
+Sama vertailuasetelma kuin edellisessä esimerkissä. Lasketaan
+\[
+\int_0^1 e^{-x}/(\sqrt{x}+1)\,dx.
+\]
+Tulokset ovat tässä tapauksessa:
+\begin{center}
+\begin{tabular}{lll}
+pisteitä & Trapetsi & Simpson \\ \hline \\
+3 & 0.47363365 & 0.43418824 \\
+21 & 0.40741212 & 0.40604377 \\
+201 & 0.40520890 & 0.40516458 \\
+2001 \quad & 0.40513820 \quad & 0.40513679
+\end{tabular}
+\end{center}
+Konvergenssi on nyt selvästi hitaampaa kuin edellisessä esimerkissä, eikä eri menetelmillä
+ole tässä merkittävää eroa. Syynä on ilmeisesti se, että integroitava funktio on vähemmän
+säännöllinen kuin edellisessä esimerkissä (jatkuva, mutta ei jatkuvasti derivoituva
+integroimisvälillä). \loppu
+\end{Exa}
+Em.\ esimerkeissä on merkille pantavaa, että kun Esimerkin 2 integraalissa tehdään sijoitus
+$\sqrt{x}=t$, on tuloksena Esimerkin 1 integraali (kertoimella 2). Sijoitus siis kannattaa
+tässä tehdä, vaikka se ei muuten (suljetussa muodossa integroimisen kannalta) tee tehtävää 
+helpommaksi. Myös osittaisintegroinnilla, sarjakehitelmillä ym. voi usein manipuloida tehtävää
+niin, että integroitavasta funktiosta tulee säännöllisempi, jolloin numeeriset kvadratuurit
+toimivat paremmin.
+
+\subsection*{Virhearvioista}
+
+Osavälijakoon perustuvan yhdistetyn kvadratuurin virhe arvioidaan ensin erikseen kullakin
+osavälillä. Tarkastellaan jatkossa edellä esitettyä kolmea esimerkkiä: Keskipistesääntö, 
+Trapetsi ja Simpson.
+
+Arvioitaessa virhettä yksittäisellä osavälillä on ensimmäisenä tehtävänä tutkia, \pain{kuinka} 
+\pain{korkea-asteisille} p\pain{ol}y\pain{nomeille} \pain{kvadratuuri} \pain{on} 
+\pain{tarkka}, ts. on määrättävä indeksi $m$ siten, että kvadratuuri on tarkka polynomille
+astetta $m$ mutta ei astetta $m+1$. Mainituissa esimerkkitapauksissa on tulos seuraava:
+\begin{center}
+\begin{tabular}{ll}
+Sääntö & \hspace{2mm} Tarkka polynomeille astetta \\ \hline \\
+Keskipistesääntö & $\quad m=1$ \\ Trapetsi & $\quad m=1$ \\ Simpson & $\quad m=3$
+\end{tabular}
+\end{center}
+
+Aloitetaan keskipistesäännöstä. Oletetetaan, että funktio $f$ on tarkasteltavalla (osa)välillä
+$[a,b]$ kahdesti jatkuvasti derivoituva. Merkitään $c=(a+b)/2$ ja käytetään
+integroimisvirheelle symbolia $E(f)\,$:
+\[ 
+E(f) = \int_a^b f(x)\,dx - (b-a)f(c). 
+\]
+Integroimisvirheen arvioiminen perustuu kahteen perushavaintoon: Ensinnäkin nähdään, että pätee
+\begin{equation} \label{havainto 1}
+E(f+g) = E(f)+E(g). \tag{a} 
+\end{equation}
+(Yleisemmin $E(f)$ on lineaarinen $f$:n suhteen, eli 
+$E(\alpha f + \beta g) = \alpha E(f) + \beta E(g)$, $\alpha,\beta \in \R$.) Toinen
+perushavainto on em.\ taulukkoon perustuva:
+\begin{equation} \label{havainto 2}
+f(x) = A + Bx \quad (A,B \in \R) \qimpl E(f)=0. \tag{b}
+\end{equation}
+Olkoon nyt $p(x)=f$:n Taylorin polynomi astetta $n=1$ pisteessä $c$, eli
+\[ 
+p(x) = f(c) + f'(c)(x-c). 
+\]
+Tällöin on havaintojen \eqref{havainto 1}--\eqref{havainto 2} perusteella, ja koska
+$(f-p)(c)=0$,
+\[
+E(f) = E(f-p+p) = E(f-p) + E(p) = E(f-p) = \int_a^b (f-p)(x)\,dx.
+\]
+Taylorin lauseen (Lause \ref{Taylor}) perusteella on
+\[ 
+f(x)-p(x) = \frac{1}{2}f''(\xi)(x-c)^2 = f''(\xi)\,\omega(x), \quad x \in [a,b], 
+\]
+missä $\xi = \xi(x) \in (a,b)$ ja $\,\omega(x)=\tfrac{1}{2}(x-c)^2 \ge 0$. Näin ollen jos
+\[ 
+M_1 = \min_{x\in[a,b]} f''(x), \quad M_2 = \max_{x\in[a,b]} f''(x), 
+\]
+niin voidaan päätellä
+\begin{align*}
+&M_1\,\omega(x) \,\le\, (f-p)(x) \,\le\, M_2\,\omega(x), \quad x \in [a,b] \\[1mm]
+&\impl\quad M_1\,\int_a^b \omega(x)\,dx 
+                \,\le\, \int_a^b (f-p)(x)\,dx \,\le\, M_2\,\int_a^b \omega(x)\,dx \\
+&\ekv\quad \frac{1}{24}\,M_1\,(b-a)^3    
+                \,\le\, \int_a^b (f-p)(x)\,dx \,\le\, \frac{1}{24}\,M_2\,(b-a)^3.
+\end{align*}
+Siis jollakin $\eta \in [M_1,M_2]$ pätee
+\[ 
+E(f) = \frac{\eta}{24}\,(b-a)^3. 
+\]
+Koska $f''$ on jatkuva välillä $[a,b]$, niin $M_1=f''(x_1)$ ja $M_2=f''(x_2)$ joillakin
+$x_1,x_2\in[a,b]$ (Lause \ref{Weierstrassin peruslause}), jolloin $\eta = f''(\xi)$ jollakin 
+$\xi \in [a,b]$ (Lause \ref{ensimmäinen väliarvolause}). Keskipistesäännölle on näin johdettu
+virhekaava
+\[
+\boxed{\quad E(f) = \frac{1}{24}\,(b-a)^3 f''(\xi), \quad \xi \in [a,b]
+                                     \quad\text{(Keskipistesääntö)}. \quad}
+\]
+
+Trapetsille voidaan johtaa virhekaava vastaavaan tapaan. Tässä tapauksessa on
+vertailupolynomiksi $p$ kuitenkin syytä valita Taylorin polynomin sijasta ensimmäisen asteen
+interpolaatiopolypainnomi, jolle pätee $p(a)=f(a)$ ja $p(b)=f(b)$
+(ks.\ Luku \ref{interpolaatiopolynomit}). Virhekaavaksi saadaan
+(Harj.teht.\,\ref{H-int-9: Trapetsin virhekaava})
+\[
+\boxed{\quad E(f) = - \frac{1}{12}\,(b-a)^3 f''(\xi), \quad \xi \in [a,b] 
+                                      \quad \text{(Trapetsi)}. \quad}
+\]
+
+Keskipistesäännön ja trapetsin virhekaavoista nähdään, että jos $f$ on ylöspäin kaareutuva
+($f''(x)>0$ välillä $[a,b$]), niin keskipistesääntö antaa integraalille liian pienen ja 
+Trapetsi liian suuren arvon. Em.\ virheanalyysiin liittyen ilmiön voi selittää niin, että 
+keskipistesääntö integroi oikein $f$:n Taylorin polynomin $T_1(x,c)$, kun taas Trapetsi
+integroi oikein $f$:n interpolaatiopolynomin, vrt. kuvio.
+%\begin{figure}[H]
+%\begin{center}
+%\import{kuvat/}{kuvaipol-6.pstex_t}
+%\end{center}
+%\end{figure}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,3)(0,0)
+\put(2,0){\vector(1,0){7}} \put(8.8,-0.4){$x$}
+\put(2,0){\vector(0,1){3}} \put(2.2,2.8){$y$}
+\dashline{0.1}(4.0,1.8)(7.0,2.3179) \dashline{0.1}(4.0,1.1306)(7.0,1.7)
+\put(4,0){\line(0,1){0.1}} \put(5.5,0){\line(0,1){0.1}} \put(7,0){\line(0,1){0.1}}
+\put(3.9,-0.5){$a$} \put(6.9,-0.5){$b$} \put(5.4,-0.5){$c$} 
+\put(7.2,1.652){$\scriptstyle{\text{Keskipistesääntö}}$}
+\put(7.2,2.316){$\scriptstyle{\text{Trapetsi}}$}
+\curve(
+    4.0000,    1.8000,
+    4.5000,    1.5211,
+    5.0000,    1.3843,
+    5.5000,    1.4117,
+    6.0000,    1.6000,
+    6.5000,    1.9202,
+    7.0000,    2.3179)
+\end{picture}
+\end{center}
+\end{figure}
+Myös Simpsonin säännölle voidaan johtaa virhekaava samantyyppisellä päättelyllä kuin edellä.
+Olettaen, että $f$ on neljä kertaa jatkuvasti derivoituva välillä $[a,b]$, saadaan
+virhekaavaksi (Harj.teht.\,\ref{H-int-9: Simpsonin 2})
+\[
+\boxed{\quad E(f) = - \frac{1}{90}\,h^5 f^{(4)}(\xi), 
+              \quad h=(b-a)/2, \quad \xi \in [a,b] \quad \text{(Simpson)}. \quad}
+\]
+
+Em.\ virhekaavoista voidaan edelleen johtaa virhearvioita yhdistetyille kvadratuureille.
+Tarkastellaan jälleen esimerkkinä keskipistesääntöä, rajoittuen tasaväliseen jakoon eli
+olettaen väli $[a,b]$ jaetuksi osaväleihin $[x_{k-1},x_k],\ k=1\ldots n$, missä
+$x_k-x_{k-1}=h=(b-a)/n\ \forall k$. Olkoon funktio $f$ kahdesti jatkuvasti
+derivoituva välillä $[a,b]$, ja olkoon $M_1$ ja $M_2$ $f''$:n minimi- ja maksimiarvot välillä
+$[a,b]$. Tällöin jos $E_k(f) =$ keskipistesäännön integrointivirhe osavälillä $[x_{k-1},x_k]$,
+niin em.\ virhekaavan perusteella
+\[ 
+\frac{1}{24}\,M_1 h^3 \le E_k(f) \le \frac{1}{24}\,M_2 h^3. 
+\]
+Summaamalla yli $k$:n ja huomioimalla, että $\,nh=b-a\,$ saadaan kokonaisvirheelle 
+$E(f) = \sum_{k=1}^n E_k(f)$ arviot
+\[ 
+\frac{1}{24}\,(b-a)M_1 h^2 \le E(f) \le \frac{1}{24}\,(b-a)M_2 h^2. 
+\]
+Tässä on $M_1=f(x_1),\ M_2=f(x_2)\,$ joillakin $x_1,x_2 \in [a,b]$, joten päädytään 
+väliarvomuotoiseen virhekaavaan kuten edellä. Tasavälisen trapetsin ja Simpsonin tapauksessa
+menetellään vastaavasti, jolloin tuloksena ovat seuraavat virhekaavat:
+\begin{center}
+\fbox{\begin{tabular}{ll}
+Tasavälinen, yhdistetty kp.-sääntö:    & $E(f)=\ \frac{1}{24}(b-a)f''(\xi)\,h^2$ \ykehys\\ \\
+Tasavälinen, yhdistetty trapetsi:      & $E(f)=-\frac{1}{12}(b-a)f''(\xi)\,h^2$ \\ \\
+Tasavälinen, yhdistetty Simpson:       & $E(f)=-\frac{1}{180}(b-a)f^{(4)}(\xi)\,h^4 \ $ \akehys
+\end{tabular}}
+\end{center}
+Tässä on kaikissa tapauksissa $\xi \in [a,b]$, ja $h$ on lähimpien kvadratuuripisteiden väli,
+eli joko $h=$ osavälin pituus (Keskipistesääntö, Trapetsi), tai $h=$ puolet osavälin
+pituudesta (Simpson).
+
+Muun kuin tasavälisen jaon tapauksessa voidaan em.\ yhdistettyjen kvadratuurien virhe arvioida
+muodossa $\abs{E(f)} \le \ldots\,$, missä oikealla puolella on $\pm f^{(k)}(\xi)$:n sijasta
+$\abs{f^{(k)}(x)}$:n maksimiarvo välillä $[a,b]$ ja $h$ on peräkkäisten kvadratuuripisteiden
+\pain{suurin} väli. Yleisesti jos osavälijakoon perustuvan yhdistetyn numeerisen kvadratuurin
+virhe on suuruusluokkaa $\ordoO{h^r}$ (integroitavan funktion $f$ ollessa riittävän
+säännöllinen), mutta ei luokkaa $\ordoO{h^{r+1}}$ (vaikka $f$ olisi kuinka säännöllinen), niin
+sanotaan, että ko. menetelmän (tarkkuuden)
+\index{kertaluku!b@tarkkuuden}%
+\kor{kertaluku} (engl.\ order of accuracy) on $r$.
+Kuten em.\ virhetarkastelusta voi päätellä, on yleisesti $r=m+1$, jos numeerinen kvadratuuri
+integroi osaväleillä tarkasti polynomin astetta $m$ mutta ei polynomia astetta $m+1$.
+Yhdistetty keskipistesääntö ja trapetsi ovat siis toisen kertaluvun menetelmiä, ja yhdistetyn
+Simpsonin kertaluku on $r=4$. Esimerkkejä ensimmäisen kertaluvun menetelmistä ovat Riemannin
+summakaavat, joissa kvadratuuripisteet (eli välipisteet $\xi_k$, vrt.\ Luku
+\ref{määrätty integraali}) eivät ole osavälien keskipisteitä
+(ks.\ Harj.teht\,\ref{H-int-9: Riemannin summa}). Riemannin summiin perustuvista
+approksimaatioista yhdistetty keskipistesääntö on siis tarkkuutensa puolesta omassa luokassaan.
+
+\subsection*{Sovellusesimerkki: Adaptiivinen Simpson}
+\index{adaptiivinen Simpson|vahv}
+\index{zza@\sov!Adaptiivinen Simpson|vahv}
+
+Laskimissa ja numeeris--symbolisissa tietokoneohjelmistoissa numeerisen integroinnin komentojen
+(esim. Mathematica: \verb|NIntegrate|) takana on usein yhdistetty Simpson, mahdollisesti myös
+korkeamman kertaluvun yhdistettyjä kvadratuureja. Jakoa osaväleihin ei näissä ohjelmissa
+yleensä suoriteta tasavälisesti, vaan integroitavaan funktioon sopeutuen \kor{adaptiivisesti}. 
+Adaptiivisen Simpsonin menetelmän ideana on selvittää 'nuuskimalla', kuinka suuri on 
+integroitavan funktion neljäs derivaatta $f^{(4)}(x)$ tarkasteltavalla osavälillä 
+$[x_{k-1},x_k]$. Perusajatus on yksinkertainen: Jos osaväli on lyhyt (niinkuin laskun kuluessa
+ennen pitkää on), niin voidaan olettaa, että $f^{(4)}(x)$ on ko.\ välillä likimain vakio $=M_k$.
+Tällöin vakio $M_k$ saadaan selville tulkitsemalla itse algoritmin antamia tuloksia 
+\index{a posteriori}%
+\kor{a posteriori} (eli laskemisen jälkeen) seuraavasti: Sovelletaan ensin Simpsonin sääntöä
+välillä $[x_{k-1},x_k]$ -- tulos $I_1$. Jaetaan sitten väli puoliksi ja sovelletaan Simpsonin
+sääntöä kummallakin osavälillä erikseen -- tulos $I_2$. Jos nyt integraalin tarkka arvo $=I$ 
+välillä $[x_{k-1},x_k]$, niin Simpsonin virhekaavan mukaan
+\[
+\begin{cases} 
+ I-I_1=-\frac{1}{90}M_kh^5, \\ 
+ I-I_2=-\frac{1}{90}M_k\cdot 2\cdot\left(\frac{h}{2}\right)^5
+\end{cases}
+\impl\ M_k=96h^{-5}(I_1-I_2), \quad h=\tfrac{1}{2}(x_k-x_{k-1}).
+\]
+Todellisuudessa $f^{(4)}$ ei ole aivan vakio edes lyhyellä välillä (jos olisi, saataisiin myös
+integraalin tarkka arvo $I$ selville!), mutta saatu arvio on yleensä adaptiivisiin 
+tarkoituksiin riittävä: Sen avulla voidaan ohjata algoritmia tihentämään jakoa siellä, missä 
+laskun antama luku $M_k$ on itseisarvoltaan suuri. Algoritmi pyrkii tarkemmin tihentämään jakoa
+niin, että \pain{virhetihe}y\pain{s}, eli integroimisvirhe osavälillä jaettuna osavälin 
+pituudella, on suunnilleen sama jokaisella osavälillä. (Tällainen jako on osoitettavissa 
+laskutyön kannalta optimaaliseksi.) 
+
+Adaptiivinen algoritmi toimii käytännössä hämmästyttävän hyvin myös useimmissa sellaisissa
+tilanteissa, joissa funktio ei ole lainkaan niin säännöllinen kuin em.\ laskussa oletetaan
+(eli neljä kertaa jatkuvasti derivoituva). Näin käy vaikkapa Esimerkin 
+\ref{Trapetsi vastaan Simpson 2} integroimistehtävässä, jossa integroitava funktio ei ole
+edes jatkuvasti derivoituva ($f(x) \approx 1-\sqrt{x}$ pisteen $x=0$ lähellä). Laskemalla
+lukuja $M_k$ ym.\ tavalla algoritmi päätyy tihentämään jakoa voimakkaasti origon lähellä
+ja pystyy tämän 'koneälyn' ansiosta laskemaan integraalin arvon vaaditulla tarkkuudella lähes
+yhtä nopeasti kuin Esimerkin \ref{Trapetsi vastaan Simpson 1} tilanteessa 
+(ks.\ Harj.teht.\,\ref{H-int-9: sqrt-integraali}c).
+
+\Harj
+\begin{enumerate}
+
+\item
+Integraali $\int_0^1 f(x)\,dx$ lasketaan tasavälisellä, yhdistetyllä Trapetsilla jakamalla
+integroimisväli $n$ osaväliin. Laske näin saadun likiarvon virhe tarkasti, kun \
+a) $f(x)=x(1-x)$, \ b) $f(x)=e^x$.
+
+\item
+Laske seuraaville integraalille likiarvot käyttämällä $11$ pisteen tasavälistä, yhdistettyä
+Trapetsia ($10$ osaväliä) ja Simpsonin sääntöä ($5$ osaväliä) ja vertaa tarkkaan arvoon.
+\[
+\text{a)}\,\ \int_0^1 \frac{1}{1+x^2}\,dx \qquad
+\text{b)}\,\ \int_0^1 \frac{4x^3}{1+x}\,dx \qquad
+\text{c)}\,\ \int_0^1 \frac{1}{1+\sqrt[4]{x}}\,dx
+\]
+
+\item \label{H-int-9: korjattu trapetsi} \index{korjattu trapetsikaava}
+Numeerisen integroinnin nk.\ \kor{korjattu trapetsikaava} on
+\[
+\int_a^b f(x)\,dx \approx \frac{1}{2}(b-a)[f(a)+f(b)]-\frac{1}{12}(b-a)^2[f'(b)-f'(a)].
+\]
+Näytä, että kaava on tarkka polynomeille astetta $m=3$. Millainen on vastaava yhdistetty
+kvadratuuri, jos jako osaväleihin on tasavälinen?
+
+\item \label{H-int-9: Trapetsin virhekaava}
+Olkoon $f$ kahdesti jatkuvasti derivoituva välillä $[a,b]$ ja $g=f-p$, missä $p$ on ensimmäisen
+asteen (Lagrangen) interpolaatiopolynomi, jolle pätee $p(a)=f(a)$ ja $p(b)=f(b)$. Näytä
+osittain integroimalla, että pätee
+\[
+-\frac{1}{2}\int_a^b (x-a)(b-x)g''(x)\,dx = \int_a^b g(x)\,dx.
+\]
+Johda Trapetsin virhekaava tästä tuloksesta.
+
+\item \label{H-int-9: Simpson 1}
+a) Olkoon $p$ funktion $f$ toisen asteen interpolaatiopolynomi, joka määritellään ehdoilla
+$p(a-h)=f(a-h)$, $p(a)=f(a)$ ja $p(a+h)=f(a+h)$ välillä $[a-h,a+h]$. Näytä, että Simpsonin
+sääntö ko.\ välillä on sama kuin approksimaatio
+\[
+\int_{a-h}^{a+h} f(x)\,dx \approx \int_{a-h}^{a+h} p(x)\,dx.
+\]
+b) Todista Simpsonin säännön virhekaava siinä tapauksessa, että $f^{(4)}$ on vakio 
+välillä $[a-h,a+h]$ (eli $f$ on polynomi astetta $4$).
+
+\item \label{H-int-9: Riemannin summa}
+Integraalin approksimoiminen Riemannin summalla, jossa välipisteiksi osaväleillä $[x_{k-1},x]$
+valitaan $\xi_k=x_{k-1}$, vastaa osaväleillä tehtyä approksimaatiota
+$\int_a^b f(x)\,dx \approx (b-a)f(a)$. Johda tälle virhekaava
+\[
+E(f)=\frac{1}{2}(b-a)^2 f'(\xi), \quad \xi\in[a,b].
+\]
+Mikä on virhekaava koko välillä, jos jako osaväleihin on tasavälinen?
+
+\item(*) \label{H-int-9: Arkhimedes} \index{zzb@\nim!Arkhimedeen algoritmi}
+(Arkhimedeen algoritmi) Suora leikkaa paraabelin $K:\ y=x^2$ pisteissä $(a,a^2)$ ja 
+$(b,b^2)$, jolloin suora erottaa paraabelista segmentin $A$ välillä $[a,b]$ ($a<b$). Olkoon 
+$A_n$ segmentin pinta-alan $\mu(A)$ likiarvo, joka saadaan jakamalla väli $[a,b]$ tasavälisesti
+$2^n$ osaväliin ($n\in\N$) ja käyttämällä yhdistettyä trapetsia. Näytä pelkin algebran keinoin,
+että jono $\seq{A_n}$ on geometrinen sarja. Laske $\mu(A)$ ($=\lim_n A_n$) tällä perusteella.
+
+\item (*) \label{H-int-9: Simpsonin 2}
+a) (Vrt.\ Tehtävä \ref{H-int-9: Simpson 1}a.) Olkoon $p$ funktion $f$ yleistetty kolmannen
+asteen interpolaatiopolynomi, joka määritellään ehdoilla $\,p(a-h)=f(a-h)$, $\,p(a+h)=f(a+h)$,
+$\,p(a)=f(a)\,$ ja $\,p'(a)=f'(a)$ välillä $[a-h,a+h]$. Näytä, että Simpsonin sääntö ko.\
+välillä on sama kuin approksimaatio
+\[
+\int_{a-h}^{a+h} f(x)\,dx \approx \int_{a-h}^{a+h} p(x)\,dx.
+\]
+b) Johda Simpsonin virhekaava. \kor{Vihje}: Lause \ref{usean pisteen Taylor}.
+
+\item (*) \label{H-int-9: korjatun trapetsin virhe}
+Olkoon $f$ neljä kertaa jatkuvasti derivoituva välillä $[a,b]$. Johda korjatulle
+trapetsikaavalle (Harj.teht.\,\ref{H-int-9: korjattu trapetsi}) virhekaava
+\[
+E(f) = \frac{1}{720}\,(b-a)^5 f^{(4)}(\xi), \quad \xi\in[a,b].
+\]
+\kor{Vihje}: Hermiten interpolointi ja Lause \ref{usean pisteen Taylor}!
+
+\item (*) \label{H-int-9: sqrt-integraali}
+Tarkastellaan numeerisen integroinnin virhettä laskettaessa integraali $\int_0^1\sqrt{x}\,dx\,$
+yhdistetyillä kvadratuureilla, joissa väli $[0,1]$ jaetaan eri tavoilla $n$ 
+osaväliin. \vspace{1mm}\newline
+\ a) Näytä, että jos jako on tasavälinen, niin sekä yhdistetyn trapetsin että yhdistetyn
+Simpsonin virhe on \ $\sim n^{-3/2}$ suurilla $n$:n arvoilla. \newline 
+b) Valitaan välin $[0,1]$ jakopisteiksi $x_k=(k/n)^{4/3},\ k=0 \ldots n$ ja käytetään
+yhdistettyä trapetsia. Näytä, että virhe $\,=\mathcal{O}(n^{-2}\ln n)$. \newline
+c) Valitaan välin $[0,1]$ jakopisteiksi $x_k=(k/n)^{8/3},\ k=0 \ldots n$ ja \mbox{käytetään}
+yhdistettyä Simpsonia. Näytä, että virhe $\,=\mathcal{O}(n^{-4}\ln n)$. (Adaptiivinen Simpsonin
+algoritmi päätyy likimain tähän jakoon suurilla $n$:n arvoilla.)
+ 
+\item (*) \label{H-int-9: hidas sarja}
+(Hitaan sarjan kiihdytys) Suppeneva integraali $\int_n^\infty f(x)\,dx$, missä $n\in\N$ on suuri
+luku, voidaan laskea likimäärin käyttämällä joko a) yhdistettyä trapetsia tai b) yhdistettyä,
+korjattua trapetsia (Harj.teht.\,\ref{H-int-9: korjattu trapetsi}) välin $[n,\infty)$ jaossa
+osaväleihin $\,[k,k+1]$, $k\in\N$, $k \ge n$. Lähtien näistä ajatuksista ja mainittujen
+kvadratuurien virhearvioista 
+(ks.\ Harj.teht.\,\ref{H-int-9: korjatun trapetsin virhe}) johda seuraavat tulokset, kun
+$f(x)=1/x^\alpha,\ \alpha>1$\,:
+\begin{align*}
+&\text{a)}\,\ \sum_{k=1}^\infty \frac{1}{k^\alpha} \,=\,
+ \sum_{k=1}^n \frac{1}{k^\alpha}+\frac{1}{\alpha-1}\,n^{1-\alpha}-\frac{1}{2}\,n^{-\alpha}
+ +\Ord{n^{-\alpha-1}}\,. \\
+&\text{b)}\,\ \sum_{k=1}^\infty \frac{1}{k^\alpha} \,=\,
+ \sum_{k=1}^n \frac{1}{k^\alpha}+\frac{1}{\alpha-1}\,n^{1-\alpha}-\frac{1}{2}\,n^{-\alpha}
+ +\frac{\alpha}{12}\,n^{-\alpha-1}+\Ord{n^{-\alpha-3}}\,.
+\end{align*}
+\kor{Vihje}: Huomioi, että
+\begin{align*}
+\text{a)}\,\ \sum_{k=n+1}^\infty f(k)
+&\,=\, \sum_{k=n}^\infty \frac{1}{2}\,\bigl[\,f(k)+f(k+1)\,\bigr] - \frac{1}{2}\,f(n), \\
+\text{b)}\,\ \sum_{k=n+1}^\infty f(k)
+&\,=\, \sum_{k=n}^\infty \left(\frac{1}{2}\,\bigl[\,f(k)+f(k+1)\,\bigr]
+                             -\frac{1}{12}\,\bigl[\,f'(k+1)-f'(k)\,\bigr]\right) \\
+&\quad -\frac{1}{2}\,f(n) - \frac{1}{12}\,f'(n).
+\end{align*}
+
+\end{enumerate}
+ 

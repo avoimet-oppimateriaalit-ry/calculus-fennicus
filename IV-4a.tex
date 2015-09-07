@@ -1,0 +1,335 @@
+\section{Implisiittifunktiot} \label{implisiittifunktiot} 
+\alku
+
+Jos $F$ on kahden reaalimuuttujan funktio, niin Euklidisen tason pistejoukko
+\begin{equation}  \label{joukko S}
+S=\{P \vastaa (x,y) \in \R^2 \mid F(x,y)=0\}
+\end{equation}
+on yleensä jokin käyrä. Muitakin mahdollisuuksia on: Joukko $S$ voi myös koostua useista 
+erillisistä käyristä tai käyrän 'pätkistä'. Se voi myös sisältää eristettyjä pisteitä, tai olla
+pelkästään erillisistä pisteistä koostuva, tai $S$ voi olla tyhjä joukko (vrt.\ käyrää koskeva
+alaviite edellisessä luvussa).
+\begin{Exa}
+Jos $a \in \R$, niin joukko
+\[ 
+S = \{P \vastaa (x,y) \in R^2 \mid x^2+y^2+a = 0\} 
+\]
+on ympyräviiva jos $a<0$, piste jos $a=0$, ja tyhjä joukko jos $a>0$. \loppu 
+\end{Exa}
+Olkoon $S$ määritelty kaavalla \eqref{joukko S}. Halutaan selvittää, millainen $S$ on 
+rajoitettuna  euklidisen tason 'viipaleeseen'
+\[
+E_A=\{P \vastaa (x,y) \in \R^2 \mid x \in A\},
+\]
+missä $A \subset \R$ on jokin \pain{väli}. Oletetaan ensiksi, että $S\cap E_A$ on esitettävissä
+muodossa
+\[
+S\cap E_A =\{P \vastaa (x,y) \in \R^2 \mid x \in A \ \ja \ y=f(x)\},
+\]
+missä $\,f:A \kohti \R$ on (yhden reaalimuuttujan) funktio. Sanotaan tällöin, että yhtälö 
+$F(x,y)=0$ (tai pistejoukko $S$) määrittelee välillä $A$ \kor{implisiittifunktion} $f$. 
+Implisiittifunktio $f$ on siis määritelmän mukaan sellainen, että
+\[
+F(x,f(x))=0 \ \ \forall x \in A, 
+\]
+ja lisäksi pätee
+\[ 
+(x,y) \in A \times \R\ \ja\ F(x,y) = 0 \qimpl y = f(x), 
+\]
+ts.\ yhtälö $F(x,y)=0$ ratkeaa $y$:n suhteen y\pain{ksikäsitteisesti} muotoon $y = f(x)$, 
+kun $x\in A$.
+
+Yksinkertainen esimerkki implisiittifunktiosta on Luvussa \ref{käänteisfunktio} käsitelty 
+käänteisfunktio, jonka määritelmä voidaan esittää muodossa
+\[
+F(x,y)=x-f(y)=0 \ \ekv \ y=\inv{f}(x).
+\]
+--- Itse asiassa myös tavallinen funktio muuttuu 'implisiittiseksi' (suom.\ 'epäsuoraksi', 
+'peitetyksi'), kun $y=f(x)$ kirjoitetaan muotoon $F(x,y)=f(x)-y=0$.
+\begin{Exa}
+Tason suoran perusmuotoinen yhtälö
+\[
+ax+by+c=0
+\]
+voidaan tulkita implisiittifunktion $y=f(x)$ määrittelyksi, kun $b\neq 0$. Tällöin on siis 
+$f(x) = -(ax+c)/b$, $D_f = R_f = \R$. \loppu
+\end{Exa}
+\begin{Exa} Yhtälö 
+\[
+F(x,y) = \sin x + y + y^5 = 0
+\]
+määrittelee implisiittifunktion, joka voidaan esittää yhdistettynä funktiona
+\[
+y = f(x) = \inv{g} \circ (-\sin)(x) = -\inv{g}(\sin x),
+\]
+missä $g(y) = y^5 + y,\ D_g = \R$ (vrt.\ Esimerkki \ref{algebrallinen käänteisfunktio} 
+Luvussa \ref{käänteisfunktio}). Funktion $f$ määrittelyjoukko on $D_f = \R$ ja arvojoukko on 
+$R_f = [-a,a]$, missä $a = \inv{g}(1)$, ts.\ $\,a^5 + a = 1$. \loppu 
+\end{Exa}
+
+\subsection*{Monihaaraiset implisiittifunktiot}
+
+Implisiittifunktion määrittely-yrityksissä varsin tavallinen on tilanne, että yhtälö $F(x,y)=0$
+kyllä ratkeaa $y$:n suhteen tarkasteltavalla välillä $A$, mutta ei yksikäsitteisesti. Oletaan
+jatkossa tällainen tilanne. Oletetaan tällöin edelleen, että $S\cap E_A$ on purettavissa osiin
+\[
+S\cap E_A = \bigcup_{i\in \Lambda} S_i,
+\]
+missä $\Lambda \subset \N$ (tai $\Lambda \subset \Z$) on jokin indeksijoukko (jossa vähintään
+kaksi alkiota) ja jokainen $S_i,\ i \in \Lambda$, on käyrä (vrt.\ alaviite edellisessä luvussa)
+muotoa
+\[
+S_i=\{P \vastaa (x,y) \in \R^2 \mid x \in A \ \ja \ y=f_i(x)\},
+\]
+missä $f_i: A \kohti \R$ on reaalifunktio. Sanotaan tällöin, että funktioj\pain{oukko}
+\[
+\mathfrak{f}=\{f_i, \ i \in \Lambda \}
+\]
+on yhtälön $F(x,y)=0$ (tai pistejoukon $S$) määrittelemä \kor{monihaarainen} (moniarvoinen)
+\kor{implisiittifunktio}. Monihaarainen implisiittifunktio ei siis ole funktio
+
+\pagebreak 
+
+vaan sellaisten joukko. Ko.\ funktiojoukon alkioita $f_i$ sanotaan $\mathfrak{f}$:n 
+\kor{haaroiksi} (engl. branch).\footnote[1]{Monihaarainen funktio $\mathfrak{f}$ voidaan myös
+tulkita \kor{joukkoarvoiseksi} määrittelemällä
+\[ 
+\mathfrak{f}(x) = \{f_i(x),\ i \in \Lambda\},
+\]
+missä $f_i,\ i \in \Lambda$ ovat $\mathfrak{f}$:n haarat välillä $A$. Koska $\mathfrak{f}(x)$
+on (joukkona) yksikäsitteinen jokaisella $x \in A$, niin $\mathfrak{f}$ on funktio tyyppiä 
+$\mathfrak{f}: A \kohti \mathcal{B}$, missä maalijoukko $\mathcal{B}$ on 'joukkojen joukko'
+\[ 
+\mathcal{B} = \{\,\{y_i, \ i \in \Lambda\} \mid y_i \in \R\ \ \forall i \in \Lambda\,\}. 
+\]} 
+Indeksijoukko $\Lambda$ voi olla ääretön.
+\begin{figure}[H]
+\begin{center}
+\setlength{\unitlength}{1cm}
+\begin{picture}(8,8)(-1,-2)
+\put(-1,0){\vector(1,0){8}}\put(6.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){8}}\put(0.2,5.8){$y$}
+\put(1,0){\drawline(0,-0.1)(0,0.1)} \put(6,0){\drawline(0,-0.1)(0,0.1)}
+\put(0.9,-0.5){$a$} \put(5.9,-0.5){$b$}
+\put(0,-0.4){\curve(
+    1.0000,   -1.1137,
+    1.2000,   -1.1013,
+    1.4000,   -1.0586,
+    1.6000,   -0.9883,
+    1.8000,   -0.9004,
+    2.0000,   -0.8108,
+    2.2000,   -0.7383,
+    2.4000,   -0.7012,
+    2.6000,   -0.7129,
+    2.8000,   -0.7791,
+    3.0000,   -0.8952,
+    3.2000,   -1.0466,
+    3.4000,   -1.2100,
+    3.6000,   -1.3572,
+    3.8000,   -1.4598,
+    4.0000,   -1.4947,
+    4.2000,   -1.4487,
+    4.4000,   -1.3217,
+    4.6000,   -1.1282,
+    4.8000,   -0.8954,
+    5.0000,   -0.6600,
+    5.2000,   -0.4619,
+    5.4000,   -0.3379,
+    5.6000,   -0.3146,
+    5.8000,   -0.4034,
+    6.0000,   -0.5976)}
+\curve(
+    1.0000,    3.0000,
+    1.2000,    2.8198,
+    1.4000,    2.6562,
+    1.6000,    2.5080,
+    1.8000,    2.3740,
+    2.0000,    2.2531,
+    2.2000,    2.1440,
+    2.4000,    2.0456,
+    2.6000,    1.9566,
+    2.8000,    1.8760,
+    3.0000,    1.8025,
+    3.2000,    1.7349,
+    3.4000,    1.6720,
+    3.6000,    1.6127,
+    3.8000,    1.5558,
+    4.0000,    1.5000,
+    4.2000,    1.4442,
+    4.4000,    1.3873,
+    4.6000,    1.3280,
+    4.8000,    1.2651,
+    5.0000,    1.1975,
+    5.2000,    1.1240,
+    5.4000,    1.0434,
+    5.6000,    0.9544,
+    5.8000,    0.8560,
+    6.0000,    0.7469)
+\put(0,-1.5){
+\curve(
+    1.0000,    5.0000,
+    1.2000,    6.1424,
+    1.4000,    6.8307,
+    1.6000,    7.1511,
+    1.8000,    7.1831,
+    2.0000,    6.9988,
+    2.2000,    6.6630,
+    2.4000,    6.2337,
+    2.6000,    5.7614,
+    2.8000,    5.2895,
+    3.0000,    4.8545,
+    3.2000,    4.4854,
+    3.4000,    4.2042,
+    3.6000,    4.0256,
+    3.8000,    3.9574,
+    4.0000,    4.0000,
+    4.2000,    4.1467,
+    4.4000,    4.3836,
+    4.6000,    4.6898,
+    4.8000,    5.0369,
+    5.0000,    5.3898,
+    5.2000,    5.7058,
+    5.4000,    5.9352,
+    5.6000,    6.0213,
+    5.8000,    5.8999,
+    6.0000,    5.5000)}
+\put(6,-1.6){$y=f_1(x)$}
+\put(6,1.2){$y=f_2(x)$}
+\put(6,4.5){$y=f_3(x)$}
+\end{picture}
+%\caption{Monihaarainen implisiittifunktio}
+\end{center}
+\end{figure}
+
+\begin{Exa}
+Yhtälö $x^2+y^2=1$ määrittelee välillä $[-1,1]$ kaksihaaraisen implisiittifunktion
+\[
+\mathfrak f=\{f_+,f_-\},
+\]
+missä
+\[
+f_\pm = \pm \sqrt{1-x^2}. \loppu
+\]
+\end{Exa}
+\begin{Exa} Millaisen monihaaraisen implisiittifunktion määrittelee yhtälö \newline
+$y^4-2y^2+x^2-x=0$\,?
+\end{Exa}
+\ratk Jos $x\in\R$, niin mahdolliset ratkaisut $y\in\R$ ovat
+\[
+y=\pm\sqrt{1\pm\sqrt{1+x-x^2}}.
+\]
+Tässä on
+\begin{align*}
+1+x-x^2 &\ge 0 \qekv \frac{1}{2}(1-\sqrt{5}) \le x \le \frac{1}{2}(1+\sqrt{5}) \\
+1+x-x^2 &\ge 1 \qekv 0 \le x \le 1
+\end{align*}
+Päätellään, että väleillä $[\tfrac{1}{2}(1-\sqrt{5}),\,0]$ ja $[1,\,\tfrac{1}{2}(1+\sqrt{5})]$
+funktio on kaksihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\}$, missä
+\[
+f_1(x)=\sqrt{1+\sqrt{1+x-x^2}}\,, \quad f_2(x)=-\sqrt{1+\sqrt{1+x-x^2}}\,.
+\]
+Välillä $[0,1]$ funktio on nelihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\,,\,f_3\,,\,f_4\}$,
+missä $f_1$ ja $f_2$ ovat samat kuin edellä ja
+\[
+f_3(x)=\sqrt{1-\sqrt{1+x-x^2}}\,, \quad  f_4(x)=-\sqrt{1-\sqrt{1+x-x^2}}\,.
+\]
+Jos $x\in(-\infty,\,\tfrac{1}{2}(1-\sqrt{5})$ tai $x\in(\tfrac{1}{2}(1+\sqrt{5},\,\infty)$,
+ei yhtälö toteudu millään $y\in\R$, joten näillä väleillä yhtälö ei määrittele mitään
+(reaaliarvoista) funktiota. \loppu 
+
+\subsection*{Funktiot $\arcsin$, $\arccos$, $\arctan$}
+
+Funktiomerkinnöillä $\,\arcsin$, $\arccos$ ja $\arctan$ tarkoitetaan yhtälöiden $x-\sin y =0$,
+$x-\cos y=0$ ja $x-\tan y=0$ määrittelemiä äärettömän monihaaraisia funktioita,
+määrittelyjoukkona joko väli $[-1,1]$ ($\arcsin,\,\arccos$) tai $\R$ ($\arctan$). Esimerkiksi
+$\arctan$ määritellään
+\[
+\arctan = \{f_n, \ n\in\Z\},
+\]
+missä
+\[
+f_n(x)= \Arctan x + n\pi.
+\]
+Tässä $f_0(x)=\Arctan x\,$ on implisiittifunktion $\arctan$ \kor{päähaara} 
+(engl.\ principal branch), vrt.\ Luku \ref{käänteisfunktio}.
+\begin{Exa} \label{napakulman kaava} Jos $\varphi(x,y)$ on karteesisen koordinaatiston
+pistettä $(x,y)$ vastaava napakulma, $\varphi\in[0,2\pi)$, niin funktioriippuvuus 
+$(x,y)\map\varphi(x,y)$ on
+\[
+\varphi(x,y)=
+\begin{cases}
+\Arctan(y/x),      &\text{jos}\ \ x>0\ \ja\ y\geq 0 \\
+\Arctan(y/x)+\pi,  &\text{jos}\ \ x<0 \\
+\Arctan(y/x)+2\pi, &\text{jos}\ \ x>0\ \ja\ y<0 \\
+\pi/2,             &\text{jos}\ \ x=0\ \ja\ y>0 \\
+3\pi/2,            &\text{jos}\ \ x=0\ \ja\ y<0
+\end{cases}
+\]
+Tässä tarvittiin siis peräti kolmea $\arctan$:n haaraa (!).
+\loppu
+\begin{figure}[H]
+\begin{center}
+\input{plots/arctanhaarat.tex}
+\end{center}
+\end{figure}
+\end{Exa}
+
+\subsection*{Kahden muuttujan implisiittifunktiot}
+
+Jos $F$ on kolmen muuttujan funktio ja yhtälö
+\[
+F(x,y,z)=0
+\]
+ratkeaa yksikäsitteisesti $z$:n suhteen, kun $(x,y)\in A\subset\R^2$, tulee määritellyksi
+kahden muuttujan implisiittifunktio
+\[
+z=f(x,y), \quad (x,y)\in A.
+\]
+Monihaaraiset tilanteet ovat jälleen tavallisia.
+\begin{Exa}
+Yhtälö $x^2+y^2+z^2=R^2$ määrittelee kaksihaaraisen implisiittifunktion
+$z=\pm\sqrt{R^2-x^2-y^2}\,$ joukossa $A=\{(x,y)\in\R^2 \ | \ x^2+y^2\leq R^2\}$. \loppu
+\end{Exa}
+\begin{Exa} Jos $m\in\N,\ m \ge 2$, niin yhtälö
+\[
+y,z\in\C: \quad y^m=z
+\]
+määrittelee $m$-haaraisen kompleksifunktion $y=\sqrt[m]{z}$, vrt.\ Luku \ref{III-3}.
+Jos kirjoitetaan $z=x+iy$ ja $y=u(x,y)+iv(x,y)$, niin $u$ ja $v$ ovat $m$-haaraisia
+funktioita tyyppiä $u,v:\ \Rkaksi\kohti\R$. \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Seuraavassa on määritelty implisiittifunktioita, mahdollisesti useampihaaraisia. Määritä näiden
+haarat funktioina $y=f(x),\ D_f\subset\R$ (määritä myös $D_f$). Hahmottele funktiot myös 
+graafisesti!
+\begin{align*}
+&\text{a)}\ \ x\cos x+y^2=0 \qquad\qquad\quad\,
+ \text{b)}\ \ x+y^4-2y^2=0 \\
+&\text{c)}\ \ x+\tan\,(y^4-16y^2)=0 \qquad
+ \text{d)}\ \ \arctan x + \arctan y=\frac{\pi}{4}
+\end{align*}
+
+\item
+Mitkä ovat monihaaraisen funktion $\arccos(\cos x)$ arvot, kun $x=13\pi/4$\,?
+
+\item
+a) Määrittele monihaaraisen funktion $\arcsin=\{f_n\,,\ n\in\Z\}$ haarat päähaaran $f_0$
+avulla. \ b) Ilmaise karteesisen koordinaatiston pisteiden ja napakulman välinen riippuvuus
+$\varphi(x,y)$ funktioiden $f_n$ avulla.
+
+\item
+Yhtälö $x+3xyz^2+z^4=0\ (x,y,z\in\R)$ määrittelee implisiittifunktion $z=f(x,y)$. \ a) Laske 
+$f$:n arvot pisteissä $(0,0)$, $(2,-1)$ ja $(1,1)$. \ b)  Millaisia ovat $f$:n haarat 
+(määrittelyjoukot ja laskusäännöt) yleisemmin?
+
+\item (*)
+Määrittele kaksihaaraiset funktiot $u=\{u_1,u_2\}$ ja $v=\{v_1,v_2\}$ siten, että
+\[
+u(x,y)+iv(x,y)=\sqrt{z}\,, \quad z=x+iy\in\C.
+\]
+
+\end{enumerate}

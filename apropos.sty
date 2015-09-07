@@ -1,0 +1,231 @@
+%sisällysluettelon section-asetus
+\renewcommand{\l@section}{\@dottedtocline{2}{2.8em}{3.5em}}
+
+%sisällysluettelon chapter-asetus: tempdima 1.5em -> 2.8em
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2.8em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+%sisällysluettelon täydennysrivit
+\newcommand{\subcon}[2]{\contentsline {subsection}{\numberline {} \hspace{3mm} {#1}}{{#2}}}
+
+%lause- ym. rakenteita
+\newtheorem{Thm}{Lause}[section]
+{\theorembodyfont{\normalfont}  \newtheorem{Lause}[Thm]{Lause}}
+{\theorembodyfont{\normalfont}  \newtheorem{*Lause}[Thm]{*Lause}}
+{\theorembodyfont{\normalfont}  \newtheorem{Prop}[Thm]{Propositio}}
+{\theorembodyfont{\normalfont}  \newtheorem{Lem}[Thm]{Lemma}}
+{\theorembodyfont{\normalfont}  \newtheorem{Kor}[Thm]{Korollaari}}
+{\theorembodyfont{\normalfont}  \newtheorem{Def}[Thm]{Määritelmä}}
+{\theorembodyfont{\normalfont}  \newtheorem{Sop}[Thm]{Sopimus}}
+{\theorembodyfont{\normalfont}  \newtheorem{Exa}{Esimerkki}}
+
+\newcommand{\loppu}{\ensuremath{\quad \square}}
+\newenvironment{Tod}{\underline{Todistus}\ \,}{\loppu}
+\newenvironment{Ratk}{\underline{Ratkaisu}\ \,}{\loppu}
+\newenvironment{Ratk*}{\underline{Ratkaisu}\ \,}{}
+\newcommand{\ratk}{\underline{Ratkaisu}\ \,}
+\newcommand{\tod}{\underline{Todistus}\ \,}
+%\newcommand{\Harj}{\vspace{8mm} $\bigstar$ \ HARJOITUSTEHTÄVIÄ}
+\newcommand{\Harj}{\vspace{4mm} \begin{center} \textbf{HARJOITUSTEHTÄVIÄ} \end{center}}
+%\newcommand{\Harj}{\vspace{4mm} \begin{center} HARJOITUSTEHTÄVIÄ \end{center}}
+
+%kehystyksen väljennyksiä
+\newcommand{\kehys}{\rule[-2mm]{0mm}{6mm}}
+\newcommand{\ykehys}{\rule{0mm}{6mm}}
+\newcommand{\akehys}{\rule[-3mm]{0mm}{3mm}}
+\newcommand{\Ykehys}{\rule{0mm}{8mm}}
+\newcommand{\Akehys}{\rule[-5mm]{0mm}{5mm}}
+\newcommand{\ygehys}{\rule{0mm}{4mm}}
+\newcommand{\agehys}{\rule[-3mm]{0mm}{2mm}}
+\newcommand{\gehys}{\rule[-2mm]{0mm}{7mm}}
+
+%painotuksia ja korostuksia
+\newcommand{\hist}[1]{\textbf{#1}}
+\newcommand{\kor}[1]{\emph{#1}}
+\newcommand{\pain}[1]{\underline{#1}}
+\newcommand{\vahv}[1]{\textbf{#1}}
+
+%logiikkaa
+\newcommand{\ja}{\ensuremath{\ \&\ }}
+\newcommand{\tai}{\ensuremath{\,\vee\,}}
+
+%lyhenteitä
+\newcommand{\impl}{\ensuremath{\Rightarrow}}
+\newcommand{\qimpl}{\ensuremath{\quad \Rightarrow \quad}}
+\newcommand{\limp}{\ensuremath{\Leftarrow}}
+\newcommand{\ekv}{\ensuremath{\Leftrightarrow}}
+\newcommand{\qekv}{\ensuremath{\quad \Leftrightarrow} \quad}
+\newcommand{\map}{\ensuremath{\mapsto}}
+\newcommand{\Map}{\ensuremath{\longmapsto}}
+\newcommand{\vast}{\ensuremath{\leftrightarrow}}
+\newcommand{\ext}{\ensuremath{\hookrightarrow}}
+\newcommand{\kohti}{\ensuremath{\rightarrow}}
+\newcommand{\Kohti}{\ensuremath{\longrightarrow}}
+\newcommand{\D}{\displaystyle}
+\newcommand{\vastaa}{\ensuremath{\, \widehat{=} \,}}
+\newcommand{\Vastaa}{\ensuremath{\, \widehat{\approx} \,}}
+\newcommand{\aste}{\ensuremath{^{\circ}}}
+
+%lukujoukot
+\newcommand{\N}{\ensuremath{\mathbb N}}
+\newcommand{\Z}{\ensuremath{\mathbb Z}}
+\newcommand{\Q}{\ensuremath{\mathbb Q}}
+\newcommand{\DD}{\ensuremath{\mathbb D}}
+\newcommand{\R}{\ensuremath{\mathbb R}}
+\newcommand{\C}{\ensuremath{\mathbb C}}
+\newcommand{\K}{\ensuremath{\mathbb K}}
+\newcommand{\A}{\ensuremath{\mathbb A}}
+\newcommand{\G}{\ensuremath{\mathbb G}}
+\newcommand{\J}{\ensuremath{\mathbb J}}
+
+\newcommand{\eps}{\varepsilon}
+
+%desimaalilukuja
+\newcommand{\x}{\ensuremath{\Breve{x}}}
+\newcommand{\y}{\ensuremath{\Breve{y}}}
+\newcommand{\z}{\ensuremath{\Breve{z}}}
+
+%itseisarvo ja normi
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\norm}[1]{\vert\!\vert#1\vert\!\vert}
+\newcommand{\enorm}[1]{\vert\!\vert\!\vert#1\vert\!\vert\!\vert}
+
+%lukujono
+\newcommand{\seq}[1]{\ensuremath{\{#1\}}}
+
+%kosinin geometrinen esiaste
+\newcommand{\kos}{\gamma}
+
+%differentiaalioperaattorit
+\newcommand{\dif}{\ensuremath{\text{D}}}
+\newcommand{\dyf}{\ensuremath{\text{L}}}
+
+%pitkä vektorinuoli
+\newcommand{\Vect}[1]{\overrightarrow{#1}}
+
+%paikkavektori ja tangenttivektori
+\newcommand{\mv}[1]{\mathbf{#1}}
+\newcommand{\vr}{\vec r}
+\newcommand{\dvr}{\vec r\,'}
+\newcommand{\ddvr}{\vec r\,''}
+\newcommand{\tv}{\vec\tau}
+
+%matriisien lyhennysmerkkejä
+\newcommand{\mo}{\ensuremath{{\mathbf{0}}}}
+\newcommand{\mx}{\ensuremath{{\mathbf{x}}}}
+\newcommand{\my}{\ensuremath{{\mathbf{y}}}}
+\newcommand{\mz}{\ensuremath{{\mathbf{z}}}}
+\newcommand{\mA}{\ensuremath{{\mathbf{A}}}}
+\newcommand{\mB}{\ensuremath{{\mathbf{B}}}}
+\newcommand{\mC}{\ensuremath{{\mathbf{C}}}}
+\newcommand{\mF}{\ensuremath{{\mathbf{F}}}}
+\newcommand{\mI}{\ensuremath{{\mathbf{I}}}}
+\newcommand{\mL}{\ensuremath{{\mathbf{L}}}}
+\newcommand{\mU}{\ensuremath{{\mathbf{U}}}}
+\newcommand{\mD}{\ensuremath{{\mathbf{D}}}}
+\newcommand{\mH}{\ensuremath{{\mathbf{H}}}}
+\newcommand{\mJ}{\ensuremath{{\mathbf{J}}}}
+\newcommand{\mV}{\ensuremath{{\mathbf{V}}}}
+\newcommand{\mW}{\ensuremath{{\mathbf{W}}}}
+\newcommand{\mR}{\ensuremath{{\mathbf{R}}}}
+\newcommand{\ma}{\ensuremath{{\mathbf{a}}}}
+\newcommand{\mb}{\ensuremath{{\mathbf{b}}}}
+\newcommand{\mc}{\ensuremath{{\mathbf{c}}}}
+\newcommand{\md}{\ensuremath{{\mathbf{d}}}}
+\newcommand{\me}{\ensuremath{{\mathbf{e}}}}
+\newcommand{\mf}{\ensuremath{{\mathbf{f}}}}
+\newcommand{\mg}{\ensuremath{{\mathbf{g}}}}
+\newcommand{\mh}{\ensuremath{{\mathbf{h}}}}
+\newcommand{\mr}{\ensuremath{{\mathbf{r}}}}
+\newcommand{\mpu}{\ensuremath{{\mathbf{u}}}}
+\newcommand{\mt}{\ensuremath{{\mathbf{t}}}}
+\newcommand{\mpv}{\ensuremath{{\mathbf{v}}}}
+\newcommand{\mw}{\ensuremath{{\mathbf{w}}}}
+\newcommand{\Nabla}{\ensuremath{{\boldsymbol{\nabla}}}}
+
+%jakopisteistö
+\newcommand{\X}{\ensuremath{X}}
+
+%matriisiympäristöjä
+\newenvironment{cmatrix}{\left[\begin{array}{cccccccccccccccccccc}}{\end{array}\right]}
+\newenvironment{rmatrix}{\left[\begin{array}{rrrrrrrrrrrrrrrrrrrr}}{\end{array}\right]}
+\newenvironment{detmatrix}{\left|\begin{array}{rrrrrrrrrrrrrrrrrrrr}}{\end{array}\right|}
+
+%skalaaritulo
+\newcommand {\scp}[2]{\langle #1, #2 \rangle}
+
+%analyyttinen geometria
+\newcommand{\Ekaksi}{\ensuremath{\mathit{E^{2}}}}
+\newcommand{\Ekolme}{\ensuremath{\mathit{E^{3}}}}
+\newcommand{\kulma}{\ensuremath{\measuredangle}}
+\newcommand{\skulma}{\ensuremath{\angle \negthickspace \negthickspace \negthickspace \uparrow}}
+\newcommand{\Rkaksi}{\ensuremath{\mathbb R^{2}}}
+\newcommand{\Rkolme}{\ensuremath{\mathbb R^{3}}}
+\newcommand{\Pkunta}{\ensuremath{\mathbb P}}
+
+%piste kuvassa
+\newcommand{\piste}{\ensuremath{\scriptstyle{\bullet}}}
+\newcommand{\Piste}{\ensuremath{\bullet}}
+
+%kompleksiluvut
+\newcommand{\pointer}[1]{\ensuremath{\overset{-\!\triangleright}{#1}}}
+\newcommand{\ptp}{\ensuremath{\overset{-\!\triangleright}{p}}}
+\newcommand{\ptq}{\ensuremath{\overset{-\!\triangleright}{q}}}
+\newcommand{\ptr}{\ensuremath{\overset{-\!\triangleright}{e}}}
+\newcommand{\pti}{\ensuremath{\overset{-\!\triangleright}{i}}}
+\newcommand{\ptpinv}{\ensuremath{(\ptp)^{-1}}}
+%\newcommand{\vkulma}[1]{\ensuremath{\angle \! \raisebox{0.175cm}
+%                         {$\underline{\phantom{/} \negmedspace  #1}$}}}
+\newcommand{\vkulma}[1]{\ensuremath{\angle #1 }}
+\newcommand{\re}{\ensuremath{\text{Re}\;}}
+\newcommand{\im}{\ensuremath{\text{Im}\;}}
+
+%määrittely- ja arvojoukot
+\newcommand{\DF}{\ensuremath{{\mathcal{D}}}}
+\newcommand{\RF}{\ensuremath{{\mathcal{R}}}}
+
+%käänteisfunktio
+\newcommand{\invf}{\ensuremath{f^{-1}}}
+\newcommand{\inv}[1]{\ensuremath{{#1^{-1}}}}
+
+%trigonometristen käänteisfunktioiden päähaarat ja areafunktiot
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\Arccos}{Arccos}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arccot}{Arccot}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\Arcosh}{Arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+
+%suuruusluokkamerkinnät
+\newcommand{\ordoO}[1]{\ensuremath{\mathcal{O}(#1)}}
+\newcommand{\Ord}[1]{\ensuremath{\mathcal{O}(#1)}}
+\newcommand{\ord}[1]{\ensuremath{\textit{o}(#1)}}
+
+%integrointi
+\DeclareMathOperator*{\Lim}{Lim}
+\newcommand{\sijoitus}[2]{\operatornamewithlimits{\Bigl|}_{#1}^{#2}}
+
+%osittaisderivointi
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+
+%hakemistomerkintöjä
+\newcommand{\av}[1]{#1$^\dag$}
+\newcommand{\nel}{\,^\square}
+\newcommand{\ohje}{\vahv{Lukuohje}: Hakusana viittaa}
+\newcommand{\sov}{\vahv{Sovellusesimerkit}:}
+\newcommand{\nim}{\vahv{Nimetyt harjoitustehtävät}:}

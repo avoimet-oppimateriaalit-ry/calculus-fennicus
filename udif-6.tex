@@ -1,0 +1,532 @@
+\section[Epälineaariset yhtälöryhmät: Jacobin matriisi \\ ja Newtonin menetelmä]
+{Epälineaariset yhtälöryhmät: Jacobin \\ matriisi ja Newtonin menetelmä}
+\label{jacobiaani}
+\sectionmark{Jacobin matriisi}
+\alku
+
+Tarkastellaan yleistä $m$ yhtälön ja $n$ tuntemattoman yhtälöryhmää muotoa
+\[
+\left\{ \begin{aligned}
+&f_1(x_1,\ldots,x_n)\ =0 \\
+&\quad\vdots \\
+&f_m(x_1,\ldots,x_n)=0
+\end{aligned} \right.
+\]
+missä funktiot $f_i\,,\ i=1 \ldots m$, ovat $n$ reaalimuuttujan reaaliarvoisia funktioita, eli 
+funktioita tyyppiä $f_i\,:\ \DF_{f_i} \kohti \R,\ \DF_{f_i}\subset\R^n$. Yhtälöryhmä on 
+\index{epzy@epälineaarinen yhtälöryhmä} \index{yhtzy@yhtälöryhmä!b@epälineaarinen}
+\kor{epälineaarinen}, jos se ei ole lineaarinen, eli jos ainakin yksi funktioista $f_i$ on 
+ei-affiininen kuvaus (vrt.\ Luku \ref{affiinikuvaukset}). Kun määritellään
+\[
+\mf = (f_1,\ldots,f_m), \quad \DF_\mf = \DF_{f_1}\cap\DF_{f_2}\cap\cdots\cap\DF_{f_m}\,,
+\]
+niin ym.\ yhtälöryhmän voi kirjoittaa kätevästi vektorimuodossa\,:
+\[
+\mf(\mx)=\mv{0}.
+\]
+Tässä siis $\mf$ on funktio (kuvaus) tyyppiä $\,\mf:\ \DF_\mf\kohti\R^m,\ \DF_\mf\subset\R^n$.
+\index{funktio A!j@$n$ muuttujan vektoriarvoinen} \index{vektoric@vektoriarvoinen funktio}
+\index{vektorimuuttujan funktio}%
+Tämä on \kor{vektorimuuttujan vektoriarvoinen} funktio, jonka voi tulkita aiemmin Luvuissa 
+\ref{lineaarikuvaukset}--\ref{affiinikuvaukset} määriteltyjen lineaari- ja affiinikuvausten
+\index{vektorikenttä}%
+yleistykseksi. Myös termiä \kor{vektorikenttä} (vrt.\ Luku \ref{divergenssi ja roottori}) voi
+käyttää. Yhtälöryhmiä matriisialgebran keinoin käsiteltäessä tulkitaan $\mf$ tavallisesti
+pystyvektoriksi. Kuten nähdään jatkossa, matriisialgebraa tarvitaan muun muassa, kun halutaan
+määrittää algoritmisin keinoin ko.\ yhtälöryhmän \kor{ratkaisut}, eli joukko
+\[
+X=\{\mx\in\DF_\mf \mid \mf(\mx)=\mv{0}\}.
+\]
+Yhtälöryhmiä käytännössä (numeerisesti) ratkaistaessa on tavallisimmin $m=n$. 
+\begin{Exa}
+Epälineaaristen yhtälöryhmien
+\[ 
+\text{a)} \ \left\{ \begin{aligned} 
+                    &3x+y+z+9=0 \\ &7x+y+3z+27=0 \\ &x^2+y^2+z^2-81=0 
+                    \end{aligned} \right.  \qquad
+\text{b)} \ \left\{ \begin{aligned} &x+y+z-16=0 \\ &x^2+y^2+z^2-81=0 \end{aligned} \right.
+\]
+vektorimuotoisia esitystapoja ovat
+\begin{align*}
+\text{a)}\ \mf(x,y,z)\,&=\,(\,3x+y+z+9,\ 7x+y+3x+27,\ x^2+y^2+z^2-81\,) \\
+                       &=\,(0,0,0), \\
+\text{b)}\ \mf(x,y,z)\,&=\,(x+y+z-16,\ x^2+y^2+z^2-81\,) \\
+                       &=\,(0,0),
+\end{align*}
+tai pystyvektoreiden avulla
+\begin{align*}
+&\text{a)}\ \mf(x,y,z) = \begin{bmatrix} 
+                         3x+y+z+9 \\ 7x+y+3z+27 \\ x^2+y^2+z^2-81 
+                         \end{bmatrix} 
+                       = \begin{bmatrix} 0\\0\\0 \end{bmatrix}, \\[3mm]
+&\text{b)}\ \mf(x,y,z) = \begin{bmatrix} 
+                         x+y+z-16 \\ x^2+y^2+z^2-81 
+                         \end{bmatrix}\,=\,\begin{bmatrix} 0\\0 \end{bmatrix}.
+\end{align*}
+Algebrallisin (tai b-kohdassa geometrisin) keinoin voidaan todeta ratkaisuiksi
+\[
+\text{a)}\ X = \{\,(0,0,-9),\,(6,-6,3)\,\}, \quad \text{b)}\ X=\emptyset. \loppu
+\]
+\end{Exa}
+
+\index{differentioituvuus}%
+Vektoriarvoista funktiota $\mf$ sanotaan \kor{differentioituvaksi} pisteessä $\mx\in\DF_\mf$,
+jos jokainen komponenttifunktio $f_i$ on ko.\ pisteessä differentioituva (Määritelmän 
+\ref{differentioituvuus} mielessä). Jos $\mf$ on differentioituva, niin yhdistämällä 
+komponenttifunktioiden differentiaalikehitelmät saadaan tulos
+\[
+\mf(\mx+\Delta\mx)=\mf(\mx)+\mJ\,\mf(\mx)\Delta\mx+\mr(\mx),
+\]
+missä $\mJ$ on $\mf$:n \kor{Jacobin}\footnote[2]{Saksalainen matemaatikko \vahv{K.G.J. Jacobi}  
+eli vuosina 1804-1851. \index{Jacobi, K. G. J.|av}} \kor{matriisi} (engl. Jacobian)
+\index{Jacobin matriisi} \index{differentiaalioperaattori!i@Jacobin matriisi}%
+\[
+\boxed{\quad \mJ\,\mf(\mx)=\begin{bmatrix} 
+                           \dfrac{\ykehys\partial f_1}{\partial x_1}(\mx) & \ldots & 
+                           \dfrac{\partial f_1}{\partial x_n}(\mx) \\ \vdots \\ 
+                           \dfrac{\partial f_m}{\akehys\partial x_1}(\mx) & \ldots & 
+                           \dfrac{\partial f_m}{\partial x_n}(\mx)
+                           \end{bmatrix}\quad \text{(Jacobin matriisi)} \quad}
+\]
+ja jäännösfunktiolle $\mr$ pätee arvio
+\[
+\abs{\mr(\mx)} = o(\abs{\Delta\mx}), \quad \text{kun}\,\ \abs{\Delta x} \kohti 0.
+\]
+Tapauksessa $m=1$ Jacobin matriisi on sama kuin transponoitu gradientti, eli
+$\mJ f = (\Nabla f)^T$. Tapauksessa $n=1$ Jacobin matriisi puolestaan palautuu
+vektoriarvoisen yhden muuttujan funktion (tavalliseksi) derivaataksi.
+Tapauksissa $m=2,3$ tämä on ennestään tuttu parametrisen käyrän
+derivaattana (Luku \ref{derivaatta geometriassa}). Jacobin matriisi on siis jälleen
+derivaattakäsitteen yleistys kahdellakin eri tavalla. Määritelmästä nähdään yleisemmin, että
+Jacobin matriisi on esitettävissä joko gradienttien $\nabla f_i$ tai osittaisderivaattojen
+$\partial_j\mf$ avulla muodoissa
+\[
+\mJ\mf \,=\, [\nabla f_1 \ldots \nabla f_m]^T \,=\, [\partial_1\mf \ldots \partial_n\mf].
+\]
+\begin{Exa} \label{yryhmä-esim}
+Kun yhtälöryhmä
+\[ \begin{cases}
+    \,x^3-2xy^5-x-2 = 0 \\
+   -x^3y+2xy^2+y^5+3 = 0
+   \end{cases} \]
+kirjoitetaan muotoon $\mf(x,y)=\mo$, $\ \mf=[f_1,f_2]^T$, niin Jacobin matriisi on
+\[
+\mJ\,\mf(x,y) = \begin{bmatrix}
+\partial_x f_1 & \partial_y f_1 \\
+\partial_x f_2 & \partial_y f_2
+\end{bmatrix} \\
+= \begin{bmatrix}
+3x^2-2y^5-1 & -10xy^4 \\ -3x^2+2y^2 & -x^3+4xy+5y^4
+\end{bmatrix}.
+\]
+Yhtälöryhmän eräs ratkaisu on $(x,y)=(2,1)$. Tässä pisteessä on
+\[
+\mJ\,\mf(2,1)=\begin{rmatrix} 9 & -20 \\ -10 & 5 \end{rmatrix}. \loppu
+\]
+\end{Exa}
+
+Jos $\mf$ on differentioituva pisteessä $\ma$, niin approksimaatiota
+\[
+\mf(\mx) \approx \mf(\ma) + \mJ\mf(\ma)(\mx-\ma)
+\]
+\index{linearisaatio (funktion)}% \index{funktion approksimointi!ab@linearisaatiolla}%
+sanotaan aiempaan tapaan (vrt.\ Luku \ref{derivaatta}) $\mf$:n \kor{linearisaatioksi} pisteessä
+$\ma$. (Oikeammin kyse on 'affinisaatiosta'.) Koska approksimaation virhe on suuruusluokkaa
+$\ord{\abs{\mx-\ma}}$ (differentioituvuuden määritelmän mukaisesti), niin johtopäätös on\,:
+\[
+\boxed{\quad\kehys \text{Differentioituva kuvaus}\ 
+                 \approx\ \text{affiinikuvaus p\pain{aikallisesti}}. \quad}
+\]
+\jatko \begin{Exa} (jatko) Pisteen $(-1,1)\,\vastaa\,\ma=[-1,1]^T$ ympäristössä on likimain
+\[
+\mf(x,y)\,\approx\,\mf(-1,1)+\mJ(-1,1)(\mx-\ma)\,
+     =\,\begin{rmatrix} 0\\3 \end{rmatrix}+\begin{rmatrix} 0&10\\-1&2 \end{rmatrix} 
+                                           \begin{rmatrix} x+1\\y-1 \end{rmatrix}. \loppu
+\]
+\end{Exa}
+
+\subsection*{Newtonin menetelmä yhtälöryhmille}
+\index{Newtonin menetelmä!a@yhtälöryhmälle|vahv}
+
+Tarkastellaan yhtälöryhmää $\mf(\mx)=\mo$, missä $\mf$ on tyyppiä $\mf:\ \R^n\kohti\R^n$.
+Newtonin menetelmässä tehdään yhtälöryhmässä linearisoiva approksimaatio pisteessä $\mx_k$,
+eli ratkaistaan
+\[
+\mf(\mx_k)+\mJ(\mx_k)(\mx-\mx_k)=\mo.
+\]
+Kun ratkaisua merkitään $\mx=\mx_{k+1}$, on tuloksena iteraatiokaava
+\[
+\mJ(\mx_k)(\mx_{k+1}-\mx_k)=-\mf(\mx_k)
+\]
+eli
+\[
+\boxed{\kehys\quad \mx_{k+1}=\mx_k-\inv{\mJ(\mx_k)}\,\mf(\mx_k) \quad \text{(Newton)}. \quad}
+\]
+Perusajatus tässä on täsmälleen sama kuin yhden yhtälön ($n=1$) tapauksessa (vrt.\ Luku 
+\ref{kiintopisteiteraatio}): kyseessä on
+\index{kiintopisteiteraatio}%
+\kor{kiintopisteiteraatio} muotoa
+\[
+\mx_{k+1}=\mF(\mx_k), \quad k=0,1,\ldots,
+\]
+missä $\mF(\mx)=\mx-\mJ(\mx)^{-1}\mf(\mx)$. 
+
+Newtonin menetelmä suppenee myös yhtälöryhmien ratkaisussa samantapaisin oletuksin kuin yhden 
+yhtälön tapauksessa. --- Kerrattakoon Luvusta \ref{usean muuttujan jatkuvuus}, että
+vektorijonon $\seq{\mx_k}$ suppeneminen kohti vektoria $\mc\in\R^n$ tarkoittaa:
+\[
+\mx_k \kohti \mc \qekv \abs{\mx_k-\mc} \kohti 0 \quad (k\kohti\infty),
+\]
+missä $\abs{\cdot}$ on $\R^n$:n euklidinen normi. Kuten tapauksessa $n=1$, Newtonin menetelmän
+\index{kvadraattinen!a@suppeneminen}%
+suppeneminen on myös (riittävin oletuksin) \kor{kvadraattista} seuraavassa
+konvergenssilauseessa lähemmin määriteltävällä tavalla. Lause on todistuksineen varsin
+suoraviivainen yleistys Lauseesta \ref{Newtonin konvergenssi}, mutta todistuksen yksityiskohdat
+ovat teknisempiä. (Todistus nojaa usean muuttujan Taylorin lauseeseen, ks.\ Luku
+\ref{usean muuttujan taylorin polynomit} jäljempänä, vrt.\ myös
+Harj.teht.\,\ref{taylorin lause}:\ref{H-dif-4: Newtonin konvergenssi}.) Sivuutetaan todistus.
+\begin{Lause} \label{Newtonin konvergenssi -Rn}
+Olkoon $\mf:\DF_\mf\kohti\R^n$, $\DF_\mf\subset\R^n$, $\mf=(f_i)$, ja olkoon $\mf(\mc)=\mo$, 
+$\mc\in\R^n$. Olkoot edelleen osittaisderivaatat $\partial^\alpha  f_i(\mx)$ olemassa ja 
+jatkuvia pisteen $\mc$ ympäristössä, kun $i=1\ldots n$ ja $\abs{\alpha}\leq 2$, ja olkoon 
+Jacobin matriisi $\mJ\,\mf(\mc)$ säännöllinen. Tällöin Newtonin iteraatio 
+$\mx_{k+1}=\mx_k-\inv{\mJ(\mx_k)}\,\mf(\mx_k)$ suppenee kohti $\mc$:tä, mikäli $\abs{\mx_0-\mc}$
+on riittävän pieni, ja suppeneminen on kvadraattista:
+\[
+\abs{\mx_{k+1}-\mc}\leq C\abs{\mx_k-\mc}^2\quad (C=\text{vakio}).
+\]
+\end{Lause}
+\begin{Exa} \label{Newton-2d: ex1} Etsi Newtonin menetelmällä ratkaisu yhtälöryhmälle 
+\[ \begin{cases}
+    \,x^3-2xy^5-x=2.04 \\
+    -x^3y+2xy^2+y^5=-0.05
+\end{cases} \]
+pisteen $(-1,1)$ läheltä. 
+\end{Exa}
+\ratk Tässä on
+\[
+\mf(x,y)= \begin{bmatrix} x^3-2xy^5-x-2.04 \\ -x^3y+2xy^2+y^5+0.05 \end{bmatrix}
+\]
+ja Jacobin matriisi $\mJ(x,y)$ on sama kuin Esimerkissä \ref{yryhmä-esim}. Iteraatiokaavan
+\[
+[x_{k+1},\,y_{k+1}]^T = [x_k,\,y_k]^T -\mJ(x_k,y_k)^{-1}\mf(x_k,y_k)
+\]
+mukaan laskien saadaan
+\begin{align*}
+                       (x_0,y_0)\ &=\ (-1,\,1) \\
+                       (x_1,y_1)\ &=\ (-0.942,1.004) \\
+                       (x_2,y_2)\ &=\ (-0.918940,1.006156) \\
+                       (x_3,y_3)\ &=\ (-0.914247,1.006622) \\
+                       (x_4,y_4)\ &=\ (-0.914214,1.006633) \\
+                       (x_5,y_5)\ &=\ (-0.914216,1.006633) \\
+                                  &\vdots \quad \loppu
+\end{align*}
+
+Esimerkissä Newtonin iteraatio suppeni nopeasti, koska alkuarvaus oli lähellä ratkaisua. Ellei
+hyvää alkuarvausta ole käytettävissä, voidaan ensin koettaa paikallistaa ratkaisut jollakin 
+yksinkertaisemmalla menetelmällä. Esimerkiksi jos yhtälöryhmä ei ole kooltaan suuri, voidaan 
+kokeilemalla tutkia, missä funktio
+\[
+F(\mx)=\sum_{i=1}^n [f_i(\mx)]^2
+\]
+saa pieniä arvoja. Vieläkin suoraviivaisempi on 'yrityksen ja erehdyksen' menetelmä: Iteroidaan
+\index{suppenemisallas}%
+vaihtelevilla alkuarvauksilla, kunnes sattumalta osutaan nk.\ \kor{suppenemisaltaaseen}, eli 
+riittävän lähelle jotakin ratkisua. Mikäli iteraatio ei suppene esimerkiksi kymmenen kierroksen
+jälkeen, vaihdetaan alkuarvausta.
+\begin{Exa}
+Ratkaise yhtälöryhmä
+\[
+\begin{cases}
+\,x^2+y^2= 1 \\ \,e^x+\sin y=1
+\end{cases}
+\]
+\end{Exa}
+\ratk Tässä on
+\[
+\mf(x,y) = \begin{bmatrix} x^2+y^2-1 \\ e^x+\sin y-1 \end{bmatrix}, \qquad
+\mJ\,\mf(x,y) = \begin{bmatrix} 2x & 2y \\ e^x & \cos y \end{bmatrix},
+\]
+joten Newtonin iteraatio saa muodon
+\[
+\begin{bmatrix} x_{k+1} \\ y_{k+1} \end{bmatrix} =
+\begin{bmatrix} x_k \\ y_k \end{bmatrix} - 
+\inv{\begin{bmatrix} 2x_k & 2y_k \\ e^{x_k} & \cos y^k \end{bmatrix}}
+\begin{bmatrix} x_k^2+y_k^2-1 \\ e^{x_k}+\sin y_k-1\end{bmatrix}.
+\]
+Ratkaisuja on kaksi:
+\begin{align*}
+A:\quad &(x,y)=(\phantom{-}0.5538..,\, -0.8327..\,) \\
+B:\quad &(x,y)=(-0.8089..,\phantom{-}\,0.5879..\,)
+\end{align*}
+Seuraavassa tuloksia alkuarvauksista riippuen. Merkintä * tarkoittaa epäonnistumista 
+(singulaarinen Jacobin matriisi tai iteraation hajaantuminen).
+\[
+\begin{array}{lll}
+(\phantom{-}1,\phantom{-}0)\kohti A\qquad & 
+(\phantom{-}0\phantom{.0},\phantom{-}0)\kohti * \qquad & 
+(-\phantom{1}5,\phantom{-}0\phantom{.0})\kohti B \\ 
+(\phantom{-}1,\phantom{-}1)\kohti B\qquad & 
+(\phantom{-}0.1,\phantom{-}0)\kohti A \qquad & 
+(-10,\phantom{-}0\phantom{.0})\kohti B \\
+(-1,\phantom{-}1)\kohti B\qquad & 
+(-0.1,\phantom{-}0)\kohti * \qquad & 
+(\phantom{-1}3,\phantom{-}3\phantom{.0})\kohti B \\
+(-1,-1)\kohti B\qquad & 
+(\phantom{-}5\phantom{.0},\phantom{-}0)\kohti * \qquad & 
+(\phantom{-1}3,-3\phantom{.0})\kohti A \\
+(\phantom{-}0,-1)\kohti A\qquad & 
+(\phantom{-}0\phantom{.0},\phantom{-}5)\kohti B \qquad & 
+(\phantom{-1}3,-1.5)\kohti A \\
+(\phantom{-}1,-1)\kohti A\qquad & 
+(\phantom{-}0\phantom{.0},-5)\kohti A \qquad & 
+(\phantom{-1}3,-1.2)\kohti B \\
+\end{array} \loppu
+\]
+
+\subsection*{Suuret yhtälöryhmät. Jatkamismenettely}
+\index{jatkamismenettely (algoritmi)|vahv}
+
+Newtonin menetelmää käytetään yleisesti myös hyvin suurien epälineaaristen yhtälöryhmien
+ratkaisuun. Tällaiset ongelmat syntyvät usein osana laajempaa laskentaprosessia, jolloin
+on myös tavallista, että hyvä alkuarvaus on tarjolla laskennan aikaisemmista vaiheista.
+Näin on  esimerkiksi ratkaistaessa differentiaaliyhtälösysteemeitä numeerisilla
+askelmenetelmillä (ks.\ Luku \ref{DYn numeeriset menetelmät}). 
+
+Jos halutaan vain ratkaista yksittäinen suurikokoinen yhtälöryhmä ilman ennakkotietoa
+ratkaisun (ratkaisujen) sijainnista, voi toimivan alkuarvauksen löytäminen Newtonin
+iteraatiolle olla hyvin vaikeaa. Tällaisessa tilanteessa varsin yleisesti käytetty on nk.
+\kor{jatkamismenettely} (engl.\ continuation method), jossa ratkaistava ongelma 
+parametrisoidaan muotoon
+\[
+P(t),\quad 0\leq t<1.
+\]
+Oletetaan, että $P(1)$ on ongelma, joka varsinaisesti halutaan ratkaista, ja että $P(0)$ on 
+helppo ratkaista. Tällöin jatkamismenettelyn ideana on ratkaista peräkkäin
+\[
+P(t_0),P(t_1),\ldots,P(t_N),\quad t_N=1,
+\]
+missä (esimerkiksi) $t_k=k\Delta t$. Jos $\Delta t$ on pieni ja parametrisointi suoritettu 
+hyvin, on probleeman $P(t_{k-1})$ ratkaisu hyvä alkuarvaus Newtonin iteraatiolle, kun 
+ratkaistaan probleemaa $P(t_k)$. Näin voidaan askelittain edetä lopputilaan
+$t_N=1$.\footnote[2]{Jatkamismenettelyyn perustuvan algoritmin suunnittelussa on yleensä
+apua probleeman fysikaalisesta taustasta. Esimerkiksi rakenteiden mekaniikan ongelmassa, jossa
+halutaan simuloida rakenteen suuria muodonmuutoksia kuormituksen alaisena, on luontevaa
+menetelllä kuten koejärjestelyssä: Parametrisoidaan kuormituksen voimakkuus, eli lähdetään
+kuormittamattomasta tilasta ja lisätään kuormitusta pienin askelin, kunnes päädytään haluttuun
+lopputilaan. Parametrin $t$ voi tällöin kuvitella koejärjestelyyn liittyväksi 
+aikamuuttujaksi. Aikamuuttujan lisääminen (aikaparametrisointi) on luonnollista
+yleisemminkin silloin, kun fysiikasta peräisin olevaan ongelmaan etsitään ajasta riippumatonta
+(tasapaino)ratkaisua.}
+Ellei parempaa ideaa ole käytettävissä, voi yleisen yhtälöryhmän parametrisoida vaikkapa
+muunnoksella muotoa
+\[
+\mf(\mx)=\mo\ \ext\ \\ \mg(\mx)+t\,[\,\mf(\mx)-\mg(\mx)\,]=\mo,
+\]
+missä $\mg(\mx)=\mo$ on jokin helposti ratkeava (esim.\ lineaarinen) yhtälöryhmä.
+\begin{Exa} Yhtälöryhmälle %[ratk: (x,y)=(5,4)]
+\[
+\left\{ \begin{aligned}
+        &x^3-2y^3+x+2y=10 \\ &x^3+y^3-2xy^2-3x-y=10
+        \end{aligned} \right.
+\]
+antaa Newtonin algoritmi alkuarvauksilla $(x_0,y_0)=(1,1)$ ja $(x_0,y_0)=(-1,-1)$ ratkaisun
+$(x,y)=(-2.25872,-2.42834)$. Kokeillaan, löytyykö jokin muu ratkaisu jatkamismenettelyllä:
+Parametrisoidaan yhtälöryhmä muotoon
+\[
+\mf(t,\mx) = \begin{bmatrix}
+             t(x^3-2y^3)+x+2y \\ t(x^3+2y^3-2xy^2)-3x-y
+             \end{bmatrix}
+           = \begin{bmatrix} 10\\10 \end{bmatrix}
+\]
+ja ratkaistaan tämä parametrin arvoilla $t_k=0.2k,\ k=0 \ldots 5$. Kun $k=0$, on ratkaisu
+$(x,y)=(-6,8)$. Tästä eteenpäin ($k=1 \ldots 5$) käytetään edellisellä $k$:n arvolla saatua
+ratkaisua alkuarvauksena Newtonin iteraatiolle. Tulos:
+\begin{center}
+\begin{tabular}{ll}
+$t$   & $\text{Ratkaisu}$  \\ \hline \\
+$0.2$ & $(10.5223,8.55714)$ \\
+$0.4$ & $(7.60605,6.14808)$ \\
+$0.6$ & $(6.30833,5.07754)$ \\
+$0.8$ & $(5.53177,4.43769)$ \\
+$1.0$ & $(5.00000,4.00000)$
+\end{tabular}
+\end{center}
+Ratkaisu $(x,y)=(5,4)$ löytyy myös alkuarvauksia vaihtelemalla. Esim.\ $(x_0,y_0)=(3,3)$ tai
+jopa $(x_0,y_0)=(0,0)$ johtavat tähän. \loppu
+\end{Exa}
+
+\subsection*{Yksinkertaistettu Newtonin iteraatio}
+\index{Newtonin menetelmä!a@yhtälöryhmälle|vahv}
+ 
+Epälineearista yhtälöryhmää Newtonin menetelmällä ratkaistaessa on jokaisella 
+iteraatiokierroksella suoritettava seuraavat laskuoperaatiot:
+\begin{itemize}
+\item[-] Funktioevaluaatio: $\ \mx_k\ \map\ \mf(\mx_k)=\my_k$.
+\item[-] Jacobin matriisin \kor{päivitys} (engl.\ updating) 
+         $\ \mx_k\ \map\ \mJ\mf(\mx_k)=\mA_k$. \index{pzy@päivitys (Jacobin matriisin)}
+\item[-] Lineaarisen yhtälöryhmän ratkaisu: 
+         $\ \my_k\map\mpu_k=\mA_k^{-1}\my_k\ (\mA_k\mpu_k=\my_k)$.
+\item[-] Vähennyslasku: $\ \mx_k\,,\mpu_k\ \map\ \mx_k-\mpu_k=\mx_{k+1}$.
+\end{itemize}
+Sekä Jacobin matriisin päivittäminen että etenkin lineaarisen yhtälöryhmän ratkaiseminen ovat
+suhteellisen raskaita operaatioita, jos yhtälöryhmän koko on suuri. Hyvin suuria yhtälöryhmiä
+ratkaistaessa saatetaankin päivittämisessä hieman 'laiskotella', ts.\ päivitystä ei suoriteta
+jokaisella iteraatiokierroksella. Tämä helpottaa myös lineaaristen yhtälöryhmien (suoraa) 
+ratkaisemista, koska yhtälöryhmien kerroinmatriisi pysyy samana päivityksien välissä. Riittää
+silloin laskea Jacobin matriisin $LU$-hajotelma jokaisen päivityksen jälkeen ja pitää se tallessa
+seuraavaan päivitykseen asti (vrt.\ Luku \ref{Gaussin algoritmi}). Riippuen siitä, kuinka usein
+päivitys suoritetaan, saadaan Newtonin menetelmälle erilaisia variaatioita, joista voidaan 
+valita ongelmakohtaisesti tehokkain.
+
+Em.\ variaatioista yksinkertaisimmassa lasketaan Jacobin matriisi vain kerran,
+alkuarvauspisteessä. Kun merkitään $\mA=\mJ(\mx_0)$, niin iteraatiokaavaksi tulee
+\[
+\mx_{k+1}=\mx_k-\mA^{-1}\mf(\mx_k), \quad k=0,1\ldots
+\]
+%tai algoritmisemmin kirjoitettuna
+%\begin{align*}
+%&\mx_k\map\mb_k=\mf(\mx_k), \\
+%&\mb_k\map\mpu_k\,:\ \mA\mpu_k=\mb_k, \\ 
+%&\mx_{k+1}=\mx_k-\mpu_k\,, \quad k=0,1,\ldots
+%\end{align*}
+Tämä Newtonin menetelmän äärimmäinen yksinkertaistus ei ole aidon Newtonin menetelmän veroinen
+käytännössä, sillä se suppenee (sikäli kuin suppenee) vain lineaarisesti 
+(vrt.\ Harj.teht.\,\ref{kiintopisteiteraatio}:\,\ref{H-V-7: yksinkertaistettu Newton},
+kun $n=1$). --- Sen sijaan teoreettisten tarkastelujen 'ajattelumenetelmäksi' tämä menetelmä
+sopii hyvin, ks.\ seuraava luku. 
+\begin{Exa} Esimerkin \ref{Newton-2d: ex1} tilanteessa on
+\[
+\mA=\mJ\mf(-1,1)= \begin{rmatrix} 0&10\\-1&2 \end{rmatrix}, \quad
+\mA^{-1}=\frac{1}{10}\begin{rmatrix} 2&-10\\1&0 \end{rmatrix},
+\]
+joten ym.\ tavalla yksinkertaistetuksi Newtonin iteraatiokaavaksi tulee
+\[
+\begin{bmatrix} x_{k+1}\\y_{k+1} \end{bmatrix} 
+   = \begin{bmatrix} x_k\\y_k \end{bmatrix}
+         -\frac{1}{10}\begin{rmatrix} 2&-10\\1&0 \end{rmatrix}
+         \left[\begin{array}{l} 
+               x_k^3-2x_ky_k^5-x_k-2.04\\-x_k^3y_k+2x_ky_k^2+y_k^5-0.05 
+               \end{array}\right].
+\]
+Iteraatio suppenee, mutta selvästi aitoa Newtonin iteraatiota hitaammin
+(vrt.\ Esimerkki \ref{Newton-2d: ex1}):
+\begin{align*}
+\qquad (x_0,y_0)\ &=\ (-1,\,1) \\
+       (x_1,y_1)\ &=\ (-0.942,1.004) \\
+       (x_2,y_2)\ &=\ (-0.929318,1.005191) \\
+       (x_3,y_3)\ &=\ (-0.923142,1.005780) \\
+       (x_4,y_4)\ &=\ (-0.919696,1.006109) \\
+       (x_5,y_5)\ &=\ (-0.917651,1.006304) \\
+%      (x_6,y_6)\ &=\ (-0.916395,1.006424) \\
+%      (x_7,y_7)\ &=\ (-0.915608,1.006500) \\
+                  &\ \vdots \loppu
+\end{align*}
+%Iteraatio suppenee, mutta selvästi aitoa Newtonin iteraatiota hitaammin. \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske seuraavissa tapauksissa $\mf$:n Jakobin matriisi ensimmäisessä annetussa pisteessä,
+approksimoi $\mf$ affiinikuvauksella ja laske tämän avulla $\mf$:n arvo likimäärin toisessa
+annetussa pisteessä. Vertaa tarkkaan arvoon. \vspace{1mm}\newline
+a) \   $\mf(x,y)=(x^3+y^3,x^3-y^3),\,\ (1,1),\,\ (0.9,1.1)$ \newline
+b) \   $\mf(x,y)=(e^x\sin\pi y,e^{-x}\cos\pi y),\,\ (0,1/3),\,\ (-0.04,0.30)$ \newline
+c) \,\ $\mf(x,y,z)=(x^2y,x^2z,y^2-z^2),\,\ (1,3,3)\,\ (0.99,,3.02,2.97)$ \newline
+d) \   $\mf(x,y,z)=(x^2+yz,y^2-x\ln z),\,\ (2,2,1),\,\ (1.98,2.01,1.03)$ \newline
+e) \,\ $\mf(\mx)=(x_1x_2,\,x_1^2-x_3^2,\,x_2^2+x_3x_4,\,x_2x_4+x_4^2),\,\ (1,2,-2,-1),$ \newline 
+       \phantom{e \,\ }  $(1.01,2.02,-2.02,-1.01)$
+ 
+\item 
+Yhtälöryhmällä
+\[
+[\mf(x,y,z)]^T \,=\, [\,x^3 - x^2 y + x z^3,\,xyz + z^2,\,x^3 + y^3 + z^3\,] \,=\, \mb^T
+\]
+on muuan helppo ratkaisu, kun $\mb^T=[1,2,3]$. Approksimoimalla $\mf$ affiinikuvauksella ko.\ 
+ratkaisupisteen lähellä laske yhtälöryhmän ratkaisu likimäärin, kun $\mb=[1.04,1.98,3.02]^T$.
+
+\item
+Laske koordinaattimuunnoksien $(r,\varphi,z)\map(x,y,z)$ (lieriök. $\ext$ karteesinen) ja 
+$(r,\theta,\varphi)\map(x,y,z)$ (pallok.\ $\ext$ karteesinen) Jacobin matriisit 
+$\mJ(r,\varphi,z)$ ja $\mJ(r,\theta,\varphi)$. Missä pisteissä $\mJ$ on singulaarinen matriisi?
+
+\item
+Olkoon $\mf$ tyyppiä $\mf: \R^n\kohti\R^p$ ja $\mg$ tyyppiä $\mg: \R^p\kohti\R^m$. Johda
+yhdistetyn funktion $\mF(\mx)=(\mg\circ\mf)(\mx)=\mg[\mf(\mx)]$ Jacobin matriisin laskusääntö
+$\mJ\mF(\mx)=\mJ\mg[\mf(\mx)]\mJ\mf(\mx)$. \kor{Vihje}: Ketjusääntö!
+
+\item
+Etsi seuraaville yhtälöryhmille ratkaisu Newtonin menetelmällä lähtien alkuarvauksesta
+$(x_0,y_0)=(1,1)$.
+\[
+\text{a)}\,\ \begin{cases} \,x^4+y^4=2xy^5\\ \,x+x^2+y^4=4 \end{cases} \quad
+\text{b)}\,\ \begin{cases} \,x^3+3x=y^4+4y \\ \,\cos\pi x+xye^{-y}=0 \end{cases}
+\]
+
+\item
+Etsi seuraavien yhtälöryhmien ratkaisut neljän merkitsevän numeron tarkkuudella käyttäen
+kaksiulotteista Newtonin menetelmää. Laske a)- ja b)-kohdissa ratkaisu myös vaihtoehtoisella
+tavalla, jossa eliminoidaan ensin toinen tuntemattomista ja käytetään 1-ulotteista Newtonin
+menetelmää. \vspace{1mm}\newline
+a) \ $y-e^x=0,\,\ x-\sin y=0$ \newline
+b) \ $x^2+y^2=1,\,\ y=e^x\ $ (kaksi ratkaisua) \newline 
+c) \ $y-\sin x=0,\,\ x^2+(y+1)^2=2\ $ (kaksi ratkaisua) \newline
+d) \ $x^2-xy+2y^2=10,\,\ x^3y^2=2\ $ (neljä ratkaisua) \newline
+e) \ $\sin x+\sin y=1,\,\ x^3=y^2<30\ $ (neljä ratkaisua)
+
+\item 
+Selvitä (kaksiulotteista) Newtonin menetelmää käyttäen, missä pisteissä Cartesiuksen lehden
+$x^3 + y^3 = 3xy$ tangentin ja jonkin koordinaatiakselin välinen kulma on $45\aste$.
+
+\item
+Määritä likimäärin seuraavien yhtälöryhmien ratkaisut eliminoimalla ensin yksi tuntemattomista
+ja käyttämällä sen jälkeen Newtonin menetelmää.
+\[
+\text{a)}\ \ \begin{cases} x^2+y^2+z^2=1\\z=xy\\6xz=1 \end{cases} \
+\text{b)}\ \ \begin{cases} x^2+y^2+z^2=1\\y=\sin z\\z+z^2+z^3=x+y \end{cases} \
+\text{c)}\ \ \begin{cases} x^2+y^4=1\\z=x^3y\\e^x=2y-z \end{cases}
+\]
+
+\item
+Yhtälöryhmällä
+\[
+x+yze^x \,=\, x^3+y^3z \,=\, y+e^{xyz} \,=\, 2.1
+\]
+on ratkaisu pisteen $(0,1,2)$ lähellä. Iteroi tästä alkuarvauksesta kolme kertaa Newtonin
+menetelmän yksinkertaistetulla versiolla, jossa Jacobin matriisia ei päivitetä. Vertaa oikean 
+Newtonin iteraation antamiin tuloksiin.
+
+\item (*)
+Etsi jatkamismenettelyä ja Newtonin menetelmää käyttäen jokin ratkaisu yhtälöryhmälle
+\[
+\left\{ \begin{aligned}
+        &3x^3-y^3+z^3+x-2z+40=0 \\ 
+        &4x^3-3y^3-z^3-2x-3y-40=0 \\ 
+        &x^3+y^3+z^3-5x-5y+5z-40=0
+        \end{aligned} \right.
+\] 
+% Eräs atkaisu on (5,6,-6).)
+
+\item (*)
+Määritä suora, joka sivuaa kahdessa eri pisteessä käyrää
+\[
+K:\ x^2y^2-2xy^3+y^4-4x^2y+6xy^2-2y^3+4x^2-3y^2-12x+y=20.
+\]
+% Käyrän yhtälö: 4x+3y+24=(x-y-1)^2(y-2)^2. S: 4x+3y+24=0. Sivuamispisteet (-3,-4) ja (-7.5,2).
+
+\item (*)
+(Avaruuspysäköinti) Tähtien välisen avaruden pisteessä $P=(x,y,z)$ (pituusyksikkö = valovuosi)
+on avaruusasema. Avaruusasemaan vaikuttaa lähimpien tähtien vetovoima $\vec G=-k\nabla u$,
+missä $k$ on vakio ja
+\[
+u(x,y,z) = \sum_{i=1}^n \frac{m_i}{|P-P_i|}\,,
+\]
+missä $m_i$ on tähden $T_i$ massa ja $P_i$ sijainti. Määritä avaruuspysäköintiä varten kaikki
+pisteet $P$, joissa $\vec G=\vec 0$, kun $m_i=iM,\ i=1 \ldots n\,$ ($M=$ vakio)
+ja \vspace{1mm}\newline
+a) \ $n=3,\,\ P_1=(0,0,0),\ P_2=(1,0,0),\ P_3=(0,1,0)$, \newline
+b) \ $n=4,\,\ P_1=(0,0,0),\ P_2=(1,0,0),\ P_3=(0,1,0),\ P_4=(0,0,1)$. 
+ 
+\end{enumerate}

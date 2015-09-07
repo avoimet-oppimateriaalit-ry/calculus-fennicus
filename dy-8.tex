@@ -1,0 +1,369 @@
+\section{*Picardin--Lindelöfin lause} \label{Picard-Lindelöfin lause}
+\alku
+
+Palataan tutkimaan ensimmäisen kertaluvun alkuarvotehtävää
+\begin{equation} \label{Picard-1}
+\begin{cases} \,y'=f(x,y), \\ \,y(x_0)=y_0 \end{cases}
+\end{equation}
+tällä kertaa teoreettisemmalta kannalta. Asetetaan kysymys: Millä, funktiolle $f$ ja luvuille
+$x_0,y_0$, asetettavilla ehdoilla voidaan taata, että alkuarvotehtävällä on yksikäsitteinen
+ratkaisu pisteen $x_0$ ympäristössä? Vastauksen antaa seuraava kuuluisa lause.
+\begin{*Lause} \label{picard-lindelöf} \index{Picardin--Lindelöfin lause|emph}
+\index{differentiaaliyhtälön!h@ratkeavuus|emph}%
+\vahv{(Picard--Lindelöf\,\footnote[2]{Picardin--Lindelöfin lauseen alkuperäisversion esitti
+ja todisti tässä esitettyä yleisemmässä muodossa ranskalainen matemaatikko \hist{Emile Picard}
+(1853-1941) vuonna 1893. Suomalainen matemaatikko \hist{Ernst Lindelöf} (1870-1946) tarkensi
+tulosta hiukan myöhemmin. Lauseen väittämän jälkimmäinen osa (koskien ratkeavuutta koko
+tarkasteltavalla välillä) on Lindelöfin käsialaa.
+\index{Picard, E.|av} \index{Lindelöf, E.|av}})} Olkoon $T=[a,b]\times [c,d]\subset\Rkaksi$ ja
+oletetaan, että $f:T\kohti\R$ toteuttaa ehdot
+\begin{itemize}
+\item[(i)]  Funktio $x \map f(x,y)$ on jatkuva välillä $[a,b]$ jokaisella $y\in[c,d]$.
+\item[(ii)] Funktio $y \map f(x,y)$ on jokaisella $x\in[a,b]$ Lipschitz-jatkuva välillä $[c,d]$
+            vakiolla, joka ei riipu $x$:stä, ts.\ $\exists L\in\R_+$ siten, että pätee
+            \[
+            |f(x,y_1)-f(x,y_2)| \le L\abs{y_1-y_2} \quad\forall (x,y_1)\in T, \ (x,y_2)\in T.
+            \]
+\end{itemize}
+Tällöin, jos $(x_0,y_0)\in(a,b)\times(c,d)$, niin on olemassa $\delta>0$ siten, että
+alkuarvotehtävällä
+\[
+\begin{cases} \,y'=f(x,y),\quad x\in (x_0-\delta,x_0+\delta), \\ \,y(x_0)=y_0 \end{cases}
+\]
+on yksikäsitteinen ratkaisu. Edelleen jos oletukset ovat voimassa, kun välin $[c,d]$ tilalla
+on $\R$ ($T=[a,b]\times\R$), niin ratkaisu on olemassa ja yksikäsitteinen koko avoimella
+välillä $(a,b)$, kun $(x_0,y_0)\in(a,b)\times\R$.
+\end{*Lause}
+
+Seuraavassa käydään lyhyesti läpi Lauseen \ref{picard-lindelöf} todistukset ideat ja
+päävaiheet. (Todistuksen tarkkaan läpiviemiseen ovat käsitteelliset eväämme hieman vajavaiset.)
+Lähtökohtana on ajatus, että alkuarvotehtävän ratkaisu konstruoidaan nk.\ 
+\index{kiintopisteiteraatio!Picardin iteraatio|(} \index{Picardin iteraatio|(}%
+\kor{Picardin iteraatiolla}. Tässä puolestaan idea on seuraava: Kun ollaan lähellä pistettä
+$x_0$, niin voidaan olettaa, että $y(x)$ on lähellä $y_0$:aa. Ratkaisun ensimmäinen
+approksimaatio on tämän mukaan vakio:
+\[
+y(x)\approx y_0(x)=y_0.
+\]
+
+Parannetaan tätä nyt asteittain ratkaisemalla palautuvasti alkuarvotehtävät
+\[
+\begin{cases}
+\,y_k'(x)=f(x,y_{k-1}(x)), \\
+\,y_k(x_0)=y_0,\quad k=1,2,\ldots
+\end{cases}
+\]
+Koska tässä $y_{k-1}$ tunnetaan aikaisemmilta iteraatiokierroksilta (tai alkuehdosta), saadaan
+jokainen $y_k$ määrätyksi palautuvasti tunnetun funktion integraalina:
+\begin{equation} \label{Picard-2}
+y_0(x) = y_0, \quad y_k(x) = y_0+\int_{x_0}^x f(t,y_{k-1}(t))dt,\quad k=1,2,\ldots
+\end{equation}
+Näin on määritelty Picardin iteraatio. --- Huomattakoon, että tässä on itse asiassa kyse
+\pain{kiinto}p\pain{isteiteraatiosta}, missä 'pisteen' sijasta etsitään funktiota (vrt.\ Luku
+\ref{kiintopisteiteraatio}). Iteraatiota sovelletaan alkuarvotehtävän integroituun muotoon
+\[ 
+y(x) = y_0+\int_{x_0}^x f(t,y(t))\,dt,
+\]
+\index{integraaliyhtälö}%
+eli Picardin iteraatiossa on kyse tämän \kor{integraaliyhtälön} iteratiivisesta 
+ratkaisemisesta. --- Katkaisemalla iteraatio saadaan likimääräinen ratkaisu, kuten
+kiintopisteiteraatioissa yleensä.
+
+Picardin iteraatiota voi siis pitää alkuarvotehtävän likimääräisen ratkaisemisen menetelmänä.
+Toisin kuin edellisessä luvussa tarkastellut numeeriset menetelmät, Picardin iteraatio on
+kuitenkin lähinnä 'ajattelumenetelmä', sillä käytännössä iteraatioon sisältyvät integraalit
+tulevat yleensä nopeasti hankaliksi.
+\begin{Exa} Laske kaksi ensimmäistä Picardin iteraattia $\,(y_k(x), \ k=1,2\,)$
+alkuarvotehtävälle
+\[
+\begin{cases}
+\,y'=x+y^2, \\ \,y(0)=1.
+\end{cases}
+\]
+\end{Exa}
+\ratk Tässä on $f(x,y)=x+y^2$, $x_0=0$, $y_0=1$, joten $y_0(x)=1$ ja
+\begin{align*}
+y_1(x) &= 1+\int_0^x (t+1)\,dt=\underline{\underline{1+x+\frac{1}{2}x^2}}, \\
+y_2(x) &= 1+\int_0^x \left[t+\left(1+t+\frac{1}{2}t^2\right)^2\right]dt \\
+&= \underline{\underline{1+x+\frac{3}{2}x^2+\frac{2}{3}x^3+\frac{1}{4}x^4+\frac{1}{20}x^5}}.
+\end{align*}
+Seuraavaa iteraatti $y_3(x)$ olisi jo polynomi astetta $11$. \loppu
+
+Palataan Lauseen \ref{picard-lindelöf} todistukseen, jossa siis ideana on konstruoida
+alkuarvotehtävän ratkaisu Picardin iteraatiolla \eqref{Picard-2}. Tarkoituksena on tällöin
+osoittaa, että iteraatio suppenee kohti välillä $[x_0-\delta,x_0+\delta]$ jatkuvaa funktiota
+$y$, joka toteuttaa
+\begin{equation} \label{Picard-3}
+y(x)=y_0+\int_{x_0}^x f(t,y(t))dt,\quad x\in [x_0-\delta,x_0+\delta].
+\end{equation}
+Parametrin $\delta$ valinnalla ($\delta$ riittävän pieni) taataan, että 
+$[x_0-\delta,x_0+\delta]\subset[a,b]$ ja että $y(x)$ ei 'karkaa' väliltä $[c,d]$, ts.\ 
+$\,(x,y(x)) \in T\ \ \forall x \in [x_0-\delta,x_0+\delta]$ (vrt.\ vastaava ajatus Lauseen 
+\ref{separoituvan DY:n ratkaisu} todistuksessa). Tällöin oletuksen (i) mukaan yhdistetty 
+funktio $x \map f(x,y(x))$ on jatkuva välillä $[x_0-\delta,x_0+\delta]$, jolloin yhtälöstä 
+\eqref{Picard-3} ja Analyysin peruslauseesta seuraa, että $y$ on jatkuvasti derivoituva välillä 
+$[x_0-\delta,x_0+\delta]$. Tällöin $y$ on myös alkuarvotehtävän \eqref{Picard-1} ratkaisu 
+välillä $(x_0-\delta,x_0+\delta)$.
+
+Iteraation \eqref{Picard-2} suppenemisen toteamiseksi otetaan käyttöön välillä 
+$[x_0-\delta,x_0+\delta]$ määriteltyä jatkuvaa funktiota mittaava \kor{maksiminormi}
+\index{maksiminormib@maksiminormi (funktion)} \index{normi!xb@maksiminormi (funktion)}%
+\[ 
+\norm{y} = \max\,\{\,\abs{y(x)} \mid  x_0-\delta \le x \le x_0+\delta\,\}. 
+\]
+Tälle (niinkuin normeille yleensä, vrt.\ Luku \ref{abstrakti skalaaritulo}) pätee 
+\pain{kolmioe}p\pain{ä}y\pain{htälö}
+\[
+\norm{y_1+y_2} \le \norm{y_1}+\norm{y_2}.
+\]
+
+Lähdetään nyt Lauseen \ref{picard-lindelöf} oletuksesta (ii) ja arvioidaan
+\begin{align*}
+\abs{y_{k+1}(x)-y_k(x)}\ 
+     &=\ \left| \int_{x_0}^x [f(t,y_k(t))-f(t,y_{k-1}(t))]\,dt \right| \\ 
+     &\le\ \left| \int_{x_0}^x L \abs{y_k(t)-y_{k-1}(t)}\,dt \right| \\[2mm]
+     &\le\ L \abs{x-x_0} \norm{y_k-y_{k-1}} \\[4mm]
+     &\le\ L\delta\,\norm{y_k-y_{k-1}}, \quad x \in [x_0-\delta,x_0+\delta], \quad k=1,2, \ldots
+\end{align*}  
+Tulos on kirjoitettavissa
+\[
+\norm{y_{k+1}-y_k}\ \le\ L\delta\,\norm{y_k-y_{k-1}}, \quad k=1,2,\ldots
+\]
+Merkitään nyt $q=L\delta$, ja oletetaan jatkossa, että $q < 1$ (järjestettävissä valitsemalla
+$\delta<1/L$). Käyttämällä saatua arviota palautuvasti seuraa
+\[
+\norm{y_{k+1}-y_k}\ \le\ q^k\norm{y_1-y_0}, \quad k=1,2,\ldots
+\]
+Oletuksen (i) mukaan funtkio $g(x)=f(x,y_0)$ on jatkuva välillä $[a,b]$, joten iteraatiokaavan
+\eqref{Picard-2} perusteella
+\[
+\norm{y_1-y_0} = \max_{x\in[x_0-\delta,x_0+\delta]}\,\Bigl|\int_{x_0}^x f(t,y_0)\,dt\Bigr| 
+                 \le C\delta,
+\]
+missä $C$ on $\abs{g}$:n maksimiarvo välillä $[a,b]$. Yhdistämällä saadut arviot ja käyttämällä
+kolmioepäyhtälöä seuraa
+\begin{align*}
+\norm{y_n-y_k}\ &=\ \norm{(y_n-y_{n-1})+(y_{n-1}-y_{n-2})+ \ldots + (y_{k+1}-y_k)} \\[3mm]
+                &\le\ \norm{y_n-y_{n-1}}+ \norm{y_{n-1}-y_{n-2}} + \ldots 
+                                                                 + \norm{y_{k+1}-y_k} \\[3mm]
+                &\le\ (q^{n-1}+q^{n-2} + \ldots + q^k)\,C\delta \\
+                &<\ C\delta q^k\sum_{i=0}^\infty q^i\,
+                 =\,\frac{C\delta}{1-q}\,q^k, \quad 0 \le k < n.
+\end{align*}
+Tästä voidaan päätellä ensinnäkin, että jos $\delta$ on riittävän pieni, niin
+$\norm{y_n-y_0} \le C\delta/(1-\delta) \le \min\{y_0-c,\,d-y_0\}\ \forall n$, jolloin
+$y_n(x)$:n pako väliltä $[c,d]$ on estetty. Toiseksi päätellään, että jono $\seq{y_k(x)}$ on
+Cauchy jokaisella $x \in [x_0-\delta,x_0+\delta]$ ja siis suppenee:
+\[ 
+y_k(x) \kohti y(x)\in[c,d], \quad x \in [x_0-\delta,x_0+\delta]. 
+\]
+\index{tasainen suppeneminen}%
+On edelleen pääteltävissä, että tämä suppeneminen on itse asiassa \kor{tasaista} välillä
+$[x_0-\delta,x_0+\delta]$, ts.\ pätee
+\[
+\norm{y_k-y}\,=\,\max_{x\in[x_0-\delta,\,x_0+\delta]} \abs{y_k(x)-y(x)} 
+                 \kohti\ 0, \quad \text{kun}\ k \kohti \infty,
+\]
+ja että raja-arvona konstruoitu $y(x)$ on jatkuva välillä $[x_0-\delta,x_0+\delta]$. (Tässä on
+todistuksen käsitteellisesti vaativin kohta!) Ottamalla lopuksi iteraatiokaavassa 
+\eqref{Picard-2} puolittain raja-arvo, kun $k\kohti\infty$, päätellään, että $y(x)$ ratkaisee 
+probleeman \eqref{Picard-3}, jolloin Lauseen \ref{picard-lindelöf} ensimmäisestä väittämästä
+on todistettu ratkaisun olemassaoloa koskeva osa. Ratkaisun yksikäsitteisyys on todettavissa
+suoraviivaisemmin, ks.\ Harj.teht.\,\ref{H-dy-8: ratkaisun yksikäsitteisyys}. 
+
+Lauseen \ref{picard-lindelöf} toista väittämää todistettaessa ei jonon $\seq{y_k(x)}$ 
+pako-ongelmaa ole, joten väli $[x_0-\delta,x_0+\delta]$ voidaan korvata välillä $[a,b]$.
+Tarkentamalla em.\ laskua osoittautuu, että voidaan myös arvioida
+\[
+\abs{y_{k+1}(x)-y_k(x)}\ \le\ C\,\frac{L^k\abs{x-x_0}^k}{k!}\,, \quad x\in[a,b].
+\]
+Tutkittaessa jonon $\seq{y_k(x)}$ suppenemista tulee siis vertailukohdaksi nyt geometrisen
+sarjan sijasta eksponenttifunktion sarja
+\[ 
+e^{L\abs{x-x_0}} = \sum_{k=0}^\infty \frac{L^k\abs{x-x_0}^k}{k!}\,. 
+\]
+Tämä suppenee kaikkialla, joten voidaan päätellä samalla tavoin kuin edellä, että funktio
+$y(x)=\lim_k y_k(x)$ on integraaliyhtälön \eqref{Picard-3} ratkaisu, tällä kertaa koko välillä
+ $[a,b]$. Alkuarvotehtävä \eqref{Picard-1} on näin ratkaistu yksikäsitteisesti välillä $(a,b)$.
+\index{kiintopisteiteraatio!Picardin iteraatio|)} \index{Picardin iteraatio|)}
+
+\begin{Exa}
+Alkuarvotehtävä
+\[
+\begin{cases} \,y'=\sin y, \\ \,y(x_0)=y_0 \end{cases}
+\]
+toteuttaa Lauseen \ref{picard-lindelöf} ehdot, kun $T=\R^2$, sillä $f(y)=\sin y$ on kaikilla 
+väleillä Lipschitz-jatkuva vakiolla $L=1$. Alkuarvotehtävällä on siis yksikäsitteinen ratkaisu
+välillä $(-\infty,\infty)$ jokaisella $(x_0,y_0)\in\R^2$. Jos valitaan esim.\ $x_0=0$, niin
+nähdään, että $y_0$:n eri arvoja vastaavat ratkaisut löytyvät kaikki Esimerkissä 
+\ref{separoituva DY}:\ref{muuan separoituva dy} laskettujen ratkaisujen joukosta. Näin on tullut
+varmistetuksi, että mainitussa esimerkissä löydettiin kaikki differentiaaliyhtälön $y'=\sin y$
+ratkaisut. \loppu
+\end{Exa}
+\begin{Exa}
+Alkuarvotehtävälle
+\[
+\begin{cases} \,y'=\sqrt{\abs{y}}, \\ \,y(0)=0 \end{cases}
+\]
+Lauseen \ref{picard-lindelöf} ehdot eivät toteudu millään joukon $T=(a,b)\times(c,d)$
+valinnalla, sillä on oltava $0\in(a,b)$, jolloin $f(y)=\sqrt{\abs{y}}$ ei ole Lipschitz-jatkuva
+välillä $[a,b]$. Ratkaisu ei olekaan yksikäsitteinen 
+(ks.\ Esimerkki \ref{DY-käsitteet}:\,\ref{erikoinen dy}b). \loppu
+\end{Exa}
+\begin{Exa}
+Jos lineaarisessa alkuarvotehtävässä
+\[
+\begin{cases}
+\,y'+P(x)y=R(x), \\ \,y(x_0)=y_0
+\end{cases}
+\]
+$P$ ja $Q$ ovat jatkuvia välillä $[a,b]$, niin Lauseen \ref{picard-lindelöf} ehdot ovat 
+voimassa, kun valitaan $T=[a,b]\times\R$. Nimittäin
+\begin{itemize}
+\item[(i)]  Funktio $x \map f(x,y)=-P(x)y+R(x)$ \ on jatkuva välillä $[a,b]$ jokaisella
+            $y\in\R$.
+\item[(ii)] $\abs{f(x,y_1)-f(x,y_2)}=\abs{P(x)}\abs{y_1-y_2}\leq L\abs{y_1-y_2},\quad 
+             (x,y_1), \ (x,y_2) \in T$, missä $L=\D \max_{x\in [a,b]} \abs{P(x)}$.
+\end{itemize}
+Alkuarvotehtävä siis ratkeaa yksikäsitteisesti välillä $(a,b)$, kun $x_0\in (a,b)$.
+(Sama pääteltiin Luvussa \ref{lineaarinen 1. kertaluvun DY} toisin keinoin.) \loppu
+\end{Exa}
+
+\pagebreak
+\subsection*{Differentiaaliyhtälösysteemin ratkeavuus}
+\index{differentiaaliyhtälön!h@ratkeavuus|vahv}
+\index{differentiaaliyhtälö!g@--systeemi|vahv}
+
+Picardin-Lindelöfin lauseen todellinen hienous piilee siinä, että lauseen väittämä voidaan
+yleistää hyvin suoraviivaisesti koskemaan yleistä normaalimuotoista 
+differentiaaliyhtälösysteemiä (vrt.\ Luku \ref{DY-käsitteet})
+\[ \left\{ \begin{aligned} 
+           y'_1(x) &= f_1(x,y_1, \ldots, y_n), \\
+           y'_2(x) &= f_2(x,y_1, \ldots, y_n), \\
+                  &\vdots \\
+           y'_n(x) &= f_n(x,y_1 \ldots, y_n).
+           \end{aligned} \right. \]
+Alkuehdoiksi oletetaan
+\[ 
+y_i(x_0) = A_i, \quad i = 1 \ldots n, 
+\]
+missä $x_0\in(a,b)$. Tarkastellaan esimerkkinä alkuarvotehtävää kokoa $n=2\,$:
+\begin{equation} \label{Picard-4}
+\left\{ \begin{aligned}
+&y' = f_1(x,y,u), \\
+&u' = f_2(x,y,u), \quad x\in(a,b), \\
+&y(x_0)=y_0,\ u(x_0)=u_0.
+        \end{aligned} \right.
+\end{equation}
+Picardin-Lindelöfin lauseen muotoilussa tälle ongelmalle asetetaan 
+\[
+T=[a,b]\times[c_1,d_1]\times[c_2,d_2]\subset\R^3 \quad 
+        \text{tai} \quad T=[a,b]\times\R^2\subset\R^3
+\]
+ja oletetaan
+\begin{itemize}
+\item[(i)]  Funktiot $\,x \map f_1(x,y,u)\,$ ja $\,x \map f_2(x,y,u)\,$ ovat jatkuvia välillä
+            $[a,b]$ jokaisella $\,(y,u)\in[c_1,d_1]\times[c_2,d_2]\,$ tai jokaisella
+            $\,(y,u)\in\Rkaksi$.
+\item[(ii)] $f_1$ ja $f_2$ toteuttavat muuttujien $y,u$ suhteen Lipschitz-ehdon: \newline
+            Jollakin $L\in\R_+$ pätee
+            \begin{align*}
+            \abs{f_i(x,y_1,u_1)-f_i(x,y_2,u_2)} 
+                     &\le L\max\{\abs{y_1-y_2},\,\abs{u_1-u_2}\}, \quad i=1,2 \\
+                     &\qquad\forall (x,y_1,u_1)\in T, \ (x,y_2,u_2)\in T.
+            \end{align*}
+\end{itemize}
+Näillä oletuksilla päädytään vastaavaan väittämään kuin edellä, ts.\ alkuarvotehtävä 
+\eqref{Picard-4} ratkeaa yksikäsitteisesti, joko $x_0$:n lähellä välillä 
+$(x_0-\delta,x_0+\delta)$, tai vahvemmin oletuksin koko välillä $(a,b)$. Myös todistus on 
+perusidealtaan sama kuin edellä: Lähtökohtana on ratkaisun konstruoiminen Picardin iteraatiolla
+\[ \left\{ \begin{aligned} 
+y_k(x) &= y_0+\int_{x_0}^x f_1(t,y_{k-1}(t),u_{k-1}(t))\,dt, \\
+u_k(x) &= u_0+\int_{x_0}^x f_2(t,y_{k-1}(t),u_{k-1}(t))\,dt, \quad k=1,2, \ldots 
+           \end{aligned} \right. \]
+
+Palataan lopuksi Luvussa \ref{2. kertaluvun lineaarinen DY} tarkasteltuun toisen kertaluvun
+lineaariseen ja homogeeniseen alkuarvotehtävään
+\begin{equation} \label{Picard-5}
+\begin{cases}
+\,y''+P(x)y'+Q(x)y=0, \\ \,y(0)=A, \ y'(0)=B.
+\end{cases}
+\end{equation}
+Kun tässä kirjoitetaan $u=y'$, niin päästään systeemimuotoon \eqref{Picard-4}, missä
+\[
+f_1(x,y,u)=u, \quad f_2(x,y,u) = -Q(x)y-P(x)u. 
+\]
+Jos $P$ ja $Q$ ovat jatkuvia välillä $(a,b)$ (kuten oletettiin Luvussa 
+\ref{2. kertaluvun lineaarinen DY}), niin $x \map f_1(x,y,u)$ ja $x \map f_2(x,y,u)$ ovat
+jatkuvia välillä $[a_1,b_1]$ jokaisella $(y,u)\in\Rkaksi$, kun $[a_1,b_1]\subset(a,b)$. Koska
+\begin{align*}
+f_1(x,y_1,u_1)-f_1(x,y_2,u_2)\ &=\ u_1-u_2, \\
+f_2(x,y_1,u_1)-f_2(x,y_2,u_2)\ &=\ -Q(x)(y_1-y_2)-P(x)(u_1-u_2), 
+\end{align*}
+niin nähdään, että myös ehto (ii) toteutuu, kun asetetaan
+\[ 
+L=\max\{1,\,L_1\}, \quad L_1 = \max_{x\in[a_1,b_1]}\bigl\{\abs{P(x)}+\abs{Q(x)}\bigr\}. 
+\]
+Näin ollen Picardin--Lindelöfin lauseen (vahvemman väittämän) mukaan alkuarvotehtävä 
+\eqref{Picard-5} ratkeaa yksikäsitteisesti välillä $(a_1,b_1)$. Koska tämä on totta aina kun
+$[a_1,b_1] \subset (a,b)$, niin tehtävällä on yksikäsitteinen ratkaisu koko avoimella välillä
+$(a,b)$. Lause \ref{lin-2: lause 2} on näin tullut todistetuksi Picardin--Lindelöfin lauseen
+seuraamuksena.
+
+\Harj
+\begin{enumerate}
+
+\item
+Mitä voidaan Picardin--Lindelöfin lauseen valossa sanoa seuraavien alkuarvotehtävien 
+ratkeavuudesta ja ratkaisujen yksikäsitteisyydestä $\R$:ssä tai $\R$:n osaväleillä?
+\begin{align*}
+&\text{a)}\ \ y'=\cos y+\frac{x}{y^2+1}\,,\,\ y(0)=A\in\R \\
+&\text{b)}\ \ y'=\frac{y}{\cosh x}+e^{x-y^2},\,\ y(0)=A\in\R \\ 
+&\text{c)}\ \ y'=\frac{y}{\cos x}+e^{x-y^2},\,\ y(0)=A\in\R \\
+&\text{d)}\ \ y'=8xy+\frac{\sin(xy)}{x^2+2x-35}\,,\,\ y(0)=A\in\R \\
+&\text{e)}\ \ y''=\cos(xy),\,\ y(0)=A\in\R,\ y'(0)=B\in\R
+\end{align*}
+
+\item
+Määritä seuraaville alkuarvotehtäville kaikki alkupisteen lähiympäristössä pätevät ratkaisut.
+Vertaa Picardin--Lindelöfin lauseen väittämään. \vspace{1mm}\newline
+a) \ $y'=y^2,\,\ y(0)=1 \qquad\qquad\quad\,\ $
+b) \ $y'=y^2,\,\ y(0)=1000$ \newline
+c) \ $y'=y\sqrt{\abs{y}},\,\ y(0)=1 \qquad\quad\,\ \ $
+d) \ $y'=\sqrt[4]{\abs{y}},\,\ y(0)=1$ \newline 
+e) \ $y'=\sqrt[4]{\abs{y}},\,\ y(0)=0.0001 \qquad\,$
+f) \ $y'=\sqrt[4]{\abs{y}},\,\ y(0)=0$
+
+\item 
+Halutaan laskea Neperin luku $e$ lähtien tiedosta, että $e=y(1)$, missä $y(x)$ ratkaisee
+alkuarvotehtävän $\,y'=y,\ y(0)=1$. Millainen laskukaava saadaan luvulle $e$, kun tehtävä 
+ratkaistaan Picardin iteraatiolla?
+
+\item 
+Laske seuraavissa alkuarvotehtävissä Picardin iteraatit $y_1(x)$ ja $y_2(x)$ ja vertaa 
+tarkkaan ratkaisuun. 
+(Vrt.\ Harj.teht.\ \ref{DYn numeeriset menetelmät}:\ref{H-dy-7: Euler-kokeita}.)
+\[
+\text{a)}\ \ \begin{cases} \,y'=-y^2, \\ \,y(0)=1 \end{cases}
+\text{b)}\ \ \begin{cases} \,y'=y^2, \\ \,y(0)=1 \end{cases}
+\text{c)}\ \ \begin{cases} \,y'=-2xy^2, \\ \,y(0)=1 \end{cases}
+\text{d)}\ \ \begin{cases} \,y'=2xy^2, \\ \,y(0)=1 \end{cases}
+\]
+
+\item
+Laske alkuarvotehtävälle
+\[
+\text{a)}\ \ \begin{cases} \,y''=-y, \\ \,y(0)=1,\ y'(0)=0 \end{cases} \quad
+\text{b)}\ \ \begin{cases} \,y''=-y, \\ \,y(0)=0,\ y'(0)=1 \end{cases}
+\]
+likimääräinen ratkaisu iteroimalla $2n$ kertaa ($n\in\N$) Picardin iteraatiolla tehtävän
+systeemimuodosta.
+
+\item (*) \label{H-dy-8: ratkaisun yksikäsitteisyys}
+Näytä, että Lauseen \ref{picard-lindelöf} oletuksin alkuarvotehtävän \eqref{Picard-1} ratkaisu
+(jos olemassa) on yksikäsitteinen välillä $(x_0-\delta,x_0+\delta)$, kun $\delta$ on riittävän
+pieni. \kor{Vihje}: Oleta $y_1(x)$ ja $y_2(x)$ ratkaisuiksi, lähde tehtävän integraalimuodosta
+\eqref{Picard-3}, käytä oletusta (ii) ja valitse $\delta<1/L$.
+
+
+\end{enumerate}

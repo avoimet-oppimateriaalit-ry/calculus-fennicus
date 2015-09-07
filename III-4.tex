@@ -1,0 +1,148 @@
+\section{*Kompleksikertoiminen vektoriavaruus}
+\alku
+\index{vektoric@vektoriavaruus!b@kompleksikertoiminen|vahv}
+
+Luvussa \ref{tasonvektorit} esiteltiin algebra nimeltä (lineaarinen)
+vektoriavaruus, symbolisesti $(U,\K)$, missä $U$ on vektorien muodostama joukko ja $\K$ on
+nk.\ skalaarien muodostama vektoriavaruuden kertojakunta. Vektoriavaruudessa on määritelty
+kaksi laskuoperaatiota, vektorien yhteenlasku ja skalaarilla kertominen, jotka ovat
+funktioita tyyppiä
+
+\begin{tabular}{ll}
+yhteenlasku: &$U \times U \kohti U$, \\
+skalaarilla kertominen: &$\K \times U \kohti U$.
+\end{tabular}
+
+Sisätuloavaruudeksi sanotaan vektoriavaruutta, jossa on määritelty myös skalaaritulo
+(eli sisätulo, ks.\ Luku \ref{abstrakti skalaaritulo}) funktiona tyyppiä
+
+\begin{tabular}{ll}
+skalaaritulo: &$\qquad\qquad\,\ U \times U \kohti \K$.
+\end{tabular}
+
+Tähän asti on käsitelty lähinnä tapausta $\K = \R$, jolloin puhutaan \kor{reaalikertoimisesta} 
+avaruudesta. Laajennus reaaliluvuista kompleksilukuihin mahdollistaa nyt myös 
+\kor{kompleksikertoimisen} vektoriavaruuden, jossa $\K = \C$. Kompleksikertoiminen 
+vektoriavaruus ei algebrana oleellisesti poikkea reaalikertoimisesta niin kauan kuin vain 
+vektorien yhteenlasku ja skalaarilla kertominen on määritelty. Sen sijaan skalaaritulon 
+määrittely funktiona tyyppiä $U \times U \kohti \C$ aiheuttaa teoriaan lisäpiirteitä, jotka on
+otettava huomioon. Kompleksikertoimisen sisätuloavaruuden $(U, \C)$ sisätulon 
+$\scp{\cdot}{\cdot}$ on toteutettava seuraavat ehdot (vrt.\ Luvun \ref{abstrakti skalaaritulo}
+ehdot reaalikertoimiselle tapaukselle)\,:
+\begin{enumerate}
+\item \kor{Puolisymmetrisyys}
+\begin{itemize}
+\item[] $\scp{\mpu}{\mpv}=\overline{\scp{\mpv}{\mpu}} \quad \forall \ \mpu,\mpv \in U$.
+\end{itemize}
+\item \kor{Sekvilineaarisuus} \index{sekvilineaarisuus}
+\begin{itemize}
+\item[(a)] $\scp{\alpha \mpu + \beta \mpv}{\mw} = \alpha \scp{\mpu}{\mw} 
+                                                                + \beta \scp{\mpv}{\mw}$,
+\item[(b)] $\scp{\mpu}{\alpha \mpv + \beta \mw} = \overline{\alpha} \scp{\mpu}{\mpv} 
+                                                        + \overline{\beta} \scp{\mpu}{\mw}$
+\item[] \qquad\qquad $\forall \ \mpu, \mpv, \mw \in U,\ \alpha, \beta \in \C$.
+\end{itemize}
+\item \kor{Positiividefiniittisyys} \index{positiividefiniittisyys!a@skalaaritulon}
+\begin{itemize}
+\item[(a)] $\scp{\mpu}{\mpu} \geq 0 \ \forall \ \mpu \in U$,
+\item[(b)] $\scp{\mpu}{\mpu} = 0 \ \ekv \ \mpu = \mathbf{0}$.
+\end{itemize}
+\end{enumerate}
+Havaitaan, että reaalikertoimisesta tapauksesta poikkeavat vain symmetriaehto (1) sekä 
+sekvilineaarisuusehto (2b) (sekvilineaarinen = $1\frac{1}{2}-$lineaarinen, engl.\ sesquilinear 
+-- vrt. bilineaarinen = kaksoislineaarinen, engl.\ bilinear). Itse asissa vain symmetriaehdon
+ero on olennainen, sillä (1) \& (2a) $\impl$ (2b) (Harj.teht.\,\ref{H-III-4: skalaaritulo}).
+Huomattakoon, että symmetriaehto (1) pitää erikoistapauksena sisällään ehdon
+$\scp{\mpu}{\mpv} = \scp{\mpv}{\mpu}$, kun $\scp{\mpu}{\mpv} \in \R$, joten aiemmin asetettuja
+reaalikertoimisen tapauksen ehtoja ei erillisinä enää tarvita. Koska ehto (1) myös takaa, että 
+$\scp{\mpu}{\mpu}\in\R\,\ \forall \mpu \in U$, niin ehto (3a) on mielekäs. Uusista ehdoista
+aksioomina tarpeellisia ovat (1), (2a), (3a) ja (3b):n osa $[\impl]$, sillä (1) \& (2a)
+$\impl$ (2b), kuten sanottu, ja (2a) $\impl$ (3b):n osa $[\Leftarrow]$.
+
+Skalaaritulon keskeinen ominaisuus on Cauchyn--Schwarzin epäyhtälö, joka vapautettiin 
+geometriasta Luvussa \ref{abstrakti skalaaritulo}. Varmistetaan nyt, että epäyhtälö pätee myös
+kompleksikertoimisessa tapauksessa (vrt. Lause \ref{schwarzR}).
+\begin{Lause} \label{schwarzC} \index{Cauchyn!f@--Schwarzin epäyhtälö|emph}
+Jokaiselle aksioomat 1--3 toteuttavalle kompleksikertoimisen vektoriavaruuden $U$
+skalaaritulolle pätee Cauchyn--Schwarzin epäyhtälö
+\[
+\abs{\scp{\mpu}{\mpv}} \leq \abs{\mpu} \abs{\mpv},
+\]
+missä
+\[
+\abs{\mpu}=\scp{\mpu}{\mpu}^{1/2}.
+\]
+\tod
+Tapaus $\mpu = \mathbf{0}$ on jälleen selvä, joten voidaan olettaa $\mpu \neq \mathbf{0}$, 
+jolloin on $\scp{\mpu}{\mpu}>0$ aksioomien (3a,b) perusteella. Lähdetään jälleen epäyhtälöstä
+\[
+\scp{\beta \mpu + \mpv}{\beta \mpu + \mpv} \geq 0,
+\]
+joka nyt on voimassa $\forall \beta \in \C$ (aksiooma (3a)).
+
+Käyttämällä sekvilineaarisuusehtoja (2a,b), symmetriaehtoa (1) ja Luvun 
+\ref{kompleksiluvuilla laskeminen} kaavoja (2),\,(3),\,(7) tämä purkautuu muotoon
+\begin{align*}
+\scp{\beta \mpu}{\beta \mpu} + \scp{\beta \mpu}{\mpv} + \scp{\mpv}{\beta \mpu} 
+                                                      + \scp{\mpv}{\mpv} &\geq 0 \\
+\ekv \ \abs{\beta}^2 \scp{\mpu}{\mpu} + 2 \; \text{Re} \; \{ \beta \scp{\mpu}{\mpv} \} 
+                                      + \scp{\mpv}{\mpv} &\geq 0.
+\end{align*}
+Koska tämä on voimassa $\forall \beta \in \C$ ja koska $\scp{\mpu}{\mpu} > 0$, voidaan valita
+\[
+\beta = - \frac{\overline{\scp{\mpu}{\mpv}}}{\scp{\mpu}{\mpu}}\,,
+\]
+jolloin Luvun \ref{kompleksiluvuilla laskeminen} kaavojen (3),\,(6) perusteella seuraa
+\begin{align*}
+&-\frac{\abs{\scp{\mpu}{\mpv}}^2}{\scp{\mpu}{\mpu}} + \scp{\mpv}{\mpv} \geq 0 \\
+& \ekv \ \abs{\scp{\mpu}{\mpv}}^2 \leq \scp{\mpu}{\mpu} \scp{\mpv}{\mpv} \\[2mm]
+& \ekv \ \abs{\scp{\mpu}{\mpv}} \leq \abs{\mpu} \abs{\mpv}. \quad\loppu
+\end{align*}
+\end{Lause}
+\begin{Exa} Yksinkertaisin esimerkki kompleksikertoimisesta sisätuloavaruudesta on $\C$ itse,
+ts.\ $(U, \C)$, missä $U=\C$. Nimittäin koska kompleksilukujen yhteenlasku on samanlainen 
+operaatio kuin tason vektoreiden yhteenlasku, ja kertolasku voidaan tulkita myös skalaarilla
+kertomiseksi, niin $(\C,\C)$ on vektoriavaruus. Kun tässä avaruudessa määritellään skalaaritulo
+\[
+\scp{u}{v} = u \overline{v}, \quad u,v \in \C,
+\]
+toteutuvat em. ehdot 1--3 (vrt. Luvun \ref{kompleksiluvuilla laskeminen} kaavat). 
+Cauchyn--Schwarzin epäyhtälö pelkistyy tässä erikoistapauksessa yhtälöksi:
+\[
+\abs{\scp{u}{v}} = \abs{u \overline{v}} = \abs{u}\abs{v}, \quad u,v \in \C. \loppu
+\]
+\end{Exa}
+\begin{Exa} Kompleksikertoimisia sisätuloavaruuksia ovat myös avaruuksien $(\Rkaksi, \R)$ ja
+$(\R^3,\R)$ laajennukset $(\C^2,\C)$ ja $(\C^3,\C)$. Esimerkiksi $(\C^3,\C)$:ssä skalaaritulo
+määritellään
+\begin{align*}
+&\mpu =(u_1,u_2,u_3) \in \C^3, \quad \mpv =(v_1,v_2,v_3) \in \C^3\,: \\
+&\scp{\mpu}{\mpv} = \sum_{i=1}^3 u_i \overline{v_i}.
+\end{align*}
+\end{Exa}
+Avaruuden $(\C^n, \C),\ (n=2,3)$ 
+\index{euklidinen!b@normi} \index{normi!euklidinen}%
+\kor{euklidinen normi} on
+\[
+\abs{\mpu} = \scp{\mpu}{\mpu}^{1/2} = ( \sum_{i=1}^n \abs{u_i}^2 )^{1/2}. \loppu
+\]
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-III-4: skalaaritulo}
+Näytä, että skalaaritulon sekvilineaarisuusominaisuus (2b) seuraa ehdoista (1) ja (2a).
+
+\item
+Ovatko avaruuden $(\C^2,\C)$ vektorit 
+\[
+\mpu=(3-4i,\,7-i), \ \ \mpv=(2-11i,\,13-9i)
+\]
+lineaarisesti riippumattomat?
+ 
+\item
+Jaa sisätuloavaruuden $(\C^2,\C)$ vektori $\mpu=(1+i,2-3i)$ kahteen komponenttiin siten, että
+toinen komponentti on vektorin $\mpv=(1-i,2+i)$ suuntainen ja toinen $\mpv$:tä vastaan
+kohtisuora.
+
+\end{enumerate}

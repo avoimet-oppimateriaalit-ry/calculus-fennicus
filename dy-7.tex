@@ -1,0 +1,359 @@
+\section[Differentiaaliyht‰lˆiden numeeriset ratkaisumenetelm‰t]{Differentiaaliyht‰lˆiden
+numeeriset \\ ratkaisumenetelm‰t} 
+\label{DYn numeeriset menetelm‰t}
+\sectionmark{DY:n numeeriset ratkaisumenetelm‰t}
+\alku
+\index{differentiaaliyht‰lˆn!i@numeerinen ratkaiseminen|vahv}
+
+Edellisiss‰ luvuissa on kehitelty differentiaaliyht‰lˆiden ratkaisemistaitoa l‰hinn‰ nk.\
+'tarkan' ratkaisemisen n‰kˆkulmasta. T‰m‰ ratkaisuoppi on hyvin perinteist‰, ja sill‰ on oma
+pysyv‰ arvonsa. --- Etenkin silloin kun ratkaisun voi esitt‰‰ alkeisfunktioden avulla 
+suhteellisen yksinkertaisena lausekkeena, on perinteist‰ ratkaisutapaa vaikea sivuuttaa. 
+Sovelluksissa tˆrm‰t‰‰n kuitenkin hyvin usein differentiaaliyht‰lˆihin (ja etenkin 
+-systeemeihin), joihin mik‰‰n t‰h‰n asti tarjotuista resepteist‰ ei tehoa. Silloin on tyydytt‰v‰
+etsim‰‰n ratkaisu likim‰‰rin \kor{numeerisesti}, k‰yt‰nnˆss‰ tietokoneen tai tehokkaan 
+laskimen avustuksella.\footnote[2]{Differentiaaliyht‰lˆit‰ ratkottiin numeerisesti jo ennen 
+tietokoneiden aikaa, mutta ratkaiseminen rajoittui vain hyvin t‰rkein‰ pidettyihin kohteisiin,
+kuten tykinammusten lentoratojen m‰‰ritt‰miseen. Tietokoneiden aikakaudella 
+differentiaaliyht‰lˆiden numeerisesta ratkaisemisesta on tullut arkip‰iv‰‰ mit‰ erilaisimmilla
+tieteen ja tekniikan aloilla. Samalla on ratkaisumenetelmist‰ kehittynyt laaja menetelm‰tiede,
+josta on kirjoitettu paksuja kirjoja.} Numeerinen ratkaiseminen siis poikkeaa melkoisesti
+perinteisist‰ menetelmist‰, joilla ratkaisu yleens‰ saadaan (jos saadaan) 'k‰sipelill‰'. 
+Mit‰‰n periaatteellista eroa ei numeerisen ja 'tarkan' ratkaisemisen v‰lill‰ silti ole, sill‰
+myˆs numeerisin keinoin saadaan tarkka ratkaisu, kun ajatellaan algoritmin tuottama 
+likim‰‰r‰isratkaisujen jono 'loppuun asti' lasketuksi. --- Itse asiassa juuri n‰in meneteltiin
+Luvussa \ref{m‰‰r‰tty integraali}, kun etsittiin yleisp‰tev‰‰ ratkaisutapaa 
+differentiaaliyht‰lˆlle $y'=f(x)$.
+
+Jatkossa tarkastellaan lyhyesti \pain{alkuarvoteht‰vien} numeerisessa ratkaisussa k‰ytett‰vien
+\index{askelmenetelm‰}%
+nk.\ \kor{askelmenetelmien} perusiedoita. Otetaan tarkastelun kohteeksi j‰lleen ensimm‰isen
+kertaluvun normaalimuotoinen alkuarvoteht‰v‰
+\begin{equation} \label{dy-7: ivp}
+\begin{cases}
+\,y'=f(x,y),\quad x>x_0, \\
+\,y(x_0)=y_0.
+\end{cases}
+\end{equation}
+Kaikissa askelmenetelmiss‰ on ideana l‰hte‰ alkuarvopisteest‰ $x_0$ ja edet‰ lyhyin 
+\pain{askelin}, ensin pisteeseen $x_1$, sitten pisteeseen $x_2$, jne. Jokaisella askeleella
+$x_k \kohti x_{k+1}$ lasketaan luku $y_{k+1}$, joka pyrkii olemaan likiarvo tarkan ratkaisun
+$y(x)$ arvolle pisteess‰ $x_{k+1}$:
+\[
+y_{k+1}\approx y(x_{k+1}),\quad k=0,1,\ldots
+\]
+Lukua $y_{k+1}$ laskettaessa tunnetaan jo luvut $y_0,y_1, \ldots y_{k}$ (alkuehdosta ja 
+aikaisemmilta askelilta), joten $y_{k+1}$ voidaan laskea p\pain{alautuvasti}. Jos laskukaavassa
+esiintyy vain edelt‰v‰ luku $y_k$, on kyseess‰ 
+\index{yksiaskelmenetelm‰} \index{moniaskelmenetelm‰}%
+\kor{yksiaskelmenetetelm‰}, muussa tapauksessa \kor{moniaskelmenetelm‰}.
+Erilaiset askelmenetelm‰t erottaa siis lopulta toisistaan vain se,
+millaista palautuskaavaa tai yleisemp‰‰ algoritmia luvun $y_{k+1}$ laskemisessa k‰ytet‰‰n.
+Tarkkuutta voidaan s‰‰dell‰ sek‰ menetelm‰n valinnalla ett‰
+\index{askelpituus}%
+\kor{askelpituuksilla} $x_{k+1}-x_k$ (vrt.\ numeerisen integroinnin menetelm‰t Luvussa
+\ref{numeerinen integrointi}). Seuraavassa tarkastellaan ensin askelmenetelmist‰ kaikkein
+yksinkertaisinta --- myˆs vanhinta.
+
+\subsection*{Eulerin menetelm‰}
+\index{Eulerin!d@menetelm‰|vahv}
+
+\kor{Eulerin menetelm‰}\footnote[2]{Sveitsil‰inen matemaatikko \hist{Leonhard Euler} 
+(1707-1783) on entuudestaan tuttu jo kompleksisesta eksponenttifunktiosta (Eulerin kaava) ja
+h‰nen mukaansa nimetyst‰ differentiaaliyht‰lˆst‰. \kor{Eulerin yht‰lˆt} (vallan toisessa 
+merkityksess‰) ovat keskeisi‰ matematiikan lajissa nimelt‰ \kor{variaatiolaskenta} ja 
+(j‰lleen toisessa merkityksess‰) virtausmekaniikassa. Euler tutki aikansa matematiikkaa ja 
+fysiikkaa hyvin laajasti, myˆs t‰htitiedett‰, musiikkia, merenkulkua, ym. Euler oli 1700-luvun
+merkitt‰vimpi‰ ja kaikkien aikojen monipuolisimpia matemaatikkoja. \index{Euler, L.|av}} on
+yksiaskelmenetelm‰, jossa luku $y_{k+1}$ lasketaan palautuskaavasta 
+\[
+\boxed{\kehys\quad y_{k+1}=y_k+hf(x_k,y_k),\quad h=x_{k+1}-x_k, \quad k=0,1,\ldots \quad}
+\]
+Kaavan voi johtaa esim.\ seuraavasti: Integroidaan differentiaaliyht‰lˆ $y'=f(x,y)$ puolittain
+v‰lin $[x_k,\,x_{k+1}]$ yli, jolloin seuraa
+\[
+y(x_{k+1})=y(x_k)+\int_{x_k}^{x_{k+1}} f(x,y(x))dx.
+\]
+Oletetaan, ett‰ $f(x,y(x))=y'(x)$ on likimain vakio v‰lill‰ $[x_k,x_{k+1}]$ ja tehd‰‰n t‰h‰n
+nojaten approksimaatio
+\[
+\int_{x_k}^{x_{k+1}} f(x,y(x))dx \approx hf(x_k,y(x_k)), \quad h=x_{k+1}-x_k.
+\]
+(Kyse on yksinkertaisesta numeerisesta integroinnista, vrt.\ Luku 
+\ref{numeerinen integrointi}.) Eulerin menetelm‰‰n p‰‰dyt‰‰n, kun tulos
+\begin{align*}
+&y_{k+1} \approx y_k+hf(x_k,y_k), \quad y_k=y(x_k),\ y_{k+1}=y(x_{k+1})
+\intertext{'murjotaan' muotoon}
+&y_{k+1} = y_k+hf(x_k,y_k), \quad y_k \approx y(x_k),\ y_{k+1} \approx y(x_{k+1}).
+\end{align*}
+Jos askelpituus $h$ oletetaan tunnetuksi (esim.\ vakio), niin Eulerin menetelm‰n askel koostuu
+yhdest‰ funktioevaluaatiosta, yhdest‰ kertolaskusta ja kahdesta yhteenlaskusta:
+\[
+x_k=x_{k-1}+h, \quad t_k=f(x_k,y_k), \quad y_{k+1}=y_k+ht_k.
+\]
+\begin{Exa} Laske Neperin luvulle $e$ likiarvo $y_n$ ratkaisemalla alkuarvoteht‰v‰ 
+$y'=y,\ y(0)=1$ Eulerin menetelm‰ll‰ ja vakioaskelpituudella $h=1/n,\ n\in\N$. Arvioi virhe.
+\end{Exa}
+\ratk Eulerin menetelm‰ll‰ laskien saadaan
+\begin{align*}
+y_0=1, \quad &y_k=y_{k-1}+hy_{k-1}=(1+h)y_{k-1}, \quad k=1,2 \ldots \\
+      \qimpl &y_n = (1+h)^n = \underline{\underline{\left(1+\frac{1}{n}\right)^n}}.
+\intertext{Virheen arvioimiseksi tarkastellaan lauseketta}
+             &\ln\frac{y_n}{e} = n\,\ln\left(1+\frac{1}{n}\right)-1.
+\end{align*}
+Taylorin lauseen (ks.\ Luku \ref{taylorin lause}) mukaan on 
+$\,\ln(1+x)=x-\frac{1}{2}x^2+\ordoO{\abs{x}^3}$, joten seuraa
+\begin{align*}
+\ln\frac{y_n}{e}\,=\,-\frac{1}{2n}+\ordoO{n^{-2}} 
+                  &\qimpl \frac{y_n}{e}\,=\,e^{-\frac{1}{2n}+\ordoO{n^{-2}}}
+                                       \,=\,1-\frac{1}{2n}+\ordoO{n^{-2}} \\
+                  &\qimpl e-y_n = \underline{\underline{\frac{e}{2n}+\ordoO{n^{-2}}}}. \loppu
+\end{align*}
+
+\subsection*{Eulerin menetelm‰n virhe}
+
+Edell‰ esimerkiss‰ saatu virhearvio $\,y_n-y(x_n)=\ordoO{h}\,$ p‰tee Eulerin menetelm‰lle melko
+yleisin edellytyksin. Yleisemm‰n virhearvion johtamiseksi olkoon askelpituus $h=$ vakio ja 
+kirjoitetaan $Y_k=y(x_k)=y(x_0+kh)$, miss‰ $y(x)$ on alkuarvoteht‰v‰n \eqref{dy-7: ivp} 
+\index{konsistenssivirhe}%
+ratkaisu. Arvioidaan ensin Eulerin menetelm‰n nk.\ \kor{konsistenssivirhe}, eli luku $\delta_k$
+yht‰lˆss‰
+\[
+Y_{k+1}=Y_k+hf(x_k,Y_k)+\delta_k.
+\]
+Kun merkit‰‰n $\,u(x)=f(x,y(x))=y'(x)$, niin osittain integroimalla seuraa (ks.\ myˆs Eulerin
+menetelm‰n johto edell‰)
+\begin{align*}
+\delta_k &= \int_{x_k}^{x_{k+1}} u(x)\,dx - hu(x_k) \\
+         &=\sijoitus{x_k}{x_{k+1}} (x-x_{k+1})u(x) - \int_{x_k}^{x_{k+1}} (x-x_{k+1})u'(x)\,dx
+                                                   - hu(x_k) \\
+         &= \int_{x_k}^{x_{k+1}} (x_{k+1}-x)y''(x)\,dx.
+\end{align*}
+Oltetetaan nyt (Oletus \#1), ett‰ $y$ on kahdesti jatkuvasti derivoituva ja p‰tee arvio
+$\abs{y''(x)} \le M$ (kyseeseen tulevilla $x$:n arvoilla). T‰llˆin konsistenssivirhe on enint‰‰n
+\[
+\abs{\delta_k} \le \int_{x_k}^{x_{k+1}} (x_{k+1}-x)\,M\,dx = \frac{1}{2}\,Mh^2.
+\]
+K‰ytt‰en t‰t‰ arviota ja kolmioep‰yht‰lˆ‰ voidaan nyt p‰‰tell‰:
+\begin{align*}
+&\begin{cases} 
+\, Y_{k+1}=Y_k+hf(x_k,Y_k)+\delta_k, \\ \,y_{k+1}=y_k+hf(x_k,y_k)
+ \end{cases} \\
+&\qimpl \abs{Y_{k+1}-y_{k+1}} \le \abs{Y_k-y_k}+h\abs{f(x_k,Y_k)-f(x_k,y_k)}+\frac{1}{2}\,Mh^2.
+\end{align*}
+Oletetaan (Oletus \#2), ett‰ oikealla puolella voidaan k‰ytt‰‰ arviota
+\[
+\abs{f(x,y_1)-f(x,y_2)} \le L\abs{y_1-y_2}
+\]
+($x=x_k,\,y_1=Y_k,\,y_2=y_k$), miss‰ $L$ on vakio. T‰llˆin seuraa
+\[
+\abs{Y_{k+1}-y_{k+1}} \le (1+hL)\,\abs{Y_k-y_k} + \frac{1}{2}\,Mh^2.
+\]
+Soveltamalla t‰t‰ ep‰yht‰lˆ‰ palautuvasti, kun $k=0,1 \ldots\,$ seuraa (induktio!)
+\[
+\abs{Y_n-y_n}\,\le\,\frac{1}{2}\,Mh^2 \sum_{k=0}^{n-1} (1+hL)^k\,
+                 =\,\frac{M}{2L}\bigl[(1+hL)^n-1\bigr]\,h, \quad n=1,2 \ldots
+\]
+K‰ytt‰m‰ll‰ t‰ss‰ viel‰ arviota 
+$\,(1+hL)^n \le \bigl(e^{hL}\bigr)^n = e^{Lnh} = e^{L(x_n-x_0)}\,$ saadaan Eulerin menetelm‰n 
+virhearvioksi tehdyin oletuksin
+\begin{equation} \label{Eulerin virhe}
+\boxed{\quad
+\abs{y(x_n)-y_n} \le \frac{M}{2L}\bigl(e^{L(x_n-x_0)}-1\bigr)\,h, \quad x_n=x_0+nh. \quad}
+\end{equation}
+\begin{Exa} Alkuarvoteht‰v‰
+\[
+\begin{cases} \,y'=e^{-x}+x\sin y, \quad x>0, \\ \,y(0)=1 \end{cases}
+\]
+ei ratkea perinteisin menetelmin, joten on tyytyminen numeeriseen ratkaisuun.
+Differentiaaliyht‰lˆst‰ n‰hd‰‰n, ett‰ ratkaisulle p‰tee $\abs{y'(x)} \le 1+x$, kun $x \ge 0$.
+Derivoimalla implisiittisesti ja k‰ytt‰m‰ll‰ t‰t‰ arviota seuraa
+\[
+y''(x)=-e^{-x}+\sin y+xy'\cos y \qimpl \abs{y''(x)} \le 2+x+x^2,\,\ x \ge 0.
+\]
+Koska edelleen on
+\[
+\abs{f(x,y_1)-f(x,y_2)}\,=\,x\abs{\sin y_1-\sin y_2}\,\le\,x\abs{y_1-y_2}, \quad x \ge 0,
+\]
+niin n‰hd‰‰n, ett‰ Eulerin menetelm‰n virhearvio \eqref{Eulerin virhe} on p‰tev‰, kun arviossa
+asetetaan
+\[
+L=x_n=nh, \quad M=2+x_n+x_n^2 \quad (n \ge 1).
+\]
+Esimerkiksi jos halutaan ratkaisu v‰lill‰ $[0,2]$, niin voidaan valita $L=2,\ M=8$, jolloin
+virhe on enint‰‰n
+\[
+\abs{y(x_n)-y_n} < 2e^4 h < 110 h \quad (x_n \le 2\,).
+\]
+Todenn‰kˆisesti virhe on huomattavasti t‰t‰ arviota pienempi. \loppu
+\end{Exa}
+
+\subsection*{Differentiaaliyht‰lˆsysteemit}
+\index{differentiaaliyht‰lˆ!g@--systeemi|vahv}
+
+Eulerin menetelm‰n, samoin kuin muidenkin askelmenetetelmien (ks.\ esimerkit j‰ljemp‰n‰) vahva
+puoli sovellusten kannalta on, ett‰ menetelm‰t soveltuvat sellaisenaan myˆs normaalimuotoisen 
+differentiaaliyht‰lˆsysteemin ratkaisuun, sik‰li kuin kyseess‰ on alkuarvoteht‰v‰. Myˆs 
+korkeamman kertaluvun differentiaaliyht‰lˆiden alkuarvoteht‰v‰t ratkeavat t‰ll‰ tavoin 
+kirjoittamalla teht‰v‰ ensin systeemimuotoon, vrt.\ Luku \ref{DY-k‰sitteet}. Esimerkki
+valaiskoon asiaa.
+\begin{Exa} Esit‰ Eulerin menetelm‰‰n perustuva algoritmi, jolla voidaan ratkaista numeerisesti
+alkuarvoteht‰v‰
+\[
+\begin{cases} \,y'''=x+yy'y'', \quad x>0, \\ \,y(0)=1,\ y'(0)=y''(0)=0. \end{cases}
+\]
+\end{Exa}
+\ratk Alkuehdoista ja ratkaistavan differentiaaliyht‰lˆn systeemimuodosta
+\[
+\begin{cases} \,y'=u, \\ \,u'=v, \\ \,v'=x+yuv \end{cases}
+\]
+saadaan algoritmiksi
+\[
+y_0=1,\ u_0=v_0=0, \quad
+\begin{cases}
+\,y_{k+1}=y_k+hu_k, \\ 
+\,u_{k+1}=u_k+hv_k, \\ 
+\,v_{k+1}=v_k+h(x_k+y_ku_kv_k), \quad k=0,1 \ldots \loppu
+\end{cases}
+\]
+
+\subsection*{*Muita askelmenetelmi‰}
+\index{askelmenetelm‰|vahv}
+
+Tavallisten differentiaaliyht‰lˆiden alkuarvoteht‰viss‰ k‰ytett‰vien 'mahdollisten menetelmien
+luettelo' on nykyisin tavattoman pitk‰. Seuraavassa vain muutamia esimerkkej‰ usein k‰ytetyist‰
+tai muuten hyvin tunnetuista askelmenetelmist‰.
+\index{implisiittinen Euler} \index{trapetsi} \index{keskipistes‰‰ntˆ}
+\index{klassinen Runge-Kutta} \index{Runge-Kutta (klassinen)}%
+\vspace{5mm}\newline
+\underline{Implisiittinen Euler} \vspace{2mm}\newline
+$y_{k+1}=y_k+hf(x_{k+1},y_{k+1})$ \vspace{5mm}\newline
+\underline{Trapetsi} \vspace{2mm}\newline
+$y_{k+1}=y_k+\frac{h}{2}\bigl[f(x_k,y_k)+f(x_{k+1},y_{k+1})\bigr]$ \vspace{5mm}\newline
+\underline{Keskipistes‰‰ntˆ} \vspace{2mm}\newline
+$y_{k+1}=y_k+hf\left(x_k+\frac{1}{2}h,\,\frac{1}{2}y_k+\frac{1}{2}y_{k+1}\right)$
+\vspace{5mm}\newline
+\underline{BDF-2} \vspace{2mm}\newline
+$y_{k+1}=\frac{4}{3}y_k-\frac{1}{3}y_{k-1}+\frac{2}{3}hf(x_{k+1},y_{k+1})$ \vspace{5mm}\newline
+\underline{BDF-3} \vspace{2mm}\newline
+$y_{k+1}=\frac{18}{11}y_k-\frac{9}{11}y_{k-1}+\frac{2}{11}y_{k-2}
+                         +\frac{6}{11}hf(x_{k+1},y_{k+1})$ \vspace{5mm}\newline
+\underline{BDF-4} \vspace{2mm}\newline
+$y_{k+1}=\frac{48}{25}y_k-\frac{36}{25}y_{k-1}+\frac{16}{25}y_{k-2}-\frac{3}{25}y_{k-3}
+                         +\frac{12}{25}hf(x_{k+1},y_{k+1})$ \vspace{5mm}\newline
+\underline{Klassinen Runge-Kutta} \vspace{2mm}\newline
+$y_{k+1}=y_k+\frac{h}{6}\bigl(V_1+2V_2+2V_3+V_4\bigr),$ \vspace{2mm}\newline
+$\phantom{y_{k+1}=\,} 
+V_1=f(x_k,y_k),\ \ 
+V_2=f\left(x_k+\frac{1}{2}h,y_k+\frac{1}{2}hV_1\right)$ \vspace{2mm}\newline
+$\phantom{y_{k+1}=\,}
+V_3=f\left(x_k+\frac{1}{2}h,y_k+\frac{1}{2}hV_2\right),\ \ V_4=f\left(x_k+h,y_k+hV_3\right)$
+\vspace{5mm}\newline
+\index{kertaluku!b@tarkkuuden}
+N‰ist‰ implisiittinen (samoin kuin tavallinen) Eulerin menetelm‰ on \kor{ensimm‰isen kertaluvun}
+menetelm‰, eli virhe on suotuisissa oloissa luokkaa $\ordoO{h}$. Trapetsi, keskipistes‰‰ntˆ ja
+BDF-2 ovat \kor{toisen kertaluvun} menetelmi‰ (virhe $\ordoO{h^2}$ riitt‰v‰n s‰‰nnˆllisille 
+ratkaisuille), BDF-3 on kertalukua $3$ ja BDF-4 ja klassinen Runge-Kutta molemmat kertalukua 
+$4$. Esimerkeist‰ BDF-2, BDF-3 ja BDF-4 edustavat \pain{moniaskelmenetelmi‰} (askelpituus 
+oletettu vakioksi). N‰iden k‰ynnist‰miseksi on laskettava ensin erillisell‰ algoritmilla 
+$y_1 \ldots y_{m-1}$ (BDF-$m$). --- Nimi BDF on lyhenne sanoista Backward Differentiation
+Formula (ks. Harj.Teht.\,\ref{H-dy-7: BDF}). 
+
+\index{implisiittinen (askel)menetelm‰}%
+Kaikissa esimerkeiss‰, viimeist‰ lukuun ottamatta, on kyse \kor{implisiittisest‰} menetelm‰st‰.
+T‰ll‰ tarkoitetaan, ett‰ laskettava luku $y_{k+1}$ esiintyy laskukaavassa myˆs funktion $f$ 
+'alla'. T‰llˆin lukua ei saada selville pelk‰st‰‰n funktioevaluaatioilla, vaan on ratkaistava
+yht‰lˆ (systeemin tapauksessa yht‰lˆryhm‰) muotoa $y_{k+1}=F(y_{k+1})$. K‰yt‰nnˆss‰ t‰m‰ 
+ratkaistaan likim‰‰rin, esimerkiksi muutamalla (1--3) Newtonin iteraatiolla tai 
+yksinkertaisemmin kiintopisteiteraatiolla: 
+\[
+t_{j+1}=F(t_j), \quad j=0 \ldots m\,; \quad y_{k+1}=t_{m+1}.
+\]
+(Vrt.\ Luku \ref{kiintopisteiteraatio} --- yht‰lˆryhmien iteratiivisista ratkaisumenetelmist‰
+tulee puhe myˆhemmin.) Iteraation alkuarvoksi voidaan ottaa esim.\ Eulerin menetelm‰n antama
+$\,t_0=y_k+hf(x_k,y_k)$. 
+
+Implisiittiset menetelm‰t kuten implisiittinen Euler ja BDF-$m$ ovat differentiaaliyht‰lˆiden
+'black box'-ratkaisijoina hyvin suosittuja, syyst‰ ett‰ ne ovat vaihtelevissa tilanteissa 
+suhteellisen varmoja. --- Todettakoon t‰ss‰ ainoastaan, ett‰ varmuus tulee esiin erityisesti
+sellaisissa nk.\
+\index{kankeus (DY:n)}%
+\kor{kankeissa} (engl.\ stiff) teht‰viss‰, joissa ratkaisu sis‰lt‰‰ nopeasti
+(eksponentiaalisesti) vaimenevia transientteja. T‰llaisessa teht‰v‰ss‰ esimerkiksi 
+implisiittinen Euler on tavallista Eulerin menetelm‰‰ huomattavasti varmempi vaihtoehto, vaikka
+menetelmien muodollisessa tarkkuudessa ei ole eroa (ks.\ Harj.teht.\,\ref{H-dy-7: kankea DY}).
+Sen sijaan teht‰viss‰, joissa mainitun tyyppisi‰ erityisongelmia ei esiinny, ovat 
+yksinkertaisemmat
+\index{eksplisiittinen (askel)menetelm‰}%
+\kor{eksplisiittiset} menetelm‰t (kuten Euler ja klassinen Runge-Kutta)
+edelleen varteenotettavia vaihtoehtoja ja myˆs k‰ytˆss‰.
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-dy-7: Euler-kokeita} 
+Laske seuraavissa alkuarvoteht‰viss‰ Eulerin menetelm‰ll‰ likiarvot luvuille 
+$\,y(x_k),\ k=1 \ldots 5$, miss‰ $x_k=k/5$ (askelpituus $h=0.2$). Vertaa tarkkaan ratkaisuun!
+\[
+\text{a)}\ \ \begin{cases} \,y'=-y^2, \\ \,y(0)=1 \end{cases}
+\text{b)}\ \ \begin{cases} \,y'=y^2, \\ \,y(0)=1 \end{cases}
+\text{c)}\ \ \begin{cases} \,y'=-2xy^2, \\ \,y(0)=1 \end{cases}
+\text{d)}\ \ \begin{cases} \,y'=2xy^2, \\ \,y(0)=1 \end{cases}
+\]
+
+\item
+Alkuarvoteht‰v‰
+\[
+y(0)=1, \quad y'=\frac{x}{\sqrt{y^2+1}}+\frac{2x^2}{x^2+1}
+\]
+ratkaistaan numeerisesti v‰lill‰ $[0,10]$ k‰ytt‰en Eulerin menetelm‰‰ ja vakioaskelpituutta $h$.
+Arvioi vakiot $L$ ja $M$ Eulerin menetelm‰n virhearviossa ko.\ v‰lill‰. Mill‰ askelpituuksilla
+voidaan taata, ett‰ numeerisen ratkaisun suhteellinen virhe ei ylit‰ yhdess‰k‰‰n
+laskentapisteess‰ arvoa $10^{-4}\,$?
+
+\item
+Alkuarvoteht‰v‰ $y'=-1/y,\ y(0)=3$ ratkaistaan numeerisesti v‰lill‰ $[0,1]$ k‰ytt‰en
+askelpituutta $h=0.2$. Laske seuraavilla menetelmill‰ approksimaatio $y_5$ luvulle
+$y(1)\,$: Euler, Trapetsi, BDF-2, BDF-3, Klassinen Runge-Kutta. Vertaa tarkkaan arvoon!
+
+\item
+Alkuarvoteht‰v‰ss‰ $y'=f(x),\ y(0)=0$ klassinen Runge-Kutta-menetelm‰ pelkistyy er‰‰ksi
+tunnetuksi numeerisen integroinnin s‰‰nnˆksi. Mist‰ s‰‰nnˆst‰ on kyse?
+
+\item \label{H-dy-7: BDF}
+Differentiaaliyht‰lˆn $y'=f(x,y)$ ratkaisumenetelm‰ BDF-$m$ johdetaan kirjoittamalla yht‰lˆ
+pisteess‰ $x=x_{k+1}$, tekem‰ll‰ approksimaatio
+\[
+y'(x_{k+1}) \approx \frac{1}{h} \sum_{j=0}^m \alpha_j y_{k+1-j}, \quad y_i=y(x_i) 
+\]
+ja vaatimalla, ett‰ t‰m‰ on tarkka polynomeille astetta $\le m$. Tarkista laskemalla kertoimet
+$\alpha_j$, ett‰ tuloksena on todella menetelm‰ BDF-$2$, kun $m=2$. Millainen menetelm‰ on 
+BDF-$1\,$?
+
+\item \label{H-dy-7: kankea DY}
+Olkoon $\tau = 0.02$. Halutaan ratkaista numeerisesti alkuarvoteht‰v‰
+\[
+\begin{cases} \,\tau y'+y=\sin x, \quad x>0, \\ \,y(0)=0.1. \end{cases}
+\]
+Vertaa tavallisen ja implisiittisen Eulerin menetelm‰n antamia ratkaisuja laskemalla molemmilla
+menetelmill‰ $\,y_k \approx y(kh),\ k=1 \ldots 5\,$ askelpituuksilla $h=0.01$, $h=0.04$ ja 
+$h=0.08$. Hahmottele kaikki ratkaisut graafisesti ja vertaa myˆs tarkkaan ratkaisuun! 
+(Ks.\ sovellusesimerkki Luvussa \ref{lineaarinen 1. kertaluvun DY}.)
+
+\item
+Tasossa liikkuvaan avaruusalukseen vaikuttaa origossa olevan maapallon vetovoima
+$\vec F=-(k/r^2)\,\vec e_r$, miss‰ $k$ on vakio (napakoordinaatisto). Hetkell‰ $t$ alus on 
+paikassa $(x(t),y(t))$ ja sen nopeus on $u(t)\vec i+v(t)\vec j$. Kirjoita aluksen liikeyht‰lˆ
+$m\vec r\,''=\vec F$ karteesisessa koordinaatistossa normaalimuotoiseksi
+differentiaaliyht‰lˆsysteemiksi ja esit‰ Eulerin menetelm‰‰n perustuva algoritmi yht‰lˆiden
+numeeriseksi ratkaisemiseksi. Oletetaan tunnetuksi alkuarvot $x_0,y_0,u_0,v_0$ hetkell‰ $t=0$.
+
+\item (*)
+Ratkaistaessa Eulerin menetelm‰ll‰ alkuarvoteht‰v‰‰
+\[
+\begin{cases} \,y'=\dfrac{y^2}{x+y+1}+4x+2, \quad x>0, \\[3mm] \,y(0)=A \end{cases}
+\]
+askelpituudella $h=0.1$ havaitaan yll‰tt‰en, ett‰ saadaan tarkka ratkaisu, ts.\
+$y_k=y(x_k)\ \forall k\ (x_k=kh)$. Mik‰ on $A$:n arvo?
+
+\end{enumerate}

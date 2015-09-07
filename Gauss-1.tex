@@ -1,0 +1,322 @@
+\section{Vektorikentät ja polkuintegraalit} \label{polkuintegraalit}
+\alku
+\index{polkuintegraali|vahv}
+
+Luvussa \ref{viivaintegraalit} tarkasteltiin viivaintegraaleja, joissa tason tai avaruuden
+käyrän yli integroidaan kaarenpituusmitan suhteen. Tässä luvussa tarkastelun kohteena on toinen
+viivaintegraalien luokka, jolle käytetään jatkossa nimeä \kor{polkuintegraalit}
+(engl.\ path integral, suom.\ myös \kor{tieintegraali}). Polkuintegraaleille on ominaista, että
+integrointi käyrää pitkin tapahtuu tiettyyn \pain{suuntaan}, siksi nimitys \kor{polku}, jonka
+voi tulkita suunnatuksi käyräksi. Suunnan ohella polkuintegraaleille on tyypillistä, että
+integrointiin liittyvä mitta \pain{ei} ole kaarenpituusmitta vaan muu yksi\-ulotteinen mitta,
+joka on tapauskohtainen. Polun suunta vaikuttaa polkuintegraaliin niin, että jos vain suunta
+vaihtuu, eli polku pysyy muuten (käyränä) samana, niin polkuintegraalin arvo vaihtuu
+vastaluvukseen. Polun parametrisoinnin kautta tämä vastaa määrätyn integraalin vaihtosääntöä,
+ks.\ esimerkit jäljempänä.
+
+Jatkossa rajoitutaan sellaisiin polkuintegraaleihin, jotka sovelluksissa liitetään yleensä
+fysikaalisiin vektorikenttiin (kuten voima-, sähkö- ja magneettikenttiin). Vektorikenttiin
+liittyvillä polkuintegraaleilla on jatkossa käyttöä myös Gaussin ja Stokesin lauseiden
+yhteydessä.\footnote[2]{Matemaattisissa teksteissä erilaisten viivaintegraalien nimet eivät ole
+täysin vakiintuneet. Esim.\ saatetaan puhua 'vektorikenttien viivantegraaleista', kun
+tarkoitetaan polkuintegraaleja tämän tekstin merkityksessä.}
+
+Erotukseksi käyrästä polku merkitään jatkossa symbolilla $p$ tai tarkemmin
+\[
+p: A \kohti B,
+\]
+jolloin merkintä kertoo sekä polun (käyrän) päätepisteet että polun suunnan. Luontevasti
+polun suunnan määrittää parametrisointi: suunta on joko parametrin kasvusuunta tai vastakkainen
+suunta. Jos polku on parametrisoitu välillä $t\in[a,b]$, niin polku voidaan merkitä tarkemmin
+kuten parametrinen käyrä:   
+\[ 
+p:\ t \in [a,b]\ \map\ \vec r\,(t).
+\]
+Parametrisoinnin ei tarvitse olla 1--1, joten polku (kuten parametrinen käyrä) voi leikata
+itsensä tai kiertyä itsensä päälle.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-34.pstex_t}
+\end{center}
+\end{figure}
+
+Jatkossa tarkastelun kohteena ovat tason tai avaruuden polut muotoa $t\in[a,b]\map(x(t),y(t))$
+tai $t\in[a,b]\map(x(t),y(t),z(t))$. Funktioiden $x(t)$, $y(t)$, $z(t)$ oletetaan olevan joko
+jatkuvasti derivoituvia välillä  $[a,b]$ tai toteuttavan vastaavat, hieman heikommat
+säännöllisyysehdot, vrt. Luku \ref{viivaintegraalit}. 
+
+Kuten aiemmin, voidaan laskea \kor{polun pituus} integraalina
+\[
+\mu(p)=\int_a^b \abs{\vec r\,'(t)}\,dt.
+\]
+Tässä on kuitenkin kyse jo ennestään tutusta viivaintegraalista, jossa mitta on
+kaarenpituusmitta eikä polun suunnalla ole väliä.
+
+Polkuintegraaleja (jatkon kannalta myös merkittävimpiä) ovat
+\begin{equation} \label{polkuintegraaleja}
+\int_p f\,dx, \quad \int_p f\,dy, \quad \int_p f\,dz, \tag{$\star$}
+\end{equation}
+missä $f(x,y,z)$ (tasossa $f(x,y)$) on tunnettu funktio. Näihin integraaleihin liittyvä
+mitta on tavallinen ($1$-ulotteinen) Jordan-mitta. Jos tunnetaan polun parametrisointi
+välillä $t\in[a,b]$, niin esimerkiksi $\int_p f\,dx$ lasketaan yksinkertaisesti kirjoittamalla
+$dx=x'(t)dt$ (kuten muuttujan vaihdossa). Jos vielä oletetaan, että $t=a$ vastaa polun
+alkupistettä ja $t=b$ loppupistettä, niin saadaan laskukaava
+\[
+\int_p f\,dx = \int_a^b f(x(t),y(t),z(t)\,x'(t)\,dt.
+\]
+Parametrisoinnin vaihto vastaa tässä kaavassa (toista) muuttujan vaihtoa, joten parametrisointi
+ei vaikuta integraalin arvoon.
+\begin{Exa} Tason polku $p$ kulkee pisteestä $(0,0)$ pisteeseen $(1,1)$ pitkin käyrää $y=x^2$
+ja polku $-p$ pitkin samaa käyrää pisteesät $(1,1)$ pisteeseen $(0,0)$. Laske
+$\int_p xy\,dy$ ja $\int_{-p} xy\,dy$.
+\end{Exa}
+\ratk Valitaan molemmissa integraaleissa parametriksi $t=x$\,:
+\begin{align*}
+&\int_p xy\,dy     = \int_0^1 x \cdot x^2 \cdot 2x\,dx = \int_0^1 2x^4\,dx
+                  = \underline{\underline{\frac{2}{5}}}\,, \\
+&\int_{-p} xy\,dy  = \int_1^0 2x^4\,dx = -\int_0^1 2x^4\,dx 
+                  = \underline{\underline{-\frac{2}{5}}}\,. \loppu
+\end{align*}
+
+Esimerkin jälkimmäisessä integraalissa käytettiin määrätyn integraalin vaihtosääntöä. --- Itse
+asiassa kun vaihtosääntö huomioidaan, niin määrätty integraali on itsekin tulkittavissa
+polkuintegraaliksi: $\int_a^b f(x)\,dx = \int_p f\,dx$, missä $p$ on $\R$:n polku, jonka
+alkupiste on $a$ ja loppupiste $b$ (!).
+
+\subsection*{Polkuintegraali $\int_p \vec F \cdot d\vec r$}
+\index{polkuintegraali!a@työintegraali|vahv}
+\index{tyzz@työintegraali|vahv}
+
+Fysiikan sovelluksissa polkuintegraalit liittyvät usein vektorikenttiin. Tyypillinen esimerkki
+on \pain{voimakentässä} $\vec F(x,y,z)$ liikkuva (pistemäinen) kappale, jonka liikerata
+tunnetaan jollakin aikavälillä $t\in [a,b]$. Tällöin voimakentän kappaleeseen tekemä
+\pain{t}y\pain{ö} lasketaan polkuintegraalina pitkin kappaleen kulkemaa liikerataa. Liikerata
+tulkitaan siis poluksi $p:t \map \vec r\,(t)$, $t\in [a,b]$. Jos $\vec F=\text{vakio}$, niin
+fysiikan lakien mukaan työ $=|\vec F| \cdot s$, missä $s=$ polulla kuljettu matka voiman
+vaikutussuunnassa, eli
+\[
+W=\vec F\cdot[\vec r\,(b)-\vec r\,(a)]\quad (\vec F\text{ vakio}).
+\]
+Vakiovoimakentän tekemän työn kannalta polkua siis 'mittaa' vektori
+\[
+\vec\mu(p)=\vec r\,(b)-\vec r\,(a).
+\]
+Jos tämä tulkitaan polun (vektoriarvoiseksi) mitaksi, niin nähdään, että tämäkin mitta on
+additiivinen: Jos $p_1$ ja $p_2$ ovat $p$:n osapolkuja vastaten parametrin arvoja väleillä
+$[a,t_0]$ ja $[t_0,b]$, $t_0\in (a,b)$, niin $\vec \mu(p)=\vec \mu(p_1)+\vec\mu(p_2)$,
+vrt.\ kuvio.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-35.pstex_t}
+\end{center}
+\end{figure}
+Entä jos voimakenttä $\vec F$ ei ole vakio, mutta on jatkuva? Tällöin menetellään niinkuin
+integraaleissa yleensä: Otetaan käyttöön välin $[a,b]$ jako $\{t_k, \ k=0,\ldots,n\}$,
+$a=t_0<t_1<\ldots t_n=b$, jolloin polku $p$ jakautuu peräkkäisiksi osapoluiksi $\Delta p_k$,
+$k=1\ldots n\,$ vastaten parametrin arvoja väleillä $[t_{k-1},t_k]$. Koska funktio
+$t \map \vec r\,(t)$ on jatkuva, niin osapolkujen $\Delta p_k$ päätepisteet 
+$\vec r\,(t_{k-1})=\vec r_{k-1}$ ja $\vec r\,(t_k)=\vec r_k$ tulevat yhä lähemmäksi toisiaan
+jaon tihetessä. Tällöin voima $\vec F$ on osapolulla $\Delta p_k$ likimain vakio 
+(koska $\vec F$ oli jatkuva), joten voiman tekemä työ tällä osapolulla on likimain
+\[
+\Delta W_k\approx\vec F(\vec r_{k-1})\cdot\vec\mu(\Delta p_k),\quad 
+\vec\mu(\Delta p_k)=\vec r_k-\vec r_{k-1}\,.
+\]
+Kun jaon tiheysparametri $h=\max_k|\vec r_k-\vec r_{k-1}|\kohti 0$, saadaan voimakentän
+tekemälle kokonaistyölle integraalilauseke
+\[
+W=\Lim_{h\kohti 0}\sum_{k=1}^n\Delta W_k=\int_p \vec F\cdot d\vec\mu.
+\]
+Tämä on siis tulkittava polkuintegraaliksi vektorimitan $\vec\mu$ suhteen (!). Integraali saa
+hieman konkreettisen muodon, kun käytetään merkintää $d\vec\mu=d\vec r$, jolloin työn
+integraalikaava siis on
+\[
+\boxed{\kehys\quad W=\int_p \vec F\cdot d\vec r \quad (\text{työintegraali}). \quad}
+\]
+Määritelmän mukaisesti $W$:lle saadaan likiarvoja summien avulla. Esimerkiksi
+\[
+W\approx\sum_{k=1}^n \vec F(\vec r_{k-1})\cdot (\vec r_k-\vec r_{k-1}).
+\]
+Näin laskettaessa polusta $p$ ei tarvitse tehdä voimakkaita säännöllisyysoletuksia. Esimerkiksi
+työ $W$ voidaan laskea, vaikka $p$ ei olisi suoristuva (ts.\ pituusmitta ei määritelty). Tämä
+johtuu siitä, että työintegraali mittaa vain siirtymää voiman vaikutussuunnassa, ei
+kaarenpituutta.
+
+Jos oletetaan parametrisointi $p: t\in[a,b] \map \vec r\,(t)$, niin työintegraalissa voidaan
+kirjoitta $d\vec r=\dvr(t)dt$, jolloin saadaan laskukaava
+\[
+W=\int_a^b \vec F(\vec r(t))\cdot \dvr(t)\,dt.
+\]
+Jos taas voimakenttä esitetään koordinaattimuodossa
+\[
+\vec F(x,y,z)=F_1(x,y,z)\vec i + F_2(x,y,z)\vec j+F_3(x,y,z)\vec k,
+\]
+niin kirjoittamall $d\vec r=dx\,\vec i+dy\,\vec j+dz\,\vec k$ työintegraali purkautuu
+polkuintegraalien \eqref{polkuintegraaleja} summaksi:
+\[
+W=\int_p (F_1\,dx+F_2\,dy+F_3\,dz).
+\]
+Riittävän säännöllisellä polulla työintegraalin voi ilmaista kolmannellakin tavalla, sillä
+\[
+d\vec r = \frac{\dvr(t)}{|\dvr(t)|}|\dvr(t)|dt = \vec t\,ds,
+\]
+missä $\vec t$ on polun suuntainen yksikkötangenttivektori. Tämän mukaan siis työintegraali
+voidaan haluttaessa liittää myös kaarenpituusmittaan laskukaavalla
+\[
+W = \int_p \vec F\cdot\vec t\,ds.
+\]
+Kuten kaavan johdosta ilmenee, tässä on $\vec t\,ds=\dvr(t)\,dt$, joten riippuvuus
+kaarenpituusmitasta on näennäinen.
+\begin{Exa}
+Määritä voimakentän
+\[
+\vec F=(x^2-y)\vec i-2xy\vec j
+\]
+tekemä työ kappaleen liikkuessa polulla
+\[
+p: \ x(t)=2\cos t, \ y(t)=\sin t, \ t\in [0,2\pi].
+\]
+\end{Exa}
+\ratk $\quad dx=-2\sin t\,dt,\quad dy=\cos t\,dt, \quad t\in [0,2\pi]$
+\begin{align*}
+\impl \quad W &= \int_0^{2\pi} [\,(4\cos^2 t-\sin t)(-2\sin t)-(4\cos t\sin t)\cos t\,]\,dt \\
+              &= \int_0^{2\pi} (-12\cos^2 t\sin t+2\sin^2 t)\,dt \\
+              &= \sijoitus{0}{2\pi} (4\cos^3 t-\cos t\sin t+t) 
+               = \underline{\underline{2\pi}}. \loppu
+\end{align*}
+
+\subsection*{Gradienttikenttä ja työintegraali}
+\index{polkuintegraali!a@työintegraali|vahv}
+\index{tyzz@työintegraali|vahv}
+\index{gradienttikenttä|vahv}
+
+Jos voimakenttä $\vec F$ on g\pain{radienttikenttä}, eli lausuttavissa skalaaripotentiaalin $u$
+avulla muodossa
+\[
+\vec F=-\nabla u,
+\]
+niin työintegraali voidaan laskea hyvin yksinkertaisesti. Nimittäin tässä tapauksessa on
+derivoinnin ketjusäännön (Luku \ref{osittaisderivaatat}) perusteella
+\[
+\vec F(\vec r(t))\cdot \dvr(t) = -\nabla u(\vec r(t))\cdot \dvr(t)
+                               = -\frac{d}{dt} u(\vec r(t)),
+\]
+joten
+\[
+W = \int_a^b \vec F(\vec r(t))\cdot \dvr(t)\,dt 
+  = -\sijoitus{a}{b} u(\vec r(t))
+  = u(\vec r(a))-u(\vec r(b)).
+\]
+Siis gradienttikentän työintegraali määräytyy pelkästään polun päätepisteistä:
+\[ 
+\boxed{ \begin{aligned} \quad\ygehys 
+                 &\text{Gradienttikentän tekemä työ} \\
+                 &= \text{potentiaaliero polun alku- ja loppupisteiden välillä}. \quad\agehys
+           \end{aligned} } 
+\]
+
+\jatko \begin{Exa} (jatko). Esimerkissä polun alku- ja loppupisteet ovat samat. Koska
+$W\neq 0$, ei esimerkin kenttä $\vec F$ ole gradienttikenttä. Sen sijaan jos esimerkiksi
+\[
+\vec F=(x^2-y^2)\vec i-2xy\vec j,
+\]
+niin ilman enempää laskemista selviää, että $W=0$, sillä
+\[
+\vec F=-\nabla(-\frac{1}{3}x^3+xy^2). \loppu
+\]
+\end{Exa}
+
+\subsection*{Vektoriarvoiset polkuintegraalit}
+\index{polkuintegraali!b@vektoriarvoinen p.-integraali|vahv}
+
+Fysiikan sovelluksissa (esimerkiksi sähkömagnetiikassa) esiintyy myös vektoriarvoisia 
+polkuintegraaleja muotoa
+\[
+\int_p f\,d\vec r\quad\text{tai}\quad\int_p \vec F\times d\vec r.
+\]
+Nämä voidaan laskea parametrisoinnin avulla samalla periaatteella kuin työintegraalikin.
+\jatko \begin{Exa} (jatko) Laske $\int_p x\,d\vec r\,$ ja $\int_p \vec r \times d\vec r\,$,
+kun $p$ on esimerkin polku.
+\end{Exa}
+\ratk
+\begin{align*}
+\int_p x\,d\vec r\,
+&= \int_0^{2\pi} x(t)[x'(t)\vec i+y'(t)\vec j\,]\,dt \\
+&= \int_0^{2\pi} 2\cos t\,(-2\sin t\,\vec i+\cos t\,\vec j\,)\,dt \\
+&= -\vec i\int_0^{2\pi} 4\cos t\sin t\,dt + \vec j\int_0^{2\pi} 2\cos^2 t\,dt \\
+&= -\vec i\sijoitus{0}{2\pi} 2\sin^2 t 
+   +\vec j\sijoitus{0}{2\pi}(t+\cos t\sin t)
+ = \underline{\underline{2\pi\vec j}}, \\
+\int_p \vec r\times d\vec r\, 
+&= \int_0^{2\pi} [x(t)\vec i+y(t)\vec j\,]\times[x'(t)\vec i+y'(t)\vec j\,]\,dt \\
+&= \int_0^{2\pi}(2\cos t\,\vec i+\sin t\,\vec j\,)\times
+               (-2\sin t\,\vec i+\cos t\,\vec j\,)\,dt \\
+&= \int_0^{2\pi} (2\cos^2 t+2\sin^2 t)\vec k\, dt
+ = \vec k \int_0^{2\pi} 2\,dt
+ =\underline{\underline{4\pi\vec k}}. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske polkuintegraali $\int_p (9x^2y\,dx-11xy^2\,dy)$, kun polku $p$ kulkee origosta 
+pisteeseen $(1,1)$ \ a) pitkin käyrää $x(t)=t^2,\ y(t)=t^3$, \ b) pitkin suoraa, \ 
+c) pitkin käyrää $\vec r\,(t)=t\vec i+t^\alpha\vec j,\ \alpha>0$.
+
+\item
+Laske polkuintegraali $\int_p (xdy-ydx)$, kun polku $p$ kulkee pisteestä $(1,0)$ pitkin
+logaritmista spiraalia $r=e^{-\varphi}$ origoon.
+
+\item
+Laske polkuintegraali $\int_p [(y-x)\,dx+xy\,dy]$, kun polku polku $p$ on määritelty 
+seuraavasti:
+
+a) Pisteestä $(1,0)$ pisteeseen $(-1,0)$ yksikköympyrää pitkin vastapäivään
+
+b) Pisteestä $(1,0)$ pisteeseen $(-1,0)$ yksikköympyrää pitkin myötäpäivään
+
+c) Murtoviiva $ABCD$, missä $A=(1,0)$, $B=(1,1)$, $C=(-1,1)$ ja $D=(-1,0)$
+
+d) Pisteestä $(1,0)$ yksikköympyrää pitkin takaisin lähtöpisteeseen vastapäivään kiertäen
+
+e) Origosta pitkin $x$-akselia pisteeseen $(\pi,0)$ ja takaisin origoon pitkin käyrää $y=\sin x$
+
+f) Pisteestä $(a,0)$ takaisin lähtöpisteeseen kiertäen vastapäivään ellipsiä
+   $x^2/a^2+y^2/b^2=1$ ($a,b>0$).
+
+\item 
+Laske seuraavat polkuintegraalit.
+
+a) $\int_p \vec F \cdot d\vec r$, kun $\vec F(x,y,z)=\sqrt y\,\vec i+2x\vec j+3y\vec k$ ja
+polku kulkee origosta pisteeseen $(3,9,27)$ pitkin käyrää
+$\vec r\,(t)=t\vec i+t^2\vec j+t^3\vec k$.
+
+b) $\int_p \vec F\,\cdot\,d\vec r$, kun $\vec F(x,y,z)=x^3\vec i+y^2\vec j+z\vec k$ ja polku
+kulkee origosta pisteeseen $(1,1,2)$ pitkin käyrää $S:\,x=y,\ z=x^2+y^2$.
+
+c) $\int_p \vec F \times d\vec r$, kun $\vec F(x,y,z)=xyz\vec i+y^2\vec k$ ja polku $p$ seuraa
+tason $x=y$ ja pinnan $z=x^2$ leikkauskäyrää origosta pisteeseen $(2,2,4)$.
+
+\item 
+Polun $p$ alkupiste on $(-1,1,-1)$ ja loppupiste $(1,2,3)$. Laske näillä tiedoilla seuraavat
+polkuintegraalit (työintegraalit) kirjoittamalla integraalit ensin muotoon 
+$\int_p \nabla u \cdot d\vec r$. \vspace{1mm}\newline
+a) \ $\int_p (yz\,dx + zx\,dy + xy\,dz) \qquad\qquad\ \ $
+b) \ $\int_p (yz^2\,dx+xz^2\,dy+2xyz\,dz)$ \newline
+c) \ $\int_p [e^x y\,dx+(e^x+z^2)\,dy+2yz\,dz] \quad\ $
+d) \ $\int_p \sin\frac{\pi(x+y+z)}{6}\,(dx+dy+dz)$
+
+\item
+Määritellään $g(u,v)=\int_p (y\,dx+2x\,dy)$, missä $p$ kulkee origosta pisteeseen $(u,v)$
+suoraa pitkin. Mikä on $g$:n maksimiarvo yksikköympyrällä?
+
+\item (*)
+Kappale, jonka massa $=m$, liikkuu aikavälillä $[t_1,t_2]$ pitkin polkua $p:\,t\map\vec r\,(t)$
+pisteestä $P_1$ pisteeseen $P_2$. Liikkeen aikana kappaleeseen vaikuttaa voimakenttä $\vec F$.
+Johda liikeyhtälöstä $m\vec r\,''=\vec F$ energiaperiaate
+\[
+\frac{1}{2}\,m(v_2^2-v_1^2)=\int_p \vec F \cdot d\vec r, \quad 
+           \text{missä}\ v_i=\abs{\dvr(t_i)},\ i=1,2.
+\]
+\end{enumerate}

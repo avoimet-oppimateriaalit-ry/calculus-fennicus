@@ -1,0 +1,769 @@
+\section{Funktion k‰site. Trigonometriset funktiot} \label{trigonometriset funktiot}
+\sectionmark{Trigonometriset funktiot}
+\alku
+
+T‰ss‰ luvussa esitell‰‰n matematiikassa keskeinen k‰site \kor{funktio}, sen johdannainen
+\kor{reaalifunktio} sek‰ ensimm‰isin‰ reaalifunktioina \kor{trigonometriset funktiot}.
+Osoittautuu, ett‰ riitt‰v‰n yleisesti ja abstraktisti ymm‰rrettyn‰  funktioita on esiintynyt
+jo aiemmin erin‰isill‰ 'salanimill‰'. Reaalifunktioiden osalta ei muita kuin trigonometrisia
+funktioita toistaiseksi k‰sitell‰; yleisempi reaalifunktioiden teoria esitet‰‰n j‰ljemp‰n‰
+Luvuissa IV-VI.
+
+\subsection*{Funktion k‰site}
+\index{funktio A!a@joukko-opillinen|vahv}
+
+\kor{Funktio} l. \kor{kuvaus} (engl. function, map, mapping) ymm‰rret‰‰n matematiikassa
+tavallisimmin kolmikkona muotoa
+\[
+\{\text{joukko} \ A, \ \text{s‰‰ntˆ} \ f, \ \text{joukko} \ B\}.
+\]
+T‰ll‰ tarkoitetaan, ett‰ on jokin s‰‰ntˆ $f$, jonka mukaan m‰‰r‰ytyy y\pain{ksik‰sitteinen}
+$y \in B$ j\pain{okaisella} $x \in A$. Yhteys $x$:n $y$:n v‰lill‰ merkit‰‰n $y=f(x)$ ja
+lausutaan '$y$ on $f$ $x$'. Voidaan myˆs k‰ytt‰‰ \pain{liitt‰misnuolta} ja merkit‰ 
+$x \map f(x) (=y)$. Sanotaan, ett‰ $A$ on $f$:n
+\index{mzyzy@m‰‰rittelyjoukko} \index{maalijoukko}%
+\kor{m‰‰rittelyjoukko} (tai l‰htˆjoukko,
+engl. domain) ja $B$ \kor{maalijoukko} ja merkit‰‰n $f:A \kohti B$. Funktion m‰‰rittelyjoukon
+alkioihin viitataan yleisnimell‰ \kor{muuttuja} (engl.\ variable). Jos $y=f(x)$, niin sanotaan,
+ett‰ $y$ on $f$:n \kor{arvo} (engl.\ value) \kor{$x$:ss‰} (tai muuttujan arvolla $x$);
+lyhyemmin lausutaan '$f$ $x$:ss‰' tai usein myˆs '$f$ pisteess‰ $x$'. Maalijoukon osajoukko
+\[
+\{y \in B \ | \ y=f(x) \ \text{jollakin} \ x \in A\}
+\]
+\index{arvojoukko} \index{kuva (arvojoukko)}%
+on nimelt‰‰n $f$:n \kor{arvojoukko} tai $A$:n \kor{kuva} $f$:ss‰ (engl.\ range, image). T‰t‰ 
+merkit‰‰n lyhyesti $f(A)$. 
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-4.pstex_t}
+\end{center}
+\end{figure}
+\begin{Exa}
+Jos $x$ ja $y$ ovat reaalilukuja ja kirjoitetaan $f(x,y)=x^2y-y^3$, tarkoitetaan (ellei 
+m‰‰rittelyjoukosta toisin sovita) funktiota
+\[
+\{ \Rkaksi, \ f(x,y)=x^2y-y^3, \ \R \},
+\]
+joka siis liitt‰‰ mihin tahansa lukupariin $(x,y)\in\R^2$ laskus‰‰nnˆn ilmaiseman reaaliluvun.
+Funktion arvojen m‰‰r‰‰misess‰ tarvitaan t‰ss‰ tapauksessa ainoastaan reaalilukujen 
+kerto- ja v‰hennyslaskuoperaatioita. Esim.
+\begin{align*}
+&f(3,-2)=3^2 \cdot (-2) - (-2)^3 = -10, \\
+&f(2,\sqrt{2})=2^2\cdot\sqrt{2}-(\sqrt{2})^3=0, \\
+&f(\pi,e)=\pi^2 e - e^3=6.74282937.. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Funktio joukko-opissa}
+\index{funktio A!a@joukko-opillinen|vahv}
+
+Hyvin yleisesti ja abstraktisti ajatellen voidaan funktiota pit‰‰ 's‰‰nnˆn' sijasta enemm‰nkin
+'luettelona', joka liitt‰‰ kuhunkin alkioon $x \in A$ yksik‰sitteisen ($x$:st‰ riippuvan)
+alkion $y \in B$. N‰in ajatellen funktiosta tulee puhtaasti joukko-opillinen k‰site: Funktion
+m‰‰rittelee joukon $A \times B = \{(x,y) \mid x \in A\, \ja\, y \in B\}$ (= $A$:n ja $B$:n
+karteesinen tulo, vrt.\ alaviite Luvussa \ref{tasonvektorit}) mik‰ tahansa osajoukko
+$F \subset A \times B$, joka toteuttaa ehdon
+\[
+\forall x \in A\ [\,(x,y) \in F\,\ \text{t‰sm‰lleen yhdell‰}\,\ y \in B\,].
+\]
+Nimitt‰in t‰llaista joukkoa vastaa $A$:ssa m‰‰ritelty funktio $f$, kun tulkitaan
+\[
+y=f(x)\ \ekv\ (x,y) \in F.
+\]
+Funktion k‰sitteen kannalta ei siis ole lopulta lainkaan merkityst‰ sill‰, onko funktio
+tunnettu 'lausekkeena' (laskus‰‰ntˆn‰) vai pelkk‰n‰ 'datana'.\footnote[2]{K‰yt‰nnˆss‰
+'funktiodata' voi perustua esim.\ suoriin mittauksiin tai se voi olla tietokonemalleihin
+perustuva laskettu ennuste, kuten s‰‰ennustuksissa.} 
+\begin{Exa} \pain{Reaaliluku}j\pain{ono} $\{a_1, a_2, \ldots\}$ on tulkittavissa funktioksi
+tyyppi‰ $f: \ \N\kohti\R$. Nimitt‰in jono on ajateltavissa 'luettelona' $1 \map a_1$, 
+$2 \map a_2$, $\ldots$ eli joukkona
+\[
+F= \{ (1,a_1), (2,a_2),\ldots \} \subset \N \times \Q. \loppu
+\]
+\end{Exa}
+Kaikki t‰h‰n asti esiintyneet \pain{laskuo}p\pain{eraatiot} ovat itse asiassa funktioita. 
+Funktion voi t‰llˆin mielt‰‰ 'laskukoneeksi', joka antaa laskuoperaation lopputuloksen
+annetuilla l‰htˆtiedoilla.
+\begin{Exa}
+Reaalilukujen yhteenlasku ja kertolasku ovat funktioita tyyppi‰ $f:\ \Rkaksi \map \R$ 
+laskus‰‰nnˆill‰
+\[
+\text{yhteenlasku:} \quad f(x,y)=x+y, \qquad \text{kertolasku:} \quad f(x,y)=xy.
+\]
+Jakolasku on funktio $f: \{(x,y) \in \Rkaksi \ | \ y \neq 0 \} \kohti \R$ s‰‰nnˆll‰
+$f(x,y)=x/y$. \loppu
+\end{Exa}
+\begin{Exa} \label{skalaaritulo funktiona} Edellisess‰ luvussa liitettiin euklidisen tason
+kulmaan $\kulma(\vec a,\vec b)$ geometrisin keinoin m‰‰r‰ytyv‰ reaaliluku, jota merkittiin 
+$\cos\kulma(\vec a,\vec b)$. Koska ko.\ luku on yksik‰sitteinen, niin kyseess‰ on funktio 
+$\,\cos:\ A \kohti \R$, miss‰ $A=$ kaikkien kulmien joukko. Funktion arvojoukko on 
+$[-1,1]\subset\R$. M‰‰rittelyjoukossa voidaan kulmat haluttaessa tulkita tason vektoripareina
+$(\vec a,\vec b)$, miss‰ $\vec a,\vec b \neq \vec 0$, tai yksikkˆvektorien pareina 
+($\abs{\vec a}=\abs{\vec b}=1$).  \loppu
+\end{Exa}
+
+\subsection*{Reaalifunktio}
+\index{funktio A!b@reaalifunktio|vahv}
+\index{reaalifunktio|vahv}
+
+'Funktioiden ‰iti' on \kor{reaalifunktio} eli reaalimuuttujan reaaliarvoinen funktio muotoa
+$f: A \kohti \R$, miss‰ $A \subset \R$. Myˆs termi‰ 'yhden muuttujan funktio' k‰ytet‰‰n usein 
+t‰ss‰ rajatussa merkityksess‰. Reaalimuuttujan funktio voidaan k‰tev‰sti havainnollistaa
+\index{kuvaaja}%
+\kor{kuvaajan} (engl.\ graph) avulla. Funktion $f: A \kohti \R$ kuvaaja joukossa
+$B \subset A\ (A\subset\R)$ on euklidisen avaruuden $\Ekaksi$ pistejoukko
+\[ 
+G = \{P = (x,y) \mid y = f(x)\,\ja\, x \in B\},
+\]
+miss‰ $P$:n koordinaatit $(x,y)$ viittaavat karteesiseen koordinaatistoon (ellei toisin sovita).
+Huomattakoon, ett‰ jos $f$:n m‰‰rittelyjoukko rajataan joukoksi $B$, niin funktion
+joukko-opillinen m‰‰ritelm‰ on
+\[ 
+F = \{(x,y)\in\Rkaksi \mid y = f(x)\,\ja\, x \in B\}.
+\]
+Funktion tulkinta 'k‰yr‰n‰' (eli kuvaajana $G$) siis yksinkertaisesti geometrisoi funktion
+abstraktin joukko-opillisen m‰‰ritelm‰n.
+
+Kun reaalilukujono tulkitaan funktioksi $f:\ \N\kohti\R$, niin $f$:n kuvaaja on $\Ekaksi$:n
+pistejono. T‰t‰ lukujonon kuvaustapaa on edell‰ jo k‰ytetty Luvuissa \ref{jonon raja-arvo} ja
+\ref{Cauchyn jonot}.
+\begin{Exa} Alla on kuvattu funktio, jonka laskus‰‰ntˆ on $f(x)=x^2/(x+1)$,
+joukoissa $B=[0,4]$ ja $B=[0,4]\cap\N$. J‰lkimm‰isess‰ tapauksessa kuvaaja esitt‰‰ lukujonon
+$\seq{a_n}=\{\,n^2/(n+1),\ n=1,2,\ldots\,\}$ alkup‰‰t‰. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12.5,7.5)(0,-2)
+\multiput(0,0)(7,0){2}{
+\put(0,0){\vector(1,0){6}} \put(1,-1){\vector(0,1){6}}
+\put(1.9,-0.5){$1$} \put(2.9,-0.5){$2$} \put(3.9,-0.5){$3$} \put(4.9,-0.5){$4$} 
+\put(5.8,-0.5){$x$} \put(1.2,4.8){$y$}
+\multiput(2,0)(1,0){4}{\line(0,-1){0.1}}}
+\put(3.6,1.5){$G:\ y=f(x)$}
+\put(9,0.5){$\scriptstyle{\bullet}$} \put(10,1.33){$\scriptstyle{\bullet}$}
+\put(11,2.25){$\scriptstyle{\bullet}$} \put(12,3.2){$\scriptstyle{\bullet}$}
+\put(2.5,-2){$f(x)=\dfrac{x^2}{x+1}$} \put(9.5,-2){$a_n=\dfrac{n^2}{n+1}$}
+\put(1,0){
+\curve( 
+0, 0,
+0.5, 0.17,
+1, 0.5,
+1.5, 0.9,
+2, 1.33,
+3, 2.25,
+4, 3.2)}
+\end{picture}
+\end{center}
+\end{figure}
+\end{Exa}
+Jos reaalifunktioon liittyy helposti ilmaistavissa oleva laskus‰‰ntˆ, niin funktio
+ilmoitetaan tavallisimmin pelkk‰n‰ laskus‰‰ntˆn‰. T‰llˆin oletetaan (ellei toisin sovita), ett‰
+m‰‰rittelyjoukko on suurin $\R$:n osa\-joukko, jossa laskus‰‰ntˆ‰ voi soveltaa. Yksitt‰ist‰
+\index{funktioevaluaatio}%
+laskus‰‰nnˆn k‰yttˆ‰, eli laskuoperaatiota $x \map f(x)$ sanotaan \kor{funktioevaluaatioksi}.
+Usein t‰m‰ onnistuu vain numeerisesti (eli likim‰‰rin),  jolloin k‰yt‰nnˆss‰ pystyt‰‰n vain
+laskemaan ‰‰rellinen m‰‰r‰ termej‰ lukujonosta, jonka raja-arvo $=f(x)$.
+\begin{Exa} Reaalifunktion $f(x)=x^2/(x^2-2)$ m‰‰rittelyjoukko on \newline
+$A\ =\ \{x\in\R \mid x^2 \neq 2\}\ 
+    =\ (-\infty,-\sqrt{2}) \cup (-\sqrt{2},\sqrt{2}) \cup (\sqrt{2},\infty)$. \loppu
+\end{Exa}
+\begin{Exa} \pain{Potenssisar}j\pain{a} $\sum_k a_k x^k$ voidaan tulkita reaalifunktioksi, jonka
+arvo $x$:ss‰ on sarjan summa ja m‰‰rittelyjoukko on sarjan suppenemisv‰li. Esimerkiksi funktion
+\[
+f(x)=\sum_{k=1}^\infty \frac{x^k}{k}
+\]
+m‰‰rittelyjoukko on v‰li $[-1,1)$, vrt.\ Luku \ref{potenssisarja}. Ellei ole $x=0$, on
+funktioevaluaatio $x \map f(x)$ t‰ss‰ tapauksessa suoritettava numeerisesti, esim.\ 
+laskemalla sarjan osasummia. \loppu
+\end{Exa}
+
+\pagebreak
+
+\subsection*{Funktiot kosini ja sini}
+\index{funktio C!a@$\sin$, $\cos$|vahv}
+\index{trigonometriset funktiot|vahv}
+
+Tarkastellaan yksikkˆympyr‰‰, jonka keskipiste on karteesisen koordinaatiston origossa $O$ ja
+jolta on valittu referenssipisteeeksi $A=(1,0)$. Pisteest‰ $A$ l‰htien voidaan yksikkˆympyr‰‰
+kiert‰‰ joko \kor{positiiviseen kiertosuuntaan} eli vastap‰iv‰‰n tai
+\kor{negatiiviseen kiertosuuntaan} eli myˆt‰p‰iv‰‰n. Edellisess‰ tapauksessa asetetaan
+\index{kulma!d@kiertokulma} \index{kiertokulma}%
+\kor{kiertokulman} mitaksi kaarenpituus (= keh‰‰ pitkin kuljettu matka), j‰lkimm‰isess‰ sen
+vastaluku. T‰ll‰ tavoin kiertokulman mitta voi saada mink‰ tahansa reaaliarvon, ja jokaista
+mittalukua $\alpha$ vastaa yksik‰sitteinen keh‰n piste
+\[
+P(\alpha)=(x(\alpha),y(\alpha)), \quad \alpha \in \R.
+\]
+T‰ss‰ siis $P$ ei tarkoita yksitt‰ist‰ pistett‰, vaan yksik‰sitteist‰ riippuvuutta 
+$\alpha \map P(\alpha)$ eli 'pistearvoista' reaalimuuttujan funktiota. Vastaavasti $x$ ja $y$
+tarkoittavat edell‰ funktioita tyyppi‰
+\[
+x: \ \R \kohti [-1,1], \qquad y: \ \R \kohti [-1,1].
+\]
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-8.pstex_t}
+\end{center}
+\end{figure}
+Kulman kosinin aiemman m‰‰ritelm‰n (ks.\ Luku \ref{skalaaritulo}) mukaisesti on
+\[
+\cos\kulma AOP(\alpha) = x(\alpha).
+\]
+M‰‰ritell‰‰n nyt reaalifunktio cos eli \kor{kosini} vaihtamalla t‰ss‰
+'kulmamuuttujan' tilalle kiertokulman mittaluku $\alpha$\,:
+\[
+\cos\alpha = x(\alpha), \quad \alpha\in\R.
+\]
+M‰‰ritell‰‰n vastaavasti reaalifunktio sin eli \kor{sini} asettamalla
+\[
+\sin\alpha = y(\alpha), \quad \alpha \in \R. 
+\]
+Reaalifunktiot kosini ja sini (m‰‰rittelyjoukkona $\R$) ovat \kor{trigonometristen funktioiden}
+perustyypit. Yhdenmuotoisten kolmioiden periaatteella n‰hd‰‰n, ett‰ m‰‰ritelm‰t vastaavat 
+tuttuja trigonometrian merkintˆj‰, kun $0 < \alpha < \pi/2$.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-9.pstex_t}
+\end{center}
+\end{figure}
+Muutamia m‰‰ritelmist‰ suoraan seuraavia, tai symmetrian avulla helposti perusteltavia, kosinin
+ja sinin ominaisuuksia on lueteltu alla. N‰m‰ ovat voimassa $\forall \alpha \in \R$.
+\begin{align}
+&\cos(\alpha + 2 \pi) = \cos\alpha, \ \ \sin(\alpha + 2 \pi) = \sin\alpha. \label{trig1} \\
+&\cos(-\alpha) = \cos\alpha, \ \ \sin(-\alpha) = -\sin\alpha. \label{trig2} \\
+&\cos(\alpha + \pi) = -\cos\alpha, \ \ \sin(\alpha + \pi) = -\sin\alpha. \label{trig3} \\ 
+&\sin\alpha = \cos(\pi/2 - \alpha), \ \ \cos\alpha = \sin(\pi/2 - \alpha). \label{trig4} \\
+&\cos^2 \alpha + \sin^2 \alpha = 1. \label{trig5}
+\end{align}
+N‰ist‰ ominaisuus \eqref{trig1} (joka seuraa myˆs \eqref{trig3}:sta) kertoo, ett‰ cos ja sin
+\index{jaksollinen funktio} \index{funktio B!c@jaksollinen}%
+ovat \kor{jaksollisia} (periodisia) funktioita, jaksona $2\pi$ = yksikkˆympyr‰n keh‰n pituus. 
+\index{parillinen, pariton!b@funktio} \index{funktio B!b@parillinen, pariton}%
+Ominaisuus \eqref{trig2} kertoo, ett‰ kosini on \kor{parillinen} (symmetrinen) ja sini 
+\kor{pariton} (antisymmetrinen) funktio. Ominaisuus \eqref{trig5} on Pythagoraan lause.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{picture}(14,4)(-2,-2)
+\put(-2,0){\vector(1,0){14}} \put(11.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){4}} \put(0.2,1.8){$y$}
+%\linethickness{0.5mm}
+\multiput(3.14,0)(3.14,0){3}{\drawline(0,-0.1)(0,0.1)}
+\put(0.1,-0.4){$0$} \put(3.05,-0.4){$\pi$} \put(6.10,-0.4){$2\pi$} \put(9.20,-0.4){$3\pi$}
+\curve(
+   -1.5708,    0.0000,
+   -1.0708,    0.4794,
+   -0.5708,    0.8415,
+   -0.0708,    0.9975,
+    0.4292,    0.9093,
+    0.9292,    0.5985,
+    1.4292,    0.1411,
+    1.9292,   -0.3508,
+    2.4292,   -0.7568,
+    2.9292,   -0.9775,
+    3.4292,   -0.9589,
+    3.9292,   -0.7055,
+    4.4292,   -0.2794,
+    4.9292,    0.2151,
+    5.4292,    0.6570,
+    5.9292,    0.9380,
+    6.4292,    0.9894,
+    6.9292,    0.7985,
+    7.4292,    0.4121,
+    7.9292,   -0.0752,
+    8.4292,   -0.5440,
+    8.9292,   -0.8797,
+    9.4292,   -1.0000,
+    9.9292,   -0.8755,
+   10.4292,   -0.5366,
+   10.9292,   -0.0663)
+\curvedashes[1mm]{0,1,2}
+\curve(
+   -1.5708,   -1.0000,
+   -1.0708,   -0.8776,
+   -0.5708,   -0.5403,
+   -0.0708,   -0.0707,
+    0.4292,    0.4161,
+    0.9292,    0.8011,
+    1.4292,    0.9900,
+    1.9292,    0.9365,
+    2.4292,    0.6536,
+    2.9292,    0.2108,
+    3.4292,   -0.2837,
+    3.9292,   -0.7087,
+    4.4292,   -0.9602,
+    4.9292,   -0.9766,
+    5.4292,   -0.7539,
+    5.9292,   -0.3466,
+    6.4292,    0.1455,
+    6.9292,    0.6020,
+    7.4292,    0.9111,
+    7.9292,    0.9972,
+    8.4292,    0.8391,
+    8.9292,    0.4755,
+    9.4292,   -0.0044,
+    9.9292,   -0.4833,
+   10.4292,   -0.8439,
+   10.9292,   -0.9978)
+\put(1,1.2){$y=\sin x$}
+\put(5.5,1.2){$y=\cos x$}
+\end{picture} 
+\end{figure}
+Trigonometrisissa funktioevaluaatioissa $x\map\cos x$ ja $x\map\sin x$ on, poikkeuksellisia 
+$x$:n arvoja lukuunottamaatta, turvauduttava laskimiin. Laskinta tarvitaan myˆs, kun halutaan
+saada selville, miss‰ kulmassa trigonometrinen funktio saa annetun arvon, ts.\ halutaan 
+ratkaista $\alpha$ yht‰lˆst‰ $\,\cos\alpha=y\,$ tai $\,\sin\alpha=y\,$, kun tunnetaan
+$y\in[-1,1]$. Laskimella saadaan yleens‰ yhden ratkaisun likiarvo (esim.\ komennolla 
+$\cos^{-1} y$ tai $\arccos y$). Muut ratkaisut voidaan t‰m‰n j‰lkeen p‰‰tell‰ laskimeen 
+enemp‰‰ turvautumatta, sill‰ kosinin ja sinin m‰‰ritelmien perusteella p‰tee
+\[ \boxed{ \begin{aligned} \quad\ykehys
+\cos\alpha=\cos\beta &\qekv \beta=\alpha + n \cdot 2\pi\ 
+                            \tai\ \beta=-\alpha + n \cdot 2\pi, \qquad n\in\Z, \\
+\sin\alpha=\,\sin\beta &\qekv \beta=\alpha + n \cdot 2\pi\ 
+                              \tai\ \beta=\pi-\alpha + n \cdot 2\pi, \quad n\in\Z. \quad\akehys
+\end{aligned} } \]
+\begin{Exa} Mill‰ kulman $\alpha$ asteluvuilla v‰lill‰ $[0^{\circ},360^{\circ}]$ on
+$\cos 2\alpha=-2/3$ (yhden desimaalin tarkkuus)?
+\end{Exa}
+\ratk Laskin antaa yht‰lˆlle $\cos x=-2/3$ ratkaisun $x=2.300523.. \vastaa 131.8^{\circ}$,
+joten mahdolliset $\alpha$:n arvot ovat
+\[ \begin{cases}
+\,2\alpha = 131.8^{\circ} + n \cdot 360^{\circ} 
+               &\qimpl \alpha = \ 65.9^{\circ} + n \cdot 180^{\circ}, \quad n\in\Z, \\
+\,2\alpha = -131.8^{\circ} + m \cdot 360^{\circ} 
+               &\qimpl \alpha =  -65.9^{\circ} + m \cdot 180^{\circ}, \quad m\in\Z.
+\end{cases} \]
+Kysytyt $\alpha$:n arvot suuruusj‰rjestyksess‰ ($n=0,\ m=1,\ n=1,\ m=2$)\,:
+\[
+65.9^{\circ},\ 114.1^{\circ},\ 245.9^{\circ},\ 294.1^{\circ}. \loppu
+\]
+
+Perusominaisuuksien \eqref{trig1}--\eqref{trig5} ohella tarvitaan monesti nk.\
+\kor{yhteenlaskukaavoja}
+\begin{equation} \label{trig6} \boxed{ \begin{aligned}
+\ykehys\quad &\cos(\alpha + \beta) 
+                    = \cos\alpha\cos\beta - \sin\alpha\sin\beta, \quad  \\
+     \akehys &\sin(\alpha + \beta) = \,\sin\alpha\cos\beta + \cos\alpha\sin\beta. 
+\end{aligned} } \end{equation}
+N‰m‰ ovat voimassa $\forall \alpha, \beta \in \R$. Kaavat on helpointa perustella 
+vektorilaskulla, ks.\ kuvio.
+\begin{multicols}{2}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4.5,4.5)(-1.5,0)
+\put(2,2){\bigcircle{4}}
+\put(2,2){\vector(3,1){1.9}}
+\put(2,2){\vector(1,3){0.63}}
+\put(2,2){\vector(1,0){2}} \put(2,2){\vector(0,1){2}}
+\put(4,2.55){$\vec a$} \put(2.55,4){$\vec b$} \put(4.2,1.9){$\vec i$} \put(1.9,4.2){$\vec j$}
+\put(2,2){\arc{2}{-0.32}{0}} \put(3.2,2.1){$\alpha$}
+\put(2,2){\arc{1}{-1.25}{0}} \put(2.4,2.4){\begin{turn}{40}$\beta$\end{turn}}
+\end{picture}
+\end{center}
+\end{figure}
+\begin{align*}
+\vec a &= \cos \alpha \, \vec i + \sin \alpha \, \vec j \\[2mm]
+\vec b &= \cos \beta \, \vec i + \sin \beta \, \vec j
+\end{align*}
+\end{multicols}
+Kuvion ja skalaaritulon m‰‰ritelm‰n perusteella on
+\[
+\vec a \cdot \vec b = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \cos(\beta-\alpha).
+\]
+Vaihtamalla $\alpha \rightarrow -\alpha$ ja k‰ytt‰m‰ll‰ symmetriaominaisuuksia \eqref{trig2}
+seuraa kaavoista \eqref{trig6} ensimm‰inen. Toinen seuraa t‰m‰n j‰lkeen ensimm‰isest‰ sek‰
+kaavoista \eqref{trig4},\,\eqref{trig2}:
+\begin{align*}
+\sin(\alpha + \beta) &= \cos\left(\tfrac{\pi}{2} - \alpha - \beta\right) \\[1mm]
+                     &= \cos\left(\tfrac{\pi}{2} - \alpha\right) \cos(-\beta) 
+                            - \sin\left(\tfrac{\pi}{2} - \alpha\right) \sin(-\beta) \\[1mm]
+                     &= \sin \alpha \cos \beta + \cos \alpha \sin \beta.
+\end{align*}
+Valitsemalla em.\ kaavoissa $\beta = \alpha$ saadaaan monesti kysytyt
+\kor{kaksinkertaisen kulman kaavat}:
+\begin{equation} \label{trig7} \boxed{ \begin{aligned}
+\ykehys\quad \cos 2\alpha &= \cos^2\alpha-\sin^2\alpha \quad \\ 
+                          &= 2\cos^2 \alpha - 1 \\
+                          &= 1-2\sin^2\alpha, \quad \\
+     \akehys \sin 2\alpha &= 2\sin \alpha \cos \alpha.
+\end{aligned} } \end{equation}
+\begin{Exa} \label{sin kolme alpha} Kaavojen \eqref{trig6},\,\eqref{trig7} ja \eqref{trig5}
+perusteella
+\begin{align*}
+\sin 3\alpha &= \sin (\alpha + 2\alpha) \\
+&= \sin \alpha \cos 2\alpha + \cos \alpha \sin 2\alpha \\
+&= \sin \alpha(1-2\sin^2 \alpha) + 2\cos^2 \alpha \sin \alpha \\
+&= \sin \alpha - 2\sin^3 \alpha + 2(1-\sin^2 \alpha) \sin \alpha \\
+&= 3\sin\alpha - 4\sin^3\alpha. \loppu
+\end{align*}
+\end{Exa}
+\begin{Exa} \label{kulman kolmijako}
+Laske $\,x = \sin\frac{\pi}{18} = \sin 10\aste$.
+\end{Exa}
+\ratk Edellisen esimerkin perusteella $x$ toteuttaa kolmannen asteen yht‰lˆn
+\[
+3x - 4x^3 = \sin 30\aste = \tfrac{1}{2}.
+\]
+Numeerisin keinoin lˆydet‰‰n ratkaisu $x=0.173648177669303 \ldots$\footnote[2]{Esimerkin luku
+$x$ on algebrallinen mutta ei geometrinen, ts.\ $x \not\in\G$ (vrt.\ Luku \ref{geomluvut}). 
+Kulmaa $\frac{\pi}{18} = 10\aste$ ei siten ole mahdollista konstruoida geometrisesti.
+Yleisestikin gometrisesti konstruoitavissa olevat kulmat ovat melko harva joukko. Esimerkiksi
+kulma $3\aste$ voidaan konstruoida (ks.\ Harj.teht. \ref{H-II-5: geometrinen kulma}), sen
+sijaan kulmia $2\aste$ ja $1\aste$ ei voida.} \loppu
+
+\subsection*{Tangentti ja kotangentti}
+\index{funktio C!b@$\tan$, $\cot$|vahv}
+\index{trigonometriset funktiot|vahv}
+
+Muista trigonometrisista funktioista t‰rkeimm‰t ovat \kor{tangentti} ($\tan$) ja
+\kor{kotangentti} ($\cot$), jotka m‰‰ritell‰‰n
+\begin{align*}
+\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \qquad 
+                     &(\alpha \in \R, \ \alpha \neq (n + \tfrac{1}{2})\pi,\ n \in \Z), \\[3mm]
+\cot\alpha = \frac{\cos\alpha}{\sin\alpha} \qquad 
+                     &(\alpha \in \R, \ \alpha \neq n \pi, \ n \in \Z).
+\end{align*}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{picture}(14,4.5)(-2.5,-2.5)
+\put(-2,0){\vector(1,0){13}} \put(10.8,-0.4){$x$}
+\put(0,-2){\vector(0,1){4}} \put(0.2,1.8){$y$}
+\multiput(3.14,0)(3.14,0){3}{\drawline(0,-0.1)(0,0.1)}
+\put(0.1,-0.4){$0$} \put(3.05,-0.4){$\pi$} \put(6.10,-0.4){$2\pi$} \put(9.20,-0.4){$3\pi$}
+\multiput(0,0)(3.14,0){4}{
+\curve(
+   -1.1,-2,     
+   -1.0708,   -1.8305,
+   -0.9708,   -1.4617,
+   -0.8708,   -1.1872,
+   -0.7708,   -0.9712,
+   -0.6708,   -0.7936,
+   -0.5708,   -0.6421,
+   -0.4708,   -0.5090,
+   -0.3708,   -0.3888,
+   -0.2708,   -0.2776,
+   -0.1708,   -0.1725,
+   -0.0708,   -0.0709,
+    0.0292,    0.0292,
+    0.1292,    0.1299,
+    0.2292,    0.2333,
+    0.3292,    0.3416,
+    0.4292,    0.4577,
+    0.5292,    0.5848,
+    0.6292,    0.7279,
+    0.7292,    0.8935,
+    0.8292,    1.0917,
+    0.9292,    1.3386,
+    1.0292,    1.6622,
+        1.1,2)}
+\curvedashes[1mm]{0,1,2}
+\multiput(0,0)(3.14,0){3}{
+\curve(
+    0.5000,   1.8305,
+    0.6000,    1.4617,
+    0.7000,    1.1872,
+    0.8000,    0.9712,
+    0.9000,    0.7936,
+    1.0000,    0.6421,
+    1.1000,   0.5090,
+    1.2000,   0.3888,
+    1.3000,    0.2776,
+    1.4000,   0.1725,
+    1.5000,    0.0709,
+    1.6000,  -0.0292,
+    1.7000,  -0.1299,
+    1.8000,   -0.2333,
+    1.9000,   -0.3416,
+    2.0000,   -0.4577,
+    2.1000,   -0.5848,
+    2.2000,   -0.7279,
+    2.3000,   -0.8935,
+    2.4000,   -1.0917,
+    2.5000,   -1.3386,
+    2.6000,   -1.6622,
+    2.7000,   -2.1154)}
+\put(-2.2,-0.4){$y=\tan x$}
+\put(1.3,0.5){$y=\cot x$}
+\end{picture}
+\end{figure}
+Tangentin m‰‰ritelm‰st‰ voidaan p‰‰tell‰, ett‰ yht‰lˆll‰ $\tan\alpha=y$ on ratkaisu jokaisella
+$y\in\R$ ja ett‰ ratkaisu on yksik‰sitteinen esim.\ lis‰ehdolla $\alpha \in (-\pi/2,\,\pi/2)$ 
+tai $\alpha \in [0,\pi)$. Poikkeuksellisia $y$:n arvoja lukuunottamatta tarvitaan t‰llaisen
+ratkaisun likiarvon hakemiseen laskin (komento $\tan^{-1} y$ tai $\arctan y$). Muut yht‰lˆn 
+ratkaisut saadaan perusratkaisusta lis‰‰m‰ll‰ $\pi$:n monikertoja, sill‰ tangentilla on
+m‰‰ritelm‰ns‰ perusteella ominaisuus
+\[
+\boxed{\quad\kehys \tan\alpha=\tan\beta \qekv \beta=\alpha + n \cdot \pi, \quad n\in\Z. \quad}
+\]
+
+Suoraan kaavasta \eqref{trig5} seuraa tangenttiin liittyv‰, usein k‰yttˆˆn tuleva kaava
+\begin{equation} \label{trig8}
+\boxed{\quad \frac{\ygehys 1}{\rule[-2mm]{0mm}{2mm} \cos^2 \alpha} = 1 + \tan^2 \alpha. \quad }
+\end{equation}
+Tangentin avulla saadaan myˆs joskus tarvittavia \kor{puolen kulman kaavoja}: Kun l‰hdet‰‰n
+kaavoista \eqref{trig7} ja k‰ytet‰‰n kaavaa \eqref{trig8}, saadaan
+\begin{align*}
+\sin \alpha &\,=\,2 \sin \frac{\alpha}{2} \cos \frac{\alpha}{2}
+             \,=\, 2 \tan \frac{\alpha}{2} \cos^2 \frac{\alpha}{2}
+             \,= \frac{2\tan \frac{\alpha}{2}}{1 + \tan^2 \frac{\alpha}{2}}\,, \\
+\cos \alpha &\,=\,2\cos^2 \frac{\alpha}{2} - 1
+             \,=\,\frac{2}{1+\tan^2 \frac{\alpha}{2}} - 1 
+             \,=\,\frac{1 - \tan^2 \frac{\alpha}{2}}{1 + \tan^2 \frac{\alpha}{2}}\,.
+\end{align*}
+N‰in saatiin kaavat \\
+\begin{equation} \label{trig9}
+\boxed{\quad\left.\begin{array}{ll}
+\sin\alpha = \frac{\ykehys \D 2t}{\D 1+t^2} \\ \\
+\cos\alpha = \frac{\D 1-t^2}{\D 1+t^2} \\ \\
+\tan\alpha = \frac{\D 2t}{\akehys \D 1-t^2}
+\end{array}\right\} \ t= \tan \frac{\alpha}{2}\,. \quad}
+\end{equation} \\
+N‰iden mukaan trigonometristen funktioiden arvojen laskemiseen riitt‰‰ suorittaa ainoastaan yksi
+'aidosti trigonometrinen' laskuoperaatio $\alpha \map \tan \frac{\alpha}{2} = t$, mink‰ j‰lkeen
+tarvitaan vain reaalilukujen kunnan laskuoperaatioita.\footnote[2]{Trigonometristen funktioiden
+laskukaavoista \eqref{trig1}--\eqref{trig9} on syyt‰ huomauttaa, ett‰ kaikki n‰iss‰ kaavoissa
+esiintyv‰t laskuoperaatiot, kuten $\alpha\map\sin\alpha$, $\alpha\map\pi/2-\alpha$,
+$(\alpha,\beta)\map\alpha+\beta$ tai $\alpha\map\alpha/2$, voidaan toteuttaa geometrisesti, jos
+l‰htˆkohtana olevat kulmat tunnetaan geometrisina olioina. N‰in ymm‰rrettyn‰ kaavat 
+\eqref{trig1}--\eqref{trig9} ovat siis p‰tevi‰, vaikkei kulman mittaa lainkaan m‰‰ritelt‰isi.}
+
+Trigonometrisista funktioista maininnan arvoisia ovat viel‰ kosinin ja sinin johdannaisfunktiot
+\index{funktio C!c@$\sec$, $\csc$}
+\kor{sekantti} ($\sec$) ja \kor{kosekantti} ($\csc$):
+\begin{align*}
+\sec \alpha = \frac{1}{\cos \alpha} \qquad 
+                     &(\alpha \in \R, \ \alpha \neq (n + \tfrac{1}{2}) \pi, \ n \in \Z), \\[3mm]
+\csc \alpha = \frac{1}{\sin \alpha} \qquad 
+                     &(\alpha \in \R, \ \alpha \neq n \pi, \ n \in \Z).
+\end{align*}
+
+
+\subsection*{Sovellusesimerkki: Harmoninen v‰r‰htely}
+\index{zza@\sov!Harmoninen v‰r‰htely|vahv}
+
+Sinin ja kosinin yhdistelm‰funktio $f(x) = A \sin x + B \cos x\ (A,B\in\R)$ on sovelluksissa 
+yleinen. Tyypillisesti kyse on 
+\index{harmoninen v‰r‰htely}%
+\pain{harmonisesta} \pain{v‰r‰htel}y\pain{st‰}, jossa jokin 
+fysikaalinen suure $y$ (esim.\ s‰hkˆj‰nnite) vaihtelee \pain{aika}muuttujan $t$ mukaan siten, 
+ett‰ $y(t) = A \sin \omega t + B \sin \omega t$. Suuretta $\omega$  (yksikkˆ $= 1/$s) sanotaan 
+v‰r‰htelyn \pain{kulmataa}j\pain{uudeksi}. Mainittuun funktioon $f(x)$ p‰‰dyt‰‰n, kun otetaan 
+k‰yttˆˆn (dimensioton) muuttuja $x=\omega t$.
+
+Tarkasteltava funktio saadaan selvemp‰‰n muotoon, kun merkit‰‰n ensin
+\[
+R = \sqrt{A^2 + B^2}.
+\]
+T‰llˆin on $(A/R)^2+(B/R)^2=1$, eli piste $P=(A/R,B/R)$ on yksikkˆympyr‰ll‰
+(ol.\ $(A,B)\neq(0,0)$). N‰in ollen jollakin $\alpha\in\R$ p‰tee
+\[
+\frac{A}{R} = \cos\alpha, \quad \frac{B}{R} = \sin\alpha \qimpl \tan\alpha = \frac{B}{A}\,.
+\]
+N‰ist‰ viimeinen ehto m‰‰r‰‰ $\alpha$:n $\,\pi$:n monikertaa vaille 
+yksik‰sitteisesti. Huomioimalla myˆs $\sin\alpha$:n tai $\cos\alpha$:n merkki
+(kahdesta muusta ehdosta) n‰hd‰‰n, ett‰ $\alpha$ on $2\pi$:n monikertaa vaille yksik‰sitteinen.
+Yhteenlaskukaavan \eqref{trig7} perusteella $f(x)$ voidaan nyt esitt‰‰ muodossa
+\begin{align*}
+f(x) &= R(\cos\alpha\sin x + \sin\alpha\cos x) \\
+     &= R\sin(x+\alpha) \\
+     &= R\sin(x-\beta), \quad \beta=-\alpha.
+\end{align*}
+Sanotaan t‰llˆin, ett‰ $R$ on (esim.\ v‰r‰htelyn)
+\index{amplitudi} \index{vaihekulma}%
+\kor{amplitudi} ja $\alpha$ 
+(tai $\beta=-\alpha$) on \kor{vaihekulma} (vaihesiirtym‰). Funktion $f$ kuvaaja saadaan siis 
+skaalaamalla funktion $\sin x$ kuvaaja amplitudilla $R$ ja siirt‰m‰ll‰ skaalattu kuvaaja 
+vaihekulman verran $x$-akselin suunnassa.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6.5,3)(0,-1)
+\put(0,0){\vector(1,0){6}} \put(5.8,-0.5){$x$}
+\put(1.7,-1){\vector(0,1){3}} \put(1.9,1.8){$y$}
+\put(3,0){\line(0,-1){0.1}}   \put(3.1,-0.4){$\beta$}
+\put(1.7,1){\line(1,0){0.1}}  \put(2,0.8){R}
+\put(3,0){
+\curve(
+-2.17,-0.22,
+   -2, 0.28,
+-1.83, 0.70,
+-1.67, 0.96,
+ -1.5, 0.98,
+-1.33, 0.76,
+-1.17, 0.36,
+   -1,-0.14,
+-0.83, -0.6,
+-0.67,-0.90,
+ -0.5, -1.0,
+-0.33,-0.84,
+-0.17,-0.48,
+    0,    0,
+ 0.17, 0.48,
+ 0.33, 0.84,
+  0.5,  1.0,
+ 0.67, 0.90,
+ 0.83,  0.6,
+    1, 0.14,
+ 1.17,-0.36,
+ 1.33,-0.76,
+  1.5,-0.98,
+ 1.67,-0.96,
+ 1.83,-0.70,
+    2,-0.28,
+ 2.17, 0.22)}
+\end{picture}
+\end{center}
+\end{figure}
+\begin{Exa} Kirjoita seuraavat funktiot perusmuotoon $f(x)=R\sin(x-\beta)$:
+\[
+\text{a)}\,\ f(x) = \sin x - \sqrt{3}\,\cos x \qquad \text{b)}\,\ f(x)=-3\sin x - 4\cos x
+\]
+\end{Exa}
+\ratk \ a) \ T‰ss‰ on $R=2$, jolloin $\alpha$ ratkeaa ehdoista
+\[
+\cos\alpha = \frac{1}{2}\,, \quad \sin\alpha = -\frac{\sqrt{3}}{2} \qimpl \alpha 
+                                             = -\frac{\pi}{3} + n\cdot 2\pi, \quad n\in\Z.
+\]
+Siis $f(x) = 2\sin(x-\tfrac{\pi}{3})$.
+
+b) \ T‰ss‰ on $R=5$ ja $\tan\alpha=4/3$. Laskin antaa $\alpha=0.927295..\,$ eli 
+$\alpha \approx 53.1\aste$, mutta ratkaisu ei ole k‰yp‰, koska on $\cos\alpha>0$. Valitaan 
+$\alpha=-\pi+0.927295..$ $=-2.214297..\,$ eli $\alpha \approx 53.1\aste-180\aste=-126.9\aste$,
+jolloin on edelleen $\tan\alpha=4/3$ ja $\cos\alpha<0$. Siis $f(x)=5\sin(x-\beta)$, miss‰ 
+$\beta=2.214297..\,\Vastaa\, 126.9\aste$. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Psykiatrin vastaanottoa voi kuvata matemaattisesti kolmikkona (psykiatri, potilas, diagnoosi).
+Pohdi seuraavissa tapauksissa (kussakin erikseen), millaisilla oletuksilla kyseess‰ on
+funktio: \newline
+a) \ psykiatri : potilaat $\kohti$ diagnoosit \newline
+b) \ potilas  :  psykiatrit $\kohti$ diagnoosit \newline
+c) \ psykiatri : diagnoosit $\kohti$ potilaat \newline
+d) \ potilas : diagnoosit $\kohti$ psykiatrit
+
+\item
+Funktiot $f$ ja $g$ m‰‰ritell‰‰n laskus‰‰nnˆill‰ $f(x,y)=x^5+2x^4y-2x^2y^3$ ja
+$g(x,y,z)=(x+y+z)/(1+x^2+y^2+z^2)$, miss‰ $x,y,z\in\R$. Laske $f(2,-3)$, $f(\sqrt{2},\sqrt{2})$,
+$g(0,0,0)$ ja $g(1,-2,3)$. 
+
+\item 
+Mitk‰ ovat seuraavien funktioiden m‰‰rittelyjoukot ($x,y\in\R$)? 
+\[
+\text{a)}\,\ f(x)=x^{0} \quad\ \text{b)}\,\ f(x)=\frac{x^2}{x} \quad\ 
+\text{c)}\,\ f(x,y)=\frac{x+y}{x^2-y^2}
+\]
+Voiko n‰m‰ funktiot ilmaista m‰‰rittelyjoukossaan jollakin yksinkertaisemmalla laskus‰‰nnˆll‰?
+
+\item
+Mit‰ yhteist‰ ja mit‰ eroa on seuraavilla reaalifunktioilla? \newline
+a) \ $\D{f(x)=\frac{x^4}{x^2}\ \ \text{ja}\ \ g(x)=x^2 \quad\ }$
+b) \ $\D{f(x)=\sum_{k=1}^\infty \left(\frac{x}{2}\right)^k\ \text{ja}\ \
+               g(x)=\frac{x}{2-x}}$
+
+\item
+Mitk‰ seuraavista joukon $\Rkaksi=\R\times\R$ osajoukoista $F$ ovat funktioita? \newline
+a) \ $F=\{(1,2),(2,1),(3,3),(\pi,e),(e,\pi)\}$ \newline
+b) \ $F=\{(1,2),(2,3),(3,3),(3,2),(2,1)\}$ \newline
+c) \ $F=\{(n,n^2) \mid n\in\Z\}$ \newline
+d) \ $F=\{(n^2,n) \mid n\in\Z\}$ \newline
+e) \ $F=\{(n^2,n) \mid n\in\N\}$
+
+\item
+Tulkitse funktioina (m‰‰rittely- ja arvojoukko!) tason vektorien laskuoperaatiot: yhteenlasku,
+skalaarilla kertominen ja pistetulo.
+ 
+\item
+a) Onko olemassa funktio $f$, jonka m‰‰rittelyjoukko $=\R$ ja $\forall x\in\R$ p‰tee
+$f(x)=\sum_{k=0}^\infty x^k$\,? Jos vastaus on myˆnteinen, niin m‰‰rittele $f$! \newline 
+b) Yhden reaalimuuttujan sis‰lt‰v‰n predikaatin (Luku \ref{logiikka}) voi tulkita funktioksi
+ja jopa reaalifunktioksi. Miten?
+
+\item
+Olkoon $\sin\alpha=7/25$ ja $\cot\beta=-5/12$. Laske lausekkeen $\sin(\alpha-\beta)$ mahdolliset
+arvot.
+
+\item
+Nelikulmion sivujen pituudet ovat $1$, $2$, $3$ ja $4$, ja yhden kulman mitta asteina on
+$160\aste$. Laske kaikkien n‰m‰ ehdot t‰ytt‰vien nelikulmioiden kolmen muun kulman mitat
+$0.1$ asteen tarkkuudella. Piirr‰ kuviot! 
+
+\item
+Ratkaise seuraavat trigonometriset yht‰lˆt: \newline
+a) \ $\sin 2x=\cos 7x\quad\,$ b) \ $\tan 2x=3\tan x\quad\,$ 
+c) \ $4\sin^2 x=\tan x$ \newline
+d) \ $\abs{\sin x+\abs{\sin x}}=\cos x+\abs{\cos x}\quad\,$ e) \ $\cos 2x=\sin x + \cos x$ 
+
+\item
+Ratkaise trigonometrinen ep‰yht‰lˆ, eli m‰‰rit‰ joukko $A\subset\R$ tai $A\subset\Rkaksi$
+siten, ett‰ ep‰yht‰lˆ toteutuu t‰sm‰lleen kun $x \in A$ tai $(x,y) \in A$\,: \newline
+a) \ $\sin\abs{x}<\abs{\sin x}\quad$ b) \ $\abs{\sin 2x}\ge\abs{\sin 3x}\quad$
+c) \ $\sin 4x>\cot x-\tan x$ \newline
+d) \ $2\sin(x-y^2)>1 \quad$ e) \ $\sin(x-y)+\cos x>0$
+
+\item
+a) Johda tangentin yhteenlaskukaava $\ \displaystyle{\,\tan(\alpha + \beta)
+   =\frac{\tan\alpha + \tan\beta}{1-\tan\alpha\tan\beta}\,}.$ \vspace{1mm}\newline
+b) Tunnetaan $t=\cos\alpha$. Lausu $t$:n avulla $\cos n\alpha$, kun $n=2,3,4,5$. \newline
+c) Johda k‰‰nteiset yhteenlaskukaavat, joissa $\,\cos x \cos y$, $\,\sin x\sin y\,$ ja \newline
+$\,\cos x\sin y\,$ lausutaan $\,\cos{(x\pm y)}$:n ja $\,\sin{(x\pm y)}$:n avulla.
+
+\item \label{H-II-5: trigtuloksia}
+a) N‰yt‰, ett‰
+\[
+\sin\frac{\alpha}{2}=\pm\sqrt{\tfrac{1}{2}(1-\cos\alpha)}, \quad
+\cos\frac{\alpha}{2}=\pm\sqrt{\tfrac{1}{2}(1+\cos\alpha)}.
+\]
+Mill‰ v‰leill‰ on molemmissa kaavoissa voimassa etumerkki $+$\,? \newline
+b) Johda kaavat
+\[
+\tan \frac{\alpha}{2}=\frac{\sin \alpha}{1+\cos \alpha}\,, \quad
+  \cot \frac{\alpha}{2}=\frac{\sin \alpha}{1-\cos \alpha}\,.
+\]
+
+\item
+M‰‰rit‰ amplitudi ja vaihekulma: \newline
+a) \ $f(x)=3\cos x-4\sin x \quad\ \ \ $ b) \ $f(x)=-4\sin x+\cos x$ \newline
+c) \ $f(x)=76\cos x+57\sin x \quad$     d) \ $f(x)\,=\,\sin 2x(\sec x-2\csc x)$
+
+\item
+Vaihtovirran kolmen eri vaiheen j‰nnitteet ovat
+\[
+V_i(t)=V_0\sin(\omega t+\varphi_i),\ \ i=1,2,3, \quad \varphi_2=\varphi_1 + \frac{2\pi}{3}\,,\
+                                                      \varphi_3=\varphi_1 + \frac{4\pi}{3}\,.
+\]
+M‰‰rit‰ vaiheiden 1 ja 2 v‰lisen j‰nnitteen $V_1-V_2$ amplitudi ja vaihekulma. Mik‰ on 
+kaikkien vaiheiden j‰nnitteiden summa?
+
+\item
+Saata funktio
+\[
+f(x) = \sin x + 2\sin(x+\frac{2\pi}{3})+3\sin(x+\frac{4\pi}{3})
+\]
+muotoon $\,f(x)=R\sin(x+\alpha)$.
+
+\item (*) 
+Funktioista puhuttaessa lausutaan $f(x)$ usein '$f$ pisteess‰ $x$'. Olkoon nyt $x\in\R$ annettu
+'piste' ja m‰‰ritell‰‰n 'pistefunktio' $x$ seuraavasti:
+\[
+x(f)=f(x)\text{ }\forall f\in A,
+\]
+miss‰ $A=\{$reaalifunktiot, jotka on m‰‰ritelty pisteess‰ $x\}$. Onko t‰llainen 
+funktion m‰‰rittely todella mahdollinen ja jos on, miten $x(f)$ pit‰isi lausua?
+
+\item (*) \label{H-II-5: geometrinen kulma}
+Tasakylkinen kolmio, jonka huippukulma $=36\aste$, voidaan jakaa kahteen kolmioon siten, ett‰
+molemmat osakolmiot ovat tasakylkisi‰. K‰ytt‰en t‰t‰ ideaa l‰htˆkohtana laske $x=\sin 3\aste$
+tarkasti juurilukujen avulla. P‰‰ttele, ett‰ kulma $3\aste$ on konstruoitavissa geometrisesti.
+
+\item (*) \label{H-II-5: sinin raja-arvo}
+Todista: $\ {\D \sin\frac{\pi}{2^{n+1}} 
+               \,\le\, \left(\frac{1}{\sqrt{2}}\right)^n, \quad n=0,1,2, \ldots}$ 
+
+\item (*) \label{H-II-5: minmax}
+M‰‰rit‰ funktion $f(x)=\cos^2 x+4\sin x\cos x+3\sin^2 x$ pienin ja suurin arvo sek‰ minimi-
+ja maksimikohdat saattamalla funktio muotoon $f(x)=R\sin(2x+\alpha)+C$.
+
+\end{enumerate}

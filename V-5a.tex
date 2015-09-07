@@ -1,0 +1,138 @@
+%Esimerkit ja harjoitustehtävät vanhasta luvusta 'Kaarenpituus: $\sin$ ja $\cos$'
+\begin{Exa} Missä pisteissä funktio $f(x)=2\abs{\sin x}-\cos x)$ saavuttaa pienimmän ja
+suurimman arvonsa välillä $[0,2\pi]$? 
+\end{Exa}
+\ratk Funktio on derivoituva väleillä $(0,\pi)$ ja $(\pi,2\pi)$, joilla $\sin x$ ei vaihda 
+merkkiään:
+\[
+f'(x) = \begin{cases}
+        \dif(2\sin x-\cos x) = 2\cos x + \sin x,    \quad &x \in (0,\pi), \\
+        \dif(-2\sin x - \cos x = -2\cos x + \sin x, \quad &x \in (\pi,2\pi).
+        \end{cases}
+\]
+Derivaatan nollakohdat ovat pisteissä, joissa 
+\begin{align*}
+x \in (0,\pi)\ \ja\ 2\cos x + \sin x = 0    
+                        &\qimpl x=x_1 \in (\pi/2,\pi)\ \ja\ \tan x_1 = - 2 \\
+                        &\qimpl \sin x_1 = 2/\sqrt{5}, \quad \cos x_1 = - 1/\sqrt{5} \\
+                        &\qimpl f(x_1) = \sqrt{5}, \\
+x \in (\pi,2\pi)\ \ja\ -2\cos x + \sin x = 0 
+                        &\qimpl x = x_2 \in (\pi,3\pi/2)\ \ja \tan x_2 = 2 \\
+                        &\qimpl \sin x_2 = - 2/\sqrt{5}, \quad \cos x_2 = - 1/\sqrt{5} \\
+                        &\qimpl f(x_2) = \sqrt{5}. 
+\end{align*}
+Vertailemalla arvoihin $f(0)=f(2\pi)=-1$ ja $f(\pi)=1$ todetaan, että $f$ saavuttaa välillä 
+$[0,2\pi]$ maksimiarvonsa $f_{max}=\sqrt{5}$ pisteissä $x_1 = \Arctan(-2)+\pi = 2.03444393..$ ja
+$x_2=\Arctan 2+\pi = 4.24874137..$ ja minimiarvonsa $f_{min}=-1$ välin päätepisteissä. \loppu
+\begin{Exa} Näytä, että $f(x)=x-\sin x$ on aidosti kasvava $\R$:ssä. \end{Exa}
+\ratk Koska $f'(x)=1-\cos x \ge 0\ \forall x$, Lauseen \ref{monotonisuuskriteeri} mukaan $f$ on
+jokaisella välillä $[a,b]$ kasvava. Saman lauseen mukaan $f$ on jokaisella välillä $[a,b]$ myös
+aidosti kasvava, koska joukko
+\[
+X = [a,b] \cap \{x\in\R \mid f'(x)=0\} = [a,b] \cap \{k \cdot 2\pi,\ k \in \Z\}
+\]
+on äärellinen. Siis $f$ on aidosti kasvava $\R$:ssä. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-V-5: numeerinen kaarenpituus}
+Tutki, kuinka tarkasti kaaren
+\[
+S=\{P=(x,y) \mid y=x^2\ \ja\ x\in[0,1]\}
+\]
+pituus saadaan lasketuksi käyttämällä pisteistöä $\{(x_i,f(x_i)),\ i=0 \ldots 10\}$, missä 
+$x_i=i/10$. Tarkka arvo on $s=1.47894..$
+
+\item
+Origosta siirrytään käyrää $r=4\cos\varphi$ (napakoordinaatit) seuraten pisteeseen, jonka
+$x$-koordinaatti $=3$. Mikä on matkan pituus lyhintä reittiä?
+
+\item
+Näytä, että jos $a,b\in\R$ ja $b \neq 0$, niin 
+$\,\displaystyle{\lim_{x \kohti 0}\frac{\sin ax}{\sin bx}=\frac{a}{b}}\,$.
+
+\item
+Määritä raja-arvot
+\begin{align*}
+&\text{a)}\ \lim_{x \kohti 0} \frac{x\sin x}{1-\cos x} \qquad
+ \text{b)}\ \lim_{x \kohti 0} \frac{x\sin 2x}{1-\cos 2x} \qquad
+ \text{c)}\ \lim_{x \kohti 0^+} \frac{x-\sqrt{x}}{\sqrt{\sin x}} \\
+&\text{d)}\ \lim_{x\kohti\frac{\pi}{2}}(1+\cos 2x)\tan^2 x \qquad
+ \text{e)}\ \lim_{x\kohti\infty} x\sin\frac{1}{x}
+\end{align*}
+
+\item
+Näytä induktiolla, että $\dif^n\tan x=p(\tan x)$, missä $p$ on polynomi astetta $n+1$.
+
+\item
+Johda derivoimissääntöjen ja Lauseen \ref{yksinkertaisin dy} avulla kaava
+\[
+\Arctan x + \Arccot x=\frac{\pi}{2}\,, \quad x\in\R.
+\]
+
+\item
+Totea funktio
+\[
+f(x)=\begin{cases} 
+     x^2\sin\dfrac{1}{x^2}\,, &\text{kun}\ x \neq 0 \\ 0, &\text{kun}\ x=0
+     \end{cases} \]
+esimerkiksi funktiosta, joka on derivoituva jokaisessa pisteessä $x\in\R$, mutta derivaatta
+ei ole jokaisessa pisteessä jatkuva.
+
+\item
+Millä väleillä funktio $f(x)=x+4\sin x$ on aidosti kasvava ja millä aidosti vähenevä?
+Hahmottele funktion kuvaaja.
+
+\item
+Määritä seuraavien implisiittifunktioiden $y(x)$ derivaatat annetuissa pisteissä:
+\begin{align*}
+&\text{a)}\ y+2\sin y+\cos y=x,\ \ (x,y)=(1,0) \\
+&\text{b)}\ 2x+y-\sqrt{2}\sin(xy)=\frac{\pi}{2}\,,\ \ (x,y)=\left(\frac{\pi}{4}\,,1\right) \\
+&\text{c)}\ x\sin(xy-y^2)=x^2-1,\ \ (x,y)=(1,1) \\
+&\text{d)}\ \tan(xy^2)=\frac{2xy}{\pi}\,,\ \ (x,y)=\left(-\pi,\frac{1}{2}\right)
+\end{align*}
+
+\item
+Määritä napa- tai pallokoordinaatistoon siirtymällä seuraavien funktioiden maksimi- ja 
+minimiarvot annetussa joukossa $A$. Anna myös karteesisessa koordinaatistossa pisteet, 
+joissa nämä arvot saavutetaan.
+\begin{align*}
+&\text{a)}\ f(x,y)=x^3y^4,\ \ A=\{(x,y) \mid x^2+y^2 \le 1\} \\
+%&\text{b)}\ f(x,y)=x^2y^4,\ \ A=\{(x,y) \mid x^2+y^2 \le 25\} \\
+&\text{b)}\ f(x,y,z)=xyz^3,\ \ A=\{(x,y,z) \mid x^2+y^2+z^2 \le 1\}
+\end{align*}
+
+\item
+Määritä funktion $f(x)=4\abs{\cos x}-3\sin x+2\cos x\,$ derivaatan epäjatkuvuuskohdat, 
+paikalliset ääriarvokohdat ja absoluuttiset maksimi- ja minimiarvot välillä $[0,2\pi]$. 
+Hahmottele käyrän $y=f(x)$ kulku.
+
+\item
+Ratkaise alkuarvotehtävä $\,y(0)=0,\ y'=\sin x+\cos x,\ x\in\R$.
+
+\item (*)
+Näytä sopivalla muuttujan vaihdolla, että \newline
+$\D
+\text{a)}\ \ \lim_{x\kohti\infty} x\left(\frac{\pi}{2}-\Arctan x\right)=1, \qquad 
+\text{b)}\ \ \lim_{x \kohti 1^-} \frac{\pi-2\Arcsin x}{\sqrt{1-x}}=2\sqrt{2}$.
+
+\item (*)
+Näytä derivoimissääntöjen ja Lauseen \ref{toiseksi yksinkertaisin dy} avulla, että 
+pätee:
+\[
+\Arctan x=\sum_{k=0}^\infty \frac{(-1)^{k}}{2k+1}\,x^{2k+1},\ \ x\in(-1,1).
+\]
+
+\item(*)
+Kaarenpituuden määritelmän mukaisesti saadaan yksikköympyrän kaarenpituudelle alalikiarvo
+laskemalla sellaisen $n$-kulmion piiri, jonka kärjet ovat yksikköympyrällä. Olkoon $n$-kulmio
+säännöllinen ja piiri $=s_n$. Näytä, että kun valitaan $n=2^{k+1},\ k=1,2, \ldots\,$, niin
+luvut 
+$a_k=s_n/2,\ n=2^{k+1}$ saadaan lasketuksi palautuvana lukujonona
+\[
+a_0=2, \quad a_{k+1}=\frac{2a_k}{\sqrt{2+\sqrt{4-(2^{-k}a_k)^2}}}\,, \quad k=0,1,\ldots
+\]
+Laske $a_k$ kun $k=1 \ldots 10$ ja vertaa lukuun $\pi$.
+ 
+\end{enumerate}

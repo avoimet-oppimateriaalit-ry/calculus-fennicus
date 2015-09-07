@@ -1,0 +1,500 @@
+\section{Analyysin peruslause} \label{analyysin peruslause}
+\alku
+Palataan Luvussa \ref{m‰‰r‰tty integraali} tarkasteltuun probleemaan (P), jossa etsittiin
+annetun funktion $f$ integraalifunktiota $y(x)$ v‰lill‰ $(a,b)$ lis‰ehdoilla, ett‰ $y(x)$ on
+jatkuva v‰lill‰ $[a,b]$ ja $y(a)=0$. Kysymys probleeman ratkeavuudesta j‰tettiin tuolloin
+avoimeksi. N‰ytet‰‰n nyt, ett‰ riitt‰v‰ ehto ratkeavuudelle on, ett‰ funktio $f$ on
+ j\pain{atkuva} \pain{v‰lill‰} $[a,b]$. Kyseess‰ on er‰s matemaattisen analyysin
+perustavimmista tuloksista, ja se tunnetaankin nimell‰
+\kor{Analyysin peruslause}\footnote[2]{Englanninkielinen nimi on 'The Fundamental Theorem of
+Calculus'. Lauseen muotoilut kirjallisuudessa ovat vaihtelevia. --- Usein peruslauseena
+esitet‰‰n vain Lauseen \ref{Analyysin peruslause} toinen osav‰itt‰m‰, jolloin lause j‰‰
+sis‰llˆlt‰‰n melko kevyeksi, ks.\ Lause \ref{Analyysin peruslause 2} j‰ljemp‰n‰.}.
+\begin{*Lause} \label{Analyysin peruslause} \vahv{(Analyysin peruslause)}
+\index{Analyysin peruslause|emph} \index{Riemann-integroituvuus!b@jatkuvan funktion|emph}
+Jos $f$ on jatkuva v‰lill‰ $[a,b]$, niin
+\begin{enumerate}
+\item $f$ on Riemann-integroituva v‰lill‰ $[a,b]$.
+\item Funktio $F(x)=\int_a^x f(t)\, dt$ on jatkuvasti derivoituva v‰lill‰ $[a,b]\,$ ja \\
+      $F'(x)=f(x)$ ko.\ v‰lill‰.
+\end{enumerate}
+\end{*Lause}
+Seuraavassa todistetaan Lauseen \ref{Analyysin peruslause} ensimm‰inen (vaativampi) osav‰itt‰m‰
+heikennetyss‰ muodossa, uudistamalla Luvussa \ref{m‰‰r‰tty integraali} tehty Lipschitz-oletus
+\[
+\abs{f(x_1)-f(x_2)}\leq L\abs{x_1-x_2}\quad\forall x_1,x_2\in [a,b].
+\]
+\begin{Lause} \label{Analyysin peruslause 1} V‰lill‰ $[a,b]$ Lipschitz-jatkuva funktio on
+Riemann-integroituva.% ko.\ v‰lill‰.
+\end{Lause}
+\tod Olkoon $X_n=\{x_k,\ k=0 \ldots n\}$ v‰lin $[a,b]$ jako. Koska $f$ on (ainakin) jatkuva
+v‰lill‰ $[a,b]$, niin $f$ saavuttaa v‰leill‰ $[x_{k-1},x_k]$ maksimi- ja minimi-\linebreak
+arvonsa (Lause\ref{Weierstrassin peruslause}), joten jakoon $X_n$ liittyv‰t Riemannin yl‰- ja
+alasummat \linebreak (ks.\ edellinen luku) voidaan kirjoittaa
+\[
+\overline{\sigma}(f,X_n)=\sum_{k=1}^n f(\xi_k)(x_k-x_{k-1}), \quad\,\
+\underline{\sigma}(f,X_n)=\sum_{k=1}^n f(\eta_k)(x_k-x_{k-1}),
+\]
+miss‰ $\xi_k,\eta_k\in[x_{k-1},x_k]$. T‰m‰n ja oletetun Lipschitz-jatkuvuuden perusteella on
+\begin{align*}
+0 \,\le\, \overline{\sigma}(f,X_n)-\underline{\sigma}(f,X_n)
+ &\,=\, \sum_{k=1}^n[f(\xi_k)-f(\eta_k)](x_k-x_{k-1}) \\
+ &\,\le\, \sum_{k=1}^n L|\xi_k-\eta_k|(x_k-x_{k-1}) \\
+ &\,\le\, \sum_{k=1}^n Lh_{X_n}(x_k-x_{k-1}) \,=\, L(b-a)h_{X_n}.
+\end{align*}
+On p‰‰telty, ett‰ jos $\seq{X_n}$ on jono jakoja, jolle $h_{X_n} \kohti 0$, niin
+\[
+\overline{\sigma}(f,X_n)-\underline{\sigma}(f,X_n)\,=\,\mathcal{O}(h_{X_n})\,\kohti\,0.
+\]
+T‰m‰n ja Lauseiden \ref{yl‰- ja alaintegraalit raja-arvoina} ja \ref{Riemann-integroituvuus}
+perusteella seuraa v‰ite. \loppu
+
+Analyysin peruslauseen 1.\ v‰itt‰m‰n mukaisesti Lause \ref{Analyysin peruslause 1} on tosi myˆs,
+jos $f$ on pelk‰st‰‰n jatkuva v‰lill‰ $[a,b]$. Todistuksen p‰‰idea on t‰ss‰kin tapauksessa sama,
+mutta todistuksen on nojattava syv‰llisemp‰‰n jatkuvuuden logiikkaan, tarkemmin sanoen
+\pain{tasaiseen} j\pain{atkuvuuteen} (ks.\ Luku \ref{jatkuvuuden logiikka}). Todettakoon t‰ss‰
+ainoastaan, ett‰ pelk‰n jatkuvuusoletuksen perusteella em.\ todistuskonstruktion
+loppup‰‰telm‰ksi tulee
+\[
+\overline{\sigma}(f,X_n)-\underline{\sigma}(f,X_n) = o(1)
+                  \,\kohti\,0, \quad \text{kun}\ h_{X_n} \kohti 0.
+\]
+V‰itetty integroituvuus (Analyysin peruslauseen 1.\ v‰itt‰m‰) tulee siis n‰inkin todistetuksi.
+
+Analyysin peruslauseen 2. v‰itt‰m‰n todistamiseksi tarkastellaan (sovelluksiakin silm‰ll‰
+pit‰en, ks.\ esimerkki j‰ljemp‰n‰) yleisemp‰‰ tilannetta, jossa funktio $f$ on integroituva 
+v‰lill‰ $[a,b]$ mutta ei v‰ltt‰m‰tt‰ jatkuva koko v‰lill‰ $[a,b]$. 
+T‰llˆinkin funktio $F(x) = \int_a^x f(t)\,dt$ on m‰‰ritelty koko v‰lill‰ $[a,b]$ 
+(Lause \ref{integroituvuus osav‰lill‰}). Seuraavan lauseen toinen v‰itt‰m‰ todistaa Lauseen
+\ref{Analyysin peruslause} toisen osav‰itt‰m‰n, joten Analyysin peruslause tulee samalla
+kokonaaan todistetuksi.
+\begin{Lause} \label{Analyysin peruslause 2} Olkoon $f$ m‰‰ritelty, rajoitettu ja
+Riemann-integroituva v‰lill‰ $[a,b]$ ja $F(x)=\int_a^x f(t)\,dt$, $\,x\in[a,b]$. T‰llˆin p‰tee:
+\begin{enumerate}
+\item Jos $\abs{f(x)}\leq M \ \forall x\in [a,b]$, niin $F$ on v‰lill‰ $[a,b]$ Lipschitz-jatkuva
+      vakiolla $L=M$.
+\item Jos $f$:ll‰ on oikeanpuoleinen raja-arvo $f(x^+)$ pisteess‰ $x\in[a,b)$, niin $F$ on 
+      pisteess‰ $x$ oikealta derivoituva ja $D_+F(x)=f(x^+)$. Vastaavasti jos $f$:ll‰ on 
+      vasemmanpuoleinen raja-arvo $f(x^-)$ pisteess‰ $x\in(a,b]$, niin $F$ on vasemmalta 
+      derivoituva pisteess‰ $x$ ja $D_-F(x)=f(x^-)$.
+\end{enumerate}
+\end{Lause}
+\tod \ 1. Jos $\,-M \le f(x) \le M,\ x\in[a,b]$, niin integraalien vertailuperiaatteen
+(Lause \ref{integraalien vertailuperiaate}) nojalla p‰tee jokaisella osav‰lill‰ 
+$[x_1,x_2]\subset[a,b]\ (x_1<x_2)$
+\[
+-M(x_2-x_1) = \int_{x_1}^{x_2} (-M)\,dt \le \int_{x_1}^{x_2} f(t)\,dt 
+              \le \int_{x_1}^{x_2} M\,dt = M(x_2-x_1).
+\]
+Integraalin additiivisuuden (Lause \ref{integraalin additiivisuus}) perusteella seuraa
+\[
+\abs{F(x_2)-F(x_1)} = \left|\int_{x_1}^{x_2} f(t)\,dt\right| 
+                      \le M \abs{x_1-x_2}\ \ \forall x_1,x_2\in[a,b]\ \impl\ \text{v‰ite 1.}
+\]
+
+2. Olkoon oikeanpuoleinen raja-arvo $f(x^+)$ olemassa pisteess‰ $x\in[a,b)$ ja olkoon $\eps>0$.
+T‰llˆin on olemassa $\delta\in(0,b-x]$ siten, ett‰ $\abs{f(t)-f(x^+)}<\eps$, kun 
+$t\in[x,x+\delta)$ (Lause \ref{approksimaatiolause}). T‰llˆin jos $0<\Delta x<\delta$, niin
+integraalin lineaarisuuden, additiivisuuden ja vertailuperiaatteen nojalla
+\begin{multline*}
+\left|\frac{F(x+\Delta x)-F(x)}{\Delta x}-f(x^+)\right| 
+               \,=\, \left|\frac{1}{\Delta x}\int_x^{x+\Delta x} [f(t)-f(x^+)]\,dt\right| \\
+               \,\le\, \frac{1}{\Delta x}\int_x^{x+\Delta x} |f(t)-f(x^+)|\,dt
+               \,\le\, \frac{1}{\Delta x}\int_x^{x+\Delta x} \eps\,dt \,=\,\eps.
+\end{multline*}
+Koska t‰ss‰ $\eps>0$ oli mielivaltainen ja ep‰yht‰lˆ on p‰tev‰ jokaisella 
+$\Delta x\in(0,\delta)$, miss‰ $\delta>0$, niin $F$ on m‰‰ritelm‰n mukaan oikealta derivoituva
+pisteess‰ $x$ ja $D_+F(x)=f(x^+)$. V‰itt‰m‰n toinen osa todistetaan vastaavasti. \loppu
+\begin{Exa}: \vahv{Liikelaki}. \index{zza@\sov!Liikelaki} \label{liikelaki} \ Jos kappaleen
+(massa = $m$) suoraviivaisessa liikkeess‰ vaikuttaa liikesuuntaan voima $f(t)$ ($t$=aika),
+niin \pain{liikem‰‰r‰n} \pain{s‰il}y\pain{mislaki} aikav‰lill‰ $[0,\infty)$ on
+\[
+mv(t)-mv(0)= \int_0^t f(t')dt',
+\]
+miss‰ $v(t)=$ kappaleen nopeus hetkell‰ $t$ ja oikealla puolella oleva (Riemannin) integraali
+on voiman $f$ \pain{im}p\pain{ulssi} aikav‰lill‰ $[0,t]$. Jos $f$ on jatkuva pisteess‰ $t>0$,
+niin Lauseen \ref{Analyysin peruslause 2} perusteella liikem‰‰r‰n s‰ilymislaista seuraa
+(puolittain derivoimalla) \pain{liike}y\pain{ht‰lˆ}
+\[
+mv'(t)=f(t).
+\]
+Jos $f$ on pisteess‰ $t$ ep‰jatkuva (fysikaalisesti mahdollista!), ei liikeyht‰lˆ ole (yleens‰)
+voimassa ko.\ hetkell‰. Liikem‰‰r‰n s‰ilymislaki sen sijaan s‰ilytt‰‰ p‰tevyytens‰, edellytt‰en
+ainoastaan, ett‰ $f$ on (Riemann-)integroituva aikav‰leill‰ $[0,t]$. Liikem‰‰r‰n
+s‰ilymislakia voidaan n‰in ollen pit‰‰ 'alkuper‰isen‰' fysiikan lakina ja liikeyht‰lˆ‰ 
+pikemminkin t‰m‰n seuraamuksena mainitun lis‰oletuksen ($f$ jatkuva pisteess‰ $t$) vallitessa. 
+Esimerkiksi jos $v(0)=v_0$ ja
+\[
+f(t)=\begin{cases}
+F,   &\text{ kun } t\in [t_1,t_2], \\
+\,0, &\text{ muuten},
+\end{cases}
+\]
+miss‰ $F \neq 0$ on vakio ja $0<t_1<t_2\,$, niin liikem‰‰r‰n s‰ilymislain mukainen
+(fysikaalisesti oikea!) ratkaisu on
+\begin{align*}
+v(t) = \begin{cases}
+v_0,                         &\text{kun}\,\ t\in [0,t_1], \\[3mm]
+v_0+\dfrac{F}{m}\,(t-t_1),   &\text{kun}\,\ t\in [t_1,t_2], \\[3mm]
+v_0+\dfrac{F}{m}\,(t_2-t_1), &\text{kun}\,\ t\in [t_2,\infty).
+\end{cases}
+\end{align*}
+Liikeyht‰lˆ $mv'(t)=f(t)$ on t‰ss‰ tapauksessa voimassa v‰leill‰ $(0,t_1)$, $(t_1,t_2)$ ja
+$(t_2,\infty)$. Pisteiss‰ $t_1$ ja $t_2$ nopeus $v(t)$ on Lauseen \ref{Analyysin peruslause 2}
+mukaisesti jatkuva (koska $f$ on rajoitettu) ja sek‰ vasemmalta ett‰ oikealta derivoituva.
+Koska $f$:ll‰ on n‰iss‰
+pisteiss‰ hyppyep‰jatkuvuus, ovat toispuoliset derivaatat erisuuret, ja n‰in ollen $v(t)$ ei
+ole derivoituva pisteiss‰ $t_1$ ja $t_2$. \loppu
+\end{Exa}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,3)(-1,-0.4)
+\put(-1,0){\vector(1,0){10}} \put(8.8,-0.5){$t$}
+\put(0,-1){\vector(0,1){4}} \put(0.2,2.8){$v(t)$}
+\path(0,1)(3,1)(6,2)(9,2) 
+\put(0,1){\line(-1,0){0.1}} \put(-0.5,0.9){$v_0$}
+\put(3,0){\line(0,-1){0.1}} \put(2.9,-0.5){$t_1$}
+\put(6,0){\line(0,-1){0.1}} \put(5.9,-0.5){$t_2$}
+\end{picture}
+\end{center}
+\end{figure}
+
+\subsection*{Funktion $\,\int_{g_1(x)}^{g_2(x)} f(t)\,dt$ derivaatta}
+
+Integraalin additiivisuuden nojalla otsikon funktio voidaan esitt‰‰ muodossa \linebreak
+$\,F(g_2(x))-F(g_1(x))$, miss‰ $F(x)=\int_a^x f(t)\,dt$. Yhdistetyn funktion derivoimiss‰‰nnˆn
+ja Lauseen \ref{Analyysin peruslause 2} perusteella p‰‰dyt‰‰n derivoimiss‰‰ntˆˆn
+\[
+\boxed{\quad \frac{d}{dx}\int_{g_1(x)}^{g_2(x)} f(t)\, dt 
+                      = f(g_2(x))g_2'(x)-f(g_1(x))g_1'(x) \quad}
+\]
+seuraavin oletuksin:
+\begin{itemize}
+\item[(i)]   $g_1(t)$ ja $g_2(t)$ ovat derivoituvia pisteess‰ $t=x$.
+\item[(ii)]  $f(t)$ on m‰‰ritelty, rajoitettu ja Riemann-integroituva jollakin v‰lill‰ $[a,b]$,
+             miss‰ $\,a<\min\{g_1(x),g_2(x)\}\,$ ja $b>\max\{g_1(x),g_2(x)\}$.
+\item[(iii)] $f(t)$ on jatkuva pisteiss‰ $g_1(x)$ ja $g_2(x)$.
+\end{itemize}
+\begin{Exa} Jokaisella $x \neq 0$ (myˆs kun $x=1$\,(!)) p‰tee
+\[
+\frac{d}{dx}\int_x^{1/x} \frac{e^t}{t}\,dt\,
+               =\,-\frac{1}{x^2}\left(x\,e^{1/x}\right)-\frac{e^x}{x}\,
+               =\,-\frac{1}{x}(e^x+e^{1/x}),
+\]
+sill‰ oletukset (i)--(iii) ovat voimassa. Samasta syyst‰ p‰tee jokaisella $x>0$
+\[
+\frac{d}{dx}\int_x^{x^2} \frac{e^t}{t}\,dt\,
+               =\,2x \cdot \frac{e^{x^2}}{x^2}-\frac{e^x}{x}\,
+               =\,\frac{1}{x}(2e^{x^2}-e^x).
+\]
+Sen sijaan jos $x†\le 0$, niin t‰m‰ lasku ei ole p‰tev‰, koska t‰llˆin ei oletus (ii) 
+(tapauksessa $x=0$ ei myˆsk‰‰n (iii)) ole voimassa. \loppu
+\end{Exa}
+
+\subsection*{Osittaisintegrointi ja sijoitus m‰‰r‰tyss‰ integraalissa}
+\index{osittaisintegrointi|vahv}
+\index{muuttujan vaihto (sijoitus)!b@integraalissa|vahv}
+
+M‰‰r‰tylle integraalille p‰tev‰t riitt‰vin s‰‰nnˆllisyysoletuksin seuraavat laskukaavat, 
+vrt.\ vastaavat m‰‰r‰‰m‰ttˆm‰n integraalin kaavat Luvussa \ref{osittaisintegrointi}. 
+\begin{enumerate}
+\item \pain{Osittaisinte}g\pain{rointikaava}
+\[
+\int_a^b f'(x)g(x)\, dx=\sijoitus{a}{b} f(x)g(x)-\int_a^b f(x)g'(x)\, dx.
+\]
+\item \pain{Si}j\pain{oituskaava}
+\[
+\int_a^b f(x)\, dx = \int_\alpha^\beta f(u(t))u'(t)\, dt,\quad u(\alpha)=a, \ u(\beta)=b.
+\]
+\end{enumerate}
+Osittaisintegrointikaava on p‰tev‰ silloin kun $f$ ja $g$ ovat v‰lill‰ $[a,b]$ jatkuvasti 
+derivoituvia. T‰llˆin $f'g$ ja $fg'$ ovat jatkuvia v‰lill‰ $[a,b]$, jolloin Analyysin
+peruslauseen ja integraalin lineaarisuuden perusteella p‰tee
+\begin{align*}
+\int_a^b f'(x)g(x)\,dx+\int_a^b f(x)g'(x)\,dx
+            &= \int_a^b [f'(x)g(x)+f(x)g'(x)]\,dx \\     
+            &= \int_a^b \frac{d}{dx}\,f(x)g(x)\,dx = \sijoitus{a}{b} f(x)g(x).
+\end{align*}
+
+M‰‰r‰tyn integraalin sijoituskaava vaatii hieman pitemm‰t perustelut. Olkoon esimerkiksi
+$\alpha<\beta$ (kaavan p‰tevyys ei t‰t‰ edellyt‰). T‰llˆin on oletettava
+\begin{itemize}
+\item[(i)] $u$ on jatkuvasti derivoituva v‰lill‰ $[\alpha,\beta]$,
+\item[(ii)] $f$ on jatkuva v‰lill‰ $[A,B]$, jolle p‰tee
+$t\in [\alpha,\beta] \ \impl \ u(t)\in [A,B]$.
+\end{itemize}
+Kun merkit‰‰n
+\[
+F(x)=\int_a^x f(s)ds, \quad x\in[A,B],
+\]
+niin Analyysin peruslauseen mukaan on
+\[
+F'(x)=f(x),\quad x\in [A,B].
+\]
+T‰llˆin on oletuksien (i)-(ii) perusteella
+\[
+\frac{d}{dt}F(u(t))=f(u(t))u'(t),\quad t\in [\alpha,\beta],
+\]
+joten
+\begin{align*}
+\int_\alpha^\beta f(u(t))u'(t)\, dt &= \sijoitus{\alpha}{\beta} F(u(t)) \\
+&= F(u(\beta))-F(u(\alpha)) \\
+&= F(b)-F(a)=\int_a^b f(x)\, dx.
+\end{align*}
+Tapauksessa $\alpha >\beta$ on puhuttava v‰list‰ $[\beta,\alpha]$, muuten perustelut ovat samat.
+Huomattakoon, ett‰ koska funktion $u$ injektiviisytt‰ ei vaadittu, eiv‰t $\alpha$ ja $\beta$
+v‰ltt‰m‰tt‰ ole yksik‰sitteiset, vrt.\ kuvio.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12,6)
+\put(0,0){\vector(1,0){12}} \put(11.8,-0.4){$t$}
+\put(0,0){\vector(0,1){6}} \put(0.2,5.8){$x$}
+% f(x)=0.05(x-2)(x-8)(x-10)+2
+\curve(
+    1.50,   0.619,
+    2.00,   2.000,
+    2.50,   3.031,
+    3.00,   3.750,
+    3.50,   4.194,
+    4.00,   4.400,
+    4.50,   4.406,
+    5.00,   4.250,
+    5.50,   3.989,
+    6.00,   3.600,
+    6.50,   3.181,
+    7.00,   2.750,
+    7.50,   2.344,
+    8.00,   2.000,
+    8.50,   1.756,
+    9.00,   1.650,
+    9.50,   1.719,
+   10.00,   2.000,
+   10.50,   2.531,
+   11.00,   3.350)
+%\put(0.9,0.85){$\bullet$}\put(4.9,2.85){$\bullet$}
+%\drawline(1,1)(5,3)
+%\drawline(3,1.1)(5,2.1)
+\dashline{0.2}(0,2)(11,2)
+\dashline{0.2}(2,0)(2,2) \dashline{0.2}(8,0)(8,2) \dashline{0.2}(10,0)(10,2)
+\dashline{0.2}(0,3.75)(7,3.75)
+\dashline{0.2}(3,0)(3,3.75) \dashline{0.2}(5.8,0)(5.8,3.75)
+\put(0,1){\line(-1,0){0.1}} \put(0,5){\line(-1,0){0.1}}
+\put(-0.6,0.9){$A$} \put(-0.6,4.9){$B$}
+\put(-0.45,1.9){$a$} \put(-0.43,3.65){$b$}
+\put(1.9,-0.4){$\alpha$} \put(7.9,-0.4){$\alpha$} \put(9.9,-0.4){$\alpha$}
+\put(2.9,-0.5){$\beta$} \put(5.71,-0.5){$\beta$}
+\put(11,3.6){$x=u(t)$}
+\end{picture}
+\end{center}
+\end{figure}
+\begin{Exa}
+Kun integraalissa
+\[
+\int_0^2 \frac{e^{-x}}{1+\sqrt{x}}\, dx
+\]
+tehd‰‰n sijoitus
+\[
+\sqrt{x}=t \ge 0\ \ \ekv\ \ x=u(t)=t^2,
+\]
+niin
+\[
+dx=u'(t)dt=2tdt
+\]
+ja
+\[
+u(\alpha)=0\ \impl \alpha=0, \quad u(\beta)=2\ \impl\ \beta=\sqrt{2},
+\]
+joten integraali saa muodon
+\[
+\int_0^2 \frac{e^{-x}}{1+\sqrt{x}}\, dx=\int_0^{\sqrt{2}} \frac{e^{-t^2}}{1+t}\,2t\,dt
+                                       =2\int_0^{\sqrt{2}} \frac{te^{-t^2}}{1+t}\,dt. \loppu
+\]
+\end{Exa}
+Esimerkin muunnetussa integraalissa (toisin kuin alkuper‰isess‰) integroitava funktio on 
+s‰‰nnˆllinen (sile‰) koko integroimisv‰lill‰. Integroitavan funktion s‰‰nnˆllisyys on yleisesti
+eduksi silloin, kun integraalin arvo lasketaan numeerisilla menetelmill‰, ks.\ Luku 
+\ref{numeerinen integrointi} j‰ljemp‰n‰.
+
+\subsection*{Integraalilaskun v‰liarvolause}
+
+Seuraava lause on v‰liarvolauseiden sarjan kolmas ja viimeinen, vrt.\ Lauseet 
+\ref{ensimm‰inen v‰liarvolause} ja \ref{toinen v‰liarvolause}. Verrattuna aiempiin
+v‰liarvolauseisiin t‰m‰ lause ei ole kovin itsen‰inen, sill‰ se seuraa helposti Analyysin
+peruslauseesta ja Differentiaalilaskun v‰liarvolauseesta
+(Harj.teht.\,\ref{H-int-6: todistuksia}a).
+\begin{Lause} \label{kolmas v‰liarvolause} \vahv{(Integraalilaskun v‰liarvolause)}
+\index{vzy@v‰liarvolauseet!c@integraalilaskun|emph} \index{Integraalilaskun v‰liarvolause|emph}
+Jos f on jatkuva v‰lill‰ $[a,b]$, niin jollakin $\xi\in(a,b)$ on
+\[
+\int_a^b f(x)\,dx = f(\xi)(b-a).
+\]
+\end{Lause}
+Seuraavaa Lauseen \ref{kolmas v‰liarvolause} yleisemp‰‰ (myˆs itsen‰isemp‰‰) muotoa sanotaan
+integraalilaskun \kor{yleistetyksi} v‰liarvolauseeksi.
+\begin{Lause} \label{kolmas v‰liarvolause - yleistys}
+Jos $f$ on jatkuva v‰lill‰ $[a,b]$, $g$ on Riemann--integroituva v‰lill‰ $[a,b]$ ja joko
+$g(x) \ge 0$ tai $g(x) \le 0$ koko v‰lill‰ $[a,b]$, niin jollakin $\xi \in[a,b]$ on
+\[
+\int_a^b f(x)g(x)\,dx=f(\xi)\int_a^b g(x)\,dx.
+\]
+\end{Lause}
+\tod Jos $g(x)\geq 0$ ja $f_{\text{min}}$ ja $f_{\text{max}}$ ovat $f$:n minimi- ja maksimiarvot
+v‰lill‰ $[a,b]$, niin p‰‰tell‰‰n
+\begin{align*}
+&f_{\text{min}}\,g(x) \le f(x)g(x) \le f_{\text{max}}\,g(x),\quad x\in [a,b] \\[1mm]
+&\impl\; f_{\text{min}} \int_a^b g(x)\,dx \le \int_a^b f(x)g(x)\,dx 
+                                  \le f_{\text{max}} \int_a^b g(x)\,dx \\
+&\impl\; \int_a^b f(x)g(x)\,dx = \eta \int_a^b g(x)\,dx, \quad 
+                                    \eta\in [f_{\text{min}},f_{\text{max}}]. 
+\end{align*}
+Ensimm‰isen v‰liarvolauseen (Lause \ref{ensimm‰inen v‰liarvolause}) mukaan on t‰ss‰ 
+$\eta=f(\xi)$ jollakin $\xi\in [a,b]$, joten v‰ite seuraa. Tapauksessa $g(t)\leq 0$ voidaan
+k‰ytt‰‰ jo todistettua v‰itt‰m‰‰, kun $g$:n tilalla on $-g$. \loppu
+
+Funktion $f$ 
+\index{keskiarvo!a@funktion}%
+\kor{keskiarvoksi} (engl.\ average value) v‰lill‰ $[a,b]$ sanotaan lukua
+\[
+K(f) = \frac{1}{b-a}\int_a^b f(x)\,dx.
+\]
+Jos $\,\D g(x) \ge 0\ \forall x\in[a,b]\,\ \text{ja}\,\ \int_a^b g(x)\,dx>0$, niin lukua
+\[
+K_g(f)= \frac{\int_a^b f(x)g(x)\, dx}{\int_a^b g(x)\,dx}
+\]
+sanotaan $f$:n \kor{painotetuksi keskiarvoksi} (engl.\ weighted average) v‰lill‰ $[a,b]$ ja
+\index{painotettu keskiarvo}%
+funktiota $g$ t‰llˆin \kor{painofunktioksi}. Lauseen \ref{kolmas v‰liarvolause - yleistys}
+mukaan v‰lill‰ $[a,b]$ jatkuvalle funktiolle p‰tee $K_g(f)=f(\xi)$ jollakin $\xi\in[a,b]$.
+
+\subsection*{Taylorin lauseen integraalimuoto}
+
+Monissa sovelluksissa (esim.\ numeeristen menetelmien virhett‰ arvioitaessa, ks.\
+Harj.teht.\,\ref{H-int-6: virhekaava}) seuraava Taylorin lauseen vaihtoehtoinen
+\kor{integraalimuoto} on hyvin k‰tev‰ --- vrt.\ Lause \ref{Taylor}, jota kutsutaan Taylorin
+lauseen \kor{v‰liarvomuodoksi}.
+\begin{Lause} \label{Taylor-integraali} \index{Taylorin lause!a@integraalimuoto|emph}
+\vahv{(Taylorin lause -- integraalimuoto)} Jos $f$ on $n+1$ kertaa jatkuvasti derivoituva 
+v‰lill‰ $[x_0,x]$ $(x>x_0)$ tai $[x,x_0]$ ($x<x_0$) ja $T_n(x,x_0)$ on $f$:n Taylorin polynomi
+astetta $n$ pisteess‰ $x_0$, niin
+\[
+f(x)-T_n(x,x_0)=\int_{x_0}^x \frac{1}{n!}(x-t)^n f^{(n+1)}(t)\,dt.
+\]
+\end{Lause}
+\tod L‰hdet‰‰n ilmeisest‰ identiteetist‰
+\[
+f(x)=f(x_0)+\int_{x_0}^x f'(t)\,dt,
+\]
+joka on sama kuin lauseen v‰itt‰m‰ tapauksessa $n=0$. Jos t‰ss‰ $f$ on kahdesti jatkuvasti
+derivoituva integroimisv‰lill‰ (oletus tapauksessa $n=1$), voidaan integroida osittain
+seuraavasti:
+\begin{align*}
+f(x) &= f(x_0)-\sijoitus{x_0}{x} (x-t)f'(t)+\int_{x_0}^x (x-t)f''(t)\,dt \\
+&= f(x_0)+f'(x_0)(x-x_0)+\int_0^x (x-t)f''(t)\,dt.
+\end{align*}
+N‰in on todistettu v‰itt‰m‰ tapauksessa $n=1$. Jatkamalla osittaisintegrointia n‰hd‰‰n 
+vastaavasti, ett‰ v‰itt‰m‰ on tosi, kun $n=2$, jne.\ (Yleinen todistus:
+Harj.teht.\,\ref{H-int-6: todistuksia}b.) \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Jos $f$ jatkuva v‰lill‰ $[a,b]$, niin mik‰ on funktion
+\[
+g(x)=\int_a^b [f(t)-x\,]^2\,dt
+\]
+pienin arvo ja miss‰ se saavutetaan?
+
+\item
+Laske:
+\begin{align*}
+&\text{a)}\,\ \frac{d}{dx}\int_2^x \frac{\sin t}{t}\,dt \qquad
+ \text{b)}\,\ \frac{d}{dt}\int_t^3 \frac{\sin x}{x}\,dx \qquad
+ \text{c)}\,\ \frac{d}{dx}\int_{x^2}^x \frac{\sin t}{t}\,dt \\
+&\text{d)}\,\ \frac{d}{dx}x^2\int_0^{x^2} \frac{\sin u}{u}\,du \qquad
+ \text{e)}\,\ \frac{d}{dt} \int_{-t^{-1}}^t \frac{\cos y}{1+y^2}\,dy \\
+&\text{f)}\,\ \frac{d}{d\theta}\int_{\sin\theta}^{\cos\theta} \frac{1}{1-x^2}\,dx \qquad
+ \text{g)}\,\ \frac{d}{dx}F(\sqrt{x}),\,\ F(t)=\int_0^t \cos(x^2)\,dx \\
+&\text{h)}\,\ H'(2),\,\ H(x)=3x\int_4^{x^2} e^{-\sqrt{t}}\,dt
+\end{align*}
+
+\item
+Ratkaise $y(x)$:
+\[
+\text{a)}\ \ y(x)=1-\int_0^x y(t)\,dt \qquad
+\text{b)}\ \ y(x)=\pi\left(1+\int_1^x y(t)\,dt\right)
+\]
+
+\item
+Laske integroimalla osittain kohdissa a)--f) ja sijoituksella kohdissa g)--l):
+\begin{align*}
+&\text{a)}\ \ \int_0^1 x e^{-x}\,dx \qquad
+ \text{b)}\ \ \int_0^\pi x\cos x\,dx \qquad
+ \text{c)}\ \ \int_0^\pi x\sin x\,dx \\
+&\text{d)}\ \ \int_0^2 \sqrt{x}\ln x\,dx \qquad
+ \text{e)}\ \ \int_0^1 \Arctan x\,dx \qquad
+ \text{f)}\ \ \int_0^\pi e^{-x}\sin x\,dx \\
+&\text{g)}\ \ \int_{-2}^2 \frac{1}{2x^2+4x+3}\,dx \qquad
+ \text{h)}\ \ \int_0^{\ln 2} \frac{e^x}{1+e^x}\,dx \qquad
+ \text{i)}\ \ \int_1^4 \frac{\sqrt{x}}{\sqrt[4]{x}+1}\,dx \\
+&\text{j)}\ \ \int_0^1 \sqrt{\frac{1-x}{1+x}}\,dx \qquad
+ \text{k)}\ \ \int_0^{\pi/4} \frac{1}{1+\tan x}\,dx \qquad
+ \text{l)}\ \ \int_0^{\pi} \frac{\sin x}{2-\cos x}\,dx
+\end{align*}
+
+\item
+Olkoon $R>0$ ja $ab \neq 0$. Laske
+\[
+\text{a)}\ \ \int_0^R x^2\sqrt{R^2-x^2}\,dx, \qquad
+\text{b)}\ \ \int_0^{\pi/2} \frac{1}{a^2\cos^2 x+b^2\sin^2 x}\,dx.
+\]
+
+\item
+Yksinkertaista seuraavat funktiolausekkeet sijoitusta k‰ytt‰en ($x>0$).
+\[
+\text{a)}\ \ f(x)=\int_0^x \sqrt{t}\,\sqrt{x^2-t^2}\,dx \qquad
+\text{b)}\ \ f(x)=\int_{-x/2}^{x/2} \frac{1}{(x^2-t^2)^{3/2}}\,dt
+\]
+
+\item
+Laske funktion $f(x)=\sin^2x$ \ a) keskiarvo, \,b) funktiolla $g(x)=x$ painotettu keskiarvo
+v‰lill‰ $[0,\pi]$.
+
+
+\item \label{H-int-6: todistuksia}
+a) Todista Integraalilaskun v‰liarvolause soveltamalla Differentiaalilaskun v‰liarvolausetta
+funktioon $F(x)=\int_a^x f(t)\,dt$. \ b) Todista Lause \ref{Taylor-integraali} induktiolla. \
+c) Johda Lauseesta \ref{Taylor-integraali} Taylorin lauseen v‰liarvomuoto (Lause \ref{Taylor})
+k‰ytt‰m‰ll‰ hyv‰ksi Lausetta \ref{kolmas v‰liarvolause - yleistys}.
+
+\item (*)
+Onko funktiolla $\D\,F(x)=\int_0^{2x-x^2}\cos\left(\frac{1}{1+t^2}\right)dt\,$
+suurin tai pienin arvo? Perustele!
+
+\item (*) \index{osittaissummaus}
+N‰yt‰ oikeaksi \kor{osittaissummauksen} kaava
+\[
+\sum_{k=1}^n f_k g_k = \sijoitus{k=1}{k=n} F_k g_k - \sum_{k=1}^{n-1} F_k\,(g_{k+1}-g_k), \quad
+                       F_k = \sum_{i=1}^k f_i.
+\]             
+Mik‰ on vastaava kaava m‰‰r‰tylle integraalille?
+
+\item (*) \label{H-int-6: virhekaava}
+Olkoon $f$ kolmesti jatkuvasti derivoituva v‰lill‰ $[a-h,a+h]$. Johda Lauseen
+\ref{Taylor-integraali} avulla keskeisdifferenssiapproksimaation virhekaava
+\begin{align*}
+&f'(a)-\frac{f(a+h)-f(a-h)}{2h} \,=\, -\frac{1}{h}\int_{a-h}^{a+h} k(t)f'''(t)\,dt, \\[2mm]
+&\text{miss‰}\quad k(t)=\begin{cases}
+      \,\frac{1}{2}(a-h-t)^2, &\text{kun}\ \ t\in[\,a-h,a\,], \\
+      \,\frac{1}{2}(a+h-t)^2, &\text{kun}\ \ t\in[\,a,a+h\,].
+      \end{cases}
+\end{align*}
+Johda t‰st‰ edelleen virhekaavalle v‰liarvomuoto
+(vrt.\ Propositio \ref{keskeisdifferenssin tarkkuus}) 
+\[
+f'(a)-\frac{f(a+h)-f(a-h)}{2h} \,=\, -\frac{1}{6}\,h^2 f'''(\xi), \quad\ \xi\in[a-h,a+h].
+\]
+
+\end{enumerate}

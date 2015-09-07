@@ -1,0 +1,577 @@
+\section{Neliömatriisit. Käänteismatriisi} \label{inverssi}
+\alku
+\index{neliömatriisi|vahv}
+
+Tässä ja seuraavassa luvussa tutkimuskohteena on lineaarinen yhtälöryhmä
+\[
+\mA \mx = \mb,
+\]
+missä yhtälöitä ja tuntemattomia on yhtä monta, eli \mA\ on neliömatriisi kokoa $n \times n$ ja
+$\mb \in \R^n\ (n \in \N)$. (Mukavuussyistä ajatellaan \mA\ ja \mb\ reaalisiksi --- tulokset 
+jatkossa pätevät sellaisinaan myös kompleksialueella.)
+
+Sekä matriisitulon että matriisi-vektoritulon kannalta tärkeä neliömatriisien erikoistapaus on
+\index{yksikkömatriisi} \index{identiteettikuvaus, --matriisi}%
+\kor{yksikkömatriisi} (engl.\ unit matrix) eli \kor{identiteettimatriisi}, jonka symboli on
+$\mI$ ja määritelmä
+\[
+[\mI]_{ij} = (\delta_{ij}) 
+           = \begin{bmatrix} 
+             1&0&\ldots&0 \\ 0&1&\ldots&0\\ \vdots&\vdots&\ddots&\vdots \\ 0&0&\ldots&1 
+             \end{bmatrix} 
+           = [\me_1 \ldots \me_n].
+\]
+Jos $\mA$ ja $\mI$ ovat kokoa $n \times n$ ja $\mx$ on pystyvektori kokoa $n$, niin pätee
+\[
+\text{(a)}\ \ \mA\mI=\mI\mA=\mA, \qquad \text{(b)}\ \ \mI\mx=\mx.
+\]
+Ominaisuuden (a) mukaan $\mI$ on matriisikertolaskun ykkösalkio samankokoisten neliömatriisien 
+välisissä operaatioissa --- tästä nimi 'yksikkömatriisi'. Ominaisuuden (b) mukaan kuvaus 
+$\mx \map \mI \mx$ on $\R^n$:n \kor{identiteettikuvaus} --- tästä nimi 'identiteettimatriisi'.
+
+Jos matriisien kertolaskuun liittyy 'ykkösmatriisi', niin liittyykö myös käänteismatriisi? 
+--- Tässä tullaankin neliömatriisien teorian keskeisimpään kysymykseen.
+\begin{Def} \label{käänteismatriisin määritelmä} \index{kzyzy@käänteismatriisi|emph}
+\index{neliömatriisi!d@säännöllinen/singulaarinen|emph}
+\index{szyzy@säännöllinen matriisi|emph} \index{singulaarinen matriisi|emph}
+\index{ei-singulaarinen matriisi|emph} \index{kzyzy@kääntyvä matriisi}
+\index{matriisin ($\nel$neliömatriisin)!d@$\nel$käänteismatriisi}
+Neliömatriisi $\mA$ on \kor{säännöllinen} eli \kor{ei-singulaarinen} eli \kor{kääntyvä}, jos on
+olemassa matriisi $\mB$ siten, että pätee
+\[
+\mA \mB = \mB \mA = \mI.
+\]
+Sanotaan, että $\mB$ on $\mA$:n \kor{käänteismatriisi} (engl.\ inverse matrix) ja merkitään
+\[
+\mB = \mA^{-1}.
+\]
+Jos $\mA$ ei ole säännöllinen, se on epäsäännöllinen eli \kor{singulaarinen}.
+\end{Def}
+
+Käänteismatriisin symboli $\mA^{-1}$ luetaan yleensä 'A miinus yksi'. Jos $\mA^{-1}$ on
+olemassa, niin se on yksikäsitteinen. Nimittäin jos $\mB$ ja $\mC$ ovat molemmat $\mA$:n
+käänteismatriiseja, niin seuraaan väittämän mukaan on oltava $\mB=\mC$.
+\begin{Prop} \label{m-prop 1} Jos on olemassa matriisit $\mB$ ja $\mC$ kokoa $n \times n$
+siten, että $\mA\mB=\mI$ ja $\mC\mA=\mI$, niin $\mB=\mC$.
+\end{Prop}
+\tod Oletuksien ja matriisitulon liitännäisyyden perusteella
+\[
+\mB = \mI \mB = (\mC \mA) \mB = \mC (\mA \mB) = \mC \mI = \mC. \loppu
+\]
+
+Jos $\mA$ on säännöllinen, niin Määritelmästä \ref{käänteismatriisin määritelmä} nähdään 
+välittömästi, että myös $\mB=\mA^{-1}$ on säännöllinen ja $\mB^{-1}=\mA$. Suorittamalla 
+määritelmässä transponointi nähdään myös, että
+\[
+\mA \mB = \mB \mA = \mI \ \ekv \ \mB^T \mA^T = \mA^T \mB^T = \mI^T = \mI.
+\]
+Siis: Jos $\mA$ on säännöllinen, niin sekä $\mA^{-1}$ että $\mA^T$ ovat säännöllisiä, ja pätee
+\[
+\boxed{\quad\kehys (\mA^{-1})^{-1}=\mA, \qquad (\mA^T)^{-1} = (\mA^{-1})^T. \quad}
+\]
+Jos $\mA$ ja $\mB$ ovat säännöllisiä ja samaa kokoa, niin myös tulo $\mA \mB$ on säännöllinen.
+Nimittäin matriisitulon säännöin ja käänteismatriisin määritelmän perusteella
+\begin{align*}
+(\mA \mB)(\inv{\mB}\inv{\mA}) &= \mA(\mB \inv{\mB})\inv{\mA} 
+                               = \mA \mI \inv{\mA} = \mA \inv{\mA} = \mI, \\
+(\inv{\mB}\inv{\mA})(\mA \mB) &= \inv{\mB}(\inv{\mA} \mA)\mB 
+                               = \inv{\mB} \mI \mB = \inv{\mB} \mB = \mI,
+\end{align*}
+joten
+\[
+\boxed{\quad\kehys \inv{(\mA \mB)} = \inv{\mB} \inv{\mA}. \quad}
+\]
+Tulos on helposti yleistettävissä seuraavasti (vrt.\ vastaava transponointisääntö edellisessä
+luvussa)\,:
+\begin{Prop} \label{matriisitulon säännöllisyys} Jos $\mA_k,\ k=1 \ldots m$ ovat säännöllisiä
+ja samaa kokoa olevia neliömatriiseja, niin tulo $\mA=\mA_1\mA_2 \cdots \mA_m$ on myös 
+säännöllinen ja $\mA^{-1}=\mA_m^{-1}\mA_{m-1}^{-1} \cdots \mA^{-1}$.
+\end{Prop} 
+
+Lineaarista yhtälöryhmää ratkaistaessa kerroinmatriisin säännöllisyys 'ratkaisee' ongelman 
+periaatteelliselta kannalta seuraavasti:
+\begin{Prop} \label{kerroinmatriisi} Jos yhtälöryhmässä $\mA\mx=\mb$ kerroinmatriisi $\mA$ on
+säännöllinen neliömatriisi kokoa $n \times n$, niin yhtälöryhmällä on jokaisella $\mb \in \R^n$
+yksikäsitteinen ratkaisu
+\[
+\mx = \inv{\mA} \mb.
+\]
+\end{Prop}
+\tod Merkitään $\mB=\mA^{-1}$ ja päätellään:
+\begin{align*}
+\text{a)}\,\ \mA\mB=\mI &\qimpl \mA(\mB\mb) = (\mA\mB)\mb = \mI\mb = \mb. \\
+\text{b)}\,\ \mB\mA=\mI &\qimpl \mx = \mI\mx = (\mB\mA)\mx = \mB(\mA\mx). 
+\end{align*}
+Tämän perusteella todetaan:\, a) $\mx=\mB\mb$ on yhtälöryhmän $\mA\mx=\mb$ ratkaisu.\newline
+b) Jos $\mA\mx=\mb$, niin $\mx=\mB\mb$, eli tämä on ainoa mahdollinen ratkaisu. \loppu
+
+Proposition \ref{kerroinmatriisi} mukaan yhtälöryhmän $\mA\mx=\mb$ kerroinmatriisin mahdollinen
+singulaarisuus paljastuu yhälöryhmää ratkaistaessa:
+\begin{Kor} \label{singulaarisuuskriteeri} Jos yhtälöryhmä $\mA\mx=\mb$ 
+($\mA$ kokoa $n \times n$) joko ei ratkea jollakin $\mb\in\R^n$ tai ratkaisu ei ole
+yksikäsitteinen, niin $\mA$ on singulaarinen.
+\end{Kor}
+
+\subsection*{Neliömatriisin säännöllisyyskriteerit}
+
+Proposition \ref{kerroinmatriisi} mukaan kerroinmatriisin $\mA$ säännöllisyys takaa
+yhtälöryhmän $\mA\mx=\mb$ säännöllisyyden eli yksikäsitteisen ratkeavuuden jokaisella
+$\mb\in\R^n$. Tämä väittämä pätee myös kääntäen, ja itse asiassa pätee paljon vahvempi tulos:
+Jos yhtälöryhmä $\mA\mx=\mb$ joko ratkeaa yksikäsitteisesti kun $\mb=\mv{0}$ (eli ainoa
+ratkaisu on $\mx=\mv{0}$) tai ratkeaa jokaisella $\mb\in\R^n$, niin kummassakin tapauksessa
+$\mA$ on säännöllinen matriisi. Muotoillaan tulos seuraavasti:
+\begin{*Lause} (\vahv{Neliömatriisin säännöllisyys}) \label{säännöllisyyskriteerit}
+\index{matriisin ($\nel$neliömatriisin)!e@$\nel$säännöllisyyskriteerit|emph} Jos $\mA$ on
+neliömatriisi kokoa $n \times n$, niin seuraavat väittämät ovat keskenään yhtäpitävät.
+\begin{itemize}
+\item[E0.] $\mA$ on säännöllinen matriisi.
+\item[E1.] Yhtälöryhmän $\mA\mx=\mv{0}$ ainoa ratkaisu on $\mx=\mv{0}$.
+\item[E2.] Yhtälöryhmällä $\mA\mx=\mb$ on ratkaisu jokaisella $\mb\in\R^n$.
+\end{itemize}
+\end{*Lause}
+Lause \ref{säännöllisyyskriteerit} sisältää kuusi implikaatioväittämää, joista riippumattomia
+ovat esim.: E0\,$\impl$\,E1, E0\,$\impl$\,E2, E1\,$\impl$\,E0 ja E2\,$\impl$\,E0. Näistä 
+kaksi ensimmäistä ovat Propositioon \ref{kerroinmatriisi} sisältyviä ja siis jo selviä.
+Kaksi muuta sen sijaan ovat syvällisempiä. Nämä sisältyvät erikoistapauksina yleisempään
+lineaarisia yhtälöryhmiä koskevaan väittämään, joka tunnetaan nimellä 
+\kor{Lineaarialgebran peruslause}. Yleisempää lausetta (joka koskee myös systeemejä kokoa 
+$m \times n,\ m \neq n$) ei tässä muotoilla. Todetaan sen sijaan Lauseen
+\ref{säännöllisyyskriteerit} mielenkiintoinen seuraamus:
+\begin{Kor} \label{ihme} Samaa kokoa oleville neliömatriiseille pätee
+\[
+\mA\mB=\mI \qimpl \mB\mA=\mI.
+\]
+\end{Kor}
+\tod Jos $\mA\mB=\mI$, niin säännöllisyyskriteeri E2 on täytetty (ks.\ Proposition
+\ref{kerroinmatriisi} todistus, osa a)), joten Lauseen \ref{säännöllisyyskriteerit} mukaan
+$\mA$ on säännöllinen. Tällöin jos $\mC=\mA^{-1}$, niin $\mA\mB=\mC\mA=\mI$, jolloin on oltava
+$\mC=\mB$ (Propositio \ref{m-prop 1}). Siis $\mB\mA=\mI$. \loppu
+
+Korollaarin \ref{ihme} mukaan siis jo ehto $\mA\mB=\mI$ riittää takaamaan, että $\mB=\mA^{-1}$
+ja $\mA=\mB^{-1}$, ts.\ toinen Määritelmän \ref{käänteismatriisin määritelmä} ehdoista on
+turha (!).
+
+Jatkossa ei Lausetta \ref{säännöllisyyskriteerit} pyritä heti todistamaan, vaan seuraavissa
+kahdessa luvussa tarkastellaan ensin lineaarisen yhtälöryhmän ratkaisemista algoritmisin
+keinoin. Osoittautuu, että ratkaisualgoritmin sivutuotteena sadaan myös Lause
+\ref{säännöllisyyskriteerit} todistetuksi.\footnote[2]{Lineaarialgebraa käsittelevässä
+kirjallisuudessa todistetaan Lineaarialgebran peruslause (ja siihen sisältyen Lause
+\ref{säännöllisyyskriteerit}) yleensä ei-algoritmisesti, abstraktin lineaarialgebran keinoin.}
+
+Tämän luvun loppuosassa kohdisteaan huomio kahteen neliömatriisien erikoisluokkaan,
+\kor{ortogonaali-} ja \kor{kolmio}matriiseihin ja edellisten alaluokkaan
+\kor{permutaatio}matriiseihin. Permutaatio- ja kolmiomatriiseilla on jatkossa keskeinen rooli
+lineaarisen yhtälöryhmän ratkaisualgoritmissa. Kuten nähdään, näiden matriisien osalta
+säännöllisyyskysymys voidaan ratkaista tukeutumatta Lauseeseen \ref{säännöllisyyskriteerit}.
+Kolmiomatriisin tapauksessa perustana on seuraavista kahdesta väittämästä jälkimmäinen (joka
+nojaa edelliseen). Tämä muistuttaa Lauseen \ref{säännöllisyyskriteerit} väittämää E2\,\impl\,E0
+mutta perustuu tätä vahvempiin oletuksiin. Muotoillaan ensin alkuperäinen oletusväittämä E2
+toisella tavalla:
+\begin{Prop} \label{m-prop 2} Pätee: \ E2 $\ \ekv\ \mA\mB=\mI\ $ jollakin $\mB$.
+\end{Prop}
+\tod \fbox{$\impl$} Jos E2 on tosi, niin on olemassa vektorit $\mb_k\in\R^n$ siten, että 
+$\mA\mb_k=\me_k,\ k=1 \ldots n$. Tällöin jos $\mB=[\mb_1 \ldots \mb_n]$, niin 
+$\mA\mB = [\mA\mb_1\,\ldots\,\mA\mb_n] = [\me_1 \ldots \me_n] = \mI$. \
+\fbox{$\Leftarrow$} \ Ks. Proposition \ref{kerroinmatriisi} todistus, osa a). \loppu
+\begin{Prop} \label{m-prop 3} Jos $\mA$ on kokoa $n \times n$ ja yhtälöryhmät $\mA\mx=\mb$
+ja $\mA^T\mx=\mb$ ovat molemmat ratkeavia jokaisella $\mb\in\R^n$, niin $\mA$ on säännöllinen
+matriisi.
+\end{Prop}
+\tod Oletuksien ja Propostition \ref{m-prop 2} perusteella on olemassa matriisit $\mB$ ja $\mC$
+siten, että $\mA\mB=\mI$ ja $\mA^T\mC=\mI$. Tällöin on myös $(\mA^T\mC)^T=\mC^T\mA=\mI^T=\mI$.
+Siis $\mA\mB=\mC^T\mA=\mI$, mistä seuraa (Propositio \ref{m-prop 1}), että
+$\mB=\mC^T (=\mA^{-1})$, eli $\mA$ on säännöllinen. \loppu 
+ 
+\subsection*{Ortogonaalimatriisit}
+\index{ortogonaalimatriisi|vahv}
+\index{neliömatriisi!e@ortogonaalinen|vahv}
+\index{ortogonaalisuus!c@matriisin|vahv}
+
+Erikoisen säännöllisten matriisien luokan muodostavat \kor{ortogonaaliset} matriisit. Jos 
+neliömatriisi $\mA$ esitetään sarakkeidensa avulla muodossa
+\[
+\mA = [\ma_1 \ldots \ma_n],
+\]
+niin sanotaan, että $\mA$ on ortogonaalinen, jos $\{\ma_1,\ldots,\ma_n\}$ on ortonormeerattu 
+systeemi $\R^n$:ssä, ts.\
+\[
+\scp{\ma_i}{\ma_j} = \ma_i^T \cdot \ma_j = \delta_{ij}, \quad i,j=1 \ldots n.
+\]  
+Matriisitulon määritelmän perusteella (ks.\ edellinen luku) tämä on sama kuin ehto
+\[
+\mA^T \mA = \mI.
+\]
+Tällöin Korollaarin \ref{ihme} mukaan on myös $\mA\mA^T = \mI$, eli ortogonaalisessa
+matriisissa myös rivit muodostavat ortonormeeratun systeemin (!) ja $\inv{\mA} = \mA^T$. 
+Toisaalta, jos $\mA^T\mA = \mI$, niin
+\[
+\delta_{ij} = [\mA^T \mA]_{ij} = \ma_i^T \ma_j,
+\]
+eli $\mA$ on ortogonaalinen. On siis päädytty (Korollaariin \ref{ihme} ja siis Lauseeseen
+\ref{säännöllisyyskriteerit} osaksi vedoten) tulokseen
+\[
+\boxed{\quad\kehys \mA \text{ ortogonaalinen} \ \ekv \ \inv{\mA} = \mA^T. \quad}
+\]
+Jos $\mA$ on sekä ortogonaalinen että \pain{s}y\pain{mmetrinen}, niin $\mA\mA=\mI$. Voidaan
+siis todeta (tällä kertaa Lauseeseen \ref{säännöllisyyskriteerit} vetoamatta), että pätee:
+\begin{Prop} \label{ortog ja sym} Jos $\mA$ on ortogonaalinen ja symmetrinen matriisi, niin 
+$\mA$ on säännöllinen ja $\mA^{-1}=\mA$.
+\end{Prop}
+
+\subsection*{Permutaatiomatriisi $\mI_p$}
+\index{permutaatiomatriisi|vahv}
+
+Jatkon kannalta erityisen kiinnostava ortogonaalisten matriisien luokka koostuu
+\kor{permutaatiomatriiseista}, joissa on samat sarakkeet kuin yksikkömatriisissa $\mI$ mutta
+vaihdetussa (permutoidussa) järjestyksessä. Permutaatiomatriisi merkitään
+\[
+\mI_p = [\me_{i_1}\ \me_{i_2}\ \ldots \me_{i_n}],
+\]
+missä $p=(i_1,i_2,\ldots,i_n)$ on järjestetyn lukujoukon $(1,2,\ldots,n)$
+\index{permutaatio}%
+\kor{permutaatio} (eli samatluvut eri järjestyksessä).
+Permutaatio-opin tunnettu (helppo) tulos on, että lukujoukon
+$(1,2,\ldots,n)$ erilaisia permutaatioita --- ja siis myös erilaisia permutaatiomatriiseja
+$\mI_p$ kokoa $n \times n$ --- on $n!$ kpl. Jokainen permutaatio $p$ on saavutettavissa
+suorittamalla ($p$:stä riippuva) määrä $m$ peräkkäisiä
+\index{parivaihto}%
+\kor{parivaihtoja}, joissa kaksi lukua
+vaihdetaan keskenään. Luku $m$ ei ole yksikäsitteinen, koska saman parivaihdon toisto palauttaa
+alkuperäisen järjestyksen. Sen sijaan on osoitettavissa (vaikka ei aivan helposti), että
+luvun $m$ parillisuus/parittomuus on permutaatiolle ominainen, ts.\ jokainen permutaatio on
+\index{parillinen, pariton!c@permutaatio}%
+joko \kor{parillinen} tai \kor{pariton}.  
+
+Jokainen permutaatiomatriisi $\mI_p$ on luonnollisesti ortogonaalinen, ts.\ $\mI_p^T\mI_p=\mI$.
+Helposti on nähtävissä, että myös $\mI_p$:n rivit saadaan permutoimalla $\mI$:n rivit, eli
+$\mI_p^T=\mI_q$, missä $q$ on toinen lukujen $(1,2,\ldots,n)$ permutaatio ($q=p$, jos $\mI_p$ on
+symmetrinen). Koska $\mI=\mI_q^T\mI_q=\mI_p\mI_p^T$, niin $\mI_p^T\mI_p=\mI_p\mI_p^T=\mI$. Siis
+on päätelty (Lauseeseen \ref{säännöllisyyskriteerit} vetoamatta), että $\mI_p^{-1}=\mI_p^T$.
+\begin{Exa} Tapauksessa $n=3$ erilaisia permutaatiomatriiseja on $3!=6$ kpl, vastaten
+permutaatioita $p=(1,2,3),(2,1,3),(1,3,2),(3,2,1),(2,3,1),(3,1,2)$. Näistä ensimmäinen ja
+kaksi viimeistä ovat parillisia ($0$ tai $2$ parivaihtoa), muut parittomia ($1$ parivaihto).
+Kuviosta (merkitty $\bullet=1$ ja $\cdot=0$) nähdään, että jos $p=(2,3,1)$, niin
+$\mI_p^T=\mI_q$, missä $q=(3,1,2)$.
+\[
+\begin{bmatrix}
+\bullet & \cdot & \cdot \\ 
+\cdot & \bullet & \cdot \\
+\cdot & \cdot & \bullet
+\end{bmatrix}\,\ 
+\begin{bmatrix}
+\cdot & \bullet & \cdot \\ 
+\bullet & \cdot & \cdot  \\
+\cdot & \cdot & \bullet
+\end{bmatrix}\,\
+\begin{bmatrix}
+\bullet & \cdot & \cdot \\ 
+\cdot & \cdot & \bullet \\
+\cdot & \bullet & \cdot
+\end{bmatrix}\,\
+\begin{bmatrix}
+\cdot & \cdot & \bullet \\ 
+\cdot & \bullet & \cdot \\
+\bullet & \cdot & \cdot
+\end{bmatrix}\,\
+\begin{bmatrix}
+\cdot & \cdot & \bullet \\ 
+\bullet & \cdot & \cdot  \\
+\cdot & \bullet & \cdot
+\end{bmatrix}\,\
+\begin{bmatrix}
+\cdot & \bullet & \cdot \\ 
+\cdot & \cdot & \bullet \\
+\bullet & \cdot & \cdot
+\end{bmatrix} \loppu
+\]
+\end{Exa}
+
+Jos $\mA=[\ma_1 \ldots \ma_n]$ on matriisi kokoa $n \times n$ ja
+$\mI_p=[\me_{i_1} \ldots \me_{i_n}]$, niin
+\[
+\mA\mI_p = [\mA\me_{i_1} \ldots \mA\me_{i_n}] = [\ma_{i_1} \ldots \ma_{i_n}].
+\]
+Operaatio $\mA \map \mA\mI_p$ siis permutoi $\mA$:n sarakkeet $\mI_p$:n sarakkeiden mukaiseen
+järjestykseen $p$. Vastaavasti koska $(\mI_p\mA)^T = \mA^T\mI_p^T$, niin päätellään, että
+operaatio $\mA \map \mI_p\mA$ permutoi $\mA^T$:n sarakkeet (eli $\mA$:n rivit) $\mI_p^T$:n
+sarakkeiden (eli $\mI_p$:n rivien) mukaiseen järjestykseen. Yhteeneveto:
+\[
+\boxed{\ykehys \begin{aligned}
+\quad&\mA\map\mA\mI_p\,: \quad \text{$\mA$:n sarakkeiden permutointi $\mI_p$:n 
+                                             sarakkeiden mukaisesti}. \quad \\
+     &\mA\map\mI_p\mA\,: \quad \text{$\mA$:n rivien permutointi $\mI_p$:n rivien mukaisesti}.
+\end{aligned} \akehys}
+\]
+\jatko \begin{Exa} (jatko)
+\[
+\begin{bmatrix} 1&2&3\\4&5&6\\7&8&9 \end{bmatrix}
+\begin{bmatrix} 0&1&0\\0&0&1\\1&0&0 \end{bmatrix} =
+\begin{bmatrix} 3&1&2\\6&4&5\\9&7&8 \end{bmatrix}, \quad
+\begin{bmatrix} 0&1&0\\0&0&1\\1&0&0 \end{bmatrix}
+\begin{bmatrix} 1&2&3\\4&5&6\\7&8&9 \end{bmatrix} =
+\begin{bmatrix} 4&5&6\\7&8&9\\1&2&3 \end{bmatrix}. \loppu
+\]
+\end{Exa}
+Edellisen luvun matriisialgebran säännöistä voidaan päätellä, että matriisin sarakkeiden
+permutointi operaatiolla $\mA\map\mA\mI_p$ toimii yhtä hyvin matriiseille kokoa $m \times n$,
+$m \neq n$, ja vastaavasti rivien permutointi matriiseille kokoa $n \times m$. Neliömatriisin
+tapauksessa nähdään myös, että sarakkeiden tai rivien permutoinnissa säännöllinen matriisi
+säilyy säännöllisenä (koska säännöllisten matriisien tulo on säännöllinen). Samoin
+singulaarinen matriisi säilyy singulaarisena (Harj.teht.\,\ref{H-m-2: pikku väittämiä}d).
+
+Permutaatiomatriisin erikoistapaus on \kor{vaihtomatriisi}, jossa vain kaksi $\mI$:n saraketta
+on vaihdettu keskenään. Jos vaihdetut sarakkeet ovat $\me_k$ ja $\me_m$ ($k<m$), niin
+vaihtomatriisi on $\mV = [\,\me_1\,\ldots\,\me_{k-1}\ \me_m\ \me_{k+1}\,\ldots\,\me_{m-1}\,
+\me_k\ \me_{m+1}\,\ldots\,\me_n\,]$. Tämä on paitsi ortogonaalinen myös symmetrinen:
+\[
+\mV= \begin{bmatrix}
+1 \\
+& \ddots \\
+& & 0 & \hdotsfor{3} & 1 \\
+& & & 1 \\
+& & & & \ddots \\
+& & & & & 1 \\
+& & 1 & \hdotsfor{3} & 0 \\
+& & & & & & & 1 \\
+& & & & & & & & 1 \\
+& & & & & & & & &1 \\
+\end{bmatrix}
+\]
+Koska permutaatioon $p$ päästään peräkkäisillä parivaihdoilla, niin vastaavasti $\mI_p$
+saadaan kertomalla $\mI$ oikealta vastaavilla vaihtomatriiseilla $\mV_i,\ i=1 \ldots m$, eli
+\[
+\mI_p = \mI\mV_1 \ldots \mV_m = \mV_1 \ldots \mV_m.
+\]
+Koska jokainen $\mV_i$ on symmetrinen, niin tulon transponointisäännön perusteella
+\[
+\mI_p^{-1} = \mI_p^T = \mV_m \ldots \mV_1.
+\]
+
+\subsection*{Kolmiomatriisit}
+\index{kolmiomatriisi|vahv}
+
+\begin{Def} \index{ylzy@yläkolmiomatriisi|emph} \index{alakolmiomatriisi|emph}
+\index{diagonaalimatriisi|emph}
+\index{neliömatriisi!ea@diagonaalinen|emph}
+Neliömatriisi $\mA = (a_{ij})$ on
+\begin{itemize}
+\item[-] \kor{yläkolmiomatriisi}, jos $\,a_{ij}=0$, kun $i>j$,
+\item[-] \kor{alakolmiomatriisi}, jos $\,a_{ij}=0$, kun $i<j$,
+\item[-] \kor{diagonaalinen} l. \kor{diagonaalimatriisi}, jos $\,a_{ij} = 0$, kun $i \neq j$.
+\end{itemize}
+\end{Def}
+\[
+\begin{array}{ccc}
+\begin{bmatrix} 
+\# & \# & \# & \# \\ 0 & \# & \# & \# \\ 0 & 0 & \# & \# \\ 0 & 0 & 0 & \# 
+\end{bmatrix} \quad & 
+\begin{bmatrix} 
+\# & 0 & 0 & 0 \\ \# & \# & 0 & 0 \\ \# & \# & \# & 0 \\ \# & \# & \# & \# 
+\end{bmatrix} \quad &
+\begin{bmatrix} 
+\# & 0 & 0 & 0 \\ 0 & \# & 0 & 0 \\ 0 & 0 & \# & 0 \\ 0 & 0 & 0 & \# 
+\end{bmatrix} \\ \\
+\text{yläkolmio}\ \ \ & \text{alakolmio}\ \ & \text{diagonaalinen}
+\end{array}
+\] 
+Määritelmän mukaisesti diagonaalimatriisi on molempien kolmiomatriisien
+erikoistapaus. Määritelmän matriisityypeille käytetään usein erikoissymboleja $\mU$ 
+(yläkolmio, engl.\ Upper triangular), $\mL$ (alakolmio, engl.\ Lower triangular) ja $\mD$ 
+(diagonaalimatriisi). Neliömatriisin $\mA$ alkioita $a_{ii}$ sanotaan yleisesti $\mA$:n 
+\index{lzy@lävistäjä, -alkio} \index{diagonaali (matriisin)}%
+\kor{lävistäjäalkioiksi} ja (järjestettyä) joukkoa  $(a_{ii},\ i = 1 \ldots n)$ $\mA$:n
+\kor{lävistäjäksi} eli \kor{diagonaaliksi}. Joukko $(a_{i,i+k},\ i = 1 \ldots n-k)$ on
+vastaavasti
+\index{ylzy@ylädiagonaali} \index{aladiagonaali}%
+$k$:s \kor{ylädiagonaali} ja $(a_{i-k,i},\ i = k+1 \ldots n)$ $k$:s \kor{aladiagonaali}.
+Diagonaalimatriisi esitetään usein lävistäjäalkioidensa avulla käyttäen merkintää 
+\[
+\mD = \text{diag} \, (d_i), \quad d_i=[\mD]_{ii}\,.
+\]
+
+Kolmiomatriisin säännöllisyyskysymyksen ratkaisee
+\begin{Lause} \label{kolmiomatriisi} \vahv{(Kolmiomatriisin säännöllisyys)}\, 
+Jos $\mA = (a_{ij})$ on kolmiomatriisi kokoa $n \times n$, niin $\mA$ on säännöllinen 
+täsmälleen kun lävistäjäalkiot $a_{ii}$  ovat kaikki nollasta poikkeavat, ja tällöin pätee
+\begin{itemize}
+\item[(i)]  $\mA$ diagonaalinen/yläkolmio/alakolmio \\ $\impl$ $\inv{\mA}$ 
+            diagonaalinen/yläkolmio/alakolmio
+\item[(ii)] $[\inv{\mA}]_{ii} = 1/a_{ii}, \quad i=1 \ldots n.$
+\end{itemize}
+\end{Lause}
+\tod Diagonaalimatriisin tapauksessa nähdään, että jos $a_{kk}=0$ jollakin 
+$k \in \{1,\ldots,n\}$, niin yhtälöryhmällä $\mA \mx = \mo$ on monikäsitteinen ratkaisu 
+$\mx = x_k \me_k,\ x_k\in\R$, joten Korollaarin \ref{singulaarisuuskriteeri} mukaan $\mA$ on 
+singulaarinen. Jos $a_{ii} \neq 0$, $i = 1\ldots n$, niin $\mA \inv{\mA} = \inv{\mA} \mA = \mI$
+toteutuu väitteen mukaisella valinnalla, eli
+\[
+\inv{\mA} = \text{diag} \, (1/a_{ii}).
+\]
+
+Oletetaan seuraavaksi, että $\mA$ on alakolmiomatriisi, jolloin yhtälöryhmä $\mA\mx=\mb$ on
+auki kirjoitettuna
+\[
+\begin{cases}
+\,a_{11} x_1 &= b_1, \\
+\,a_{21} x_1 + a_{22} x_2 &= b_2, \\
+\ \vdots & \ \vdots \\
+\,a_{n1} x_1 + a_{n2} x_2 + \ldots + a_{nn} x_n &= b_n.
+\end{cases}
+\]
+Jos $a_{ii}\neq 0\ \forall i$, niin yhtälöryhmä ratkeaa purkamalla se palautuvasti alusta:
+\begin{align*}
+x_1\ &=\ \inv{a_{11}}b_1\ =\ b_{11}b_1, \\[2mm]
+x_2\ &=\ -\inv{a_{22}}a_{21}x_1 + \inv{a_{22}}b_2\ 
+      =\ -\inv{a_{22}}a_{21}b_{11}b_1 + \inv{a_{22}}b_2
+      =\ b_{21}b_1 + b_{22}b_2,
+\end{align*}
+ja yleisesti (induktio!)
+\[
+x_i = \sum_{j=1}^i b_{ij}b_j, \quad i = 1 \ldots n,
+\]
+missä $b_{ii} = \inv{a_{ii}}$. Kun asetetaan $b_{ij}=0,\ j>i$, ja $\mB = \{b_{ij}\}$, niin
+$\mB$ on siis alakolmiomatriisi, lävistäjäalkioin $b_{ii}=\inv{a_{ii}}$, ja yhtälöryhmän
+ratkaisu on
+\[
+\mx = \mB\mb.
+\]
+Tähän siis päädyttiin olettaen, että $a_{ii}\neq 0\ \forall i$. Jos tämä oletus ei toteudu, 
+niin jollakin $k \in \{1, \ldots, n\}$ pätee: $\,a_{kk} = 0$ ja 
+$a_{ii} \neq 0, \ i=1 \ldots k-1$. Silloin nähdään em.\ algoritmista, että jos valitaan 
+$b_i=0, \ i=1 \ldots k-1$, niin on oltava $x_i = 0,\ i=1 \ldots k-1$, jolloin $k$:s yhtälö saa
+muodon $0=b_k$. Näin ollen yhtälöryhmä $\mA\mx=\mb$ ei yleisesti ratkea, joten Korollaarin
+\ref{singulaarisuuskriteeri} perusteella $\mA$ on singulaarinen.
+
+Jos $\mA$ on yläkolmiomatriisi, niin yhtälöryhmä $\mA\mx=\mb$ purkautuu lopusta lukien:
+Ratkaistaan ensin $n$:s yhtälö $a_{nn}x_n=b_n$, sitten $(n-1)$:s yhtälö, jne. Tässäkin
+tapauksessa päätellään, että $\mA$ on singulaarinen, jos $a_{kk} = 0$ jollakin $k$, muuten
+löytyy matriisi $\mB$, jolle pätee $\mA\mB=\mI$. Matriisi $\mB$ on jälleen samaa tyyppiä kuin
+$\mA$ (yläkolmio), ja lävistäjäalkiot ovat $b_{ii}=\inv{a_{ii}}$.
+
+Olkoon nyt $\mA$ yleisemmin kolmiomatriisi (ylä- tai alakolmio) ja $\mA$:n lävistäjäalkiot
+nollasta poikkeavat. Tällöin $\mA^T$ on myös kolmiomatriisi, jonka lävistäjäalkiot ovat samat 
+kuin $\mA$:n. Em.\ päättelyn mukaan yhtälöryhmät $\mA\mx=\mb$ ja $\mA^T\mx=\mb$ ovat
+molemmat ratkeavia jokaisella $\mb\in\R^n$, joten $\mA$ on säännöllinen matriisi
+(Propositio \ref{m-prop 3}). Kolmiomatriisin säännöllisyyskysymys on näin ratkaistu Lauseesta
+\ref{säännöllisyyskriteerit} riippumatta. \loppu
+
+Em.\ todistuksen sivutuotteena saatiin myös algoritmi kolmiomatriisin $\mA$ käänteismatriisin
+laskemiseksi: Ratkaistaan (todistuksessa esitetyllä tavalla) lineaarinen yhtälöryhmä
+$\mA\mx=\mb$ y\pain{leisellä} $\mb\in\R^n$. Kun ratkaisu esitetään muodossa
+\[
+x_i=\sum_{j=1}^n b_{ij}b_j, \quad i=1 \ldots n \qekv \mx=\mB\mb,
+\]
+niin $\mB=\mA^{-1}$, eli kertoimet $b_{ij}$ ovat käänteismatriisin alkiot. Nämä tulevat
+algoritmin kuluesssa lasketuksi palautuvasti riveittäin. Vain diagonaalisen (tai muulla tavoin
+erikoisen, ks.\ Harj.teht.\,\ref{H-m-2: matriiseja alkioittain}b) matriisin tapauksessa on
+käänteismatriisin $\mA^{-1}$ alkioille mahdollista laskea yksinkertaiset lausekkeet $\mA$:n
+alkioiden avulla.
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-m-2: pikku väittämiä}
+Olkoon $\mA$, $\mB$ ja $\mC$ samaa kokoa olevia neliömatriiseja. Todista: \vspace{1mm}\newline
+a) \ $\mA$ säännöllinen ja symmetrinen $\ \impl\ $ $\mA^{-1}$ symmetrinen. \newline
+b) \ $\mC\mA=\mC\mB$ ja $\mC$ säännöllinen $\ \impl\ $ $\mA=\mB$. \newline
+c) \ $\mA\mB$ singulaarinen $\ \impl\ $ $\mA$ tai $\mB$ singulaarinen. \newline
+d) \ $\mA$ singulaarinen ja $\mB$ säännöllinen $\ \impl\ $ 
+                                               $\mA\mB$ ja $\mB\mA$ singulaariset. \newline
+e) \ $\mA$ ja $\mB$ ortogonaaliset $\ \impl\ $ $\mA\mB$ ortogonaalinen.
+
+\item
+Tarkista kokoa $2 \times 2$ olevan matriisin käänteismatriisin laskusääntö
+\[
+\begin{bmatrix} \,a&b\,\\\,c&d\, \end{bmatrix}^{-1}
+=\ \frac{1}{D}\begin{rmatrix} d&-b\\-c&a \end{rmatrix}, \quad D=ad-bc \neq 0. 
+\]
+
+\item
+a) Näytä, että jokainen ortogonaalinen $2 \times 2$-matriisi voidaan kirjoittaa jollakin
+$\theta\in\R$ jompaan kumpaan seuraavista muodoista:
+\[
+\mA=\begin{rmatrix} \cos\theta&\sin\theta\\-\sin\theta&\cos\theta \end{rmatrix}
+\quad \text{tai} \quad
+\mA=\begin{rmatrix} \cos\theta&\sin\theta\\\sin\theta&-\cos\theta \end{rmatrix}.
+\]
+b) Olkoon $\mA$ kokoa $3 \times 3$ oleva ortogonaalimatriisi, jonka alkioista tiedetään:
+$a_{11}=\frac{3}{7},\ a_{12}=-\frac{2}{7},\ a_{22}=\frac{6}{7},\ a_{21}<0,\ a_{31}>0,\ a_{13}<0$.
+Laske $\mA$ ja $\mA^{-1}$. \vspace{1mm}\newline
+c) Totea, että yhtälöryhmässä
+\[
+\begin{cases}
+\,\sqrt{\frac 23}\,x_1+\frac 12\,x_2-\frac{1}{2\sqrt{3}}\,x_3          & = 1\\
+\,\frac{1}{\sqrt 3}\,x_1-\frac{1}{\sqrt 2}\,x_2+\frac{1}{\sqrt 6}\,x_3 & = 2\\
+\,-\frac{1}{2}\,x_2-\frac{\sqrt 3}{2}\,x_3                             & =  3
+\end{cases}
+\]
+kerroinmatriisi on ortogonaalinen. Ratkaise tätä tietoa käyttäen! \vspace{1mm}\newline
+d) Matriisilla
+\[
+\mA=\begin{rmatrix} 1&1&1&1\\1&1&-1&-1&\\1&-1&1&-1\\-1&1&1&-1 \end{rmatrix}
+\]
+on ominaisuus: $\lambda\mA$ on ortogonaalinen eräällä $\lambda\in\R$. Määritä tätä tietoa
+hyväksi käyttäen vaakavektori $\mx^T$ siten, että $\mx^T\mA=[7,13,-3,-9]$.
+
+\item
+a) Olkoon $\mH=\mI-\mx\mx^T$, missä $\mx\in\R^n$, $\mx\neq\mv{0}$ ja $\abs{\mx} \neq 1$. Näytä,
+että eräällä $\lambda\in\R$ pätee $\mH^{-1}=\mI+\lambda\mx\mx^T$. \newline
+b) Olkoon $\mx\in\R^n,\ \mx\neq\mv{0}$ ja $r=2\abs{\mx}^{-2}$. Näytä, että $\mH=\mI-r\,\mx\mx^T$
+on symmetrinen ja ortogonaalinen matriisi. \newline
+c) Näytä, että jos matriisille $\mA$ pätee $\mA+\mA^T=\mv{0}$ ja $\mI+\mA$ on säännöllinen
+matriisi, niin $\mB=(\mI+\mA)^{-1}(\mI-\mA)$ on ortogonaalinen.
+
+\item
+Onko joukon $(1,2,\ldots,10)$ permutaatio $(4,6,2,7,9,1,3,10,5,8)$ parillinen vai pariton?
+
+\item 
+Matriiseista $\mV_1$ ja $\mV_2$ kokoa $3\times3$ tiedetään, että kertoessaan vasemmalta
+matriisin $\mA$ matriisi $\mV_1$ vaihtaa $\mA:$n rivien 1 ja 2 järjestyksen ja $\mV_2$ rivien
+2 ja 3 järjestyksen. Millaisen rivien permutoinnin silloin tuottavat $\mV_1\mV_2$ ja
+$\mV_2\mV_1$? Määritä myös $\mV_1$ ja $\mV_2$ sekä mainitut tulot.
+
+\item \label{H-m-2: matriiseja alkioittain} 
+a) Olkoon $\mA=(a_{ij})$ kokoa $n\times n$ ja $\mD=\text{diag}\{d_i,\, i=1 \ldots n\}$.
+Määritä matriisien $\mA\mD$ ja $\mD\mA$ alkiot. \newline
+b) Olkoon $n,k\in\N,\ n \ge 2$, $k \le n$, $\mA=(a_{ij})$ kokoa $n \times n$,
+$a_{ii}=a \neq 0$ kun $i \neq k$, $a_{kk}=b \neq 0$, $a_{ik}=c \neq 0$ kun $i>k$ ja $a_{ij}=0$
+muulloin. Määritä käänteismatriisin $\mA^{-1}$ alkiot.
+
+\item
+Määritä seuraavien kolmiomatriisien käänteismatriisit ratkaisemalla yleinen lineaarinen
+yhtälöryhmä, jonka kerroinmatriisina on ko.\ matriisi.
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 3&0\\-5&2 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 4&0&0\\-2&2&0\\3&1&-1 \end{rmatrix} \qquad
+ \text{c)}\ \ \begin{rmatrix} 3&0&-1&1\\0&2&1&1\\0&0&-1&2\\0&0&0&2 \end{rmatrix} \\[1mm]
+&\text{d)}\ \ \begin{bmatrix} 
+              1&0&0&0&0\\1&1&0&0&0\\0&1&1&0&0\\0&0&1&1&0\\0&0&0&1&1 
+              \end{bmatrix} \qquad
+ \text{e)}\ \ \begin{bmatrix}
+              1&0&0&0&1\\0&1&0&0&1\\0&0&1&0&1\\0&0&0&1&1\\0&0&0&0&2
+              \end{bmatrix} \qquad
+ \text{f)}\ \ \begin{bmatrix}
+              1&0&0&0&0\\1&1&0&0&0\\1&1&1&0&0\\1&1&1&1&0\\1&1&1&1&1
+              \end{bmatrix}   
+\end{align*}
+
+\item (*) Näytä Lauseeseen \ref{säännöllisyyskriteerit} vedoten, että neliömatriiseille
+pätee: \vspace{1mm}\newline
+a)\,\ $\mA\mB\,\ \text{säännöllinen}\ \qimpl \mA\ \text{ja}\ \mB\ \text{säännölliset}$.\newline
+b)\,\ $\mA^2+3\mA+2\mI=\mv{0} \qimpl \mA\,\ \text{säännöllinen}$.
+
+\item (*)
+Näytä, että on olemassa permutaatiomatriisit $\mU$ ja $\mV$ siten, että pätee
+\[
+\mA=\begin{bmatrix} 0&2&1&0\\0&1&0&0\\2&2&2&1\\1&2&2&0 \end{bmatrix}
+   =\mU \begin{bmatrix} 1&2&2&2\\0&1&2&2\\0&0&1&2\\0&0&0&1 \end{bmatrix} \mV.
+\]
+Laske käänteismatriisi $\mA^{-1}$ tämän tiedon avulla. Tarkista, että $\mA\mA^{-1}=\mI$.
+
+\item (*)
+Olkoon $a,b\in\R$ ja $b \neq 0$. Näytä matriisialgebran avulla, että pätee: 
+Differentiaaliyhtälöllä $\,y''+ay'+by=x^{100}\,$ on yksittäisratkaisuna polynomi astetta
+$100$.
+ 
+\end{enumerate}
+

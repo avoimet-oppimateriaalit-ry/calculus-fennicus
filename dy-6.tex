@@ -1,0 +1,631 @@
+\section{*Yleinen 2.\ kertaluvun lineaarinen DY} \label{2. kertaluvun lineaarinen DY}
+\sectionmark{\ Yleinen 2. kertaluvun lineaarinen DY}
+\alku
+\index{lineaarinen differentiaaliyhtälö!d@2.\ kertaluvun|vahv}
+
+Yleinen toisen kertaluvun lineaarinen differentiaaliyhtälö on muotoa
+\begin{equation} \label{lin-2: ty}
+y''+P(x)y'+Q(x)y=R(x).
+\end{equation}
+Perusoletus on, että sekä
+\index{kerroin (DY:n)} \index{oikea puoli (DY:n)}%
+\kor{kerroinfunktiot} $P$ ja $Q$ että yhtälön \kor{oikea puoli} $R$ 
+ovat jatkuvia tarkasteltavalla välillä $(a,b)$. Ratkaisuna pidetään tällöin jokaista ko.\
+välillä kahdesti derivoituvaa funktiota $y(x)$, joka toteuttaa yhtälön. --- Yhtälöstä on
+tällöin luettavissa, että myös $y''$ on jatkuva välillä $(a,b)$. Jatkossa tarkastellaan aluksi
+yhtälön \eqref{lin-2: ty} homogeenista erikoistapausta, jossa $R(x)=0$.
+
+\subsection*{Homogeeninen yhtälö: Ratkaisuavaruus}
+\index{lineaarinen differentiaaliyhtälö!a@homogeeninen|vahv}
+\index{ratkaisuavaruus (DY:n)|vahv}
+
+Kun homogeeninen differentiaaliyhtälö kirjoitetaan
+\begin{equation} \label{lin-2: hy}
+\dyf y=y''+P(x)y'+Q(x)y=0,
+\end{equation}
+niin operaattori $\dyf$ on jälleen lineaarinen:
+\index{differentiaalioperaattori!b@lineaarisen DY:n}%
+\[
+\dyf(c_1y_1+c_2y_2)=c_1\dyf y_1+c_2\dyf y_2, \quad c_1,c_2\in\R.
+\]
+Siis jos $y_1$ ja $y_2$ ovat yhtälön \eqref{lin-2: hy} ratkaisuja, niin ratkaisu on myös mikä
+tahansa näiden lineaarinen yhdistely
+\[
+y(x)=C_1y_1(x)+C_2y_2(x),\quad C_1,C_2\in\R.
+\]
+Ratkeavuusteorian keskeisin tulos on, että tämä itse asiassa on yhtälön \eqref{lin-2: hy}
+yleinen ratkaisu edellyttäen ainoastaan, että funktiot $y_1$ ja $y_2$ ovat
+\index{lineaarinen riippumattomuus}%
+\kor{lineaarisesti riippumattomat} välillä $(a,b)$. Tällä tarkoitetaan, että pätee (vrt.\ Luku 
+\ref{funktioavaruus})
+\[
+c_1y_1(x)+c_2y_2(x)=0 \quad \forall x\in (a,b) \ \impl \ c_1=c_2=0.
+\]
+\index{lineaarinen riippuvuus}%
+Jos tämä ei päde, niin sanotaan, että $y_1$ ja $y_2$ ovat \kor{lineaarisesti riippuvat} välillä
+$(a,b)$. Tässä tapauksessa on joko $y_2=cy_1$ tai $y_1=cy_2$ ko.\ välillä jollakin $c\in\R$. 
+\begin{*Lause} \label{lin-2: lause 1} Jos differentiaaliyhtälössä \eqref{lin-2: hy} 
+kerroinfunktiot $P$ ja $Q$ ovat jatkuvia välillä $(a,b)$, niin yhtälöllä on ko. välillä kaksi
+lineaarisesti riippumatonta ratkaisua. Edelleen jos $y_1$ ja $y_2$ ovat mitkä tahansa kaksi
+yhtälön \eqref{lin-2: hy} lineaarisesti riippumatonta ratkaisua välillä $(a,b)$, niin yleinen
+ratkaisu ko.\ välillä on
+\[
+y(x)=C_1y_1(x)+C_2y_2(x),\quad C_1,C_2\in\R.
+\]
+\end{*Lause}
+\begin{Exa} \label{lin-2: lause 1 - esim}
+Eulerin differentiaaliyhtälön
+\[
+x^2y''-3xy'-3y=0
+\]
+perusmuodossa \eqref{lin-2: hy} kerroinfunktiot ovat $P(x)=-3/x$ ja $Q(x)=-3/x^2$. Nämä ovat
+jatkuvia väleillä $(-\infty,0)$ ja $(0,\infty)$, ja näillä väleillä yleinen ratkaisu on
+(ks.\ edellinen luku)
+\[
+y(x)=C_1x+C_2x^3, \quad C_1,C_2\in\R.
+\]
+Tulos on sopusoinnussa Lauseen \ref{lin-2: lause 1} kanssa, sillä $y_1(x)=x$ ja $y_2(x)=x^3$
+ovat lineaarisesti riippumattomat jokaisella välillä $(a,b)$:
+\[
+c_1x+c_2x^3 = 0 \ \ \forall x \in (a,b) \qekv c_1=c_2 = 0. \loppu
+\]
+\end{Exa}
+\jatko \begin{Exa} (jatko) Jos esimerkin differentiaaliyhtälöä $\,x^2y''-3xy'-3y=0$
+tarkastellaan välillä $(-\infty,\infty)$, niin ratkaisuksi havaitaan myös
+\[
+y_3(x) = |x|^3 = \begin{cases} 
+                 \,x^3, &\text{kun}\ x \ge 0, \\ \,-x^3, &\text{kun}\ x<0,
+                 \end{cases}
+\]
+sillä tämä on kahdesti derivoituva ja toteuttaa yhtälön koko $\R$:ssä. Tätä funktiota ei
+kuitenkaan voi ilmaista muodossa $C_1y_1(x)+C_2y_2(x)$, sillä $y_1(x)=x$ ja $y_2(x)=x^3$
+(samoin niiden lineaariset yhdistelyt) ovat parittomia, kun taas $y_3$ on parillinen. --- Tulos
+ei ole ristiriidassa Lauseen \ref{lin-2: lause 1} kanssa, sillä lauseen oletus
+kerroinfunktioiden $P$ ja $Q$ jatkuvuudesta ei toteudu välillä $(-\infty,\infty)$. Huomattakoon
+myös, että väleillä $(0,\infty)$ ja $(-\infty,0)$ on $y_3(x)=\pm y_2(x)$, joten näillä
+väleillä $y_3$ ei tuo mitään uutta yleiseen ratkaisuun. \loppu
+\end{Exa}
+Lauseen \ref{lin-2: lause 1} tulos on tulkittavissa niin, että yhtälön \eqref{lin-2: hy}
+ratkaisujen joukko $\mathcal{Y}$ on tehdyin oletuksin \pain{2--ulotteinen} \pain{vektoriavaruus}
+(funktioavaruus, vrt.\ Luku \ref{funktioavaruus}). Tämän avaruuden \pain{kanta} on mikä tahansa
+lineaarisesti riippumaton ratkaisupari $\{y_1,y_2\}$, jolloin koko ratkaisuavaruus voidaan
+esittää muodossa
+\[
+\mathcal{Y}=\{y=c_1y_1+c_2y_2 \ | \ c_1,c_2\in\R\}.
+\]
+Lauseen \ref{lin-2: lause 1} (osittainen) todistus esitetään jäljempänä. Tätä ennen 
+tarkastellaan lauseen seuraamuksia ajatellen yhtälön \eqref{lin-2: hy} ratkaisemista
+kvadratuureilla.
+
+\subsection*{Homogeeninen yhtälö: Ratkaiseminen kvadratuureilla}
+\index{lineaarinen differentiaaliyhtälö!a@homogeeninen|vahv}
+
+Ensinnäkin joudutaan toteamaan, että yhtälö \eqref{lin-2: hy} \pain{ei} aina ratkea
+kvadratuureilla. Kvadratuureihin palautumaton on esimerkksi niinkin yksinkertainen yhtälö kuin
+\[
+y''=xy.
+\]
+Tämän huonon uutisen jälkeen todettakoon, että jos yhtälölle \eqref{lin-2: hy} on 
+keksittävissä edes y\pain{ksi} ei-triviaali (eli nollasta poikkeava) ratkaisu $y_1$, niin toinen, 
+$y_1$:stä lineaarisesti riippumaton ratkaisu --- ja niin muodoin yleinen ratkaisu --- on
+konstruoitavissa kvadratuureilla. Jatkossa rajoitutaan tähän tapaukseen, eli oletetaan yksi
+ratkaisu $y_1 \neq 0$ tunnetuksi.
+
+Jos tunnetaan yhtälön \eqref{lin-2: hy} ratkaisu $y_1\neq 0$, niin toista ratkaisua voidaan 
+etsiä tuttuun tapaan \pain{vakion} \pain{varioinnilla}, eli muodossa
+\[
+y(x)=C(x)y_1(x).
+\]
+Tällöin on 
+\[
+y' = y_1C'+y_1'C, \quad y'' = y_1C''+2y_1'C'+y_1''C.
+\]
+Koska $\dyf y_1=0$, seuraa $C$:lle differentiaaliyhtälö
+\[
+y_1(x)C''+[2y_1'(x)+P(x)y_1(x)]C'=0.
+\]
+Sijoituksella $u=C'$ tästä tulee separoituva:
+\[
+u'+K(x)u=0,\quad K(x)=2\,\frac{y_1'(x)}{y_1(x)}+P(x)=2\frac{d}{dx}\ln\abs{y_1(x)}+P(x).
+\]
+Separoimalla ja integroimalla saadaan
+\begin{align*}
+\int\frac{du}{u}  &= -\int K(x)\,dx \\
+\ekv \ \ln\abs{u} &= -2\ln\abs{y_1(x)}-\int P(x)\,dx + A \quad (A\in\R).
+\end{align*}
+Valitsemalla $A=0$ (yksi ratkaisu $u\neq 0$ riittää!) saadaan
+\[
+u(x)=\frac{e^{-\int P(x)dx}}{[y_1(x)]^2}=C'(x).
+\]
+Näin ollen eräs ratkaisu on
+\begin{align*}
+y_2(x) &= y_1(x)\int u(x)\,dx \\
+       &= y_1(x) \int \frac{e^{-\int P(x)dx}}{[y_1(x)]^2}\,dx.
+\end{align*}
+Ratkaisu on pätevä ainakin $y_1$:n nollakohtien välisillä avoimilla väleillä. Tällaisilla
+väleillä suhde $u=y_2/y_1$ ei selvästikään ole vakio (koska on positiivisen funktion
+integraalifunktio), joten löydetty ratkaisu on $y_1$:stä lineaarisesti riippumaton.
+Homogeenisen yhtälön \eqref{lin-2: hy} yleinen ratkaisu on tällöin (ainakin mainituilla
+väleillä) kirjoitettavissa
+\[
+y(x)=C_1y_1(x)+C_2y_2(x).
+\]
+\begin{Exa} \label{lin-2: Ex4}
+Differentiaaliyhtälöllä
+\[
+y''+xy'-y=0
+\]
+on ilmeinen ratkaisu $\,y_1(x)=x$, joten etsitään toista muodossa
+\[
+y(x)=xC(x) \qimpl y'=xC'+C, \quad y''=xC''+2C'.
+\]
+Sijoitus yhtälöön antaa
+\[
+xu'+(x^2+2)u=0, \quad u=C'.
+\]
+Ratkaisu separoimalla (ol.\ $x>0$):
+\begin{align*}
+&\int\frac{du}{u} \,=\, \ln u
+                  \,=\, -\int\left(x+\frac{2}{x}\right)dx 
+                  \,=\, \ln\left(x^{-2}e^{-x^2/2}\right)+\ln A \\
+&\qimpl u=C'=Ax^{-2}e^{-x^2/2}.
+\end{align*}
+Valitsemalla $A=1$, asettamalle ehto $\lim_{x\kohti\infty}C(x)=0$ ja integroimalla osittain
+saadaan
+\[
+C(x) = -\int_x^\infty u(t)\,dt = -x^{-1}e^{-x^2/2}+\int_x^\infty e^{-t^2/2}\,dt.
+\]
+Yleinen ratkaisu on näin ollen
+\[
+y(x) \,=\, C_1x + C_2\,xC(x)
+     \,=\, C_1x + C_2\left(-e^{-x^2/2}+x\int_x^\infty e^{-t^2/2}\,dt\right), \quad C_1,C_2\in\R. 
+\]
+Vaikka laskun välivaiheissa oletettiin $x>0$, on ratkaisu pätevä koko $\R$:ssä. \loppu
+\end{Exa}
+
+\subsection*{Homogeeninen yhtälö: ratkeavuusteoria}
+\index{lineaarinen differentiaaliyhtälö!a@homogeeninen|vahv}
+
+Palataan Lauseeseen \ref{lin-2: lause 1}, jota ei ole todistettu. Lauseen väittämistä
+syvällisin koskee --- kuten tavallista --- ratkaisujen $y_1$ ja $y_2$ olemassaoloa. Jatkossa
+johdetaan tämä tulos, samoin kuin Lauseen  \ref{lin-2: lause 1} muut väittämät, seuraavasta
+peruslauseesta, joka puolestaan on erikoistapaus paljon yleisemmästä alkuarvotehtävän
+ratkeavuutta koskevasta väittämästä. Väittämää ei tässä vaiheessa todisteta, vaan asiaan
+palataan myöhemmin luvussa \ref{Picard-Lindelöfin lause}. Puheena olevaan erikoistapaukseen
+sovellettuna ratkeavuusväittämä on seuraava: 
+\begin{*Lause} \label{lin-2: lause 2} \index{differentiaaliyhtälön!h@ratkeavuus|emph} 
+Jos $P$ ja $Q$ ovat jatkuvia välillä $(a,b)$ ja $x_0\in (a,b)$, niin alkuarvotehtävällä
+\[
+\left\{ \begin{aligned}
+&y''+P(x)y'+Q(x)y=0,\quad x\in (a,b), \\
+&y(x_0)\,=A, \\
+&y'(x_0) =B
+\end{aligned} \right.
+\]
+on yksikäsitteinen ratkaisu jokaisella $A,B\in\R$.
+\end{*Lause}
+
+Jatkossa siis todistetaan väittämä: \ 
+$\text{Lause \ref{lin-2: lause 2}}\ \impl\ \text{Lause \ref{lin-2: lause 1}}$. Todistuksessa
+näyttelee keskeistä roolia seuraava käsite.
+\begin{Def} \index{Wronskin determinantti|emph} Välillä $(a,b)$ derivoituvien funktioiden
+$y_1$ ja $y_2$ \kor{Wronskin determinantti} on
+\[
+W_{12}(x)=\begin{vmatrix}
+y_1(x) & y_2(x) \\
+y_1'(x) & y_2'(x)
+\end{vmatrix} = (y_1y_2'-y_2y_1')(x), \quad x\in(a,b).
+\]
+\end{Def}
+\begin{Prop} \label{lin-2: prop} Jos $y_1$ ja $y_2$ ovat derivoituvia välillä $(a,b)$ ja 
+$W_{12}(x_0)=(y_1y_2'-y_2y_1')(x_0)\neq 0$ jollakin $x_0\in (a,b)$, niin $y_1$ ja $y_2$ ovat
+lineaarisesti riippumattomat välillä $(a,b)$.
+\end{Prop}
+\tod Jos joillakin $c_1,c_2\in\R$ pätee
+\[
+c_1y_1(x)+c_2y_2(x)=0,\quad x\in (a,b),
+\]
+niin derivoimalla seuraa, että myös
+\[
+c_1y_1'(x)+c_2y_2'(x)=0,\quad x\in (a,b).
+\]
+Kun nämä yhtälöt kirjoitetaan pisteessä $x_0$, niin saadaan yhtälöryhmä
+\[ \left\{ \begin{aligned}
+\,y_1(x_0)c_1+y_2(x_0)c_2 &= 0, \\ y_1'(x_0)c_1+y_2'(x_0)c_2 &= 0.
+           \end{aligned} \right. \]
+Koska $W_{12}(x_0)\neq 0$, niin yhtälöryhmän ainoa ratkaisu on 
+$c_1=c_2=0$.\footnote[2]{Jos $\,a_{ij},x_i,b_i\in\R,\ i,j=1,2$ ja 
+$\,W=a_{11}a_{22}-a_{21}a_{12} \neq 0$, niin pätee
+\[
+\left\{ \begin{aligned} 
+        a_{11}x_1+a_{12}x_2 &= b_1 \\ a_{21}x_1+a_{22}x_2 &= b_2 
+        \end{aligned} \right.
+\qekv \left\{ \begin{aligned} 
+        x_1 &= W^{-1}(a_{22}b_1-a_{12}b_2), \\ x_2 &= W^{-1}(a_{11}b_2-a_{21}b_1). 
+        \end{aligned}\right.
+\]}
+Siis oletuksesta $\,c_1y_1(x)+c_2y_2(x)=0,\ x\in(a,b)\,$ seuraa, että $c_1=c_2=0$, joten $y_1$
+ja $y_2$ ovat lineaarisesti riippumattomat välillä $(a,b)$. \loppu
+\begin{Exa} Funktiot $y_1(x)=x^3$ ja $y_2(x)=|x|^3$ ovat (kehdestikin) derivoituvia ja
+lineaarisesti riippumattomia $\R$:ssä (vrt.\ Esimerkki \ref{lin-2: lause 1 - esim} edellä).
+Laskemalla näiden funktioiden Wronskin determinantti todetaan, että
+$W_{12}(x)=0\ \forall x\in\R$. Tämän (vasta)esimerkin perusteella päätellään:
+\begin{align*}
+&\text{$y_1$ ja $y_2$ lineaarisesti riippumattomat välillä $(a,b)$} \\[1mm]
+&\qquad\qquad\ \ \not\impl\quad W_{12}(x_0) \neq 0 \quad \text{jollakin}\ x_0\in(a,b). \loppu
+\end{align*}
+\end{Exa}
+Esimerkin perusteella Proposition \ref{lin-2: prop} (implikaatio)väittämä ei päde kääntäen. Jos
+sen sijaan oletuksia vahvistetaan niin, että $y_1$ ja $y_2$ oletetaan differentiaaliyhtälön
+\eqref{lin-2: hy} ratkaisuiksi välillä $(a,b)$, niin käänteinenkin väittämä on tosi. Tällaisella
+oletuksella saadaan seuraava, Propositiota \ref{lin-2: prop} huomattavasti vahvempi tulos.
+\begin{Lause} \label{lin-2: lause 3} Jos $y_1$ ja $y_2$ ovat differentiaaliyhtälön 
+\eqref{lin-2: hy} ratkaisuja välillä $(a,b)$ \ \ ($P$ ja $Q$ jatkuvia välillä $(a,b)$) ja 
+$W_{12}(x)$ on funktioiden $y_1,y_2$ Wronskin determinantti välillä $(a,b)$, niin pätee
+\begin{align*}
+      &W_{12}(x_0)=0 \quad \text{jollakin}\ x_0\in (a,b) \\[1mm]
+\qekv &W_{12}(x)\ =0 \quad \text{jokaisella}\ x\in(a,b) \\[1mm]
+\qekv &\text{$y_1$ ja $y_2$ lineaarisesti riippuvat välillä $(a,b)$}.
+\end{align*}
+\end{Lause}
+\tod Oletuksien mukaan
+\[
+\begin{cases}
+y_1''+P(x)y_1'+Q(x)y_1=0,\quad &x\in (a,b), \\
+y_2''+P(x)y_2'+Q(x)y_2=0,\quad &x\in (a,b).
+\end{cases}
+\]
+Kertomalla ensimmäinen yhtälö $y_2$:lla ja toinen $y_1$:llä ja vähentämällä seuraa
+\[
+y_1y_2''-y_2y_1''+P(x)(y_1y_2'-y_2y_1')=0,\quad x\in (a,b).
+\]
+Mutta
+\[
+y_1y_2''-y_2y_1''=\frac{d}{dx}(y_1y_2'-y_2y_1').
+\]
+Siis on päätelty, että $y(x)=W_{12}(x)$ on jokaisella $x_0\in(a,b)$ ratkaisu alkuarvotehtävälle
+\begin{equation} \label{Wronskin yhtälö}
+\begin{cases}
+\,y'+P(x)y=0,\quad x\in (a,b) \\ \,y(x_0)=W_{12}(x_0)
+\end{cases}
+\end{equation}
+Koska ratkaisu on (vrt.\ Luku \ref{lineaarinen 1. kertaluvun DY})
+\[
+W_{12}(x)=W_{12}(x_0)\,e^{-\int_{x_0}^x P(t)dt},\quad x\in (a,b)
+\]
+ja koska $e^t \neq 0\ \forall t\in\R$, niin seuraa ensimmäinen osaväittämä: \ 
+$W_{12}(x_0)=0\ \ekv\ W_{12}(x)=0\,\ \forall x\in(a,b)$.
+
+Tapauksessa $y_1(x)=0\ \forall x\in(a,b)$ on toinenkin osaväittämä tosi, joten oletetaan, että
+$y_1(x_0) \neq 0$ jollakin $x_0\in(a,b)$. Tällöin on $y_1$:n jatkuvuuden nojalla 
+$y_1(x) \neq 0$ jollakin välillä $(x_0-\delta,x_0+\delta)\subset(a,b)$, $\delta>0$. Tällä 
+välillä $y_2/y_1$ on derivoituva ja
+\[
+\frac{d}{dx}\left[\frac{y_2(x)}{y_1(x)}\right]=\frac{W_{12}(x)}{[y_1(x)]^2}\,.
+\]
+Näin ollen jos $\,W_{12}(x)=0\,$ välillä $(a,b)$, niin jollakin $C\in\R$ pätee
+\[
+\frac{y_2(x)}{y_1(x)}=C\ \ekv\ -Cy_1(x)+y_2(x)= 0 \quad \text{välillä}\ (x_0-\delta,x_0+\delta).
+\]
+Kun merkitään $\,y(x)=-Cy_1(x)+y_2(x),\ x\in(a,b)$, niin on siis $y(x)=0$ mainitulla osavälillä,
+jolloin on erityisesti $y(x_0)=y'(x_0)=0$. Koska $y$ on myös differentiaaliyhtälön 
+\eqref{lin-2: hy} ratkaisu välillä $(a,b)$, niin $y$ ratkaisee siis Lauseen \ref{lin-2: lause 2}
+alkuarvotehtävän, kun $A=B=0$. Koska ilmeinen ratkaisu on myös $y=0$ ja koska ratkaisu on 
+mainitun lauseen mukaan yksikäsitteinen, niin on siis oltava 
+$\,y(x)=-Cy_1(x)+y_2(x)=0,\ x\in(a,b)$. Tällöin $y_1$ ja $y_2$ ovat lineaarisesti riippuvat
+välillä $(a,b)$. Päättely perustui oletukseen, että $\,W_{12}(x)=0\,$ välillä $(a,b)$, joten
+toisen osaväittämän osa \fbox{$\impl$} tuli todistetuksi. Jäljelle jäävä osa \fbox{$\Leftarrow$}
+on jo todistettu, sillä tämä on Proposition \ref{lin-2: prop} väittämän loogisesti
+ekvivalenttinen muoto. \loppu
+
+Nyt ollaan valmiita esittämään (Lauseeseen \ref{lin-2: lause 2} nojaava)
+ 
+\underline{Lauseen \ref{lin-2: lause 1} todistus} \ Olkoot $y_1$ ja $y_2$ Lauseen 
+\ref{lin-2: lause 2} alkuarvotehtävän ratkaisut, kun\, a) $A=1,\ B=0$, \ b) $A=0,\ B=1$.
+Tällöin funktioiden $y_1$ ja $y_2$ Wronskin determinantti $x_0$:ssa on
+\[
+W_{12}(x_0)=\begin{vmatrix}
+1 & 0 \\
+0 & 1
+\end{vmatrix}=1.
+\]
+Proposition \ref{lin-2: prop} mukaan $y_1$ ja $y_2$ ovat lineaarisesti riippumattomat välillä
+$(a,b)$, joten ensimmäinen osaväittämä on todistettu.
+
+Toisen osaväittämän todistamiseksi oletetaan, että $y_1$ ja $y_2$ ovat mitkä tahansa kaksi 
+differentiaaliyhtälön \eqref{lin-2: hy} lineaarisesti riippumatonta ratkaisua välillä $(a,b)$
+ja että $u$ on kolmas saman DY:n ratkaisu. Tällöin jos voidaan määritellä kertoimet $c_1$ ja 
+$c_2$ siten, että funktiolle $\,y(x)=c_1y_1(x)+c_2y_2(x)\,$ pätee 
+$\,y(x_0)=u(x_0),\ y'(x_0)=u'(x_0)$, niin $u$ ja $y$ ovat saman alkuarvotehtävän ratkaisuja,
+jolloin Lauseen \ref{lin-2: lause 2} mukaan on oltava $u(x)=y(x),\ x\in(a,b)$. Kertoimet
+määräytyvät yhtälöryhmästä
+\[ \left\{ \begin{aligned}
+y_1(x_0)c_1+y_2(x_0)c_2 &= u(x_0), \\ y'_1(x_0)c_1+y'_2(x_0)c_2 &= u'(x_0).
+           \end{aligned} \right. \]
+Tämä ratkeaa yksikäsitteisesti ehdolla $\,y_1(x_0)y'_2(x_0)-y'_1(x_0)y_2(x_0) \neq 0$, eli
+ehdolla $W_{12}(x_0) \neq 0$, missä $\,W_{12}\,$ on funktioiden $y_1$ ja $y_2$ Wronskin
+determinantti. Mutta oletuksen ja Lauseen \ref{lin-2: lause 3} perusteella
+$W_{12}(x_0) \neq 0$ jokaisella $x_0\in(a,b)$. Siis $u$ on esitettävissä funktioiden $y_1$ ja
+$y_2$ lineaarisena yhdistelynä. \loppu
+
+\subsection*{Täydellinen yhtälö: vakioiden variointi}
+\index{lineaarinen differentiaaliyhtälö!b@täydellinen}
+\index{lineaarinen differentiaaliyhtälö!g@vakio(ide)n variointi|vahv}
+\index{vakio(ide)n variointi|vahv}
+
+Jos homogeenisen yhtälön \eqref{lin-2: hy} yleinen ratkaisu tunnetaan, niin täydellisen
+yhtälön \eqref{lin-2: ty} ratkaisemiseksi riittää jälleen löytää tälle yksittäisratkaisu.
+Yleinen menetelmä perustuu vakioiden variointiin: Jos homogeenisen yhtälön yleinen ratkaisu
+on $y(x)=C_1y_1(x)+C_2y_2(x)$, niin täydelliselle yhtälölle löydetään yksittäisratkaisu
+muodossa
+\[
+y(x)=C_1(x)y_1(x)+C_2(x)y_2(x).
+\]
+Tällöin
+\[
+y'=C_1(x)y_1'(x)+C_2(x)y_2'(x)+C_1'(x)y_1(x)+C_2'(x)y_2(x).
+\]
+Tämän lausekkeen yksinkertaistamiseksi asetetaan lisäehto
+\[
+C_1'(x)y_1(x)+C_2'(x)y_2(x)=0
+\]
+(osoittautuu mahdolliseksi!), jolloin
+\begin{align*}
+y'  &= C_1(x)y_1'(x)+C_2(x)y_2'(x), \\
+y'' &= C_1(x)y_1''(x)+C_2(x)y_2''(x) +C_1'(x)y_1'(x)+C_2'(x)y_2'(x)
+\end{align*}
+ja näin ollen
+\begin{align*}
+\dyf y &= y''+P(x)y'+Q(x)y \\
+       &= C_1(x)\dyf y_1+C_2(x)\dyf y_2+C_1'(x)y_1'(x)+C_2'(x)y_2'(x).
+\end{align*}
+Tässä on $\dyf y_1=\dyf y_2=0$, joten oletettu lisäehto huomioiden on saatu yhtälöryhmä
+\[
+\begin{cases}
+\,y_1(x)C_1'+y_2(x)C_2'=0, \\
+\,y_1'(x)C_1'+y_2'(x)C_2'=R(x).
+\end{cases}
+\]
+Koska tässä on (Lause \ref{lin-2: lause 3})
+\[
+(y_1y_2'-y_2y_1')(x)=W_{12}(x)\neq 0,
+\]
+niin yhtälöryhmä ratkeaa:
+\[
+C_1'=-\frac{y_2(x)R(x)}{W_{12}(x)}\,,\quad C_2'=\frac{y_1(x)R(x)}{W_{12}(x)}\,.
+\]
+Integroimalla $C_1(x)$ ja $C_2(x)$ näistä yhtälöistä on löydetty täydellisen yhtälön
+\eqref{lin-2: ty} yksittäisratkaisu. Yhtälön \eqref{lin-2: ty} yleiseksi ratkaisuksi tulee näin
+muodoin
+\[
+y(x)=C_1y_1(x)+C_2y_2(x)
+    -y_1(x)\int\frac{y_2(x)R(x)}{W_{12}(x)}\,dx+y_2(x)\int\frac{y_1(x)R(x)}{W_{12}(x)}\,dx.
+\]
+
+\begin{Exa}
+Ratkaise Eulerin differentiaaliyhtälö
+\[
+x^2y''+4xy'+2y=f(x), \quad x>0.
+\]
+\end{Exa}
+\ratk Homogeenisen yhtälön yleinen ratkaisu on (ks.\ edellinen luku)
+\[
+y(x) \,=\, \frac{C_1}{x}+\frac{C_2}{x^2} \,=\, C_1y_1(x)+C_2y_2(x).
+\]
+Em.\ laskukaavoissa on
+\[
+R(x)=\frac{f(x)}{x^2}\,, \quad W_{12}(x)=(y_1y_2'-y_1'y_2)(x)=-\frac{1}{x^4}\,,
+\] 
+joten vakioiden variointi antaa
+\begin{align*}
+&C_1'= f(x) \qimpl C_1(x)=\int f(x)\,dx, \\
+&C_2'=-xf(x) \qimpl C_2(x)=-\int xf(x)\,dx.
+\end{align*}
+Yksittäisratkaisu on siis
+\[
+y(x) = \frac{1}{x}\int f(x)\,dx - \frac{1}{x^2}\int xf(x)\,dx.
+\]
+Tämä on myös yleinen ratkaisu, kun oikealla puolella integraaleihin sisällytetään
+määräämättömät integroimisvakiot. \loppu
+
+
+\subsection*{Tunnettuja differentiaaliyhtälöitä}
+
+Toisen kertaluvun lineaarinen, homogeeninen differentiaaliyhtälö on sovelluksissa yleinen
+differentiaaliyhtälön tyyppi. Seuraavassa muutamia tunnettuja differentiaaliyhtälöitä, jotka on
+nimetty niitä tutkineiden matemaatikkojen mukaan.
+\index{lineaarinen differentiaaliyhtälö!fb@Besselin, Hermiten, Laguerren, $\quad$
+       Legendren, T\v{s}eby\v{s}evin}             
+%\index{lineaarinen differentiaaliyhtälö!l@Besselin DY}
+%\index{lineaarinen differentiaaliyhtälö!l@Hermiten DY}
+%\index{lineaarinen differentiaaliyhtälö!l@Laguerren DY}
+%\index{lineaarinen differentiaaliyhtälö!l@Legendren DY}
+%\index{lineaarinen differentiaaliyhtälö!l@T\v{s}eby\v{s}evin DY}
+\index{Besselin differentiaaliyhtälö}
+\index{Hermiten!c@differentiaaliyhtälö}
+\index{Laguerren differentiaaliyhtälö}
+\index{Legendren differentiaaliyhtälö}
+\index{Tsebysev@T\v{s}eby\v{s}evin differentiaaliyhtälö}%
+\vspace{3mm}\newline
+\kor{Legendre}: $\qquad(x^2-1)y''+2xy'-n(n+1)y=0$ \vspace{3mm}\newline
+\kor{T\v{s}eby\v{s}ev}: $\qquad (1-x^2)y''-xy'+n^2y=0$ \vspace{3mm}\newline
+\kor{Hermite}: $\qquad\ y''-2xy'+2ny=0$ \vspace{3mm}\newline
+\kor{Laguerre}: $\qquad xy''+(1-x)y'+ny=0$ \vspace{3mm}\newline
+\kor{Bessel}: $\quad\qquad x^2y''+xy'+(x^2-p^2)y=0$ \vspace{3mm}\newline
+Näistä muilla paitsi Besselin differentiaaliyhtälöllä on ratkaisuna polynomi astetta $n$, kun
+$n\in\N\cup\{0\}$ (sovelluksien kannalta kiinnostavin tapaus). Ko.\ polynomit on nimetty
+samoin kuin differentiaaliyhtälöt. Besselin differentiaaliyhtälössä $p \ge 0$ on reaalinen
+paramatetri
+
+\subsection*{Sarjaratkaisut}
+\index{lineaarinen differentiaaliyhtälö!k@sarjaratkaisut|vahv}
+\index{sarjaratkaisu (lineaarisen DY:n)|vahv}
+
+Jos toisen kertaluvun lineaarisella, homogeenisella differentiaaliyhtälöllä ei ole yhtään 
+'tunnistettavaa' ratkaisua, niin ratkaisemista voidaan yrittää \kor{sarjamenetelmällä}.
+Tällöin ratkaisua etsitään joko potenssisarjana tai potenssisarjoja sisältävänä lausekkeena.
+Menetelmän perusidea on sama kuin integroinnin sarjamenetelmässä 
+(ks.\ Luku \ref{osamurtokehitelmät}).
+
+Esimerkkinä sarjamenetelmän soveltamisesta olkoon Besselin differentiaaliyhtälö, jonka
+perusmuoto on
+\[
+y''+\frac{1}{x}y'+(1-\frac{p^2}{x^2})y=0.
+\]
+Yleinen ratkaisu (sovelluksissa yleensä välillä $(0,\infty)$) kirjoitetaan muodossa
+\[
+y(x)=C_1 J_p(x)+C_2 Y_p(x),
+\]
+missä $J_p$ ja $Y_p$ ovat
+\index{Besselin funktio}%
+\kor{Besselin funktioita}, tarkemmin \kor{ensimmäisen lajin} ($J_p$)
+ja \kor{toisen lajin} ($Y_p$) Besselin funktioita. (Tapauksessa $p=1/2$ nämä ovat 
+poikkeuksellisesti alkeisfunktioita, ks.\ Harj.teht.\,\ref{H-dy-6: Besselin erikoistapaus}.)
+Funktio $J_p$ on muotoa
+\[
+J_p(x)=\sum_{k=0}^\infty a_kx^{2k+p}=x^p F(x),
+\]
+missä potenssisarja $F(x)=\sum_{k=0}^\infty a_kx^{2k}$ suppenee kaikkialla. Muilla kuin 
+kokonaislukuarvoilla on vastaavasti
+\[
+Y_p(x)=\sum_{k=0}^\infty a_kx^{2k-p}=x^{-p} G(x),\quad p\notin \{0,1,2,\ldots\}
+\] 
+missä $G$:n sarja jälleen suppenee kaikkialla. Jos $p$ on kokonaisluku, niin $Y_p$ sisältää
+myös logaritmisen termin muotoa $x^{-p}H(x)\ln\abs{x}$, missä $H(x)$ on ilmaistavissa 
+potenssisarjana.
+
+Olkoon $p=0$, ja yritetään sarjaratkaisua $y(x)=\sum_{k=0}^\infty a_kx^k$.
+Sijoitus yhtälöön antaa
+\[
+\sum_{k=2}^\infty k(k-1)a_kx^{k-2}+\sum_{k=1}^\infty ka_kx^{k-2}+\sum_{k=0}^\infty a_kx^k=0.
+\]
+Kun kahdessa ensimmäisessä summassa vaihdetaan summausindeksiksi $k$:n tilalle $k+2$, saadaan
+\[
+\sum_{k=0}^\infty (k+2)(k+1)a_{k+2}x^k+\bigl[\,a_1x^{-1}+\sum_{k=0}^\infty (k+2)a_{k+2}x^k\,\bigr] 
+                                                 + \sum_{k=0}^\infty a_kx^k=0 \quad \forall x
+\]
+eli yhdistämällä summat
+\[
+a_1x^{-1}+\sum_{k=0}^\infty [(k+2)^2a_{k+2}+a_k]x^k = 0\quad\forall x.
+\]
+Nähdään, että tämä toteutuu, kun valitaan
+\begin{align*}
+a_1 &= a_3=a_5=\ldots =0 \\
+a_0 &= 1,\quad a_{k+2}=-\frac{1}{(k+2)^2}\,a_k,\quad k=0,2,4 \ldots
+\end{align*}
+Kertoimille $a_{2k}$ saadaan (pienen mietiskelyn jälkeen) lauseke
+\[
+a_{2k}=(-1)^k\frac{1}{(k!)^2\cdot 4^k},\quad k=0,1,\ldots
+\]
+Ratkaisu, nimeltään $J_0$, on siis
+\[
+J_0(x)=\sum_{k=0}^\infty (-1)^k\frac{1}{(k!)^2}\left(\frac{x}{2}\right)^{2k}.
+\]
+Tämä sarja suppenee (ja on termeittäin derivoitavissa) kaikkialla, joten on löydetty
+koko $\R$:ssä pätevä ratkaisu differentiaaliyhtölölle $xy''+y'+xy=0$. Toisen lajin ratkaisu
+$Y_0(x)$ on pätevä vain erikseen väleillä $(-\infty,0)$ ja $(0,\infty)$. Tämäkin on 
+ilmaistavissa potenssisarjojen avulla (ks. Harj.teht.\,\ref{H-dy-6: Besselin toinen laji}).
+
+\Harj
+\begin{enumerate}
+
+\item
+Minkä toisen kertaluvun lineaarisen ja homogeenisen differentiaaliyhtälön ratkaisuja
+(jollakin avoimella välillä) ovat
+a) $y_1(x)=x+1$ ja $y_2(x)=x^2$, b) $y_1(x)=x$ ja $y_2(x)=e^x$, c) $y_1(x)=x^2$ ja 
+$y_2(x)=\sin x\,$?
+
+\item
+Ratkaise käyttäen annettua, yksittäisratkaisua koskevaa lisätietoa: \vspace{1mm}\newline
+a) \ $xy''-(x+3)y'+y=0; \quad$ polynomi \newline
+b) \ $x^2(\ln x-1)y''-xy'+y=0; \quad$ polynomi \newline
+c) \ $(x^2-2x-1)y''-(2x-1)y'+2y=0; \quad$ polynomi \newline
+d) \ $ y''+(\tan x-2\cot x)y'+2(\cot^2x)y=0; \quad \sin x$ \newline
+e) \ $y''+2(1-\tan^2x)y=0; \quad \cos^2x$ \newline
+f) \ $(x-2)y''-(4x-7)y'+(4x-6)y=0; \quad e^{ax}$
+
+\item
+Differentiaaliyhtälöllä $\,y''+P(x)y'+Q(x)y=0\,$ on helposti arvattava ei-triviaali ratkaisu,
+jos $1+P(x)+Q(x)=0$. Ratkaise tämän (ja tarvittaessa toisenkin) arvauksen perusteella:
+\vspace{1mm}\newline
+a) \ $(x-1)y''-xy'+y=0$ \newline
+b) \ $(2x-x^2)y''+(x^2-2)y'+(2-2x)y=0$ \newline
+c) \ $y''-(2+2x+x^{-1})y'+(1+2x+x^{-1})y=0$ \newline
+d) \ $(x+1)y''-xy'-y=(x+1)^2$ 
+
+\item
+Oletetaan, että differentiaaliyhtälön $\,y''+P(x)y'+Q(x)y=0\,$ kerroinfunktioille pätee:
+$P$ on derivoituva ja $P'$ ja $Q$ ovat jatkuvia tarkasteltavalla välillä $(a,b)$. Tällöin
+voidaan sijoituksella $y(x)=K(x)u(x)$ muuntaa DY muotoon
+\[
+u''+I(x)u=0.
+\]
+Miten $K(x)$ on valittava ja mikä on $I(x)$:n lauseke?
+
+\item
+Ratkaise vakioiden varioinnilla:
+\vspace{1mm}\newline
+a) \ $y''+y=\tan x \qquad\qquad\qquad\,$
+b) \ $y''-y=1/(e^x+1)$ \newline
+c) \ $y''+2y'+y=1/(x^2+1) \quad\,\ $
+d) \ $x^2y''+2xy'-2y=x^2e^x$ \newline
+e) \ $y''+5y'+4y=f(x) \qquad\quad\ \ $
+f) \ $y''+4y'+4y=f(x)$ \newline
+g) \ $y''+4y'+5y=f(x) \qquad\quad\,\ $
+h) \ $x^2y''+5xy'+3y=f(x)$ \newline
+i) \ $x^2y''+5xy'+4y=f(x) \qquad\ $
+j) \ $x^2y''-2y=f(x)$
+
+\item \index{Legendren polynomi}
+a) \kor{Legendren polynomi} astetta $n$ määritellään
+\[
+P_n(x)=\frac{1}{2^n n!}\frac{d^n}{dx^n}\,(x^2-1)^n.
+\]
+Totea, että $P_n$ on polynomi astetta $n$ ja näytä, että tämä on Legendren 
+differentiaaliyhtälön ratkaisu $n$:n arvoilla $0,1,2,3$. \vspace{1mm}\newline
+b) Määritä Hermiten ja Laguerren polynomit astetta $n \le 2$, ts.\ kyseisten
+differentiaaliyhtälöiden polynomiratkaisut, kun $n=0,1,2$. \vspace{1mm}\newline
+Määritä\, c) Legendren,\, d) T\v{s}eby\v{s}evin,\, e) Hermiten,\, f) Laguerren
+DY:n yleinen ratkaisu, kun $n=1$.
+
+\item \label{H-dy-6: Besselin erikoistapaus}
+Tapauksessa $p=1/2\,$ Besselin differentiaaliyhtälö on ratkaistavissa alkeisfunktioilla.
+Määritä ratkaisu sijoituksella $\,y(x)=u(x)/\sqrt{x}$.
+
+\item 
+Seuraavien differentiaaliyhtälöiden yleinen ratkaisu on esitettävissä pisteen $x=0$ lähellä 
+muodossa $y(x)=C_1\sum_{k=0}^\infty a_k x^k+C_2\sum_{k=0}^\infty b_k x^k$, missä $a_0=b_1=1$ ja
+$a_1=b_0=0$. Määritä molempien potenssisarjojen neljä ensimmäistä nollasta poikkeavaa
+termiä. \vspace{1.5mm}\newline
+a) \ $y''+2xy'+5y=0 \quad$
+b) \ $y''+2xy+6y=0 \quad$
+c) \ $y''+xy'-x^2y=0 \quad$ \newline
+d) \ $y''+(x+1)y'+(x-1)y=0 \quad$
+e) \ $(1-x^2)y''-xy'+ay=0,\ a\in\R$
+
+\item (*) \index{Tsebysev@T\v{s}eby\v{s}evin polynomi}
+\kor{T\v{s}eby\v{s}evin polynomi} astetta $n$ määritellään välillä $[-1,1]$ kaavalla
+\[
+T_n(x)=\cos\,(n\Arccos x), \quad x\in[-1,1].
+\]
+a) Näytä, että $T_n$ on polynomi astetta $n$ (sijoita $x=\cos\theta$). \ b) Näytä, että $T_n$
+on T\v{s}eby\v{s}evin differentiaaliyhtälön ratkaisu välillä $(-1,1)$. \ c) Laske polynomin
+$T_5$ kertoimet ja hahmottele $T_5(x)$ graafisesti välillä $[-2,2]$. Mitkä ovat $T_5$:n
+nollakohdat ja missä pisteissä on $T_5(x)=\pm 1\,$?
+
+\item (*) \label{H-dy-6: Besselin toinen laji}
+Näytä, että jos $p=0$, niin Besselin differentiaaliyhtälöllä on välillä $(0,\infty)$
+(toisen lajin) ratkaisu muotoa $Y_0(x)=J_0(x)\ln x+F(x)$, missä $F$ on ilmaistavissa kaikkialla
+suppenevana potenssisarjana.
+
+\item (*)
+Näytä, että differentiaaliyhtälön $y''=xy$ yleinen ratkaisu on esitettävissä potenssisarjana
+muodossa
+\[
+y(x)=C_1 \sum_{k=0}^\infty a_k x^{3k} + C_2 \sum_{k=0}^\infty b_k x^{3k+1}, \quad a_0=b_0=1.
+\]
+Määrittele kerroinjonot $\seq{a_k}$ ja $\seq{b_k}$ palautuvina lukujonoina ja päättele, että
+sarja suppenee kaikkialla. Millainen on yleisemmin differentiaaliyhtälön $y''=x^my\,$ yleinen
+sarjaratkaisu, kun $m\in\N\,$?
+
+\end{enumerate}

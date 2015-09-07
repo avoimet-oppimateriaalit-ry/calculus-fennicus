@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{kuvaDD-6.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2234,1487)(389,-1366)
+\put(1486,-1366){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}
+{\updefault}$x$}}}
+\put(2521,-511){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}
+{\updefault}$y$}}}
+\put(2431,-1096){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}
+{\updefault}$z$}}}
+\end{picture}

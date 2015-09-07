@@ -1,0 +1,551 @@
+\section{Integraalifunktion numeerinen laskeminen. \\ Määrätty integraali}
+\label{määrätty integraali}
+\sectionmark{Määrätty integraali}
+\alku
+
+Annetun funktion integraalifunktion määräämiseksi on toistaiseksi tarkasteltu erilaisia
+funktioalgebran keinoja. Näissä funktio on tunnettava laskusääntönä eli jonakin
+algebrallisena lausekkeena tarkasteltavalla välillä tai sen osaväleillä. Sovelluksia
+ajatellen tällainen oletus on melko rajoittava, sillä funktio voi yhtä hyvin olla pelkkä
+pisteittäin määritelty 'luettelo'. Näin on esimerkiksi, jos funktion arvoja voidaan
+käytännössä vain mitata tai jos funktion määritelmä on epäsuora niin, että funktioevaluaatio
+$x \map f(x)$ onnistuu vain numeerisesti. Jos tällaisella funktiolla on integraalifunktio,
+niin luonnollisesti integraalifunktionkaan arvoja ei voida käytännössä laskea muuten kuin
+numeerisesti. Mutta miten? --- Jatkossa ratkaistaan tämä ongelma johtamalla yleispätevä
+laskukaava numeeriselle funktioevaluaatiolle $x \map F(x)$, missä $F$ on annetun funktion
+integraalifunktio. Laskukaava johdattaa samalla integraalifunktiosta riippumattomaan
+\kor{määrätyn integraalin} käsitteeseen.
+
+Oletetaan, että $f$ on määritelty (reaalifunktiona) välillä $[a,b]$, eli jokaiseen
+$x\in[a,b]$ liittyy yksikäsitteinen luku $f(x)\in\R$. Täsmennetään $f$:n
+integraalifunktion määrittämisen ongelma välillä $(a,b)$ seuraavasti:
+\begin{itemize}
+\item[(P)] Etsi funktio $y(x)$, joka on jatkuva välillä $[a,b]$, derivoituva välillä $(a,b)$
+ja toteuttaa
+\[
+\begin{cases}
+\,y'(x)=f(x),\quad x\in (a,b), \\
+\,y(a)=0.
+\end{cases}
+\]
+\end{itemize}
+Tämän mukaan etsitään siis funktiota, joka on $f$:n integraalifunktio välillä $(a,b)$ ja
+toteuttaa lisäksi asetetun jatkuvuusehdon ja alkuehdon. Koska derivoituvuus jo takaa
+jatkuvuuden välillä $(a,b)$, niin jatkuvuusehto merkitsee ainoastaan lisäehtoja:
+$y(x)$ on oikealta jatkuva $a$:ssa ja vasemmalta jatkuva $b$:sä. 
+
+Sikäli kuin probleemalla (P) on ratkaisu, takaa asetettu alkuehto ratkaisun
+yksikäsitteisyyden (vrt.\ Korollaari \ref{toiseksi yksinkertaisin dy}). Vaikeampaan
+kysymykseen, joka koskee ratkaisun olemassoloa, antaa erään vastauksen seuraava huomattava
+lause.
+\begin{*Lause} \label{P:n ratkeavuus} Jos $f$ on jatkuva välillä $[a,b]$, niin probleemalla
+(P) on ratkaisu.
+\end{*Lause}
+Lause \ref{P:n ratkeavuus} on keskeinen osaväittämä yleisemmässä lauseessa, joka tunnetaan
+\kor{Analyysin peruslauseen} nimellä. Tämä muotoillaan ja (osittain) todistetaan jäljempänä
+Luvussa \ref{analyysin peruslause}. Tässä luvussa asetetaan kysymys toisin: Jos yksinkertaisesti
+\pain{oletetaan}, että (P) ratkeaa, niin miten luku $y(x)\in\R$ voidaan käytännössä
+\pain{laskea}, kun $x\in(a,b]$ on annettu? Jatkossa tarkastellaan tätä kysymystä ensin
+tapauksessa $x=b$, jolloin tehtävänä on siis laskea luku $y(b)$, kun $y(x)$ on määritelty
+epäsuorasti (P):n ratkaisuna. Koska $y(b)$ on reaaliluku, niin ko.\ lukua ei yleisesti voi
+laskea 'tarkasti', vaan käytännössä on tyydyttävä konstruoimaan $y(b)$ jonkin (viime kädessä
+rationaalisen) lukujonon $\seq{Y_n}$ raja-arvona. Tehtävänä on siis määrittää algoritmi, jolla
+on mahdollista laskea jokaisella $n\in\N$ luku $Y_n$ siten, että $\,\lim_nY_n=y(b)$.
+
+Olkoon $n\in\N$ annettu. Lukua $Y_n$ määrättäessä otetaan lähtökohdaksi välin $[a,b]$
+\index{jako (osaväleihin)}%
+\kor{jako osaväleihin} $[x_{k-1},x_k]$, $k=1 \ldots n$, missä 
+$a = x_0 < x_1 < \ldots < x_n = b$. Jako voi olla esim.\ 
+\index{tasavälinen jako}%
+\kor{tasavälinen}, jolloin on
+$x_k=a+kh_n$, missä $h_n=(b-a)/n$. Yleisemmin osavälijakoja rajoitetaan ainoastaan ehdolla
+\begin{equation} \label{int-4: tiheysehto}
+\lim_nh_n=0, \quad \text{missä}\,\ h_n = \max_{k=1 \ldots n} (x_k-x_{k-1}),\,\ n\in\N.
+                                                                       \tag{$\star$}
+\end{equation}
+Tässä $h_n$ on osavälijaon nk.\ 
+\index{tiheysparametri}%
+\kor{tiheysparametri}. Tasavälisille jaoille raja-arvoehto
+\eqref{int-4: tiheysehto} luonnollisesti toteutuu.
+
+Kun pisteet $x_k,\ k = 0 \ldots n$ on valittu em.\ tavalla, niin (P):n ratkaisulle $y(x)$
+voidaan ensinnäkin kirjoittaa
+\[
+y(b) \,=\, [y(x_n)-y(x_{n-1})]+ \ldots +[y(x_1)-y(x_0)]+y(x_0)
+\]
+ja alkuehdon $y(x_0)=y(a)=0$ perusteella siis
+\[
+y(b)=\sum_{k=0}^n [y(x_k)-y(x_{k-1})].
+\]
+Funktio $y(x)$ toteuttaa Differentiaalilaskun väliarvolauseen ehdot osaväleillä $\quad$
+$[x_{k-1},x_k]$ ja lisäksi $y'(x)=f(x),\ x\in(x_{k-1},x_k)$. Väliarvolauseen mukaan on tällöin
+olemassa pisteet $\xi_k\in(x_{k-1},x_k),\ k=1 \ldots n$ siten, että
+\[
+y(x_k)-y(x_{k-1})=f(\xi_k)(x_k-x_{k-1}), \quad k=1\ldots n.
+\]
+Yhdistämällä kaksi viimeistä tulosta on päätelty, että (P):n ratkaisulle pätee
+\[
+y(b)=\sum_{k=1}^nf(\xi_k)(x_k-x_{k-1}).
+\]
+Tämä ei toimi suoraan laskukaavana, koska pisteitä $\xi_k$ ei tunneta, mutta kaava on
+luonteva lähtökohta approksimatiolle: Korvataan tuntemattomat pisteet $\xi_k$ joillakin
+\pain{valituilla} pisteillä $\xi_k\in[x_{k-1},x_k]$, esim.\ $\xi_k=x_{k-1}$ tai
+$\xi_k=(x_{k-1}+x_k)/2$. Kun valinta on jokaisella osavälillä tehty, niin lasketaan
+\[
+Y_n = \sum_{k=1}^nf(\xi_k)(x_k-x_{k-1}).
+\]
+Näin muodostuu lukujono $\seq{Y_n}$, jonka $n$:s termi siis lasketaan seuraavasti:
+\begin{itemize}
+\item[A1.] Valitaan \kor{jakopisteet} $x_k,\ k=0 \ldots n$ niin, että
+           $a=x_0 < x_1 < \ldots < x_n=b$. \index{jakopiste}%
+\item[A2.] Valitaan \kor{välipisteet} $\xi_k\in[x_{k-1},x_k],\ k=1 \ldots n$.
+           \index{vzy@välipiste(istö)}%
+\item[A3.] Lasketaan $Y_n=\sum_{k=1}^n f(\xi_k)(x_k-x_{k-1})$.
+\end{itemize}
+Tämän mukaisesti $Y_n$:n laskemiseksi riittää suorittaa äärellinen määrä laskuoperaatioita:
+$n$ kpl (käytännössä yleensä likimääräisiä) funktioevaluaatioita $x \map f(x)$ ja lisäksi
+$n$ kertolaskua ja $n-1$ yhteenlaskua.
+
+Verrattaessa algoritmilla A1--A3 laskettua lukua $Y_n$ lukuun $y(b)$ on em.\ tarkkaa
+$y(b)$:n lauseketta verrattava $Y_n$:n vastaavaan lausekkeeseen (A3). Näissä välipisteet
+$\xi_k$ eivät ole samat, joten kirjoitettakoon lausekkeessa (A3) $\xi_k$:n tilalle $\eta_k$.
+Approksimaatiolle $\,Y_n \approx y(b)$ saadaan tällöin virhekaava
+\[
+y(b)-Y_n \,=\, \sum_{k=1}^n[f(\xi_k)-f(\eta_k)](x_k-x_{k-1}).
+\]
+Virheen arvioimiseksi on siis pystyttävä arvioimaan erotuksia $f(\xi_k)-f(\eta_k)$, kun
+pisteistä $\xi_k$ ja $\eta_k$ tiedetään ainoastaan, että ne ovat samalla osavälillä
+$[x_{k-1},x_k]$. Arvion onnistumiseksi toivotulla tavalla on ilmeisesti tehtävä jokin
+säännöllisyys\-oletus funktiosta $f$. --- Yleisesti jos $f$ on riittävän säännöllinen, on
+$\abs{f(\xi)-f(\eta)}$ enintään verrannollinen lukuun $\abs{\xi-\eta}$, ts.\
+$f(\xi)-f(\eta)=\Ord{\abs{\xi-\eta}}$. Tämän takaava minimioletus on, että $f$ on välillä
+$[a,b]$ Lipschitz-jatkuva, ts.\ $\exists\,L\in\R_+$ (= $f$:n Lipschitz-vakio) siten, että
+\[
+\abs{f(\xi)-f(\eta)} \le L \abs{\xi-\eta} \quad \forall\ \xi,\eta\in[a,b]
+\]
+(ks.\ Määritelmä \ref{funktion l-jatkuvuus} ja myös Lause \ref{Lipschitz-kriteeri}).
+
+Kun oletetaan $f$:n Lipschitz-jatkuvuus, niin pätee
+\[
+\abs{f(\xi_k)-f(\eta_k)} \le L\abs{\xi_k-\eta_k}, \quad k=1 \ldots n.
+\]
+Tässä on $\,\abs{\xi_k-\eta_k} \le x_k-x_{k-1}$, koska $\xi_k,\eta_k\in[x_{k-1},x_k]$ ja
+edelleen $x_k-x_{k-1} \le h_n$, joten $\,\abs{f(\xi_k)-f(\eta_k)} \le Lh_n,\ k=1 \ldots n$.
+Kun käytetään näitä arvioita yhdessä kolmioepäyhtälön kanssa em.\ virhekaavassa, niin seuraa
+\begin{align*}
+\abs{y(b)-Y_n)} \,&\le\, \sum_{k=1}^n \abs{f(\xi_k)-f(\eta_k)}(x_k-x_{k-1}) \\
+                  &\le\, Lh_n\sum_{k=1}^n (x_k-x_{k-1}) \,=\, L(b-a)h_n.
+\end{align*}
+
+On päädytty seuraavaan tulokseen.
+\begin{Lause} \label{summakaavalause} Olkoon $f$ Lipschitz-jatkuva välillä $[a,b]$ vakiolla
+$L$ ja olkoon $y(x)$ probleeman (P) ratkaisu. Tällöin jos $\seq{Y_n}$ on mikä tahansa
+algoritmilla A1--A3 laskettu lukujono raja-arvoehdolla \eqref{int-4: tiheysehto}, niin
+$\,\lim_nY_n=y(b)$, tarkemmin 
+$\abs{y(b)-Y_n} \le L(b-a)h_n\ \forall n\in\N$.\footnote[2]{Kuten nähdään jäljempänä
+Luvussa \ref{analyysin peruslause}, Lauseen \ref{summakaavalause} raja-arvoväittämä
+(ilman tarkennusta) on tosi myös, jos $f$ oletetetaan ainoastaan jatkuvaksi välillä $[a,b]$.
+Mitään kvantitatiivista virhearviota approksimaatiolle $Y_n \approx y(b)$ ei pelkän
+jatkuvuusoletuksen perusteella saada.}
+\end{Lause}
+
+Edellä laskettiin toistaiseksi (P):n ratkaisu vain pisteessä $x=b$. Tulos on kuitenkin
+helposti yleistettävissä. Nimittäin jos $y(x)$ on (P):n ratkaisu ja kiinnitetään $x\in(a,b]$,
+niin funktio $y(t),\ t\in[a,x]$ on jatkuva välillä $[a,x]$ (koska on jatkuva välillä
+$[a,b]$) ja ratkaisu alkuarvotehtävälle
+\[
+\begin{cases}
+\,y'(t)=f(t),\,\ t\in(a,x), \\ \,y(a)=0.
+\end{cases}
+\]
+Kyseessä on siis probleema (P), missä muuttujana on $x$:n sijasta $t$ ja $b$:n tilalla on $x$.
+Näin muodoin kun tehdään samat vaihdokset algoritmissa A1--A3, niin saadaan lasketuksi $y(x)$
+missä tahansa halutussa pisteessä $x\in(a,b]$.
+\begin{Exa} Ratkaise alkuarvotehtävä $\,y'(x)=x,\ x>0,\ y(0)=0$ algoritmilla A1--A3.
+\end{Exa}
+\ratk  Kiinnitetään $x>0$ ja tarkastellaan väliä $[0,x]$. Asetetaan jakopisteet $t_k$
+tasavälisesti, eli $t_k=kx/n,\ k=0 \ldots n$, jolloin laskukaavan (A3) mukaan on
+\[
+Y_n \,=\, \sum_{k=1}^n f(\xi_k)(t_k-t_{k-1}) 
+    \,=\, \sum_{k=1}^n \xi_k\,\frac{x}{n}\,.
+\]
+Välipisteiden valinnassa kokeiltakoon vaihtoehtoja \ a) $\xi_k=t_k$, \ b) $\xi_k=t_{k-1}$ ja
+\ c) $\xi_k=(t_{k-1}+t_k)/2$, \ $k=1 \ldots n$, jolloin saadaan:
+\begin{align*}
+\text{a)}\ \ Y_n &\,=\, \sum_{k=1}^{n}k\,\frac{x}{n}\cdot\frac{x}{n}
+                  \,=\, \frac{x^2}{n^2}\sum_{k=1}^{n} k
+                  \,=\, \frac{x^2}{n^2}\cdot\frac{1}{2}\,n(n+1)
+                  \,=\, \frac{x^2}{2}+\frac{x^2}{2n}\,. \\
+\text{b)}\ \ Y_n &\,=\, \sum_{k=1}^{n}(k-1)\,\frac{x}{n}\cdot\frac{x}{n}
+                  \,=\, \frac{x^2}{n^2}\sum_{k=1}^{n} (k-1)
+                  \,=\, \frac{x^2}{n^2}\cdot\frac{1}{2}\,n(n-1)
+                  \,=\, \frac{x^2}{2}-\frac{x^2}{2n}\,. \\
+\text{c)}\ \ Y_n &\,=\, \sum_{k=1}^{n}\frac{1}{2}\left[(k-1)\,\frac{x}{n}+k\,\frac{x}{n}\right]
+                                                                            \cdot\frac{x}{n}
+                  \,=\, \frac{x^2}{n^2}\sum_{k=1}^{n} \left(k-\frac{1}{2}\right)
+                  \,=\, \frac{x²}{n^2}\cdot\frac{1}{2}\,n^2
+                  \,=\, \frac{x^2}{2}\,.
+\end{align*}
+Havaitaan, että kaikissa tapauksissa on $\,\lim_nY_n=\tfrac{1}{2}x^2$. Lause
+\ref{summakaavalause} soveltuu ($L=1$), joten $\,y(x)=\tfrac{1}{2}x^2,\ x>0$. \loppu
+
+Esimerkissä pätee approksimaatiolle $Y_n \approx y(x)$ Lauseen \ref{summakaavalause} mukaan 
+virhearvio $\,\abs{y(x)-Y_n} \le x^2/n\,$ ($L=1,\ b-a=x,\ h_n=x/n$). Havaitut virheet ovat
+\ a) $y(x)-Y_n=-\tfrac{x^2}{2n}$, \ b) $y(x)-Y_n=\tfrac{x^2}{2n}$, \ $y(x)-Y_n=0$, joten
+nämä ovat arvion kanssa sopusoinnussa.
+
+Jos (P):n ratkaisu $y(x)$ halutaan laskea useammassa pisteessä, voidaan algoritmi A1--A3
+käynnistää jokaista laskentapistettä varten erikseen, kuten esimerkissä. Numeerisesti
+laskettaessa algoritmi kannattaa kuitenkin ottaa tehokkaampaan käyttöön huomioimalla, että
+kaavan (A3) mukaan luku $Y_n$ tullaan laskeneeksi käytännössä palautuvasti muodossa
+\[
+Y_0=0, \quad Y_k=Y_{k-1}+f(\xi_k)(x_k-x_{k-1}), \quad k=1 \ldots n.
+\]
+Luvut $Y_k=\sum_{i=1}^k f(\xi_i)(x_i-x_{i-1}),\ k=1 \ldots n-1$ saadaan tällöin summauksen
+välituloksina. Nämä ovat algoritmin A1--A3 mukaisia approksimaatioita luvuille $y(x_k)$, kun
+jakopisteinä ovat $x_i,\ i=0 \ldots k$ välillä $[a,x_k]$. Samoin oletuksin kuin edellä myös
+näiden virhe on $\Ord{h_n}$, tarkemmin $|y(x_k)-Y_k| \le L(x_k-a)h_n,\ k=1 \ldots n-1$.
+Luvut $Y_k$ kannattaa siis kaikki huomioida, jolloin saadaan käsitys funktiosta $y(x)$ koko
+tarkasteltavalla välillä ilman lisätyötä.
+\jatko \begin{Exa} (jatko) Kuviossa on valittu $x=2,\ n=4$ ja yhdistetty esimerkin
+valinnoilla lasketut pisteet $(x_k,Y_k)$ murtoviivaksi. Tämä esittää funktion $y(x)$
+kuvaajaa likimäärin välillä $[0,2]$. Tulos on tarkin tapauksessa (c), mutta muissakin
+tapauksissa tarkkuus kasvaa kiinteällä $x$, kun $n\kohti\infty$.
+\end{Exa} 
+\begin{figure}[H]
+\setlength{\unitlength}{0.5cm}
+\begin{center}
+\begin{picture}(12,11)(1,2.5)
+\put(1,0){\vector(1,0){12}} \put(13.5,-0.2){$x$}
+\put(1,0){\vector(0,1){12.5}} \put(0.9,13){$y$}
+\multiput(1,0)(2.5,0){5}{\line(0,-1){0.1}}
+\put(1,5){\line(-1,0){0.1}} \put(1,10){\line(-1,0){0.1}}
+\put(0.2,4.7){$1$} \put(0.2,9.7){$2$}
+\put(0.8,-1){$0$} \put(5.8,-1){$1$} \put(10.8,-1){$2$}
+\path(1,0)(3.5,0.625)(6,2.5)(8.5,5.625)(11,10) \put(11.5,9.9){(c)}
+\path(1,0)(3.5,0.781)(6,3.125)(8.5,7.031)(11,12.5) \put(11.5,12.4){(a)}
+\path(1,0)(3.5,0.469)(6,1.875)(8.5,4.219)(11,7.5) \put(11.5,7.4){(b)}
+\end{picture}
+\end{center}
+\end{figure}
+
+
+\subsection*{Määrätty integraali}
+\index{mzyzyrzy@määrätty integraali|vahv}
+
+Algoritmin A1--A3 mukaan lasketulla luvulla $y(b)=\lim_nY_n$, missä $y(x)$ on probleeman (P)
+ratkaisu, on matematiikassa oma nimensä ja merkintänsä: Lukua kutsutaan funktion $f$
+\kor{määrätyksi} \kor{integraaliksi yli välin} $[a,b]$, merkitään
+\[
+y(b)=\int_a^b f(x)\,dx
+\]
+ja luetaan 'integraali $a$:sta $b$:hen $f(x)\,dx$'. Sanotaan edelleen, että $a$ on integraalin
+\kor{alaraja}, $b$ on \kor{yläraja} ja $[a,b]$ on \kor{integroimisväli}. Muuttuja $x$, eli
+\kor{integroimismuuttuja}, on 'dummy' (kuten summausindeksi), ts.\ muuttuja voidaan vaihtaa
+integraalin merkityksen muuttumatta.
+
+Määrätty integraali on siis integroitavasta funktiosta $f$ ja integroimisvälistä riippuva
+reaaliluku, joka on käytännösä laskettavissa lukujonon raja-arvona algoritmin (A1)--(A3)
+mukaisesti. Kun $Y_n$:n laskukaavassa (A3) käytetään erotuksille $x_k-x_{k-1}$
+lyhenysmerkintää $\Delta x_k$, niin määrätyn integraalin laskeminen edellä esitetyllä tavalla
+voidaan tiivistää \kor{summakaavaksi} \index{summakaava (määr.\ integraalin)}
+\begin{equation} \label{int-4: summakaava}
+\boxed{\quad \int_a^b f(x)\,dx = \Lim_n \sum_{k=1}^n f(\xi_k)\Delta x_k. \quad}
+\end{equation}
+\index{raja-arvo!f@määrätyn integraalin}%
+Tässä raja-arvomerkintään '$\Lim_n$' on sisällytetty ensinnäkin algoritmissa A1--A3 asetetut
+rajoitukset koskien pisteiden $x_k$ ja $\xi_k$ valintaa, toiseksi ehto
+\eqref{int-4: tiheysehto} ja kolmanneksi vaatimus, että \pain{kaikki} algoritmin (A1)--(A3)
+mukaiset lukujonot $\seq{Y_n}$ suppenevat kohti \pain{samaa} raja-arvoa (= määrätyn integraalin
+arvo). Edellä esitetyn perusteella viimeksi mainittu vaatimus toteutuu (ja summakaava on siis
+pätevä) ainakin oletuksin, että probleema (P) on ratkeava (perusoletus toistaiseksi!) ja $f$ on
+Lipschitz-jatkuva välillä $[a,b]$.
+
+Em.\ oletuksilla probleeman (P) ratkaisulle johdettiin edellä myös yleisempi laskukaava, joka
+voidaan nyt kirjoittaa määrättynä integraalina:
+\begin{equation} \label{int-4: P:n ratkaisukaava}
+y(x)=\int_a^x f(t)\,dt, \quad a < x \le b.
+\end{equation}
+Koska (P):n ratkaisu on (eräs) $f$:n integraalifunktio välillä $(a,b)$, niin kaava
+\eqref{int-4: P:n ratkaisukaava} yhdessä summakaavan \eqref{int-4: summakaava} kanssa antaa
+tähänastisesta integroimistekniikasta (myös derivoimissäännöistä!) riippumattoman menetelmän
+integraalifunktion määräämiseksi.\footnote[2]{Integraalifunktion merkinnän '$\int f(x)\,dx$'
+taustalla on määrätyn integraalin summakaava. Merkinnän otti käyttöön \hist{G.W. Leibniz}
+ajatellen summakaavan 'rajankäyntejä' $\sum\hookrightarrow\int$ ja
+$\Delta x_k\hookrightarrow dx$, kun $n\kohti\infty$. Leibnizin omien päiväkirjamerkintöjen
+mukaan integraalimerkinnän tarkka keksimispäivä oli 29.10.1675. \index{Leibniz, G. W.|av}}
+
+Toisaalta jos välillä $(a,b)$ tunnetaan $f$:n integraalifunktio $F$ 
+(esim.\ alkeisfunktiona tai sarjana) ja $F$ on jatkuva välillä $[a,b]$
+(välttämäntön lisäoletus!), niin luvun $\int_a^b f(x)\,dx\,$ laskeminen käy päinsä suoraan
+$F$:n avulla. Nimittäin näillä oletuksilla probleeman (P) ratkaisu on $y(x)=F(x)-F(a)$,
+jolloin
+\[
+\int_a^b f(x)\, dx \,=\, y(b) \,=\,F(b)-F(a).
+\]
+Tämä tunnettuun integraalifunktioon $F$ perustuva määrätyn integraalin laskukaava esitetään
+yleensä \kor{sijoituskaavana} \index{sijoituskaava (määr.\ integraalin)}
+\begin{equation} \label{int-4: sijoituskaava}
+\boxed{\kehys\quad \int_a^b f(x)\,dx = \sijoitus{x=a}{x=b} F(t) 
+                                     = \sijoitus{a}{b} F(x). \quad}
+\end{equation}
+Tässä oikea puoli luetaan 'sijoitus $a$:sta $b$:hen $F(x)$'. Kaava \eqref{int-4: sijoituskaava}
+saadaan päteväksi myös tapauksessa $a>b$, kun \pain{sovitaan}, että määrätylle integraalille
+on voimassa \kor{vaihtosääntö} \index{vaihtoszyzy@vaihtosääntö!a@määrätyn integraalin}
+\begin{equation} \label{int-4: vaihtosääntö}
+\boxed{\quad \int_{a}^b f(x)\, dx=-\int_{b}^a f(x)\, dx. \quad}
+\end{equation}
+Mukavuussyistä oletetaan tämä päteväksi myös kun $a=b$, jolloin tulee sovituksi, että
+\[
+\int_a^a f(x)\, dx=0.
+\]
+
+Huomautettakoon määrätyn integraalin käsitteestä, että toistaiseksi kyse ei ole muusta kuin
+erikoisesta merkinnästä luvulle $y(b)$ siinä tapauksessa, että probleemalla (P) on ratkaisu
+$y(x)$. Samaa ajatusta kertaavat myös sijoituskaava \eqref{int-4: sijoituskaava} ja
+vaihtosääntö \eqref{int-4: vaihtosääntö}. Seuraavassa luvussa nähdään, että
+määrätystä integraalista tulee (P):n ratkeavuudesta (ja yleisemminkin integraalifunktion
+olemassaolosta) riippumaton käsite, kun määritelmäksi otetaan suoraan summakaava
+\eqref{int-4: summakaava}, johon edellä päädyttiin numeerisena laskukaavana luvulle $y(b)$.
+Myöhemmissä luvuissa määrätyn integraalin käsite saa edelleen lisää 'eloa' erilaisista
+sovelluksista. Kuten tullaan näkemään, sovelluksissa määrättyyn integraaliin päädytään
+suoraan summakaavan kautta. Tällöin sijoituskaava \eqref{int-4: sijoituskaava} näyttäytyy
+oikotienä integraalin arvon 'tarkkaan' laskemiseen silloin, kun funktiolle $f$ on löydettävissä
+(edellisten lukujen menetelmin) välillä $[a,b]$ jatkuva integraalifunktio $F$.  
+
+Seuraavassa esitetään määrätyn integraalin kolme keskeistä ominaisuutta. Nämä pysyvät voimassa,
+kun määrittelyn perustaksi jatkossa otetaan summakaava \eqref{int-4: summakaava}, mutta
+toistaiseksi ominaisuudet perustellaan vedoten oletettuun probleeman (P) ratkeavuuteen. 
+
+
+\subsection*{Additiivisuus. Lineaarisuus. Vertailuperiaate}
+
+Jos probleema (P) on ratkeava, niin jokaisella $c\in(a,b)$ voidaan kirjoittaa
+$y(b)=y(c)+[y(b)-y(c)]$ eli määrätyn integraalin avulla ilmaistuna
+\index{additiivisuus!a@integraalin}%
+\begin{equation} \label{int-4: additiivisuussääntö}
+\boxed{\quad \int_a^b f(x)\,dx = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx. \quad}
+\end{equation}
+Tämän säännön perusteella sanotaan, että määrätty integraali on \kor{additiivinen}
+\kor{integroimisvälin suhteen}. Kun huomiodaan myös vaihtosääntö \eqref{int-4: vaihtosääntö},
+niin todetaan, että additiivisuussääntö \eqref{int-4: additiivisuussääntö} on pätevä lukujen
+$a,b,c$ suuruusjärjestyksestä riippumatta edellyttäen, että probleema (P) on ratkaistavissa,
+kun $a$:n tilalla on $\min\{a,b,c\}$ ja $b$:n tilalla $\max\{a,b,c\}$.
+
+Olkoon (P):n ratkaisu $F(x)$ ja lisäksi olkoon (P):llä ratkaisu $G(x)$, kun $f$:n tilalla on
+funktio $g$. Tällöin jos $\alpha,\beta\in\R$, niin $y(x)=\alpha F(x)+\beta G(x)\,$ on
+(P):n ratkaisu, kun $f$:n tilalla on $\alpha f +\beta g$. Erityisesti on siis
+$y(b)=\alpha F(b)+\beta G(b)$, eli määrätylle integraalille pätee \kor{lineaarisuussääntö}
+(vrt.\ määräämättömän integraalin vastaava sääntö \ref{integraalifunktio}:\,(I-1))
+\index{lineaarisuus!b@integroinnin}%
+\begin{equation} \label{int-4: lineaarisuussääntö}
+\boxed{\quad \int_a^b [\alpha f(x)+\beta g(x)]\, dx 
+        = \alpha\int_a^b f(x)\, dx + \beta\int_a^b g(x)\, dx, \quad \alpha,\beta\in\R. \quad}
+\end{equation}
+Jos mainittujen oletusten lisäksi oletetetaan, että että $f(x) \le g(x)\ \forall x\in[a,b]$,
+niin $F'(x)-G'(x) = f(x)-g(x) \le 0,\ x\in(a,b)$, jolloin $F(x)-G(x)$ on vähenevä välillä
+$[a,b]$ (Lause \ref{monotonisuuskriteeri}). Erityisesti on $F(b)-G(b) \le F(0)-G(0) = 0$ eli
+$F(b) \le G(b)$. Näin ollen määrätyille integraaleille pätee \kor{vertailuperiaate}
+\index{vertailuperiaate!a@integraalien}%
+\begin{equation} \label{int-4: vertailuperiaate}
+\boxed{\quad f(x)\leq g(x)\quad\forall x\in [a,b] 
+             \ \impl \ \int_a^b f(x)\,dx \le \int_a^b g(x)\,dx. \quad}
+\end{equation}
+Koska $\pm f(x) \le \abs{f(x)}$ ja $\int_a^b [\pm f(x)]\,dx = \pm\int_a^b f(x)\,dx$
+(lineaarisuussääntö!), niin vertailuperiaattetta soveltaen seuraa erityisesti
+\begin{equation} \label{int-4: kolmioepäyhtälö}
+\boxed{\quad \left|\int_a^b f(x)\, dx\right|\leq \int_a^b\abs{f(x)}\,dx. \quad}
+\end{equation}
+Tätä sanotaan 
+\index{kolmioepäyhtälö!f@integraalien}%
+\kor{integraalien kolmioepäyhtälöksi}.\footnote[2]{Epäyhtälö
+\eqref{int-4: kolmioepäyhtälö} on sukua järjestetyn kunnan kolmioepäyhtälölle, joka pätee
+summakaavan \eqref{int-4: summakaava} äärellisille summille.}
+\begin{Exa} Sijoituskaavan \eqref{int-4: sijoituskaava} perusteella on
+\begin{align*}
+&\int_0^2 \sin x\, dx=\sijoitus{0}{2}(-\cos x)=\sijoitus{2}{0}\cos x=1-\cos 2, \\
+&\int_x^{x^2} t\, dt =\sijoitus{x}{x^2}\frac{1}{2}t^2=\frac{1}{2}(x^4-x^2), \quad x\in\R.
+\end{align*}
+\end{Exa}
+\begin{Exa} Laske $\int_0^2 f(x)\,dx$, kun $f(x)=\max\{\sqrt{x},x^2\}$. \end{Exa}
+\ratk Todetaan ensin, että $f(x)=\sqrt{x}$ välillä $[0,1]$ ja $f(x)=x^2$ välillä $[1,2]$.
+Tällöin käyttämällä ensin additiivisuussääntöä \eqref{int-4: additiivisuussääntö} ja sitten
+sijoituskaavaa \eqref{int-4: sijoituskaava} saadaan
+\[
+\int_0^2 f(x)\,dx \,=\, \int_0^1 \sqrt{x}\,dx + \int_1^2 x^2\,dx
+                  \,=\, \sijoitus{0}{1}\frac{2}{3}\,x^{3/2}+\sijoitus{1}{2}\frac{1}{3}\,x^3
+                  \,=\, 3. \ \loppu
+\]
+\begin{Exa} Määritä funktion $f(x)=\min\{3x,4-x^2\}$ integraalifunktio $\R$:ssä käyttäen
+hyväksi määrättyä integraalia. \end{Exa}
+\ratk Funktio $\,y(x)=\int_0^x f(t)\,dt\,$ on kysytty integraalifunktio lisäehdolla $y(0)=0$.
+Koska $f(x)=3x$, kun $x\in[-4,1]$, ja $f(x)=4-x^2$, kun $x \ge 1$ tai $x \le -4$, niin pätee
+\begin{align*}
+x\in[-4,1]       \qimpl y(x) &= \int_0^x 3t\,dt = \sijoitus{0}{x}\frac{3}{2}\,t^2 
+                              = \frac{3}{2}\,x^2, \\[1mm]
+x\in[1,\infty)   \qimpl y(x) &= y(1)+[y(x)-y(1)] \\[3mm]
+                             &= \frac{3}{2}+\int_1^x (4-t^2)\,dt \\
+                             &= \frac{3}{2}+\sijoitus{1}{x}\left(4t-\frac{1}{3}\,t^3\right)
+                              = -\frac{1}{3}\,x^3 + 4x -\frac{13}{6}\,, \\[2mm]
+x\in(-\infty,-4] \qimpl y(x) &= y(-4)+[y(x)-y(-4)] \\[3mm]
+                             &= 24+\int_{-4}^x (4-t^2)\,dt \\
+                             &= 24+\sijoitus{-4}{x}\left(4t-\frac{1}{3}\,t^3\right)
+                              = -\frac{1}{3}\,x^3 + 4x +\frac{56}{3}\,.
+\end{align*}
+Tässä $y(1)=3/2$ ja $y(-4)=24$ saatiin ensimmäisestä lausekkeesta. Yleinen integraalifunktio
+on $F(x)=y(x)+C,\ C\in\R$, joten
+\[
+\int f(x)\,dx\,= \begin{cases}
+                  -\frac{1}{3}\,x^3 + 4x +\frac{56}{3}+C,  &\text{kun}\,\ x < -4, \\
+                 \,\frac{3}{2}\,x^2+C,                     &\text{kun}\ -4 \le x \le 1, \\
+                  -\frac{1}{3}\,x^3 + 4x -\frac{13}{6}+C,  &\text{kun}\,\ x>1.
+                \end{cases} \quad\loppu
+\]
+\begin{Exa} Sievennä lauseke $\D \,\frac{d}{dx}\int_{\sqrt{x}}^{1/\sqrt{x}}e^{-t^2},\ x>0$.
+\end{Exa}
+\ratk Funktiolla $e^{-t^2}$ on $\R$:ssä sarjamuotoinen integraalifunktio $F(t)$, mutta
+sievennyksessä riittää tieto, että $F(t)$ on olemassa:
+\begin{align*}
+\frac{d}{dx}\int_{\sqrt{x}}^{1/\sqrt{x}}e^{-t^2}\, dt 
+           &\,=\,\frac{d}{dx} [F(\frac{1}{\sqrt{x}})-F(\sqrt{x})] \\
+           &\,=\,-\frac{1}{2x\sqrt{x}}f(\frac{1}{\sqrt{x}})-\frac{1}{2\sqrt{x}}f(\sqrt{x}) \\
+           &\,=\, -\frac{1}{2\sqrt{x}}\left(\frac{e^{-1/x}}{x}+e^{-x}\right). \loppu
+\end{align*}
+\begin{Exa} Arvioi virhe approksimaatiossa
+$\ \D\int_{10}^{20}\frac{x^4}{x^5+1}\,dx \approx \ln 2$.
+\end{Exa}
+\ratk Integroimisvälillä on
+\[
+\frac{x^4}{x^5+1}=\frac{1}{x}-\frac{1}{x(x^5+1)}\,,
+\]
+joten lineaarisuussäännön \eqref{int-4: lineaarisuussääntö} ja sijoituskaavan
+\eqref{int-4: sijoituskaava} nojalla on
+\[
+\int_{10}^{20}\frac{x^4}{x^5+1}\,dx \,=\, \int_{10}^{20}\frac{1}{x}\,dx-\delta
+                                   \,=\, \sijoitus{10}{20}\ln x -\delta
+                                   \,=\, \ln 2 - \delta,
+\]
+missä on edelleen vertailuperiaatteen \eqref{int-4: vertailuperiaate} ja sijoituskaavan nojalla
+\[
+0 \,\le\, \delta = \int_{10}^{20}\frac{1}{x(x^5+1)}\,dx
+                 \,\le\, \int_{10}^{20}\frac{1}{x^6}\,dx
+                 \,=\, \sijoitus{10}{20}-\frac{1}{5x^5}
+                 \,<\, 2 \cdot 10^{-6}.
+\]
+Siis approksimaatio on ylälikiarvo, jonka virhe on alle $2 \cdot 10^{-6}$. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Ratkaise probleema (P), tai osoita ratkeamattomuus, kun $[a,b]=[0,1]$ ja
+\begin{align*}
+&\text{a)}\,\ f(x)=\begin{cases} 
+                   \,\ln x, &\text{kun}\ x>0, \\ \,0, &\text{kun}\ x=0,
+                   \end{cases} \qquad
+ \text{b)}\,\ f(x)=\begin{cases} 
+                   \,\frac{1}{x}, &\text{kun}\ x>0, \\ \,0, &\text{kun}\ x=0,
+                   \end{cases} \\
+&\text{c)}\,\ f(x)=\begin{cases} 
+                   \,\frac{1}{\sqrt{x}}, &\text{kun}\ x>0, \\ \,1, &\text{kun}\ x=0,
+                   \end{cases} \qquad\
+ \text{d)}\,\ f(x)=\begin{cases} 
+                   \,\frac{1}{\sqrt{|2x-1|}}, &\text{kun}\ x \neq \frac{1}{2}, \\ 
+                   \,0,                       &\text{kun}\ x=\frac{1}{2}.
+                   \end{cases}
+\end{align*} 
+
+\item
+Ratkaise alkuarvotehtävä $\,y'(x)=f(x),\ x>0,\ y(0)=0$ käyttämällä algoritmia A1--A3 ja
+tasavälisiä jakoja välillä $[0,x]$, kun \ a) $f(x)=x^2$, \newline
+b) $f(x)=x^3$, \ c) $f(x)=e^{-x}$, \ d) $f(x)=2^x$. \newline
+Lisätietoja: $\,\sum_{k=1}^n k^2 = \frac{1}{6}\,n(n+1)(2n+1),\,\
+\sum_{k=1}^n k^3 = \frac {1}{4}\,n^2(n+1)^2$.
+
+\item
+Laske seuraavat raja-arvot tulkitsemalla ne määrätyiksi integraaleiksi.
+\begin{align*}
+&\text{a)}\ \ \lim_{n\kohti\infty} \frac{1}{n^4}\left[1^3+2^3+ \ldots +(4n-1)^3\right] \qquad
+ \text{b)}\ \ \lim_{n\kohti\infty} \sum_{k=1}^n \frac{1}{n+k} \\
+&\text{c)}\ \ \lim_{n\kohti\infty} \frac{\pi}{n} \sum_{k=1}^{n-1} \sin\frac{k\pi}{n} \qquad
+ \text{d)}\ \ \lim_{n\kohti\infty} \frac{1}{n^2} \sum_{k=0}^{n-1} \sqrt{n^2-k^2} \\
+&\text{e)}\ \ \lim_{n\kohti\infty} \frac{1}{n^2} \sum_{k=0}^{n} \sqrt{n^2+k^2} \qquad
+ \text{f)}\ \ \lim_{n\kohti\infty} \sum_{k=0}^n \frac{n}{n^2+k^2}
+\end{align*}
+
+\item
+Laske sääntöjen \eqref{int-4: sijoituskaava}--\eqref{int-4: lineaarisuussääntö} avulla tarkasti
+(jos mahdollista) tai numeerisena likiarvona:
+\begin{align*}
+&\text{a)}\,\ \int_{-2}^2 (x^2+3)^2\,dx \qquad
+ \text{b)}\,\ \int_4^9 \left(\sqrt{x}-\frac{1}{\sqrt{x}}\right)\,dx \qquad
+ \text{c)}\,\ \int_{1}^{10} \frac{1}{x^3+x}\,dx \\
+&\text{d)}\,\ \int_{-1}^1 2^x\,dx \qquad
+ \text{e)}\,\ \int_0^4 \abs{\sin\theta}\,d\theta \qquad
+ \text{f)}\,\ \int_0^\pi \max\{\cos x,\,\sin 2x\}\,dx \\
+&\text{g)}\,\ \int_1^2|x^3+x^2-3|\,dx \qquad
+ \text{h)}\,\ \int_0^\pi|x-\cos x|\,dx \qquad
+ \text{i)}\,\ \int_0^4 \min\{4x,\,e^x\}\,dx
+\end{align*}
+
+\item
+Laske seuraavien funktioiden derivaatat vapaan muuttujan suhteen.
+\begin{align*}
+&\text{a)}\ \ \int_\pi^x \sin^3 t\,dt \qquad
+ \text{b)}\ \ \int_x^{2\pi}(\sin^2u-u^4 e^{-u})\,du \qquad
+ \text{c)}\ \ \int_{x}^{5x} \frac{e^s}{s^2+1}\,ds \\
+&\text{d)}\ \ \int_0^{3\sinh 2x} \sqrt{9+t^2}\,dt \qquad
+ \text{e)}\ \ \int_{-\pi}^t \frac{\cos y}{1+y^2}\,dy \qquad
+ \text{f)}\ \ \int_{\sin\theta}^{\cos\theta} \sqrt{1-x^2}\,dx
+\end{align*}
+
+\item
+Määritä seuraavien funktioiden integraalifunktiot $\R$:ssä käyttäen hyväksi määrättyä
+integraalia:
+\begin{align*}
+&\text{a)}\ \ f(x)=|x|-|x-2| \qquad
+ \text{b)}\ \ f(x)=|x^2-7x+10| \\
+&\text{c)}\,\ f(x)=\max\,\{\,x^2+2x+3,\,9-2x-x^2\}
+\end{align*}
+
+\item
+Määritä seuraavien funktioiden pienimmät arvot ja piirrä funktioiden \newline kuvaajat.
+\[
+\text{a)}\ \ f(x)=\int_0^1 \abs{x-t}\,dt \qquad
+\text{b)}\ \ f(x)=\int_0^\pi (x\cos t-t\cos x)^2\,dt
+\]
+
+\item
+Todista:
+\begin{align*}
+&\text{a)}\ \ 1 \le \int_0^1 \frac{1+x^{20}}{1+x^{21}} \le \frac{22}{21} \qquad
+ \text{b)}\ \ \frac{2}{\sqrt[4]{e}} \le \int_0^2 e^{x^2-x}\,dx \le 2e^2 \\
+&\text{c)}\ \ \int_3^5 \frac{x}{e\ln x}\,dx > 2 \qquad
+ \text{d)}\ \ 0 < \int_{50}^{100} \frac{x^3}{x^6+8x+9}\,dx < 1.5 \cdot 10^{-4} \\
+&\text{e)}\ \ \int_{100}^{300} \frac{x^5}{x^6+x-1}\,dx 
+                               = \ln 3-\delta, \quad 0<\delta<2 \cdot 10^{-11}
+\end{align*}
+
+\item (*)
+Perustele likimääräinen laskukaava
+\[
+\int_1^2 \frac{e^{-x}}{x}\,dx \,\approx\, \ln 2+\sum_{k=1}^n \frac{(-1)^k}{k \cdot k!}(2^k-1),
+                                          \quad n\in\N,\,\ n \gg 1
+\]
+ja arvioi tämän virhe, kun $n=10$.
+
+\item (*) 
+Olkoon $\D F(x)=\int_0^{2x-x^2} \cos\left(\frac{1}{1+t^2}\right)\,dt, \quad
+           G(x)=\int_4^{x^2} e^{t^2}\,dt$. \vspace{2mm}\newline
+a) Tutki, saavuttaako $F$ jollakin $x$ pienimmän tai suurimman arvonsa. \newline
+b) Laske raja-arvo $\ \lim_{x \kohti 2} G(x)/(x^3-8)$.
+
+\item (*)
+Probleemassa (P) olkoon $[a,b]=[-1,1]$, $f(0)=0$ ja $f$:n määritelmä muualla kuin origossa
+\[
+\text{a)}\,\ f(x)=\frac{1}{x}\left(\sin\frac{1}{x}+x\cos\frac{1}{x}\right), \quad
+\text{b)}\,\ f(x)=\frac{1}{x}\left(\sin\frac{1}{x^2}+x^2\cos\frac{1}{x^2}\right).
+\]
+Näytä, että probleema (P) \ a) ei ratkea, \ b) ratkeaa. 
+
+\end{enumerate}

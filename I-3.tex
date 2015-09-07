@@ -1,0 +1,504 @@
+\section{Logiikan ja joukko-opin merkinnöistä} \label{logiikka}
+\alku
+\sectionmark{Logiikka ja joukko-oppi}
+\index{logiikka|vahv}
+
+\kor{Logiikassa} (ja yleisemminkin matematiikassa) tarkastellaan väittämiä eli 
+\index{propositio (väitelause)}%
+\kor{propositioita}\footnote[2]{Proposition sijasta käytetään suomenkielisissä teksteissä usein
+termiä \kor{väitelause} tai vain 'lause'. Tässä tekstissä termillä 'lause' on erikoismerkitys 
+(= 'teoreema'), termiä 'propositio' sen sijaan käytetään sekä yleis- että erikoismerkityksessä,
+ks.\ alaviite Luvussa \ref{ratluvut}. \index{vzy@väitelause|av} \index{lause (väitelause)|av}},
+joilla on tietty
+\index{totuusarvo}%
+\kor{totuusarvo}, joko 'tosi' (totuusarvo = 1, tai T = True) tai 'epätosi'
+(totuusarvo = 0, tai F = False).
+\begin{Exa} Lausumista
+\begin{align*}
+A &= \text{'eilen satoi'} \\
+B &= \text{'eilen oli pouta'} \\
+C &= \text{'huomenna sataa'} \\
+D &= \text{'huomenna saisi jo sataa'} \\
+E &= \text{'kolme per neljä on pienempi kuin kaksi per kolme'}
+\end{align*}
+kolmea ensimmäistä voidaan pitää propositioina, sikäli kuin lausumat rajataan tiettyä päivää ja
+paikkaa koskeviksi (ja jätetään huomiotta mahdolliset mittausongelmat). Samoin $E$ on 
+propositio. Lausuma $D$ ei ole propositio. \loppu \end{Exa} 
+Esimerkkiväittämistä $A$ ja $B$ ovat toistensa
+\index{looginen!negaatio (komplementti)} \index{negaatio (looginen)}%
+\kor{negaatioita} eli \kor{komplementteja}. 
+Merkitään $B = \neg A,\ A = \neg B$, tai vähemmän muodollisesti $B = ei(A)$, $A = ei(B)$.
+Väittämän $C$ totuusarvo ei ole (tänään) tiedossa --- tämä ei siis ole ongelma logiikassa.
+
+\index{looginen!operaattori} \index{operaattori!a@looginen}%
+\kor{Loogisten operaattorien} $\wedge$ ('ja'), $\tai$ ('tai'), $\impl$ ('seuraa'), $\ekv$
+('täsmälleen kun') avulla voidaan propositioista johtaa uusia propositioita. Erityisesti jos 
+$A$ ja $B$ ovat propositioita, niin $A \wedge B$, $A \tai B$, $A \impl B$ ja $A \ekv B$ ovat
+myös propositioita. Näistä kahden ensimmäisen tulkinta on  ilmeinen: $A \wedge B$ on tosi kun
+$A$ ja $B$ ovat molemmat tosia, muulloin epätosi, ja $A \tai B$ on tosi täsmälleen kun ainakin
+toinen  väittämistä $A,B$ on tosi.  Väittämä $A \wedge \neg A$ on \kor{identtisesti epätosi} 
+(epätosi jokaisella $A$), luonnollisella kielellä 'mahdoton'. Tällainen väittämä on
+\index{looginen!ristiriita} \index{ristiriita (looginen)} \index{identtisesti (epä)tosi}%
+\kor{loogisen ristiriidan} perusmuoto. Väittämä $A \tai \neg A$ on puolestaan 
+\kor{identtisesti tosi} (tosi jokaisella $A$), eli suhteessa väittämään $A$ 'mitäänsanomaton'.
+\begin{Exa} Jos $A$ on epätosi ja $B$ ja $C$ molemmat tosia, niin $(A \wedge B) \tai C$ on tosi
+ja $A \wedge (B \tai C)$ on epätosi. Jälkimmäiset kaksi väittämää eivät siis ole yleisesti 
+samanarvoiset (eli sulkeita ei voida poistaa). \loppu \end{Exa}
+
+\subsection*{Implikaatio}
+\index{implikaatio|vahv}
+
+Implikaatioväittämän $A \impl B$ looginen tulkinta ei ole aivan ilmeinen. Mahdollisia lukutapoja
+ovat ensinnäkin: \index{riittävä ehto} \index{vzy@välttämätön ehto}%
+\begin{align*}
+A \impl B\ : \quad &\text{$A$:sta seuraa $B$}                 \\
+                   &\text{$A$ \kor{implikoi} $B$:n}           \\
+                   &\text{jos $A$, niin $B$}                  \\
+                   &\text{aina kun $A$, niin $B$}             \\
+                   &\text{aina $B$, kun $A$}                  \\
+                   &\text{$A$ vain, kun $B$}                  \\
+                   &\text{$A$ on $B$:n \kor{riittävä ehto}}   \\
+                   &\text{$B$ on $A$:n \kor{välttämätön ehto}}
+\end{align*}
+Sovelluksissa, myös luonnollisessa kielessä, voidaan implikaatioväittämä usein tulkita niin, 
+että $A$ on 'syy' ja $B$ on 'seuraus'. Logiikassa ei mitään 'syyllisyyttä' kuitenkaan 
+edellytetä, vaan implikaatio voi olla puhdas sattumakin ('sattumoisin aina $B$ kun $A$'). 
+Loogisessa kalkyylissä väittämän $A \impl B$ totuusarvo voidaan laskea tulkinnoista
+(ks.\ myös Harj.teht.\,\ref{H-I-3: tautologioita}a)
+\begin{align}
+A \impl B \quad &\ekv \quad \neg\,(A \wedge \neg B)    \tag{a} \\
+                &\ekv \quad \neg A \tai (A \wedge B).  \tag{b}
+\end{align}
+Tässä $P \ekv Q$ luetaan '$P$:llä ja $Q$:lla on sama totuusarvo', ks.\ ekvivalenssinuolen 
+tulkinnat jäljempänä. Implikaation tulkinnan (b) mukaan $A \impl B$ on tosi täsmälleen, kun 
+joko $A$ on epätosi tai $A$ ja $B$ ovat molemmat tosia. Erityisesti siis 'mahdottomasta seuraa 
+mitä tahansa', eli väittämä $A \impl B$ on tosi jokaisella $B$ (eli $B$:n suhteen 
+'mitäänsanomaton'), jos $A$ on epätosi. 
+\begin{Exa} Tulkinnoista (a)--(b) nähdään, että väittämä $A \impl A$ on identtisesti tosi, eli
+väittämä 'ei sano mitään' $A$:sta.
+\loppu \end{Exa}
+\begin{Exa} Jos $0$ ja $1$ ovat jonkin kunnan nolla- ja ykkösalkiot, niin propositio
+[\,$0 = 1\,\ \impl\,\ \text{kirjoittaja on mainio matemaatikko}$\,] on (loogisesti) tosi. \loppu 
+\end{Exa}
+Matematiikan lauseet, propositiot, lemmat ja korollaarit ovat tyypillisesti muotoa 'Jos .. 
+[oletukset], niin .. [väitös]', eli muotoa $A \impl B$, missä $A$ on \pain{oletus} (oletukset)
+ja $B$ on \pain{väitös}. Loogista päättelyä, joka osoittaa lauseen tai vastaavan todeksi 
+(sillä matematiikan lauseet ovat tosia!) sanotaan
+\index{todistus}%
+\kor{todistukseksi} (engl.\ proof). Jos lause
+on muotoa $A \impl B$, niin todistaminen (eli proposition $A \impl B$ todeksi näyttäminen)
+tapahtuu \pain{olettamalla}, että $A$ on tosi ja \pain{nä}y\pain{ttämällä}, että tällöin myös
+$B$ on tosi (riittää, koska $A \impl B$ on tosi, jos $A$ on epätosi!). Tämän nk.
+\index{todistus!a@suora, epäsuora}%
+\kor{suoran todistuksen} ohella toinen mahdollinen todistustapa on 
+\index{epzys@epäsuora todistus}%
+\kor{epäsuora todistus}. Epäsuoran todistuksen ideana on näyttää, että jos todistettavan
+väittämän  \pain{ne}g\pain{aatio} \pain{on} \pain{tosi}, niin seuraa
+\pain{loo}g\pain{inen} \pain{ristiriita} (muotoa '$C$ tosi ja epätosi', missä $C$ on
+propositio), jolloin päätellään, että negaation on oltava epätosi ja väittämän siis tosi
+(ks.\ Harj.teht. \ref{H-I-3: modus tollens}). Implikaatioväittämän tapauksessa epäsuoran
+todistuksen rakenne on seuraava, vrt.\ em.\ tulkinta (a).
+\begin{itemize}
+\item[(1)] Oletetaan, että $A$ on tosi ja $B$ epätosi (eli $A \impl B$ epätosi).
+\item[(2)] Näytetään, että oletus (1) johtaa loogiseen ristiriitaan. Päätellään, että oletus oli
+           väärä ja siis $A \impl B$ tosi.
+\end{itemize}
+Oletusta (1) (tai osaoletusta '$B$ epätosi') sanotaan
+\index{vastaoletus}%
+\kor{vastaoletukseksi}, ja koko 
+todistustavasta käytetään myös nimitystä \kor{todistus vastaoletuksella} (engl. proof by 
+contradiction). --- Huomattakoon, että vastaoletus ei nimestään huolimatta ole oletuksen
+negaatio vaan pikemminkin 'vastaväitös'. 
+
+Epäsuoraan todistustapaan turvauduttiin itse asiassa jo edellä Lauseen \ref{kuntatuloksia}  
+kohdassa (g). Tässä väittämä oli muotoa $A \impl B$, missä
+\begin{align*}
+A \quad &= \quad \text{aksioomat (K1)--(K10) ja (J1)--(J4)}, \\
+B \quad &= \quad 0 < 1.
+\end{align*}
+Vastaoletus, että $B$ on epätosi, johti loogiseen ristiriitaan '$C$ tosi ja epätosi',
+missä $C=$ (K10)$\,\wedge\,$(J1). 
+
+\subsection*{Ekvivalenssi}
+\index{ekvivalenssi|vahv}%
+ 
+Jos $A$ ja $B$ ovat propositioita, niin $A \ekv B$ on propositio, joka kertoo, että $A$ ja $B$ 
+ovat samanarvoiset eli \kor{ekvivalentit} väittämät. Tämä tarkoittaa yksinkertaisesti, että
+väittämien $A$ ja $B$ totuusarvot ovat samat, eli joko molemmat ovat tosia tai molemmat ovat 
+epätosia. Ekvivalenssin yleisiä lukutapoja ovat
+\begin{align*}
+A \ekv B: \quad &\text{$A$ ja $B$ ekvivalentit, samanarvoiset} \\
+                &\text{$A$ ja $B$ yhtäpitävät} \\
+                &\text{$A$ \kor{silloin ja vain silloin kun} (engl. if and only if) $B$} \\
+                &\text{$A$ täsmälleen kun $B$} \\
+                &\text{$A$ \kor{joss} (engl. iff) $B$}
+\end{align*} 
+Ekvivalenssinuolen avulla voidaan esim. ilmaista jokin väittämä toisin sanoin tai merkinnöin, 
+tai vain toisessa muodossa. Kyse voi tällöin olla esim.\ jonkin merkintätavan 
+\kor{määritelmästä}, tai yleispätevästä toisinnosta eli
+\index{looginen!tautologia} \index{tautologia (looginen)}%
+\kor{tautologiasta}. 
+\begin{Exa} \label{ekvivalensseja}
+\begin{align*}
+0< x < 1 \quad\quad          &\ekv \quad\quad 0 < x\ \ \wedge\ \ x < 1 \\
+A \impl B \quad\quad         &\ekv \quad\quad \neg B \impl \neg A \\
+A \impl B \impl C \quad\quad &\ekv \quad\quad A \impl B\ \wedge\ B \impl C \\
+A \ekv B \quad\quad          &\ekv \quad\quad A \impl B\ \wedge\ B \impl A \quad \loppu
+\end{align*} \end{Exa}
+Ensimmäinen esimerkki määrittelee merkinnän $0<x<1$. Toisessa esimerkissä on kyse yleisestä 
+(myös hyödyllisestä!) tautologiasta (Harj.teht. \ref{H-I-3: tautologioita}b). Kolmannessa 
+esimerkissä määritellään kahden implikaatioväittämän muodostama 
+\index{pzyzy@päättelyketju}%
+\kor{päättelyketju}\footnote[2]{Jos matemaattinen lause yms.\ on implikaatioväittämä muotoa 
+$A \impl B$, niin todistus on tyypillisesti päättelyketju muotoa
+$\,A \impl C_1 \impl C_2 \impl \ldots \impl C_n \impl B$, missä osaväittämät
+$A \impl C_1,\ C_1 \impl C_2,\ \ldots\ C_n \impl B$ joko ovat ilmeisen tosia, tai tosia muiden 
+tunnettujen lauseiden (tai erikseen todistettavien aputulosten) perusteella. Päättelyketjun
+määrittely noudattaa tässä matematiikan käytäntöä --- formaalissa logiikassa tällaista
+sopimusta ei ole.}. 
+Viimeisessä esimerkissä tulkitaan itse väittämä $A \ekv B$. Tämän tulkinnan mukaisesti 
+ekvivalenssiväittämä todistetaan osoittamalla erikseen \fbox{\impl} $(\ A \impl B\ )$ ja
+\fbox{\limp} $(\ A \limp B\ )$ eli näyttämällä implikaatiot tosiksi molempiin suuntiin.
+Jos kyseessä on yksinkertainen tautologia, voidaan myös muodostaa
+\index{totuustaulu}%
+\kor{totuus}(arvo)\kor{taulu}(kko), jossa käydään läpi kaikki mahdollisuudet.
+\begin{Exa} \label{de Morgan logiikassa} Näytä identtisesti tosiksi
+\vahv{de Morganin lait}: \vspace{1mm}\newline
+a)\,\ $\neg\,(A \tai B)\ \ekv\ \neg A \wedge \neg B \qquad$
+b)\,\ $\neg\,(A \wedge B)\ \ekv\ \neg A \tai \neg B$
+\end{Exa}
+\ratk Totuustaulussa (alla) on merkitty $P = A \tai B$, $Q = A \wedge B$ ja käyty läpi
+propositioiden $A,B$ kaikki totuusarvoyhdistelmät  ($4$ kpl). Taulukosta nähdään, että
+propositioiden $\neg P$ ja $\neg A \wedge \neg B$, samoin propositioiden $\neg Q$ ja 
+\mbox{$\neg A \tai \neg B$} totuusarvot ovat kaikissa tapauksissa samat. Tämä todistaa
+väitteet. \loppu
+
+\begin{tabular}{cccccccccccccc}
+$A$ & $B$ & $\neg A$ & $\neg B$ &  &  & $P$ & $\neg P$ & $\neg A \wedge \neg B$ & & & 
+$Q$ & $\neg Q$ & $\neg A \tai \neg B$ \\ \hline
+1 & 1 & 0 & 0 & & & 1 & 0 & 0 & & & 1 & 0 & 0 \\
+1 & 0 & 0 & 1 & & & 1 & 0 & 0 & & & 0 & 1 & 1 \\
+0 & 1 & 1 & 0 & & & 1 & 0 & 0 & & & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & & & 0 & 1 & 1 & & & 0 & 1 & 1
+\end{tabular}
+
+Loogisten operaattorien, samoin järjestys- ja samastusrelaatioiden yms.\ yhteydessä negaation 
+merkkinä käytetään yleisesti päälleviivausta.
+\begin{Exa}
+\begin{align*}
+A \not\impl B \,\ &\ekv \,\ \neg\,( A \impl B ) \,\ \ekv \,\ A\,\wedge\,\neg B \\
+A \not\impl B \,\ &\not\ekv \,\ A \impl \neg B \\
+x \neq y \,\      &\ekv \,\ \neg\,(x=y) \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Predikaatti ja kvanttorit}
+\index{predikaatti|vahv} \index{kvanttori|vahv}%
+
+Logiikassa \kor{predikaatti} on sellainen lausuma, jossa on yksi tai useampia vapaita 
+\kor{muuttujia}. Predikaatista tulee propositio, kun muuttujat \kor{sidotaan} --- sellaisenaan
+predikaatti ei ole propositio. Esimerkiksi jos tarkastellaan rationaalilukuja ja kirjoitetaan
+\[
+P(x): \quad x>2, \quad\quad\quad Q(x,y): \quad x=y^2,
+\]
+\index{yksipaikkainen predikaatti} \index{kaksipaikkainen predikaatti}%
+niin $P(x)$ on \kor{yksipaikkainen} (so.\ yhden muuttujan sisältävä) predikaatti, nimeltään 
+\kor{epäyhtälö} (engl.\ inequality), ja $Q(x,y)$ on \kor{kaksipaikkainen} predikaatti, nimeltään
+\kor{yhtälö} (engl.\ equation). Jokaisella muuttujan $x$ arvolla $P(x)$ on propositio, samoin 
+$Q(x,y)$ kun molemmat muuttujat kiinnitetään. Esim.\ $P(5/2)$ ja $Q(4,2)$ ovat tosia, $P(1)$ ja
+$Q(0,1)$ epätosia. Muuttujien sitominen voi tapahtua myös \kor{kvanttorien} avulla. Kvanttoreita
+ovat symbolit '$\forall$' ja '$\exists$', jotka luetaan
+\begin{align*}
+&\forall \quad \text{'kaikille', 'jokaiselle'}, \\
+&\exists \quad \text{'on olemassa'}.
+\end{align*}
+Esimerkiksi jos $X \subset \Q$, niin ym.\ predikaattiin $P(x)$ liittyviä propostitioita ovat
+\[
+A: \quad \exists x \in X\ (\,P(x)\,), \quad\quad\quad B: \quad \forall x \in X\ (\,P(x)\,).
+\]
+Tässä kvanttorien ulottuvuus on merkitty sulkeilla. Jos sulkeet halutaan välttää, niin $A$:n 
+vähemän formaali muoto on
+\[
+A: \quad \exists x \in X\ \,\text{siten, että}\ \,P(x),
+\]
+missä \,'siten, että'\, voidaan haluttaessa lyhentää muotoon \,'s.e.'\,. Kummassakin 
+propositiossa tullaan toimeen ilman sulkeita myös, kun kirjoitetaan yksinkertaisemmin
+\[
+A: \quad P(x)\ \ \text{jollakin}\ x \in X, \quad\quad\quad B: \quad P(x)\ \ \forall x \in X.
+\]
+\begin{Exa} Jos $X=\Q$, niin predikaatista $P(x):\,x^2 \neq 2$ johdettu propositio 
+$B:\,x^2 \neq 2\ \forall x\in\Q$ on tosi (Harj.teht. \ref{H-I-3: sqrt 2}). \loppu
+\end{Exa}
+Em.\ propositioiden $A,B$ negaatiot saadaan ymmärrettävämpään muotoon suorittamalla
+\pain{ne}g\pain{aation} p\pain{urku} seuraavasti:
+\begin{align*}
+\neg\,[\,\exists x \in X\,(\,P(x)\,)\,] \quad 
+                 &\ekv \quad \forall x \in X\ (\,\neg\,P(x)\,), \\
+\neg\,[\,\forall x \in X\ (\,P(x)\,)\,] \quad 
+                 &\ekv \quad \exists x \in X\ (\,\neg\,P(x)\,).
+\end{align*}
+Jälkimmäisen säännön mukaisesti proposition $B:\ P(x)\,\forall x \in X$ näyttämiseen 
+\pain{e}p\pain{ätodeksi} riittää löytää yksikin \pain{vastaesimerkki} $ x\in X$, jolle
+$P(x)$ on epätosi.
+\begin{Exa} Jos $X = \{x \in \Q \mid x < 1\ \}$, niin propositio
+\[
+A: \quad \forall x \in X\ \exists y \in X\ (y>x)
+\]
+on tosi. Jos $X = \{x \in \Q \mid x \le 1\}$, niin $A$:n negaatio
+\[
+\neg A: \quad \exists x \in X\ [\,\not\exists y \in X\ (y>x)\,] \,\ \ekv\,\
+              \exists x \in X\ [\,\forall  y\in X\,(\,y \le x\,)\,]
+\]
+on tosi. \loppu 
+\end{Exa}
+Formaali kvanttorimerkintä $\forall x \in X$ jätetään matemaattisissa teksteissä usein
+merkitsemättä silloin kun on selvää, että kyse on koko tiettyä joukkoa $X$ (esim.\ $X=\Q$)
+koskevasta päättelystä.
+\begin{Exa} \label{näkymätön kvanttori} Rationaalilukuja koskeva päätelmä
+\[
+2x^2+x<1\,\ \ekv\,\ -1<x<\tfrac{1}{2}
+\]
+ratkaisee $\Q$:ssa (oikein!) epäyhtälön $2x^2+x<1$. Päätelmä on muodoltaan predikaatti mutta
+tulkittavissa propositioksi, jossa sidonta $\forall x\in\Q$ on sujuvuussyistä 'näkymätön'.
+\loppu
+\end{Exa} 
+
+\subsection*{Joukko-oppi}
+\index{joukko-oppi|vahv}%
+
+Logiikan ohella abstraktin ajattelun perimmäisiä perusteita käsittelee matematiikan laji nimeltä
+\kor{joukko-oppi} (engl. set theory). Tässä todettakoon ainoastaan lyhyesti eräiden logiikan ja
+joukko-opin perusideoiden välinen yhteys. Ensinnäkin 'mahdottoman väittämän' muotoa 
+$A \wedge \neg A$ vastine joukko-opissa on
+\index{tyhjä joukko}%
+\kor{tyhjä joukko}, jonka symboli on '$\emptyset$'. 
+Tyhjässä joukossa ei ole alkioita, eli $x \in \emptyset$ on aina epätosi. 
+ 
+Loogisen negaation $\neg A$ vastine joukko-opissa on joukon $A$ 
+\index{komplementti (joukon)}%
+\kor{komplementti}, joka merkitään $\complement(A)$ ja määritellään
+\[
+x \in \complement(A) \quad \ekv \quad x \not\in A.
+\]
+Käytännössä komplementti on määriteltävä jonkin
+\index{universaalijoukko}%
+\kor{universaalijoukon}\footnote[2]{Termi 
+'universaalijoukko' saattaa herättää mielikuvan joukosta, joka sisältää kirjaimellisesti 
+'kaiken'. Tämän tyyppisiä ajatelmia joukko-opissa olikin sen teorian alkuvaiheissa, mutta niiden
+huomattiin johtavan paradokseihin, ts.\ loogisiin mahdottomuuksiin. Sittemmin täsmentyneistä 
+joukko-opin aksioomista seuraakin, että 'mikään ei sisällä kaikkea'.} $U$ suhteen. Tällä
+ymmärretään sellaista joukkoa, johon kaikki tarkasteltavat joukot (mukaan lukien joukkojen 
+komplementit) sisältyvät osajoukkoina. 
+\begin{Exa} Olkoon $P(x)$ jokin rationaalilukujoukkoon \Q\ liittyvä predikaatti, esim.\ 
+$P(x) = x<2$. Tällöin ehto '$P(x)$ tosi' määrittelee \Q:n osajoukon $A$, jota merkitään
+$\,A\,=\,\{\,x \in \Q \mid P(x)\,\}$. Universaalijoukoksi on tässä luonnollista ajatella
+$U=\Q$, jolloin $A$:n komplementti on
+\[
+\complement(A)\ =\ \{\,x \in \Q \mid \neg P(x)\,\}\ 
+                =\ \{\,x \in \Q \mid x \ge 2\,\}. \loppu 
+\] \end{Exa}
+
+Loogisten yhdistelyjen $A \tai B$, $A \wedge B$, $A \impl B$ ja $A \ekv B$ joukko-opilliset
+vastineet ovat $A \cup B$, $A \cap B$, $A \subset B$ ja $A=B$, kuten nähdään määritelmistä:
+\begin{align*}
+x\in A \cup B   &\qekv x \in A\ \tai\ x \in B  \\
+x\in A \cap B   &\qekv x \in A\,\ \wedge\,\ x \in B  \\
+A \subset B     &\qekv x \in A\ \impl\ x \in B \\
+A = B           &\qekv x \in A\ \ekv\ x \in B
+\end{align*}
+Joukko $A \cup B$ on nimeltään $A$:n ja $B$:n 
+\index{unioni (yhdiste)} \index{yhdiste (unioni)}%
+\kor{yhdiste} eli \kor{unioni} (engl.\ union)
+ja $A \cap B$ on $A$:n ja $B$:n 
+\index{leikkaus (joukkojen)}%
+\kor{leikkaus} (engl.\ intersection). Jos kahdella joukolla
+$A,B$ ei ole yhteisiä alkioita, eli $x \in A\,\wedge\,x \in B$ on epätosi jokaisella $x$, niin 
+tämä voidaan ilmaista lyhyesti merkinnällä $A \cap B = \emptyset$. Sanotaan tällöin, että $A$ ja
+$B$ ovat \kor{erillisiä} eli 
+\index{pistevieraat joukot}%
+\kor{pistevieraita} (engl. disjoint).
+\begin{Exa} Esimerkin \ref{näkymätön kvanttori} päättely tulkittiin propositioksi ajattelemalla
+kvanttorimerkintä $\forall x\in\Q$ lisätyksi. Vielä luontevampi on joukko-opillinen tulkinta:
+$\ \{\,x\in\Q \mid 2x^2+x<1\,\}\ =\ \{\,x\in\Q \mid -1<x<\tfrac{1}{2}\,\}$. \loppu
+\end{Exa}
+\index{de Morganin lait}
+\begin{Exa} Todista joukko-opin de Morganin lait (vrt.\ Esimerkki\,\ref{de Morgan logiikassa})
+\begin{align*}
+\complement(A \cup B) \quad &= \quad \complement(A) \cap \complement(B), \\
+\complement(A \cap B) \quad &= \quad \complement(A) \cup \complement(B).
+\end{align*}
+\end{Exa}
+\ratk \ Päättelyketjussa
+\begin{align*}
+x \in \complement(A \cup B) \quad &\ekv \quad x \not\in (A \cup B) \\
+                                  &\ekv \quad \neg\,(\,x \in A\,\tai\,x \in B\,) \\
+                                  &\ekv \quad x \not\in A\,\wedge\,x\not\in B \qquad\qquad 
+                                         \text{[\,Esim.\,\ref{de Morgan logiikassa}\,a)\,]} \\
+                                  &\ekv \quad x\in\complement(A)\,\wedge\,x\in\complement(B) \\
+                                  &\ekv \quad x\in\complement(A)\cap\complement(B)
+\end{align*}
+voidaan edetä molempiin suuntiin, joten joukoilla $\complement(A \cup B)$ ja 
+$\complement(A) \cap \complement(B)$ on samat alkiot, ja ensimmäinen väittämä on siis 
+todistettu. Toisen väittämän todistus saadaan tästä vaihdoilla $\cup \ext \cap$, 
+$\cap \ext\cup$, $\tai \ext \wedge$ ja $\wedge \ext \tai$. \loppu 
+
+\subsection*{Ekvivalenssirelaatio}
+\index{ekvivalenssirelaatio|vahv}%
+
+\index{relaatio}%
+\kor{Relaatio} on joukko-opillinen 'suhteen' käsite. Jos $R$ on joukossa $A$ määritelty relaatio
+ja $x,y \in A$, niin merkintä $x\,R\,y$ luetaan '$x$ on relaatiossa $R$ $y$:n kanssa', tai
+sujuvammin vain '$x$ [relaation nimi] $y$'. Relaatioista ovat jo tuttuja käytännössä tärkeimmät, 
+eli järjestys- ja samastusrelaatio.
+\index{samastus '$=$'!d@yleinen}%
+Samastusrelaation on aina oltava \kor{ekvivalenssirelaatio}, jonka aksioomat ovat seuraavat:
+\begin{itemize}
+\item[(E1)] \ $x\,R\,x\ \ \forall x$
+\item[(E2)] \ $x\,R\,y\ \impl\ y\,R\,x$
+\item[(E3)] \ $x\,R\,y\ \wedge\ y\,R\,z\ \impl\ x\,R\,z$
+\end{itemize}
+\index{symmetrisyys!a@relaation} \index{refleksiivisyys (relaation)}
+\index{transitiivisuus (relaation)}%
+Vaaditut ominaisuudet ovat nimeltään \kor{refleksiivisyys}, \kor{symmetrisyys} ja 
+\kor{transitiivisuus}. Esimerkiksi relaatio '$\le$' on refleksiivinen ja transitiivinen muttei 
+symmetrinen, ja relaatio '$\neq$' on ainoastaan symmetrinen. Samastusrelaatio 'sama kuin' sen 
+sijaan on mitä ilmeisimmin ekvivalenssirelaatio. Esimerkiksi kun kirjoitetaan $x=y=z$ 
+(tarkoittaen: \ $x=y$ ja $y=z$), niin on ilmeistä, että $x=z$. Tässä on siis kyse 
+transitiivisuudesta.\footnote[2]{Samastusrelaation yleiset aksioomat ovat samat kuin 
+ekvivalenssirelaation, vrt.\ alaviite edellisessä luvussa.}
+\begin{Exa} Jos $A =$ \{suomalaiset\}, niin seuraavat $A$:ssa määritellyt relaatiot ovat
+ekvivalenssirelaatioita:
+\begin{align*}
+x \sim y         \quad &\ekv \quad \text{$x$ ja $y$ ovat syntyneet samana vuonna}, \\
+x\ \heartsuit\ y \quad &\ekv \quad \text{$y=x\,\ $ tai $\,\ y$ on $x$:n puoliso}. \loppu
+\end{align*}
+\end{Exa}
+Joukossa $A$ määritellyllä ekvivalenssirelaatiolla on se ominaisuus, että se jakaa $A$:n
+\index{ekvivalenssiluokka}%
+\kor{ekvivalenssiluokkiin}. Nämä ovat $A$:n osajoukkoja, joiden sisältämät alkiot ovat kaikki
+relaatiossa keskenään. Refleksiivisyysominaisuuden (E1) vuoksi jokainen $A$:n alkio kuuluu 
+ainakin yhteen ekvivalenssiluokkaan (mahdollisesti yksinään). Toisaalta 
+transitiivisuusominaisuudesta (E3) seuraa, että kaksi ekvivalenssiluokkaa ovat joko täysin samat
+tai ne ovat pistevieraita --- siis jokainen $A$:n alkio kuuluu täsmälleen yhteen
+ekvivalenssiluokkaan. Jos kyseessä on samastusrelaatio, niin kunkin ekvivalenssiluokan 
+sisältämät alkiot 'luokitellaan samoiksi' eli samastetaan keskenään. Tällöin voidaan puhua myös
+\index{samastusluokka}%
+\kor{samastusluokista}. 
+\jatko \begin{Exa} (jatko) Relaation '$\sim$' määräämiä ekvivalenssiluokkia sanotaan 
+ikäluokiksi. Relaatio '$\heartsuit$' jakaa $A$:n ekvivalenssiluokkiin joissa on joko yksi alkio
+(alaikäiset, sinkut, ym.) tai kaksi alkiota (rekisteröidyt parit). \loppu 
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Olkoon $A$ propositio 'Sataa', $B$ propositio 'Menen lenkille' ja $C$ propositio 'Minulla on
+aikaa'. Kirjoita näiden ja loogisten operaattoreiden avulla mahdollisimman pelkistetysti: \newline
+a) \ 'Väsyttää, on pimeää ja TV:stä tulee BB, joten en mene lenkille.' \newline
+b) \ 'Menen lenkille, satoi tai paistoi!' \newline
+c) \ 'Sataa, joten en mene lenkille.' \newline
+d) \ 'Sataa enkä mene lenkille.' \newline
+e) \ 'Menen lenkille vain, jos minulla on aikaa.' \newline
+f) \ 'Minulla on aikaa eikä sadakaan, mutta en mene lenkille.' \newline
+g) \ 'Jos ei sada ja minulla on aikaa, niin menen lenkille.' \newline
+h) \ 'Minulla on aikaa vain, jos sateen vuoksi en mene lenkille.'
+
+\item Olkoon $A=$ 'Tänään sataa', $B=$ 'Huomenna on pouta' ja $C=$ 'Tänään on pouta'. a) Jos 
+tänään alkanut sade jatkuu huomiseen, niin mitkä ovat propositioiden $\,A \impl B\,$ ja 
+$\,B \impl A\,$ totuusarvot\,? b) Riippuuko proposition
+$\neg(\neg A \wedge B) \impl \neg C$ totuusarvo siitä, mikä päivä on 'tänään'\,?
+
+\item \label{H-I-3: modus tollens} \index{modus tollens}
+Osoita joko totuustaulun avulla tai muuten päättelemällä seuraava propositio 
+(nk.\ \kor{modus tollens}) identtisesti todeksi:
+$\ [\,(\neg P \impl Q) \wedge \neg Q\,] \impl P$. \newline
+Miten tulokseen vedotaan epäsuorassa todistuksessa\,?
+
+\item \label{H-I-3: tautologioita}
+Näytä totuustaulun avulla tai muuten päättelemällä identtisesti todeksi: 
+\vspace{1mm}\newline
+a) \ $\neg\,(A \wedge \neg B)\ \ekv\ \neg A \tai (A \wedge B) \qquad$
+b) \ $(A \impl B)\ \ekv\ (\neg B \impl \neg A)$ \newline
+c) \ $[\,(A \impl B)\,\wedge\,(B \impl C)\,]\ \impl\ (A \impl C)$ \newline
+d) \ $[\,(A \impl C)\wedge(B \impl C)\,]\ \impl\ [\,(A \tai B) \impl C\,]$ \newline
+e) \ $[\,(A \wedge B) \impl C\,]\ \ekv\ [\,A \impl (B \impl C)\,]$ \vspace{1mm}\newline
+Vertaile totuustaulun avulla: \vspace{1mm}\newline
+f) \ $(A \wedge B) \tai C\,\ \text{ja}\,\ A \wedge (B \tai C) \quad\ $  
+g) \ $A \not\impl B\,\ \text{ja}\,\ A\impl\neg B$ \vspace{1mm}\newline
+Tutki totuustaulun avulla, voiko seuraavat propositiot ilmaista jollakin yksinkertaisemmalla
+(ekvivalentilla) tavalla: \vspace{1mm}\newline
+h) \ $(A \impl B) \wedge B \quad\ $ 
+i) \ $(A \impl B) \impl A \quad\ $ 
+j) \ $[\,(A \impl B) \wedge B\,]\,\impl\,A$
+
+\item
+Jos seuraavat predikaatit $P(x)$ tulkitaan väittäminä $P(x)\ \forall x\in\Q$, niin mitkä 
+väittämistä ovat tosia ja mitkä epätosia\,? \vspace{1mm}\newline
+a) \ $2x>3\,\ \impl\,\ x>4/3 \qquad\qquad\qquad\quad$
+b) \ $x<-2\,\ \ekv\,\ x^2>4$ \newline
+c) \ $3x<4\,\ \impl\,\ x<1\ \tai\ 2x<3 \qquad\quad$
+d) \ $x>1\,\ \not\ekv\,\ x>0\ \wedge\ x>1$ \newline
+e) \ $x=4/3\ \wedge\ 3x^2<x+4\,\ \impl\,\ x^2+2x+1<0$ \newline
+f) \ $2x^2+x\,\le\,1\,\le\,3x-2x^2\,\ \ekv\,\ x=4/3$ \newline
+
+\item
+Olkoot $x$ ja $y$ rationaalilukuja. Mitkä seuraavista propositioista ovat tosia\,? \newline
+a) \ $\forall x \exists y\ (x \cdot y = 0) \qquad$ 
+b) \ $\forall x \exists y\ (x \cdot y = 1)$ \newline
+c) \ $\exists y \forall x\ (x \cdot y = 0) \qquad$ 
+d) \ $\exists y \forall x\ (x \cdot y = 1)$ \newline
+e) \ $\exists y \forall x\ (x \cdot y = x)$ \qquad 
+f) \ $\exists y \forall x\ (x \cdot y = y)$ \newline
+g) \ $\forall x \exists y\ (y<x) \qquad\quad\,$
+h) \ $\exists x \forall y\ (y \ge x)$ \newline
+Miten tilanne muuttuu, jos $x$ ja $y$ ovat positiivisia rationaalilukuja\,?
+
+\item
+Olkoon $x\in\Q$. Muodosta seuraavien kahden proposition negaatiot auki purettuina. Mitkä näin
+syntyvistä neljästä propositiosta ovat tosia? \vspace{1mm}\newline
+a) \ $\forall (\eps>0) \exists (x \neq 1) (\abs{x-1}<\eps) \quad$
+b) \ $\exists (x \neq 1) \forall (\eps>0) (\abs{x-1}<\eps)$
+
+\item \label{H-I-3: sqrt 2} 
+Näytä epäsuoralla todistustavalla: \ a) Ei ole olemassa pienintä positiivista 
+rationaalilukua. \ b) $\,x^2 \neq 2\ \forall x\in\Q$. \ c) $\,x^2 \neq 3\ \forall x\in\Q$.
+
+\item
+Universaalijoukko $U$ olkoon kymmenen ensimmäisen luonnollisen luvun muodostama joukko 
+$\,\{1,2,3,4,5,6,7,8,9,10\}$. Olkoon $A=\{2,5,7,8,10\}$ ja $B=\{2,4,6,8,10\}$. Määritä 
+$A \cup B$, $A \cap B$, $\complement(A)$, $\complement(A \cup B)$ ja
+$\complement(A) \cap \complement(B)$. 
+
+\item
+Todista seuraavat joukko-opilliset väittämät: \newline
+a) \ $A \subset B\ \ekv\ A \cup B = B\ \ekv\ A \cap B = A$ \newline
+b) \ $A \subset B\ \wedge\ A \subset C\ \ekv\ A \subset B \cap C$ \newline
+c) \ $A \subset C\ \wedge\ B \subset C\ \ekv\ A \cup B \subset C$ \newline
+d) \ $A \subset B\ \ekv\ A \cap C \subset B \cap C\ \forall C$ \newline
+e) \ $\,\emptyset \subset A\ \forall A$
+
+\item Muotoile ja todista Tehtävän \ref{H-I-3: tautologioita} väittämien b)--d)
+joukko-opilliset vastineet.
+
+\item
+Olkoon $\,A=\{(p,q) \mid p,q\in\Z\}$ (kokonaislukuparien joukko) ja 
+$Q=\{(p,q) \in A \mid q \neq 0\}$. Määritellään $Q$:ssa relaatio 
+$(p_1,q_1) \sim (p_2,q_2)\ \ekv\ p_1q_2=p_2q_1\,$. Näytä, että kyseessä on $Q$:n 
+ekvivalenssirelaatio. Miten tulos liittyy rationaalilukuihin?
+
+\item
+Mitä ekvivalenssirelaation ominaisuuksia on seuraavilla, annetuissa joukoissa $A$ määritellyillä
+relaatioilla\,? \newline
+a) \ $A=\N:\,\ x R y\ \ekv\ x+y$ on parillinen. \newline
+b) \ $A=\N:\,\ x R y\ \ekv\ x+y$ on pariton. \newline
+c) \ $A=\Q:\,\ x R y\ \ekv\ \abs{x-y} \le 10^{-100}$. \newline 
+d) \ $A=\{\,\text{suomalaiset}\,\}:\,\ x R y\ \ekv x$ ja $y$ ovat toisilleen sukua suoraan 
+ylenevässä tai alenevassa polvessa.
+
+\item (*) \index{alkuluku}
+Luonnollinen luku $k\in\N$ on luvun $n\in\N$ \kor{tekijä}, jos $n=k \cdot m$ jollakin $m\in\N$.
+Luku $n$ on \kor{alkuluku}, jos $n$:llä ei ole muita tekijöitä kuin $k=1$ ja $k=n$. Näytä, että
+alkuluvuilla ei ole loppua, ts.\ ei ole olemassa suurinta alkulukua.
+
+\end{enumerate}

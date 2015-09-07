@@ -1,0 +1,555 @@
+\section{Katsaus rationaalilukuihin}  \label{ratluvut}
+\alku
+\sectionmark{Rationaaliluvut}
+
+\kor{Luonnollisten lukujen} joukkoa merkitsemme
+\[
+\N = \{1,2,3,4,\ldots\}.
+\]
+Yleisemmin \kor{joukko} (engl. set) koostuu \kor{alkioista} (engl. element), joita joukon \N\ 
+tapauksessa ovat luvut $1$, $2$, $3$ jne. Merkinn‰t
+\[
+8 \in \N, \quad \infty \not\in \N
+\]
+luetaan 'kahdeksan kuuluu \N:‰‰n, '‰‰retˆn ei kuulu \N:‰‰n', tarkoittaen yksinkertaisesti, ett‰
+\N:ss‰ on alkio nimelt‰ 'kahdeksan' mutta ei alkiota nimelt‰ '‰‰retˆn'.
+
+Joukko $A = \{1,2,3\}$ on \N\ :n \kor{osajoukko} (engl. subset). Merkit‰‰n
+\[
+A \subset \N \quad \text{tai} \quad \N \supset A
+\]
+ja luetaan '$A$ kuuluu/sis‰ltyy \N\ :‰‰n' tai '\N\ sis‰lt‰‰ $A$:n'. Yleisesti merkint‰ 
+$A \subset B$ tarkoittaa, ett‰ jokainen $A$:n alkio on myˆs $B$:n alkio, toisin sanoen p‰tee
+\[
+x \in A \qimpl x \in B.
+\]
+T‰ss‰ '$\impl$' on logiikan symboleihin kuuluva nk. \kor{implikaationuoli}: Merkint‰ $P \impl Q$
+luetaan '$P$:st‰ seuraa $Q$', tai 'jos $P$, niin $Q$'. Symboli '$\subset$' (kuuluminen 
+osajoukkona) m‰‰ritell‰‰n siis symbolin '$\in$' (kuuluminen alkiona) avulla. J‰lkimm‰inen 
+symboli on nk.\ \kor{primitiivi}, jota ei voi en‰‰ m‰‰ritell‰ muiden symbolien avulla. Joukoista 
+puhuttaessa voi siis merkintˆj‰ $x \in A$ tai $x \not\in A$ pit‰‰ kaiken loogisen ajattelun 
+l‰htˆkohtana. 
+\begin{Exa} Jos $A = \{2,1,1,2,1\}$ ja $B = \{1,2\}$, niin $A \subset B$, sill‰ jos $x \in A$,
+niin on joko $x=1$, jolloin $x \in B$, tai $x=2$, jolloin myˆskin $x \in B$. Samalla p‰‰ttelyll‰
+n‰hd‰‰n, ett‰ p‰tee myˆs $B \subset A$. \loppu \end{Exa} 
+Jos joukoille $A$ ja $B$ p‰tee sek‰ $A \subset B$ ett‰ $B \subset A$, kuten esimerkiss‰, niin 
+sanotaan, ett‰ $A$ ja $B$ ovat (joukkoina) \kor{samat}, ja merkit‰‰n $A=B$.\footnote[2]{Jos 
+$A \subset B$, ja $A$ ei ole sama kuin $B$, sanotaan ett‰ $A$ on $B$:n \kor{aito} 
+(engl.\ proper) osajoukko. Joissakin matemaattisissa teksteiss‰ symbolilla '$\subset$' on t‰m‰
+rajatumpi merkitys, jolloin mahdollisuus $A=B$ varataan merkinn‰ll‰ $A \subseteq B$. T‰ss‰ 
+tekstiss‰ siis p‰tee $A \subset A$.} 
+Logiikan ja joukko-opin merkintˆj‰ k‰sitell‰‰n hieman laajemmin Luvussa \ref{logiikka}. 
+Todettakoon t‰ss‰ yhteydess‰ viel‰ osajoukon m‰‰rittelyss‰ tavallinen merkint‰
+\[ 
+B\ =\ \{\,x \in A \mid E\,\}, 
+\]
+miss‰ $E$ on jokin \kor{ehto}, joka jokaisen alkion $x \in A$ kohdalla joko toteutuu, jolloin 
+$x \in B$, tai ei toteudu, jolloin $x \not\in B$.
+\begin{Exa} \kor{Parilliset} ja \kor{parittomat} luonnolliset luvut m‰‰ritell‰‰n $\N$:n osajoukkoina
+\begin{align*}
+A &= \{\,x \in \N \mid x=2\cdot y\,\ \text{jollakin}\ y\in\N\,\}\ =\ \{\,2,4,6,\ \ldots\,\}, \\
+B &= \{\,x\in\N \mid x\not\in A\,\}\ =\ \{\,1,3,5,\ \ldots\,\} \loppu
+\end{align*}
+\end{Exa}
+Esimerkiss‰ on jo viitattu luonnollisten lukujen joukossa (tunnetulla tavalla) m‰‰riteltyihin 
+\kor{laskuoperaatioihin}, joita on kaksi:
+\begin{align*}
+\text{yhteenlasku:} \quad &x \in \N\ \ja\ y \in \N \quad \map \quad 
+                             x + y \in \N \quad \quad \text{'$x$ plus $y$'} \\
+\text{kertolasku:}  \quad &x \in \N\ \ja\ y \in \N \quad \map \quad 
+                             x \cdot y\ \,\in \N \quad \quad \text{'$x$ kertaa $y$'}
+\end{align*}
+T‰ss‰ '$\&$' on logiikan merkint‰, luetaan 'ja' (formaalimpi merkint‰ '$\wedge$'), ja 
+'$\map$' tarkoittaa \kor{liitt‰mist‰}: Lukuihin $x$ ja $y$, eli \N:n \kor{lukupariin}, liitet‰‰n
+(yksik‰sitteinen) luku $x + y \in \N$, nimelt‰‰n $x$:n ja $y$:n \kor{summa}, ja 
+$x \cdot y \in \N$, nimelt‰‰n $x$:n ja $y$:n \kor{tulo}. Laskuoperaatio tarkoittaa siis 
+yksitt‰isten lukujen $x,y$ tapauksessa 'liitt‰miss‰‰ntˆ‰', yleisemmin 'liitt‰miss‰‰nnˆstˆ‰'. 
+S‰‰nnˆt voidaan ajatella joko joistakin yleisemmist‰ periaatteista (laskus‰‰nnˆist‰) 
+johdetuiksi, tai ne voidaan ymm‰rt‰‰ pelk‰st‰‰n 'luettelona', joka kattaa kaikki lukuparit. Kun
+yhteen- ja kertolaskun sis‰ltˆ on yhteisesti sovittu (ja peruskoulun oppikirjoihin painettu), on
+luonnollisten lukujen perustalle rakennettu \kor{algebra}\footnote[2]{Algebra eli 'kirjainlaskenta'
+on numeroilla laskemisen eli \kor{aritmetiikan} abstraktimpi muoto. Algebran kehitys alkoi
+arabikulttuurin piiriss‰ 1.\ vuosituhannella jKr.}, jota merkitt‰kˆˆn $(\N,+,\cdot)$.
+
+Seuraavat hyvin tunnetut peruslait ovat voimassa luonnollisten lukujen laskuoperaatioille:
+\begin{itemize}
+\item[(L1)] $\quad x+y = y+x$
+\item[(L2)] $\quad x \cdot y = y \cdot x$
+\item[(L3)] $\quad x+(y+z) = (x+y)+z$
+\item[(L4)] $\quad x \cdot (y \cdot z) = (x \cdot y) \cdot z$
+\item[(L5)] $\quad x \cdot (y+z) = x \cdot y + x \cdot z$
+\item[(L6)] $\quad x \cdot 1 = x \ \ \forall x \in \N$
+\end{itemize}
+T‰ss‰ (L1),\,(L2) ovat \kor{vaihdantalait}, (L3),\,(L4) ovat \kor{liit‰nt‰lait} ja (L5) on 
+\kor{osittelulaki}. Viimeksi mainitulla on myˆs rinnakkainen muoto
+\begin{itemize}
+\item[(L5')] $\quad\!\! (x+y) \cdot z = x \cdot z + y \cdot z$,
+\end{itemize}
+joka seuraa yhdist‰m‰ll‰ (L2) ja (L5). Laissa (L6) '$\,\forall$' on logiikan symboli, joka 
+luetaan 'kaikille'. T‰m‰ laki ilmaisee, ett‰ luku  $1$ on kertolaskun nk. \kor{ykkˆsalkio}. 
+Kuten n‰hd‰‰n j‰ljemp‰n‰, laskulait (L1)--(L6) ovat yhteisi‰ monille algebroille. Yleisemmiss‰ tarkasteluissa
+n‰m‰ lait otetaankin usein oletetuiksi peruslaeiksi eli \kor{aksioomiksi}.\footnote[2]{Luonnollisten lukujen 
+tapauksessa laskulait (L1)--(L6) ovat johdettavissa luonnollisten lukujen perustana olevista
+\vahv{Peanon aksioomista}. Aksioomat esitti italialainen matemaatikko \hist{Giuseppe Peano} (1858--1932) vuonna
+1889. Peanon aksioomat luonnollisille luvuille ovat: (P1) $1\in\N$. \,(P2) Jokaisella $x\in\N$ on yksik‰sitteinen
+\kor{seuraaja} $x'\in\N$. \,(P3) Luku $1$ ei ole mink‰‰n $x\in\N$ seuraaja. \,(P4) Jokainen $x\in\N$ on
+korkeintaan yhden luvun seuraaja, ts.\ jos $x,y\in\N$ ja $x'=y'$, niin $x=y$. \,(P5) Jos $S\subset\N$ ja p‰tee
+(i) $1\in\N$ ja (ii) $x' \in S$ aina kun $x \in S$, niin $S=\N$. Aksioomassa (P2) esiintyv‰ luvun seuraaja on 
+tavanomaisen kielenk‰ytˆn mukaan 'seuraava luku'. Aksiooman (P3) mukaan luku $1$ on luonnollisista luvuista
+'ensimm‰inen', sen sijaan 'viimeist‰' lukua ei ole, koska jokaisella luvulla on seuraaja (aksiooma (P2)) eik‰ 
+mik‰‰n luku voi esiinty‰ seuraajaketjussa kahdesti (aksioomat (P3) ja (P4)). Luonnollisia lukuja on siis
+‰‰rettˆm‰n monta. Aksiooma (P5) asettaa nk.\ \kor{induktioperiaatteen}, ks.\ Luku \ref{jono} j‰ljemp‰n‰. 
+
+Luonnollisten lukujen yhteenlasku ja kertolasku m‰‰ritell‰‰n aksioomiin (P1)--(P5) perustuen asettamalla
+kummallekin laskuoperaatiolle kaksi aksioomaa. N‰iden perusteella mink‰ tahansa halutun laskuoperaation tulos
+on m‰‰r‰tt‰viss‰ lukujen $\,1$, $1' = 2$, $2' = 3$, jne avulla. Yhteenlaskun aksioomat: \,(Y1) $\,x+1=x'$, 
+\,(Y2) $\,x+y'=(x+y)'$. Kertolaskun aksioomat: \,(K1) = (L6), \,(K2) $\,x \cdot y' = x \cdot y + x$.}
+
+Laskulaeissa (L1)--(L6) on oletettu normaalit j‰rjestyss‰‰nnˆt laskuoperaatioiden yhdistelylle,
+eli ensin lasketaan sulkeiden sis‰ll‰ olevat lausekkeet, ja kertolaskut aina ennen yhteenlaskuja
+mik‰li sulkeita ei ole. Huomattakoon, ett‰ t‰ss‰ ei ole kyse mist‰‰n ylim‰‰r‰isist‰ 
+olettamuksista, vaan esimerkiksi s‰‰ntˆ
+\[
+x + y \cdot z\ =\ x + (y \cdot z)
+\]
+on \pain{sulkeiden} p\pain{ois}j\pain{‰ttˆs‰‰ntˆ}, eli kyse on merkint‰sopimuksesta. Samaa operaatiota
+yhdistelt‰ess‰ on  liit‰nt‰lakien (L3),\,(L4) perusteella tulos aina sama operaatioiden j‰rjestyksest‰
+riippumatta, joten sulkeet voidaan j‰tt‰‰ pois (merkint‰sopimus!) ja kirjoittaa
+\[
+x + y + x + \ldots, \quad x \cdot y \cdot z \cdot \ldots
+\]
+Tavanomaisen lukujen algebran merkint‰sopimuksiin kuuluu myˆs vapaus j‰tt‰‰ kertomerkki merkitsem‰tt‰
+sik‰li kuin sekaannuksen vaaraa ei ole:
+\[
+x \cdot y = xy, \quad x \cdot 2 = 2x, \quad  2\cdot(1+2) = 2(1+2) = 2 \cdot 3 \neq 23
+\]
+Per‰kk‰isi‰ tuloja laskettaessa on saman luvun $n$-kertaisesta ($n \in \N$) kertolaskusta tapana
+k‰ytt‰‰ nimityst‰ \kor{potenssiin korotus} ja k‰ytt‰‰ merkint‰‰
+\[
+\underset{(n\ \text{kpl})}{x \cdot x \cdots x} \quad = \quad x^n \quad 
+                              \quad \text{'$x$ potenssiin $n$'} \quad (n \in \N).
+\]
+   
+\subsection*{Kokonaisluvut $\Z$}
+
+\kor{Kokonaislukujen} joukko \Z\ on ensimm‰inen askel siin‰ 'ihmistyˆss‰', jossa 
+lukuj‰rjestelm‰‰ pyrit‰‰n laajentamaan l‰htˆkohtana luonnolliset luvut. Laajennus koostuu 
+kahdesta osa-askeleesta, joista ensimm‰inen on luvun \kor{nolla} ('ei mit‰‰n') ja toinen 
+\kor{vastaluvun} ('montako puuttuu') k‰yttˆˆnotto. N‰iden ajatusten tuloksena syntyv‰‰ 
+lukujoukkoa merkit‰‰n
+\[
+\Z = \{\ \ldots,-2,-1,0,1,2,\ \ldots\ \} \quad = \quad \{\ 0,\pm 1, \pm 2,\ \ldots\ \}.
+\]
+Lukualueen laajennus tehd‰‰n aksiomaattisesti olettamalla seuraavat lis‰aksioomat, jotka siis
+ovat voimassa \Z:ssa mutteiv‰t \N:ss‰.
+\begin{itemize}
+\item[(L7)] $\quad \text{On olemassa \kor{luku}}\ 0,\ 
+                   \text{jolle p‰tee}\ \ x+0 = x\ \ \forall\ x \in \Z.$
+\item[(L8)] $\quad \text{Jokaisella}\ x \in \Z\ \text{on \kor{vastaluku}}\ -x,\ 
+                   \text{jolle p‰tee}\ \ x+(-x) = 0.$
+\end{itemize}
+Lyhennysmerkint‰
+\[
+x + (-y) = x - y \quad \quad \text{'$x$ miinus $y$'}
+\]
+tuo \Z:aan uuden laskuoperaation, \kor{v‰hennyslaskun}, jonka tulos on nimelt‰‰n lukujen $x$ ja
+$y$ \kor{erotus}.  T‰ss‰ on siis kyse yhteenlaskun ja 'merkinvaihdon' $x \map -x$ (jonka voi 
+myˆs tulkita laskuoperaatioksi) yhdist‰misest‰.
+
+Kokonaisluvuilla laskettaessa pidet‰‰n selviˆn‰, ett‰ luku $0$ samoin kuin vastaluvut $-1,\ -2, \ldots\,$
+ovat yksik‰sitteisi‰. Tuttuja ovat myˆs laskus‰‰nnˆt $\,-(-x)=x$, $\,0 \cdot x=0\,$ ja $\,(-1) \cdot x = -x$.
+N‰it‰ oletuksia\,/\,laskus‰‰ntˆj‰ ei tarvitse kuitenkaan sis‰llytt‰‰ kokonaislukujen aksioomiin, sill‰ ne
+ovat aksioomien seurauksia:
+\begin{Lause}\footnote[2]{Kun matemaattisessa tekstiss‰ halutaan nostaa esiin jokin selke‰sti 
+muotoiltu, tosi v‰itt‰m‰, esim. siksi ett‰ v‰itt‰m‰‰n halutaan myˆhemmin viitata tai kun 
+halutaan korostaa tuloksen uutuusarvoa, k‰ytet‰‰n nimityksi‰ \kor{Lause} eli \kor{Teoreema} 
+(engl.\ Theorem), \kor{Propositio} (engl.\ Proposition), \kor{Apulause} eli \kor{Lemma} 
+(engl.\ Lemma) ja \kor{Seurauslause} eli \kor{Korollaari} (engl.\ Corollary). T‰ss‰ tekstiss‰ 
+k‰ytet‰‰n (hieman ep‰johdonmukaisesti) nimityksi‰ Lause, Propositio, Lemma ja Korollaari. 
+Propositio on lausetta v‰h‰arvoisempi tai sis‰llˆlt‰‰n teknisempi v‰itt‰m‰ --- nimityst‰ 
+k‰ytet‰‰n l‰hinn‰, kun halutaan luokitella lauseita niiden painoarvon mukaan. Lemma on yleens‰
+v‰lietappi jonkin lauseen/proposition todistamisessa ja korollaari jo todistetun lauseen tai 
+proposition suoraviivainen seuraamus.} \label{Z-tuloksia} Kokonaisluvuille p‰tee aksioomien
+(L1)--(L8) perusteella: \vspace{1mm}\newline
+(a) \ Luku $0$ on yksik‰sitteinen, samoin vastaluku $-x$ jokaisella $x\in\Z$. \newline
+(b) \ $-(-x)=x\,\ \forall x\in\Z$. \newline
+(c) \ $0 \cdot x = 0\,\ \forall x\in\Z$. \newline
+(d) \ $(-1) \cdot x = -x\,\ \forall x\in\Z$. 
+\end{Lause}
+Lause \ref{Z-tuloksia} tulee todistetuksi seuraavassa luvussa osana yleisemp‰‰ lausetta,
+joten tyydyt‰‰n t‰ss‰ todistamaan ainoastaan helpoin osav‰itt‰m‰ (b): Koska aksioomien
+(L1) ja (L8) mukaan on
+\[
+-x+x = x+(-x) = 0,
+\]
+niin vastaluvun m‰‰ritelm‰n mukaisesti on $-(-x)=x$. \loppu
+\begin{Exa} Lauseen \ref{Z-tuloksia} laskus‰‰nnˆt (b) ja (d) yhdist‰m‰ll‰ n‰hd‰‰n, ett‰
+$(-1)\cdot(-1)=-(-1)=1.$ \loppu \end{Exa}
+
+\subsection*{Lukuj‰rjestelm‰t}
+Kokonaisluvut on k‰yt‰nnˆss‰ ilmaistava jossakin \kor{lukuj‰rjestelm‰ss‰}. Tavanomaisin, 
+matematiikan '‰idinkieleksi' vakiintunut on \kor{kymmenj‰rjestelm‰} (engl.\ decimal system), 
+jossa kirjoitetaan
+\begin{align*}
+1+1\ &=\ 2 \quad\ \,\text{'kaksi'}, \\
+2+1\ &=\ 3 \quad\ \,\text{'kolme'}, \\
+     &\ \vdots \\
+8+1\ &=\ 9 \quad\ \,\text{'yhdeks‰n'}, \\
+9+1\ &=\ 10 \quad \text{'kymmenen'}.
+\end{align*}
+T‰ss‰ merkit $0 \ldots 9$ ovat \kor{kymmenj‰rjestelm‰n numerot} (engl.\ digits, lat.\ 
+digitus = sormi,varvas). Luku 'kymmenen' on luonnollisista luvuista ensimm‰inen, jolla ei ole 
+ko.\ j‰rjestelm‰ss‰ omaa symbolia, vaan se merkit‰‰n yhdistelm‰n‰ 'yksi nolla'. T‰m‰ on 
+j‰rjestelm‰n \kor{kantaluku}. Kymmenj‰rjestelm‰n luvut ilmaistaan t‰m‰n j‰lkeen symbolisesti 
+muodossa 
+\[
+x\ =\ eabcd \ldots\ \in\ \Z,
+\]
+miss‰ $e$ on \kor{etumerkki} (engl.\ sign), $e=+$ tai $e=-$ (\,'tyhj‰' = $+$\,), ja 
+$\,a,b,c,d, \ldots$ ovat kymmenj‰rjestelm‰n numeroita. Numeroiden lukum‰‰r‰st‰ riippuen tulkinta
+on
+\[
+ea = \pm a, \quad eab = \pm (a \cdot 10 + b), \quad 
+                 eabc = \pm(a \cdot 10^2 + b \cdot 10 + c), \quad \text{jne.}
+\]
+T‰ss‰ etumerkki on $e$:n mukainen.\footnote[2]{Lukumerkinn‰n tulkinnan mukaisesti on
+$\pm 0abc .. = \pm abc ..$, ts.\ 'etunollat' eiv‰t vaikuta luvun tulkintaan.} 
+
+Yleisemmin jos lukuj‰rjestelm‰n kantaluku on luku $k \in \N,\ k\neq 1$, niin t‰m‰n 
+$k$-\kor{j‰rjestelm‰n} luvuilla $0,1, \ldots, k-1$ on oltava kullakin oma 
+numeromerkki.\footnote[2]{Lukuj‰rjestelmien idea keksittiin Kaksoisvirranmaassa noin 4000 vuotta
+sitten. Varhaisimmissa j‰rjestelmiss‰ kantaluku oli $60$. Numeromerkit olivat nuolenp‰‰merkkien
+yhdistelmi‰.} Jos $a,b,c, \ldots$ ovat t‰llaisia merkkeja, niin luku $x = eabcd \ldots$ 
+tulkitaan samoilla s‰‰nnˆill‰ kuin edell‰. On huomioitava ainoastaan, ett‰ luku '10' ei nyt ole
+'kymmenen', vaan t‰ll‰ tarkoitetaan lukua $1\cdot k + 0 = k$. Kantaluvun merkki on siis aina 
+'$10$', sen sijaan ‰‰nt‰mistapa (esim.\ 'kymmenen','tusina','tiu') on sovittava erikseen 
+kussakin lukuj‰rjestelm‰ss‰ (ja kussakin kieless‰). Ellei mit‰‰n ole sovittu, on luettava 
+'yksi nolla'. Lukuj‰rjestelmist‰ kaikkein yksinkertaisin numeromerkistˆlt‰‰n on 
+\kor{binaarij‰rjestelm‰}, jossa kantalukuna on 'ykkˆsest‰ seuraava' eli $2$. Binaarij‰rjestelm‰n
+numeroita eli \kor{bittej‰} ovat vain $0$ ja $1$.
+\begin{Exa} Kymmenj‰rjestelm‰n luku $1253$ voidaan lukea 'yksi kaksi viisi kolme', jolloin 
+ainoastaan ‰‰nnet‰‰n luvun 'nimi'. Lukutavassa 'tuhat kaksi sataa viisikymment‰ kolme' annetaan
+jo luvulle tulkinta: $1253 = $ 'tuhat plus kaksi kertaa sata plus viisi kertaa kymmenen plus 
+kolme'. T‰ss‰ 'sata' ja 'tuhat' ovat suomen kieless‰ sovittuja (ja kouluissa opetettuja) 
+‰‰nt‰mistapoja luvuille $100=k^2$ ja $1000=k^3$, kun $k =$ 'kymmenen'. \loppu 
+\end{Exa}
+\begin{Exa} Lausu kymmenj‰rjestelm‰n luku 11 binaarij‰rjestelm‰ss‰. \end{Exa}
+\ratk Kymmenj‰rjestelm‰ss‰ voidaan kirjoittaa $11 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2 + 1$. 
+Binaarij‰rjestelm‰n esitysmuoto saadaan t‰st‰ kirjoittamalla merkin '$2$' tilalle '$10$'\,:
+\[
+11\ =\ 1 \cdot 10^3 + 0 \cdot 10^2 + 1 \cdot 10 + 1\ =\ 1011 \quad 
+                                  \text{(binaarij‰rjestelm‰)}. \quad \loppu
+\]
+\begin{Exa} Laske $7$-j‰rjestelm‰n lukujen $145$ ja $66$ summa ja muunna tulos 
+kymmenj‰rjestelm‰‰n. \end{Exa}
+\ratk Kun merkit‰‰n $k=7$, niin laskulakeja (L1)--(L6) soveltaen saadaan
+\begin{align*}
+145+66 &= (1 \cdot k^2 + 4 \cdot k + 5) + (6 \cdot k + 6) \\
+       &= 1 \cdot k^2 + (4+6) \cdot k + (5+6) \\
+       &= 1 \cdot k^2 + (1 \cdot k + 3) \cdot k + (1 \cdot k + 4) \\
+       &= (1+1) \cdot k^2 + (3+1) \cdot k + 4 \\
+       &= 2 \cdot k^2 + 4 \cdot k + 4 \\
+       &= 244.
+\end{align*}
+Kymmenj‰rjestelm‰ss‰ ilmaistuna lopputulos on $2 \cdot 7^2 + 4 \cdot 7 + 4 = 130$. \loppu
+
+\pagebreak
+
+\subsection*{Rationaaliluvut $\Q$}
+
+Siirrytt‰ess‰ \Z:sta \kor{rationaalilukujen} joukkoon \Q\ tarvitaan en‰‰ yksi lis‰aksiooma:
+\begin{itemize}
+\item[(L9)] $\quad \text{Jokaisella}\ x \neq 0\ \text{on \kor{k‰‰nteisluku}}\ x^{-1}\ 
+                                                 \text{siten, ett‰}\ \ x \cdot x^{-1} = 1.$
+\end{itemize}
+Lyhennysmerkint‰
+\[
+x \cdot y^{-1} = x / y = \frac{x}{y} \quad  \quad \text{'$x$ per $y$'}
+\]
+m‰‰rittelee nelj‰nnen laskuoperaation, \kor{jakolaskun}, jonka tulos on nimelt‰‰n lukujen $x$ ja
+$y$ \kor{osam‰‰r‰}. Jakolaskussa on siis kyse 'k‰‰nt‰misoperaation' $y \map y^{-1}$ ja 
+kertolaskun $x,y^{-1} \map x \cdot y^{-1}$ yhdist‰misest‰. Sanotaan, ett‰ luku $x$ on t‰ss‰
+operaatiossa \kor{osoittaja} ja luku $y$ on \kor{nimitt‰j‰} (engl.\ numerator, denominator). 
+Jakolaskun m‰‰ritelm‰n ja aksioomien (L2),\,(L6) perusteella on
+\[
+x^{-1} = x^{-1} \cdot 1 = 1 \cdot x^{-1} = 1 / x.
+\]
+Kun lukujoukkoa \Z\ laajennetaan siten, ett‰ laajennetussa joukossa \Q\ p‰tev‰t aksioomat 
+(L1)-(L9), on tuloksena uusi algebra, jota merkit‰‰n $(\Q,+,\cdot)$. Aksiooman (L9) ja jakolaskun
+m‰‰ritelm‰n mukaisesti \Q:n alkioita ovat ainakin luvut muotoa $x = p/q$, miss‰ $p \in \Z$ ja $q \in \N$.
+Osoittautuu (ks.\ Esimerkki\,\ref{kaksi Q-lakia} alla ja Harj.teht.\,\ref{H-I-1: Q-lakeja}), ett‰
+l‰hdett‰ess‰ mainittua muotoa olevista luvuista ovat laskuoperaatioiden $\,x \map -x$, $\,x \map x^{-1}$,
+$\,x,y \map x+y\,$ ja $\,x,y \map x \cdot y\,$ aina samaa muotoa, eli muun tyyppisi‰ lukuja ei \Q:ssa ole.
+Rationaalilukujen joukko \Q\ voidaan siten m‰‰ritell‰
+\[
+\Q = \{\ x = p/q\ \vert\ p \in \Z\ \ja\ q \in \N\ \}.
+\]
+
+Aksioomista (L1)-(L9) voidaan johtaa rationaalilukujen kaikki normaalit laskus‰‰nnˆt. Seuraavassa
+kaksi esimerkki‰ (ks.\ myˆs Harj.teht.\,\ref{H-I-1: Q-lakeja}).
+\begin{Exa} \label{kaksi Q-lakia}
+Vedoten aksioomiin (L1)--(L9) ja Lauseeseen \ref{Z-tuloksia} perustele rationaalilukujen
+laskus‰‰nnˆt
+\[
+\text{a)}\,\ \frac{0}{q}=0\,\ (q\in\N) \qquad 
+\text{b)}\,\ \frac{1}{q_1}\cdot\frac{1}{q_2} = \frac{1}{q_1q_2}\,\ (q_1,q_2\in\N)
+\]
+\end{Exa}
+\ratk a) L‰htien rationaaliluvun m‰‰ritelm‰st‰ ja vedoten Lauseen \ref{Z-tuloksia}
+v‰itt‰m‰‰n (c) sek‰ aksioomiin (L4), (L9) ja (L6) p‰‰tell‰‰n:
+\begin{align*}
+0/q = 0 \cdot q^{-1} &= (0 \cdot q)\cdot q^{-1} \\
+                     &= 0\cdot(q \cdot q^{-1}) \\
+                     &= 0 \cdot 1 \\
+                     &= 0.
+\end{align*}
+b) V‰itet‰‰n, ett‰ $q_1^{-1}q_2^{-1}=(q_1q_2)^{-1}$, ts.\ ett‰ $y=q_1^{-1}q_2^{-1}$ on luvun
+$x=q_1q_2$ k‰‰nteisluku. Tarkistus:
+\begin{align*}
+x \cdot y = (q_1q_2)\cdot(q_1^{-1}q_2^{-1}) &= (q_1q_2)\cdot(q_2^{-1}q_1^{-1}) \\
+                                            &= q_1(q_2q_2^{-1})q_1^{-1} \\
+                                            &= q_1 \cdot 1 \cdot q_1^{-1} \\
+                                            &= q_1q_1^{-1} = 1. 
+\end{align*}
+T‰ss‰ vedottiin aksioomiin (L2), (L4), (L9) ja (L6). \loppu
+
+Kun k‰‰nteisluvun potenssiin korotuksessa sovitaan merkinn‰st‰
+\[
+(x^{-1})^n = \quad x^{-n}, \quad n \in \N,
+\]
+voidaan $x^{-1}$ lukea myˆs '$x$ potenssiin miinus $1$'. Aksioomat (L2),\,(L4),\,(L6) ja (L9)
+huomioiden seuraa myˆs 
+\[
+x \neq 0\ \ja\ m,n \in \Z\ \ja\ m,n \neq 0 
+                         \qimpl x^m \cdot x^n = \begin{cases}
+                                                \,x^{m+n}, \quad \text{kun}\,\ m+n \neq 0 \\
+                                                \,1, \quad\quad\,\ \ \text{kun}\,\ m+n = 0
+                                                \end{cases}
+\]
+T‰m‰n s‰‰nnˆn yksinkertaistamiseksi on luontevaa \pain{m‰‰ritell‰}:
+\[
+\boxed{\kehys\quad x^0 = 1, \quad \text{kun}\ x \neq 0\ \ (x\in\Q) \quad }
+\]
+T‰llˆin saadaan yleiset laskus‰‰nnˆt
+\[
+\boxed{\kehys \quad x^mx^n=x^{m+n}, \quad x^ny^n=(xy)^n, \quad (x^m)^n=x^{mn}, 
+                                                         \quad x,y \neq 0,\ m,n\in\Z \quad} 
+\]
+Myˆs $0^n = 0 \ \ \forall\ n \in \N$. Sen sijaan m‰‰rittelem‰tt‰ j‰‰v‰t $0^0$ ja 
+$0^{-n},\ n \in \N$, syyst‰ ett‰ $0$:lla ei ole k‰‰nteislukua. 
+
+\subsection*{$\Q$:n j‰rjestysrelaatio}
+
+Rationaaliluvut voidaan tunnetulla tavalla myˆs \kor{j‰rjest‰‰}, eli voidaan m‰‰ritell‰
+\kor{j‰rjestysrelaatio}
+\[
+<\ : \quad \text{'pienempi kuin'}.
+\]
+T‰llˆin syntyv‰‰ algebraa voidaan merkit‰ $(\Q,+,\cdot,<)$. J‰rjestysrelaatioon liitet‰‰n seuraavat
+yleiset aksioomat (eli oletetut peruslait):
+
+\pagebreak
+
+\begin{itemize}
+\item[(J1)] $\quad \text{Vaihtoehdoista}\ \{x<y,\ x=y,\ x>y\}\ 
+                                          \text{on voimassa t‰sm‰lleen yksi}.$
+\item[(J2)] $\quad x<y\ \ja\ y<z \,\ \impl\,\ x<z$
+\item[(J3)] $\quad x<y \,\ \impl\,\ x+z < y+z \ \ \forall z$
+\item[(J4)] $\quad x > 0 \ \ja\ y > 0 \,\ \impl\,\ x \cdot y\, > 0$
+\end{itemize}
+T‰ss‰ merkint‰ $x>y$ ('$x$ suurempi kuin $y$') on merkinn‰n $y<x$ vaihtoehtoinen muoto. K‰yt‰nnˆss‰ 
+vertailusta selvit‰‰n nopeimmin k‰ytt‰m‰ll‰ laskulakeja (L7),\,(L8) ja (L1), sill‰ n‰ist‰ ja 
+aksioomasta (J3) on p‰‰telt‰viss‰, ett‰ p‰tee
+\[ 
+\begin{cases} \begin{aligned}
+x<y &\qekv x-y < 0 \\ x=y &\qekv x-y = 0 \\ x>y &\qekv x-y > 0
+\end{aligned} \end{cases}
+\] 
+T‰ss‰ '$\ekv$' on logiikan symboleihin kuuluva \kor{ekvivalenssinuoli}, joka voidaan t‰ss‰ 
+yhteydess‰ lukea
+\[
+\text{P} \quad \ekv \quad \text{Q}\ : \quad \text{'P t‰sm‰lleen kun Q'}.
+\]
+Ym.\ kriteerill‰ voidaan siis vertailukysymys $\,x$ ? $y\,$ selvitt‰‰ tutkimalla, onko luku 
+$x-y$ \kor{positiivinen} ($>0$), \kor{negatiivinen} ($<0$), vai $\,=0$. Perusmuotoisesta
+rationaaliluvusta $\,x = p/q,\ (p\in\Z,\ q\in \N)$ puolestaan sovitaan, ett‰ vaihtoehdot
+$x>0$ ja $x=0$ vastaavat vaihtoehtoja $p\in\N$ ja $p=0$, muulloin on $x<0$. T‰m‰ sopimus on
+mahdollinen, koska Esimerkin\,\ref{kaksi Q-lakia} laskus‰‰nnˆn (a) mukaan luvut $0/q$ samastuvat
+lukuun $0$\,:
+\[
+0\ =\ \dfrac{0}{1}\ =\ \dfrac{0}{2}\ =\ \ldots
+\]
+Toisaalta muita luvun $0$ esiintymismuotoja ei $\Q$:ssa ole, sill‰ jos $x=p/q=0$, niin seuraa
+$\,(p/q) \cdot q = p = 0 \cdot q = 0$ (aksioomat (L4),\,(L2),\,(L9),\,(L6) ja Lauseen \ref{Z-tuloksia}
+v‰itt‰m‰ (c)). Aksiooma (J1) on n‰in ollen voimassa. Myˆs aksioomien (J2)--(J4) voimassaolo on
+helposti p‰‰telt‰viss‰ (Harj.teht.\,\ref{H-I-1: Q-j‰rjestys}).
+
+J‰rjestys ja samastus ovat esimerkkej‰ (joukko--opillisista) \kor{relaatioista}, joissa on kyse joukon
+kahden alkion v‰lisest‰ 'suhteesta'. J‰rjestykseen\,/\,samastukseen liittyvi‰ relaatiosymboleja ovat 
+mainittujen lis‰ksi myˆs '$\neq$', '$\le$' ja '$\ge$', jotka m‰‰ritell‰‰n
+\begin{align*}
+x \neq y \quad &\ekv \quad \text{ei p‰de}\ \ x=y \\
+x \le y  \quad &\ekv \quad x < y\,\ \text{tai}\,\ x = y \\
+x \ge y  \quad &\ekv \quad x > y\,\ \text{tai}\,\ x = y
+\end{align*}
+Merkint‰ $P \ekv Q$ voidaan t‰ss‰ lukea '$P$ tarkoittaa samaa kuin $Q$'.
+
+\subsection*{Summa- ja tulomerkinn‰t}
+
+Laskettaessa per‰kk‰in yhteen tai kerrottaessa useita erilaisia lukuja on luvut k‰tev‰‰ 
+numeroida eli \kor{indeksoida}, jolloin voidaan k‰ytt‰‰ lyhennysmerkintˆj‰. N‰m‰ ovat 
+\begin{align*}
+&\text{\kor{Summamerkint‰:}} \qquad\, x_1 + x_2 + \ \ldots\  + x_n\ =\ \sum_{i=1}^n x_i \\
+&\text{\kor{Tulomerkint‰:}} \qquad\qquad\quad x_1 \cdot x_2 \cdot\ \ldots\ \cdot x_n\ 
+                                                                    =\ \prod_{i=1}^n x_i
+\end{align*}
+Summamerkinn‰ss‰ symboli $i$ on nimelt‰‰n \kor{summausindeksi}. T‰m‰ saa yleens‰ (ei aina)
+kokonaislukuarvoja, jolloin symboli valitaan tavallisimmin joukosta $\{i,j,k,l,m,n\}$.
+Koska kyse on vain lyhennysmerkinn‰st‰, ei symbolin valinta luonnollisesti vaikuta itse 
+laskutoimitukseen:
+\[
+\sum_{i=1}^n a_i = \sum_{j=1}^n a_j = \sum_{k=1}^n a_k = \ldots
+\]
+Per‰kk‰isiss‰ tuloissa sanotaan kerrottavia lukuja tulon \kor{tekijˆiksi} (engl.\ factor).
+Kokonaislukujen per‰kk‰isiin tuloihin liittyy termi $n$-\kor{kertoma} (engl.\ $n$-factorial),
+joka merkit‰‰n $\,n!\,$ ja m‰‰ritell‰‰n
+\[
+\quad 0! = 1, \quad 1! = 1, \quad n!\,=\,1 \cdot 2 \ \ldots\ \cdot n\ 
+                                      =\ \prod_{k=1}^n k, \quad n = 2,3,\ \ldots
+\]
+
+%\subsection*{Reaaliluvut $\R$}
+
+%Rationaalilukujen joukko \Q\ on edelleen laajennettavissa \kor{reaalilukujen} joukoksi \R, 
+%jolloin koko laajennusketju on
+%\[
+%\N \quad \ext \quad \Z \quad \ext \quad \Q \quad \ext \quad \R.
+%\]
+%Viimeinen laajennusvaihe on kuitenkin k‰sitteellisesti huomattavasti vaikeampi kuin muut. Luvun
+%\Roman{chapter} er‰‰n‰ p‰‰tavoitteena --- ja punaisena lankana jatkossa --- on juuri t‰m‰n 
+%laajennusvaiheen toteuttaminen.
+
+\Harj
+\begin{enumerate}
+
+\item
+N‰yt‰, ett‰ seuraaville joukoille p‰tee $A=B$, eli $A$ ja $B$ ovat joukkoina samat:
+\begin{align*}
+&\text{a)}\ \ A=\{3n+2 \mid n\in\Z\}, \quad B=\{3n-7 \mid n\in\Z\} \\
+&\text{b)}\ \ A=\{7n+3 \mid n\in\Z\}, \quad B=\{7n-32 \mid n\in\Z\}
+\end{align*}
+
+\item
+Vedoten aksioomiin (L1)--(L8) ja Lauseen \ref{Z-tuloksia} v‰itt‰miin perustele kokonaislukujen
+laskus‰‰nnˆt \ a) $-x+(-y)=-(x+y)$, \ b) $(-x) \cdot y = - x\cdot y$, \
+c) $(-x) \cdot (-y) = x \cdot y$.
+
+\item 
+Muodosta kantalukuja $k=2$, $k=3$ ja $k=4$ vastaavien lukuj‰rjestelmien kertotaulut.
+
+\item 
+Tusinaj‰rjestelm‰ss‰ on kymmenj‰rjestelm‰n merkkien lis‰ksi k‰ytˆss‰ numeromerkit (vasemmalla 
+kymmenj‰rjestelm‰n merkint‰)
+\begin{align*}
+&10=\diamondsuit \quad \text{'ruutu'} \\
+&11=\heartsuit \quad \text{'hertta'} \\
+&12=10 \quad \text{'tusina' (kantaluku)}
+\end{align*}
+Muunna kymmenj‰rjestelm‰n luku 155 tusinaj‰rjestelm‰‰n ja tusinaj‰rjestelm‰n luku 
+$9\diamondsuit 07\heartsuit$ kymmenj‰rjestelm‰‰n.
+
+\item 
+Suorita kymmenj‰rjestelm‰‰n muuntamatta seuraavat tusinaj‰rjestelm‰n (ks. edellinen teht‰v‰) 
+laskuoperaatiot:
+\[
+\text{a)}\ \ \heartsuit\heartsuit\diamondsuit + \diamondsuit\diamondsuit\heartsuit \qquad 
+\text{b)}\ \  247-19\diamondsuit \qquad 
+\text{c)}\ \ 23 \cdot 34
+\]
+
+\item
+Rusinaj‰rjestelm‰ss‰ kymmenj‰rjestelm‰n luku $7$ ‰‰nnet‰‰n 'rusina', luvut $1 \ldots 6$ merkit‰‰n ja
+‰‰nnet‰‰n samoin kuin kymmenj‰rjestelm‰ss‰, ja luvut $100$ ja $1000$ ‰‰nnet‰‰n 'pulla' ja 'kakku'.
+Miten merkit‰‰n ja lausutaan kymmenj‰rjestelm‰n luku $2331$ rusinaj‰rjestelm‰ss‰?
+
+
+
+\item  \label{H-I-1: Q-lakeja}
+Seuraavissa rationaalilukujen laskus‰‰nnˆiss‰ on tulos esitetty rationaaliluvun perusmuodossa
+olettaen, ett‰ $p,p_1,p_2\in\Z$ ja $q,q_1,q_2\in\N$. Perustele s‰‰nnˆt vedoten aksioomiin (L1)--(L9),
+Lauseeseen \ref{Z-tuloksia} ja Esimerkin \ref{kaksi Q-lakia} laskus‰‰ntˆihin.
+\begin{align*}
+&\text{a) \,Supistus\,(lavennus):} \quad (p \cdot m)/(q \cdot m) = p/q, \quad m\in\Z,\ m\neq 0 \\
+&\text{b)   Vastaluku:} \quad -(p/q) = (-p)/q \\
+&\text{c) \,K‰‰nteisluku:} \quad (p/q)^{-1} = \begin{cases}
+                                              \,q/p,       &\text{jos}\ p\in\N \\
+                                              \,(-q)/(-p), &\text{jos}\ p\not\in\N,\ p \neq 0
+                                              \end{cases} \\
+&\text{d)   Yhteenlasku:} \quad p_1/q_1+p_2/q_2 = (p_1q_2+p_2q_1)/(q_1q_2) \\
+&\text{e) \,Kertolasku:} \quad (p_1/q_1)(p_2/q_2) = (p_1p_2)/(q_1q_2)
+\end{align*}
+
+\item \label{H-I-1: Q-j‰rjestys}
+Vedoten teht‰v‰n \ref{H-I-1: Q-lakeja} laskus‰‰ntˆihin ja rationaalilukujen j‰rjestysrelaation
+m‰‰ritelm‰‰n n‰yt‰, ett‰ j‰rjestysrelaatiolle ovat voimassa aksioomat (J2), (J3) ja (J4). 
+
+\item
+Ratkaise $\Q$:ssa seuraavat yht‰lˆt\,/\,ep‰yht‰lˆt mahdollisimman yksinkertaiseen muotoon. 
+Perustele laskun vaiheet aksioomilla (L1)--(L9), (J1)--(J4)\,! \vspace{1mm}\newline
+a) \ $2x+7=9x-4 \qquad\quad\,\ $
+b) \ $\tfrac{x}{5}+\tfrac{2}{3}<\tfrac{x}{3}+\tfrac{1}{2}$ \newline
+c) \ $(x+1)/(x-2)=4 \qquad$
+d) \ $(2x-1)/(3x+2)>3$
+
+\item
+a) N‰yt‰, ett‰ seuraavat p‰‰ttelys‰‰nnˆt ovat p‰tevi‰ sek‰ kokonaisluvuille ($x_k\in\Z$) ett‰
+rationaaliluvuille ($x_k\in\Q$). Voit vedota sek‰ aksioomiin ett‰ niist‰ johdettuihin laskus‰‰ntˆihin
+(Lause \ref{Z-tuloksia}, Teht‰v‰ \ref{H-I-1: Q-lakeja}).
+\begin{align*}
+&\quad\ \ \prod_{k=1}^n x_k = 0 \qekv x_k=0\,\ \text{jollakin}\,\ k\in\{1,\ldots,n\} \\
+&\quad\ \ \prod_{k=1}^n x_k < 0 \qekv \text{pariton m‰‰r‰ lukuja $x_k$ on negatiivisia, muut}\ >0
+\end{align*}
+Soveltaen a-kohdan p‰‰telmi‰ ratkaise $\Q$:ssa:
+\vspace{1mm}
+\begin{align*}
+&\text{b)}\,\ 2x^2-3x-2 \ge 0 \qquad\,
+ \text{c)}\,\ 63x^2-32x \le 63 \qquad
+ \text{d)}\,\ 9x^3 \ge 169x \\[1mm]
+&\text{e)}\,\ \frac{x+1}{x-1}\,\ge\,\frac{x}{x+1} \qquad\quad
+ \text{f)}\,\ \frac{5}{6x-7}\,\le\,x \qquad\qquad
+ \text{g)}\,\ 6x+\frac{2x+12}{x^2+x}\,\ge\,13
+\end{align*}
+
+\item
+Sievenn‰ (ol.\ $n\in\N$)
+\[
+\text{a)}\ \ \sum_{k=1}^n n \qquad
+\text{b)}\ \ \sum_{i=1}^{n^2} \frac{2}{n} - \sum_{j=1}^n 1 - \sum_{k=1}^n 1 \qquad
+\text{c)}\ \ \prod_{k=1}^n \left(1+\frac{1}{k}\right)
+\]
+
+\item 
+Kaksoissumma $\sum_{i=1}^n\sum_{j=1}^m a_{ij}\ (n,m\in\N,\ a_{ij}\in\Q)$ m‰‰ritell‰‰n
+\[
+\sum_{i=1}^n\sum_{j=1}^m a_{ij} = \sum_{i=1}^n\Bigl(\sum_{j=1}^m a_{ij}\Bigr) 
+                                = \sum_{j=1}^m\Bigl(\sum_{i=1}^n a_{ij}\Bigr)
+                                = \sum_{j=1}^m\sum_{i=1}^n a_{ij}\,.
+\]
+a) N‰yt‰, ett‰ t‰ss‰ sulkeiden poisto ja j‰rjestyksen vaihto ovat todella mahdollisia, ts.\ 
+ett‰ kaksi keskimm‰ist‰ lauseketta ovat samat. \vspace{1mm}\newline
+b)\,\ Sievenn‰: $\D \ \sum_{i=1}^n\sum_{j=1}^n (a_i + a_j). \quad\ $
+c)\,\ N‰yt‰: $\D \ \Bigl(\,\sum_{i=1}^n a_i \Bigr)^2 = \sum_{i=1}^n\sum_{j=1}^n a_i a_j\,$.
+
+\item (*)  \label{H-I-1: teleskooppisumma}
+Summaa $\sum_{k=0}^n a_k$ sanotaan \kor{teleskooppisummaksi}, jos $a_k=b_{k+1}-b_k\ \forall k$, 
+miss‰ luvut $b_k,\ k=0 \ldots n+1$,
+ovat tunnettuja. \newline
+a) M‰‰rit‰ teleskooppisumman arvo lukujen $b_k$ avulla.\newline
+b) Mist‰ nimitys teleskooppisumma?\newline
+c) Laske teleskooppi-idealla summat
+\[
+\sum_{k=0}^n (2k+1) \quad \text{ja} \quad \sum_{k=1}^n\frac{1}{k(k+1)}\,, \quad n\in\N.
+\]
+d) N‰yt‰ teleskooppisummien avulla:\, $\sum_{k=1}^n k^2 = \tfrac{1}{6}n(2n^2+3n+1),\,\ n\in\N$. 
+
+\end{enumerate}

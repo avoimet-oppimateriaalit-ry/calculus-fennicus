@@ -1,0 +1,288 @@
+\section{*Tensorit, vektorit ja skalaarit}  \label{tensorit}
+\sectionmark{*Tensorit}
+\alku
+
+Kuten edellä on todettu, on neliömuodolla $\mx^T\mA\mx$ se ominaisuus, että koordinaatistoa 
+kierrettäessä neliömuodon matriisi muuntuu similaarisesti:
+\[
+\mx\hookrightarrow\my=\mC^T\mx \ \impl \ \mA\hookrightarrow\mB=\mC^T\mA\mC.
+\]
+On myös nähty, että pinnan kaarevuusmatriisilla on tämä sama ominaisuus, kun koordinaatiston 
+kierto tapahtuu pinnan normaalin ympäri. Yleisesti sanotaan sellaista oliota, jolla on 
+jokaisessa koordinaatistossa matriisin olomuoto, ja joka muuntuu koordinaatistoa kierrettäessä
+\index{tensori}%
+ym.\ säännön mukaan, \kor{tensoriksi}.\footnote[2]{Tensori on matematiikassa tässä esitettyä
+yleisempi käsite. Tensorit liitetään, ei ainoastaan karteesisen koordinaatiston kiertoihin,
+vaan yleisempien käyräviivaisten kordinaatistojen välisiin muunnoksiin. Muunnoksiin liittyvä
+differentiaalilaskenta, nk.\ \kor{tensorilaskenta}, on oma matematiikan lajinsa. Tensoreilla ja
+tensorilaskennalla on paljon käyttöä fysiikassa.}
+Neliömuoto, matriisinsa kautta nähtynä, on siis tensori, itse asiassa \kor{symmetrinen tensori}.
+Myös pinnan kaarevuus on symmetrinen tensori, ja kaarevuusmatriisin sijasta puhutaankin yleensä
+\index{kaarevuustensori}%
+\kor{kaarevuustensorista}. Näin puhuen kaarevuus tulee selvemmin ymmärretyksi pinnan
+paikalliseksi geometriseksi ominaisuudeksi, joka vain näyttäytyy erilaisena eri
+koordinaatistoissa.
+
+Jos $f=f(x,y,z)$ on kahdesti jatkuvasti derivoituva, niin tietyssä pisteessä laskettu Hessen 
+matriisi
+\[
+\mA=\begin{bmatrix} 
+    f_{xx} & f_{xy} & f_{xz} \\ f_{xy} & f_{yy} & f_{yz} \\ f_{xz} & f_{yz} & f_{zz} 
+    \end{bmatrix}
+\]
+muuntuu koordinaatistoa kierrettäessä ym. similaarisuussäännön mukaisesti. --- Tämä nähdään 
+approksimoimalla $f$:ää toisen asteen Taylorin polynomilla. Silloin voidaan ajatella, että $f$:n
+'toinen derivaatta' ei ole mihinkään yksittäiseen koordinaatistoon sidottu toisten 
+osittaisderivaattojen matriisi, vaan pikemmin \pain{tensori}, jonka ilmiasuja nämä matriisit 
+ovat (!).
+
+Myös \pain{lineaarikuvaus} $\,A:\R^n\kohti\R^n$ voidaan ymmärtää tensorina, sillä jos
+\[
+A:\ \mx \map \my \ \ekv \ \my=\mA\mx,
+\]
+niin nähdään, että koordinaattimuunnoksessa
+\[
+\mx=\mC\mx',\quad \my=\mC\my'\quad (\inv{\mC}=\mC^T)
+\]
+lineaarikuvaus saa muodon
+\[
+\my'=\mB\mx',\quad \mB=\mC^T\mA\mC.
+\]
+\index{zza@\sov!Magneettinen permeabiliteetti}%
+\begin{Exa} \vahv{Magneettinen permeabiliteetti}.
+Sähkömagnetiikassa magneettivuon tiheyden ($\vec B$) ja magneettikentän voimakkuuden ($\vec H$)
+välinen yksinkertaisin materiaalilaki on
+\[
+\vec B=\mu\vec H,
+\]
+missä materiaalivakio $\mu$ on väliaineen \pain{ma}g\pain{neettinen} p\pain{ermeabiliteetti}.
+Tämä laki on sama kaikissa koordinaatistoissa. Yleisemmin, jos materiaali on epäisotrooppinen,
+voi $\vec B$:n ja $\vec H$:n riippuvuus olla yleisempi lineaarikuvaus muotoa
+\[
+\mB=\boldsymbol{\mu}\mH \qekv \begin{bmatrix} B_1 \\ B_2 \\ B_3 \end{bmatrix} =
+\begin{bmatrix} 
+\mu_{11}&\mu_{12}&\mu_{13} \\ \mu_{21}&\mu_{22}&\mu_{23} \\ \mu_{31}&\mu_{32}&\mu_{33} 
+\end{bmatrix}
+\begin{bmatrix} H_1 \\ H_2 \\ H_3 \end{bmatrix}.
+\]
+Tällöin $\boldsymbol{\mu}$ on tensori, eli matriisi $(\mu_{ij})$ muuntuu koordinaatistoa 
+kierrettäessä similaarisesti. \loppu
+\end{Exa}
+\begin{Exa}
+Kahdesti jatkuvasti derivoituvasta funktiosta $f=f(x,y)$ tiedetään, että $f_{xx}(0,0)=24$, 
+$f_{yy}(0,0)=-24$ ja $f_{xy}(0,0)=-7$. Laske $f_{\xi\xi}(0,0)$, $f_{\xi\eta}(0,0)$ ja 
+$f_{\eta\eta}(0,0)$ koordinaatistossa $(\xi,\eta)$, jonka kantavektorit ovat
+\[
+\vec e_\xi=\frac{1}{5}(4\vec i + 3\vec j),\quad \vec e_\eta=\frac{1}{5}(-3\vec i +4\vec j).
+\]
+\end{Exa}
+\ratk Koordinaattimuunnos $(x,y)\hookrightarrow (\xi,\eta)$ määräytyy ehdosta
+\[
+%       &x\vec i+y\vec j=\xi\vec e_\xi+\eta\vec e_\eta
+%                =\frac{1}{5}(4\xi-3\eta)\vec i+\frac{1}{5}(3\xi+4\eta)\vec j \\
+\begin{bmatrix} x\\y \end{bmatrix}=\frac{1}{5}\begin{rmatrix} 4&-3\\3&4 \end{rmatrix}
+\begin{bmatrix} \xi \\ \eta \end{bmatrix}=\mC\begin{bmatrix} \xi \\ \eta \end{bmatrix}.
+\]
+Koska $f$:n toisen kertaluvun osittaisderivaatat muodostavat tensorin, on
+\begin{align*}
+\begin{bmatrix} 
+f_{\xi\xi}(0,0) & f_{\xi\eta}(0,0) \\ f_{\xi\eta}(0,0) & f_{\eta\eta}(0,0) 
+\end{bmatrix}
+&=\mC^T\begin{bmatrix} f_{xx}(0,0)&f_{xy}(0,0) \\ f_{xy}(0,0)&f_{yy}(0,0) \end{bmatrix}\mC \\
+&=\frac{1}{25}\begin{rmatrix} 4&3\\-3&4 \end{rmatrix} 
+              \begin{rmatrix} 24&-7\\-7&-24 \end{rmatrix}
+              \begin{rmatrix} 4 & -3 \\ 3 & 4 \end{rmatrix} \\
+&=\begin{rmatrix} 0&-25\\-25&0 \end{rmatrix}.
+\end{align*}
+Siis $f_{\xi\xi}(0,0)=f_{\eta\eta}(0,0)=0$, $f_{\xi\eta}=-25$. --- Eräs oletukset toteuttava 
+funktio on
+\[
+f(x,y)=(4x+3y)(3x-4y)=-25\xi\eta. \loppu
+\]
+
+\subsection*{Vektorit}
+\index{vektoria@vektori (geometrinen)!a@tason \Ekaksi|vahv}
+\index{vektoria@vektori (geometrinen)!b@avaruuden \Ekolme|vahv}
+
+Jos tensori on olio, joka 'näyttää matriisilta' jokaisessa (karteesisessa) koordinaatistossa,
+niin tason tai avaruuden vektori voidaan vastaavasti tulkita olioksi, jonka olomuoto on lukupari
+tai lukukolmikkko jokaisessa koordinaatistossa. Kuten tensori, tämä pari tai kolmikko muuntuu
+koordinaatistoa kierrettäessä systemaattisella tavalla. Esimerkiksi jos 
+$\vec v=x\vec i + y\vec j + z\vec k$ on avaruusvektori, niin muunnossääntö 
+$\mx \vastaa (x,y,z) \map (x',y',z') \vastaa \mx'$ siirryttäessä kierrettyyn koordinaatistoon,
+jonka kantavektorien koordinaatit kannassa $\{\vec i,\vec j,\vec k\}$ ovat 
+ortogonaalimatriisin $\mC$ sarakkeet, on (vrt.\ Luku \ref{lineaarikuvaukset})
+\[
+\mC\mx'=\mx \qekv \mx'=\mC^T\mx.
+\]
+Siis ei ainoastaan tensorin, vaan myös vektorin 'perimmäinen olemus' paljastuu vasta 
+koordinaatistoa kierrettäessä (!). --- Havaitaan myös, että symmetrisellä tensorilla ja 
+vektorilla on se yhteinen piirre, että löytyy koordinaatisto, tai koordinaatistoja, joissa 
+tensorin/vektorin ilmiasu matriisina/$\R^n$:n alkiona saa mahdollisimman yksinkertaisen muodon.
+Symmetrisen tensorin tapauksessa tämä yksinkertaisin muoto on diagonaalimatriisi. Tason tai 
+avaruuden vektorin yksinkertaisin muoto on lukupari $(a,0)$ tai lukukolmikko $(a,0,0)$, missä 
+$a>0$ on vektorin pituus. Tällaiseen koordinaatistoon siirryttäessä  palataan itse asiassa 
+vektorin alkuperäiseen geometriseen ideaan --- vektorihan oli alunperin suunnattu jana. Vektorin
+suunnan pysyvyys koordinaatistoa kierrettäessä varmistetaan em.\ muunnossäännöllä. Sen mukaan
+siis vektorin ilmiasu $\R^n$:n alkiona \pain{ei} ole pysyvä, vaan nimenomaan muuttuu 
+koordinaatistoa kierrettäessä, muunnossäännön ilmaisemalla systemaattisella tavalla.
+\begin{Exa} Voidaan kuvitella (etenkin tapauksissa $n=2$ ja $n=3$), että euklidinen avaruus 
+$\R^n$ on pisteavaruuden $E^n$ koordinaattiavaruus jossakin valitussa (karteesisessa) 
+koordinaatistossa. Jos nyt valittua pistettä $P \in E^n$ edustaa vektori $\mx$ (paikkavektori),
+niin koordinaatistoa kierrettäessä $P$:n koordinaatit muuntuvat kaavan $\mx'=\mC^T\mx$
+mukaisesti. Muunnoskaava varmistaa, että piste 'pysyy paikallaan', eli pisteen paikkavektori on
+vektori juuri tämän vaatimuksen vuoksi. Vastaavasti jos tarkastellaan funktion $f(\mx)$
+muuntumista koordinaatiston kierrossa, niin muunnossäännöllä $g(\mx')=f(\mC\mx')$ tarkoitetaan,
+että 'funktio pysyy paikallaan', ts.\ funktion arvo tietyssä (paikallaan pysyvässä) pisteessä
+ei muutu. \loppu \end{Exa}
+\begin{Exa} Olkoon $f=f(x,y,z)$ on differentioituva funktio. Kierretään koordinaatistoa 
+muunnoksella $\mC\mx'=\mx\ \ekv\ \mx'=\mC^T\mx\ (\mx=[x,y,z]^T,\ \mx'=[x',y',z']^T)$ ja 
+merkitään $g(\mx')=f(\mx)=f(\mC\mx')$. Olkoon $\nabla f(0,0,0)= a_1\vec i+a_2\vec j+a_3\vec k$.
+Tällöin jos $\ma=[a_1,a_2,a_3]^T$, niin differentioituvuuden määritelmän mukaisesti on
+\[
+f(x,y,z)=f(0,0,0)+\ma^T\mx + o(\abs{\mx}).
+\]
+Ketjusääntöjen perusteella myös $g$ on differentioituva origossa, joten jollakin 
+$\mb=[b_1,b_2,b_2]^T$ on
+\[
+g(x',y',z')=g(0,0,0)+\mb^T\mx' + o(\abs{\mx'})=f(0,0,0)+\mb^T\mx' + o(\abs{\mx'}).
+\]
+Kun näissä hajotelmissa oletetaan, että $\mC\mx'=\mx$, niin $\abs{\mx'}=\abs{\mx}$ ja 
+$g(x',y',z')=f(x,y,z)$, joten on oltava
+\[
+\ma^T\mx=\mb^T\mx'=\mb^T\mC^T\mx=(\mC\mb)^T\mx \qimpl \mC\mb=\ma.
+\]
+Tulos merkitsee, että funktion gradientti (tulkittuna pystyvektorina) muuntuu koordinaatistoa
+kierrettäessä kuten vektori. Samaan tulokseen tullaan myös laskemalla $g$:n gradientti suoraan
+ketjusääntöjen avulla kaavasta $g(\mx')=f(\mC\mx')$. \loppu
+\end{Exa}
+Funktion gradientti on jo aiemminkin tulkittu vektoriksi, mutta tällöin tulkinta perustui vain
+gradientin 'ulkonäköön' kiinteässä koordinaatistossa. Nyt voidaan siis vahvistaa, että tulkinta
+kestää myös koordinaatiston kierron:
+\[
+\boxed{\quad\kehys \text{Gradientti \kor{on} vektori}. \quad}
+\]
+
+\subsection*{Skalaarit}
+\index{skalaari|vahv}
+
+Jos tensorin ja vektorin todellinen luonne paljastuu vasta koordinaatiston kierrossa, niin 
+samoin on \pain{skalaarin} laita. Skalaari on olio, jonka ilmiasu jokaisessa koordinaatistossa
+on luku (tässä reaaliluku), ja nimenomaan aina \pain{sama} luku. Esimerkiksi jos 
+$f=f(\mx),\ \mx\in\R^n$, on reaaliarvoinen funktio, niin $f$:n  arvo tietyssä 
+(kiinteäksi ajatellussa) pisteessä on skalaari. Vektoriin liittyvä skalaari on vektorin pituus,
+koska pituus on reaaliluku, joka ei muutu koordinaatiston kierrossa. Kahteen vektoriin 
+$\mx,\my\in\R^n$ liittyvä skalaari on (nimensä mukaisesti) \pain{skalaaritulo}, sillä jos 
+$\mx'=\mC^T\mx$ ja $\my'=\mC^T\my$, niin
+\[
+(\mx')^T\my' = (\mC^T\mx)^T\mC^T\my = \mx^T\mC\mC^T\my = \mx^T\mI\my = \mx^T\my.
+\]
+Tensoreihin liittyvä mielenkiintoinen skalaari on tensorin \kor{jälki}:
+\begin{Def} \label{tensorin jälki} \index{jzy@jälki (tensorin)|emph}
+Jos $T$ on $\R^n$:n tensori, jonka matriisi annetussa ortonormeeratussa koordinaatistossa on
+$\mA=(a_{ij})$, niin $T$:n \kor{jälki} (engl.\ trace) on
+\[
+tr\,T = \sum_{i=1}^n a_{ii}\,.
+\]
+\end{Def}
+\begin{Lause} \label{jälki on skalaari} Tensorin jälki on skalaari. \end{Lause}
+\tod Olkoon $\mC$ ortogonaalimatriisi kokoa $n \times n$ ja $\mB=\mC^T\mA\mC$. Lause väittää,
+että
+\[
+\sum_{i=1}^n [\mB]_{ii} = \sum_{i=1}^n [\mA]_ {ii}\,.
+\]
+Lähdetään matriisitulon määritelmästä ja vaihdetaan summausjärjestystä\,:
+\begin{align*}
+\sum_{i=1}^n [\mB]_{ii} 
+         &= \sum_{i=1}^n\sum_{j=1}^n[\mC^T]_{ij}\,[\mA\mC]_{ji} \\
+         &= \sum_{i=1}^n\sum_{j=1}^n[\mC^T]_{ij}\sum_{k=1}^n[\mA]_{jk}\,[\mC]_{ki} \\
+         &= \sum_{j=1}^n\sum_{k=1}^n[\mA]_{jk}\left(\sum_{i=1}^n[\mC]_{ki}\,[\mC^T]_{ij}\right).
+\end{align*}
+Tässä on $\mC$:n ortogonaalisuuden perusteella
+\[
+\sum_{i=1}^n[\mC]_{ki}\,[\mC^T]_{ij} = [\mC\mC^T]_{kj} = [\mI]_{kj} = \delta_{kj}\,,
+\]
+joten
+\[
+\sum_{i=1}^n [\mB]_{ii} = \sum_{j=1}^n\sum_{k=1}^n[\mA]_{jk}\delta_{kj} 
+                        = \sum_{j=1}^n[\mA]_{jj}\,. \loppu
+\]
+
+\begin{Exa} Tarkastellaan funktion $u=u(x,y)\,$ 'toista derivaattaa', eli tensoria $T$, jonka
+matriisi on
+\[
+\mA = \begin{bmatrix} u_{xx}(x,y) & u_{xy}(x,y) \\ u_{xy}(x,y) & u_{yy}(x,y) \end{bmatrix}.
+\]
+Kun koordinaatistoa kierretään muunnoksella $\mC[\xi,\eta]^T=[x,y]^T$ ja merkitään 
+$v(\xi,\eta)=u(x(\xi,\eta),y(\xi,\eta))$, niin $T$:n matriisi kierretyssä koordinaatistossa on
+\[
+\begin{bmatrix} 
+v_{\xi\xi}(\xi,\eta) & v_{\xi\eta}(\xi,\eta) \\ v_{\xi\eta}(\xi,\eta) & v_{\eta\eta}(\xi,\eta)
+\end{bmatrix}
+= \mC^T \begin{bmatrix} 
+        u_{xx}(x,y) & u_{xy}(x,y) \\ u_{xy}(x,y) & u_{yy}(x,y) 
+        \end{bmatrix} \mC.
+\]
+Lauseen \ref{jälki on skalaari} mukaan pätee
+\[
+(\partial_\xi^2+\partial_\eta^2)v(\xi,\eta)\,=\,(\partial_x^2+\partial_y^2)u(x,y). \loppu
+\]
+\end{Exa}
+Esimerkistä voidaan vetää se (yleisemminkin $\R^n$:ssä pätevä) merkittävä johtopäätös, että
+Laplacen operaattori $\Delta$ 'näyttää samalta' kaikissa karteesisissa koordinaatistoissa.
+Koska $\Delta$ myös operoi sekä skalaareihin että vektoreihin kuten skalaari, niin voidaan
+kahdessa eri merkityksessä sanoa\,:
+\[
+\boxed{\quad\kehys \text{$\Delta$ \kor{on skalaarinen operaattori}}. \quad}
+\]
+
+\Harj
+\begin{enumerate}
+
+\item
+Kahdesti jatkuvasti derivoituvasta funktiosta $f(x,y)$ tiedetään: $f_{xx}(0,0)=0$,
+$f_{yy}(0,0)=-2$ ja $f_{xy}(0,0)=2$. Laske $f_{\xi\xi}(0,0)$ ja $f_{\eta\eta}(0,0)$ sellaisessa
+kierretyssä koordinaatistossa, jossa $f_{\xi\eta}(0,0)=0$.
+
+\item
+Eräässä materiaalissa magneettikentän tiheyden ja magneettikentän voimakkuuden välillä on
+riippuvuus $\mB=\boldsymbol{\mu}\mH$, missä $\boldsymbol{\mu}$ on tensori, jonka
+matriisiesitys on
+\[
+\boldsymbol{\mu}= \begin{bmatrix} \mu&0&0 \\ 0&2\mu&0 \\ 0&0&3\mu \end{bmatrix}
+\]
+koordinaatistossa, jonka kantavektorit ovat
+\[
+\vec e_1=\frac{1}{5}(3\vec i+ 4\vec j\,), \quad 
+\vec e_2=\frac{1}{25}(12\vec i-9\vec j+20\vec k\,), \quad 
+\vec e_3=\frac{1}{25}(16\vec i-12\vec j-15\vec k\,). 
+\]
+Millainen on $\boldsymbol{\mu}$:n esitysmuoto peruskoordinaatiston kannassa
+$\{\vec i,\vec j,\vec k\}$\,?
+
+\item
+Näytä, että jos $\vec a$ ja $\vec F$ ovat vektorikenttiä (eli vektoriarvoisia funktioita),
+niin \, a) $\nabla\cdot\vec F$ on skalaarikenttä, \ b) $(\vec a\cdot\nabla)\vec F$ on
+vektorikenttä.
+
+\item (*)
+a) Näytä, että differentiaalioperaattori
+\[
+A=a\partial_x^2+b\partial_y^2+c\partial_x\partial_y,
+\]
+missä $a$, $b$ ja $c$ ovat skalaareita ($a,b,c\in\R$), säilyy muuttumattomana $\Rkaksi$:n
+koordinaatiston kierrossa täsmälleen kun $a=b$ ja $c=0$,
+eli kun $A=a\Delta$. \vspace{1mm}\newline
+b) Millaiseksi osittaisdifferentialiyhtälö $u_{xx}-u_{yy}=0$ muuntuu kierretyssä 
+koordinaatistossa, jonka kantavektorit ovat
+\[
+\vec e_1=\frac{1}{\sqrt{2}}(\vec i+\vec j\,), \quad 
+\vec e_2=\frac{1}{\sqrt{2}}(-\vec i+\vec j\,)\,?
+\]
+c) Jos $\vec a=\vec i+\vec j$, niin millaisen muodon differentiaalioperaattori
+\[
+(\vec a\cdot\nabla)^2 = (\partial_x)^2+(\partial_y)^2+2\partial_x\partial_y
+\]
+saa b-kohdan kierretyssä koordinaatistossa?
+
+\end{enumerate}

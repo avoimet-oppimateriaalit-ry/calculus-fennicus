@@ -1,0 +1,582 @@
+\section{Taylorin polynomien sovelluksia} \label{taylorin polynomien sovelluksia}
+\alku
+\index{Taylorin polynomi|vahv}
+
+Tässä luvussa tarkastellaan eräitä tavallisia Taylorin polynomien ja Taylorin lauseen 
+käyttötapoja funktiotutkimuksessa ja funktioiden approksimoimisessa. Taylorin polynomeja 
+laskettaessa tai jäännöstermiä arvioitaessa voidaan laskuja usein huomattavasti lyhentää ja 
+selkiyttää käyttämällä nk.\ \kor{suuruusluokkamerkintöjä}. Esimakua tällaisista merkinnöistä 
+on saatu jo edellisen luvun Esimerkeissä \ref{nopea Taylor 1} ja \ref{nopea Taylor 2}, joissa
+käytettiin lyhennysmerkintää $[x^m]$. Tämän tilalla on tavallisempaa käyttää merkintää
+$\ordoO{\abs{x}^m}$, joka luetaan 'suuruusluokkaa $x^m$' tai vain 'oo $x^m$'. Toinen,
+merkitykseltään hiukan voimakkaampi suuruusluokkamerkintä on $o(\abs{x}^m)$, joka luetaan
+'pikku oo $x^m$'. Näissä merkinnöissä on $\abs{x}^m$ nk.\ vertailufunktio. Tämän tilalla voi
+olla yleisempi, ei-negatiivisia arvoja saava funktio, esim.\ 
+$\abs{x-x_0}^\alpha,\ \alpha\in\Q$.
+\begin{Def} \label{iso oo ja pikku oo} \vahv{(Suuruusluokkamerkinnät $\mathcal{O}$ ja $o$)}
+\index{suuruusluokkamerkinnät|emph} 
+Jos $f$ ja $g$ on määritelty välillä $[x_0-a,x_0+a]$ ($a>0$) ja 
+$g(x) \ge 0\ \forall\,x\in[x_0-a,x_0+a]$, niin käytetään merkintää
+\[
+f(x)=\mathcal{O}(g(x)), \quad x\in[x_0-a,x_0+a],
+\]
+jos on olemassa vakio $C\in\R_+$, siten että pätee
+\[
+\abs{f(x)}\leq Cg(x) \quad\forall\ x\in[x_0-a,x_0+a].
+\]
+Jos $g(x)>0\,\ \forall\,x \neq x_0$ ja pätee $\,\lim_{x\kohti x_0} (f/g)(x)=0$, niin käytetään
+merkintää
+\[
+f(x)=o(g(x)), \quad \text {kun}\ x\kohti x_0.
+\]
+\end{Def}
+
+Jos merkinnällä $\ordoO{..}$ halutaan ainoastaan kertoa, että arvio on pätevä jossakin $x_0$:n 
+ympäristössä, niin tämä voidaan ilmaista kirjoittamalla, kuten vastaavassa merkinnässä $o(..)$,
+\[
+f(x)=\ordoO{g(x)}, \quad \text{kun}\ x\kohti x_0.
+\]
+Näissä merkinnöissä voi raja-arvon $x_0$ tilalla olla $\pm\infty$, jolloin kyse on $f$:n 
+arvioimisesta suurilla $\abs{x}$:n arvoilla. Vertailufunktio on tällöin tyypillisesti 
+$g(x)=\abs{x}^\alpha$ jollakin $\alpha\in\Q$.
+
+Laskuissa suuruusluokkamerkintöjä on kätevä käsitellä kuten funktioita, jolloin niitä voi 
+yhdistellä funktioiden tavoin. Esimerkiksi $\,f(x)+o(x^2)$ tarkoittaa funktiota $\,f(x)+g(x)$,
+missä $\,g(x)=o(x^2)$, ja $\,\ordoO{x^2}+\ordoO{y^2}$ tarkoittaa samaa kuin $\ordoO{x^2+y^2}$.
+Määritelmästä \ref{iso oo ja pikku oo} on helposti todennettavissa seuraavat
+suuruusluoka-algebran säännöt (Harj.teht.\,\ref{H-VIII-5: suuruusluokka-algebra}). Säännöissä
+oletetaan, että $x,y \ge 0$.
+\[ \boxed{ \begin{aligned} 
+\ykehys\quad \Ord{x}+\Ord{y} &= \Ord{\max\{x,y\}}, \quad \\
+\Ord{x}\Ord{y}               &= \Ord{xy}, \quad \\
+\ord{x}\Ord{y}               &= \ord{xy}. \quad
+           \end{aligned} } \]
+Sovelluksissa kahta jälkimmäistä sääntöä käytetään tavallisimmin muodossa
+\[
+\Ord{x^\alpha}\Ord{x^\beta}=\Ord{x^{\alpha+\beta}}, \quad
+\ord{x^\alpha}\Ord{x^\beta}=\ord{x^{\alpha+\beta}}, \quad x \ge 0,\ \alpha,\beta\in\R.
+\]
+\begin{Exa} Muuttujan vaihdon $x^2=t$ ja Taylorin lauseen avulla päätellään, että pisteen
+$x=0$ lähellä (esim.\ välillä $[-1,1]$) on
+\[
+\sqrt{x^2+1} = \sqrt{1+t} = 1+\frac{1}{2}\,t + \Ord{t^2} = 1+\frac{1}{2}\,x^2+\Ord{x^4}.
+\]
+Suurilla $x$:n arvoilla ($x\kohti\infty$) saadaan muuttujan vaihdolla $x^{-2}=t$ vastaavasti
+arvio
+\[
+\sqrt{x^2+1} = x\sqrt{1+x^{-2}} = x\left(1+\frac{1}{2x^2}+\Ord{x^{-4}}\right)
+                                = x+\frac{1}{2x}+\Ord{x^{-3}}. \loppu
+\]
+\end{Exa}
+\begin{Exa} Näytä, että pienillä $|x|$:n arvoilla on
+\[
+f(x) \,=\, \frac{1-x}{1+2x-x^2+\Ord{|x|^3}} \,=\,1-3x+7x^2+\Ord{|x|^3}.
+\]
+\ratk Koska pienillä $|t|$:n arvoilla on $1/(1+t)=1-t+t^2+\Ord{|t|^3}$, niin
+suuruusluokka-algebra antaa
+(vrt.\ edellisen luvun Esimerkit \ref{nopea Taylor 1}--\ref{nopea Taylor 2})
+\begin{align*}
+f(x)\,&=\, (1-x)\left\{1-\left[2x-x^2+\Ord{|x|^3}\right]
+                        +\left[2x-x^2+\Ord{|x|^3}\right]^2+\Ord{|x|^3}\right\} \\
+    \,&=\, (1-x)[1-(2x-x^2)+4x^2]+\Ord{|x|^3} \,=\, 1-3x+7x^2+\Ord{|x|^3}. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Funktion approksimointi}
+%\index{funktion approksimointi!b@Taylorin polynomilla|vahv}
+
+Taylorin polynomien avulla voidaan differentiaaliin perustuva approksimaatio
+\[
+f(x+\Delta x)\approx f(x)+f'(x)\Delta x
+\]
+(vrt. Luku \ref{differentiaali}) sekä yleistää että tarkentaa: Jos $f$ on $n+1$ kertaa 
+jatkuvasti derivoituva pisteen $x$ ympäristössä, niin
+\[
+\boxed{\begin{aligned}
+\quad f(x+\Delta x)=f(x)
+         &+f'(x)\Delta x+\frac{1}{2!}f''(x)(\Delta x)^2 \\
+         &+ \cdots + \frac{1}{n!}f^{(n)}(x)(\Delta x)^n+\Ord{\abs{\Delta x}^{n+1}}. \quad
+\end{aligned}}
+\]
+Hyvä arvio approksimaation virheelle, tai ainakin sen suuruusluokalle, on yleensä
+\[
+\text{virhe}\ =\ \text{tarkka}-\text{approksimaatio}\ 
+                     \approx\ \frac{1}{(n+1)!}f^{(n+1)}(x)(\Delta x)^{n+1}.
+\]
+\begin{Exa} $\sqrt[10]{1000}\ \approx\ ?$ \end{Exa}
+\ratk
+\[
+\sqrt[10]{1000}\ =\ \sqrt[10]{1024-24}\ =\ 2\sqrt[10]{1-\tfrac{3}{128}}\,.
+\]
+Kun merkitään $f(x)=\sqrt[10]{1-x}$, niin
+\begin{alignat*}{2}
+f'(x)&=-\tfrac{1}{10}(1-x)^{-9/10},\quad &f''(x)&=-\tfrac{9}{100}(1-x)^{-19/10}, \\
+f'''(x)&=-\tfrac{171}{1000}(1-x)^{-29/10},\quad &f^{(4)}(x)&=-\tfrac{4959}{10000}(1-x)^{-39/10}
+\end{alignat*}
+\begin{align*}
+\impl \ &\sqrt[10]{1000} =2f(\tfrac{3}{128}) \\
+&\approx 2\left[1+\left(-\tfrac{1}{10}\right)\cdot\tfrac{3}{128}
+                 +\tfrac{1}{2}\cdot\left(-\tfrac{9}{100}\right)\left(\tfrac{3}{128}\right)^2 +
+       \tfrac{1}{6}\cdot\left(-\tfrac{171}{1000}\right)\left(\tfrac{3}{128}\right)^3\right] \\
+&\approx 2\,(\,1-0.00234275-0.0000247192-0.000000366926\,) \\[2mm]
+&= 1.995262327671.
+\end{align*}
+Virhe (tarkka arvo $-$ likiarvo) on suuruusluokkaa
+\[
++\frac{1}{4!}f^{(4)}(0)\cdot (\Delta x)^4 
+             = -\tfrac{1653}{80000}\cdot\left(\tfrac{3}{128}\right)^4\approx -6\cdot 10^{-9}.
+\]
+Oikea 12-desimaalinen arvo on
+\[
+\sqrt[10]{1000}\approx 1.995262314969. \loppu
+\]
+
+\begin{Exa}\ Arvioi $\,\sin 31^\circ\,$ lähtien arvosta $\,\sin 30^\circ = \tfrac{1}{2}$.
+\end{Exa}
+\ratk Kun $f(x)=\sin x$,\ $x=\tfrac{\pi}{6}$,\ $\Delta x=\tfrac{\pi}{180}$, on
+\begin{align*}
+f(x+\Delta x) \,&\approx\, \sin x + \cos x\,\Delta x-\tfrac{1}{2}\sin x\,(\Delta x)^2 \\
+              \,&=\, \tfrac{1}{2}+\tfrac{\sqrt{3}}{2}\cdot\tfrac{\pi}{180}
+                  -\tfrac{1}{2}\cdot\tfrac{1}{2}\cdot\left(\tfrac{\pi}{180}\right)^2\ 
+                 \approx\ 0.51503882.
+\end{align*}
+Virhe (tarkka arvo $-$ likiarvo) on luokkaa
+\[
+-\frac{1}{3!}\cos x\,(\Delta x)^3\approx -8\cdot 10^{-7}.
+\]
+Oikea 8-desimaalinen arvo on: $\,\sin 31^\circ\approx 0.51503807$. \loppu
+
+\subsection*{Paikalliset ääriarvot}
+
+Lauseen \ref{ääriarvolause} mukaan derivoituvan funktion paikallisessa ääriarvokohdassa on
+myös derivaatan nollakohta. Jos funktio on derivaatan nollakohdan ympäristössä riittävän 
+säännöllinen, niin Taylorin polynomien avulla voidaan selvittää, onko kyseessä todella 
+ääriarvokohta ja jos, niin minkälaatuinen.
+\begin{Lause} \label{Taylorin ääriarvolause}
+\index{paikallinen maksimi, minimi, ääriarvo|emph}
+\index{maksimi (funktion)!a@paikallinen|emph} 
+\index{minimi (funktion)!a@paikallinen|emph}
+\index{zyzy@ääriarvo (paikallinen)|emph}
+\index{kriittinen piste!a@luokittelu|emph}
+Jos $f$ on pisteen $c$ ympäristössä $n$ kertaa jatkuvasti derivoituva, $n\geq 2$, ja pätee
+$\,f^{(k)}(c)=0,\quad k=1\ldots n-1\,$ ja $\,f^{(n)}(c)\neq 0$, niin
+\begin{itemize}
+\item[a)] jos $n$ on pariton, niin $f$:llä ei ole $c$:ssä paikallista ääriarvoa,
+\item[b)] jos $n$ on parillinen, niin $f$:llä on $c$:ssä
+\begin{itemize}
+\item[-] paikallinen minimi, jos $f^{(n)}(c)>0$,
+\item[-] paikallinen maksimi, jos $f^{(n)}(c)<0$.
+\end{itemize}
+\end{itemize}
+\end{Lause}
+\tod Lauseen \ref{Taylorin approksimaatiolause} ja oletuksien mukaan
+\[
+f(x)=f(c)+\frac{1}{n!}f^{(n)}(c)(x-c)^n+o(\abs{x-c}^n), \quad \text{kun}\ x \kohti c.
+\]
+Koska $f^{(n)}(c)\neq 0$, tämä voidaan kirjoittaa myös muotoon
+\[
+f(x)=f(c)+\frac{1}{n!}f^{(n)}(c)\,[\,1+o(1)\,]\,(x-c)^n, \quad \text{kun}\ x\kohti c,
+\]
+jolloin nähdään, että riittävän pienellä $\delta$ ($\delta>0$) on oltava
+\[
+f(x)=f(c)+\frac{1}{n!}f^{(n)}(c)k(x)(x-c)^n,\quad x\in [c-\delta,c+\delta],
+\]
+missä esimerkiksi
+\[
+\frac{1}{2}\leq k(x)\leq \frac{3}{2}\,.
+\]
+Näin ollen jos $n$ on parillinen ja $f^{n)}(c)>0$, on $f(x)>f(c)$ kun $x\in[c-\delta,c)$ tai
+$x\in(c,c+\delta]$, jolloin $c$ on paikallinen minimikohta
+(Määritelmä \ref{paikallinen ääriarvo}). Muissa tapauksissa on päättely vastaava
+(vrt.\ kuvio). \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(11,4)(0,-2)
+\multiput(0,0)(3,0){4}{\vector(1,0){2}}
+\multiput(1.8,-0.5)(3,0){4}{$x$}
+\multiput(0.9,-0.4)(3,0){4}{$c$}
+\multiput(1,0)(3,0){4}{\dashline{0.1}(0,0)(0,1)}
+\put(0,-2){\parbox{2cm}{\small $n$ pariton, $f^{(n)}(c)>0$}}
+\put(3,-2){\parbox{2cm}{\small $n$ pariton, $f^{(n)}(c)<0$}}
+\put(6,-2){\parbox{2cm}{\small $n$ parillinen $f^{(n)}(c)>0$}}
+\put(9,-2){\parbox{2cm}{\small $n$ parillinen, $f^{(n)}(c)<0$}}
+\curve(
+  0,  0.5,
+0.2,0.744,
+0.4,0.892,
+0.6,0.968,
+0.8,0.996,
+  1,    1,
+1.2,1.004,
+1.4,1.032,
+1.6,1.108,
+1.8,1.256,
+  2,  1.5)
+\curve(
+  3,  1.5,
+3.2,1.256,
+3.4,1.108,
+3.6,1.032,
+3.8,1.004,
+  4,    1,
+4.2,0.996,
+4.4,0.968,
+4.6,0.892,
+4.8,0.744,
+  5,  0.5)
+\curve(
+  6,   1.5,
+6.2,1.2048,
+6.4,1.0648,
+6.6,1.0128,
+6.8,1.0008,
+  7,     1,
+7.2,1.0008,
+7.4,1.0128,
+7.6,1.0648,
+7.8,1.2048,
+  8,   1.5)
+\curve(
+  9,   0.5,
+9.2,0.7952,
+9.4,0.9352,
+9.6,0.9872,
+9.8,0.9992,
+  10,     1,
+10.2,0.9992,
+10.4,0.9872,
+10.6,0.9352,
+10.8,0.7952,
+  11,   0.5)
+\end{picture}
+\end{center}
+\end{figure}
+\begin{Exa}
+Tutki mahdollisen ääriarvokohdan laatu seuraavissa tapauksissa: \vspace{2mm}\newline
+a) \   $f(x)=\sin x + \cos x, \quad c=\pi/4$ \newline
+b) \   $f(x)=e^{-x}+\sin x + \sqrt{1-x^2}, \quad c=0$ \newline
+c) \,\ $f(x)=1-\cos x-\sqrt{1+x^2}, \quad c=0$
+\begin{align*} 
+\text{\ratk} \quad &\text{a)} \quad f'(\pi/4)=0,\quad f''(\pi/4)=-\sqrt{2} \qquad
+                                    \qimpl \text{paik.\ maksimi.} \hspace{1cm} \\[1mm]
+                   &\text{b)} \quad f'(0)=f''(0)=0,\quad f'''(0)=-2 \quad\,
+                                    \qimpl \text{ei ääriarvoa.} \\
+                   &\text{c)} \quad f^{(k)}(0)=0,\ k=1 \ldots 3,\ f^{(4)}(0)=5 \,
+                                    \qimpl \text{paik.\ minimi.} \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Funktio $\tfrac{f(x)}{g(x)}=\tfrac{0}{0}\,$, kun $x=a$}
+%\index{funktion approksimointi!b@Taylorin polynomilla|vahv}
+
+Jos funktiot $f$ ja $g$ ovat pisteen $a$ ympäristössä säännöllisiä ja $f(a)=g(a)=0$, niin
+Taylorin lauseen avulla voidaan tutkia, millainen funktio $F(x)=f(x)/g(x)$ on pisteen $a$
+ympäristössä. Ensinnäkin jos halutaan ratkaista raja-arvokysymys
+\[
+\lim_{x\kohti a} \frac{f(x)}{g(x)}=\,?
+\]
+niin Taylorin lauseeseen perustuva menettely on seuraava: Oletetaan, että $f$ ja $g$ ovat $n$
+kertaa jatkuvasti derivoituvia pisteen $a$ ympäristössä ja että pätee
+\[
+\frac{f(a)}{g(a)}=\frac{0}{0}\,,\quad \frac{f'(a)}{g'(a)}=\frac{0}{0}\,,\ \ldots,\ 
+                                      \frac{f^{(n-1)}(a)}{g^{(n-1)}(a)}=\frac{0}{0}\,, \quad 
+                                      \frac{f^{(n)}(a)}{g^{(n)}(a)}=\frac{A}{B}\,,
+\]
+missä $A \neq 0$ tai $B \neq 0$. Tällöin Lauseen \ref{Taylorin approksimaatiolause} mukaan
+\[
+\frac{f(x)}{g(x)} = \frac{\frac{A}{n!}\,(x-a)^n + \ord{\abs{x-a}^n)}}{\frac{B}{n!}\,(x-a)^n 
+                                                + \ord{\abs{x-a}^n)}}
+                  = \frac{A+\ord{1}}{B+\ord{1}}, \quad \text{kun}\ x \kohti a.
+\]
+Päätellään, että jos $A \neq 0$ ja $B=0$, niin $\abs{f(x)/g(x)}\kohti\infty$, kun
+$x \kohti a$, jolloin raja-arvoa ei ole (reaalilukuna --- voi olla $\lim=\pm\infty$). Muussa
+tapauksessa, eli jos $B \neq 0$, on
+\[
+\lim_{x \kohti a} \frac{f(x)}{g(x)} = \frac{A}{B} = \frac{f^{(n)}(a)}{g^{(n)}(a)}\,,
+\]
+ja tällöin on yleisemminkin
+\[
+\lim_{x \kohti a} \frac{f(x)}{g(x)} 
+               = \lim_{x \kohti a} \frac{f'(x)}{g'(x)} 
+               =\ \ldots\ = \lim_{x \kohti a} \frac{f^{(n)}(x)}{g^{(n)}(x)}\,.
+\]
+Tämä tulos on siis voimassa (tehtyjen säännöllisyysoletusten puitteissa), kunhan ketjun 
+\pain{viimeinen} raja-arvo on olemassa. --- Tulos on jo ennestään tuttu l'Hospitalin
+sääntönä (Lause \ref{Hospital}).
+\begin{Exa} Määritä raja-arvo 
+$\ \displaystyle{\lim_{x \kohti 0} \frac{\sin 2x-2x}{\sinh x-x}\,}$. 
+\end{Exa}
+\ratk \,Funktiot $f(x)=\sin 2x-2x$ ja $g(x)=\sinh x-x$ ovat sileitä $\R$:ssä. Derivoimalla 
+todetaan
+\[
+\frac{f'(x)}{g'(x)}=\frac{2\cos 2x-2}{\cosh x-1}\,, \quad 
+\frac{f''(x)}{g''(x)}=\frac{-4\sin 2x}{\sinh x}\,, \quad
+\frac{f'''(x)}{g'''(x)}=\frac{-8\cos 2x}{\cosh x}\,,\ \ldots
+\]
+Havaitaan, että $f^{(k)}(0)=g^{(k)}(0)=0$, kun $k=0,1,2$, ja $f'''(0)=-8,\ g'''(0)=1$. Siis
+\[
+\lim_{x \kohti 0} \frac{\sin 2x-2x}{\sinh x-x} = \frac{-8}{1} = -8. \loppu
+\]
+
+Taylorin lauseen perusteella saadaan siis raja-arvolle $\lim_{x \kohti a} f(x)/g(x)$ sama
+laskukaava kuin l'Hospitalin säännöllä. Funktiosta $f(x)/g(x)$ saadaan kuitenkin Taylorin
+polynomien avulla selville paljon muutakin. Seuraavassa esimerkki vaativammasta tehtävän
+asettelusta.
+\begin{Exa} Määritä polynomit $p$ ja $q$ siten, että väleillä $[-1,0)$ ja $(0,1]$ pätee
+\[
+F(x)=\frac{\sin 2x-2x}{\sinh x-x} \,=\, p(x)+\Ord{x^4},\quad\ 
+G(x)=\frac{\sin x}{2x^2}+\frac{\cos x -1}{x^3}=q(x)+\Ord{\abs{x}^5}.
+\]
+\begin{align*}
+\text{\ratk} \quad  \sin 2x -2x\
+         &=\ \Bigl(2x-\frac{1}{6}(2x)^3+\frac{1}{120}(2x)^5+\Ord{\abs{x}^7}\Bigr)-2x 
+                                                                           \hspace{2cm} \\
+         &=\ -\frac{4}{3}x^3+\frac{4}{15}x^5+\Ord{\abs{x}^7}, \\
+\sinh x -x \,\ 
+         &=\ \Bigl(x+\frac{1}{6}x^3+\frac{1}{120}x^5+\Ord{\abs{x}^7}\Bigr)-x \\
+         &=\ \frac{1}{6}x^3+\frac{1}{120}x^5+\Ord{\abs{x}^7} \\
+\qimpl \frac{\sin 2x-2x}{\sinh x-x}\ 
+         &=\ \frac{-8+\frac{8}{5}x^2+\ordoO{x^4}}{1+\frac{1}{20}x^2+\Ord{x^4}} \\[2mm]
+         &=\ -8+2x^2+\Ord{x^4} \,=\, p(x)+\Ord{x^4}. \\[5mm]
+\frac{\sin x}{2x^2}+\frac{\cos x -1}{x^3}\ 
+         &=\ \frac{1}{2x^2}\Bigl(x-\frac{x^3}{6}+\frac{x^5}{120}+\Ord{\abs{x}^7}\Bigr) \\
+         & \quad\ + \frac{1}{x^3}\Bigl(-\frac{1}{2}x^2 +\frac{1}{24}x^4-\frac{1}{720}x^6 + 
+                                                      \Ord{x^8}\Bigr) \\
+         &=\ -\frac{1}{24}x+\frac{1}{360}x^3+\Ord{\abs{x^5}} \,=\, q(x)+\Ord{\abs{x}^5}.
+\end{align*}
+
+\vspace{2mm}
+
+Tuloksista voi päätellä esimerkiksi raja-arvot
+\[
+\lim_{x\kohti 0}\left(\frac{\sin 2x-2x}{x^2\sinh x-x^3}+\frac{8}{x^2}\right) = 2, \qquad 
+\lim_{x\kohti 0} \left(\frac{\sin x}{2x^3}+\frac{\cos x -1}{x^4}\right)=-\frac{1}{24}\,.
+\]
+Nähdään myös, että jos asetetaan (jatkamisperiaatteella) $F(0)=-8$ ja $G(0)=0$, niin $F$:llä
+on pisteessä $x=0$ paikallinen minimi ja $G$ on origon ympäristössä aidosti vähenevä. \loppu
+\end{Exa}
+
+\subsection*{Differenssiapproksimaatiot}
+\index{differenssiapproksimaatio|vahv}
+
+Taylorin lauseella on usein keskeinen rooli, kun halutaan johtaa virhearvioita numeerisille
+(likimääräisille) laskentamenetelmille, jotka perustuvat oletettuun funktion säännöllisyyteen.
+Tarkastellaan esimerkkinä derivaattojen numeerisessa laskemisessa käytettäviä nk.\
+\kor{differenssiapproksimaatioita}. Näissä ei funktiota oleteta tunnetuksi lausekkeena vaan
+riittää tuntea funktion arvo äärellisen monessa (tyypillisesti vain muutamassa) pisteessä
+tarkasteltavan pisteen lähellä. Seuraavat kolme ovat differenssiapproksimaatioista
+tavallisimmat (ol.\ $h>0$):
+\begin{align}
+f'(a)  &\,\approx\, \frac{f(a+h)-f(a)}{h}\,, \label{dif1} \tag{\text{a}} \\
+f'(a)  &\,\approx\, \frac{f(a+h)-f(a-h)}{2h}\,, \label{dif2} \tag{\text{b}} \\
+f''(a) &\,\approx\, \frac{f(a+h)-2f(a)+f(a-h)}{h^2}\,. \label{dif3} \tag{\text{c}}
+\end{align}
+Näistä (a) perustuu suoraan derivaatan määritelmään. Approksimaatioita (b) ja (c) sanotaan 
+\index{keskeisdifferenssiapproksimaatio}%
+\kor{keskeis}differenssiapproksimaatioiksi, syystä että funktio evaluoidaan näissä $a$:n
+suhteen symmetrisessä pisteistössä.
+
+Em.\ approksimaatioille voidaan johtaa virhearvio Taylorin lauseesta olettaen, että $f$ on
+riittävän säännöllinen. Tarkastellaan esimerkkinä approksimaatiota (b), muut jätetään
+harjoitustehtäviksi (Harj.teht.\,\ref{H-dif-5: virhearvio (a)},\ref{H-dif-5: virhearvio (c)}).
+\begin{Prop} \label{keskeisdifferenssin tarkkuus} Jos $f$ on kolmesti jatkuvasti derivoituva
+välilä $[a-h,a+h]$, niin differenssiapproksimaatiolle (b) pätee virhearvio
+\[
+\left|\,f'(a)-\frac{f(a+h)-f(a-h)}{2h}\,\right| \,\le\,\frac{1}{6}M\,h^2, \quad
+                                          M=\max_{x\in[a-h,a+h]}|f'''(x)|.
+\]
+\end{Prop}
+\tod Oletuksien perusteella on joillakin $\,\xi_1\in(a,a+h)\,$ ja $\,\xi_2\in(a-h,a)$ 
+\begin{align*}
+f(a+h) &= f(a)+f'(a)h+\frac{1}{2}f''(a)\,h^2+\frac{1}{6}f'''(\xi_1)\,h^3, \\
+f(a-h) &= f(a)-f'(a)h+\frac{1}{2}f''(a)\,h^2-\frac{1}{6}f'''(\xi_2)\,h^3
+\end{align*}
+(Lause \ref{Taylor}: välin $[a,b]$ tilalla väli $[a-h,a+h]$, $x_0=a$, $x=a \pm h$, $n=2$).
+Näistä seuraa vähennyslaskulla
+\[
+f'(a)-\frac{f(a+h)-f(a-h)}{2h} = -\frac{1}{12}\,[f'''(\xi_1)+f'''(\xi_2)]\,h^2.
+\]
+Käyttämällä oikealla arviota $|f'''(\xi_1)+f'''(\xi_2)| \le |f'''(\xi_1)|+|f'''(\xi_2)| \le 2M$
+seuraa väite. \loppu
+
+Proposition \ref{keskeisdifferenssin tarkkuus} perusteella approksimaatio (b) on tarkka
+toisen asteen polynomeille (joille $M=0$). Valitsemalla $f(x)=\frac{1}{6}M(x-a)^3$ nähdään
+myös, että virhearvio on tehdyin oletuksin tarkin mahdollinen.
+
+Yleisesti sanotaan, että differenssiapproksimaation (tarkkuuden)
+\index{kertaluku!b@tarkkuuden}%
+\kor{kertaluku} on $r$, jos
+sen virhe on $\mathcal{O}(h^r)$ mutta ei $o(h^r)$ yleiselle, riittävän säännölliselle
+funktiolle. Approksimaation (b) kertaluku on siis $r=2$, eli kyseessä on
+\kor{toisen kertaluvun} approksimaatio. Approksimaation (c) kertaluku on samoin $r=2$
+(Harj.teht.\,\ref{H-dif-5: virhearvio (c)}), sen sijaan (a) on ensimmäisen kertaluvun ($r=1$)
+approksimaatio (Harj.teht.\,\ref{H-dif-5: virhearvio (a)}).
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-VIII-5: suuruusluokka-algebra}
+Perustele suuruusluokka-algebran säännöt (ol.\ $x,y \ge 0$)
+\[
+\Ord{x}+\Ord{y} = \Ord{\max\{x,y\}}, \quad 
+\Ord{x}\Ord{y} = \Ord{xy}, \quad
+\ord{x}\Ord{y} = \ord{xy}.
+\]
+
+\item
+Mitä funktion $f$ ominaisuuksia tarkoitetaan seuraavilla merkinnöillä? \newline
+a) \ $f(x)=f(a)+\ord{1}, \quad \text{kun}\,\ x \kohti a$. \newline
+b) \ $f(x_1)-f(x_2)=\Ord{\abs{x_1-x_2}}, \quad \text{kun}\,\ x_1,x_2\in[a,b]$. \newline
+c) \ $f(x)=f(a)+k(x-a)+o\,(\abs{x-a}), \quad \text{kun}\,\ x \kohti a$.
+
+\item
+Anna suuruusluokka-arviot seuraavien approksimaatioiden virheille: \vspace{1mm}\newline
+a) \ $\sqrt{x^4+2} \approx \sqrt{2}, \quad \text{kun}\ x \kohti 0$ \vspace{2mm}\newline
+b) \ $\sqrt{x^4+3x} \approx \sqrt{3x}, \quad \text{kun}\ x \kohti 0^+$ \vspace{1mm}\newline
+c) \ $\sqrt{x^4+4x} \approx x^2, \quad \text{kun}\ x\kohti\pm\infty$ \vspace{1mm}\newline
+d) \ $\sqrt{x^4+4x} \approx x^2+2x^{-1} \quad \text{kun}\ x\kohti\infty$ \vspace{0.5mm}\newline
+e) \ $x/\sin x \approx 1, \quad \text{kun}\ x \kohti 0$ \vspace{1mm}\newline
+f) \ $\ln(1+e^x) \approx x, \quad \text{kun}\ x\kohti\infty$
+
+\item
+Arvioi approksimaation $f(x) \approx T_2(x,0)$ virheen itseisarvo välillä $[-1/2,\,1/2]$
+seuraaville funktioille: \vspace{1mm}\newline
+a) \, $\sqrt{1+x}\quad\,\ $ 
+b) \, $\sqrt[10]{1+x}\quad\,\ $ 
+c) \, $\tan x\quad\,\ $ 
+d) \, $\ln(1+x)\quad\,\ $ 
+e) \, $e^{\sin x}$   
+
+\item
+Arvioi seuraavien funktioapproksimaatioiden virhe:
+\begin{align*}
+&\text{a)}\ \ \sqrt[3]{8+x} \approx 2+\frac{x}{12}-\frac{x^2}{288}\,, \quad 
+                                         \text{kun}\ \abs{x} \le 1 \\
+&\text{b)}\ \ \sin x \approx x-\frac{1}{6}x^3, \quad 
+                                         \text{kun}\ x\vastaa\alpha\in[0\aste,10\aste] \\
+&\text{c)}\ \ \frac{1}{x^4}\left[\frac{1}{\sqrt{1+x^2}}-\sqrt{1-x^2}\right] 
+            \approx \frac{1}{2}\,, \quad \text{kun}\ \abs{x} \le 0.15\,\ \text{ja}\,\ x \neq 0
+\end{align*}
+
+\item
+Jos $T_n(x,0)$ on funktion $f(x)=\cos x$ Taylorin polynomi, niin millä $a$:n ja $n$:n arvoilla
+voidaan taata, että \newline
+a) \ $\abs{\cos x-T_2(x,0)} \le 10^{-4}$ välillä $[-a,a]$, \newline
+b) \ $\abs{\cos x-T_n(x,0)} \le 10^{-4}$ välillä $[-\pi/2,\,\pi/2]$\,?
+
+\item
+a) Laske luvulle $1/\sqrt[4]{e}$ rationaalinen likiarvo approksimoimalla funktiota $e^x$ toisen
+asteen Taylorin polynomilla. Arvioi approksimaation virhe Taylorin lauseen avulla ja vertaa
+virheen tarkkaan arvoon. \vspace{1mm}\newline
+b) Laske luvulle $a=\sqrt[12]{4000}$ rationaalinen likiarvo kirjoittamalla $4000=4096(1-x)$ ja
+approksimoimalla funktiota $f(x)=\sqrt[12]{1-x}$ toisen asteen Taylorin polynomilla. Arvioi
+approksimaation virhe Taylorin lauseen avulla ja vertaa virheen tarkkaan arvoon.
+
+\item
+Suhteellisuusteorian mukaan vauhdilla $v$ liikkuvan partikkelin liike-energia on
+\[
+E_k = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}-mc^2,
+\]
+missä $m$ on partikkelin massa ja $c \approx 3 \cdot 10^8$ m/s on valon nopeus. Millaisilla 
+vauhdin $v$ arvoilla approksimaation $E_k \approx \frac{1}{2} mv^2$ suhteellinen virhe on
+enintään $0.01\%$\,? 
+
+\item 
+Seuraavilla funktioilla piste $x=0$ on mahdollinen paikallinen minimi- tai maksimikohta.
+Tutki asia derivoimalla!
+\[
+\text{a)}\ (1-x)e^x \quad\
+\text{b)}\ (2-x^2)\cos x \quad\
+\text{c)}\ (x-x^4)\sin x \quad\
+\text{d)}\ \sqrt{1-x^2}-1/\sqrt{1+x^2}
+\]
+
+\item
+Millä $a$:n ja $b$:n arvoilla funktiolla
+\[
+\text{a)}\ e^x+ax+bx^2 \quad\ 
+\text{b)}\ x\sin x+ax^2+bx^4 \quad\ 
+\text{c)}\ \sin x+\cos x+ax+bx^2
+\]
+on paikallinen minimi pisteessä $x=0$\,?
+
+\item
+Yhtälö $\,y(\cos y-\sin y)=2\sin x+\cos x+ax+b\,$ määritelee pisteen $x=0$ ympäristössä
+funktion $y(x)$. Määritä vakiot $a$ ja $b$, kun tiedetään, että $y(x)$ saavuttaa pisteessä
+$x=0$ paikallisen ääriarvon $y(0)=0$. Onko kyseessä maksimi vai minimi?
+
+\item
+Määritä seuraavat raja-arvot:
+\begin{align*}
+&\text{a)}\ \ \lim_{x \kohti 0}\frac{\sqrt[7]{1+x}-1}{x} \qquad
+ \text{b)}\ \ \lim_{x \kohti 0}\frac{3x}{\tan 4x} \qquad
+ \text{c)}\ \ \lim_{x \kohti 0}\frac{ 2\cos x-2+x^2 }{x^4 } \\
+&\text{d)}\ \ \lim_{x \kohti 0}\frac{x-\sin x}{x-\tan x} \qquad
+ \text{e)}\ \ \lim_{x \kohti 0}\frac{10^x-e^x}{x} \qquad
+ \text{f)}\ \ \lim_{x \kohti 0}\frac{1-\cos ax}{1-\cos bx} \\
+&\text{g)}\ \ \lim_{x\kohti\pi/2}\frac{\cos 3x}{\pi-2x} \qquad
+ \text{h)}\ \ \lim_{t\kohti\pi/2}\frac{\ln\sin t}{\cos t} \qquad
+ \text{i)}\ \ \lim_{x \kohti 0^+}\frac{\sin^2 x}{\tan x-x} \\
+&\text{j)}\ \ \lim_{x \kohti 1}\frac{\ln(ex)-1}{\sin\pi x} \qquad
+ \text{k)}\ \ \lim_{x \kohti -\infty} x\sin\frac{1}{x} \qquad
+ \text{l)}\ \ \lim_{x\kohti\infty}x^2\ln(\cos\frac{\pi}{x}) \\[1mm]
+&\text{m)}\ \ \lim_{x\kohti\infty} \left[\sqrt{x^2+154x}-\ln(5+e^x)\right] \qquad
+ \text{n)}\ \ \lim_{x\kohti\infty}\left(\sqrt[6]{x^6+42x^5+77x}-x\right) \qquad
+\end{align*}
+
+\item
+Määritä seuraaville funktioille $f$ mahdollisimman alhaista astetta oleva polynomi $p$
+siten, että annetulla $m$ ja jollakin $\delta>0$ on $f(x)=p(x)+\Ord{|x|^m}$, kun
+$0<|x|<\delta$. Tutki myös pisteen $x=0$ laatu mahdollisena $f$:n paikallisena
+ääriarvokohtana, kun asetetaan $f(0)=\lim_{x \kohti 0} f(x)$.
+\begin{align*}
+&\text{a)}\,\ \frac{1-\cos x}{x^2}\,,\,\ m=7 \qquad
+ \text{b)}\,\ \frac{\sin x-x}{x^3}\,,\,\ m=8 \qquad
+ \text{c)}\,\ \frac{x^3}{\sin x-x}\,,\,\ m=3 \\
+&\text{d)}\,\ \frac{x}{e^x-1}\,,\,\ m=3 \qquad
+ \text{e)}\,\ \frac{\ln(1+x)}{x}\,,\,\ m=5 \qquad
+ \text{f)}\,\ \frac{\sqrt{1+x}-1}{\sqrt[3]{1-x}-1}\,,\,\ m=3
+\end{align*}
+
+\item \label{H-dif-5: virhearvio (a)}
+Näytä, että jos $f$ on jatkuva välillä $[a,a+h]$ ja
+kahdesti derivoituva välillä $(a,a+h)$, niin jollakin $\xi\in(a,a+h)$ pätee
+\[
+f'(a)-\frac{f(a+h)-f(a)}{h} \,=\, -\frac{1}{2}\,f''(\xi)\,h.
+\]
+
+\item (*) \label{H-dif-5: virhearvio (c)}
+Näytä Taylorin lauseen avulla, että jos $f$ on neljä
+kertaa jatkuvasti derivoituva välillä $[a-h,a+h]$, niin pätee
+\[
+\left|\,f''(a)-\frac{f(a+h)-2f(a)+f(a-h)}{h^2}\,\right| 
+               \,\le\,\frac{1}{12}\left(\max_{x\in[a-h,a+h]}|f^{(4)}(x)|\right) h^2.
+\]
+Miten arvio toteutuu funktiolle $f(x)=(x-a)^4$\,?
+
+\item (*)
+a) Näytä, että eräillä (millä?) $A$:n ja $B$:n arvoilla pätee
+\[
+\Arccos x\,=\,A\sqrt{1-x}+B(1-x)^{3/2}+\mathcal{O}\left((1-x)^{5/2}\right),
+\quad \text{kun}\ x \kohti 1^-.
+\]
+b) Näytä, että jos sykloidin yhtälöt $x=R(t-\sin t),\ y=R(1-\cos t)$ eliminoidaan muotoon
+$y=y(x)$ (ratkaisemalla $t=t(x)$ ensimmäisestä yhtälöstä), niin origon ympäristössä pätee
+\[
+y(x) = 3\sqrt[3]{\frac{Rx^2}{6}}+\mathcal{O}\left(\sqrt[3]{\frac{x^4}{R}}\,\right).
+\]
+
+\item (*)
+Olkoon $c$ funktion $f$ yksinkertainen nollakohta ja olkoon $f$ kolme kertaa jatkuvasti
+derivoituva $c$:n ympäristössä. Halutaan määrätä $c$ Newtonin menetelmästä muunnellulla
+iteraatiolla $\,x_{n+1}=F(x_n)$, missä
+\[
+F(x)=x-\frac{f(x)}{f'(x)}+[f(x)]^2g(x).
+\]
+Miten $g(x)$ on valittava, jotta iteraation suppeneminen kohti $c$:tä on vähintään
+kuutiollista? Millä ehdolla suppeneminen on täsmälleen kuutiollista? Sovella menetelmää 
+funktioon $f(x)=x^2-a,\ a>0$
+(vrt.\ Harj.teht.\,\ref{kiintopisteiteraatio}:\ref{H-V-7: kuutiollisia iteraatioita}b).
+
+\end{enumerate}

@@ -1,0 +1,20 @@
+\begin{picture}(0,0)%
+\includegraphics{kuvapot-7.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3702,1947)(2611,-1141)
+\put(3376,-871){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\theta$}}}
+\put(2701,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\underbrace{\hspace{4cm}}_{dx}$}}}
+\put(5491,-151){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$y$}}}
+\put(6211,-1141){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x$}}}
+\put(4591,-61){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\begin{turn}{-90}$\overbrace{\hspace{2cm}}^{\text{\begin{turn}{90}$dy$\end{turn}}}$\end{turn}}}}
+\put(2611,-871){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\begin{turn}{26.6}$\overbrace{\hspace{4.472cm}}^{ds}$\end{turn}}}}
+\put(3061,614){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\vec n$}}}
+\end{picture}

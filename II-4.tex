@@ -1,0 +1,258 @@
+\section{*Abstrakti skalaaritulo ja normi} \label{abstrakti skalaaritulo}
+\sectionmark{*Abstrakti skalaaritulo}
+\alku
+
+Oletetaan lähtökohdaksi annettu reaalikertoiminen vektoriavaruus $(U,\R)$ ja siinä määritelty
+skalaaritulo eli \kor{sisätulo}, jota merkitään symbolilla $\scp{\cdot}{\cdot}$. $U$:n alkioita
+(vektoreita) merkitään $\mpu, \mpv$, jne. --- Mitään hypoteeseja näiden 'ulkonäöstä' ei tehdä.
+Skalaaritulosta oletetaan, että $\scp{\mpu}{\mpv} \in \R$ on määritelty kaikille pareille 
+$(\mpu, \mpv),\ \mpu,\mpv \in U$ (eli $(\mpu,\mpv) \in U \times U$, vrt.\ alaviite
+Luvussa \ref{tasonvektorit}) ja että seuraavat lainalaisuudet ovat voimassa:
+\index{skalaaritulo!d@abstrakti}
+\begin{enumerate}
+\item \kor{Symmetrisyys} \index{symmetrisyys!b@skalaaritulon}
+\begin{itemize}
+\item[] $\scp{\mpu}{\mpv}=\scp{\mpv}{\mpu} \quad \forall\,\mpu,\mpv \in U.$
+\end{itemize}
+\item \kor{Bilineaarisuus} \index{bilineaarisuus}
+\begin{itemize}
+\item[(a)] $\scp{\alpha \mpu + \beta \mpv}{\mw} 
+                             = \alpha \scp{\mpu}{\mw} + \beta \scp{\mpv}{\mw}$,
+\item[(b)] $\scp{\mpu}{\alpha \mpv + \beta \mw} 
+                             = \alpha \scp{\mpu}{\mpv} + \beta \scp{\mpu}{\mw}$
+\item[]    $\qquad\qquad\forall\,\mpu,\mpv,\mw \in U,\ \alpha,\beta\in\R.$
+\end{itemize}
+\item \kor{Positiividefiniittisyys} \index{positiividefiniittisyys!a@skalaaritulon}
+\begin{itemize}
+\item[(a)] $\scp{\mpu}{\mpu} \ge 0 \quad \forall\,\mpu \in U,$
+\item[(b)] $\scp{\mpu}{\mpu} = 0 \ \ekv \ \mpu = \mathbf{0}.$
+\end{itemize}
+\end{enumerate}
+Tässä $U$:n nollavektoria (vektorien yhteenlaskun nolla-alkiota) on merkitty $\mathbf{0}$:lla.
+
+Oletukset 1--3 ovat yleiset, reaalikertoimisen vektoriavaruuden 
+\kor{skalaaritulon aksioomat}.\footnote[2]{Bilineaarisuusvaatimus (b) on aksioomana tarpeeton,
+koska se seuraa ehdosta (a) sekä symmetriasta. Positiividefiniittisyysaksiooman osa (b) riittää
+myös asettaa muodossa '$\impl$', sillä '$\Leftarrow$' seuraa bilineaarisuudesta.} Jos 
+$\scp{\cdot}{\cdot}$ on aksioomat 1--3 täyttävä $U$:n skalaaritulo, niin sanotaan, että ko.\ 
+skalaarituloon liittyvä vektorin $\mpu \in U$ \kor{normi} on 
+\[ 
+\abs{\mpu} = \scp{\mpu}{\mpu}^{1/2}.
+\]
+\begin{Exa} Olkoon $U=(\Rkaksi,\R)$ tason vektoriavaruuden $(V,\R)$ ortonormeerattua kantaa
+$\{\vec i,\vec j\}$ vastaava koordinaattiavaruus. Tällöin jos $\mpu=(x_1\,,y_1) \in U$ ja 
+$\mpv=(x_2\,,y_2) \in U$, ja vastaavat tason vektorit ovat $\vec u=x_1\vec i+y_1\vec j$ ja
+$\vec v=x_2\vec i+y_2\vec j$, niin edellisen luvun päätelmien perusteella aksioomat 1--3 ovat 
+voimassa, kun $U$:n skalaaritulo määritellään
+\[
+\scp{\mpu}{\mpv}=\vec u\cdot\vec v=x_1 x_2 + y_1 y_2. \loppu
+\]
+\end{Exa}
+Asetetaan esimerkkiin viitaten
+\begin{Def} \label{R2:n euklidinen skalaaritulo ja normi}
+\index{euklidinen!c@skalaaritulo|emph} \index{euklidinen!b@normi|emph}
+\index{skalaaritulo!c@$\R^n$:n euklidinen|emph} \index{normi!euklidinen|emph}
+Jos $\mpu=(x_1\,,y_1)\in\Rkaksi$ ja $\mpv=(x_2\,,y_2)\in\Rkaksi$, niin sanotaan, että
+skalaaritulo
+\[
+\scp{\mpu}{\mpv}=x_1 x_2 + y_1 y_2
+\]
+on $\Rkaksi$:n (vektoriavaruuden $(\Rkaksi,\R)$) \kor{euklidinen skalaaritulo}. Normi
+\[
+\abs{\mpu} = \scp{\mpu}{\mpu}^{1/2} = (x^2+y^2)^{1/2}, \quad \mpu=(x,y)\in\Rkaksi
+\]
+on $\Rkaksi$:n \kor{euklidinen normi}.
+\end{Def}
+\jatko \begin{Exa} (jatko) Tason vektoreiden skalaaritulolle pätevä epäyhtälö
+$\abs{\vec u\cdot\vec v\,} \le \abs{\vec u\,}\abs{\vec v\,}$ voidaan kirjoittaa $\Rkaksi$:n
+euklidisen skalaaritulon ja normin avulla muodossa
+\[
+\abs{\scp{\mpu}{\mpv}}\le\abs{\mpu}\abs{\mpv} \quad \forall\,\mpu,\mpv\in\Rkaksi. \loppu
+\]
+\end{Exa}
+Esimerkin epäyhtälö tarkoittaa auki kirjoitettunaa väittämää
+\[
+\abs{x_1 x_2 + y_1 y_2} \le \sqrt{x_1^2+y_1^2}\,\sqrt{x_2^2+y_2^2}\ \quad 
+                                           \forall\,x_1,\,x_2,\,y_1,\,y_2\in\R.
+\]
+Tämä on siis tosi geometrisin perustein --- mutta väittämänä tämä ei näytä lainkaan geometriasta
+riippuvalta. Seuraava lause osoittaa, että kyseessä ei olekaan geometrinen vaan 
+\pain{al}g\pain{ebrallinen} väittämä: Epäyhtälö on erikoistapaus yleisemmästä, kaikille 
+skalaarituloille pätevästä \kor {Cauchyn} tai \kor{Cauchyn--Schwarzin epäyhtälöstä}. Kyseessä on
+kolmioepäyhtälön ohella matemaattisen analyysin yleisimmin käytetty epäyhtälö.
+\begin{Lause} \vahv{(Cauchy--Schwarz)} \label{schwarzR}
+\index{Cauchyn!f@--Schwarzin epäyhtälö|emph} Jokaiselle aksioomat 1--3 toteuttavalle,
+reaalikertoimisen vektoriavaruuden $U$ skalaaritulolle pätee epäyhtälö
+\[
+\abs{\scp{\mpu}{\mpv}} \le \abs{\mpu} \abs{\mpv}, \quad 
+\]                            
+missä $\abs{\mpu}=\sqrt{\scp{\mpu}{\mpu}}$.
+\end{Lause}
+\tod Jos $\mpu=\mathbf{0}$, niin $\scp{\mpu}{\mpv}=\scp{\mpu}{\mpu}=0$ bilineaarisuusehtojen
+nojalla, joten tässä tapauksessa väittämä on tosi muodossa $0 \leq 0$. Oletetaan siis, että 
+$\mpu \neq \mathbf{0}$, jolloin aksiooman 3 mukaan on $\scp{\mpu}{\mpu} > 0$. Tällöin saman 
+aksiooman mukaan 
+\[
+\scp{\beta \mpu + \mpv}{\beta \mpu + \mpv} \geq 0 \quad \forall \beta \in \R.
+\]
+Aksioomien 1--2 perusteella tämä voidaan kirjoittaa yhtäpitävästi muotoon
+\[
+\beta^2\scp{\mpu}{\mpu} + 2 \beta \scp{\mpu}{\mpv} 
+                        + \scp{\mpv}{\mpv} \geq 0 \quad \forall \beta \in \R.
+\]
+Valitsemalla tässä
+\[
+\beta=-\frac{\scp{\mpu}{\mpv}}{\scp{\mpu}{\mpu}}
+\]
+seuraa
+\begin{align*}
+-\frac{\scp{\mpu}{\mpv}}{\scp{\mpu}{\mpu}}^2+\scp{\mpv}{\mpv} \geq 0
+            &\qekv \scp{\mpu}{\mpv}^2 \ \leq \ \scp{\mpu}{\mpu}\scp{\mpv}{\mpv} \\
+            &\qekv \abs{\scp{\mpu}{\mpv}} \ \leq \ \abs{\mpu} \abs{\mpv}. \loppu
+\end{align*}
+
+\subsection*{Normi}
+\index{normi|vahv}
+
+Edellä kutsuttiin jo vektorin $\mpu$ \pain{normiksi} skalaaritulon avulla määriteltyä
+reaalilukua $\abs{\mpu}=\scp{\mpu}{\mpu}^{1/2}$. Yleisemmin \kor{vekoriavaruuden normi} 
+ei edellytä skalaaritulon määrittelyä, vaan kyse on yleisemmästä tavasta määrätä vektorille
+'pituus'. Yleisempää vektorin $\mpu$ normia merkitään symbolilla $\norm{\mpu}$. Vektorin
+'normittamisessa' on kyse laskuoperaatiosta (tai mittausoperaatiosta) 
+$\mpu \in U \map \norm{\mpu}\in\R$, jonka on täytettävä seuraavat \kor{normin aksioomat}:
+\begin{enumerate}
+\item \kor{Positiividefiniittisyys} \index{positiividefiniittisyys!b@normin}
+\begin{itemize}
+\item[(a)] $\norm{\mpu} \ge 0 \quad \forall\,\mpu \in U,$ 
+\item[(b)] $\norm{\mpu}=0\,\impl\,\mpu=\mv{0}.$
+\end{itemize}
+\item \kor{Skaalautuvuus} \index{skaalautuvuus (normin)}
+\begin{itemize} 
+\item[]$\norm{\alpha\mpu}=\abs{\alpha}\norm{\mpu} \quad \forall\,\mpu\,\in U,\ \alpha\in\R.$
+\end{itemize}
+\item \kor{Kolmioepäyhtälö} \index{kolmioepäyhtälö!c@normiavaruuden}
+\begin{itemize}
+\item[] $\norm{\mpu+\mpv} \le \norm{\mpu}+\norm{\mpv} \quad \forall\,\mpu,\mpv \in U.$
+\end{itemize}
+\end{enumerate}
+Valitsemalla $\alpha=0$ aksioomassa 2 nähdään, että pätee $\mpu=\mv{0}\,\impl\,\norm{\mpu}=0$.
+Aksiooman 1b perusteella tämä imlikaatio pätee myös kääntäen, joten normille on voimassa
+\[
+\norm{\mpu}=0\,\ekv\,\mpu=\mv{0}.
+\]
+\begin{Exa}
+Skalaaritulon avulla määritellylle normille $\norm{\mpu}=\abs{\mpu}=\scp{\mpu}{\mpu}^{1/2}$
+aksioomien 1--2 voimassaolo on ilmeistä skalaaritulon positiividefiniittisyyden ja 
+bilineaarisuuden perusteella (skalaaritulon aksioomat 2 ja 3). Myös kolmioepäyhtälö on voimassa 
+(Harj.teht.\,\ref{H-II-4: kolmioey}a), joten kyseessä on todella normi. \loppu
+\end{Exa}
+\begin{Exa} \label{R2:n max-normi} \index{maksiminormia@maksiminormi ($\R^2$:n)}
+\index{normi!xa@maksiminormi ($\R^2$:n)}
+Avaruuden $\Rkaksi$ nk.\ \kor{maksiminormi} määritellään
+\[
+\norm{\mpu}=\norm{(x,y)}=\max\{\abs{x},\abs{y}\}.
+\]
+Aksioomien 1--2 toteutuminen tälle normille on helposti todettavissa. Aksiooman 3 toteen
+näyttämiseksi olkoon $\mpu=(x_1\,,y_1)\in\Rkaksi$ ja $\mpv=(x_2\,,y_2)\in\Rkaksi$, jolloin
+\[
+\norm{\mpu+\mpv}=\max\{\abs{x_1+x_2},\,\abs{y_1+y_2}\}.
+\]
+Jos tässä on $\abs{x_1+x_2}\le\abs{y_1+y_2}$, niin reaalilukujen kunnassa pätevän
+kolmioepäyhtälön (Lause \ref{kolmioepäyhtälö}) perusteella voidaan päätellä:
+\begin{align*}
+\norm{\mpu+\mpv}\,=\,\abs{y_1+y_2} 
+                 &\le\,\abs{y_1}+\abs{y_2} \\
+                 &\le\,\max\{\abs{x_1},\,\abs{y_1}\}+\max\{\abs{x_2},\,\abs{y_2}\}
+                \,=\,\norm{\mpu}+\norm{\mpv}.
+\end{align*}
+Jos $\abs{x_1+x_2}>\abs{y_1+y_2}$, niin päätellään vastaavasti
+\begin{align*}
+\norm{\mpu+\mpv}\,=\,\abs{x_1+x_2} 
+                 &\le\,\abs{x_1}+\abs{x_2} \\
+                 &\le\,\max\{\abs{x_1},\,\abs{y_1}\}+\max\{\abs{x_2},\,\abs{y_2}\}
+                \,=\,\norm{\mpu}+\norm{\mpv}.
+\end{align*}
+Siis kolmioepäyhtälö on voimassa. \loppu
+\end{Exa}
+
+Reaalikertoimista vektoriavaruutta, jossa on määritelty normi, sanotaan 
+(reaalikertoimiseksi)
+\index{normiavaruus} \index{siszy@sisätuloavaruus}%
+\kor{normiavaruudeksi}. Jos avaruudessa on määritelty myös sisätulo ja normi on siitä johdettu,
+sanotaan avaruutta \kor{sisätuloavaruudeksi}.
+\begin{Exa} Vektoriavaruus $U=(\Rkaksi,\R)$ varustettuna euklidisella skalaaritulolla
+(Määritelmä \ref{R2:n euklidinen skalaaritulo ja normi}) on sisätuloavaruus nimeltä 
+\kor{euklidinen avaruus} $\Rkaksi$. Maksiminormilla (Esimerkki \ref{R2:n max-normi}) 
+varustettuna $U$ on vain normiavaruus, sillä maksiminormi ei ole johdettavissa mistään
+sisätulosta (Harj.teht.\,\ref{H-II-4: kolmioey}b).
+\end{Exa}
+\begin{Exa} Hyvin yksinkertainen esimerkki sisätuloavaruudesta on yksiulotteinen avaruus 
+$(U,\R,\cdot)$, missä $U=\R$. Tässä avaruudessa tulkitaan $\mpu + \mpv$ reaalilukujen 
+yhteenlaskuksi ja $\alpha\mpu$ ja $\scp{\mpu}{\mpv}$ molemmat reaalilukujen kertolaskuksi.
+Tällöin normi $\abs{\mpu}=\mpu$:n itseisarvo, ja Cauchyn--Schwarzin epäyhtälö toteutuu yhtälönä
+$\abs{\mpu\mpv}=\abs{\mpu}\abs{\mpv}$. \loppu 
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item
+Näytä geometriaan vetoamatta, että $\Rkaksi$:n euklidiselle skalaaritulolle ovat voimassa
+skalaaritulon aksioomat.
+
+\item
+Tutki, onko kyseessä $\Rkaksi$:n skalaaritulo, kun $\mpu=(x_1,y_1),\ \mpv = (x_2, y_2)$ ja
+määritellään \newline
+a) \ $\scp{\mpu}{\mpv}=x_1 y_1 + x_2 y_2$ \newline
+b) \ $\scp{\mpu}{\mpv}=2x_1 x_2 + 5y_1 y_2$ \newline
+c) \ $\scp{\mpu}{\mpv}=x_1 x_2 - y_1 y_2$ \newline
+d) \ $\scp{\mpu}{\mpv}=(x_1+y_1)(x_2+y_2)$ \newline
+e) \ $\scp{\mpu}{\mpv}=(x_1+y_1)(x_2+y_2)+y_1 y_2$ \newline
+Minkä muodon saa (myönteisessä tapauksessa) Cauchyn--Schwarzin epäyhtälö\,?
+
+\item
+Olkoon $\{\vec a,\vec b\}$ tason vektoriavaruuden $U=(V,\R)$ kanta. Näytä, että jos vektorin
+$\vec v \in V$ koordinaatit ko.\ kannassa ovat $(x,y)$, niin 
+$\,\norm{\vec v\,} = \abs{x}+\abs{y}\,$ määrittelee $U$:n normin.
+
+\item
+Olkoon $\mpu=(x,y)\in\Rkaksi$. Mitkä seuraavista ovat vektoriavaruuden $U=(\Rkaksi,\R)$
+normeja? \newline
+a) \ $\norm{\mpu}=\abs{x+y}$ \newline
+b) \ $\norm{\mpu}=\abs{x}+\abs{y}$ \newline
+b) \ $\norm{\mpu}=2\abs{x}-\abs{y}$ \newline
+c) \ $\norm{\mpu}=0.01\abs{x}+0.003\abs{y}$ \newline
+d) \ $\norm{\mpu}=x+\abs{y}$ \newline
+e) \ $\norm{\mpu}=\abs{x}+y^2$ \newline
+f) \ $\norm{\mpu}=\sqrt{2x^2+3y^2}$ \newline
+g) \ $\norm{\mpu}=\sqrt{\abs{xy}}$
+
+\item \label{H-II-4: kolmioey} \index{kolmioepäyhtälö!d@sisätuloavaruuden}
+\index{suunnikasyhtälö}
+a) Todista sisätuloavaruuden normille pätevä kolmioepäyhtälö muodossa
+$\norm{\mpu+\mpv}^2 \le (\norm{\mpu}+\norm{\mpv})^2$. \ b) Näytä, että sisätuloavaruuden
+normille pätee \kor{suunnikasyhtälö} 
+$\norm{\mpu+\mpv}^2+\norm{\mpu-\mpv}^2=2\norm{\mpu}^2+2\norm{\mpv}^2$. Päättele, että
+$\Rkaksi$:n maksiminormi $\norm{\mpu}=\norm{(x,y)}=\max\{\abs{x},\abs{y}\}$ ei ole johdettavissa
+mistään sisätulosta.
+
+\item
+Tutki, millainen geometrinen muodonmuutos tapahtuu $\Rkaksi$:n yksikköympyrässä
+$S=\{\mpu=(x,y)\in\Rkaksi \mid \abs{\mpu}=1\}$, kun pisteen etäisyys origosta mitataan 
+euklidisen normin sijasta seuraavilla normeilla:
+\[
+\text{a)}\ \ \norm{\mpu}=\max\{\abs{x},\abs{y}\} \qquad
+\text{b)}\ \ \norm{\mpu}=\abs{x}+\abs{y} \qquad
+\text{c)}\ \ \norm{\mpu}=\sqrt{4x^2+y^2}
+\]
+
+\item (*)
+Olkoon $a,b,c,d\in\R$ ja määritellään
+\[
+\scp{\mpu}{\mpv}\,=\,ax_1x_2+bx_1y_2+cx_2y_1+dy_1y_2\,,
+\]
+missä $\mpu=(x_1,y_1)\in\Rkaksi$ ja $\mpv=(x_2,y_2)\in\Rkaksi$. Täsmälleen millä luvuille
+$a,b,c,d$ asetettavilla ehdoilla $\scp{\cdot}{\cdot}$ on vektoriavaruuden $U=(\Rkaksi,\R)$ 
+skalaaritulo?
+
+\end{enumerate}

@@ -1,0 +1,314 @@
+\section{Pyörteetön vektorikenttä} \label{pyörteetön vektorikenttä}
+\alku
+\index{pyzz@pyörteetön vektorikenttä|vahv}
+\index{vektorikenttä!b@pyörteetön|vahv}
+
+Jos $\vec F$ on fysikaalinen virtaus-, sähkö-, magneetti- ym. kenttä, sanotaan kenttää
+$\vec \omega=\nabla\times\vec F$ kentän pyörrekentäksi (vrt.\ Luku 
+\ref{divergenssi ja roottori}). Stokesin lause ilmaisee yhteyden kentän $\vec F$ ja pyörrekentän
+$\vec\omega$ välillä:
+\[
+\oint_{\partial A} \vec F\cdot d\vec r=\int_A \vec\omega\cdot d\vec a.
+\]
+Tällä yhteydellä on paljon käyttöä esimerkiksi sähkömagneetikassa, jossa pyörrekentät ovat 
+näkyvässä roolissa jo perusyhtälöissä (Maxwellin yhtälöissä, vrt.\ Luku 
+\ref{divergenssi ja roottori}). Jos $\vec F$ on pyörteetön kenttä, eli jos $\vec\omega=\vec 0$,
+antaa Stokesin lause tuloksen
+\begin{equation} \label{Kpot-1}
+\oint_{\partial A} \vec F\cdot d\vec r=0.
+\end{equation}
+Luvun \ref{polkuintegraalit} termein tämä voidaan lukea: Pyörteettömän vektorikentän tekemä työ
+suljettua polkua pitkin = 0. Sanotaan, että kenttä $\vec F$ on tällöin
+\index{konservatiivinen vektorikenttä} \index{vektorikenttä!c@konservatiivinen}%
+\kor{konservatiivinen} (energian säilyttävä).
+
+Jos $\vec F$ on gradienttikenttä, ts. $\vec F=-\nabla u$, niin $\vec F$ on pyörteetön. Tulos 
+\eqref{Kpot-1} on tällöin voimassa --- ja tiedettiin ilman Stokesin lausettakin, sillä 
+gradienttikentän tekemä työ = 0, jos polun alku- ja loppupisteet ovat samat, vrt.\ Luku 
+\ref{polkuintegraalit}. --- Mutta entä jos kysytäänkin toisin päin: Millainen on riittävän 
+säännöllinen, mutta muuten mahdollisimman yleinen vektorikenttä $\vec F$, joka on joko (a)
+konservatiivinen tai (b) pyörteetön? Seuraavassa keskitytään vastaamaan näihin kysymyksiin. 
+Tarkastellaan aluksi tason vektorikenttiä.
+
+\index{yhtenzy@yhtenäinen (joukko)}%
+Olkoon $A\subset\R^2$ \pain{avoin} joukko. Sanotaan, että tällainen joukko on \kor{yhtenäinen}
+(engl.\ connected), jos mielivaltaiset kaksi $A$:n pistettä ovat yhdistettävissä jatkuvalla, 
+suoristuvalla parametrisella käyrällä, jonka päätepisteet ovat mainitut pisteet ja joka on 
+kokonaisuudessaan $A$:ssa. Jatkossa sanotaan avointa ja yhtenäistä joukkoa
+\index{alue}%
+\kor{alueeksi} (engl.\ domain)\footnote[2]{Alue määritellään hieman yleisemmin joukkona
+$B = A \cup S$, missä $A$ on avoin ja yhtenäinen ja $S \subset \partial A$. Jos
+$S = \emptyset$, niin $B=A$ on \kor{avoin alue}. Jos $S=\partial A$, niin $B=\overline{A}$ on
+\kor{suljettu alue}. \index{avoin alue|av} \index{suljettu alue|av}}. 
+\begin{Lause} \label{Lpot-1} \index{gradienttikenttä|emph}
+Jos tason vektorikenttä $\vec F$ on jatkuva ja konservatiivinen alueessa $A \subset \R^2$, niin
+$\vec F$ on gradienttikenttä, ts.\ $\vec F=-\nabla u$, missä $u$ on $A$:ssa jatkuvasti
+derivoituva.
+\end{Lause}
+\tod Olkoon $\vec r_0\vastaa (x_0,y_0)\in A$ kiinteä ja $\vec r\vastaa (x,y)\in A$ muuttuva 
+$A$:n piste. Olkoon edelleen $p$ yksinkertainen, suoristuva parametrinen käyrä (polku) 
+$\vec r=\vec r\,(t)$, $t\in [a,b]$, jolle $\vec r\,(a)=\vec r_0$ ja
+$\vec r_b=\vec r\vastaa (x,y)$. Määritellään
+\[
+u(p,x,y)=-\int_p \vec F\cdot d\vec r.
+\]
+Jos $u$ ei riipu polun $p$ valinnasta, ts. $u(p,x,y)=u(x,y)$, niin jatkamalla polkua pisteestä
+$\vec r$ seuraa jatkuvuusoletuksesta, että
+\[
+u(\vec r+\Delta\vec r\,)=-\vec F(\vec r\,)\cdot\Delta\vec r+o(|\Delta\vec r\,|).
+\]
+Tämän mukaan $u$ on differentioituva ja $\nabla u=-\vec F$. Riittää siis osoittaa, että
+$u(p,x,y)$ riippuu vain polun päätepisteistä. Olkoon $p_1$ ja $p_2$ kaksi polkua joilla on sama
+alkupiste $(x_0,y_0)$ ja sama loppupiste $(x,y)$. Jos vastaavat geometriset käyrät ovat $S_1$
+ja $S_2$, niin
+\[
+S_1\cup S_2=\bigcup_i S_i,\quad S_i\subset A,
+\]
+missä $S_i$:t ovat suljettuja käyriä (vrt.\ kuvio).
+\vspace{3mm}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-18.pstex_t}
+\end{center}
+\end{figure}
+Tällöin 
+\[
+\int_{p_1} \vec F\cdot d\vec r-\int_{p_2} \vec F\cdot d\vec r
+                         = \sum_i \oint_{S_i} \vec F\cdot d\vec r.
+\]
+Koska $\vec F$ on konservatiivinen, on $\oint_{S_i} \vec F\cdot d\vec r=0$, joten
+\[
+\int_{p_1} \vec F\cdot d\vec r=\int_{p_2} \vec F\cdot d\vec r.
+\]
+Siis $u(p,x,y)=u(x,y)$ on polun valinnasta riippumaton. \loppu
+
+\index{yhdesti yhtenäinen alue}%
+Sanotaan, että alue $A\subset\R^2$ on \kor{yhdesti yhtenäinen} (engl.\ simply connected), jos
+pätee $B \subset A$ aina kun $B$ on alue, jolle $\partial B\subset A$. Kun kirjoitetaan
+$S=\partial B$, niin ehdon hieman havainnollisempi muotoilu on: $A\subset\R^2$ on yhdesti
+yhtenäinen, jos jokainen suljettu käyrä $S \subset A$ voidaan kutistaa pisteeksi niin, että
+käyrä pysyy kutistuessaan koko ajan $A$:ssa. Yhdesti yhteinäinen joukko on 'järvi ilman saaria'.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvapot-19.pstex_t}
+\end{center}
+\end{figure}
+Seuraava Stokesin lauseen seurannaistulos on vektorikenttien teorian keskeisimpiä. Tuloksella
+on paljon käyttöä fysiikassa.
+\begin{Lause} \label{Lpot-2} \index{gradienttikenttä|emph}
+Jos tason vektorikenttä $\vec F$ on jatkuvasti derivoituva ja pyörteetön (rot\,$\vec F=0$)
+yhdesti yhtenäisessä alueessa $A$, niin $\vec F$ on gradienttikenttä.
+\end{Lause}
+\tod Kentän potentiaali määritetään polkuintegraalina kuten edellä, jolloin riittää jälleen
+osoittaa, että integraalin arvo riippuu vain polun päätepisteistä. Tämän todistamiseksi
+valitaan jälleen kaksi polkua, joilla on samat päätepisteet, jolloin (vrt.\ todistus edellä)
+\[
+\int_{p_1} \vec F\cdot d\vec r-\int_{p_2} \vec F\cdot d\vec r
+                               = \sum_i \oint_{S_i} \vec F\cdot d\vec r.
+\]
+Nytkin on oikea puoli = 0, sillä oletetun yhdesti yhtenäisyyden perusteella käyrien $S_i$ 
+sisäänsä sulkemat alueet $A_i$ sisältyvät joukkoon $A$, jolloin Stokesin tasokaavan
+(edellinen luvun kaava \eqref{Stokesin tasokaava}) ja $\vec F$:n pyörteettömyyden
+perusteella
+\[
+\oint_{S_i} \vec F\cdot d\vec r=\int_{A_i} \text{rot}\,\vec F\,dxdy=0. \loppu
+\]
+\vspace{0.2mm}
+\begin{multicols}{2} \raggedcolumns
+Lauseiden \ref{Lpot-1}--\ref{Lpot-2} todistuksien perusteella gradienttikentän potentiaali
+saadaan lasketuksi työintegraalina:
+\[
+u(\vec r\,)=-\int_{p:\,\vec r_0\,\kohti\,\vec r} \vec F\cdot d\vec r.
+\]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,1.5)(0,0.5)
+\put(-0.1,-0.1){$\bullet$}
+\put(3.9,0.9){$\bullet$}
+\spline(0,0)(1,1)(2,1)(3,0)(4,1)
+\put(1,0.86){\vector(3,2){0.1}}
+\put(0.2,-0.1){$\vec r_0$} \put(3.9,1.2){$\vec r$}
+\put(1.2,0.5){$p$}
+\end{picture}
+\end{center}
+\end{multicols}
+Laskukaavassa voidaan polku $p$ voidaan valita vapaasti, kunhan se pysyy alueessa $A$
+(jossa $\vec F$ on määritelty). Jos $A$:n geometria ei aseta rajoituksia, voidaan polku valita
+esimerkiksi seuraamaan koordinaattiakselien suuntaisia suoria, jolloin potentiaalin
+laskukaavaksi tulee
+\begin{align*}
+\vec F(x,y) &= F_1(x,y)\vec i + F_2(x,y)\vec j\,: \\
+     u(x,y) &= -\int_{x_0}^x F_1(t,y_0)\,dt-\int_{y_0}^y F_2(x,t)\,dt.
+\end{align*}
+\begin{Exa}
+Onko vektorikenttä
+\[
+\vec F(x,y)=(x^3-y^3+\cos x)\vec i-(3xy^2+e^{-y})\vec j
+\]
+gradienttikenttä?
+\end{Exa}
+\ratk Koska
+\[
+\text{rot}\, \vec F=-\partial_x(3xy^2+e^{-y})-\partial_y(x^3-y^3+\cos x)=0,
+\]
+niin $\vec F$ on gradienttikenttä $\R^2$:ssa (Lause \ref{Lpot-2}). Valinnalla $(x_0,y_0)=(0,0)$ 
+potentiaaliksi saadaan
+\begin{align*}
+u(x,y) &= -\int_0^x (t^3+\cos t)\,dt+\int_0^y (3xt^2+e^{-t})\,dt \\
+&= -\frac{1}{4}x^4-\sin x+xy^3-e^{-y}+2.
+\end{align*}
+Yleinen potentiaalifunktio on
+\[
+u(x,y)=-\frac{1}{4}x^4+xy^3-\sin x-e^{-y}+C\quad (C=\text{vakio}). \loppu
+\]
+\begin{Exa}
+Polaarikoordinaatistossa on määritelty vektorikenttä $\vec F=\frac{1}{r}\,\vec e_\varphi$.
+Tutki, onko $\vec F$  gradienttikenttä alueessa $A$, kun \vspace{1mm}\newline
+a) $A=\{\,(x,y)\in\R^2 \; | \; x>0 \; \ja \; y>0\,\}$, \newline
+b) $A=\{\,(x,y)\in\R^2 \; | \; (x,y)\neq(0,0)\,\}$.
+\end{Exa}
+\ratk Polaarikoordinaatistossa on (vrt.\ Luku \ref{divergenssi ja roottori})
+\[
+\vec F=F_r\vec e_r+F_\varphi \vec e_\varphi\,: \quad 
+      \text{rot}\,\vec F=\frac{1}{r}\,\partial_r(rF_\varphi)-\frac{1}{r}\,\partial_\varphi F_r.
+\]
+Tässä on $F_r=0$ ja $F_\varphi=1/r$, joten $\vec F$ on pyörteetön jokaisessa alueessa, joka ei
+sisällä origoa.
+
+a) Tässä $A$ on yhdesti yhtenäinen, joten $\vec F$ on gradienttikenttä. Valitsemalla $r_0>0$
+voidaan potentiaali $u(x,y)=v(r,\varphi)$ laskea polkuintegraalina
+\begin{align*}
+v(r,\varphi)
+&= -\int_{r_0}^r F_r(t,0)\,dt-\int_0^\varphi F_\varphi(r,t)\,r\,dt \,=\, -\varphi \\ 
+&\impl\quad u(x,y) \,=\, -\underline{\underline{\Arcsin\left(\frac{y}{\sqrt{x^2+y^2}}\right)}}.
+\end{align*}
+
+b) Tässä $A$ ei ole yhdesti yhtenäinen, joten tutkitaan erikseen, onko $\vec F$ 
+konservatiivinen. Valitaan polku $p:\vec r=\vec r(\varphi)$, $0\leq\varphi\leq 2\pi$ siten,
+että $\vec r(\varphi)$ kiertää $r_0$-säteisen ympyräviivan:
+\[
+\vec r(\varphi)=r_0\,\vec e_r,\quad r_0>0,\ 0\leq\varphi\leq 2\pi.
+\]
+Tällöin polun alku- ja loppupisteet ovat samat, $\vec r(\varphi)\vastaa (x,y)\in A$ jokaisella
+$\varphi$ ja
+\[
+\int_p \vec F\cdot d\vec r=\int_0^{2\pi} \frac{1}{r_0}\cdot r_0\,d\varphi=2\pi\neq 0,
+\]
+Siis $\vec F$ ei ole $A$:ssa konservatiivinen eikä näin muodoin myöskään gradienttikenttä
+$A$:ssa. \loppu
+
+\subsection*{Avaruuden pyörteetön vektorikenttä}
+
+Vertaamalla Lauseen \ref{Lpot-1} todistusta Stokesin lauseen kolmiulotteiseen versioon 
+nähdään, että todistus (ja siis myös Lauseen \ref{Lpot-1} väittämä) on sellaisenaan pätevä
+myös avaruuden vektorikentälle. Sikäli kuin alueen geometria ei aseta rajoituksia, voidaan
+kolmiulotteisen, konservatiivisen vektorikentän 
+$\vec F = F_1(x,y,z)\vec i + F_2(x,y,z)\vec j + F_3(x,y,z)\vec k$ potentiaali laskea esimerkiksi
+polkuintegraalina
+\[
+u(x,y,z) = -\int_{x_0}^x F_1(t,y_0,z_0)\,dt -\int_{y_0}^y F_2(x,t,z_0)\,dt
+                                            -\int_{z_0}^z F_3(x,y,t)\,dt.
+\]
+Myös Lause \ref{Lpot-2} yleistyy kolmeen ulottuvuuteen, kunhan yhdesti yhtenäisyys
+määritellään sopivasti. Tarkastellaan yksinkertaisia, suljettuja, suoristuvia käyriä
+$S\subset A$, joille on löydettävissä Stokesin lauseen ehdot täyttävä pinta $B\subset\R^3$ 
+siten, että $\partial B=S$. Jos jokaiselle tällaiselle käyrälle on pinta $B$ vielä määrättävissä
+siten, että $B\subset A$, niin aluetta $A$ sanotaan yhdesti yhtenäiseksi. Esimerkiksi
+\[
+A=\{\,(x,y,z)\in\R^3 \; | \; a^2<x^2+y^2+z^2<R^2\,\} \quad (0 \le a < R)
+\]
+on yhdesti yhtenäinen (!). Sen sijaan
+\[
+A=\{\,(x,y,z)\in\R^3 \; | \; x^2+y^2+z^2<R^2 \; \ja \; x^2+y^2>a^2\,\} \quad (0 \le a < R)
+\]
+ei ole yhdesti yhtenäinen, sillä jos
+\[
+S=\{\,(x,y,z)\in\R^3 \; | \; x^2+y^2=b^2 \; \ja \; z=0\,\},
+\]
+niin $S\subset A$, kun $a<b<R$, mutta jos $B\subset\R^3$ on pinta, niin ehdot $S=\partial B$ ja
+$B\subset A$ eivät voi yhtä aikaa toteutua.
+\begin{Exa}
+Pallokoordinaatistossa on määritelty vektorikenttä
+\[
+\vec F(r,\theta,\varphi)
+            =\frac{1}{r^3}(2\cos\theta\,\vec e_r+\sin\theta\,\vec e_\theta),\quad r\neq 0.
+\]
+Määrää kentän potentiaali, jos sellainen on.
+\end{Exa}
+\ratk Tässä on $\vec F=F_r\vec e_r+F_\theta\vec e_\theta+F_\varphi\vec e_\varphi$, missä
+\[
+F_r=2r^{-3}\cos\theta,\quad F_\theta=r^{-3}\sin\theta,\quad F_\varphi=0,
+\]
+joten (ks.\ Luku \ref{div ja rot käyräviivaisissa})
+\[
+\nabla\times\vec F = 0\,\vec e_r + 0\,\vec e_\theta
+  + \frac{1}{r}[\partial_r(rF_\theta)-\partial_\theta F_r]\vec e_\varphi = \vec 0\quad (r\neq 0).
+\]
+Koska origon poissulkeminen ei aiheuta yhtenäisyysongelmia kolmessa dimensiossa, niin $\vec F$
+on gradienttikenttä. Potentiaali voidaan laskea ottamalla lähtöpisteeksi esimerkisi
+$\vec r_0=(r_0,0,0)$, $r_0>0$, ja etenemällä koordinaattiviivojen suuntaisia polkuja:
+\begin{align*}
+u(r,\theta,\varphi) &= -\int_{r_0}^r F_r(t,0,0)\,dt-\int_0^\theta F_\theta(r,t,0)r\,dt
+                                 -\int_0^\varphi F_\varphi(r,\theta,t)r\sin\theta\,dt \\
+                    &= -\int_{r_0}^r 2t^{-3}\,dt-\int_0^\theta r^{-2}\sin t\,dt \\
+                    &= \sijoitus{r_0}{r}t^{-2}+r^{-2}\sijoitus{0}{\theta} \cos t \\
+                    &= r^{-2}\cos\theta+\text{vakio} \; (=-r_0^{-2}).
+\end{align*}
+Potentiaaliksi kelpaa siis $u(r,\theta,\varphi)=\underline{\underline{r^{-2}\cos\theta}}$. 
+\loppu
+
+\Harj
+\begin{enumerate}
+
+\item
+Totea vektorikenttä $\vec F(x,y)=(y+2x)\vec i+x\vec j$ pyörteettömäksi. Laske tätä havaintoa
+hyödyksi käyttäen polkuintegraali $\int_p \vec F \cdot d\vec r$, missä $p$ kulkee pisteestä
+$(1,0)$ origon kautta pisteeseen $(1,2)$ pitkin ympyrän kaarta.
+
+\item
+Määritä funktio $f$ siten, että $f(0)=1$ ja tason vektorikenttä 
+\[
+\vec F(x,y)=f(y)[2xy\vec i+x^2(y+1)\vec j\,]
+\] 
+on pyörteetön. Mikä tällöin on kentän potentiaali?
+
+\item
+Osoita seuraavat vektorikentät koko avaruudessa pyörteettömiksi ja määritä kenttien 
+potentiaalit.
+\vspace{1mm}\newline
+a) \ $z\vec i+z\cos y\vec j+(x+\sin y)\vec k \qquad$
+b) \ $e^x\sin y\vec j+e^x\cos y\vec j+z\vec k$ \newline
+c) \ $2xyz\vec i+x^2z\vec j+x^2y\vec k \qquad$
+d) \ $-2xe^{-y}\vec i+(x^2e^{-y}+\sin z)\vec j+y\cos z\vec k$ \newline
+e) \ $(x^2+y^2+z^2)(x\vec i+y\vec j+z\vec k)=r^2\vec r$
+
+\item 
+Vektorikentästä $\vec F$ tiedetään, että se on koko avaruudessa pyörteetön ja muotoa 
+$\vec F(x,y,z)=xy^2\vec i+(\cos z+x^2y)\vec j+yf(z)\vec k$. Määrää kentän 
+skalaaripotentiaali ja tämän avulla polkuintegraali $\int_p \vec F\cdot d\vec r$, missä
+$p$:n alkupiste on $(0,0,0)$ ja loppupiste $(2,-1,3)$. 
+
+\item (*) \index{zzb@\nim!Hzy@Häiriö kentässä}
+(Häiriö kentässä) Tason vektorikenttään $\vec U_0=u_0\vec i$ ($u_0=$ vakio) tuodaan este
+\[
+A=\{(x,y)\in\R^2 \mid x^2+y^2 \le R^2\},
+\] 
+jolloin kenttä häiriintyy muotoon $\vec U=u(x,y)\vec i + v(x,y)\vec j$. Häiriintyneestä
+kentästä $\vec U$ tiedetään, että se on sekä lähteetön että pyörteetön esteen ulkopuolella,
+ts.\ $\text{div}\,\vec U = \text{rot}\,\vec U=0$ muualla kuin $A$:ssa. Lisäksi tiedetään, että
+$\vec U \cdot \vec n = 0\,$ reunalla $\partial A$ (eli kun $x^2+y^2=R^2$, $\vec n=\,$
+$\partial A$:n normaali) ja että $\vec U(x,y)\kohti\vec U_0$, kun $x^2+y^2\kohti\infty$.
+Ongelmana on löytää nämä ehdot täyttävä kenttä $\vec U$. Koska $A$:n ulkopuolinen alue ei
+ole yhdesti yhtenäinen, ei $\vec U$ välttämättä ole gradienttikenttä (vaikka onkin 
+pyörteetön).
+
+a) Näytä, että problemalla on ratkaisu, jonka napakoordinaattimuoto on
+\[
+\vec U=-\nabla f(r)\cos\varphi + g(r)\vec e_\varphi
+\] 
+eli määritä funktiot $f(r),g(r)$ mahdollisimman yleisessä muodossa niin, että annetut ehdot
+toteutuvat. (Muita ratkaisuja ei ongelmalla ole). \newline
+b) Totea, että em.\ ratkaisusta tulee yksikäsitteinen, kun asetetaan lisäehto muotoa
+$v(R,0)=v_0$ (tässä karteesiset koordinaatit).
+
+\end{enumerate}

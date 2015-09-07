@@ -1,0 +1,571 @@
+\section{Ensimmäisen kertaluvun lineaarinen DY} \label{lineaarinen 1. kertaluvun DY}
+\sectionmark{\ 1. kertaluvun lineaarinen DY}
+\alku
+\index{lineaarinen differentiaaliyhtälö!c@1.\ kertaluvun|vahv}
+
+Separoituvan (tai sellaiseksi palautuvan) differentiaaliyhtälön ohella toinen sovelluksissa
+hyvin yleinen differentiaaliyhtälön tyyppi on \kor{lineaarinen} DY. Tässä luvussa tarkastelun
+kohteena on 1.\ kertaluvun lineaarinen differentiaaliyhtälö, jonka yleinen muoto on
+\begin{equation} \label{lin-1: ty}
+y'+P(x)y=R(x).
+\end{equation}
+Tässä $P$ on nk.\
+\index{kerroin (DY:n)} \index{oikea puoli (DY:n)}%
+\kor{kerroinfunktio}. Sekä $P$ että yhtälön \kor{oikea puoli} eli $R$ oletetaan
+j\pain{atkuviksi} välillä $(a,b)$, jolla ratkaisua haetaan. Kuten yleensä, ratkaisulta $y$
+edellytetään derivoituvuus välillä $(a,b)$. Koska derivoituvuudesta seuraa jatkuvuus, niin
+differentiaaliyhtälöstä nähdään, että edelleen myös $y'$ on jatkuva välillä $(a,b)$.
+
+Kun otetaan käyttöön \kor{operaattori}merkintä
+\[
+\dyf y=\frac{dy}{dx}+P(x)y\footnote[2]{Tapauksessa $P=0$ on $\dyf=\dif$, vrt.\
+Luku \ref{derivaatta}. Yleisemmin voidaan kirjoitaa $\dyf=\dif+P(x)$, jolloin kyse on
+operaattorien $f\map\dif f$ ja $f \map P(x)f$ yhteenlaskusta 'funktion funktioina'.},
+\]
+niin yhtälö \eqref{lin-1: ty} voidaan kirjoittaa lyhyesti
+\[
+\dyf y=R(x).
+\]
+Yhtälöä sanotaan lineaariseksi sen vuoksi, että pätee
+\[
+\dyf(c_1y_1+c_2y_2)=c_1\dyf y_1+c_2\dyf y_2\,, \quad c_1,c_2\in\R,
+\]
+eli $\dyf$ on
+\index{differentiaalioperaattori!b@lineaarisen DY:n}%
+\kor{lineaarinen} operaattori.\footnote[3]{Jos operaattori ei ole lineaarinen, niin se on
+\kor{epälineaarinen}. Epälineaarinen on vaikkapa operaattori $\dyf(y)=y'+y^2$.
+\index{epzy@epälineaarinen operaattori|av}}.
+
+Jos tunnetaan yksikin lineaarisen yhtälön \eqref{lin-1: ty} yksittäisratkaisu $y=y_0(x)$, niin
+yhtälön yleisen ratkaisun etsiminen helpottuu huomattavasti. Nimittäin jos $y=y(x)$ on mikä
+tahansa toinen ratkaisu, niin yhtälöistä
+\[
+\left\{ \begin{aligned}
+&\dyf y = R(x), \\
+&\dyf y_0 = R(x)
+\end{aligned} \right.
+\]
+seuraa $L$:n lineaarisuuden nojalla
+\[
+0=\dyf y - \dyf y_0 = \dyf(y-y_0),
+\]
+eli erotus $u(x)=y(x)-y_0(x)$ toteuttaa yksinkertaisemman yhtälön
+\begin{equation} \label{lin-1: hy}
+y'+P(x)y=0.
+\end{equation}
+Tätä sanotaan (lineaariseksi 1. kertaluvun) 
+\index{lineaarinen differentiaaliyhtälö!a@homogeeninen}
+\index{lineaarinen differentiaaliyhtälö!b@täydellinen}%
+\kor{homogeeniseksi} yhtälöksi. Jos $R \neq 0$, niin
+\index{epzy@epähomogeeninen DY}%
+yhtälöä \eqref{lin-1: ty} sanotaan vastaavasti \kor{epähomogeeniseksi} tai, etenkin 
+ratkaisemisen yhteydessä, \kor{täydelliseksi} yhtälöksi. On päätelty:
+\[
+\boxed{\begin{aligned}
+\quad\ykehys \text{Lineaarisen}\ 
+            &\text{yhtälön \eqref{lin-1: ty} yleinen ratkaisu} \\[2mm]
+            &= \ \text{täydellisen yhtälön \eqref{lin-1: ty} yksittäisratkaisu} \\
+            &+ \ \text{homogeenisen yhtälön \eqref{lin-1: hy} yleinen ratkaisu}. \quad\akehys
+\end{aligned}}
+\]
+Sikäli kuin yksittäisratkaisu $y_0(x)$ tunnetaan, on jäljellä siis homogeenisen yhtälön
+\eqref{lin-1: hy} yleisen ratkaisun etsiminen. Tämä käy helposti, koska yhtälö on separoituva:
+Luvun \ref{separoituva DY} menetelmin saadaan ratkaisuksi
+\[
+y(x)=Ce^{-\int P(x)dx}.
+\]
+(Tässä ei integraalifunktioon $\int P(x)\,dx$ tarvitse sisällyttää toista määräämätöntä
+vakiota $C_1$, koska tämän vaikutus sisältyy jo vakioon $C$ kertoimena $e^{-C_1}$.) Yhtälö
+\eqref{lin-1: ty} on näin ratkaistu yhdellä kvadratuurilla:
+\[
+y(x)=y_0(x)+Ce^{-\int P(x)dx}.
+\]
+
+Jos yksityisratkaisua ei tunnetta, ratkeaa yhtälö \pain{kahdella} kvadratuurilla. Nimittäin 
+yksittäisratkaisu saadaan aina selville käyttäen 
+\index{lineaarinen differentiaaliyhtälö!g@vakio(ide)n variointi} \index{vakio(ide)n variointi}%
+\kor{vakion varioinnin} nimellä tunnettua 
+(yhden kvadratuurin sisältävää) menettelyä. Vakion variointi tarkoittaa homogeenisen yhtälön
+yleisessä ratkaisussa tehtävää muutosta $C \ext C(x)$ ja näin saatavan funktion
+\[
+y(x)=C(x)e^{-\int P(x)dx}
+\]
+kokeilua täydellisen yhtälön mahdollisena ratkaisuna. Sijoitus yhtälöön antaa
+\[
+\dyf y=C'(x)e^{-\int P(x)dx}+C(x)\dyf[e^{-\int P(x)dx}]=R(x).
+\]
+Tässä on $\dyf[e^{-\int P(x)dx}]=0$, joten saadaan
+\begin{align*}
+C'(x)e^{-\int P(x)dx} = R(x) &\qekv C'(x)  = \,e^{\int P(x)dx} R(x) \\
+                             &\qekv\,C(x)\,= \int e^{\int P(x)dx}R(x)\,dx+C.
+\end{align*}
+Analyysin peruslauseen nojalla tämä ratkaisu on pätevä välillä $(a,b)$, jolla $P$ ja $R$ ovat
+jatkuvia. Kun vakio $C$ jätetään yksittäisratkaisussa kiinnittämättä, voidaan yhtälön
+\eqref{lin-1: ty} yleiseksi ratkaisuksi kirjoittaa suoraan
+\[
+y(x) \,=\, e^{-\int P(x)dx}C(x) \,=\, e^{-\int P(x)dx}\left(C+\int e^{\int P(x)dx}R(x)\,dx\right).
+\]
+Alkuehdon $y(x_0)=Y_0$ ($x_0\in(a,b)$) toteuttava ratkaisu on yksikäsitteinen ja
+kirjoitettavissa suoraan määrättyjen integraalien avulla:
+\begin{equation} \label{lin-1: ty-ratk}
+y(x)=e^{-\int_{x_0}^x P(t)dt}\left(Y_0+\int_{x_0}^x e^{\int_{x_0}^s P(t)dt}R(s)\,ds\right).
+\end{equation}
+Jos tässä kiinnitetään vain $x_0$ ja annetaan $Y_0$:n olla muuttuva $(Y_0 \ext C)$, niin saadaan 
+jälleen yleinen ratkaisu.
+\begin{Exa} Ratkaise differentiaaliyhtälö
+\[
+y'+\frac{2y}{1-x^2}=\frac{1+x}{(1-x)^3}\,.
+\]
+\end{Exa}
+\ratk Ratkaistaan ensin homogeeninen yhtälö:
+\begin{align*}
+\frac{dy}{dx}+\frac{2y}{1-x^2}=0 \ &\impl \ \int\frac{dy}{y}=\int\frac{2dx}{x^2-1} \\
+&\impl \ \ln\abs{y}=\ln\Bigl|\frac{x-1}{x+1}\Bigr|+\ln\abs{C} \\
+&\impl \ y=C\,\frac{x-1}{x+1}\,.
+\end{align*}
+Yleinen ratkaisu vakion varioinnilla: 
+\begin{align*}
+y=C(x)\,\frac{x-1}{x+1} \ &\impl \ C'(x)\,\frac{x-1}{x+1}=\frac{1+x}{(1-x)^3} \\
+\impl\ C'(x) &= -\frac{(x+1)^2}{(x-1)^4}=-\frac{[(x-1)+2]^2}{(x-1)^4} \\
+             &= -\frac{1}{(x-1)^2}-\frac{4}{(x-1)^3}-\frac{4}{(x-1)^4} \\
+\impl\ C(x)  &= \frac{1}{x-1}+\frac{2}{(x-1)^2}+\frac{4}{3(x-1)^3}+C \\
+             &= \frac{3x^2+1}{3(x-1)^3}+C \\
+\impl\ y(x)=C(x)\,\frac{x-1}{x+1}\,
+             &=\, \frac{3x^2+1}{3(x-1)^2(x+1)}+C\,\frac{x-1}{x+1}\,.
+\end{align*}
+Ratkaisu on pätevä väleillä $(-\infty,-1)$, $(-1,1)$ ja $(1,\infty)$. \loppu
+
+\subsection*{Integroivan tekijän menettely}
+\index{lineaarinen differentiaaliyhtälö!h@integroivan tekijän menettely|vahv}
+
+Vakion variointia suoraviivaisempi tapa ratkaista yhtälö \eqref{lin-1: ty} on kertoa yhtälö
+ensin nk.\ 
+ \index{integroiva tekijä (DY:n)}%
+\kor{integroivalla tekijällä}, joka määritellään
+\[
+H(x)= e^{\int P(x)dx}.
+\]
+Koska $H'=P(x)H$, niin
+\[
+H(x)[y'+P(x)y\,] = \frac{d}{dx}[H(x)y\,].
+\]
+Näin ollen, ja koska $H(x)>0\ \forall x$, niin saadaan ratkaisukaavio
+\begin{align*}
+y'+P(x)y = R(x) &\qekv H(x)[y'+P(x)y] = H(x)R(x) \\[3.5mm]
+                &\qekv [H(x)y\,]' = H(x)R(x) \\[1.5mm]
+                &\qekv H(x)y(x) = \int H(x)R(x)\,dx \\
+                &\qekv y(x) = H(x)^{-1}\int H(x)R(x)\,dx, \quad x\in(a,b).
+\end{align*}
+Päättely nojaa jälleen Analyysin peruslauseeseen ja tehtyihin jatkuvuusoletuksiin. Lopputulos
+on sama kuin edellä, ja alkuarvotehtävän ratkaisu saadaan jälleen vaihtamalla määräämättömät
+integraalit määrätyiksi.
+\begin{Exa}
+Ratkaise differentiaaliyhtälö $\ y'+y\cot x=e^{\cos x}$.
+\end{Exa}
+\ratk Koska $\int \cot x\,dx=\ln\abs{\sin x}+C$, niin esim.\ välillä $(0,\pi)$ 
+(jolla $\cot x$ on jatkuva) voidaan integroivaksi tekijäksi valita
+\[
+H(x)=e^{\ln\sin x}=\sin x.
+\]
+Em.\ ratkaisukaaviota seuraten päätellään
+\begin{align*}
+y'+y\cot x=e^{\cos x} &\qekv y'\sin x+y\cos x = \sin x e^{\cos x} \\[3mm]
+                      &\qekv (y\sin x)'=\sin x\,e^{\cos x} \\[1mm]
+                      &\qekv y\sin x = \int \sin x\,e^{\cos x}\,dx = -e^{\cos x}+C \\
+                      &\qekv y(x)=\frac{C-e^{\cos x}}{\sin x}\,.
+\end{align*}
+Ratkaisu on pätevä väleillä $(n\pi,(n+1)\pi),\ n\in\Z$. \loppu
+
+\subsection*{Vakiokertoiminen yhtälö}
+\index{lineaarinen differentiaaliyhtälö!f@vakiokertoiminen|vahv}
+\index{vakiokertoiminen DY|vahv}
+
+Sovelluksissa hyvin yleinen yhtälön \eqref{lin-1: ty} erikoistapaus on \kor{vakiokertoiminen}
+1. kertaluvun lineaarinen DY, joka on muotoa
+\begin{equation} \label{lin-1: ty-vak}
+y'+ay=f(x)\quad (a\in\R,\ a \neq 0).
+\end{equation}
+(Tapaus $a=0$ sivuutetaan entuudestaan tuttuna.) Tämän ratkaisu alkuehdolla $y(x_0)=Y_0$ on 
+ratkaisukaavan \eqref{lin-1: ty-ratk} mukaisesti
+\begin{align*}
+y(x) &= e^{-a(x-x_0)}\left(Y_0+\int_{x_0}^x e^{a(t-x_0)}f(t)\,dt\right) \\
+     &= Y_0e^{-a(x-x_0)} + \int_{x_0}^x e^{a(t-x)}f(t)\,dt.
+\end{align*}
+Ellei haluta käyttää suoraan tätä kaavaa (yleisessä ratkaisussa $Y_0 \ext C$), niin 
+yksittäisratkaisu on usein löydettävissä helposti myös 'sivistyneellä arvauksella'. 
+Edellytyksenä on, että $f(x)$ on riittävän yksinkertaista muotoa.
+\begin{Exa}
+Etsi yhtälölle $\,y'+y=f(x)\,$ yksittäisratkaisu $y_0(x)$, kun
+\[
+\text{a)}\,\ f(x)=x^2, \quad 
+\text{b)}\,\ f(x)=e^x, \quad 
+\text{c)}\,\ f(x)=e^{-x}, \quad 
+\text{d)}\,\ f(x)=\cos 2x.
+\]
+\end{Exa}
+\ratk a) \ Kokeillaan, olisiko yksittäisratkaisu toisen asteen polynomi muotoa
+$y_0(x)=Ax^2+Bx+C$. Sijoitus yhtälöön antaa
+\[
+Ax^2+(2A+B)x+(B+C)=x^2.
+\]
+Tämä toteutuu jokaisella $x$, kun
+\[
+\left\{ \begin{alignedat}{4}
+&A & & & & & &=1 \\
+2&A & \ + \ &B & & & &=0 \\
+& & &B & \ + \ &C & &=0
+\end{alignedat} \right. \,\ \ekv \,\
+\left\{ \begin{aligned}
+A &= 1 \\
+B &= -2 \\
+C &= 2
+\end{aligned} \right.
+\]
+Siis yksittäisratkaisu on $y_0(x)=x^2-2x+2$.
+
+\ratk b) \ Kokeillaan yksittäisratkaisua muotoa $y_0(x)=Ae^x\,$:
+\[
+2Ae^x=e^x\quad\forall x \ \ekv \ A=\frac{1}{2}.
+\]
+Siis $y_0(x)=\tfrac{1}{2}e^x$ toimii.
+
+\ratk c) \ Tässä yritys $y_0(x)=Ae^{-x}$ ei onnistu, sillä tämä sattuu olemaan homogeeniyhtälön
+ratkaisu. Yritetään
+\[
+y_0(x)=Axe^{-x}\,:\quad Ae^{-x}-Axe^{-x}+Axe^{-x}=e^{-x}\ \impl\ A=1.
+\]
+Siis $y_0(x)=xe^{-x}$ toimii.
+
+\ratk d) \ Yritys: $\,y_0(x)=A\cos 2x + B\sin 2x$
+\begin{align*}
+&\impl \ (A+2B)\cos 2x + (-2A+B)\sin 2x=\cos 2x \\
+&\impl \left\{ \begin{alignedat}{3}
+&A & \ + \ 2&B & &=1 \\
+-2&A & \ + \ &B & &=0
+\end{alignedat} \right. \,\ \ekv \,\ \left\{ \begin{aligned}
+A &= 1/5 \\
+B &= 2/5
+\end{aligned} \right.
+\end{align*}
+Siis $y_0(x)=\tfrac{1}{5}(\cos 2x+2\sin 2x)$ on yksittäisratkaisu. \loppu \newline
+
+Yksittäisratkaisua etsittäessä on syytä huomioida myös \pain{lineaarisuussääntö}:
+\begin{align*}
+\dyf y_1 &= f_1(x) \ \ja \ \dyf y_2=f_2(x) \\
+&\impl \ \dyf(c_1y_1+c_2y_2)=c_1f_1(x)+c_2f_2(x).
+\end{align*}
+\jatko \begin{Exa}
+(jatko) \ \, Etsi yksittäisratkaisu, kun
+\[
+\text{e)}\,\ f(x)=4\sin^2 x-5x^2-2, \quad
+\text{f)}\,\ f(x)=6\sinh x-10\cos 2x.
+\]
+\end{Exa}
+\ratk Koska
+\[
+\text{e)}\,\ f(x)=-2\cos 2x-5x^2, \quad
+\text{f)}\,\ f(x)=3e^x-3e^{-x}-10\cos 2x,
+\]
+niin lineaarisuussääntöä ja kohtien a)-d) tuloksia käyttäen saadaan
+\begin{align*}
+\text{e)}\ \ y_0(x) &= -2\cdot\frac{1}{5}(\cos 2x+2\sin 2x)-5(x^2-2x+2) \\
+                    &= -\frac{2}{5}\cos 2x-\frac{4}{5}\sin 2x-5x^2+10x-10, \\[2mm]
+\text{f)}\ \ y_0(x) &= 3\cdot\frac{1}{2}\,e^x-3xe^{-x}-10\cdot\frac{1}{5}(\cos 2x+2\sin 2x) \\
+             &= \frac{3}{2}\,e^x-3xe^{-x}-2\cos 2x-4\sin 2x. \loppu
+\end{align*}
+
+Seuraavan taulukon säännöt ovat em.\ esimerkin yleistyksiä. Taulukossa oletetaan
+differentiaaliyhtälö \eqref{lin-1: ty-vak}, missä
+$a\neq 0$. Lisäksi $n\in\N\cup\{0\}$ ja $\omega\neq 0$.
+\vspace{0.5cm} \newline
+\begin{tabular}{|l|l|} \hline
+$f(x)$ &$y_0(x)$ muotoa \\ \hline & \\
+$x^n$ &$A_nx^n+\cdots + A_0$ \\ & \\
+$x^ne^{bx}, \quad b\neq-a$ &$(A_nx^n+\cdots + A_0)e^{bx}$ \\ & \\
+$x^ne^{-ax}$ &$Ax^{n+1}e^{-ax}$ \\ & \\
+$x^n(A\cos \omega x + B\sin \omega x)$ &$(A_nx^n+\cdots + A_0)\cos \omega x 
+                                                   + (B_nx^n+\cdots + B_0)\sin \omega x$ \\ 
+& \\ \hline 
+\end{tabular}
+
+\subsection*{Jaksolliset ratkaisut}
+\index{lineaarinen differentiaaliyhtälö!i@jaksolliset ratkaisut|vahv}
+\index{jaksollinen ratkaisu (DY:n)|vahv}
+
+Sovelluksissa yleinen vakikertoimisen yhtälön \eqref{lin-1: ty-vak} erikoistapaus on sellainen,
+jossa yhtälön oikea puoli $f$ on j\pain{aksollinen}. Tällöin yhtälölle on löydettävissä 
+yksittäisratkaisu $y_p$, joka on samoin jaksollinen, ja $y_p$:n jakso = $f$:n jakso.
+(Tapauksessa $a=0$ ei jaksollista ratkaisua yleisesti ole, ks.\ 
+Harj.teht.\,\ref{H-dy-4: jaksolliset ratkaisut}.) Olkoon $f$ koko $\R$:ssä  määritelty, jatkuva
+ja $L$-jaksoinen funktio. Etsitään $L$-jaksoinen ratkaisu määräämällä tämä yhden jakson
+pituisella välillä, esim.\ välillä $[0,L]$. Tällä välillä riittää asettaa jaksollisuusehto
+$y(0)=y(L)$, joten on siis löydettävä funktio $y_p$, joka on välillä $[0,L]$ jatkuva, välillä
+$(0,L)$ derivoituva ja toteuttaa
+\[
+\begin{cases} \,y'+ay=f(x), \quad x\in(0,L), \\ \,y(0)=y(L). \end{cases}
+\]
+Ratkaisu on muotoa $y(x)=Ce^{-ax}+y_0(x)$, missä $y_0$ on jokin differentiaaliyhtälön
+yksittäisratkaisu, esim. (vrt.\ ratkaisukaava edellä)
+\[
+y_0(x)=\int_0^x e^{a(t-x)}f(t)\,dt.
+\]
+Jaksollisuusehto määrää vakion $C$, jolloin ratkaisuksi saadaan (olettaen $a \neq 0$)
+\[
+y_p(x)=\frac{y_0(L)-y_0(0)}{1-e^{-aL}}\,e^{-ax}+y_0(x), \quad x\in[0,L].
+\]
+Kun jatketaan $y_p$ koko $\R$:ään jaksollisuusehdolla $y_p(x \pm L)=y_p(x)$, niin on 
+pääteltävissä (Harj.teht.\,\ref{H-dy-4: jaksolliset ratkaisut}a), että näin määritelty $y_p$ on
+differentiaaliyhtälön ratkaisu $\R$:ssä. Koska $y_p$ siis on yksittäisratkaisu, niin yleinen
+ratkaisu $\R$:ssä on
+\[
+y(x)=Ce^{-ax}+y_p(x).
+\]
+Alkuehto $y(x_0)=Y_0$ määrää $C$:n arvoksi $C=(Y_0-y_p(x_0))e^{ax_0}$. 
+
+Sovelluksissa on yleensä $a>0$ ja muuttujan $x$ tilalla \pain{aika} ($t$), jolloin ym.\ 
+ratkaisussa on siis kaksi osaa, jaksollinen osa $y_p(t)$ ja nk.\ \pain{transientti}, joka 
+'kuolee pois', kun $t\kohti\infty$. Seuraavassa esimerkki sähkötekniikasta.
+
+\index{lineaarinen differentiaaliyhtälö!i@jaksolliset ratkaisut|vahv}%
+\index{jaksollinen ratkaisu (DY:n)|vahv}%
+\index{zza@\sov!Szyhkzza@Sähköpiiri: RC|vahv}
+\subsection*{Sovellusesimerkki: Sähköpiiri RC}
+\begin{multicols}{2} %\raggedcolumns
+\pain{Tehtävän kuvaus} \vspace{0.2cm} \newline 
+Oheisessa sähköpiirissä on sarjaan kytketty vastus ($R$) ja kondensaattori, jonka kapasitanssi
+$=C$. Virta piirissä hetkellä $t$ on $i(t)$, kondensaatorin varaus $=y(t)$ ja jännite 
+kondensaattorin yli $=u(t)$. 
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(7.5,4)(-0.5,-0.5)
+\multiput(0,0)(6,0){2}{
+\put(-0.5,0){\line(1,0){1}}
+\multiput(-0.25,0)(0.25,0){3}{\line(-1,-1){0.25}}
+}
+\path(0,0)(0,1)
+\put(0,1.5){\circle{1}} 
+\curve(-0.2,1.45,-0.1,1.55,0,1.5)\curve(0,1.5,0.1,1.45,0.2,1.55)
+\path(0,2)(0,3)(1,3)(2,3.5)
+\path(2,3)(3,3)(3,3.25)(5,3.25)(5,2.75)(3,2.75)(3,3)
+\path(5,3)(6,3)(6,1.6)(6.5,1.6)(5.5,1.6)
+\path(6.5,1.4)(5.5,1.4)
+\path(6,1.4)(6,0)
+\put(0,3.2){$e(t)$} \put(3.8,3.4){$R$} \put(6.1,1.7){$C$} \put(4.7,1.4){$y(t)$} 
+\put(5.5,3.2){$i(t)$}
+\put(5,3){\vector(1,0){1}}
+\curve(6.4,2.7,6.7,1.5,6.4,0.3)
+\put(6.4,0.3){\vector(-1,-2){0.01}}
+\put(6.9,1.4){$u(t)$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+
+\begin{multicols}{2} \raggedcolumns
+Piiriä syötetään kokoaaltotasasuunnatulla jännitteellä
+\[
+e(t)=E\abs{\sin \omega t}.
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,2)(-0.5,-0.5)
+\put(0,0){\vector(1,0){4.5}} \put(4.3,-0.5){$t$}
+\put(0,0){\vector(0,1){1.5}} \put(0.2,1.3){$e(t)$}
+\multiput(0,0)(1,0){4}{
+\setlength{\unitlength}{0.3cm}
+\renewcommand{\yscale}{2}
+\curve(
+  0,       0,
+0.2, 0.19867,
+0.4, 0.38942,
+0.6, 0.56464,
+0.8, 0.71736,
+  1, 0.84147,
+1.2, 0.93204,
+1.4, 0.98545,
+1.6, 0.99957,
+1.8, 0.97385,
+  2,  0.9093,
+2.2,  0.8085,
+2.4, 0.67546,
+2.6,  0.5155,
+2.8, 0.33499,
+  3.14, 0)}
+\setlength{\unitlength}{1cm}
+\dashline{0.2}(0,0.6)(4,0.6)
+\put(-0.4,0.5){$E$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+\pain{Matemaattinen malli} \ (Ol. kytkin suljettu)
+\begin{align*}
+Ri(t)+u(t) &= e(t), \\
+y(t) &= Cu(t), \\
+y'(t) &= i(t).
+\end{align*}
+\pain{Alkuoletukset} \vspace{0.2cm} \newline
+Ajanhetkillä $t\leq t_0$ on $i(t)=q(t)=0$. Kytkin suljetaan hetkellä $t=t_0$, ja pidetään sen
+jälkeen suljettuna. \vspace{0.2cm} \newline
+\pain{Tehtävä} \vspace{0.2cm} \newline
+Määritä kondensaattorin varaus $y(t)$, kun $t \ge t_0\,$. \vspace{0.2cm} \newline
+\pain{Ratkaisu} \vspace{0.2cm} \newline
+Merkitään $Q=EC$ ja $\tau=RC$ ($\tau=$ aikavakio). Eliminoimalla $i(t)$ ja $u(t)$ saadaan
+ratkaistavaksi alkuarvotehtävä
+\[
+\begin{cases}
+\,\tau y'+y = Q\abs{\sin \omega t},\quad t>t_0, \\ \,y(t_0) =0.
+\end{cases}
+\]
+Koska differentiaaliyhtälön oikea puoli on jaksollinen, jaksona
+\[
+T=\pi/\omega,
+\]
+on yhtälölle löydettävissä yksittäisratkaisu $y_p$, joka on samoin $T$-jaksoinen. Tämä on
+välillä $[0,T]$ jatkuva, välillä $(0,T)$ derivoituva ja toteuttaa
+\[
+\begin{cases}
+\,\tau y_p'+y_p = Q\sin \omega t,\quad t\in (0,T), \\ \,y_p(0) =y_p(T).
+\end{cases}
+\]
+Etsitään ensin differentiaaliyhtälön yksittäisratkaisu $y_0$ välillä $(0,T)\,$:
+\begin{align*}
+&y_0(t) =A\sin \omega t + B\cos \omega t \\
+&\impl \ (A-\tau\omega B)\sin \omega t + (\tau\omega A+B)\cos\omega t 
+                                                    = Q\sin \omega t,\quad 0<t<T \\
+&\ekv \ \left\{ \begin{alignedat}{3}
+&A \ - \ & \tau\omega&B & &=Q \\
+\tau\omega&A \ + \ & &B & &=0
+\end{alignedat} \right. \\ 
+&\ekv \ A=\frac{Q}{k^2+1},\quad B=-\frac{kQ}{k^2+1},\qquad k=\tau\omega.
+\end{align*}
+(Tässä uusi parametri $k$ on dimensioton). Etsityn $T$-jaksoisen ratkaisun on siis oltava 
+välillä $[0,T]$ muotoa
+\[
+y_p(t)=Ce^{-t/\tau}+\frac{Q}{k^2+1}(\sin \omega t-k\cos \omega t).
+\]
+
+Vakio $C$ määräytyy jaksollisuusehdosta:
+\begin{align*}
+y_p(0)=y_p(T) \ &\ekv \ C-\frac{kQ}{k^2+1} = Ce^{-T/\tau}+\frac{kQ}{k^2+1} \\
+&\ekv \ C=\frac{2kQ}{(k^2+1)(1-e^{-T/\tau})}\,.
+\end{align*}
+Siis välillä $[0,T]$ pätee
+\[
+y_p(t) = \frac{Q}{k^2+1}
+         \left(\frac{2k}{1-e^{-T/\tau}}\,e^{-t/\tau}+\sin \omega t-k\cos \omega t\right),
+\]
+missä
+\[
+Q=EC, \quad \tau=RC, \quad T=\frac{\pi}{\omega}\,,\quad k=\tau\omega=\pi\frac{\tau}{T}\,.
+\]
+Alkuehdon $y(t_0)=0$ toteuttava ratkaisu on
+\[
+y(t)=-y_p(t_0)e^{-(t-t_0)/\tau}+y_p(t),\quad t\geq t_0.
+\]
+Jos sattuu olemaan $y_p(t_0)=0$, ei transientti 'herää'. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item 
+Ratkaise (yleinen ratkaisu tai alkuarvotehtävän ratkaisu):
+\begin{align*}
+&\text{a)}\ \ y'+2xy=2xe^{-x^2} \qquad
+ \text{b)}\ \ (1+x^2)y'-2xy=(1+x^2)^2 \\
+&\text{c)}\ \ \cos x y'-\sin x y=xe^x \qquad
+ \text{d)}\ \ y'-y=\cosh x \\
+&\text{e)}\ \ xy'+2y=x^3,\,\ y(1)=1 \qquad
+ \text{f)}\ \ y'+y\cos x=\sin x\cos x,\,\ y(0)=1 \\
+&\text{g)}\ \ y'+y\tan x=\sin^3 x,\,\ y(0)=1 \qquad
+ \text{h)}\ \ y'+\abs{x-\abs{x}}y=x,\,\ y(0)=0 \\
+&\text{i)}\ \ y'+2y=x^3-x,\,\ y(0)=1 \qquad
+ \text{j)}\ \ y'-y=e^x-\sin x,\,\ y(0)=0
+\end{align*}
+
+\item 
+a) Differentiaaliyhtälöllä $y'+P(x)y=(x+1)^2e^x$ on ratkaisu $y=(x^2-1)e^x$. Määritä yleinen
+ratkaisu. \newline
+b) Olkoon funktiot $f$ ja $g$ derivoituvia ja $f'$ ja $g'$ jatkuvia välillä $(a,b)$,
+ja olkoon $f(x) \neq 0\ \forall x\in(a,b)$. Minkä lineaarisen differentiaaliyhtälön yleinen
+ratkaisu välillä $(a,b)$ on $y(x)=Cf(x)+g(x),\ C\in\R\,$?
+
+\item
+Määritä $\R$:sssä jatkuva funktio $y(x)$, joka toteuttaa yhtälön
+\[
+2\int_0^x ty(t)\,dt=x^2+y(x), \quad x\in\R.
+\]
+
+\item \label{H-dy-4: Bernoullin DY}
+\index{differentiaaliyhtälö!q@Bernoullin} \index{Bernoullin differentiaaliyhtälö}
+Näytä, että \kor{Bernoullin} DY $\,y'=A(x)y+B(x)y^k\ (k\in\R,\ k \neq 0,\ k \neq 1)$ palautuu 
+lineaariseksi sijoituksella $u=y^{1-k}$. Ratkaise tällä periaatteella
+\begin{align*}
+&\text{a)}\ \ xy'+y=x^3y^2 \qquad\qquad\,\
+ \text{b)}\ \ y'+y=y^2(\cos x-\sin x) \\
+&\text{c)}\ \ 3y'+y=(1-2x)y^4 \qquad
+ \text{d)}\ \ y'+2y/(1-x)=4(x^2-x)\sqrt{y}
+\end{align*}
+
+\item
+Käyrän $y=y(x)$ pisteeseen $P$ asetetaan tangentti, joka leikkaa $y$-akselin pisteessä $Q$.
+Määritä kaikki käyrät, joilla on ominaisuus: kolmion $OPQ$ ($O=$ origo) pinta-ala $=a^2=$ vakio.
+
+\item
+Funktio $R(x)$ on jatkuva $\R$:ssä ja $-2x^2 \le R(x) \le x^2\ \forall x\in\R$. Funktio $y(x)$
+on alkuarvotehtävän $y'+3x^2y=R(x),\ y(0)=0$ ratkaisu. Mitä arvoja $y(-1)$ voi saada?
+
+\item \label{H-dy-4: jaksolliset ratkaisut}
+Olkoon $f$ ja $y_p$ koko $\R$:ssä määriteltyjä, jatkuvia ja $L$-jaksoisia funktioita, ja
+lisäksi olkoon $y_p$ differentiaaliyhtälön $\,y'+ay=f(x)\ (a\in\R)$ ratkaisu
+välillä $(0,L)$. \vspace{1mm}\newline
+a) Näytä, että $y_p'+ay_p=f(x)\ \forall x\in\R$. \newline
+b) Olkoon $F$ ja $Y$ $f$:n ja $y_p$:n keskiarvot välillä $[0,L]$. Näytä, että $F=aY$. 
+--- Johtopäätös, jos $a=0$\,? 
+
+\item
+Olkoon
+\[
+f(x) = \begin{cases} 
+       \,0, &\text{kun}\ x=k\in\Z, \\ \,2x-2k-1, &\text{kun}\ x\in(k,k+1),\ k\in\Z.
+       \end{cases}
+\]
+Määritä funktio $y_p$, joka on (1) jaksollinen, (2) koko $\R$:ssä määritelty ja jatkuva ja 
+(3) on differentiaaliyhtälön $\,y'+y=f(x)\,$ ratkaisu väleillä $(k,k+1)$, $k\in\Z$. Hahmottele
+$y_p$ graafisesti välillä $[0,2]$. Toteutuuko differentiaaliyhtälö pisteessä $x=1$\,? 
+
+\item (*)
+a) Näytä, että alkuarvotehtävän $y'=x+\abs{y},\ y(-2)=1$ ratkaisulla on minimi
+$y(\ln 2-1)=\ln 2-1$. \newline
+b) Määritä differentiaaliyhtälön $y'=\abs{y-x}$ yleinen ratkaisu. Laske myös $y_1(1)$ ja
+$y_2(1)$ yksittäisratkaisuille, jotka toteuttavat ehdot $y_1(-1)=-1/2$ ja $y_2(-1)=1/2$.
+
+\item (*) \label{H-dy-4: Riccatin DY}
+\index{differentiaaliyhtälö!q@Riccatin} \index{Riccatin differentiaaliyhtälö}
+\kor{Riccatin} DY on muotoa $\,y'=A(x)+B(x)y+C(x)y^2$. Jos tälle tunnetaan yksittäisratkaisu
+$y_0$, niin yhtälö palautuu Bernoullin DY:ksi (ks. Tehtävä \ref{H-dy-4: Bernoullin DY}) 
+sijoituksella $y=y_0+u$. Ratkaise tällä periaatteella seuraavat differentiaaliyhtälöt annettua
+lisätietoa käyttäen. \vspace{1mm}\newline
+a) \ $y'=1+x+x^2-(2x+1)y+y^2, \quad y_0(x)=$ polynomi astetta $1$ \newline
+b) \ $y'=y^2-x^2y-(x-1)^2, \quad y_0(x)=$ polynomi astetta $2$ \newline
+c) \ $x^2y'+(xy-2)^2=0, \quad y_0(x)=a/x\,\ (a\in\R)$
+
+\item (*)
+Funktio $y(x)$ on derivoituva välillä $(0,\infty)$, oikealta jatkuva pisteessä $x=0$ ja
+$y(0^+)=1$. Lisäksi tiedetään, että $y'(x)+y(x) \ge f(x)$ kun $x>0$, missä $f$ on  välillä
+$[0,\infty)$ jatkuva funktio. Näytä, että jokaisella $x>0$ pätee
+\[
+y(x) \ge e^{-x} + \int_0^x e^{t-x} f(t)\,dt.
+\]
+
+\item (*)
+Olkoon $\tau>0$. Ratkaise differentiaaliyhtälö
+\[
+\tau y'+y=\abs{2k-t}, \quad t\in(0,\infty)\cap[2k-1,2k+1], \quad k\in\N\cup\{0\} 
+\]
+muodossa $y(t)=Ce^{-t/\tau}+y_p(t)$, missä $y_p$ on jaksollinen, jaksona $T=2$. Hahmottele
+graafisesti alkuehdon $y(0)=2$ toteuttava ratkaisu $\tau$:n arvoilla $10$, $1$ ja $0.1$.
+
+\end{enumerate}

@@ -1,0 +1,549 @@
+\section{Funktion raja-arvo} \label{funktion raja-arvo} \alku
+ 
+Jatkuvuuteen liittyy l‰heisesti k‰site \kor{funktion raja-arvo}. Raja-arvo kertoo funktion 
+arvojen k‰ytt‰ytymisest‰ l‰hestytt‰ess‰ jotakin pistett‰ $a\in\R$ funktion m‰‰rittelyjoukosta 
+k‰sin. Pisteen $a$ ei tarvitse olla m‰‰rittelyjoukossa, riitt‰‰ ett‰ sit‰ voidaan l‰hesty‰ 
+mielivaltaisen l‰helle. Tyypillinen sovellustilanne onkin juuri t‰llainen. Toisaalta, jos
+piste on m‰‰rittelyjoukossa, ei raja-arvo silti riipu funktion arvosta t‰ss‰ pisteess‰.
+
+Funktion raja-arvoja on kahdentyyppisi‰, varsinaisia eli raja-arvoja ilman lis‰m‰‰reit‰, ja 
+\index{toispuolinen raja-arvo}%
+\kor{toispuolisia} raja-arvoja (engl. one-sided limit). M‰‰ritelm‰t ovat seuraavat.
+\begin{Def} \vahv{(Funktion raja-arvo)}\ \label{funktion raja-arvon m‰‰ritelm‰}
+\index{funktion raja-arvo|emph} \index{raja-arvo!b@reaalifunktion|emph}
+\index{vasemmanpuoleinen raja-arvo|emph} \index{oikeanpuoleinen raja-arvo|emph}
+Funktiolla $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on \kor{pisteess‰} $a$ (tai $a$:ssa) 
+\kor{raja-arvo} $A\in\R$, jos jokaiselle reaalilukujonolle $\seq{x_n}$ p‰tee
+\[
+\bigl(\,x_n\in\DF_f\ \ja\ x_n\neq a\,\bigr)\,\forall n\,\ \ja\,\ x_n\kohti a\,\ 
+                          \impl\,\ f(x_n)\kohti A,
+\]
+ja oletus on voimassa jollekin jonolle $\{x_n\}$. Funktiolla on pisteess‰ $a$ 
+\kor{vasemmanpuoleinen raja-arvo} $A_-\in\R$, jos jokaiselle reaalilukujonolle $\seq{x_n}$
+p‰tee
+\[
+\bigl(\,x_n\in\DF_f\ \ja\ x_n< a\,\bigr)\,\forall n\,\ \ja\,\ x_n\kohti a\,\ 
+                          \impl\,\ f(x_n)\kohti A_-,
+\]
+ja oletus on voimassa jollekin jonolle $\{x_n\}$. Funktiolla on pisteess‰ $a$
+\kor{oikeanpuoleinen raja-arvo} $A_+\in\R$, jos jokaiselle reaalilukujonolle $\seq{x_n}$
+p‰tee
+\[
+\bigl(\,x_n\in\DF_f\ \ja\ x_n> a\,\bigr)\,\forall n\,\ \ja\,\ x_n\kohti a\,\
+                          \impl\,\ f(x_n)\kohti A_+,
+\]
+ja oletus on voimassa jollekin jonolle $\{x_n\}$.
+\end{Def}
+Raja-arvon m‰‰ritelm‰n lis‰ehto 'oletus voimassa jollekin jonolle $\seq{x_n}$' tarkoittaa,
+ett‰ l‰hestyminen ($x_n \kohti a$) oletetulla tavalla on mahdollista, ts.\ ett‰ $a$ \pain{ei}
+\pain{ole} \pain{eristett}y p\pain{iste} joukossa $\DF_f \cup \{a\}$
+(ks.\ Harj.teht.\,\ref{jatkuvuuden k‰site}:\ref{H-V-1: eristetty piste}). Toispuolisissa
+raja-arvoissa lis‰ehto tarkoittaa vastaavasti, ett‰ $a$ ei ole eristetty piste joukossa
+$[\DF_f\cap(-\infty,a)]\cup\{a\}$ (vasemmanpuoleinen raja-arvo) tai joukossa
+$[\DF_f\cap(a,\infty)]\cup\{a\}$ (oikeanpuoleinen raja-arvo). Eristetyss‰ pisteess‰
+raja-arvoa ei siis m‰‰ritell‰, olipa piste m‰‰rittelyjoukossa $\DF_f$ tai ei.
+
+M‰‰ritelm‰ss‰ esiintyville raja-arvoille k‰ytet‰‰n merkintˆj‰
+\[
+A = \lim_{x\kohti a} f(x), \quad A_\pm = \lim_{x\kohti a^\pm} f(x),
+\]
+tai merkit‰‰n (vrt.\ lukujonon raja-arvomerkinn‰t)
+\[
+f(x) \kohti A, \quad \text{kun}\ x \kohti a, \qquad 
+f(x) \kohti A_\pm, \quad \text{kun}\ x \kohti a^\pm.
+\]
+Toispuolisille raja-arvoille k‰tev‰ merkint‰tapa on myˆs
+\[
+A_+ = f(a^+), \quad A_- = f(a^-).
+\]
+\begin{Exa} \label{helppo raja-arvo} M‰‰rit‰ $\,\lim_{x \kohti 1}f(x)$, kun 
+$f(x)=(x-1)/(x^2+x-2)$.
+\end{Exa}
+\ratk M‰‰rittelyjoukko on $\DF_f=\{x\in\R \mid x \neq 1\,\ja\,x \neq -2\}$ ja
+$f(x)=1/(x+2)\ \forall x\in\DF_f$. N‰in ollen jos $x_n\in\DF_f\ \forall n$
+($\,\impl\, x_n \neq 1\ \forall n$) ja $x_n \kohti 1$, niin $f(x_n)=1/(x_n+2) \kohti 1/3$.
+Siis $\,\lim_{x \kohti 1}f(x)=1/3$ (M‰‰ritelm‰ \ref{funktion raja-arvon m‰‰ritelm‰}). \loppu
+
+Kuten lukujonon, myˆs funktion raja-arvomerkinnˆiss‰, voi olla $A$:n tai $A_\pm$:n
+tilalla $\infty/-\infty$, jolloin tarkoitetaan M‰‰ritelm‰n 
+\ref{funktion raja-arvon m‰‰ritelm‰} mukaisesti, ett‰ $f(x)$ kasvaa/v‰henee rajatta,
+kun $x \kohti a$ tai $x \kohti a^\pm$. 
+\jatko \begin{Exa} (jatko) Esimerkin funktiolle p‰tee
+\[
+\lim_{x \kohti\,-2^-} f(x) = -\infty, \quad \lim_{x \kohti\,-2^+} f(x) = \infty. \loppu
+\]
+\end{Exa}
+
+Sik‰li kuin raja-arvo $\lim_{x \kohti a} f(x)$ on olemassa, yhtyv‰t myˆs toispuoliset 
+raja-arvot (sik‰li kuin m‰‰ritelt‰viss‰) t‰h‰n. Toisaalta on mahdollista, ett‰ molemmat 
+toispuoliset raja-arvot ovat olemassa pisteess‰ $a$ mutta eri suuret, jolloin raja-arvoa
+pisteess‰ $a$ ei ole. Mit‰ tulee jatkuvuuden ja raja-arvon v‰liseen yhteyteen, n‰hd‰‰n
+M‰‰ritelmist‰ \ref{funktion jatkuvuus} ja \ref{funktion raja-arvon m‰‰ritelm‰}, ett‰ sik‰li
+kuin raja-arvo $\lim_{x \kohti a} f(x)$ on m‰‰ritelt‰viss‰ (eli $a$ ei ole eristetty piste
+joukossa $\DF_f \cup \{a\}$), p‰tee
+\[ \boxed{ \begin{aligned}
+\ykehys\quad f \text{ jatkuva pisteess‰ } a\in\DF_f \ \ekv \ 
+       \lim_{x\kohti a} f(x) = f(a) \quad \\ (\text{$a$ ei eristetty piste}). \quad\akehys
+\end{aligned} } \]
+Jos $f$:ll‰ on toispuolinen raja-arvo $f(a^+)$ tai $f(a^-)$ ja p‰tee joko $f(a)=f(a+)$ tai 
+\index{oikealta jatkuva} \index{vasemmalta jatkuva}
+\index{jatkuvuus (yhden muuttujan)!ea@oikealta, vasemmalta}%
+$f(a)=f(a^-)$, niin sanotaan vastaavasti, ett‰ $f$ on \kor{oikealta jatkuva} tai 
+\kor{vasemmalta jatkuva} pisteess‰ $a$. Jos $a\in\DF_f$ ja pistett‰ $a$ voidaan l‰hesty‰ 
+molemmista suunnista $\DF_f$:st‰ k‰sin, niin on ilmeist‰, ett‰ $f$ on jatkuva $a$:ssa
+t‰sm‰lleen kun $f$ on sek‰ vasemmalta ett‰ oikealta jatkuva $a$:ssa. Edelleen n‰hd‰‰n, ett‰
+$f$ on jatkuva suljetulla v‰lill‰ $[a,b]$ (M‰‰ritelm‰ \ref{jatkuvuus v‰lill‰}) t‰sm‰lleen kun
+$f$ on jatkuva avoimella v‰lill‰ $(a,b)$ ja lis‰ksi oikealta jatkuva $a$:ssa ja vasemmalta
+jatkuva $b$:ss‰.
+
+Kuten jatkuvuus, myˆs raja-arvo on m‰‰ritelt‰viss‰ vaihtoehtoisella 
+$(\eps,\delta)$-kritee\-rill‰, vrt.\ M‰‰ritelm‰ \ref{vaihtoehtoinen jatkuvuus}. Vaihtoehtoinen
+m‰‰ritelm‰ muotoillaan t‰ss‰ lauseena raja-arvolle $\lim_{x\kohti a} f(x)= A\in\R$. Todistus
+sivuutetaan, sill‰ se on hyvin samanlainen kuin Lauseen \ref{jatkuvuuskriteerien yht‰pit‰vyys}
+todistus edellisess‰ luvussa. (Toispuolisille raja-arvoille on muotoiltavissa vastaava tulos,
+samoin tapauksille $\lim_{x\kohti a} f(x) = \pm\infty$.)
+\begin{*Lause} \vahv{(Raja-arvon $(\eps,\delta)$-kriteeri)} \label{approksimaatiolause}
+\index{funktion raja-arvo|emph} \index{raja-arvo!b@reaalifunktion|emph}
+Funktiolla $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on raja-arvo $\lim_{x\kohti a} f(x)=A\in\R$
+t‰sm‰lleen kun $\DF_f\cap[(a-\delta,a)\cup(a,a+\delta)]\neq\emptyset$ $\forall \delta>0$ ja
+jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett‰ jokaisella $x\in\R$ p‰tee
+\[
+x\in\DF_f \ \ja \ 0<\abs{x-a}<\delta \ \impl \ \abs{f(x)-A}<\eps.
+\]
+\end{*Lause}
+Lukujonoista tiedet‰‰n, ett‰ suppeneva lukujono on rajoitettu 
+(Lause \ref{suppeneva jono on rajoitettu}). Funktiolle, jolla on raja-arvo, p‰tee Lauseen
+\ref{approksimaatiolause} perusteella vastaava tulos:
+\begin{Lause} \label{raja-arvo ja rajoitettu funktio} \index{rajoitettu!c@funktio|emph} 
+Jos $\lim_{x \kohti a} f(x) = A\in\R$, niin $f$ on \kor{rajoitettu} jossakin pisteen
+ymp‰ristˆss‰, ts.\ $\exists \delta>0$ ja $C\in\R_+$ siten, ett‰
+\[ 
+|f(x)| \le C \quad \forall\ x\in(a-\delta,a+\delta)\cap\DF_f. 
+\]
+\end{Lause}
+\tod Valitaan $\eps=1$ ja vastaava $\delta>0$ niin, ett‰ Lauseen \ref{approksimaatiolause}
+ehto on voimassa. T‰llˆin seuraa kolmioep‰yht‰lˆst‰, ett‰ v‰itt‰m‰ on tosi, kun
+$C=\abs{A}+1$. \loppu
+
+\subsection*{Funktion approksimointi raja-arvolla}
+%\index{funktion approksimointi!a@raja-arvolla|vahv}
+
+Jos funktiosta tunnetaan raja-arvo $A = \lim_{x\kohti a} f(x)$, niin Lauseen 
+\ref{approksimaatiolause} mukaan voidaan raja-arvopisteen l‰hell‰ k‰ytt‰‰ approksimaatiota 
+$f(x) \approx A$. Lause ei tosin anna (eik‰ tehdyin oletuksin voikaan antaa) mit‰‰n 
+kvantitatiivista tietoa approksimaation tarkkuudesta, koska $\delta$:n riippuvuutta
+$\eps$:sta ei tunneta. Tyypillisiss‰ esimerkkitapauksissa funktiosta $f$ kuitenkin yleens‰
+tiedet‰‰n lauseessa oletettua enemm‰n, jolloin approksimaatiolle on ehk‰ mahdollista johtaa 
+kvantitatiivinen virhearvio t‰m‰n lis‰tiedon perusteella. Likim‰‰r‰isess‰ funktioevaluaatiossa
+raja-arvotieto voi auttaa etenkin silloin, kun funktion laskukaava suoraan k‰ytettyn‰ on
+altis numeerisille pyˆristysvirheille raja-arvopisteen l‰hell‰.
+\begin{Exa} \label{raja-arvolla approksimointi} Funktio $f(x) = (1-\cos x)/x^2$ on m‰‰ritelty,
+kun $x \neq 0$. Myˆhemmin (Luku \ref{kaarenpituus}) osoitetaan, ett‰ 
+$\lim_{x \kohti 0} f(x) = 1/2$. T‰h‰n tulokseen perustuva approksimaatio
+\[
+f(0.000000003) \approx \lim_{x \kohti 0} f(x) = 0.5
+\]
+on huomattavasti turvallisempi kuin $f$:n laskukaavan suora k‰yttˆ, sill‰ lasku\-operaatiossa
+$x \map 1-\cos x$ tapahtuu huomattava merkitsevien numeroiden kato, kun $\abs{x}$ on pieni 
+(vrt.\ Luku \ref{desimaaliluvut}). Paitsi turvallinen, raja-arvoon perustuva
+\mbox{approksimaatio} on t‰ss‰ tapauksessa myˆs hyvin tarkka: virhe on alle $10^{-18}$. \loppu
+\end{Exa}
+
+\subsection*{Raja-arvojen yhdistely}
+\index{funktion raja-arvo!a@raja-arvojen yhdistely|vahv}
+
+Raja-arvojen laskemista helpottavat seuraavat lauseet, jotka ovat Lauseiden 
+\ref{jatkuvuuden yhdistelys‰‰nnˆt} ja \ref{yhdistetyn funktion jatkuvuus} vastineita. 
+Todistukset ovat M‰‰ritelm‰n \ref{funktion raja-arvon m‰‰ritelm‰} perusteella suoraviivaisia
+(Harj.teht.\,\ref{H-V-2: todistuksia}; ks.\ myˆs 
+Harj.teht.\,\ref{jatkuvuuden k‰site}:\ref{H-V-1: eristetty piste}). Lauseet p‰tev‰t ilmeisin
+muutoksin myˆs toispuolisille raja-arvoille.
+\begin{Lause} \label{funktion raja-arvojen yhdistelys‰‰nnˆt}
+Jos $\lim_{x\kohti a} f(x) = A\in\R$, niin
+\begin{align*}
+\lim_{x\kohti a} (\lambda f)(x) &= \lambda A \quad \forall \lambda\in\R. \\
+\intertext{Jos lis‰ksi $\lim_{x\kohti a} g(x)=B\in\R$ ja $a$ ei ole joukon
+$(\DF_f\cap\DF_g)\cup\{a\}$ eristetty piste, niin}
+\lim_{x\kohti a} (f+g)(x)       &=A+B, \\  
+\lim_{x\kohti a} (fg)(x)        &=AB.
+\intertext{Jos lis‰ksi $B\neq 0$ ja $a$ ei ole joukon
+$\DF_{f/g}\cup\{a\}=\{x\in\DF_f\cap\DF_g \mid g(x) \neq 0\}\cup\{a\}$ eristetty piste, niin}
+\lim_{x\kohti a} (f/g)(x)       &=A/B.
+\end{align*}
+\end{Lause}
+\begin{Lause} \label{yhdistetyn funktion raja-arvo} Jos $\lim_{x\kohti a} g(x) = A\in\R$, $f$
+on jatkuva pisteess‰ $x=A$ ja $a$ ei ole joukon $\DF_{f \circ g}\cup\{a\}$ eristetty piste,
+niin $\lim_{x\kohti a} (f\circ g)(x) = f(A)$. 
+\end{Lause}
+\jatko \begin{Exa} (jatko) Koska $g(x) = \sqrt{\abs{x}}$ on jatkuva $\R$:ss‰ 
+(Propositio \ref{potenssifunktion jatkuvuus}), niin esimerkin raja-arvotuloksesta ja Lauseesta
+\ref{yhdistetyn funktion raja-arvo} seuraa
+\[
+\lim_{x \kohti 0} \frac{\sqrt{1-\cos x}}{\abs{x}} 
+      = \lim_{x \kohti 0} \sqrt{\frac{1-\cos x}{x^2}} = \frac{1}{\sqrt{2}}\,. \loppu 
+\]
+\end{Exa}
+\begin{Exa} Funktioille $f_0(x)=1$ ja $f_1(x)=x$ ovat voimassa ilmeiset raja-arvotulokset
+\[
+\lim_{x \kohti a} f_0(x) = 1, \quad \lim_{x \kohti a} f_1(x) = a, \quad a \in \R.
+\]
+N‰iden ja Lauseen \ref{funktion raja-arvojen yhdistelys‰‰nnˆt} perusteella seuraa
+\[
+\lim_{x \kohti a} \frac{(x+1)^2}{x+2} = \frac{(a+1)^2}{a+2}\,, \quad \text{kun}\ a \neq -2.
+\]
+Tulos on selv‰ myˆs Lauseen \ref{jatkuvuuden yhdistelys‰‰nnˆt} perusteella, sill‰ t‰m‰n mukaan
+rationaalifunktio $f$ on jatkuva koko m‰‰rittelyjoukossaan, jolloin 
+$\lim_{x\kohti a} f(x) = f(a)$, kun $a\in\DF_f$. \loppu
+\end{Exa}
+
+\subsection*{Raja-arvon laskeminen sijoituksella}
+\index{funktion raja-arvo!b@laskeminen sijoituksella|vahv}
+
+Raja-arvon $\,\lim_{x \kohti a} f(x)$ laskemista on usein mahdollista helpottaa tekem‰ll‰
+\kor{sijoitus} eli \kor{muuttujan vaihto} $\,x=u(t)$. Muuttujaa vaihdettaessa tukeudutaan
+seuraavaan lauseeseen, joka on helposti muotoiltavissa myˆs toispuolista raja-arvoa
+koskevaksi (Harj.teht.\,\ref{H-V-2: todistuksia}c).
+\begin{Lause} \label{raja-arvo sijoituksella} Olkoon $u:\ U\kohti[a-\delta,a+\delta]$ 
+($\delta>0$) jatkuva bijektio, miss‰ $U$ on suljettu v‰li. T‰llˆin jos $u(\alpha)=a$, niin
+p‰tee
+\[
+\lim_{x \kohti a} f(x) = \lim_{t\kohti\alpha} f(u(t)) = \lim_{t\kohti\alpha} F(t)=A,
+\]
+sik‰li kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
+\end{Lause}
+\tod Lauseen \ref{k‰‰nteisfunktion jatkuvuus} perusteella myˆs k‰‰nteisfunktio
+$u^{-1}:\ [a-\delta,a+\delta] \kohti U$ on jatkuva bijektio. Olkoon nyt $x_n\in\DF_f$,
+$x_n \neq a\ \forall n$ ja $x_n \kohti a$. T‰llˆin jostakin indeksist‰ eteenp‰in on 
+$\abs{x_n-a}<\delta$, jolloin voidaan kirjoittaa $\,x_n=u(t_n),\ t_n \in U$. Koska
+$u:\ U \kohti [a-\delta,a+\delta]$ on injektio, niin $x_n \neq a\ \impl\ t_n\neq\alpha$.
+Koska $u^{-1}$ on jatkuva pisteess‰ $a$, niin 
+$x_n \kohti a\ \impl\ t_n=u^{-1}(x_n) \kohti u^{-1}(a)=\alpha$. T‰llˆin oletuksen
+$\lim_{t\kohti\alpha} F(t)=A$ perusteella p‰tee $f(x_n)=f(u(t_n))=F(t_n) \kohti A$. On n‰ytetty,
+ett‰ $\,\lim_{x \kohti a} f(x)=A$ (M‰‰ritelm‰ \ref{funktion raja-arvon m‰‰ritelm‰},
+kun $A\in\R$; p‰‰ttely toimii myˆs, kun $A=\pm\infty$). \loppu
+
+\begin{Exa} \label{raja-arvo muuttujan vaihdolla} M‰‰rit‰ raja-arvo
+$\D \,A=\lim_{x \kohti 81} \frac{\sqrt{x}-9}{\sqrt[4]{x}-3}\,$.
+\end{Exa}
+\ratk T‰ss‰ sopiva sijoitus on $\,\sqrt[4]{x}=t$, jolloin on $\,x=t^4=u(t)$, ja arvoa
+$x=81\,(=a)$ vastaa $t=3\,(=\alpha)$. Koska
+\[
+F(t)=f(t^4)=\frac{t^2-9}{t-3}=t+3=G(t), \quad \text{kun}\ t \neq 3,
+\]
+niin funktion $G$ jatkuvuuden perusteella on $\lim_{t \kohti 3} F(t)=G(3)=6$. Lauseen
+\ref{raja-arvo sijoituksella} oletukset ovat voimassa ($\delta \le 3$), joten kysytty
+raja-arvo on $A=6$. \loppu
+\begin{Exa} Sijoituksella $x=2t$ saadaan (vrt.\ Luku \ref{trigonometriset funktiot})
+\[
+\lim_{x \kohti 0^+} \frac{\sin\frac{x}{2}}{\sqrt{1-\cos x}}
+  = \lim_{t \kohti 0^+} \frac{\sin t}{\sqrt{1-\cos 2t}}
+  = \lim_{t \kohti 0^+} \frac{\sin t}{\sqrt{2\sin^2 t}}
+  = \lim_{t \kohti 0^+} \frac{1}{\sqrt{2}} 
+  = \frac{1}{\sqrt{2}}\,.
+\]
+T‰ss‰ loppusievennys perustui p‰‰ttelyyn
+$\,t\in(0,\pi]\,\impl\,\sqrt{\sin^2 t}=\sin t$. \loppu
+\end{Exa}
+
+Esimerkeiss‰ suoritettiin raja-arvolaskuille hyvin tyypillinen nelivaiheinen lasku\-operaatio
+\[
+\lim_{x \kohti a} f(x) = \lim_{t\kohti\alpha} f(u(t)) = \lim_{t\kohti\alpha} F(t)
+                       = \lim_{t\kohti\alpha} G(t) = G(\alpha).
+\]
+T‰ss‰
+\begin{enumerate}
+\item Sijoitetaan $x=u(t)$ [\,tai $v(x)=t\,\impl\,x=u(t)$\,] ja lasketaan $\alpha=u^{-1}(a)$.
+\item Sievennet‰‰n $f(u(t))$ lausekkeeksi $F(t)$.
+\item Pelkistet‰‰n $F(t)$ lausekkeeksi $G(t)$, kun $t\neq\alpha$.
+\item Lasketaan raja-arvo vedoten $G$:n j\pain{atkuvuuteen} pisteess‰ $t=\alpha$.
+\end{enumerate}
+Sik‰li kuin muuttujaa ei vaihdeta, lasku supistuu vaiheiksi 3--4 ($F=f,\,t=x$), kuten
+Esimerkiss‰ \ref{helppo raja-arvo} edell‰.
+
+\subsection*{Funktion jatkaminen}
+\index{jatkaminen (funktion)|vahv}
+
+Jos $a\in\R$ ei ole funktion $f$ m‰‰rittelyjoukossa, mutta on olemassa (aito) raja-arvo
+$\lim_{x\kohti a} f(x)=A\in\R$, niin on luonnollista sis‰llytt‰‰ $a$ m‰‰rittelyjoukkoon
+asettamalla $f(a)=A$. N‰in menetellen $f$:st‰ tulee M‰‰ritelm‰n \ref{funktion jatkuvuus}
+mukaisesti jatkuva pisteess‰ $a$. Funktion m‰‰rittelyjoukon laajentamista t‰ll‰ tavoin
+kutsutaan \kor{funktion jatkamiseksi}.
+\begin{Exa} Esimerkiss‰ \ref{helppo raja-arvo} todettiin, ett‰ funktiolla
+$f(x)=(x-1)/(x^2+x-2)$ on raja-arvo $\lim_{x \kohti 1}f(x)=1/3$. Kun piste $x=1$ sis‰llytet‰‰n
+$f$:n m‰‰rittelyjoukkoon asettamalla $f(1)=1/3$, niin $f$ tulee jatketuksi funktioksi
+$f(x)=1/(x+2)$. Enemp‰‰ ei m‰‰rittelyjoukkoa voi t‰ss‰ laajentaa jatkamalla, koska
+$f$:ll‰ ei ole reaalista (tai yleisemp‰‰k‰‰n) raja-arvoa, kun $x \kohti -2$. \loppu
+\end{Exa}
+\begin{Exa} Esimerkin \ref{raja-arvolla approksimointi} raja-arvotiedon
+(ja Esimerkin \ref{jatkuvuuden k‰site}:\ref{trig yhdistely} tiedon) perusteella funktio
+\[ 
+f(x) = \begin{cases} \,\dfrac{1-\cos x}{x^2}\,, &\text{kun}\ x \neq 0, \\[2mm]
+                     \,\dfrac{1}{2}\,,          &\text{kun}\ x=0
+       \end{cases}
+\]
+on jatkuva $\R$:ss‰. Funktion arvo $0$:ssa on m‰‰r‰tty jatkamalla. \loppu
+\end{Exa}             
+
+\subsection*{Paloittainen jatkuvuus}
+\index{jatkuvuus (yhden muuttujan)!f@paloittainen|vahv} \index{paloittainen!b@jatkuvuus|vahv}
+
+Funktion toispuoliset raja-arvot tulevat k‰yttˆˆn erityisesti sellaisissa sovellustilanteissa,
+joissa (usein fysikaalista perua oleva) funktio on jatkuva muualla paitsi erillisiss‰ 
+\index{hyppyep‰jatkuvuus}%
+pisteiss‰, joissa sill‰ on yksinkertainen nk.\ \kor{hyppyep‰jatkuvuus}
+(engl.\ jump discontinuity). Asetetaan t‰llaisia k‰yt‰nnˆn tarpeita silm‰ll‰ pit‰en
+\begin{Def}
+Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on v‰lill‰ $[a,b]$ \kor{paloittain jatkuva} 
+(engl.\ piecewise continuous), jos $\exists$ pisteet $c_k$, $k=0\ldots n$, $n\in\N$ siten,
+ett‰
+\[
+a=c_0<c_1<\ldots<c_n=b
+\]
+ja p‰tee
+\begin{itemize}
+\item[(i)] $(c_{k-1},c_k)\subset\DF_f$ ja $f$ on jatkuva v‰lill‰
+$(c_{k-1},c_k), \quad k=1 \ldots n$,
+\item[(ii)] $\exists$ toispuoliset raja-arvot
+\begin{align*}
+\lim_{x\kohti c_k^+} f(x) &= f(c_k^+), \quad k=0 \ldots n-1, \\ 
+\lim_{x\kohti c_k^-} f(x) &= f(c_k^-), \quad k=1 \ldots n.
+\end{align*}
+\end{itemize}
+\end{Def}
+Huomattakoon, ett‰ raja-arvot $f(c_k^\pm)$ eiv‰t raja-arvon m‰‰ritelm‰n mukaisesti riipu $f$:n
+mahdollisista arvoista pisteiss‰ $c_k$. Jos molemmat toispuoliset raja-arvot ovat olemassa,
+mutta eiv‰t yhdy, on kyseess‰ hyppyep‰jatkuvuus (hyppy= $f(c_k^+)-f(c_k^-)$). Jos yhtyv‰t, on
+funktio pisteess‰ $c_k$ joko jatkuva tai m‰‰ritelt‰viss‰ jatkuvaksi raja-arvon avulla
+(jatkamismenettely).
+\begin{Exa} \label{sahafunktio} Olkoon $[x]=$ suurin kokonaisluku, jolle p‰tee $[x] \le x$.
+Funktio $f(x)=x-[x]$, eli
+\[
+f(x)=x-k,\quad \text{kun } x\in[k,k+1), \quad k\in\Z,
+\]
+on jokaisella v‰lill‰ $[a,b]\subset\R$ paloittain jatkuva. Pisteiss‰ $k\in\Z$ funktio
+voitaisiin m‰‰ritell‰ miten tahansa (tai j‰tt‰‰ m‰‰rittelem‰tt‰) ilman, ett‰ sill‰ 
+vaikutettaisiin toispuolisiin raja-arvoihin $f(k^+)=0$ ja $f(k^-)=1$. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,3)(-1,-1)
+\put(-1,0){\vector(1,0){14}} \put(12.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){3}} \put(0.2,1.8){$y$}
+\multiput(0,0)(1,0){12}{\drawline(0,0)(0,-0.1)} \put(0.9,-0.5){$1$} \put(1.9,-0.5){$2$}
+\drawline(-0.1,1)(0,1) \put(-0.4,0.9){$1$}
+\multiput(0,0)(1,0){12}{\drawline(0,0)(1,1)}
+\end{picture}
+\end{center}
+\end{figure}
+\end{Exa}
+\index{zza@\sov!Kiihdytys}%
+\begin{Exa} \vahv{Kiihdytys}. Auto on paikallaan moottorin k‰ydess‰. Ajan hetkell‰ $t=0$
+polkaistaan kaasupoljin pohjaan. Kiihtyvyys $f(t)=$ ?
+\end{Exa}
+\ratk Idealisoidun matemaattisen mallin mukaan on
+\[
+f(t)=
+\begin{cases}
+\,0,              &\text{kun}\ t<0, \\
+\,a=\text{vakio}, &\text{kun}\ t\ge 0.
+\end{cases}
+\]
+Todellisuudessa hyppyep‰jatkuvuutta ei hetkell‰ $t=0$ esiinny. Matemaattinen malli (jos hyv‰)
+riippuukin esimerkiss‰ olennaisesti siit‰, millaisessa \pain{aikaskaalassa} tapahtumia
+tarkastellaan. Eri skaaloissa funktio $f$ voi n‰ytt‰‰ hyvin erilaiselta. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,4)(0,0)
+\multiput(0,0)(8,0){2}{
+\put(0,1){\vector(1,0){6}} \put(5.8,0.6){$t$}
+\put(1,0){\vector(0,1){4}} \put(1.2,3.8){$y$}
+}
+\multiput(2,1)(1,0){4}{\drawline(0,0)(0,-0.1)} \put(1.7,0.5){$1$ s}
+\drawline(0.9,3)(1,3) \put(0.6,2.9){$a$}
+\multiput(10,1)(1,0){4}{\drawline(0,0)(0,-0.1)} \put(9.5,0.5){$1$ ms}
+\drawline(8.9,3)(9,3) \put(8.6,2.9){$a$}
+\dashline{0,2}(9,2.97)(14,2.97)
+\spline(1,1)(1.1,3)(1.3,2.9)(1.4,3)(2,3)(3,3)(4,3)(5,3)
+\spline(9,1)(9.5,2)(9.7,1.5)(10,2.3)(10.3,2.2)(10.6,2.5)(11,2.7)(11.5,2.8)(12,2.9)(13,2.95)
+\put(3,3.3){$y=f(t)$} \put(11,3.3){$y=f(t)$}
+\end{picture}
+\end{center}
+\end{figure}
+
+\subsection*{Raja-arvot $\displaystyle{\lim_{x\kohti\pm\infty}f(x)}$}
+\index{funktion raja-arvo|vahv} \index{raja-arvo!b@reaalifunktion|vahv}
+
+Raja-arvo $\lim_{x\kohti\infty} f(x)$ m‰‰ritell‰‰n samoin kuin edell‰, eli sijoittamalla
+yleiseen m‰‰ritelm‰‰n $a=\infty$. T‰llˆin $x_n\kohti\infty$ tarkoittaa, ett‰ $\{x_n\}$ kasvaa
+rajatta. Raja-arvo $\lim_{x\kohti -\infty} f(x)$ m‰‰ritell‰‰n vastaavasti. Lause 
+\ref{funktion raja-arvojen yhdistelys‰‰nnˆt} on p‰tev‰ myˆs raja-arvoille 
+$\lim_{x\kohti\pm\infty} f(x)$, samoin Lause \ref{yhdistetyn funktion raja-arvo}, kun 
+m‰‰rittelyjoukkoa $\DF_{f\circ g}$ koskeva oletus muutetaan joko ehdoksi
+$\DF_{f\circ g}\cap(M,\infty)\neq\emptyset\ \forall M\in\R$ (jos $x \kohti \infty$) tai ehdoksi 
+$\DF_{f\circ g}\cap(-\infty,M)\neq\emptyset\ \forall M\in\R$ (jos $x \kohti- \infty$).
+
+Raja-arvoja $\lim_{x\kohti\infty} f(x)$ m‰‰r‰tt‰ess‰ usein k‰tev‰ on sijoitus $x=t^{-1}$, eli
+siirtyminen tarkastelemaan funktiota $F(t)=f(1/t)$. Koska 
+$x\kohti\pm\infty\ \ekv\ t\kohti 0^\pm$, niin raja-arvojen m‰‰ritelmist‰ n‰hd‰‰n, ett‰ p‰tee
+(vrt.\ Lause \ref{raja-arvo sijoituksella})
+\[
+\lim_{x\kohti\pm\infty} f(x) = \lim_{t\kohti 0^\pm} F(t) = F(0^\pm), \quad F(t)=f(1/t).
+\]
+\begin{Exa} (jatko) Muuttujan vaihdolla $x=t^{-1}$ p‰‰tell‰‰n Propostitioon 
+\ref{potenssifunktion jatkuvuus} ja Lauseisiin \ref{jatkuvuuden yhdistelys‰‰nnˆt} ja 
+\ref{yhdistetyn funktion jatkuvuus} vedoten:
+\[
+\lim_{x\kohti\infty} \frac{\sqrt[3]{x}+\sqrt[4]{x}}{\sqrt[3]{8x+3}} 
+                 = \lim_{t\kohti 0^+} \frac{1+\sqrt[12]{t}}{\sqrt[3]{8+3t}}
+                 = \frac{1+0}{\sqrt[3]{8+0}} = \frac{1}{2}\,. \loppu
+\]
+\end{Exa}
+Lukujonojen teoriasta tiedet‰‰n, ett‰ monotoninen ja rajoitettu lukujono suppenee.
+Raja-arvoja $\,\lim_{x\kohti\infty}f(x)\,$ koskeva vastaava v‰itt‰m‰ on
+\begin{Lause} \label{monotonisen funktion raja-arvo} Jos funktio $f$ on monotoninen ja
+rajoitettu v‰lill‰ $[a,\infty)$, niin on olemassa raja-arvo $\lim_{x\kohti\infty}f(x)\in\R$.
+\end{Lause}
+\tod Olkoon $f$ esim.\ kasvava v‰lill‰ $[a,\infty)$. T‰llˆin jos merkit‰‰n $y_k=f(k)$,
+$k\in\N$ ja $k \ge a$, niin $\seq{y_k}$ on kasvava ja rajoitettu lukujono, joten
+$y_k \kohti y\in\R$. Olkoon nyt $\seq{x_n}$ mik‰ tahansa lukujono, jolle p‰tee
+$x_n\ge a\ \forall n$ ja $x_n\kohti\infty$. T‰llˆin jos $x_n\in[k,k+1)$, $k\in\N$, niin
+$y_k \le f(x_n) \le y_{k+1}$, koska $f$ on kasvava. T‰ss‰ $k\kohti\infty$ kun $n\kohti\infty$
+(koska $x_n\kohti\infty$), joten p‰‰tell‰‰n (Propositio \ref{jonotuloksia}[V2]), ett‰
+$\lim_nf(x_n)=\lim_ky_k=y$. Koska t‰m‰ p‰tee jokaiselle mainitut ehdot t‰ytt‰v‰lle jonolle
+$\seq{x_n}$, niin $\,\lim_{x\kohti\infty}f(x)=y$. Jos $f$ on v‰henev‰ v‰lill‰ $[a,\infty)$, niin
+p‰‰ttely on vastaava. \loppu
+
+\subsection*{Asymptootit}
+\index{asymptootti|vahv}
+
+Sanotaan, ett‰ funktio $g(x)$ on funktion $f(x)$ \kor{asymptootti}, jos 
+\[
+\lim_{x\kohti \infty} [f(x)-g(x)]=0, \ \text{ tai }\ \lim_{x\kohti -\infty} [f(x)-g(x)]=0.
+\]
+Asymptootin ideana on approksimoida funktiota jollakin (mieluiten) yksinkertaisella
+funktiolla $g(x)$, kun joko $x$ on hyvin suuri (merkint‰ $x \gg 1$) tai $-x$ on hyvin suuri 
+(merkint‰ $x \ll -1$)\,:
+\[
+f(x)\approx g(x), \quad \text{kun}\ x\gg 1\ 
+                        \text{tai}\ x\ll -1.\footnote[2]{Asymptootin perinteisempi ja
+rajoitetumpi geometrinen m‰‰ritelm‰ on tasok‰yr‰‰n liittyen \pain{suora}, jota 'k‰yr‰ l‰hestyy
+‰‰rettˆmyydess‰'. Esimerkiksi k‰yr‰n $S:\,y=x^2/(x+1)$ asymptootteja ovat t‰m‰n tulkinnan
+mukaan suorat $y=x-1$ ja $x=-1$. J‰lkimm‰inen on nk.\ pystysuora asymptootti, jolla ei ole
+funktiovastinetta.}
+\]
+Kyse on Lauseesta \ref{approksimaatiolause}, joka on yleistett‰viss‰ myˆs raja-arvoja 
+$\lim_{x\kohti\pm\infty} f(x)$ koskevaksi: Esimerkiksi jos $\DF_f\cap\DF_g\supset[a,\infty)$ ja
+$\lim_{x\kohti\infty} [f(x)-g(x)]=0$, niin jokaisella $\eps>0$ on olemassa $M\in[a,\infty)$
+siten, ett‰ $\,\abs{f(x)-g(x)}<\eps\ \forall x>M$.
+\begin{Exa} Funktion $f(x)=\sqrt{x^2+4x}\,$ er‰s asymptootti, kun $|x| \gg 1$, on $g(x)=|x+2|$,
+sill‰ rajoilla $x\kohti\pm\infty\,$ on
+\begin{align*}
+f(x)-g(x) \,=\, \sqrt{x^2+4x}-|x+2| 
+          &\,=\, \frac{x^2+4x-(x+2)^2}{\sqrt{x^2+4x}+|x+2|} \\
+          &\,=\, -\frac{4}{\sqrt{x^2+4x}+|x+2|}\ \kohti\ 0. \loppu
+\end{align*}
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-V-2: todistuksia}
+a) Todista Lause \ref{funktion raja-arvojen yhdistelys‰‰nnˆt}. \
+b) Todista Lause \ref{yhdistetyn funktion raja-arvo}. \
+c) Muotoile ja todista Lauseen \ref{raja-arvo sijoituksella} vastine koskien toispuolista
+raja-arvoa $\lim_{x \kohti a^+} f(x)$.
+
+\item
+Funktiosta $f$ tiedet‰‰n, ett‰ $[-1,1]\subset\DF_f$, $f(0)=0$ ja 
+$\,\sqrt{2-x^2} \le f(x) \le \sqrt{2+9\abs{x}}$, kun $0 < \abs{x} \le 1$. N‰yt‰, ett‰
+$\lim_{x \kohti 0}f(x)=\sqrt{2}$.
+
+\item
+a) Funktiosta $f$ tiedet‰‰n, ett‰ $\,\lim_{x \kohti 0^+}f(x)=A$. N‰yt‰, ett‰ jos $f$ on 
+parillinen, niin $\,\lim_{x \kohti 0^-}f(x)=A$, ja jos pariton, niin
+$\,\lim_{x \kohti 0^-}f(x)=-A$. \newline
+b) Funktiosta $f$ tiedet‰‰n, ett‰ $\,\lim_{x \kohti 0^+}f(x)=A$ ja
+$\,\lim_{x \kohti 0^-}f(x)=B$. Laske raja-arvot $\lim_{x \kohti 0^+} f(x^2-x)$ ja
+$\lim_{x \kohti 0^-} f(x^2+x^3)$. 
+
+\item
+M‰‰rit‰ seuraavat raja-arvot, joko reaalilukuna tai muodossa $\pm\infty$, tai totea 
+vaihtoehtoisesti, ettei raja-arvoa ole. Vaihda tarvittaessa muuttujaa.
+\begin{align*}
+&\text{a)}\ \lim_{x \kohti 4} (x^2-4x+1) \qquad
+ \text{b)}\ \lim_{x \kohti 3} \frac{x+3}{x+6} \qquad
+ \text{c)}\ \lim_{x\kohti\pi} \frac{(x+\pi)^2}{\pi x} \\[1mm]
+&\text{d)}\ \lim_{x \kohti -2} \frac{x^2+2x}{x^2-4} \qquad
+ \text{e)}\ \lim_{x \kohti 2} \left(\frac{1}{x-2}-\frac{4}{x^2-4}\right) \qquad
+ \text{f)}\ \lim_{x \kohti \frac{\pi}{2}} \frac{\sin(2x+\pi)}{\cot x} \\
+&\text{g)}\ \lim_{t \kohti 0} \frac{(t+1)^2-(t-1)^2}{t} \qquad
+ \text{h)}\ \lim_{s \kohti 0} \frac{s^2+3s}{(s+2)^2-(s-2)^2} \\
+&\text{i)}\ \lim_{x \kohti -3} \abs{x-3} \qquad
+ \text{j)}\ \lim_{x \kohti 2} \frac{\abs{x^2-4x+3}}{x^2+2x-3} \qquad
+ \text{k)}\ \lim_{x \kohti 1} \frac{\abs{x^2-4x+3}}{x^2+2x-3} \\
+&\text{l)}\ \lim_{x \kohti 0} \frac{\sqrt{1+2x+3x^2}-\sqrt{1-x}}{x} \qquad
+ \text{m)}\ \lim_{y \kohti 1} \frac{y-4\sqrt{y}+3}{y^2-1} \\
+&\text{n)}\ \lim_{x \kohti 0} \frac{\sqrt{2-x}-\sqrt{2+x}}{x\sqrt{x}} \qquad
+ \text{o)}\ \lim_{x \kohti 2} \frac{\sqrt{4-4x+x^2}}{x-2} \qquad 
+ \text{p)}\ \lim_{t \kohti 8} \frac{t^{2/3}-4}{t^{1/3}-2} \\
+&\text{q)}\ \lim_{x \kohti 3^+} \frac{\abs{x-3}}{3-x} \qquad
+ \text{r)}\ \lim_{x \kohti 2^-} \frac{\sqrt{4-4x+x^2}}{x-2} \qquad
+ \text{s)}\ \lim_{x \kohti \pi^+} \frac{\sqrt{1+\cos x}}{\cos\frac{x}{2}} \\
+&\text{t)}\ \lim_{x \kohti -0.4^+} \frac{2x+5}{5x+2} \qquad
+ \text{u)}\ \lim_{x \kohti 1^+} \frac{x}{\sqrt{x^2-1}} \qquad
+ \text{v)}\ \lim_{x \kohti 1^+} \frac{\sqrt{x^2-x}}{x-x^2} \\
+&\text{x)}\ \lim_{x\kohti\infty} \frac{1+x+x^4}{2+30x+200x^3} \qquad
+ \text{y)}\ \lim_{x\kohti\infty} \left(\frac{x^2}{x+1}-\frac{x^2}{x-1}\right) \\
+&\text{z)}\ \lim_{x \kohti -\infty} \frac{2x-1}{\sqrt{3x^2+x+1}} \qquad
+ \text{Â)}\ \lim_{x\kohti\infty} \frac{x\sqrt{x+1}\,(1-\sqrt{2x+3})}{7-6x+4x^2} \\[1mm]
+&\text{‰)}\ \lim_{x\kohti\infty} \left(\sqrt{x^2+9x}-\sqrt{x^2-5x}\right) \qquad
+ \text{ˆ)}\ \lim_{x \kohti -\infty} \left(\sqrt{x^2-4x}-\sqrt{x^2+10x}\right)
+\end{align*}
+
+\item \label{H-V-2: v‰itt‰mi‰}
+Todista M‰‰ritelm‰n \ref{funktion raja-arvon m‰‰ritelm‰} ja lukujonojen teorian
+avulla: \vspace{1mm}\newline
+a) Jos $f$ on monotoninen ja rajoitettu v‰lill‰ $(a,b)\subset\DF_f$, niin on olemassa
+raja-arvot $f(a^+)$ ja $f(b^-)$. \newline
+b) Jos $f(x) \le g(x)\ \forall x\in(a,b)\subset\DF_f\cap\DF_g$, niin $f(a^+) \le g(a^+)$ ja
+$f(b^-) \le g(b^-)$ sik‰li kuin raja-arvot ovat olemassa reaalilukuina.
+
+\item
+Laajenna funktion $\,\D f(x)=\frac{x^2-1}{\sqrt{x+3}-2}\,$
+m‰‰rittelyjoukko v‰liksi $[-3,\infty)$ jatkamalla. Mik‰ on jatketun funktion sievennetty
+laskus‰‰ntˆ?
+
+\item
+Olkoon $f$ m‰‰ritelty v‰lill‰ $\,[1,\infty)\,$ ja olkoon $\,y_n=f(n)$, $n\in\N$. N‰yt‰, ett‰
+p‰tee $\,\lim_{x\kohti\infty} f(x)=A\ \impl\ \lim_ny_n=A$. N‰yt‰ vastaesimerkill‰, ett‰
+k‰‰nteinen implikaatio ei ole tosi.
+
+\item
+M‰‰rit‰ seuraaville funktioille $f(x)$ tai $y(x)$ asymptootti $g(x)$, joka on annettua
+muotoa ($a,b\in\R$) ja mahdollisimman tarkka (ellei yksik‰sitteinen). Tarkastele erikseen
+tapaukset $x\kohti\infty$ ja $x \kohti -\infty$. \vspace{2mm}\newline
+a) $\D \,f(x)=\frac{\abs{x+3}}{2x-1}\,, \quad g(x)=a$ \newline
+b) $\D \,f(x)=\frac{(x+3)^2}{\abs{3x+1}}\,, \quad g(x)=ax+b$ \vspace{1mm}\newline
+c) $\D \,f(x)=\sqrt{2x^2+3x+\cos x}, \quad g(x)=ax+b$ \vspace{3mm}\newline
+d) $\D \,f(x)=\frac{1}{\sqrt{3x^2+4x}+\sqrt{x^2+x+1}}\,, \quad g(x)=\frac{a}{x}$ 
+                                                         \vspace{1mm}\newline
+e) $\D \,f(x)=\frac{\abs{3x+2}}{2x+3}\,, \quad g(x)=a+\frac{b}{x}$ \vspace{2mm}\newline
+f) $\D \,9(x-1)^2-16(y+2)^2=25,\ y(x) \ge -2, \quad g(x)=ax+b$ \vspace{3mm}\newline
+g) $\D \,(2x^2+1)y+x\,\cos y=(2x+1)^3, \quad g(x)=ax+b$
+
+\item
+Funktiolla $f(x)=\sqrt{x^4+8x^3+35x^2+78x+98}$ on asymptootteina toisen asteen polynomeja. 
+Koeta lˆyt‰‰ mahdollisimman tarkka t‰llainen asymptootti $p(x)$ ja arvioi approksimaation 
+$f(x)\approx p(x)$ virhe, kun $|x|\ge 100$.
+
+\item (*)
+Olkoon $a>0$ ja $m,n\in\N$. Laske raja-arvo
+$\displaystyle{\,\lim_{x \kohti a} \frac{\sqrt[m]{x}-\sqrt[m]{a}}{\sqrt[n]{x}-\sqrt[n]{a}}\,}$.
+
+\item (*) Reaalifunktiosta $f$ tiedet‰‰n, ett‰ $f(x)=x+1\ \forall x\in\R,\ x \not\in X$, miss‰
+$X\subset\R$ on ‰‰rellinen joukko. Joukkoa $X$ ei tunneta, eik‰ pisteist‰ $x \in X$ tiedet‰
+muuta kuin ett‰ $f$ on n‰iss‰ pisteiss‰ joko m‰‰ritelty jollakin tuntemattomilla tavalla
+(reaaliarvoisena) tai j‰tetty m‰‰rittelem‰tt‰. N‰yt‰, ett‰ $\,\lim_{x \kohti 0} f(x)=1$.
+
+\end{enumerate}

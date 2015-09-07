@@ -1,0 +1,359 @@
+\section{Integraalifunktio} \label{integraalifunktio}
+\alku
+\index{integraalifunktio|vahv}
+
+Palautettakoon mieliin Luvusta \ref{väliarvolause 2}, että funktiota $F(x)$ sanotaan
+funktion $f(x)$ \kor{integraalifunktioksi} avoimella välillä $(a,b)$, jos $F$ on derivoituva
+välillä $(a,b)$ ja
+\[
+F'(x)=f(x),\quad x\in (a,b).
+\]
+Integraalifunktiota merkitään
+\[
+F(x)=\int f(x)\, dx.
+\]
+Hieman erikoinen merkintä viittaa integraalifunktion laskennalliseen määritelmään, joka 
+esitetään myöhemmin (Luku \ref{määrätty integraali}). Integraalifunktiota sanotaan myös
+\index{mzyzyrzyzy@määräämätön integraali}%
+\kor{määräämättömäksi integraaliksi} (engl.\ indefinite integral, antiderivative). Tässä
+'määräämätön' viittaa siihen, että integraalifunktio ei ole yksikäsitteinen, vaan siihen 
+voidaan lisätä mielivaltainen vakio: Jos yksi integraalifunktio $F$ tunnetaan, niin kaikki 
+\index{integroimisvakio}%
+integraalifunktiot ovat esitettävissä nk.\ \kor{integroimisvakion} $C$ avulla muodossa
+\[
+\int f(x)\, dx=F(x)+C.
+\]
+Määrämätön integraali on siis itse asiassa funktiojoukko. Kyseessä on differentiaaliyhtälön
+$\,y'=f(x)\,$ yleinen ratkaisu välillä $(a,b)$ (ks.\ Korollaari 
+\ref{toiseksi yksinkertaisin dy}).
+\begin{Exa} Määritä funktion
+\[
+f(x)=\begin{cases} 
+     \,1, &\text{kun}\ x \le 2, \\[2mm] 
+     \,\dfrac{10}{x}-2x, &\text{kun}\ x>2
+     \end{cases}
+\]
+integraalifunktio $\R$:ssä. \end{Exa}
+\ratk Koska $f(2^-)=f(2^+)=1=f(2)$, niin $f$ on jatkuva $\R$:ssä. Tunnettujen 
+derivoimissääntöjen (Luku \ref{derivaatta}) perusteella on oltava
+\[
+F(x) = \begin{cases} 
+       \,x+C_1\,, &\text{kun}\ x\in(-\infty,2), \\ 
+       \,10\ln x-x^2+C_2\,, &\text{kun}\ x\in(2,\infty),
+        \end{cases}
+\]
+jolloin on $F'(x)=f(x)$, kun $x \neq 2$. Jotta $F$ olisi derivoituva myös pisteessä $x=2$, on
+$F$:n oltava tässä pisteessä ainakin jatkuva, eli on oltava
+\[
+2+C_1 = 10\ln 2-4+C_2 \qimpl C_2 = C_1-10\ln 2+6.
+\]
+Kirjoittamalla $C_1=C$ on saatu
+\[
+F(x)=\begin{cases} 
+     \,x+C, &\text{kun}\ x \le 2, \\ 
+     \,10\ln(x/2)-x^2+6+C, &\text{kun}\ x \ge 2. 
+     \end{cases}
+\]            
+Funktion $F$ toispuoliset derivaatat pisteessä $x=2$ ovat
+\[
+D_-F(2)=f(2^-), \quad D_+F(2)=f(2^+).
+\]
+Koska $f(2^-)=f(2^+)$, niin $F$ on derivoituva myös pisteessä $x=2$ ja $F'(2)=f(2)$.
+Integraalifunktio on siis löydetty. Kuvassa $f$ ja $F$, kun $C=0$. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1.5cm}
+\begin{center}
+\begin{picture}(10,3)(-0.5,-0.7)
+\put(-0.5,0){\vector(1,0){4}} \put(3.3,-0.35){$x$}
+\put(0,-1){\vector(0,1){3}} \put(0.2,1.8){$f(x)$}
+\put(0,1){\line(1,0){2}}
+\curve(
+2.0, 1.0,
+2.1, 0.5619,
+2.2, 0.1455,
+2.3, -0.2522,
+2.4, -0.6333,
+2.5, -1.0)
+\put(-0.3,0.9){$1$}
+\put(2,0){\line(0,-1){0.1}} \put(1.9,-0.4){$2$}
+\put(4.5,0){\vector(1,0){4}} \put(8.3,-0.35){$x$}
+\put(5,-1){\vector(0,1){3}} \put(5.2,1.8){$F(x)$}
+\put(5,0){\line(1,1){2}}
+\curve(
+7.0, 2.0,
+7.1, 2.0779,
+7.2, 2.1131,
+7.3, 2.1076,
+7.4, 2.0632,
+7.5, 1.9814,
+7.6, 1.8636,
+7.7, 1.7110,
+7.8, 1.5247,
+7.9, 1.3056,
+8.0, 1.0546,
+8.1, 0.7725,
+8.2, 0.4600,
+8.3, 0.1177)
+\put(5,1){\line(-1,0){0.1}} \put(4.7,0.9){$1$}
+\put(7,0){\line(0,-1){0.1}} \put(6.9,-0.4){$2$}
+\end{picture}
+\end{center}
+\end{figure}
+
+'Integrointi', ymmärrettynä integraalifunktion etsimisenä, on siis derivoinnin käänteistoimi.
+Sekä yksittäisten funktioiden integroimiskaavat että integraalifunktioiden yleisemmät
+laskusäännöt ovatkin derivoimissääntöjä 'nurinpäin' luettuna. 
+\begin{Exa} Koska (vrt.\ Luku \ref{kompleksinen eksponenttifunktio})
+\[
+D\ln(x+\sqrt{x^2+1}) = \frac{1}{\sqrt{x^2+1}}, \quad x\in\R,
+\]
+niin saadaan (koko $\R$:ssä pätevä) integroimissääntö
+\[
+\int \frac{1}{\sqrt{x^2+1}}\,dx \ =\ \ln(x+\sqrt{x^2+1})+C. \loppu
+\]
+\end{Exa}
+
+Integrointimenetelmistä yksinkertaisin on 'taulukkomenetelmä' eli kaavakokoelma, joka perustuu
+suoraan tunnettuihin derivoimissääntöihin. Seuraavaan taulukkoon on koottu tällaisista
+integroimiskaavoista keskeisimmät (ml.\ esimerkin tulos). Nämä voidaan suoraan lukea Lukujen 
+\ref{derivaatta}, \ref{kaarenpituus}, \ref{exp(x) ja ln(x)} ja
+\ref{kompleksinen eksponenttifunktio} derivoimissäännöistä.
+
+\[ \boxed{\begin{alignedat}[l]{2} \quad
+&(1)  \quad \int x^\alpha\,dx & \ = \ 
+     & \frac{\ykehys 1}{\alpha +1}\,x^{\alpha+1}+C,\quad \alpha\in\R, \ \alpha\neq -1. \quad \\
+&(2)  \quad \int \frac{1}{x}\,dx & \ = \ &\ln\abs{x}+C. \\
+&(3)  \quad \int \cos x\,dx & \ = \ & \sin x+C. \\
+&(4)  \quad \int \sin x\,dx & \ = \ & -\cos x+C. \\
+&(5)  \quad \int e^x \, dx & \ = \ & e^x+C. \\
+&(6)  \quad \int \frac{1}{\cos^2 x}\,dx & \ = \ & \tan x+C. \\
+&(7)  \quad \int \frac{1}{\sin^2 x}\,dx & \ = \ & -\cot x+C. \\
+&(8)  \quad \int \frac{1}{\sqrt{1-x^2}}\,dx & \ = \ & \Arcsin x+C. \\
+&(9)  \quad \int \frac{1}{\sqrt{x^2+1}}\,dx & \ = & \ln(x+\sqrt{x^2+1})+C. \quad \\
+&(10) \quad \int \frac{1}{\sqrt{x^2-1}}\,dx & \ = \ & \ln\abs{x+\sqrt{x^2-1}}+C. \\
+&(11) \quad \int \frac{1}{1+x^2}\,dx & \ = \ & \Arctan x+C. \\
+&(12) \quad \int \frac{1}{\akehys 1-x^2}\,dx  & \ = \ & 
+                 \frac{1}{2}\ln\left|\frac{1+x}{1-x}\right|+C.
+\end{alignedat}} \]
+
+Taulukkoa voitaisiin helposti jatkaa tunnettujen derivoimissääntöjen perusteella. Esimerkiksi
+pätee (ks.\ Luku \ref{exp(x) ja ln(x)})\,:
+
+\[ \boxed{\begin{alignedat}[l]{2} \quad
+&(13) \quad \int\dfrac{\ykehys 1}{\sin x}\,dx & \ = \ & 
+                     \ln\left|\dfrac{1-\cos x}{\sin x}\right|+C. \\
+&(14) \quad \int\dfrac{1}{\cos x}\,dx & \ = \ & 
+                    -\ln\left|\dfrac{1-\sin x}{\akehys\cos x}\right|+C. \hspace{35mm}
+\end{alignedat}} \]
+
+Sääntöjä (1)--(14) voidaan tarkemmin käyttää sellaisilla \pain{avoimilla} \pain{väleillä},
+joilla annettu funktio $f$ ja integraalifunktio $F$ ovat molemmat määriteltyjä ja jälkimmäinen
+on derivoituva. Esimerkiksi säännöt (3)--(5) ovat päteviä koko $\R$:ssä, sääntö (2) on pätevä 
+väleillä $(-\infty,0)$ ja $(0,\infty)$, sääntö (8) välillä $(-1,1)$, ja sääntö (7) väleillä
+$(k\pi,(k+1)\pi),\ k\in\Z$. Silloin kun integroimissäännön pätevyys on rajoitettu useammalle
+pistevieraalle $\R$:n osavälille (kuten sännöissä (2) ja (7)), ei integroimisvakion tarvitse
+olla eri osaväleillä sama.
+
+Taulukkokaavat (9), (10) ja (12) voidaan ilmaista myös hyperbolisten käänteisfunktioiden
+$\arsinh$, $\Arcosh$ ja $\artanh$ avulla, sillä pätee
+(ks.\ Luku \ref{kompleksinen eksponenttifunktio})
+\begin{align*}
+&\ln(x+\sqrt{x^2+1}) \,=\, \arsinh x, \quad x\in\R, \\
+&\ln|x+\sqrt{x^2-1}|\, = \begin{cases}
+                         \,\Arcosh x, &\text{kun}\ x>1, \\ -\Arcosh|x|, &\text{kun}\ x<-1,
+                         \end{cases} \\
+&\frac{1}{2}\ln\left|\frac{1+x}{1-x}\right|\, = \begin{cases}
+                                                \,\artanh x,      &\text{kun}\ |x|<1, \\
+                                                \,\artanh\,(1/x), &\text{kun}\ |x|>1.
+                                                \end{cases}
+\end{align*}  
+
+Integraalifunktion etsiminen --- silloin kun funktio ei löydy suoraan yksinkertaisimpien
+derivoimissääntöjen perusteella --- on taitolaji, jota perinteisessä matematiikassa on 
+harjoiteltu varsin paljon. Lajilla on urheilullista mielenkiintoa mm.\ siksi, että monien
+varsin yksinkertaisten funktioiden, kuten 
+\[
+\frac{1}{x^4+1}\,, \quad \frac{\sqrt{x^2+1}}{x}
+\]
+integraalifunktioiden määrittäminen on työlästä. On myös paljon funktioita, esim.\ 
+\[
+e^{x^2}, \quad
+\cos x^2, \quad
+\frac{e^x}{x}\,, \quad
+\frac{\sin x}{x}\,, \quad
+\frac{1}{\ln x}\,, \quad
+\sqrt{x}\sin x, \quad
+\sqrt{x^4+1}, \quad
+\sqrt{1+\sin^2 x},
+\]
+joiden integraalifunktiot eivät ole nk.\ 
+\index{alkeisfunktio}%
+\kor{alkeisfunktioita}, eli ne eivät ole 
+polynomien tai rationaalifunktioiden, juurilausekkeiden, eksponentti- tai 
+logaritmifunktioiden tai trigonometristen funktioiden tai niiden käänteisfuntioiden avulla
+ilmaistavissa olevia lausekkeita. Sanotaan tällöin, että funktio ei ole integroitavissa
+\index{suljettu muoto (integroinnin)}%
+\kor{suljetussa muodossa} (engl.\ in closed form). Tällaisista integraalifunktioista on ennen
+puhuttu kunnioittavaan sävyyn, kutsuen niitä mm. 'korkeammiksi transkendenttifunktioiksi'.
+Nykyisin laskimet ja tietokoneet, ja niiden myötä numeerisen laskennan helppous, ovat
+pudottaneet tällaisetkin funktiot tavallisten kuolevaisten joukkoon.
+
+Tietokoneiden myötä on tullut myös symbolisen laskennan mahdollisuus, mikä on vähentänyt
+perinteisen käsityötaidon merkitystä integraalifunktioiden etsinnässä. Tavallisimmat 
+integroimissäännöt ja -menetelmät on silti edelleen syytä tuntea, mm.\ koska tällä 
+laskutekniikalla on yleisempääkin käyttöä. Tässä ja kahdessa seuraavassa luvussa käydään läpi
+integroimistekniikan yleisimmät menetelmät.
+
+\subsection*{Kolme yleistä integroimissääntöä}
+
+Yleisiä derivoimissääntöjä 'nurinpäin' lukemalla saadaan yleisiä integroimissääntöjä. 
+Seuraavista kolmesta säännöstä ensimäinen kertoo, että integrointi on derivoinnin tavoin 
+\pain{lineaarinen} toimitus. Toinen ja kolmas sääntö ovat yhdistetyn funktion
+derivoimissääntöön suoraan perustuvia.
+\begin{align*}
+&\int f(x)\, dx=F(x)+C\ \ \ja\,\ \int g(x)\, dx=G(x)+C \\
+&\impl \quad \left\{ \begin{array}{lr}
+     \int\, [\alpha f(x)+\beta g(x)]\, dx
+                =\alpha F(x) +\beta G(x) +C,\quad \alpha,\beta\in\R, &\qquad \text{(I-1)} \\
+     \int f(ax+b)\, dx 
+                =\dfrac{1}{a}\,F(ax+b)+C,\quad a,b\in\R, \ a\neq 0, &\qquad \text{(I-2)} \\[2mm]
+     \int f(g(x))g'(x)\, dx = F(g(x))+C.     &\qquad \text{(I-3)}
+                     \end{array} \right.
+\end{align*}
+Näissä säännöissä (kuten säännöissä (1)--(14)) on huomioitava, että integroimisvakio $C$ on nk.\
+\index{geneerinen vakio}%
+\kor{geneerinen} vakio, joka voi eri yhteyksissä (kuten lausekkeissa $F(x)+C$ ja $G(x)+C$) aina
+saada erilaisia arvoja, ellei toisin sovita.
+\begin{Exa} \label{E10.1.2}
+$\D\int\frac{1}{x^2+x}\, dx=\,?$
+\end{Exa}
+\ratk Hajotetaan integroitava funktio ensin kahden yksinkertaisemman funktion summaksi:
+\begin{align*}
+&\frac{1}{x^2+x} \,=\, \frac{1}{x(x+1)} \,=\, \frac{A}{x}+\frac{B}{x+1}
+                                         \,=\, \frac{(A+B)x+A}{x(x+1)} \\ 
+&\qquad\ \qimpl \begin{cases} \,A+B=0 \\ \,A=1 \end{cases}
+         \ekv\quad \begin{cases} \,A=1 \\ \,B=-1  \end{cases} 
+         \impl\quad \frac{1}{x^2+x} \,=\, \frac{1}{x}-\frac{1}{x+1} \\[2mm]
+&\qquad\ \qimpl \int \frac{1}{x^2+x}\,dx\ 
+                \overset{\text{(I-1)}}{=}\ \int \frac{1}{x}\, dx - \int\frac{1}{x+1}\, dx \\
+&\hspace{48mm}\ \overset{(2),\,\text{(I-2)}}{=}\ \ln\abs{x}-\ln\abs{x+1}+C\
+                    =\ \underline{\underline{\ln\left|\frac{x}{x+1}\right|+C}}. \loppu
+\end{align*}
+\begin{Exa} Johda taulukkokaava (12). \end{Exa}
+\ratk Edellistä esimerkkiä mukaillen lasketaan
+\begin{align*}
+&\frac{1}{1-x^2} \,=\, \frac{1}{(1+x)(1-x)}
+                \,=\, \frac{1}{2}\,\frac{1}{1+x}+\frac{1}{2}\,\frac{1}{1-x} \\
+&\ \qimpl \int\frac{1}{1-x^2}\,dx \,=\, \frac{1}{2}\ln|1+x|-\frac{1}{2}\ln|1-x|+C
+                                  \,=\, \frac{1}{2}\ln\left|\frac{1+x}{1-x}\right|+C. \loppu
+\end{align*}
+
+Esimerkeissä integraalifunktio löydettiin nk.
+\index{osamurtokehitelmä}%
+\kor{osamurtokehitelmän} avulla. Tämä on
+yleisempiinkin rationaalifunktiohin soveltuva menetelmä, kuten nähdään jäljempänä
+Luvussa \ref{osamurtokehitelmät}.
+\begin{Exa} Säännön (I-3), taulukkokaavan (1) ja derivoimissääntöjen $\dif\ln|x|=1/x$ ja
+$\dif\sin x=\cos x$ perusteella
+\begin{align*}
+&\int \frac{1}{x}\,\ln\abs{x}\,dx = \frac{1}{2}\,(\ln\abs{x})^2 + C, \\
+&\int \sin^4 x \cos x\, dx = \frac{1}{5}\,\sin^5 x + C. \loppu
+\end{align*}
+\end{Exa}
+\begin{Exa}
+$\D\int\frac{1}{x^2+x+1}\, dx=\,?$
+\end{Exa}
+\ratk Koska
+\[
+\frac{1}{x^2+x+1}=\frac{1}{(x+\frac{1}{2})^2+\frac{3}{4}}
+                 =\frac{4}{3}\,\frac{1}{(\frac{2x+1}{\sqrt{3}})^2+1}\,,
+\]
+niin
+\begin{align*}
+\int\frac{1}{x^2+x+1}\,dx\ 
+&\,\ \ \overset{\text{(I-1)}}{=}\ \ 
+          \frac{4}{3}\int \frac{1}{(\frac{2x+1}{\sqrt{3}})^2+1}\,dx \\
+&\overset{\text{(I-2)},(11)}{=}\ 
+          \frac{4}{3}\cdot\frac{\sqrt{3}}{2}\Arctan\left(\frac{2x+1}{\sqrt{3}}\right)+C \\
+&\quad\, =\ \ 
+ \underline{\underline{\frac{2}{\sqrt{3}}\Arctan\left(\frac{2x+1}{\sqrt{3}}\right)+C}}. \loppu
+\end{align*}
+
+\begin{Exa} \label{cos-integraaleja}
+$\text{a)}\ \D\int\cos^2 x\, dx=\,? \quad\text{b)}\ \int\cos^3 x\, dx=\,?$
+\end{Exa}
+\ratk Koska
+\[
+\cos^2 x=\frac{1}{2}+\frac{1}{2}\cos 2x, \quad \cos^3 x=(1-\sin^2 x)\cos x,
+\]
+niin
+\begin{align*}
+&\text{a)}\ \int \cos^2 x\, dx\,=\,\frac{1}{2}\,x+\frac{1}{4}\sin 2x+C\,
+                     =\, \underline{\underline{\frac{1}{2}\,(x+\cos x\sin x)+C}}, \\
+&\text{b)}\ \int \cos^3 x\, dx\,=\,\int\left(\cos x-\sin^2 x\cos x\right)\,dx\,
+                     =\, \underline{\underline{\sin x-\frac{1}{3}\sin^3 x+C}}. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item 
+Määritä se funktion $2 x - 3$ integraalifunktio, jonka kuvaaja sivuaa suoraa $x+y = 0$.
+
+\item 
+Ratkaise seuraavat alkuarvotehtävät välillä $(-\infty,\infty)$\,: \newline
+a) \ $F'(x)=2x^2-\abs{x},\ F(0) = 1$. \newline
+b) \ $F'(x)=\abs{x^2+4x},\ F(-4)=0$. \newline
+c) \ $F'(x)=\max\{x,\,8x-x^2\},\ F(4)=-1$. \newline
+d) \ $F'(x)=\min\{4-4x+x^2,\,40+2x-x^2\},\ F(0)=180$.
+
+\item 
+Määritä seuraavien funktioiden integraalifunktiot taulukkokaavoihin (1)--(12) ja sääntöihin
+(I-1)--(I-3) vedoten. Muunna funktio tarvittaessa ensin integroinnin kannalta
+soveliaampaan muotoon.
+\begin{align*}
+&\text{a)}\ \ (2x^2 - 5 x + 7)(4x-4) \qquad 
+ \text{b)}\ \ \frac{1}{\sqrt{2x + 3}} \qquad
+ \text{c)}\ \ \frac{3}{3-\pi x} \qquad
+ \text{d)}\ \ \frac{x^2}{4x^3-1} \\
+&\text{e)}\ \ \frac{2x^3+x}{(x^4+x^2+1)^3} \qquad
+ \text{f)}\ \ \frac{x}{(x^2+1)\sqrt{x^2+1}} \qquad
+ \text{g)}\ \ \frac{1}{x\ln\abs{x}} \qquad 
+ \text{h)}\ \ \frac{e^x}{e^x+1} \\
+&\text{i)}\ \ \frac{1}{x(\ln\abs{x})^2} \qquad
+ \text{j)}\ \ \frac{1}{\sqrt{x^2-3}} \qquad
+ \text{k)}\ \ \frac{1}{\sqrt{x^2+3}} \qquad 
+ \text{l)}\ \ \frac{x+2}{\sqrt{x^2-1}} \\
+&\text{m)}\ \ \frac{3x-2}{\sqrt{2x^2+5}} \qquad
+ \text{n)}\ \ \frac{1}{x^2+14x+50} \qquad
+ \text{o)}\ \ \frac{1}{x^2+14x+48} \\
+&\text{p)}\ \ \frac{1}{x^2+2x+10} \qquad
+ \text{q)}\ \ \frac{1}{x^2+3x-10} \qquad
+ \text{r)}\ \ \frac{2x+1}{x^2+3x-10} \\
+&\text{s)}\ \ \sin 2x\,\cos^4 x \qquad
+ \text{t)}\ \ \frac{\sin x}{\cos^3 x} \qquad
+ \text{u)}\ \ \tan x \qquad
+ \text{v)}\ \ \tan^2 x \qquad
+ \text{x)}\ \ \tan^3 x \\
+&\text{y)}\ \ \frac{e^{\tan x}}{\cos^2 x} \qquad
+ \text{z)}\ \ \sin^5 x \qquad
+ \text{å)}\ \ \cosh^2 x \qquad 
+ \text{ä)}\ \ \tanh x \quad\ \
+ \text{ö)}\ \ \frac{\arsinh x}{\sqrt{x^2+1}}
+\end{align*}
+
+\item (*)
+Määritä $a\in\R$ ja $\R$:ssä jaksollinen funktio $u$ siten, että $y(x)=ax+u(x)$ on 
+alkuarvotehtävän $\,y'=\abs{\sin x},\ y(0)=0\,$ ratkaisu.
+
+\item (*)
+Olkoon $f(0)=0$ ja $f$:n määritelmä muualla kuin origossa
+\[
+\text{a)}\ \ f(x)=\frac{x}{\sqrt{\abs{x}}}\,, \qquad
+\text{b)}\ \ f(x)=\frac{x}{\abs{x}}\,, \qquad
+\text{c)}\ \ f(x)=\frac{1}{x}\left(\sin\frac{1}{x^2}+x^2\cos\frac{1}{x^2}\right).
+\]
+Konstruoi $f$:n integraalifunktio välillä $(-1,1)$ tai näytä, että ko.\ välillä $f$:llä
+ei ole integraalifunktiota.
+
+\end{enumerate}

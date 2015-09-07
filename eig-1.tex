@@ -1,0 +1,571 @@
+\section{Matriisin ominaisarvot} \label{matriisin ominaisarvot}
+\alku
+
+Aloitetaan määritelmästä.
+\begin{Def} \index{matriisin ($\nel$neliömatriisin)!i@$\nel$ominaisarvo, -vektori|emph}
+Jos $\mA$ on neliömatriisi kokoa $n\times n$, niin kompleksiluku $\lambda\in\C$ on $\mA$:n 
+\kor{ominaisarvo} (engl.\ eigenvalue, ruots.\ egenvärde, saks.\ Eigenwert), ja vektori
+$\mx\in\C^n$, $\mx\neq\mo$, on ominaisarvoon $\lambda$ liittyvä \kor{ominaisvektori}
+(engl.\ eigenvector), jos pätee
+\[
+\mA\mx=\lambda\mx.
+\]
+\end{Def}
+Määritelmässä voi $\mA$ olla yhtä hyvin reaalinen kuin kompleksinen matriisi. Määritelmä siis 
+\pain{ei} yksinkertaistu muotoon $\lambda\in\R$, $\mx\in\R^n$ siinäkään tapauksessa, että $\mA$
+on reaalinen.
+
+Määritelmästä nähdään heti, että ominaisvektorit eivät ole yksikäsitteiset: Jos $\mx$ on 
+ominaisvektori, niin samoin on $\alpha\mx$ jokaisella $\alpha\in\C$, $\alpha\neq 0$. 
+\index{normeeraus (vektorin)}%
+Ominaisvektorit voidaan siis \kor{normeerata} mielivaltaisella tavalla, esimerkiksi ehdolla 
+$\abs{\mx}=1$.
+
+\index{ominaisarvo, -vektori, -pari}%
+Matriisin ominaisarvot ja -vektorit, eli \kor{ominaisparit} (engl. eigenpair) määrittelevää 
+yhtälöä $\mA\mx=\lambda\mx$ sanotaan \kor{ominaisarvoyhtälöksi}. Ominaisparien laskeminen 
+aloitetaan määrämällä tästä yhtälöstä ensin kaikki ominaisarvot. Ominaisarvojen joukkoa, jota
+\index{spektri (matriisin)} \index{matriisin ($\nel$neliömatriisin)!i@$\nel$spektri}%
+sanotaan $\mA$:n \kor{spektriksi}, merkitään jatkossa symbolilla $\sigma(\mA)\,$:
+\[
+\sigma(\mA)=\{\mA\text{:n ominaisarvot}\} \subset\C.
+\]
+Spektrin avulla saadaan matriisin säännöllisyydelle jälleen uusi luonnehdinta:
+\[
+\boxed{\kehys\quad \mA\ \text{säännöllinen} \qekv 0\not\in\sigma(\mA). \quad}
+\]
+
+Kun ominaisarvoyhtälö kirjoitetaan muotoon
+\[
+(\mA-\lambda\mI)\mx=\mo
+\]
+($\mI=\text{yksikkömatriisi}$), niin matriisialgebran ja determinanttiopin mukaan tällä on 
+ei-triviaali ratkaisu, eli $\lambda\in\sigma(\mA)$, täsmällen kun
+\[
+\det(\mA-\lambda\mI)=0.
+\]
+Tämä on siis \kor{ominaisarvoehto}. Koska $\lambda$ esiintyy tässä ainoastaan 
+$(\mA-\lambda\mI)$:n diagonaalilla, niin alideterminanttisäännön 
+(Lause \ref{alideterminanttisääntö}) perusteella nähdään, että ominaisarvoehto purkautuu
+yhtälöksi muotoa
+\[
+p(\lambda)=0,
+\]
+missä $p(\lambda)$ on polynomi astetta $n$, tarkemmin
+\[
+p(\lambda)=(-1)^n\lambda^n+\{\text{alempiasteisia termejä}\}.
+\]
+\index{karakteristinen yhtälö (polynomi)!b@neliömatriisin}
+\index{matriisin ($\nel$neliömatriisin)!j@$\nel$karakteristinen polynomi}%
+Ominaisarvoehtoa $p(\lambda)=0$ sanotaan $\mA$:n \kor{karakteristiseksi yhtälöksi} ja
+polynomia $p(\lambda)=\det(\mA-\lambda\mI)$ $\mA$:n \kor{karakteristiseksi polynomiksi}.
+Matriisin $\mA$ ominaisarvot ovat siis $\mA$:n karakteristisen polynomin juuret, ja näin ollen
+$\mA$:n spektri $\sigma(\mA)$ koostuu vähintään yhdestä ja enintään $n$:stä kompleksiluvusta 
+(Algebran peruslause). Jos $\mA$ on reaalinen matriisi, niin karakteristinen polynomi
+$p(\lambda)$ on reaalikertoiminen, jolloin juuret ovat joko reaalisia tai muodostavat 
+konjugaattipareja. Jos $\lambda\in\sigma(\mA)$ on $p(\lambda)$:n $m$-kertainen juuri, niin
+lukua $m_a(\lambda)=m$ sanotaan ko. ominaisarvon
+\index{kertaluku!e@ominaisarvon} \index{algebrallinen kertaluku}%
+\kor{algebralliseksi kertaluvuksi}. Algebran peruslauseen mukaan on
+\[
+\sum_{\lambda\in\sigma(\mA)} m_a(\lambda)=n.
+\]
+Jos $m_a(\lambda)=1$, on kyseessä
+\index{yksinkertainen!b@ominaisarvo}%
+\kor{yksinkertainen} (engl. simple) ominaisarvo. 
+
+Kun ominaisarvo $\lambda\in\sigma(\mA)$ on löydetty (mahdollisesti numeerisin apukeinoin),
+saadaan vastaavat ominaisvektorit selville ominaisarvoyhtälöstä $(\mA-\lambda\mI)\mx=\mo$, joka
+ominaisarvon määritelmän mukaisesti on singulaarinen yhtälöryhmä $\C^n$:ssä. Kun tämä 
+yhtälöryhmä saatetaan Gaussin algoritmilla singulaariseen perusmuotoonsa, saadaan kaikki 
+ratkaisut selville. Yleisesti jos $\mx_1 \in \C^n$ ja $\mx_2 \in \C^n$ ovat ominaisarvoyhtälön
+ratkaisuja, niin samoin on $\alpha_1\mx_1+\alpha_2\mx_2\ \forall \alpha_1,\alpha_2 \in \C$, 
+joten tiettyyn ominaisarvoon liittyvät ominaisvektorit muodostavat $\C^n$:n aliavaruuden. Tätä
+aliavaruutta sanotaan ko.\ ominaisarvoon liittyväksi
+\index{ominaisavaruus}%
+\kor{ominaisavaruudeksi} (engl.\ eigenspace).
+Jos ominaisavaruuden dimensio on $\nu$, eli jos samaan ominaisarvoon
+$\lambda$ voidaan liittää täsmälleen $\nu$ lineaarisesti riippumatonta ominaisvektoria, niin
+sanotaan, että luku $\nu$ (aina $\nu\geq 1$) on ko.\ ominaisarvon
+\index{geometrinen kertaluku}%
+\kor{geometrinen kertaluku}, ja merkitään
+\[
+m_g(\lambda)=\nu.
+\]
+Jokaiseen ominaisarvoon $\lambda\in\sigma(\mA)$ liittyy siis kaksi kertalukua, algebrallinen
+kertaluku $m_a(\lambda)$ ja geometrinen kertaluku $m_g(\lambda)$, jotka molemmat ovat
+luonnollisia lukuja. Voidaan myös osoittaa, että aina pätee
+\[ 
+m_g(\lambda)\leq m_a(\lambda), \quad \lambda\in\sigma(\mA).
+\]
+\begin{Exa} \label{eig-ex1}
+Määritä matriisin
+\[
+\mA=\begin{rmatrix} 2 & 0 & 4 \\ 0 & 6 & 0 \\ 4 & 0 & 2 \end{rmatrix}
+\]
+ominaisarvot ja ominaisvektorit.
+\end{Exa}
+\ratk Ominaisarvojen determinanttiehto on
+\begin{align*}
+\det(\mA-\lambda\mI) &= \begin{vmatrix} 
+                        2-\lambda & 0 & 4 \\ 0 & 6-\lambda & 0 \\ 4 & 0 & 2-\lambda 
+                        \end{vmatrix} \\ 
+                     &= (6-\lambda)(\lambda^2-4\lambda-12) = -(6-\lambda)^2(\lambda+2) = 0
+\end{align*}
+(determinantti purettu toisen vaaka- tai pystyrivin mukaan), joten ominaisarvot ja niiden 
+algebralliset kertaluvut ovat
+\[ 
+\lambda_1=6, \quad m_a(\lambda_1)=2, \qquad \lambda_2=-2, \quad m_a(\lambda_2)= 1. 
+\]
+Ominaisvektorit saadaan ratkaisemalla ominaisarvoyhtälö kummallekin ominaisarvolle erikseen:
+\begin{align*}
+(\mA-\lambda_1\mI)\mx=\mo \ &\ekv \ \begin{rmatrix} 
+                                    -4 & 0 & 4 \\ 0 & 0 & 0 \\ 4 & 0 & -4 
+                                    \end{rmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mo \\ \\
+&\ekv \ \begin{rmatrix} -4 & 0 & 4 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{rmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mo. \\ \\
+(\mA-\lambda_2\mI)\mx=\mo \ &\ekv \ \begin{rmatrix} 
+                                    4 & 0 & 4 \\ 0 & 8 & 0 \\ 4 & 0 & 4 
+                                    \end{rmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mo \\ \\
+&\ekv \ \begin{rmatrix} 4 & 0 & 4 \\ 0 & 8 & 0 \\ 0 & 0 & 0 \end{rmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \mo.
+\end{align*}
+Nähdään, että  ominaisarvoon $\lambda_1$ liittyy kaksi lineaarisesti riippumatonta 
+ominaisvektoria, esimerkiksi
+\[
+\mx_1=\begin{rmatrix} 1 \\ 0 \\ 1 \end{rmatrix},\quad 
+\mx_2=\begin{rmatrix} 0 \\ 1 \\ 0 \end{rmatrix},
+\]
+ja ominaisarvoon $\lambda_2$ liittyy yksi lineaarisesti riippumaton ominaisvektori, esimerkiksi
+\[
+\mx_3=\begin{rmatrix} -1 \\ 0 \\ 1 \end{rmatrix}.
+\]
+Ominaisarvojen geometriset kertaluvut ovat näin ollen
+\[
+m_g(\lambda_1)=2,\quad m_g(\lambda_2)=1. \loppu
+\]
+\begin{Exa} \label{eig-ex2}
+Laske matriisin
+\[
+\mA=\begin{rmatrix} 1 & 0 & -2 \\ 0 & 1 & -2 \\ 0 & 1 & -1 \end{rmatrix}
+\]
+ominaisarvot ja ominaisvektorit.
+\end{Exa}
+\ratk Karakteristinen polynomi on
+\[
+p(\lambda)=(1-\lambda)(\lambda^2+1),
+\]
+joten ominaisarvot ovat
+\[
+\lambda_1=1,\quad \lambda_2=i,\quad \lambda_3=-i.
+\]
+Samaan tapaan laskien kuin edellisessä esimerkeissä saadaan ominaisvektoreiksi
+\[
+\mx_1=\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},\quad
+\mx_2=\begin{bmatrix} 1+i \\ 1+i \\ 1 \end{bmatrix},\quad
+\mx_3=\begin{bmatrix} 1-i \\ 1-i \\ 1 \end{bmatrix}.
+\]
+Ominaisarvojen kertaluvut ovat
+\[
+m_a(\lambda_i)=m_g(\lambda_i)=1,\quad i=1,2,3. \loppu
+\]
+
+\begin{Exa} \label{eig-ex3} Laske diagonaalimatriisin $\mA=\text{diag}\, (d_i, \ i=1\ldots n)$
+ominaisarvot ja ominaisvektorit. 
+\end{Exa}
+\ratk Karakteristinen yhtälö on
+\[
+\det(\mA-\lambda\mI)=\prod_{i=1}^n (d_i-\lambda)=0.
+\]
+Jos $d_i\neq d_j$, kun $i\neq j$, niin ominaisarvot ja niiden algebrallisest kertaluvut ovat
+\[
+\lambda_i=d_i,\quad m_a(\lambda_i)=1,\quad i=1\ldots n.
+\]
+Jos $d_i=d \ \forall i$ (jolloin $\mA=d\mI$), niin $\mA$:lla on yksi $n$-kertainen ominaisarvo:
+\[
+\lambda=d,\quad m_a(\lambda)=n.
+\]
+Jos yleisemmin luku $d$ esiintyy $\mA$:n diagonaalilla täsmälleen $m$ kertaa, niin ominaisarvon
+$\lambda=d$ algebrallinen kertaluku on $m_a(\lambda)=m$. Myös geometrinen kertaluku on 
+$m_g(\lambda)=m$, sillä ominaisarvoyhtälöstä nähdään, että ominaisvektoreita ovat $\R^n$:n 
+peruskantavektorit $\me_i$ jokaisella $i$, jolla $d_i=d$. Erityisesti jos $d_i=d \ \forall i$,
+niin jokainen vektori $\mx\in\R^n$, $\mx\neq \mo$, on ominaisvektori. \loppu
+
+Tähänastisissa esimerkeissä ovat omainaisarvojen algebralliset ja geometriset kertaluvut olleet
+samat. Seuraavasta esimerkistä nähdään, että näin ei ole aina.
+\begin{Exa} \label{eig-ex4} Määrää $\mA$:n ominaisarvot ja ominaisvektorit, kun
+\[
+\mA=\begin{bmatrix} 
+    a & 1 \\ & a & 1 \\ & & a & \ddots \\ & & & \ddots & 1 \\ & & & & a 
+    \end{bmatrix}
+\]
+eli
+\[
+A=(a_{ij})_{i,j=1}^n,\quad a_{ij}
+ = \begin{cases} 
+   \,a, &\text{kun } i=j, \\ \,1, &\text{kun } j=i+1, \\ \,0, &\text{muulloin}.
+   \end{cases}
+\]
+\end{Exa}
+\ratk Kyseessä on kolmiomatriisi, jonka karakteristinen yhtälö on
+\[
+\det(\mA-\lambda\mI)=(a-\lambda)^n=0.
+\]
+Tämän mukaan $\lambda=a$ on $n$-kertainen ominaisarvo ($m_a(\lambda)=n$). Kun $\lambda=a$, niin
+ominaisarvoyhtälöt ovat
+\[
+(\mA-\lambda\mI)\mx=\mo \ \ekv \ \left\{ \begin{aligned}
+x_2 &= 0 \\
+x_3 &= 0 \\
+& \ \, \vdots \\
+x_n &= 0
+\end{aligned} \right.
+\]
+joten $\mA$:lla on vain yksi lineaarisesti riippumaton ominaisvektori $\mx=[1,0,\ldots,0]^T$. 
+Siis ainoan ominaisarvon geometrinen kertaluku on $m_g(\lambda)=1$. \loppu
+
+Todetaan tässä yhteydessä vielä matriisin ominaisvektoreiden lineaarista riippuvuutta
+rajoittava yleinen tulos.
+\begin{Lause} \label{ominaisvektorien lineaarinen riippumattomuus}
+\index{lineaarinen riippumattomuus|emph} Matriisin eri ominaisarvoihin liittyvät ominaisvektorit
+ovat keskenään lineaarisesti riippumattomat.
+\end{Lause}
+\tod Olkooon $\mA\ma_i=\lambda_i\ma_i,\ i=1 \ldots m$, missä $\ma_i\neq\mo$ ja 
+$\lambda_i\neq\lambda_j$, kun $i \neq j$. Kun merkitään
+\[
+\mB=(\mA-\lambda_1\mI)(\mA-\lambda_2\mI) \cdots (\mA-\lambda_{m-1}\mI) 
+   = \prod_{k=1}^{m-1}(\mA-\lambda_k\mI),
+\]
+niin oletusten perusteella
+\[
+\mB\ma_j = \prod_{k=1}^{m-1}(\lambda_j-\lambda_k)\,\ma_j 
+         = \begin{cases} 
+            \,\mo, \quad &j=1 \ldots m-1, \\ 
+            \,\prod_{k=1}^{m-1}(\lambda_m-\lambda_k)\,\ma_m, \quad &j=m. 
+           \end{cases} 
+\]
+Oletetaan nyt, että
+\[
+\sum_{j=1}^m x_j\ma_j = \mo.
+\]
+Tällöin seuraa
+\[
+\mo=\mB\sum_{j=1}^m x_j\ma_j\,=\,\sum_{j=1}^m x_j\mB\ma_j\,
+                              =\,\prod_{k=1}^{m-1}(\lambda_m-\lambda_k)x_m\ma_m\,,
+\]
+joten on oltava $x_m=0$. Siis
+\[
+\sum_{j=1}^{m-1} x_j\ma_j = \mo.
+\]
+Jos $m=2$, niin tämä yhtälö toteutuu vain kun $x_1=0$, jolloin on päätelty, että $x_1=x_2=0$.
+Jos $m>2$, niin kertomalla yhtälö puolittain matriisilla
+\[
+\mB=\prod_{k=1}^{m-2}(\mA-\lambda_k\mI)
+\]
+päätellään samalla tavoin kuin edellä, että $x_{m-1}=0$, jne. Siis vektorit 
+$\ma_1, \ldots, \ma_m$ ovat lineaarisesti riippumattomat:
+\[
+\sum_{j=1}^m x_j\ma_j = \mo \qimpl x_m = x_{m-1} = \ldots = x_1 = 0. \loppu
+\]
+
+Lauseella \ref{ominaisvektorien lineaarinen riippumattomuus} on seuraava ilmeinen seuraamus:
+\begin{Kor} Jos $\mA$ on kokoa $n\times n$ ja kaikki $\mA$:n ominaisarvot ovat yksinkertaisia,
+niin $\mA$:n ominaisvektoreista voidaan muodostaa $\C^n$:n kanta.
+\end{Kor}
+
+\subsection*{Symmetrinen matriisi}
+\index{neliömatriisi!a@symmetrinen|vahv}
+
+Reaalisen ja symmetrisen matriisin ominaisarvoteoria voidaan pelkistää seuraavaksi kauniiksi
+lauseeksi. Lauseen täydellinen todistus sopii paremmin lineaarialgebran laajemman esittelyn
+yhteyteen, joten rajoitutaan tässä todistamaan vain kaksi lauseeseen sisältyvää (helpompaa)
+osaväittämää.
+\begin{Lause} \label{symmetrisen matriisin ominaisarvoteoria} Olkoon $\mA$ reaalinen ja 
+symmetrinen matriisi kokoa $n\times n$. Tällöin $\mA$:n ominaisarvot ovat reaaliset,
+ominaisarvojen algebralliset ja geometriset kertaluvut ovat samat, ja $\mA$:n ominaisvektoreista
+voidaan muodostaa $\R^n$:n ortonormeerattu kanta.
+\end{Lause}
+\tod (osittainen) \ \, Jos
+\[
+\mA\mx=\lambda\mx,\quad \lambda\in\C,\ \mx\in\C^n,\ \mx\neq\mo,
+\]
+niin
+\[
+\scp{\mA\mx}{\mx}=\lambda\scp{\mx}{\mx}=\lambda\abs{\mx}^2,
+\]
+missä $\scp{\cdot}{\cdot}$ on $\C^n$:n euklidinen skalaaritulo ja $\abs{\cdot}$ on euklidinen
+normi:
+\[
+\scp{\mx}{\my}=\sum_{i=1}^n x_i\overline{y}_i,\quad \abs{\mx}=\sqrt{\scp{\mx}{\mx}}.
+\]
+Konjugoimalla saatu yhtälö puolittain saadaan
+\[
+\overline{\scp{\mA\mx}{\mx}}=\overline{\lambda\abs{\mx}^2}=\overline{\lambda}\abs{\mx}^2.
+\]
+Mutta $\mA$:n oletetun reaalisuuden ja symmetrian perusteella on
+(vrt.\ Luku \ref{matriisialgebra})
+\[
+\overline{\scp{\mA\mx}{\mx}}=\scp{\mx}{\mA\mx}=\scp{\mA\mx}{\mx},
+\]
+joten $\lambda\abs{\mx}^2=\overline{\lambda}\abs{\mx}^2$. Tässä on $\abs{\mx}^2\in\R_+$, joten
+$\lambda=\overline{\lambda}$, eli $\lambda\in\R$.
+
+Olkoot $\lambda$ ja $\mu$ $\mA$:n kaksi eri suurta ominaisarvoa ja $\mx$ ja $\my$ vastaavat
+ominaisvektorit:
+\[
+\mA\mx=\lambda\mx\,\ \ja\,\ \mA\my=\mu\my.
+\]
+Jo todetun perusteella on $\lambda,\mu\in\R$, joten seuraa
+\begin{align*}
+\scp{\mA\mx}{\my} &= \scp{\lambda\mx}{\my}=\lambda\scp{\mx}{\my}, \\
+\scp{\mx}{\mA\my} &= \scp{\mx}{\mu\my}=\mu\scp{\mx}{\my}.
+\end{align*}
+Mutta koska $\mA$ on reaalinen ja symmetrinen, niin
+\[
+\scp{\mA\mx}{\my}=\scp{\mx}{\mA\my},
+\]
+joten seuraa
+\[
+(\lambda-\mu)\scp{\mx}{\my}=0 \ \impl \ \scp{\mx}{\my}=0.
+\]
+Yhdistämällä tähänastiset päätelmät on todistettu, että $\mA$:n ominaisarvot ovat reaaliset, ja
+että eri ominaisarvoihin liittyvät ominaisvektorit ovat ortogonaaliset. Todistuksen loppuosa
+sivuutetaan. \loppu
+
+Lauseen \ref{symmetrisen matriisin ominaisarvoteoria} tuloksesta seuraa, että reaalisen ja 
+symmetrisen matriisin tapauksessa ei kompleksilukuja tarvita myöskään ominaisvektoreissa. 
+Nimittäin jos $\mx\in\C^n$ on ominaisvektori ja $\mx=\mpu+i\mpv$, $\mpu,\mpv\in\R^n$, niin 
+$\mA$:n, $\lambda$:n, $\mpu$:n ja $\mpv$:n reaalisuuden perusteella
+\begin{align*}
+\mA\mx=\lambda\mx \ &\ekv \ \mA\mpu+i\mA\mpv=\lambda\mpu+i\lambda\mpv \\
+&\ekv \ \mA\mpu=\lambda\mpu \ \ja \ \mA\mpv=\lambda\mpv.
+\end{align*}
+Reaalisen ja symmetrisen matriisin ominaisarvoyhtälö $\mA\mx=\lambda\mx$ voidaan siis ratkaista
+kokonaan $\R^n$:ssä.
+\begin{Exa} \label{eig-ex5} Symmetrisen matriisin
+\[
+\mA=\begin{rmatrix} 2 & 0 & 4 \\ 0 & 6 & 0 \\ 4 & 0 & 2 \end{rmatrix}
+\]
+ortonormeeratut ominaisvektorit ovat (vrt.\ Esimerkki \ref{eig-ex1})
+\[
+\mx_1=\frac{1}{\sqrt{2}}[1,0,1]^T, \quad 
+\mx_2=[0,1,0]^T, \quad 
+\mx_3=\frac{1}{\sqrt{2}}[-1,0,1]^T. \loppu
+\]
+\end{Exa}
+
+\subsection*{Diagonalisoituva matriisi}
+\index{diagonalisointi!a@matriisin|vahv}
+
+Olkoon $\mA$ reaalinen ja symmetrinen matriisi kokoa $n\times n$ ja olkoon $\mC$ reaalinen
+matriisi, jonka sarakkeina ovat $\mA$:n ortonormeeratut ominaisvektorit:
+\[
+\mC=[\mc_1\ldots\mc_n],\quad 
+         \mA\mc_i=\lambda_i\mc_i, \quad i=1\ldots n, \quad \scp{\mc_i}{\mc_j}=\delta_{ij}.
+\]
+Tässä voidaaan ominaisarvoyhtälöt $\mA\mc_i=\lambda_i\mc_i$ koota matriisiyhtälöksi
+\[
+[\mA\mc_1\ldots\mA\mc_n] \,=\, [\lambda_1\mc_1\ldots\lambda_n\mc_n]
+                         \,=\, [\mC(\lambda_1\me_1)\ldots\mC(\lambda_n\me_n)]
+\]
+eli (vrt.\ Luku \ref{matriisialgebra})
+\[
+\mA\mC=\mC\boldsymbol{\Lambda},
+\]
+missä $\boldsymbol{\Lambda}=[\lambda_1\me_1\ldots\lambda_n\me_n]=\text{diag}(\lambda_i)$. Koska
+$\mC$ on ortogonaalinen, on $\inv{\mC}=\mC^T$, joten seuraa
+\[
+\boxed{\kehys\quad \mC^T\mA\mC=\boldsymbol{\Lambda}
+                          \qekv \mA=\mC\boldsymbol{\Lambda}\mC^T. \quad}
+\]
+Tässä tuloksessa siis $\mC$:n sarakkeina ovat $\mA$:n \pain{ortonormeeratut} ominaisvektorit 
+jossakin järjestyksessä ja $\boldsymbol{\Lambda}$ on diagonaalimatriisi, jonka lävistäjällä ovat
+$\mA$:n ominaisarvot $\mC$:n määräämässä järjestyksessä siten, että $\mA\mc_i=\lambda\mc_i$,
+$\lambda_i=[\boldsymbol{\Lambda}]_{ii}$. Annetaan tässä yhteydessä hieman yleisempi määritelmä.
+\begin{Def} (\vahv{Similariteettimuunnos}) \label{similaarimuunnos}
+\index{similaarisuus|emph} \index{ortogonaalisuus!d@similariteettimuunnoksen|emph}
+\index{neliömatriisi!g@diagonalisoituva|emph}
+Jos $\mA$ ja $\mB$ ovat 
+samankokoisia neliömatriiseja, ja on olemassa säännöllinen matriisi $\mC$ siten, että 
+$\mB=\mC^{-1}\mA\mC$, niin sanotaan, että $\mA$ ja $\mB$ ovat \kor{similaariset}, ja kuvausta
+$\mA \map \mB$ sanotaan \kor{similariteettimuunnokseksi}. Similariteettimuunnos on 
+\kor{ortogonaalinen}, jos $\mC$ on ortogonaalinen matriisi. Jos $\mA$ on similaarinen 
+diagonaalimatriisin kanssa, niin sanotaan, että $\mA$ on \kor{diagonalisoituva}.
+\end{Def}
+Reaalinen ja symmetrinen matriisi on siis määritelmän mukaisesti diagonalisoituva, ja tässä
+tapauksessa matriisi $\mC$ on myös valittavissa niin, että diagonalisoiva similariteettimuunnos
+on ortogonaalinen. Yleisemmin voidaan $\mC$:n sarakkeiksi valita mitkä tahansa $n$ lineaarisesti
+riippumatonta ominaisvektoria. Tällaisen ominaisvektorisysteemin olemassaolo on myös
+välttämätön ehto sille, että matriisi on diagonalisoituva:
+\begin{Lause} \label{diagonalisoituva matriisi} Matriisi $\mA$ kokoa $n \times n$ on 
+diagonalisoituva täsmälleen kun $\mA$:lla on $n$ lineaarisesti riippumatonta ominaisvektoria.
+Tällöin jos matriisin $\mC$ sarakkeina ovat mitkä tahansa $\mA$:n lineaarisesti riippumattomat
+ominaisvektorit ja diagonaalimatriisin $\boldsymbol{\Lambda}$ lävistäjäalkioina ovat vastaavat
+ominaisarvot, niin $\mA=\mC\boldsymbol{\Lambda}\mC^{-1}$.
+\end{Lause}
+\tod Jos $\mA$:lla on lineaarisesti riippumattomat ominaisvektorit $\mc_i\,,\ i=1 \ldots n$,
+niin muodostamalla nämä sarakkeina matriisi $\mC=[\mc_1 \ldots \mc_n]$ todetaan kuten edellä,
+että $\mA\mC=\mC\boldsymbol{\Lambda}\ \ekv\ \mA=\mC\boldsymbol{\Lambda}\mC^{-1}$, missä
+$\boldsymbol{\Lambda}=\text{diag}\,(\lambda_i)$ ja $\lambda_i=$ ominaisvektoriin $\mc_i$ 
+liittyvä ominaisarvo. Tämä todistaa väittämän osan \fbox{$\Leftarrow$}\,. Osan \fbox{$\impl$} 
+todistamiseksi olkoon $\mA=\mC^{-1}\mD\mC$, missä $\mC$ on säännöllinen ja 
+$\mD=\text{diag}\,(d_i)$ on diagonaalimatriisi. Tällöin pätee
+\[
+\mD\me_i=d_i\me_i \qekv (\mC^{-1}\mD\mC)(\mC^{-1}\me_i)=d_i\mC^{-1}\me_i, \quad i=1 \ldots n,
+\]
+joten matriisilla $\mA=\mC^{-1}\mD\mC$ on ominaisvektorit $\mc_i=\mC^{-1}\me_i$ ja vastaavat
+ominaisarvot $d_i$. Vektorit $\mc_i$ ovat lineaarisesti riippumattomat, sillä
+\[
+\sum_{i=1}^n x_i\mc_i=\mo \qekv \mC\sum_{i=1}^n x_i\mc_i=\sum_{i=1}^n x_i\me_i=\mo 
+                          \qekv x_i=0,\ i= 1 \ldots n.
+\]
+Siis $\{d_i,\ i=1 \ldots n\}\subset\sigma(\mA)$ ja $\mA$:lla on $n$ lineaarisesti riippumatonta
+ominaisvektoria vastaten näitä ominaisarvoja. Tällöin on myös oltava 
+$\{d_i,\ i=1 \ldots n\}=\sigma(\mA)$, sillä muu johtaisi ristiriitaan Lauseen 
+\ref{ominaisvektorien lineaarinen riippumattomuus} kanssa. \loppu
+\begin{Exa} Matriisilla
+\[
+\mA=\begin{bmatrix} 1&1\\0&1 \end{bmatrix}
+\]
+on vain yksi ominaisvektori (Esimerkki \ref{eig-ex4}), joten $\mA$ ei ole diagonalisoituva
+(Lause \ref{diagonalisoituva matriisi}). \loppu
+\end{Exa}
+\begin{Exa}
+Määrittele diagonalisoiva muunnos $\mA\map\mD=\inv{\mC}\mA\mC$ matriisille
+\[
+\mA=\begin{rmatrix} 2 & 0 & 4 \\ 0 & 6 & 0 \\ 4 & 0 & 2 \end{rmatrix}.
+\]
+\end{Exa}
+\ratk saadaan suoraan edellisen luvun Esimerkeistä \ref{eig-ex1} ja \ref{eig-ex5}:
+\[
+\begin{rmatrix} 6&0&0\\0&6&0\\0&0&-2 \end{rmatrix}=
+\begin{rmatrix} 
+\frac{1}{\sqrt{2}}&0&\frac{1}{\sqrt{2}}\\0&1&0\\-\frac{1}{\sqrt{2}}&0&\frac{1}{\sqrt{2}} 
+\end{rmatrix}
+\begin{rmatrix} 2&0&4\\0&6&0\\4&0&2 \end{rmatrix} 
+\begin{rmatrix} 
+\frac{1}{\sqrt{2}}&0&-\frac{1}{\sqrt{2}}\\0&1&0\\ \frac{1}{\sqrt{2}}&0&\frac{1}{\sqrt{2}} 
+\end{rmatrix}.
+\]
+Tässä on valittu ortogonaalinen muunnos. Mahdollista on myös valita $\mC$:n sarakkeiksi
+esim.\ vektorit $\mc_1=[1,1,1]^T$, $\mc_2=[1,0,-1]^T$ ja $\mc_3=[0,1,0]^T$, sillä nämäkin
+ovat $\mA$:n lineaarisesti riippumattomia ominaisvektoreita (vastaten ominaisarvoja 
+$\lambda_1=6$, $\lambda_2=-2$ ja $\lambda_3=6$, ks.\ edellisen luvun Esimerkki \ref{eig-ex1}).
+Kysytyksi muunnokseksi saadaan tällä valinnalla
+\[
+\begin{rmatrix} 6&0&0\\0&-2&0\\0&0&6 \end{rmatrix}=
+\begin{rmatrix} 1&1&0\\1&0&1\\1&-1&1 \end{rmatrix}^{-1}
+\begin{rmatrix} 2&0&4\\0&6&0\\4&0&2 \end{rmatrix}
+\begin{rmatrix} 1&1&0\\1&0&1\\1&-1&1 \end{rmatrix} \loppu
+\]
+
+\Harj
+\begin{enumerate}
+
+\item
+Todista: \vspace{1mm}\newline
+a) Jos $\lambda\in\sigma(\mA)$, niin $\lambda^p\in\sigma(\mA^p)\ \forall p\in\N$. \newline
+b) Jos $\mA$ on säännöllinen ja $\lambda\in\sigma(\mA)$, niin 
+   $\lambda^{-1}\in\sigma(\mA^{-1})$.
+\newline
+c) Jos $\mA$ on reaalinen, niin $\sigma(\mA^T)=\sigma(\mA)$. \newline
+d) Jos $1\in\sigma(\mA)$ tai $2\in\sigma(\mA)$, niin $\mB=2\mI-3\mA+\mA^2$ on singulaarinen.
+
+\item 
+Määritä seuraavien matriisien ominaisarvot ja -vektorit sekä ominaisarvojen algebralliset ja
+geometriset kertaluvut.
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&-2\\-2&1 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 1&-1\\1&1 \end{rmatrix} \qquad
+ \text{c)}\ \ \begin{rmatrix} 4&4\\-1&0 \end{rmatrix} \\[2mm]
+&\text{d)}\ \ \begin{rmatrix} 3&1&1\\1&3&1\\1&1&3 \end{rmatrix} \qquad
+ \text{e)}\ \ \begin{rmatrix} -2&1&1\\0&0&4\\0&-1&-4 \end{rmatrix} \qquad
+ \text{f)}\ \ \begin{rmatrix} 1&2&1\\0&2&-2\\1&0&3 \end{rmatrix} \\[2mm]
+&\text{g)}\ \ \begin{rmatrix} 2&2&3\\4&1&0\\1&-2&0 \end{rmatrix} \qquad
+ \text{h)}\ \ \begin{rmatrix} 1&0&0&1\\0&2&0&0\\9&0&3&0\\1&0&0&4 \end{rmatrix} \qquad
+ \text{i)}\ \ \begin{rmatrix} 1&0&0&4\\0&1&3&0\\0&2&1&0\\1&0&0&1 \end{rmatrix}
+\end{align*}
+
+\item
+Olkoon
+\[
+\mA=\begin{rmatrix} 1&1&0\\0&2&0\\2&1&-1 \end{rmatrix}, \quad
+\mB=\begin{bmatrix} 1&t&t\\t&1&t\\t&t&1 \end{bmatrix}, \quad
+\mC=\begin{bmatrix}
+    \alpha&1&1&\beta \\ 4&\alpha&\beta&2 \\ 4&\beta&\alpha&2 \\ \beta&3&3&\alpha    
+    \end{bmatrix}.
+\]
+a) Matriisin $\mA$ ominaisvektoreita ovat $[1,1,1]^T$, $[1,0,1]^T$ ja $[0,0,1]^T$. Laske tätä
+tietoa hyväksi käyttäen $\mA^{11}\mx$, kun $\mx=[2,1,1]^T$. \vspace{1mm}\newline
+b) Matriisin $\mB$ ominaisarvot ovat reaalifunktioita $t\map\lambda_i(t)$. Hahmottele näiden
+kuvaajat! \vspace{1mm}\newline
+c) Matriisilla $\mC$ on ominaisarvo $\lambda$ ja vastaava ominaisvektori $[0,1,-1,0]^T$.
+Millainen ehto tästä seuraa luvuille $\alpha,\beta$ ja $\lambda$\,?
+
+\item
+a) Näytä, että jos neliömatriisille pätee $\mA^2=\mA$, niin $\sigma(\mA)\subset\{0,1\}$. Näytä
+esimerkillä, että vaihtoehdot $\sigma(\mA)=\{0\}$, $\sigma(\mA)=\{1\}$ ja $\sigma(\mA)=\{0,1\}$
+ovat kaikki mahdollisia. \vspace{1mm}\newline
+b) Lineaarikuvaus $\mx\map\mA\mx$, missä $\mA$ on kokoa $3 \times 3$, vastaa projektiota
+tasolle $T:\,x+3y-2z=0$ suoran $S:\,x=y=z$ sunnassa. Näytä, että $\sigma(\mA)=\{0,1\}$ ja
+että $\mA$:lla on kolme lineaarisesti riippumatonta ominaisvektoria. Mitkä ovat ominaisarvojen
+kertaluvut? Päteekö myös $\mA^2=\mA$\,?
+\vspace{1mm} \newline
+c) Olkoon $\mA=\ma\ma^T$, missä $\ma\in\R^n,\ n \ge 2$ ja $\abs{\ma}=1$. Näytä, että 
+$\sigma(\mA)=\{0,1\}$. Mitkä ovat ominaisarvojen geometriset kertaluvut?
+
+\item
+Matriisilla kokoa $3 \times 3$ on ominaisuus: Matriisin ominaisarvot ovat $\lambda_1=-1$, 
+$\lambda_2=1$, $\lambda_3=2$ ja vastaavat ominaisvektorit ovat $[1,1,1]^T$,
+$[1,1,-1]^T$ ja $[0,1,2]^T$. Montako erilaista nämä ehdot täyttävää matriisia on olemassa?
+Määritä yksi!
+
+\item
+Tutki, ovatko seuraavat matriisit $\mA$ diagonalisoituvia. Myönteisessä tapauksessa laske 
+matriisille jokin (reaalinen tai kompleksinen) tulohajotelma muotoa $\mA=\mC\mD\mC^{-1}$, missä
+$\mD$ on diagonaalinen.
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 1&0\\4&-3 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 3&1\\5&-1 \end{rmatrix} \qquad
+ \text{c)}\ \ \begin{rmatrix} -3&2\\-2&1 \end{rmatrix} \qquad
+ \text{d)}\ \ \begin{rmatrix} 1&2\\-4&-3 \end{rmatrix} \\[2mm]
+&\text{e)}\ \ \begin{rmatrix} 1&1&0\\0&2&0\\-2&5&-1 \end{rmatrix} \qquad
+ \text{f)}\ \ \begin{rmatrix} -2&-1&1\\1&1&0\\0&1&0 \end{rmatrix} \qquad
+ \text{g)}\ \ \begin{rmatrix} 0&2&0\\-2&2&2\\1&1&0 \end{rmatrix} \\[2mm]
+&\text{h)}\ \ \begin{rmatrix} -1&-1&0\\1&-2&3\\1&-2&-6 \end{rmatrix} \qquad
+ \text{i)}\ \ \begin{rmatrix} 1&0&0&9\\0&1&0&0\\0&0&1&0\\1&0&0&1 \end{rmatrix} \qquad
+ \text{j)}\ \ \begin{rmatrix} 1&0&0&3\\0&1&3&0\\0&1&1&0\\1&0&0&1 \end{rmatrix}
+\end{align*}
+
+\item
+a) Näytä, että similaarisuus on samaa kokoa olevien neliömatriisien välinen
+ekvivalenssirelaatio. Millainen on ekvivalenssiluokka, joka sisältää yksikkömatriisin 
+$\mI$\,? \vspace{1mm}\newline
+b) Olkoon $\mA$ ja $\mB$ lineaarikuvauksen $A:\,\R^n\kohti\R^n$ matriisit avaruuden $\R^n$
+kahdessa eri kannassa. Näytä, että $\mA$ ja $\mB$ ovat similaariset. 
+
+\item
+Määritä seuraavien matriisien ominaisarvot ja muodosta ominaisvektoreista $\R^2$:n, $\R^3$:n tai
+$\R^4$:n ortonormeerattu, positiivisesti suunnistettu kanta.
+\begin{align*}
+&\text{a)}\ \ \begin{rmatrix} 0&2\\2&0 \end{rmatrix} \qquad
+ \text{b)}\ \ \begin{rmatrix} 1&1\\2&2 \end{rmatrix} \qquad
+ \text{c)}\ \ \begin{rmatrix} 5&2\\2&8 \end{rmatrix} \qquad
+ \text{d)}\ \ \begin{rmatrix} 0&-2\\-2&1 \end{rmatrix} \\[2mm]
+&\text{e)}\ \ \begin{rmatrix} 0&-1&-1\\-1&0&1\\-1&1&0 \end{rmatrix} \qquad
+ \text{f)}\ \ \begin{rmatrix} 4&2&2\\2&1&1\\2&1&1 \end{rmatrix} \qquad
+ \text{g)}\ \ \begin{rmatrix} 1&2&0\\2&1&1\\0&1&1 \end{rmatrix} \\[2mm]
+&\text{h)}\ \ \begin{rmatrix} 3&1&1\\1&3&1\\1&1&3 \end{rmatrix} \qquad
+ \text{i)}\ \ \begin{rmatrix} 2&0&0&2\\0&1&0&0\\0&0&1&0\\2&0&0&1 \end{rmatrix} \qquad
+ \text{j)}\ \ \begin{rmatrix} 1&0&0&2\\0&1&2&0\\0&2&1&0\\2&0&0&1 \end{rmatrix}
+\end{align*}
+
+\item (*) \index{Cayleyn--Hamiltonin lause}
+\kor{Cayleyn--Hamiltonin lauseen} mukaan neliömatriisi toteuttaa oman karakteristisen
+yhtälönsä, ts.\ jos $p(\lambda)$ on matriisin karakteristinen polynomi, niin $p(\mA)=\mo$. \ 
+a) Todista lause siinä tapauksessa, että $\mA$ on diagonalisoituva. \ b) Näytä, että lause on
+tosi myös Esimerkin \ref{eig-ex4} ei-diagonalisoituvalle matriisille
+
+\end{enumerate}

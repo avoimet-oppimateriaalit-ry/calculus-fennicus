@@ -1,0 +1,548 @@
+\section{Monotoniset ja rajoitetut lukujonot}
+\label{monotoniset jonot}
+\alku
+\index{lukujono!c@monotoninen|vahv} \index{lukujono!e@rajoitettu|vahv}
+\index{monotoninen!a@lukujono|vahv} \index{rajoitettu!a@lukujono|vahv}
+
+Tässä luvussa tarkastelun kohteena ovat lukujonot, jotka ovat sekä monotonisia (kasvavia tai 
+väheneviä, Määritelmä \ref{monotoninen jono}) että rajoitettuja (Määritelmä 
+\ref{rajoitettu jono}). Tällaiset lukujonot ovat käytännössä yleisiä, vaikka ne muodostavatkin
+vain pienen 'vähemmistön' kaikista lukujonoista. Tämän luvun päätulos on, että monotoniselle
+ja rajoitetulle jonolle löydetään aina raja-arvo --- kunhan raja-arvo ja suppeneminen sitä kohti
+määritellään sopivasti.
+\begin{Exa} \label{desimaaliluku on rajoitettu jono} Jokainen ääretön desimaaliluku 
+$\x=\seq{x_n}\in\DD$ on lukujonona monotoninen, kuten aiemmin on todettu 
+(ks.\ Luku \ref{desimaaliluvut}). Jono $\seq{x_n}$ on myös rajoitettu, sillä 
+$\abs{x_n} \le C = \abs{x_0}+1\ \forall n$ (Propsitio \ref{desim}). \loppu
+\end{Exa}
+\begin{Exa} \label{kaksi sarjaa} Näytä, että sarja \ a) $\sum_{k=0}^\infty 1/k!\,$, \ 
+b) $\sum_{k=1}^\infty 1/k^2\,$ on lukujonona monotoninen ja rajoitettu. \end{Exa}
+\ratk Kummassakin tapauksessa kyseeessä on
+\index{sarja!b@positiiviterminen}%
+\kor{positiiviterminen} sarja eli sarja muotoa $\sum_k a_k$, missä $a_k>0\ \forall k$.
+Positiiviterminen sarja on (osasummiensa) lukujonona aidostikin kasvava, joten riittää
+osoittaa, että jonot
+\begin{align*}
+&\text{a)}\,\ \seq{s_n}\ =\ \left\{\,\sum_{k=0}^n \frac{1}{k!}\,,\ \ n=0,1,2,\,\ldots\,\right\}\
+                         =\ \left\{\,1,2,\frac{5}{2}\,,\,\ldots\,\right\}, \\
+&\text{b)}\,\ \seq{s_n}\ =\ \left\{\,\sum_{k=1}^n \frac{1}{k^2}\,,\ \ n=1,2,3,\,\ldots\,\right\}\
+                         =\ \left\{\,1,\frac{5}{4},\frac{23}{18}\,,\,\ldots\,\right\}
+\end{align*}
+ovat rajoitettuja. \ a) Kun $n \ge 4$, voidaan arvioida
+\begin{align*}
+s_n\  =\ \sum_{k=0}^n \frac{1}{k!}\ 
+     &=\ 1 + 1 + \frac{1}{2!}\left(1+\frac{1}{3}+\frac{1}{3\cdot 4}+\,\ldots\,
+                                                +\frac{1}{3\cdot 4 \cdots n}\,\right) \\
+     &\le\ 2 + \frac{1}{2}\left(1+\frac{1}{3}+\frac{1}{3^2}+\,\ldots\,
+                                               +\frac{1}{3^{n-2}}\,\right) \\[1mm]
+     &<\ 2 + \frac{1}{2}\cdot\frac{1}{1-\frac{1}{3}}\ =\ 2.75.
+\end{align*}
+Siis $0 < s_n < 2.75\ \forall n$, joten $\seq{s_n}$ on rajoitettu.
+
+b) Tässä tarvitaan hiukan enemmän kekseliäisyyttä. Esimerkiksi: Koska
+\[
+\frac{1}{k^2}\ <\ \frac{1}{(k-1)k}\ =\ \frac{1}{k-1} - \frac{1}{k}, \quad k \ge 2,
+\]
+niin osasummia voidaan arvioida teleskooppisummien 
+(vrt.\ Harj.teht. \ref{ratluvut}:\ref{H-I-1: teleskooppisumma}) avulla seuraavasti:
+\begin{align*}
+s_n\ &=\ 1 + \sum_{k=2}^n \frac{1}{k^2}\ 
+      <\ 1 + \sum_{k=2}^n \left( \frac{1}{k-1} - \frac{1}{k} \right) \\
+     &=\ 1 + \left(1 - \frac{1}{2}\right) 
+           + \left(\frac{1}{2} - \frac{1}{3}\right) + \ldots
+           + \left(\frac{1}{n-1} - \frac{1}{n}\right)         \\
+     &=\ 1 + 1 + \left(- \frac{1}{2} + \frac{1}{2}\right) + \ldots 
+      + \left(- \frac{1}{n-1} + \frac{1}{n-1}\right) - \frac{1}{n} \\
+     &=\ 2 - \frac{1}{n}\ <\ 2, \quad n \ge 3.
+\end{align*}
+Siis $0 < s_n < 2\ \forall n$, joten $\seq{s_n}$ on rajoitettu. \loppu
+
+\subsection*{Suppeneminen kohti desimaalilukua}
+\index{lukujono!d@suppeneva|vahv}
+
+Esimerkin \ref{kaksi sarjaa} sarjoilla ei kummallakaan ole raja-arvoa toistaiseksi 
+tunnettujen lukujen joukossa, kuten tullaan näkemään. Silti nämä sarjat 
+'näyttävät suppenevan', kun sarjojen (rationaaliset) osasummat muunnetaan äärettömiksi 
+desimaaliluvuiksi. 
+\jatko \begin{Exa} (jatko) a) Osasummat $\,s_1 \ldots s_{12}\,$ ovat
+\[
+\begin{aligned}
+s_1         &= 2 \quad\               =\ 2.0000000000 \ldots \\
+s_2         &= \tfrac{5}{2} \quad\    =\ 2.5000000000 \ldots \\
+s_3         &= \tfrac{8}{3} \quad\    =\ 2.6666666666 \ldots \\
+s_4         &= \tfrac{65}{24} \ \ \   =\ 2.7083333333 \ldots \\
+s_5         &= \tfrac{163}{60} \ \    =\ 2.7166666666 \ldots \\
+s_6         &= \tfrac{1957}{720} \    =\ 2.7180555555 \ldots \\
+\end{aligned} \qquad\quad
+\begin{aligned}
+s_7\        &= \tfrac{685}{252} \qquad\        =\ 2.7182539682 \ldots \\
+s_8\        &= \tfrac{109601}{40320} \quad\    =\ 2.7182787698 \ldots \\
+s_9\        &= \tfrac{98641}{36288} \quad\ \   =\ 2.7182815255 \ldots \\
+s_{10}      &= \tfrac{9864101}{3628800} \quad  =\ 2.7182818011 \ldots \\
+s_{11}      &= \tfrac{13563139}{4989600} \ \   =\ 2.7182818261 \ldots \\
+s_{12}      &= \tfrac{260412269}{95800320}\    =\ 2.7182818282 \ldots
+\end{aligned}
+\]
+
+b) Osasummat indeksin arvoilla $\,n=10^k,\ k=1 \ldots 12\,$ ovat
+\[
+\begin{aligned}
+s_{10}       &=\ 1.5497677311 \ldots \\
+s_{100}      &=\ 1.6349839001 \ldots \\
+s_{1000}     &=\ 1.6439345666 \ldots \\
+s_{10000}    &=\ 1.6448340718 \ldots \\
+s_{100000}   &=\ 1.6449240668 \ldots \\
+s_{1000000}  &=\ 1.6449330668 \ldots
+\end{aligned} \qquad\quad
+\begin{aligned}
+s_{10000000}      &=\ 1.6449339668 \ldots \\
+s_{100000000}     &=\ 1.6449340568 \ldots \\
+s_{1000000000}    &=\ 1.6449340658 \ldots \\
+s_{10000000000}   &=\ 1.6449340667 \ldots \\
+s_{100000000000}  &=\ 1.6449340668 \ldots \\
+s_{1000000000000} &=\ 1.6449340668 \ldots \loppu
+\end{aligned}
+\]
+\end{Exa}
+Osasummien perusteella näyttää siltä, että raja-arvo $s=\lim_n s_n$ (eli sarjan summa) on
+esimerkkitapauksessa mahdollista tulkita äärettömäksi desimaaliluvuksi:
+\[
+\text{a)}\ \ \sum_{k=0}^\infty \frac{1}{k!}\, = 2.71828182 \ldots \qquad
+\text{b)}\ \ \sum_{k=1}^\infty \frac{1}{k^2}  = 1.64493406 \ldots
+\]
+Mutta mitä täsmällisemmin tarkoittaa, että ääretön desimaaliluku on lukujonon raja-arvo?
+--- Alkuperäiseen raja-arvon määritelmään (Määritelmä \ref{jonon raja}) ei voida suoraan
+vedota, koska määritelmän ehdossa $\abs{a_n-a}<\eps$ tarvittavaa vähennyslaskua ja lukujen
+vertailua ei ole (ainakaan toistaiseksi) määritelty, kun $a\in\DD$. Ratkaistaan ongelma
+asettamalla erillinen määritelmä.
+\begin{Def} \label{jonon raja - desim} \index{lukujonon raja-arvo|emph}
+\index{raja-arvo!a@lukujonon|emph} \index{suppeneminen!a@lukujonon|emph}
+\index{hajaantuminen!a@lukujonon|emph} Lukujono $\seq{a_n}$ \kor{suppenee kohti} ääretöntä
+desimaalilukua $\x=\seq{x_n}\in\DD$ täsmälleen kun
+\[
+\lim_n (a_n-x_n) = 0.
+\]
+Sanotaan tällöin, että $\x$ on jonon $\seq{a_n}$ \kor{raja-arvo}, ja merkitään 
+$\,\lim_n a_n = \x$ tai $a_n \kohti \x$. Jos lukujonolla on raja-arvo $\x\in\DD$, niin
+sanotaan, että lukujono \kor{suppenee}, muulloin lukujono \kor{hajaantuu} eli
+\kor{divergoi}.
+\end{Def}
+Huomattakoon, että ehdossa $\lim_n(a_n-x_n)=0$ on kyse lukujonon $\seq{a_n-x_n}$ 
+tavanomaisesta (rationaalisesta) raja-arvosta Määritelmän \ref{jonon raja} mukaisesti. 
+Jos myös jonolla $\seq{a_n}$ on rationaalinen raja-arvo, niin Määritelmät
+\ref{jonon raja - desim} ja \ref{jonon raja}  ovat sopusoinnussa, sillä jos 
+$a_n \kohti x\in\Q$ (Määritelmä \ref{jonon raja}) ja $x=\x=\seq{x_n}\in\DD$
+(Määritelmä \ref{samastus QD}), niin $a_n-x_n = (a_n-x)+(x-x_n) \kohti 0+0=0$
+(Lause \ref{raja-arvojen yhdistelysäännöt}), eli $a_n \kohti \x$ Määritelmän 
+\ref{jonon raja - desim} mukaisesti. Myös on voimassa (vrt.\ Lauseet 
+\ref{suppeneva jono on rajoitettu} ja \ref{raja-arvon yksikäsitteisyys})
+\begin{Lause} \label{raja-arvon yksikäsitteisyys - desim} Jos lukujono $\seq{a_n}$ suppenee
+Määritelmän \ref{jonon raja - desim} mukaisesti, niin \newline
+(i) $\seq{a_n}$ on rajoitettu lukujono, ja (ii) raja-arvo $\lim_n a_n$ on yksikäsitteinen.
+\end{Lause}
+\tod (i) Kirjoittamalla $\,a_n=(a_n-x_n)+x_n\,$ ja soveltamalla kolmioepäyhtälöä päätellään
+\[
+\abs{a_n} \,\le\, \abs{a_n-x_n}+\abs{x_n} \,\le\, C_1+C_2=C\ \forall n,
+\]
+sillä $\seq{a_n-x_n}$ on rajoitettu suppenevana jonona (Lause 
+\ref{suppeneva jono on rajoitettu}) ja myös $\seq{x_n}$ on rajoitettu
+(ks.\ Esimerkki \ref{desimaaliluku on rajoitettu jono} edellä). Siis $\seq{a_n}$ on
+rajoitettu jono. 
+
+(ii) Oletetaan, että $a_n \kohti \x = \seq{x_n}\in\DD$ ja $a_n \kohti \y = \seq{y_n}\in\DD$.
+Tällöin $a_n-x_n \kohti 0$ ja $a_n-y_n \kohti 0$ (Määritelmä \ref{jonon raja - desim}),
+jolloin Lauseen \ref{raja-arvojen yhdistelysäännöt} perusteella
+\[
+x_n-y_n\ =\ (a_n-y_n)-(a_n-x_n) \,\kohti\, 0.
+\]
+Siis $\,\lim_n(x_n-y_n)=0$, mikä Määritelmän \ref{samastus DD} mukaan tarkoittaa: $\,\x=\y$.
+\loppu
+\begin{Exa} Määritelmän \ref{jonon raja - desim} mukaisesti jokainen ääretön desimaaliluku
+$\x=\seq{x_n}\,$ 'suppenee itseensä' lukujonona $\seq{a_n}=\seq{x_n}$ (!). \loppu
+\end{Exa}
+
+Jatkossa keskeinen kysymys on: Jos lukujonolle $\seq{a_n}$ ei ole osoitettavissa mitään
+ilmeistä (esim.\ rationaalista) raja-arvoa, niin millaisilla ehdoilla voidaan olla varmoja,
+että Määritelmän \ref{jonon raja - desim} mukainen raja-arvo äärettömänä desimaalilukuna on
+olemassa? Täsmällinen vastaus tähän kysymykseen saadaan jäljempänä Luvussa \ref{Cauchyn jonot};
+tässä yhteydessä tyydytään osittaiseen vastaukseen. Ensinnäkin, Lauseen
+\ref{raja-arvon yksikäsitteisyys - desim} mukaan \pain{välttämätön} ehto raja-arvon
+olemassaololle on, että $\seq{a_n}$ on rajoitettu. Seuraavan lauseen mukaan \pain{riittävä}
+ehto on, että $\seq{a_n}$ sekä monotoninen että rajoitettu. 
+\begin{*Lause}\footnote[2]{Tässä ja jatkossa merkintä (*) lauseen yhteydessä tarkoittaa,
+että lauseen todistus on tavallista vaativampi looginen konstruktio.} 
+\label{monotoninen ja rajoitettu jono} (\vahv{Monotoninen ja rajoitettu lukujono suppenee})
+Jokaisella monotonisella ja rajoitetulla lukujonoilla on Määritelmän
+\ref{jonon raja - desim} mukainen raja-arvo äärettömänä desimaalilukuna.\footnote[3]{Lause
+\ref{monotoninen ja rajoitettu jono} on esimerkki olemassaolo- eli \kor{eksistenssilauseesta},
+jossa jokin (tässä raja-arvo) väitetään olemassa olevaksi. --- Paino lauseessa onkin sanalla
+'on'. \index{eksistenssilause|av}}
+\end{*Lause}
+\tod Määritelmästä \ref{jonon raja - desim} nähdään, että jos $a_n \kohti \x$, niin
+$-a_n \kohti -\x$. Voidaan sen vuoksi rajoittua tapauksiin, joissa joko (i) $\seq{a_n}$ on
+kasvava ja jollakin $N\in\N$ pätee $a_n \ge 0\ \forall n \ge N$ tai (ii) $\seq{a_n}$ on
+vähenevä ja $a_n \ge 0\ \forall n\in\N$, sillä muissa tapauksissa jono $\seq{-a_n}$ on tyyppiä
+(i) tai (ii). Olkoon ensin jono tyyppiä (i), ja määritellään jonoon liittyen predikaatti
+(vrt.\ Luku \ref{logiikka})
+\[
+Q(x): \quad a_n < x \ \ \forall n \quad (x \in \Q).
+\]
+Koska $\seq{a_n}$ on rajoitettu, on löydettävissä $M \in \N$ siten, että $\,a_n < M\ \forall n$.
+Oletuksien (i) perusteella on silloin $\,0 \le a_n < M\ \forall n \ge N$. Tällöin voidaan valita
+yksikäsitteisesti $x_0 \in \{0,\ldots,M-1\}$ siten, että $Q(x_0)$ on epätosi ja $Q(x_0 + 1)$ on 
+tosi. Koska $Q(x_0)$ on epätosi, on $a_n \ge x_0$ jollakin $n$. Olkoon $n=N_0$ pienin tällainen 
+indeksi. Tällöin koska jono $\seq{a_n}$ on kasvava ja koska $Q(x_0+1)$ on tosi, on 
+$\,x_0 \le a_n < x_0 + 1\ \forall n \ge N_0$.
+
+Valitaan seuraavaksi $x_1 = x_0 + d_1 \cdot 10^{-1},\ d_1 \in \{0,1, \ldots, 9\}$ siten, että
+$Q(x_1)$ on epätosi ja $Q(x_1 + 10^{-1})$ on tosi. Koska $Q(x_1)$ on epätosi, on $a_n \ge x_1$
+jollakin $n$. Olkoon $n=N_1$ pienin tällainen indeksi ($N_1 \ge N_0$). Tällöin koska jono 
+$\seq{a_n}$ on kasvava ja koska $Q(x_1 + 10^{-1})$ on tosi, on 
+$\,x_1 \le a_n < x_1 + 10^{-1}\ \forall n \ge N_1$.
+
+Jatkamalla samalla tavoin saadaan konstruoiduksi kasvava jono $\seq{x_k}$ ja kasvava indeksijono
+$\{N_0,N_1, \ldots\,\}$ siten, että jokaisella $k$ pätee
+\begin{equation}  \label{suppenemisehto - desim}
+x_k \le a_n < x_k + 10^{-k}, \quad \text{kun}\ n \ge N_k. \tag{$\star$}
+\end{equation}
+Tapauksessa (ii) tullaan samaan tulokseen, kun predikaatti $Q(x)$ määritellään
+\[
+Q(x): \quad a_n < x \ \ \text{jollakin}\ n \quad (x \in \Q).
+\]
+
+Kummassakin tapauksessa (i) ja (ii) on siis konstruoitu ääretön desimaaliluku 
+$\x=\{x_k,\ k=0,1,\ldots\,\}$ ja indeksijono $\{N_k,\ k=0,1,\ldots\,\}$ siten, että pätee
+\[
+\abs{a_n-x_k} < 10^{-k}, \quad \text{kun}\ n \ge N_k.
+\]
+Kun huomioidaan, että jonolle $\seq{x_k}$ pätee (Propositio \ref{desim})
+\[
+\abs{x_n-x_k} < 10^{-k}, \quad \text{kun}\ n \ge k,
+\]
+niin kirjoittamalla $a_n-x_n = (a_n-x_k)+(x_k-x_n)$ ja soveltamalla kolmioepäyhtälöä seuraa
+kahden viimeksi kirjoitetun epäyhtälön perusteella
+\[
+\abs{a_n-x_n} \,\le\, \abs{a_n-x_k}+\abs{x_n-x_k} \,<\, 2 \cdot 10^{-k}, \quad
+                \text{kun}\ n \ge \max\{k,N_k\} = N_k'.
+\]
+Proposition \ref{jonon raja 2} mukaan tämä ehto on sama kuin ehto: $\,\lim_n(a_n-x_n)=0$. Siis
+$\lim_n a_n = \x = \seq{x_n}$ Määritelmän \ref{jonon raja - desim} mukaisesti. \loppu
+
+Kun lukujono $\seq{a_n}$ tunnetaan, niin Lauseen \ref{monotoninen ja rajoitettu jono}
+todistuskonstruktiota voidaan seurata algoritmina, joka määrittää raja-arvon
+alkaen kokonaislukuosasta ja edeten desimaali kerrallaan.
+\jatko\jatko \begin{Exa} (jatko) Raja-arvo $\lim_n s_n = \seq{x_k}\in\DD$ määrätään
+valitsemalla luvut $x_k\in\Q_k,\ k=0,1,\ldots\,$ siten, että $s_n \ge x_k$ jollakin $n$
+ja $s_n < x_k + 10^{-k}\ \forall n$, jolloin ehto \eqref{suppenemisehto - desim} toteutuu 
+jollakin $N_k\in\N$ (jokaisella $k$), kun $a_n=s_n$.
+ 
+a) Koska $s_n < 3\ \forall n$ ja $s_1=2\ \impl\ s_n \ge 2\ \forall n \ge 1$, niin $x_0=2$ ja
+pienin $N_0$:n arvo, jolla ehto \eqref{suppenemisehto - desim} toteutuu kun $k=0$, on $N_0=1$.
+Vastaavasti koska $s_3 < 2.7$, $s_4 > 2.7$ ja ilmeisesti $s_n < 2.8\ \forall n$ (tämä on 
+erikseen varmistettava osasummia arvioimalla, ks.\ Harj.teht.\,\ref{H-I-8: kaksi sarjaa}),
+niin $x_1=2.7$ ja indeksin $N_1$ pienin arvo on $N_1=4$. Samalla tavoin nähdään lasketuista
+osasummista, että $x_2=2.71,\,x_3=2.718,\,\ldots,\,x_8=2.71828182$ ja että indeksien 
+$N_k,\ k=2 \ldots 8$ pienimmät arvot ehdossa \eqref{suppenemisehto - desim} ovat $N_2=5$,
+$N_3=6$, $N_4=7$, $N_5=N_6=9$, $N_7=10$ ja $N_8=11$.
+
+b) Osasummista
+\[
+\begin{aligned}
+s_{21}  &=\ 1.59843081 \ldots \\
+s_{22}  &=\ 1.60049693 \ldots \\[2mm]
+s_{202} &=\ 1.63999580 \ldots \\
+s_{203} &=\ 1.64002007 \ldots
+\end{aligned} \qquad\quad
+\begin{aligned}
+s_{1070}  &=\ 1.64399992 \ldots \\
+s_{1071}  &=\ 1.64400079 \ldots \\[2mm]  
+s_{29353} &=\ 1.64489999 \ldots \\
+s_{29354} &=\ 1.64490000 \ldots
+\end{aligned}
+\]
+on pääteltävissä (ja varmistettavissa, ks.\ Harj.teht.\,\ref{H-I-8: kaksi sarjaa}), että
+pienimmät indeksin $N_k$ arvot, joilla ehdot \eqref{suppenemisehto - desim} toteutuvat 
+kun $k=1 \ldots 4\,$, ovat $N_1=22$, $N_2=203$, $N_3=1071$ ja $N_4=29354$. \loppu
+\end{Exa} \seur
+\begin{Exa} \label{sqrt 2 algoritmina} Luvun \ref{jonon raja-arvo}
+Esimerkissä \ref{sqrt 2} näytettiin, että palautuvalle rationaalilukujonolle
+\[
+a_0 = 2, \quad a_{n+1} = \frac{a_n}{2} + \frac{1}{a_n}\,, \quad n = 0,1,\ldots
+\]
+pätee $a_n > 0\ \forall n$ ja $a_n^2 > 2\ \forall n$. Palautuskaavasta ja mainituista
+tuloksista seuraa myös, että
+\[
+a_{n+1}-a_n\ =\ \frac{a_n}{2}+\frac{1}{a_n}-a_n\ =\ \frac{1}{2a_n}\,(2-a_n^2)\ <\ 0,
+\]
+joten $\seq{a_n}$ on aidosti vähenevä ja myös rajoitettu: $\,0 < a_n \le 2\ \forall n$. Siis
+$\seq{a_n}$ suppenee Määritelmän \ref{jonon raja - desim} mukaisesti kohti ääretöntä
+desimaalilukua. Suppeneminen on itse asiassa hyvin nopeaa:
+\begin{align*}
+a_0\ &=\ 2.000 \ldots \\
+a_1\ &=\ 1.5000 \ldots \\
+a_2\ &=\ 1.41666 \ldots \\
+a_3\ &=\ 1.41421568 \ldots \\
+a_4\ &=\ 1.41421356237468 \ldots \\
+a_5\ &=\ 1.41421356237309504880168962 \ldots \\
+a_6\ &=\ 1.4142135623730950488016887242096980785696 \ldots \\
+a_7\ &=\ 1.4142135623730950488016887242096980785696 \ldots \loppu
+\end{align*}
+\end{Exa}
+Esimerkin lukujonosta tiedetään, että se suppenee myös Määritelmän \ref{jonon raja}
+mukaisesti kohti lukua $\sqrt{2}$ (ks.\ Luku \ref{jonon raja-arvo}). Edellä todettiin myös,
+että Määritelmien \ref{jonon raja} ja \ref{jonon raja - desim} mukaiset raja-arvot ovat samat,
+jos raja-arvo on rationaalinen. On odotettavissa, että näin on laita yleisemminkin, jos
+molemmat raja-arvot ovat olemassa. Näin olettaen (asia varmistuu seuraavassa luvussa) saa
+abstrakti luku $\sqrt{2}$ konkreettisen 'ilmiasun' äärettömänä desimaalilukuna:
+\[
+\sqrt{2} =\ 1.4142135623730950488016887242096980785696 \ldots
+\]
+Algoritmina (haluttaessa laskea $\sqrt{2}\,$:n desimaaleja) esimerkin lukujono $\seq{a_n}$ on
+nopeimpia tunnettuja.\footnote[2]{Esimerkin algoritmi tunnettiin jo muinaisessa Babyloniassa 
+3000 vuotta sitten. Yalen yliopistossa säilytettävässä savitaulussa n:o 7289 on algoritmilla 
+laskettu $\sqrt{2}\,$:n approksimaatio $x_3$ lähtien alkuarvosta $x_1$. Laskut on suoritettu
+$60$-kantaisessa lukujärjestelmässä neljän merkitsevän numeron tarkkuudella, jolloin 
+tulokseksi on saatu
+\[
+x_3^*\ =\  1 + 24 \cdot 60^{-1} + 51 \cdot 60^{-2} + 10 \cdot 60^{-3}\ =\ 1.41421296\,..
+\]
+Katkaisuvirheestä johtuen tuloksen virhe (noin $-6 \cdot 10^{-7}$) sattuu olemaan jopa 
+pienempi kuin $x_3$:n tarkan arvon virhe (noin $+21 \cdot 10^{-7}$).} 
+
+\pagebreak
+
+\subsection*{Neperin luku}
+\index{Neperin luku|vahv}%
+
+\begin{Prop} \label{Neperin jonot} Lukujonot 
+\[
+\seq{a_n}\ =\ \left\{\left(1 + \frac{1}{n}\right)^n,\ n = 1,2, \ldots\,\right\}, \quad 
+\seq{b_n}\ =\ \left\{\left(1 - \frac{1}{n}\right)^n,\ n = 1,2, \ldots\,\right\} 
+\]
+ovat kasvavia ja rajoitettuja. Lisäksi $\ \lim_n a_n b_n = 1$. \end{Prop}
+\tod Soveltamalla Bernoullin epäyhtälöä (Propositio \ref{Bernoulli}) saadaan
+\begin{align*}
+\frac{a_{n+1}}{a_n}\ &=\ \frac{\bigl(1 + \frac{1}{n+1}\bigr)^{n+1}}{(1 + \frac{1}{n})^n}\
+                      =\ \biggl(1 + \frac{1}{n}\biggr) 
+                         \Biggl( \frac{1 + \frac{1}{n+1}}{1 + \frac{1}{n}} \Biggr)^{n+1} \\
+                     &=\ \biggl(1 + \frac{1}{n}\biggr) 
+                         \Biggl[ 1 - \frac{1}{(n+1)^2} \Biggr]^{n+1}\ 
+                      >\ \biggl(1 + \frac{1}{n}\biggr)\biggl(1 - \frac{1}{n+1}\biggr)\ =\ 1.
+\end{align*}
+Siis $a_{n+1} > a_n\ \ \forall n$, eli $\seq{a_n}$ on (aidosti) kasvava jono. Vastaavalla 
+päättelyllä todetaan (Harj.teht. \ref{H-I-8: Neperin jono}), että myös jono $\seq{b_n}$ on 
+aidosti kasvava. Tällöin koska jokaisella $n \ge 2$ pätee
+\[
+1 - \frac{1}{n^2}\ <\ 1 \quad \ekv \quad 1 + \frac{1}{n}\ <\ \frac{1}{1-\frac{1}{n}}\,,
+\]
+päätellään
+\[
+a_n\ <\ \frac{1}{b_n}\ \le\ \frac{1}{b_2}\ =\ 4 \quad \text{kun}\ n \ge 2.
+\]
+Siis $1 < a_n < 4$ ja $0 \le b_n < 1$ kaikilla $n$, eli jonot $\seq{a_n}$ ja $\seq{b_n}$ ovat
+paitsi kasvavia myös rajoitettuja. Bernoullin epäyhtälöstä seuraa lisäksi
+\[
+1\ >\ a_n b_n\ =\ \bigl(1 - \frac{1}{n^2}\bigr)^n\ >\ 1 - \frac{1}{n} \quad (n \ge 2),
+\]
+joten $0 < 1 - a_n b_n < 1/n\ \ \forall n \ge 2$. Tästä ja lukujonon raja-arvon määritelmästä
+seuraa väittämän viimeinen osa. \loppu  
+
+Koska Proposition \ref{Neperin jonot} jonot ovat kasvavia ja rajoitettuja, niin niille
+voidaan laskea Määritelmän \ref{jonon raja - desim} mukainen raja-arvo äärettömänä
+desimaalilukuna. Jonon $\seq{a_n}$ tapauksessa raja-arvo on nk.\ \kor{Neperin luku}, jonka
+vakiintunut symboli on $\,e\,$:
+\[
+\lim_n (1+\tfrac{1}{n})^n = e =\ 2.71828182845905 \ldots
+\]
+Luku $e$ on jaksoton, eli se ei samastu mihinkään rationaalilukuun. 
+\begin{Exa} Määritä pienimmät indeksit $N_k,\ k=0\ldots 3\,$ Lauseen
+\ref{monotoninen ja rajoitettu jono} todistuskonstruktiossa, kun $a_n=(1+1/n)^n$.
+\end{Exa}
+\ratk Todistuskonstruktion vertailuluvut ovat
+\[
+x_0=2, \quad x_1=2.7, \quad x_2=2.71, \quad x_3=2.718, \quad \ldots
+\]
+Laskemalla jonon $\seq{a_n}$ alkupään termejä desimaalilukuina todetaan
+\[
+\begin{aligned}
+a_1    &=\ 2.00000000 \ldots \\ 
+a_2    &=\ 2.25000000 \ldots \\[2mm] 
+a_{73} &=\ 2.69989423 \ldots \\ 
+a_{74} &=\ 2.70013967 \ldots
+\end{aligned} \qquad\quad
+\begin{aligned}
+a_{163}   &=\ 2.70999015 \ldots \\
+a_{164}   &=\ 2.71004043.. \\[2mm]
+a_{4821}  &=\ 2.71799996 \ldots \\
+a_{4822}  &=\ 2.71800001 \ldots
+\end{aligned}
+\]
+Siis $\,N_0=1,\ N_1=74,\ N_2=164,\ N_3=4822$. \loppu
+
+Palataan vielä Esimerkin \ref{kaksi sarjaa} positiivitermiseen sarjaan 
+$\,\sum_{k=0}^\infty 1/k!\,$. Tämän sarjan edellä lasketuista osasummista
+voi arvella, että sarja itse asiassa suppenee kohti Neperin lukua (ja vieläpä nopeasti).
+Tämän arvelun varmistamiseksi riittää näyttää, että jos $\,s_n=\sum_{k=0}^n 1/k!$ ja 
+$\,a_n=(1+1/n)^n$, niin $\,\lim_n(s_n-a_n)=0$, vrt.\ Neperin luvun määritelmä edellä.
+Todistetaan tämä väittämä, joka samalla antaa nopean algoritmin Neperin luvun desimaalien 
+laskemiseksi.
+\begin{Prop} \label{e:n sarja}
+$\quad \displaystyle{
+\lim_n \left[\sum_{k=0}^n \frac{1}{k!}-\left(1+\frac{1}{n}\right)^n\right] = 0.}$
+\end{Prop}
+\tod Binomikaavan mukaan
+\begin{align*}
+\left(1+\frac{1}{n}\right)^n 
+  &= 1+n\cdot\frac{1}{n}+\frac{n(n-1)}{1\cdot 2}\left(\frac{1}{n}\right)^2
+                        +\frac{n(n-1)(n-2)}{1\cdot 2\cdot 3}\left(\frac{1}{n}\right)^3 + \cdots
+                        + \left(\frac{1}{n}\right)^n \\
+  &=1+1+\frac{1}{2!}\left(1-\frac{1}{n}\right)
+                +\frac{1}{3!}\left(1-\frac{1}{n}\right)\left(1-\frac{2}{n}\right) + \ldots \\
+  &\qquad\qquad\qquad\quad\quad\ \ \ldots  
+       + \frac{1}{n!}\left(1-\frac{1}{n}\right)
+                     \left(1-\frac{2}{n}\right)\cdots\left(1-\frac{n-1}{n}\right) \\
+  &=\sum_{k=0}^n a_k^{(n)}\,\frac{1}{k!}\,,
+\end{align*}
+missä
+\[
+a_k^{(n)} = \begin{cases} 
+            \,1,                                           \quad &\text{kun}\ k=0,1, \\
+            \,\prod_{j=1}^{k-1}\left(1-\frac{j}{n}\right), \quad &\text{kun}\ k=2 \ldots n.
+            \end{cases} \]
+Nähdään, että jokaisella $1 \le m \le n$ pätee 
+\begin{align*}
+1\            &\ge\ a_k^{(n)}\ \ge\ a_m^{(n)}\ 
+                           \ge\ \left(1-\frac{m-1}{n}\right)^{m-1}, \quad k = 0 \ldots m \\[2mm]
+\impl\quad 0\ &\le\ 1-a_k^{(n)}\ \le\ 1-\left(1-\frac{m-1}{n}\right)^{m-1}, \quad k= 0 \ldots m.
+\end{align*}
+Tämän sekä arvion (ks.\ Harj.teht.\,\ref{H-I-8: kaksi sarjaa})
+\[
+\sum_{k=0}^n \frac{1}{k!}\ <\ \sum_{k=0}^m \frac{1}{k!} \,+\, \frac{2}{(m+1)!}\,, \quad 
+                           0 \le m < n
+\]
+perusteella voidaan arvioida
+\begin{align*}
+0\ \le\ \sum_{k=0}^n \frac{1}{k!}\,-\,\left(1+\frac{1}{n}\right)^n\
+       &=\ \sum_{k=0}^n \left(1-a_k^{(n)}\right)\frac{1}{k!} \\
+       &=\ \sum_{k=0}^m \left(1-a_k^{(n)}\right)\frac{1}{k!}\ 
+                          +\ \sum_{k=m+1}^n \left(1-a_k^{(n)}\right)\frac{1}{k!} \\
+       &<\ \left[1-\left(1-\frac{m-1}{n}\right)^{m-1}\right]\,\sum_{k=0}^m \frac{1}{k!}\ 
+                          +\ \sum_{k=m+1}^n \frac{1}{k!} \\
+       &<\ \left[1-\left(1-\frac{m-1}{n}\right)^{m-1}\right] \cdot 3 \,+\, \frac{2}{(m+1)!}\,,
+\end{align*}
+missä $0 \le m < n$. Olkoon nyt $\eps>0$ ja valitaan $m\in\N$ siten, että
+\[
+\frac{2}{(m+1)!}\ <\ \frac{\eps}{2}
+\]
+(mahdollista, koska $\,2/(m+1)! \kohti 0\,$ kun $m\kohti\infty$). Kun $m$ on näin kiinnitetty,
+valitaan edelleen $N\in\N,\ N \ge m\,$ siten, että 
+\[
+1-\left(1-\frac{m-1}{n}\right)^{m-1}\ <\ \frac{\eps}{6}\,, \quad \text{kun}\ n>N
+\]
+(mahdollista, koska $\left(1-\frac{m-1}{n}\right)^{m-1} \kohti 1\ 
+\impl\ 1-\left(1-\frac{m-1}{n}\right)^{m-1} \kohti 0\,$, kun $n\kohti\infty$). Tällöin seuraa
+\[
+0\ \le\ \sum_{k=0}^n \frac{1}{k!}\,-\,\left(1+\frac{1}{n}\right)^n\ <\ \eps, 
+                                                        \quad \text{kun}\ n>N.
+\]
+Koska tässä $\eps>0$ oli mielivaltainen ja $N\in\N$ ($N$ riippuu vain $\eps$:sta), niin 
+lukujonon raja-arvon määritelmän perusteella seuraa väite. \loppu
+
+\Harj
+\begin{enumerate}
+
+
+\item \label{H-I-8: kaksi sarjaa}
+Laskemalla summia \ a) $s_n=\sum_{k=0}^n 1/k!\,$, \ b) $s_n=\sum_{k=1}^n 1/k^2\,$ todetaan:
+\newline
+a) $s_n=2.718281826..$ kun $n=11$, \ b) $s_n=1.644934065..$ kun $n=10^9$.
+Vedetään tuloksista johtopäätös: $\,\lim_n s_n=s\in\DD$ katkaistuna kahdeksaan merkitsevään
+numeroon on \ a) $s=2.71828182..$ \ b) $s=1.64493406..$ \newline 
+Varmista johtopäätös näyttämällä ensin: Jos \ a) $m\in\N\cup\{0\}$, \ b) $m\in\N$, niin
+jokaisella $n>m$ pätee
+\[
+\text{a)}\ \ s_n < s_m + \frac{m+2}{m+1}\cdot\frac{1}{(m+1)!}\,, \qquad
+\text{b)}\ \ s_n < s_m + \frac{1}{m}\,.
+\]
+
+\item
+Näytä, että positiivitermisen sarjan
+\[
+\sum_{k=0}^\infty \frac{10^{-k}}{k+1}
+\]
+osasummien jono on rajoitettu. Laske sarjan summa $x\in\DD$ viiden merkitsevän numeron 
+tarkkuudella ja varmista tulos, ts.\ todista lasketut numerot oikeiksi.
+
+\item
+Millaisen desimaalimuodon Lauseen \ref{monotoninen ja rajoitettu jono} todistuskonstruktio
+antaa raja-arvoille $\,a=\lim_n (1-1/n)$, $\,b=\lim_n (1+1/n)$, $c=\lim_n (-1+1/n)$ ja
+$d=\lim_n (-1-1/n)\,$?
+
+\item \label{H-I-8: Neperin jono}
+Näytä, että Proposition \ref{Neperin jonot} lukujono $\seq{b_n}$ on aidosti kasvava.
+
+\item
+Näytä, että palautuva lukujono
+\[
+a_0 = \frac{1}{10}\,, \quad \displaystyle{a_{n+1} = \frac{a_n}{1+a_n^6}\,, \quad n=0,1, \ldots}
+\]
+on vähenevä ja rajoitettu. Jonolla on myös rationaalinen raja-arvo --- mikä\,?
+
+\item
+Näytä, että palautuva rationaalilukujono
+\[
+a_0\in\Q, \quad a_{n+1}=\frac{a_n}{1+10^{-n}a_n^2}\,,\quad n=0,1, \ldots
+\]
+on monotoninen ja rajoitettu. Laske raja-arvo $\,\lim_n a_n\, = a\in\DD$ kuuden 
+merkitsevän numeron tarkkuudella ja perustele tarkkuus, kun \ a) $a_0=1$, \ b) $a_0=3$. 
+
+\pagebreak
+
+\item
+Tarkastellaan palautuvaa rationaalilukujonoa
+\[
+a_0=1, \quad a_{n+1} = 1-\frac{1}{a_n+3}\,, \quad n=0,1,\ldots
+\]
+a) Näytä induktiolla: $\,\tfrac{5}{7} < a_n \le \tfrac{3}{4}$, kun $n=1,2,\ldots$ \newline
+b) Näytä: Jonolle $\seq{b_n}=\seq{a_{n+1}-a_n}$ pätee
+\[
+b_{n+1} = \frac{b_n}{(a_n+3)(a_{n+1}+3)}\,, \quad n=0,1,\ldots
+\]
+c) Näytä induktiolla: $\seq{a_n}$ on aidosti vähenevä lukujono. \newline
+d) Laske raja-arvo $\lim_n a_n$ Määritelmän \ref{jonon raja} mukaan. \newline
+e) Päättele: Määritelmän \ref{jonon raja - desim} mukainen raja-arvo katkaistuna kuuteen
+merkitsevään numeroon on $\lim_n a_n = 0.732050..$ (voit tukeutua laskimeen\,!). 
+
+\item (*)
+Eräs algoritmi tunnetun luvun $\pi\ =\ 3.1415926535897932384626433832..$ laskemiseksi
+perustuu kaavaan
+\[
+\pi=\sum_{k=0}^\infty \frac{1}{16^k}
+    \left(\frac{4}{8k+1}-\frac{2}{8k+4}-\frac{1}{8k+5}-\frac{1}{8k+6}\right).
+\]
+Totea sarja positiivitermiseksi ja arvioi, montako $\pi$:n oikeaa desimaalia on 
+poimittavissa sarjan osasumman $s_n$ desimaalilukumuodosta, kun a) $n=10$, \ b) $n=15$, \ 
+c) $n=20$. (Kaava on keksitty v. 1995.)
+
+\item (*) \label{H-I-8: sqrt-kunta}
+Näytä, että seuraavat lukujonot (kunnassa $(\J,+\cdot,<)$, ks.\ Luku \ref{kunta})
+ovat monotonisia ja rajoitettuja (\kor{vihje}: induktio!). Laske lukujonoille myös raja-arvot
+(\kor{vihje}: juuriluvun määritelmä ja Lause \ref{raja-arvojen yhdistelysäännöt}). \\[2mm]
+a) $\ \ a_0=\sqrt{3}\,, \quad   a_{n+1}=\sqrt{3+a_n}\,,      \quad n=0,1, \ldots$ \\[2mm]
+b) $\ \ a_0=\sqrt{3}\,, \quad   a_{n+1}=\sqrt{2a_n}\,,       \quad n=0,1, \ldots$ \\[2mm]
+c) $\ \ a_0=\sqrt{5}\,, \quad\, a_{n+1}=\sqrt{2a_n}\,,       \quad n=0,1, \ldots$ \\[2mm]
+d) $\ \ a_0=3,          \qquad  a_{n+1}=\sqrt[4]{6+a_n^2}\,, \quad n=0,1, \ldots$  
+
+\item (*)
+Näytä, että palautuva lukujono
+\[
+a_{n+1} = \frac{a_n}{5-a_n}\,, \quad n=0,1, \ldots
+\]
+on rajoitettu ja eräästä indeksistä alkaen monotoninen, sikäli kuin pätee
+\[
+a_0 \neq \frac{4}{1-5^{-n}} \quad \forall n\in\N.
+\]
+Määritä myös tällä ehdolla ($a_0$:sta riippuva) raja-arvo $\,\lim_n a_n$. \newline
+\kor{Vihje}: Tutki jonoa $\seq{b_n}=\seq{a_n^{-1}}$. 
+
+\end{enumerate} 

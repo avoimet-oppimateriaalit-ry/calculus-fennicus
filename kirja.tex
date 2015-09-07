@@ -1,0 +1,196 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[finnish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{theorem}
+\usepackage{graphicx}
+\usepackage{apropos}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{amscd}
+\usepackage{curves}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{float}
+\usepackage{import}
+\usepackage{rotating}
+%\usepackage{makeidx}
+
+\author{Juhani Pitkäranta}
+\title{Matematiikan peruskurssi L1}
+\date{Elokuu 2005}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{\medskipamount}
+\setlength{\textwidth}{35em}
+
+\usepackage{jpheader}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+\theoremheaderfont{\rmfamily\scshape}
+
+%\numberwithin{Thm}{section}
+%\numberwithin{Prop}{section}
+%\numberwithin{Lem}{section}
+
+%\includeonly{I-0,I-1,I-2,I-3,I-4,I-5,I-6,I-7,I-8,I-9,I-10,I-11,I-12}
+%\includeonly{II-0,II-1,II-2,II-3,II-3,II-4,II-5}
+\includeonly{II-6}%,II-7,II-8}
+%\includeonly{III-0,III-1,III-2,III-3,III-4}
+%\includeonly{IV-0,IV-1,IV-2,IV-3,IV-4,IV-5}
+%\includeonly{V-0,V-1,V-2,V-3,V-4,V-5,V-6,V-7,V-8,V-9}
+%\includeonly{exp-0,exp-1,exp-2,exp-3,exp-4}
+%\includeonly{dif-0,dif-1,dif-2,dif-3,dif-4,dif-5,dif-6}
+%\includeonly{int-0,int-1,int-2,int-3,int-4,int-5,int-6,int-7,int-8,int-9}
+%\includeonly{dy-0,dy-1,dy-2,dy-3,dy-4,dy-5,dy-6,dy-7,dy-8}
+%\includeonly{m-0,m-1,m-2,m-3,m-4,m-5,m-6,m-7,m-8}
+%\includeonly{udif-0,udif-1,udif-2,udif-3,udif-4,udif-5,udif-6,udif-7,udif-8,udif-9}
+%\includeonly{eig-0,eig-1,eig-2,eig-3,eig-4}
+%\includeonly{uint-0,uint-1,uint-2,uint-3,uint-4,uint-5,uint-6,uint-7}
+%\includeonly{Gauss-0,Gauss-1,Gauss-2,Gauss-3,Gauss-4,Gauss-5}
+
+%\makeindex
+
+\begin{document}
+%\maketitle
+
+%\newcommand{\alku}{\setcounter{Exa}{0} \setcounter{equation}{0} \markright{\thesection}}
+\newcommand{\alku}{\setcounter{Exa}{0} \setcounter{equation}{0}}
+\newcommand{\jatko}{\addtocounter{Exa}{-1}}
+\newcommand{\seur}{\addtocounter{Exa}{1}}
+
+%\pagestyle{myheadings}
+
+\include{I-0}  % Luvut ja lukujonot
+\include{I-1}  % Rationaaliluvut
+\include{I-2}  % Kunta
+\include{I-3}  % Logiikka ja joukko-oppi
+\include{I-4}  % Jonon käsite
+\include{I-5}  % Äärettömät desimaaliluvut
+\include{I-6}  % Lukujonon raja-arvo
+\include{I-7}  % Suppenevat lukujonot
+\include{I-8}  % Monotoniset ja rajoitetut lukujonot
+\include{I-9}  % Reaaliluvut
+\include{I-10} % Cauchyn jonot
+\include{I-11} % Reaalilukujen ominaisuuksia
+\include{I-12} % Klassinen sarjaoppi
+
+\include{II-0} % Vektorit ja analyyttinen geometria
+\include{II-1} % Euklidinen taso
+\include{II-2} % Tason vektorit
+\include{II-3} % Skalaaritulo
+\include{II-4} % *Abstrakti skalaaritulo
+\include{II-5} % Trigonometriset funktiot
+\include{II-6} % Avaruuden vektorit
+\include{II-7} % Suorat, tasot ja pinnat
+\include{II-8} % Käyräviivaiset koordinaatistot
+
+\include{III-0} % Kompleksiluvut
+\include{III-1} % Osoitinkunta
+\include{III-2} % Kompleksiluvut
+\include{III-3} % Algebran peruslause
+\include{III-4} % *Kompleksikertoiminen vektoriavaruus
+
+\include{IV-0} % Reaalimuuttujien funktiot
+\include{IV-1} % Yhden muuttujan funktiot
+\include{IV-2} % Käänteisfunktio
+\include{IV-3} % Kahden ja kolmen muuttujan funktiot
+\include{IV-4} % Parametriset käyrät ja pinnat
+\include{IV-5} % *Funktioavaruus
+
+\include{V-0} % Jatkuvuuvs ja derivoituvuus
+\include{V-1} % Jatkuvuuden käsite
+\include{V-2} % Funktion raja-arvo 
+\include{V-3} % Derivaatta
+\include{V-4} % Trigonometristen funktioiden derivointi
+\include{V-5} % Ääriarvot. Sileys
+\include{V-6} % Differentiaalilaskun väliarvolause
+\include{V-7} % Kiintopisteiteraatio
+\include{V-8} % Analyyttiset kompleksifunktiot
+\include{V-9} % *Jatkuvuuden logiikka
+
+\include{exp-0} %Eksponenttifunktio
+\include{exp-1} %Yleinen eksponenttifunktio $E(x)$
+\include{exp-2} %Funktiot $e^x$ ja $\ln x$ 
+\include{exp-3} %Kompleksinen eksponenttifunktio
+\include{exp-4} %Eksponenttifunktion sovellusesimerkkejä
+
+\include{dif-0} %Yhden muuttujan differentiaalilaskenta
+\include{dif-1} %Differentiaali ja muutosnopeus
+\include{dif-2} %Käyrän tangentti ja normaali
+\include{dif-3} %Käyrän kaarevuus
+\include{dif-4} %Taylorin polynomit ja Taylorin lause
+\include{dif-5} %Taylorin polynomien sovelluksia
+\include{dif-6} %Interpolaatiopolynomit
+
+\include{int-0} %Integraali
+\include{int-1} %Integraalifunktio
+\include{int-2} %Osittaisintegrointi ja sijoitus
+\include{int-3} %Osamurtokehitelmät. Sarjamenetelmä
+\include{int-4} %Integraalifunktion numeerinen laskeminen. Määrätty integraali
+\include{int-5} %Riemannin integraali
+\include{int-6} %Analyysin peruslause
+\include{int-7} %Riemannin integraalin laajennukset
+\include{int-8} %Pinta-ala ja kaarenpituus
+\include{int-9} %Numeerinen integrointi
+
+\include{dy-0} %Differentiaaliyhtälöt
+\include{dy-1} %Differentiaaliyhtälöiden peruskäsitteet
+\include{dy-2} %Separoituva differentiaaliyhtälö
+\include{dy-3} %Palautuvat toisen kertaluvun DY:t
+\include{dy-4} %Ensimmäisen kertaluvun lineaarinen DY
+\include{dy-5} %Lineaariset, vakiokertoimiset DY:t. Eulerin differentiaaliyhtälö
+\include{dy-6} %*Yleinen toisen kertaluvun lineaarinen DY
+\include{dy-7} %Diferentiaaliyhtälöiden numeeriset ratkaisumenetelmät
+\include{dy-8} %*Picardin-Lindelöfin lause
+
+\include{m-0} %Matriisit
+\include{m-1} %Matriisialgebra
+\include{m-2} %Neliömatriisit. Käänteismatriisi
+\include{m-3} %Gaussin algoritmi
+\include{m-4} %Tuettu Gaussin algoritmi. Singulaariset yhtälöryhmät
+\include{m-5} %Determinantti
+\include{m-6} %Lineaarikuvaukset
+\include{m-7} %Affiinikuvaukset. Geometriset kuvaukset
+\include{m-8} %*Lineaaristen yhtälöryhmien perinteisiä sovellusesimerkkejä
+
+\include{udif-0} %Usean muuttujan differentiaalilaskenta
+\include{udif-1} %Usean muuttujan jatkuvuus ja raja-arvot
+\include{udif-2} %Osittaisderivaatat
+\include{udif-3} %Gradientti
+\include{udif-4} %Divergenssi ja roottori
+\include{udif-5} %Operaattorit grad, div, rot ja Laplace käyräviivaisissa koordinaatistoissa
+\include{udif-6} %Epälineaariset yhtälöryhmät: Jacobin matriisi ja Newtonin menetelmä
+\include{udif-7} %Kontraktiokuvuauslause. Käänteisfunktiolause. Implisiittifunktiolause
+\include{udif-8} %Usean muuttujan ääriarvotehtävät
+\include{udif-9} %Usean muuttujan Taylorin polynomit 
+
+\include{eig-0} %Matriisin ominaisarvot ja neliömuodot
+\include{eig-1} %Matriisin ominaisarvot
+\include{eig-2} %Neliömuodon diagonalisointi
+\include{eig-3} %Pinnan kaarevuus
+\include{eig-4} %*Tensorit, vektorit ja skalaarit
+
+\include{uint-0} %Usean muuttujan integraalilaskenta
+\include{uint-1} %Pinta-alamitta ja tasointegraalit
+\include{uint-2} %Tasointegraalien laskutekniikka
+\include{uint-3} %Avaruusintegraalit
+\include{uint-4} %Taso-ja avaruusintegraalien muuntaminen
+\include{uint-5} %Integraalien sovellukset: Tiheys ja kokonaismäärä
+\include{uint-6} %Viivaintegaalit
+\include{uint-7} %Pintaintegraalit
+
+\include{Gauss-0} %Gaussin ja Stokesin lauseet
+\include{Gauss-1} %Vektorikentät ja polkuintegraalit
+\include{Gauss-2} %Gaussin lause
+\include{Gauss-3} %Gaussin lauseen sovelluksia
+\include{Gauss-4} %Stokesin lause
+\include{Gauss-5} %Pyörteetön vektorikenttä
+
+%\printindex
+
+\end{document}

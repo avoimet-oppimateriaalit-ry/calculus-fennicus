@@ -1,0 +1,241 @@
+%Tähän on siirretty ylijäämäosia vanhoista luvuista II.7 ja II.8 (3/09)
+
+\subsection*{Ortogonaaliprojektio}
+
+Avaruusvektoreiden muodostamalla vektoriavaruudella $V$ on aliavaruuksia $V$:n itsensä lisäksi
+kahta tyyppiä: 1-ulotteisia, joiden geometrinen vastine on origon kautta kulkeva avaruussuora,
+ja 2-ulotteisia, joiden geometrinen vastine on origon kautta kulkeva taso.
+Jos $W \subset V$ on $V$:n aito aliavaruus (ts. $W \neq V$), niin mielivaltainen $\vec u \in V$
+voidaan jakaa yksikäsitteisesti kahteen keskenään ortogonaaliseen komponenttiin siten, että 
+komponenteista toinen on $W$:ssä ja toinen $W$:tä vastaan kohtisuora:
+\[
+\vec u = \vec w + \vec w^{\perp}, \quad  \vec w \in W, \ \vec w^{\perp} \perp W.
+\]
+Tässä $\vec w = \vec u$:n \kor{ortogonaaliprojektio} $W$:lle määräytyy ehdosta
+\[
+(\vec u - \vec w) \cdot \vec v = 0 \quad \forall \vec v \in W.
+\]
+Jos esimerkiksi $W$ on 2-ulotteinen, eli muotoa
+\[
+W=\{\vec v = \lambda \vec a + \mu \vec b \ | \ \lambda, \mu \in \R \},
+\]
+niin riittää asettaa ehdot
+\[
+(\vec u - \vec w) \cdot \vec a =(\vec u -\vec w) \cdot \vec b =0,
+\]
+sillä tällöin on myös
+\begin{align*}
+(\vec u - \vec w)(\lambda \vec a + \mu \vec b)
+             &=\lambda(\vec u - \vec w) \cdot \vec a + \mu (\vec u-\vec w) \cdot \vec b \\
+             &=\lambda \cdot 0 + \mu \cdot 0 = 0 \quad \forall \lambda, \mu \in \R.
+\end{align*}
+Näin ollen riittää, että ortogonaalisuusehto pätee $W$:n kantavektoreille. Kun siis $\vec w$:tä
+haetaan muodossa
+\[
+\vec w = x \vec a +y \vec b,
+\]
+on $x$:lle ja $y$:lle haettava (jos mahdollista) sellaiset arvot, että
+\[
+\vec w \cdot \vec a = \vec u \cdot \vec a \quad \ja \quad \vec w \cdot \vec b 
+                    = \vec u \cdot \vec b
+\]
+eli
+\[ \begin{cases}
+(\vec a \cdot \vec a)x+(\vec a \cdot \vec b)y  = \vec u \cdot \vec a \\
+(\vec a \cdot \vec b)x+(\vec b \cdot \vec b)y\,= \vec u \cdot \vec b
+\end{cases} \]
+Tällä yhtälöryhmällä on yksikäsitteinen ratkaisu täsmälleen kun
+\[
+(\vec a \cdot \vec a)(\vec b \cdot \vec b) - (\vec a \cdot \vec b)^2 \neq 0
+                                           \qekv \vec a \neq \vec 0\ 
+                                            \ja\ \vec b \neq \vec 0\ 
+                                            \ja\ \abs{\cos{\kulma(\vec a,\vec b)}} \neq 1
+\]
+Siis yhtälöryhmä ratkeaa yksikäsitteisesti täsmälleen kun $\{\vec a, \vec b\}$ on lineaarisesti
+riippumaton systeemi.
+
+Euklidisessa avaruudessa $\Ekolme$ vastaa $2$-ulotteista aliavaruutta $W \subset V$ origon
+kautta kulkeva taso $T$, jonka suuntavektoreina ovat $W$:n kantavektorit. Vektorin 
+$\vec u = \Vect{OP}$ ortogonaaliprojektion hakeminen $W$:ssä vastaa tällöin geometrista
+ongelmaa: Etsi $Q \in T$, siten että pätee
+\[
+\Vect{QP} \ \perp \ \Vect{QA} \quad \forall A \in T.
+\]
+Etsitty ortogonaaliprojektio on tällöin $\vec w=\Vect{OQ}$, ja $\vec n =\Vect{QP}$ on tason $T$
+\kor{normaalivektori}, eli vektori, joka on kaikkia tason suuntaisia vektoreita vastaan
+kohtisuora.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-12.pstex_t}
+\end{center}
+\end{figure}
+\begin{Exa}
+Taso $T$ kulkee pisteiden $(0,0,0), \ (2,1,1)$ ja $(2,3,-3)$ kautta. Määrää vektorin 
+$\vec u=\vec i +2\vec j -3\vec k$ ortogonaaliprojektio tasolle.
+\end{Exa}
+\ratk Ortogonaaliprojektio on muotoa 
+\begin{align*}
+\vec w &= x \vec a +y \vec b \\
+&=x(2\vec i + \vec j + \vec k) + y(2\vec i + 3\vec j -3\vec k) \\
+&=(2x+2y)\vec i +(x+3y)\vec j+(x-3y)\vec k,
+\end{align*}
+joten
+\begin{align*}
+\vec u - \vec w = (1-2x-2y)\vec i + (2-x-3y)\vec j + (-3-x+3y)\vec k,
+\end{align*}
+ja on siis oltava
+\begin{align*}
+(\vec u - \vec w) \cdot \vec a &= (1-2x-2y) \cdot 2 + (2-x-3y) \cdot 1 + (-3-x+3y) \cdot 1 \\
+                               &=1-6x-4y=0, \\ \\
+(\vec u - \vec w) \cdot \vec b &= (1-2x-2y) \cdot 2 + (2-x-3y) \cdot 3 + (-3-x+3y) \cdot (-3) \\
+                               &=17-4x-22y=0.
+\end{align*}
+Ratkaisemalla yhtälöryhmä
+\[
+\left\{\begin{array}{ll}
+6x+4y &= 1 \\
+4x+22y &= 17
+\end{array}\right.
+\]
+saadaan
+\[
+x=-23/58, \ y=49/58,
+\]
+joten kysytty projektio on 
+\[
+\vec w = \frac{1}{58}(52\vec i +124\vec j -170\vec k).
+\]
+Sivutuotteena saatiin myös tason $T$ normaalivektori:
+\begin{align*}
+\vec n &= \vec u - \vec w 
+           = \frac{1}{58}\left[(58-52)\vec i + (116-124)\vec j +(-174+170) \vec k\right] \\
+       &= \frac{1}{58}(6\vec i -8\vec j -4\vec k)
+\end{align*}
+\pain{Tarkistus}:
+\begin{align*}
+\vec n \cdot \vec w &= \frac{1}{58^2}(6 \cdot 52 - 8 \cdot 124 + 4 \cdot 170) \\ 
+                    &= \frac{1}{58^2}(312-992+680)=0 \quad \text{OK!}
+\end{align*}
+
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-13.pstex_t}
+\end{center}
+\end{figure}
+Kuviossa on
+\[
+\sin{\kulma (\vec u, \vec w)} = \frac{\abs{\vec n}}{\abs{\vec u}} = \frac{1}{\sqrt{406}}
+                                \qimpl \kulma (\vec u, \vec w) \approx 3^{\circ},
+\]
+joten $\vec u$ on lähes tason $T$ suuntainen. \loppu
+
+\pagebreak
+
+\subsection*{*Ristitulo tasossa}
+
+Jos $\vec a$ ja $\vec b$ ovat tason vektoreita, 
+\[
+\vec a=x_1\vec i + y_1 \vec j, \quad \vec b=x_2\vec i + y_2 \vec j,
+\]
+niin näiden välinen ristitulo voidaan määritellä lisäämällä kolmas ulottuvuus:
+\[
+\vec a \times \vec b = \left| \begin{array}{ccc}
+\vec i & \vec j & \vec k \\
+x_1 & y_1 & 0 \\
+x_2 & y_2 & 0 
+\end{array} \right|
+=
+\left|\begin{array}{cc} 
+y_1 & 0 \\
+y_2 & 0
+\end{array} \right| \vec i -
+\left|\begin{array}{cc} 
+x_1 & 0 \\
+x_2 & 0
+\end{array} \right| \vec j +
+\left|\begin{array}{cc} 
+x_1 & y_1 \\
+x_2 & y_2
+\end{array} \right| \vec k
+=(x_1y_2-x_2y_1)\vec k.
+\]
+Koska lopputulos on joka tapauksessa tason normaalin $\vec k$ suuntainen, ei ristitulon
+vektoriluonteella ole tässä olennaista merkitystä. Tason vektoreiden ristitulo voidaankin
+määritellä yhtä hyvin reaaliarvoisena (skalaariarvoisena):
+\[
+\vec a \times \vec b = \left|\begin{array}{cc} x_1 & y_1 \\ x_2 & y_2 \end{array} \right| 
+                     = \left|\begin{array}{cc} x_1 & x_2 \\ y_1 & y_2 \end{array} \right|
+                     = x_1y_2-x_2y_1.
+\]
+Näin määriteltynä tason ristitulo ei siis ole 'vektoritulo', vaan toisen tyyppinen 
+'skalaaritulo', eli kuvaus tyyppiä $V \times V \map \R$.\footnote[1]{Laskukaavansa mukaisesti
+tason ristitulo on itse asiassa 'skalaarikaksitulo', joka on läheistä sukua avaruuden
+skalaarikolmitulolle.} 
+\begin{Exa} Jos $K$ on tason kolmio, jonka kärjet ovat $(0,0)$, $(x_1,y_1)$ ja $(x_2,y_2)$,
+niin $K$:n pinta-ala on (vrt.\ Esimerkki \ref{avaruuskolmion ala} edellä)
+\[
+\text{ala}(K)=\frac{1}{2}\abs{\vec a\times\vec b}=\frac{1}{2}\abs{x_1y_2-x_2y_1}\,. \loppu
+\]
+\end{Exa}
+
+Geometrinen määritelmä tason skalaariselle ristitulolle on
+\[
+\vec a \times \vec b = \begin{cases} 
+\ \ \,\abs{\vec a}\abs{\vec b} \sin\alpha, 
+     &\text{ jos } \vec a \text{ on myötäpäivään } \vec b \text{:stä kulmassa } \alpha\le\pi, \\
+     -\abs{\vec a}\abs{\vec b} \sin\alpha, 
+     &\text{ jos } \vec a \text{ on vastapäivään } \vec b \text{:stä kulmassa } \alpha\le\pi.
+\end{cases}
+\]
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10.5,4)
+\put(0,3){\vector(2,1){2}} \put(0,3){\vector(3,-2){3}}
+\put(3.2,0.9){$\vec a$} \put(2.1,3.9){$\vec b$}
+\put(1,0){$\vec a\times\vec b>0$}
+\put(6,3){\vector(3,1){3}} \put(6,3){\vector(4,-1){4}}
+\put(9.2,3.9){$\vec a$} \put(10.2,1.9){$\vec b$}
+\put(7,0){$\vec a\times\vec b<0$}
+\end{picture}
+\end{center}
+\end{figure}
+Tässä määritelmässä siis 'kulman sini' lasketaan sisäkulman mitan avulla kuten aiemmin. 
+Toisaalta tasossa on luontevaa mitata kahden vektorin välinen kulma \pain{suunnatulla} 
+mittauksella seuraavasti:
+\begin{align*}
+\skulma(\vec a, \vec b) \ = \ &\text{vektorien } \vec a, \vec b \text{ välinen kulma mitattuna } 
+         \vec a \text{:sta lähtien vastapäivään}, \\ &0 \leq \skulma(\vec a, \vec b) < 2\pi.
+\end{align*}
+Tässä mittauksessa vektorien $\vec a,\vec b$ järjestys on tärkeä, sillä määritelmän mukaisesti
+on $\displaystyle{\skulma(\vec a,\vec b)=2\pi-\skulma(\vec b,\vec a)}$ (paitsi jos
+$\vec a\uparrow\uparrow\vec b$, jolloin 
+$\displaystyle{\skulma(\vec a,\vec b) = \skulma(\vec b,\vec a) = 0}$).
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(5,3)(-1,-1)
+\put(1,1){\vector(2,-1){3}} \put(1,1){\vector(1,-1){2}} 
+\put(4,-0.2){$\vec a$} \put(2.3,-1.3){$\vec b$}
+\put(1,1){\arc{1}{-5.486}{0.45}}
+\put(1.34,0.64){\vector(3,2){0.01}}
+\put(-1,1){$\skulma (\vec a,\vec b)$}
+\end{picture}
+\end{center}
+\end{figure}
+Suunnatulla kulman mittauksella tason ristitulon geometrisesta määritelmästä tulee 
+yksinkertaisempi:
+\[
+\vec a \times \vec b =\abs{\vec a}\abs{\vec b}\sin{\skulma(\vec a, \vec b)}. 
+\]
+Myös avaruusvektorien ristitulo voidaan määritellä suunatulla kulman mittauksella, nimittäin
+(vrt.\ Määritelmä \ref{ristitulon määritelmä})
+\[
+\vec a \times \vec b = \abs{\vec a}\abs{\vec b}\sin\skulma(\vec a,\vec b)\,\vec n,
+\]
+missä $\vec n$ on vektoreita $\vec a$ ja $\vec b$ vastaan kohtisuora yksikkövektori (kumpi
+tahansa kahdesta vaihtoehdosta!) ja $\displaystyle{\skulma(\vec a,\vec b)}$ on suunnattu 
+kulman mitta \pain{$\vec n$:n} \pain{osoittamasta} \pain{suunnasta} \pain{näht}y\pain{nä}. 
+Tavallisemmin avaruusvektoreiden ristitulo määritellään kuitenkin em.\ tavalla 
+'kätisyyssääntöjä' käyttäen, jolloin ristitulon suunta on (ehkä) helpommin geometrisesti 
+hahmotettavissa.

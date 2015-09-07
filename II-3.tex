@@ -1,0 +1,464 @@
+\section{Skalaaritulo} \label{skalaaritulo}
+\alku
+\index{laskuoperaatiot!c@tason vektoreiden|vahv}
+
+Olkoot $\vec a \neq \vec 0$ ja $\vec b \neq \vec 0$ kaksi tason vektoria. Näiden kanssa
+samansuuntaiset
+\index{yksikkövektori}%
+\kor{yksikkövektorit} (yksikön pituiset vektorit) ovat
+\[
+\vec a^{\,0} = \frac{1}{\abs{\vec a}}\,\vec a=\frac{\vec a}{\left|\vec a\right|}\,, \quad\ 
+\vec b^{\,0} = \frac{1}{\abs{\vec b}}\,\vec b=\frac{\vec b}{|\vec b|}\,.
+\]
+Liitetään jatkossa vektoreihin $\vec a,\vec b$ luku $\kos(\vec a, \vec b) \in \R$, joka 
+riippuu vain $\vec a$:n ja $\vec b$:n suunnista, eli vain yksikkövektoreista 
+$\vec a^{\,0},\vec b^{\,0}$. Liittäminen tapahtuu geometrisella konstruktiolla seuraavasti:
+Olkoon $\vec a^{\,0}=\Vect{OA}$, $\vec b^{\,0} = \Vect{OB}$ ja valitaan pisteiden $O$ ja $A$
+kautta kulkevalta suoralta piste $B'$, joka on lähinnä pistettä $B$. Tällöin kulma
+$\kulma OB'B$ (tai $\kulma AB'B$, jos $B'=O$) on suora.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,3.5)(0,0)
+%\Thicklines
+\put(0,0){\vector(1,1){2.1}} \put(0,0){\vector(1,0){3}} \dashline{0.2}(2.1,2.1)(2.1,0) 
+\put(5,0){\vector(1,0){3}} \put(5,0){\vector(0,1){3}}
+\put(11,0){\vector(1,0){3}} \put(11,0){\vector(-1,3){0.95}} \dashline{0.2}(10.05,2.85)(10.05,0) 
+\dashline{0.2}(9.5,0)(11,0)
+\put(2.8,-0.5){$A$} \put(7.8,-0.5){$A$} \put(13.8,-0.5){$A$}
+\put(-0.1,-0.5){$O$} \put(4.9,-0.5){$O=B'$} \put(10.9,-0.5){$O$}
+\put(2,-0.5){$B'$} \put(10,-0.5){$B'$}
+\put(2.7,0.2){$\vec a^{\,0}$} \put(7.7,0.2){$\vec a^{\,0}$} \put(13.7,0.2){$\vec a^{\,0}$}
+\put(1.6,2){$\vec b^{\,0}$} \put(5.2,2.8){$\vec b^{\,0}$} \put(10.25,2.65){$\vec b^{\,0}$}
+\put(2.3,2.1){$B$} \put(4.5,2.8){$B$} \put(9.55,2.65){$B$}
+\path(2.1,0.15)(1.95,0.15)(1.95,0) \path(5,0.15)(5.15,0.15)(5.15,0) 
+\path(10.05,0.15)(10.2,0.15)(10.2,0)
+\end{picture}
+\end{center}
+\end{figure}
+Kuvioon liittyen asetetaan:
+\[
+\kos(\vec a,\vec b) = \kos(\vec a^{\,0}, \vec b^{\,0}) = \left\{ \begin{array}{rl} 
+ | \Vect{OB'} |, & \text{jos } \  \Vect{OB'} \ \uparrow \uparrow \ \vec a^{\,0}, \\
+              0, & \text{jos } \  \Vect{OB'} = \vec 0, \\
+-| \Vect{OB'} |, & \text{jos } \  \Vect{OB'} \ \uparrow \downarrow \ \vec a^{\,0}. 
+\end{array} \right.
+\]
+Luku $\kos(\vec a,\vec b)$ määräytyy siis geometrisesti janan pituutena tai sen vastalukuna,
+kun tunnetaan vektorit $\vec a$ ja $\vec b$. Konstruktio on ilmeisen symmetrinen näiden
+vektorien suhteen, ts.\ $\kos(\vec a, \vec b)=\kos(\vec b, \vec a)$. Ilmeistä on myös, että
+$\kos(\vec a, \vec b)$ ei muutu, jos konstruktioon liittyvää geometrista kuviota
+muutetaan euklidisella liikkeellä. Tästä voidaan päätellä, että $\kos(\vec a,\vec b)$
+riippuu vain vektoreiden $\vec a,\vec b$ suuntien määräämän \pain{sisäkulman}
+\pain{mittaluvusta}. Konstruktiosta nähdään, että sama pätee myös kääntäen: Luku 
+$\kos(\vec a,\vec b)$ määrää minitun mittaluvun yksikäsitteisesti.
+
+Jatkossa vektorien $\vec a,\vec b$ suuntien määräämää kulmaa merkitään symbolilla
+$\kulma(\vec a,\vec b)$.\footnote[2]{Merkinnässä $\kulma(\vec a,\vec b)$ ei ole tarpeen
+tehdä eroa sisä- ja ulkokulman välillä, ts.\ kulmaa ei tarvitse tulkita sektoriksi.
+Vrt.\ Luku \ref{geomluvut}.} 
+Lukua $\kos(\vec a,\vec b)$ sanotaan tästä lähtien \kor{kulman} $\kulma(\vec a,\vec b)$
+\kor{kosiniksi} ja merkitään
+\index{kulma!c@kulman kosini}%
+\[
+\boxed{\kehys\quad \kos(\vec a,\vec b) = \cos\kulma(\vec a,\vec b). \quad}
+\]
+Koska luku $\cos\kulma(\vec a, \vec b)$ määrää kulmaan $\kulma(\vec a,\vec b)$ liittyen
+sisäkulman mittaluvun, niin se määrää myös kulman geometrisen 'ulkonäön'. Erityisesti pätee
+\[
+\begin{array}{lcll}
+\cos\kulma(\vec a, \vec b) = 1 \quad  & \Leftrightarrow \quad & \vec a 
+                                  \uparrow \uparrow \vec b \quad   & \text{(nollakulma),} \\
+\cos\kulma(\vec a, \vec b) = -1 \quad & \Leftrightarrow \quad & \vec a 
+                                  \uparrow \downarrow \vec b \quad & \text{(oikokulma),} \\
+\cos\kulma(\vec a, \vec b) = 0 \quad  & \Leftrightarrow \quad & \vec a \perp \vec b \quad 
+                                                                   & \text{(suora kulma).}
+\end{array}
+\]
+Tässä on käytetty merkintää $\vec a \perp \vec b$ ilmaisemaan, että vektorit $\vec a$ ja 
+\index{ortogonaalisuus!a@vektoreiden} \index{kohtisuoruus (vektoreiden)}%
+$\vec b$ ovat \kor{kohtisuorat} eli \kor{ortogonaaliset} ($\kulma(\vec a,\vec b)$ 
+= suora kulma). Luvun $\cos\kulma(\vec a,\vec b)$ määritelmän ja Pythagoraan lauseen
+perusteella on kaikissa tapauksissa
+\begin{equation} \label{skalaari1}
+-1 \le \cos\kulma(\vec a, \vec b) \leq 1.
+\end{equation}
+Määritelmästä nähdään myös, että pätee
+\begin{equation} \label{skalaari2}
+\cos\kulma(\lambda\vec a,\vec b)=\cos\kulma(\vec a,\lambda\vec b)
+                                =\begin{cases}
+                                  \ \ \cos\kulma(\vec a,\vec b), \ \ \text{jos}\ \lambda>0, \\
+                                     -\cos\kulma(\vec a,\vec b), \ \ \text{jos}\ \lambda<0.
+                                 \end{cases}
+\end{equation}
+\begin{Def} (\vahv{Skalaaritulo}) \label{vektorien skalaaritulo}
+\index{skalaaritulo!a@tason vektoreiden|emph} \index{pistetulo|emph}
+Vektorien $\vec a, \vec b$ \kor{skalaaritulo} eli \kor{pistetulo} on reaaliluku, joka merkitään
+$\vec a \cdot \vec b$, \,luetaan '$a$ piste $b$', ja määritellään
+\[
+\vec a\cdot\vec b \
+                  = \begin{cases} 
+                    \,\abs{\vec a} \abs{\vec b}\cos\kulma(\vec a, \vec b), 
+                         &\text{jos}\,\ \vec a\neq\vec 0\,\,\ \text{ja}\ \ \vec b\neq\vec 0, \\
+                    \,0, &\text{jos}\,\ \vec a = \vec 0\,\ \text{tai}\,\ \vec b = \vec 0.
+                    \end{cases}
+\]
+\end{Def}
+Määritelmästä seuraa ensinnäkin
+\begin{equation} \label{skalaari3}
+\boxed{\kehys\quad \vec a \cdot \vec a = \abs{\vec a}^{2}. \quad}
+\end{equation}
+Toiseksi on voimassa symmetrialaki
+\begin{equation} \label{skalaari4}
+\boxed{\kehys\quad \vec a \cdot \vec b = \vec b \cdot \vec a. \quad}
+\end{equation}
+Kolmanneksi seuraa määritelmästä ja ominaisuudesta \eqref{skalaari2} skalaarilla kertomisen
+ja pistetulon välinen osittelulaki
+\begin{equation} \label{skalaari5}
+\boxed{\kehys\quad (\lambda \vec a) \cdot \vec b 
+  = \vec a \cdot (\lambda \vec b) = \lambda ( \vec a \cdot \vec b), \quad \lambda\in\R. \quad}
+\end{equation}
+Viimeksi mainitun lain perusteella sulkeiden pois jättäminen merkinnässä 
+$\lambda \vec a\cdot\vec b$ ei aiheuta sekaannusta. 
+
+Hieman vähemmän ilmeinen skalaaritulon määritelmän seuraamus on pistetulon ja vektorien 
+yhteenlaskun välinen osittelulaki
+\begin{equation} \label {skalaari6}
+\boxed{\kehys\quad \vec a \cdot (\vec b + \vec c\,) 
+                        = \vec a \cdot \vec b + \vec a \cdot \vec c. \quad}
+\end{equation}
+Tämän todistamiseksi tarkastellaan alla olevia kuvioita. \vspace{5mm}\newline
+Kuvio 1:
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5.2)(-1,-0.5)
+%\Thicklines
+\put(-1,0){\line(1,0){9.5}} \put(8.7,-0.13){$S$}
+\put(0,0){\vector(3,2){6}}
+\dashline{0.2}(6,4)(6,0)
+\put(0,0){\vector(1,0){3}} \put(0,0){\vector(1,0){6}}
+\put(-0.5,-0.5){$O$} \put(6.2,-0.5){$B'$} \put(6.2,3.9){$B$}
+\put(2.7,0.2){$\vec a$} \put(5.5,3.9){$\vec b$}
+\dashline{0.2}(2,1.33)(2,0)
+\multiput(2,0)(4,0){2}{\path(0,0.15)(0.15,0.15)(0.15,0)}
+\put(0,-0.1){$\underbrace{\hspace{2cm}}_{\displaystyle{\cos\kulma(\vec a,\vec b)}}$}
+\put(0.8,0.9){$1$}
+\put(1,1.1){\vector(3,2){0.9}}
+\put(0.7,0.9){\vector(-3,-2){0.8}}
+\end{picture}
+\end{center}
+\end{figure}
+Kuvio 2: \vspace{2mm}\newline
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(14,6)(-0.1,-1.7)
+\path(0,0)(5,0) \path(6,0)(13,0)
+\put(0,0){\vector(4,1){4}} \put(0,0){\vector(3,4){3}} \put(3,4){\vector(1,-3){1}} 
+\put(0,0){\vector(1,0){2}}
+\put(-0.1,-0.5){$O$} \put(2.9,-0.5){$B'$} \put(3.9,-0.5){$C'$} \put(5.1,-0.1){$S$}
+\dashline{0.2}(3,0)(3,4) \dashline{0.2}(4,0)(4,1)
+\put(1.7,-0.5){$\vec a$} \put(2.5,3.7){$\vec b$} \put(4,1.2){$\vec c$} 
+\put(3.05,0.35){$\vec b+\vec c$}
+\put(2.9,4.2){$B$} \put(4.1,0.9){$C$}
+\put(6,0){\vector(1,1){4}} \put(6,0){\vector(3,1){6}} \put(12,2){\vector(-1,1){2}}
+\dashline{0.2}(10,0)(10,4) \dashline{0.2}(12,0)(12,2)
+\put(5.9,-0.5){$O$} \put(9.9,-0.5){$C'$} \put(11.9,-0.5){$B'$} \put(13.1,-0.1){$S$}
+\put(7.7,-0.5){$\vec a$} \put(8.8,3.7){$\vec b+\vec c$} \put(10.5,3.7){$\vec c$} 
+\put(11.4,1.9){$\vec b$}
+\put(12.1,1.9){$B$} \put(9.9,4.1){$C$}
+\put(0.5,-2){$\displaystyle{
+\begin{array}{ll}
+\abs{\vec a}\abs{\Vect{OC'}} = \abs{\vec a}\abs{\Vect{OB'}} + \abs{\vec a}\abs{\Vect{B'C'}} 
+\qquad & \qquad \abs{\vec a}\abs{\Vect{OC'}} = \abs{\vec a}\abs{\Vect{OB'}} 
+                                             - \abs{\vec a}\abs{\Vect{B'C'}} \\
+         \impl \ \vec a \cdot (\vec b + \vec c\,) = \vec a \cdot \vec b + \vec a \cdot \vec c 
+\qquad & \qquad \impl \ \vec a \cdot (\vec b + \vec c\,) 
+         = \vec a \cdot \vec b + \vec a \cdot \vec c \hspace{1cm}
+\end{array}}$}
+\end{picture}
+\end{center}
+\end{figure}
+
+Kuviossa 1 on $\abs{\Vect{OB'}} = \abs{\cos\kulma(\vec a, \vec b)} \abs{\vec b}$
+kolmioiden yhdenmuotoisuuden perusteella, jolloin skalaaritulon määritelmästä seuraa
+\[
+\vec a \cdot \vec b = \left\{ \begin{array}{rcl}
+\abs{\vec a}\abs{\Vect{OB'}},  & \text{jos} & \Vect{OB'} \ \uparrow\uparrow \ \vec a, \\ 
+-\abs{\vec a}\abs{\Vect{OB'}}, & \text{jos} & \Vect{OB'} \ \uparrow\downarrow \ \vec a.
+\end{array} \right.
+\]
+Perustuen tähän geometriseen tulkintaan on Kuviossa 2 johdettu osittelulaki \eqref{skalaari6}
+tapauksessa $\cos\kulma(\vec a, \vec b)>0$ ja $\cos\kulma(\vec a,\vec b+\vec c)>0$. Muissakin
+tapauksissa ($\cos\kulma(\vec a, \vec b) \le 0$ ja/tai $\cos\kulma(\vec a,\vec b+\vec c) \le 0$)
+voidaan päättellä vastaavalla tavalla, että osittelulaki \eqref{skalaari6} on voimassa.
+
+Skalaaritulon ominaisuuksia \eqref{skalaari4}, \eqref{skalaari5}, \eqref{skalaari6} 
+yhdistelemällä saadaan nk.\
+\index{bilineaarisuus}%
+\kor{bilineaarisuusominaisuudet}
+\begin{equation} \label{skalaari7}
+\boxed{\begin{array}{ll}
+\ykehys \quad (\lambda \vec a + \mu \vec b) \cdot \vec c 
+                    &= \ \lambda\,\vec a \cdot \vec c + \mu\,\vec b \cdot \vec c, \\ 
+\akehys \quad\vec a \cdot (\lambda \vec b + \mu \vec c\,)  
+                    &= \ \lambda\,\vec a \cdot \vec b + \mu\,\vec a \cdot \vec c,
+                                                    \quad \lambda,\mu \in \R. \quad
+\end{array}}
+\end{equation} 
+
+Skalaaritulo, joka edellä on määritelty geometristen ideoiden pohjalta, on itse asiassa hyvin 
+yleinen vektoriavaruuksiin liittyvä käsite. Yleisemmissä yhteyksissä ei skalaaritulolle oleteta
+\index{symmetrisyys!b@skalaaritulon}%
+lähtökohtaisesti muita ominaisuuksia kuin (i) \kor{symmetrisyys}, eli symmetrialakia 
+\eqref{skalaari4} vastaava ominaisuus, (ii) \kor{bilineaarisuus}, eli laskusääntöjen 
+\eqref{skalaari7} vastineet, ja
+\index{positiividefiniittisyys!a@skalaaritulon}%
+(iii) \kor{positiividefiniittisyys}, jonka muotoilu tason vektoreille on
+\[
+\vec a \cdot \vec a \geq 0 \,\ \forall \vec a \quad \text{ja} \quad
+             \vec a \cdot \vec a = 0  \,\impl\, \vec a = \vec 0.
+\]
+Tämä on ilmeinen em.\ geometrisen määritelmän perusteella (ominaisuus \eqref{skalaari3}).
+Määritelmästä ja ominaisuudesta \eqref{skalaari1} seuraa myös, että tason vektoreiden 
+skalaaritulolle pätee epäyhtälö
+\begin{equation} \label{Cauchy-Schwarz}
+\boxed{\kehys\quad\abs{\vec a \cdot \vec b} \leq \abs{\vec a\,} \abs{\vec b\,}. \quad}
+\end{equation}
+Tällä epäyhtälöllä on yleisempiä --- vähemmän ilmeisiä --- algerallisia ulottuvuuksia, joita
+tarkastellaan lähemmin seuraavassa luvussa.
+\begin{Exa}
+Tason vektoreista $\vec a,\vec b$ ja $\vec u$ tiedetään
+\[
+\abs{\vec a}=1, \quad \abs{\vec b} = 3, \quad \vec a\cdot\vec b = 2, \quad 
+\vec a\cdot\vec u = -2, \quad \vec b\cdot\vec u = 1.
+\]
+Määritä $\vec u$:n koordinaatit kannassa $\{\vec a,\vec b\}$. \end{Exa}
+\ratk Jos merkitään $\vec u = x\vec a + y\vec b$, niin kertomalla skalaarisesti $\vec a$:lla ja
+$\vec b$:lla ja käyttämällä bilineaarisuussääntöjä \eqref{skalaari7} ja sääntöjä 
+\eqref{skalaari3},\eqref{skalaari4} saadaan
+\[
+x\vec a + y\vec b = \vec u 
+                      \qimpl \begin{cases}
+                             \,\abs{\vec a}^2 x + (\vec a\cdot\vec b) y = \vec a\cdot\vec u \\
+                             \,(\vec a\cdot\vec b) x + \abs{\vec b}^2 y = \vec b\cdot\vec u
+                             \end{cases}
+\]
+Siis
+\[
+\begin{cases} \,x + 2y = -2 \\ \,2x + 9y = 1 \end{cases} \impl\quad 
+\begin{cases} \,x=-4 \\ \,y=1 \end{cases} \loppu
+\]
+\jatko \begin{Exa} (jatko) Jaa esimerkin vektori $\vec u$ kahteen komponenttiin siten,
+että toinen komponentti on $\vec a$:n suuntainen ja toinen on kohtisuora a) $\vec a$:ta, 
+b) $\vec b$:ta  vastaan. 
+\end{Exa}
+\ratk Halutaan laskea $\vec u_1,\vec u_2$ siten, että $\vec u = \vec u_1 + \vec u_2$, 
+$\,\vec u_1 = t\vec a,\ t\in\R$ ja
+\[
+\text{a)}\,\ \vec u_2\cdot\vec a = (\vec u - t\vec a)\cdot\vec a = 0, \qquad 
+\text{b)}\,\ \vec u_2\cdot\vec b = (\vec u - t\vec a)\cdot\vec b = 0.
+\]
+Esimerkin tiedoin saadaan
+\[
+\text{a)}\,\ t = \frac{\vec a\cdot\vec u}{\abs{\vec a}^2} = -2, \qquad
+\text{b)}\,\ t = \frac{\vec b\cdot\vec u}{\vec a\cdot\vec b} = \frac{1}{2}\,.
+\]
+Siis $\vec u = \vec u_1 + \vec u_2$, missä
+\begin{align*}
+&\text{a)}\,\ \vec u_1 = -2\vec a,\quad \vec u_2 
+                       = \vec u - \vec u_1 = (-4\vec a + \vec b) + 2\vec a 
+                       = -2\vec a + \vec b, \\
+&\text{b)}\,\ \vec u_1 = \tfrac{1}{2}\vec a,\quad\ \ \vec u_2 
+                       = \vec u - \vec u_1 = (-4\vec a + \vec b) - \tfrac{1}{2}\vec a
+                       = -\tfrac{9}{2}\vec a + \vec b. \loppu
+\end{align*}
+Esimerkin a)-kohdassa on kyse perustehtävästä, jossa annettu vektori $\vec u\in V$
+halutaan jakaa kahteen komponenttiin $\vec u_1,\,\vec u_2$ siten, että $\vec u_1$ on
+annetun vektorin $\vec a$ suuntainen ja $\vec u_2 \perp \vec u_1$. Tällöin sanotaan,
+\index{ortogonaaliprojektio}%
+että $\vec u_1$ on $\vec u$:n \kor{ortogonaaliprojektio} $\vec a$:n \kor{suuntaan} eli
+$\vec a$:n virittämään $V$:n yksiulotteiseen aliavaruuteen
+\[
+W=\{\vec v = \lambda \vec a \mid \lambda \in \R\}.
+\]
+Euklidisessa tasossa aliavaruutta $W$ vastaa origon kautta kulkeva suora.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(9,5)
+\path(0,0)(8,2)
+\put(2,0.5){\vector(4,1){4}}
+\put(2,0.5){\vector(1,1){3.4}}
+\put(6,1.5){\vector(-1,4){0.6}}
+\put(1.9,0.1){$O$}
+\put(5.7,0.9){$\vec u_1$} \put(4.9,3.7){$\vec u$} \put(5.6,3.7){$\vec u_2$}
+%\put(6,1.5){\arc{0.6}{-1.8}{-0.3}} \put(6.02,1.58){$\scriptscriptstyle{\bullet}$}
+\path(6.16,1.54)(6.12,1.7)(5.96,1.66)
+\put(7,2.2){$W\leftrightarrow S\subset E^2$} \curve(6.9,2.3,6.7,2,6.5,1.63)
+\end{picture}
+\end{center}
+\end{figure}
+
+\subsection*{Ortonormeerattu kanta}
+\index{kanta!a@ortonormeerattu|vahv}
+
+Luvussa \ref{tasonvektorit} konstruoitiin avaruudelle $V$ kanta käyttäen kahta lineaarisesti 
+riippumatonta vektoria. Skalaaritulon tultua määritellyksi saadaan käytännön laskut 
+huomattavasti yksinkertaistumaan valitsemalla kantavektorit niin, että ne ovat ortogonaaliset,
+ts.\ kantavektorien välinen skalaaritulo $=0$. Jos vielä kantavektorit
+\index{normeeraus (vektorin)}  \index{ortogonaalisuus!b@kannan}% 
+\kor{normeerataan} yksikkövektoreiksi, niin sanotaan, että näin saatu kanta on
+\kor{ortonormeerattu} (muussa tapauksessa vain \kor{ortogonaalinen}). Ortonormeerattu kanta
+$\{\vec i, \vec j\}$ on siis sellainen, että pätee
+\[
+\left\{ \begin{array}{ll}
+\vec i \cdot \vec j = 0 & \text{(ortogonaalisuusehto),} \\
+\abs{\vec i} = \abs{\vec j} = 1 & \text{(normeerausehto).}
+\end{array} \right.
+\]
+Nämä ehdot toteuttava $\{\vec i, \vec j\}$ on lineaarisesti riippumaton, sillä
+\[
+x\vec i+y\vec j = \vec 0 \qimpl \begin{cases} 
+                                \,x=\vec i\cdot(x\vec i+y\vec j)=\vec i\cdot\vec 0=0, \\ 
+                                \,y=\vec j\cdot(x\vec i+y\vec j)=\vec j\cdot\vec 0=0.
+                                \end{cases}
+\]
+Vastaavaa euklidisen tason koordinaatistoa sanotaan
+\index{koordinaatisto!b@karteesinen}%
+\kor{karteesiseksi}\footnote[2]{Termi on muotoutunut ranskalaisen \hist{Ren\'e Descartes}in
+latinankielisestä nimestä \newline
+Cartesius, vrt.\ alaviite edellisessä luvussa.} koordinaa\-tis\-toksi.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(7,4)(-1,-1)
+\put(-1,0){\vector(1,0){5}} \put(3.8,-0.5){$x$}
+\put(0,-1){\vector(0,1){4}} \put(0.2,2.8){$y$}
+\put(-0.5,-0.5){$O$}
+\put(0,0){\vector(1,0){1}} \put(0.8,-0.6){$\vec i$}
+\put(0,0){\vector(0,1){1}} \put(-0.3,0.7){$\vec j$}
+\put(2.9,1.4){$\bullet$}
+\dashline{0.2}(0,1.5)(3,1.5) \dashline{0.2}(3,1.5)(3,0)
+\put(2.9,-0.4){$x$} \put(-0.4,1.4){$y$}
+\put(2.9,1.8){$P=(x,y)$}
+\end{picture}
+\end{center}
+\end{figure}
+Ortonormeeratussa kannassa $\{\vec i,\vec j\}$ annettujen vektorien skalaaritulo on helposti
+laskettavissa: Jos
+\[
+\vec v_1 = x_1 \vec i + y_1 \vec j, \quad \vec v_2 = x_2 \vec i + y_2 \vec j,
+\]
+niin skalaaritulon bilineaarisuuden ja symmetrisyyden perusteella
+\begin{align*}
+\vec v_1 \cdot \vec v_2 &= (x_1 \vec i + y_1 \vec j) \cdot (x_2 \vec i + y_2 \vec j) \\
+                        &= x_1x_2\,\vec i \cdot \vec i + (x_1y_2 + x_2y_1)\,\vec i \cdot \vec j 
+                                                       + y_1y_2\,\vec j \cdot \vec j.
+\end{align*}
+Koska tässä on $\vec i\cdot\vec i=\vec j\cdot\vec j=1$ ja $\vec i\cdot\vec j=0$, niin 
+laskukaavaksi tulee
+\begin{equation} \label{skalaari9}
+\boxed{\kehys\quad \vec v_1\cdot\vec v_2 = x_1x_2 + y_1y_2. \quad}
+\end{equation}
+Tämän mukaan skalaaritulo määräytyy ortonormeeratussa kannassa laskukaaviolla 
+(vrt.\ vektorien yhteenlaskun vastaava kaavio edellisessä luvussa)
+\[
+\begin{array}{cccccc}
+&\vec v_1   &  &\vec v_2   &     & \\
+&\downarrow &  &\downarrow &     & \\ 
+&(x_1,y_1)  &  &(x_2,y_2)  &\map &(x_1x_2+y_1y_2)\,=\,\vec v_1\cdot\vec v_2
+\end{array}
+\]
+Myös vektorin itseisarvon laskeminen käy ortonormeeratussa kannassa helposti, sillä
+laskukaavojen \eqref{skalaari3} ja \eqref{skalaari9} mukaan
+\begin{equation} \label{skalaari10}
+\boxed{\kehys\quad \abs{\vec v\,}^2= \vec v\cdot\vec v=x^2+y^2, \quad 
+                                                \vec v=x\vec i+y\vec j. \quad }
+\end{equation}
+\begin{Exa} Laske $\cos\kulma(\vec a,\vec b)$, kun $\vec a=4\vec i+3\vec j$ ja
+$\vec b=2\vec-3\vec j$.
+\end{Exa}
+\ratk Määritelmän \ref{vektorien skalaaritulo} ja kaavojen
+\eqref{skalaari9}--\eqref{skalaari10} perusteella
+\[
+\cos\kulma(\vec a,\vec b)=\frac{\vec a\cdot\vec b}{\abs{\vec a\,}\abs{\vec b\,}}
+                   =\frac{4\cdot 2+3\cdot(-3)}{\sqrt{4^2+3^2}\sqrt{2^2+3^2}}
+                   =-\frac{1}{5\sqrt{13}}\,. \loppu
+\]
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske \newline
+a) \ $\abs{4\vec a-5\vec b}$, kun $\abs{\vec a}=1$, $\abs{\vec b}=2$ ja 
+     $\vec a\cdot\vec b=-\frac{1}{3}\abs{\vec a}\abs{\vec b}$ \newline
+b) \ $\vec a\cdot\vec b$, kun $\abs{\vec a+3\vec b}=16$ ja $\abs{\vec a-3\vec b}=2\sqrt{58}$
+
+\item
+a) Kolmiossa $ABC$ ovat sivujen $AB$, $AC$ ja $BC$ pituudet $a$, $b$ ja $c$. Näytä skalaaritulon
+avulla, että pätee $\,c^2 = a^2+b^2-2ab\cos\kulma BAC$. \newline
+b) Nelikulmiossa $ABCD$ on $\cos\kulma BAD=\gamma$ ja sivujen $AB$, $AD$, $BC$ ja $CD$ pituudet
+ovat $a$, $b$, $c$ ja $d$. Laske $\cos\kulma BCD$.
+
+\item
+Kun $\vec a$ ja $\vec b$ ovat tason vektoreita ja $|\vec a |=|\vec b |$, saa
+skalaaritulo $(\vec a+\vec b)\cdot(\vec a-\vec b)$ yksinkertaisen muodon. Millaisen? Mitä 
+tulos tarkoittaa geometrisesti, jos $\,\vec a=\Vect{OA}\,$ ja $\,\vec b=\Vect{OB}$, missä \ 
+a) $\,OA\,$ ja $\,OB\,$ ovat suunnikkaan kaksi sivua, \ b) $\,O$ on ympyrän keskipiste ja
+$A$, $B$ sen kehän pisteitä? Kuva! 
+
+\item
+Suorakulmaisessa kolmiossa $ABC$ on suoran kulman kärjestä lähtevä korkeusjana $AD$. Sivujen
+$AB$ ja $AC$ pituudet ovat $5$ ja $12$. Laske skalaaritulot $\Vect{AB}\cdot\Vect{DC}$,
+$\Vect{BD}\cdot\Vect{CA}$ ja $\Vect{AC}\cdot\Vect{CD}$.
+
+\item
+Tason vektoreista $\vec a$ ja $\vec b$ tiedetään, että $|\vec a|=|\vec b|=1$ ja
+$\vec a \cdot \vec b =\frac{1}{7}$. Lisäksi tiedetään vektorista $\vec v$,
+että $\vec a \cdot \vec v =3$ ja $\vec b \cdot \vec v =-1$. Määritä $\vec v$:n
+koordinaatit kannassa $\{\vec a ,\vec b \}$.
+
+\item
+Tason koordinaatistossa $\{O,\vec a,\vec b\}$ ovat pisteen $P$ koordinaatit $(2,1)$ ja pisteen
+$O'$ koordinaatit $(-1,3)$. Määritä pisteen $P$ koordinaatit koordinaatistossa
+$\{O',\vec a+\vec b,\vec a-2\vec b\}$, kun tiedetään, että $\abs{\vec a}=\abs{\vec b}=1$ ja
+$\vec a\cdot\vec b=-\frac{1}{3}\,$.
+
+\item
+Laske $\abs{\vec a}$, $\abs{\vec b}$ ja $\cos\kulma(\vec a,\vec b)$, kun \newline
+a) \ $\vec a=\vec i-\vec j,\,\ \vec b=\vec i+2\vec j\qquad\qquad\quad$ \newline
+b) \ $\vec a=-2\vec i+3\vec j,\,\  \vec b=3\vec i-\vec j$ \newline
+c) \ $\vec a=-68\vec i+51\vec j,\,\ \vec b=3\vec i+4\vec j\qquad$ \newline
+d) \ $\vec a=76\vec i-57\vec j,\,\ \vec b=92\vec i+69\vec j$ \newline
+e) \ $\vec a=(3\sqrt{2}+5)\vec i+(5\sqrt{2}-3)\vec j,\ \ $
+     $\vec b=(5\sqrt{2}+3)\vec i+(3\sqrt{2}-5)\vec j$
+
+\item
+Tason vektoreista $\vec a,\vec b \in V$ tiedetään, että $\abs{\vec a}=1$, $\abs{\vec b}=3$ ja
+$\vec a\cdot\vec b=-2$. Millä kertoimien $\lambda,\mu$ arvoilla 
+$\{\vec a,\lambda\vec a+\mu\vec b\}$ on $V$:n ortonormeerattu kanta\,?
+
+\item (*)
+Näytä skalaarituloa käyttäen, että kolmion korkeusjanat ovat kolmella saman pisteen kautta
+kulkevalla suoralla, ts.\ korkeusjanat tai niiden jatkeet leikkaavat samassa pisteessä.
+
+\item (*)
+Joukko $S\subset\Ekaksi$ koostuu pisteistä $P$, joiden karteesiset koordinaatit toteuttavat
+ehdon
+\[
+(x-1)^2-(y+2)^2=1.
+\]
+Olkoot $(\xi,\eta)$ pisteen $P$ koordinaatit toisessa ortonormeeratussa koordinaatistossa,
+jonka origo on pisteessä $(x,y)=(1,-2)$ ja kantavektorit
+\[
+\vec e_1=\frac{1}{\sqrt{2}}(\vec i+\vec j),\ \ \vec e_2=\frac{1}{\sqrt{2}}(\vec i-\vec j).
+\]
+Jos pisteen $P=(x,y)$ koordinaatit tässä koordinaatistossa ovat $(x',y')$, niin millä
+koordinaateille $x',y'$ asetettavalla ehdolla on $P=(x',y') \in S\,$? Piirrä kuva, jossa
+näkyvät molemmat koordinaatistot, ja hahmottele kuvaan joukko $S$.
+
+\end{enumerate}
+

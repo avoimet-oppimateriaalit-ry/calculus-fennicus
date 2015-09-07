@@ -1,0 +1,384 @@
+
+\section{Jonon käsite} \label{jono}
+\alku
+
+\index{jono}%
+\kor{Jono} (engl.\ sequence, ruots.\ följd) on olio muotoa
+\[
+\{\,a_1, a_2, a_3,\,\ldots\,\}.
+\]
+Joukosta jonon erottaa ennen muuta j\pain{är}j\pain{est}y\pain{s}: Jonon jäsenet, joita 
+\index{termi (jonon)}%
+kutsutaan jonon \kor{termeiksi} (vrt. joukon alkio) on 'pantu jonoon' eli järjestykseen. 
+Matemaattisessa jonossa järjestys tarkoittaa vastaavuutta luonnollisten lukujen joukon ja jonon
+välillä:
+\begin{align*}
+&1 \map a_1 \\
+&2 \map a_2 \\
+&\vdots
+\end{align*}
+Tässä '$\map$' tarkoittaa jälleen 'liittämistä': Jokaiseen $n \in \N$ liitetään yksikäsitteinen 
+jonon termi ($n$:s termi) $a_n$, jolloin sanotaan, että $n$ on ko.\ termin järjestysnumero eli 
+\index{indeksi!b@jonomerkinnän}%
+\kor{indeksi}. Indeksijoukko on siis koko $\N$, mikä tarkoittaa, että jono on 
+p\pain{äätt}y\pain{mätön}\footnote[2]{'Päättyvästä jonosta' muotoa
+\[
+(\,a_1, a_2,\,\ldots, a_n\,), \quad n \in \N
+\]
+käytetään tässä tekstissä yleisnimitystä (äärellinen) \kor{järjestetty joukko} (tai '$n$ alkion
+järjestetty joukko'), tapauksissa $n=2,3$ nimiä \kor{pari} ja \kor{kolmikko}. Jonomerkinnästä
+poiketen käytetään tässä yhteydessä pääsääntöisesti kaarisulkeita. --- Kirjallisuudessa 
+kaarisulkeilla merkitään joskus myös päättymättömiä jonoja, samoin merkintää $<a_n>$ näkee 
+jonoista käytettävän. \index{jzy@järjestetty joukko|av} \index{pari|av} \index{kolmikko|av}}.
+
+Matemaattisen jonoon, niinkuin joukkoonkin, voi periaatteessa sijoittaa mitä tahansa. Jatkossa
+tarkastelun kohteena ovat ennen muuta
+\index{lukujono}%
+\kor{lukujonot}, joille käytetään lyhennysmerkintöjä
+\begin{align*}
+&\{\,a_n,\ n = 1,2,\,\ldots\,\}, \\
+&\{a_n\}_{n=1}^{\infty}, \\
+&\{a_n\}.
+\end{align*}
+Jos jonon termit määräytyvät tunnettuna, indeksistä riippuvana lausekkeena, voidaan ko.\
+lauseke kirjoittaa $a_n$:n paikalle.
+\begin{Exa}
+\begin{align*}
+%&\{\,1,2,3,4,\ \ldots\} = \{n\}_{n=1}^{\infty}, \{k\}_{k=1}^{\infty} \\
+&\{\,1,-1,1,-1,\ \ldots\ \} = \{\,(-1)^{n+1},\,\ n=1,2,\ \ldots\ \} \\
+&\left\{\,\frac{1}{9}, \frac{1}{16}, \frac{1}{25},\ \ldots\ \right\} 
+                        = \left\{\,\frac{1}{(k+2)^2}\,,\ \ k = 1,2,\ \ldots \ \right\} \\
+&\{\,1,1,2,6,24,120,720,5040,40320,\ \ldots\ \} = \{\,n!\,\}_{n=0}^{\infty} \loppu
+\end{align*}
+\end{Exa}
+Viimeinen esimerkki on myös esimerkki yleisemmästä jonosta muotoa
+\[
+\{\,a_m, a_{m+1}, a_{m+2},\ \ldots\ \} = \{a_n\}_{n=m}^{\infty}, \quad m \in \Z.
+\]
+Indeksin vaihdolla tämä voidaan palauttaa normaalimuotoon:
+\[
+\{a_n\}_{n=m}^{\infty} = \{a_{m+k-1}\}_{k=1}^{\infty}.
+\]
+\begin{Exa} \label{rekursio} \index{lukujono!a@palautuva (rekursiivinen)}
+\index{palautuva lukujono} \index{rekursiivinen lukujono}
+Lukujono
+\[
+a_0 = \tfrac{1}{2}, \quad a_n = 1 - a_{n-1}^2, \quad n = 1,2, \ldots
+\]
+on esimerkki \kor{palautuvasta} eli \kor{rekursiivisesta} lukujonosta, joka 'määrittelee 
+itsensä'. Tässä $a_1 = 3/4,\ a_2 = 7/16,\ a_3 = 207/256,\ \ldots$ \loppu 
+\end{Exa} 
+
+\subsection*{Sarja}
+\index{sarja|vahv} \index{lukujono!b@sarja|vahv}%
+
+Jos $\{\,a_k,\ k = 1,2,\ \ldots\ \}$ on lukujono ja $\{s_n\}$ toinen lukujono, joka
+määritellään
+\[
+s_n = a_1 + \ldots + a_n = \sum_{k=1}^{n} a_k\,,
+\]
+niin sanotaan että $\{s_n\}$ on \kor{sarja} (engl. series). Sarjan tavanomainen lyhennetty 
+merkintätapa on
+\[
+\sum_{k=1}^{\infty} a_k \quad \Bigl(\ = \ \ \{\ \sum_{k=1}^{n} a_k\,,\ \ n = 1,2,\ \ldots\ \}\ 
+\Bigr).
+\]
+\index{termi (sarjan)} \index{osasumma (sarjan)}%
+Lukuja $a_k$ sanotaan \kor{sarjan termeiksi} ja lukuja $s_n$ \kor{sarjan osasummiksi}. Sarja
+tulkitaan siis lukujonoksi, joka muodostuu sarjan osasummista.\footnote[2]{Sarjan tulkinta tässä
+tekstissä hieman 'oikoo' sarjan formaalia määritelmää, joka kuuluu: Sarja on jonojen $\seq{a_k}$
+(sarjan termit) ja $\seq{s_n}$ (osasummat) muodostama j\pain{ono}p\pain{ari}.}
+\begin{Exa}
+\[
+\sum_{k=0}^{\infty} (-1)^k\ =\ \{\ \sum_{k=0}^{n} (-1)^k\,,\ \ n 
+                            = 0,1,\ \ldots\ \}\ = \ \{\,1,0,1,0,\ \ldots\ \} \quad \loppu
+\] 
+\end{Exa}
+'Kaikkien sarjojen äiti' on (perusmuotoinen)
+\index{geometrinen sarja} \index{sarja!a@geometrinen}%
+\kor{geometrinen sarja}, jonka termit ovat $a_k = q^k,\ k = 0,1,\ \ldots$, ts.\ sarja on muotoa 
+$\sum_{k=0}^\infty q^k = \{1,1+q,1+q+q^2,\ \ldots\,\}$\footnote[3]{Mukavuussyistä sovittakoon,
+että geometrisessa sarjassa $\sum_{k=0}^\infty q^k$ ensimmäinen termi on $q^0 = 1$ myös kun 
+$q=0$.}. Osasummille saadaan tässä tapauksessa laskukaava
+(ks.\ Harj.teht.\,\ref{kunta}:\,\ref{H-I-2: kuntakaavat}\,c)
+\[
+\boxed{\ s_n = \sum_{k=0}^n q^k\ =\ \dfrac{q^{n+1}-1}{q-1}, \quad q \neq 1.\ }
+\]
+
+\subsection*{Induktio}
+\index{induktio(periaate)|vahv}%
+
+Luonnollisiin lukuihin ja jonon käsitteeseen liittyy läheisesti myös matemaattinen 
+todistusperiaate nimeltä \kor{induktio}. Olkoon $P(n),\ n \in \N$, predikaatti. Tällöin 
+proposition
+\[
+\mathcal{P}: \quad P(n)\ \ \forall n \in \N
+\]
+voi tulkita viittaavan väittämäjonoon $\{\,P(1),P(2), \ldots\,\}$. Induktion ideana on muuntaa
+tämä jono palautuvaksi, jolloin jono 'todistaa itsensä' samalla tavoin kuin palautuva lukujono
+'laskee itsensä' (vrt. Esimerkki \ref{rekursio} edellä). Idea realisoidaan tarkastelemalla
+kahta propositiota:
+\begin{align*}
+&\mathcal{P}_1\ : \quad P(1), \\
+&\mathcal{P}_2\ : \quad P(n) \impl P(n+1)\ \ \forall n \in \N.
+\end{align*}
+Jos $\mathcal{P}_1$ ja $\mathcal{P}_2$ ovat molemmat tosia, niin $\mathcal{P}_1$ käynnistää 
+propositioon $\mathcal{P}_2$ perustuvan 'todistusautomaatin', joten implikaatio
+\[
+\mathcal{P}_1 \wedge \mathcal{P}_2 \quad \impl \quad \mathcal{P},
+\]
+joka lausuu nk.\ \kor{induktioperiaatteen}, tuntuu ilmeisen 
+todelta.\footnote[2]{Induktioperiaate seuraa Peanon aksioomasta (P5) asettamalla
+$S = \{n \in \N \mid P(n)\ \text{tosi}\,\}$, ks.\ alaviite Luvussa \ref{ratluvut}.} 
+Induktioperiaatteen mukaan siis väittämän $\mathcal{P}$ todistamiseksi riittää osoittaa, että
+$\mathcal{P}_1$ ja $\mathcal{P}_2$ ovat molemmat tosia. Proposition $\mathcal{P}_2$ 
+\index{induktioaskel, -oletus}%
+toteennäyttämistä sanotaan \kor{induktioaskeleeksi} ja todistuksen ko.\ osan lähtöoletusta 
+'$n \in \N$ ja $P(n)$ tosi' \kor{induktio-oletukseksi}.
+
+Näytetään induktion avulla oikeaksi seuraava tuttu tulos:
+\begin{Prop} \label{binomikaava} (\vahv{Binomikaava}) \index{binomikaava, -kerroin|emph}
+Rationaalilukujen kunnassa tai sen laajennuksissa pätee
+\[
+(x+y)^n\ =\ \sum_{k=0}^n \binom{n}{k}\, x^{n-k}y^k, \quad n \in \N,
+\]
+missä \kor{binomikertoimet} määritellään
+\[
+\binom{n}{k}\ =\ \dfrac{n!}{k!(n-k)!}.
+\]
+\end{Prop}
+\tod Väittämä on muotoa $P(n)\ \forall n \in \N$. Tässä $P(1)$ on ilmeisen tosi, joten riittää
+suorittaa induktioaskel. Oletetaan siis, että $P(n)$ on tosi, ts.\ että binomikaava pätee 
+tietyllä (mutta mielivaltaisesti valitulla) $n$:n arvolla. Tällöin on kunnan aksioomien ja 
+oletuksen perusteella
+\begin{align*}
+(x+y)^{n+1}\ =\ (x+y)(x+y)^n\ 
+            &=\ (x+y) \sum_{k=0}^n \binom{n}{k}\, x^{n-k}y^k \\
+            &=\ \sum_{k=0}^n \binom{n}{k}\, x^{n-k+1}y^k\ 
+                                +\ \sum_{k=0}^n \binom{n}{k}\, x^{n-k}y^{k+1} \\
+            &=\ \sum_{k=0}^n \binom{n}{k}\, x^{n+1-k}y^k\ 
+                                +\ \sum_{l=1}^{n+1} \binom{n}{l-1}\, x^{n+1-l}y^l.
+\end{align*}
+Tässä on jälkimmäisessä summassa tehty indeksin vaihto $l=k+1$. Kun jälleen kirjoitetaan $l=k$,
+voidaan molemmat summat yhdistää tulokseksi
+\[
+(x+y)^{n+1}\ =\ \sum_{k=0}^{n+1} c_k\ x^{n+1-k}y^k,
+\]
+missä
+\[
+c_0 = \binom{n}{0} = 1 = \binom{n+1}{0}, \quad \quad 
+c_{n+1} = \binom{n}{n} = 1 = \binom{n+1}{n+1},
+\]
+ja indeksin arvoilla $k = 1 \ldots n$
+\begin{align*}
+c_k\ =\ \binom{n}{k} + \binom{n}{k-1}\ 
+    &=\ \dfrac{n!}{k!(n-k)!} + \dfrac{n!}{(k-1)!(n-k+1)!} \\
+    &=\ \dfrac{n!}{(k-1)!(n-k)!}\ \Bigl(\dfrac{1}{k} + \dfrac{1}{n-k+1} \Bigr) \\
+    &=\ \dfrac{n!}{(k-1)!(n-k)!}\ \cdot\ \dfrac{n+1}{k(n-k+1)} \\
+    &=\ \dfrac{(n+1)!}{k!(n-k+1)!}\ =\ \binom{n+1}{k}.
+\end{align*} 
+Näin ollen $P(n+1)$ on tosi ja induktioaskel siis suoritettu. Todistuksessa tarvittiin yleisten
+kuntaoperaatioiden lisäksi luonnollisten lukujen välisiä laskuoperaatioita
+(mukaan lukien jakolasku), joten todistus on pätevä rationaalilukujen kunnassa tai sen
+laajennuksissa. \loppu
+
+Kuten Proposition \ref{binomikaava} todistuksesta käy ilmi, binomikertoimet ovat laskettavissa
+palautuvasti kaavasta
+\[
+\binom{n+1}{0}\ =\ \binom{n+1}{n+1}\ =\ 1, \quad \quad 
+\binom{n+1}{k}\ =\ \binom{n}{k} + \binom{n}{k-1}\,, \quad k = 1 \ldots n.
+\]
+Kaava havainnollistuu 
+\index{Pascalin kolmio}%
+\kor{Pascalin kolmiossa}, jonka avulla kertoimet voidaan määrittää 
+kätevästi pienillä $n$:n arvoilla:
+\begin{align}
+                                        &\ 1                                     \notag \\
+                                   1\,\ &\ \quad\ 1                              \tag{$n=1$} \\
+                             1\ \ \quad &\ 2\,\qquad 1                           \tag{$n=2$} \\
+                         1\ \qquad 3\,\ &\ \quad\ 3\,\qquad 1                    \tag{$n=3$} \\
+                 1 \qquad\ 4\ \ \quad\, &\ 6\,\qquad 4\,\qquad 1                 \tag{$n=4$} \\
+                  1\ \qquad 5\qquad 10\ &\ \quad 10 \qquad 5\,\qquad 1           \tag{$n=5$} \\
+       1\ \qquad 6\,\qquad 15\ \ \quad  &20\ \ \quad 15 \qquad 6\,\qquad 1       \tag{$n=6$} \\
+    1\,\qquad 7\,\qquad 21\ \ \quad 35\ &\,\ \quad 35 \ \ \quad 21 \qquad 7 \qquad 1  
+                                                                                 \tag{$n=7$} \\
+1 \qquad 8 \qquad 28 \qquad 56\ \ \quad &70\ \ \quad 56\ \ \quad 28 \qquad 8\,\qquad 1
+                                                                                 \tag{$n=8$}
+\end{align}
+Pascalin kolmion avulla binomikertoimet määräytyvät pelkällä luonnollisten lukujen 
+yhteenlaskulla.
+
+Toisena induktion sovelluksena todistetaan usein käytetty epäyhtälö.
+\begin{Prop} (\vahv{Bernoullin epäyhtälö}) \label{Bernoulli} \index{Bernoullin epäyhtälö|emph}
+Rationaalilukujen kunnassa tai sen järjestetyissä laajennuksissa pätee
+\[
+\boxed{\kehys\quad (1+x)^n\ >\ 1+nx \quad 
+     \text{kun}\ \  n \in \N,\ n \ge 2\ \ \text{ja}\ \ x \ge -1,\ x \neq 0. \quad}
+\] 
+\end{Prop}
+\tod Jos $x>0$, niin epäyhtälö seuraa helpoiten binomikaavasta:
+\[
+(1+x)^n\ =\ 1 + \binom{n}{1}\,x\ +\ [\ldots]\ =\ 1 + nx + [\ldots],
+\]
+missä $[\ldots] > 0$, kun $x>0$ ja $n \ge 2$. Yleispätevämpi todistus perustuu induktioon,
+eikä sekään ole pitkä: Ensinnäkin
+\[
+(1+x)^2\ =\ 1+2x+x^2\ > 1+2x, \quad \text{kun}\ x \neq 0,
+\]
+joten väittämä on tosi, kun $n=2$. Toisaalta jos väite on tosi millä tahansa $n$:n arvolla 
+(induktio-oletus, $n \ge 2$), niin
+\begin{align*}
+(1+x)^{n+1}\ &=\   (1+x)(1+x)^n      \\
+             &\ge\ (1+x)(1+nx)       \\ 
+             &=\   1 + (n+1)x + nx^2 \\
+             &>\   1 + (n+1)x,
+\end{align*}
+kun $x \ge -1 \impl 1+x \ge 0$ ja $x \neq 0 \impl x^2 > 0$. Induktioperiaatteen mukaan väittämä
+on näin todistettu. \loppu
+
+\subsection*{Numeroituvuus, mahtavuus}
+\index{numeroituvuus (joukon)|vahv} \index{mahtavuus (joukon)|vahv}%
+
+Sanotaan, että joukot $A$ ja $B$ ovat \kor{yhtä mahtavat} (engl. of the same cardinality), jos 
+joukkojen välillä on olemassa \pain{kääntäen} y\pain{ksikäsitteinen} \pain{vastaavuus} siten, 
+että jokaista $A$:n alkiota vastaa yksikäsitteinen $B$:n alkio ja kääntäen. Vastaavuutta 
+merkitään jatkossa kaksoisnuolella '$\vast$':
+\[
+A \vast B \qquad \text{(kääntäen yksikäsitteinen vastaavuus)}. \\
+\]
+Jos erityisesti $\,A \vast \{\,1,2,\ \ldots\ n\,\}\,$ jollakin $n\in\N$, niin sanotaan, että 
+$A$ on \kor{äärellinen} (engl.\ finite) joukko. Tällöin $A$:ssa on täsmälleen $n$ alkiota, ja 
+$A$ ja $B$ ovat yhtä mahtavat täsmälleen, kun myös $B$:ssä on $n$ alkiota. Äärellisen joukon
+tapauksessa vastaavuutta $A \vast \{\,1,2,\ \ldots\ n \}$ sanotaan $A$:n alkioiden 
+\kor{numeroinniksi} (indeksoinniksi). Numerointi tekee $A$:sta j\pain{är}j\pain{estet}y\pain{n}
+joukon. 
+\begin{Exa}
+\begin{align*}
+A &= \{\,1,2,3,1000\,\} \\
+B &= \{\,\text{vuohi V, hevonen H, opiskelija O, professori P}\,\} \\
+C &= \{\,\text{linnunradan atomit}\,\}
+\end{align*}
+Kaikki kolme ovat äärellisiä joukkoja. Joukot $A$ ja $B$ ovat yhtä mahtavat. \loppu 
+\end{Exa}
+\index{zyzy@äärellinen, ääretön joukko}%
+Jos joukko ei ole äärellinen, niin se on \kor{ääretön} (engl. infinite).
+\begin{Exa} \label{numer} Joukot
+\begin{align*}
+&A = \{\,1,4,9,16,25,36,49,\ \ldots\ \}, \\
+&B = \{\,1,100,10000,1000000,\ \ldots\ \}
+\end{align*}
+ovat molemmat äärettömiä. Ne ovat myös yhtä mahtavat, sillä vastaavuuksista
+\begin{align*}
+n \in \N \quad &\vast \quad n^2 \in A \\
+n \in \N \quad &\vast \quad 10^{2n-2} \in B
+\end{align*}
+nähdään, että $A \vast \N \vast B$. \loppu \end{Exa}
+Esimerkin perusteella pienemmältä tai suuremmalta 'tuntumiseen' ei voi luottaa vertailtaessa 
+äärettömien joukkojen mahtavuuksia. Sanonnat kuten 'yhtä monta' tai 'sama määrä' on myös
+selkeintä rajata äärellisten joukkojen vertailuun.
+
+Esimerkin \ref{numer} joukkojen $A,B$ alkiot voidaan numeroida esitettyjen vastaavuuksien 
+perusteella. Yleisesti sanotaan, että joukko $A$ on \kor{numeroituva} 
+(tai 'numeroituvasti ääretön', engl.\ (d)enumerable tai countably infinite), jos $A \vast \N$.
+Numeroituvuus siis tarkoittaa, että joukon alkiot voidaan järjestää jonoksi.
+\begin{Exa} Kokonaislukujoukon $\Z = \{\,0,\pm 1, \pm 2, \ldots\, \}$ eräs jonomuoto on
+\[
+\{\,0,1,-1,2,-2,\ \ldots\ \}\ \ =\ \ \{\,a_n,\ n = 1,2,\ \ldots\,\},
+\]
+joten \Z\ on numeroituva. Esimerkiksi luku $-777$ on jonon $1555$:s termi. \loppu 
+\end{Exa}
+\begin{Exa} Rationaalilukujoukko $\Q$ on esitettävissä muodossa
+\[
+\Q\ =\ A_1\ \cup\ A_2\ \cup\ \cdots\ = \ \bigcup_{m=1}^{\infty} A_m,
+\]
+missä
+\begin{align*}
+A_1\,\ &=\ \{\,0\,\}, \\
+A_m\   &=\ \bigl\{\,x = p/q \in \Q\,\mid\ \abs{p} + \abs{q} 
+                      = m\ \ja\ x \not\in A_k\ \ \text{kun}\ \ k<m\,\bigr\}, \ \ m = 2,3, \ldots
+\end{align*}
+Osajoukot $A_m$ ovat määritelmän mukaisesti keskenään pistevieraita 
+(\mbox{$A_m \cap A_k = \emptyset$} kun $k<m$), joten jokainen $x \in \Q$ on enintään yhden 
+osajoukon alkio. Toisaalta määritelmästä seuraa myös, että jos $x \in \Q$, niin $x \in A_m$, 
+missä $m\in\N$ on pienin luku, jolle pätee $m = \abs{p} + \abs{q}$ ja $x = p/q$. Näin ollen 
+jokainen $x\in\Q$ on täsmälleen yhden osajoukon $A_m$ alkio. Joukot $A_m$ ovat myös äärellisiä,
+joten jokainen niistä voidaan numeroida erikseen. Jos nyt $A_m$:n alkioiden lukumäärä $= N_m$,
+niin mielivaltaiselle $x\in\Q$ saadaan yksikäsitteinen järjestysnumero $n$ säännöllä
+\[
+n = \begin{cases} \begin{aligned}
+    1,\  \qquad\qquad\qquad\qquad\quad &\text{jos $x=0$}, \\
+    N_1 + \cdots + N_{m-1} + k, \quad  &\text{jos $x$ on $A_m$:n $k$:s alkio},\ \ m \ge 2.
+                  \end{aligned}
+    \end{cases}
+\]
+Kaikki rationaaliluvut on näin järjestetty jonoksi, ja voidaan siis todeta, että $\Q$ on 
+numeroituva. \loppu 
+\end{Exa}
+
+Jos joukko on ääretön mutta ei numeroituva, sanotaan että se on 
+\index{ylinumeroituva joukko}%
+\kor{ylinumeroituva} (engl.\ uncountable). Näinkin 'mahtavia' joukkoja --- myös lukujoukkoja ---
+on olemassa, kuten tullaan näkemään.
+
+\Harj
+\begin{enumerate}
+
+\item
+Näytä induktiolla todeksi summakaavat ($n\in\N$) \vspace{1mm}\newline
+a) \ $\sum_{k=1}^n k = \frac{1}{2} n(n+1) \qquad\ $
+b) \ $\sum_{k=1}^n k^2 = \frac{1}{6} n(n+1)(2n+1)$ \vspace{1mm}\newline 
+c) \ $\sum_{k=1}^n k^3 = \frac {1}{4} n^2(n+1)^2 \qquad$
+d) \ $\sum_{k=1}^n k^4 = \frac{1}{30} n(n+1)(2n+1)(3n^2+3n-1)$
+
+\item
+Näytä induktiolla seuraavat summakaavat päteviksi jokaisella $n\in\N$\,:
+\begin{align*}
+&\text{a)} \quad 1 \cdot 3 + 3 \cdot 5 + \ldots + (2n-1)(2n+1) = \frac{n}{3}(4n^2+6n-1) \\
+&\text{b)} \quad \sum_{k=1}^n k^2 2^k = (n^2-2n+3)2^{n+1}-6 \\
+&\text{c)} \quad \sum_{k=1}^n kq^{k-1} 
+                          = \frac{1-(n+1)q^n+nq^{n+1}}{(1-q)^2}\,, \quad q\in\Q,\ q \neq 1
+\end{align*}
+
+\item \label{jono-H4}
+Määritellään palautuvat lukujonot
+\begin{align*}
+&\text{a)} \quad a_0=1, \quad a_{n+1} = qa_n + 1, \quad n=0,1\,\ldots \\
+&\text{b)} \quad a_0=2, \quad a_{n+1} = \frac{a_n}{2} + \frac{1}{a_n}\,, \quad n=0,1\,\ldots \\
+&\text{c)} \quad a_1=3,\ a_2=6,\ a_{n+1} = \frac{na_n+a_{n-1}+3}{n}\,, \quad n=2,3\,\ldots \\
+&\text{d)} \quad a_0\in\Q,\ a_0 \not\in \{-1/n \mid n\in\N\}, \quad 
+                            a_{n+1} = \frac{a_n}{1+a_n}\,, \quad n=0,1\,\ldots
+\end{align*}
+Näytä induktiolla, että \ a) $\seq{a_n}$ on geometrinen sarja, \ 
+b) $1 \le a_n \le 2\ \forall n$, \newline
+c) $a_n < 4n\ \forall n$, \ d) $a_n=a_0/(1+na_0)\ \forall n$.
+
+\item
+Laske seuraavien summalausekkeiden arvot ($n\in\N$)\,:
+\[
+\text{a)}\ \ \sum_{k=0}^n \binom{n}{k} \qquad 
+\text{b)}\ \ \sum_{k=0}^n (-1)^k \binom{n}{k} \qquad
+\text{c)}\ \ \sum_{k=0}^n 2^k\binom{n}{k} \qquad
+\text{d)}\ \ \sum_{k=0}^n 3^{-k}\binom{n}{k}
+\]
+
+\item (*)
+Olkoon $x\in\Q,\ x>0$. Näytä, että jos jollakin $a\in\Q$ ja $n\in\N,\ n \ge 2$ pätee 
+$1 < x^n \le a$, niin $1 < x < 1+(a-1)/n$. \ \kor{Vihje}: Kirjoita $x=1+y$.
+
+\item (*) a) Näytä, että jos $x\in\Q,\ x> 0$ ja $n\in\N,\ n\ge 3,$ niin
+$(1+x)^n > 1+nx+\frac 12 n(n-1)x^2.$ \ b) Millaisia vielä parempia arvioita saadaan, jos 
+$n\ge k,\ k=4,5, \ldots$\,? \ c) Näytä, että on olemassa $n\in\N$ siten, että pätee
+\[
+\frac{(1+10^{-100})^n}{n^{100}} > 10^{100}.
+\]
+
+\item (*)
+Näytä, että jos joukot $A_1,\,A_2,\,A_3, \ldots$ ovat keskenään pistevieraita ja numeroituvia,
+niin myös joukko
+\[
+A = A_1 \cup A_2 \cup \ldots = \bigcup_{n=1}^\infty A_n
+\]
+on numeroituva. Totea väitteen pätevyys suoraan (määrittämällä $A$), kun 
+$A_n=\{\,x\in\Q \mid n-1 \le \abs{x} < n\,\}$.
+
+\end{enumerate}  

@@ -1,0 +1,413 @@
+\section{Trigonometristen funktioiden derivointi} \label{kaarenpituus}
+\alku
+
+Trigonometriset funktiot reaalifunktioina perustuvat kaarenpituuden käsitteeseen
+(yksikköympyrällä, ks.\ Luku \ref{trigonometriset funktiot}). Käsite on aiemmin määritelty
+lyhyesti Luvussa \ref{geomluvut}. Seuraavassa tarkastellaan aluksi kaarenpituutta hieman
+yleisemmältä kannalta ja johdetaan näiden tarkastelujen pohjalta raja-arvotulos
+\[
+\lim_{x \kohti 0} \frac{\sin x}{x} = 1.
+\]
+Trigonometristen funktioiden kaikki derivoimissäännöt ovat tästä perustuloksesta ja Luvun
+\ref{derivaatta} säännöistä johdettavissa.
+
+\subsection*{Kaarenpituus}
+\index{kaarenpituus|vahv}
+
+Olkoon $f:\DF_f\kohti\R$, $\DF_f\subset\R$, jatkuva suljetulla välillä $[a,b]\subset \DF_f$.
+Merkitään
+\[
+A=(a,f(a)), \quad B=(b,f(b))
+\]
+ja sanotaan, että euklidisen tason käyrä
+\[
+S=\{P=(x,y)\in\Ekaksi \mid x\in [a,b] \ \ja \ y=f(x)\}
+\]
+\index{kaari (käyrän)} \index{yksinkertainen!c@käyrä, kaari}%
+on pisteitä $A,B$ yhdistävä (yksinkertainen) \kor{kaari} (tai käyrän kaari, engl.\ arc).
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5)(-1,-1)
+\put(-1,0){\vector(1,0){10}} \put(8.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){5}} \put(0.2,3.8){$y$}
+\put(0.9,1.9){$\bullet \ A$} \put(7.9,2.9){$\bullet \ B$}
+\curve(
+    1.0000,    2.0000,
+    1.5000,    2.7635,
+    2.0000,    3.0000,
+    2.5000,    2.8848,
+    3.0000,    2.5679,
+    3.5000,    2.1733,
+    4.0000,    1.8000,
+    4.5000,    1.5211,
+    5.0000,    1.3843,
+    5.5000,    1.4117,
+    6.0000,    1.6000,
+    6.5000,    1.9202,
+    7.0000,    2.3179,
+    7.5000,    2.7130,
+    8.0000,    3.0000)
+\put(4.5,1.8){$S$}
+\end{picture}
+\end{center}
+\end{figure}
+Olkoon edelleen $\{P_0,\ldots,P_n\}$, $n\in\N$, äärellinen, järjestetty pistejoukko kaarella
+$S$ siten, että
+\[
+P_i=(x_i,f(x_i)),\quad i=0,\ldots,n,
+\]
+missä
+\[
+a=x_0<x_1<\ldots <x_n=b,
+\]
+jolloin siis $P_0=A$, $P_n=B$. Merkitään tällaista pistejoukkoa symbolisesti $\mathcal{P}$:llä,
+\[
+\mathcal{P}=\{P_0,\ldots,P_n\}\subset S,
+\]
+ja kaikkien tällaisten pistejoukkojen joukkoa $\mathcal{M}$:llä. Joukko $\mathcal{M}$ on 
+ylinumeroituva, sillä jo pisteellä $P_1$ on ylinumeroituva määrä vaihtoehtoja.
+
+Pistejoukon $\mathcal{P}\in\mathcal{M}$ kautta kulkevaa murtoviivaa, päätepisteinä $A$ ja $B$, 
+sanottakoon pisteistön $\mathcal{P}$ kautta kulkevaksi kaaren $S$ \kor{oikopoluksi}.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(10,5)(-1,-1)
+\put(-1,0){\vector(1,0){10}} \put(8.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){5}} \put(0.2,3.8){$y$}
+\put(0.9,1.9){$\bullet \ A$} \put(7.9,2.9){$\bullet \ B$}
+\curve(
+    1.0000,    2.0000,
+    1.5000,    2.7635,
+    2.0000,    3.0000,
+    2.5000,    2.8848,
+    3.0000,    2.5679,
+    3.5000,    2.1733,
+    4.0000,    1.8000,
+    4.5000,    1.5211,
+    5.0000,    1.3843,
+    5.5000,    1.4117,
+    6.0000,    1.6000,
+    6.5000,    1.9202,
+    7.0000,    2.3179,
+    7.5000,    2.7130,
+    8.0000,    3.0000)
+\put(3.7,1.2){$S$}
+\put(2.4,2.8){$\bullet$} \put(2.4,3.1){$P_1$}
+\put(5.4,1.3){$\bullet$} \put(5.4,0.9){$P_2$}
+\path(1,2)(2.5,2.88)(5.5,1.41)(8,3)
+\end{picture}
+\end{center}
+\end{figure}
+Jokaisella oikopolulla on (geometrinen) \kor{pituus}, jota merkitään symbolilla
+$s_\mathcal{P}$ ja määritellään
+\[
+s_\mathcal{P}=\sum_{i=1}^n \sqrt{(x_i-x_{i-1})^2+[f(x_i)-f(x_{i-1})]^2}\,.
+\]
+\index{suoristuva (käyrä)}%
+Sanotaan, että kaari $S$ on \kor{suoristuva} (engl. rectifiable), jos joukko
+\[
+\mathcal{S}=\{s_\mathcal{P} \ | \ \mathcal{P}\in\mathcal{M}\}
+\]
+on (reaalilukujoukkona) \pain{ra}j\pain{oitettu}. Tässä tapauksessa kaarelle $S$ voidaan
+määritellä  \kor{kaarenpituus}. Nimittäin, koska rajoitetulla joukolla on pienin yläraja eli
+supremum (vrt.\ Luku \ref{reaalilukujen ominaisuuksia}), niin luontevalta tuntuva määritelmä on
+\[
+\boxed{\kehys\quad S\text{:n pituus} = s = \sup\mathcal{S}. \quad}
+\]
+Pelkästään $f$:n jatkuvuudesta \pain{ei} seuraa, että kaari $S$ on suoristuva (vaikka
+vasta\-esimerkkejä ei ole aivan helppo löytää). Jatkossa tehdään funktiosta $f$ sen vuoksi 
+hieman voimakkaampi oletus, joka takaa kaarenpituuden olemassaolon. Oletus on lievennettävissä
+koskemaan välin $[a,b]$ osavälejä (ks.\ alaviite jäljempänä), joten tavanomaisia funktioita 
+ajatellen lisäoletus on melko viaton.
+\begin{Lause} \label{kaarenpituuslause}
+Jos $f$ on välillä $[a,b]$ jatkuva ja lisäksi monotoninen, niin kaari
+$S=\{P=(x,y)\in\Ekaksi \mid x\in [a,b] \ja y=f(x)\}$ on suoristuva, ja kaarenpituudelle $s$
+pätee $\,b-a \,\le\, s \,\le\, b-a + \abs{f(b)-f(a)}$.
+\end{Lause}
+\tod  Koska $f$ on monotoninen, niin $s_\mathcal{P}$:n lausekkeessa luvut $f(x_i)-f(x_{i-1})$
+ovat samanmerkkisiä (tai nollia), jolloin epäyhtälöä $\,\sqrt{x^2+y^2}\le|x|+|y|\,$ ensin
+soveltaen seuraa
+\begin{align*}
+s_\mathcal{P}\, &\le\, \sum_{i=1}^n [\,(x_i-x_{i-1})+|f(x_i)-f(x_{i-1})|\,] \\
+               &=\, \sum_{i=1}^n (x_i-x_{i-1})+\left|\sum_{i=1}^n [f(x_i)-f(x_{i-1})]\right|
+             \,=\, b-a+\abs{f(b)-f(a)}.
+\end{align*}
+Todetaan myös, että $s_\mathcal{P} \ge b-a\ \forall\ \mathcal{P}$, sillä pienin mahdollinen
+$s_\mathcal{P}$ (jokaisella $\mathcal{P}$) saadaan, kun $f$ on vakio. Tehdyin oletuksin 
+siis pätee
+\[
+b-a\ \le\ s_\mathcal{P}\ \le\ b-a+\abs{f(b)-f(a)} \quad \forall\ s_\mathcal{P}\in\mathcal{S}.
+\]
+Joukolle $\mathcal{S}$ on näin saatu alaraja ja yläraja, joten luku $s=\sup\mathcal{S}$ on
+olemassa ja saadut rajat pätevät myös tälle luvulle. \loppu
+
+Ellei $S$ itse satu olemaan murtoviiva (jolloin $s\in\mathcal{S}$), on kaarenpituus määrättävä
+käytännössä konstruoimalla jono $\mathcal{P}_n\in\mathcal{M}$, $n=1,2,\ldots$ niin, että 
+$s_{\mathcal{P}_n}=s_n\kohti s$, kun $n\kohti\infty$. Esimerkiksi jos valitaan 
+$\mathcal{P}_n = \{a + k(b-a)/n,\ k = 0 \ldots n\}$, niin algoritmi toimiikin tavanomaisissa
+tapauksissa (vrt.\ Harj.teht.\,\ref{H-V-4: numeerinen
+kaarenpituus}).\footnote[2]{Kaarenpituuden laskemiseen palataan myöhemmin toisessa
+asiayhteydessä. Tällöin myös näytetään, että kaarenpituus on tarkasteltavan välin suhteen
+\kor{additiivinen}, ts.\ jos $a<c<b$, niin $s=s_1+s_2$, missä $s$, $s_1$ ja $s_2$ ovat
+vastaavasti kaarenpituudet välillä $[a,b]$, $[a,c]$ ja $[c,b]$. Additiivisuuden ja Lauseen
+\ref{kaarenpituuslause} perusteella käyrän $S: y=f(x)$ kaaren suoristuvuuteen välillä $[a,b]$
+riittää jatkuvuusoletuksen lisäksi, että väli $[a,b]$ on jaettavissa äärellisen moneen
+osaväliin, joilla $f$ on monotoninen.}
+
+Jos koko välin $[a,b]$ sijasta tarkastellaan väliä $[a,x]$, $a<x \le b$, ja määritellään
+\[
+S_x=\{P=(t,f(t)) \ | \ a\leq t\leq x\},
+\]
+niin $S_x$:n kaarenpituudesta $s(x)$ tulee välillä $[a,b]$ määritelty funktio, kun vielä 
+asetetaan $s(a)=0$. Koska $s(x_2)-s(x_1)$ tällöin merkitsee kaarenpituutta välillä $[x_1,x_2]$
+(ks.\ alaviite), on Lauseen \ref{kaarenpituuslause} mukaan
+\[
+s(x_2)-s(x_1)\,\ge\,x_2-x_1,\quad a \le x_1 < x_2 \le b,
+\]
+joten $s(x)$ on välillä $[a,b]$ aidosti kasvava. Lisäksi nähdään Lauseen
+\ref{kaarenpituuslause} yläraja-arviosta, että $s(x)$ on jatkuva välillä $[a,b]$.
+
+Siirrytään nyt tarkastelemaan jatkon kannalta tärkeää erikoistapausta, missä $[a,b]=[0,1]$ ja 
+funktio $f$ määritellään
+\[
+f(x)=1-\sqrt{1-x^2}, \quad x\in [0,1].
+\]
+Lauseen \ref{kaarenpituuslause} oletukset toteutuvat tällöin, ja $S$ on $x$-akselia origossa
+sivuavan 1-säteisen ympyrän kaari.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(6,5)(-1,-1)
+\put(-1,0){\vector(1,0){6}} \put(4.8,-0.4){$x$}
+\put(0,-1){\vector(0,1){5}} \put(0.2,3.8){$y$}
+\put(3,0){\line(0,-1){0.15}} \put(2.92,-0.5){$\scriptstyle{1}$}
+\put(0,3){\line(-1,0){0.15}} \put(-0.4,2.9){$\scriptstyle{1}$}
+\put(0,3){\arc{6}{0}{1.57}}
+\put(-0.1,-0.1){$\bullet$} \put(2.9,2.9){$\bullet$}
+\path(0,3)(2.25,1.05)(0,1.05)
+\dashline{0.1}(2.25,1.05)(2.25,0)
+\put(0,1.05){$\overbrace{\hspace{2.25cm}}^x$}
+\put(1,0.5){$\scriptstyle{t}$} \put(3,2){$S$} \put(2.18,-0.2){$\scriptstyle{x}$}
+\end{picture}
+\end{center}
+\end{figure}
+Kun merkitään $t=$ kaarenpituus välillä $[0,x]$, niin (ks.\ kuvio)
+\[
+x=\sin t.
+\]
+Kun $x$:n ja $t$:n välille oletetaan tämä yhteys välillä 
+$x\in[0,1]\ \ekv\ t\in[0,\tfrac{\pi}{2}]$, niin ko.\ välillä voidaan kirjoittaa
+\[
+f(x) \,=\, 1+\sqrt{1-x^2} \,=\, 1-\cos t
+\]
+ja arvioida Lauseen \ref{kaarenpituuslause} perusteella
+\[
+\begin{cases} \,t \ge x, \\ \,t \le x+f(x) \end{cases} \qekv
+\begin{cases} \,t \ge \sin t, \\ \,t \le \sin t + 1-\cos t \end{cases}
+\]
+eli
+\[
+t-(1-\cos t) \,\le\, \sin t \,\le\, t, \quad t\in[0,\tfrac{\pi}{2}].
+\]
+
+Tässä on viitattu aiemmin (Luku \ref{geomluvut}) sovittuun merkintään ($\pi$:n määritelmä!)
+\[
+S\text{:n pituus}=\tfrac{\pi}{2}.
+\]
+Kun saadun epäyhtälön vasemmalla puolella käytetään trigonometrian kaavaa
+$\,1-\cos t = 2\sin^2\tfrac{t}{2}$ (ks.\ Luku \ref{trigonometriset funktiot}) ja sovelletaan
+epäyhtälön jälkimmäistä osaa, seuraa
+\[
+t-(1-\cos t) \,=\, t-2\sin^2\tfrac{t}{2} 
+             \,\ge\, t-2\left(\tfrac{t}{2}\right)^2 
+             \,=\, t-\tfrac{1}{2}t^2, \quad t\in[0,\pi].
+\]
+Yhdistämällä epäyhtälöt on tultu päätelmään
+\begin{align*}
+t-\tfrac{1}{2}t^2                &\,\le\ \sin t \,\le\ t, \quad t\in[0,\tfrac{\pi}{2}] \\[1mm]
+\impl\quad\ 1-\tfrac{1}{2}\,t    &\,\le\, \frac{\sin t}{t} \,\le\, 1,
+                                    \quad t\in(0,\tfrac{\pi}{2}] \\
+\impl\quad 1-\tfrac{1}{2}\abs{t} &\,\le\, \frac{\sin t}{t} \,\le\, 1, 
+                                    \quad 0<\abs{t}\le\tfrac{\pi}{2}.
+\end{align*}
+Tässä viimeinen päättely perustui funktion $\sin t/t$ parillisuuteen.
+
+Jos nyt $t_n\in [-\tfrac{\pi}{2},\tfrac{\pi}{2}]$, $t_n\neq 0$ ja $t_n\kohti 0$, niin viimeksi
+kirjoitetun epäyhtälön perusteella
+\[
+1\ \ge\ \frac{\sin t_n}{t_n}\ \ge\ 1-\tfrac{1}{2}\abs{t_n} \kohti 1.
+\]
+Raja-arvon määritelmän (Määritelmä \ref{funktion raja-arvon määritelmä}) perusteella on 
+johdettu raja-arvotulos
+\begin{equation} \label{sinin raja-arvotulos}
+\boxed{\quad \lim_{t\kohti 0}\,\frac{\ykehys\sin t}{\akehys t}=1. \quad}
+\end{equation}
+Kun sovelletaan tätä tulosta, kaavaa $1-\cos t=2\sin^2\tfrac{t}{2}$ ja raja-arvojen
+yhdistelysääntöjä (Lause \ref{funktion raja-arvojen yhdistelysäännöt}), niin seuraa
+\begin{equation} \label{kosinin raja-arvotulos}
+\boxed{\quad \lim_{t\kohti 0}\,\frac{\ykehys 1-\cos t}{\akehys t^2}=\frac{1}{2}\,. \quad}
+\end{equation}
+Edellä olennaisesti johdettiin myös seuraavat, kaikilla $t\in\R$ pätevät epäyhtälöt:
+\[
+\boxed{\kehys\quad \abs{\sin t}\,\le\,\abs{t}, \quad 
+                   0\,\le\,1-\cos t \le \frac{1}{2}\,t^2, \quad t\in\R. \quad}
+\]
+Kun raja-arvotulokset \eqref{sinin raja-arvotulos},\,\eqref{kosinin raja-arvotulos} yhdistetään
+trigonometrisiin yhteenlaskukaavoihin
+\begin{align*}
+\sin (x+t) &=\sin x\cos t+\cos x\sin t, \\
+\cos (x+t) &=\cos x\cos t-\sin x\sin t
+\end{align*}
+(ks.\ Luku \ref{trigonometriset funktiot}) saadaan yleisemmät raja-arvotulokset
+(Harj.teht.\,\ref{H-V-4: sinin ja kosinin erotusosamäärät})
+\begin{equation} \label{sinin ja kosinin erotusosamäärät}
+\boxed{\begin{aligned}
+\quad \lim_{t\kohti 0}\,\frac{\ykehys \sin(x+t)-\sin x}{t} &= \cos x, \\
+       \lim_{t\kohti 0}\,\frac{\cos(x+t)-\cos x}{\akehys t}&= -\sin x. \quad
+\end{aligned}}
+\end{equation}
+
+\subsection*{Trigonometristen funktioiden derivaatat}
+\index{derivoimissäännöt!f@trigonometriset funktiot|vahv}
+
+Raja-arvotulosten \eqref{sinin ja kosinin erotusosamäärät} perusteella funktioiden $\sin$ ja 
+$\cos$ derivoimissäännöt ovat
+\[ \boxed{ \begin{aligned}
+\quad \dif\sin x &= \cos x, \quad x\in\R, \\
+      \dif\cos x &= -\sin x, \quad x\in\R. \quad
+\end{aligned} } \]
+Näiden sääntöjen ja Luvun \ref{derivaatta} sääntöjen perusteella on
+\[
+\dif\left(\frac{\sin x}{\cos x}\right)=1+\frac{\sin^2 x}{\cos^2 x}\,.
+\]
+Tämä ja vastaava $\cot$-funktion derivoimissääntö annetaan yleensä muodossa
+\[ \boxed{ \begin{aligned}
+\quad \dif\tan x\ &=\ 1+\tan^{\ykehys 2}x\ =\ \dfrac{1}{\cos^2 x}\,, \\
+      \dif\cot x\ &=\ -(1+\cot^2 x)\ =\ -\dfrac{1}{\akehys \sin^2 x}\,. \quad
+\end{aligned} } \]
+
+Trigonometristen käänteisfunktioiden derivaatat voidaan laskea edellisen luvun säännöllä
+\eqref{D5}. Esim.\ jos $y\in(-1,1)$ ja $\Arcsin y=x\in(-\tfrac{\pi}{2},\tfrac{\pi}{2})$,
+niin mainittu sääntö yhdessä trigonometrian kaavojen kanssa antaa
+\[
+\frac{d}{dy}\Arcsin y = \frac{1}{\dif\sin x} 
+                      = \frac{1}{\cos x} 
+                      = \frac{1}{\sqrt{1-\sin^2 x}}
+                      = \frac{1}{\sqrt{1-y^2}}\,.
+\]
+Kun $\Arccos$ ja $\Arctan$ derivoidaan vastaavalla tavalla on tulos
+(Harj.teht.\,\ref{H-V-4: Arccos ja Arctan})\,:
+\[ \boxed{ \begin{aligned}
+\quad \dif\Arcsin x\ &=\ \dfrac{1}{\sqrt{1-x^2}}\,, \quad x\in (-1,1), \\
+      \dif\Arccos x\ &=\ -\dfrac{1}{\sqrt{1-x^2}}\,, \quad x\in (-1,1), \quad \\
+      \dif\Arctan x\ &=\ \dfrac{1}{1+x^2}\,, \quad x\in\R.
+\end{aligned} } 
+\]
+
+Em.\ derivoimissääntöjen antamia funktioita edelleen derivoimalla nähdään, että kaikki 
+säännöissä mainitut funktiot ovat mielivaltaisen monta kertaa derivoituvia koko
+määrittelyjoukossaan, jos tämä koostuu avoimista väleistä, muuten kaikilla määrittelyjoukon
+avoimilla osaväleillä. Sama pätee myös yleisemmille trigonometrisille funktioille, jotka
+saadaan yhdistelemällä perusfunktioita laskuoperaatioilla tai yhdistettyinä funtioina.
+\begin{Exa} Funktioiden $\,\sin\,$ ja $\,\cos\,$ sekä edellisen luvun dervioimissääntöjen
+nojalla on
+\[
+\dif\,\frac{\sin x}{1+\cos x} 
+       \,=\, \frac{\cos x}{1+\cos x}+\frac{\sin^2x}{(1+\cos x)^2}
+       \,=\, \frac{\cos x+\cos^2x+\sin^2x}{(1+\cos x)^2}
+       \,=\, \frac{1}{1+\cos x}\,.
+\]
+Lasku on pätevä jokaisella $x\in\R$, jolla $\cos x \neq -1$, eli derivoitavan funktion
+koko määrittelyjoukossa. \loppu
+\end{Exa}
+\begin{Exa} Funktiot $\,u(x)=\cos x\,$ ja $\,v(x)=\sin x\,$ ovat (ainakin eräs) ratkaisu
+ongelmaan
+\[
+\begin{cases} \,u'=-v,\ v'=u, \quad x\in\R \\ \,u(0)=1,\ v(0)=0 \end{cases}
+\]
+(Ongelma on ratkaistavissa toisellakin tavalla, ks.\
+Harj.teht.\,\ref{derivaatta}:\ref{H-V-3: cos ja sin potenssisarjoina}b.) \loppu
+\end{Exa}
+ 
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-V-4: numeerinen kaarenpituus}
+Tutki, kuinka tarkasti kaaren
+\[
+S=\{P=(x,y) \mid y=x^2\ \ja\ x\in[0,1]\}
+\]
+pituus saadaan lasketuksi käyttämällä pisteistöä $\{(x_i,f(x_i)),\ i=0 \ldots 10\}$, missä 
+$x_i=i/10$. Tarkka arvo on $s=1.47894..$
+
+\item
+Origosta siirrytään käyrää $r=4\cos\varphi$ (napakoordinaatit) seuraten pisteeseen, jonka
+$x$-koordinaatti $=3$. Mikä on matkan pituus lyhintä reittiä?
+
+\item \label{H-V-4: sinin ja kosinin erotusosamäärät}
+Johda raja-arvotulokset \eqref{sinin ja kosinin erotusosamäärät}.
+
+\item
+Näytä, että jos $a,b\in\R$ ja $b \neq 0$, niin 
+$\,\displaystyle{\lim_{x \kohti 0}\frac{\sin ax}{\sin bx}=\frac{a}{b}}\,$.
+
+\item
+Määritä raja-arvot
+\begin{align*}
+&\text{a)}\ \lim_{x \kohti 0} \frac{x\sin x}{1-\cos x} \qquad
+ \text{b)}\ \lim_{x \kohti 0} \frac{x\sin 2x}{1-\cos 2x} \qquad
+ \text{c)}\ \lim_{x \kohti 0^+} \frac{x-\sqrt{x}}{\sqrt{\sin x}} \\
+&\text{d)}\ \lim_{x\kohti\frac{\pi}{2}}(1+\cos 2x)\tan^2 x \qquad
+ \text{e)}\ \lim_{x\kohti\infty} x\sin\frac{1}{x}
+\end{align*}
+
+\item \label{H-V-4: Arccos ja Arctan}
+Johda funktioiden $\Arccos$ ja $\Arctan$ derivoimissäännöt.
+
+\item
+Derivoi ja sievennä lopputulos:
+\begin{align*}
+&\text{a)}\ \frac{1-\cos x}{\sin x} \qquad
+ \text{b)}\ \frac{1+\cos x}{1-\cos x} \qquad
+ \text{c)}\ \frac{\sin x-\cos x}{\sin x+\cos x} \\[1mm]
+&\text{d)}\ \Arcsin(\cos x) \qquad
+ \text{e)}\ \Arccos(\sin x) \qquad
+ \text{f)}\ \Arctan(\cot x)
+\end{align*} 
+
+\item
+Määritä implisiittifunktion $y(x)$ derivaatta annetussa pisteessä:
+\begin{align*}
+&\text{a)}\,\ y+2\sin y+\cos y=x,\ \ (x,y)=(1,0) \\
+&\text{b)}\,\ 2x+y-\sqrt{2}\sin(xy)=\frac{\pi}{2}\,,\ \ (x,y)=\left(\frac{\pi}{4}\,,1\right) \\
+&\text{c)}\,\ x\sin(xy-y^2)=x^2-1,\ \ (x,y)=(1,1) \\
+&\text{d)}\,\ \tan(xy^2)=\frac{2xy}{\pi}\,,\ \ (x,y)=\left(-\pi,\frac{1}{2}\right)
+\end{align*}
+
+\item
+Näytä induktiolla, että $\dif^n\tan x=p(\tan x)$, missä $p$ on polynomi astetta $n+1$ ja
+muotoa $\,p(t)=n!\,t^{n+1}\,+\,c_{n-1}\,t^{n-1}\,+\,c_{n-3}\,t^{n-3}\,+\,\ldots$
+
+\item
+Totea funktio
+\[
+f(x)=\begin{cases} 
+     x^2\sin\dfrac{1}{x^2}\,, &\text{kun}\ x \neq 0, \\ 0, &\text{kun}\ x=0
+     \end{cases} \]
+esimerkiksi funktiosta, joka on derivoituva jokaisessa pisteessä $x\in\R$, mutta derivaatta
+ei ole jokaisessa pisteessä jatkuva. Hahmottele $f$:n ja $f'$:n kuvaajat!
+
+\item (*)
+Olkoon $s_n$ käyrän $\,S: y=x^n\,$ kaarenpituus välillä $[0,1]$, kun $n\in\N$. Näytä, että
+$\lim_n s_n = 2$.
+
+\item (*)
+Näytä sopivalla muuttujan vaihdolla: \vspace{1mm}\newline
+$\D
+\text{a)}\ \ \lim_{x\kohti\infty} x\left(\frac{\pi}{2}-\Arctan x\right)=1 \qquad 
+\text{b)}\ \ \lim_{x \kohti 1^-} \frac{\pi-2\Arcsin x}{\sqrt{1-x}}=2\sqrt{2}$
+
+\end{enumerate}

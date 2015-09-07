@@ -1,0 +1,500 @@
+\section[Taso- ja avaruusintegraalien muuntaminen]{Taso- ja avaruusintegraalien \\ 
+muuntaminen} 
+\label{muuttujan vaihto integraaleissa}
+\sectionmark{Integraalien muuntaminen}
+\alku
+\index{muuttujan vaihto (sijoitus)!b@integraalissa|vahv}
+
+Olkoon $A,B\subset\R^n$, $n\in\N$ ja olkoon $\mpu:B \kohti A$ bijektio (tai 'melkein bijektio',
+ks.\ huomautukset jäljempänä).
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-26.pstex_t}
+\end{center}
+\end{figure}
+Halutaan laskea integraali $\int_A f\,d\mu = \int_A f\,dx_1\ldots dx_n$ muunnetussa muodossa
+\[
+\int_A f\,d\mu=\int_B g\,d\mu', \quad g(\mt)=f(\mpu(\mt)), \quad \mt \in B.
+\]
+Tässä $g$ on kuvauksen $\mpu$ välittämä $f$:n vastine $B$:ssä, ja $\mu'$ on toinen, toistaiseksi
+tuntematon $\R^n$:n mitta. Kyse on siis muuttujan vaihdosta eli \pain{si}j\pain{oituksesta}
+\[
+\mx=\mpu(\mt),\quad \mt\in B.
+\]
+Muunnoksessa on ensinnäkin määrättävä funktio $g$. Sikäli kuin lähtökohtana on
+(niinkuin yleensä) tunnettu kuvaus $\mpu$, tämä on suoraviivainen toimenpide. Myös mitan
+$\mu'$ formaali määrittely on helppoa. Nimittäin jos $\mpu(\Delta B)=\Delta A \subset A$ ja
+valitaan $f(\mx)=1,\ \mx\in \Delta A$ (jolloin $g(\mt)=1,\ \mt\in \Delta B$), on mitan ja
+integraalin yhteyden (vrt. Luku \ref{tasointegraalit}) ja oletetun integraalien välisen
+yhteyden perusteella
+\[
+\mu'(\Delta B)=\int_{\Delta B} d\mu'=\int_{\Delta A} d\mu=\mu(\Delta A).
+\]
+Siis $\mu'(\Delta B)=\mu(\Delta A)$, eli $\Delta B$:n mitta määräytyy vastinjoukon
+$\Delta A=\mpu(\Delta B)$ Jordan-mittana. --- Tässä on huomattava, että kuvauksen $\mpu$ on
+oltava (ainakin lähes) injektio, jotta $\mu'$ olisi todella mitta. Nimittäin koska mitta on
+additiivinen, niin $B$:n mitallisille osajoukoille on oltava voimassa
+\[
+\Delta B_1\cap\Delta B_2=\emptyset \qimpl
+       \mu'(\Delta B_1\cup\Delta B_2)=\mu'(\Delta B_1)+\mu'(\Delta B_2).
+\]
+Jos $\mpu$ ei olisi injektio, niin joillakin $\mx_1,\mx_2 \in B$, $\mx_1\neq\mx_2$ olisi
+$\mpu(\mx_1)=\mpu(\mx_2)$, tai yleisemmin $\mpu(\Delta B_1)=\mpu(\Delta B_2)=\Delta A$, missä
+$\Delta B_1,\Delta B_2 \subset B$ ja $\Delta B_1 \cap \Delta B_2 =\emptyset$. Tällöin
+$\mu'(\Delta B_1\cup\Delta B_2)=\mu(\Delta A)$ ja
+$\mu'(\Delta B_1)+\mu'(\Delta B_2)=2\mu(\Delta A)\neq\mu(\Delta A)$, ellei ole
+$\mu(\Delta A)=0$. Päätellään siis, että $\mpu$:n epäinjektiivisyys voidaan sallia
+\pain{enintään} (mitan $\mu'$ suhteen) \pain{nollamittaisessa} j\pain{oukossa}.
+
+Sikäli kuin $\mpu$ on injektio, tai mainitulla tavalla 'melkein', on integraalin
+muuntamiskysymys siis periaatteessa ratkaistu. Toistaiseksi ei kuitenkaan ole selvää,
+millä tavoin mitan $\mu'$ avulla voidaan käytännössä laskea (muuten kuin palaamalla 
+alkuperäisiin muuttujiin). Tämä laskutekninen kysymys onkin kaikkein keskeisin, sikäli 
+kuin muunnoksesta halutaan jotakin hyötyä.
+
+\subsection*{Muuntosuhde}
+
+Tutkitaan muunnettua integraalia $\int_B g\,d\mu'$. Oletetaan, että $B$ on rajoitettu ja
+$g(\mt)$ rajoitettu $B$:ssä, jolloin on
+(vrt.\ Luvut \ref{tasointegraalit} ja \ref{avaruusintegraalit})
+$\int_B g\,d\mu'=\int_T g_0\,d\mu'$, missä $T \supset B$ on $n$-ulotteinen suorakulmainen
+perussärmiö ja $g_0=g$:n nollajatko $B$:n ulkopuolelle. Oletetaan jatkossa, että
+$\mpu:\ T \kohti \mpu(T)$ on (lähes) injektio ja että $\mpu(T')$ on Jordan-mitallinen aina
+kun $T' \subset T$ on Jordan-mitallinen. Tällöin jos $\mathcal{T}_h=\{T_k\}\,$ on $T$:n jako
+osasärmiöihin, joiden särmien pituus on enintään $h$, niin vastaavasti kuin Jordan-mitan suhteen
+integroitaessa pätee summakaava
+\[
+\int_T g_0\,d\mu' \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)\mu'(T_k)
+                  \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)\mu(\mpu(T_k)),
+\]
+missä $\mt_k \in T_k$.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-27.pstex_t}
+\end{center}
+\end{figure}
+Oletetaan nyt, että kuvaukselle $\mpu$ on määriteltävissä $T$:ssä jatkuvana funktiona
+$J(\mt)$ nk.\ \kor{muuntosuhde} (mittasuhde, suurennussuhde) siten, että jokaisella
+$T_k\in\mathcal{T}_h$ ja jokaisella $\mt_k \in T_k$ pätee\footnote[2]{Muuntosuhteen
+määrittely voidaan yleisemmin rajoittaa särmiöihin, joille pätee $T_k \cap U=\emptyset$,
+missä $\mu'(U)=0$. Tällöin muuntosuhde ei välttämättä ole koko $T$:ssä jatkuva tai edes
+määritelty.}
+\[
+\left|\frac{\mu(\mpu(T_k))}{\mu(T_k)}-J(\mt_k)\right| \,\le\, \eps(h) \kohti 0 \quad 
+                                                             \text{kun}\,\ h \kohti 0,
+\]
+missä $\eps(h)$ riippuu vain tiheysparametrista $h$ (ei $k$:sta eikä yleisemmin
+$\mathcal{T}_h$:sta).
+
+Tämän perusteella voidaan em.\ summakaavassa kirjoittaa likimäärin
+$\mu(\mpu(T_k) \approx J(\mt_k)\mu(T_k)$. Olettaen, että $|g_0(\mt)| \le C,\ \mt \in T$
+($g$ oli rajoitettu), saadaan tälle approksimatiolle tehtyjen oletusten perusteella virhearvio
+\[
+\left|\sum_k g_0(\mt_k)\mu(\mpu(T_k))-\sum_k g_0(\mt_k)J(\mt_k)\mu(T_k)\right|
+\le C\eps(h)\sum_k\mu(T_k) = C\eps(h)\mu(T).
+\]
+Oletukseen $\,\lim_{h \kohti 0}\eps(h)=0\,$ perustuen ja integraalin summakaavaa uudelleen
+soveltaen seuraa
+\[
+\Lim_{h \kohti 0} \sum_k g_0(\mt_k)\mu(\mpu(T_k)) 
+          \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)J(\mt_k)\mu(T_k)
+          \,=\, \int_T g_0(\mt)J(\mt)\,d\mu.
+\]
+Tässä on edelleen $\int_T g_0(\mt)J(\mt)\,d\mu = \int_B g(\mt)J(\mt)\,d\mu$
+(koska $g_0J=(gJ)_0$), joten on päätelty:
+\[
+\int_A f\,d\mu = \int_B g\,d\mu' = \int_B g(\mt)J(\mt)\,d\mu.
+\]
+Integraalia $\int_A f\,d\mu$ muunnettaessa on siis muunnosten $f(\mx)=f(\mpu(\mt))=g(\mt)$
+ja $A \ext B$, $\mpu(B)=A$, lisäksi suoritettava paikalliseen muuntosuhteeseen $J(\mt)$
+perustuva \pain{mittamuunnos} $d\mu'=J(\mt)\,d\mu$, eli muunnoskaava on
+\begin{equation} \label{muuntokaava}
+\boxed{\kehys\quad \int_A f(\mx)\,dx_1\ldots dx_n=\int_B g(\mt)J(\mt)\,dt_1\ldots dt_n. \quad}
+\tag{$\star$}
+\end{equation}
+%Siis jos muuntosuhde $J(\mt)$ pystytään määräämään (laskutekniikasta jäljempänä), niin
+%integraali $\int_A f\,d\mu,\ A\subset\R^n$ muunnetaan muodollisesti sijoituksilla
+%\[
+%f(\mx) = f(\mpu(\mt)) = g(\mt), \quad d\mu = J(\mt)\,dt_1\cdots dt_n, \quad 
+%                                      A \ext B, \quad \mpu(B)=A. \Akehys
+%\]
+\begin{Exa} Olkoon $A=\{(x,y)\in\R^2 \mid x\in[1,2]\ \ja\ x \le y \le 2x\}$. Laske
+$\int_A xy\,dxdy\,$ käyttäen sijoitusta $(x,y)=\mpu(\mt)=\mpu(t,s)=(t,st)$.
+\end{Exa}
+\ratk Ensinnäkin todetaan, että $\,A=\mpu(B)$, missä $\,B=[1,2]\times[1,2]$, ja että 
+$\mpu:\,B \kohti A$ on bijektio. Muuntosuhteen laskemiseksi tarkastellaan suorakulmiota 
+$\Delta T=[t,t+\Delta t]\times[s,s+\Delta s]$, missä $t,s \ge 1$ ja 
+$0 < \Delta t,\Delta s \le h$. Tällöin on
+\begin{align*}
+\Delta A\,=\,\mpu(\Delta T)\,
+         &=\{(x,y)\in\R^2 \mid t \le x \le t+\Delta t\ \ja\ sx \le y \le (s+\Delta s)x\}\\[1mm]
+\impl\quad\mu(\Delta A) 
+         &= \int_t^{t+\Delta t}\left(\int_{sx}^{(s+\Delta s)x}\,dy\right)dx\,
+          =\,\int_t^{t+\Delta t} (\Delta s)x\,dx \\
+         &=\,\frac{1}{2}\Delta s\left[(t+\Delta t)^2-t^2\right]\,
+          =\,t\,\Delta t\Delta s + \frac{1}{2}(\Delta t)^2\Delta s.
+\end{align*}
+Koska $\mu(\Delta A)/\mu(\Delta T)=t+\frac{1}{2}\Delta t = t + \Ord{h}$, niin muuntosuhteen
+määritelmän perusteella on $J(t,s)=t$. Siis kaavan \eqref{muuntokaava} mukaan
+\[
+\int_A f(x,y)\,dxdy = \int_B f(t,st)\,t\,dtds = \int_1^2 t^3\,dt\cdot\int_1^2 s\,ds 
+                    = \frac{15}{4}\cdot\frac{3}{2} = \frac{45}{8}\,.
+\]
+Tarkistus (ilman muuttujan vaihtoa):
+\[
+\int_A xy\,dxdy = \int_1^2\left[\int_x^{2x} xy\,dy\right]dx
+                = \int_1^2\left[\sijoitus{y=x}{y=2x} \frac{1}{2}xy^2\right]dx
+                = \int_1^2 \frac{3}{2}x^3\,dx = \frac{45}{8}\,. \loppu
+\]
+Kuten esimerkissä, integraalin muuntamisen keskeisin laskutekninen ongelma on muuntosuhteen
+määrääminen. Jatkossa ratkaistaan tämä ongelma differentiaalilaskennan keinoin. Aloitetaan
+yksiulotteisesta integraalista.
+
+
+\subsection*{Muuntosuhde $\R$:ssä}
+\index{muuntosuhde integraalissa!a@$\R$:ssä|vahv}
+
+Olkoon $A=[a,b]$ ja $B=[c,d]$ suljettuja välejä ja $u:B \kohti A$ bijektio. Oletetaan, että
+$u$ on jatkuvasti derivoituva välillä $B$. Tällöin jos $T_k=[t_{k-1},t_k]\subset B$, missä 
+$t_k-t_{k-1} \le h$, niin jollakin $\xi_k\in T_k$ on
+(Lause \ref{toinen väliarvolause}).
+\[ 
+\mu(u(T_k)) = |u(t_k)-u(t_{k-1})| = |u'(\xi_k)|(t_k-t_{k-1}) = |u'(\xi_k)|\mu(T_k).
+\]
+Tässä $u'$ (ja näin ollen myös $|u'|$) on jatkuva, joten $|u'(\xi_k)|-|u'(t)|=\ord{1}$
+$\forall t \in T_k$, kun $h \kohti 0$.\footnote[2]{Päättely nojaa tässä jatkuvuuden
+syvällisempään logiikkaan: Tehdyin oletuksin $|u'|$ on tasaisesti jatkuva välillä $[a,b]$
+(Lause \ref{kompaktissa joukossa jatkuva on tasaisesti jatkuva}, ks.\ myös Lause
+\ref{tasaisen jatkuvuuden käsite}).} Näin ollen jokaisella $t \in T_k$
+\[
+\mu(u(T_k)) \,=\, |u'(t)|\mu(T_k)+\ord{1}\mu(T_k), \quad \text{kun}\ h \kohti 0.
+\]
+Muuntosuhteen määritelmän mukaan on siis $J(t)=\abs{u'(t)}$, jolloin muunnoskaava 
+\eqref{muuntokaava} saa muodon
+\begin{equation} \label{muuntokaava-R1a}
+\int_a^b f(x)\,dx=\int_B f(u(t))\abs{u'(t)}\,dt, \quad u(B)=[a,b]. \tag{a}
+\end{equation}
+Koska oletettiin, että $u:\ B \kohti [a,b]$ on jatkuva bijektio, niin $u$ on välillä $B$ joko
+aidosti kasvava tai aidosti vähenevä. Tällöin jos $u(\alpha)=a$ ja $u(\beta)=b$, niin
+\begin{alignat*}{2}
+&u\text{ kasvava } (u'(x)\geq 0) \ &&\impl \ B=[\alpha,\beta], \\
+&u\text{ vähenevä } (u'(x)\leq 0) \ &&\impl \ B=[\beta,\alpha].
+\end{alignat*}
+Kummassakin tapauksessa kaava \eqref{muuntokaava-R1a} voidaan kirjoittaa muotoon
+\begin{equation} \label{muuntokaava-R1b}
+\int_a^b f(x)\,dx=\int_B f\bigl(u(t)\bigr)\abs{u'(t)}\,dt=\int_\alpha^\beta f(u(t))u'(t)\,dt.
+\tag{b}
+\end{equation}
+Tässä (määrätyn integraalin vaihtosääntöön perustuvassa) laskukaavassa on kyse
+\pain{si}j\pain{oituksesta} \pain{määrät}y\pain{ssä} \pain{inte}g\pain{raalissa}, vrt.\ Luku
+\ref{analyysin peruslause}.
+Kaava \eqref{muuntokaava-R1b} on (tietyin edellytyksin, ks.\ mainittu luku) pätevä, vaikka $u$
+ei olisikaan bijektio. Sen sijaan kaava \eqref{muuntokaava-R1a} \pain{ei} ole pätevä, jos $u'$
+vaihtaa merkkinsä välillä $B$.
+
+\begin{multicols}{2} \raggedcolumns
+\begin{Exa} Jos integraalissa $\int_0^1 x\,dx$ tehdään sijoitus $x=u(t)=3t-2t^2$,
+niin $u'(t)=3-4t$, $u(0)=0$, $u(1)=1$, ja määrätyn integraalin sijoituskaava
+\eqref{muuntokaava-R1b} on pätevä:
+\begin{align*}
+\int_0^1 x\,dx &= \int_0^1 f(u(t))u'(t)\,dt \\
+               &= \int_0^1 (9t-18t^2+8t^3)\,dt \\
+               &= \sijoitus{0}{1}(\tfrac{9}{2}t^2-6t^3+2t^4) = \frac{1}{2}\,.
+\end{align*}
+\end{Exa}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,5)(-1,-0.5)
+\put(0,0){\vector(1,0){3}} \put(2.8,-0.5){$t$}
+\put(0,0){\vector(0,1){3}} \put(0.2,2.8){$x$}
+\curve(0,0,1,2,2,2)
+\dashline{0.1}(0,2)(2,2) \dashline{0.1}(1,0)(1,2)
+\put(2,0){\line(0,-1){0.1}} \put(1.9,-0.5){$1$} \put(0.9,-0.5){$\tfrac{1}{2}$}
+\put(0,2){\line(-1,0){0.1}} \put(-0.4,1.85){$1$}
+\put(1.5,2.4){$x=u(t)$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+Sen sijaan kaava \eqref{muuntokaava-R1a} antaa väärän tuloksen:
+\[
+\int_0^1 f(u(t))\abs{u'(t)}\,dt
+     =\int_0^{3/4}(9t-18t^2+8t^3)\,dt - \int_{3/4}^1(9t-18t^2+8t^3)\,dt 
+     = \frac{49}{64}\,.
+\]
+Kummallakin tavalla saadaan oikea tulos, jos muunnetuksi integroimisväliksi valitaan 
+$B=[0,\tfrac{1}{2}]$, jolloin $u:B\kohti[0,1]$ on bijektio (vrt.\ kuvio). \loppu
+
+Esimerkistä nähdään, että määrätyn integraalin muunnoskaava \eqref{muuntokaava} antaa
+yleisesti väärän tuloksen, jos muunnoskuvaus ei ole injektiivinen. Ongelma on hankalampi
+useammassa dimensiossa, missä epäinjektiivisyyttä ei aina ole helppo havaita. Useammassa
+dimensiossa ei ongelman poistamiseksi myöskään ole mitään yksinkertaista, määrätyn integraalin
+sijoituskaavaan verrattavaa oikotietä.
+
+\subsection*{Muuntosuhde $\R^n$:ssä}
+\index{muuntosuhde integraalissa!b@$\R^n$:ssä|vahv}
+
+Tarkastellaan ensin kaksiulotteista muunnosta
+\[
+\begin{cases}
+\,x=u(t,s), \\
+\,y=v(t,s), &\mt=(t,s)\in T, \ \mpu=(u,v),
+\end{cases}
+\]
+missä $T$ on perussuorakulmio. Oletetaan, että $u$ ja $v$ ovat jatkuvasti derivoituvia $T$:ssä
+(osittaisderivaatat olemassa ja jatkuvia $T$:ssä, Määritelmä
+\ref{jatkuvuus kompaktissa joukossa - Rn}). Tällöin suorakulmion
+$\Delta T=[t_0+\Delta t]\times [s_0+\Delta s]\subset T$ kuvautumista voi tutkia likimäärin
+linearisoivalla approksimaatiolla (vrt. Luku \ref{jacobiaani})
+\[
+\begin{cases}
+\,x(t,s)\approx u(t_0,s_0)+u_t(t_0,s_0)(t-t_0)+u_s(t_0,s_0)(s-s_0), \\
+\,y(t,s)\approx v(t_0,s_0)\,+v_t(t_0,s_0)(t-t_0)+v_s(t_0,s_0)(s-s_0).
+\end{cases}
+\]
+Tämä on affiinikuvaus, jonka mukaisesti suorakulmio kuvautuu suunnikkaaksi. Suunnikkaan
+virittävät vektorit
+\begin{align*}
+\vec a &= \Delta t\bigl[u_t(t_0,s_0)\vec i + v_t(t_0,s_0)\vec j\,\bigr], \\
+\vec b &= \Delta s\bigl[u_s(t_0,s_0)\vec i + v_s(t_0,s_0)\vec j\,\bigr].
+\end{align*}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-28.pstex_t}
+\end{center}
+\end{figure}
+Kun määritellään kuvauksen $\mpu$ Jacobin matriisi (vrt.\ Luku \ref{jacobiaani})
+\[
+\mJ\mpu(t,s)=\begin{bmatrix} u_t & u_s \\ v_t & v_s \end{bmatrix},
+\]
+niin nähdään, että suunnikkaan pinta-ala on
+\[
+\mu(\Delta A)=\abs{\vec a \times \vec b}=\abs{\det[\mJ\mpu(t_0,s_0)]}\,|\Delta t||\Delta s|.
+\]
+Koska $\mu(\Delta T)=|\Delta t||\Delta s|$, niin muuntosuhde on tämän perusteella
+$J(t,s)=|\det[\mJ\mpu(t,s)]|$. Oletetuin säännöllisyyehdoin tämä osoittautuu oikeaksi
+tulokseksi (sivuutetaan tarkemmat perustelut), joten tasointegraalin muuntosuhde saadaan
+\index{Jacobin determinantti}%
+\kor{Jacobin determinantin} $\det[\mJ\mpu(t,s)]$ avulla:
+\[
+\boxed{\kehys\quad 
+       \text{Muuntosuhde = kuvauksen $\mpu$ Jacobin determinantin itseisarvo.} \quad}
+\]
+
+Em.\  tulos on pätevä myös yleisemmin $n$-ulotteiselle avaruusintegraalille. Nimittäin jos
+$\mpu:\,T \kohti \mpu(T)$ on epälineaarinen kuvaus ($T\subset\R^n$ perussärmiö), niin tämän
+linearisaatio pisteessä $\mt$ on $\R^n$:n affiinikuvaus, joka kuvaa suorakulmaisen särmiön
+suuntaissärmiöksi. Ko.\ suuntaissärmiön särmävektoreista muodostettu determinantti = $\mpu$:n
+Jacobin (matriisin) determinantti pisteessä $\mt$. Koska determinantin itseisarvo on särmiön
+tilavuus (Propositio \ref{suuntaissärmiön tilavuuskaava}), niin ym.\ sääntö on pätevä. Siis
+yleistä $n$-ulotteista integraalia muunnettaessa mitan muunnoskaava on
+\[
+\boxed{\kehys\quad d\mu=\abs{\det(\mJ\mpu)}\,dt_1\cdots dt_n. \quad}
+\]
+\begin{Exa}
+$A=\text{suunnikas}$, jonka kärjet ovat $(0,0)$, $(1,0)$, $(2,1)$ ja $(3,1)$. 
+Laske $\,\int_A xy\,dxdy$.
+\end{Exa}
+\begin{multicols}{2} \raggedcolumns
+\ratk Tehdään muuttujan vaihto
+\[
+\begin{cases}
+\,x=u(t,s)=t+2s, \\
+\,y=v(t,s)=s,
+\end{cases}
+\]
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaUint-29.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+jolloin $\mpu: B \kohti A$, $B=[0,1]\times [0,1]$ on bijektio ja
+\begin{align*}
+\mJ=\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \ &\impl \ J=\abs{\det\mJ}=1 \\
+\impl \ \int_A xy\,dxdy &= \int_0^1\left[\int_0^1 (t+2s)s\,ds\right]dt \\
+                        &= \int_0^1 \left(\frac{1}{2}t+\frac{2}{3}\right)\,dt
+                         = \underline{\underline{\frac{11}{12}}}\,. \loppu
+\end{align*}
+\begin{Exa} Laske integraali
+\[ 
+\int_A e^{-x-y-z}\,dxdydz, \quad 
+         A = \{(x,y,z) \in \R^3 \mid x+y \ge 0\ \ja\ y+z \ge 0\ \ja\ x+z \ge 0\,\}. 
+\]
+\end{Exa}
+\ratk Tehdään $A$:n muotoon sopiva muuttujan vaihdos
+\[
+\begin{cases} \,u = x+y \\ \,v = y+z \\ \,w = x+z \end{cases} 
+    \ekv\quad \begin{bmatrix} x\\y\\z \end{bmatrix} =
+              \frac{1}{2} \begin{rmatrix} 1&-1&1\\1&1&-1\\-1&1&1 \end{rmatrix}
+              \begin{bmatrix} u\\v\\w \end{bmatrix},
+\]
+jolloin muuntosuhde on
+\[
+J = \left(\frac{1}{2}\right)^3 \begin{detmatrix} 1&-1&1\\1&1&-1\\-1&1&1 \end{detmatrix} 
+  = \frac{1}{2}\,.
+\] 
+Kuvaus $(u,v,w) \in B \map (x,y,z) \in A$ on ilmeinen bijektio, kun
+$B = [0,\infty)\times[0,\infty)\times[0,\infty)$, joten muunnoskaavaa \eqref{muuntokaava}
+ja Fubinin sääntöä soveltaen on tulos
+\begin{align*} 
+\int_A &e^{-x-y-z}\,dxdydz = \int_B e^{-\frac{1}{2}(u+v+w)}\,\tfrac{1}{2}\,dudvdw \\ 
+       &= \frac{1}{2}\int_0^\infty\int_0^\infty\int_0^\infty 
+           e^{-\frac{1}{2}u}e^{-\frac{1}{2}v}e^{-\frac{1}{2}w}\,dudvdw
+        = \frac{1}{2}\left[\int_0^\infty e^{-\frac{1}{2}u}\,du\right]^3 
+        = \underline{\underline{4}}. \loppu
+\end{align*}
+
+\subsection*{Integraalit käyräviivaisissa koordinaatistoissa}
+\index{tasointegraali!c@käyräv.\ koordinaateissa|vahv}
+\index{avaruusintegraali!b@käyräv.\ koordinaateissa|vahv}
+\index{muuntosuhde integraalissa!c@käyräv.\ koordinaatistoissa|vahv}
+\index{kzyyrzy@käyräviivaiset koordinaatistot!d@--integraalit|vahv}
+
+Integraalien muunnoskaavat tulevat fysikaalisissa sovelluksissa käyttöön useimmin silloin, kun
+karteesisesta koordinaatistosta halutaan siirtyä käyräviivaiseen napa-, lieriö- tai 
+pallokoordinaatistoon. Jos tasossa siirrytään napakoordinaatteihin, niin muunnoksen
+\[
+x=r\cos\varphi=u(r,\varphi), \quad y=r\sin\varphi=v(r,\varphi)
+\]
+Jacobin matriisi on
+\[
+\mJ=\begin{rmatrix} \cos\varphi & -r\sin\varphi \\ \sin\varphi & r\cos\varphi \end{rmatrix}.
+\]
+Tämän determinantin itseisarvo on $J=r$, joten muunnoskaavaksi tulee
+\[
+\boxed{\kehys\quad \int_A f(x,y)\,dxdy=\int_B g(r,\varphi)\,rdrd\varphi. \quad}
+\]
+Esimerkiksi jos $A=$ origokeskinen, $R$-säteinen kiekko, niin kaava on pätevä, kun 
+$B=[0,R]\times[0,2\pi]$. Muunnoksen lievästä epäinjektiivisyydestä ei tässä ole haittaa, koska
+se rajoittuu nollamittaiseen osajoukkoon ($r=0$, $\varphi=0$ tai $\varphi=2\pi$).
+\begin{Exa} Laske $\displaystyle{\int_{\R^2} e^{-x^2-y^2}\,dxdy}$.
+\end{Exa}
+\ratk Siirrytään napkoordinaatistoon. Koordinaattimuunnos $\mpu: B \kohti \R^2$ on (melkein)
+bijektio, kun valitaan $B=\{(r,\varphi)\in\R^2 \mid r \ge 0,\ 0 \le \varphi \le 2\pi\}$, joten
+\begin{align*}
+\int_{\R^2} e^{-x^2-y^2}\,dxdy 
+&= \int_B e^{-r^2}r\,dr d\varphi \\
+&= \int_0^{2\pi} \left[\int_0^\infty e^{-r^2}r\,dr\right]d\varphi
+ = 2\pi \sijoitus{0}{\infty} \left(-\frac{1}{2}e^{-r^2}\right)
+ = \underline{\underline{\pi}}. \loppu
+\end{align*}
+Esimerkin integraali laskettuna karteesisessa koordinaatistossa on
+\begin{align*}
+\int_{\R^2} e^{-x^2-y^2}\,dxdy &= \int_{\R^2} e^{-x^2}\cdot e^{-y^2}\,dxdy \\
+&= \left[\int_{-\infty}^\infty e^{-x^2}\,dx\right]
+   \left[\int_{-\infty}^\infty e^{-y^2}\,dy\right] 
+ = \left[\int_{-\infty}^\infty e^{-x^2}\,dx\right]^2.
+\end{align*}
+Saatiin siis hauska tulos:
+\begin{Prop} \label{Gamma(1/2)} $\ \int_{-\infty}^\infty e^{-x^2}\,dx=\sqrt{\pi}$.
+\end{Prop}
+Siirryttäessä kolmessa dimensiossa lierökoordinaatistoon on muuntosuhde sama kuin tasossa
+siirryttäessä polaarikoordinaatistoon, eli $J(r,\varphi,z)=r$. Pallokoordinaatistoon
+siirryttäessä saadaan muuntosuhteeksi
+\[ 
+J=\abs{\det\mJ\,}=\left|\begin{array}{ccc} 
+                  \sin\theta\cos\varphi & r\cos\theta\cos\varphi & -r\sin\theta\sin\varphi \\
+                  \sin\theta\sin\varphi & r\cos\theta\sin\varphi & r\sin\theta\cos\varphi \\
+                  \cos\theta            & -r\sin\theta           & 0
+                  \end{array}\right| = r^2\sin\theta. 
+\]
+Integraalin muunnoskaavat lieriö- ja pallokoordinaatistoon ovat näin ollen                                     
+\[
+\boxed{\begin{aligned}
+\ykehys\quad &\text{Lieriökoord.\,:} \qquad 
+              \int_A f(x,y,z)\,dxdydz = \int_B g(r,\varphi,z)\,r\,drd\varphi dz \\
+             &\text{Pallokoord.\,:} \qquad\    
+              \int_A f(x,y,z)\,dxdydz 
+                = \int_B g(r,\theta,\varphi)\,r^2\sin\theta\,drd\theta d\varphi \quad\akehys 
+\end{aligned}}
+\]
+\begin{Exa} \label{integraali yli pallokuoren} Laske $I=\int_A(x^2+y^2)\,dxdydz$, kun $A$ on
+\index{pallokuori}%
+\kor{pallokuori} eli kahden pallopinnan väliin jäävä alue:
+\[
+A=\{\,(x,y,z)\in\R^3\ |\ R_1^2 \le x^2+y^2+z^2 \le R_2^2\,\}.
+\]
+\end{Exa} 
+\ratk Lasku käy helpoiten pallokoordinaattien avulla:
+\begin{align*}
+I &= \int_0^{2\pi}\left\{\int_0^\pi\left[\int_{R_1}^{R_2}
+         r^2\sin^2\theta\cdot r^2\sin\theta\,dr\right]d\theta\right\}d\varphi \\
+  &= \int_0^{2\pi}d\varphi\cdot\int_0^\pi\sin^3\theta\,d\theta\cdot\int_{R_1}^{R_2}r^4\,dr
+   = 2\pi\cdot\frac{4}{3}\cdot\frac{1}{5}(R_2^5-R_1^5)
+   = \underline{\underline{\frac{8\pi}{15}(R_2^5-R_1^5)}}. \loppu
+\end{align*}
+
+\Harj
+\begin{enumerate}
+
+\item
+Muunna integraali $\int_A f(x,y)\,dxdy$ annettua muunnosta $\mpu$ käyttäen laskemalla ensin 
+tarkasti suhde $\mu(\Delta A)/\mu(\Delta T)$, missä $\Delta T=[t,t+\Delta t,s,s+\Delta s]$ ja
+$\Delta A=\mpu(\Delta T)$, ja muuntosuhde tämän raja-arvona, kun 
+$\max\{\Delta t,\Delta s\} \kohti 0\,$: 
+a) \ $A:\ x\in[1,2]\ \ja\ -x^2 \le y \le 3x^2,\,\ \mpu(t,s)=(t,st^2)$ \newline
+b) \ $A:\ x\in[1,\infty)\ \ja\ 1/x^2 \le y \le 2/x^2,\,\ \mpu(t,s)=(t,s/t^2)$
+
+\item
+Laske sopivalla muunnoksella: \vspace{1mm}\newline
+a) \ $\int_A (x+2y)^4(x-2y)^6\,dxdy,\,\ A:\ \abs{x+2y} \le 1\ \ja\ \abs{x-2y} \le 2$ \newline
+b) \ $\int_A (2x+3y)^2(x-5y)^2\,dxdy,\,\ A:\ \abs{2x+3y} \le 4\ \ja\ \abs{x-5y} \le 3$
+ 
+\item
+Laske seuraavat integraalit sijoituksella muotoa $x=as\,\cos t,\ y=bs\,\sin t$.
+\begin{align*}
+&\text{a)}\ \ \int_{\R^2} e^{-3x^2-4y^2}\,dxdy \qquad
+ \text{b)}\ \ \int_{\R^2} \frac{1}{(1+x^2+4y^2)^2}\,dxdy \\
+&\text{c)}\ \ \int_A \ln\left(1+\frac{x^2}{4}+\frac{y^2}{9}\right)dxdy, \quad
+              A:\ x,y \ge 0\ \ja\ 9x^2+4y^2 \le 36
+\end{align*}
+
+\item
+a) Joukko $A\subset\R^2$ sijaitsee koordinaattineljänneksessä $x,y>0$ ja rajoittuu käyriin
+$y^3=ax^2$, $y^3=bx^2$, $x^4=cy^3$ ja $x^4=dy^3$, missä $0<a<b$ ja $0<c<d$. Laske pinta-ala
+$\mu(A)$ sijoituksella $y^3=ux^2,\ x^4=vy^3$. \vspace{1mm}\newline
+b) Ratkaise Harj.teht.\,\ref{avaruusintegraalit}:\ref{H-uint-3: ellipsoidin tilavuus} muuttujan
+vaihdolla $(x,y,z)=(au,bv,cw)$.
+
+%\item 
+%Kappaletta, jonka tiheys $\rho$ on vakio, rajoittavat $xy$-taso, lieriö $x^2+y^2=a^2$ ja 
+%paraboloidi $x^2+y^2=az$ ($a>0$). Laske kappaleen massa ja hitausmomentit koordinaatiakselien 
+%suhteen käyttäen lieriökoordinaatteja.
+
+\item 
+Laske integraali $\int_A f\,dxdydz$ lieriö- tai pallokoordinaatteihin
+siirtymällä: \vspace{1mm}\newline
+a)\ \ $A:\ x^2+y^2 \le z \le \sqrt{2-x^2-y^2}, \quad f(x,y,z)=z$ \newline
+b)\ \ $A:\ x^2+y^2+z^2 \le 12,\ z \ge x^2+y^2, \quad f(x,y,z)=1$ \newline
+c)\ \ $A:\ x^2+y^2+z^2 \le R^2,\ x,y,z \ge 0, \quad f(x,y,z)=x$ \newline
+d)\ \ $A:\ x^2 + y^2 + z^2 \le R^2,\ x,y,z\ge 0, \quad f(x,y,z=xyz$ \newline
+e)\ \ $A:\ 1 \le x^2+y^2 \le 4,\ 0 \le y \le x,\ 0 \le z \le 1, \quad f(x,y,z)=x^2+y^2$ \newline
+f)\,\ \ $A:\ 4 \le x^2+y^2+z^2 \le 9,\ z \ge 0, \quad f(x,y,z)=z$ \newline
+g)\ \ $A:\ x^2+y^2 \ge R^2,\ x^2+y^2+z^2 \le R^2, \quad f(x,y,z)=x^2+y^2$
+
+\item 
+Puolikartio $z=\sqrt{x^2+y^2}$ jakaa origokeskiset pallot kahteen osaan. Laske näiden
+osien tilavuuksien suhde pallokoordinaattien avulla.
+
+\item (*)
+Olkoon $f(x,y)=e^{(y-x)/(y+x)}$ ja $A$ kolmio, jonka kärjet ovat $(0,0)$, $(1,0)$ ja $(0,1)$.
+Laske integraali $\int_A f\,dxdy$ \ a) polaarikoordinaattien avulla, \linebreak
+b) sijoituksella $u=y-x,\ v=y+x$.
+
+\item (*)
+Laske tasointegraali $\D \int_0^\infty\left[\int_0^x \frac{e^{-x-2y}}{x+2y}\,dy\right]dx$.
+
+\item (*)
+Laske tilavuus $\mu(A)$, kun $A\subset\R^3$ määritellään ehdoilla
+\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} \le 1\ \ja\ z+y \ge b \quad (a,b,c>0).
+\]
+
+\item (*)
+Olkoon $K$ suuntaissärmiö, jonka yksi kärki on origossa ja origosta lähtevien särmien toiset
+päätepisteet ovat $(2,1,1)$, $(-1,2,2)$ ja $(0,-2,1)$. Laske $\int_K xye^z\,dxdydz\,$ sopivalla
+muuttujan vaihdolla.
+
+\end{enumerate} 

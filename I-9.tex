@@ -1,0 +1,494 @@
+\section{Reaaliluvut} \label{reaaliluvut}
+\alku
+
+Aloitetaan m‰‰ritelm‰st‰.
+\begin{Def} \label{reaaliluvut desimaalilukuina} \index{reaaliluvut!a@desimaalilukuina|emph}
+(\vahv{Reaaliluvut}) \kor{Reaalilukujen} joukko $\R$ koostuu ‰‰rettˆmist‰ desimaaliluvuista,
+ts.\ $\R=\DD$.
+\end{Def}
+M‰‰ritelm‰ \ref{reaaliluvut desimaalilukuina} reaaliluvuille ei ole ainoa mahdollinen, sill‰ on
+ilmeist‰, ett‰ esimerkiksi ‰‰rettˆm‰t binaariluvut voitaisiin yht‰ hyvin ottaa m‰‰rittelyn
+l‰htˆkohdaksi. Monia muitakin l‰hestymistapoja on, kuten havaitaan tuonnempana. M‰‰ritelm‰ 
+\ref{reaaliluvut desimaalilukuina} antaa joka tapauksessa reaaliluvuille er‰‰n mahdollisen 
+tulkinnan, joka jatkossa otetaan l‰htˆkohdaksi. 
+
+Yhdess‰ aiemmin sovitun samastusrelaation (M‰‰ritelm‰ \ref{samastus DD}) kanssa M‰‰ritelm‰ 
+\ref{reaaliluvut desimaalilukuina} kertoo vasta, milt‰ reaaliluvut 'n‰ytt‰v‰t' ja miten niit‰ 
+erotellaan. Jotta reaaliluvuilla p‰‰st‰isiin myˆs laskemaan, on m‰‰ritelt‰v‰ lukujen v‰liset
+laskuoperaatiot. 
+
+\subsection*{$\R$:n laskuoperaatiot}
+
+Viitaten M‰‰ritelm‰‰n \ref{jonon raja - desim} asetetaan
+\begin{Def} \label{reaalilukujen laskutoimitukset}
+\index{laskuoperaatiot!b@reaalilukujen|emph}
+\index{reaalilux@reaalilukujen!a@laskuoperaatiot|emph}
+(\vahv{Reaalilukujen laskutoimitukset}) Jos $\x = \seq{x_n}$ ja $\y = \seq{y_n}$ ovat
+reaalilukuja, niin m‰‰ritell‰‰n
+\begin{align*}
+\text{yhteenlasku:} \quad\quad       \x+\y &= \lim_n\,(x_n+y_n) = \z\in\R. \\
+\text{kertolasku:} \ \quad\quad\quad  \x\y &= \lim_n\,x_n y_n = \z\in\R.\\
+\text{jakolasku:} \,\ \ \quad\quad   \x/\y &= \lim_n\,x_n / y_n = \z\in\R.
+\end{align*} \end{Def}
+T‰ss‰ on jakolaskussa oletettava tavalliseen tapaan $\y \neq 0$, eli $y_n \not\kohti 0$
+(M‰‰ritelm‰ \ref{samastus QD}). Ehto merkitsee, ett‰ jollakin $m$ on  $y_m \neq 0$, jolloin
+t‰st‰ indeksist‰ alkaen on $\abs{y_n} \ge \abs{y_m} > 0,\ n \ge m$ (koska $\seq{\abs{y_n}}$ on
+kasvava jono). Jakolaskun m‰‰ritelm‰ on siis muodollisesti kunnossa, kunhan $\y \neq 0$ ja
+jonossa $\seq{x_n/y_n}$ rajoitutaan indekseihin $n \ge m$. Yhteenlaskun m‰‰ritelm‰st‰ n‰hd‰‰n,
+ett‰ luvun $\x = \seq{x_n}$ vastaluku on $-\x = \seq{-x_n}$, eli operaatio $\x \map -\x$ vastaa
+desimaaliluvun etumerkin vaihtoa, kuten jo Luvussa \ref{desimaaliluvut} sovittiin. V‰hennyslasku
+m‰‰ritell‰‰n t‰m‰n j‰lkeen normaaliin tapaan, eli $\x-\y=\x+(-\y)=\lim_n(x_n-y_n)\in\R$.
+
+M‰‰ritelm‰ \ref{reaalilukujen laskutoimitukset} on k‰yt‰nnˆn l‰heinen sik‰li, ett‰ se
+perustuu suoraan lukujen $\breve{x}$ ja $\breve{y}$ esitysmuotoihin annetussa
+lukuj‰rjestelm‰ss‰, t‰ss‰ kymmenj‰rjestelm‰ss‰. Lukujonojen $\seq{x_n+y_n}$, $\seq{x_ny_n}$ ja
+$\seq{x_n/y_n}$ termien laskemisen voi ajatella vastaavan likim‰‰r‰isi‰ laskuoperaatioita
+liukuluvuilla (vrt.\ Luku \ref{desimaaliluvut}). M‰‰ritelm‰‰n sis‰ltyy kuitenkin toistaiseksi
+ratkaisematon teoreettinen ongelma: Lukujonojen $\seq{x_n+y_n}$, $\seq{x_ny_n}$ ja
+$\seq{x_n/y_n}$ oletetetaan suppenevan kohti reaalilukua (eli ‰‰retˆnt‰ desimaalilukua), mutta
+toistaiseksi t‰m‰ on varmistettu vain monotonisen ja rajoitetun lukujonon osalta
+(Lause \ref{monotoninen ja rajoitettu jono}). M‰‰ritelm‰n
+\ref{reaalilukujen laskutoimitukset} lukujonot ovat kyll‰ rajoitettuja (mainituin lis‰ehdoin
+koskien jonoa $\seq{x_n/y_n}$) mutta eiv‰t v‰ltt‰m‰tt‰ monotonisia. M‰‰ritelm‰n tueksi
+tarvitaankin seuraava lause.
+\begin{Lause} \label{monotoninen ja rajoitettu jono - yleistys} Jos $\seq{a_n}$ ja $\seq{b_n}$
+ovat monotonisia ja rajoitettuja lukujonoja, niin lukujonot $\seq{a_n+b_n}$ ja $\seq{a_nb_n}$
+suppenevat M‰‰ritelm‰n \ref{jonon raja - desim} mukaisesti kohti reaalilukua. Jos edelleen
+$|b_n| \ge b>0\ \forall n$, niin myˆs jono $\seq{a_n/b_n}$ suppenee kohti reaalilukua.
+\end{Lause}
+\tod \ \underline{Yhteenlasku}. Jos $\seq{a_n}$ ja $\seq{b_n}$ ovat molemmat kasvavia tai
+molemmat v‰henevi‰, niin $\seq{a_n+b_n}$ on vastaavasti kasvava/v‰henev‰
+(Harj.teht.\,\ref{desimaaliluvut}:\ref{H-I-5: monotonisten jonojen yhdistely}), jolloin
+$\lim_n(a_n+b_n)\in\R$ on olemassa Lauseen \ref{monotoninen ja rajoitettu jono} perusteella.
+Olkoon toinen jonoista kasvava ja toinen v‰henev‰, esim.\ $\seq{a_n}$ kasvava. Valitaan
+$b\in\Q$ siten, ett‰ $b_n+b \ge 0\ \forall n$ (mahdollista, koska $\seq{b_n}$ on rajoitettu) ja
+kirjoitetaan
+\[
+a_n+b_n = (a_n-b)+(b_n+b).
+\]
+T‰ss‰ $\seq{b_n+b}$ on rajoitettu ja v‰henev‰ jono, joten Lauseen
+\ref{monotoninen ja rajoitettu jono} mukaan se suppenee:
+$\lim_n(b_n+b)=\breve{x}=\seq{x_n}\in\R$. Koska $b_n+b \ge 0\ \forall n$, on $\breve{x}$:n
+etumerkki $+$ (mahdollisesti $\breve{x}=0$), joten lukujono $\seq{x_n}$ on kasvava.
+Koska myˆs $\seq{a_n-b}$ on kasvava jono, niin samoin on $\seq{a_n-b+x_n}$, joten
+Lauseen \ref{monotoninen ja rajoitettu jono} mukaan 
+$\lim_n(a_n-b+x_n)=\breve{y}=\seq{y_n}\in\R$. N‰in m‰‰r‰tty $\breve{y}$ on lukujonon
+$\seq{a_n+b_n}$ raja-arvo M‰‰ritelm‰n \ref{jonon raja - desim} mukaisesti, sill‰ ko.\
+m‰‰ritelm‰n ja Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} perusteella
+\[
+(a_n+b_n)-y_n = [(a_n-b+x_n)-y_n]+(b_n+b-x_n) \kohti 0+0 = 0.
+\]
+\underline{Kertolasku}. Olkoon $\lim_na_n=\breve{x}=\seq{x_n}\in\R$ ja
+$\lim_nb_n=\breve{y}=\seq{y_n}\in\R$. Jos $\breve{x}$:ll‰ ja $\breve{y}$:ll‰ on sama etumerkki,
+niin jono $\seq{x_ny_n}=\seq{|x_n||y_n|}$ on kasvava (koska $\seq{|x_n|}$ ja $\seq{|y_n|}$, ovat
+kasvavia, vrt.\ Harj.teht.\,\ref{desimaaliluvut}:\ref{H-I-5: monotonisten jonojen yhdistely}),
+muussa tapauksessa $\seq{x_ny_n}=\seq{-|x_n||y_n|}$ on v‰henev‰ jono. Lauseen
+\ref{monotoninen ja rajoitettu jono} mukaan on siis olemassa raja-arvo
+$\lim_nx_ny_n=\breve{z}=\seq{z_n}\in\R$. T‰m‰ on myˆs lukujonon $\seq{a_nb_n}$ raja-arvo
+M‰‰ritelm‰n \ref{jonon raja - desim} mukaisesti, sill‰ ko.\ m‰‰ritelm‰n ja Lauseen
+\ref{jonotuloksia} (V3) mukaan
+\[
+a_nb_n-z_n = (a_n-x_n)b_n+(b_n-y_n)x_n+(x_ny_n-z_n) \kohti 0+0+0=0.
+\]
+\underline{Jakolasku}. Koska $\seq{b_n}$ on monotoninen lukujono, niin tehdyin lis‰oletuksin
+on jostakin indeksist‰ $n=m$ alkaen oltava joko $b_n \ge b$ tai $b_n \le -b$. T‰llˆin
+lukujono $\seq{1/b_n}$ on monotoninen indeksist‰ $n=m$ alkaen. Kirjoitetaan t‰st‰ indeksist‰
+eteenp‰in $a_n/b_n=a_n(1/b_n)$ ja vedotaan jo k‰siteltyyn kertolaskuun. \loppu
+
+Koska M‰‰ritelm‰n \ref{reaalilukujen laskutoimitukset} lukujonot $\seq{x_n}$ ja $\seq{y_n}$ ovat
+monotonisia ja rajoitettuja, niin Lause \ref{monotoninen ja rajoitettu jono - yleistys} takaa
+m‰‰ritelm‰n toimivuuden. Havainnollistettakoon lauseen todistuksessa k‰ytetty‰ p‰‰ttely‰ viel‰
+laskuesimerkill‰.
+\begin{Exa} \label{laskuesimerkki desimaaliluvuilla pi ja e} Olkoon
+\begin{align*}
+\breve{\pi} &= 3.141592653\ldots = \seq{3,3.1,3.14,3.141\ldots} = \seq{p_n}, \\
+\breve{e}   &= 2.718281828\ldots = \seq{2,2.7,2.71,2.718\ldots} = \seq{e_n}.
+\end{align*}
+M‰‰rit‰ a) $\breve{\pi}+\breve{e}$ ja $\breve{\pi}\breve{e}$, b) $\breve{\pi}-\breve{e}$,
+c) $\breve{\pi}/\breve{e}$ M‰‰ritelm‰n \ref{reaalilukujen laskutoimitukset} mukaisesti
+viiden desimaalin tarkkuudella k‰ytt‰m‰ll‰ Lauseen \ref{monotoninen ja rajoitettu jono}
+todistusta algoritmina.
+\end{Exa}
+\ratk a) Lukujonot
+\[
+\seq{p_n+e_n}=\seq{5,5.8,5.85,5.859\ldots}, \quad 
+\seq{p_ne_n}=\seq{6,8.37,8.5094,8.537238\ldots}
+\]
+ovat molemmat kasvavia ja rajoitettuja, joten ne suppenevat kohti reaalilukua
+(Lause \ref{monotoninen ja rajoitettu jono}). Lauseen \ref{monotoninen ja rajoitettu jono} 
+todistuskonstruktiota algoritmina k‰ytt‰en saadaan
+\[
+\breve{\pi}+\breve{e} = 5.85987\,..\,, \quad \breve{\pi}\breve{e}  = 8.53974\,..\,.
+\]
+b) Lukujono $\seq{p_n-e_n}=\seq{0,0.4,0.43,0.423,\ldots}$ ei ole monotoninen, joten Lause
+\ref{monotoninen ja rajoitettu jono} ei sovellu suoraan. Kirjoitetaan sen vuoksi ensin
+\[
+p_n-e_n = (p_n-3) + (3-e_n).
+\]
+T‰ss‰ $\seq{3-e_n}$ on rajoitettu ja v‰henev‰ lukujono. Sen raja-arvoksi saadaan Lauseen
+\ref{monotoninen ja rajoitettu jono} todistuskonstruktiolla
+\[
+\lim_n(3-e_n) = 3-\breve{e} = 0.28171\,..
+\]
+Kun t‰m‰ v‰litulos tulkitaan lukujonoksi $\seq{0,0.2,0.28,0.281,\ldots}=\seq{x_n}$, niin
+$\seq{p_n-3}$ ja $\seq{x_n}$ ovat molemmat kasvavia lukujonoja. Siis myˆs $\seq{(p_n-3)+x_n}$
+on kasvava, ja voidaan laskea (algoritmi sama kuin dell‰)
+\[
+\breve{\pi}-\breve{e} = \lim_n[(p_n-3)+x_n] = 0.42331\,.. 
+\]
+c) Lukujonon $\seq{p_n/e_n}$ ei ole monotoninen, joten Lause
+\ref{monotoninen ja rajoitettu jono} ei sovellu t‰h‰nk‰‰n suoraan. Lasketaan ensin
+v‰lituloksena v‰henev‰n lukujonon $\seq{1/e_n}$ raja-arvo:
+\[
+\lim_n(1/e_n) = 1/\breve{e} = 0.36787\,..
+\]
+Kun v‰litulos tulkitaan lukujonoksi $\seq{x_n}=\seq{0,0.3,0.36,0.367,\ldots}$, niin
+$\seq{p_nx_n}$ on kasvava lukujono. T‰h‰n Lauseen \ref{monotoninen ja rajoitettu jono}
+todistuskonstruktio soveltuu ja antaa
+\[
+\breve{\pi}/\breve{e} = \breve{\pi}(1/\breve{e}) = \lim_n p_nx_n = 1.15572\,.. \loppu
+\]
+
+\subsection*{$\R$:n j‰rjestysrelaatio}
+
+Myˆs j‰rjestysrelaation m‰‰ritelm‰ reaaliluvuille on suoraviivainen. 
+\begin{Def} \label{reaalilukujen j‰rjestys} 
+\index{jzy@j‰rjestysrelaatio!c@$\R$:n|emph}
+\index{reaalilux@reaalilukujen!b@j‰rjestysrelaatio|emph}
+(\vahv{$\R$:n j‰rjestysrelaatio}) Jos $\x=\seq{x_n}\in\R,\ \y=\seq{y_n}\in\R$, niin
+$\,\x<\y\,$ t‰sm‰lleen kun $\,x_n<y_n\,$ jollakin $n\,$ ja $\,\x\neq\y$.
+\end{Def}
+M‰‰ritelm‰n \ref{reaalilukujen j‰rjestys} mukaisesti voidaan reaalilukujen
+$\x=\seq{x_n}$ ja $\y=\seq{y_n}$ suuruusj‰rjestys ratkaista laskennallisesti vertailemalla
+lukuja $x_n,y_n,\ n=0,1,\ldots$ Vertailua jatketaan, kunnes tavataan ensimm‰inen indeksi, 
+jolla $x_n \neq y_n$. (Jollei t‰llaista indeksi‰ tavata, on $\x=\y$.) Jos 
+$\abs{x_n-y_n} \ge 2 \cdot 10^{-n}$, on suuruusj‰rjestys ratkennut. Muussa tapauksessa,
+eli jos $x_n-y_n = \pm 10^{-n}$, on viel‰ mahdollisuus, ett‰ $\x$ ja $\y$ samastuvat
+kumpikin lukuun $x_n$ tai $y_n$, jolloin on $\x=\y$ (ks.\ Luvun \ref{suppenevat lukujonot}
+tarkastelut liittyen Lauseeseen \ref{samastuslause DD}).
+
+M‰‰ritelmist‰ \ref{reaaliluvut desimaalilukuina}--\ref{reaalilukujen j‰rjestys} on
+johdettavissa seuraava merkitt‰v‰ tulos. Todistus esitet‰‰n luvun lopussa
+(harjoitusteht‰vill‰ tuettuna).
+\begin{*Lause} \label{R on kunta} (\vahv{$(\R,+,\cdot,<)$ on j‰rjestetty kunta})
+Reaalilukujen joukko varustettuna M‰‰ritelm‰n \ref{reaalilukujen laskutoimitukset}
+mukaisilla laskuoperaatioilla ja M‰‰ritelm‰n \ref{reaalilukujen j‰rjestys} mukaisella
+j‰rjestysrelaatiolla on j‰rjestetty kunta. 
+\end{*Lause}
+
+M‰‰ritelm‰st‰ \ref{reaalilukujen j‰rjestys} seuraa v‰littˆm‰sti, ett‰ jos
+$\x = \seq{x_n} \in \R$, niin
+\begin{align*}
+\x = 0 \quad &\ekv \quad x_n = 0\ \ \forall n \\
+\x < 0 \quad &\ekv \quad x_n < 0\ \ \text{jollakin}\ n \quad (\text{etumerkki}\ e = - ) \\
+\x > 0 \quad &\ekv \quad x_n > 0\ \ \text{jollakin}\ n \quad (\text{etumerkki}\ e = + )
+\end{align*}
+T‰m‰ vertailu siis ratkeaa pelk‰st‰‰n $\x$:n etumerkin perusteella, ellei ole $\x=0$. $\R$:n
+j‰rjestysrelaation m‰‰rittely voidaan vaihtoehtoisesti perustaa t‰h‰n vertailuun yhdistettyn‰
+v‰hennyslaskuun (vrt.\ $\Q$:n j‰rjestysrelaatio, Luku \ref{ratluvut})\,:
+\[
+\x<\y \,\ \ekv \,\ \x-\y<0.
+\]
+On ilmeist‰, ett‰ j‰rjestysrelaation aksioomista ainakin (J1) (vrt.\ Luku \ref{ratluvut})
+on voimassa kummalla tahansa m‰‰ritelm‰ll‰. 
+
+\subsection*{Reaaliluvut abstrakteina lukuina}
+\index{reaaliluvut!b@abstrakteina lukuina|vahv}
+
+Kun reaaliluvuille on m‰‰ritelty sek‰ laskuoperaatiot ett‰ j‰rjestysrelaatio, voidaan 
+reaalilukujen olemus jonoina haluttaesssa 'unohtaa' ja k‰sitell‰ lukuja vain abstrakteina 
+lukuina, joilla voi laskea ja joita voi vertailla. T‰m‰n ajattelutavan mukaisesti pidet‰‰n
+jatkossa myˆs reaalilukuja 'oikeina' lukuina, joita ei symbolisissa merkinnˆiss‰ en‰‰
+erotella rationaaliluvuista. 
+\begin{Exa} \label{kertausesimerkkej‰} Luvun \ref{monotoniset jonot} tulosten ja 
+M‰‰ritelmien \ref{reaaliluvut desimaalilukuina}-- \ref{reaalilukujen laskutoimitukset}
+perusteella voidaan nyt kirjoittaa
+\begin{align*}
+\lim_n \left(1 + \dfrac{1}{n}\right)^n\ =\ \sum_{k=0}^\infty \frac{1}{k!}\    
+                                           &= \ 2.71828182845905\,..\ = \ e\in\R, \\ 
+\lim_n \left(1 - \dfrac{1}{n}\right)^n\    &= \ 0.36787944117144\,..  = \ \frac{1}{e}\,.
+\end{align*}
+Ottamalla k‰yttˆˆn toinen hyvin tunnettu reaaliluku $\,\pi\ =\ 3.1415926535897\,..$ voidaan
+myˆs osoittaa, ett‰ (vrt.\ Luku \ref{monotoniset jonot})
+\[
+\sum_{k=1}^\infty \dfrac{1}{k^2}\ = \ 1.64493406684822\,..\ = \ \frac{\pi^2}{6}\,.
+\]
+\end{Exa}
+Reaalilukujen tultua m‰‰ritellyksi j‰rjestettyn‰ kuntana tulee myˆs lukujonon raja-arvon 
+alkuper‰isest‰ m‰‰ritelm‰st‰ (M‰‰ritelm‰ \ref{jonon raja}) p‰tev‰, kun jonon termit ja/tai 
+raja-arvo ovat reaalilukuja. Koska lukujonon suppeneminen kohti reaalista raja-arvoa on
+aiemmin m‰‰ritelty erikseen (M‰‰ritelm‰ \ref{jonon raja - desim}), tarvitaan ympyr‰n
+sulkemiseksi seuraava tulos (todistus luvun lopussa).
+\begin{*Lause} \label{suppeneminen kohti reaalilukua} M‰‰ritelm‰t \ref{jonon raja} ja 
+\ref{jonon raja - desim} lukujonon suppenemiselle kohti reaalilukua ovat yht‰pit‰v‰t. 
+\end{*Lause}
+
+\subsection*{Kymmenjako- ja puolituskonstruktiot}
+\index{kymmenjakokonstruktio|vahv} \index{puolituskonstruktio|vahv}%
+
+M‰‰ritelm‰n \ref{reaaliluvut desimaalilukuina} mukaan reaalilukua voi laskennallisesti 
+'vain l‰hesty‰, ei saavuttaa', paitsi jos luku on rationaalinen. Algoritmisesti voi 
+'l‰hestyminen' tapahtua esim.\ suoraan M‰‰ritelm‰‰n \ref{reaaliluvut desimaalilukuina} 
+perustuen, jolloin lasketaan ensin luvun kokonaislukuosa ja sen j‰lkeen desimaaleja yksi
+kerrallaan. Tarkastellaan nyt hieman yleisemmin t‰t‰ laskemisen ongelmaa.
+
+Olkoon reaaliluku $a$ m‰‰ritelty yksik‰sitteisesti, esimerkiksi asettamalla luvulle jokin 
+algebrallinen ehto, m‰‰rittelem‰ll‰ luku jonkin tunnetun jonon raja-arvona, tai jollakin
+muulla tavalla. Halutaan konstruoida $\,a\,$ M‰‰ritelm‰n \ref{reaaliluvut desimaalilukuina}
+mukaisena desimaalilukuna, eli muodossa $a = x_0.d_1 d_2\ldots$  Oletetaan jatkossa, ett‰ $a$:n
+etumerkki on $+$ (muuten konstruoidaan luku $-a\,$). T‰llˆin $a$:n kokonaislukosa ja desimaalit
+luvuissa $x_n=x_0.d_1 \ldots d_n$ m‰‰rytyv‰t seuraamalla toimintaohjetta:
+\[
+\text{Etsi $\,x_n\in\Q_n\,$ siten, ett‰ p‰tee}\ \ x_n \le a\ \ 
+                            \text{ja}\ \ x_n + 10^{-n} > a, \quad n = 0,1, \ldots
+\]
+Jos $a$ on rationaaliluku, niin toimintaohje on sama kuin jakokulma-algoritmissa (vrt.\ Luku 
+\ref{desimaaliluvut}). Yleisemm‰n reaaliluvun $a>0$ tapauksessa toimintaohjetta voi pit‰‰
+ajatuskonstruktiona, joka \pain{m‰‰rittelee} luvun $a$. Annetaan t‰lle nimi
+\kor{kymmenjako}konstruktio. --- Kymmenjakokonstruktiota on jo aiemmin k‰ytetty Lauseen
+\ref{monotoninen ja rajoitettu jono} todistuksessa. Reaaliluvun m‰‰ritelm‰n‰ 
+konstruktiota voi pit‰‰ j‰rjestysrelaatioon nojaavana M‰‰ritelm‰n
+\ref{reaaliluvut desimaalilukuina} toisintona tai t‰smennyksen‰.
+
+Kymmenjakokonstruktion on jo aiemmin todettu toimivan myˆs algoritmina (vrt.\ edellisen
+luvun esimerkit ja harjoitusteht‰v‰t). Yleisemmin algoritmi toimii, jos oletetaan, ett‰
+konstruktioon sis‰ltyv‰t vertailut ovat laskennallisesti toteutettavissa. N‰in on ainakin,
+jos oletetaan laskettava luku $a \in \R$ sellaiseksi, ett‰ mink‰ tahansa \pain{rationaaliluvun}
+$x \in \Q$ kohdalla voidaan selvitt‰‰ \pain{‰‰rellisell‰} m‰‰r‰ll‰ \pain{rationaalisia}
+operaatioita (laskuoperaatioita ja vertailuja), mik‰ vaihtoehdoista $a < x$, $a = x$, $a > x$
+on voimassa. T‰llˆin saadaan ensin $a$:n etumerkki selville vertaamalla lukuun $x=0$, mink‰
+j‰lkeen $a$:n tai $-a$:n kokonaislukuosa ja desimaalit $d_n$ voidaan laskea ym.\ toimintaohjetta
+seuraamalla, periaatteessa mihin tahansa haluttuun indeksiin asti. T‰llainen
+\kor{kymmenjakoalgoritmi} on siis jakokulma-algoritmin yleistys.
+\begin{Exa} \label{neliˆjuuri 2} Konstruoi reaaliluku $a=\sqrt{2}$ kymmenjakoalgoritmilla.
+\end{Exa}
+\ratk Luvun $a$ ja positiivisen rationaaliluvun $x$ vertailu palutuu rationaaliseksi
+ekvivalenssilla
+\[
+a<x\ \ekv\ 2<x^2.
+\]
+Koska $1^2<2$ ja $2^2>2$, on ensinn‰kin oltava $\ a = 1.d_1d_2d_3\,..\ $ Edelleen koska
+$\,1.4^2 = 1.96 < 2$, $\,1.5^2 = 2.25 > 2$, $\,1.41^2 = 1.9881 < 2$, $\,1.42^2 = 2.0164 > 2$,
+$\,1.414^2 = 1.999396 < 2$ ja $1.415^2 = 2.002225 > 2$, on $d_1 = 4$, $d_2=1$ ja $d_3=4$.
+Jatkamalla t‰ll‰ tavoin on tuloksena (jaksoton) desimaaliluku
+$a = 1.4142135623730950488016887\,..$\footnote[2]{Ennen laskimia on neliˆjuurien k‰sinlaskua
+esimerkin tapaan harjoiteltu kouluissakin. -- Nykyisin laskimet ja tietokoneet laskevat
+neliˆjuuria kymmenjakoa paljon tehokkaammilla, palautuviin lukujonoihin perustuvilla
+algoritmeilla, vrt.\ edellisen luvun Esimerkki \ref{sqrt 2 algoritmina}.} \loppu
+\begin{Exa} Laske luku $a = \sqrt{\sqrt{2}+1}\ $ $20$ merkitsev‰n numeron tarkkuudella k‰ytt‰en
+kymmenjakoalgoritmia. 
+\end{Exa}
+\ratk Verrattaessa lukua $a$ rationaalilukuun $x \ge 1$ p‰tee
+\[
+a\,<\,x \qekv \sqrt{2} + 1\,<\,x^2 \qekv \sqrt{2}\,<\,x^2 - 1 \qekv 2\,<\,(x^2 - 1)^2,
+\]
+joten vertailu palautuu rationaalioperaatioksi. Algoritmia seuraten saadaan
+\[
+a\ =\ 1.5537739740300373073\,.. \quad \loppu
+\]
+\index{symbolinen laskenta}%
+Esimerkeiss‰ vertailun $a<x$ palauttaminen rationaaliseksi perustuu \kor{symboliseen} 
+(ei-numeeriseen) \kor{laskentaan}, t‰ss‰ algebraan, joka nojaa viime k‰dess‰ reaalilukujen
+kunta-aksioomiin, j‰rjestysrelaation aksioomiin ja neliˆjuuren symboliseen m‰‰ritelm‰‰n
+$(\sqrt{a})^2 = a$. Kuten n‰iss‰ esimerkeiss‰, symbolisen laskennan teht‰v‰n‰ on yleens‰
+yksinkertaistaa tai selkeytt‰‰ laskentateht‰v‰‰ ennen varsinaisia numeerisia laskuja.
+ 
+Kymmenjaon vastine voidaan luonnollisesti konstruoida myˆs muihin lukuj‰rjestelmiin perustuvana. 
+Binaarij‰rjestelm‰n tapauksessa k‰ytet‰‰n nimityst‰ \kor{puolituskonstruktio} (tai 
+puolitusmenetelm‰, engl.\ bisection). Puolituskonstruktiossa reaaliluku $a \ge 0$ konstruoidaan
+binaarimuodossa $a = x_0.b_1b_2b_3\,..$, miss‰ kokonaislukuosa $x_0$ ja bitit $b_n \in \{0,1\}$
+valitaan siten, ett‰ luvut $x_0$ ja $\,x_n = x_0 + \sum_{k=1}^n b_k \cdot 2^{-k},\ n \in \N,$
+toteuttavat  
+\[
+x_n \le\,a \quad \text{ja} \quad x_n + 2^{-n} >\,a, \quad n = 0,1, \ldots
+\]
+Yksinkertaisen logiikkansa vuoksi puolitusmenetelm‰‰ k‰ytet‰‰n matemaattisten todistusten 
+ajatuskonstruktioissa hyvin usein. (Puolituskonstruktio olisi ollut vaihtoehto myˆs Lauseen
+\ref{monotoninen ja rajoitettu jono} todistuksessa.) Ym.\ lis‰oletusten voimassa ollessa voi
+konstruktiota k‰ytt‰‰ myˆs toimivana algoritmina.
+
+\subsection*{Reaalilukujen jonot}
+\index{lukujono|vahv}
+
+Reaalilukujen jono-olemuksen 'unohtaminen' on erityisen suositeltavaa silloin, kun tutkitaan 
+\kor{reaalilukujonoja} ja niiden suppenemista. J‰rjestysrelaatioon sek‰ (v‰h‰isess‰ m‰‰rin)
+kunta-algebraan vetoava M‰‰ritelm‰ \ref{jonon raja} on sellaisenaan p‰tev‰ myˆs reaalilukujonon
+suppenemisen m‰‰ritelm‰n‰. Jos reaalilukujonolla on t‰m‰n m‰‰ritelm‰n mukainen raja-arvo
+(reaalilukuna), niin sanotaan, ett‰ jono
+\index{suppeneminen!a@lukujonon} \index{hajaantuminen!a@lukujonon}%
+\kor{suppenee}, muussa tapauksessa \kor{hajaantuu} (vrt.\ M‰‰ritelm‰ \ref{jonon raja - desim}). 
+\begin{Exa} \label{reaalinen geometrinen sarja} M‰‰rit‰ perusmuotoisen geometrisen sarjan summa,
+kun $q = 1/\sqrt{2}$. 
+\end{Exa}
+\ratk Luvussa \ref{jonon raja-arvo} johdettu geometrisen sarjan summakaava on p‰tev‰, kun 
+$q \in \R$ ja $\abs{q}<1$. T‰ss‰ on $0<q<1$, joten
+\[
+\sum_{n=0}^{\infty} \bigl( \frac{1}{\sqrt{2}} \bigr)^n\ 
+                      =\ \frac{1}{1-\frac{1}{\sqrt{2}}}\ =\ \frac{\sqrt{2}}{\sqrt{2}-1}\ 
+                      =\ 2 + \sqrt{2}\ =\ 3.4142135623730950488 \ldots  \loppu
+\]
+Esimerkin lasku on j‰lleen esimerkki myˆs symbolisesta laskennasta, jossa lukua $\sqrt{2}$ 
+k‰sitell‰‰n abstraktina lukuna pelk‰st‰‰n kunnan $(\R,+,\cdot)$ yleisi‰ ominaisuuksia 
+(kunta-aksioomia) ja symbolista m‰‰ritelm‰‰ $\ (\sqrt{2})^2 = 2\ $ hyv‰ksi k‰ytt‰en.
+
+Todettakoon, ett‰ kaikki Luvuissa \ref{jonon raja-arvo}--\ref{monotoniset jonot} esitetyt
+lukujonoja koskevat m‰‰ritelm‰t ja v‰itt‰m‰t ovat p‰tevi‰ reaalilukujen kunnassa
+$(\R,+,\cdot,<)$ --- syyst‰, ett‰ n‰m‰ perustuvat vain j‰rjestetyn kunnan algebraan ja
+oletukseen, ett‰ kunta sis‰lt‰‰ rationaaliluvut. 
+
+Esimerkkin‰ reaalilukujonon suppenemistarkastelusta todistettakoon
+\begin{Prop} \label{juurilemma} $\quad \displaystyle{\boxed{\kehys\quad 
+\lim_n \sqrt[n]{a}=1 \quad \forall a\in\R,\ a>0. \quad}}$ 
+\end{Prop}
+\tod Merkit‰‰n $b_n=\sqrt[n]{a}$. Tapauksessa $a=1$ on v‰itt‰m‰ ilmeisen tosi ja tapauksessa 
+$0<a<1$ p‰tee: $\,b_n=1/(1/a)^{1/n} \kohti 1$, jos $(1/a)^{1/n} \kohti 1$ 
+(Lause \ref{raja-arvojen yhdistelys‰‰nnˆt} reaalilukujonoille). Riitt‰‰ siis tarkastella
+tapausta $a>1$. T‰llˆin on oltava $b_n>1\ \forall n$ (koska $b_n^n=a>1$), jolloin seuraa
+\[
+\left(\frac{b_{n+1}}{b_n}\right)^n =\, \frac{1}{b_{n+1}}\frac{b_{n+1}^{n+1}}{b_n^n}
+\,=\, \frac{1}{b_{n+1}}\frac{a}{a} \,=\, \frac{1}{b_{n+1}} \,<\, 1. 
+\]  
+Siis $b_{n+1}/b_n<1\ \forall n$, joten $\seq{b_n}$ on aidosti v‰henev‰ lukujono. Koska 
+$\seq{b_n}$ on myˆs ilmeisen rajoitettu lukujono, niin $b_n \kohti b\in\R$
+(Lause \ref{monotoninen ja rajoitettu jono}), ja koska $\,b_n>1\ \forall n$, niin $\,b \ge 1$
+(Propositio \ref{jonotuloksia} (V1) reaalilukujonoille). T‰ss‰ vaihtoehto $b>1$ johtaisi
+loogiseen ristiriitaan: $\,a=b_n^n \ge b^n\kohti\infty$. Siis $\,\lim_n b_n=1$. \loppu 
+
+\subsection*{*Lauseiden \ref{R on kunta} ja \ref{suppeneminen kohti reaalilukua} todistukset}
+
+\vahv{Lause \ref{R on kunta}}. \ Kunta-aksioomista todistetaan esimerkkin‰ ainoastaan 
+aksioomien (K4) (kertolaskun liit‰nt‰laki) ja (K9) (k‰‰nteisalkio) voimassaolo, muut
+j‰tet‰‰n harjoitusteht‰v‰ksi (Harj.teht.\,\ref{H-I-9: R:n kunta-aksioomat}). 
+
+\fbox{K4} \ Olkoon $\x = \seq{x_n},\ \y = \seq{y_n},\ \z = \seq{z_n}$ reaalilukuja ja olkoon
+edelleen $\x\y = \breve{a} = \seq{a_n} \in \R\ $ ja $\ \y\z = \breve{b} = \seq{b_n} \in \R$. 
+T‰llˆin aksiooman (K4) sis‰ltˆ on M‰‰ritelmien \ref{reaalilukujen laskutoimitukset}
+ja \ref{jonon raja - desim} perusteella
+\[
+\breve{a}\z\ =\ \x\breve{b} \quad \ekv \quad \lim_n\,(a_n z_n - x_n b_n)\ =\ 0.
+\]
+Kirjoitetaan t‰ss‰
+\[
+a_n z_n - x_n b_n\ =\ (a_n - x_n y_n) z_n + x_n (y_n z_n - b_n).
+\]
+Koska t‰ss‰ $a_n - x_n y_n \kohti 0\ $ ja $\ y_n z_n - b_n \kohti 0$ (M‰‰ritelm‰t 
+\ref{reaalilukujen laskutoimitukset} ja \ref{jonon raja - desim}) ja jonot $\seq{x_n}$
+ja $\seq{z_n}$ ovat rajoitettuja, niin v‰ite $a_n z_n - x_n b_n \kohti 0$ seuraa Lauseen
+\ref{raja-arvojen yhdistelys‰‰nnˆt} ja Proposition \ref{jonotuloksia} (V3) perusteella.
+
+\fbox{K9} \ Luvun $\x = \seq{x_n} \in \R$ k‰‰nteisluvun $\x^{-1}$ konstruoimiseksi olkoon 
+\mbox{$\x \neq 0$}, jolloin jollakin $m \in \N$ on oltava
+$\,\abs{x_n} \ge \abs{x_m} > 0\ \ \forall n \ge m$.
+T‰llˆin jono \seq{\,x_m^{-1}, x_{m+1}^{-1}, \ldots\,}\ on monotoninen ja rajoitettu, jolloin
+on olemassa reaaliluku $\,\y = \seq{y_n}\,$ siten, ett‰ $\,x_n^{-1}-y_n \kohti 0$ 
+(Lause \ref{monotoninen ja rajoitettu jono}). Proposition \ref{jonotuloksia} (V3) ja
+M‰‰ritelm‰n \ref{reaalilukujen laskutoimitukset} perusteella p‰‰tell‰‰n t‰llˆin
+\[
+x_n^{-1} - y_n \kohti 0 \quad \ekv \quad 1 - x_n y_n \kohti 0 \quad \ekv \quad \x\y = 1.
+\]
+Siis $\y = \x^{-1}$ ja aksiooma (K9) on n‰in ollen voimassa. \loppu
+
+J‰rjestyrelaation aksiooman (J1) voimassaolo on jo todettu. Aksioomien (J2) ja (J4)
+todentaminen j‰tet‰‰n harjoitusteht‰v‰ksi
+(Harj.teht.\,\ref{H-I-9: R:n j‰rjestysominaisuuksia}cd). Todistetaan siis ainoastaan aksiooman
+(J3) voimassaolo.
+\begin{Prop} \label{R:n aksiooma (J3)} Reaaliluvuille p‰tee: Jos $\x<\y$, niin
+$\x+\z<\y+\z\ \forall \z\in\R$.
+\end{Prop}
+\tod Olkoon $\x=\seq{x_n}\in\R$, $\y=\seq{y_n}\in\R$, $\z=\seq{z_n}\in\R$ ja merkit‰‰n
+$\x+\z=\breve{a}=\seq{a_n}\in\R$ ja $\y+\z=\breve{b}=\seq{b_n}\in\R$, jolloin
+$x_n+z_n-a_n \kohti 0$ ja $y_n+z_n-b_n \kohti 0$, kun $n\kohti\infty$
+(M‰‰ritelm‰ \ref{reaalilukujen laskutoimitukset}). V‰itet‰‰n: Jos $\x<\y$, niin
+$\breve{a}<\breve{b}$. Tehd‰‰n vastaoletus: $\breve{a}=\breve{b}$ tai 
+$\breve{a}>\breve{b}$. Ensimm‰isess‰ vaihtoehdossa on $\lim_n(a_n-b_n)=0$
+(M‰‰ritelm‰ \ref{samastus DD}), jolloin oletusten ja Lauseen 
+\ref{raja-arvojen yhdistelys‰‰nnˆt} perusteella seuraa
+\[
+x_n-y_n \,=\, (x_n+z_n-a_n)-(y_n+z_n-b_n)+(a_n-b_n) \,\kohti\, 0.
+\]
+Siis $\x=\y$ (M‰‰ritelm‰ \ref{samastus DD}), mutta t‰m‰ on looginen ristiriita,
+koska (J1) on voimassa ja oletettiin $\x<\y$. Toisessa vaihtoehdossa
+($\breve{a}>\breve{b}$) on $a_n \ge b_n\ \forall n$
+(Harj.teht.\,\ref{H-I-9: R:n j‰rjestysominaisuuksia}a) ja samoin
+$x_n \le y_n\ \forall n$ (koska $\x<\y$), joten seuraa
+\begin{align*}
+c_n \,&=\, (x_n+z_n-a_n)-(y_n+z_n-b_n) \\ 
+      &=\, (x_n-y_n)+(b_n-a_n) \,\le\, x_n-y_n \,\le\, 0\,\ \forall n.
+\end{align*}
+Koska t‰ss‰ $c_n \kohti 0$, niin $x_n-y_n \kohti 0$ (Propositio \ref{jonotuloksia} (V2)),
+joten on j‰lleen p‰‰dytty loogiseen ristiriitaan: $\x<\y$ ja $\x=\y$. Vaihtoehdot
+$\breve{a}=\breve{b}$ ja $\breve{a}>\breve{b}$ on n‰in muodoin pois suljettu, joten on
+oltava $\breve{a}<\breve{b}$. \loppu
+
+\vahv{Lause \ref{suppeneminen kohti reaalilukua}}. \ Perustetaan todistus seuraavaan
+v‰itt‰m‰‰n, joka seuraa helposti M‰‰ritelm‰st‰ \ref{reaalilukujen j‰rjestys}
+(Harj.teht.\,\ref{H-I-9: R:n j‰rjestysominaisuuksia}b).
+\begin{Lem} \label{R:n j‰rjestyslemma} Jos $\,\x=\seq{x_n}\in\R$, niin 
+$\,\abs{\x-x_n} \le 10^{-n}\ \forall n$.
+\end{Lem}
+Oletetaan, ett‰ $a_n \kohti \x,\ \x=\seq{x_n}\in\R$ M‰‰ritelm‰n \ref{jonon raja} 
+mukaisesti ja olkoon $\eps > 0$. T‰llˆin on olemassa indeksit $N_1,N_2 \in \N$ siten, ett‰ 
+$\abs{a_n-\x} < \eps/2\,$ kun $n > N_1$ ja $10^{-n} < \eps/2\,$ kun $n > N_2$, jolloin 
+(j‰rjestetyn kunnan) kolmioep‰yht‰lˆn ja Lemman \ref{R:n j‰rjestyslemma} perusteella
+\[
+\abs{a_n-x_n} \le \abs{a_n-\x} + \abs{\x-x_n} < \abs{a_n-\x} + 10^{-n} 
+              < \eps, \quad \text{kun}\ n > \max\,\{N_1,N_2\} = N.
+\]
+T‰ss‰ $\eps > 0$ oli mielivaltainen, joten M‰‰ritelm‰n \ref{jonon raja} mukaan 
+$a_n-x_n \kohti 0$, eli $\,a_n \kohti \x$ M‰‰ritelm‰n \ref{jonon raja - desim} mukaisesti.
+T‰m‰ todistaa v‰itt‰m‰n ensimm‰isen osan. Toinen osa todistetaan samankaltaisella 
+p‰‰ttelyll‰. \loppu
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-I-9: R:n kunta-aksioomat} 
+N‰yt‰ M‰‰ritelm‰‰n \ref{reaalilukujen laskutoimitukset} perustuen, ett‰ reaaliluvuille
+ovat voimassa: \newline
+a) yhteen- ja kertolaskun vaihdantalait (K1,K2) \newline 
+b) yhteenlaskun liit‰nt‰laki (K3) \newline
+c) yhteen- ja kertolaskun osittelulaki (K5)
+
+\item \label{H-I-9: R:n j‰rjestysominaisuuksia}
+Olkoon $\x=\seq{x_n}\in\R$, $\y=\seq{y_n}\in\R$ ja $z=\seq{z_n}\in\R$. N‰yt‰, ett‰ M‰‰ritelmien
+\ref{reaalilukujen j‰rjestys} ja \ref{reaalilukujen laskutoimitukset} perusteella p‰tee \newline 
+a) \ $\x<\y\ \ekv\ \x \neq \y\ \ja\ x_n \le y_n\ \forall n$ \hspace{5mm}
+b) \ $\abs{\x-x_n} \le 10^{-n}\ \forall n$ \newline
+c) \ $\x<\y\ \ja\ \y<\z\ \impl\ \x<\z$ \hspace{15mm}\,
+d) \ $\x>0\ \ja\ \y>0\ \impl\ \x\y>0$
+
+\item
+Tutki, kuinka suuri virhe tehd‰‰n, kun laskettaessa \ a) $e+\pi$, \ b) $e^2/\pi$, \ 
+c) $\pi^2-e^2$ \ c) $e^5\pi^6$ katkaistaan $e$ ja $\pi$ ensin $9$ merkitsev‰‰n numeroon
+ja laskuoperaatioissa tulos samoin $9$ merkitsev‰‰n numeroon.
+
+\item
+Olkoon lukuj‰rjestelm‰n kantaluku $=k$. K‰ytt‰en kymmenjakoalgoritmia vastaavaa 
+$k$-jakoalgoritmia konstruoi nelj‰n merkitsev‰n numeron tarkkuudella \ a) $\sqrt[3]{11}$
+binaarij‰rjestelm‰ss‰, \ b) $\sqrt{7}$ $3$-kantaisessa j‰rjestelm‰ss‰.
+
+\item (*)
+Tiedet‰‰n, ett‰ $\,\sum_{k=1}^\infty k^{-2}=\pi^2/6$. \,N‰yt‰ t‰m‰n tiedon perusteella:
+\vspace{1mm}\newline
+$\D
+\text{a)}\,\ \sum_{k=0}^\infty \frac{1}{(2k+1)^2}=\frac{\pi^2}{8} \qquad
+\text{b)}\,\ \sum_{k=0}^\infty \frac{(-1)^k}{(k+1)^2}=\frac{\pi^2}{12}$
+
+%\item (*)
+%N‰yt‰, ett‰ $\,\lim_n \sqrt[n]{n^k}=1\ \forall k\in\N$.
+
+\item (*)
+Olkoon $a_k \kohti a\ (k \kohti \infty)$, miss‰ on desimaalilukumerkinnˆin 
+\[
+a_k=x_0^{(k)}.\,d_1^{(k)}d_2^{(k)}\,\ldots =\seq{x_n^{(k)}} \in\R, \quad a
+                                           =x_0.d_1d_2\ldots = \seq{x_n} \in\R.
+\]
+Todista seuraavat v‰itt‰m‰t: \newline
+a) \ Jos $a$ ei ole ‰‰rellinen desimaaliluku, niin jokaisella $n\in\N$ on olemassa indeksi 
+$N_n\in\N$ siten, ett‰ \ $a_k = x_0.d_1 \ldots d_n \ldots\ \forall k>N_n$. \newline
+b) \ a-kohdan v‰itt‰m‰ ei ole tosi jokaisella $a\in\R$ (vastaesimerkki\,!). \newline
+c) \ Jos $a$ on ‰‰rellinen desimaaliluku, niin on olemassa $m\in\N$ ja jokaisella $n \ge m$ 
+indeksi $N_n\in\N$ siten, ett‰ $d_n^{(k)}\in\{0,9\}\ \forall k>N_n$. \newline
+d) \ Jokaisella $a\in\R$ p‰tee: $\,\lim_k x_k^{(k)}=a$.
+
+\end{enumerate}

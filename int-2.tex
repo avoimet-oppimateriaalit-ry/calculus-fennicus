@@ -1,0 +1,345 @@
+\section{Osittaisintegrointi ja sijoitus} \label{osittaisintegrointi}
+\alku
+\index{osittaisintegrointi|vahv}
+
+Integroimistekniikan, eli integraalifunktioiden etsimisen, kaksi keskeisintä yleistä metodia
+ovat \kor{osittaisintegrointi} (engl. integration by parts, partial integration) ja 
+\kor{sijoitus}(menettely) (engl.\ substitution). Näillä menetelmillä on 'matematiikan kaavoina'
+yleisempääkin käyttöä.
+
+Osittaisintegroinnin kaava on yksinkertaisesti tulon derivoimissääntö toisin kirjoitettuna:
+\[
+\frac{d}{dx}(fg)=f'g+fg' \qekv f'g = \frac{d}{dx}(fg)-fg'
+\]
+\[
+\impl \quad \boxed{\quad \int f'(x)g(x)\, dx=f(x)g(x)-\int f(x)g'(x)\, dx. \quad}
+\]
+\begin{Exa}\ a) \ $\D\int xe^x\, dx=\,? \quad$ b) \ $\D\int e^x\sin x\, dx=\,?$
+\end{Exa}
+\ratk
+\begin{align*}
+\text{a)} \quad   \int xe^x\, dx\, &=\,\int\underbrace{e^x}_{f'(x)}\underbrace{x}_{g(x)}\, dx\,
+                                    =\,e^x\cdot x-\int e^x\, dx
+                                    =\,\underline{\underline{(x-1)e^x+C}}. \\
+     \text{\underline{Tarkistus}:} &\quad \frac{d}{dx}((x-1)e^x)
+                                              =e^x+(x-1)e^x=xe^x. \quad\text{OK!} \loppu
+\intertext{$\qquad\ $b) \ Valitaan $f'(x)=f(x)=e^x$ ja integroidaan kahdesti osittain:}
+F(x)        &= \int e^x\sin x\, dx=e^x\sin x-\int e^x\cos x\, dx \\
+            &=e^x\sin x-e^x\cos x-\int e^x\sin x\, dx \\[2mm]
+            &=e^x(\sin x -\cos x)-F(x) \\[2mm]
+\impl \ F(x)&=\underline{\underline{\frac{1}{2}\,e^x(\sin x-\cos x)+C}}. \loppu
+\end{align*}
+\begin{Exa} \label{paha integraali} Määritä integraalifunktio 
+$\displaystyle{\int \sqrt{a^2+x^2}\,dx}$, \ kun $a>0$. 
+\end{Exa}
+\ratk Osittain integroimalla \,($f'(x)=1,\ g(x)=\sqrt{a^2+x^2}$\,)\, saadaan ensin
+\[
+\int \sqrt{a^2+x^2}\,dx = x\sqrt{a^2+x^2} - \int \frac{x^2}{\sqrt{a^2+x^2}}\,dx.
+\]
+Tässä on
+\begin{align*}
+-\int\frac{x^2}{\sqrt{a^2+x^2}}\,dx\ 
+               &=\ -\int\frac{(x^2+a^2)-a^2}{\sqrt{a^2+x^2}}\,dx \\
+               &=\ -\int\sqrt{a^2+x^2}\,dx + \int\frac{a^2}{\sqrt{a^2+x^2}}\,dx,
+\end{align*}
+joten seuraa (ks.\ edellisen luvun kaavat (9) ja (I-2))
+\begin{align*}
+2\int \sqrt{a^2+x^2}\,dx\ &=\ x\sqrt{a^2+x^2} + \int \frac{a}{\sqrt{(x/a)^2+1}}\,dx \\
+                          &=\ x\sqrt{a^2+x^2} + a^2\ln\bigl[(x/a)+\sqrt{(x/a)^2+1}\,\bigr]+C.
+\end{align*}
+Kun tässä kirjoitettaan vakion $C$ tilalle $a^2\ln a+C$ (mahdollista, koska $C$ on joka 
+tapauksessa määräämätön), saadaan tulos muotoon
+\[
+\int \sqrt{a^2+x^2}\,dx\ 
+  =\ \underline{\underline{\frac{1}{2}\bigl[x\sqrt{a^2+x^2} 
+                + a^2\ln\bigl(x + \sqrt{a^2+x^2}\bigr)\bigr]+C}}. \loppu
+\]
+
+\subsection*{Reduktiokaavat}
+\index{reduktiokaavat (integraalien)|vahv}
+
+Osittain integroimalla voidaan johtaa \kor{reduktiokaavoja} (palautuskaavoja) koko joukolle
+integraaleja, joissa on kokonaislukuparametri. Esimerkiksi seuraavat integraalit saadaan tällä
+tavoin lasketuksi suljetussa muodossa:
+\begin{align*}
+&\int x^ne^x\,dx,\quad \int x^n\cos x\,dx,\quad x^n\sin x\,dx,\quad
+ \int (1+x^2)^{-n}\, dx,\quad n\in\N, \\
+&\int \cos^n x\, dx,\quad \int\sin^n x\, dx,\quad n\in\Z. \\
+\end{align*}
+Tarkastellaan esimerkkinä integraalia 
+\[
+I_n(x)=\int \cos^n x\,dx.
+\]
+Osittain integroimalla saadaan
+\begin{align*}
+I_n(x) &= \int \cos x\cdot \cos^{n-1} x\, dx \qquad[\,f'(x)=\cos x,\ g(x)=\cos^{n-1}x\,] \\
+&=\sin x\cos^{n-1} x + (n-1)\int\sin^2 x\cos^{n-2} x\, dx \\
+&=\sin x\cos^{n-1} x + (n-1)\int(1-\cos^2 x)\cos^{n-2}x\,dx \\[1mm]
+&=\sin x\cos^{n-1} x + (n-1)I_{n-2}(x)-(n-1)I_n(x).
+\end{align*}
+Tämän perusteella integraalille $I_n(x)$ pätee reduktiokaava
+\begin{equation} \label{reduktio 1}
+nI_n(x)-(n-1)I_{n-2}(x)=\sin x\cos^{n-1} x.
+\end{equation}
+Kaava pätee itse asiassa kun $n\hookrightarrow\alpha$, $\alpha\in\R$, mutta siitä on hyötyä
+lähinnä kun $n\in\Z$, jolloin $I_n$ voidaan palauttaa kaavan avulla tapauksiin $n=0,\pm 1$ ja
+näin ollen integroida suljetussa muodossa (tapaukseen $n=-1$ soveltuu edellisen luvun 
+taulukkokaava (14)).
+\begin{Exa}
+$\text{a)}\ \D\int\cos^3 x\, dx=\,? \quad\text{b)}\ \int\cos^{-3} x\, dx=\,?$
+\end{Exa}
+\ratk Indekseillä $n=3$ ja $n=-1$ reduktioaava \eqref{reduktio 1} antaa
+\begin{align*}
+I_3(x)    &= \frac{1}{3}\sin x\cos^2 x + \frac{2}{3}I_1(x), \\
+I_{-3}(x) &= \frac{1}{2}\sin x\cos^{-2} x + \frac{1}{2}I_{-1}(x),
+\end{align*}
+joten (vrt.\ edellisen luvun Esimerkki \ref{cos-integraaleja})
+\begin{align*}
+\text{a)}\,\ \int \cos^3 x\, dx 
+        &= \frac{1}{3}\sin x\cos^2 x + \frac{2}{3}\int\cos x\, dx \\
+        &= \underline{\underline{-\frac{1}{3}\sin^3 x + \sin x+C}}
+\intertext{ja edellisen luvun kaavan (14) perusteella}
+\text{b)}\,\ \int \cos^{-3} x\, dx 
+        &= \frac{1}{2}\sin x\cos^{-2} x + \frac{1}{2}\int\cos^{-1} x\,dx \\
+        &=\underline{\underline{\frac{1}{2}\ln\left|
+              \frac{\cos x}{1-\sin x}\right|+ \frac{1}{2}\,\frac{\sin x}{\cos^2 x}+C}}. \loppu
+\end{align*}
+
+Toisena esimerkkinä tarkasteltakoon integraalia
+\[
+I_n(x)=\int\frac{1}{(1+x^2)^n}\,dx,\quad n \ge 2.
+\]
+Pyritään palauttamaan tämä tapaukseen $n=1$, jossa integraalifunktio tunnetaan (edellisen
+luvun taulukkokaava (11)). Valitaan $f'(x)=1,\ g(x)=(1+x^2)^{-n}$ ja integroidaan osittain:
+\begin{align*}
+I_n(x) &= \frac{x}{(1+x^2)^n}+2n\int\frac{x^2}{(1+x^2)^{n+1}}\, dx \quad [x^2=(x^2+1)-1] \\
+&= \frac{x}{(1+x^2)^n}+2n I_n(x) - 2n I_{n+1}(x).
+\end{align*}
+Kirjoittamalla $n$:n tilalle $n-1$ päädytään reduktiokaavaan
+\begin{equation} \label{reduktio 2}
+I_n(x)=\frac{1}{2n-2}\,\frac{x}{(1+x^2)^{n-1}}+\frac{2n-3}{2n-2}\,I_{n-1}(x).
+\end{equation}
+\begin{Exa}
+Kaavaa \eqref{reduktio 2} kahdesti soveltamalla saadaan
+\begin{align*}
+\int\frac{1}{(1+x^2)^3}\,dx 
+&= \frac{1}{4}\frac{x}{(1+x^2)^2}+\frac{3}{4}\int\frac{1}{(1+x^2)^2}\,dx \\
+&= \frac{1}{4}\,\frac{x}{(1+x^2)^2}+\frac{3}{4}
+        \left(\frac{1}{2}\,\frac{x}{1+x^2}+\frac{1}{2}\int \frac{1}{1+x^2}\,dx\right) \\
+&= \underline{\underline{\frac{1}{4}\,
+         \frac{x}{(1+x^2)^2}+\frac{3}{8}\,\frac{x}{1+x^2}+\frac{3}{8}\Arctan x+C}}. \loppu
+\end{align*}
+\end{Exa}
+
+\subsection*{Sijoitusmenettely}
+\index{muuttujan vaihto (sijoitus)!b@integraalissa|vahv}
+
+Sijoituksella tarkoitetaan integroinnissa \pain{muuttu}j\pain{an} \pain{vaihtoa}
+(kuten raja-arvoja laskettaessa, vrt.\ Luku \ref{funktion raja-arvo}). Integroinnin 
+sijoitusmenettely perustuu seuraavaan tulokseen, joka puolestaan perustuu yhdistetyn funktion
+ja käänteisfunktion derivoimissääntöihin.
+\begin{Prop} \label{sijoituspropositio}
+Olkoon $u:(c,d)\Kohti (a,b)$ bijektio ja olkoon $u$ derivoituva välillä $(c,d)$ ja
+käänteisfunktio $v=\inv{u}$ derivoituva välillä $(a,b)$. Tällöin, jos $G(t)$ on funktion
+$g(t)=f(u(t))u'(t)$ integraalifunktio välillä $(c,d)$, ts.\
+\[
+\int f(u(t))u'(t)\, dt=G(t)+C,\quad t\in (c,d),
+\]
+niin funktion $f(x)$ integraalifunktio välillä $(a,b)$ on
+\[
+\int f(x)\, dx=G(v(x))+C,\quad x\in (a,b).
+\]
+\end{Prop}
+\tod Jos $x\in (a,b)$ ja $t=v(x) \ \ekv \ x=u(t)$, niin yhdistetyn funktion derivoimissäännön
+ja oletuksien perusteella
+\begin{align*}
+\frac{d}{dx}G(v(x)) &= G'(v(x))v'(x)=G'(t)v'(x) \\
+&= f(u(t))u'(t)v'(x).
+\end{align*}
+Tässä on $u(t)=x$, joten $f(u(t))=f(x)$ ja käänteisfunktion derivoimissäännön
+(Luku \ref{derivaatta}, kaava \eqref{D5}) mukaan
+\[ 
+u'(t)v'(x)=1 \qimpl \text{väite}. \loppu 
+\]
+
+Sovelluksissa sijoitus tehdään usein (ehkä useammin) muodossa $v(x)=t$. Mekaanisesti
+sijoitusmenettely toimii siis seuraavalla tavalla:
+
+\kor{Ongelma:} $\quad \D\int f(x)\,dx=\,?$
+\begin{enumerate}
+\item Tehdään sijoitus: $\quad x=u(t) \quad \text{tai} \quad v(x)=t$.
+\item Ratkaistaan
+      \[
+      x=u(t)\ \impl\ t=v(x) \quad \text{tai} \quad v(x)=t \ \impl \ x=u(t).
+      \]
+\item Sijoitetaan integraaliin
+      \[
+      x=u(t)\,\ (\text{tai}\ v(x)=t) \quad \text{ja} \quad dx=u'(t)\,dt.
+      \]
+\item Kirjoitetaan $f(u(t))u'(t)=g(t)$ (mahdollinen sievennys) ja ratkaistaan muunnettu
+      ongelma:
+      \[
+      \int g(t)\,dt = G(t)+C.
+      \]
+\item Sijoitetaan ratkaisuun $t=v(x)$, jolloin saadaan alkuperäisen ongelman ratkaisu:
+      \[
+      \int f(x)\, dx=G(v(x))+C.
+      \]
+\end{enumerate}
+Vaiheessa 2 ei haittaa, vaikka käänteisfunktio $v=\inv{u}$ tai $u=\inv{v}$ olisi monihaarainen
+(yhtälön $u(t)=x$ tai $v(x)=t$ ratkaisu monikäsitteinen), kunhan Proposition
+\ref{sijoituspropositio} oletukset toteutuvat valitulla haaralla. On ainoastaan pidettävä
+huolta, ettei laskun eri vaiheissa hypellä haaralta toiselle.
+\begin{Exa} $\displaystyle{\int \frac{1}{\sqrt{x}+1}\, dx=\,?}$ 
+\end{Exa}
+\ratk Tässä on $(a,b) = (0,\infty)$.
+\begin{enumerate}
+\item Tehdään sijoitus: $\quad v(x) = \sqrt{x} = t \in (0,\infty)$.
+\item Ratkaistaan: $\quad \sqrt{x}=t\ \impl\ x=u(t)=t^2$.
+\item Sijoitetaan integraaliin: $\quad \sqrt{x}=t,\ dx=2t\,dt$.
+\item Ratkaistaan muunnettu ongelma:
+\[
+\int \frac{2t}{t+1}\,dt \,=\, \int \left(2-\frac{2}{t+1}\right)dt \,=\, 2t - 2\ln(t+1) + C.
+\]
+\item Alkuperäisen ongelman ratkaisu sijoituksella $t=\sqrt{x}\,$:
+\[
+\int \frac{1}{\sqrt{x}+1}\,dx \,=\, \underline{\underline{2\sqrt{x} - 2\ln(\sqrt{x}+1) + C}}.
+\]
+\end{enumerate}
+\begin{Exa} \label{rat-palautuva integraali 1}
+$\D\int\frac{1}{e^x+1}\, dx=\,?$
+\end{Exa}
+\ratk Sijoittamalla $\ \D{e^x=t\in(0,\infty)\ \impl\ x=\ln t,\ dx=\frac{1}{t}\,dt}\,$ saadaan
+\begin{align*}
+\int\frac{1}{e^x+1}\,dx\,
+&=\,\int\frac{1}{(t+1)t}\,dt\,
+ =\,\ln\left|\frac{t}{t+1}\right|+C\quad 
+               (\text{Esimerkki \ \ref{integraalifunktio}:\,\ref{E10.1.2}}) \\
+&\impl \ \int\frac{1}{e^x+1}\,dx\,
+ =\,\ln\left(\frac{e^x}{e^x+1}\right)+C\,
+ =\,\underline{\underline{x-\ln(e^x+1)+C}}. \loppu
+\end{align*}
+
+\begin{Exa}
+$\D\int\frac{1}{(1+x^2)^2}\,dx=\,?$
+\end{Exa}
+\ratk Tämän voi laskea reduktiokaavalla \eqref{reduktio 2}. Toinen vaihtoehto on
+trigonometrinen sijoitus
+\[
+x=\tan t, \quad dx=\,\frac{1}{\cos^2 t}\,dt, \quad t\in (-\pi/2,\pi/2).
+\]
+Koska $\,1+\tan^2 t=1/\cos^2 t$, saadaan muunnetuksi integraaliksi
+\begin{align*}
+\int\frac{1}{(1+\tan^2 t)^2}\cdot\frac{1}{\cos^2 t}\,dt
+       &= \int\cos^2 t\, dt = \frac{1}{2}(t+\sin t\cos t)+C \\
+       &= \frac{1}{2}\left(t+\frac{\sin t}{\cos t}\cdot\cos^2 t\right)+C 
+        = \frac{1}{2}\left(t+\frac{\tan t}{1+\tan^2 t}\right)+C.
+\end{align*}
+Ratkaisemalla lopuksi
+\[
+x=\tan t \ \ja \ t\in (-\pi/2,\pi/2) \qekv t=\Arctan x
+\]
+saadaan tulos
+\[
+\int\frac{1}{(1+x^2)^2}\, dx
+        =\underline{\underline{\frac{1}{2}\left(\Arctan x + \frac{x}{1+x^2}\right) + C}}.
+\]
+\underline{Vertailu}: Reduktiokaava \eqref{reduktio 2} on menetelmänä suoraviivaisempi. \loppu
+\begin{Exa} \label{rat-palautuva integraali 2} $\D\int\frac{1}{x+1+\sqrt[3]{x+1}}\, dx=\,?$ 
+\end{Exa}
+\ratk Sijoituksella
+\begin{align*}
+\sqrt[3]{x+1}=t \ \ekv \ x=t^3-1,\quad dx 
+                     &= 3t^2\, dt\quad (x>-1,\ t>0)
+\intertext{saadaan}
+\int\frac{1}{x+1+\sqrt[3]{x+1}}\, dx = \int\frac{3t^2}{t^3+t}\,dt 
+                     &=\int\frac{3t}{t^2+1}\, dt \\
+                     &=\frac{3}{2}\ln (t^2+1)+C \\
+                     &=\underline{\underline{\frac{3}{2}\ln[(x+1)^{2/3}+1]+C}}.
+\end{align*}
+Jos välillä $x\in(-\infty,-1)$ tulkitaan $\sqrt[3]{x+1}=-\sqrt[3]{\abs{x+1}}$, niin tulos on
+pätevä myös tällä välillä. \loppu
+
+\begin{Exa}
+$\D\int \frac{e^x}{\sqrt{x}}\,dx\ =\ ?$ 
+\end{Exa}
+\ratk Sijoituksella $\ \D{\sqrt{x} = t,\ x = t^2,\ dx = 2t\,dt}\ $ tehtävä muuntuu muotoon
+\[ 
+\int 2e^{t^2}\,dt\ =\ ? 
+\]
+Tällä ei ole alkeisfunktioratkaisua (ainoastaan sarjaratkaisu, ks. seuraava luku), joten 
+tyydytään tulokseen
+\[ 
+\int \frac{e^x}{\sqrt{x}}\,dx = 2G(\sqrt{x}), \quad G(t) = \int e^{t^2}\,dt. \loppu 
+\]
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske osittain integroimalla
+\begin{align*}
+&\text{a)}\ \ \int x\cos x\,dx \qquad
+ \text{b)}\ \ \int x^3 e^{-x^2}\,dx \qquad
+ \text{c)}\ \ \int x^3\cos(x^2)\,dx \\
+&\text{d)}\ \ \int x^2 e^{ax}\,dx,\,\ a\in\R \qquad
+ \text{e)}\ \ \int x^\alpha\ln x\,dx,\,\ \alpha\in\R \\
+&\text{f)}\ \ \int \Arctan x\,dx \qquad
+ \text{g)}\ \ \int \Arcsin x\,dx \qquad
+ \text{h)}\ \ \int x\Arctan x\,dx
+\end{align*}
+
+\item
+Johda osittain integroimalla reduktiokaava annetulle integraalille $I_n(x)$ ja laske kaavan
+avulla $I_n(x)$ annetuilla $n$:n arvoilla. \vspace{1mm}\newline
+a) \ $\int x^n e^x\,dx,\ n\in\N\cup\{0\},\ \ n=1,2,3$. \newline
+b) \ $\int x^n \sin x\,dx,\ n\in\N\cup\{0\},\ \ n=1,2,3$. \newline
+c) \ $\int x^n \cos x\,dx,\ n\in\N\cup\{0\},\ \ n=1,2,3$. \newline
+d) \ $\int \sin^n x\,dx,\ n\in\Z,\ \ n=-3,4$. \newline
+e) \ $\int (\ln x)^n\,dx,\ n\in\N\cup\{0\},\ \ n=1,2$. \newline
+f) \ $\int (x^2+1)^{n-1/2}\,dx,\ n\in\Z,\ \ n=-1,2$. \newline
+g) \ $\int (x^2-1)^{n-1/2}\,dx,\ n\in\Z,\ \ n=-1,2$. \newline
+h) \ $\int (1-x^2)^{n-1/2}\,dx,\ n\in\Z,\ \ n=-1,2$.
+
+\item
+Laske annettua sijoitusta käyttäen:
+\begin{align*}
+&\text{a)}\ \ \int \frac{1}{\sqrt{5-x^2}}\,dx,\ \ x=\sqrt{5}\,t \qquad
+ \text{b)}\ \ \int \frac{1}{x^2+2x+3}\,dx,\ \ x+1=\sqrt{2}\,t \\
+&\text{c)}\ \ \int e^{\sqrt{x}}\,dx,\ \ x=t^2 \qquad\qquad\quad\,\
+ \text{d)}\ \ \int e^{\sqrt[3]{x}}\,dx,\ \ \sqrt[3]{x}=t
+\end{align*}
+
+\item
+Muunna seuraavat integraalit toiseen muotoon annetulla sijoituksella.
+\begin{align*}
+&\text{a)}\ \ \int \frac{1}{\sqrt{1+x^4}}\,dx,\ \ x^4=t \qquad
+ \text{b)}\ \ \int e^{x^2}\,dx,\ \ x^2=t \\
+&\text{c)}\ \ \int \sin(\ln x)\,dx,\ \ x=e^t \qquad\,
+ \text{d)}\ \ \int \ln(\tan x)\,dx,\ \ \tan x=t
+\end{align*}
+
+\item
+Funktioiden $x^\alpha\sin\beta x,\ x^\alpha\cos\beta x,\ x^\alpha e^{\beta x}$
+($\alpha,\beta\in\R$) integraalifunktiot ovat alkeisfunktioita vain kun joko $\beta=0$ tai 
+$\alpha\in\N\cup\{0\}$. Mitkä seuraavista ovat tämän tiedon perusteella alkeisfunktioita ja 
+mitkä eivät?
+\begin{align*}
+&\text{a)}\ \ \int \cos(x^2)\,dx \qquad
+ \text{b)}\ \ \int x^{13}\sqrt{x}\cos\sqrt{x}\,dx \qquad
+ \text{c)}\ \ \int x^5 e^{x^4}\,dx \\
+&\text{d)}\ \ \int x^7 e^{x^4}\,dx \qquad\,\ \
+ \text{e)}\ \ \int \sqrt{\ln x}\,dx \qquad\
+ \text{f)}\ \ \int \frac{1}{\ln x}\,dx \\
+&\text{g)}\ \ \int \frac{1}{x\sqrt{\ln x}}\,dx \quad\,\ \ 
+ \text{h)}\ \ \int \sin(e^x)\,dx \qquad
+ \text{i)}\ \ \int \cos x\,\ln x\,dx
+\end{align*}
+
+\item (*)
+Olkoon $n\in\N\cup\{0\}$ ja $a,b\in\R$. Johda reduktiokaavat integraaleille
+\[
+I_n(x)=\int x^n e^{ax}\cos bx, \quad J_n(x)=\int x^n e^{ax}\sin bx.
+\]
+
+\end{enumerate}

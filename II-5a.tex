@@ -1,0 +1,260 @@
+\section{Funktion k‰site} \label{funktio}
+\alku
+
+\kor{Funktio} l. \kor{kuvaus} (engl. function, map, mapping) on matematiikassa kolmikko muotoa
+\[
+\{\text{joukko} \ A, \ \text{s‰‰ntˆ} \ f, \ \text{joukko} \ B\}.
+\]
+T‰ll‰ tarkoitetaan, ett‰ on jokin s‰‰ntˆ $f$, jonka mukaan m‰‰r‰ytyy y\pain{ksik‰sitteinen}
+$y \in B$ j\pain{okaisella} $x \in A$. Yhteys $x$:n $y$:n v‰lill‰ merkit‰‰n $y=f(x)$ ja
+lausutaan '$y$ on $f$ $x$'. Voidaan myˆs k‰ytt‰‰ \pain{liitt‰misnuolta} ja merkit‰ 
+$x \map f(x) (=y)$. Sanotaan, ett‰ $A$ on $f$:n \kor{m‰‰rittelyjoukko} (tai l‰htˆjoukko,
+engl. domain) ja $B$ \kor{maalijoukko} ja merkit‰‰n $f:A \kohti B$. Funktion m‰‰rittelyjoukon
+alkioihin viitataan yleisnimell‰ \kor{muuttuja} (engl.\ variable). Jos $y=f(x)$, niin sanotaan,
+ett‰ $y$ on $f$:n \kor{arvo} (engl.\ value) \kor{$x$:ss‰} (tai muuttujan arvolla $x$);
+lyhyemmin lausutaan '$f$ $x$:ss‰' tai usein myˆs '$f$ pisteess‰ $x$'. Maalijoukon osajoukko
+\[
+\{y \in B \ | \ y=f(x) \ \text{jollakin} \ x \in A\}
+\]
+on nimelt‰‰n $f$:n \kor{arvojoukko} tai $A$:n \kor{kuva} $f$:ss‰ (engl.\ range, image). T‰t‰ 
+merkit‰‰n lyhyesti $f(A)$.
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-4.pstex_t}
+\end{center}
+\end{figure}
+\begin{Exa}
+Jos $x$ ja $y$ ovat reaalilukuja ja kirjoitetaan $f(x,y)=x^2y-y^3$, tarkoitetaan (ellei 
+m‰‰rittelyjoukosta toisin sovita) funktiota
+\[
+\{ \Rkaksi, \ f(x,y)=x^2y-y^3, \ \R \},
+\]
+joka siis liitt‰‰ mihin tahansa reaalilukupariin $(x,y)$ laskus‰‰nnˆn ilmaiseman reaaliluvun.
+Funktion arvojen m‰‰r‰‰misess‰ tarvitaan t‰ss‰ tapauksessa ainoastaan reaalilukujen 
+kerto- ja v‰hennyslaskuoperaatioita. Esim.
+\begin{align*}
+&f(3,-2)=3^2 \cdot (-2) - (-2)^3 = -10 \\
+&f(2,\sqrt{2})=2^2\cdot\sqrt{2}-(\sqrt{2})^3=0 \\
+&f(\pi,e)=\pi^2 e - e^3=6.742829374372954.. \loppu
+\end{align*}
+\end{Exa}
+Hyvin yleisesti ja abstraktisti ajatellen voidaan funktiota pit‰‰ 's‰‰nnˆn' sijasta enemm‰nkin
+'luettelona', joka liitt‰‰ kuhunkin alkioon $x \in A$ yksik‰sitteisen ($x$:st‰ riippuvan)
+alkion $y \in B$. N‰in ajatellen funktiosta tulee puhtaasti joukko-opillinen k‰site: Funktion
+m‰‰rittelee joukon $A \times B = \{(x,y) \mid x \in A\, \ja\, y \in B\}$ (= $A$:n ja $B$:n
+karteesinen tulo, vrt.\ alaviite Luvussa \ref{tasonvektorit}) mik‰ tahansa osajoukko
+$F \subset A \times B$, joka toteuttaa ehdon
+\[
+x \in A \ \impl \ (x,y) \in F\,\ \text{t‰sm‰lleen yhdell‰}\,\ y \in B.
+\]
+Nimitt‰in t‰llaista joukkoa vastaa $A$:ssa m‰‰ritelty funktio, kun tulkitaan
+\[
+y=f(x)\ \ekv\ (x,y) \in F.
+\]
+Funktion k‰sitteen kannalta ei siis ole lainkaan merkityst‰ sill‰, m‰‰r‰ytyv‰tkˆ funktion arvot
+jonkin s‰‰nnˆn mukaan laskemalla vai pelk‰st‰‰n 'luettelosta katsomalla'. 
+\begin{Exa} Rationaalilukujen jono $\{a_1, a_2, \ldots\}$ tarkoittaa 'luetteloa' $1 \map a_1$, 
+$2 \map a_2$, \ldots, joten t‰m‰ on tulkittavissa kuvaukseksi tyyppi‰ $f: \ \N \kohti \Q$, eli 
+siis myˆs joukoksi
+\[
+F= \{ (1,a_1), (2,a_2),\ldots \} \subset \N \times \Q \loppu
+\]
+\end{Exa}
+Kaikki t‰h‰n asti esiintyneet \pain{laskuo}p\pain{eraatiot} ovat itse asiassa funktioita. 
+Funktion voi t‰llˆin mielt‰‰ 'laskukoneeksi', joka antaa laskuoperaation lopputuloksen
+annetuilla l‰htˆtiedoilla.
+\begin{Exa}
+Reaalilukujen yhteenlasku ja kertolasku ovat funktioita tyyppi‰ $f:\ \Rkaksi \map \R$ 
+laskus‰‰nnˆill‰
+\[
+\text{yhteenlasku:} \quad f(x,y)=x+y, \qquad \text{kertolasku:} \quad f(x,y)=xy.
+\]
+Jakolasku on funktio $f: \{(x,y) \in \Rkaksi \ | \ y \neq 0 \} \kohti \R$ s‰‰nnˆll‰
+$f(x,y)=x/y$. \loppu
+\end{Exa}
+\begin{Exa} \label{skalaaritulo funktiona} Edellisess‰ luvussa liitettiin euklidisen tason
+kulmaan $\kulma(\vec a,\vec b)$ geometrisin keinoin m‰‰r‰ytyv‰ reaaliluku, jota merkittiin 
+$\cos\kulma(\vec a,\vec b)$. Koska ko.\ luku on yksik‰sitteinen, niin kyseess‰ on funktio 
+$\,\cos:\ A \kohti \R$, miss‰ $A=$ kaikkien kulmien joukko. Funktion arvojoukko on 
+$[-1,1]\subset\R$. M‰‰rittelyjoukossa voidaan kulmat haluttaessa tulkita tason vektoripareina
+$(\vec a,\vec b)$, miss‰ $\vec a,\vec b \neq \vec 0$, tai yksikkˆvektorien pareina 
+($\abs{\vec a}=\abs{\vec b}=1$).  \loppu
+\end{Exa}
+
+\subsection*{K‰‰nteisfunktio}
+
+Aiemmin (esim.\ Luvussa \ref{tasonvektorit}) on k‰ytetty merkint‰‰ $A \vast B$, kun joukkojen
+$A$ ja $B$ alkiot vastaavat toisiaan 'yksi yhteen'. T‰llˆin jos '$x$:\,‰‰ vastaa $y$' merkit‰‰n
+$x \map y$, niin n‰hd‰‰n, ett‰ vastaavuusmerkint‰ $x \vast y$ tarkoittaa samaa kuin
+$x \map y\ \ja\ y \map x$. Vastaavuudessa on siis kyse funktioista $f_1:\,A \kohti B$ ja 
+$f_2:\,B \kohti A$, joilla on ominaisuus
+\[
+f_1(x) = y\,\ \ekv\,\ f_2(y)=x \quad (x \in A,\ y \in B).
+\]
+T‰m‰ tarkoittaa, ett‰ $f_1$ ja $f_2$ ovat toistensa \kor{k‰‰nteisfunktioita}. Yleisesti jos
+$f:\ A \kohti B$ on funktio, niin $f$:n k‰‰nteisfunktio on olemassa, eli $f$ on \kor{k‰‰ntyv‰} 
+(engl.\ invertible), jos p‰tee
+\[
+x_1 \neq x_2\ \impl\ f(x_1) \neq f(x_2) \quad \forall x_1,x_2 \in A.
+\] 
+Sanotaan t‰llˆin, ett‰ $f$ on 1-1 eli 'yksi yhteen' (engl. one to one), tai ett‰ $f$ on
+\kor{k‰‰nt‰en yksik‰sitteinen} funktiona $f:\ A \kohti f(A)$. K‰‰nteisfunktion yleinen symboli 
+on $f^{-1}$, luetaan '$f$ miinus $1$'. 
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-5.pstex_t}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\import{kuvat/}{kuvaII-6.pstex_t}
+\end{center}
+\end{figure}
+Jos $f:\,A \kohti B$ on 1-1, niin k‰‰nteisfunktion $\inv{f}$ m‰‰rittelyjoukko $= f$:n
+arvojoukko $f(A)$ ja laskus‰‰ntˆ (liitt‰miss‰‰ntˆ) siis 
+\[ 
+x=\inv{f}(y)\,\ \ekv\,\ y=f(x)\ \ (y \in f(A)).
+\] 
+\begin{Exa} Olkoon $A=\{1,2,3\}\subset\N$ ja $B=\{4,5,6\}\subset\N$ ja m‰‰ritell‰‰n funktiot 
+$f:\ A \kohti B$ ja $g:\ A \kohti B$ asettamalla
+\begin{align*}
+&f(1)=6,   \quad f(2)=4,     \quad f(3)=5 \\
+&g(1)=4,\, \quad g(2)=5,\, \quad g(3)=4
+\end{align*}
+T‰llˆin $f$ on k‰‰ntyv‰ ja
+\[
+\inv{f}(4)=2, \quad \inv{f}(5)=3, \quad \inv{f}(6)=1.
+\]
+Funktio $g$ ei ole k‰‰ntyv‰, koska $g(1)=g(3)$. Joukko-opillisesti ilmaistuna on
+\begin{align*}
+f\       &=\ \{(1,6),(2,4),(3,5)\}\ \subset\ A \times B \\
+g\       &=\ \{(1,4),(2,5),(3,4)\}\ \subset\ A \times B \\
+\inv{f}\ &=\ \{(6,1),(4,2),(5,3)\}\ =\ \{(4,2),(5,3),(6,1)\}\ \subset\ B \times A \loppu
+\end{align*}  
+\end{Exa}
+
+\subsection*{Reaalifunktio}
+
+'Funktioiden ‰iti' on \kor{reaalifunktio} eli reaalimuuttujan reaaliarvoinen funktio muotoa
+$f: A \kohti \R$, miss‰ $A \subset \R$. Myˆs termi‰ 'yhden muuttujan funktio' k‰ytet‰‰n usein 
+t‰ss‰ rajatussa merkityksess‰. Reaalifunktio ilmoitetaan tavallisimmin pelkk‰n‰ laskus‰‰ntˆn‰,
+sik‰li kuin s‰‰ntˆ on yksinkertaisesti ilmaistavissa. T‰llˆin oletetaan (ellei toisin sovita),
+ett‰ m‰‰rittelyjoukko on suurin $\R$:n osa\-joukko, jossa laskus‰‰ntˆ‰ voi soveltaa.
+Yksitt‰ist‰ laskus‰‰nnˆn k‰yttˆ‰, eli laskuoperaatiota $x \map f(x)$ sanotaan 
+\kor{funktioevaluaatioksi}. Usein t‰m‰ onnistuu vain numeerisesti (eli likim‰‰rin), 
+jolloin k‰yt‰nnˆss‰ pystyt‰‰n vain laskemaan ‰‰rellinen m‰‰r‰ termej‰ lukujonosta, jonka 
+raja-arvo $=f(x)$.
+\begin{Exa} Reaalifunktion $f(x)=x^2/(x^2-2)$ m‰‰rittelyjoukko on \newline
+$A\ =\ \{x\in\R \mid x^2 \neq 2\}\ 
+    =\ (-\infty,-\sqrt{2}) \cup (-\sqrt{2},\sqrt{2}) \cup (\sqrt{2},\infty)$ \loppu
+\end{Exa}
+\begin{Exa} Potenssisarja $\sum_k a_k x^k$ voidaan tulkita reaalifunktioksi, jonka arvo
+$x$:ss‰ = sarjan summa ja m‰‰rittelyjoukko = sarjan suppenemisv‰li. Esimerkiksi funktion
+\[
+f(x)=\sum_{k=1}^\infty \frac{x^k}{k}
+\]
+m‰‰rittelyjoukko on v‰li $[-1,1)$, vrt.\ Luku \ref{potenssisarja}. Ellei ole $x=0$, on
+funktioevaluaatio $x \map f(x)$ t‰ss‰ tapauksessa suoritettava numeerisesti, esim.\ 
+laskemalla sarjan osasummia. \loppu
+\end{Exa}
+
+Reaalimuuttujan funktio voidaan k‰tev‰sti havainnollistaa \kor{kuvaajan} (engl.\ graph) avulla. 
+Funktion $f: A \kohti \R$ kuvaaja joukossa $B \subset A\ (A\subset\R)$ on euklidisen avaruuden 
+$\Ekaksi$ pistejoukko
+\[ 
+S = \{P = (x,y) \mid y = f(x)\,\ja\, x \in B\},
+\]
+miss‰ $P$:n koordinaatit $(x,y)$ viittaavat karteesiseen koordinaatistoon (ellei toisin sovita).
+Myˆs reaalilukujono voidaan t‰ll‰ tavoin kuvata $\Ekaksi$:n pistejonona (kuten jo aiemmin 
+tehtiin Luvuissa \ref{jonon raja-arvo} ja \ref{Cauchyn jonot}). Lukujono tulkitaan t‰llˆin 
+funktioksi $f:\ \N \kohti \R$.
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(12.5,8)(0,-2)
+\multiput(0,0)(7,0){2}{
+\put(0,0){\vector(1,0){6}} \put(1,-1){\vector(0,1){6}}
+\put(1.9,-0.5){$1$} \put(2.9,-0.5){$2$} \put(3.9,-0.5){$3$} \put(4.9,-0.5){$4$} 
+\put(5.8,-0.5){$x$} \put(1.2,4.8){$y$}
+\multiput(2,0)(1,0){4}{\line(0,-1){0.1}}}
+\put(3.5,1.5){$S:\ y=f(x)$}
+\put(9,0.5){$\scriptstyle{\bullet}$} \put(10,1.33){$\scriptstyle{\bullet}$}
+\put(11,2.25){$\scriptstyle{\bullet}$} \put(12,3.2){$\scriptstyle{\bullet}$}
+\put(2.5,-2){$f(x)=\dfrac{x^2}{x+1}$} \put(9.5,-2){$a_n=\dfrac{n^2}{n+1}$}
+\put(1,0){
+\curve( 
+0, 0,
+0.5, 0.17,
+1, 0.5,
+1.5, 0.9,
+2, 1.33,
+3, 2.25,
+4, 3.2)}
+\end{picture}
+\end{center}
+\end{figure}
+
+\Harj
+\begin{enumerate}
+
+\item
+Psykiatrin vastaanottoa voi kuvata matemaattisesti kolmikkona \{psykiatri,
+potilas, diagnoosi\}. Pohdi seuraavissa tapauksissa (kussakin erikseen), millaisilla oletuksilla
+kyseess‰ on funktio: \newline
+a) \ psykiatri : potilaat $\kohti$ diagnoosit \newline
+b) \ potilas  :  psykiatrit $\kohti$ diagnoosit \newline
+c) \ psykiatri : diagnoosit $\kohti$ potilaat \newline
+d) \ potilas : diagnoosit $\kohti$ psykiatrit
+
+\item
+Funktiot $f$ ja $g$ m‰‰ritell‰‰n laskus‰‰nnˆill‰ $f(x,y)=x^5+2x^4y-2x^2y^3$ ja
+$g(x,y,z)=(x+y+z)/(1+x^2+y^2+z^2)$, miss‰ $x,y,z\in\R$. Laske $f(2,-3)$, $f(\sqrt{2},\sqrt{2})$,
+$g(0,0,0)$ ja $g(1,-2,3)$. 
+
+\item 
+Mitk‰ ovat seuraavien funktioiden m‰‰rittelyjoukot ($x,y\in\R$)? 
+\[
+\text{a)}\,\ f(x)=x^{0} \quad\ \text{b)}\,\ f(x)=\frac{x^2}{x} \quad\ 
+\text{c)}\,\ f(x,y)=\frac{x+y}{x^2-y^2}
+\]
+Voiko n‰m‰ funktiot ilmaista m‰‰rittelyjoukossaan jollakin yksinkertaisemmalla laskus‰‰nnˆll‰?
+
+\item
+Mit‰ yhteist‰ ja mit‰ eroa on reaalifunktioilla \newline
+$\displaystyle{f(x)=\sum_{k=1}^\infty \left(\frac{x}{2}\right)^k\,\ \text{ja} \quad
+               g(x)=\frac{x}{2-x}\ }$?
+
+\item
+Mitk‰ seuraavista joukon $\Rkaksi=\R\times\R$ osajoukoista $F$ ovat funktioita? M‰‰rittele myˆs 
+(joukko-opillisesti) k‰‰nteisfunktiot, jos olemassa. \newline
+a) \ $F=\{(1,2),(2,1),(3,3),(\pi,e),(e,\pi)\}$ \newline
+b) \ $F=\{(1,2),(2,3),(3,3),(3,2),(2,1)\}$ \newline
+c) \ $F=\{(n,n^2) \mid n\in\Z\}$ \newline
+d) \ $F=\{(x,x^3) \mid x\in\Q\}$
+
+\item
+Tulkitse funktioina (m‰‰rittely- ja arvojoukko!) avaruusvektorien laskuoperaatiot: yhteenlasku,
+skalaarilla kertominen, pistetulo ja ristitulo. Millainen funktio on skalaarikolmitulo?
+ 
+\item
+a) Onko olemassa funktio $f$, jonka m‰‰rittelyjoukko $=\R$ ja $\forall x\in\R$ p‰tee
+$f(x)=\sum_{k=0}^\infty x^k$\,? Jos vastaus on myˆnteinen, niin m‰‰rittele $f$! \newline 
+b) Yhden reaalimuuttujan sis‰lt‰v‰n predikaatin (Luku \ref{logiikka}) voi tulkita funktioksi
+ja jopa reaalifunktioksi. Miten?
+
+\item
+Rationaalilukujono $\{a_n,\ n=1,2,\ldots\}$ voidaan tulkita funktioksi tyyppi‰ $f:\ \N\kohti\Q$.
+Tutki, onko ko.\ funktio k‰‰ntyv‰ seuraavissa tapauksissa: \newline
+a) \ $a_n=(-1)^n,\ \ $ b) \ $a_n=(n+1)/(n+2),\ \ $ c) \ $a_n=n^3 2^{-n},\ \ $
+d) \ $a_n=n^2 2^{-n}$
+
+\item (*) 
+Funktioista puhuttaessa lausutaan $f(x)$ usein '$f$ pisteess‰ $x$'. Olkoon nyt $x\in \R$ 
+annettu 'piste' ja m‰‰ritell‰‰n 'pistefunktio' $x$ seuraavasti:
+\[
+x(f)=f(x)\text{ }\forall f\in A,
+\]
+miss‰ $A=\{$reaalifunktiot, jotka on m‰‰ritelty pisteess‰ $x\}$. Onko t‰llainen 
+funktion m‰‰rittely todella mahdollinen ja jos on, miten $x(f)$ pit‰isi lausua?
+
+\end{enumerate}

@@ -1,0 +1,589 @@
+\section{Pinta-alamitta ja tasointegraalit} \label{tasointegraalit}
+\alku \sectionmark{Tasointegraalit}
+\index{tasointegraali|vahv}
+
+Tasoalueen p\pain{inta-alan} m‰‰r‰‰mist‰ m‰‰r‰tyn integraalin avulla on tarkasteltu aiemmin
+Luvussa \ref{pinta-ala ja kaarenpituus}. T‰ss‰ luvussa tarkastelun kohteena ovat yleisemm‰t
+\kor{tasointegraalit} muotoa
+\begin{equation} \label{integraalimerkint‰}
+\int_A f\, d\mu=I(f,A,\mu), \tag{$\star$}
+\end{equation}
+miss‰ $A\subset\R^2$, $f$ on $A$:ssa m‰‰ritelty (kahden muuttujan) funktio ja $\mu$ on $\R^2$:n
+\kor{pinta-alamitta}. Integraali $I(f,A,\mu)$ on tarkemmin \pain{reaaliluku},
+joka riippuu funktiosta $f$, joukosta $A$ ja mitasta $\mu$, kuten ilmenee lukutavasta:
+$f$\pain{:n} \pain{inte}g\pain{raali} y\pain{li} \pain{$A$:n} \pain{mitan} $\mu$
+\pain{suhteen}. --- Kyseess‰ on ennest‰‰n tutun \pain{m‰‰r‰t}y\pain{n} \pain{inte}g\pain{raalin}
+yleistys; nimitt‰in kuten j‰ljemp‰n‰ havaitaan, merkint‰ \eqref{integraalimerkint‰} on p‰tev‰
+myˆs, kun $f$ on v‰lill‰ $A=[a,b]$ m‰‰ritelty (integroituva) funktio,
+$I(f,A,\mu)=\int_a^b f(x)\,dx$ ja $\mu$ on $\R$:n \kor{pituusmitta}.
+
+\subsection*{Jordanin pinta-alamitta}
+\index{pinta-alamitta!a@tason|vahv}
+\index{Jordan-mitta!a@pinta-alamitta|vahv}
+
+Koska tasointegraali m‰‰ritell‰‰n suhteessa pinta-alamittaan, on t‰m‰ ensin m‰‰ritelt‰v‰.
+\index{mitta, mitallisuus}%
+\kor{Mitta} (engl.\ measure) on yleisemmin \kor{joukkofunktio}, joka liitt‰‰ \kor{mitalliseen}
+(engl.\ measurable) joukkoon (t‰ss‰ $\R^2$:n osajoukkoon) reaaliluvun:
+\[
+\mu:\mathcal{M}\Kohti\R,\quad \mathcal{M}=\{\text{mitalliset joukot $A\subset\R^2$}\}.
+\]
+Pinta-alamitaksi oletetaan jatkossa \kor{Jordan-mitta}\footnote[2]{Jordan-mittaa sanotaan myˆs
+\kor{Peanon--Jordanin} mitaksi. Termit viittaavat matemaatikoihin \hist{Camille Jordan}
+(ransk.\ 1838-1922) ja \hist{Giuseppe Peano} (ital.\ 1858-1932). \index{Jordan, C.|av}
+\index{Peano, G.|av}}, joka jatkossa m‰‰ritell‰‰n niin,
+ett‰ seuraavat kolme aksioomaa toteutuvat. Aksioomista ensimm‰isess‰ asetetaan
+\index{perussuorakulmio}%
+koordinattiakselien mukaan suunnatun nk.\ \kor{perussuorakulmion} mitta. Muut kaksi ovat
+yleisempienkin \kor{positiivisten} mittojen aksioomia (tai aksioomien seurauksia). 
+\begin{itemize}
+\item[A1.] \kor{Perussuorakulmion mitta}: \ 
+           $T=\{(x,y)\in\R^2 \mid x\in[a_1,b_1]\ \ja\ y\in[a_2,b_2]\}$: \\[0.25cm] 
+           $\mu(T)=(b_1-a_1)(b_2-a_2)$.
+\item[A2.] \kor{Additiivisuus}: \ $A,B\in\mathcal{M} \ \ja\ A \cap B=\emptyset$ \\[0.25cm]
+           $\impl \ A \cup B \in \mathcal{M} \ \ja \ \mu(A \cup B)=\mu(A)+\mu(B)$.
+           \index{additiivisuus!b@mitan}
+\item[A3.] \kor{Positiivisuus}: \ $\mu(A)\geq 0\quad\forall A\in\mathcal{M}$.
+           \index{positiivisuus (mitan)}
+\end{itemize}
+Huomattakoon, ett‰ aksiooman A1 mukaisesti mitta $\mu$ on l‰htˆkohtaisesti
+valitusta (karteesisesta) koordinaatistosta riippuva. Mittoja k‰sittelev‰lle matematiikan
+lajille, \kor{mittateorialle}, t‰llainen l‰htˆkohta on tyypillinen, jolloin mitan
+riippumattomuus koordinaatistosta (mik‰li tosi) on aina erikseen osoitettava.
+
+Tyhj‰ joukko $\emptyset$ katsotaan aina mitalliseksi, jolloin aksiooman A2 mukaan on oltava
+$\mu(\emptyset)=0$. Yleisemmin jos $A \in \mathcal{M}$ ja $\mu(A)=0$, sanotaan ett‰ $A$ on
+\index{nollamittaisuus}%
+\kor{nollamittainen}. Nollamittaiset joukot ovat mittateoriassa t‰rke‰ll‰
+sijalla.\footnote[2]{Nollamittaisuuteen liittyy erikoinen matematiikan termi
+\kor{melkein kaikkialla} (engl.\ almost everywhere), joka tarkoittaa: muualla kuin
+nollamittaisessa (osa)joukossa. \index{melkein kaikkialla|av}}
+\begin{Exa} Koordinaattiakselien suuntaiset janat $A=\{a\}\times[b,c]$ ja
+$B=[a,b]\times\{c\}$ voidaan tulkita suorakulmion erikoistapauksiksi, jolloin aksiooman A1
+mukaan $\mu(A)=\mu(B)=0$. \loppu
+\end{Exa}
+\begin{Exa} Jos $A=[a_1,b_1]\times[a_2,b_2]$ ja $B=[b_1,c_1]\times[a_2,b_2]$, niin
+$A \cup B=[a_1,c_1]\times[a_2,b_2]$, joten aksiooman A1 mukaan on
+$\mu(A \cup B)=\mu(A)+\mu(B)$. \loppu
+\end{Exa}
+J‰lkimm‰isess‰ esimerkiss‰ additiivisuusaksiooma A2 toteutuu, vaikka $A \cap B\neq\emptyset$.
+T‰m‰ johtuu siit‰, ett‰ (edellisen esimerkin mukaan) $A \cap B$ on nollamittainen.
+--- Yleisemminkin voi aksiooomassa A2 ehdon $\,A \cap B = \emptyset\,$ lievent‰‰ ehdoksi
+$\mu(A \cap B)=0$ (ks.\ Jordan-mitan m‰‰rittely j‰ljemp‰n‰ ja
+Harj.teht.\,\ref{H-uint-1: v‰itt‰mi‰}c).
+
+\subsection*{Integraali yli rajoitetun joukon}
+\index{Riemannin!a@integraali|vahv}
+\index{Riemann-integroituvuus!c@tasossa|vahv}
+
+Olkoon $A\subset\R^2$ rajoitettu joukko, jolloin se sis‰ltyy johonkin perussuorakulmioon:
+\[
+A \subset T = [a_1,b_1]\times [a_2,b_2]
+\]
+(ks.\ kuvio alla). Olkoon $f$ $A$:ssa m‰‰ritelty rajoitettu funktio ja olkoon $f_0=$ $f$:n
+\index{nollajatko (funktion)}%
+\kor{nollajatko} $A$:n ulkopuolelle:
+\[
+f_0(x,y)=\begin{cases} \,f(x,y), &\text{kun}\ (x,y)\in A, \\ \,0, &\text{muulloin}. \end{cases}
+\]
+T‰llˆin sovitaan ensinn‰kin, ett‰
+\[
+\boxed{\kehys\quad \int_A f\, d\mu=\int_T f_0\, d\mu, \quad A \subset T. \quad}
+\]
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-1.pstex_t}
+\end{center}
+\end{figure}
+Kuten m‰‰r‰tyss‰ integraalissa, integraalin $\int_T f_0\,d\mu$ m‰‰rittelyn l‰htˆkohtana on
+\index{jako (suorakulmioihin)}%
+$T$:n \kor{jako} (ositus), t‰ss‰ tapauksessa perussuorakulmion muotoisiin osajoukkoihin:
+\begin{align*}
+&\mathcal{T}_h=\{T_{kl}, \ k=1,\ldots, m, \ l=1,\ldots, n\}, \\[1mm]
+&T_{kl} = [x_{k-1},x_k]\times [y_{l-1},y_l], \quad
+\begin{cases} \,a_1 = x_0<x_1<\ldots x_m=b_1, \\ \,a_2 = y_0<y_1<\ldots < y_n=b_2. \end{cases}
+\end{align*}
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-2.pstex_t}
+\end{center}
+\end{figure}
+Jaon (eli suorakulmiojoukon $\mathcal{T}_h$) indeksoinnissa k‰ytetty parametri $h$ on j‰lleen
+\index{tiheysparametri}%
+\kor{tiheysparametri}. T‰m‰n m‰‰ritelm‰ kahdessa ulottuvuudessa on
+\[
+h=\max\{h_x,\,h_y\}, \quad h_x=\max_k\{x_k-x_{k-1}\}, \quad h_y=\max_l\{y_l-y_{l-1}\}.
+\]
+Integraali $\int_T f_0\,d\mu$ m‰‰ritell‰‰n nyt m‰‰r‰tyn integraalin tapaan eli
+\index{Riemannin!b@summa}%
+\kor{Riemannin summien} avulla raja-arvoprosessilla
+(vrt.\ M‰‰ritelm‰t \ref{Riemannin integraali} ja \ref{raja-arvo Lim})
+\[
+\int_T f_0\,d\mu = \Lim_{h\kohti 0} \sum_{k=1}^m \sum_{l=1}^n f_0(\xi_{kl},\eta_{kl})\mu(T_{kl}),
+\]
+miss‰ $(\xi_{kl},\eta_{kl})\in T_{kl}$. Vaihtoehtoinen, etenkin teoreettisissa tarkasteluissa
+k‰tev‰ integroituvuuden kriteeri saadaan, kun m‰‰ritell‰‰n jakoon $\mathcal{T}_h$ liittyen
+\index{Riemannin!c@yl‰- ja alasumma}%
+\begin{align*}
+&-\text{\kor{yl‰summa}}: \quad \overline{\sigma}_h(f_0,\mathcal{T}_h)
+                          =\sum_{k=1}^m\sum_{l=1}^n M_{kl}\,\mu(T_{kl}), \quad
+                             M_{kl}=\sup_{(x,y)\in T_{kl}} f_0(x,y), \\
+&-\text{\kor{alasumma}}: \quad \underline{\sigma}_h(f_0,\mathcal{T}_h)
+                          =\sum_{k=1}^m\sum_{l=1}^n m_{kl}\,\mu(T_{kl}), \quad
+                             m_{kl}=\inf_{(x,y)\in T_{kl}} f_0(x,y).
+\end{align*}
+T‰llˆin $f$ on integroituva yli $A$:n t‰sm‰lleen kun p‰tee
+(vrt.\ Lause \ref{Riemann-integroituvuus})
+\[
+\sup_{\mathcal{T}_h} \underline{\sigma}_h(f_0,\mathcal{T}_h) 
+                     = \underline{I}(f,\mu,A) = \overline{I}(f,\mu,A)
+                     = \inf_{\mathcal{T}_h} \overline{\sigma}_h(f_0,\mathcal{T}_h),
+\]
+\index{Riemannin!d@yl‰- ja alaintegraali}%
+ja integraalin arvo = n‰iden \kor{ala}- ja \kor{yl‰integraalien} yhteinen arvo $I(f,A,\mu)$.
+
+Molemmista m‰‰rittelytavoista n‰hd‰‰n, ett‰ $\int_T f_0\,d\mu$ ei riipu suorakulmion $T$
+valinnasta sik‰li kuin $T \supset A$ (Harj.teht.\,\ref{H-uint-1: T:n valinta}). --- T‰m‰ tulos
+ennakoitiin jo edell‰, kun sovittiin: $\,\int_A f\,d\mu = \int_T f_0\,d\mu,\ T \supset A$.
+
+\subsection*{Lineaarisuus. Additiivisuus. Vertailuperiaate}
+
+Jos merkit‰‰n rajoitetun joukon A yli integroituvien funktioiden joukkoa symbolilla
+$\mathcal{R}_A$, niin seuraavat yleiset ominaisuudet ovat yhteisi‰ tasointegraaleille ja 
+yksiulotteisille m‰‰r‰tyille integraaleille (ks.\ Lauseet
+\ref{integraalin additiivisuus}--\ref{integraalien vertailuperiaate}). N‰m‰ ovat voimassa myˆs
+jatkossa m‰‰ritelt‰ville muille integraalityypeille.
+\index{lineaarisuus!b@integroinnin}
+\index{additiivisuus!a@integraalin}
+\index{vertailuperiaate!a@integraalien}%
+\[ 
+\boxed{ \begin{aligned}
+\ykehys\quad &\text{Lineaarisuus}\,: \qquad 
+f,g \in \mathcal{R}_A\ \impl\ \alpha f + \beta g \in \mathcal{R}_A \quad
+                                         \forall\ \alpha,\beta \in \R \quad \text{ja} \\
+&\phantom{\text{Lineaarisuus}\,:} \qquad 
+\int_A (\alpha f + \beta g)\,d\mu = \alpha\int_A f\,d\mu + \beta\int_A g\,d\mu. \\[2mm]
+&\text{Additiivisuus}\,: \quad 
+f\in\mathcal{R}_A\ \ja\ f\in\mathcal{R}_B\ \ja\ A \cap B = \emptyset \\
+&\phantom{\text{Additiivisuus}\,:} \quad \impl\ \int_{A \cup B} f\,d\mu 
+                                              = \int_A f\,d\mu + \int_B f\,d\mu. \\[2mm]
+&\text{Vertailuperiaate}\,: \quad 
+f,g \in \mathcal{R}_A\ \ja\ f \le g\,\ A\text{:ssa}\ \impl\ \int_A f\,d\mu \le \int_A\,g\,d\mu. 
+        \quad\Akehys \end{aligned} } 
+\]
+Lineaarisuus ja vertailuperiaate seuraavat suoraan m‰‰ritelm‰st‰, kuten yksi\-ulotteisessa
+tapauksessa (ks.\ Luku \ref{riemannin integraali}). Additiivisuus on johdettavissa
+yksinkertaisimmin lineaarisuudesta: Kun merkit‰‰n $f$:n nollajatkoja joukkojen $A$, $B$ ja
+$A \cup B$ suhteen vastaavasti symboleilla $f_A$, $f_B$ ja $f_0$, niin p‰tee
+\[
+A \cap B = \emptyset \qimpl f_0=f_A+f_B.
+\]
+N‰in ollen jos $T=[a_1,b_1]\times[a_2,b_2] \supset A \cup B$, niin lineaarisuuden nojalla
+\[
+\int_T f_0\,d\mu = \int_T f_A\,d\mu + \int_T f_B\,d\mu
+   \qekv \int_{A \cup B} f\,d\mu = \int_A f\,d\mu + \int_B f\,d\mu.
+\]
+
+\subsection*{Rajoitetun joukon mitta}
+
+Em.\ m‰‰ritelmiss‰ on integraalin riippuvuus mitasta varsin yksinkertainen, sill‰ m‰‰ritelmiss‰
+tarvitaan vain suorakulmioiden $T_{kl}$ mittoja aksiooman A1 mukaisesti. Mutta kun integraali on
+kerran m‰‰ritelty k‰ytt‰en hyv‰ksi mitan yksinkertaisimpia ominaisuuksia, voidaankin m‰‰ritell‰
+yleisemm‰n joukon $A$ mitta k‰ytt‰en hyv‰ksi integraalia (!).
+Menettely on seuraava: Tarkastellaan funktiota
+\[
+f(x,y)=1,\quad (x,y)\in A.
+\]
+\index{karakteristinen funktio}%
+T‰m‰n nollajatkoa sanotaan $A$:n \kor{karakteristiseksi funktioksi} ja merkit‰‰n
+\[
+\chi_A(x,y)=\begin{cases} 
+            \,1, &\text{kun}\ (x,y) \in A, \\ \,0, &\text{kun}\ (x,y) \notin A. 
+            \end{cases}
+\]
+Sik‰li kuin $\chi_A$ on Riemann-integroituva yli suorakulmion $T\supset A$, on em.\ 
+m‰‰ritelmien mukaan
+\[
+\int_A d\mu=\int_T \chi_A\,d\mu, \quad T=[a_1,b_1]\times[a_2,b_2]\supset A.
+\]
+\begin{Def} (\vahv{Jordan-mitta}) \label{Jordan-mitta} \index{pinta-alamitta!a@tason|emph}
+\index{Jordan-mitta!a@pinta-alamitta|emph} \index{mitta, mitallisuus!a@Jordan-mitta|emph} 
+Rajoitettu joukko $A\subset\R^2$ on \kor{Jordan-mitallinen} t‰sm‰lleen kun $A$:n
+karakteristinen funktio $\chi_A$ on Riemann-integroituva yli suorakulmioiden
+$T=[a_1,b_1]\times[a_2,b_2]\supset A$ ja $A$:n \kor{Jordan-mitta} on t‰llˆin
+\[
+\boxed{\kehys\quad \mu(A)=\int_A d\mu. \quad}
+\]
+\end{Def}
+Mitta-aksioomien A1--A3 toteutuminen on t‰m‰n m‰‰ritelm‰n ja em.\ yleisten integraalin
+ominaisuuksien perusteella ilmeist‰.
+
+Kaikki rajoitetut joukot eiv‰t ole mitallisia (ks.\ Harj.teht.\,\ref{H-uint-1: esimerkkej‰}a),
+mutta jokaiselle rajoitetulle joukolle $A\subset\R^2$ voidaan m‰‰ritell‰
+\index{ulkomitta (Jordanin)} \index{siszy@sis‰mitta (Jordanin)}
+\begin{align*}
+&\text{\kor{ulkomitta}:} \quad 
+            \overline{\mu}(A)=\inf_{\mathcal{T}_h}\overline{\sigma}_h(\chi_A,\mathcal{T}_h), \\
+&\text{\kor{sis‰mitta}:} \quad 
+            \underline{\mu}(A)=\sup_{\mathcal{T}_h}\underline{\sigma}_h(\chi_A,\mathcal{T}_h),
+\end{align*}
+miss‰ $\inf$ ja $\sup$ lasketaan yli kaikkien perussuorakulmion $T\supset A$ jakojen. Joukko
+$A$ on mitallinen t‰sm‰lleen kun $\overline{\mu}(A)=\underline{\mu}(A)$.
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-3.pstex_t}
+\end{center}
+\end{figure}
+Kuviossa on
+\begin{align*}
+\mu(\raisebox{-0.1cm}{\epsfig{file=kuvat/kuvaUint-4a.eps}}) 
+                      &= \underline{\sigma}_h(\chi_A,\mathcal{T}_h)
+                       =\sum_{T_{kl}\in\mathcal{T}_h:\,T_{kl}\subset A} \mu(T_{kl}), \\
+\mu(\raisebox{-0.1cm}{\epsfig{file=kuvat/kuvaUint-4b.eps}}) 
+                      &= \overline{\sigma}_h(\chi_A,\mathcal{T}_h)
+                         -\underline{\sigma}_h(\chi_A,\mathcal{T}_h).
+\end{align*}
+\begin{Exa} $A=$ jana, jonka p‰‰tepisteet ovat $(0,0)$ ja $(2,1)$. N‰yt‰: $\mu(A)=0$.
+\end{Exa}
+\begin{multicols}{2}
+\ratk Jaetaan $T=[0,2]\times[0,1] \supset A$ suorakulmioihin kokoa $h \times h/2$, miss‰
+$2/h=n\in\N$. T‰llˆin on (vrt.\ kuvio)
+\[
+\overline{\sigma}_h(\chi_A,\mathcal{T}_h) = \frac{2}{h}\cdot\frac{h^2}{2} = h.
+\]
+N‰in ollen $\overline{\mu}(A) \le h=2/n\ \forall n\in\N$, joten $\overline{\mu}(A)=0$ ja siis
+$\mu(A)=0$. \loppu
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(4,4)
+\put(0,1){\vector(1,0){5}} \put(0,1){\vector(0,1){2.5}}
+\put(5.3,0.9){$x$} \put(-0.1,3.8){$y$}
+\put(3.95,0.6){$\scriptstyle{2}$} \put(-0.4,2.9){$\scriptstyle{1}$}
+\put(0.45,0.6){$\scriptstyle{h}$} \put(-0.6,1.2){$\scriptstyle{h/2}$}
+\put(0,3){\line(1,0){4}} \put(4,1){\line(0,1){2}}
+\multiput(0,1)(0.5,0.25){8}{\line(1,0){0.5}}
+\multiput(0,1.25)(0.5,0.25){8}{\line(1,0){0.5}}
+\multiput(0,1)(0.5,0.25){8}{\line(0,1){0.25}}
+\multiput(0.5,1)(0.5,0.25){8}{\line(0,1){0.25}}
+\thicklines
+\put(0,1){\line(2,1){4}}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+
+Mainittakoon viel‰ seuraava lause, jonka osittainen todistus j‰tet‰‰n harjoitusteht‰v‰ksi
+(Harj.teht.\,\ref{H-uint-1: integroituvuus L-ehdolla}). Lauseen jatkuvuusoletus
+(jota harjoitusteht‰v‰ss‰ on vahvistettu) viittaa M‰‰ritelm‰‰n
+\ref{jatkuvuus kompaktissa joukossa - Rn}.
+\begin{*Lause} \label{jatkuvan funktion integroituvuus tasossa}
+\index{Riemann-integroituvuus!b@jatkuvan funktion|emph}
+\index{Riemann-integroituvuus!c@tasossa|emph}
+Jos $f$ on jatkuva suorakulmiossa $T=[a,b]\times[c,d]$ ja $A \subset T$ on mitallinen, niin
+$f$ on Riemann-integroituva yli $A$:n.
+\end{*Lause} 
+
+\subsection*{Siirto-, peilaus- ja kiertoinvarianssi}
+\index{Jordan-mitta!a@pinta-alamitta|vahv}
+\index{siirtoinvarianssi (mitan)|vahv}
+\index{peilausinvarianssi (mitan)|vahv}
+\index{kiertoinvarianssi (mitan)|vahv}
+
+Jotta Jordan-mitta vastaisi tavanomaista geometriasta tunnettua pinta-alaa, on mitan oltava
+\kor{siirto}-, \kor{peilaus} ja  \kor{kiertoinvariantti}. T‰ll‰ tarkoitetaan, ett‰ jos $A$ on
+mitallinen ja $A'$ on $A$:n kanssa (geometrisesti)
+\index{yhtenevyys}%
+\kor{yhtenev‰}, eli $A'=\mf(A)$, miss‰ joillakin $a,b,\theta\in\R$ on
+\[
+\mf(x,y)=(a+x\cos\theta \mp y\sin\theta,\,b+x\sin\theta \pm y\cos\theta),
+\]
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-7.pstex_t}
+\end{center}
+\end{figure}
+niin $\mu(A')=\mu(A)$. Kuvaus $\mf:A \kohti A'$ on affiinimuunnoksen erikoistapaus, joka
+\index{siirto (translaatio)} \index{kierto!a@geom.\ kuvaus} \index{peilaus}%
+koostuu \kor{siirrosta} (siirtovektori $\vec r_0=a\vec i + b\vec j\,$), \kor{kierrosta}  
+(kiertokulma $\theta$) ja mahdollisesta \kor{peilauksesta} (merkin vaihtelu). Yhdistetty‰
+siirtoa ja kiertoa (kuva) sanotaan
+\index{euklidinen liike}%
+\kor{euklidiseksi liikkeeksi}.  
+
+Siirto- ja peilausinvarianssi ovat mitan $\mu$ m‰‰ritelm‰st‰ varsin ilmeisi‰. Kierron suhteen 
+sen sijaan voisi m‰‰ritelm‰n koordinaattiriippuvuuden ep‰ill‰ aiheuttavan ongelmia. T‰llaisia
+ei todellisuudessa ole, vaan p‰tee
+(ks.\ Harj.teht.\,\ref{H-uint-1: kiertoinvarianssi a},\ref{H-uint-1: kiertoinvarianssi b})
+\begin{Lause}
+Jordanin pinta-alamitta on siirto-, peilaus- ja kiertoinvariantti, ts. geometrisesti yhtenevien
+joukkojen mitat ovat samat.
+\end{Lause}
+
+\subsection*{Keskipistes‰‰ntˆ}
+\index{keskipistes‰‰ntˆ|vahv}
+
+Kuten yhden muuttujan integraaleja, myˆs tasointegraaleja voi laskea numeerisesti suoraan 
+m‰‰ritelm‰st‰ k‰sin, eli approksimoimalla integraalia Riemannin summalla:
+\[ 
+\int_A f\, d\mu = \int_T f_0\, d\mu 
+    \,\approx\, \sum_{k=1}^m \sum_{l=1}^n f_0(\xi_{kl},\eta_{kl})\mu(T_{kl}), \quad T \supset A.
+\]
+Jos t‰ss‰ valitaan $(\xi_{kl},\eta_{kl})=T_{kl}$:n keskipiste, niin approksimaatiota sanotaan
+\index{yhdistetty!a@keskipistes‰‰ntˆ}%
+\kor{yhdistetyksi keskipistes‰‰nnˆksi}. Kuten yhdess‰ dimensiossa (vrt.\ Luku 
+\ref{numeerinen integrointi}), t‰m‰ on Riemannin summiin perustuvista approksimaatioista
+yleens‰ tarkin.
+\begin{Exa} Jos $A = [a,b] \times [c,d]$, niin integraali $\int_A x\,d\mu$ saadaan lasketuksi
+jakamalla $A\ $ $m \times n$ samankokoiseen suorakulmioon ja k‰ytt‰m‰ll‰ yhdistetty‰
+keskipistes‰‰ntˆ‰:
+\begin{align*}
+\int_A x\,d\mu\ 
+   &\approx\ \sum_{k=1}^m\sum_{l=1}^n 
+    \left[a+\frac{(k-\tfrac{1}{2})(b-a)}{m}\right]\frac{b-a}{m}\cdot\frac{c-d}{n} \\
+   &=\, (b-a)(c-d)\left[a + \frac{b-a}{m^2}\sum_{k=1}^m (k-\tfrac{1}{2})\right] \\
+   &=\, (b-a)(c-d)[a+\tfrac{1}{2}(b-a)] \,=\, \tfrac{1}{2}(a+b)\mu(A).
+\end{align*}
+Koska tulos ei riipu parametreista $m,n$, on oltava $\int_A x\,d\mu = \tfrac{1}{2}(a+b)\mu(A)$.
+Vastaavalla tavalla laskien saadaan $\int_A y\,d\mu = \tfrac{1}{2}(c+d)\mu(A)$. \loppu
+\end{Exa}
+Esimerkiss‰ saatiin jo yhdell‰ suorakulmiolla ($m=n=1,\ T_{11}=A$) tarkka tulos. Yleisemmin
+keskipistes‰‰ntˆ integroi suorakulmiossa tarkasti ensimm‰isen asteen polynomin:
+\begin{multicols}{2}
+\begin{align*}
+f(x,y) &= a_0 + a_1 x + a_2 y \quad (a_0,a_1,a_2 \in \R) \\
+       &\impl \ \int_T f\, d\mu=f(x_0,y_0)\mu(T).
+\end{align*}
+\begin{figure}[H]
+\setlength{\unitlength}{1cm}
+\begin{center}
+\begin{picture}(-3,0.5)(4,2)
+\path(0,0)(4,0)(4,2)(0,2)(0,0)
+\put(1.9,0.9){$\bullet$} \put(2.2,0.9){$(x_0,y_0)$}
+\put(1.9,2.2){$T$}
+\end{picture}
+\end{center}
+\end{figure}
+\end{multicols}
+T‰m‰n ominaisuuden ja kahden muuttujan Taylorin kaavan
+(Luku \ref{usean muuttujan taylorin polynomit}) perusteella keskipistes‰‰nnˆlle on johdettavissa 
+virhearvio samaan tapaan kuin yhdess‰ dimensiossa (Harj.teht.\,\ref{H-uint-1: kp-virhearvio}).
+\begin{Exa} \label{keskipistes‰‰ntˆ tasossa} Olkoon $A = [0,1] \times [0,1]$ ja laskettavana
+integraali $\int_A x^2 y^2\,d\mu$. Kun $A$ jaetaan neliˆihin kokoa $h \times h$ ja kussakin 
+neliˆss‰ integroimispisteeksi valitaan (a) vasen alanurkka, (b) keskipiste, niin integraalille
+saadaan seuraavat likiarvot (tarkka arvo $=1/9\,$; taulukkoon on merkitty myˆs summattavien 
+termien lukum‰‰r‰ $N=h^{-2}$)\,:
+\begin{center}
+\begin{tabular}{llll}
+$h$    & $N$    & Likiarvo (a)  & Likiarvo (b) \\  \hline & \\
+0.1    & $10^2$ & 0.081225000.. & 0.110556250.. \\
+0.01   & $10^4$ & 0.107813722.. & 0.111105555.. \\
+0.001  & $10^6$ & 0.110778138.. & 0.111111055.. \\
+0.0001 & $10^8$ & 0.111077781.. & 0.111111110.. \qquad\qquad\loppu
+\end{tabular}
+\end{center}
+\end{Exa}
+Jos joukko $A$ on yleisempi joukko kuin suorakulmio, niin Riemannin summiin perustuva
+numeerinen approksimaatio
+\[ 
+\int_A f\,d\mu = \int_T f_0\,d\mu 
+                 \approx \sum_{k=1}^m \sum_{l=1}^n f_0(\xi_{kl},\eta_{kl})\mu(T_{kl}) 
+\]
+\begin{multicols}{2} \raggedcolumns
+ei v‰ltt‰m‰tt‰ ole kovin hyv‰, syyst‰ ett‰ $f$:n nollajatko $f_0$ on (yleens‰) ep‰jatkuva 
+sellaisissa suorakulmioissa $T_{kl}$, jotka leikkaavat reunaviivaa $\partial A$ (kuvio).
+%\begin{multicols}{2} \raggedcolumns
+T‰llˆin arvio
+\[
+\int_{T_{kl}} f_0\, d\mu\approx f_0(\xi_{kl},\eta_{kl})\mu(T_{kl})
+\]
+on p‰‰s‰‰ntˆisesti kehno, valittiinpa $(\xi_{kl},\eta_{kl}) \in T_{kl}$ miten hyv‰ns‰.
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-10.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+
+\begin{multicols}{2} \raggedcolumns
+Jos halutaan parantaa algoritmia, niin on syyt‰ k‰ytt‰‰ tarkempia approksimaatioita
+integraaleille
+\[
+\int_{T_{kl}} f_0\, d\mu=\int_{T_{kl}\cap A} f\, d\mu
+\]
+silloin kun $T_{kl}\cap\partial A\neq\emptyset$. Esimerkiksi jakoa voidaan paikallisesti
+tihent‰‰ ja k‰ytt‰‰ samaa algoritmia uudelleen ($T$:n tilalla $T_{kl}$, $A$:n tilalla
+$A \cap T_{kl}$).
+\begin{figure}[H]
+\begin{center}
+\input{kuvat/kuvaUint-11.pstex_t}
+\end{center}
+\end{figure}
+\end{multicols}
+
+\subsection*{$\R$:n pituusmitta}
+\index{pituusmitta (Jordanin)|vahv}
+\index{Jordan-mitta!b@$\R$:n pituusmitta|vahv}
+\index{mitta, mitallisuus!a@Jordan-mitta|vahv}
+
+M‰‰ritelt‰ess‰ $\R$:n (Jordanin) \kor{pituusmitta} kirjoitetaan aksiooman A1 tilalle
+\begin{itemize}
+\item[A1.] \kor{Suljetun v‰lin mitta}: $\,\ A=[a,b]: \,\ \mu(A)=b-a$.
+\end{itemize}
+Muut aksioomat s‰ilyv‰t ennallaan. Jos $A\subset\R$ on rajoitettu joukko, niin m‰‰ritell‰‰n
+\[
+\int_A f\,d\mu = \int_T f_0\,d\mu, \quad T=[a,b] \supset A,
+\]
+miss‰ $f_0$ on $f$:n nollajatko, ja t‰ss‰ edelleen
+\[
+\int_T f_0\,d\mu = \Lim_{h \kohti 0} \sum_{k=1}^n f_0(\xi_k)\mu(T_k),
+\]
+miss‰ $\,T_k=[x_{k-1},x_k]$, $\,\xi_k \in T_k\,$ ja $\,a=x_0<x_1 < \ldots <x_n=b$. Koska
+$\mu(T_k)=x_k-x_{k-1}$, niin t‰ss‰ $\int_T f_0\,d\mu=\int_a^b f_0(x)\,dx\,$ (M‰‰ritelm‰
+\ref{Riemannin integraali}). M‰‰r‰tyss‰ (Riemannin) integraalissa on siis kyse integroimisesta
+$\R$:n pituusmitan suhteen. Rajoitetun joukon $A\subset\R$ Jordan-mitta m‰‰ritell‰‰n kuten
+edell‰, eli integraalin avulla:
+\[
+\mu(A)=\int_A d\mu.
+\]
+\begin{Exa} Jos $A=[0,1]\cup[2,4]$ niin integraalin additiivisuuden (tai suoraan m‰‰ritelm‰n)
+perusteella
+\[
+\int_A f\,d\mu = \int_{[0,1]} f\,d\mu+\int_{[2,4]} f\,d\mu 
+               = \int_0^1 f(x)\,dx+\int_2^4 f(x)\,dx.
+\]
+Erityisesti on $\mu(A)=\int_A d\mu = 1+2=3$. \loppu
+\end{Exa}
+
+\Harj
+\begin{enumerate}
+
+\item \label{H-uint-1: T:n valinta}
+N‰yt‰, ett‰ jos $T_1$ ja $T_2$ ovat joukon $A\subset\R^2$ sis‰lt‰vi‰ perussuorakulmioita, niin
+samoin on $T_1 \cap T_2$. P‰‰ttele t‰st‰, ett‰ m‰‰ritelm‰ $\int_A f\,d\mu=\int_T f_0\,d\mu$
+antaa saman tuloksen perussuorakulmion $T \supset A$ valinnasta riippumatta.
+
+\item \label{H-uint-1: esimerkkej‰}
+a) N‰yt‰, ett‰ joukko $A=([0,1]\cap\Q)\times[0,1]$ ei ole Jordan-mitallinen. \newline
+b) Anna esimerkki joukosta $A$, jolle p‰tee $A\subset[0,1]\times[0,1]$, $\overline{\mu}(A)=1$
+ja $\underline{\mu}(A)=0.99$.
+
+\item \label{H-uint-1: v‰itt‰mi‰}
+Todista seuraavat rajoitettuja joukkoja $A,B\subset\R^2$ koskevat
+v‰itt‰m‰t:  \vspace{1mm}\newline 
+a) Jos $A \subset B$, niin $\underline{\mu}(A)\le\underline{\mu}(B)$ ja
+$\overline{\mu}(A)\le\overline{\mu}(B)$. \vspace{1mm}\newline
+b) Jos $\mu(B)=0 $, niin $\underline{\mu}(A \cup B)=\underline{\mu}(A)$ ja
+$\overline{\mu}(A \cup B)=\overline{\mu}(A)$. \vspace{1mm}\newline
+c) Jos $\mu(A \cap B)=0$, niin 
+$\underline{\mu}(A \cup B)=\underline{\mu}(A)+\underline{\mu}(B)$ ja
+$\overline{\mu}(A \cup B)=\overline{\mu}(A)+\overline{\mu}(B)$.
+
+\item 
+Laske joukon $A = \{(x,y)\in\R^2 \mid x \in [0, 1]\,\ja\, 0 \le y \le x^2\}$ Jordanin 
+ulko-ja sis‰mitalle approksimaatiot jakamalla $T = [0, 1] \times [0, 1]$ suorakulmioihin kokoa
+$h \times h^2\ (h^{-1}\in\N)$ ja n‰iden perusteella mitta $\mu(A)$.
+
+\item
+Olkoon $A\subset\R^2$ rajoitettu joukko ja $f$ ja $g$ m‰‰riteltyj‰ ja rajoitettuja $A$:ssa.
+N‰yt‰, ett‰ jos $f(x,y) \le g(x,y)\ \forall (x,y) \in A$, niin
+$\overline{I}(f,\mu,A)\,\le\,\underline{I}(g,\mu,A)$. 
+
+\item \label{H-uint-1: kiertoinvarianssi a}
+a) Olkoon $A=$ suorakulmainen kolmio, jonka k‰rjet ovat pisteiss‰ $(0,0)$, $(a, 0)$ ja $(0, b)$.
+N‰yt‰ Jordan-mitan m‰‰ritelm‰st‰, ett‰ $\mu(A) = \frac{1}{2} |a| |b|$. \vspace{1mm}\newline
+b) Vedoten a-kohdan tulokseen ja mitan additiivisuuteen p‰‰ttele, ett‰ suorakulmion mitta on 
+kiertoinvariantti.
+
+\item 
+Laske yhdistetty‰ keskipistes‰‰ntˆ‰ k‰ytt‰en integraali $\int_A (1+x-2 y)\,d\mu$, kun 
+$A\subset\R^2$ on $T$:n muotoinen alue, jonka nurkkapisteet ovat $(2,0)$, $(3,0)$, $(3,3)$, 
+$(5,3)$, $(5,4)$, $(0,4)$, $(0,3)$ ja $(2,3)$.
+
+\item \label{H-uint-1: toisen asteen integraalit}
+Olkoon $A=[-a/2,a/2]\times[-b/2,b/2]$. Jakamalla $A$ samankokoisiin suorakulmioihin ja 
+k‰ytt‰m‰ll‰ yhdistetty‰ keskipistes‰‰ntˆ‰ n‰yt‰ oikeaksi:
+\[
+\int_A x^2\,d\mu=\frac{1}{12}\,a^3b, \quad
+\int_A y^2\,d\mu=\frac{1}{12}\,ab^3, \quad
+\int_A \abs{xy}\,d\mu=\frac{1}{16}\,a^2b^2.
+\]
+
+\item 
+Olkoon $A = [0,1] \times [0,1]$. Laske seuraavat integraalit jakamalla $A$ neliˆihin kokoa 
+$h \times h$ ($h^{-1}\in\N$), k‰ytt‰m‰ll‰ yhdistetty‰ keskipistes‰‰ntˆ‰, ja laskemalla tuloksen
+raja-arvo, kun $h \to 0$.
+\[
+\text{a)}\ \ \int_A xy^2\,d\mu \qquad
+\text{b)}\ \ \int_A x^2y^2\,d\mu \qquad
+\text{c)}\ \ \int_A e^{x+y}\,d\mu
+\]
+
+\item (*)
+Luvussa \ref{pinta-ala ja kaarenpituus} v‰itettiin, ett‰ jos
+\[
+A = \{\,(x,y) \in \R^2 \mid x \in [a,b]\ \ja\ 0 \le y \le f(x)\,\},
+\]
+miss‰ $f$ on rajoitettu, ei-negatiivinen ja Riemann-integroituva v‰lill‰ $[a,b]$, niin
+$\,\mu(A)=\int_a^b f(x)\,dx$. Todista v‰itt‰m‰ uudelleen n‰ytt‰m‰ll‰, ett‰
+\[ 
+\underline{\mu}(A) = \underline{\int_a^b} f(x)\,dx, \quad 
+\overline{\mu}(A) = \overline{\int_a^b} f(x)\,dx 
+\]
+ja vetoamalla Lauseeseen \ref{Riemann-integroituvuus}.
+
+\item (*) \label{H-uint-1: integroituvuus L-ehdolla}
+Todista Lauseen \ref{jatkuvan funktion integroituvuus tasossa} v‰itt‰m‰, kun jatkuvuuden
+sijasta oletetaan, ett‰ $f$ toteuttaa Lipschitz-jatkuvuusehdon
+\[
+\abs{f(x_1,y_1)-f(x_2,y_2)} \le L(\abs{x_1-x_2}+\abs{y_1-y_2}), \quad 
+                                              (x_1,y_1),\,(x_2,y_2) \in T.
+\]
+\kor{Vihje}: Vertaa yl‰- ja alasummia $\overline{\sigma}(f_0,\mathcal{T}_h)$ ja
+$\underline{\sigma}(f_0,\mathcal{T}_h)$ ($\mathcal{T}_h=T$:n ositus).
+
+\item (*) \label{H-uint-1: fplus ja fmiinus}
+Olkoon $A\subset\R^2$ rajoitettu joukko ja $f$ m‰‰ritelty $A$:ssa. M‰‰ritell‰‰n
+\[
+f_+(x,y) = \begin{cases} 
+            \,f(x,y), &\text{kun}\ f(x,y)>0, \\ 
+            \,0,      &\text{muulloin}. 
+           \end{cases}
+\]
+a) N‰yt‰: $\ \overline{I}(f_+,A)-\underline{I}(f_+,A) \le \overline{I}(f,A)-\underline{I}(f,A)$.
+\vspace{1mm}\newline
+b) P‰‰ttele: Jos $f$ on Riemann-integroituva yli $A$:n, niin samoin ovat $f_+$, $f_-=f-f_+$ ja
+$|f|$. 
+
+\item (*) \label{H-uint-1: kiertoinvarianssi b}
+L‰htien teht‰v‰n \ref{H-uint-1: kiertoinvarianssi a} tuloksesta todista: Jos $A\subset\R^2$ on
+rajoitettu, niin $\underline{\mu}(A)$ ja $\overline{\mu}(A)$ ovat kiertoinvariantteja.
+P‰‰ttele, ett‰ jos $A$ on Jordan-mitallinen, niin $\mu(A)$ on kiertoinvariantti.
+
+\item (*)
+Integraalille $\int_A f\,d\mu$, miss‰ $A$ on kolmio, jonka k‰rjet ovat $(0,0)$, $(1,0)$ ja
+$(0,1)$, ja $f(x,y)=x+2y$, lasketaan likiarvo jakamalla $T=[0,1]\times[0,1] \supset A$
+neliˆihin kokoa $h \times h$ ja laskemalla $\int_T f_0\,d\mu$ yhdistetyll‰ keskipistes‰‰nnˆll‰.
+a) N‰yt‰, ett‰ tuloksena on yl‰likiarvo, jonka virhe $=\tfrac{3}{2}h+\Ord{h^2}$. \newline
+b) Mik‰ on integraalin tarkka arvo? 
+
+\item (*) \label{H-uint-1: kp-virhearvio}
+Olkoon $f$:n osittaisderivaatat toiseen kertalukuun asti jatkuvia suorakulmiossa
+$A=[-a/2,a/2]\times[-b/2,b/2]$. K‰ytt‰m‰ll‰ Taylorin lausetta, integraalien vertailuperiaatetta
+ja teht‰v‰n \ref{H-uint-1: toisen asteen integraalit} tuloksia n‰yt‰ oikeaksi keskipistes‰‰nnˆn
+virhearvio
+\[
+\Bigl|\int_A f\,d\mu - f(0,0)\,ab\,\Bigr|\,\le\,\frac{ab}{24}(M_{11}a^2+M_{22}b^2)
+                                                +\frac{1}{16}\,M_{12}\,a^2b^2,
+\]
+miss‰ $M_{11}$, $M_{22}$ ja $M_{12}$ ovat osittaisderivaattojen $f_{xx}$, $f_{yy}$ ja $f_{xy}$
+itseisarvojen maksimiarvot $A$:ssa. N‰yt‰ edelleen, ett‰ jos $A$ jaetaan suorakulmioihin
+kokoa $h_1 \times h_2\ (a/h_1\in\N,\ b/h_2\in\N)$, niin yhdistetylle keskipistes‰‰nnˆlle
+p‰tee virhearvio
+\[
+\abs{E(f)}\,\le\,\frac{ab}{24}\left(M_{11}h_1^2+M_{22}h_2^2+\frac{3}{2}\,M_{12}\,h_1h_2\right).
+\]
+Mik‰ $E(f)$ on tarkasti, jos $f$ on toisen asteen polynomi ja tunnetaan osittaisderivaattojen
+$f_{xx}$, $f_{yy}$ ja $f_{xy}$ (vakio)arvot $F_{11}$, $F_{22}$ ja $F_{12}\,$?
+
+\end{enumerate}

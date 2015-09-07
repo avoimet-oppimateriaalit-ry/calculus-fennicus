@@ -1,0 +1,454 @@
+\section{Jordan-mitta ja Riemann-integraali} \label{jordanin mitta}
+\sectionmark{Jordan-mitta}
+\alku
+
+Jos $A=[a,b]$ on suljettu väli ($a<b$), niin sanotaan, että luku
+\[
+\mu(A) = b-a
+\]
+$A$:n \kor{mitta}, tarkemmin sanoen \kor{Jordan-mitta}. Mitta (engl.\ measure) on yleisemmin 
+\kor{joukkofunktio}, joka liittää \kor{mitalliseen} (engl. measurable) joukkoon 
+(tässä reaalilukujoukkoon) reaaliluvun:
+\[
+\mu:\mathcal{M}\Kohti\R,\quad \mathcal{M}=\{\text{mitalliset joukot $A\subset\R$}\}.
+\]
+Toistaiseksi on siis sovittu, että ainakin suljetut välit ovat mitallisia ja mitta on välin 
+pituus. Tämä sopimus on itse asiassa mittaa koskeva \pain{aksiooma}, joka kertoo, että kyseessä
+on \kor{pituusmitta} (muitakin mittoja siis on). Jordanin pituusmitan aksioomat ovat:
+\begin{itemize}
+\item[(a)] \kor{Suljetun välin mitta}: \ $A=[a,b]\ \impl\ \mu(A)=b-a$.
+\item[(b)] \kor{Positiivisuus}: \ $\mu(A)\geq 0\quad\forall A\in\mathcal{M}$.
+\item[(c)] \kor{Additiivisuus}: \ $A,B\in\mathcal{M} \ \ja\ A \cap B=\emptyset$ \\[0.25cm]
+           $\impl \ A \cup B \in \mathcal{M} \ \ja \ \mu(A \cup B)=\mu(A)+\mu(B)$.
+\end{itemize}
+Näistä kaksi jälkimmäistä ovat itse asiassa yleisempien \kor{positiivisten} mittojen 
+ominaisuuksia, eli tällaisten mittojen \kor{mitta-aksioomia}.
+\begin{Exa} Jos $A=[-1,1]$, $B=[2,5]$ ja $C=[-7,-3]$, niin aksioomien (a),(c) perusteella 
+$\,\mu(A \cup B \cup C)=2+3+4=9$. \loppu
+\end{Exa}
+Tyhjä joukko $\emptyset$ katsotaan aina mitalliseksi, jolloin aksiooman (c) mukaan on oltava
+\[
+\mu(\emptyset)=0.
+\]
+Yleisemmin jos $A \in \mathcal{M}$ ja $\mu(A)=0$, sanotaan että $A$ on \kor{nollamittainen}. 
+Nollamittaiset joukot ovat yleisessä mittateoriassa tärkeällä sijalla, ja niihin viitataan 
+jatkossakin useasti. Käsitteeseen liittyy (matemaattisessa tekstissä hieman oudolta
+kuullostava) termi \kor{melkein kaikkialla} (engl.\ almost everywhere). Tämä tarkoittaa
+'muualla kuin nollamittaisessa (osa)joukossa'. --- Pituusmittaan liittyen voi yhden 
+reaaliluvun muodostaman joukon $\{a\}$ sopia (suljetun välin rajatapauksena $[a,a]$) 
+mitalliseksi ja nollamittaiseksi. Aksioomasta (c) seuraa silloin, että jokainen 
+\pain{äärellinen} \pain{reaaliluku}j\pain{oukko} \pain{on} \pain{nollamittainen}.
+
+Palautetaan mieliin määrätyn integraalin käsite Luvusta \ref{riemannin integraali}\,: Jos $f$ on
+määritelty ja rajoitettu välillä $[a,b]$, niin $f$:n Riemann-integraali välillä $[a,b]$ on
+\[
+\int_a^b f(x)\, dx=\Lim_{h \kohti 0} \sum_{k=1}^n f(\xi_k)(x_k-x_{k-1}),
+\]
+sikäli kuin raja-arvo on olemassa (ks. Määritelmä \ref{raja-arvo Lim}). Tässä on aiempaan tapaan
+\[
+a=x_0<x_1<\ldots <x_n=b, \quad \xi_k\in [x_{k-1},x_k], \quad h=\max_{h=1\ldots n} (x_k-x_{k-1}).
+\]
+Merkitään
+\[
+A=[a,b],\quad T_k=[x_{k-1},x_k], \quad \mathcal{T}_h=\{T_k, \ k=1\ldots n\}.
+\]
+Joukkoa $\mathcal{T}_h\,$, joka siis koostuu jaon $\{x_k,\,k=0 \ldots n\}$ määrittelemistä välin
+$A$ vierekkäisistä osaväleistä, sanotaan jatkossa välin $A$ \kor{ositukseksi} (engl. partition).
+Koska $\mu(T_k)=x_k-x_{k-1}$, niin Riemann-integraalin määritelmä voidaan kirjoittaa muotoon
+\[
+\int_a^b f(x)\, dx=\Lim_{h \kohti 0} \sum_{T_k\in\mathcal{T}_h} f(\xi_k)\mu(T_k).
+\]
+
+Palautettakoon vielä mieleen Luvusta \ref{ylä- ja alaintegraalit}, että Riemannin integraali
+voidaan määritellä raja-arvon 'Lim' sijasta vaihtoehtoisesti lähtien Riemannin y\pain{lä}- ja 
+\pain{alasummista}
+\[
+\Sigma_h (f,\mathcal{T}_h) = \sum_{T_k\in\mathcal{T}_h} M_k\,\mu(T_k)\,, \quad
+\sigma_h (f,\mathcal{T}_h) = \sum_{T_k\in\mathcal{T}_h} m_k\,\mu(T_k)\,,
+\]
+missä
+\[
+M_k=\sup_{x\in T_k} f(x),\quad m_k=\inf_{x\in T_k} f(x).
+\]
+Näiden avulla määriteltyjä lukuja
+\[
+\overline{I}(f,A)=\inf_{\mathcal{T}_h} \Sigma_h(f,\mathcal{T}_h)\,,\quad 
+\underline{I}(f,A)=\sup_{\mathcal{T}_h} \sigma_h(f,\mathcal{T}_h)
+\]
+sanotaan $f$:n y\pain{läinte}g\pain{raaliksi} ja \pain{alainte}g\pain{raaliksi} välillä $[a,b]$.
+Sikäli kuin $f$ on määritelty ja rajoitettu välillä $[a,b]$, ovat yläintegraali ja alaintegraali
+molemmat olemassa. Tällöin $f$ on välillä $[a,b]$ Riemann-integroituva täsmälleen, kun ylä- ja
+alaintegraalit ovat samat, jolloin $f$:n integraali = ylä- ja alaintegraalien yhteinen arvo 
+(Lause \ref{Riemannin integraali - vaihtoehto})). 
+
+Olettaen $f$ Riemann-integroituvaksi välillä $A=[a,b]$ kirjoitetaan nyt
+\[
+\int_a^b f(x)\, dx=\int_A f\, d\mu, \quad A=[a,b],
+\]
+ja luetaan oikea puoli: '$f$:n integraali yli $A$:n mitan $\mu$ suhteen'. Näin ajatellen 
+määrätyssä integraalissa on siis \pain{kolme} komponenttia\,:
+\[
+\int_A f\, d\mu=I(f,A,\mu).
+\]
+Laajennetaan nyt em. integraalin määritelmä koskemaan yleisempää \pain{ra}j\pain{oitettua} 
+joukkoa $A\subset\R$ seuraavasti: Jos $f$ on $A$:ssa määritelty ja rajoitettu, niin määritellään
+ensin $f$:n \kor{nollajatko}
+\[
+f_0(x)=\begin{cases} 
+       f(x), &\text{kun}\ x\in A \\ 0, &\text{kun}\ x\in\R,\ x\notin A 
+       \end{cases}
+\]
+ja tämän avulla
+\[
+\boxed{\kehys\quad \int_A f \, d\mu=\int_T f_0 \, d\mu,\quad T=[a,b]\supset A \quad}
+\]
+Koska $f_0(x)=0$ kun $x\not\in A$, niin Riemannin integraalin ominaisuuksien perusteella on 
+helppo päätellä, että sikäli kuin $f_0$ on Riemann-integroituva jollakin välillä 
+$[a,b]\supset A$, niin $f_0$ on integroituva kaikilla väleillä $[a,b]\supset A$ ja integraalin
+arvon on välistä $[a,b]$ riippumaton, kunhan $[a,b]\supset A$. Voidaan siis sopia, että $f$ on
+Riemann-integroituva yli rajoitetun joukon $A\subset\R$ täsmälleen kun $f_0$ on
+Riemann-integroituva jollakin välillä $[a,b]\supset A$.
+
+Em. määritelmässä on integraalin riippuvuus mitasta varsin yksinkertainen, sillä määritelmässä
+tarvitaan vain suljettujen välien mittoja. Mutta kun integraali on kerran määritelty käyttäen
+hyväksi mitan yksinkertaisimpia ominaisuuksia, voidaankin määritellä yleisemmän joukon $A$ mitta
+käyttäen hyväksi integraalia (!). Tällaisen 'vuorovedon' mahdollisuus (joka kuuluu yleisemmänkin 
+mittateorian ominaispiirteisiin), kertoo että mitta ja integraali muodostavat toisiinsa
+läheisesti liittyvän käsiteparin. Menettely on seuraava: Tarkastellaan funktiota
+\[
+f(x)=1,\quad x\in A=D_f.
+\]
+Tämän nollajatkoa sanotaan $A$:n \kor{karakteristiseksi funktioksi} ja merkitään
+\[
+\chi_A(x)=\begin{cases} 
+          1, &\text{kun}\ x\in A \\ 0, &\text{kun}\ x\in\R, \ x\notin A 
+          \end{cases}
+\]
+Sikäli kuin $\chi_A$ on Riemann-integroituva jollakin välillä $[a,b]\supset A$, on em.\ 
+määritelmän mukaan
+\[
+\int_A d\mu=\int_T \chi_A\, d\mu,\quad T=[a,b]\supset A.
+\]
+\begin{Def} \label{Jordanin pituusmitta}
+Rajoitettu joukko $A\subset\R$ on \kor{Jordan-mitallinen} täsmälleen kun $A$:n 
+karakteristinen funktio $\chi_A$ on Riemann-integroituva väleillä $[a,b]\supset A$,
+ja $A$:n \kor{Jordan-mitta} on tällöin
+\[
+\boxed{\kehys\quad \mu(A)=\int_A d\mu \quad}
+\]
+\end{Def}
+Mitta-aksiooman (b) toteutuminen on määritelmän perusteella ilmeistä. Myös 
+additiiviuusaksiooma (c) toteutuu Jordan-mitalle, sillä karakteristisen funktion
+määritelmästä seuraa helposti, että pätee 
+(Harj.teht. \ref{H-Uint-1: karakteristinen funktio})
+\[ 
+A \cap B = \emptyset \qimpl \chi_{A \cup B} = \chi_A + \chi_B.
+\]
+Tällöin jos $T=[a,b] \supset A \cup B$, niin integraalin lineaarisuuden nojalla 
+\[
+\int_T \chi_{A \cup B}\,d\mu = \int_T \chi_A\,d\mu + \int_T \chi_B\,d\mu \\
+                               \qekv \mu(A \cup B) = \mu(A)+\mu(B).
+\]
+Jordan-mitta, jota sanotaan myös \kor{Peanon--Jordanin mitaksi}\footnote[1]{Termit viittaavat
+matemaatikkoihin \hist{Camille Jordan} (ransk. 1838-1922) ja \hist{Giuseppe Peano} 
+(ital. 1858-1932).}, ei ole ainoa ainoa suljetun välin pituusmitan yleistys. Matemaattisen
+analyysin kannalta monessa mielessä parempi on (Jordan-mittaa hieman myöhemmin kehitetty) 
+\kor{Lebesquen mitta}, ks.\ kommentit luvun lopussa. Käytännön integraalilaskentaan Jordan-mitta
+tarjoaa kuitenkin riittävän ja Lebesguen mittaa jonkin verran havainnollisemman perustan.
+
+\subsection*{Ulkomitta ja sisämitta}
+
+Jos $f=\chi_A$ ja $\mathcal{T}_h$ on välin $T=[a,b]\supset A$ ositus osaväleihin
+$T_k=[x_{k-1},x_k],\ k=1 \ldots n$, niin Riemannin ylä- ja alasummien määritelmän perusteella
+\begin{align*}
+\Sigma_h(\chi_A,\mathcal{T}_h) &= \sum_{T_k\in\mathcal{T}_h:\,T_k\cap A\neq\emptyset}\mu(T_k) \\
+\sigma_h(\chi_A,\mathcal{T}_h) &= \sum_{T_k\in\mathcal{T}_h:\,T_k\subset A}\mu(T_k)
+\end{align*}
+Näihin summiin liitettäviä lukuja
+\begin{alignat*}{2}
+\overline{\mu}(A)  &= \inf_{\mathcal{T}_h} \Sigma_h(\chi_A,\mathcal{T}_h) & 
+                   &= \overline{I}(\chi_A,T) \\
+\underline{\mu}(A) &= \sup_{\mathcal{T}_h} \sigma_h(\chi_A,\mathcal{T}_h) & 
+                   &= \underline{I}(\chi_A,T)
+\end{alignat*}
+sanotaan $A$:n (Jordanin) \kor{ulkomitaksi} ja \kor{sisämitaksi}. Molemmat ovat määriteltyjä
+jokaiselle rajoitetulle joukolle, ja $\underline{\mu}(A)\leq\overline{\mu}(A)$. 
+(Jos $T_k\not\subset A \ \forall T_k\in\mathcal{T}_h$, niin asetetaan
+$\sigma_h(\chi_A,\mathcal{T}_h)=0$). Mitallisuuden ja Riemann-integroituvuuden määritelmien
+perusteella pätee
+\[
+\boxed{\kehys\quad A\ \text{Jordan-mitallinen} 
+            \qekv \overline{\mu}(A)=\underline{\mu}(A) \quad (=\mu(A)) \quad}
+\]
+Hiukan havainnollisempi mitallisuuden kriteeri saadaan tarkastelemalla $A$:n \pain{reunaa}
+$\partial A$ (vrt.\ Luku \ref{kompaktit joukot}) ja vertaamalla erotusta 
+$\overline{\mu}(A)-\underline{\mu}(A)$ reunan ulkomittaan $\overline{\mu}(\partial A)$. 
+Nimittäin jos jako $\mathcal{T}_h$ on \pain{tasavälinen} 
+(eli osavälit $T_k\subset\mathcal{T}_h$ ovat samanpituiset) ja $a,b\not\in\partial A$, niin voidaan
+päätellä, että pätee (ks.\ Harj.teht. \ref{H-Uint-1: mitallisuuskriteeri})
+\[
+\frac{1}{2}\sum_{T_k\in\mathcal{T}_h:\,T_k\cap \partial A\neq\emptyset} \mu(T_k)\
+  \le\ \Sigma_h(\chi_{A},\mathcal{T}_h) - \sigma_h(\chi_{A},\mathcal{T}_h)\
+  \le \sum_{T_k\in\mathcal{T}_h:\,T_k\cap \partial A\neq\emptyset} \mu(T_k).
+\]
+Ottamalla tässä infimum yli ositusten $\mathcal{T}_h$ ja huomioimalla, että ulko- ja
+sisämittojen ym.\ määritelmissä voidaan ositukset $\mathcal{T}_h$ rajoittaa tasavälisiksi
+määritelmien muuttumatta (ks.\ Lause \ref{ylä- ja alaintegraalit raja-arvoina}), seuraa 
+\[
+\frac{1}{2}\,\overline{\mu}(\partial A)\ \le\ \overline{\mu}(A)-\underline{\mu}(A)\
+                                         \le\ \overline{\mu}(\partial A). 
+\]
+Tämän mukaan $A$ on mitallinen täsmälleen kun $\overline{\mu}(\partial A)=0$, eli kun 
+$\partial A$ on (mitallinen ja) nollamittainen:
+\begin{Lause} \vahv{(Mitallisuuskriteeri)} \label{mitallisuuskriteeri-R} Joukoille
+$A\subset\R$ pätee
+\[ 
+\boxed{\kehys\quad A\ \text{Jordan-mitallinen} \qekv \mu(\partial A)=0 \quad} \Akehys
+\]
+\end{Lause}
+
+\begin{Exa} \label{mitallisuusesim-R}
+Tutki seuraavien joukkojen Jordan-mitallisuutta: \vspace{1mm}\newline
+a) \ $A=(0,1)\qquad$  b) \ $A=\{\frac{1}{k}, \ k\in\N\} \qquad$ c) \ $A=\Q\cap (0,1)$
+\end{Exa}
+\ratk \ a) \ Kun valitaan $[a,b]=[0,1]$, nähdään että kaikille osituksille pätee
+\[
+\sigma_h(\chi_A,\mathcal{T}_h)=\Sigma_h(\chi_A,\mathcal{T}_h)=1,
+\]
+joten $\overline{\mu}(A)=\underline{\mu}(A)=1$. Siis $A$ on Jordan-mitallinen ja 
+$\underline{\underline{\mu(A)=1}}$.
+
+b) \ Valitaan $[a,b]=[0,1]$ ja ositus $\mathcal{T}_h=\{[x_{k-1},x_k],\ k=1\ldots n\}$
+siten, että
+\[
+[x_0,x_1]=[0,h]\ \ja\ x_k-x_{k-1} \le h^2,\quad k=2\ldots n.
+\]
+Tällöin jos $m-1 < h^{-1} \le m,\ m \in \N$, niin $[h,1] \subset [1/m,1]$, jolloin välillä 
+$[h,1]$ on enintään $m$ joukon $A$ alkiota. Näistä kukin voi kuulua enintään kahteen osaväliin
+$[x_{k-1},x_k]$, joten $A$:n ulkomitalle saadaan arvio
+\[
+\overline{\mu}(A) \le \Sigma_h(\chi_A,\mathcal{T}_h) 
+                  \le h + 2m \cdot h^2 \le h + 2h^{-1} \cdot h^2 = 3h.
+\]
+Tämä pätee jokaisella $h>0$, joten on oltava $\overline{\mu}(A)=0$. Siis $A$ on (mitallinen ja)
+nollamittainen: $\underline{\underline{\mu(A)=0}}$.
+
+c)\ \, Kun valitaan $[a,b]=[0,1]$, niin nähdään, että $\overline{\mu}(A)=1$, 
+$\underline{\mu}(A)=0$, joten $A$ ei ole Jordan-mitallinen. Samaan tulokseen johtaa päättely:
+$\,\partial A = [0,1]\ \impl\ \mu(\partial A) \neq 0$. \loppu
+
+Seuraavan tuloksen mukaan joukon (mitallisuus ja) mitta säilyy, jos joukosta poistetaan 
+nollamittainen osajoukko. --- Huomattakoon, että yleisesti \pain{ei} päde, että mitallisen 
+joukon osajoukko on mitallinen, vrt.\ esimerkki edellä.
+\begin{Prop} \label{nollamittaisen osajoukon poisto} Jos $A \cup B$ on mitallinen ja $B$ on
+nollamittainen, niin $A$ on mitallinen ja $\mu(A)=\mu(A \cup B)$.
+\end{Prop}
+\tod Ulko- ja sisämittojen määritelmistä voi helposti päätellä, että rajoitetuille joukoille 
+$A,B \subset \R$ pätee (Harj.teht. \ref{H-Uint-1: mitta-arvioita})
+\begin{align*}
+\overline{\mu}(A)\  &\le\ \overline{\mu}(A \cup B)\ \le\ \overline{\mu}(A)+\overline{\mu}(B), \\
+\underline{\mu}(A)\ &\le\ \underline{\mu}(A \cup B)\ \le\ \underline{\mu}(A)+\overline{\mu}(B).
+\end{align*}
+Koska $A \cup B$ on mitallinen ja $B$ nollamittainen, niin 
+$\overline{\mu}(A \cup B) = \underline{\mu}(A \cup B)$ ja $\overline{\mu}(B)=0$, joten seuraa
+$\overline{\mu}(A)\le\mu(A \cup B)\le\underline{\mu}(A)$. Siis
+$\overline{\mu}(A)=\underline{\mu}(A)=\mu(A \cup B)$. \loppu
+
+Jos $\mathcal{M}=\{\text{Jordan-mitalliset, rajoitetut joukot } A\subset\R\}$, niin 
+Propositiosta \ref{nollamittaisen osajoukon poisto} on johdettavissa seuraava mitan 
+additiivisuusaksiooman (c) vahvennettu muoto:
+\[
+\boxed{ \begin{aligned}
+        \quad &A,B\in\mathcal{M} \ \ja \ \mu(A\cap B)=0 \ykehys\\
+              &\impl\quad A\cup B\in\mathcal{M}\ \ja\ \mu(A\cup B)=\mu(A)+\mu(B) \quad\akehys
+        \end{aligned} }
+\]
+
+\subsection*{Integroituvuus yli mitallisen joukon}
+
+Kun joukon $A\subset\R$ mitallisuus on em.\ tavalla määritelty karakteristisen funktion 
+Riemann-integroituvuutena, voidaan puolestaan tutkia yleisempien funktioiden integroituvuutta
+mitallisten joukkojen yli. Perustulos on seuraava.
+\begin{Lause} \label{integroituvuus yli joukon - R} Jos $f$ on rajoitettu ja 
+Riemann-integroituva välillä $[a,b]$ ja $A\subset [a,b]$ on Jordan-mitallinen, niin $f$ on 
+Riemann-integroituva yli $A$:n.
+\end{Lause}
+\tod Olkoon $\abs{f(x)} \le M,\ x\in[a,b]$ ja olkoon
+$\mathcal{T}_h=\{[x_{k-1},x_k],\ k=1\ldots n\}$ välin $[a,b]$ ositus, missä
+$h=\max_k (x_k-x_{k-1})$. Merkitään
+\begin{align*}
+&M_k=\sup_{x\in T_k} f(x), \quad\   m_k=\inf_{x\in T_k} f(x), \\
+&M_k^0=\sup_{x\in T_k} f_0(x),\quad m_k^0=\inf_{x\in T_k} f_0(x).
+\end{align*}
+Olkoon edelleen
+\begin{align*}
+\Lambda_1    &= \{k\in\{1,\ldots,n\} \ | \ T_k\subset A\}, \\
+\Lambda_2    &= \{k\in\{1,\ldots,n\} \ | \ k\notin\Lambda_1\ \ja\ T_k\cap A\neq\emptyset\},
+                \quad \partial A_h = \bigcup_{k\in\Lambda_2} T_k\,.
+\end{align*}
+Tällöin
+\begin{align*}
+\Sigma_h(f_0,\mathcal{T}_h)-\sigma_h(f_0,\mathcal{T}_h)
+    &= \sum_{k\in\Lambda_1}(M_k^0-m_k^0)\,\mu(T_k)
+     + \sum_{k\in\Lambda_2}(M_k^0-m_k^0)\,\mu(T_k) \\
+    &= \sum_{k\in\Lambda_1}(M_k-m_k)\,\mu(T_k)
+     + \sum_{k\in\Lambda_2}(M_k^0-m_k^0)\,\mu(T_k).
+\end{align*}
+Koska $f$ on integroituva välillä $[a,b]$, niin tässä
+\[
+\sum_{k\in\Lambda_1}(M_k-m_k)\,\mu(T_k) \le \sum_{k=1}^n(M_k-m_k)\,\mu(T_k)\ 
+                                        \kohti\ 0, \quad \text{kun}\ h \kohti 0.
+\]
+Toisaalta koska $A$ on mitallinen ja siis $\,\overline{\mu}(\partial A)=0$ 
+(Lause \ref{mitallisuuskriteeri-R}), niin \newline
+$\overline{\mu}(\partial A_h) \kohti 0$ kun $ h \kohti 0$, joten voidaan arvioida
+\[
+\Bigl|\sum_{k\in\Lambda_2}(M_k^0-m_k^0)\mu(T_k)\Bigr| \le \sum_{k\in\Lambda_2} M\mu(T_k) 
+                             = M\mu(\partial A_h) \kohti 0, \quad \text{kun}\ h \kohti 0.
+\]
+On siis päätelty:
+\[
+\Sigma_h(f_0,\mathcal{T}_h)-\sigma_h(f_0,\mathcal{T}_h) \kohti 0, \quad \text{kun}\ h \kohti 0.
+\]
+Näin ollen $f_0$:n ylä- ja ala-integraalit välillä $[a,b]$ ovat samat, siis $f_0$ on 
+Riemann-integroituva yli välin $[a,b]$ eli $f$ on Riemann-integroituva yli $A$:n. \loppu
+
+\subsection*{Riemann-integraalin laajennukset}
+
+Riemann-integraalin käsite voidaan laajentaa koskemaan myös ei-rajoitettuja funktioita ja 
+ei-rajoitettuja joukkoja. Seuraavat laajennussäännöt vastaavat Luvussa 
+\ref{integraalin laajennuksia} tehtyjä sopimuksia. Sikäli kuin integaali on näiden sääntöjen
+mukaisesti määritelty, sanotaan, että se \kor{suppenee}.
+\begin{itemize}
+\item[1.] Jos $A\subset[a,b]$ ja $f$ on rajoitettu ja Riemann-integroituva yli joukon 
+          $A\cap[c,d]$ aina kun $[c,d]\subset(a,b)$, niin
+          \[
+          \int_A f\, d\mu
+          =\lim_{\substack{\ c\kohti a^+ \\ d\kohti b^-}}\int_{A\cap [c,d]} f\,d\mu,
+          \]
+          sikäli kuin raja-arvo on olemassa.
+\item[2.] \kor{Additiivisuussääntö}: Jos $A_1,A_2\subset\R$ ovat rajoitettuja joukkoja, jos
+          $f$ on integroituva yli joukkojen $A_1$ ja $A_2$, joko tavanomaisessa mielessä tai
+          säännön 1 mukaisesti, ja jos $\mu(A_1 \cap A_2)=0$, niin $f$ on integroituva yli 
+          joukon $A=A_1 \cup A_2$ ja
+          \[
+          \int_A f\,d\mu = \int_{A_1} f\,d\mu + \int_{A_2} f\,d\mu.
+          \]
+\item[3.] Jos $A$ ei ole rajoitettu, mutta jokaisella $a,b \in \R,\ a<b$, joukko $A\cap [a,b]$ 
+          on mitallinen ja $f$ on integroituva yli joukon $A\cap [a,b]$, joko tavanomaisessa
+          mielessä tai sääntöjen 1--2 mukaisesti, niin
+          \[
+          \int_A f\, d\mu
+          =\lim_{\substack{\ a\kohti -\infty \\ b\kohti +\infty}}\int_{A\cap [a,b]} f\,d\mu,
+          \]
+          sikäli kuin raja-arvo on olemassa.
+\end{itemize}
+\begin{Exa} Olkoon
+\[
+A=\bigcup_{k=0}^\infty\,[k,\,k+a_k],
+\]
+missä $0 \le a_k \le 1\ \forall k$. Täsmälleen millä ehdolla integraali $\int_A x\,d\mu$
+suppenee?
+\end{Exa}
+\ratk Koska jokaisella $n\in\N$ pätee
+\[
+\int_{[0,n] \cap A} f\,d\mu = \sum_{k=0}^{n-1} \int_k^{k+a_k} x\,dx
+                            = \sum_{k=0}^{n-1}\sijoitus{k}{k+a_k} \frac{1}{2}\,x^2
+                            = \sum_{k=0}^{n-1}(ka_k+a_k^2/2)
+\]
+ja koska $ka_k \le ka_k+a_k^2/2 \le 2ka_k$, kun $a_k\in[0,1]$ ja $k \ge 1$, niin vastaus on:
+Täsmälleen kun sarja $\sum_{k=1}^\infty ka_k$ suppenee. \loppu 
+
+\subsection*{Lebesguen mitta ja integraali}
+
+Kun joukon $A\subset\R$ pituusmitta halutaan määrätä mahdollisimman yleispätevästi ja 
+elegantisti, on tuloksena \kor{Lebesguen mitta} (\hist{H. Lebesgue}, 1906). Todettakoon tässä
+ainoastaan Lebesguen mittateorian keskeisin ero verrattuna Peano-Jordanin teoriaan: Lebesguen 
+mitta on (siis toisin kuin Jordan-mitta) \kor{numeroituvasti additiivinen}: Jos $A_1,A_2,\ldots$
+ovat Lebesgue-mitallisia ja pistevieraita, niin $A=A_1\cup A_2\cup\ldots$ on myös 
+Lebesgue-mitallinen ja
+\[
+\mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty \mu(A_i),\quad A_i\cap A_j=\emptyset, \ i\neq j.
+\]
+Jos oikealla oleva sarja ei suppene, annetaan $A$:n mitalle arvo $\mu(A)=\infty$. Tässäkin 
+tapauksessa siis joukkoa $A$ pidetään mitallisena, eli lukuasteikko (mahdollisten mittalukujen
+joukko) laajennetaan käsittämään myös luku $\infty$. (Tällä luvulla laskemisen säännöt on 
+erikseen sovittava). Esimerkiksi $A=\R$ on numeroituvan additiivisuuden perusteella mitallinen
+ja $\mu(\R)=\infty$. Numeroituvasta additiivisuudesta seuraa myös, että jokainen numeroituva 
+joukko $A\subset\R$ on Lebesguen mielessä nollamittainen --- vrt. Esimerkki 
+\ref{mitallisuusesim-R}c edellä, jossa joukko $A$ on numeroituva, muttei Jordan-mitallinen.
+
+Sikäli kuin $A$ on Jordan-mitallinen, se on myös Lebesgue-mitallinen, ja mitat ovat samat. Sama
+ei siis päde kääntäen, eli Lebesguen mitta on Jordan-mitan aito laajennus.
+
+Kuten Jordan-mitta, myös Lebesguen mitta voidaan liittää määrättyyn integraaliin, mutta tällöin
+kyseessä ei ole Riemann-integraali vaan \kor{Lebesguen integraali}. Todettakoon ainoastaan, että
+sikäli kuin joukolla $A\subset\R$ on äärellinen Lebesguen mitta, voidaan kirjoittaa
+\[
+\mu(A)=\int_A d\mu,
+\]
+missä siis integraali on ymmärrettävä Lebesguen mielessä. Lebesguen mitta ja integraali 
+muodostavat näin ollen vastaavanlaisen käsiteparin kuin Jordan-mitta ja Riemannin integraali.
+
+Lebesguen mitalla ja integraalilla on nykyisin hyvin keskeinen merkitys matemaattisessa 
+analyysissä, etenkin sellaisissa syvällisemmissä tarkasteluissa, joissa pyritään mahdollisimman
+eheään ja yleispätevään teoriaan. Käytännön integraalilaskennassa tullaan sen sijaan yleensä 
+hyvin toimeen yksinkertaisemmilla Jordan-mitan ja Riemann-integraalin käsitteillä. Jatkossa 
+siirrytäänkin useampaan ulottuvuuteen tältä yksinkertaisemmalta perustalta.
+
+\Harj
+\begin{enumerate}
+
+\item
+Laske seuraavien joukkojen Jordan-mitat (pituusmitat) suoraan mitan määritelmästä, tai totea,
+ettei joukko ole mitallinen. 
+\begin{align*}
+&\text{a)}\ \ [-1,1] \cup (2,3) \cup \{7\} \qquad
+ \text{b)}\ \ \{2^{-n} \mid n\in\N\} \qquad
+ \text{c)}\ \ \bigcup_{k=1}^{\infty} \,[3 \cdot 2^{-k},\,4 \cdot 2^{-k}] \\
+&\text{d)}\ \ \{x\in[0,1] \mid x \neq e^{-n}\ \forall n\in\N\} \qquad
+ \text{e)}\ \ \{x\in[0,1] \mid x \neq e^{-t}\ \forall t\in\Q\} \qquad
+\end{align*}
+
+\item \label{H-Uint-1: karakteristinen funktio}
+Näytä, että reaalilukujoukon karakteristiselle funktiolle pätee
+\[
+A \cap B = \emptyset \qimpl \chi_{A \cup B} = \chi_A + \chi_B\,.
+\]
+
+\item \label{H-Uint-1: mitta-arvioita}
+Näytä, että rajoitetuille joukoille $A,B\subset\R$ pätee
+\begin{align*}
+\overline{\mu}(A)\  &\le\ \overline{\mu}(A \cup B)\  \le\ \overline{\mu}(A)+\overline{\mu}(B), \\
+\underline{\mu}(A)\ &\le\ \underline{\mu}(A \cup B)\ \le\ \underline{\mu}(A)+\overline{\mu}(B).
+\end{align*}
+
+\item
+Laske $f$:n integraali yli annetun joukon $A$ (tavallinen tai laajennettu Riemannin integraali)
+sikäli kuin integraali on määritelty:
+\begin{align*}
+&\text{a)}\ \ f(x)=x^2,\,\ A=(-1,0]\cup\{1\}\cup[5,7) \qquad
+ \text{b)}\ \ f(x)=e^{x^2},\,\ A=\Z \\[3mm]
+&\text{c)}\ \ f(x)=x^{-2},\,\ 
+              A=\bigcup_{n=1}^\infty\,\left[\frac{2n-1}{2n}\,,\,\frac{2n}{2n+1}\right] \\
+&\text{d)}\ \ f(x)=x^{-1},\,\ 
+              A=\bigcup_{n=1}^\infty\,\left[\frac{1}{3n+1}\,,\,\frac{1}{3n-1}\right] 
+\end{align*}
+
+\item (*) \label{H-Uint-1: mitallisuuskriteeri}
+Olkoon $A\subset[a,b]$ reaalilukujoukko ja $\mathcal{T}_h$ välin $[a,b]$ ositus osaväleihin
+$T_k=[x_{k-1},x_k],\ k=1 \ldots n$. \ a) \ Näytä, että jos 
+$x_k\not\in\partial A,\ k=0 \ldots n$, niin
+\begin{align*}
+&\Sigma_h(\chi_{A},\mathcal{T}_h) - \sigma_h(\chi_{A},\mathcal{T}_h)\
+  = \sum_{T_k\in\mathcal{T}_h:\,T_k\cap \partial A\neq\emptyset} \mu(T_k).
+\intertext{b) \ Näytä, että yleisemmin pätee}
+&\Sigma_h(\chi_{A},\mathcal{T}_h) - \sigma_h(\chi_{A},\mathcal{T}_h)\
+  \le \sum_{T_k\in\mathcal{T}_h:\,T_k\cap \partial A\neq\emptyset} \mu(T_k).
+\intertext{c) \ Näytä, että jos ositus $\mathcal{T}_h$ on tasavälinen ja 
+                $a,b\not\in\partial A$, niin pätee}
+&\Sigma_h(\chi_{A},\mathcal{T}_h) - \sigma_h(\chi_{A},\mathcal{T}_h)\
+  \ge\ \frac{1}{2}\sum_{T_k\in\mathcal{T}_h:\,T_k\cap \partial A\neq\emptyset} \mu(T_k).
+\end{align*}
+
+\end{enumerate}
