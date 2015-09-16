@@ -2,21 +2,21 @@
 \alku
 \sectionmark{Suppenevat lukujonot}
 
-T‰ss‰ luvussa tarkastellaan suppenevien lukujonojen ominaisuuksia yleiselt‰ kannalta 
---- 'luku' (mat.) ymm‰rret‰‰n samoin kuin edellisess‰ luvussa.
+T√§ss√§ luvussa tarkastellaan suppenevien lukujonojen ominaisuuksia yleiselt√§ kannalta 
+--- 'luku' (mat.) ymm√§rret√§√§n samoin kuin edellisess√§ luvussa.
 \begin{Def} \label{rajoitettu jono} \index{lukujono!e@rajoitettu|emph}
 \index{rajoitettu!a@lukujono|emph}
-Lukujono $\{a_n\}$ on \kor{rajoitettu} (engl.\ bounded),  jos on olemassa luku $C$ siten, ett‰
-p‰tee $\abs{a_n} \le C\ \ \forall n$. 
+Lukujono $\{a_n\}$ on \kor{rajoitettu} (engl.\ bounded),  jos on olemassa luku $C$ siten, ett√§
+p√§tee $\abs{a_n} \le C\ \ \forall n$. 
 \end{Def}
 \begin{Lause} \label{suppeneva jono on rajoitettu} Suppeneva lukujono on rajoitettu. 
 \end{Lause}
-\tod Olkoon jono yleist‰ muotoa $\{a_n\}_{n=m}^{\infty},\ m \in \Z$. Jos p‰tee $a_n \kohti a$,
-niin suppenemisen m‰‰ritelm‰n mukaan $\exists N \in \N$ siten, ett‰
+\tod Olkoon jono yleist√§ muotoa $\{a_n\}_{n=m}^{\infty},\ m \in \Z$. Jos p√§tee $a_n \kohti a$,
+niin suppenemisen m√§√§ritelm√§n mukaan $\exists N \in \N$ siten, ett√§
 \[
 \abs{a_n - a} < 1, \quad \text{kun}\ n > N
 \]
-(M‰‰ritelm‰ss‰ \ref{jonon raja} valittu $\eps = 1$). T‰llˆin on kolmioep‰yht‰lˆn mukaan
+(M√§√§ritelm√§ss√§ \ref{jonon raja} valittu $\eps = 1$). T√§ll√∂in on kolmioep√§yht√§l√∂n mukaan
 \begin{align*}
 \abs{a_n}\ &=\ \abs{\,(a_n - a) + a\,} \\
            &\le\ \abs{a_n - a} + \abs{a}\ <\ 1 + \abs{a}, \quad \text{kun}\ n > N,
@@ -27,23 +27,23 @@ joten
            =\ C \quad \forall n \ge m. \loppu
 \]
 
-Seuraavat yleiset laskus‰‰nnˆt ovat huomattavan k‰yttˆkelposia sek‰ raja-arvoja
-laskettaessa ett‰ teoreettisemmissa tarkasteluissa.
-\begin{Lause} \label{raja-arvojen yhdistelys‰‰nnˆt} (\vahv{Raja-arvojen yhdistelys‰‰nnˆt})
+Seuraavat yleiset laskus√§√§nn√∂t ovat huomattavan k√§ytt√∂kelposia sek√§ raja-arvoja
+laskettaessa ett√§ teoreettisemmissa tarkasteluissa.
+\begin{Lause} \label{raja-arvojen yhdistelys√§√§nn√∂t} (\vahv{Raja-arvojen yhdistelys√§√§nn√∂t})
 \index{lukujonon raja-arvo!64@raja-arvojen yhdistely|emph}
-Olkoon $\seq{a_n}$ ja $\seq{b_n}$ lukujonoja ja $a,b,\lambda$ lukuja. T‰llˆin jos 
-$\lim_n a_n = a$ ja $\lim_n b_n = b$, niin p‰tee:
+Olkoon $\seq{a_n}$ ja $\seq{b_n}$ lukujonoja ja $a,b,\lambda$ lukuja. T√§ll√∂in jos 
+$\lim_n a_n = a$ ja $\lim_n b_n = b$, niin p√§tee:
 \begin{itemize}
 \item[(1)] $\quad \lim_n (a_n + b_n)\ =\ a+b$.
 \item[(2)] $\quad \lim_n (\lambda a_n)\ =\ \lambda a$.
 \item[(3)] $\quad \lim_n (a_n b_n)\ =\ ab$.
-\item[(4)] $\quad \lim_n (a_n / b_n)\ =\ a/b \quad\,\ $ lis‰ehdoilla: \
+\item[(4)] $\quad \lim_n (a_n / b_n)\ =\ a/b \quad\,\ $ lis√§ehdoilla: \
                   $b_n \neq 0\ \forall n$ ja $b \neq 0$.
 \end{itemize} \end{Lause}
-Todistetaan ainoastaan v‰itt‰m‰t (3) ja (4)
+Todistetaan ainoastaan v√§itt√§m√§t (3) ja (4)
 (muut ovat helpompia: Harj.teht.\,\ref{H-I-7: todistuksia}).
 
-\pain{V‰itt‰m‰} (3) \ Kirjoitetaan ensin
+\pain{V√§itt√§m√§} (3) \ Kirjoitetaan ensin
 \begin{align*}
 a_n b_n - ab\ &=\ (a_n b_n - a b_n) + (a b_n - ab) \\
               &=\ b_n(a_n - a) + a(b_n - b).
@@ -53,43 +53,43 @@ jollakin $C$
 \[
 \abs{b_n} \le C\ \ \forall n,
 \]
-jolloin kolmioep‰yht‰lˆn perusteella
+jolloin kolmioep√§yht√§l√∂n perusteella
 \[
 \abs{a_n b_n - ab}\ \le\ C \abs{a_n - a} + \abs{a} \abs{b_n - b}.
 \]
-Jatkossa oletetaan, ett‰ $C > 0$ ja $\abs{a} > 0$ (jos $C=0$ tai $a=0$, niin p‰‰ttely
+Jatkossa oletetaan, ett√§ $C > 0$ ja $\abs{a} > 0$ (jos $C=0$ tai $a=0$, niin p√§√§ttely
 yksinkertaistuu). Valitaan mielivaltainen $\eps > 0$, jolloin
 \[
 \eps_1 = \frac{\eps}{2C} > 0 \quad \text{ja} \quad \eps_2 = \frac{\eps}{2\abs{a}} > 0.
 \]
-Koska lukujonot $\{a_n\}$ ja $\{b_n\}$ suppenevat, on t‰llˆin lˆydett‰viss‰ indeksit 
-\mbox{$N_1 \in \N$} ja $N_2 \in \N$, siten ett‰ 
-p‰tee
+Koska lukujonot $\{a_n\}$ ja $\{b_n\}$ suppenevat, on t√§ll√∂in l√∂ydett√§viss√§ indeksit 
+\mbox{$N_1 \in \N$} ja $N_2 \in \N$, siten ett√§ 
+p√§tee
 \begin{align*}
 \abs{a_n - a}  &< \eps_1\,, \quad \text{kun}\ n > N_1, \\
 \abs{b_n\,- b} &< \eps_2\,, \quad \text{kun}\ n > N_2.
 \end{align*}
-T‰ss‰ molemmat ep‰yht‰lˆt ovat voimassa indeksist‰ $N = \max\{N_1,N_2\}\in\N$ eteenp‰in,
-joten p‰tee
+T√§ss√§ molemmat ep√§yht√§l√∂t ovat voimassa indeksist√§ $N = \max\{N_1,N_2\}\in\N$ eteenp√§in,
+joten p√§tee
 \[
 \abs{a_n b_n - ab}\ <\ C \eps_1 + \abs{a} \eps_2\ 
                     =\ \frac{\eps}{2} + \frac{\eps}{2}\ =\ \eps, \quad \text{kun}\ n > N. 
 \]
-Koska t‰ss‰ $\eps > 0$ oli mielivaltainen ja $N\in\N$ jokaisella $\eps>0$, niin lukujonon
-raja-arvon m‰‰ritelm‰n mukaan $a_n b_n \kohti ab$. \loppu
+Koska t√§ss√§ $\eps > 0$ oli mielivaltainen ja $N\in\N$ jokaisella $\eps>0$, niin lukujonon
+raja-arvon m√§√§ritelm√§n mukaan $a_n b_n \kohti ab$. \loppu
 
-\pain{V‰itt‰m‰} (4) \ T‰ss‰ aloitetaan kirjoittamalla
+\pain{V√§itt√§m√§} (4) \ T√§ss√§ aloitetaan kirjoittamalla
 \begin{align*}
 \frac{a_n}{b_n} - \frac{a}{b}\ &=\ \frac{a_n b - a b_n}{b_n b}\
                                 =\ \frac{(a_n b - ab) + (ab - ab_n)}{b_n b} \\
                                &=\ \frac{a_n - a}{b_n} - \frac{a(b_n - b)}{b_n b}\,.
 \end{align*}
-Koska $b_n \kohti b \neq 0$, niin $\exists N_0 \in \N$ siten, ett‰
+Koska $b_n \kohti b \neq 0$, niin $\exists N_0 \in \N$ siten, ett√§
 \[
 \abs{b_n - b} < \tfrac{1}{2} \abs{b}, \quad \text{kun}\ n > N_0
 \]
-(raja-arvon m‰‰ritelm‰ss‰ asetettu $\eps = \frac{1}{2} \abs{b},\ N=N_0$). T‰llˆin on
-kolmioep‰yht‰lˆn nojalla
+(raja-arvon m√§√§ritelm√§ss√§ asetettu $\eps = \frac{1}{2} \abs{b},\ N=N_0$). T√§ll√∂in on
+kolmioep√§yht√§l√∂n nojalla
 \[
 \abs{b_n}\ \ge\ \abs{b} - \abs{b_n - b}\ >\ \tfrac{1}{2} \abs{b} \quad \forall n >N_0,
 \]
@@ -100,7 +100,7 @@ joten
          &<\ \frac{2}{\abs{b}}\,\abs{a_n - a} + \frac{2 \abs{a}}{b^2}\,\abs{b_n - b} \quad 
                                                                          \forall n > N_0.
 \end{align*}
-T‰ss‰ on oikea puoli $< \eps\ (\eps > 0)$, kun
+T√§ss√§ on oikea puoli $< \eps\ (\eps > 0)$, kun
 \begin{align*}
 \frac{2}{\abs{b}}\,\abs{a_n - a}\ <\ \frac{\eps}{2} \quad 
         &\text{ja} \quad \frac{2 \abs{a}}{b^2}\,\abs{b_n - b}\ < \frac{\eps}{2}\,, \\
@@ -108,13 +108,13 @@ T‰ss‰ on oikea puoli $< \eps\ (\eps > 0)$, kun
 \abs{a_n - a} < \frac{\abs{b}}{4}\,\eps = \eps_1 \quad 
         &\text{ja} \quad \abs{b_n - b} < \frac{b^2}{4 \abs{a}}\,\eps = \eps_2\,,
 \end{align*}
-olettaen ett‰ t‰ss‰ $a \neq 0$. (Jos $a=0$, p‰‰ttely yksinkertaistuu.) Koska $a_n \kohti a$ ja
-$b_n \kohti b$ ja koska $\eps_1, \eps_2 > 0$, niin ensimm‰inen ehto toteutuu jostakin indeksist‰
-$N_1$ ja toinen jostakin indeksist‰ $N_2$ eteenp‰in, jolloin
+olettaen ett√§ t√§ss√§ $a \neq 0$. (Jos $a=0$, p√§√§ttely yksinkertaistuu.) Koska $a_n \kohti a$ ja
+$b_n \kohti b$ ja koska $\eps_1, \eps_2 > 0$, niin ensimm√§inen ehto toteutuu jostakin indeksist√§
+$N_1$ ja toinen jostakin indeksist√§ $N_2$ eteenp√§in, jolloin
 \[
 \abs{\,\frac{a_n}{b_n}-\frac{a}{b}\,}\ <\ \eps, \quad \text{kun}\ n>N = \max\{N_0,N_1,N_2\}\in\N.
 \]
-T‰ss‰ oli $\eps > 0$ mielivaltainen, joten m‰‰ritelm‰n mukaan $a_n/b_n \kohti a/b$. \loppu
+T√§ss√§ oli $\eps > 0$ mielivaltainen, joten m√§√§ritelm√§n mukaan $a_n/b_n \kohti a/b$. \loppu
 
 \begin{Exa} Laske $\ \lim_n a_n\,$, kun
 \[
@@ -125,7 +125,7 @@ a_n = \frac{n^2+2n+2}{3n^2+n}\,.
 \[
 a_n = \frac{1 + 2 \cdot \tfrac{1}{n} + 2 \cdot \tfrac{1}{n} \cdot \tfrac{1}{n}}{3 + \tfrac{1}{n}}
 \]
-voidaan suoraan soveltaa Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} s‰‰ntˆj‰ (1)--(4)\,:
+voidaan suoraan soveltaa Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} s√§√§nt√∂j√§ (1)--(4)\,:
 \begin{align*}
 \lim_n a_n\ &=\ \frac{\lim_n(1 + 2 \cdot \tfrac{1}{n} 
               + 2 \cdot \tfrac{1}{n} \cdot \tfrac{1}{n})}{\lim_n(3 + \tfrac{1}{n})} \\
@@ -133,27 +133,27 @@ voidaan suoraan soveltaa Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} s‰‰ntˆj‰ (1
               + 2\,\lim_n(\tfrac{1}{n}) \cdot \lim_n(\tfrac{1}{n})}{3 + \lim_n(\tfrac{1}{n})} \\
             &=\ \frac{1 + 2 \cdot 0 + 2 \cdot 0 \cdot 0}{3 + 0} = \frac{1}{3}\,.
 \end{align*}
-T‰ss‰ tarvittiin siis ainoastaan yht‰ suoraan m‰‰ritelm‰st‰ todistettavaa raja-arvotulosta
-$\ \lim_n (\tfrac{1}{n}) = 0\ $ (vrt.\ Esimerkki \ref{jonoja}d edellisess‰ luvussa). \loppu
+T√§ss√§ tarvittiin siis ainoastaan yht√§ suoraan m√§√§ritelm√§st√§ todistettavaa raja-arvotulosta
+$\ \lim_n (\tfrac{1}{n}) = 0\ $ (vrt.\ Esimerkki \ref{jonoja}d edellisess√§ luvussa). \loppu
 
 \begin{Exa} Yleinen geometrinen sarja on lukujono 
 \[
 \sum_{k=0}^{\infty} aq^k\ =\ \{\,\sum_{k=0}^n aq^k,\ \ n=0,1, \ldots\,\}. 
 \]
-Kun perusmuotoisen sarjan summa tiedet‰‰n (edellisen luvun Esimerkki \ref{geometrinen sarja}),
-niin Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} s‰‰nnˆn (2) mukaan yleisen geometrisen
+Kun perusmuotoisen sarjan summa tiedet√§√§n (edellisen luvun Esimerkki \ref{geometrinen sarja}),
+niin Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} s√§√§nn√∂n (2) mukaan yleisen geometrisen
 sarjan summa on
 \[
 \sum_{k=0}^{\infty} aq^k\ =\ a\,\sum_{k=0}^{\infty} q^k\ = \frac{a}{1-q}, \quad |q|<1.
 \]
 Jos $\abs{q} \ge 1$, niin yleinen geometrinen sarja suppenee vain kun $a=0$. \loppu 
 \end{Exa}
-\begin{Exa} Edellisen luvun Esimerkiss‰ \ref{sqrt 2} tarkasteltiin palautuvaa lukujonoa
+\begin{Exa} Edellisen luvun Esimerkiss√§ \ref{sqrt 2} tarkasteltiin palautuvaa lukujonoa
 \[
 a_0 = 2, \quad a_{n+1} = \frac{a_n}{2} + \frac{1}{a_n}\,, \quad n = 0,1,\ldots
 \] 
-Jos oletetaan, ett‰ $a_n>0\ \forall n$ ja $a_n \kohti a>0$ (vrt.\ edellisen luvun tarkastelut),
-niin Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} mukaan on oltava
+Jos oletetaan, ett√§ $a_n>0\ \forall n$ ja $a_n \kohti a>0$ (vrt.\ edellisen luvun tarkastelut),
+niin Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} mukaan on oltava
 \[
 a = \lim_n a_{n+1} = \lim_n \left(\frac{a_n}{2} + \frac{1}{a_n}\right) 
                    = \frac{a}{2} + \frac{1}{a}\,.
@@ -168,25 +168,25 @@ Koska $a>0$, niin seuraa $a=\sqrt{2}$.  \loppu
 \[
 a_{n+1} = qa_n - 1, \quad n=0,1,\ldots
 \]
-suppenee (jollakin $a_0$) kohti raja-arvoa $a$, niin t‰st‰ oletuksesta seuraa:
+suppenee (jollakin $a_0$) kohti raja-arvoa $a$, niin t√§st√§ oletuksesta seuraa:
 \begin{align*}
 q=1     &\qimpl a=a-1  \,\ \qimpl 0=1. \\
 q\neq 1 &\qimpl a=qa-1 \qimpl a=1/(q-1).
 \end{align*}
-Siis p‰‰tell‰‰n, ett‰ jono \pain{ei} suppene (mill‰‰n $a_0$), jos $q=1$, ja ett‰ muissa
-tapauksissa ainoa mahdollinen raja-arvo on $a=1/(q-1)$. Jonoa tarkemmin tutkimalla selvi‰‰, ett‰ 
+Siis p√§√§tell√§√§n, ett√§ jono \pain{ei} suppene (mill√§√§n $a_0$), jos $q=1$, ja ett√§ muissa
+tapauksissa ainoa mahdollinen raja-arvo on $a=1/(q-1)$. Jonoa tarkemmin tutkimalla selvi√§√§, ett√§ 
 \[
 a_n = a_0 q^n - \sum_{k=0}^{n-1} q^k, \quad n=1,2,\ldots,
 \]
-joten jono suppenee alkuarvosta $a_0$ riippumatta t‰sm‰lleen kun $\abs{q}<1$, ja t‰llˆin siis
-$a_n \kohti 1/(q-1)$. --- Huomattakoon, ett‰ p‰‰ttely tapauksessa $q=1$ on itse asiassa ep‰suora
-todistus v‰itt‰m‰lle: $\seq{a_n}$ ei suppene. (Vrt.\ Luku \ref{logiikka}.) \loppu
+joten jono suppenee alkuarvosta $a_0$ riippumatta t√§sm√§lleen kun $\abs{q}<1$, ja t√§ll√∂in siis
+$a_n \kohti 1/(q-1)$. --- Huomattakoon, ett√§ p√§√§ttely tapauksessa $q=1$ on itse asiassa ep√§suora
+todistus v√§itt√§m√§lle: $\seq{a_n}$ ei suppene. (Vrt.\ Luku \ref{logiikka}.) \loppu
 \end{Exa}
 
-Seuraavassa viel‰ kolme v‰itt‰m‰‰, jotka perustuvat suoraan lukujonon raja-arvon 
-m‰‰ritelm‰‰n. V‰itt‰mist‰ keskimm‰inen tunnetaan '\kor{voileip‰lauseena}'.
-\begin{Lause} \label{jonotuloksia} \index{lukujonon raja-arvo!68@'voileip‰lause'|emph}
-Lukujonoille p‰tee
+Seuraavassa viel√§ kolme v√§itt√§m√§√§, jotka perustuvat suoraan lukujonon raja-arvon 
+m√§√§ritelm√§√§n. V√§itt√§mist√§ keskimm√§inen tunnetaan '\kor{voileip√§lauseena}'.
+\begin{Lause} \label{jonotuloksia} \index{lukujonon raja-arvo!68@'voileip√§lause'|emph}
+Lukujonoille p√§tee
 \begin{itemize}
 \item[V1.] Jos $\,a_n \le b\ \forall n\ (a_n \ge b\ \forall n)$ ja $a_n \kohti a$,
            niin $a \le b\ (a \ge b)$.
@@ -195,14 +195,14 @@ Lukujonoille p‰tee
 \item[V3.] Jos $a_n \kohti 0$ ja jono $\seq{b_n}$ on rajoitettu, niin $a_n b_n \kohti 0$.
 \end{itemize}
 \end{Lause}
-\tod \ V1. \ Oletetaan, ett‰ $a_n \le b\ \forall n$, ja tehd‰‰n vastaoletus: 
-$\lim_n a_n = a > b$. Merkit‰‰n $\eps = a-b$, jolloin vastaoletuksen perusteella on $\eps > 0$.
+\tod \ V1. \ Oletetaan, ett√§ $a_n \le b\ \forall n$, ja tehd√§√§n vastaoletus: 
+$\lim_n a_n = a > b$. Merkit√§√§n $\eps = a-b$, jolloin vastaoletuksen perusteella on $\eps > 0$.
 Koska $a_n \le b\ \forall n$ (oletus) ja $b = a-\eps,\ \eps > 0$ (vastaoletuksen seuraamus),
 niin seuraa $a_n \le a - \eps\ \forall n$ ja siis $\abs{a_n - a} \ge \eps > 0\ \forall n$. 
-Suppenevuuden m‰‰ritelm‰st‰ seuraa t‰llˆin, ett‰ $a_n \not\kohti a$. Oletuksen mukaan oli 
-kuitenkin $a_n \kohti a$, joten on p‰‰dytty loogiseen ristiriitaan: $a_n \kohti a$ ja 
-$a_n \not\kohti a$. Vastaoletus $a>b$ on n‰in ollen v‰‰r‰, eli on oltava $a \le b$. V‰itt‰m‰n 
-ensimm‰inen osa on siis todistettu. Toinen osa seuraa, kun jo todistettua v‰itt‰m‰‰
+Suppenevuuden m√§√§ritelm√§st√§ seuraa t√§ll√∂in, ett√§ $a_n \not\kohti a$. Oletuksen mukaan oli 
+kuitenkin $a_n \kohti a$, joten on p√§√§dytty loogiseen ristiriitaan: $a_n \kohti a$ ja 
+$a_n \not\kohti a$. Vastaoletus $a>b$ on n√§in ollen v√§√§r√§, eli on oltava $a \le b$. V√§itt√§m√§n 
+ensimm√§inen osa on siis todistettu. Toinen osa seuraa, kun jo todistettua v√§itt√§m√§√§
 sovelletaan jonoon $\seq{-a_n}$.
 
 V2. \ Koska $a_n \le c_n \le b_n\ \forall n$, niin
@@ -211,55 +211,55 @@ a_n-c\,\le\,c_n-c\,\le\,b_n-c\ \ \ja\ \ c-b_n\,&\le\,c-c_n\,\le\,c-a_n \\
                    \impl \quad \abs{c-c_n}\,&\le\,\max\{\abs{a_n-c},\abs{b_n-c}\} \,\ \forall n.
 \end{align*}
 Koska $a_n \kohti c$ ja $b_n \kohti c$, niin jokaisella $\eps>0$ on olemassa indeksit 
-$N_1,N_2\in\N$ siten, ett‰ $\abs{a_n-c}<\eps$ kun $n>N_1$ ja $\abs{b_n-c}<\eps$ kun $n>N_2$.
-T‰llˆin
+$N_1,N_2\in\N$ siten, ett√§ $\abs{a_n-c}<\eps$ kun $n>N_1$ ja $\abs{b_n-c}<\eps$ kun $n>N_2$.
+T√§ll√∂in
 \[
 \abs{c-c_n} \le \max\{\abs{a_n-c},\abs{b_n-c}\} < \eps, \quad \text{kun}\ n>N=\max\{N_1,N_2\}.
 \]
-M‰‰ritelm‰n mukaan $c_n \kohti c$.
+M√§√§ritelm√§n mukaan $c_n \kohti c$.
 
-V3. \ Harjoitusteht‰v‰ (Teht‰v‰ \ref{H-I-7: jonotulos 3}a). \loppu
+V3. \ Harjoitusteht√§v√§ (Teht√§v√§ \ref{H-I-7: jonotulos 3}a). \loppu
 
-\begin{Exa} V‰itt‰m‰n (vrt.\ Lauseen \ref{jonotuloksia} v‰itt‰m‰m‰ V1) 
+\begin{Exa} V√§itt√§m√§n (vrt.\ Lauseen \ref{jonotuloksia} v√§itt√§m√§m√§ V1) 
 \[
 a_n < b\,\ \forall n\,\ \ja\,\ a_n \kohti a \qimpl a<b
 \]
-osoittaa v‰‰r‰ksi vastaesimerkki $\,a_n=1-1/n,\ n\in\N$, $\,b=1$. \loppu
+osoittaa v√§√§r√§ksi vastaesimerkki $\,a_n=1-1/n,\ n\in\N$, $\,b=1$. \loppu
 \end{Exa}
-\begin{Exa} Kunnassa $(\J,+,\cdot,<)$ (ks.\ Luku \ref{kunta}) m‰‰ritelty palautuva lukujono
+\begin{Exa} Kunnassa $(\J,+,\cdot,<)$ (ks.\ Luku \ref{kunta}) m√§√§ritelty palautuva lukujono
 \[
 a_0=0, \quad a_{n+1}=\sqrt{a_n + 1}, \quad n=0,1,\ldots
 \]
-ilmoitetaan suppenevaksi. Mik‰ on raja-arvo?
+ilmoitetaan suppenevaksi. Mik√§ on raja-arvo?
 \end{Exa}
-\ratk Palautuskaavasta seuraa, ett‰ $a_n \ge 0\ \forall n$ ja ett‰
+\ratk Palautuskaavasta seuraa, ett√§ $a_n \ge 0\ \forall n$ ja ett√§
 \[
 a_{n+1}^2 = a_n + 1, \quad n=0,1,\ldots
 \]
-Kun merkit‰‰n $\,\lim_n a_n=a$, niin Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} perusteella
+Kun merkit√§√§n $\,\lim_n a_n=a$, niin Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} perusteella
 seuraa
 \[
 \lim_n a_{n+1}^2 = a^2 = \lim_n(a_n + 1) = a+1.
 \]
 Siis $a^2-a-1=0\ \impl\ a=\tfrac{1}{2}(1\pm\sqrt{5})$. Koska $a_n \ge 0\ \forall n$, niin
-on oltava $a \ge 0$ (Lause \ref{jonotuloksia}, v‰itt‰m‰ V1). Siis 
+on oltava $a \ge 0$ (Lause \ref{jonotuloksia}, v√§itt√§m√§ V1). Siis 
 $\,\lim_n a_n =\tfrac{1}{2}(1+\sqrt{5})$. \loppu
 
 \subsection*{Jaksolliset desimaaliluvut}
 \index{jaksollinen desimaaliluku|vahv}
-\index{zyzy@‰‰retˆn desimaaliluku!69@jaksollinen desimaaliluku|vahv}%
+\index{zyzy@√§√§ret√∂n desimaaliluku!69@jaksollinen desimaaliluku|vahv}%
 
-Luvussa \ref{desimaaliluvut} todettiin, ett‰ jokaiseen rationaalilukuun $x \in \Q$ voidaan
-liitt‰‰ ‰‰retˆn, jaksollinen desimaaliluku $\x = \{x_n\} \in \DD_p$ kriteerill‰
+Luvussa \ref{desimaaliluvut} todettiin, ett√§ jokaiseen rationaalilukuun $x \in \Q$ voidaan
+liitt√§√§ √§√§ret√∂n, jaksollinen desimaaliluku $\x = \{x_n\} \in \DD_p$ kriteerill√§
 \[
 \abs{x - x_n}\ <\ 10^{-n} \quad \forall n.
 \]
-T‰m‰ merkitsee (vrt.\ Propositio \ref{jonon raja 2}), ett‰
+T√§m√§ merkitsee (vrt.\ Propositio \ref{jonon raja 2}), ett√§
 \[
 \lim_n x_n = x.
 \]
-Jatkossa on luontevaa hieman v‰ljent‰‰ Luvussa \ref{desimaaliluvut} sovittua samastusrelaatiota
-rationaalilukujen ja ‰‰rettˆmien desimaalilukujen v‰lill‰. Asetetaan
+Jatkossa on luontevaa hieman v√§ljent√§√§ Luvussa \ref{desimaaliluvut} sovittua samastusrelaatiota
+rationaalilukujen ja √§√§rett√∂mien desimaalilukujen v√§lill√§. Asetetaan
 
 \begin{Def} \label{samastus QD} Jos $x\in\Q\,$ ja $\x = \{x_n\} \in \DD$, niin
 \[
@@ -267,17 +267,17 @@ x=\x \qekv \lim_n x_n = x.
 \] 
 \end{Def}
 
-M‰‰ritelm‰n \ref{samastus QD} kriteerill‰ siis jokainen rationaaliluku samastuu edelleen ainakin
-yhteen jaksolliseen desimaalilukuun, nimitt‰in jakokulma-algoritmin antamaan. Ent‰ toisinp‰in: 
-Jos l‰htˆkohtana on jaksollinen desimaaliluku, niin onko t‰m‰ aina samastettavissa johonkin 
-rationaalilukuun M‰‰ritelm‰n \ref{samastus QD} mukaisesti? Asian tutkimiseksi oletetaan, ett‰
+M√§√§ritelm√§n \ref{samastus QD} kriteerill√§ siis jokainen rationaaliluku samastuu edelleen ainakin
+yhteen jaksolliseen desimaalilukuun, nimitt√§in jakokulma-algoritmin antamaan. Ent√§ toisinp√§in: 
+Jos l√§ht√∂kohtana on jaksollinen desimaaliluku, niin onko t√§m√§ aina samastettavissa johonkin 
+rationaalilukuun M√§√§ritelm√§n \ref{samastus QD} mukaisesti? Asian tutkimiseksi oletetaan, ett√§
 desimaaliluku $\x$ on muotoa
 \[
 \x\ =\ x_0. d_1 \ldots d_k d_{k+1} \ldots d_{k+m} d_{k+1} \ldots d_{k+m} \ldots,
 \]
-eli jaksollisuus alkaa (viimeist‰‰n) desimaalista n:o $k+1$ ja jakson pituus on $m$.
+eli jaksollisuus alkaa (viimeist√§√§n) desimaalista n:o $k+1$ ja jakson pituus on $m$.
 Tarkastellaan jonoa
-$\{x_k, x_{k+m}, x_{k+2m}, \ldots\,\} = \{x_{k+lm},\ l=0,1,\ldots\,\} = \seq{y_l}$. T‰lle p‰tee
+$\{x_k, x_{k+m}, x_{k+2m}, \ldots\,\} = \{x_{k+lm},\ l=0,1,\ldots\,\} = \seq{y_l}$. T√§lle p√§tee
 \[
 y_{l+1}-y_l\ =\ \sum_{i=k+1}^{k+m} d_i \cdot 10^{-lm-i}\ 
                          =\ 10^{-lm}\,(y_1 - y_0), \quad l = 0,1 \ldots
@@ -287,27 +287,27 @@ joten
 y_{l+1}\ &=\ y_0\ +\ (y_1-y_0)\ +\ \ldots\ +\ (y_{l+1}-y_l) \\
          &=\ y_0\ +\ (y_1 -y_0)\,\sum_{j=0}^l 10^{-jm}, \quad l = 0,1 \ldots
 \end{align*}
-N‰in ollen jono $\seq{y_l}$ suppenee geometrisena sarjana:
+N√§in ollen jono $\seq{y_l}$ suppenee geometrisena sarjana:
 \[
 \lim_{l \kohti \infty} y_l\ =\ y_0\ +\ \frac{y_1-y_0}{1 - 10^{-m}}\
                             =\ x_k\ +\ \frac{x_{k+m} - x_k}{1 - 10^{-m}}\ =\ x \in \Q.
 \]
-T‰st‰ ja jonon $\{x_n\}$ monotonisuudesta (vrt.\ Luku \ref{desimaaliluvut}) seuraa, ett‰ myˆs
-koko jono $\{x_n\}$ suppenee. Nimitt‰in jos esim.\ $\,x > 0$, niin jono $\seq{x_n}$ on kasvava,
-jolloin jokaisella $n>k$ p‰tee
+T√§st√§ ja jonon $\{x_n\}$ monotonisuudesta (vrt.\ Luku \ref{desimaaliluvut}) seuraa, ett√§ my√∂s
+koko jono $\{x_n\}$ suppenee. Nimitt√§in jos esim.\ $\,x > 0$, niin jono $\seq{x_n}$ on kasvava,
+jolloin jokaisella $n>k$ p√§tee
 \[
 x_{k+lm}=y_l\ \le\ x_n\ \le\ y_{l+1}=x_{k+(l+1)m},
 \]
-miss‰ $l\in\N\cup\{0\}$ on valittu ($n$:st‰ riippuen) siten, ett‰
+miss√§ $l\in\N\cup\{0\}$ on valittu ($n$:st√§ riippuen) siten, ett√§
 \[
 k + lm\ <\ n\ \le\ k + (l+1)m.
 \]
-Kun t‰ss‰ $n\kohti\infty$, niin $l\kohti\infty$, jolloin $y_l \kohti x$ ja $y_{l+1} \kohti x$
-ja n‰in ollen $x_n \kohti x$ (vrt.\ Lause \ref{jonotuloksia}, v‰itt‰m‰ V2).
-Samastussopimuksen \ref{samastus QD} mukaisesti on siis todistettu (ks.\ myˆs Lause 
-\ref{raja-arvon yksik‰sitteisyys})
+Kun t√§ss√§ $n\kohti\infty$, niin $l\kohti\infty$, jolloin $y_l \kohti x$ ja $y_{l+1} \kohti x$
+ja n√§in ollen $x_n \kohti x$ (vrt.\ Lause \ref{jonotuloksia}, v√§itt√§m√§ V2).
+Samastussopimuksen \ref{samastus QD} mukaisesti on siis todistettu (ks.\ my√∂s Lause 
+\ref{raja-arvon yksik√§sitteisyys})
 \begin{Lause} \label{samastuslause QD} Jokainen jaksollinen desimaaliluku samastuu
-M‰‰ritelm‰n \ref{samastus QD} mukaisesti yksik‰sitteiseen rationaalilukuun. 
+M√§√§ritelm√§n \ref{samastus QD} mukaisesti yksik√§sitteiseen rationaalilukuun. 
 \end{Lause}
 \begin{Exa}
 \[
@@ -315,7 +315,7 @@ M‰‰ritelm‰n \ref{samastus QD} mukaisesti yksik‰sitteiseen rationaalilukuun.
                     =\ \frac{55}{10}+\frac{27}{9990}\ =\ \frac{1018}{185}\,. \loppu
 \]
 \end{Exa}
-\begin{Exa} \label{samastuksia} Mitk‰ desimaaliluvut samastuvat lukuihin $0$, $10$ ja $ 3/125$ ? 
+\begin{Exa} \label{samastuksia} Mitk√§ desimaaliluvut samastuvat lukuihin $0$, $10$ ja $ 3/125$ ? 
 \end{Exa}
 \ratk Vaihtoehtoja on kaikissa tapauksissa kaksi:
 \begin{align*}
@@ -326,82 +326,82 @@ M‰‰ritelm‰n \ref{samastus QD} mukaisesti yksik‰sitteiseen rationaalilukuun.
 
 \subsection*{Desimaalilukujen samastus}
 
-Esimerkin \ref{samastuksia} mukaan on mahdollista, ett‰ kaksi merkkijonoina erilaista
-(eli ei-identtist‰) desimaalilukua $\x,\y\in\DD$ samastuu samaan rationaalilukuun $x$. T‰llˆin
-on luonnollista samastaa $\x$ ja $\y$ myˆs kesken‰‰n, eli kirjoittaa $\x=\y$. Jos $\x=\seq{x_n}$
-ja $\y=\seq{y_n}$, niin M‰‰ritelm‰n \ref{samastus QD} mukaan mainitussa tilanteessa on
-$\,\lim_n x_n = \lim_n y_n = x$, jolloin Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} mukaan on
-$\lim_n (x_n-y_n) = 0$. Otetaan t‰m‰ raja-arvoehto yleiseksi samastuskriteeriksi verrattaessa 
-‰‰rettˆmi‰ desimaalilukuja suoraan kesken‰‰n:
+Esimerkin \ref{samastuksia} mukaan on mahdollista, ett√§ kaksi merkkijonoina erilaista
+(eli ei-identtist√§) desimaalilukua $\x,\y\in\DD$ samastuu samaan rationaalilukuun $x$. T√§ll√∂in
+on luonnollista samastaa $\x$ ja $\y$ my√∂s kesken√§√§n, eli kirjoittaa $\x=\y$. Jos $\x=\seq{x_n}$
+ja $\y=\seq{y_n}$, niin M√§√§ritelm√§n \ref{samastus QD} mukaan mainitussa tilanteessa on
+$\,\lim_n x_n = \lim_n y_n = x$, jolloin Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} mukaan on
+$\lim_n (x_n-y_n) = 0$. Otetaan t√§m√§ raja-arvoehto yleiseksi samastuskriteeriksi verrattaessa 
+√§√§rett√∂mi√§ desimaalilukuja suoraan kesken√§√§n:
 \begin{Def} \label{samastus DD} \index{samastus '$=$'!e@desimaalilukujen|emph} Kaksi
-desimaalilukua $\x = \seq{x_n} \in \DD$ ja $\y = \seq{y_n} \in \DD$ samastetaan kriteerill‰
+desimaalilukua $\x = \seq{x_n} \in \DD$ ja $\y = \seq{y_n} \in \DD$ samastetaan kriteerill√§
 \[
 \x = \y \qekv \lim_n\,(x_n - y_n) = 0.
 \] 
 \end{Def}
 
-Kahden 'eri n‰kˆisen' desimaaliluvun samastuminen on siis mahdollista ainakin, jos molemmat
-samastuvat ‰‰relliseen desimaalilukuun. --- T‰m‰ osoittautuu ainoaksi erikoistapaukseksi:
+Kahden 'eri n√§k√∂isen' desimaaliluvun samastuminen on siis mahdollista ainakin, jos molemmat
+samastuvat √§√§relliseen desimaalilukuun. --- T√§m√§ osoittautuu ainoaksi erikoistapaukseksi:
 \begin{Lause} \label{samastuslause DD} Jos desimaaliluvut $\x=\seq{x_n}\in\DD$ ja
-$\y=\seq{y_n}\in\DD$ samastuvat kesken‰‰n M‰‰ritelm‰n \ref{samastus DD} mukaisesti, niin joko
-$\x$ ja $\y$ ovat merkkijonoina identtiset tai $\x=x=\y$, miss‰ $x$ on ‰‰rellinen desimaaliluku. 
+$\y=\seq{y_n}\in\DD$ samastuvat kesken√§√§n M√§√§ritelm√§n \ref{samastus DD} mukaisesti, niin joko
+$\x$ ja $\y$ ovat merkkijonoina identtiset tai $\x=x=\y$, miss√§ $x$ on √§√§rellinen desimaaliluku. 
 \end{Lause}
-\tod Jos $\seq{x_n}=\seq{0}$, niin myˆs $\seq{y_n}=\seq{0}$, sill‰ muuten
-$\abs{x_n-y_n} = \abs{y_n} \not\kohti 0$, koska jono $\seq{\abs{y_n}}$ on kasvava. T‰llˆin on
-siis $\x,\y=\pm 0.000 \ldots\,$ ja $\x=0=\y$. Jatkossa oletetetaan, ett‰ 
-$\seq{x_n} \neq \seq{0}$ ja $\seq{y_n} \neq \seq{0}$. T‰llˆin on $\x$:n ja $\y$:n etumerkkien
+\tod Jos $\seq{x_n}=\seq{0}$, niin my√∂s $\seq{y_n}=\seq{0}$, sill√§ muuten
+$\abs{x_n-y_n} = \abs{y_n} \not\kohti 0$, koska jono $\seq{\abs{y_n}}$ on kasvava. T√§ll√∂in on
+siis $\x,\y=\pm 0.000 \ldots\,$ ja $\x=0=\y$. Jatkossa oletetetaan, ett√§ 
+$\seq{x_n} \neq \seq{0}$ ja $\seq{y_n} \neq \seq{0}$. T√§ll√∂in on $\x$:n ja $\y$:n etumerkkien
 oltava samat, muuten $\abs{x_n-y_n}=\abs{x_n}+\abs{y_n} \not\kohti 0$. Koska edelleen $\x$ ja
-$\y$ voidaan kumpikin skaalata tekij‰ll‰ $\pm 10^m,\ m \in \Z$ samastuskriteerin muuttumatta,
-niin voidaan olettaa, ett‰ $\,0 \le x_n < 1\,$ ja $\,0 \le y_n <1\,$ jokaisella $n$, jolloin
+$\y$ voidaan kumpikin skaalata tekij√§ll√§ $\pm 10^m,\ m \in \Z$ samastuskriteerin muuttumatta,
+niin voidaan olettaa, ett√§ $\,0 \le x_n < 1\,$ ja $\,0 \le y_n <1\,$ jokaisella $n$, jolloin
 $\x$ ja $\y$ ovat jollakin $k\in\N$ muotoa
 \begin{align*}
 \x\ &=\ 0.d_1 \ldots d_{k-1} d_k \ldots\ldots d_m \ldots\ldots, \\
 \y\ &=\ 0.d_1 \ldots d_{k-1} \tilde{d}_k \ldots\ldots \tilde{d}_m \ldots\ldots,
 \end{align*}
-miss‰ $\tilde{d}_k \neq d_k$. T‰llˆin on $\,x_n=y_n\,$ kun $n<k$ ja 
-$\,x_k-y_k=(d_k-\tilde{d}_k)\,10^{-k}$. Yleisyytt‰ rajoittamatta voidaan edelleen olettaa, ett‰ 
-$\tilde{d}_k < d_k$ ($d_k \neq 0$). T‰llˆin n‰hd‰‰n, ett‰ erotus $\,x_n-y_n$ saa pienimm‰n
+miss√§ $\tilde{d}_k \neq d_k$. T√§ll√∂in on $\,x_n=y_n\,$ kun $n<k$ ja 
+$\,x_k-y_k=(d_k-\tilde{d}_k)\,10^{-k}$. Yleisyytt√§ rajoittamatta voidaan edelleen olettaa, ett√§ 
+$\tilde{d}_k < d_k$ ($d_k \neq 0$). T√§ll√∂in n√§hd√§√§n, ett√§ erotus $\,x_n-y_n$ saa pienimm√§n
 mahdollisen arvonsa jokaisella $n>k$, kun $d_n=0,\,\tilde{d}_n=9\ \forall n>k$, eli kun
 $\x$ ja $\y$ ovat muotoa
 \begin{align*}
 \x\ &=\ 0.d_1 \ldots d_{k-1} d_k 0 0 0 \ldots \\
 \y\ &=\ 0.d_1 \ldots d_{k-1} \tilde{d}_k 9 9 9 \ldots
 \end{align*} 
-T‰ss‰ tapauksessa on (vrt.\ Propositio \ref{desim})
-\begin{align*} \label{I-7: v‰litulos}
+T√§ss√§ tapauksessa on (vrt.\ Propositio \ref{desim})
+\begin{align*} \label{I-7: v√§litulos}
 x_n-y_n &= \left(x_k + 0 \cdot 10^{-k-1} + \ldots + 0 \cdot 10^{-n}\right)
           -\left(y_k + 9 \cdot 10^{-k-1} + \ldots + 9 \cdot 10^{-n}\right) \\
         &= (x_k-y_k) - \left(10^{-k}-10^{-n}\right) \\
         &= (d_k-\tilde{d}_k-1)\,10^{-k} + 10^{-n}, \quad n>k.
 \end{align*}
-Siis erotuksen $x_n-y_n$ pienin mahdollinen arvo on $10^{-n}$ kun $n \ge k$, ja t‰m‰
-saavutetaan, kun $d_k=\tilde{d}_k+1$ ja $d_n=0$ ja $\tilde{d}_n=9$ jokaisella $n>k$. T‰ss‰
+Siis erotuksen $x_n-y_n$ pienin mahdollinen arvo on $10^{-n}$ kun $n \ge k$, ja t√§m√§
+saavutetaan, kun $d_k=\tilde{d}_k+1$ ja $d_n=0$ ja $\tilde{d}_n=9$ jokaisella $n>k$. T√§ss√§
 erikoistapauksessa on siis $x_n=x_k\ \forall n \ge k$ ja $\lim_n y_n=x_k$, jolloin 
-$\,\x=x_k=\y\,$ M‰‰ritelm‰n \ref{samastus QD} mukaisesti.
+$\,\x=x_k=\y\,$ M√§√§ritelm√§n \ref{samastus QD} mukaisesti.
 
 Muissa kuin em.\ erikoistapauksessa on oltava joko $d_k-\tilde{d}_k \ge 2$ (tapaus 1),
 $d_m \ge 1$ jollakin $m>k$ (tapaus 2) tai $\tilde{d}_m \le 8$ jollakin $m>k$ (tapaus 3). 
-Tapauksessa 1 seuraa em.\ tuloksesta, ett‰ $x_n-y_n > 10^{-k}=\eps>0\ \forall n>k$, jolloin 
+Tapauksessa 1 seuraa em.\ tuloksesta, ett√§ $x_n-y_n > 10^{-k}=\eps>0\ \forall n>k$, jolloin 
 $x_n-y_n \not\kohti 0$. Tapauksissa 2 ja 3 on oltava $x_m-y_m \ge 2 \cdot 10^{-m}$
-(koska erotuksen pienin arvo oli $10^{-m}$). T‰llˆin koska jono $\seq{x_n}$ on kasvava
-ja koska $y_n < y_m + 10^{-m}\ \forall n>m$ (Propositio \ref{desim}), niin seuraa, ett‰
-$x_n-y_n > 10^{-m}=\eps>0$, kun $n>m$. Siis myˆs t‰ss‰ tapauksessa $x_n-y_n \not\kohti 0$.
-On p‰‰telty, ett‰ jos $\x$ ja $\y$ eiv‰t ole merkkijonoina identtiset, niin oletus
-$\lim_n(x_n-y_n)=0$ toteutuu vain edell‰ kuvatussa erikoistapauksessa, jossa $\x$ ja $\y$ 
-samastuvat ‰‰relliseen desimaalilukuun. \loppu
+(koska erotuksen pienin arvo oli $10^{-m}$). T√§ll√∂in koska jono $\seq{x_n}$ on kasvava
+ja koska $y_n < y_m + 10^{-m}\ \forall n>m$ (Propositio \ref{desim}), niin seuraa, ett√§
+$x_n-y_n > 10^{-m}=\eps>0$, kun $n>m$. Siis my√∂s t√§ss√§ tapauksessa $x_n-y_n \not\kohti 0$.
+On p√§√§telty, ett√§ jos $\x$ ja $\y$ eiv√§t ole merkkijonoina identtiset, niin oletus
+$\lim_n(x_n-y_n)=0$ toteutuu vain edell√§ kuvatussa erikoistapauksessa, jossa $\x$ ja $\y$ 
+samastuvat √§√§relliseen desimaalilukuun. \loppu
 
-Yhteenvetona rationaalilukujen ja ‰‰rettˆmien desimaalilukujen samastuksesta voidaan todeta:
-\begin{Kor} \label{rat ja desim samastus} Jokainen rationaaliluku $\,x\,$ samastuu v‰hint‰‰n
-yhteen ja enint‰‰n kahteen ‰‰rettˆm‰‰n desimaalilukuun, jotka ovat jaksollisia.
-Samastusvaihtoehtoja on kaksi t‰sm‰lleen kun $x$ on ‰‰rellinen desimaaliluku. \end{Kor}
-\begin{Exa} Mihin ‰‰rettˆmiin binaarilukuihin samastuu kymmenj‰rjestelm‰n luku \ 
+Yhteenvetona rationaalilukujen ja √§√§rett√∂mien desimaalilukujen samastuksesta voidaan todeta:
+\begin{Kor} \label{rat ja desim samastus} Jokainen rationaaliluku $\,x\,$ samastuu v√§hint√§√§n
+yhteen ja enint√§√§n kahteen √§√§rett√∂m√§√§n desimaalilukuun, jotka ovat jaksollisia.
+Samastusvaihtoehtoja on kaksi t√§sm√§lleen kun $x$ on √§√§rellinen desimaaliluku. \end{Kor}
+\begin{Exa} Mihin √§√§rett√∂miin binaarilukuihin samastuu kymmenj√§rjestelm√§n luku \ 
 a) $x = 3/4$, \ b) $y=4/3$\,? 
 \end{Exa}
 \ratk a) Koska $\,3/4 = 2^{-2}(1 \cdot 2 + 1) = 1 \cdot 2^{-1} + 1 \cdot 2^{-2}$, niin
 \[
 x\ =\ 0.11000000 \ldots \ =\ 0.10111111 \ldots
 \]
-Vaihtoehtoja on kaksi, koska $x$ on ‰‰rellinen binaariluku.
+Vaihtoehtoja on kaksi, koska $x$ on √§√§rellinen binaariluku.
  
 b) Koska
 \begin{align*}
@@ -409,16 +409,16 @@ b) Koska
              =\ 1+\frac{1}{4}+\frac{1}{4^2}+\ldots\ 
              =\ 1 \cdot 2^0 + 0 \cdot 2^{-1} +1 \cdot 2^{-2} + 0 \cdot 2^{-3} + \ldots\,,
 \end{align*}
-niin $\,y=1.010101\ldots\,$ T‰ss‰ on vain yksi vaihtoehto. \loppu
+niin $\,y=1.010101\ldots\,$ T√§ss√§ on vain yksi vaihtoehto. \loppu
 
 \Harj
 \begin{enumerate}
 
 \item \label{H-I-7: todistuksia}
-Todista Lauseen \ref{raja-arvojen yhdistelys‰‰nnˆt} v‰itt‰m‰t (1) ja (2).
+Todista Lauseen \ref{raja-arvojen yhdistelys√§√§nn√∂t} v√§itt√§m√§t (1) ja (2).
 
 \item
-M‰‰rit‰ raja-arvojen yhdistelys‰‰ntˆj‰ hyv‰ksi k‰ytt‰en
+M√§√§rit√§ raja-arvojen yhdistelys√§√§nt√∂j√§ hyv√§ksi k√§ytt√§en
 \begin{align*}
 &\text{a)}\ \ \lim_n \frac{2n^3-100n^2-5000n}{(n+200)^3} \qquad\quad
  \text{b)}\ \ \lim_n \frac{1}{n^3}\left[(n+3)^4-(n-2)^4\right] \\
@@ -427,14 +427,14 @@ M‰‰rit‰ raja-arvojen yhdistelys‰‰ntˆj‰ hyv‰ksi k‰ytt‰en
 \end{align*}
 
 \item 
-Laske lukujonojen (sik‰li kuin \kor{luku}jonoja)
+Laske lukujonojen (sik√§li kuin \kor{luku}jonoja)
 \[
 a_n=\frac{x^n}{1+x^n}\,, \quad b_n=\frac{x^n}{1+x^{2n}}\,, \quad n=1,2, \ldots\,, 
 \]
 raja-arvot kaikilla $x$:n rationaalisilla arvoilla.
 
 \item \label{H-I-7: sqrt-kunta}
-M‰‰rit‰ seuraavien palautuvien lukujonojen mahdolliset raja-arvot olettaen, ett‰
+M√§√§rit√§ seuraavien palautuvien lukujonojen mahdolliset raja-arvot olettaen, ett√§
 jonot ovat suppenevia:
 \begin{align*}
 &\text{a)}\ \ a_{n+1}=-\frac{1}{3}\,a_n+\frac{2n^2}{n^2+1} \qquad\qquad\
@@ -448,37 +448,37 @@ jonot ovat suppenevia:
 \end{align*}
 
 \item 
-Olkoon $a_n+a \neq 0\ \forall n$ ja $\,\lim_n (a_n+a)^{-1} = b \neq 0$. N‰yt‰, ett‰ jono 
-$\seq{a_n}$ suppenee ja m‰‰rit‰ $\lim_n a_n$.
+Olkoon $a_n+a \neq 0\ \forall n$ ja $\,\lim_n (a_n+a)^{-1} = b \neq 0$. N√§yt√§, ett√§ jono 
+$\seq{a_n}$ suppenee ja m√§√§rit√§ $\lim_n a_n$.
 
 \item \label{H-I-7: jonotulos 3}
-a) Todista Lauseen \ref{jonotuloksia} v‰itt‰m‰ V3. \vspace{1mm}\newline
-b) Olkoon $\seq{a_n}$ rajoitettu jono. Todista, ett‰ 
+a) Todista Lauseen \ref{jonotuloksia} v√§itt√§m√§ V3. \vspace{1mm}\newline
+b) Olkoon $\seq{a_n}$ rajoitettu jono. Todista, ett√§ 
    $\displaystyle{\,\lim_n \frac{2n+a_n}{n}=2}$.
 
 \item 
-a) Mitk‰ seuraavista luvuista ovat eri suuria ja mitk‰ samoja\,? \newline
+a) Mitk√§ seuraavista luvuista ovat eri suuria ja mitk√§ samoja\,? \newline
 $1.285714285714285714..\,$, $\frac{11}{9}\,$, $\frac{1287}{1250}\,$, $\frac{9}{7}\,$, 
 $1.029599999..\,$, $1.02949999..\,$, \newline
-$1.029600000..\,$, $a=$ yksi kokonaista kaksi yhdeks‰sosaa. \vspace{2mm}\newline
-b) Mitk‰ seuraavista desimaaliluvuista ovat kaksittain verrattaessa varmasti eri suuret ja mitk‰
+$1.029600000..\,$, $a=$ yksi kokonaista kaksi yhdeks√§sosaa. \vspace{2mm}\newline
+b) Mitk√§ seuraavista desimaaliluvuista ovat kaksittain verrattaessa varmasti eri suuret ja mitk√§
 mahdollisesti samat\,? \newline
 $\x=2.41789..,\ \ \y=2.41799..,\ \ \breve{a}=2.41788..,\ \ \breve{b}=2.41798.., \ \ 
  \breve{c}=2.4179..$
 
 \item
-M‰‰rit‰ rationaaliluku $x$ siten, ett‰ $x=\x$, kun \newline
+M√§√§rit√§ rationaaliluku $x$ siten, ett√§ $x=\x$, kun \newline
 a) \ $\x=-0.46127127127 \ldots\,$, \ b) \ $\x=2015.201520152015 \ldots$
 
 \item
-Er‰‰ss‰ lukuj‰rjestelm‰ss‰, jossa kirjoitetaan $1+1=2$, muodostavat ‰‰rettˆmien desimalilukujen
-vastineet joukon $\mathbb L$. T‰ss‰ joukossa on luvulla $\x=0.222\ldots \in \mathbb L$ toinenkin
-esitysmuoto. Mik‰ on ko.\ lukuj‰rjestelm‰n kantaluku, ja mihin rationaalilukuun $\x$ samastuu?
+Er√§√§ss√§ lukuj√§rjestelm√§ss√§, jossa kirjoitetaan $1+1=2$, muodostavat √§√§rett√∂mien desimalilukujen
+vastineet joukon $\mathbb L$. T√§ss√§ joukossa on luvulla $\x=0.222\ldots \in \mathbb L$ toinenkin
+esitysmuoto. Mik√§ on ko.\ lukuj√§rjestelm√§n kantaluku, ja mihin rationaalilukuun $\x$ samastuu?
 
 \item 
-Olkoon $x,y\in\Q$ ja $\x,\y\in\DD$. L‰htien M‰‰ritelmist‰ \ref{samastus QD} ja \ref{samastus DD}
-ja k‰ytt‰en ainoastaan raja-arvojen yhdistelys‰‰ntˆj‰ 
-(Lause \ref{raja-arvojen yhdistelys‰‰nnˆt}) n‰yt‰, ett‰ p‰tee \
+Olkoon $x,y\in\Q$ ja $\x,\y\in\DD$. L√§htien M√§√§ritelmist√§ \ref{samastus QD} ja \ref{samastus DD}
+ja k√§ytt√§en ainoastaan raja-arvojen yhdistelys√§√§nt√∂j√§ 
+(Lause \ref{raja-arvojen yhdistelys√§√§nn√∂t}) n√§yt√§, ett√§ p√§tee \
 a) \ $\x=x\ \ja\ x=\y\ \,\impl\,\ \x=\y$, \ \ b) \  $\x=\y\ \ja\ \y=y \,\impl\,\ \x=y$.
 
 \item (*)
@@ -486,24 +486,24 @@ Todista: \
 $\displaystyle{\lim_n a_n = a\,\ \impl\,\ \lim_n \frac{a_1+a_2+ \ldots + a_n}{n} = a}$.
 
 \item (*)
-M‰‰ritell‰‰n palautuva lukujono
+M√§√§ritell√§√§n palautuva lukujono
 \[
 a_1\in\Q, \quad a_{n+1}=\frac{a_n}{1+10^{-n}a_n}\,, \quad n=1,2, \ldots
 \]
-N‰yt‰, ett‰ $\seq{a_n}$ suppenee ja
+N√§yt√§, ett√§ $\seq{a_n}$ suppenee ja
 \[
 \lim_n a_n = \frac{9a_1}{a_1+9}\,, 
 \]
-paitsi er‰ill‰ poikkeuksillisilla $a_1$:n arvoilla --- mill‰\,? \newline
+paitsi er√§ill√§ poikkeuksillisilla $a_1$:n arvoilla --- mill√§\,? \newline
 \kor{Vihje}: Tutki jonoa $\seq{b_n}=\seq{a_n^{-1}}$\,.
 
 \item (*)
-\ a) M‰‰rit‰ palautuvan lukujonon
+\ a) M√§√§rit√§ palautuvan lukujonon
 \[
 a_{n+1}=(2-a_n)^2, \quad n=0,1, \ldots
 \]
-mahdolliset raja-arvot $\,a=\lim_n a_n$.\, b) Tutkimalla jonoa $\seq{b_n}=\seq{a_n-a}$ p‰‰ttele,
-ett‰ $\,\lim_n a_n = a$ vain kun $a_n=a$ jollakin $n$.\, c) P‰‰ttele, ett‰ jos $a_0\in\Q$, niin
-$\seq{a_n}$ suppenee t‰sm‰lleen, kun $a_0$ on jokin luvuista $0,1,2,3,4$.
+mahdolliset raja-arvot $\,a=\lim_n a_n$.\, b) Tutkimalla jonoa $\seq{b_n}=\seq{a_n-a}$ p√§√§ttele,
+ett√§ $\,\lim_n a_n = a$ vain kun $a_n=a$ jollakin $n$.\, c) P√§√§ttele, ett√§ jos $a_0\in\Q$, niin
+$\seq{a_n}$ suppenee t√§sm√§lleen, kun $a_0$ on jokin luvuista $0,1,2,3,4$.
 
 \end{enumerate}

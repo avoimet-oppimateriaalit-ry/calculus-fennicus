@@ -1,16 +1,16 @@
-%Esimerkit ja harjoitusteht‰v‰t vanhasta luvusta 'Kaarenpituus: $\sin$ ja $\cos$'
-\begin{Exa} Miss‰ pisteiss‰ funktio $f(x)=2\abs{\sin x}-\cos x)$ saavuttaa pienimm‰n ja
-suurimman arvonsa v‰lill‰ $[0,2\pi]$? 
+%Esimerkit ja harjoitusteht√§v√§t vanhasta luvusta 'Kaarenpituus: $\sin$ ja $\cos$'
+\begin{Exa} Miss√§ pisteiss√§ funktio $f(x)=2\abs{\sin x}-\cos x)$ saavuttaa pienimm√§n ja
+suurimman arvonsa v√§lill√§ $[0,2\pi]$? 
 \end{Exa}
-\ratk Funktio on derivoituva v‰leill‰ $(0,\pi)$ ja $(\pi,2\pi)$, joilla $\sin x$ ei vaihda 
-merkki‰‰n:
+\ratk Funktio on derivoituva v√§leill√§ $(0,\pi)$ ja $(\pi,2\pi)$, joilla $\sin x$ ei vaihda 
+merkki√§√§n:
 \[
 f'(x) = \begin{cases}
         \dif(2\sin x-\cos x) = 2\cos x + \sin x,    \quad &x \in (0,\pi), \\
         \dif(-2\sin x - \cos x = -2\cos x + \sin x, \quad &x \in (\pi,2\pi).
         \end{cases}
 \]
-Derivaatan nollakohdat ovat pisteiss‰, joissa 
+Derivaatan nollakohdat ovat pisteiss√§, joissa 
 \begin{align*}
 x \in (0,\pi)\ \ja\ 2\cos x + \sin x = 0    
                         &\qimpl x=x_1 \in (\pi/2,\pi)\ \ja\ \tan x_1 = - 2 \\
@@ -21,17 +21,17 @@ x \in (\pi,2\pi)\ \ja\ -2\cos x + \sin x = 0
                         &\qimpl \sin x_2 = - 2/\sqrt{5}, \quad \cos x_2 = - 1/\sqrt{5} \\
                         &\qimpl f(x_2) = \sqrt{5}. 
 \end{align*}
-Vertailemalla arvoihin $f(0)=f(2\pi)=-1$ ja $f(\pi)=1$ todetaan, ett‰ $f$ saavuttaa v‰lill‰ 
-$[0,2\pi]$ maksimiarvonsa $f_{max}=\sqrt{5}$ pisteiss‰ $x_1 = \Arctan(-2)+\pi = 2.03444393..$ ja
-$x_2=\Arctan 2+\pi = 4.24874137..$ ja minimiarvonsa $f_{min}=-1$ v‰lin p‰‰tepisteiss‰. \loppu
-\begin{Exa} N‰yt‰, ett‰ $f(x)=x-\sin x$ on aidosti kasvava $\R$:ss‰. \end{Exa}
+Vertailemalla arvoihin $f(0)=f(2\pi)=-1$ ja $f(\pi)=1$ todetaan, ett√§ $f$ saavuttaa v√§lill√§ 
+$[0,2\pi]$ maksimiarvonsa $f_{max}=\sqrt{5}$ pisteiss√§ $x_1 = \Arctan(-2)+\pi = 2.03444393..$ ja
+$x_2=\Arctan 2+\pi = 4.24874137..$ ja minimiarvonsa $f_{min}=-1$ v√§lin p√§√§tepisteiss√§. \loppu
+\begin{Exa} N√§yt√§, ett√§ $f(x)=x-\sin x$ on aidosti kasvava $\R$:ss√§. \end{Exa}
 \ratk Koska $f'(x)=1-\cos x \ge 0\ \forall x$, Lauseen \ref{monotonisuuskriteeri} mukaan $f$ on
-jokaisella v‰lill‰ $[a,b]$ kasvava. Saman lauseen mukaan $f$ on jokaisella v‰lill‰ $[a,b]$ myˆs
+jokaisella v√§lill√§ $[a,b]$ kasvava. Saman lauseen mukaan $f$ on jokaisella v√§lill√§ $[a,b]$ my√∂s
 aidosti kasvava, koska joukko
 \[
 X = [a,b] \cap \{x\in\R \mid f'(x)=0\} = [a,b] \cap \{k \cdot 2\pi,\ k \in \Z\}
 \]
-on ‰‰rellinen. Siis $f$ on aidosti kasvava $\R$:ss‰. \loppu
+on √§√§rellinen. Siis $f$ on aidosti kasvava $\R$:ss√§. \loppu
 
 \Harj
 \begin{enumerate}
@@ -41,19 +41,19 @@ Tutki, kuinka tarkasti kaaren
 \[
 S=\{P=(x,y) \mid y=x^2\ \ja\ x\in[0,1]\}
 \]
-pituus saadaan lasketuksi k‰ytt‰m‰ll‰ pisteistˆ‰ $\{(x_i,f(x_i)),\ i=0 \ldots 10\}$, miss‰ 
+pituus saadaan lasketuksi k√§ytt√§m√§ll√§ pisteist√∂√§ $\{(x_i,f(x_i)),\ i=0 \ldots 10\}$, miss√§ 
 $x_i=i/10$. Tarkka arvo on $s=1.47894..$
 
 \item
-Origosta siirryt‰‰n k‰yr‰‰ $r=4\cos\varphi$ (napakoordinaatit) seuraten pisteeseen, jonka
-$x$-koordinaatti $=3$. Mik‰ on matkan pituus lyhint‰ reitti‰?
+Origosta siirryt√§√§n k√§yr√§√§ $r=4\cos\varphi$ (napakoordinaatit) seuraten pisteeseen, jonka
+$x$-koordinaatti $=3$. Mik√§ on matkan pituus lyhint√§ reitti√§?
 
 \item
-N‰yt‰, ett‰ jos $a,b\in\R$ ja $b \neq 0$, niin 
+N√§yt√§, ett√§ jos $a,b\in\R$ ja $b \neq 0$, niin 
 $\,\displaystyle{\lim_{x \kohti 0}\frac{\sin ax}{\sin bx}=\frac{a}{b}}\,$.
 
 \item
-M‰‰rit‰ raja-arvot
+M√§√§rit√§ raja-arvot
 \begin{align*}
 &\text{a)}\ \lim_{x \kohti 0} \frac{x\sin x}{1-\cos x} \qquad
  \text{b)}\ \lim_{x \kohti 0} \frac{x\sin 2x}{1-\cos 2x} \qquad
@@ -63,10 +63,10 @@ M‰‰rit‰ raja-arvot
 \end{align*}
 
 \item
-N‰yt‰ induktiolla, ett‰ $\dif^n\tan x=p(\tan x)$, miss‰ $p$ on polynomi astetta $n+1$.
+N√§yt√§ induktiolla, ett√§ $\dif^n\tan x=p(\tan x)$, miss√§ $p$ on polynomi astetta $n+1$.
 
 \item
-Johda derivoimiss‰‰ntˆjen ja Lauseen \ref{yksinkertaisin dy} avulla kaava
+Johda derivoimiss√§√§nt√∂jen ja Lauseen \ref{yksinkertaisin dy} avulla kaava
 \[
 \Arctan x + \Arccot x=\frac{\pi}{2}\,, \quad x\in\R.
 \]
@@ -77,15 +77,15 @@ Totea funktio
 f(x)=\begin{cases} 
      x^2\sin\dfrac{1}{x^2}\,, &\text{kun}\ x \neq 0 \\ 0, &\text{kun}\ x=0
      \end{cases} \]
-esimerkiksi funktiosta, joka on derivoituva jokaisessa pisteess‰ $x\in\R$, mutta derivaatta
-ei ole jokaisessa pisteess‰ jatkuva.
+esimerkiksi funktiosta, joka on derivoituva jokaisessa pisteess√§ $x\in\R$, mutta derivaatta
+ei ole jokaisessa pisteess√§ jatkuva.
 
 \item
-Mill‰ v‰leill‰ funktio $f(x)=x+4\sin x$ on aidosti kasvava ja mill‰ aidosti v‰henev‰?
+Mill√§ v√§leill√§ funktio $f(x)=x+4\sin x$ on aidosti kasvava ja mill√§ aidosti v√§henev√§?
 Hahmottele funktion kuvaaja.
 
 \item
-M‰‰rit‰ seuraavien implisiittifunktioiden $y(x)$ derivaatat annetuissa pisteiss‰:
+M√§√§rit√§ seuraavien implisiittifunktioiden $y(x)$ derivaatat annetuissa pisteiss√§:
 \begin{align*}
 &\text{a)}\ y+2\sin y+\cos y=x,\ \ (x,y)=(1,0) \\
 &\text{b)}\ 2x+y-\sqrt{2}\sin(xy)=\frac{\pi}{2}\,,\ \ (x,y)=\left(\frac{\pi}{4}\,,1\right) \\
@@ -94,40 +94,40 @@ M‰‰rit‰ seuraavien implisiittifunktioiden $y(x)$ derivaatat annetuissa pisteiss‰
 \end{align*}
 
 \item
-M‰‰rit‰ napa- tai pallokoordinaatistoon siirtym‰ll‰ seuraavien funktioiden maksimi- ja 
-minimiarvot annetussa joukossa $A$. Anna myˆs karteesisessa koordinaatistossa pisteet, 
-joissa n‰m‰ arvot saavutetaan.
+M√§√§rit√§ napa- tai pallokoordinaatistoon siirtym√§ll√§ seuraavien funktioiden maksimi- ja 
+minimiarvot annetussa joukossa $A$. Anna my√∂s karteesisessa koordinaatistossa pisteet, 
+joissa n√§m√§ arvot saavutetaan.
 \begin{align*}
-&\text{a)}\ f(x,y)=x^3y^4,\ \ A=\{(x,y)†\mid x^2+y^2 \le 1\} \\
-%&\text{b)}\ f(x,y)=x^2y^4,\ \ A=\{(x,y)†\mid x^2+y^2 \le 25\} \\
+&\text{a)}\ f(x,y)=x^3y^4,\ \ A=\{(x,y)¬†\mid x^2+y^2 \le 1\} \\
+%&\text{b)}\ f(x,y)=x^2y^4,\ \ A=\{(x,y)¬†\mid x^2+y^2 \le 25\} \\
 &\text{b)}\ f(x,y,z)=xyz^3,\ \ A=\{(x,y,z) \mid x^2+y^2+z^2 \le 1\}
 \end{align*}
 
 \item
-M‰‰rit‰ funktion $f(x)=4\abs{\cos x}-3\sin x+2\cos x\,$ derivaatan ep‰jatkuvuuskohdat, 
-paikalliset ‰‰riarvokohdat ja absoluuttiset maksimi- ja minimiarvot v‰lill‰ $[0,2\pi]$. 
-Hahmottele k‰yr‰n $y=f(x)$ kulku.
+M√§√§rit√§ funktion $f(x)=4\abs{\cos x}-3\sin x+2\cos x\,$ derivaatan ep√§jatkuvuuskohdat, 
+paikalliset √§√§riarvokohdat ja absoluuttiset maksimi- ja minimiarvot v√§lill√§ $[0,2\pi]$. 
+Hahmottele k√§yr√§n $y=f(x)$ kulku.
 
 \item
-Ratkaise alkuarvoteht‰v‰ $\,y(0)=0,\ y'=\sin x+\cos x,\ x\in\R$.
+Ratkaise alkuarvoteht√§v√§ $\,y(0)=0,\ y'=\sin x+\cos x,\ x\in\R$.
 
 \item (*)
-N‰yt‰ sopivalla muuttujan vaihdolla, ett‰ \newline
+N√§yt√§ sopivalla muuttujan vaihdolla, ett√§ \newline
 $\D
 \text{a)}\ \ \lim_{x\kohti\infty} x\left(\frac{\pi}{2}-\Arctan x\right)=1, \qquad 
 \text{b)}\ \ \lim_{x \kohti 1^-} \frac{\pi-2\Arcsin x}{\sqrt{1-x}}=2\sqrt{2}$.
 
 \item (*)
-N‰yt‰ derivoimiss‰‰ntˆjen ja Lauseen \ref{toiseksi yksinkertaisin dy} avulla, ett‰ 
-p‰tee:
+N√§yt√§ derivoimiss√§√§nt√∂jen ja Lauseen \ref{toiseksi yksinkertaisin dy} avulla, ett√§ 
+p√§tee:
 \[
 \Arctan x=\sum_{k=0}^\infty \frac{(-1)^{k}}{2k+1}\,x^{2k+1},\ \ x\in(-1,1).
 \]
 
 \item(*)
-Kaarenpituuden m‰‰ritelm‰n mukaisesti saadaan yksikkˆympyr‰n kaarenpituudelle alalikiarvo
-laskemalla sellaisen $n$-kulmion piiri, jonka k‰rjet ovat yksikkˆympyr‰ll‰. Olkoon $n$-kulmio
-s‰‰nnˆllinen ja piiri $=s_n$. N‰yt‰, ett‰ kun valitaan $n=2^{k+1},\ k=1,2, \ldots\,$, niin
+Kaarenpituuden m√§√§ritelm√§n mukaisesti saadaan yksikk√∂ympyr√§n kaarenpituudelle alalikiarvo
+laskemalla sellaisen $n$-kulmion piiri, jonka k√§rjet ovat yksikk√∂ympyr√§ll√§. Olkoon $n$-kulmio
+s√§√§nn√∂llinen ja piiri $=s_n$. N√§yt√§, ett√§ kun valitaan $n=2^{k+1},\ k=1,2, \ldots\,$, niin
 luvut 
 $a_k=s_n/2,\ n=2^{k+1}$ saadaan lasketuksi palautuvana lukujonona
 \[

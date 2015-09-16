@@ -2,58 +2,58 @@
 \alku
 \index{tasointegraali|vahv}
 
-Tasointegraali on mahdollistaa palauttaa yhden muuttujan integrointiteht‰viksi, jolloin 
-integraali voidaan suotuisissa oloissa laskea k‰ytt‰en hyv‰ksi integraalifunktioita, eli 
-suljetussa muodossa. T‰ss‰ luvussa tarkastellaan t‰llaista laskutekniikkaa.
+Tasointegraali on mahdollistaa palauttaa yhden muuttujan integrointiteht√§viksi, jolloin 
+integraali voidaan suotuisissa oloissa laskea k√§ytt√§en hyv√§ksi integraalifunktioita, eli 
+suljetussa muodossa. T√§ss√§ luvussa tarkastellaan t√§llaista laskutekniikkaa.
 
 \index{x@$x$-projisoituva (joukko)}%
 Tarkastellaan joukkoa $A\subset\R^2$ joka on nk. \kor{$x$-projisoituva}, eli muotoa
 \[
 A=\{(x,y)\in\R^2 \ | \ x\in [a,b], \ g_1(x)\leq y\leq g_2(x)\},
 \]
-miss‰ oletetaan, ett‰ $g_1$ ja $g_2$ ovat v‰lill‰ $[a,b]$ rajoitettuja. Olkoon 
-$T=[a,b]\times [c,d]$ suorakulmio, joka sis‰lt‰‰ $A$:n, ja olkoon $\mathcal{T}_h$ jokin $T$:n
+miss√§ oletetaan, ett√§ $g_1$ ja $g_2$ ovat v√§lill√§ $[a,b]$ rajoitettuja. Olkoon 
+$T=[a,b]\times [c,d]$ suorakulmio, joka sis√§lt√§√§ $A$:n, ja olkoon $\mathcal{T}_h$ jokin $T$:n
 jako.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvaUint-13.pstex_t}
 \end{center}
 \end{figure}
-Olkoon $f$ m‰‰ritelty $T$:ss‰ ja rajoitettu, ja tarkastellaan integraalin $\int_A f\, d\mu$
-m‰‰ritt‰v‰‰ Riemannin summaa. Olkoon $\mathcal{T}_h=\{T_{kl},\ k=1 \ldots m,\ l=1 \ldots n\}$
+Olkoon $f$ m√§√§ritelty $T$:ss√§ ja rajoitettu, ja tarkastellaan integraalin $\int_A f\, d\mu$
+m√§√§ritt√§v√§√§ Riemannin summaa. Olkoon $\mathcal{T}_h=\{T_{kl},\ k=1 \ldots m,\ l=1 \ldots n\}$
 ja valitaan
 \[
 (\xi_{kl},\eta_{kl})=(\xi_k,\eta_l)\in T_{kl},\quad k=1 \ldots m,\ l=1 \ldots n.
 \]
-T‰llˆin summa muodon
+T√§ll√∂in summa muodon
 \[
 \sum_{T_{kl}\in\mathcal{T}_h} f_0(\xi_{kl},\eta_{kl})\mu(T_{kl})
 = \sum_{k=1}^m\sum_{l=1}^n f_0(\xi_k,\eta_l)(x_k-x_{k-1})(y_l-y_{l-1}).
 \]
-Sik‰li kuin funktio $y \map f_0(\xi_k,y)$ on Riemann-integroituva v‰lill‰ $[c,d]$, on
-sisemm‰ll‰ summalla raja-arvo
+Sik√§li kuin funktio $y \map f_0(\xi_k,y)$ on Riemann-integroituva v√§lill√§ $[c,d]$, on
+sisemm√§ll√§ summalla raja-arvo
 \[
 \sum_{l=1}^n f_0(\xi_k,\eta_l)(y_l-y_{l-1})\ 
                   \underset{h\kohti 0}{\Kohti}\ \int_c^d f_0(\xi_k,y)\,dy
                          = \int_{g_1(\xi_k)}^{g_2(\xi_k)} f(\xi_k,y)\,dy.
 \]
-Kun merkit‰‰n
+Kun merkit√§√§n
 \[
 F(x)=\int_{g_1(x)}^{g_2(x)} f(x,y)\, dy,\quad x\in [a,b],
 \]
-niin p‰‰tell‰‰n, ett‰ sik‰li kuin $F$ on edelleen Riemann-integroituva v‰lill‰ $[a,b]$, niin
-jaon $\mathcal{T}_h$ ollessa riitt‰v‰n tihe‰ on likim‰‰rin
+niin p√§√§tell√§√§n, ett√§ sik√§li kuin $F$ on edelleen Riemann-integroituva v√§lill√§ $[a,b]$, niin
+jaon $\mathcal{T}_h$ ollessa riitt√§v√§n tihe√§ on likim√§√§rin
 \[
 \sum_{T_{kl}\in\mathcal{T}_h} f_0(\xi_k,\eta_l)\mu(T_{kl}) 
             \approx \sum_{l=1}^n F(\xi_k)(x_k-x_{k-1}) \approx \int_a^b F(x)\,dx.
 \]
-N‰ytt‰‰ siis ilmeiselt‰, ett‰ funktioiden $g_1$, $g_2$ ja $f$ ollessa riitt‰v‰n s‰‰nnˆllisi‰
-p‰tee
+N√§ytt√§√§ siis ilmeiselt√§, ett√§ funktioiden $g_1$, $g_2$ ja $f$ ollessa riitt√§v√§n s√§√§nn√∂llisi√§
+p√§tee
 \[
 h\kohti 0 \ \impl \ 
             \sum_{T_{kl}\in\mathcal{T}_h} f_0(\xi_k,\eta_l)\mu(T_{kl})\kohti\int_a^b F(x)\,dx.
 \]
-N‰in on johdettu (tai ainakin tehty uskottavaksi) laskukaava
+N√§in on johdettu (tai ainakin tehty uskottavaksi) laskukaava
 \begin{equation} \label{tasopalautus-x}
 \boxed{ \begin{aligned}
 \ykehys\quad&A=\{(x,y)\in\R^2 \ | \ x\in [a,b], \ g_1(x)\leq y\leq g_2(x)\} \quad\\
@@ -61,10 +61,10 @@ N‰in on johdettu (tai ainakin tehty uskottavaksi) laskukaava
                          = \int_a^b\left[\int_{g_1(x)}^{g_2(x)} f(x,y)\,dy\right]dx. \quad
            \end{aligned} } 
 \end{equation}
-T‰m‰n mukaan siis tasointegraali yli $x$-projisoituvan joukon on laskettavissa per‰kk‰isin‰
+T√§m√§n mukaan siis tasointegraali yli $x$-projisoituvan joukon on laskettavissa per√§kk√§isin√§
 \index{iteroitu integraali}%
-yksiulotteisina, nk.\ \kor{iteroituina integraaleina}. Kyseess‰ on \kor{Fubinin lauseen} 
-nimell‰ tunnetun v‰itt‰m‰n er‰s muoto. Lause muotoillaan t‰sm‰llisemmin ja todistetaan luvun 
+yksiulotteisina, nk.\ \kor{iteroituina integraaleina}. Kyseess√§ on \kor{Fubinin lauseen} 
+nimell√§ tunnetun v√§itt√§m√§n er√§s muoto. Lause muotoillaan t√§sm√§llisemmin ja todistetaan luvun 
 lopussa.
 
 \index{y@$y$-projisoituva joukko}%
@@ -90,9 +90,9 @@ muodon
 \begin{equation} \label{tasopalautus-y}
 \int_A f\,d\mu=\int_a^b\left[\int_{g_1(y)}^{g_2(y)} f(x,y)\,dx\right]dy.
 \end{equation}
-Jos $A$ ei ole kumpaakaan projisoituvaa tyyppi‰, niin kaavoja \eqref{tasopalautus-x} ja 
-\eqref{tasopalautus-y} p‰‰st‰‰n yleens‰ k‰ytt‰m‰‰n, kun $A$ ensin jaetaan sopiviin osiin 
-(vrt.\ kuvio edell‰) ja k‰ytet‰‰n integraalin additiivisuutta:
+Jos $A$ ei ole kumpaakaan projisoituvaa tyyppi√§, niin kaavoja \eqref{tasopalautus-x} ja 
+\eqref{tasopalautus-y} p√§√§st√§√§n yleens√§ k√§ytt√§m√§√§n, kun $A$ ensin jaetaan sopiviin osiin 
+(vrt.\ kuvio edell√§) ja k√§ytet√§√§n integraalin additiivisuutta:
 \[
 \int_A f\,d\mu=\sum_{i=1}^m \int_{A_i} f\,d\mu,\quad A
               =\left(\bigcup_{i=1}^m A_i\right)\cup B, \quad \mu(A_i\cap A_j)
@@ -101,36 +101,36 @@ Jos $A$ ei ole kumpaakaan projisoituvaa tyyppi‰, niin kaavoja \eqref{tasopalautu
 
 Iteraatiokaavojen \eqref{tasopalautus-x}--\eqref{tasopalautus-y} perusteella voidaan 
 tasointegraalikin laskea suotuisissa oloissa integraalifunktioiden avulla. Olkoon esimerkiksi
-$A$ $x$-projisoituva ja oletetaan, ett‰ on lˆydett‰viss‰ funktion $f(x,y)$ integraalifunktio
-muuttujan $y$ suhteen, ts. funktio $F(x,y)$, jolle p‰tee
+$A$ $x$-projisoituva ja oletetaan, ett√§ on l√∂ydett√§viss√§ funktion $f(x,y)$ integraalifunktio
+muuttujan $y$ suhteen, ts. funktio $F(x,y)$, jolle p√§tee
 \[
 \frac{\partial}{\partial y} F(x,y)=f(x,y),\quad (x,y)\in A.
 \]
-T‰llˆin kaavan \eqref{tasopalautus-x} mukaan
+T√§ll√∂in kaavan \eqref{tasopalautus-x} mukaan
 \[
 \int_A f(x,y)\,d\mu = \int_a^b\left[\sijoitus{y=g_1(x)}{y=g_2(x)}F(x,y)\right]dx
                     =\int_a^b G(x)\,dx,
 \]
-miss‰
+miss√§
 \[
 G(x)=F(x,g_2(x))-F(x,g_1(x)).
 \]
-Jos edelleen on lˆydett‰viss‰ funktion $G$ integraalifunktio $H$, niin integraali saadaan
+Jos edelleen on l√∂ydett√§viss√§ funktion $G$ integraalifunktio $H$, niin integraali saadaan
 lasketuksi suljetussa muodossa:
 \[
 \int f\,d\mu=\sijoitus{a}{b} H(x)=H(b)-H(a).
 \]
-Laskun onnistuminen t‰ll‰ tavoin riippuu siis paitsi funktiosta $f$, myˆs funktioista $g_1$ ja
+Laskun onnistuminen t√§ll√§ tavoin riippuu siis paitsi funktiosta $f$, my√∂s funktioista $g_1$ ja
 $g_2$, eli $A$:n reunaviivan muodosta. Onnistuminen on taattu esimerkiksi silloin, kun $f$, 
-$g_1$ ja $g_2$ ovat polynomeja, sill‰ t‰llˆin myˆs $F$, $G$ ja $H$ ovat polynomeja.
+$g_1$ ja $g_2$ ovat polynomeja, sill√§ t√§ll√∂in my√∂s $F$, $G$ ja $H$ ovat polynomeja.
 
-Ajatellen iteraatiokaavoja \eqref{tasopalautus-x}--\eqref{tasopalautus-y} k‰ytet‰‰n 
-tasointegraaleille merkint‰tapoja
+Ajatellen iteraatiokaavoja \eqref{tasopalautus-x}--\eqref{tasopalautus-y} k√§ytet√§√§n 
+tasointegraaleille merkint√§tapoja
 \[
 \int_A f\, dxdy\quad\text{tai} \quad \iint_A f\, dxdy.
 \]
-N‰iss‰ siis kirjoitetaan $d\mu=dxdy$, mik‰ merkint‰ viittaa 'differentiaalisen suorakulmion' 
-$\,[x,x+dx]\times[y,y+dy]$ pinta-alaan. Merkint‰‰ k‰ytet‰‰n jatkossa.
+N√§iss√§ siis kirjoitetaan $d\mu=dxdy$, mik√§ merkint√§ viittaa 'differentiaalisen suorakulmion' 
+$\,[x,x+dx]\times[y,y+dy]$ pinta-alaan. Merkint√§√§ k√§ytet√§√§n jatkossa.
 \begin{Exa} Olkoon $A=[0,1]\times[0,1]$. Laske $\int_A \sqrt{\abs{x-y}}\,dxdy$. \end{Exa}
 \ratk \ Kaavan \eqref{tasopalautus-x} mukaan
 \begin{align*}
@@ -144,7 +144,7 @@ $\,[x,x+dx]\times[y,y+dy]$ pinta-alaan. Merkint‰‰ k‰ytet‰‰n jatkossa.
  = \underline{\underline{\frac{8}{15}}}\,. \loppu
 \end{align*}
 \begin{Exa}
-$A=\text{kolmio}$, jonka k‰rjet ovat $(0,0)$, $(1,0)$ ja $(0,1)$. Laske
+$A=\text{kolmio}$, jonka k√§rjet ovat $(0,0)$, $(1,0)$ ja $(0,1)$. Laske
 \begin{multicols}{2} \raggedcolumns
 \[
 I=\int_A xy^2\,dxdy.
@@ -166,7 +166,7 @@ I &= \int_0^1\left[\int_0^{1-x} xy^2\,dy\right] dx \\
   &= \int_0^1 \frac{1}{12}(1-x)^4\,dx = \sijoitus{0}{1} -\frac{1}{60}(1-x)^5
    = \underline{\underline{\frac{1}{60}}}\,. \loppu
 \end{align*}
-\begin{Exa} Laske $\mu(A)$, kun $A=\text{$R$-s‰teinen kiekko}$.
+\begin{Exa} Laske $\mu(A)$, kun $A=\text{$R$-s√§teinen kiekko}$.
 \end{Exa}
 \ratk Kaavan \eqref{tasopalautus-x} mukaan
 \begin{align*}
@@ -181,16 +181,16 @@ Sijoitus $x=R\sin t$, $dx=R\cos t\, dt$, $t\in [-\frac{\pi}{2},\frac{\pi}{2}]\,$
                                &= R^2\sijoitus{-\pi/2}{\pi/2}(t+\sin t\cos t) 
                                = \pi R^2. \loppu
 \end{align*}
-Esimerkin 3 yleistyksen‰ n‰hd‰‰n kaavasta \eqref{tasopalautus-x}, ett‰ $x$-projisoituvan joukon
+Esimerkin 3 yleistyksen√§ n√§hd√§√§n kaavasta \eqref{tasopalautus-x}, ett√§ $x$-projisoituvan joukon
 pinta-alamitta on laskettavissa kaavalla
 \[
 \mu(A)=\int_a^b [g_2(x)-g_1(x)]\,dx,
 \]
-joka on tuttu jo Luvusta \ref{pinta-ala ja kaarenpituus}. Kaavan k‰yttˆ vastaa pinta-alan
+joka on tuttu jo Luvusta \ref{pinta-ala ja kaarenpituus}. Kaavan k√§ytt√∂ vastaa pinta-alan
 laskemista 'siivuttamalla' $A$ osiin muotoa 
 $\Delta A=\{(x,y)\in A \ | \ x\in [x,x+\Delta x]\}$, jolloin on
-$\mu(\Delta A) \approx [g_2(x)-g_1(x)]\Delta x$ pienill‰ $\Delta x$:n arvoilla ja olettaen,
-ett‰ $g_1$ ja $g_2$ ovat jatkuvia pisteess‰ $x$. (Jatkuvuusoletus on lievennett‰viss‰, vrt.\
+$\mu(\Delta A) \approx [g_2(x)-g_1(x)]\Delta x$ pienill√§ $\Delta x$:n arvoilla ja olettaen,
+ett√§ $g_1$ ja $g_2$ ovat jatkuvia pisteess√§ $x$. (Jatkuvuusoletus on lievennett√§viss√§, vrt.\
 Luku \ref{pinta-ala ja kaarenpituus}.)
 
 \begin{figure}[H]
@@ -199,28 +199,28 @@ Luku \ref{pinta-ala ja kaarenpituus}.)
 \end{center}
 \end{figure}
 
-\subsection*{Ep‰oleelliset tasointegraalit}
-\index{tasointegraali!a@ep‰oleellinen|vahv}
-\index{epzyoi@ep‰oleellinen integraali|vahv}
+\subsection*{Ep√§oleelliset tasointegraalit}
+\index{tasointegraali!a@ep√§oleellinen|vahv}
+\index{epzyoi@ep√§oleellinen integraali|vahv}
 
 Jos tasointegraalissa $\int_A f\,dxdy$ joko $A$ ei ole rajoitettu tai $f$ ei ole $A$:ssa
-rajoitettu, voidaan tasointegraalin m‰‰rittely‰ laajentaa vastaavaan tapaan kuin yksiulotteisen
-Riemannin integraalin tapauksessa, vrt.\ Luku \ref{integraalin laajennuksia}. Jos m‰‰ritelm‰n
-laajennus tuottaa integraalille yksik‰sitteisen (reaali)arvon, sanotaan j‰lleen, ett‰ n‰in
+rajoitettu, voidaan tasointegraalin m√§√§rittely√§ laajentaa vastaavaan tapaan kuin yksiulotteisen
+Riemannin integraalin tapauksessa, vrt.\ Luku \ref{integraalin laajennuksia}. Jos m√§√§ritelm√§n
+laajennus tuottaa integraalille yksik√§sitteisen (reaali)arvon, sanotaan j√§lleen, ett√§ n√§in
 \index{suppeneminen!c@integraalin}%
-m‰‰ritelty \kor{ep‰oleellinen} integraali \kor{suppenee}. Valaistakoon asiaa ensin esimerkeill‰.
+m√§√§ritelty \kor{ep√§oleellinen} integraali \kor{suppenee}. Valaistakoon asiaa ensin esimerkeill√§.
 \begin{Exa} Olkoon $A=[0,1]\times[0,1]$ ja $B=[0,\infty)\times[0,\infty)$. Laske
 \[
 \text{a)}\,\ \int_A \frac{y^2}{\sqrt{x}}\,dxdy, \qquad
 \text{b)}\,\ \int_B \frac{x}{1+x^2+y^2}\,dxdy.
 \]
 \end{Exa}
-\ratk a) \ Koska $f$ ei ole $A$:ssa rajoitettu (ei edes m‰‰ritelty, kun $x=0$), niin kyseess‰
-on ep‰oleellinen integraali. T‰m‰ voidaan (ainakin yritt‰‰) laskea raja-arvona
+\ratk a) \ Koska $f$ ei ole $A$:ssa rajoitettu (ei edes m√§√§ritelty, kun $x=0$), niin kyseess√§
+on ep√§oleellinen integraali. T√§m√§ voidaan (ainakin yritt√§√§) laskea raja-arvona
 \[
 \int_A f\,dxdy=\lim_{\eps\kohti 0^+} \int_{A_\eps} f\,dxdy,
 \]
-miss‰ $A_\eps=[\eps,1]\times [0,1]$. T‰ss‰ $\int_{A_\eps} f\,dxdy$ on tavanomainen Riemannin
+miss√§ $A_\eps=[\eps,1]\times [0,1]$. T√§ss√§ $\int_{A_\eps} f\,dxdy$ on tavanomainen Riemannin
 integraali, joten iteraatiokaava \eqref{tasopalautus-x} soveltuu:
 \begin{align*}
 \int_{A_\eps} f\,dxdy 
@@ -231,14 +231,14 @@ integraali, joten iteraatiokaava \eqref{tasopalautus-x} soveltuu:
  = \,\sijoitus{\eps}{1} \frac{2}{3}\sqrt{x}\,\kohti\,\underline{\underline{\frac{2}{3}}}\,,
                                               \quad \text{kun}\ \eps\kohti 0^+.
 \end{align*}
-Integraali siis suppenee. Oikea integraalin arvo olisi saatu myˆs luottaen suoraan kaavaan
+Integraali siis suppenee. Oikea integraalin arvo olisi saatu my√∂s luottaen suoraan kaavaan
 \eqref{tasopalautus-x} eli ohittamalla raja-arvoprosessi:
 \[
 \int_A f\,dxdy = \int_0^1\left[\int_0^1 \frac{y^2}{\sqrt{x}}\,dy\right]dx 
                = \int_0^1 \frac{1}{\sqrt{x}}\,dx \cdot \int_0^1 y^2\,dy
                = 2 \cdot \frac{1}{3} = \frac{2}{3}\,.
 \]
-b) Myˆs t‰m‰ integraali suppenee, ja suoraan kaavaan \eqref{tasopalautus-y} perustuva lasku
+b) My√∂s t√§m√§ integraali suppenee, ja suoraan kaavaan \eqref{tasopalautus-y} perustuva lasku
 \begin{align*}
 \int_A \frac{x}{(1+x^2+y^2)^2}\,dxdy 
        &= \int_0^\infty\left[\int_0^\infty \frac{x}{(1+x^2+y^2)^2}\,dx\right]dy \\
@@ -251,28 +251,28 @@ antaa oikean tuloksen. Asian voi varmistaa laskemalla ensin
 \int_{T_{ab}} \frac{x}{(1+x^2+y^2)^2}\,dxdy 
                = \int_0^b\left[\int_0^a \frac{x}{(1+x^2+y^2)^2}\,dx\right]dy,
 \]
-miss‰ $T_{ab}=[0,a]\times[0,b]$, ja toteamalla, ett‰ t‰m‰n integraalin arvo $\kohti\pi/4$ aina
+miss√§ $T_{ab}=[0,a]\times[0,b]$, ja toteamalla, ett√§ t√§m√§n integraalin arvo $\kohti\pi/4$ aina
 kun $a\kohti\infty$ ja $b\kohti\infty$. \loppu
 
-Esimerkin perusteella kaavat \eqref{tasopalautus-x}--\eqref{tasopalautus-y} n‰ytt‰v‰t soveltuvan
-suoraan myˆs ep‰oleellisiin integraaleihin. Useimmiten n‰in onkin k‰yt‰nnˆss‰, mutta kyse on
-vain p‰‰s‰‰nnˆst‰, kuten seuraava esimerkki osoittaa.
-\begin{Exa} Laske s‰‰nnˆill‰ \eqref{tasopalautus-x} ja \eqref{tasopalautus-y} integraali
+Esimerkin perusteella kaavat \eqref{tasopalautus-x}--\eqref{tasopalautus-y} n√§ytt√§v√§t soveltuvan
+suoraan my√∂s ep√§oleellisiin integraaleihin. Useimmiten n√§in onkin k√§yt√§nn√∂ss√§, mutta kyse on
+vain p√§√§s√§√§nn√∂st√§, kuten seuraava esimerkki osoittaa.
+\begin{Exa} Laske s√§√§nn√∂ill√§ \eqref{tasopalautus-x} ja \eqref{tasopalautus-y} integraali
 \[
 I=\int_A f(x,y)\,dxdy, \quad A=[0,\infty)\times[0,1], \quad f(x,y)=xy(2-xy)e^{-xy}.
 \]
 \end{Exa}
 \ratk
 \begin{align*}
-\text{S‰‰ntˆ \eqref{tasopalautus-x}}: \quad 
+\text{S√§√§nt√∂ \eqref{tasopalautus-x}}: \quad 
 I &= \int_0^\infty \left[ \sijoitus{y=0}{y=1} xy^2e^{-xy}\right]dx
    =\int_0^\infty xe^{-x}=1. \\[2mm]
-\text{S‰‰ntˆ \eqref{tasopalautus-y}}: \quad 
+\text{S√§√§nt√∂ \eqref{tasopalautus-y}}: \quad 
 I &= \int_0^1 \left[\lim_{a\kohti\infty}\sijoitus{x=0}{x=a} x^2ye^{-xy}\right]dy
    =\int_0^1 \left[\lim_{a\kohti\infty} a^2ye^{-ay}\right]dy=0. \loppu
 \end{align*}
-Esimerkin ristiriidan voi pelkist‰‰ seuraavaan p‰‰ttelyketjuun, jossa kysymysmerkill‰ varustettu
-p‰‰telm‰ (ja vain se!) on v‰‰r‰:
+Esimerkin ristiriidan voi pelkist√§√§ seuraavaan p√§√§ttelyketjuun, jossa kysymysmerkill√§ varustettu
+p√§√§telm√§ (ja vain se!) on v√§√§r√§:
 \begin{align*}
 1 &= \int_0^\infty \left[\int_0^1 f(x,y)\,dy\right]dx \\
   &= \lim_{a\kohti\infty} \int_0^a \left[\int_0^1 f(x,y)\,dy\right]dx \\
@@ -281,14 +281,14 @@ p‰‰telm‰ (ja vain se!) on v‰‰r‰:
   &= \int_0^1 \left[\int_0^\infty f(x,y)\,dx\right]dy = 0.
 \end{align*}
 
-Esimerkiss‰ ongelmaksi osoittautuu integroitavan funktion \pain{merkinvaihtelu}: Jos t‰m‰
-sallitaan, eiv‰t iteraatiokaavat \eqref{tasopalautus-x}--\eqref{tasopalautus-y} v‰ltt‰m‰tt‰ anna
+Esimerkiss√§ ongelmaksi osoittautuu integroitavan funktion \pain{merkinvaihtelu}: Jos t√§m√§
+sallitaan, eiv√§t iteraatiokaavat \eqref{tasopalautus-x}--\eqref{tasopalautus-y} v√§ltt√§m√§tt√§ anna
 ristiriidattomia tuloksia. Ongelma ratkaistaankin poistamalla merkinvaihtelun mahdollisuus
-ep‰oleellisen integraalin m‰‰ritelm‰ss‰ seuraavasti: 
+ep√§oleellisen integraalin m√§√§ritelm√§ss√§ seuraavasti: 
 
 \index{positiivinen osa (funktion)} \index{negatiivinen osa (funktion)}%
-M‰‰ritell‰‰n funktion $f(x,y)$ \kor{positiivinen osa} $f_+$ ja \kor{negatiivinen osa} $f_-$
-asettamalla $f$:n m‰‰rittelyjoukossa $D_f$
+M√§√§ritell√§√§n funktion $f(x,y)$ \kor{positiivinen osa} $f_+$ ja \kor{negatiivinen osa} $f_-$
+asettamalla $f$:n m√§√§rittelyjoukossa $D_f$
 \[
 \begin{aligned}
 f_+(x,y) &= \begin{cases} 
@@ -300,17 +300,17 @@ f_-(x,y) &= \begin{cases} -f(x,y), &\text{kun}\ f(x,y)<0, \\
             \end{cases}
 \end{aligned}
 \]
-T‰llˆin jos $A\subset D_f$ on rajoitettu joukko ja $f$ on Riemann-integroituva yli $A$:n, niin
+T√§ll√∂in jos $A\subset D_f$ on rajoitettu joukko ja $f$ on Riemann-integroituva yli $A$:n, niin
 samoin ovat $f_+$ ja $f_-$ (Harj.teht.\,\ref{tasointegraalit}:\ref{H-uint-1: fplus ja fmiinus}).
-Koska on myˆs $f=f_+-f_-$, niin seuraa
+Koska on my√∂s $f=f_+-f_-$, niin seuraa
 \[
 \int_A f\,d\mu=\int_A f_+\,d\mu-\int_A f_-\,d\mu.
 \]
-Jos $A$ ei ole rajoitettu tai $f$ ei ole $A$:ssa rajoitettu, niin otetaan t‰m‰ integraalin
-\pain{m‰‰ritelm‰ksi}, eli asetetaan vaatimus, ett‰ $f_+$ ja $f_-$ ovat molemmat integroituvia
-yli $A$:n. Funktion merkinvaihtelun mahdollisuus on n‰in poistettu integraalin laajennetusta
-m‰‰ritelm‰st‰.
-\jatko \begin{Exa} (jatko). T‰ss‰ on
+Jos $A$ ei ole rajoitettu tai $f$ ei ole $A$:ssa rajoitettu, niin otetaan t√§m√§ integraalin
+\pain{m√§√§ritelm√§ksi}, eli asetetaan vaatimus, ett√§ $f_+$ ja $f_-$ ovat molemmat integroituvia
+yli $A$:n. Funktion merkinvaihtelun mahdollisuus on n√§in poistettu integraalin laajennetusta
+m√§√§ritelm√§st√§.
+\jatko \begin{Exa} (jatko). T√§ss√§ on
 \[
 f_+(x,y)=\begin{cases} 
           \,xy(2-xy)e^{-xy}, &\text{kun } 0 \le xy \le 2, \\ \,0, &\text{muulloin}, 
@@ -323,22 +323,22 @@ joten kun $A=[0,\infty)\times [0,1]$, saadaan
                  &=\int_0^1 \left[\sijoitus{x=0}{x=2/y} x^2ye^{-xy}\right]dy\,
                 \,=\int_0^1 4e^{-2}y^{-1}\,dy.
 \end{align*}
-Saatu integraali ei suppene, joten $f_+$ ei ole integroituva yli $A$:n, eik‰ m‰‰ritelm‰n mukaan
-siis myˆsk‰‰n $f$. \loppu
+Saatu integraali ei suppene, joten $f_+$ ei ole integroituva yli $A$:n, eik√§ m√§√§ritelm√§n mukaan
+siis my√∂sk√§√§n $f$. \loppu
 \end{Exa}
-Todettakoon lopuksi, ett‰ em.\ m‰‰ritelm‰nk‰‰n nojalla iteraatiokaavat
-\eqref{tasopalautus-x}--\eqref{tasopalautus-y} eiv‰t sovellu ep‰oleellisiin integraaleihin
-aivan yleisp‰tev‰sti, mutta poikkeukset n‰ist‰ (p‰‰)s‰‰nnˆist‰ ovat melko eksoottisia,
+Todettakoon lopuksi, ett√§ em.\ m√§√§ritelm√§nk√§√§n nojalla iteraatiokaavat
+\eqref{tasopalautus-x}--\eqref{tasopalautus-y} eiv√§t sovellu ep√§oleellisiin integraaleihin
+aivan yleisp√§tev√§sti, mutta poikkeukset n√§ist√§ (p√§√§)s√§√§nn√∂ist√§ ovat melko eksoottisia,
 ks.\ Harj.teht.\,\ref{Riemann vs Fubini}.
 
 \subsection*{Fubinin lause}
 
-Tarkoituksena on perustella tasointegraalin iteraatiokaava \eqref{tasopalautus-x}. T‰ss‰ riitt‰‰
+Tarkoituksena on perustella tasointegraalin iteraatiokaava \eqref{tasopalautus-x}. T√§ss√§ riitt√§√§
 rajoittua erikoistapaukseen, jossa $A$ on suorakulmio, eli laskukaavaan
 \[
 \int_T f\,d\mu = \int_a^b\left[\int_c^d f(x,y)\,dy\right]dx, \quad T = [a,b] \times [c,d].
 \]
-Nimitt‰in jos t‰ss‰ on
+Nimitt√§in jos t√§ss√§ on
 \[ 
 T \supset A = \{(x,y) \in \R^2 \mid x \in [a,b]\ \ja\ g_1(x) \le y \le g_2(x) \}, 
 \]
@@ -347,14 +347,14 @@ ulkopuolelle.
 \begin{Lause} \label{Fubini} \index{Fubinin lause|emph} 
 \vahv{(Tasointegraalin iteraatiokaava -- Fubinin\footnote[2]{Italialainen matemaatikko
 \hist{Guido Fubini} eli vuosina 1897-1943. \index{Fubini, G.|av}} lause)}
-Olkoon $f$ m‰‰ritelty, rajoitettu ja 
+Olkoon $f$ m√§√§ritelty, rajoitettu ja 
 Riemann-integroituva suorakulmiossa $T=[a,b]\times [c,d]$. Olkoon edelleen $f(x,y)$ muuttujan
-$y$ suhteen Riemann-integroituva v‰lill‰ $[c,d]$ jokaisella $x \in [a,b]$ ja muuttujan $x$ 
-suhteen Riemann-integroituva v‰lill‰ $[a,b]$ jokaisella $y \in [c,d]$. T‰llˆin funktiot
+$y$ suhteen Riemann-integroituva v√§lill√§ $[c,d]$ jokaisella $x \in [a,b]$ ja muuttujan $x$ 
+suhteen Riemann-integroituva v√§lill√§ $[a,b]$ jokaisella $y \in [c,d]$. T√§ll√∂in funktiot
 \[ 
 F(x) = \int_c^d f(x,y)\,dy, \quad G(y) = \int_a^b f(x,y)\,dx 
 \]
-ovat Riemann-integroituvia v‰leill‰ $[a,b]$ ja $[c,d]$, ja p‰tee
+ovat Riemann-integroituvia v√§leill√§ $[a,b]$ ja $[c,d]$, ja p√§tee
 \[ 
 \int_T f(x,y)\,dxdy = \int_a^b F(x)\,dx = \int_c^d G(y)\,dy. 
 \]
@@ -364,18 +364,18 @@ T_{kl}=[x_{k-1},x_k]\times[y_{l-1},y_l]$, suorakulmion $T$ jako, ja olkoon
 \[ 
 m_{kl} = \inf_{(x,y) \in T_{kl}} f(x,y), \quad M_{kl} = \sup_{(x,y) \in T_{kl}} f(x,y). 
 \]
-T‰llˆin $m_{kl} \le f(x,y) \le M_{kl}\ \forall (x,y) \in T_{kl}$, joten integraalien 
+T√§ll√∂in $m_{kl} \le f(x,y) \le M_{kl}\ \forall (x,y) \in T_{kl}$, joten integraalien 
 vertailuperiaatteen nojalla
 \[ 
 m_{kl}(y_l-y_{l-1}) \le \int_{y_{l-1}}^{y_l} f(x,y)\,dy 
                     \le M_{kl}(y_l-y_{l-1}) \quad \forall x \in [x_{k-1},x_k]. 
 \]
-Summaamalla t‰m‰ yli indeksin $l$ seuraa
+Summaamalla t√§m√§ yli indeksin $l$ seuraa
 \[ 
 m_k\,=\,\sum_{l=1}^n m_{kl}(y_l-y_{l-1}) \le F(x) 
          \le \sum_{l=1}^n M_{kl}(y_l-y_{l-1})\,=\,M_k \quad \forall x \in [x_{k-1},x_k], 
 \]
-mist‰ puolestaan seuraa
+mist√§ puolestaan seuraa
 \begin{align*}
 \sum_{k=1}^m\sum_{l=1}^n m_{kl}(x_k-x_{k-1})(y_l-y_{l-1})\,
                 &=\,\sum_{k=1}^m m_k(x_k-x_{k-1}) \\
@@ -388,32 +388,32 @@ eli
 \underline{\sigma}(f,\mathcal{T}_h) \le \underline{\int_a^b}F(x)\,dx 
                     \le \overline{\int_a^b}F(x)\,dx \le \overline{\sigma}(f,\mathcal{T}_h), 
 \]
-miss‰ $\underline{\sigma}(f,\mathcal{T}_h)$ ja $\overline{\sigma}(f,\mathcal{T}_h)$ ovat
-jakoon $\mathcal{T}_h$  liittyv‰t Riemannin ala- ja yl‰summat. Ottamalla t‰ss‰ vasemmalla
+miss√§ $\underline{\sigma}(f,\mathcal{T}_h)$ ja $\overline{\sigma}(f,\mathcal{T}_h)$ ovat
+jakoon $\mathcal{T}_h$  liittyv√§t Riemannin ala- ja yl√§summat. Ottamalla t√§ss√§ vasemmalla
 supremum ja oikealla infimum kaikkien jakojen $\mathcal{T}_h$ suhteen seuraa tasointegraalin
-m‰‰ritelm‰n nojalla (vrt.\ edellinen luku)
+m√§√§ritelm√§n nojalla (vrt.\ edellinen luku)
 \[ 
 \int_T f\,d\mu \le \underline{\int_a^b}F(x)\,dx \le \overline{\int_a^b}F(x)\,dx 
                                                 \le \int_T f\,d\mu. 
 \]
-T‰m‰n mukaan $F$:n yl‰- ja alaintegraalit v‰lill‰ $[a,b]$ ovat samat, joten $F$ on v‰lill‰
-$[a,b]$ Riemann-integroituva (Lause \ref{Riemann-integroituvuus}), ja ep‰yht‰lˆketjusta seuraa
-myˆs v‰itetty (ensimm‰inen) laskukaava. Toinen laskukaava perustellaan vastaavasti.  
+T√§m√§n mukaan $F$:n yl√§- ja alaintegraalit v√§lill√§ $[a,b]$ ovat samat, joten $F$ on v√§lill√§
+$[a,b]$ Riemann-integroituva (Lause \ref{Riemann-integroituvuus}), ja ep√§yht√§l√∂ketjusta seuraa
+my√∂s v√§itetty (ensimm√§inen) laskukaava. Toinen laskukaava perustellaan vastaavasti.  
 %\[ 
 %\underline{\int_a^b}F(x)\,dx = \overline{\int_a^b}F(x)\,dx 
 %                             = \int_a^b F(x)\,dx = \int_T f\,d\mu. \loppu 
 %\]
 
-Mainittakoon, ett‰ Fubinin lauseessa ei v‰ltt‰m‰tt‰ tarvita oletuksia funktion $f$ 
-integroituvuudesta erikseen muuttujien $x$ ja $y$ suhteen, vaan riitt‰‰, ett‰ $f$ on 
-integroituva yli $T$:n. T‰llˆin on v‰itt‰m‰ss‰ funktiot $F$ ja $G$ m‰‰ritelt‰v‰ joko yl‰- tai
-alaintegraaleina (mik‰ tahansa nelj‰st‰ vaihtoehdosta), muuten lauseen v‰itt‰m‰ s‰ilytt‰‰ 
-p‰tevyytens‰, ja todistuskin pysyy olennaisesti samana (!). Jos siis oletetaan ainoastaan, ett‰
-$f$ on Riemann-integroituva yli $T$:n, niin p‰tee esimerkiksi laskukaava
+Mainittakoon, ett√§ Fubinin lauseessa ei v√§ltt√§m√§tt√§ tarvita oletuksia funktion $f$ 
+integroituvuudesta erikseen muuttujien $x$ ja $y$ suhteen, vaan riitt√§√§, ett√§ $f$ on 
+integroituva yli $T$:n. T√§ll√∂in on v√§itt√§m√§ss√§ funktiot $F$ ja $G$ m√§√§ritelt√§v√§ joko yl√§- tai
+alaintegraaleina (mik√§ tahansa nelj√§st√§ vaihtoehdosta), muuten lauseen v√§itt√§m√§ s√§ilytt√§√§ 
+p√§tevyytens√§, ja todistuskin pysyy olennaisesti samana (!). Jos siis oletetaan ainoastaan, ett√§
+$f$ on Riemann-integroituva yli $T$:n, niin p√§tee esimerkiksi laskukaava
 \[ 
 \int_T f\,dxdy = \int_a^b\left[\overline{\int_c^d} f(x,y)\,dy\right]dx. 
 \]
-Huomautettakoon lopuksi, ett‰ Lauseiden \ref{Analyysin peruslause} ja
+Huomautettakoon lopuksi, ett√§ Lauseiden \ref{Analyysin peruslause} ja
 \ref{jatkuvan funktion integroituvuus tasossa} perusteella Fubinin lauseen ehdot toteutuvat
 oletetussa muodossa, jos $f$ on jatkuva suorakulmiossa $T=[a,b]\times[c,d]$.
 
@@ -431,12 +431,12 @@ c) \ $\cos y,\,\ A:\ 0 \le x \le \pi\ \ja\ \abs{y} \le x$ \newline
 d) \ $y^2e^{xy}\,\ A:\ 0 \le x \le 2\ \ja\ x \le y \le 2$ \newline
 e) \ $xy^2,\,\ A:\ 0 \le x \le 1\ \ja\ x^2 \le y \le \sqrt{x}$ \newline
 f) \ $x\cos y,\,\ A:\ 0 \le x \le 1\ \ja\ 0 \le y \le 1-x^2$ \newline
-g) \ $\sqrt{a^2-y^2}\,,\,\ A=$ kolmio, jonka k‰rjet $(0,0)$, $(0,a)$ ja $(a,a)$ \ ($a>0$)
+g) \ $\sqrt{a^2-y^2}\,,\,\ A=$ kolmio, jonka k√§rjet $(0,0)$, $(0,a)$ ja $(a,a)$ \ ($a>0$)
 \newline
-h) \ $xy(1+x^4)^{-1},\,\ A=$ kolmio, jonka k‰rjet $(0,0)$, $(1,0)$ ja $(1,1)$ 
+h) \ $xy(1+x^4)^{-1},\,\ A=$ kolmio, jonka k√§rjet $(0,0)$, $(1,0)$ ja $(1,1)$ 
 
 \item
-M‰‰rit‰ pinta-ala $\mu(A)$, kun $A$ m‰‰ritell‰‰n annetuilla ehdoilla ($a>0$).
+M√§√§rit√§ pinta-ala $\mu(A)$, kun $A$ m√§√§ritell√§√§n annetuilla ehdoilla ($a>0$).
 \vspace{1mm}\newline 
 a) \ $ax \ge y^2,\,\ x^3 \le ay^2 \qquad\qquad\,$
 b) \ $ax \ge y^2,\,\ x^2+y^2 \le a^2$ \newline
@@ -445,7 +445,7 @@ d) \ $x^2-y^2 \le a^2,\,\ |y| \le x/2$ \newline
 e) \ $x,y \ge 0,\ ax \ge y^2,\ ay \ge x^2,\ 8xy^2 \le a^3$
 
 \item
-M‰‰rit‰ ja luokittele funktion
+M√§√§rit√§ ja luokittele funktion
 \[
 f(x,y)=\int_A (10-xu-yv^2)^2\,dudv, \quad A=[0,1]\times[0,1]
 \]
@@ -464,8 +464,8 @@ c) \ $\int_A |x-2y|^\alpha\,dxdy, \quad A=[1,2]\times[1,2]$ \vspace{1mm}\newline
 d) \ $\int_A x^\alpha ye^{-xy}\,dxdy, \quad A=[0,1]\times[0,\infty)$
 
 \item
-Seuraavat integraalit ovat muotoa $\int_A f(x,y)\, dxdy$. M‰‰rit‰ ensin $A$ ja laske sitten
-integraalin arvo valitsemalla sopiva integroimisj‰rjestys!
+Seuraavat integraalit ovat muotoa $\int_A f(x,y)\, dxdy$. M√§√§rit√§ ensin $A$ ja laske sitten
+integraalin arvo valitsemalla sopiva integroimisj√§rjestys!
 \begin{align*}
 &\text{a)}\ \ \int_0^1\left[\int_x^1 e^{-y^2}\,dy\right]dx \qquad\quad
  \text{b)}\ \ \int_0^{\pi/2}\left[\int_y^{\pi/2} \frac{\sin x}{x}\,dx\right]dy \\
@@ -474,8 +474,8 @@ integraalin arvo valitsemalla sopiva integroimisj‰rjestys!
 \end{align*}
 
 \item
-Tiedet‰‰n, ett‰ $\int_\R e^{-x^2}\,dx=\sqrt{\pi}$.\footnote[2]{Ks.\ Propositio \ref{Gamma(1/2)}
-j‰ljemp‰n‰.} Laske t‰ll‰ perusteella
+Tiedet√§√§n, ett√§ $\int_\R e^{-x^2}\,dx=\sqrt{\pi}$.\footnote[2]{Ks.\ Propositio \ref{Gamma(1/2)}
+j√§ljemp√§n√§.} Laske t√§ll√§ perusteella
 \begin{align*}
 &\text{a)}\,\ \int_{\R^2} |x|e^{-x^2-y^2}\,dxdy \qquad\quad\ \
  \text{b)}\,\ \int_{\R^2} (x^2+y^2)e^{-x^2-y^2}\,dxdy \\
@@ -484,16 +484,16 @@ j‰ljemp‰n‰.} Laske t‰ll‰ perusteella
 \end{align*}
 
 \item (*)
-a) N‰yt‰ integraaliin vertaamalla, ett‰ 2-ulotteinen sarja
+a) N√§yt√§ integraaliin vertaamalla, ett√§ 2-ulotteinen sarja
 \[
 \sum_{i=1}^\infty\sum_{j=1}^\infty \frac{1}{(i+j)^\alpha}
 \]
-suppenee t‰sm‰lleen kun $\alpha>2$. \ b) N‰yt‰, ett‰ approksimaation
+suppenee t√§sm√§lleen kun $\alpha>2$. \ b) N√§yt√§, ett√§ approksimaation
 \[
 \sum_{i=1}^\infty\sum_{j=1}^\infty \frac{1}{(i+j)^\alpha} \,\approx\,
 \sum_{i=1}^N\sum_{j=1}^N \frac{1}{(i+j)^\alpha} \quad (\alpha>2,\ N\in\N)
 \]
-virhe on luokkaa $\Ord{N^{2-\alpha}}$. \ c) N‰yt‰, ett‰ tarkemmin p‰tee
+virhe on luokkaa $\Ord{N^{2-\alpha}}$. \ c) N√§yt√§, ett√§ tarkemmin p√§tee
 \[
 \sum_{i=1}^\infty\sum_{j=1}^\infty \frac{1}{(i+j)^\alpha} \,=\,
 \sum_{i=1}^N\sum_{j=1}^N \frac{1}{(i+j)^\alpha} +
@@ -501,16 +501,16 @@ virhe on luokkaa $\Ord{N^{2-\alpha}}$. \ c) N‰yt‰, ett‰ tarkemmin p‰tee
 \]
 
 \item (*) \label{Riemann vs Fubini} \index{zzb@\nim!Riemann vastaan Fubini}
-(Riemann vastaan Fubini) J‰rjestet‰‰n rationaaliluvut v‰lill‰ $\,[0,1]\,$ jonoksi
-$\,\{ x_n,\ n = 0, 1, 2, \ldots \}\,$ ja m‰‰ritell‰‰n joukossa $A = [0,1] \times [0, \infty)$
+(Riemann vastaan Fubini) J√§rjestet√§√§n rationaaliluvut v√§lill√§ $\,[0,1]\,$ jonoksi
+$\,\{ x_n,\ n = 0, 1, 2, \ldots \}\,$ ja m√§√§ritell√§√§n joukossa $A = [0,1] \times [0, \infty)$
 funktio $f$ seuraavasti:
 \[
 f(x,y) = \begin{cases} 
          \,e^{n-y}, &\text{kun}\ \ x = x_n\ \ \text{ja}\ \ y \ge n, \\ \,0, &\text{muulloin}.
          \end{cases}
 \]
-a) N‰yt‰, ett‰ $f$ on Riemann-integroituva yli $A$:n (laajennettu m‰‰ritelm‰).
-b) N‰yt‰, ett‰ laskukaavoista \eqref{tasopalautus-x}--\eqref{tasopalautus-y} j‰lkimm‰inen
+a) N√§yt√§, ett√§ $f$ on Riemann-integroituva yli $A$:n (laajennettu m√§√§ritelm√§).
+b) N√§yt√§, ett√§ laskukaavoista \eqref{tasopalautus-x}--\eqref{tasopalautus-y} j√§lkimm√§inen
 toimii, edellinen ei, ts. 
 \[
 \int_A f\,dx dy\, = \int_0^\infty \left[\int_0^1 f(x, y)\,dx \right] dy\, \neq \, 

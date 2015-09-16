@@ -1,19 +1,19 @@
-\section{Neliˆmatriisit. K‰‰nteismatriisi} \label{inverssi}
+\section{Neli√∂matriisit. K√§√§nteismatriisi} \label{inverssi}
 \alku
-\index{neliˆmatriisi|vahv}
+\index{neli√∂matriisi|vahv}
 
-T‰ss‰ ja seuraavassa luvussa tutkimuskohteena on lineaarinen yht‰lˆryhm‰
+T√§ss√§ ja seuraavassa luvussa tutkimuskohteena on lineaarinen yht√§l√∂ryhm√§
 \[
 \mA \mx = \mb,
 \]
-miss‰ yht‰lˆit‰ ja tuntemattomia on yht‰ monta, eli \mA\ on neliˆmatriisi kokoa $n \times n$ ja
-$\mb \in \R^n\ (n \in \N)$. (Mukavuussyist‰ ajatellaan \mA\ ja \mb\ reaalisiksi --- tulokset 
-jatkossa p‰tev‰t sellaisinaan myˆs kompleksialueella.)
+miss√§ yht√§l√∂it√§ ja tuntemattomia on yht√§ monta, eli \mA\ on neli√∂matriisi kokoa $n \times n$ ja
+$\mb \in \R^n\ (n \in \N)$. (Mukavuussyist√§ ajatellaan \mA\ ja \mb\ reaalisiksi --- tulokset 
+jatkossa p√§tev√§t sellaisinaan my√∂s kompleksialueella.)
 
-Sek‰ matriisitulon ett‰ matriisi-vektoritulon kannalta t‰rke‰ neliˆmatriisien erikoistapaus on
-\index{yksikkˆmatriisi} \index{identiteettikuvaus, --matriisi}%
-\kor{yksikkˆmatriisi} (engl.\ unit matrix) eli \kor{identiteettimatriisi}, jonka symboli on
-$\mI$ ja m‰‰ritelm‰
+Sek√§ matriisitulon ett√§ matriisi-vektoritulon kannalta t√§rke√§ neli√∂matriisien erikoistapaus on
+\index{yksikk√∂matriisi} \index{identiteettikuvaus, --matriisi}%
+\kor{yksikk√∂matriisi} (engl.\ unit matrix) eli \kor{identiteettimatriisi}, jonka symboli on
+$\mI$ ja m√§√§ritelm√§
 \[
 [\mI]_{ij} = (\delta_{ij}) 
            = \begin{bmatrix} 
@@ -21,56 +21,56 @@ $\mI$ ja m‰‰ritelm‰
              \end{bmatrix} 
            = [\me_1 \ldots \me_n].
 \]
-Jos $\mA$ ja $\mI$ ovat kokoa $n \times n$ ja $\mx$ on pystyvektori kokoa $n$, niin p‰tee
+Jos $\mA$ ja $\mI$ ovat kokoa $n \times n$ ja $\mx$ on pystyvektori kokoa $n$, niin p√§tee
 \[
 \text{(a)}\ \ \mA\mI=\mI\mA=\mA, \qquad \text{(b)}\ \ \mI\mx=\mx.
 \]
-Ominaisuuden (a) mukaan $\mI$ on matriisikertolaskun ykkˆsalkio samankokoisten neliˆmatriisien 
-v‰lisiss‰ operaatioissa --- t‰st‰ nimi 'yksikkˆmatriisi'. Ominaisuuden (b) mukaan kuvaus 
-$\mx \map \mI \mx$ on $\R^n$:n \kor{identiteettikuvaus} --- t‰st‰ nimi 'identiteettimatriisi'.
+Ominaisuuden (a) mukaan $\mI$ on matriisikertolaskun ykk√∂salkio samankokoisten neli√∂matriisien 
+v√§lisiss√§ operaatioissa --- t√§st√§ nimi 'yksikk√∂matriisi'. Ominaisuuden (b) mukaan kuvaus 
+$\mx \map \mI \mx$ on $\R^n$:n \kor{identiteettikuvaus} --- t√§st√§ nimi 'identiteettimatriisi'.
 
-Jos matriisien kertolaskuun liittyy 'ykkˆsmatriisi', niin liittyykˆ myˆs k‰‰nteismatriisi? 
---- T‰ss‰ tullaankin neliˆmatriisien teorian keskeisimp‰‰n kysymykseen.
-\begin{Def} \label{k‰‰nteismatriisin m‰‰ritelm‰} \index{kzyzy@k‰‰nteismatriisi|emph}
-\index{neliˆmatriisi!d@s‰‰nnˆllinen/singulaarinen|emph}
-\index{szyzy@s‰‰nnˆllinen matriisi|emph} \index{singulaarinen matriisi|emph}
-\index{ei-singulaarinen matriisi|emph} \index{kzyzy@k‰‰ntyv‰ matriisi}
-\index{matriisin ($\nel$neliˆmatriisin)!d@$\nel$k‰‰nteismatriisi}
-Neliˆmatriisi $\mA$ on \kor{s‰‰nnˆllinen} eli \kor{ei-singulaarinen} eli \kor{k‰‰ntyv‰}, jos on
-olemassa matriisi $\mB$ siten, ett‰ p‰tee
+Jos matriisien kertolaskuun liittyy 'ykk√∂smatriisi', niin liittyyk√∂ my√∂s k√§√§nteismatriisi? 
+--- T√§ss√§ tullaankin neli√∂matriisien teorian keskeisimp√§√§n kysymykseen.
+\begin{Def} \label{k√§√§nteismatriisin m√§√§ritelm√§} \index{kzyzy@k√§√§nteismatriisi|emph}
+\index{neli√∂matriisi!d@s√§√§nn√∂llinen/singulaarinen|emph}
+\index{szyzy@s√§√§nn√∂llinen matriisi|emph} \index{singulaarinen matriisi|emph}
+\index{ei-singulaarinen matriisi|emph} \index{kzyzy@k√§√§ntyv√§ matriisi}
+\index{matriisin ($\nel$neli√∂matriisin)!d@$\nel$k√§√§nteismatriisi}
+Neli√∂matriisi $\mA$ on \kor{s√§√§nn√∂llinen} eli \kor{ei-singulaarinen} eli \kor{k√§√§ntyv√§}, jos on
+olemassa matriisi $\mB$ siten, ett√§ p√§tee
 \[
 \mA \mB = \mB \mA = \mI.
 \]
-Sanotaan, ett‰ $\mB$ on $\mA$:n \kor{k‰‰nteismatriisi} (engl.\ inverse matrix) ja merkit‰‰n
+Sanotaan, ett√§ $\mB$ on $\mA$:n \kor{k√§√§nteismatriisi} (engl.\ inverse matrix) ja merkit√§√§n
 \[
 \mB = \mA^{-1}.
 \]
-Jos $\mA$ ei ole s‰‰nnˆllinen, se on ep‰s‰‰nnˆllinen eli \kor{singulaarinen}.
+Jos $\mA$ ei ole s√§√§nn√∂llinen, se on ep√§s√§√§nn√∂llinen eli \kor{singulaarinen}.
 \end{Def}
 
-K‰‰nteismatriisin symboli $\mA^{-1}$ luetaan yleens‰ 'A miinus yksi'. Jos $\mA^{-1}$ on
-olemassa, niin se on yksik‰sitteinen. Nimitt‰in jos $\mB$ ja $\mC$ ovat molemmat $\mA$:n
-k‰‰nteismatriiseja, niin seuraaan v‰itt‰m‰n mukaan on oltava $\mB=\mC$.
+K√§√§nteismatriisin symboli $\mA^{-1}$ luetaan yleens√§ 'A miinus yksi'. Jos $\mA^{-1}$ on
+olemassa, niin se on yksik√§sitteinen. Nimitt√§in jos $\mB$ ja $\mC$ ovat molemmat $\mA$:n
+k√§√§nteismatriiseja, niin seuraaan v√§itt√§m√§n mukaan on oltava $\mB=\mC$.
 \begin{Prop} \label{m-prop 1} Jos on olemassa matriisit $\mB$ ja $\mC$ kokoa $n \times n$
-siten, ett‰ $\mA\mB=\mI$ ja $\mC\mA=\mI$, niin $\mB=\mC$.
+siten, ett√§ $\mA\mB=\mI$ ja $\mC\mA=\mI$, niin $\mB=\mC$.
 \end{Prop}
-\tod Oletuksien ja matriisitulon liit‰nn‰isyyden perusteella
+\tod Oletuksien ja matriisitulon liit√§nn√§isyyden perusteella
 \[
 \mB = \mI \mB = (\mC \mA) \mB = \mC (\mA \mB) = \mC \mI = \mC. \loppu
 \]
 
-Jos $\mA$ on s‰‰nnˆllinen, niin M‰‰ritelm‰st‰ \ref{k‰‰nteismatriisin m‰‰ritelm‰} n‰hd‰‰n 
-v‰littˆm‰sti, ett‰ myˆs $\mB=\mA^{-1}$ on s‰‰nnˆllinen ja $\mB^{-1}=\mA$. Suorittamalla 
-m‰‰ritelm‰ss‰ transponointi n‰hd‰‰n myˆs, ett‰
+Jos $\mA$ on s√§√§nn√∂llinen, niin M√§√§ritelm√§st√§ \ref{k√§√§nteismatriisin m√§√§ritelm√§} n√§hd√§√§n 
+v√§litt√∂m√§sti, ett√§ my√∂s $\mB=\mA^{-1}$ on s√§√§nn√∂llinen ja $\mB^{-1}=\mA$. Suorittamalla 
+m√§√§ritelm√§ss√§ transponointi n√§hd√§√§n my√∂s, ett√§
 \[
 \mA \mB = \mB \mA = \mI \ \ekv \ \mB^T \mA^T = \mA^T \mB^T = \mI^T = \mI.
 \]
-Siis: Jos $\mA$ on s‰‰nnˆllinen, niin sek‰ $\mA^{-1}$ ett‰ $\mA^T$ ovat s‰‰nnˆllisi‰, ja p‰tee
+Siis: Jos $\mA$ on s√§√§nn√∂llinen, niin sek√§ $\mA^{-1}$ ett√§ $\mA^T$ ovat s√§√§nn√∂llisi√§, ja p√§tee
 \[
 \boxed{\quad\kehys (\mA^{-1})^{-1}=\mA, \qquad (\mA^T)^{-1} = (\mA^{-1})^T. \quad}
 \]
-Jos $\mA$ ja $\mB$ ovat s‰‰nnˆllisi‰ ja samaa kokoa, niin myˆs tulo $\mA \mB$ on s‰‰nnˆllinen.
-Nimitt‰in matriisitulon s‰‰nnˆin ja k‰‰nteismatriisin m‰‰ritelm‰n perusteella
+Jos $\mA$ ja $\mB$ ovat s√§√§nn√∂llisi√§ ja samaa kokoa, niin my√∂s tulo $\mA \mB$ on s√§√§nn√∂llinen.
+Nimitt√§in matriisitulon s√§√§nn√∂in ja k√§√§nteismatriisin m√§√§ritelm√§n perusteella
 \begin{align*}
 (\mA \mB)(\inv{\mB}\inv{\mA}) &= \mA(\mB \inv{\mB})\inv{\mA} 
                                = \mA \mI \inv{\mA} = \mA \inv{\mA} = \mI, \\
@@ -81,177 +81,177 @@ joten
 \[
 \boxed{\quad\kehys \inv{(\mA \mB)} = \inv{\mB} \inv{\mA}. \quad}
 \]
-Tulos on helposti yleistett‰viss‰ seuraavasti (vrt.\ vastaava transponointis‰‰ntˆ edellisess‰
+Tulos on helposti yleistett√§viss√§ seuraavasti (vrt.\ vastaava transponointis√§√§nt√∂ edellisess√§
 luvussa)\,:
-\begin{Prop} \label{matriisitulon s‰‰nnˆllisyys} Jos $\mA_k,\ k=1 \ldots m$ ovat s‰‰nnˆllisi‰
-ja samaa kokoa olevia neliˆmatriiseja, niin tulo $\mA=\mA_1\mA_2 \cdots \mA_m$ on myˆs 
-s‰‰nnˆllinen ja $\mA^{-1}=\mA_m^{-1}\mA_{m-1}^{-1} \cdots \mA^{-1}$.
+\begin{Prop} \label{matriisitulon s√§√§nn√∂llisyys} Jos $\mA_k,\ k=1 \ldots m$ ovat s√§√§nn√∂llisi√§
+ja samaa kokoa olevia neli√∂matriiseja, niin tulo $\mA=\mA_1\mA_2 \cdots \mA_m$ on my√∂s 
+s√§√§nn√∂llinen ja $\mA^{-1}=\mA_m^{-1}\mA_{m-1}^{-1} \cdots \mA^{-1}$.
 \end{Prop} 
 
-Lineaarista yht‰lˆryhm‰‰ ratkaistaessa kerroinmatriisin s‰‰nnˆllisyys 'ratkaisee' ongelman 
+Lineaarista yht√§l√∂ryhm√§√§ ratkaistaessa kerroinmatriisin s√§√§nn√∂llisyys 'ratkaisee' ongelman 
 periaatteelliselta kannalta seuraavasti:
-\begin{Prop} \label{kerroinmatriisi} Jos yht‰lˆryhm‰ss‰ $\mA\mx=\mb$ kerroinmatriisi $\mA$ on
-s‰‰nnˆllinen neliˆmatriisi kokoa $n \times n$, niin yht‰lˆryhm‰ll‰ on jokaisella $\mb \in \R^n$
-yksik‰sitteinen ratkaisu
+\begin{Prop} \label{kerroinmatriisi} Jos yht√§l√∂ryhm√§ss√§ $\mA\mx=\mb$ kerroinmatriisi $\mA$ on
+s√§√§nn√∂llinen neli√∂matriisi kokoa $n \times n$, niin yht√§l√∂ryhm√§ll√§ on jokaisella $\mb \in \R^n$
+yksik√§sitteinen ratkaisu
 \[
 \mx = \inv{\mA} \mb.
 \]
 \end{Prop}
-\tod Merkit‰‰n $\mB=\mA^{-1}$ ja p‰‰tell‰‰n:
+\tod Merkit√§√§n $\mB=\mA^{-1}$ ja p√§√§tell√§√§n:
 \begin{align*}
 \text{a)}\,\ \mA\mB=\mI &\qimpl \mA(\mB\mb) = (\mA\mB)\mb = \mI\mb = \mb. \\
 \text{b)}\,\ \mB\mA=\mI &\qimpl \mx = \mI\mx = (\mB\mA)\mx = \mB(\mA\mx). 
 \end{align*}
-T‰m‰n perusteella todetaan:\, a) $\mx=\mB\mb$ on yht‰lˆryhm‰n $\mA\mx=\mb$ ratkaisu.\newline
-b) Jos $\mA\mx=\mb$, niin $\mx=\mB\mb$, eli t‰m‰ on ainoa mahdollinen ratkaisu. \loppu
+T√§m√§n perusteella todetaan:\, a) $\mx=\mB\mb$ on yht√§l√∂ryhm√§n $\mA\mx=\mb$ ratkaisu.\newline
+b) Jos $\mA\mx=\mb$, niin $\mx=\mB\mb$, eli t√§m√§ on ainoa mahdollinen ratkaisu. \loppu
 
-Proposition \ref{kerroinmatriisi} mukaan yht‰lˆryhm‰n $\mA\mx=\mb$ kerroinmatriisin mahdollinen
-singulaarisuus paljastuu yh‰lˆryhm‰‰ ratkaistaessa:
-\begin{Kor} \label{singulaarisuuskriteeri} Jos yht‰lˆryhm‰ $\mA\mx=\mb$ 
+Proposition \ref{kerroinmatriisi} mukaan yht√§l√∂ryhm√§n $\mA\mx=\mb$ kerroinmatriisin mahdollinen
+singulaarisuus paljastuu yh√§l√∂ryhm√§√§ ratkaistaessa:
+\begin{Kor} \label{singulaarisuuskriteeri} Jos yht√§l√∂ryhm√§ $\mA\mx=\mb$ 
 ($\mA$ kokoa $n \times n$) joko ei ratkea jollakin $\mb\in\R^n$ tai ratkaisu ei ole
-yksik‰sitteinen, niin $\mA$ on singulaarinen.
+yksik√§sitteinen, niin $\mA$ on singulaarinen.
 \end{Kor}
 
-\subsection*{Neliˆmatriisin s‰‰nnˆllisyyskriteerit}
+\subsection*{Neli√∂matriisin s√§√§nn√∂llisyyskriteerit}
 
-Proposition \ref{kerroinmatriisi} mukaan kerroinmatriisin $\mA$ s‰‰nnˆllisyys takaa
-yht‰lˆryhm‰n $\mA\mx=\mb$ s‰‰nnˆllisyyden eli yksik‰sitteisen ratkeavuuden jokaisella
-$\mb\in\R^n$. T‰m‰ v‰itt‰m‰ p‰tee myˆs k‰‰nt‰en, ja itse asiassa p‰tee paljon vahvempi tulos:
-Jos yht‰lˆryhm‰ $\mA\mx=\mb$ joko ratkeaa yksik‰sitteisesti kun $\mb=\mv{0}$ (eli ainoa
+Proposition \ref{kerroinmatriisi} mukaan kerroinmatriisin $\mA$ s√§√§nn√∂llisyys takaa
+yht√§l√∂ryhm√§n $\mA\mx=\mb$ s√§√§nn√∂llisyyden eli yksik√§sitteisen ratkeavuuden jokaisella
+$\mb\in\R^n$. T√§m√§ v√§itt√§m√§ p√§tee my√∂s k√§√§nt√§en, ja itse asiassa p√§tee paljon vahvempi tulos:
+Jos yht√§l√∂ryhm√§ $\mA\mx=\mb$ joko ratkeaa yksik√§sitteisesti kun $\mb=\mv{0}$ (eli ainoa
 ratkaisu on $\mx=\mv{0}$) tai ratkeaa jokaisella $\mb\in\R^n$, niin kummassakin tapauksessa
-$\mA$ on s‰‰nnˆllinen matriisi. Muotoillaan tulos seuraavasti:
-\begin{*Lause} (\vahv{Neliˆmatriisin s‰‰nnˆllisyys}) \label{s‰‰nnˆllisyyskriteerit}
-\index{matriisin ($\nel$neliˆmatriisin)!e@$\nel$s‰‰nnˆllisyyskriteerit|emph} Jos $\mA$ on
-neliˆmatriisi kokoa $n \times n$, niin seuraavat v‰itt‰m‰t ovat kesken‰‰n yht‰pit‰v‰t.
+$\mA$ on s√§√§nn√∂llinen matriisi. Muotoillaan tulos seuraavasti:
+\begin{*Lause} (\vahv{Neli√∂matriisin s√§√§nn√∂llisyys}) \label{s√§√§nn√∂llisyyskriteerit}
+\index{matriisin ($\nel$neli√∂matriisin)!e@$\nel$s√§√§nn√∂llisyyskriteerit|emph} Jos $\mA$ on
+neli√∂matriisi kokoa $n \times n$, niin seuraavat v√§itt√§m√§t ovat kesken√§√§n yht√§pit√§v√§t.
 \begin{itemize}
-\item[E0.] $\mA$ on s‰‰nnˆllinen matriisi.
-\item[E1.] Yht‰lˆryhm‰n $\mA\mx=\mv{0}$ ainoa ratkaisu on $\mx=\mv{0}$.
-\item[E2.] Yht‰lˆryhm‰ll‰ $\mA\mx=\mb$ on ratkaisu jokaisella $\mb\in\R^n$.
+\item[E0.] $\mA$ on s√§√§nn√∂llinen matriisi.
+\item[E1.] Yht√§l√∂ryhm√§n $\mA\mx=\mv{0}$ ainoa ratkaisu on $\mx=\mv{0}$.
+\item[E2.] Yht√§l√∂ryhm√§ll√§ $\mA\mx=\mb$ on ratkaisu jokaisella $\mb\in\R^n$.
 \end{itemize}
 \end{*Lause}
-Lause \ref{s‰‰nnˆllisyyskriteerit} sis‰lt‰‰ kuusi implikaatiov‰itt‰m‰‰, joista riippumattomia
-ovat esim.: E0\,$\impl$\,E1, E0\,$\impl$\,E2, E1\,$\impl$\,E0 ja E2\,$\impl$\,E0. N‰ist‰ 
-kaksi ensimm‰ist‰ ovat Propositioon \ref{kerroinmatriisi} sis‰ltyvi‰ ja siis jo selvi‰.
-Kaksi muuta sen sijaan ovat syv‰llisempi‰. N‰m‰ sis‰ltyv‰t erikoistapauksina yleisemp‰‰n
-lineaarisia yht‰lˆryhmi‰ koskevaan v‰itt‰m‰‰n, joka tunnetaan nimell‰ 
-\kor{Lineaarialgebran peruslause}. Yleisemp‰‰ lausetta (joka koskee myˆs systeemej‰ kokoa 
-$m \times n,\ m \neq n$) ei t‰ss‰ muotoilla. Todetaan sen sijaan Lauseen
-\ref{s‰‰nnˆllisyyskriteerit} mielenkiintoinen seuraamus:
-\begin{Kor} \label{ihme} Samaa kokoa oleville neliˆmatriiseille p‰tee
+Lause \ref{s√§√§nn√∂llisyyskriteerit} sis√§lt√§√§ kuusi implikaatiov√§itt√§m√§√§, joista riippumattomia
+ovat esim.: E0\,$\impl$\,E1, E0\,$\impl$\,E2, E1\,$\impl$\,E0 ja E2\,$\impl$\,E0. N√§ist√§ 
+kaksi ensimm√§ist√§ ovat Propositioon \ref{kerroinmatriisi} sis√§ltyvi√§ ja siis jo selvi√§.
+Kaksi muuta sen sijaan ovat syv√§llisempi√§. N√§m√§ sis√§ltyv√§t erikoistapauksina yleisemp√§√§n
+lineaarisia yht√§l√∂ryhmi√§ koskevaan v√§itt√§m√§√§n, joka tunnetaan nimell√§ 
+\kor{Lineaarialgebran peruslause}. Yleisemp√§√§ lausetta (joka koskee my√∂s systeemej√§ kokoa 
+$m \times n,\ m \neq n$) ei t√§ss√§ muotoilla. Todetaan sen sijaan Lauseen
+\ref{s√§√§nn√∂llisyyskriteerit} mielenkiintoinen seuraamus:
+\begin{Kor} \label{ihme} Samaa kokoa oleville neli√∂matriiseille p√§tee
 \[
 \mA\mB=\mI \qimpl \mB\mA=\mI.
 \]
 \end{Kor}
-\tod Jos $\mA\mB=\mI$, niin s‰‰nnˆllisyyskriteeri E2 on t‰ytetty (ks.\ Proposition
-\ref{kerroinmatriisi} todistus, osa a)), joten Lauseen \ref{s‰‰nnˆllisyyskriteerit} mukaan
-$\mA$ on s‰‰nnˆllinen. T‰llˆin jos $\mC=\mA^{-1}$, niin $\mA\mB=\mC\mA=\mI$, jolloin on oltava
+\tod Jos $\mA\mB=\mI$, niin s√§√§nn√∂llisyyskriteeri E2 on t√§ytetty (ks.\ Proposition
+\ref{kerroinmatriisi} todistus, osa a)), joten Lauseen \ref{s√§√§nn√∂llisyyskriteerit} mukaan
+$\mA$ on s√§√§nn√∂llinen. T√§ll√∂in jos $\mC=\mA^{-1}$, niin $\mA\mB=\mC\mA=\mI$, jolloin on oltava
 $\mC=\mB$ (Propositio \ref{m-prop 1}). Siis $\mB\mA=\mI$. \loppu
 
-Korollaarin \ref{ihme} mukaan siis jo ehto $\mA\mB=\mI$ riitt‰‰ takaamaan, ett‰ $\mB=\mA^{-1}$
-ja $\mA=\mB^{-1}$, ts.\ toinen M‰‰ritelm‰n \ref{k‰‰nteismatriisin m‰‰ritelm‰} ehdoista on
+Korollaarin \ref{ihme} mukaan siis jo ehto $\mA\mB=\mI$ riitt√§√§ takaamaan, ett√§ $\mB=\mA^{-1}$
+ja $\mA=\mB^{-1}$, ts.\ toinen M√§√§ritelm√§n \ref{k√§√§nteismatriisin m√§√§ritelm√§} ehdoista on
 turha (!).
 
-Jatkossa ei Lausetta \ref{s‰‰nnˆllisyyskriteerit} pyrit‰ heti todistamaan, vaan seuraavissa
-kahdessa luvussa tarkastellaan ensin lineaarisen yht‰lˆryhm‰n ratkaisemista algoritmisin
-keinoin. Osoittautuu, ett‰ ratkaisualgoritmin sivutuotteena sadaan myˆs Lause
-\ref{s‰‰nnˆllisyyskriteerit} todistetuksi.\footnote[2]{Lineaarialgebraa k‰sittelev‰ss‰
-kirjallisuudessa todistetaan Lineaarialgebran peruslause (ja siihen sis‰ltyen Lause
-\ref{s‰‰nnˆllisyyskriteerit}) yleens‰ ei-algoritmisesti, abstraktin lineaarialgebran keinoin.}
+Jatkossa ei Lausetta \ref{s√§√§nn√∂llisyyskriteerit} pyrit√§ heti todistamaan, vaan seuraavissa
+kahdessa luvussa tarkastellaan ensin lineaarisen yht√§l√∂ryhm√§n ratkaisemista algoritmisin
+keinoin. Osoittautuu, ett√§ ratkaisualgoritmin sivutuotteena sadaan my√∂s Lause
+\ref{s√§√§nn√∂llisyyskriteerit} todistetuksi.\footnote[2]{Lineaarialgebraa k√§sittelev√§ss√§
+kirjallisuudessa todistetaan Lineaarialgebran peruslause (ja siihen sis√§ltyen Lause
+\ref{s√§√§nn√∂llisyyskriteerit}) yleens√§ ei-algoritmisesti, abstraktin lineaarialgebran keinoin.}
 
-T‰m‰n luvun loppuosassa kohdisteaan huomio kahteen neliˆmatriisien erikoisluokkaan,
+T√§m√§n luvun loppuosassa kohdisteaan huomio kahteen neli√∂matriisien erikoisluokkaan,
 \kor{ortogonaali-} ja \kor{kolmio}matriiseihin ja edellisten alaluokkaan
 \kor{permutaatio}matriiseihin. Permutaatio- ja kolmiomatriiseilla on jatkossa keskeinen rooli
-lineaarisen yht‰lˆryhm‰n ratkaisualgoritmissa. Kuten n‰hd‰‰n, n‰iden matriisien osalta
-s‰‰nnˆllisyyskysymys voidaan ratkaista tukeutumatta Lauseeseen \ref{s‰‰nnˆllisyyskriteerit}.
-Kolmiomatriisin tapauksessa perustana on seuraavista kahdesta v‰itt‰m‰st‰ j‰lkimm‰inen (joka
-nojaa edelliseen). T‰m‰ muistuttaa Lauseen \ref{s‰‰nnˆllisyyskriteerit} v‰itt‰m‰‰ E2\,\impl\,E0
-mutta perustuu t‰t‰ vahvempiin oletuksiin. Muotoillaan ensin alkuper‰inen oletusv‰itt‰m‰ E2
+lineaarisen yht√§l√∂ryhm√§n ratkaisualgoritmissa. Kuten n√§hd√§√§n, n√§iden matriisien osalta
+s√§√§nn√∂llisyyskysymys voidaan ratkaista tukeutumatta Lauseeseen \ref{s√§√§nn√∂llisyyskriteerit}.
+Kolmiomatriisin tapauksessa perustana on seuraavista kahdesta v√§itt√§m√§st√§ j√§lkimm√§inen (joka
+nojaa edelliseen). T√§m√§ muistuttaa Lauseen \ref{s√§√§nn√∂llisyyskriteerit} v√§itt√§m√§√§ E2\,\impl\,E0
+mutta perustuu t√§t√§ vahvempiin oletuksiin. Muotoillaan ensin alkuper√§inen oletusv√§itt√§m√§ E2
 toisella tavalla:
-\begin{Prop} \label{m-prop 2} P‰tee: \ E2 $\ \ekv\ \mA\mB=\mI\ $ jollakin $\mB$.
+\begin{Prop} \label{m-prop 2} P√§tee: \ E2 $\ \ekv\ \mA\mB=\mI\ $ jollakin $\mB$.
 \end{Prop}
-\tod \fbox{$\impl$} Jos E2 on tosi, niin on olemassa vektorit $\mb_k\in\R^n$ siten, ett‰ 
-$\mA\mb_k=\me_k,\ k=1 \ldots n$. T‰llˆin jos $\mB=[\mb_1 \ldots \mb_n]$, niin 
+\tod \fbox{$\impl$} Jos E2 on tosi, niin on olemassa vektorit $\mb_k\in\R^n$ siten, ett√§ 
+$\mA\mb_k=\me_k,\ k=1 \ldots n$. T√§ll√∂in jos $\mB=[\mb_1 \ldots \mb_n]$, niin 
 $\mA\mB = [\mA\mb_1\,\ldots\,\mA\mb_n] = [\me_1 \ldots \me_n] = \mI$. \
 \fbox{$\Leftarrow$} \ Ks. Proposition \ref{kerroinmatriisi} todistus, osa a). \loppu
-\begin{Prop} \label{m-prop 3} Jos $\mA$ on kokoa $n \times n$ ja yht‰lˆryhm‰t $\mA\mx=\mb$
-ja $\mA^T\mx=\mb$ ovat molemmat ratkeavia jokaisella $\mb\in\R^n$, niin $\mA$ on s‰‰nnˆllinen
+\begin{Prop} \label{m-prop 3} Jos $\mA$ on kokoa $n \times n$ ja yht√§l√∂ryhm√§t $\mA\mx=\mb$
+ja $\mA^T\mx=\mb$ ovat molemmat ratkeavia jokaisella $\mb\in\R^n$, niin $\mA$ on s√§√§nn√∂llinen
 matriisi.
 \end{Prop}
 \tod Oletuksien ja Propostition \ref{m-prop 2} perusteella on olemassa matriisit $\mB$ ja $\mC$
-siten, ett‰ $\mA\mB=\mI$ ja $\mA^T\mC=\mI$. T‰llˆin on myˆs $(\mA^T\mC)^T=\mC^T\mA=\mI^T=\mI$.
-Siis $\mA\mB=\mC^T\mA=\mI$, mist‰ seuraa (Propositio \ref{m-prop 1}), ett‰
-$\mB=\mC^T (=\mA^{-1})$, eli $\mA$ on s‰‰nnˆllinen. \loppu 
+siten, ett√§ $\mA\mB=\mI$ ja $\mA^T\mC=\mI$. T√§ll√∂in on my√∂s $(\mA^T\mC)^T=\mC^T\mA=\mI^T=\mI$.
+Siis $\mA\mB=\mC^T\mA=\mI$, mist√§ seuraa (Propositio \ref{m-prop 1}), ett√§
+$\mB=\mC^T (=\mA^{-1})$, eli $\mA$ on s√§√§nn√∂llinen. \loppu 
  
 \subsection*{Ortogonaalimatriisit}
 \index{ortogonaalimatriisi|vahv}
-\index{neliˆmatriisi!e@ortogonaalinen|vahv}
+\index{neli√∂matriisi!e@ortogonaalinen|vahv}
 \index{ortogonaalisuus!c@matriisin|vahv}
 
-Erikoisen s‰‰nnˆllisten matriisien luokan muodostavat \kor{ortogonaaliset} matriisit. Jos 
-neliˆmatriisi $\mA$ esitet‰‰n sarakkeidensa avulla muodossa
+Erikoisen s√§√§nn√∂llisten matriisien luokan muodostavat \kor{ortogonaaliset} matriisit. Jos 
+neli√∂matriisi $\mA$ esitet√§√§n sarakkeidensa avulla muodossa
 \[
 \mA = [\ma_1 \ldots \ma_n],
 \]
-niin sanotaan, ett‰ $\mA$ on ortogonaalinen, jos $\{\ma_1,\ldots,\ma_n\}$ on ortonormeerattu 
-systeemi $\R^n$:ss‰, ts.\
+niin sanotaan, ett√§ $\mA$ on ortogonaalinen, jos $\{\ma_1,\ldots,\ma_n\}$ on ortonormeerattu 
+systeemi $\R^n$:ss√§, ts.\
 \[
 \scp{\ma_i}{\ma_j} = \ma_i^T \cdot \ma_j = \delta_{ij}, \quad i,j=1 \ldots n.
 \]  
-Matriisitulon m‰‰ritelm‰n perusteella (ks.\ edellinen luku) t‰m‰ on sama kuin ehto
+Matriisitulon m√§√§ritelm√§n perusteella (ks.\ edellinen luku) t√§m√§ on sama kuin ehto
 \[
 \mA^T \mA = \mI.
 \]
-T‰llˆin Korollaarin \ref{ihme} mukaan on myˆs $\mA\mA^T = \mI$, eli ortogonaalisessa
-matriisissa myˆs rivit muodostavat ortonormeeratun systeemin (!) ja $\inv{\mA} = \mA^T$. 
+T√§ll√∂in Korollaarin \ref{ihme} mukaan on my√∂s $\mA\mA^T = \mI$, eli ortogonaalisessa
+matriisissa my√∂s rivit muodostavat ortonormeeratun systeemin (!) ja $\inv{\mA} = \mA^T$. 
 Toisaalta, jos $\mA^T\mA = \mI$, niin
 \[
 \delta_{ij} = [\mA^T \mA]_{ij} = \ma_i^T \ma_j,
 \]
-eli $\mA$ on ortogonaalinen. On siis p‰‰dytty (Korollaariin \ref{ihme} ja siis Lauseeseen
-\ref{s‰‰nnˆllisyyskriteerit} osaksi vedoten) tulokseen
+eli $\mA$ on ortogonaalinen. On siis p√§√§dytty (Korollaariin \ref{ihme} ja siis Lauseeseen
+\ref{s√§√§nn√∂llisyyskriteerit} osaksi vedoten) tulokseen
 \[
 \boxed{\quad\kehys \mA \text{ ortogonaalinen} \ \ekv \ \inv{\mA} = \mA^T. \quad}
 \]
-Jos $\mA$ on sek‰ ortogonaalinen ett‰ \pain{s}y\pain{mmetrinen}, niin $\mA\mA=\mI$. Voidaan
-siis todeta (t‰ll‰ kertaa Lauseeseen \ref{s‰‰nnˆllisyyskriteerit} vetoamatta), ett‰ p‰tee:
+Jos $\mA$ on sek√§ ortogonaalinen ett√§ \pain{s}y\pain{mmetrinen}, niin $\mA\mA=\mI$. Voidaan
+siis todeta (t√§ll√§ kertaa Lauseeseen \ref{s√§√§nn√∂llisyyskriteerit} vetoamatta), ett√§ p√§tee:
 \begin{Prop} \label{ortog ja sym} Jos $\mA$ on ortogonaalinen ja symmetrinen matriisi, niin 
-$\mA$ on s‰‰nnˆllinen ja $\mA^{-1}=\mA$.
+$\mA$ on s√§√§nn√∂llinen ja $\mA^{-1}=\mA$.
 \end{Prop}
 
 \subsection*{Permutaatiomatriisi $\mI_p$}
 \index{permutaatiomatriisi|vahv}
 
 Jatkon kannalta erityisen kiinnostava ortogonaalisten matriisien luokka koostuu
-\kor{permutaatiomatriiseista}, joissa on samat sarakkeet kuin yksikkˆmatriisissa $\mI$ mutta
-vaihdetussa (permutoidussa) j‰rjestyksess‰. Permutaatiomatriisi merkit‰‰n
+\kor{permutaatiomatriiseista}, joissa on samat sarakkeet kuin yksikk√∂matriisissa $\mI$ mutta
+vaihdetussa (permutoidussa) j√§rjestyksess√§. Permutaatiomatriisi merkit√§√§n
 \[
 \mI_p = [\me_{i_1}\ \me_{i_2}\ \ldots \me_{i_n}],
 \]
-miss‰ $p=(i_1,i_2,\ldots,i_n)$ on j‰rjestetyn lukujoukon $(1,2,\ldots,n)$
+miss√§ $p=(i_1,i_2,\ldots,i_n)$ on j√§rjestetyn lukujoukon $(1,2,\ldots,n)$
 \index{permutaatio}%
-\kor{permutaatio} (eli samatluvut eri j‰rjestyksess‰).
-Permutaatio-opin tunnettu (helppo) tulos on, ett‰ lukujoukon
-$(1,2,\ldots,n)$ erilaisia permutaatioita --- ja siis myˆs erilaisia permutaatiomatriiseja
+\kor{permutaatio} (eli samatluvut eri j√§rjestyksess√§).
+Permutaatio-opin tunnettu (helppo) tulos on, ett√§ lukujoukon
+$(1,2,\ldots,n)$ erilaisia permutaatioita --- ja siis my√∂s erilaisia permutaatiomatriiseja
 $\mI_p$ kokoa $n \times n$ --- on $n!$ kpl. Jokainen permutaatio $p$ on saavutettavissa
-suorittamalla ($p$:st‰ riippuva) m‰‰r‰ $m$ per‰kk‰isi‰
+suorittamalla ($p$:st√§ riippuva) m√§√§r√§ $m$ per√§kk√§isi√§
 \index{parivaihto}%
 \kor{parivaihtoja}, joissa kaksi lukua
-vaihdetaan kesken‰‰n. Luku $m$ ei ole yksik‰sitteinen, koska saman parivaihdon toisto palauttaa
-alkuper‰isen j‰rjestyksen. Sen sijaan on osoitettavissa (vaikka ei aivan helposti), ett‰
+vaihdetaan kesken√§√§n. Luku $m$ ei ole yksik√§sitteinen, koska saman parivaihdon toisto palauttaa
+alkuper√§isen j√§rjestyksen. Sen sijaan on osoitettavissa (vaikka ei aivan helposti), ett√§
 luvun $m$ parillisuus/parittomuus on permutaatiolle ominainen, ts.\ jokainen permutaatio on
 \index{parillinen, pariton!c@permutaatio}%
 joko \kor{parillinen} tai \kor{pariton}.  
 
 Jokainen permutaatiomatriisi $\mI_p$ on luonnollisesti ortogonaalinen, ts.\ $\mI_p^T\mI_p=\mI$.
-Helposti on n‰ht‰viss‰, ett‰ myˆs $\mI_p$:n rivit saadaan permutoimalla $\mI$:n rivit, eli
-$\mI_p^T=\mI_q$, miss‰ $q$ on toinen lukujen $(1,2,\ldots,n)$ permutaatio ($q=p$, jos $\mI_p$ on
+Helposti on n√§ht√§viss√§, ett√§ my√∂s $\mI_p$:n rivit saadaan permutoimalla $\mI$:n rivit, eli
+$\mI_p^T=\mI_q$, miss√§ $q$ on toinen lukujen $(1,2,\ldots,n)$ permutaatio ($q=p$, jos $\mI_p$ on
 symmetrinen). Koska $\mI=\mI_q^T\mI_q=\mI_p\mI_p^T$, niin $\mI_p^T\mI_p=\mI_p\mI_p^T=\mI$. Siis
-on p‰‰telty (Lauseeseen \ref{s‰‰nnˆllisyyskriteerit} vetoamatta), ett‰ $\mI_p^{-1}=\mI_p^T$.
+on p√§√§telty (Lauseeseen \ref{s√§√§nn√∂llisyyskriteerit} vetoamatta), ett√§ $\mI_p^{-1}=\mI_p^T$.
 \begin{Exa} Tapauksessa $n=3$ erilaisia permutaatiomatriiseja on $3!=6$ kpl, vastaten
-permutaatioita $p=(1,2,3),(2,1,3),(1,3,2),(3,2,1),(2,3,1),(3,1,2)$. N‰ist‰ ensimm‰inen ja
-kaksi viimeist‰ ovat parillisia ($0$ tai $2$ parivaihtoa), muut parittomia ($1$ parivaihto).
-Kuviosta (merkitty $\bullet=1$ ja $\cdot=0$) n‰hd‰‰n, ett‰ jos $p=(2,3,1)$, niin
-$\mI_p^T=\mI_q$, miss‰ $q=(3,1,2)$.
+permutaatioita $p=(1,2,3),(2,1,3),(1,3,2),(3,2,1),(2,3,1),(3,1,2)$. N√§ist√§ ensimm√§inen ja
+kaksi viimeist√§ ovat parillisia ($0$ tai $2$ parivaihtoa), muut parittomia ($1$ parivaihto).
+Kuviosta (merkitty $\bullet=1$ ja $\cdot=0$) n√§hd√§√§n, ett√§ jos $p=(2,3,1)$, niin
+$\mI_p^T=\mI_q$, miss√§ $q=(3,1,2)$.
 \[
 \begin{bmatrix}
 \bullet & \cdot & \cdot \\ 
@@ -286,15 +286,15 @@ $\mI_p^T=\mI_q$, miss‰ $q=(3,1,2)$.
 \]
 \end{Exa}
 
-Jos $\mA=[\ma_1 \ldots \ma_n]$ on matriisi kokoa $n†\times n$ ja
+Jos $\mA=[\ma_1 \ldots \ma_n]$ on matriisi kokoa $n¬†\times n$ ja
 $\mI_p=[\me_{i_1} \ldots \me_{i_n}]$, niin
 \[
 \mA\mI_p = [\mA\me_{i_1} \ldots \mA\me_{i_n}] = [\ma_{i_1} \ldots \ma_{i_n}].
 \]
 Operaatio $\mA \map \mA\mI_p$ siis permutoi $\mA$:n sarakkeet $\mI_p$:n sarakkeiden mukaiseen
-j‰rjestykseen $p$. Vastaavasti koska $(\mI_p\mA)^T = \mA^T\mI_p^T$, niin p‰‰tell‰‰n, ett‰
+j√§rjestykseen $p$. Vastaavasti koska $(\mI_p\mA)^T = \mA^T\mI_p^T$, niin p√§√§tell√§√§n, ett√§
 operaatio $\mA \map \mI_p\mA$ permutoi $\mA^T$:n sarakkeet (eli $\mA$:n rivit) $\mI_p^T$:n
-sarakkeiden (eli $\mI_p$:n rivien) mukaiseen j‰rjestykseen. Yhteeneveto:
+sarakkeiden (eli $\mI_p$:n rivien) mukaiseen j√§rjestykseen. Yhteeneveto:
 \[
 \boxed{\ykehys \begin{aligned}
 \quad&\mA\map\mA\mI_p\,: \quad \text{$\mA$:n sarakkeiden permutointi $\mI_p$:n 
@@ -312,17 +312,17 @@ sarakkeiden (eli $\mI_p$:n rivien) mukaiseen j‰rjestykseen. Yhteeneveto:
 \begin{bmatrix} 4&5&6\\7&8&9\\1&2&3 \end{bmatrix}. \loppu
 \]
 \end{Exa}
-Edellisen luvun matriisialgebran s‰‰nnˆist‰ voidaan p‰‰tell‰, ett‰ matriisin sarakkeiden
-permutointi operaatiolla $\mA\map\mA\mI_p$ toimii yht‰ hyvin matriiseille kokoa $m \times n$,
-$m \neq n$, ja vastaavasti rivien permutointi matriiseille kokoa $n \times m$. Neliˆmatriisin
-tapauksessa n‰hd‰‰n myˆs, ett‰ sarakkeiden tai rivien permutoinnissa s‰‰nnˆllinen matriisi
-s‰ilyy s‰‰nnˆllisen‰ (koska s‰‰nnˆllisten matriisien tulo on s‰‰nnˆllinen). Samoin
-singulaarinen matriisi s‰ilyy singulaarisena (Harj.teht.\,\ref{H-m-2: pikku v‰itt‰mi‰}d).
+Edellisen luvun matriisialgebran s√§√§nn√∂ist√§ voidaan p√§√§tell√§, ett√§ matriisin sarakkeiden
+permutointi operaatiolla $\mA\map\mA\mI_p$ toimii yht√§ hyvin matriiseille kokoa $m \times n$,
+$m \neq n$, ja vastaavasti rivien permutointi matriiseille kokoa $n \times m$. Neli√∂matriisin
+tapauksessa n√§hd√§√§n my√∂s, ett√§ sarakkeiden tai rivien permutoinnissa s√§√§nn√∂llinen matriisi
+s√§ilyy s√§√§nn√∂llisen√§ (koska s√§√§nn√∂llisten matriisien tulo on s√§√§nn√∂llinen). Samoin
+singulaarinen matriisi s√§ilyy singulaarisena (Harj.teht.\,\ref{H-m-2: pikku v√§itt√§mi√§}d).
 
 Permutaatiomatriisin erikoistapaus on \kor{vaihtomatriisi}, jossa vain kaksi $\mI$:n saraketta
-on vaihdettu kesken‰‰n. Jos vaihdetut sarakkeet ovat $\me_k$ ja $\me_m$ ($k<m$), niin
+on vaihdettu kesken√§√§n. Jos vaihdetut sarakkeet ovat $\me_k$ ja $\me_m$ ($k<m$), niin
 vaihtomatriisi on $\mV = [\,\me_1\,\ldots\,\me_{k-1}\ \me_m\ \me_{k+1}\,\ldots\,\me_{m-1}\,
-\me_k\ \me_{m+1}\,\ldots\,\me_n\,]$. T‰m‰ on paitsi ortogonaalinen myˆs symmetrinen:
+\me_k\ \me_{m+1}\,\ldots\,\me_n\,]$. T√§m√§ on paitsi ortogonaalinen my√∂s symmetrinen:
 \[
 \mV= \begin{bmatrix}
 1 \\
@@ -337,12 +337,12 @@ vaihtomatriisi on $\mV = [\,\me_1\,\ldots\,\me_{k-1}\ \me_m\ \me_{k+1}\,\ldots\,
 & & & & & & & & &1 \\
 \end{bmatrix}
 \]
-Koska permutaatioon $p$ p‰‰st‰‰n per‰kk‰isill‰ parivaihdoilla, niin vastaavasti $\mI_p$
+Koska permutaatioon $p$ p√§√§st√§√§n per√§kk√§isill√§ parivaihdoilla, niin vastaavasti $\mI_p$
 saadaan kertomalla $\mI$ oikealta vastaavilla vaihtomatriiseilla $\mV_i,\ i=1 \ldots m$, eli
 \[
 \mI_p = \mI\mV_1 \ldots \mV_m = \mV_1 \ldots \mV_m.
 \]
-Koska jokainen $\mV_i$ on symmetrinen, niin tulon transponointis‰‰nnˆn perusteella
+Koska jokainen $\mV_i$ on symmetrinen, niin tulon transponointis√§√§nn√∂n perusteella
 \[
 \mI_p^{-1} = \mI_p^T = \mV_m \ldots \mV_1.
 \]
@@ -350,12 +350,12 @@ Koska jokainen $\mV_i$ on symmetrinen, niin tulon transponointis‰‰nnˆn perusteel
 \subsection*{Kolmiomatriisit}
 \index{kolmiomatriisi|vahv}
 
-\begin{Def} \index{ylzy@yl‰kolmiomatriisi|emph} \index{alakolmiomatriisi|emph}
+\begin{Def} \index{ylzy@yl√§kolmiomatriisi|emph} \index{alakolmiomatriisi|emph}
 \index{diagonaalimatriisi|emph}
-\index{neliˆmatriisi!ea@diagonaalinen|emph}
-Neliˆmatriisi $\mA = (a_{ij})$ on
+\index{neli√∂matriisi!ea@diagonaalinen|emph}
+Neli√∂matriisi $\mA = (a_{ij})$ on
 \begin{itemize}
-\item[-] \kor{yl‰kolmiomatriisi}, jos $\,a_{ij}=0$, kun $i>j$,
+\item[-] \kor{yl√§kolmiomatriisi}, jos $\,a_{ij}=0$, kun $i>j$,
 \item[-] \kor{alakolmiomatriisi}, jos $\,a_{ij}=0$, kun $i<j$,
 \item[-] \kor{diagonaalinen} l. \kor{diagonaalimatriisi}, jos $\,a_{ij} = 0$, kun $i \neq j$.
 \end{itemize}
@@ -371,44 +371,44 @@ Neliˆmatriisi $\mA = (a_{ij})$ on
 \begin{bmatrix} 
 \# & 0 & 0 & 0 \\ 0 & \# & 0 & 0 \\ 0 & 0 & \# & 0 \\ 0 & 0 & 0 & \# 
 \end{bmatrix} \\ \\
-\text{yl‰kolmio}\ \ \ & \text{alakolmio}\ \ & \text{diagonaalinen}
+\text{yl√§kolmio}\ \ \ & \text{alakolmio}\ \ & \text{diagonaalinen}
 \end{array}
 \] 
-M‰‰ritelm‰n mukaisesti diagonaalimatriisi on molempien kolmiomatriisien
-erikoistapaus. M‰‰ritelm‰n matriisityypeille k‰ytet‰‰n usein erikoissymboleja $\mU$ 
-(yl‰kolmio, engl.\ Upper triangular), $\mL$ (alakolmio, engl.\ Lower triangular) ja $\mD$ 
-(diagonaalimatriisi). Neliˆmatriisin $\mA$ alkioita $a_{ii}$ sanotaan yleisesti $\mA$:n 
-\index{lzy@l‰vist‰j‰, -alkio} \index{diagonaali (matriisin)}%
-\kor{l‰vist‰j‰alkioiksi} ja (j‰rjestetty‰) joukkoa  $(a_{ii},\ i = 1 \ldots n)$ $\mA$:n
-\kor{l‰vist‰j‰ksi} eli \kor{diagonaaliksi}. Joukko $(a_{i,i+k},\ i = 1 \ldots n-k)$ on
+M√§√§ritelm√§n mukaisesti diagonaalimatriisi on molempien kolmiomatriisien
+erikoistapaus. M√§√§ritelm√§n matriisityypeille k√§ytet√§√§n usein erikoissymboleja $\mU$ 
+(yl√§kolmio, engl.\ Upper triangular), $\mL$ (alakolmio, engl.\ Lower triangular) ja $\mD$ 
+(diagonaalimatriisi). Neli√∂matriisin $\mA$ alkioita $a_{ii}$ sanotaan yleisesti $\mA$:n 
+\index{lzy@l√§vist√§j√§, -alkio} \index{diagonaali (matriisin)}%
+\kor{l√§vist√§j√§alkioiksi} ja (j√§rjestetty√§) joukkoa  $(a_{ii},\ i = 1 \ldots n)$ $\mA$:n
+\kor{l√§vist√§j√§ksi} eli \kor{diagonaaliksi}. Joukko $(a_{i,i+k},\ i = 1 \ldots n-k)$ on
 vastaavasti
-\index{ylzy@yl‰diagonaali} \index{aladiagonaali}%
-$k$:s \kor{yl‰diagonaali} ja $(a_{i-k,i},\ i = k+1 \ldots n)$ $k$:s \kor{aladiagonaali}.
-Diagonaalimatriisi esitet‰‰n usein l‰vist‰j‰alkioidensa avulla k‰ytt‰en merkint‰‰ 
+\index{ylzy@yl√§diagonaali} \index{aladiagonaali}%
+$k$:s \kor{yl√§diagonaali} ja $(a_{i-k,i},\ i = k+1 \ldots n)$ $k$:s \kor{aladiagonaali}.
+Diagonaalimatriisi esitet√§√§n usein l√§vist√§j√§alkioidensa avulla k√§ytt√§en merkint√§√§ 
 \[
 \mD = \text{diag} \, (d_i), \quad d_i=[\mD]_{ii}\,.
 \]
 
-Kolmiomatriisin s‰‰nnˆllisyyskysymyksen ratkaisee
-\begin{Lause} \label{kolmiomatriisi} \vahv{(Kolmiomatriisin s‰‰nnˆllisyys)}\, 
-Jos $\mA = (a_{ij})$ on kolmiomatriisi kokoa $n \times n$, niin $\mA$ on s‰‰nnˆllinen 
-t‰sm‰lleen kun l‰vist‰j‰alkiot $a_{ii}$  ovat kaikki nollasta poikkeavat, ja t‰llˆin p‰tee
+Kolmiomatriisin s√§√§nn√∂llisyyskysymyksen ratkaisee
+\begin{Lause} \label{kolmiomatriisi} \vahv{(Kolmiomatriisin s√§√§nn√∂llisyys)}\, 
+Jos $\mA = (a_{ij})$ on kolmiomatriisi kokoa $n \times n$, niin $\mA$ on s√§√§nn√∂llinen 
+t√§sm√§lleen kun l√§vist√§j√§alkiot $a_{ii}$  ovat kaikki nollasta poikkeavat, ja t√§ll√∂in p√§tee
 \begin{itemize}
-\item[(i)]  $\mA$ diagonaalinen/yl‰kolmio/alakolmio \\ $\impl$ $\inv{\mA}$ 
-            diagonaalinen/yl‰kolmio/alakolmio
+\item[(i)]  $\mA$ diagonaalinen/yl√§kolmio/alakolmio \\ $\impl$ $\inv{\mA}$ 
+            diagonaalinen/yl√§kolmio/alakolmio
 \item[(ii)] $[\inv{\mA}]_{ii} = 1/a_{ii}, \quad i=1 \ldots n.$
 \end{itemize}
 \end{Lause}
-\tod Diagonaalimatriisin tapauksessa n‰hd‰‰n, ett‰ jos $a_{kk}=0$ jollakin 
-$k \in \{1,\ldots,n\}$, niin yht‰lˆryhm‰ll‰ $\mA \mx = \mo$ on monik‰sitteinen ratkaisu 
+\tod Diagonaalimatriisin tapauksessa n√§hd√§√§n, ett√§ jos $a_{kk}=0$ jollakin 
+$k \in \{1,\ldots,n\}$, niin yht√§l√∂ryhm√§ll√§ $\mA \mx = \mo$ on monik√§sitteinen ratkaisu 
 $\mx = x_k \me_k,\ x_k\in\R$, joten Korollaarin \ref{singulaarisuuskriteeri} mukaan $\mA$ on 
 singulaarinen. Jos $a_{ii} \neq 0$, $i = 1\ldots n$, niin $\mA \inv{\mA} = \inv{\mA} \mA = \mI$
-toteutuu v‰itteen mukaisella valinnalla, eli
+toteutuu v√§itteen mukaisella valinnalla, eli
 \[
 \inv{\mA} = \text{diag} \, (1/a_{ii}).
 \]
 
-Oletetaan seuraavaksi, ett‰ $\mA$ on alakolmiomatriisi, jolloin yht‰lˆryhm‰ $\mA\mx=\mb$ on
+Oletetaan seuraavaksi, ett√§ $\mA$ on alakolmiomatriisi, jolloin yht√§l√∂ryhm√§ $\mA\mx=\mb$ on
 auki kirjoitettuna
 \[
 \begin{cases}
@@ -418,7 +418,7 @@ auki kirjoitettuna
 \,a_{n1} x_1 + a_{n2} x_2 + \ldots + a_{nn} x_n &= b_n.
 \end{cases}
 \]
-Jos $a_{ii}\neq 0\ \forall i$, niin yht‰lˆryhm‰ ratkeaa purkamalla se palautuvasti alusta:
+Jos $a_{ii}\neq 0\ \forall i$, niin yht√§l√∂ryhm√§ ratkeaa purkamalla se palautuvasti alusta:
 \begin{align*}
 x_1\ &=\ \inv{a_{11}}b_1\ =\ b_{11}b_1, \\[2mm]
 x_2\ &=\ -\inv{a_{22}}a_{21}x_1 + \inv{a_{22}}b_2\ 
@@ -429,75 +429,75 @@ ja yleisesti (induktio!)
 \[
 x_i = \sum_{j=1}^i b_{ij}b_j, \quad i = 1 \ldots n,
 \]
-miss‰ $b_{ii} = \inv{a_{ii}}$. Kun asetetaan $b_{ij}=0,\ j>i$, ja $\mB = \{b_{ij}\}$, niin
-$\mB$ on siis alakolmiomatriisi, l‰vist‰j‰alkioin $b_{ii}=\inv{a_{ii}}$, ja yht‰lˆryhm‰n
+miss√§ $b_{ii} = \inv{a_{ii}}$. Kun asetetaan $b_{ij}=0,\ j>i$, ja $\mB = \{b_{ij}\}$, niin
+$\mB$ on siis alakolmiomatriisi, l√§vist√§j√§alkioin $b_{ii}=\inv{a_{ii}}$, ja yht√§l√∂ryhm√§n
 ratkaisu on
 \[
 \mx = \mB\mb.
 \]
-T‰h‰n siis p‰‰dyttiin olettaen, ett‰ $a_{ii}\neq 0\ \forall i$. Jos t‰m‰ oletus ei toteudu, 
-niin jollakin $k \in \{1, \ldots, n\}$ p‰tee: $\,a_{kk} = 0$ ja 
-$a_{ii} \neq 0, \ i=1 \ldots k-1$. Silloin n‰hd‰‰n em.\ algoritmista, ett‰ jos valitaan 
-$b_i=0, \ i=1 \ldots k-1$, niin on oltava $x_i = 0,\ i=1 \ldots k-1$, jolloin $k$:s yht‰lˆ saa
-muodon $0=b_k$. N‰in ollen yht‰lˆryhm‰ $\mA\mx=\mb$ ei yleisesti ratkea, joten Korollaarin
+T√§h√§n siis p√§√§dyttiin olettaen, ett√§ $a_{ii}\neq 0\ \forall i$. Jos t√§m√§ oletus ei toteudu, 
+niin jollakin $k \in \{1, \ldots, n\}$ p√§tee: $\,a_{kk} = 0$ ja 
+$a_{ii} \neq 0, \ i=1 \ldots k-1$. Silloin n√§hd√§√§n em.\ algoritmista, ett√§ jos valitaan 
+$b_i=0, \ i=1 \ldots k-1$, niin on oltava $x_i = 0,\ i=1 \ldots k-1$, jolloin $k$:s yht√§l√∂ saa
+muodon $0=b_k$. N√§in ollen yht√§l√∂ryhm√§ $\mA\mx=\mb$ ei yleisesti ratkea, joten Korollaarin
 \ref{singulaarisuuskriteeri} perusteella $\mA$ on singulaarinen.
 
-Jos $\mA$ on yl‰kolmiomatriisi, niin yht‰lˆryhm‰ $\mA\mx=\mb$ purkautuu lopusta lukien:
-Ratkaistaan ensin $n$:s yht‰lˆ $a_{nn}x_n=b_n$, sitten $(n-1)$:s yht‰lˆ, jne. T‰ss‰kin
-tapauksessa p‰‰tell‰‰n, ett‰ $\mA$ on singulaarinen, jos $a_{kk} = 0$ jollakin $k$, muuten
-lˆytyy matriisi $\mB$, jolle p‰tee $\mA\mB=\mI$. Matriisi $\mB$ on j‰lleen samaa tyyppi‰ kuin
-$\mA$ (yl‰kolmio), ja l‰vist‰j‰alkiot ovat $b_{ii}=\inv{a_{ii}}$.
+Jos $\mA$ on yl√§kolmiomatriisi, niin yht√§l√∂ryhm√§ $\mA\mx=\mb$ purkautuu lopusta lukien:
+Ratkaistaan ensin $n$:s yht√§l√∂ $a_{nn}x_n=b_n$, sitten $(n-1)$:s yht√§l√∂, jne. T√§ss√§kin
+tapauksessa p√§√§tell√§√§n, ett√§ $\mA$ on singulaarinen, jos $a_{kk} = 0$ jollakin $k$, muuten
+l√∂ytyy matriisi $\mB$, jolle p√§tee $\mA\mB=\mI$. Matriisi $\mB$ on j√§lleen samaa tyyppi√§ kuin
+$\mA$ (yl√§kolmio), ja l√§vist√§j√§alkiot ovat $b_{ii}=\inv{a_{ii}}$.
 
-Olkoon nyt $\mA$ yleisemmin kolmiomatriisi (yl‰- tai alakolmio) ja $\mA$:n l‰vist‰j‰alkiot
-nollasta poikkeavat. T‰llˆin $\mA^T$ on myˆs kolmiomatriisi, jonka l‰vist‰j‰alkiot ovat samat 
-kuin $\mA$:n. Em.\ p‰‰ttelyn mukaan yht‰lˆryhm‰t $\mA\mx=\mb$ ja $\mA^T\mx=\mb$ ovat
-molemmat ratkeavia jokaisella $\mb\in\R^n$, joten $\mA$ on s‰‰nnˆllinen matriisi
-(Propositio \ref{m-prop 3}). Kolmiomatriisin s‰‰nnˆllisyyskysymys on n‰in ratkaistu Lauseesta
-\ref{s‰‰nnˆllisyyskriteerit} riippumatta. \loppu
+Olkoon nyt $\mA$ yleisemmin kolmiomatriisi (yl√§- tai alakolmio) ja $\mA$:n l√§vist√§j√§alkiot
+nollasta poikkeavat. T√§ll√∂in $\mA^T$ on my√∂s kolmiomatriisi, jonka l√§vist√§j√§alkiot ovat samat 
+kuin $\mA$:n. Em.\ p√§√§ttelyn mukaan yht√§l√∂ryhm√§t $\mA\mx=\mb$ ja $\mA^T\mx=\mb$ ovat
+molemmat ratkeavia jokaisella $\mb\in\R^n$, joten $\mA$ on s√§√§nn√∂llinen matriisi
+(Propositio \ref{m-prop 3}). Kolmiomatriisin s√§√§nn√∂llisyyskysymys on n√§in ratkaistu Lauseesta
+\ref{s√§√§nn√∂llisyyskriteerit} riippumatta. \loppu
 
-Em.\ todistuksen sivutuotteena saatiin myˆs algoritmi kolmiomatriisin $\mA$ k‰‰nteismatriisin
-laskemiseksi: Ratkaistaan (todistuksessa esitetyll‰ tavalla) lineaarinen yht‰lˆryhm‰
-$\mA\mx=\mb$ y\pain{leisell‰} $\mb\in\R^n$. Kun ratkaisu esitet‰‰n muodossa
+Em.\ todistuksen sivutuotteena saatiin my√∂s algoritmi kolmiomatriisin $\mA$ k√§√§nteismatriisin
+laskemiseksi: Ratkaistaan (todistuksessa esitetyll√§ tavalla) lineaarinen yht√§l√∂ryhm√§
+$\mA\mx=\mb$ y\pain{leisell√§} $\mb\in\R^n$. Kun ratkaisu esitet√§√§n muodossa
 \[
 x_i=\sum_{j=1}^n b_{ij}b_j, \quad i=1 \ldots n \qekv \mx=\mB\mb,
 \]
-niin $\mB=\mA^{-1}$, eli kertoimet $b_{ij}$ ovat k‰‰nteismatriisin alkiot. N‰m‰ tulevat
-algoritmin kuluesssa lasketuksi palautuvasti riveitt‰in. Vain diagonaalisen (tai muulla tavoin
+niin $\mB=\mA^{-1}$, eli kertoimet $b_{ij}$ ovat k√§√§nteismatriisin alkiot. N√§m√§ tulevat
+algoritmin kuluesssa lasketuksi palautuvasti riveitt√§in. Vain diagonaalisen (tai muulla tavoin
 erikoisen, ks.\ Harj.teht.\,\ref{H-m-2: matriiseja alkioittain}b) matriisin tapauksessa on
-k‰‰nteismatriisin $\mA^{-1}$ alkioille mahdollista laskea yksinkertaiset lausekkeet $\mA$:n
+k√§√§nteismatriisin $\mA^{-1}$ alkioille mahdollista laskea yksinkertaiset lausekkeet $\mA$:n
 alkioiden avulla.
 
 \Harj
 \begin{enumerate}
 
-\item \label{H-m-2: pikku v‰itt‰mi‰}
-Olkoon $\mA$, $\mB$ ja $\mC$ samaa kokoa olevia neliˆmatriiseja. Todista: \vspace{1mm}\newline
-a) \ $\mA$ s‰‰nnˆllinen ja symmetrinen $\ \impl\ $ $\mA^{-1}$ symmetrinen. \newline
-b) \ $\mC\mA=\mC\mB$ ja $\mC$ s‰‰nnˆllinen $\ \impl\ $ $\mA=\mB$. \newline
+\item \label{H-m-2: pikku v√§itt√§mi√§}
+Olkoon $\mA$, $\mB$ ja $\mC$ samaa kokoa olevia neli√∂matriiseja. Todista: \vspace{1mm}\newline
+a) \ $\mA$ s√§√§nn√∂llinen ja symmetrinen $\ \impl\ $ $\mA^{-1}$ symmetrinen. \newline
+b) \ $\mC\mA=\mC\mB$ ja $\mC$ s√§√§nn√∂llinen $\ \impl\ $ $\mA=\mB$. \newline
 c) \ $\mA\mB$ singulaarinen $\ \impl\ $ $\mA$ tai $\mB$ singulaarinen. \newline
-d) \ $\mA$ singulaarinen ja $\mB$ s‰‰nnˆllinen $\ \impl\ $ 
+d) \ $\mA$ singulaarinen ja $\mB$ s√§√§nn√∂llinen $\ \impl\ $ 
                                                $\mA\mB$ ja $\mB\mA$ singulaariset. \newline
 e) \ $\mA$ ja $\mB$ ortogonaaliset $\ \impl\ $ $\mA\mB$ ortogonaalinen.
 
 \item
-Tarkista kokoa $2 \times 2$ olevan matriisin k‰‰nteismatriisin laskus‰‰ntˆ
+Tarkista kokoa $2 \times 2$ olevan matriisin k√§√§nteismatriisin laskus√§√§nt√∂
 \[
 \begin{bmatrix} \,a&b\,\\\,c&d\, \end{bmatrix}^{-1}
 =\ \frac{1}{D}\begin{rmatrix} d&-b\\-c&a \end{rmatrix}, \quad D=ad-bc \neq 0. 
 \]
 
 \item
-a) N‰yt‰, ett‰ jokainen ortogonaalinen $2 \times 2$-matriisi voidaan kirjoittaa jollakin
+a) N√§yt√§, ett√§ jokainen ortogonaalinen $2 \times 2$-matriisi voidaan kirjoittaa jollakin
 $\theta\in\R$ jompaan kumpaan seuraavista muodoista:
 \[
 \mA=\begin{rmatrix} \cos\theta&\sin\theta\\-\sin\theta&\cos\theta \end{rmatrix}
 \quad \text{tai} \quad
 \mA=\begin{rmatrix} \cos\theta&\sin\theta\\\sin\theta&-\cos\theta \end{rmatrix}.
 \]
-b) Olkoon $\mA$ kokoa $3 \times 3$ oleva ortogonaalimatriisi, jonka alkioista tiedet‰‰n:
+b) Olkoon $\mA$ kokoa $3 \times 3$ oleva ortogonaalimatriisi, jonka alkioista tiedet√§√§n:
 $a_{11}=\frac{3}{7},\ a_{12}=-\frac{2}{7},\ a_{22}=\frac{6}{7},\ a_{21}<0,\ a_{31}>0,\ a_{13}<0$.
 Laske $\mA$ ja $\mA^{-1}$. \vspace{1mm}\newline
-c) Totea, ett‰ yht‰lˆryhm‰ss‰
+c) Totea, ett√§ yht√§l√∂ryhm√§ss√§
 \[
 \begin{cases}
 \,\sqrt{\frac 23}\,x_1+\frac 12\,x_2-\frac{1}{2\sqrt{3}}\,x_3          & = 1\\
@@ -505,41 +505,41 @@ c) Totea, ett‰ yht‰lˆryhm‰ss‰
 \,-\frac{1}{2}\,x_2-\frac{\sqrt 3}{2}\,x_3                             & =  3
 \end{cases}
 \]
-kerroinmatriisi on ortogonaalinen. Ratkaise t‰t‰ tietoa k‰ytt‰en! \vspace{1mm}\newline
+kerroinmatriisi on ortogonaalinen. Ratkaise t√§t√§ tietoa k√§ytt√§en! \vspace{1mm}\newline
 d) Matriisilla
 \[
 \mA=\begin{rmatrix} 1&1&1&1\\1&1&-1&-1&\\1&-1&1&-1\\-1&1&1&-1 \end{rmatrix}
 \]
-on ominaisuus: $\lambda\mA$ on ortogonaalinen er‰‰ll‰ $\lambda\in\R$. M‰‰rit‰ t‰t‰ tietoa
-hyv‰ksi k‰ytt‰en vaakavektori $\mx^T$ siten, ett‰ $\mx^T\mA=[7,13,-3,-9]$.
+on ominaisuus: $\lambda\mA$ on ortogonaalinen er√§√§ll√§ $\lambda\in\R$. M√§√§rit√§ t√§t√§ tietoa
+hyv√§ksi k√§ytt√§en vaakavektori $\mx^T$ siten, ett√§ $\mx^T\mA=[7,13,-3,-9]$.
 
 \item
-a) Olkoon $\mH=\mI-\mx\mx^T$, miss‰ $\mx\in\R^n$, $\mx\neq\mv{0}$ ja $\abs{\mx} \neq 1$. N‰yt‰,
-ett‰ er‰‰ll‰ $\lambda\in\R$ p‰tee $\mH^{-1}=\mI+\lambda\mx\mx^T$. \newline
-b) Olkoon $\mx\in\R^n,\ \mx\neq\mv{0}$ ja $r=2\abs{\mx}^{-2}$. N‰yt‰, ett‰ $\mH=\mI-r\,\mx\mx^T$
+a) Olkoon $\mH=\mI-\mx\mx^T$, miss√§ $\mx\in\R^n$, $\mx\neq\mv{0}$ ja $\abs{\mx} \neq 1$. N√§yt√§,
+ett√§ er√§√§ll√§ $\lambda\in\R$ p√§tee $\mH^{-1}=\mI+\lambda\mx\mx^T$. \newline
+b) Olkoon $\mx\in\R^n,\ \mx\neq\mv{0}$ ja $r=2\abs{\mx}^{-2}$. N√§yt√§, ett√§ $\mH=\mI-r\,\mx\mx^T$
 on symmetrinen ja ortogonaalinen matriisi. \newline
-c) N‰yt‰, ett‰ jos matriisille $\mA$ p‰tee $\mA+\mA^T=\mv{0}$ ja $\mI+\mA$ on s‰‰nnˆllinen
+c) N√§yt√§, ett√§ jos matriisille $\mA$ p√§tee $\mA+\mA^T=\mv{0}$ ja $\mI+\mA$ on s√§√§nn√∂llinen
 matriisi, niin $\mB=(\mI+\mA)^{-1}(\mI-\mA)$ on ortogonaalinen.
 
 \item
 Onko joukon $(1,2,\ldots,10)$ permutaatio $(4,6,2,7,9,1,3,10,5,8)$ parillinen vai pariton?
 
 \item 
-Matriiseista $\mV_1$ ja $\mV_2$ kokoa $3\times3$ tiedet‰‰n, ett‰ kertoessaan vasemmalta
-matriisin $\mA$ matriisi $\mV_1$ vaihtaa $\mA:$n rivien 1 ja 2 j‰rjestyksen ja $\mV_2$ rivien
-2 ja 3 j‰rjestyksen. Millaisen rivien permutoinnin silloin tuottavat $\mV_1\mV_2$ ja
-$\mV_2\mV_1$? M‰‰rit‰ myˆs $\mV_1$ ja $\mV_2$ sek‰ mainitut tulot.
+Matriiseista $\mV_1$ ja $\mV_2$ kokoa $3\times3$ tiedet√§√§n, ett√§ kertoessaan vasemmalta
+matriisin $\mA$ matriisi $\mV_1$ vaihtaa $\mA:$n rivien 1 ja 2 j√§rjestyksen ja $\mV_2$ rivien
+2 ja 3 j√§rjestyksen. Millaisen rivien permutoinnin silloin tuottavat $\mV_1\mV_2$ ja
+$\mV_2\mV_1$? M√§√§rit√§ my√∂s $\mV_1$ ja $\mV_2$ sek√§ mainitut tulot.
 
 \item \label{H-m-2: matriiseja alkioittain} 
 a) Olkoon $\mA=(a_{ij})$ kokoa $n\times n$ ja $\mD=\text{diag}\{d_i,\, i=1 \ldots n\}$.
-M‰‰rit‰ matriisien $\mA\mD$ ja $\mD\mA$ alkiot. \newline
+M√§√§rit√§ matriisien $\mA\mD$ ja $\mD\mA$ alkiot. \newline
 b) Olkoon $n,k\in\N,\ n \ge 2$, $k \le n$, $\mA=(a_{ij})$ kokoa $n \times n$,
 $a_{ii}=a \neq 0$ kun $i \neq k$, $a_{kk}=b \neq 0$, $a_{ik}=c \neq 0$ kun $i>k$ ja $a_{ij}=0$
-muulloin. M‰‰rit‰ k‰‰nteismatriisin $\mA^{-1}$ alkiot.
+muulloin. M√§√§rit√§ k√§√§nteismatriisin $\mA^{-1}$ alkiot.
 
 \item
-M‰‰rit‰ seuraavien kolmiomatriisien k‰‰nteismatriisit ratkaisemalla yleinen lineaarinen
-yht‰lˆryhm‰, jonka kerroinmatriisina on ko.\ matriisi.
+M√§√§rit√§ seuraavien kolmiomatriisien k√§√§nteismatriisit ratkaisemalla yleinen lineaarinen
+yht√§l√∂ryhm√§, jonka kerroinmatriisina on ko.\ matriisi.
 \begin{align*}
 &\text{a)}\ \ \begin{rmatrix} 3&0\\-5&2 \end{rmatrix} \qquad
  \text{b)}\ \ \begin{rmatrix} 4&0&0\\-2&2&0\\3&1&-1 \end{rmatrix} \qquad
@@ -555,22 +555,22 @@ yht‰lˆryhm‰, jonka kerroinmatriisina on ko.\ matriisi.
               \end{bmatrix}   
 \end{align*}
 
-\item (*) N‰yt‰ Lauseeseen \ref{s‰‰nnˆllisyyskriteerit} vedoten, ett‰ neliˆmatriiseille
-p‰tee: \vspace{1mm}\newline
-a)\,\ $\mA\mB\,\ \text{s‰‰nnˆllinen}\ \qimpl \mA\ \text{ja}\ \mB\ \text{s‰‰nnˆlliset}$.\newline
-b)\,\ $\mA^2+3\mA+2\mI=\mv{0} \qimpl \mA\,\ \text{s‰‰nnˆllinen}$.
+\item (*) N√§yt√§ Lauseeseen \ref{s√§√§nn√∂llisyyskriteerit} vedoten, ett√§ neli√∂matriiseille
+p√§tee: \vspace{1mm}\newline
+a)\,\ $\mA\mB\,\ \text{s√§√§nn√∂llinen}\ \qimpl \mA\ \text{ja}\ \mB\ \text{s√§√§nn√∂lliset}$.\newline
+b)\,\ $\mA^2+3\mA+2\mI=\mv{0} \qimpl \mA\,\ \text{s√§√§nn√∂llinen}$.
 
 \item (*)
-N‰yt‰, ett‰ on olemassa permutaatiomatriisit $\mU$ ja $\mV$ siten, ett‰ p‰tee
+N√§yt√§, ett√§ on olemassa permutaatiomatriisit $\mU$ ja $\mV$ siten, ett√§ p√§tee
 \[
 \mA=\begin{bmatrix} 0&2&1&0\\0&1&0&0\\2&2&2&1\\1&2&2&0 \end{bmatrix}
    =\mU \begin{bmatrix} 1&2&2&2\\0&1&2&2\\0&0&1&2\\0&0&0&1 \end{bmatrix} \mV.
 \]
-Laske k‰‰nteismatriisi $\mA^{-1}$ t‰m‰n tiedon avulla. Tarkista, ett‰ $\mA\mA^{-1}=\mI$.
+Laske k√§√§nteismatriisi $\mA^{-1}$ t√§m√§n tiedon avulla. Tarkista, ett√§ $\mA\mA^{-1}=\mI$.
 
 \item (*)
-Olkoon $a,b\in\R$ ja $b \neq 0$. N‰yt‰ matriisialgebran avulla, ett‰ p‰tee: 
-Differentiaaliyht‰lˆll‰ $\,y''+ay'+by=x^{100}\,$ on yksitt‰isratkaisuna polynomi astetta
+Olkoon $a,b\in\R$ ja $b \neq 0$. N√§yt√§ matriisialgebran avulla, ett√§ p√§tee: 
+Differentiaaliyht√§l√∂ll√§ $\,y''+ay'+by=x^{100}\,$ on yksitt√§isratkaisuna polynomi astetta
 $100$.
  
 \end{enumerate}

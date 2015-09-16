@@ -1,64 +1,64 @@
-\section[Tuettu Gaussin algoritmi. Singulaariset yht‰lˆryhm‰t]
-{Tuettu Gaussin algoritmi. Singulaariset \\ yht‰lˆryhm‰t} 
+\section[Tuettu Gaussin algoritmi. Singulaariset yht√§l√∂ryhm√§t]
+{Tuettu Gaussin algoritmi. Singulaariset \\ yht√§l√∂ryhm√§t} 
 \label{tuettu Gauss}
 \sectionmark{Tuettu Gaussin algoritmi}
 \alku
 \index{Gaussin algoritmi (eliminaatio)!a@tuettu|vahv}
 \index{tuettu Gaussin algoritmi|vahv}
-\index{singulaarinen yht‰lˆryhm‰|vahv}
+\index{singulaarinen yht√§l√∂ryhm√§|vahv}
 
-Jos Gaussin algoritmissa tullaan $k-1$ eliminaatioaskeleen j‰lkeen tilanteeseen, jossa
-tukialkio $a_{kk}^{(k-1)} = 0$, niin algoritmissa p‰‰st‰‰n eteenp‰in k‰ytt‰m‰ll‰ nk.\
+Jos Gaussin algoritmissa tullaan $k-1$ eliminaatioaskeleen j√§lkeen tilanteeseen, jossa
+tukialkio $a_{kk}^{(k-1)} = 0$, niin algoritmissa p√§√§st√§√§n eteenp√§in k√§ytt√§m√§ll√§ nk.\
 \kor{tuentaa} (engl. pivoting). Tuennassa yksinkertaisesti vaihdetaan matriisin rivien
-ja/tai sarakkeiden j‰rjestyst‰ (vastaten yht‰lˆiden tai tuntemattomien j‰rjestyksen vaihtoa
-yht‰lˆryhm‰ss‰).
-Pyrkimyksen‰ on lˆyt‰‰ jokin sellainen 
-j‰rjestys, jossa tukialkiosta tulee nollasta poikkeava, jolloin Gaussin algoritmia voidaan 
+ja/tai sarakkeiden j√§rjestyst√§ (vastaten yht√§l√∂iden tai tuntemattomien j√§rjestyksen vaihtoa
+yht√§l√∂ryhm√§ss√§).
+Pyrkimyksen√§ on l√∂yt√§√§ jokin sellainen 
+j√§rjestys, jossa tukialkiosta tulee nollasta poikkeava, jolloin Gaussin algoritmia voidaan 
 jatkaa. Tarkastellaan aluksi nk.\ \kor{osittaista} eli
 \index{rivituenta (Gaussin alg.)}%
 \kor{rivituentaa}, jossa menettely on
-seuraava: K‰yd‰‰n l‰pi $k$:nnessa sarakkeessa l‰vist‰j‰n alapuolella olevat alkiot
+seuraava: K√§yd√§√§n l√§pi $k$:nnessa sarakkeessa l√§vist√§j√§n alapuolella olevat alkiot
 \[
 a_{ik}^{(k-1)}, \quad i=k+1 \ldots n.
 \]
-Valitaan (jos mahdollista) indeksi $i=l$ siten, ett‰ $a_{lk}^{(k-1)} \neq 0$, ja suoritetaan
-yht‰lˆryhm‰ss‰ (eli matriisissa $\mA^{(k-1)}$ ja vektorissa $\mb^{(k-1)}$) rivinvaihto
+Valitaan (jos mahdollista) indeksi $i=l$ siten, ett√§ $a_{lk}^{(k-1)} \neq 0$, ja suoritetaan
+yht√§l√∂ryhm√§ss√§ (eli matriisissa $\mA^{(k-1)}$ ja vektorissa $\mb^{(k-1)}$) rivinvaihto
 \[
 k\,\text{:s rivi} \ \leftrightarrows\ l\,\text{:s rivi}.
 \]
-T‰m‰ vastaa yht‰lˆryhm‰n yht‰lˆiden j‰rjestyksen vaihtoa. Gaussin algoritmista n‰hd‰‰n, ett‰ 
-sik‰li kuin rivien uudelleen j‰rjestely suoritetaan riveill‰ $i = k \ldots n$, ei j‰rjestyksen
-vaihto h‰iritse itse algoritmia. Toisin sanoen, lopputulos on sama, jos rivit vaihdetaan jo 
-alkuper‰isess‰ yht‰lˆryhm‰ss‰ ja sen j‰lkeen suoritetaan $k-1$ eliminaatioaskelta 
-(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Tukioperaation j‰lkeen uusi tukialkio on nollasta
+T√§m√§ vastaa yht√§l√∂ryhm√§n yht√§l√∂iden j√§rjestyksen vaihtoa. Gaussin algoritmista n√§hd√§√§n, ett√§ 
+sik√§li kuin rivien uudelleen j√§rjestely suoritetaan riveill√§ $i = k \ldots n$, ei j√§rjestyksen
+vaihto h√§iritse itse algoritmia. Toisin sanoen, lopputulos on sama, jos rivit vaihdetaan jo 
+alkuper√§isess√§ yht√§l√∂ryhm√§ss√§ ja sen j√§lkeen suoritetaan $k-1$ eliminaatioaskelta 
+(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Tukioperaation j√§lkeen uusi tukialkio on nollasta
 poikkeava, jolloin Gaussin algoritmia voidaan jatkaa.\footnote[2]{\kor{Automaattisessa}
-rivituennassa suoritetaan rivien vaihto ennen jokaista eliminaatioaskelta niin, ett‰
-tukialkioksi tulee alkioista $a_{ik}^{(k-1)},\ i=k \ldots n$ itseisarvoltaan suurin. T‰m‰
-v‰hent‰‰ pyˆristysvirheiden kasautumista ratkaisulagoritmin kuluessa (liukulukulaskennassa).
-Monissa tietokoneohjelmistojen 'black box'--ratkaisijoissa k‰ytet‰‰n automaattista rivituentaa
+rivituennassa suoritetaan rivien vaihto ennen jokaista eliminaatioaskelta niin, ett√§
+tukialkioksi tulee alkioista $a_{ik}^{(k-1)},\ i=k \ldots n$ itseisarvoltaan suurin. T√§m√§
+v√§hent√§√§ py√∂ristysvirheiden kasautumista ratkaisulagoritmin kuluessa (liukulukulaskennassa).
+Monissa tietokoneohjelmistojen 'black box'--ratkaisijoissa k√§ytet√§√§n automaattista rivituentaa
 (esim.\ Mathematica: {\tt LinearSolve}).}
 
-Em. tukioperaatio ep‰onnistuu vain siin‰ tapauksessa, ett‰ on
+Em. tukioperaatio ep√§onnistuu vain siin√§ tapauksessa, ett√§ on
 \[
 a_{ik}^{(k-1)} = 0, \quad i = k \ldots n.
 \]
-Gaussin algoritmi on t‰llˆin osoittanut alkuper‰isen matriisin $\mA$ singulaariseksi. Nimitt‰in
-koska t‰llˆin tuntematon $x_k$ ei esiinny lainkaan muunnetun yht‰lˆryhm‰n riveill‰ 
-$i=k \ldots n$, niin yht‰lˆryhm‰lle $\mA \mx = \mo$ saadaan monik‰sitteinen ratkaisu antamalla
+Gaussin algoritmi on t√§ll√∂in osoittanut alkuper√§isen matriisin $\mA$ singulaariseksi. Nimitt√§in
+koska t√§ll√∂in tuntematon $x_k$ ei esiinny lainkaan muunnetun yht√§l√∂ryhm√§n riveill√§ 
+$i=k \ldots n$, niin yht√§l√∂ryhm√§lle $\mA \mx = \mo$ saadaan monik√§sitteinen ratkaisu antamalla
 $x_k$:lle mielivaltainen arvo, asettamalla $x_{k+1}=\ldots=x_n=0$, ja ratkaisemalla 
-$x_i, \ i=1 \ldots k-1\,$ muunnetusta yht‰lˆryhm‰st‰ takaisinsijoituksella ($x_k$:n avulla). 
+$x_i, \ i=1 \ldots k-1\,$ muunnetusta yht√§l√∂ryhm√§st√§ takaisinsijoituksella ($x_k$:n avulla). 
 Siis $\mA$ on singulaarinen (Korollaari \ref{singulaarisuuskriteeri}).
 
-Osittaisen tukioperaation ep‰onnistuttua (ja siis matriisin osoittauduttua singulaariseksi) 
-voidaan Gaussin algoritmia viel‰ jatkaa k‰ytt‰m‰ll‰ nk.\ 
-\index{tzy@t‰ydellinen tuenta (Gaussin alg.)}%
-\kor{t‰ydellist‰ tuentaa}, jossa k‰yd‰‰n l‰pi kaikki matriisialkiot rivist‰ $k$ ja sarakkeesta
+Osittaisen tukioperaation ep√§onnistuttua (ja siis matriisin osoittauduttua singulaariseksi) 
+voidaan Gaussin algoritmia viel√§ jatkaa k√§ytt√§m√§ll√§ nk.\ 
+\index{tzy@t√§ydellinen tuenta (Gaussin alg.)}%
+\kor{t√§ydellist√§ tuentaa}, jossa k√§yd√§√§n l√§pi kaikki matriisialkiot rivist√§ $k$ ja sarakkeesta
 $k$ alkaen, eli alkiot
 \[
 a_{ij}^{(k-1)}, \quad i,j = k \ldots n.
 \]
-Oletetaan, ett‰ jollakin $(l,m)$ on $a_{lm}^{(k-1)} \neq 0$. (Mahdollisesti valitaan alkioista
-itseisarvoltaan suurin kuten automaattisessa rivituennassa, vrt.\ alaviite edell‰.)
+Oletetaan, ett√§ jollakin $(l,m)$ on $a_{lm}^{(k-1)} \neq 0$. (Mahdollisesti valitaan alkioista
+itseisarvoltaan suurin kuten automaattisessa rivituennassa, vrt.\ alaviite edell√§.)
 \[
 \left.
 \begin{matrix} 0 & & \ldots & & a_{km}^{(k-1)} & \ldots & a_{kn}^{(k-1)} \\ 
@@ -68,21 +68,21 @@ itseisarvoltaan suurin kuten automaattisessa rivituennassa, vrt.\ alaviite edell
                \\ a_{nk}^{(k-1)} & & & & & & \end{matrix}
 \right\rfloor
 \]
-Suoritetaan t‰llˆin rivien ja sarakkeiden vaihto
+Suoritetaan t√§ll√∂in rivien ja sarakkeiden vaihto
 \[
 k\,\text{:s rivi} \ \leftrightarrows\ l\,\text{:s rivi}, \quad k\,\text{:s sarake} \ 
                     \leftrightarrows\ m\,\text{:s sarake}.
 \]
-Sarakkeiden vaihto vastaa yht‰lˆryhm‰ss‰ tuntemattomien uudelleen indeksointia. Indekseihin 
-$j \ge k$ sovellettuna t‰m‰k‰‰n tukioperaatio ei h‰iritse itse algoritmia, ts.\ operaatio 
-voidaan ajatella suoritetuksi jo yht‰lˆryhm‰n alkuper‰isess‰ muodossa 
-(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Sik‰li kuin tukioperaatio onnistuu oletetulla
-tavalla, on operaation j‰lkeen uusi tukialkio $a_{lm}^{(k-1)} \neq 0$, jolloin Gaussin
+Sarakkeiden vaihto vastaa yht√§l√∂ryhm√§ss√§ tuntemattomien uudelleen indeksointia. Indekseihin 
+$j \ge k$ sovellettuna t√§m√§k√§√§n tukioperaatio ei h√§iritse itse algoritmia, ts.\ operaatio 
+voidaan ajatella suoritetuksi jo yht√§l√∂ryhm√§n alkuper√§isess√§ muodossa 
+(Harj.teht.\,\ref{H-m-4: tuentakysymys}a). Sik√§li kuin tukioperaatio onnistuu oletetulla
+tavalla, on operaation j√§lkeen uusi tukialkio $a_{lm}^{(k-1)} \neq 0$, jolloin Gaussin
 algoritmia voidaan jatkaa. Muussa tapauksessa on tultu tilanteeseen, jossa $a_{ij}^{(k-1)} = 0$
-kun $i = k \ldots n\,$ ja $j = 1 \ldots n$. Gaussin algoritmi on t‰llˆin p‰‰ttynyt 
-\index{perusmuoto!c@singulaarisen yht‰lˆryhm‰n}
-\index{singulaarinen yht‰lˆryhm‰!perusmuotoinen}%
-\kor{perusmuotoiseen singulaariseen yht‰lˆryhm‰‰n}, joka on siis jollakin 
+kun $i = k \ldots n\,$ ja $j = 1 \ldots n$. Gaussin algoritmi on t√§ll√∂in p√§√§ttynyt 
+\index{perusmuoto!c@singulaarisen yht√§l√∂ryhm√§n}
+\index{singulaarinen yht√§l√∂ryhm√§!perusmuotoinen}%
+\kor{perusmuotoiseen singulaariseen yht√§l√∂ryhm√§√§n}, joka on siis jollakin 
 $k \in \{0, \ldots, n-1\}$ muotoa
 \[
 \begin{bmatrix}
@@ -110,21 +110,21 @@ c_k \\
 c_n \\
 \end{bmatrix}.
 \]
-T‰ss‰ $\mU=\{u_{ij}\}$ on yl‰kolmiomatriisi, jonka $n-k$ viimeist‰ rivi‰ ovat nollarivej‰ ja 
+T√§ss√§ $\mU=\{u_{ij}\}$ on yl√§kolmiomatriisi, jonka $n-k$ viimeist√§ rivi√§ ovat nollarivej√§ ja 
 $u_{ii} \neq 0$, kun $i=1 \ldots k$ (jos $k=0$, niin $\mU=\mA=\mo$). Kertoimet $u_{ij}$ ja $c_i$
-on saatu alkuper‰isest‰  yht‰lˆryhm‰st‰ $\mA \mx = \mb$ tuetulla Gaussin algoritmilla, eli 
-eliminaatioita ja tukioperaatioita (rivien ja sarakkeiden vaihtoja) yhdistelem‰ll‰. Vektori 
-$\my$ sis‰lt‰‰ alkuper‰iset tuntemattomat $x_i$ uudessa, sarakkeiden vaihtojen m‰‰r‰m‰ss‰ 
-j‰rjestyksess‰. Jos algoritmin kuluessa on k‰ytetty vain rivituentaa, on $\my = \mx$.
+on saatu alkuper√§isest√§  yht√§l√∂ryhm√§st√§ $\mA \mx = \mb$ tuetulla Gaussin algoritmilla, eli 
+eliminaatioita ja tukioperaatioita (rivien ja sarakkeiden vaihtoja) yhdistelem√§ll√§. Vektori 
+$\my$ sis√§lt√§√§ alkuper√§iset tuntemattomat $x_i$ uudessa, sarakkeiden vaihtojen m√§√§r√§m√§ss√§ 
+j√§rjestyksess√§. Jos algoritmin kuluessa on k√§ytetty vain rivituentaa, on $\my = \mx$.
 
-Yll‰mainitusta perusmuotoisesta yht‰lˆryhm‰st‰ n‰hd‰‰n, ett‰ sill‰ on ratkaisu t‰sm‰lleen kun
+Yll√§mainitusta perusmuotoisesta yht√§l√∂ryhm√§st√§ n√§hd√§√§n, ett√§ sill√§ on ratkaisu t√§sm√§lleen kun
 \[
 c_{k+1}= \ldots = c_n = 0.
 \]
-T‰llˆin ratkaisu on monik‰sitteinen: $y_i, \ i= k+1 \ldots n$, voidaan valita mielivaltaisesti,
-mink‰ j‰lkeen $y_1, \ldots, y_k$ m‰‰r‰ytyv‰t takaisinsijoituksella.
+T√§ll√∂in ratkaisu on monik√§sitteinen: $y_i, \ i= k+1 \ldots n$, voidaan valita mielivaltaisesti,
+mink√§ j√§lkeen $y_1, \ldots, y_k$ m√§√§r√§ytyv√§t takaisinsijoituksella.
 \begin{Exa}
-Seuraavassa sovelletaan t‰ysin tuettua Gaussin algoritmia singulaariseen yht‰lˆryhm‰‰n.
+Seuraavassa sovelletaan t√§ysin tuettua Gaussin algoritmia singulaariseen yht√§l√∂ryhm√§√§n.
 \begin{align*}
 \begin{bmatrix}
 0&0&3 \\
@@ -159,59 +159,59 @@ Seuraavassa sovelletaan t‰ysin tuettua Gaussin algoritmia singulaariseen yht‰lˆr
 \begin{bmatrix} b_3 \\ b_1 \\ b_2 - b_3/2 \end{bmatrix} 
 \quad (\text{rivien ja sarakkeiden vaihto}\ 2 \leftrightarrows 3\,)
 \end{align*}
-N‰hd‰‰n, ett‰ saadulla perusmuotoisella yht‰lˆryhm‰ll‰ on ratkaisu t‰sm‰lleen, kun
+N√§hd√§√§n, ett√§ saadulla perusmuotoisella yht√§l√∂ryhm√§ll√§ on ratkaisu t√§sm√§lleen, kun
 \[
 b_2-b_3/2=0\,\ \ekv\,\ b_3 = 2b_2,
 \]
-ja yleinen ratkaisu on t‰llˆin
+ja yleinen ratkaisu on t√§ll√∂in
 \[
 \left\{ \begin{aligned} 
 x_1\ &=\ t, \\ x_2\ &=\ -t/2 + b_3/4\ =\ (b_2 - t)/2, \\ x_3\ &=\ b_1/3 
 \end{aligned} \right. \qquad\quad (t \in \R). \quad\loppu
 \]
 \end{Exa}
-Esimerkin tuloksen olisi voinut n‰hd‰ suoremminkin. Yleisen algoritmin etuna on kuitenkin, ett‰
-se toimii aina, myˆs silloin kun laskija ei 'n‰e'.
+Esimerkin tuloksen olisi voinut n√§hd√§ suoremminkin. Yleisen algoritmin etuna on kuitenkin, ett√§
+se toimii aina, my√∂s silloin kun laskija ei 'n√§e'.
 
-\subsection*{Neliˆatriisin yleinen tulohajotelma}
-\index{matriisin ($\nel$neliˆmatriisin)!g@$\nel$yleinen tulohajotelma|vahv}
-\index{tulohajotelma (neliˆmatriisin)|vahv}
+\subsection*{Neli√∂atriisin yleinen tulohajotelma}
+\index{matriisin ($\nel$neli√∂matriisin)!g@$\nel$yleinen tulohajotelma|vahv}
+\index{tulohajotelma (neli√∂matriisin)|vahv}
 
-Tuetunkin Gaussin algoritmin avulla voidaan m‰‰r‰t‰ matriisin $\mA$ k‰‰nteismatriisi, sik‰li 
-kuin $\mA$ on s‰‰nnˆllinen. Kun tukioperaatiot ajatellaan tehdyksi ennen Gaussin algoritmin 
-soveltamista, niin ensinn‰kin rivituennat vastaavat yht‰lˆryhm‰n muunnosta
+Tuetunkin Gaussin algoritmin avulla voidaan m√§√§r√§t√§ matriisin $\mA$ k√§√§nteismatriisi, sik√§li 
+kuin $\mA$ on s√§√§nn√∂llinen. Kun tukioperaatiot ajatellaan tehdyksi ennen Gaussin algoritmin 
+soveltamista, niin ensinn√§kin rivituennat vastaavat yht√§l√∂ryhm√§n muunnosta
 \[
 \mA\mx=\mb \qekv \mV\mA\mx = \mV\mb,
 \]
-miss‰ $\mV=\mI_p$ on rivien lopullista j‰rjestyst‰ $p$ vastaava permutaatiomatriisi.
---- Kerrattakoon Luvusta \ref{inverssi}, ett‰ jos rivinvaihdot vastaavat vaihtomatriiseja
+miss√§ $\mV=\mI_p$ on rivien lopullista j√§rjestyst√§ $p$ vastaava permutaatiomatriisi.
+--- Kerrattakoon Luvusta \ref{inverssi}, ett√§ jos rivinvaihdot vastaavat vaihtomatriiseja
 $\mV_i,\ i=1 \ldots m$, niin
 \[
 \mV = \mV_m \cdots \mV_2\mV_1
 \]
-(k‰‰nteinen j‰rjestys!) ja $\mV^{-1}=\mV^T=\mV_1\mV_2 \cdots \mV_m$. Sarakkeiden vaihtojen
-lopputulos taas vastaa muunnosta $\my=\mW^T\mx\ \ekv\ \mx=\mW\my$, miss‰ permutaatiomatriisi
-$\mW=\mI_q$ vastaa sarakkeiden lopullista j‰rjestyst‰ $q$. Jos sarakkeiden vaihtoja vastaavat
+(k√§√§nteinen j√§rjestys!) ja $\mV^{-1}=\mV^T=\mV_1\mV_2 \cdots \mV_m$. Sarakkeiden vaihtojen
+lopputulos taas vastaa muunnosta $\my=\mW^T\mx\ \ekv\ \mx=\mW\my$, miss√§ permutaatiomatriisi
+$\mW=\mI_q$ vastaa sarakkeiden lopullista j√§rjestyst√§ $q$. Jos sarakkeiden vaihtoja vastaavat
 vaihtomatriisit ovat $\mW_i,\ i=1 \ldots l$, niin
 \[
 \mW=\mW_1\mW_2 \ldots \mW_l
 \]
-(sama j‰rjestys kuin vaihdoissa!) ja $\mW^{-1}=\mW^T=\mW_l\mW_{l-1} \ldots \mW_1$. Kun kaikki
-tuennat huomioidaan, niin yht‰lˆryhm‰ muuntuu muotoon
+(sama j√§rjestys kuin vaihdoissa!) ja $\mW^{-1}=\mW^T=\mW_l\mW_{l-1} \ldots \mW_1$. Kun kaikki
+tuennat huomioidaan, niin yht√§l√∂ryhm√§ muuntuu muotoon
 \[
 \mA\mx=\mb \qekv \mV\mA\mx=\mV\mb \qekv (\mV\mA\mW)(\mW^T\mx) = \mV\mb \qekv \mB\my=\mc,
 \]
-miss‰ $\mc=\mV\mb$ (yht‰lˆt vaihdetussa j‰rjestyksess‰ $p$), $\my=\mW^T\mx$ (tuntemattomat
-vaihdetussa j‰rjestyksess‰ $q$) ja
+miss√§ $\mc=\mV\mb$ (yht√§l√∂t vaihdetussa j√§rjestyksess√§ $p$), $\my=\mW^T\mx$ (tuntemattomat
+vaihdetussa j√§rjestyksess√§ $q$) ja
 \[
 \mB=\mV\mA\mW\ \ekv\ \mA = \mV^T\mB\mW^T.
 \]
-Kun muunnettuun yht‰lˆryhm‰‰n $\mB\my=\mc$ sovelletaan Gaussin algoritmia, ei tuentaa en‰‰ 
-tarvita. Eliminaation lopputuloksena $\mB$ muuntuu yl‰kolmiomatriisiksi $\mU$, jolloin on kaksi
+Kun muunnettuun yht√§l√∂ryhm√§√§n $\mB\my=\mc$ sovelletaan Gaussin algoritmia, ei tuentaa en√§√§ 
+tarvita. Eliminaation lopputuloksena $\mB$ muuntuu yl√§kolmiomatriisiksi $\mU$, jolloin on kaksi
 vaihtoehtoa:
 \begin{itemize}
-\item[a)] $[\mU]_{kk} \neq 0,\ k=1\,\ldots\,n$. T‰llˆin eliminaatiovaihe menee l‰pi 
-          kokonaisuudessaan, $\mU$ on s‰‰nnˆllinen, $\mB$:lle saadaan $LU$-hajotelma
+\item[a)] $[\mU]_{kk} \neq 0,\ k=1\,\ldots\,n$. T√§ll√∂in eliminaatiovaihe menee l√§pi 
+          kokonaisuudessaan, $\mU$ on s√§√§nn√∂llinen, $\mB$:lle saadaan $LU$-hajotelma
           \[
           \mB = \mL\mU,
           \]
@@ -219,28 +219,28 @@ vaihtoehtoa:
           \begin{equation} \label{G-tulohajotelma}
           \boxed{\quad\gehys \mA = \mV^T\mL\mU\mW^T.\quad} \tag{$\star$}
           \end{equation}
-          T‰llˆin $\mA$ on s‰‰nnˆllinen ja
+          T√§ll√∂in $\mA$ on s√§√§nn√∂llinen ja
           \[
           \inv{\mA} = \mW\inv{\mU}\inv{\mL}\mV = \mW\inv{\mB}\mV.
           \]
 \item[b)] $[\mU]_{ii} \neq 0,\ i=1\,\ldots\,k<n$, $[\mU]_{i,i,}=0,\ i=k \ldots n$
-          (ol.\ $\mA\neq\mo$). T‰llˆin $\mU$ on em.\ singulaarista perusmuotoa, eli
-          $[\mU]_{ij}=0$, kun $i>k, \ j=1 \ldots n$, ja eliminaatioalgoritmi pys‰htyy
-          riville $k$. Pys‰htyminen vastaa sit‰, ett‰ matriisissa $\mL$ astetetaan
+          (ol.\ $\mA\neq\mo$). T√§ll√∂in $\mU$ on em.\ singulaarista perusmuotoa, eli
+          $[\mU]_{ij}=0$, kun $i>k, \ j=1 \ldots n$, ja eliminaatioalgoritmi pys√§htyy
+          riville $k$. Pys√§htyminen vastaa sit√§, ett√§ matriisissa $\mL$ astetetaan
           \[
           [\mL]_{ij} = \delta_{ij}, \quad 
                       \text{kun} \quad i \in \{k+1, \ldots, n\}, \ j \in \{1, \ldots, n\}.
           \]
-          Kun $\mL$ m‰‰r‰t‰‰n muilta osin samalla tavoin kuin s‰‰nnˆllisen matriisin 
-          tapauksessa, n‰hd‰‰n, ett‰ tulohajotelma \eqref{G-tulohajotelma} on edelleen p‰tev‰.
+          Kun $\mL$ m√§√§r√§t√§√§n muilta osin samalla tavoin kuin s√§√§nn√∂llisen matriisin 
+          tapauksessa, n√§hd√§√§n, ett√§ tulohajotelma \eqref{G-tulohajotelma} on edelleen p√§tev√§.
 \end{itemize}
-Kysymys neliˆmatriisin s‰‰nnˆllisyydest‰ tai singulaarisuudesta on n‰in muodoin ratkaistu 
-Gaussin algoritmilla seuraavasti: Jokainen neliˆmatriisi voidaan esitt‰‰ tulomuodossa 
-\eqref{G-tulohajotelma}, miss‰ $\mU$ on yl‰kolmiomatriisi ja $\mL,\mV,\mW$ ovat s‰‰nnˆllisi‰
- matriiseja. Matriisi $\mU$ on joko s‰‰nnˆllinen tai singulaarinen, mik‰ ratkaisee myˆs $\mA$:n
+Kysymys neli√∂matriisin s√§√§nn√∂llisyydest√§ tai singulaarisuudesta on n√§in muodoin ratkaistu 
+Gaussin algoritmilla seuraavasti: Jokainen neli√∂matriisi voidaan esitt√§√§ tulomuodossa 
+\eqref{G-tulohajotelma}, miss√§ $\mU$ on yl√§kolmiomatriisi ja $\mL,\mV,\mW$ ovat s√§√§nn√∂llisi√§
+ matriiseja. Matriisi $\mU$ on joko s√§√§nn√∂llinen tai singulaarinen, mik√§ ratkaisee my√∂s $\mA$:n
 laadun.
 \jatko
-\begin{Exa} (jatko) T‰ss‰ on
+\begin{Exa} (jatko) T√§ss√§ on
 \begin{align*}
 \mA &= \begin{bmatrix} 0&0&3 \\1&2&0 \\2&4&0 \end{bmatrix}, \quad
 \mV  = \begin{bmatrix} 1&0&0\\0&0&1\\0&1&0 \end{bmatrix} 
@@ -257,84 +257,84 @@ laadun.
              = \begin{bmatrix} x_2 \\ x_3 \\ x_1 \end{bmatrix}, \quad
 \mc = \mV\mb = \begin{bmatrix} b_3 \\ b_1 \\ b_2 \end{bmatrix}.
 \]
-Muunnetusta yht‰lˆryhm‰st‰
+Muunnetusta yht√§l√∂ryhm√§st√§
 \[
 \begin{bmatrix} 4&0&2\\0&3&0\\2&0&1 \end{bmatrix} 
 \begin{bmatrix} x_2 \\ x_3 \\ x_1 \end{bmatrix} =
 \begin{bmatrix} b_3 \\ b_1 \\ b_2 \end{bmatrix}
 \]
-p‰‰st‰‰n yl‰kolmiomuotoon yhdell‰ eliminaatioaskeleella. Koska tukioperaatiot on suoritettu jo
-etuk‰teen, ei niit‰ en‰‰ eliminaation yhteydess‰ tarvita. \loppu
+p√§√§st√§√§n yl√§kolmiomuotoon yhdell√§ eliminaatioaskeleella. Koska tukioperaatiot on suoritettu jo
+etuk√§teen, ei niit√§ en√§√§ eliminaation yhteydess√§ tarvita. \loppu
 \end{Exa}
 
-\subsection*{S‰‰nnˆllisyysaste}
+\subsection*{S√§√§nn√∂llisyysaste}
 
-Jos $\mA$ on singulaarinen, niin em. tuetun Gaussin algoritmin lopetusindeksi‰ $k$ sanotaan 
-\index{matriisin ($\nel$neliˆmatriisin)!ca@s‰‰nnˆllisyysaste (rangi)}
-\index{szyzy@s‰‰nnˆllisyysaste (rangi)} \index{rangi (s‰‰nnˆllisyysaste)}%
-$\mA$:n \kor{s‰‰nnˆllisyysasteeksi} eli \kor{rangiksi} (engl. rank), merkit‰‰n $k=r(\mA)$. 
-Luku $n-r(\mA)$ siis kertoo, kuinka monta nollarivi‰ on $\mA$:n tulohajotelman perusmuotoisessa
-singulaarisessa yl‰kolmiomatriisissa $\mU$. Jos $\mA$ on s‰‰nnˆllinen, niin $r(\mA)=n$, jolloin
-myˆs $r(\mA^T)=n$. Yleisemminkin p‰tee
+Jos $\mA$ on singulaarinen, niin em. tuetun Gaussin algoritmin lopetusindeksi√§ $k$ sanotaan 
+\index{matriisin ($\nel$neli√∂matriisin)!ca@s√§√§nn√∂llisyysaste (rangi)}
+\index{szyzy@s√§√§nn√∂llisyysaste (rangi)} \index{rangi (s√§√§nn√∂llisyysaste)}%
+$\mA$:n \kor{s√§√§nn√∂llisyysasteeksi} eli \kor{rangiksi} (engl. rank), merkit√§√§n $k=r(\mA)$. 
+Luku $n-r(\mA)$ siis kertoo, kuinka monta nollarivi√§ on $\mA$:n tulohajotelman perusmuotoisessa
+singulaarisessa yl√§kolmiomatriisissa $\mU$. Jos $\mA$ on s√§√§nn√∂llinen, niin $r(\mA)=n$, jolloin
+my√∂s $r(\mA^T)=n$. Yleisemminkin p√§tee
 \[
 \boxed{\quad r(\mA^T)=r(\mA). \quad}
 \]
-Myˆs t‰m‰n voi perustella Gaussin algoritmin antaman tulohajotelman avulla (sivuutetaan
+My√∂s t√§m√§n voi perustella Gaussin algoritmin antaman tulohajotelman avulla (sivuutetaan
 perustelut).
 
-\subsection*{Yht‰lˆryhm‰ kokoa $m \times n$}
+\subsection*{Yht√§l√∂ryhm√§ kokoa $m \times n$}
 
-Gaussin algoritmi soveltuu myˆs sellaiseen lineaariseen yht‰lˆryhm‰‰n $\mA \mx = \mb$, jossa 
-yht‰lˆiden ja tuntemattomien lukum‰‰r‰t eiv‰t ole samat, ts.\ $\mA$ on kokoa 
-$m \times n,\ m \neq n\ (\mb\in\R^m)$.  Kun tuettua Gaussin algoritmia sovelletaan t‰llaiseen 
-yht‰lˆryhm‰‰n, on lopputulos j‰lleen muunnettu perusmuotoinen yht‰lˆryhm‰ $\mU \my = \mc$, miss‰ 
-$\mU = \{u_{ij},\ i = 1 \ldots m,\ j = 1 \ldots n\}$ on yl‰kolmiomatriisi (ts.\ $u_{ij} = 0$ kun $i>j$), ja jollakin $k$, $\ 0 \le k \le \min\{m,n\}$, p‰tee
+Gaussin algoritmi soveltuu my√∂s sellaiseen lineaariseen yht√§l√∂ryhm√§√§n $\mA \mx = \mb$, jossa 
+yht√§l√∂iden ja tuntemattomien lukum√§√§r√§t eiv√§t ole samat, ts.\ $\mA$ on kokoa 
+$m \times n,\ m \neq n\ (\mb\in\R^m)$.  Kun tuettua Gaussin algoritmia sovelletaan t√§llaiseen 
+yht√§l√∂ryhm√§√§n, on lopputulos j√§lleen muunnettu perusmuotoinen yht√§l√∂ryhm√§ $\mU \my = \mc$, miss√§ 
+$\mU = \{u_{ij},\ i = 1 \ldots m,\ j = 1 \ldots n\}$ on yl√§kolmiomatriisi (ts.\ $u_{ij} = 0$ kun $i>j$), ja jollakin $k$, $\ 0 \le k \le \min\{m,n\}$, p√§tee
 \[ 
 u_{ii} \neq 0,\ \text{kun}\ i = 1 \ldots k, \quad 
 u_{ij} = 0,\ \text{kun}\ i = k+1 \ldots m,\ j = 1 \ldots n. 
 \]  
-\index{matriisin ($\nel$neliˆmatriisin)!ca@s‰‰nnˆllisyysaste (rangi)}
-\index{szyzy@s‰‰nnˆllisyysaste (rangi)} \index{rangi (s‰‰nnˆllisyysaste)}%
-Indeksi‰ $k$ sanotaan j‰lleen $\mA$:n \kor{s‰‰nnˆllisyysasteeksi} eli \kor{rangiksi}. Jos $k$ on
-suurin mahdollinen, eli jos $k = \min\{m,n\}$, niin sanotaan, ett‰ $\mA$:lla on \kor{t‰ysi} 
-s‰‰nnˆllisyysaste (engl.\ full rank). T‰ss‰ tapauksessa (t‰ydellisesti tuettua) Gaussin 
-eliminaatiota voidaan jatkaa, kunnes algoritmi tˆrm‰‰ matriisin $\mA$ 'laitaan' ($m>n$) tai 
-'pohjaan' ($m<n$). Muunnettu yht‰lˆryhm‰ $\mU \my = \mc$ voidaan esitt‰‰ 
+\index{matriisin ($\nel$neli√∂matriisin)!ca@s√§√§nn√∂llisyysaste (rangi)}
+\index{szyzy@s√§√§nn√∂llisyysaste (rangi)} \index{rangi (s√§√§nn√∂llisyysaste)}%
+Indeksi√§ $k$ sanotaan j√§lleen $\mA$:n \kor{s√§√§nn√∂llisyysasteeksi} eli \kor{rangiksi}. Jos $k$ on
+suurin mahdollinen, eli jos $k = \min\{m,n\}$, niin sanotaan, ett√§ $\mA$:lla on \kor{t√§ysi} 
+s√§√§nn√∂llisyysaste (engl.\ full rank). T√§ss√§ tapauksessa (t√§ydellisesti tuettua) Gaussin 
+eliminaatiota voidaan jatkaa, kunnes algoritmi t√∂rm√§√§ matriisin $\mA$ 'laitaan' ($m>n$) tai 
+'pohjaan' ($m<n$). Muunnettu yht√§l√∂ryhm√§ $\mU \my = \mc$ voidaan esitt√§√§ 
 \index{lohkomatriisi}%
 \kor{lohkomatriisi}muodossa
 \[
 \begin{rmatrix} \mU_{11} & \mU_{12} \\ \mU_{21} & \mU_{22} \end{rmatrix} 
 \begin{rmatrix} \my_1 \\ \my_2 \end{rmatrix}\ =\ \begin{rmatrix} \mc_1 \\ \mc_2 \end{rmatrix},
 \]
-miss‰ $\mU_{11} = \{u_{ij},\ i,j = 1 \ldots k\}$ on s‰‰nnˆllinen yl‰kolmiomatriisi, $\mU_{12}$
+miss√§ $\mU_{11} = \{u_{ij},\ i,j = 1 \ldots k\}$ on s√§√§nn√∂llinen yl√§kolmiomatriisi, $\mU_{12}$
 on kokoa $k \times (n-k)$, $\mU_{21}$ on nollamatriisi kokoa $(m-k) \times k$, $\mU_{22}$ on 
 nollamatriisi kokoa $(m-k) \times (n-k)$, ja $\mc_1$ on $k$-vektori. Koska $\mU_{21}$ ja 
-$\mU_{22}$ ovat nollamatriiseja, niin yht‰lˆryhm‰n avautuu muotoon 
+$\mU_{22}$ ovat nollamatriiseja, niin yht√§l√∂ryhm√§n avautuu muotoon 
 \[
 \left\{ \begin{aligned} 
 \mU_{11}\,\my_1 + \mU_{12}\,\my_2\ &=\ \mc_1, \\ \mathbf{0}\ &=\ \mc_2. 
 \end{aligned} \right.
 \]
-T‰st‰ n‰hd‰‰n, ett‰ sik‰li kuin $k<m$ (n‰in on aina kun $m>n$), on yht‰lˆryhm‰ll‰ sek‰ 
-v‰ltt‰m‰tˆn ett‰ riitt‰v‰
+T√§st√§ n√§hd√§√§n, ett√§ sik√§li kuin $k<m$ (n√§in on aina kun $m>n$), on yht√§l√∂ryhm√§ll√§ sek√§ 
+v√§ltt√§m√§t√∂n ett√§ riitt√§v√§
 \[ 
 \text{\kor{ratkeavuusehto}:} \quad \mathbf{0}\ =\ \mc_2. 
 \]
-Jos $k<n$ (n‰in on aina kun $m<n$), ei ratkaisu ole t‰ll‰k‰‰n ehdolla yksik‰sitteinen, sill‰ 
+Jos $k<n$ (n√§in on aina kun $m<n$), ei ratkaisu ole t√§ll√§k√§√§n ehdolla yksik√§sitteinen, sill√§ 
 ratkaisussa voidaan asettaa $\my_1 = \mU_{11}^{-1}(\mc_1 - \mU_{12}\,\my_2)$, olipa 
-$\my_2 \in \R^{n-k}$ mik‰ tahansa. P‰‰tell‰‰n siis erityisesti, ett‰ yht‰lˆryhm‰ $\mA \mx = \mb$
+$\my_2 \in \R^{n-k}$ mik√§ tahansa. P√§√§tell√§√§n siis erityisesti, ett√§ yht√§l√∂ryhm√§ $\mA \mx = \mb$
 kokoa $m \times n$, $m \neq n$, on aina singulaarinen: Joko ratkaisua ei ole jokaisella 
-$\mb \in \R^m$, tai ratkaisu ei ole yksik‰sitteinen. Edellinen tilanne vallitsee aina kun $m>n$,
-j‰lkimm‰inen aina kun $m<n$. 
-\begin{Exa} M‰‰rit‰ singulaarisen yht‰lˆryhm‰n
+$\mb \in \R^m$, tai ratkaisu ei ole yksik√§sitteinen. Edellinen tilanne vallitsee aina kun $m>n$,
+j√§lkimm√§inen aina kun $m<n$. 
+\begin{Exa} M√§√§rit√§ singulaarisen yht√§l√∂ryhm√§n
 \[
 \left\{ \begin{array}{rrrrl} 
 x_1 & + x_2 & +  x_3 & = & b_1 \\ 2x_1 & + x_2 &        & = & b_2 \\ -x_1 & & + x_3 & = & b_3 \\
     & + x_2 & + 2x_3 & = & b_4 \\   x_1 & - x_2 & - 3x_3 & = & b_5 
 \end{array} \right.
 \]
-ratkeavuusehdot, yleinen ratkaisu ja kerroinmatriisin s‰‰nnˆllisyysaste. \end{Exa}
-\ratk T‰ss‰ on $m=5$ ja $n=3$. Gaussin algoritmissa selvit‰‰n ilman tuentaa:
+ratkeavuusehdot, yleinen ratkaisu ja kerroinmatriisin s√§√§nn√∂llisyysaste. \end{Exa}
+\ratk T√§ss√§ on $m=5$ ja $n=3$. Gaussin algoritmissa selvit√§√§n ilman tuentaa:
 \begin{align*}
 \begin{rmatrix} 1&1&1\\2&1&0\\-1&0&1\\0&1&2\\1&-1&-3 \end{rmatrix} 
       \begin{rmatrix} b_1\\b_2\\b_3\\b_4\\b_5 \end{rmatrix} \quad &\longmapsto \quad
@@ -344,8 +344,8 @@ ratkeavuusehdot, yleinen ratkaisu ja kerroinmatriisin s‰‰nnˆllisyysaste. \end{Ex
 \begin{rmatrix} 1&1&1\\0&-1&-2\\0&0&0\\0&0&0\\0&0&0 \end{rmatrix} 
      \begin{rmatrix} b_1\\-2b_1+b_2\\-b_1+b_2+b_3\\-2b_1+b_2+b_4\\3b_1-2b_2+b_5 \end{rmatrix}
 \end{align*}
-Saadun singulaarisen perusmuodon mukaan kerroinmatriisin s‰‰nnˆllisyysaste on $k=2$.
-Ratkeavuusehdot voidaan lukea yht‰lˆryhm‰n kolmelta viimeiselt‰ rivilt‰:
+Saadun singulaarisen perusmuodon mukaan kerroinmatriisin s√§√§nn√∂llisyysaste on $k=2$.
+Ratkeavuusehdot voidaan lukea yht√§l√∂ryhm√§n kolmelta viimeiselt√§ rivilt√§:
 \[ \left\{
 \begin{array}{rrrrrrl} 
 -b_1 & +b_2 & +b_3 & & & = & 0 \\ -2b_1 & +b_2 & & +b_4 & & = & 0 \\ 
@@ -356,37 +356,37 @@ eli
 \begin{rmatrix} 1&0&0&-2&3\\0&1&0&1&-2\\0&0&1&1&-1 \end{rmatrix} 
 \begin{rmatrix} b_5\\b_4\\b_3\\b_2\\b_1 \end{rmatrix} = \begin{rmatrix} 0\\0\\0 \end{rmatrix}.
 \]
-Koska t‰ss‰ vasemmalla oleva matriisi on perusmuotoinen yl‰kolmio (ellei olisi, sovellettaisiin
-ensin Gaussin algoritmia), niin n‰hd‰‰n, ett‰ $b_1$ ja $b_2$ voidaan valita vapaasti, mink‰ 
-j‰lkeen $b_3$, $b_4$ ja $b_5$ m‰‰r‰ytyv‰t:
+Koska t√§ss√§ vasemmalla oleva matriisi on perusmuotoinen yl√§kolmio (ellei olisi, sovellettaisiin
+ensin Gaussin algoritmia), niin n√§hd√§√§n, ett√§ $b_1$ ja $b_2$ voidaan valita vapaasti, mink√§ 
+j√§lkeen $b_3$, $b_4$ ja $b_5$ m√§√§r√§ytyv√§t:
 \[
 \begin{cases}
 \,b_3 = b_1-b_2, \\ \,b_4 = 2b_1-b_2, \\ \,b_5 = -3b_1+2b_2.
 \end{cases}
 \]
-N‰iden ehtojen voimassa ollessa saadaan yleinen ratkaisu takaisinsijoituksella:
+N√§iden ehtojen voimassa ollessa saadaan yleinen ratkaisu takaisinsijoituksella:
 \[
 \begin{cases}
 \,x_1 = -b_1+b_2+t, \\ x_2 = 2b_1-b_2-2t, \\ x_3 = t 
 \end{cases} \quad (t \in \R).
 \]
-Ratkaisu ei ole yksik‰sitteinen, koska kerroinmatriisin s‰‰nnˆllisyysaste ei ole t‰ysi:
+Ratkaisu ei ole yksik√§sitteinen, koska kerroinmatriisin s√§√§nn√∂llisyysaste ei ole t√§ysi:
 $r(\mA)=2<\min\{m,n\}=3$. \loppu
 
-\subsection*{Lauseen \ref{s‰‰nnˆllisyyskriteerit} todistus}
+\subsection*{Lauseen \ref{s√§√§nn√∂llisyyskriteerit} todistus}
 
-Tulohajotelman \eqref{G-tulohajotelma} perusteella p‰tee
+Tulohajotelman \eqref{G-tulohajotelma} perusteella p√§tee
 \[
 \mA\mx=\mb \qekv \mU\my=\mC\mb, \qquad \my=\mW\mx,\ \ \mC=\mL^{-1}\mV.
 \]
-Jos $\mA$ on singulaarinen, niin $\mU$:n riveist‰ ainakin $n$:s on nollarivi, jolloin 
-yht‰lˆryhm‰n $\,\mU\my=\mC\mb\,$ $n$:s yht‰lˆ saa muodon $\,0=[\mC\mb]_n\,$. Jos on
-$\mb=\mv{0}$, niin yht‰lˆryhm‰ll‰ on monik‰sitteinen ratkaisu, miss‰ $y_n$ on vapaasti
-valittavissa. Jokaista ratkaisua $\my\neq\mo$ ($y_n \neq 0$) vastaa yht‰lˆryhm‰n $\mA\mx=\mo$
-ratkaisu $\mx=\mW^T\my\neq\mo$. Jos taas $\mb\in\R^n$ valitaan siten, ett‰ $[\mC\mb]_n \neq 0$,
-niin mainittu yht‰lˆ ei toteudu, jolloin on $\mU\my\neq\mC\mb\ \forall\my\in\R^n$. T‰llˆin on
-myˆs $\,\mA\mx\neq\mb$, $\mx=\mW^T\my$, $\my\in\R^n$ (koska $\mU\my=\mC\mb\ \ekv\ \mA\mx=\mb$).
-Siis $\,\mA\mx\neq\mb\ \forall\mx\in\R^n$. On p‰‰telty:
+Jos $\mA$ on singulaarinen, niin $\mU$:n riveist√§ ainakin $n$:s on nollarivi, jolloin 
+yht√§l√∂ryhm√§n $\,\mU\my=\mC\mb\,$ $n$:s yht√§l√∂ saa muodon $\,0=[\mC\mb]_n\,$. Jos on
+$\mb=\mv{0}$, niin yht√§l√∂ryhm√§ll√§ on monik√§sitteinen ratkaisu, miss√§ $y_n$ on vapaasti
+valittavissa. Jokaista ratkaisua $\my\neq\mo$ ($y_n \neq 0$) vastaa yht√§l√∂ryhm√§n $\mA\mx=\mo$
+ratkaisu $\mx=\mW^T\my\neq\mo$. Jos taas $\mb\in\R^n$ valitaan siten, ett√§ $[\mC\mb]_n \neq 0$,
+niin mainittu yht√§l√∂ ei toteudu, jolloin on $\mU\my\neq\mC\mb\ \forall\my\in\R^n$. T√§ll√∂in on
+my√∂s $\,\mA\mx\neq\mb$, $\mx=\mW^T\my$, $\my\in\R^n$ (koska $\mU\my=\mC\mb\ \ekv\ \mA\mx=\mb$).
+Siis $\,\mA\mx\neq\mb\ \forall\mx\in\R^n$. On p√§√§telty:
 \[
 \mA\ \text{singulaarinen} 
        \qimpl \begin{cases} 
@@ -394,7 +394,7 @@ Siis $\,\mA\mx\neq\mb\ \forall\mx\in\R^n$. On p‰‰telty:
                \text{\ jollakin $\mb\in\R^n$ on}\        &\mA\mx\neq\mb\,\ \forall \mx\in\R^n.
                \end{cases}
 \]
-N‰m‰ v‰itt‰m‰t ovat samanarvoisia kuin Lauseen \ref{s‰‰nnˆllisyyskriteerit} osav‰itt‰m‰t 
+N√§m√§ v√§itt√§m√§t ovat samanarvoisia kuin Lauseen \ref{s√§√§nn√∂llisyyskriteerit} osav√§itt√§m√§t 
 E1$\,\impl\,$E0 ja E2$\,\impl\,$E0, jotka siis ovat tosia. Koska E0$\,\impl\,$E1 ja
 E0$\,\impl\,$E2 olivat tosia jo Proposition \ref{kerroinmatriisi} mukaan, niin lause on
 todistettu. \loppu
@@ -405,16 +405,16 @@ todistettu. \loppu
 \begin{enumerate}
 
 \item \label{H-m-4: tuentakysymys}
-a) N‰yt‰, ett‰ tuetun Gaussin algoritmin kuluessa suoritetut tukioperaatiot (rivien ja
+a) N√§yt√§, ett√§ tuetun Gaussin algoritmin kuluessa suoritetut tukioperaatiot (rivien ja
 sarkkeiden vaihdot) voidaan suorittaa ennen eliminaatioita lopputuloksen
 muuttumatta. \vspace{1mm}\newline
 b) Olkoon $\mA$ matriisi kokoa $n \times n$ ja olkoon $\mA_k$ matriisi kokoa $k \times k$, joka
-koostuu $\mA$:n alkioista $a_{ij},\ i,j=1 \ldots k$. N‰yt‰, ett‰ yht‰lˆryhm‰ $\mA\mx=\mb$
-ratkeaa Gaussin algoritmilla ilman tukioperaatioita t‰sm‰lleen kun $\mA_k$ on s‰‰nnˆllinen
+koostuu $\mA$:n alkioista $a_{ij},\ i,j=1 \ldots k$. N√§yt√§, ett√§ yht√§l√∂ryhm√§ $\mA\mx=\mb$
+ratkeaa Gaussin algoritmilla ilman tukioperaatioita t√§sm√§lleen kun $\mA_k$ on s√§√§nn√∂llinen
 matriisi jokaisella $k=1 \ldots n$.
 
 \item 
-Muunna singulaariseen perusmuotoon tuetulla Gaussin algoritmilla, m‰‰rit‰ ratkaisut tai totea
+Muunna singulaariseen perusmuotoon tuetulla Gaussin algoritmilla, m√§√§rit√§ ratkaisut tai totea
 ratkeamattomuus:
 \begin{align*}
 &\text{a)}\ \ \begin{rmatrix} 1&2&3\\3&2&1\\1&1&1 \end{rmatrix}
@@ -434,7 +434,7 @@ ratkeamattomuus:
  \end{align*}
 
 \item
-M‰‰rit‰ $\mA$:n s‰‰nnˆllisyysaste, kaikki yht‰lˆryhm‰n $\mA\mx=\mo$ ratkaisut sek‰
+M√§√§rit√§ $\mA$:n s√§√§nn√∂llisyysaste, kaikki yht√§l√∂ryhm√§n $\mA\mx=\mo$ ratkaisut sek√§
 tulohajotelma $\mA=\mV^T\mL\mU\mW^T$, kun $\mA=$
 \begin{align*}
 &\text{a)}\ \ \begin{rmatrix} 1&2&-1\\-2&-4&2\\-1&-2&1 \end{rmatrix} \qquad
@@ -446,8 +446,8 @@ tulohajotelma $\mA=\mV^T\mL\mU\mW^T$, kun $\mA=$
 \end{align*}
 
 \item
-Saata seuraavat yht‰lˆryhm‰t tuetulla Gaussin algoritmilla singulaariseen perusmuotoon.
-M‰‰rit‰ ratkeavuusehdot ja yleinen ratkaisu sek‰ edelleen kerroinmatriisin tulohajotelma
+Saata seuraavat yht√§l√∂ryhm√§t tuetulla Gaussin algoritmilla singulaariseen perusmuotoon.
+M√§√§rit√§ ratkeavuusehdot ja yleinen ratkaisu sek√§ edelleen kerroinmatriisin tulohajotelma
 $\mA = \mV^T\mL\mU\mW^T$.
 \begin{align*}
 &\text{a)}\ \ \begin{rmatrix} 1&-2&2\\-1&2&1\\5&-10&4 \end{rmatrix}
@@ -464,7 +464,7 @@ $\mA = \mV^T\mL\mU\mW^T$.
 \end{align*}
 
 \item
-Muunna singulaariseen perusmuotoon ja ratkaise, mik‰li mahdollista:
+Muunna singulaariseen perusmuotoon ja ratkaise, mik√§li mahdollista:
 \begin{align*}
 &\text{a)}\ \ \begin{rmatrix} 1&0&4\\-1&3&4 \end{rmatrix}
               \begin{rmatrix} x_1\\x_2\\x_3 \end{rmatrix} =
@@ -485,7 +485,7 @@ Muunna singulaariseen perusmuotoon ja ratkaise, mik‰li mahdollista:
 \item 
 Olkoon \ a) \ $\D \mA = \begin{rmatrix} 1&2&3&4\\2&3&4&1\\3&4&1&2 \end{rmatrix}$,  \ \ 
 b) \ $\D \mA = \begin{rmatrix} 1&3&5&-2\\3&-2&7&5\\2&-5&2&7 \end{rmatrix}$. \vspace{1mm}\newline
-M‰‰rit‰ Gaussin algoritmilla ratkeavuusehdot ja yleinen ratkaisu yht‰lˆryhmille $\mA\mx=\mb$
+M√§√§rit√§ Gaussin algoritmilla ratkeavuusehdot ja yleinen ratkaisu yht√§l√∂ryhmille $\mA\mx=\mb$
 ($\mb\in\R^3$) ja $\mA^T\mx=\mb$ ($\mb\in\R^4$).
 
 \end{enumerate}

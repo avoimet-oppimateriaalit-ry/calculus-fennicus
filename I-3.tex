@@ -1,17 +1,17 @@
-\section{Logiikan ja joukko-opin merkinnˆist‰} \label{logiikka}
+\section{Logiikan ja joukko-opin merkinn√∂ist√§} \label{logiikka}
 \alku
 \sectionmark{Logiikka ja joukko-oppi}
 \index{logiikka|vahv}
 
-\kor{Logiikassa} (ja yleisemminkin matematiikassa) tarkastellaan v‰itt‰mi‰ eli 
-\index{propositio (v‰itelause)}%
-\kor{propositioita}\footnote[2]{Proposition sijasta k‰ytet‰‰n suomenkielisiss‰ teksteiss‰ usein
-termi‰ \kor{v‰itelause} tai vain 'lause'. T‰ss‰ tekstiss‰ termill‰ 'lause' on erikoismerkitys 
-(= 'teoreema'), termi‰ 'propositio' sen sijaan k‰ytet‰‰n sek‰ yleis- ett‰ erikoismerkityksess‰,
-ks.\ alaviite Luvussa \ref{ratluvut}. \index{vzy@v‰itelause|av} \index{lause (v‰itelause)|av}},
+\kor{Logiikassa} (ja yleisemminkin matematiikassa) tarkastellaan v√§itt√§mi√§ eli 
+\index{propositio (v√§itelause)}%
+\kor{propositioita}\footnote[2]{Proposition sijasta k√§ytet√§√§n suomenkielisiss√§ teksteiss√§ usein
+termi√§ \kor{v√§itelause} tai vain 'lause'. T√§ss√§ tekstiss√§ termill√§ 'lause' on erikoismerkitys 
+(= 'teoreema'), termi√§ 'propositio' sen sijaan k√§ytet√§√§n sek√§ yleis- ett√§ erikoismerkityksess√§,
+ks.\ alaviite Luvussa \ref{ratluvut}. \index{vzy@v√§itelause|av} \index{lause (v√§itelause)|av}},
 joilla on tietty
 \index{totuusarvo}%
-\kor{totuusarvo}, joko 'tosi' (totuusarvo = 1, tai T = True) tai 'ep‰tosi'
+\kor{totuusarvo}, joko 'tosi' (totuusarvo = 1, tai T = True) tai 'ep√§tosi'
 (totuusarvo = 0, tai F = False).
 \begin{Exa} Lausumista
 \begin{align*}
@@ -19,37 +19,37 @@ A &= \text{'eilen satoi'} \\
 B &= \text{'eilen oli pouta'} \\
 C &= \text{'huomenna sataa'} \\
 D &= \text{'huomenna saisi jo sataa'} \\
-E &= \text{'kolme per nelj‰ on pienempi kuin kaksi per kolme'}
+E &= \text{'kolme per nelj√§ on pienempi kuin kaksi per kolme'}
 \end{align*}
-kolmea ensimm‰ist‰ voidaan pit‰‰ propositioina, sik‰li kuin lausumat rajataan tietty‰ p‰iv‰‰ ja
-paikkaa koskeviksi (ja j‰tet‰‰n huomiotta mahdolliset mittausongelmat). Samoin $E$ on 
+kolmea ensimm√§ist√§ voidaan pit√§√§ propositioina, sik√§li kuin lausumat rajataan tietty√§ p√§iv√§√§ ja
+paikkaa koskeviksi (ja j√§tet√§√§n huomiotta mahdolliset mittausongelmat). Samoin $E$ on 
 propositio. Lausuma $D$ ei ole propositio. \loppu \end{Exa} 
-Esimerkkiv‰itt‰mist‰ $A$ ja $B$ ovat toistensa
+Esimerkkiv√§itt√§mist√§ $A$ ja $B$ ovat toistensa
 \index{looginen!negaatio (komplementti)} \index{negaatio (looginen)}%
 \kor{negaatioita} eli \kor{komplementteja}. 
-Merkit‰‰n $B = \neg A,\ A = \neg B$, tai v‰hemm‰n muodollisesti $B = ei(A)$, $A = ei(B)$.
-V‰itt‰m‰n $C$ totuusarvo ei ole (t‰n‰‰n) tiedossa --- t‰m‰ ei siis ole ongelma logiikassa.
+Merkit√§√§n $B = \neg A,\ A = \neg B$, tai v√§hemm√§n muodollisesti $B = ei(A)$, $A = ei(B)$.
+V√§itt√§m√§n $C$ totuusarvo ei ole (t√§n√§√§n) tiedossa --- t√§m√§ ei siis ole ongelma logiikassa.
 
 \index{looginen!operaattori} \index{operaattori!a@looginen}%
 \kor{Loogisten operaattorien} $\wedge$ ('ja'), $\tai$ ('tai'), $\impl$ ('seuraa'), $\ekv$
-('t‰sm‰lleen kun') avulla voidaan propositioista johtaa uusia propositioita. Erityisesti jos 
+('t√§sm√§lleen kun') avulla voidaan propositioista johtaa uusia propositioita. Erityisesti jos 
 $A$ ja $B$ ovat propositioita, niin $A \wedge B$, $A \tai B$, $A \impl B$ ja $A \ekv B$ ovat
-myˆs propositioita. N‰ist‰ kahden ensimm‰isen tulkinta on  ilmeinen: $A \wedge B$ on tosi kun
-$A$ ja $B$ ovat molemmat tosia, muulloin ep‰tosi, ja $A \tai B$ on tosi t‰sm‰lleen kun ainakin
-toinen  v‰itt‰mist‰ $A,B$ on tosi.  V‰itt‰m‰ $A \wedge \neg A$ on \kor{identtisesti ep‰tosi} 
-(ep‰tosi jokaisella $A$), luonnollisella kielell‰ 'mahdoton'. T‰llainen v‰itt‰m‰ on
-\index{looginen!ristiriita} \index{ristiriita (looginen)} \index{identtisesti (ep‰)tosi}%
-\kor{loogisen ristiriidan} perusmuoto. V‰itt‰m‰ $A \tai \neg A$ on puolestaan 
-\kor{identtisesti tosi} (tosi jokaisella $A$), eli suhteessa v‰itt‰m‰‰n $A$ 'mit‰‰nsanomaton'.
-\begin{Exa} Jos $A$ on ep‰tosi ja $B$ ja $C$ molemmat tosia, niin $(A \wedge B) \tai C$ on tosi
-ja $A \wedge (B \tai C)$ on ep‰tosi. J‰lkimm‰iset kaksi v‰itt‰m‰‰ eiv‰t siis ole yleisesti 
+my√∂s propositioita. N√§ist√§ kahden ensimm√§isen tulkinta on  ilmeinen: $A \wedge B$ on tosi kun
+$A$ ja $B$ ovat molemmat tosia, muulloin ep√§tosi, ja $A \tai B$ on tosi t√§sm√§lleen kun ainakin
+toinen  v√§itt√§mist√§ $A,B$ on tosi.  V√§itt√§m√§ $A \wedge \neg A$ on \kor{identtisesti ep√§tosi} 
+(ep√§tosi jokaisella $A$), luonnollisella kielell√§ 'mahdoton'. T√§llainen v√§itt√§m√§ on
+\index{looginen!ristiriita} \index{ristiriita (looginen)} \index{identtisesti (ep√§)tosi}%
+\kor{loogisen ristiriidan} perusmuoto. V√§itt√§m√§ $A \tai \neg A$ on puolestaan 
+\kor{identtisesti tosi} (tosi jokaisella $A$), eli suhteessa v√§itt√§m√§√§n $A$ 'mit√§√§nsanomaton'.
+\begin{Exa} Jos $A$ on ep√§tosi ja $B$ ja $C$ molemmat tosia, niin $(A \wedge B) \tai C$ on tosi
+ja $A \wedge (B \tai C)$ on ep√§tosi. J√§lkimm√§iset kaksi v√§itt√§m√§√§ eiv√§t siis ole yleisesti 
 samanarvoiset (eli sulkeita ei voida poistaa). \loppu \end{Exa}
 
 \subsection*{Implikaatio}
 \index{implikaatio|vahv}
 
-Implikaatiov‰itt‰m‰n $A \impl B$ looginen tulkinta ei ole aivan ilmeinen. Mahdollisia lukutapoja
-ovat ensinn‰kin: \index{riitt‰v‰ ehto} \index{vzy@v‰ltt‰m‰tˆn ehto}%
+Implikaatiov√§itt√§m√§n $A \impl B$ looginen tulkinta ei ole aivan ilmeinen. Mahdollisia lukutapoja
+ovat ensinn√§kin: \index{riitt√§v√§ ehto} \index{vzy@v√§ltt√§m√§t√∂n ehto}%
 \begin{align*}
 A \impl B\ : \quad &\text{$A$:sta seuraa $B$}                 \\
                    &\text{$A$ \kor{implikoi} $B$:n}           \\
@@ -57,85 +57,85 @@ A \impl B\ : \quad &\text{$A$:sta seuraa $B$}                 \\
                    &\text{aina kun $A$, niin $B$}             \\
                    &\text{aina $B$, kun $A$}                  \\
                    &\text{$A$ vain, kun $B$}                  \\
-                   &\text{$A$ on $B$:n \kor{riitt‰v‰ ehto}}   \\
-                   &\text{$B$ on $A$:n \kor{v‰ltt‰m‰tˆn ehto}}
+                   &\text{$A$ on $B$:n \kor{riitt√§v√§ ehto}}   \\
+                   &\text{$B$ on $A$:n \kor{v√§ltt√§m√§t√∂n ehto}}
 \end{align*}
-Sovelluksissa, myˆs luonnollisessa kieless‰, voidaan implikaatiov‰itt‰m‰ usein tulkita niin, 
-ett‰ $A$ on 'syy' ja $B$ on 'seuraus'. Logiikassa ei mit‰‰n 'syyllisyytt‰' kuitenkaan 
-edellytet‰, vaan implikaatio voi olla puhdas sattumakin ('sattumoisin aina $B$ kun $A$'). 
-Loogisessa kalkyyliss‰ v‰itt‰m‰n $A \impl B$ totuusarvo voidaan laskea tulkinnoista
-(ks.\ myˆs Harj.teht.\,\ref{H-I-3: tautologioita}a)
+Sovelluksissa, my√∂s luonnollisessa kieless√§, voidaan implikaatiov√§itt√§m√§ usein tulkita niin, 
+ett√§ $A$ on 'syy' ja $B$ on 'seuraus'. Logiikassa ei mit√§√§n 'syyllisyytt√§' kuitenkaan 
+edellytet√§, vaan implikaatio voi olla puhdas sattumakin ('sattumoisin aina $B$ kun $A$'). 
+Loogisessa kalkyyliss√§ v√§itt√§m√§n $A \impl B$ totuusarvo voidaan laskea tulkinnoista
+(ks.\ my√∂s Harj.teht.\,\ref{H-I-3: tautologioita}a)
 \begin{align}
 A \impl B \quad &\ekv \quad \neg\,(A \wedge \neg B)    \tag{a} \\
                 &\ekv \quad \neg A \tai (A \wedge B).  \tag{b}
 \end{align}
-T‰ss‰ $P \ekv Q$ luetaan '$P$:ll‰ ja $Q$:lla on sama totuusarvo', ks.\ ekvivalenssinuolen 
-tulkinnat j‰ljemp‰n‰. Implikaation tulkinnan (b) mukaan $A \impl B$ on tosi t‰sm‰lleen, kun 
-joko $A$ on ep‰tosi tai $A$ ja $B$ ovat molemmat tosia. Erityisesti siis 'mahdottomasta seuraa 
-mit‰ tahansa', eli v‰itt‰m‰ $A \impl B$ on tosi jokaisella $B$ (eli $B$:n suhteen 
-'mit‰‰nsanomaton'), jos $A$ on ep‰tosi. 
-\begin{Exa} Tulkinnoista (a)--(b) n‰hd‰‰n, ett‰ v‰itt‰m‰ $A \impl A$ on identtisesti tosi, eli
-v‰itt‰m‰ 'ei sano mit‰‰n' $A$:sta.
+T√§ss√§ $P \ekv Q$ luetaan '$P$:ll√§ ja $Q$:lla on sama totuusarvo', ks.\ ekvivalenssinuolen 
+tulkinnat j√§ljemp√§n√§. Implikaation tulkinnan (b) mukaan $A \impl B$ on tosi t√§sm√§lleen, kun 
+joko $A$ on ep√§tosi tai $A$ ja $B$ ovat molemmat tosia. Erityisesti siis 'mahdottomasta seuraa 
+mit√§ tahansa', eli v√§itt√§m√§ $A \impl B$ on tosi jokaisella $B$ (eli $B$:n suhteen 
+'mit√§√§nsanomaton'), jos $A$ on ep√§tosi. 
+\begin{Exa} Tulkinnoista (a)--(b) n√§hd√§√§n, ett√§ v√§itt√§m√§ $A \impl A$ on identtisesti tosi, eli
+v√§itt√§m√§ 'ei sano mit√§√§n' $A$:sta.
 \loppu \end{Exa}
-\begin{Exa} Jos $0$ ja $1$ ovat jonkin kunnan nolla- ja ykkˆsalkiot, niin propositio
+\begin{Exa} Jos $0$ ja $1$ ovat jonkin kunnan nolla- ja ykk√∂salkiot, niin propositio
 [\,$0 = 1\,\ \impl\,\ \text{kirjoittaja on mainio matemaatikko}$\,] on (loogisesti) tosi. \loppu 
 \end{Exa}
 Matematiikan lauseet, propositiot, lemmat ja korollaarit ovat tyypillisesti muotoa 'Jos .. 
-[oletukset], niin .. [v‰itˆs]', eli muotoa $A \impl B$, miss‰ $A$ on \pain{oletus} (oletukset)
-ja $B$ on \pain{v‰itˆs}. Loogista p‰‰ttely‰, joka osoittaa lauseen tai vastaavan todeksi 
-(sill‰ matematiikan lauseet ovat tosia!) sanotaan
+[oletukset], niin .. [v√§it√∂s]', eli muotoa $A \impl B$, miss√§ $A$ on \pain{oletus} (oletukset)
+ja $B$ on \pain{v√§it√∂s}. Loogista p√§√§ttely√§, joka osoittaa lauseen tai vastaavan todeksi 
+(sill√§ matematiikan lauseet ovat tosia!) sanotaan
 \index{todistus}%
 \kor{todistukseksi} (engl.\ proof). Jos lause
-on muotoa $A \impl B$, niin todistaminen (eli proposition $A \impl B$ todeksi n‰ytt‰minen)
-tapahtuu \pain{olettamalla}, ett‰ $A$ on tosi ja \pain{n‰}y\pain{tt‰m‰ll‰}, ett‰ t‰llˆin myˆs
-$B$ on tosi (riitt‰‰, koska $A \impl B$ on tosi, jos $A$ on ep‰tosi!). T‰m‰n nk.
-\index{todistus!a@suora, ep‰suora}%
+on muotoa $A \impl B$, niin todistaminen (eli proposition $A \impl B$ todeksi n√§ytt√§minen)
+tapahtuu \pain{olettamalla}, ett√§ $A$ on tosi ja \pain{n√§}y\pain{tt√§m√§ll√§}, ett√§ t√§ll√∂in my√∂s
+$B$ on tosi (riitt√§√§, koska $A \impl B$ on tosi, jos $A$ on ep√§tosi!). T√§m√§n nk.
+\index{todistus!a@suora, ep√§suora}%
 \kor{suoran todistuksen} ohella toinen mahdollinen todistustapa on 
-\index{epzys@ep‰suora todistus}%
-\kor{ep‰suora todistus}. Ep‰suoran todistuksen ideana on n‰ytt‰‰, ett‰ jos todistettavan
-v‰itt‰m‰n  \pain{ne}g\pain{aatio} \pain{on} \pain{tosi}, niin seuraa
-\pain{loo}g\pain{inen} \pain{ristiriita} (muotoa '$C$ tosi ja ep‰tosi', miss‰ $C$ on
-propositio), jolloin p‰‰tell‰‰n, ett‰ negaation on oltava ep‰tosi ja v‰itt‰m‰n siis tosi
-(ks.\ Harj.teht. \ref{H-I-3: modus tollens}). Implikaatiov‰itt‰m‰n tapauksessa ep‰suoran
+\index{epzys@ep√§suora todistus}%
+\kor{ep√§suora todistus}. Ep√§suoran todistuksen ideana on n√§ytt√§√§, ett√§ jos todistettavan
+v√§itt√§m√§n  \pain{ne}g\pain{aatio} \pain{on} \pain{tosi}, niin seuraa
+\pain{loo}g\pain{inen} \pain{ristiriita} (muotoa '$C$ tosi ja ep√§tosi', miss√§ $C$ on
+propositio), jolloin p√§√§tell√§√§n, ett√§ negaation on oltava ep√§tosi ja v√§itt√§m√§n siis tosi
+(ks.\ Harj.teht. \ref{H-I-3: modus tollens}). Implikaatiov√§itt√§m√§n tapauksessa ep√§suoran
 todistuksen rakenne on seuraava, vrt.\ em.\ tulkinta (a).
 \begin{itemize}
-\item[(1)] Oletetaan, ett‰ $A$ on tosi ja $B$ ep‰tosi (eli $A \impl B$ ep‰tosi).
-\item[(2)] N‰ytet‰‰n, ett‰ oletus (1) johtaa loogiseen ristiriitaan. P‰‰tell‰‰n, ett‰ oletus oli
-           v‰‰r‰ ja siis $A \impl B$ tosi.
+\item[(1)] Oletetaan, ett√§ $A$ on tosi ja $B$ ep√§tosi (eli $A \impl B$ ep√§tosi).
+\item[(2)] N√§ytet√§√§n, ett√§ oletus (1) johtaa loogiseen ristiriitaan. P√§√§tell√§√§n, ett√§ oletus oli
+           v√§√§r√§ ja siis $A \impl B$ tosi.
 \end{itemize}
-Oletusta (1) (tai osaoletusta '$B$ ep‰tosi') sanotaan
+Oletusta (1) (tai osaoletusta '$B$ ep√§tosi') sanotaan
 \index{vastaoletus}%
 \kor{vastaoletukseksi}, ja koko 
-todistustavasta k‰ytet‰‰n myˆs nimityst‰ \kor{todistus vastaoletuksella} (engl. proof by 
-contradiction). --- Huomattakoon, ett‰ vastaoletus ei nimest‰‰n huolimatta ole oletuksen
-negaatio vaan pikemminkin 'vastav‰itˆs'. 
+todistustavasta k√§ytet√§√§n my√∂s nimityst√§ \kor{todistus vastaoletuksella} (engl. proof by 
+contradiction). --- Huomattakoon, ett√§ vastaoletus ei nimest√§√§n huolimatta ole oletuksen
+negaatio vaan pikemminkin 'vastav√§it√∂s'. 
 
-Ep‰suoraan todistustapaan turvauduttiin itse asiassa jo edell‰ Lauseen \ref{kuntatuloksia}  
-kohdassa (g). T‰ss‰ v‰itt‰m‰ oli muotoa $A \impl B$, miss‰
+Ep√§suoraan todistustapaan turvauduttiin itse asiassa jo edell√§ Lauseen \ref{kuntatuloksia}  
+kohdassa (g). T√§ss√§ v√§itt√§m√§ oli muotoa $A \impl B$, miss√§
 \begin{align*}
 A \quad &= \quad \text{aksioomat (K1)--(K10) ja (J1)--(J4)}, \\
 B \quad &= \quad 0 < 1.
 \end{align*}
-Vastaoletus, ett‰ $B$ on ep‰tosi, johti loogiseen ristiriitaan '$C$ tosi ja ep‰tosi',
-miss‰ $C=$ (K10)$\,\wedge\,$(J1). 
+Vastaoletus, ett√§ $B$ on ep√§tosi, johti loogiseen ristiriitaan '$C$ tosi ja ep√§tosi',
+miss√§ $C=$ (K10)$\,\wedge\,$(J1). 
 
 \subsection*{Ekvivalenssi}
 \index{ekvivalenssi|vahv}%
  
-Jos $A$ ja $B$ ovat propositioita, niin $A \ekv B$ on propositio, joka kertoo, ett‰ $A$ ja $B$ 
-ovat samanarvoiset eli \kor{ekvivalentit} v‰itt‰m‰t. T‰m‰ tarkoittaa yksinkertaisesti, ett‰
-v‰itt‰mien $A$ ja $B$ totuusarvot ovat samat, eli joko molemmat ovat tosia tai molemmat ovat 
-ep‰tosia. Ekvivalenssin yleisi‰ lukutapoja ovat
+Jos $A$ ja $B$ ovat propositioita, niin $A \ekv B$ on propositio, joka kertoo, ett√§ $A$ ja $B$ 
+ovat samanarvoiset eli \kor{ekvivalentit} v√§itt√§m√§t. T√§m√§ tarkoittaa yksinkertaisesti, ett√§
+v√§itt√§mien $A$ ja $B$ totuusarvot ovat samat, eli joko molemmat ovat tosia tai molemmat ovat 
+ep√§tosia. Ekvivalenssin yleisi√§ lukutapoja ovat
 \begin{align*}
 A \ekv B: \quad &\text{$A$ ja $B$ ekvivalentit, samanarvoiset} \\
-                &\text{$A$ ja $B$ yht‰pit‰v‰t} \\
+                &\text{$A$ ja $B$ yht√§pit√§v√§t} \\
                 &\text{$A$ \kor{silloin ja vain silloin kun} (engl. if and only if) $B$} \\
-                &\text{$A$ t‰sm‰lleen kun $B$} \\
+                &\text{$A$ t√§sm√§lleen kun $B$} \\
                 &\text{$A$ \kor{joss} (engl. iff) $B$}
 \end{align*} 
-Ekvivalenssinuolen avulla voidaan esim. ilmaista jokin v‰itt‰m‰ toisin sanoin tai merkinnˆin, 
-tai vain toisessa muodossa. Kyse voi t‰llˆin olla esim.\ jonkin merkint‰tavan 
-\kor{m‰‰ritelm‰st‰}, tai yleisp‰tev‰st‰ toisinnosta eli
+Ekvivalenssinuolen avulla voidaan esim. ilmaista jokin v√§itt√§m√§ toisin sanoin tai merkinn√∂in, 
+tai vain toisessa muodossa. Kyse voi t√§ll√∂in olla esim.\ jonkin merkint√§tavan 
+\kor{m√§√§ritelm√§st√§}, tai yleisp√§tev√§st√§ toisinnosta eli
 \index{looginen!tautologia} \index{tautologia (looginen)}%
 \kor{tautologiasta}. 
 \begin{Exa} \label{ekvivalensseja}
@@ -145,33 +145,33 @@ A \impl B \quad\quad         &\ekv \quad\quad \neg B \impl \neg A \\
 A \impl B \impl C \quad\quad &\ekv \quad\quad A \impl B\ \wedge\ B \impl C \\
 A \ekv B \quad\quad          &\ekv \quad\quad A \impl B\ \wedge\ B \impl A \quad \loppu
 \end{align*} \end{Exa}
-Ensimm‰inen esimerkki m‰‰rittelee merkinn‰n $0<x<1$. Toisessa esimerkiss‰ on kyse yleisest‰ 
-(myˆs hyˆdyllisest‰!) tautologiasta (Harj.teht. \ref{H-I-3: tautologioita}b). Kolmannessa 
-esimerkiss‰ m‰‰ritell‰‰n kahden implikaatiov‰itt‰m‰n muodostama 
-\index{pzyzy@p‰‰ttelyketju}%
-\kor{p‰‰ttelyketju}\footnote[2]{Jos matemaattinen lause yms.\ on implikaatiov‰itt‰m‰ muotoa 
-$A \impl B$, niin todistus on tyypillisesti p‰‰ttelyketju muotoa
-$\,A \impl C_1 \impl C_2 \impl \ldots \impl C_n \impl B$, miss‰ osav‰itt‰m‰t
+Ensimm√§inen esimerkki m√§√§rittelee merkinn√§n $0<x<1$. Toisessa esimerkiss√§ on kyse yleisest√§ 
+(my√∂s hy√∂dyllisest√§!) tautologiasta (Harj.teht. \ref{H-I-3: tautologioita}b). Kolmannessa 
+esimerkiss√§ m√§√§ritell√§√§n kahden implikaatiov√§itt√§m√§n muodostama 
+\index{pzyzy@p√§√§ttelyketju}%
+\kor{p√§√§ttelyketju}\footnote[2]{Jos matemaattinen lause yms.\ on implikaatiov√§itt√§m√§ muotoa 
+$A \impl B$, niin todistus on tyypillisesti p√§√§ttelyketju muotoa
+$\,A \impl C_1 \impl C_2 \impl \ldots \impl C_n \impl B$, miss√§ osav√§itt√§m√§t
 $A \impl C_1,\ C_1 \impl C_2,\ \ldots\ C_n \impl B$ joko ovat ilmeisen tosia, tai tosia muiden 
-tunnettujen lauseiden (tai erikseen todistettavien aputulosten) perusteella. P‰‰ttelyketjun
-m‰‰rittely noudattaa t‰ss‰ matematiikan k‰yt‰ntˆ‰ --- formaalissa logiikassa t‰llaista
+tunnettujen lauseiden (tai erikseen todistettavien aputulosten) perusteella. P√§√§ttelyketjun
+m√§√§rittely noudattaa t√§ss√§ matematiikan k√§yt√§nt√∂√§ --- formaalissa logiikassa t√§llaista
 sopimusta ei ole.}. 
-Viimeisess‰ esimerkiss‰ tulkitaan itse v‰itt‰m‰ $A \ekv B$. T‰m‰n tulkinnan mukaisesti 
-ekvivalenssiv‰itt‰m‰ todistetaan osoittamalla erikseen \fbox{\impl} $(\ A \impl B\ )$ ja
-\fbox{\limp} $(\ A \limp B\ )$ eli n‰ytt‰m‰ll‰ implikaatiot tosiksi molempiin suuntiin.
-Jos kyseess‰ on yksinkertainen tautologia, voidaan myˆs muodostaa
+Viimeisess√§ esimerkiss√§ tulkitaan itse v√§itt√§m√§ $A \ekv B$. T√§m√§n tulkinnan mukaisesti 
+ekvivalenssiv√§itt√§m√§ todistetaan osoittamalla erikseen \fbox{\impl} $(\ A \impl B\ )$ ja
+\fbox{\limp} $(\ A \limp B\ )$ eli n√§ytt√§m√§ll√§ implikaatiot tosiksi molempiin suuntiin.
+Jos kyseess√§ on yksinkertainen tautologia, voidaan my√∂s muodostaa
 \index{totuustaulu}%
-\kor{totuus}(arvo)\kor{taulu}(kko), jossa k‰yd‰‰n l‰pi kaikki mahdollisuudet.
-\begin{Exa} \label{de Morgan logiikassa} N‰yt‰ identtisesti tosiksi
+\kor{totuus}(arvo)\kor{taulu}(kko), jossa k√§yd√§√§n l√§pi kaikki mahdollisuudet.
+\begin{Exa} \label{de Morgan logiikassa} N√§yt√§ identtisesti tosiksi
 \vahv{de Morganin lait}: \vspace{1mm}\newline
 a)\,\ $\neg\,(A \tai B)\ \ekv\ \neg A \wedge \neg B \qquad$
 b)\,\ $\neg\,(A \wedge B)\ \ekv\ \neg A \tai \neg B$
 \end{Exa}
-\ratk Totuustaulussa (alla) on merkitty $P = A \tai B$, $Q = A \wedge B$ ja k‰yty l‰pi
-propositioiden $A,B$ kaikki totuusarvoyhdistelm‰t  ($4$ kpl). Taulukosta n‰hd‰‰n, ett‰
+\ratk Totuustaulussa (alla) on merkitty $P = A \tai B$, $Q = A \wedge B$ ja k√§yty l√§pi
+propositioiden $A,B$ kaikki totuusarvoyhdistelm√§t  ($4$ kpl). Taulukosta n√§hd√§√§n, ett√§
 propositioiden $\neg P$ ja $\neg A \wedge \neg B$, samoin propositioiden $\neg Q$ ja 
-\mbox{$\neg A \tai \neg B$} totuusarvot ovat kaikissa tapauksissa samat. T‰m‰ todistaa
-v‰itteet. \loppu
+\mbox{$\neg A \tai \neg B$} totuusarvot ovat kaikissa tapauksissa samat. T√§m√§ todistaa
+v√§itteet. \loppu
 
 \begin{tabular}{cccccccccccccc}
 $A$ & $B$ & $\neg A$ & $\neg B$ &  &  & $P$ & $\neg P$ & $\neg A \wedge \neg B$ & & & 
@@ -182,8 +182,8 @@ $Q$ & $\neg Q$ & $\neg A \tai \neg B$ \\ \hline
 0 & 0 & 1 & 1 & & & 0 & 1 & 1 & & & 0 & 1 & 1
 \end{tabular}
 
-Loogisten operaattorien, samoin j‰rjestys- ja samastusrelaatioiden yms.\ yhteydess‰ negaation 
-merkkin‰ k‰ytet‰‰n yleisesti p‰‰lleviivausta.
+Loogisten operaattorien, samoin j√§rjestys- ja samastusrelaatioiden yms.\ yhteydess√§ negaation 
+merkkin√§ k√§ytet√§√§n yleisesti p√§√§lleviivausta.
 \begin{Exa}
 \begin{align*}
 A \not\impl B \,\ &\ekv \,\ \neg\,( A \impl B ) \,\ \ekv \,\ A\,\wedge\,\neg B \\
@@ -202,34 +202,34 @@ predikaatti ei ole propositio. Esimerkiksi jos tarkastellaan rationaalilukuja ja
 P(x): \quad x>2, \quad\quad\quad Q(x,y): \quad x=y^2,
 \]
 \index{yksipaikkainen predikaatti} \index{kaksipaikkainen predikaatti}%
-niin $P(x)$ on \kor{yksipaikkainen} (so.\ yhden muuttujan sis‰lt‰v‰) predikaatti, nimelt‰‰n 
-\kor{ep‰yht‰lˆ} (engl.\ inequality), ja $Q(x,y)$ on \kor{kaksipaikkainen} predikaatti, nimelt‰‰n
-\kor{yht‰lˆ} (engl.\ equation). Jokaisella muuttujan $x$ arvolla $P(x)$ on propositio, samoin 
-$Q(x,y)$ kun molemmat muuttujat kiinnitet‰‰n. Esim.\ $P(5/2)$ ja $Q(4,2)$ ovat tosia, $P(1)$ ja
-$Q(0,1)$ ep‰tosia. Muuttujien sitominen voi tapahtua myˆs \kor{kvanttorien} avulla. Kvanttoreita
+niin $P(x)$ on \kor{yksipaikkainen} (so.\ yhden muuttujan sis√§lt√§v√§) predikaatti, nimelt√§√§n 
+\kor{ep√§yht√§l√∂} (engl.\ inequality), ja $Q(x,y)$ on \kor{kaksipaikkainen} predikaatti, nimelt√§√§n
+\kor{yht√§l√∂} (engl.\ equation). Jokaisella muuttujan $x$ arvolla $P(x)$ on propositio, samoin 
+$Q(x,y)$ kun molemmat muuttujat kiinnitet√§√§n. Esim.\ $P(5/2)$ ja $Q(4,2)$ ovat tosia, $P(1)$ ja
+$Q(0,1)$ ep√§tosia. Muuttujien sitominen voi tapahtua my√∂s \kor{kvanttorien} avulla. Kvanttoreita
 ovat symbolit '$\forall$' ja '$\exists$', jotka luetaan
 \begin{align*}
 &\forall \quad \text{'kaikille', 'jokaiselle'}, \\
 &\exists \quad \text{'on olemassa'}.
 \end{align*}
-Esimerkiksi jos $X \subset \Q$, niin ym.\ predikaattiin $P(x)$ liittyvi‰ propostitioita ovat
+Esimerkiksi jos $X \subset \Q$, niin ym.\ predikaattiin $P(x)$ liittyvi√§ propostitioita ovat
 \[
 A: \quad \exists x \in X\ (\,P(x)\,), \quad\quad\quad B: \quad \forall x \in X\ (\,P(x)\,).
 \]
-T‰ss‰ kvanttorien ulottuvuus on merkitty sulkeilla. Jos sulkeet halutaan v‰ltt‰‰, niin $A$:n 
-v‰hem‰n formaali muoto on
+T√§ss√§ kvanttorien ulottuvuus on merkitty sulkeilla. Jos sulkeet halutaan v√§ltt√§√§, niin $A$:n 
+v√§hem√§n formaali muoto on
 \[
-A: \quad \exists x \in X\ \,\text{siten, ett‰}\ \,P(x),
+A: \quad \exists x \in X\ \,\text{siten, ett√§}\ \,P(x),
 \]
-miss‰ \,'siten, ett‰'\, voidaan haluttaessa lyhent‰‰ muotoon \,'s.e.'\,. Kummassakin 
-propositiossa tullaan toimeen ilman sulkeita myˆs, kun kirjoitetaan yksinkertaisemmin
+miss√§ \,'siten, ett√§'\, voidaan haluttaessa lyhent√§√§ muotoon \,'s.e.'\,. Kummassakin 
+propositiossa tullaan toimeen ilman sulkeita my√∂s, kun kirjoitetaan yksinkertaisemmin
 \[
 A: \quad P(x)\ \ \text{jollakin}\ x \in X, \quad\quad\quad B: \quad P(x)\ \ \forall x \in X.
 \]
 \begin{Exa} Jos $X=\Q$, niin predikaatista $P(x):\,x^2 \neq 2$ johdettu propositio 
 $B:\,x^2 \neq 2\ \forall x\in\Q$ on tosi (Harj.teht. \ref{H-I-3: sqrt 2}). \loppu
 \end{Exa}
-Em.\ propositioiden $A,B$ negaatiot saadaan ymm‰rrett‰v‰mp‰‰n muotoon suorittamalla
+Em.\ propositioiden $A,B$ negaatiot saadaan ymm√§rrett√§v√§mp√§√§n muotoon suorittamalla
 \pain{ne}g\pain{aation} p\pain{urku} seuraavasti:
 \begin{align*}
 \neg\,[\,\exists x \in X\,(\,P(x)\,)\,] \quad 
@@ -237,9 +237,9 @@ Em.\ propositioiden $A,B$ negaatiot saadaan ymm‰rrett‰v‰mp‰‰n muotoon suorittama
 \neg\,[\,\forall x \in X\ (\,P(x)\,)\,] \quad 
                  &\ekv \quad \exists x \in X\ (\,\neg\,P(x)\,).
 \end{align*}
-J‰lkimm‰isen s‰‰nnˆn mukaisesti proposition $B:\ P(x)\,\forall x \in X$ n‰ytt‰miseen 
-\pain{e}p\pain{‰todeksi} riitt‰‰ lˆyt‰‰ yksikin \pain{vastaesimerkki} $ x\in X$, jolle
-$P(x)$ on ep‰tosi.
+J√§lkimm√§isen s√§√§nn√∂n mukaisesti proposition $B:\ P(x)\,\forall x \in X$ n√§ytt√§miseen 
+\pain{e}p\pain{√§todeksi} riitt√§√§ l√∂yt√§√§ yksikin \pain{vastaesimerkki} $ x\in X$, jolle
+$P(x)$ on ep√§tosi.
 \begin{Exa} Jos $X = \{x \in \Q \mid x < 1\ \}$, niin propositio
 \[
 A: \quad \forall x \in X\ \exists y \in X\ (y>x)
@@ -251,47 +251,47 @@ on tosi. Jos $X = \{x \in \Q \mid x \le 1\}$, niin $A$:n negaatio
 \]
 on tosi. \loppu 
 \end{Exa}
-Formaali kvanttorimerkint‰ $\forall x \in X$ j‰tet‰‰n matemaattisissa teksteiss‰ usein
-merkitsem‰tt‰ silloin kun on selv‰‰, ett‰ kyse on koko tietty‰ joukkoa $X$ (esim.\ $X=\Q$)
-koskevasta p‰‰ttelyst‰.
-\begin{Exa} \label{n‰kym‰tˆn kvanttori} Rationaalilukuja koskeva p‰‰telm‰
+Formaali kvanttorimerkint√§ $\forall x \in X$ j√§tet√§√§n matemaattisissa teksteiss√§ usein
+merkitsem√§tt√§ silloin kun on selv√§√§, ett√§ kyse on koko tietty√§ joukkoa $X$ (esim.\ $X=\Q$)
+koskevasta p√§√§ttelyst√§.
+\begin{Exa} \label{n√§kym√§t√∂n kvanttori} Rationaalilukuja koskeva p√§√§telm√§
 \[
 2x^2+x<1\,\ \ekv\,\ -1<x<\tfrac{1}{2}
 \]
-ratkaisee $\Q$:ssa (oikein!) ep‰yht‰lˆn $2x^2+x<1$. P‰‰telm‰ on muodoltaan predikaatti mutta
-tulkittavissa propositioksi, jossa sidonta $\forall x\in\Q$ on sujuvuussyist‰ 'n‰kym‰tˆn'.
+ratkaisee $\Q$:ssa (oikein!) ep√§yht√§l√∂n $2x^2+x<1$. P√§√§telm√§ on muodoltaan predikaatti mutta
+tulkittavissa propositioksi, jossa sidonta $\forall x\in\Q$ on sujuvuussyist√§ 'n√§kym√§t√∂n'.
 \loppu
 \end{Exa} 
 
 \subsection*{Joukko-oppi}
 \index{joukko-oppi|vahv}%
 
-Logiikan ohella abstraktin ajattelun perimm‰isi‰ perusteita k‰sittelee matematiikan laji nimelt‰
-\kor{joukko-oppi} (engl. set theory). T‰ss‰ todettakoon ainoastaan lyhyesti er‰iden logiikan ja
-joukko-opin perusideoiden v‰linen yhteys. Ensinn‰kin 'mahdottoman v‰itt‰m‰n' muotoa 
+Logiikan ohella abstraktin ajattelun perimm√§isi√§ perusteita k√§sittelee matematiikan laji nimelt√§
+\kor{joukko-oppi} (engl. set theory). T√§ss√§ todettakoon ainoastaan lyhyesti er√§iden logiikan ja
+joukko-opin perusideoiden v√§linen yhteys. Ensinn√§kin 'mahdottoman v√§itt√§m√§n' muotoa 
 $A \wedge \neg A$ vastine joukko-opissa on
-\index{tyhj‰ joukko}%
-\kor{tyhj‰ joukko}, jonka symboli on '$\emptyset$'. 
-Tyhj‰ss‰ joukossa ei ole alkioita, eli $x \in \emptyset$ on aina ep‰tosi. 
+\index{tyhj√§ joukko}%
+\kor{tyhj√§ joukko}, jonka symboli on '$\emptyset$'. 
+Tyhj√§ss√§ joukossa ei ole alkioita, eli $x \in \emptyset$ on aina ep√§tosi. 
  
 Loogisen negaation $\neg A$ vastine joukko-opissa on joukon $A$ 
 \index{komplementti (joukon)}%
-\kor{komplementti}, joka merkit‰‰n $\complement(A)$ ja m‰‰ritell‰‰n
+\kor{komplementti}, joka merkit√§√§n $\complement(A)$ ja m√§√§ritell√§√§n
 \[
 x \in \complement(A) \quad \ekv \quad x \not\in A.
 \]
-K‰yt‰nnˆss‰ komplementti on m‰‰ritelt‰v‰ jonkin
+K√§yt√§nn√∂ss√§ komplementti on m√§√§ritelt√§v√§ jonkin
 \index{universaalijoukko}%
 \kor{universaalijoukon}\footnote[2]{Termi 
-'universaalijoukko' saattaa her‰tt‰‰ mielikuvan joukosta, joka sis‰lt‰‰ kirjaimellisesti 
-'kaiken'. T‰m‰n tyyppisi‰ ajatelmia joukko-opissa olikin sen teorian alkuvaiheissa, mutta niiden
-huomattiin johtavan paradokseihin, ts.\ loogisiin mahdottomuuksiin. Sittemmin t‰smentyneist‰ 
-joukko-opin aksioomista seuraakin, ett‰ 'mik‰‰n ei sis‰ll‰ kaikkea'.} $U$ suhteen. T‰ll‰
-ymm‰rret‰‰n sellaista joukkoa, johon kaikki tarkasteltavat joukot (mukaan lukien joukkojen 
-komplementit) sis‰ltyv‰t osajoukkoina. 
-\begin{Exa} Olkoon $P(x)$ jokin rationaalilukujoukkoon \Q\ liittyv‰ predikaatti, esim.\ 
-$P(x) = x<2$. T‰llˆin ehto '$P(x)$ tosi' m‰‰rittelee \Q:n osajoukon $A$, jota merkit‰‰n
-$\,A\,=\,\{\,x \in \Q \mid P(x)\,\}$. Universaalijoukoksi on t‰ss‰ luonnollista ajatella
+'universaalijoukko' saattaa her√§tt√§√§ mielikuvan joukosta, joka sis√§lt√§√§ kirjaimellisesti 
+'kaiken'. T√§m√§n tyyppisi√§ ajatelmia joukko-opissa olikin sen teorian alkuvaiheissa, mutta niiden
+huomattiin johtavan paradokseihin, ts.\ loogisiin mahdottomuuksiin. Sittemmin t√§smentyneist√§ 
+joukko-opin aksioomista seuraakin, ett√§ 'mik√§√§n ei sis√§ll√§ kaikkea'.} $U$ suhteen. T√§ll√§
+ymm√§rret√§√§n sellaista joukkoa, johon kaikki tarkasteltavat joukot (mukaan lukien joukkojen 
+komplementit) sis√§ltyv√§t osajoukkoina. 
+\begin{Exa} Olkoon $P(x)$ jokin rationaalilukujoukkoon \Q\ liittyv√§ predikaatti, esim.\ 
+$P(x) = x<2$. T√§ll√∂in ehto '$P(x)$ tosi' m√§√§rittelee \Q:n osajoukon $A$, jota merkit√§√§n
+$\,A\,=\,\{\,x \in \Q \mid P(x)\,\}$. Universaalijoukoksi on t√§ss√§ luonnollista ajatella
 $U=\Q$, jolloin $A$:n komplementti on
 \[
 \complement(A)\ =\ \{\,x \in \Q \mid \neg P(x)\,\}\ 
@@ -299,26 +299,26 @@ $U=\Q$, jolloin $A$:n komplementti on
 \] \end{Exa}
 
 Loogisten yhdistelyjen $A \tai B$, $A \wedge B$, $A \impl B$ ja $A \ekv B$ joukko-opilliset
-vastineet ovat $A \cup B$, $A \cap B$, $A \subset B$ ja $A=B$, kuten n‰hd‰‰n m‰‰ritelmist‰:
+vastineet ovat $A \cup B$, $A \cap B$, $A \subset B$ ja $A=B$, kuten n√§hd√§√§n m√§√§ritelmist√§:
 \begin{align*}
 x\in A \cup B   &\qekv x \in A\ \tai\ x \in B  \\
 x\in A \cap B   &\qekv x \in A\,\ \wedge\,\ x \in B  \\
 A \subset B     &\qekv x \in A\ \impl\ x \in B \\
 A = B           &\qekv x \in A\ \ekv\ x \in B
 \end{align*}
-Joukko $A \cup B$ on nimelt‰‰n $A$:n ja $B$:n 
+Joukko $A \cup B$ on nimelt√§√§n $A$:n ja $B$:n 
 \index{unioni (yhdiste)} \index{yhdiste (unioni)}%
 \kor{yhdiste} eli \kor{unioni} (engl.\ union)
 ja $A \cap B$ on $A$:n ja $B$:n 
 \index{leikkaus (joukkojen)}%
 \kor{leikkaus} (engl.\ intersection). Jos kahdella joukolla
-$A,B$ ei ole yhteisi‰ alkioita, eli $x \in A\,\wedge\,x \in B$ on ep‰tosi jokaisella $x$, niin 
-t‰m‰ voidaan ilmaista lyhyesti merkinn‰ll‰ $A \cap B = \emptyset$. Sanotaan t‰llˆin, ett‰ $A$ ja
-$B$ ovat \kor{erillisi‰} eli 
+$A,B$ ei ole yhteisi√§ alkioita, eli $x \in A\,\wedge\,x \in B$ on ep√§tosi jokaisella $x$, niin 
+t√§m√§ voidaan ilmaista lyhyesti merkinn√§ll√§ $A \cap B = \emptyset$. Sanotaan t√§ll√∂in, ett√§ $A$ ja
+$B$ ovat \kor{erillisi√§} eli 
 \index{pistevieraat joukot}%
 \kor{pistevieraita} (engl. disjoint).
-\begin{Exa} Esimerkin \ref{n‰kym‰tˆn kvanttori} p‰‰ttely tulkittiin propositioksi ajattelemalla
-kvanttorimerkint‰ $\forall x\in\Q$ lis‰tyksi. Viel‰ luontevampi on joukko-opillinen tulkinta:
+\begin{Exa} Esimerkin \ref{n√§kym√§t√∂n kvanttori} p√§√§ttely tulkittiin propositioksi ajattelemalla
+kvanttorimerkint√§ $\forall x\in\Q$ lis√§tyksi. Viel√§ luontevampi on joukko-opillinen tulkinta:
 $\ \{\,x\in\Q \mid 2x^2+x<1\,\}\ =\ \{\,x\in\Q \mid -1<x<\tfrac{1}{2}\,\}$. \loppu
 \end{Exa}
 \index{de Morganin lait}
@@ -328,7 +328,7 @@ $\ \{\,x\in\Q \mid 2x^2+x<1\,\}\ =\ \{\,x\in\Q \mid -1<x<\tfrac{1}{2}\,\}$. \lop
 \complement(A \cap B) \quad &= \quad \complement(A) \cup \complement(B).
 \end{align*}
 \end{Exa}
-\ratk \ P‰‰ttelyketjussa
+\ratk \ P√§√§ttelyketjussa
 \begin{align*}
 x \in \complement(A \cup B) \quad &\ekv \quad x \not\in (A \cup B) \\
                                   &\ekv \quad \neg\,(\,x \in A\,\tai\,x \in B\,) \\
@@ -337,19 +337,19 @@ x \in \complement(A \cup B) \quad &\ekv \quad x \not\in (A \cup B) \\
                                   &\ekv \quad x\in\complement(A)\,\wedge\,x\in\complement(B) \\
                                   &\ekv \quad x\in\complement(A)\cap\complement(B)
 \end{align*}
-voidaan edet‰ molempiin suuntiin, joten joukoilla $\complement(A \cup B)$ ja 
-$\complement(A) \cap \complement(B)$ on samat alkiot, ja ensimm‰inen v‰itt‰m‰ on siis 
-todistettu. Toisen v‰itt‰m‰n todistus saadaan t‰st‰ vaihdoilla $\cup \ext \cap$, 
+voidaan edet√§ molempiin suuntiin, joten joukoilla $\complement(A \cup B)$ ja 
+$\complement(A) \cap \complement(B)$ on samat alkiot, ja ensimm√§inen v√§itt√§m√§ on siis 
+todistettu. Toisen v√§itt√§m√§n todistus saadaan t√§st√§ vaihdoilla $\cup \ext \cap$, 
 $\cap \ext\cup$, $\tai \ext \wedge$ ja $\wedge \ext \tai$. \loppu 
 
 \subsection*{Ekvivalenssirelaatio}
 \index{ekvivalenssirelaatio|vahv}%
 
 \index{relaatio}%
-\kor{Relaatio} on joukko-opillinen 'suhteen' k‰site. Jos $R$ on joukossa $A$ m‰‰ritelty relaatio
-ja $x,y \in A$, niin merkint‰ $x\,R\,y$ luetaan '$x$ on relaatiossa $R$ $y$:n kanssa', tai
-sujuvammin vain '$x$ [relaation nimi] $y$'. Relaatioista ovat jo tuttuja k‰yt‰nnˆss‰ t‰rkeimm‰t, 
-eli j‰rjestys- ja samastusrelaatio.
+\kor{Relaatio} on joukko-opillinen 'suhteen' k√§site. Jos $R$ on joukossa $A$ m√§√§ritelty relaatio
+ja $x,y \in A$, niin merkint√§ $x\,R\,y$ luetaan '$x$ on relaatiossa $R$ $y$:n kanssa', tai
+sujuvammin vain '$x$ [relaation nimi] $y$'. Relaatioista ovat jo tuttuja k√§yt√§nn√∂ss√§ t√§rkeimm√§t, 
+eli j√§rjestys- ja samastusrelaatio.
 \index{samastus '$=$'!d@yleinen}%
 Samastusrelaation on aina oltava \kor{ekvivalenssirelaatio}, jonka aksioomat ovat seuraavat:
 \begin{itemize}
@@ -359,34 +359,34 @@ Samastusrelaation on aina oltava \kor{ekvivalenssirelaatio}, jonka aksioomat ova
 \end{itemize}
 \index{symmetrisyys!a@relaation} \index{refleksiivisyys (relaation)}
 \index{transitiivisuus (relaation)}%
-Vaaditut ominaisuudet ovat nimelt‰‰n \kor{refleksiivisyys}, \kor{symmetrisyys} ja 
+Vaaditut ominaisuudet ovat nimelt√§√§n \kor{refleksiivisyys}, \kor{symmetrisyys} ja 
 \kor{transitiivisuus}. Esimerkiksi relaatio '$\le$' on refleksiivinen ja transitiivinen muttei 
 symmetrinen, ja relaatio '$\neq$' on ainoastaan symmetrinen. Samastusrelaatio 'sama kuin' sen 
-sijaan on mit‰ ilmeisimmin ekvivalenssirelaatio. Esimerkiksi kun kirjoitetaan $x=y=z$ 
-(tarkoittaen: \ $x=y$ ja $y=z$), niin on ilmeist‰, ett‰ $x=z$. T‰ss‰ on siis kyse 
+sijaan on mit√§ ilmeisimmin ekvivalenssirelaatio. Esimerkiksi kun kirjoitetaan $x=y=z$ 
+(tarkoittaen: \ $x=y$ ja $y=z$), niin on ilmeist√§, ett√§ $x=z$. T√§ss√§ on siis kyse 
 transitiivisuudesta.\footnote[2]{Samastusrelaation yleiset aksioomat ovat samat kuin 
-ekvivalenssirelaation, vrt.\ alaviite edellisess‰ luvussa.}
-\begin{Exa} Jos $A =$ \{suomalaiset\}, niin seuraavat $A$:ssa m‰‰ritellyt relaatiot ovat
+ekvivalenssirelaation, vrt.\ alaviite edellisess√§ luvussa.}
+\begin{Exa} Jos $A =$ \{suomalaiset\}, niin seuraavat $A$:ssa m√§√§ritellyt relaatiot ovat
 ekvivalenssirelaatioita:
 \begin{align*}
 x \sim y         \quad &\ekv \quad \text{$x$ ja $y$ ovat syntyneet samana vuonna}, \\
 x\ \heartsuit\ y \quad &\ekv \quad \text{$y=x\,\ $ tai $\,\ y$ on $x$:n puoliso}. \loppu
 \end{align*}
 \end{Exa}
-Joukossa $A$ m‰‰ritellyll‰ ekvivalenssirelaatiolla on se ominaisuus, ett‰ se jakaa $A$:n
+Joukossa $A$ m√§√§ritellyll√§ ekvivalenssirelaatiolla on se ominaisuus, ett√§ se jakaa $A$:n
 \index{ekvivalenssiluokka}%
-\kor{ekvivalenssiluokkiin}. N‰m‰ ovat $A$:n osajoukkoja, joiden sis‰lt‰m‰t alkiot ovat kaikki
-relaatiossa kesken‰‰n. Refleksiivisyysominaisuuden (E1) vuoksi jokainen $A$:n alkio kuuluu 
-ainakin yhteen ekvivalenssiluokkaan (mahdollisesti yksin‰‰n). Toisaalta 
-transitiivisuusominaisuudesta (E3) seuraa, ett‰ kaksi ekvivalenssiluokkaa ovat joko t‰ysin samat
-tai ne ovat pistevieraita --- siis jokainen $A$:n alkio kuuluu t‰sm‰lleen yhteen
-ekvivalenssiluokkaan. Jos kyseess‰ on samastusrelaatio, niin kunkin ekvivalenssiluokan 
-sis‰lt‰m‰t alkiot 'luokitellaan samoiksi' eli samastetaan kesken‰‰n. T‰llˆin voidaan puhua myˆs
+\kor{ekvivalenssiluokkiin}. N√§m√§ ovat $A$:n osajoukkoja, joiden sis√§lt√§m√§t alkiot ovat kaikki
+relaatiossa kesken√§√§n. Refleksiivisyysominaisuuden (E1) vuoksi jokainen $A$:n alkio kuuluu 
+ainakin yhteen ekvivalenssiluokkaan (mahdollisesti yksin√§√§n). Toisaalta 
+transitiivisuusominaisuudesta (E3) seuraa, ett√§ kaksi ekvivalenssiluokkaa ovat joko t√§ysin samat
+tai ne ovat pistevieraita --- siis jokainen $A$:n alkio kuuluu t√§sm√§lleen yhteen
+ekvivalenssiluokkaan. Jos kyseess√§ on samastusrelaatio, niin kunkin ekvivalenssiluokan 
+sis√§lt√§m√§t alkiot 'luokitellaan samoiksi' eli samastetaan kesken√§√§n. T√§ll√∂in voidaan puhua my√∂s
 \index{samastusluokka}%
 \kor{samastusluokista}. 
-\jatko \begin{Exa} (jatko) Relaation '$\sim$' m‰‰r‰‰mi‰ ekvivalenssiluokkia sanotaan 
-ik‰luokiksi. Relaatio '$\heartsuit$' jakaa $A$:n ekvivalenssiluokkiin joissa on joko yksi alkio
-(alaik‰iset, sinkut, ym.) tai kaksi alkiota (rekisterˆidyt parit). \loppu 
+\jatko \begin{Exa} (jatko) Relaation '$\sim$' m√§√§r√§√§mi√§ ekvivalenssiluokkia sanotaan 
+ik√§luokiksi. Relaatio '$\heartsuit$' jakaa $A$:n ekvivalenssiluokkiin joissa on joko yksi alkio
+(alaik√§iset, sinkut, ym.) tai kaksi alkiota (rekister√∂idyt parit). \loppu 
 \end{Exa}
 
 \Harj
@@ -394,29 +394,29 @@ ik‰luokiksi. Relaatio '$\heartsuit$' jakaa $A$:n ekvivalenssiluokkiin joissa on 
 
 \item
 Olkoon $A$ propositio 'Sataa', $B$ propositio 'Menen lenkille' ja $C$ propositio 'Minulla on
-aikaa'. Kirjoita n‰iden ja loogisten operaattoreiden avulla mahdollisimman pelkistetysti: \newline
-a) \ 'V‰sytt‰‰, on pime‰‰ ja TV:st‰ tulee BB, joten en mene lenkille.' \newline
+aikaa'. Kirjoita n√§iden ja loogisten operaattoreiden avulla mahdollisimman pelkistetysti: \newline
+a) \ 'V√§sytt√§√§, on pime√§√§ ja TV:st√§ tulee BB, joten en mene lenkille.' \newline
 b) \ 'Menen lenkille, satoi tai paistoi!' \newline
 c) \ 'Sataa, joten en mene lenkille.' \newline
-d) \ 'Sataa enk‰ mene lenkille.' \newline
+d) \ 'Sataa enk√§ mene lenkille.' \newline
 e) \ 'Menen lenkille vain, jos minulla on aikaa.' \newline
-f) \ 'Minulla on aikaa eik‰ sadakaan, mutta en mene lenkille.' \newline
+f) \ 'Minulla on aikaa eik√§ sadakaan, mutta en mene lenkille.' \newline
 g) \ 'Jos ei sada ja minulla on aikaa, niin menen lenkille.' \newline
 h) \ 'Minulla on aikaa vain, jos sateen vuoksi en mene lenkille.'
 
-\item Olkoon $A=$ 'T‰n‰‰n sataa', $B=$ 'Huomenna on pouta' ja $C=$ 'T‰n‰‰n on pouta'. a) Jos 
-t‰n‰‰n alkanut sade jatkuu huomiseen, niin mitk‰ ovat propositioiden $\,A \impl B\,$ ja 
+\item Olkoon $A=$ 'T√§n√§√§n sataa', $B=$ 'Huomenna on pouta' ja $C=$ 'T√§n√§√§n on pouta'. a) Jos 
+t√§n√§√§n alkanut sade jatkuu huomiseen, niin mitk√§ ovat propositioiden $\,A \impl B\,$ ja 
 $\,B \impl A\,$ totuusarvot\,? b) Riippuuko proposition
-$\neg(\neg A \wedge B) \impl \neg C$ totuusarvo siit‰, mik‰ p‰iv‰ on 't‰n‰‰n'\,?
+$\neg(\neg A \wedge B) \impl \neg C$ totuusarvo siit√§, mik√§ p√§iv√§ on 't√§n√§√§n'\,?
 
 \item \label{H-I-3: modus tollens} \index{modus tollens}
-Osoita joko totuustaulun avulla tai muuten p‰‰ttelem‰ll‰ seuraava propositio 
+Osoita joko totuustaulun avulla tai muuten p√§√§ttelem√§ll√§ seuraava propositio 
 (nk.\ \kor{modus tollens}) identtisesti todeksi:
 $\ [\,(\neg P \impl Q) \wedge \neg Q\,] \impl P$. \newline
-Miten tulokseen vedotaan ep‰suorassa todistuksessa\,?
+Miten tulokseen vedotaan ep√§suorassa todistuksessa\,?
 
 \item \label{H-I-3: tautologioita}
-N‰yt‰ totuustaulun avulla tai muuten p‰‰ttelem‰ll‰ identtisesti todeksi: 
+N√§yt√§ totuustaulun avulla tai muuten p√§√§ttelem√§ll√§ identtisesti todeksi: 
 \vspace{1mm}\newline
 a) \ $\neg\,(A \wedge \neg B)\ \ekv\ \neg A \tai (A \wedge B) \qquad$
 b) \ $(A \impl B)\ \ekv\ (\neg B \impl \neg A)$ \newline
@@ -433,8 +433,8 @@ i) \ $(A \impl B) \impl A \quad\ $
 j) \ $[\,(A \impl B) \wedge B\,]\,\impl\,A$
 
 \item
-Jos seuraavat predikaatit $P(x)$ tulkitaan v‰itt‰min‰ $P(x)\ \forall x\in\Q$, niin mitk‰ 
-v‰itt‰mist‰ ovat tosia ja mitk‰ ep‰tosia\,? \vspace{1mm}\newline
+Jos seuraavat predikaatit $P(x)$ tulkitaan v√§itt√§min√§ $P(x)\ \forall x\in\Q$, niin mitk√§ 
+v√§itt√§mist√§ ovat tosia ja mitk√§ ep√§tosia\,? \vspace{1mm}\newline
 a) \ $2x>3\,\ \impl\,\ x>4/3 \qquad\qquad\qquad\quad$
 b) \ $x<-2\,\ \ekv\,\ x^2>4$ \newline
 c) \ $3x<4\,\ \impl\,\ x<1\ \tai\ 2x<3 \qquad\quad$
@@ -443,7 +443,7 @@ e) \ $x=4/3\ \wedge\ 3x^2<x+4\,\ \impl\,\ x^2+2x+1<0$ \newline
 f) \ $2x^2+x\,\le\,1\,\le\,3x-2x^2\,\ \ekv\,\ x=4/3$ \newline
 
 \item
-Olkoot $x$ ja $y$ rationaalilukuja. Mitk‰ seuraavista propositioista ovat tosia\,? \newline
+Olkoot $x$ ja $y$ rationaalilukuja. Mitk√§ seuraavista propositioista ovat tosia\,? \newline
 a) \ $\forall x \exists y\ (x \cdot y = 0) \qquad$ 
 b) \ $\forall x \exists y\ (x \cdot y = 1)$ \newline
 c) \ $\exists y \forall x\ (x \cdot y = 0) \qquad$ 
@@ -455,50 +455,50 @@ h) \ $\exists x \forall y\ (y \ge x)$ \newline
 Miten tilanne muuttuu, jos $x$ ja $y$ ovat positiivisia rationaalilukuja\,?
 
 \item
-Olkoon $x\in\Q$. Muodosta seuraavien kahden proposition negaatiot auki purettuina. Mitk‰ n‰in
-syntyvist‰ nelj‰st‰ propositiosta ovat tosia? \vspace{1mm}\newline
+Olkoon $x\in\Q$. Muodosta seuraavien kahden proposition negaatiot auki purettuina. Mitk√§ n√§in
+syntyvist√§ nelj√§st√§ propositiosta ovat tosia? \vspace{1mm}\newline
 a) \ $\forall (\eps>0) \exists (x \neq 1) (\abs{x-1}<\eps) \quad$
 b) \ $\exists (x \neq 1) \forall (\eps>0) (\abs{x-1}<\eps)$
 
 \item \label{H-I-3: sqrt 2} 
-N‰yt‰ ep‰suoralla todistustavalla: \ a) Ei ole olemassa pienint‰ positiivista 
+N√§yt√§ ep√§suoralla todistustavalla: \ a) Ei ole olemassa pienint√§ positiivista 
 rationaalilukua. \ b) $\,x^2 \neq 2\ \forall x\in\Q$. \ c) $\,x^2 \neq 3\ \forall x\in\Q$.
 
 \item
-Universaalijoukko $U$ olkoon kymmenen ensimm‰isen luonnollisen luvun muodostama joukko 
-$\,\{1,2,3,4,5,6,7,8,9,10\}$. Olkoon $A=\{2,5,7,8,10\}$ ja $B=\{2,4,6,8,10\}$. M‰‰rit‰ 
+Universaalijoukko $U$ olkoon kymmenen ensimm√§isen luonnollisen luvun muodostama joukko 
+$\,\{1,2,3,4,5,6,7,8,9,10\}$. Olkoon $A=\{2,5,7,8,10\}$ ja $B=\{2,4,6,8,10\}$. M√§√§rit√§ 
 $A \cup B$, $A \cap B$, $\complement(A)$, $\complement(A \cup B)$ ja
 $\complement(A) \cap \complement(B)$. 
 
 \item
-Todista seuraavat joukko-opilliset v‰itt‰m‰t: \newline
+Todista seuraavat joukko-opilliset v√§itt√§m√§t: \newline
 a) \ $A \subset B\ \ekv\ A \cup B = B\ \ekv\ A \cap B = A$ \newline
 b) \ $A \subset B\ \wedge\ A \subset C\ \ekv\ A \subset B \cap C$ \newline
 c) \ $A \subset C\ \wedge\ B \subset C\ \ekv\ A \cup B \subset C$ \newline
 d) \ $A \subset B\ \ekv\ A \cap C \subset B \cap C\ \forall C$ \newline
 e) \ $\,\emptyset \subset A\ \forall A$
 
-\item Muotoile ja todista Teht‰v‰n \ref{H-I-3: tautologioita} v‰itt‰mien b)--d)
+\item Muotoile ja todista Teht√§v√§n \ref{H-I-3: tautologioita} v√§itt√§mien b)--d)
 joukko-opilliset vastineet.
 
 \item
 Olkoon $\,A=\{(p,q) \mid p,q\in\Z\}$ (kokonaislukuparien joukko) ja 
-$Q=\{(p,q) \in A \mid q \neq 0\}$. M‰‰ritell‰‰n $Q$:ssa relaatio 
-$(p_1,q_1) \sim (p_2,q_2)\ \ekv\ p_1q_2=p_2q_1\,$. N‰yt‰, ett‰ kyseess‰ on $Q$:n 
+$Q=\{(p,q) \in A \mid q \neq 0\}$. M√§√§ritell√§√§n $Q$:ssa relaatio 
+$(p_1,q_1) \sim (p_2,q_2)\ \ekv\ p_1q_2=p_2q_1\,$. N√§yt√§, ett√§ kyseess√§ on $Q$:n 
 ekvivalenssirelaatio. Miten tulos liittyy rationaalilukuihin?
 
 \item
-Mit‰ ekvivalenssirelaation ominaisuuksia on seuraavilla, annetuissa joukoissa $A$ m‰‰ritellyill‰
+Mit√§ ekvivalenssirelaation ominaisuuksia on seuraavilla, annetuissa joukoissa $A$ m√§√§ritellyill√§
 relaatioilla\,? \newline
 a) \ $A=\N:\,\ x R y\ \ekv\ x+y$ on parillinen. \newline
 b) \ $A=\N:\,\ x R y\ \ekv\ x+y$ on pariton. \newline
 c) \ $A=\Q:\,\ x R y\ \ekv\ \abs{x-y} \le 10^{-100}$. \newline 
 d) \ $A=\{\,\text{suomalaiset}\,\}:\,\ x R y\ \ekv x$ ja $y$ ovat toisilleen sukua suoraan 
-ylenev‰ss‰ tai alenevassa polvessa.
+ylenev√§ss√§ tai alenevassa polvessa.
 
 \item (*) \index{alkuluku}
-Luonnollinen luku $k\in\N$ on luvun $n\in\N$ \kor{tekij‰}, jos $n=k \cdot m$ jollakin $m\in\N$.
-Luku $n$ on \kor{alkuluku}, jos $n$:ll‰ ei ole muita tekijˆit‰ kuin $k=1$ ja $k=n$. N‰yt‰, ett‰
+Luonnollinen luku $k\in\N$ on luvun $n\in\N$ \kor{tekij√§}, jos $n=k \cdot m$ jollakin $m\in\N$.
+Luku $n$ on \kor{alkuluku}, jos $n$:ll√§ ei ole muita tekij√∂it√§ kuin $k=1$ ja $k=n$. N√§yt√§, ett√§
 alkuluvuilla ei ole loppua, ts.\ ei ole olemassa suurinta alkulukua.
 
 \end{enumerate}

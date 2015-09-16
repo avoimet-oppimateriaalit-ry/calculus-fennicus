@@ -2,66 +2,66 @@
 \alku
 \index{funktio C!f@$\exp$ ($e^x$, $e^z$)|vahv}
 
-Edellisess‰ luvussa eksponenttifunktio $E(x)$ konstruoitiin jatkamalla tunnettu funktio
-$\,b^x,\ x\in\Q$. T‰ll‰ tavoin tuli varmistetuksi, ett‰ eksponenttifunktioita on olemassa,
-ett‰ luku $b=E(1)$ m‰‰r‰‰ $E(x)$:n yksik‰sitteisesti, ja ett‰ eksponenttifunktion arvot
-voidaan laskea numeerisesti suoraan m‰‰ritelm‰st‰ k‰sin. Mit‰ \pain{ei} tullut varmistetuksi
-on esimerkiksi, onko $E(x)$ mahdollisesti myˆs derivoituva, eik‰ vain jatkuva. Yleisemminkin
-j‰i avoimeksi, kuinka s‰‰nnˆllisest‰ funktiosta on ylip‰‰ns‰ kyse. Seuraavassa etsit‰‰n
-vastausta n‰ihin kysymyksiin l‰hestym‰ll‰ eksponenttifunktiota toisesta suunnasta.
+Edellisess√§ luvussa eksponenttifunktio $E(x)$ konstruoitiin jatkamalla tunnettu funktio
+$\,b^x,\ x\in\Q$. T√§ll√§ tavoin tuli varmistetuksi, ett√§ eksponenttifunktioita on olemassa,
+ett√§ luku $b=E(1)$ m√§√§r√§√§ $E(x)$:n yksik√§sitteisesti, ja ett√§ eksponenttifunktion arvot
+voidaan laskea numeerisesti suoraan m√§√§ritelm√§st√§ k√§sin. Mit√§ \pain{ei} tullut varmistetuksi
+on esimerkiksi, onko $E(x)$ mahdollisesti my√∂s derivoituva, eik√§ vain jatkuva. Yleisemminkin
+j√§i avoimeksi, kuinka s√§√§nn√∂llisest√§ funktiosta on ylip√§√§ns√§ kyse. Seuraavassa etsit√§√§n
+vastausta n√§ihin kysymyksiin l√§hestym√§ll√§ eksponenttifunktiota toisesta suunnasta.
 
-L‰htˆkohdaksi otetaan eksponenttifunktion aksiooman E3 (ks.\ edellinen luku) vahvistaminen
+L√§ht√∂kohdaksi otetaan eksponenttifunktion aksiooman E3 (ks.\ edellinen luku) vahvistaminen
 muotoon \index{eksponenttifunktio!a@aksioomat}
 \begin{itemize}
-\item[(E3')]  $E$ on derivoituva pisteess‰ $x=0$.
+\item[(E3')]  $E$ on derivoituva pisteess√§ $x=0$.
 \end{itemize}
-Koska tiedet‰‰n, ett‰ $E(0)=1$ (Lause \ref{eksponenttifunktion ominaisuudet} (b)), niin
-aksiooman E3' mukaan on olemassa luku $a\in\R$ siten, ett‰
+Koska tiedet√§√§n, ett√§ $E(0)=1$ (Lause \ref{eksponenttifunktion ominaisuudet} (b)), niin
+aksiooman E3' mukaan on olemassa luku $a\in\R$ siten, ett√§
 \[
 E'(0) \,=\, \lim_{x \kohti 0} \frac{E(x)-1}{x} \,=\, a.
 \]
-Kun yhdistet‰‰n t‰m‰ tulos ja aksiooma E4, niin seuraa
+Kun yhdistet√§√§n t√§m√§ tulos ja aksiooma E4, niin seuraa
 \[
 \lim_{\Delta x \kohti 0} \frac{E(x+\Delta x)-E(x)}{\Delta x}
  \,=\, \lim_{\Delta x \kohti 0} E(x)\,\frac{E(\Delta x)-1}{\Delta x} \,=\, aE(x), \quad x\in\R.
 \]
-Siis $E$ on derivoituva jokaisessa pisteess‰ $x\in\R$ ja
-\index{derivoimiss‰‰nnˆt!g@eksponenttifunktio}%
+Siis $E$ on derivoituva jokaisessa pisteess√§ $x\in\R$ ja
+\index{derivoimiss√§√§nn√∂t!g@eksponenttifunktio}%
 \[
 E'(x)=aE(x), \quad x\in\R.
 \]
-On p‰‰telty, ett‰ jos aksioomat E1,\,E2,\,E3',\,E4 toteuttava funktio $E(x)$ on
-olemassa, niin t‰m‰ on derivoituva $\R$:ss‰ ja jollakin $a\in\R$ ratkaisu probleemalle
+On p√§√§telty, ett√§ jos aksioomat E1,\,E2,\,E3',\,E4 toteuttava funktio $E(x)$ on
+olemassa, niin t√§m√§ on derivoituva $\R$:ss√§ ja jollakin $a\in\R$ ratkaisu probleemalle
 \[ 
 \text{(P)} \quad \begin{cases} \,y'=ay, \quad x\in\R, \\ \,y(0)=1. \end{cases}
 \]
-T‰ss‰ on kyse alkuarvoteht‰v‰st‰, jossa on ratkaistava differentiaaliyht‰lˆ
-$y'=ay$ alkuehdolla $y(0)=1$ (vrt.\ Luvussa \ref{v‰liarvolause 2} tarkasteltu
-vastaava probleema differentiaaliyht‰lˆlle $y'=f(x)$).
-\index{differentiaaliyht‰lˆ!a@eksponenttifunktion}%
-\begin{Lause} \label{exp-dy} Probleemalla (P) on ratkaisu $y(x)=E(x)$, miss‰
+T√§ss√§ on kyse alkuarvoteht√§v√§st√§, jossa on ratkaistava differentiaaliyht√§l√∂
+$y'=ay$ alkuehdolla $y(0)=1$ (vrt.\ Luvussa \ref{v√§liarvolause 2} tarkasteltu
+vastaava probleema differentiaaliyht√§l√∂lle $y'=f(x)$).
+\index{differentiaaliyht√§l√∂!a@eksponenttifunktion}%
+\begin{Lause} \label{exp-dy} Probleemalla (P) on ratkaisu $y(x)=E(x)$, miss√§
 \[ 
 E(x) = \sum_{k=0}^\infty \frac{(ax)^k}{k!} = 1 + ax + \frac{(ax)^2}{2} + \ldots 
 \]
-T‰m‰ ratkaisu on yksik‰sitteinen, ja $E(x)$ on eksponenttifunktio.
+T√§m√§ ratkaisu on yksik√§sitteinen, ja $E(x)$ on eksponenttifunktio.
 \end{Lause}
-\tod Potenssisarjan derivoimiss‰‰nnˆst‰ (Lause \ref{potenssisarja on derivoituva}) n‰hd‰‰n
-v‰littˆm‰sti, ett‰ v‰itetty $y(x)$ on probleeman (P) ratkaisu. N‰hd‰‰n myˆs, ett‰ funktiolla
-$E(x)$ on eksponenttifunktiolta vaadittavat ominaisuudet (E1)--(E3), sill‰ $E(0)=1$ ja $E$
-on m‰‰ritelty koko $\R$:ss‰ suppenevan potenssisarjan summana, siis derivoituvana ja jopa
-sile‰n‰ funktiona.
+\tod Potenssisarjan derivoimiss√§√§nn√∂st√§ (Lause \ref{potenssisarja on derivoituva}) n√§hd√§√§n
+v√§litt√∂m√§sti, ett√§ v√§itetty $y(x)$ on probleeman (P) ratkaisu. N√§hd√§√§n my√∂s, ett√§ funktiolla
+$E(x)$ on eksponenttifunktiolta vaadittavat ominaisuudet (E1)--(E3), sill√§ $E(0)=1$ ja $E$
+on m√§√§ritelty koko $\R$:ss√§ suppenevan potenssisarjan summana, siis derivoituvana ja jopa
+sile√§n√§ funktiona.
 
-N‰ytet‰‰n seuraavaksi, ett‰ $E(x)$ toteuttaa myˆs eksponenttifunktion aksiooman (E4). T‰t‰
-silm‰ll‰ pit‰en tarkastellaan ensin funktiota
+N√§ytet√§√§n seuraavaksi, ett√§ $E(x)$ toteuttaa my√∂s eksponenttifunktion aksiooman (E4). T√§t√§
+silm√§ll√§ pit√§en tarkastellaan ensin funktiota
 \[
 u(x) = E(x)E(-x), \quad x\in\R.
 \]
-Koska $E'=aE$, niin tulon derivoimiss‰‰ntˆ‰ k‰ytt‰en todetaan, ett‰
+Koska $E'=aE$, niin tulon derivoimiss√§√§nt√∂√§ k√§ytt√§en todetaan, ett√§
 \begin{equation} \label{exp-apuy 1}
 u'(x)=0, \quad x\in\R.
 \end{equation}
-Koska $u(0)=1$ ja siis $u'=0$, niin seuraa, ett‰ $u(x)=1\ \forall x\in\R$
-(Lause \ref{Integraalilaskun peruslause}). Siis $E(x)E(-x)=1\ \forall x\in\R$, ja n‰in ollen 
+Koska $u(0)=1$ ja siis $u'=0$, niin seuraa, ett√§ $u(x)=1\ \forall x\in\R$
+(Lause \ref{Integraalilaskun peruslause}). Siis $E(x)E(-x)=1\ \forall x\in\R$, ja n√§in ollen 
 $E(x) \neq 0\ \forall x\in\R$ ja
 \begin{equation} \label{exp-apuy 2}
 E(-x) = [E(x)]^{-1}, \quad x\in\R.
@@ -70,126 +70,126 @@ Olkoon seuraavaksi $t\in\R$ kiinnitetty ja tarkastellaan funktiota
 \[
 u(x) = E(t+x)E(-t)E(-x), \quad x\in\R.
 \]
-Derivoimalla muuttujan $x$ suhteen ja k‰ytt‰m‰ll‰ differentiaaliyht‰lˆ‰ $E'=aE$ todetaan, ett‰ 
-j‰lleen p‰tee \eqref{exp-apuy 1}. Koska tuloksen \eqref{exp-apuy 2} mukaan on $u(0)=1$, niin 
-p‰‰tell‰‰n kuten edell‰ ja k‰ytt‰m‰ll‰ uudelleen tulosta \eqref{exp-apuy 2}, ett‰
+Derivoimalla muuttujan $x$ suhteen ja k√§ytt√§m√§ll√§ differentiaaliyht√§l√∂√§ $E'=aE$ todetaan, ett√§ 
+j√§lleen p√§tee \eqref{exp-apuy 1}. Koska tuloksen \eqref{exp-apuy 2} mukaan on $u(0)=1$, niin 
+p√§√§tell√§√§n kuten edell√§ ja k√§ytt√§m√§ll√§ uudelleen tulosta \eqref{exp-apuy 2}, ett√§
 \[
 u(x)=E(t+x)E(-t)E(-x)=1\,\ \ekv\,\ E(t+x)= E(t)E(x), \quad x\in\R.
 \]
-T‰m‰ p‰tee jokaisella $t\in\R$, joten aksiooma E4 on voimassa funktiolle $E(x)$. Siis 
+T√§m√§ p√§tee jokaisella $t\in\R$, joten aksiooma E4 on voimassa funktiolle $E(x)$. Siis 
 $E(x)$ on eksponenttifunktio (jokaisella $a\in\R$).
 
-En‰‰ on todistamatta probleeman (P) ratkaisun yksik‰sitteisyys. T‰t‰ silm‰ll‰ pit‰en
-olkoon $y(x)$ (P):n (mik‰ tahansa) ratkaisu ja tarkastellaan funktiota
+En√§√§ on todistamatta probleeman (P) ratkaisun yksik√§sitteisyys. T√§t√§ silm√§ll√§ pit√§en
+olkoon $y(x)$ (P):n (mik√§ tahansa) ratkaisu ja tarkastellaan funktiota
 \[
 u(x)=y(x)E(-x), \quad x\in\R.
 \]
-Derivoimalla ja k‰ytt‰m‰ll‰ differentiaaliyht‰lˆit‰ $y'=ay$ ja $E'=aE$ todetaan, ett‰ j‰lleen 
-p‰tee \eqref{exp-apuy 1}. Koska $u(0)=1$, niin seuraa
+Derivoimalla ja k√§ytt√§m√§ll√§ differentiaaliyht√§l√∂it√§ $y'=ay$ ja $E'=aE$ todetaan, ett√§ j√§lleen 
+p√§tee \eqref{exp-apuy 1}. Koska $u(0)=1$, niin seuraa
 \[
 u(x)=y(x)E(-x)=1\,\ \ekv\,\ y(x)=E(x), \quad x\in\R. \loppu
 \]
 
 Sanotaan jatkossa \kor{peruseksponenttifunktioksi}, symboli $\,\exp$, probleeman (P) ratkaisua,
-kun $a=1$. M‰‰ritelm‰ potenssisarjana on siis
+kun $a=1$. M√§√§ritelm√§ potenssisarjana on siis
 \[
 \boxed{\quad \exp(x) = \sum_{k=0}^\infty \frac{x^{\ygehys k}}{\agehys k!}\,. \quad}
 \]
-Jos merkit‰‰n $e=\exp(1)$, niin edellisen luvun merkinnˆin voidaan kirjoittaa
+Jos merkit√§√§n $e=\exp(1)$, niin edellisen luvun merkinn√∂in voidaan kirjoittaa
 \[
 \boxed{\quad\kehys \exp(x) = e^x. \quad}
 \]
-T‰ss‰ $e$ on todellakin Neperin luku, sill‰ p‰tee (ks.\ Propositiot \ref{Neperin jonot} ja
+T√§ss√§ $e$ on todellakin Neperin luku, sill√§ p√§tee (ks.\ Propositiot \ref{Neperin jonot} ja
 \ref{e:n sarja})
 \[
 \exp(1) = \sum_{k=0}^\infty \frac{1}{k!} = \lim_{n\kohti\infty}\left(1+\frac{1}{n}\right)^n
                                          = e = 2.71828182845905..
 \]
-T‰ss‰ j‰lkimm‰inen raja-arvotulos on erikoistapaus yleisemm‰st‰ tuloksesta
+T√§ss√§ j√§lkimm√§inen raja-arvotulos on erikoistapaus yleisemm√§st√§ tuloksesta
 (ks.\ Harj.teht.\,\ref{H-exp-2: eksoottisia raja-arvoja})
 \[
 \boxed{\Akehys\quad \lim_n \Bigl(1+\frac{\ygehys x}{n}\Bigr)^n = e^x, \quad x\in\R. \quad }
 \]
 
-Peruseksponenttifunktion $e^x$ m‰‰ritelm‰st‰ seuraa derivoimiss‰‰ntˆ
+Peruseksponenttifunktion $e^x$ m√§√§ritelm√§st√§ seuraa derivoimiss√§√§nt√∂
 \[
 \boxed{\kehys\quad \dif e^x = e^x. \quad}
 \]
-Monet funktion $e^x$ ominaisuuksista voidaan helposti johtaa t‰st‰ s‰‰nnˆst‰ tai 
-potenssisarjaesityksest‰. Esimerkiksi potenssisarjaesityksest‰ seuraa 
+Monet funktion $e^x$ ominaisuuksista voidaan helposti johtaa t√§st√§ s√§√§nn√∂st√§ tai 
+potenssisarjaesityksest√§. Esimerkiksi potenssisarjaesityksest√§ seuraa 
 \[
 e^x > x^m/m!\ \ \forall m \in \N, \quad \text{kun}\ x>0, 
 \]
-mist‰ on edelleen helposti p‰‰telt‰viss‰ raja-arvotulokset
+mist√§ on edelleen helposti p√§√§telt√§viss√§ raja-arvotulokset
 \begin{equation} \label{exp-raja-arvot}
 \boxed{\quad \lim_{x\kohti\infty} x^{\ygehys -\alpha}e^x = \infty 
   \qekv \lim_{x\kohti\infty}x^\alpha e^{-x} = 0 \quad \forall \alpha \in \R_{\agehys}. \quad}
 \end{equation}
-N‰iden mukaan funktio $e^x$ kasvaa nopeammin, ja funktio $e^{-x}$ v‰henee nopeammin, kuin mik‰‰n
-potenssifunktio, kun $x\kohti\infty$. Potenssisarjan perusteella voidaan myˆs $e^x$:n 
-numeroarvoja laskea helposti, sill‰ pienill‰ $\abs{x}$:n arvoilla (esim.\ kun $\abs{x} \le 1$) 
-sarja suppenee nopeasti ja suuremmilla taas voidaan k‰ytt‰‰ kaavaa $e^x = (e^{x/n})^n$. 
-Derivoimiss‰‰nnˆst‰ (myˆs potenssisarjasta) n‰hd‰‰n, ett‰ funktio $e^x$ on $\R$:ss‰ 
-mielivaltaisen monta kertaa derivoituva (sile‰) funktio. 
+N√§iden mukaan funktio $e^x$ kasvaa nopeammin, ja funktio $e^{-x}$ v√§henee nopeammin, kuin mik√§√§n
+potenssifunktio, kun $x\kohti\infty$. Potenssisarjan perusteella voidaan my√∂s $e^x$:n 
+numeroarvoja laskea helposti, sill√§ pienill√§ $\abs{x}$:n arvoilla (esim.\ kun $\abs{x} \le 1$) 
+sarja suppenee nopeasti ja suuremmilla taas voidaan k√§ytt√§√§ kaavaa $e^x = (e^{x/n})^n$. 
+Derivoimiss√§√§nn√∂st√§ (my√∂s potenssisarjasta) n√§hd√§√§n, ett√§ funktio $e^x$ on $\R$:ss√§ 
+mielivaltaisen monta kertaa derivoituva (sile√§) funktio. 
 \begin{Exa} Jatka funktio $f(x)=(e^x-1-x)/x^2$ pisteeseen $x=0$.
 \end{Exa}
-\ratk $e^x$:n potenssisarjasta n‰hd‰‰n, ett‰
+\ratk $e^x$:n potenssisarjasta n√§hd√§√§n, ett√§
 \[
 f(x)= \frac{1}{2!} + \frac{x}{3!} + \frac{x^2}{4!} + \ldots\ 
                            =\ \sum_{k=0}^\infty \frac{x^k}{(k+2)!}\,, \quad x \neq 0.
 \]
-Kun asetetaan $f(0)=1/2$, niin $\forall x\in\R$ p‰tee siis
+Kun asetetaan $f(0)=1/2$, niin $\forall x\in\R$ p√§tee siis
 \[
 f(x)\,=\,\sum_{k=0}^\infty \frac{x^k}{(k+2)!} 
     \,=\,\begin{cases}
          \,\dfrac{e^x-1-x}{x^2}\,, &\text{kun}\ x \neq 0, \\ \tfrac{1}{2}\,, &\text{kun}\ x=0.
          \end{cases} 
 \]
-T‰ss‰ potenssisarjan suppenemiss‰de on $\rho=\infty$, joten $f$ ei ole vain jatkuva, vaan
-$\R$:ss‰ (myˆs pisteess‰ $x=0$\,!) mielivaltaisen monta kertaa derivoituva. \loppu
+T√§ss√§ potenssisarjan suppenemiss√§de on $\rho=\infty$, joten $f$ ei ole vain jatkuva, vaan
+$\R$:ss√§ (my√∂s pisteess√§ $x=0$\,!) mielivaltaisen monta kertaa derivoituva. \loppu
 
-Edellisess‰ luvussa todettiin, ett‰ yleinen eksponenttifunktio on muotoa $E(x)=b^x$, miss‰ 
-$b=E(1) \in \R_+$. Laskuissa usein k‰tev‰mpi on peruseksponenttifunktiosta johdettu 
+Edellisess√§ luvussa todettiin, ett√§ yleinen eksponenttifunktio on muotoa $E(x)=b^x$, miss√§ 
+$b=E(1) \in \R_+$. Laskuissa usein k√§tev√§mpi on peruseksponenttifunktiosta johdettu 
 vaihtoehtoinen esitystapa
 \[
 \boxed{\kehys\quad E(x)=e^{ax}, \quad E(1)=b=e^a. \quad}
 \]
-Luku $a\in\R$ m‰‰r‰ytyy yksik‰sitteisesti yht‰lˆst‰ $e^a=b$, koska $e^x:\ \R\kohti\R_+$ on 
+Luku $a\in\R$ m√§√§r√§ytyy yksik√§sitteisesti yht√§l√∂st√§ $e^a=b$, koska $e^x:\ \R\kohti\R_+$ on 
 bijektio. Jokainen eksponenttifunktio on siis muotoa $E(x)=e^{ax}$ jollakin $a\in\R$. 
 
-Todettakoon viel‰ l‰htˆkohtana olleesta probleemasta (P), ett‰ sen ratkaisuina saadaan siis 
+Todettakoon viel√§ l√§ht√∂kohtana olleesta probleemasta (P), ett√§ sen ratkaisuina saadaan siis 
 kaikki eksponenttifunktiot $y(x)=e^{ax}$, kun $a$:n arvoa vaihdellaan. Jos ratkaisuksi
-halutaan tietty eksponenttifunktio $E(x)$, niin $a$ m‰‰r‰ytyy joko em.\ tavalla luvun
-$b=E(1)$ kautta tai ehdosta $E'(0)=a$. Jos $a$ on kiinnitetty, niin differentiaaliyht‰lˆn
+halutaan tietty eksponenttifunktio $E(x)$, niin $a$ m√§√§r√§ytyy joko em.\ tavalla luvun
+$b=E(1)$ kautta tai ehdosta $E'(0)=a$. Jos $a$ on kiinnitetty, niin differentiaaliyht√§l√∂n
 $y'=ay$ y\pain{leinen} \pain{ratkaisu} (=kaikkien ratkaisujen joukko) on
 (Harj.teht.\,\ref{H-exp-2: exp-dy})
 \[
 y(x)=Ce^{ax}, \quad C\in\R.
 \]
-Alkuehdon $y(0)=y_0$ toteuttava ratkaisu on t‰m‰n mukaan yksik‰sitteinen ja saadaan
+Alkuehdon $y(0)=y_0$ toteuttava ratkaisu on t√§m√§n mukaan yksik√§sitteinen ja saadaan
 valitsemalla $C=y_0$.
 
 \subsection*{Logaritmifunktio}
 \index{logaritmifunktio|vahv}
 \index{funktio C!g@$\log$, $\ln$|vahv}
 
-Koska eksponenttifunktio $E:\R\kohti\R_+$ on bijektio kun $E(1)=b\neq 1$, on sill‰ 
-k‰‰nteisfunktio, jota sanotaan \kor{logaritmifunktioksi}. K‰‰nteisfunktiota merkit‰‰n
+Koska eksponenttifunktio $E:\R\kohti\R_+$ on bijektio kun $E(1)=b\neq 1$, on sill√§ 
+k√§√§nteisfunktio, jota sanotaan \kor{logaritmifunktioksi}. K√§√§nteisfunktiota merkit√§√§n
 symbolilla $\log_b\,$:
 \[
 y=b^x \ \ekv \ x=\log_b y.
 \]
 \index{luonnollinen logaritmi}%
-Peruseksponenttifunktion $e^x$ k‰‰nteisfunktiota sanotaan \kor{luonnolliseksi logaritmiksi}, 
+Peruseksponenttifunktion $e^x$ k√§√§nteisfunktiota sanotaan \kor{luonnolliseksi logaritmiksi}, 
 symbolina $\ln$ (toisinaan $\log$):
 \[
 \boxed{\kehys\quad y=e^x \ \ekv \ x=\ln y. \quad}
 \]
-Luonnollinen logaritmi, samoin kuin muutkin logaritmifunktiot, on koko m‰‰rittelyjoukossaan 
+Luonnollinen logaritmi, samoin kuin muutkin logaritmifunktiot, on koko m√§√§rittelyjoukossaan 
 ($=\R_+$) jatkuva ja aidosti kasvava, ja $\ln x \kohti \infty$ kun $x\kohti\infty$ ja 
 $\ln x \kohti -\infty$ kun $x\kohti 0^+$. Sijoituksilla $x = \pm \ln t\ \ekv\ t = e^{\pm x}$ 
-voidaan raja-arvotuloksista \eqref{exp-raja-arvot} p‰‰tell‰, ett‰ rajoilla $x\kohti\infty$ ja
-$x\kohti 0^+$ funktio $\abs{\ln x}$ kasvaa hitaammin kuin mik‰‰n potenssifunktio:
+voidaan raja-arvotuloksista \eqref{exp-raja-arvot} p√§√§tell√§, ett√§ rajoilla $x\kohti\infty$ ja
+$x\kohti 0^+$ funktio $\abs{\ln x}$ kasvaa hitaammin kuin mik√§√§n potenssifunktio:
 \begin{equation} \label{ln-raja-arvot}
 \boxed{\quad \lim_{\akehys x\kohti\infty}x^{\ykehys -\alpha}\ln x\ =
              \lim_{x\kohti 0^+}x^\alpha \ln x = 0 \quad \forall \alpha\in\R_+. \quad}
@@ -224,9 +224,9 @@ $x\kohti 0^+$ funktio $\abs{\ln x}$ kasvaa hitaammin kuin mik‰‰n potenssifunktio
 %\caption{$y=\ln x$}
 \end{center}
 \end{figure}
-Eksponentti- ja logaritmifunktioilla laskettaessa k‰ytet‰‰n yleisimmin 
-peruseksponenttifunktiota $e^x$ ja sen k‰‰nteisfunktiota $\ln x$. Useimmin tarvittavat, suoraan
-m‰‰ritelm‰st‰ ja eksponenttifunktion ominaisuuksista seuraavat kaavat ovat
+Eksponentti- ja logaritmifunktioilla laskettaessa k√§ytet√§√§n yleisimmin 
+peruseksponenttifunktiota $e^x$ ja sen k√§√§nteisfunktiota $\ln x$. Useimmin tarvittavat, suoraan
+m√§√§ritelm√§st√§ ja eksponenttifunktion ominaisuuksista seuraavat kaavat ovat
 (Harj.teht.\,\ref{H-exp-2: kaavat})\,:
 \begin{alignat}{3}
 e^{\ln x} &= x,               &\quad &x\in\R_+.            \label{exp-kaava 1}\\
@@ -234,53 +234,53 @@ e^{\ln x} &= x,               &\quad &x\in\R_+.            \label{exp-kaava 1}\\
 \ln (1/x) &= -\ln x,          &\quad &x\in\R_+.           \label{exp-kaava 3}\\
 \ln x^y   &= y\ln x,          &\quad &x\in\R_+, \ y\in\R. \label{exp-kaava 4}
 \end{alignat}
-Kaavat \eqref{exp-kaava 1} ja \eqref{exp-kaava 4} yhdist‰m‰ll‰ saadaan laskukaava
+Kaavat \eqref{exp-kaava 1} ja \eqref{exp-kaava 4} yhdist√§m√§ll√§ saadaan laskukaava
 \begin{equation} \label{exp-kaava 5}
 \boxed{\kehys\rule{0mm}{4.5mm}\kehys\quad x^y=e^{y\ln x}, \quad x\in\R_+\,,\ y\in\R. \quad}
 \end{equation}
-Kaavasta \eqref{exp-kaava 1}, eksponenttifunktion derivoimiss‰‰nnˆst‰ ja yhdistetyn funktion 
-derivoimiss‰‰nnˆst‰ saadaan johdetuksi logaritmifunktion $\ln x$ derivoimiss‰‰ntˆ:
-\index{derivoimiss‰‰nnˆt!h@logaritmifunktio}% 
+Kaavasta \eqref{exp-kaava 1}, eksponenttifunktion derivoimiss√§√§nn√∂st√§ ja yhdistetyn funktion 
+derivoimiss√§√§nn√∂st√§ saadaan johdetuksi logaritmifunktion $\ln x$ derivoimiss√§√§nt√∂:
+\index{derivoimiss√§√§nn√∂t!h@logaritmifunktio}% 
 \[ 
 1=\dif x = \dif e^{\ln x} = e^{\ln x} \dif \ln x 
          = x \dif \ln x \qimpl \dif \ln x = 1/x, \quad x>0. 
 \]
-T‰m‰n perusteella on $\dif \ln(-x) = (-1)/(-x) = 1/x,\ x<0$, joten saadaan yleisempi s‰‰ntˆ
+T√§m√§n perusteella on $\dif \ln(-x) = (-1)/(-x) = 1/x,\ x<0$, joten saadaan yleisempi s√§√§nt√∂
 \begin{equation} \label{exp-kaava 6}
 \boxed{\kehys\quad \dif \ln \abs{x} = \dfrac{1}{x}\,, \quad x \neq 0. \quad} 
 \end{equation}
-\begin{Exa} Kaavan \eqref{exp-kaava 5} ja s‰‰nnˆn \eqref{exp-kaava 6} perusteella
+\begin{Exa} Kaavan \eqref{exp-kaava 5} ja s√§√§nn√∂n \eqref{exp-kaava 6} perusteella
 \[ 
 \dif x^x = \dif e^{x\ln x} = e^{x\ln x}\dif(x\ln x) = (\ln x + 1)\,x^x, \quad x>0.
 \]
-Tuloksesta n‰hd‰‰n, ett‰ $f(x)=x^x$ on aidosti v‰henev‰ v‰lill‰ $(0,1/e]$ ja aidosti kasvava
-v‰lill‰ $[1/e,\infty)$. Siis $f$:n absoluuttinen minimiarvo on $f_{min}=f(1/e)=e^{-1/e}$.
+Tuloksesta n√§hd√§√§n, ett√§ $f(x)=x^x$ on aidosti v√§henev√§ v√§lill√§ $(0,1/e]$ ja aidosti kasvava
+v√§lill√§ $[1/e,\infty)$. Siis $f$:n absoluuttinen minimiarvo on $f_{min}=f(1/e)=e^{-1/e}$.
 Rajalla $x \kohti 0^+$ on $f(0^+)=1$ (Harj.teht.\,\ref{H-exp-2: raja-arvoja}e). \loppu
 \end{Exa}
 \begin{multicols}{2} \raggedcolumns
-\begin{Exa} Matemaatikon mˆkki on kahden tien risteyksess‰. Selvit‰ mˆkin sijainti, kun 
-tiedet‰‰n, ett‰ kummallakin tiell‰ on oheinen viitta. 
+\begin{Exa} Matemaatikon m√∂kki on kahden tien risteyksess√§. Selvit√§ m√∂kin sijainti, kun 
+tiedet√§√§n, ett√§ kummallakin tiell√§ on oheinen viitta. 
 \vspace{1cm}
 \[ 
 \boxed{ \rule[-2cm]{0mm}{2.5cm} } \boxed{ \quad x^y = y^x \quad } 
 \]
 \end{Exa}
 \end{multicols}
-\ratk Tie \,1\, on ilmeisesti puolisuora $y=x$, $x>0$. Tiell‰ \,2\, taas ovat esim.\ pisteet 
-$(2,4)$ ja $(4,2)$. Teiden leikkauspisteen selvitt‰miseksi k‰ytet‰‰n ensin kaavoja 
+\ratk Tie \,1\, on ilmeisesti puolisuora $y=x$, $x>0$. Tiell√§ \,2\, taas ovat esim.\ pisteet 
+$(2,4)$ ja $(4,2)$. Teiden leikkauspisteen selvitt√§miseksi k√§ytet√§√§n ensin kaavoja 
 \eqref{exp-kaava 1} ja \eqref{exp-kaava 4} (ol.\ $x,y\in\R_+$):
 \[
 x^y=y^x\ \ekv\ e^{y\ln x} = e^{x\ln y}\ \ekv\ y\ln x = x\ln y\ 
                                         \ekv\ \ln y/y = \ln x/x.
 \]
-S‰‰nnˆst‰ \eqref{exp-kaava 6} ja Luvun \ref{derivaatta} derivoimiss‰‰nnˆist‰ seuraa
+S√§√§nn√∂st√§ \eqref{exp-kaava 6} ja Luvun \ref{derivaatta} derivoimiss√§√§nn√∂ist√§ seuraa
 \[ 
 \dif \ln x/x = x^{-2}(1 - \ln x), \quad x>0, 
 \]
-joten funktio $f(x)=\ln x/x$ on aidosti kasvava v‰lill‰ $(0,e]$ ja aidosti v‰henev‰ v‰lill‰ 
-$[e,\infty)$. N‰in ollen, jos $x\in\R_+$ ja $x>1$, $x\neq e$, niin yht‰lˆll‰ $f(y)=f(x)$ on 
+joten funktio $f(x)=\ln x/x$ on aidosti kasvava v√§lill√§ $(0,e]$ ja aidosti v√§henev√§ v√§lill√§ 
+$[e,\infty)$. N√§in ollen, jos $x\in\R_+$ ja $x>1$, $x\neq e$, niin yht√§l√∂ll√§ $f(y)=f(x)$ on 
 kaksi ratkaisua $y$, joista toinen on $y=x$ (ks.\ kuvio). Kun $x=e$ tai $x \le 1$, on ainoa 
-ratkaisu $y=x$. P‰‰tell‰‰n, ett‰ mˆkki on pisteess‰ $(e,e)$. \loppu
+ratkaisu $y=x$. P√§√§tell√§√§n, ett√§ m√∂kki on pisteess√§ $(e,e)$. \loppu
 \begin{multicols}{2} \raggedcolumns
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -363,15 +363,15 @@ ratkaisu $y=x$. P‰‰tell‰‰n, ett‰ mˆkki on pisteess‰ $(e,e)$. \loppu
 \begin{Exa}
 $f(x)=\ln\left|\dfrac{1-\cos x}{\sin x}\right|, \quad f'(x)=\,$?
 \end{Exa}
-\ratk S‰‰nnˆn \eqref{exp-kaava 6} ja Lukujen \ref{derivaatta}--\ref{kaarenpituus}
-derivoimiss‰‰ntˆjen perusteella
+\ratk S√§√§nn√∂n \eqref{exp-kaava 6} ja Lukujen \ref{derivaatta}--\ref{kaarenpituus}
+derivoimiss√§√§nt√∂jen perusteella
 \begin{align*}
 \dif f(x)&=\frac{\sin x}{1-\cos x}\cdot \left[1-\frac{(1-\cos x)\cos x}{\sin^2 x}\right] \\
          &=\frac{\sin x}{1-\cos x}\cdot\frac{\sin^2 x+\cos^2 x-\cos x}{\sin^2 x} \\
          &=\frac{1}{\sin x}\,. \loppu
 \end{align*}
 
-Esimerkin tulos, ja muunnoksella $x\hookrightarrow\pi/2-x$ saatava vastaava tulos, on syyt‰ 
+Esimerkin tulos, ja muunnoksella $x\hookrightarrow\pi/2-x$ saatava vastaava tulos, on syyt√§ 
 panna korvan taakse:
 \[ \boxed{
 \begin{aligned}
@@ -380,7 +380,7 @@ panna korvan taakse:
              \dif\ln\left|\dfrac{1-\sin x}{\cos x}\right|\ 
                  &=\ -\dfrac{1}{\cos x}\,, \quad x\in\R,\ \ \cos x\neq 0. \quad\akehys
 \end{aligned} } \]
-T‰ss‰ on itse asiassa
+T√§ss√§ on itse asiassa
 $\,\D \dfrac{1-\cos x}{\sin x} = \dfrac{\sin x}{1+\cos x}=\tan\dfrac{x}{2}\,$
 (ks.\ Harj.teht.\,\ref{trigonometriset funktiot}:\ref{H-II-5: trigtuloksia}b).
 
@@ -388,14 +388,14 @@ $\,\D \dfrac{1-\cos x}{\sin x} = \dfrac{\sin x}{1+\cos x}=\tan\dfrac{x}{2}\,$
 \begin{enumerate}
 
 \item \label{H-exp-2: exp-dy}
-N‰yt‰, ett‰ differentiaaliyht‰lˆn $y'=ay$ yleinen ratkaisu $\R$:ss‰ on $y(x)=Ce^{ax}$.\,
+N√§yt√§, ett√§ differentiaaliyht√§l√∂n $y'=ay$ yleinen ratkaisu $\R$:ss√§ on $y(x)=Ce^{ax}$.\,
 \kor{Vihje}: Tutki funktiota $u(x)=e^{-ax}y(x)$.
 
 \item \label{H-exp-2: kaavat}
 a)--d) Perustele laskukaavat (5)--(8).
 
 \item \label{H-exp-2: raja-arvoja}
-M‰‰rit‰ tai n‰yt‰ oikeaksi raja-arvot
+M√§√§rit√§ tai n√§yt√§ oikeaksi raja-arvot
 \begin{align*}
 &\text{a)}\ \lim_{x \kohti 0} \frac{e^{2x}-1-2x}{x^2} \qquad\qquad
  \text{b)}\ \lim_{x \kohti 0} \frac{1-6x+18x^2-e^{-6x}}{x^3} \\
@@ -416,75 +416,75 @@ e) \ $x^{2x} \quad$
 f) \ $x^{x^x}$
 
 \item
-M‰‰rit‰ seuraavien funktioiden paikalliset ‰‰riarvokohdat ja absoluuttiset maksimi- ja 
-minimarvot, sik‰li kuin olemassa. Hahmottele myˆs kuvaajat. \newline
+M√§√§rit√§ seuraavien funktioiden paikalliset √§√§riarvokohdat ja absoluuttiset maksimi- ja 
+minimarvot, sik√§li kuin olemassa. Hahmottele my√∂s kuvaajat. \newline
 a) \ $x\ln x,\quad$ b) \ $\sqrt[10]{\abs{x}}\ln\abs{x},\quad$ c) \ $\abs{x}e^{1/x^2},\quad$
 d) \ $x^{-\pi}\ln x,\quad$ e) \ $x^{1/x}$. 
 
 \item
-a) \ Mill‰ $a$:n arvoilla funktio $f(x)=2\ln x +x^2-ax+1$ on aidosti kasvava v‰lill‰
+a) \ Mill√§ $a$:n arvoilla funktio $f(x)=2\ln x +x^2-ax+1$ on aidosti kasvava v√§lill√§
 $(0,\infty)\,$? \newline
-b) \ N‰yt‰, ett‰ jos $0<a<b$, niin 
+b) \ N√§yt√§, ett√§ jos $0<a<b$, niin 
 $\,\displaystyle{1-\frac{a}{b}\,<\,\ln \frac{b}{a}\,<\,\frac{b}{a}-1}$. \newline
 c) \ Todista laskukaavat $\ \log_a b\cdot\log_b a=1\ $ ja $\ \log_b a\cdot\log_c b=\log_c a$.
 
 \item
-M‰‰rit‰ funktion $f(t)=e^{-x}\sin x$ paikalliset ‰‰riarvokohdat sek‰ absoluuttiset maksimi-
-ja minimiarvot v‰lill‰ $[0,\infty)$ sek‰ hahmottele $f$:n kuvaaja.
+M√§√§rit√§ funktion $f(t)=e^{-x}\sin x$ paikalliset √§√§riarvokohdat sek√§ absoluuttiset maksimi-
+ja minimiarvot v√§lill√§ $[0,\infty)$ sek√§ hahmottele $f$:n kuvaaja.
 
 \item
-P‰‰ttele, ett‰ kiintopisteiteraatio $x_{n+1}=e^{-x_n},\, n=0,1,\dots$
-suppenee jokaisella $x_0\in\R$. M‰‰rit‰ kiintopiste iteroimalla ensin
-kolme kertaa alkuarvauksesta $x_0=0$ ja kiihdytt‰m‰ll‰ sen j‰lkeen Newtonin menetelm‰ll‰.
+P√§√§ttele, ett√§ kiintopisteiteraatio $x_{n+1}=e^{-x_n},\, n=0,1,\dots$
+suppenee jokaisella $x_0\in\R$. M√§√§rit√§ kiintopiste iteroimalla ensin
+kolme kertaa alkuarvauksesta $x_0=0$ ja kiihdytt√§m√§ll√§ sen j√§lkeen Newtonin menetelm√§ll√§.
 
 \item
-N‰yt‰, ett‰ differentiaaliyht‰lˆn $y''-y'=0$ yleinen ($\R$:ss‰ kahdesti derivoituva) ratkaisu on
+N√§yt√§, ett√§ differentiaaliyht√§l√∂n $y''-y'=0$ yleinen ($\R$:ss√§ kahdesti derivoituva) ratkaisu on
 $y(x)=C_1 e^x +C_2\,,\ C_1\,,C_2\in\R$.
 
 \item
-a) N‰yt‰, ett‰ funktiolle
+a) N√§yt√§, ett√§ funktiolle
 \[
 f(x) = \begin{cases}
        e^{-\frac{1}{x^2}}, &\text{kun}\ x \neq 0 \\ 0, &\text{kun}\ x=0
        \end{cases}
 \]
-p‰tee $f^{(k)}(0)=0\ \forall k\in\N$. Hahmottele funktion kuvaaja. \vspace{1mm}\newline
-b) Halutaan m‰‰ritell‰ funktio $f$ ehdoilla \vspace{2mm}\newline
+p√§tee $f^{(k)}(0)=0\ \forall k\in\N$. Hahmottele funktion kuvaaja. \vspace{1mm}\newline
+b) Halutaan m√§√§ritell√§ funktio $f$ ehdoilla \vspace{2mm}\newline
 (i) \   $\,\ f(x)>0\,$ kun $\,x\in(0,1)$ \newline
 (ii)\   $\,\ f(x)=0\,$ kun $\,x \le 0\,$ tai $\,x \ge 1$ \newline
-(iii) \ $f$ on koko $\R$:ss‰ sile‰, eli mielivaltaisen monta kertaa derivoituva \vspace{2mm}
+(iii) \ $f$ on koko $\R$:ss√§ sile√§, eli mielivaltaisen monta kertaa derivoituva \vspace{2mm}
 \newline
-N‰yt‰, ett‰ er‰s vaatimukset t‰ytt‰v‰ funktio on
+N√§yt√§, ett√§ er√§s vaatimukset t√§ytt√§v√§ funktio on
 \[
 f(x)=\begin{cases} 
      e^{-\frac{1}{x(1-x)}}, &\text{kun}\ x\in(0,1) \\ 0, &\text{muulloin}
      \end{cases}
 \]
-Hahmottele t‰m‰n kuvaaja. \vspace{1mm}\newline
-c) N‰yt‰, ett‰ funktio
+Hahmottele t√§m√§n kuvaaja. \vspace{1mm}\newline
+c) N√§yt√§, ett√§ funktio
 \[
 f(x)=\begin{cases} 
      0,             &\text{kun}\ x/\pi\in\Z \\ e^{-\cot^2 x}, &\text{muulloin}
      \end{cases}
 \]
-on koko $\R$:ss‰ mielivaltaisen monta kertaa derivoituva (sile‰) funktio. Hahmottele $f$:n
-kuvaaja v‰lill‰ $[0,\pi]$.
+on koko $\R$:ss√§ mielivaltaisen monta kertaa derivoituva (sile√§) funktio. Hahmottele $f$:n
+kuvaaja v√§lill√§ $[0,\pi]$.
 
 \item (*)
-Mill‰ $k$:n arvoilla k‰yr‰ll‰ $y=\ln|x|$ ja suoralla $y=k(x-1)+1$ on t‰sm‰lleen yksi yhteinen
+Mill√§ $k$:n arvoilla k√§yr√§ll√§ $y=\ln|x|$ ja suoralla $y=k(x-1)+1$ on t√§sm√§lleen yksi yhteinen
 piste?
 
 \item (*)
-Mill‰ $a$:n arvoilla yht‰lˆll‰ $\,e^x=x+ax^2\,$ on reaalisia ratkaisuja a) ei yht‰‰n, 
-b) vain yksi, c) t‰sm‰lleen kaksi, d) kolme tai enemm‰n? M‰‰rit‰ ratkaisut numeerisin keinoin
+Mill√§ $a$:n arvoilla yht√§l√∂ll√§ $\,e^x=x+ax^2\,$ on reaalisia ratkaisuja a) ei yht√§√§n, 
+b) vain yksi, c) t√§sm√§lleen kaksi, d) kolme tai enemm√§n? M√§√§rit√§ ratkaisut numeerisin keinoin
 tapauksissa $a=1$ ja $a=2$.
 
 \item (*)
-a) N‰yt‰, ett‰
+a) N√§yt√§, ett√§
 \[
 1+x\,\le\,e^x\,\le\,1+x+(e-2)\,x^2 \quad \forall\,x\in[0,1].
 \]
-b) Olkoon $a \ge 1$ ja $n\in\N,\ n\ge\ln a$. N‰yt‰, ett‰
+b) Olkoon $a \ge 1$ ja $n\in\N,\ n\ge\ln a$. N√§yt√§, ett√§
 \[
 1+\frac{\ln a}{n}\,\le\,\sqrt[n]{a}\,\le\,1+\frac{\ln a}{n}+(e-2)\left(\frac{\ln a}{n}\right)^2.
 \]
@@ -492,15 +492,15 @@ Kuinka suuri on approksimaation $\,\sqrt[n]{a} \approx 1+\ln a/n\,$ virhe todell
 $a=\pi$ ja $n=100\,$?
 
 \item (*)
-N‰yt‰, ett‰ differentiaaliyht‰lˆn $y'=2xy$ yleinen ratkaisu $\R$:ss‰ on
+N√§yt√§, ett√§ differentiaaliyht√§l√∂n $y'=2xy$ yleinen ratkaisu $\R$:ss√§ on
 $y(x)=Ce^{x^2},\ C\in\R$.
 
 \item (*) \index{Hermiten!a@polynomi}
-\kor{Hermiten polynomi} $H_n(x)$ m‰‰ritell‰‰n derivoimiskaavalla
+\kor{Hermiten polynomi} $H_n(x)$ m√§√§ritell√§√§n derivoimiskaavalla
 \[
 D^ne^{-x^2}=H_n(x)e^{-x^2}, \quad n\in\N\cup\{0\}.
 \]
-N‰yt‰, ett‰ p‰tee palautuskaava
+N√§yt√§, ett√§ p√§tee palautuskaava
 \[
 H_{n+1}(x)=-2xH_n(x)-2nH_{n-1}(x), \quad n\in\N.
 \]
@@ -511,48 +511,48 @@ Tarkastellaan funktioita
 f(x)=\left(1+\frac{1}{x}\right)^x,\,\ x\in(0,\infty), \qquad
 g(x)=\left(1-\frac{1}{x}\right)^x,\,\ x\in[1,\infty).
 \]
-a) N‰yt‰, ett‰ $f$ ja $g$ ovat m‰‰rittelyv‰leill‰‰n aidosti kasvavia. \newline
-b) N‰yt‰, ett‰
+a) N√§yt√§, ett√§ $f$ ja $g$ ovat m√§√§rittelyv√§leill√§√§n aidosti kasvavia. \newline
+b) N√§yt√§, ett√§
 \begin{align*}
 &\lim_{x\kohti\infty}\left(1+\frac{1}{x}\right)^x
     =\lim_{n\kohti\infty}\left(1+\frac{1}{n}\right)^n=e, \\
 &\lim_{x\kohti\infty}\left(1-\frac{1}{x}\right)^x
     =\lim_{n\kohti\infty}\left(1-\frac{1}{n}\right)^n=\frac{1}{e}\,.
 \end{align*}
-c) N‰yt‰, ett‰ 
+c) N√§yt√§, ett√§ 
 $\,\displaystyle{\lim_{n\kohti\infty}\left(1+\frac{x}{n}\right)^n=e^x\ \forall x\in\R}$.
 
-\item (*) \index{zzb@\nim!Matemaatikon mˆkki}
-(Matemaatikon mˆkki) Matemaatikon mˆkki on koordinaatistossa, jonka origo on Helsingiss‰,
-positiivinen $x$-akseli osoittaa it‰‰n ja pituusyksikkˆ $=100$ km. Mˆkki on er‰‰n tien
-varressa kohdassa, jossa tie on it‰-l‰nsi-suuntainen. M‰‰rit‰ mˆkin sijainti, kun tiedet‰‰n,
-ett‰ tien yht‰lˆ on
+\item (*) \index{zzb@\nim!Matemaatikon m√∂kki}
+(Matemaatikon m√∂kki) Matemaatikon m√∂kki on koordinaatistossa, jonka origo on Helsingiss√§,
+positiivinen $x$-akseli osoittaa it√§√§n ja pituusyksikk√∂ $=100$ km. M√∂kki on er√§√§n tien
+varressa kohdassa, jossa tie on it√§-l√§nsi-suuntainen. M√§√§rit√§ m√∂kin sijainti, kun tiedet√§√§n,
+ett√§ tien yht√§l√∂ on
 \[
 (2x)^y=y^{3x} \quad (x,y>0)
 \]
-ja lis‰ksi tiedet‰‰n, ett‰ tien p‰‰tepiste a) on Helsinki, b) ei ole Helsinki.
+ja lis√§ksi tiedet√§√§n, ett√§ tien p√§√§tepiste a) on Helsinki, b) ei ole Helsinki.
 
-\item (*) \label{H-exp-2: kosini ja sini} \index{zzb@\nim!Pieni‰ ihmeit‰}
-(Pieni‰ ihmeit‰) Olkoon $A\in\R$. Halutaan lˆyt‰‰ $\R$:ss‰ derivoituvat funktiot $u$ ja $v$,
-jotka ratkaisevat alkuarvoteht‰v‰n
+\item (*) \label{H-exp-2: kosini ja sini} \index{zzb@\nim!Pieni√§ ihmeit√§}
+(Pieni√§ ihmeit√§) Olkoon $A\in\R$. Halutaan l√∂yt√§√§ $\R$:ss√§ derivoituvat funktiot $u$ ja $v$,
+jotka ratkaisevat alkuarvoteht√§v√§n
 \[
 \text{(P)} \quad \begin{cases} 
                  \,u'=-v,\,\ v'=u, \quad x\in\R, \\ \,u(0)=A,\,\ v(0)=0. 
                  \end{cases}
 \]
-a) Totea: Er‰s ratkaisu on $u(x)=A\cos x,\ v(x)=A\sin x$. \newline
-b) Todista: Jos $u$ ja $v$ ovat mik‰ tahansa (P):n ratkaisu, niin
+a) Totea: Er√§s ratkaisu on $u(x)=A\cos x,\ v(x)=A\sin x$. \newline
+b) Todista: Jos $u$ ja $v$ ovat mik√§ tahansa (P):n ratkaisu, niin
 \[
 [u(x)]^2+[v(x)]^2\,=\,A^2\ \ \forall x\in\R.
 \]
-c) N‰yt‰: Jos $A=0$, niin (P):n ainoa ratkaisu on $u(x)=v(x)=0$. \newline
-d) P‰‰ttele: a-kohdan ratkaisu on ainoa (P):n ratkaisu. \newline
-d) N‰yt‰: (P):n ratkaisu on myˆs
+c) N√§yt√§: Jos $A=0$, niin (P):n ainoa ratkaisu on $u(x)=v(x)=0$. \newline
+d) P√§√§ttele: a-kohdan ratkaisu on ainoa (P):n ratkaisu. \newline
+d) N√§yt√§: (P):n ratkaisu on my√∂s
 \[
 u(x)=A\sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}\,, \qquad
 v(x)=A\sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}\,.
 \]
-e) P‰‰ttele: Jokaisella $x\in\R$ p‰tee
+e) P√§√§ttele: Jokaisella $x\in\R$ p√§tee
 \[
 \cos x\,=\,\sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}\,, \qquad
 \sin x\,=\,\sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}\,.

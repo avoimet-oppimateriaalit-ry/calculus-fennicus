@@ -2,11 +2,11 @@
 \alku
 \index{Gaussin algoritmi (eliminaatio)|vahv}
 
-Lineaarisia yht‰lˆryhmi‰, jotka eiv‰t ole kooltaan aivan hirmuisia (esim. $n<10^4$) ratkotaan
-k‰yt‰nnˆss‰ usein \kor{Gaussin algoritmilla} eli \kor{Gaussin eliminaatiolla}. Algoritmilla on
-monia variaatioita, ja niill‰ monia nimi‰, mutta p‰‰idea on kaikissa sama.
+Lineaarisia yht√§l√∂ryhmi√§, jotka eiv√§t ole kooltaan aivan hirmuisia (esim. $n<10^4$) ratkotaan
+k√§yt√§nn√∂ss√§ usein \kor{Gaussin algoritmilla} eli \kor{Gaussin eliminaatiolla}. Algoritmilla on
+monia variaatioita, ja niill√§ monia nimi√§, mutta p√§√§idea on kaikissa sama.
 
-L‰hdet‰‰n ratkaisemaan yht‰lˆryhm‰‰
+L√§hdet√§√§n ratkaisemaan yht√§l√∂ryhm√§√§
 \[
 \left\{
 \begin{alignedat}{3}
@@ -19,23 +19,23 @@ a_{n1} &x_1 + a_{n2} &x_2 + \ldots + a_{nn}         &x_n  \ &= \ &b_n. \
 \end{alignedat}
 \right.
 \]
-Gaussin algoritmissa oletetaan, ett‰ yht‰lˆryhm‰ll‰ on ratkaisu $(x_i)$ ja toimitaan ik‰‰nkuin
-ratkaisu olisi sijoitettu tuntemattomien paikalle. Ratkaisun ei tarvitse olla yksik‰sitteinen
---- t‰m‰ selvi‰‰ algoritmin kuluessa. Samoin selvi‰‰, onko ratkaisua ylip‰‰ns‰ olemassa.
+Gaussin algoritmissa oletetaan, ett√§ yht√§l√∂ryhm√§ll√§ on ratkaisu $(x_i)$ ja toimitaan ik√§√§nkuin
+ratkaisu olisi sijoitettu tuntemattomien paikalle. Ratkaisun ei tarvitse olla yksik√§sitteinen
+--- t√§m√§ selvi√§√§ algoritmin kuluessa. Samoin selvi√§√§, onko ratkaisua ylip√§√§ns√§ olemassa.
 
-Gaussin algoritmissa yht‰lˆryhm‰ muunnetaan askelittain yksinkertaisempaan muotoon. Muunnetut
-yht‰lˆryhm‰t ovat alkuper‰isen kanssa ekvivalenttisia (eli muunnokset voidaan tehd‰ molempiin 
-suuntiin), joten mit‰‰n informaatiota ei laskentaprosessin kuluessa menetet‰.
+Gaussin algoritmissa yht√§l√∂ryhm√§ muunnetaan askelittain yksinkertaisempaan muotoon. Muunnetut
+yht√§l√∂ryhm√§t ovat alkuper√§isen kanssa ekvivalenttisia (eli muunnokset voidaan tehd√§ molempiin 
+suuntiin), joten mit√§√§n informaatiota ei laskentaprosessin kuluessa menetet√§.
 
-Olettaen, ett‰ $a_{11} \neq 0$ (tapaukseen $a_{11} = 0$ palataan myˆhemmin), Gaussin algoritmin
-ensimm‰inen nk.\ 
+Olettaen, ett√§ $a_{11} \neq 0$ (tapaukseen $a_{11} = 0$ palataan my√∂hemmin), Gaussin algoritmin
+ensimm√§inen nk.\ 
 \index{eliminaatioaskel (Gaussin alg.)}%
-\kor{eliminaatioaskel} on: Ratkaistaan 1. yht‰lˆst‰
+\kor{eliminaatioaskel} on: Ratkaistaan 1. yht√§l√∂st√§
 \[
 x_1=-\sum_{j=2}^n \frac{a_{1j}}{a_{11}}\,x_j + \frac{b_1}{a_{11}}
 \]
-ja sijoitetaan t‰m‰ lauseke muihin yht‰lˆihin $x_1$:n paikalle. Sievennysten j‰lkeen on 
-tuloksena alkuper‰isen kanssa ekvivalenttinen yht‰lˆryhm‰ 
+ja sijoitetaan t√§m√§ lauseke muihin yht√§l√∂ihin $x_1$:n paikalle. Sievennysten j√§lkeen on 
+tuloksena alkuper√§isen kanssa ekvivalenttinen yht√§l√∂ryhm√§ 
 \[
 \left\{
 \begin{alignedat}{2}
@@ -48,16 +48,16 @@ a_{11} x_1 + a_{12} &x_2 + \ldots +       a_{1n}  &x_n   &= b_1, \\
 \end{alignedat}
 \right.
 \]
-T‰ss‰ ensimm‰inen yht‰lˆ on j‰tetty alkuper‰iseen muotoonsa ja on merkitty
+T√§ss√§ ensimm√§inen yht√§l√∂ on j√§tetty alkuper√§iseen muotoonsa ja on merkitty
 \begin{align*}
 a_{ij}^{(1)} &= a_{ij} - a_{i1}a_{1j}/a_{11}, \quad i,j = 2 \ldots n, \\
 b_i^{(1)} &= b_i - a_{i1}b_1/a_{11}, \quad i = 2 \ldots n.
 \end{align*}
-Taulukkomuodossa laskien t‰m‰ muunnos toteutuu, kun kerrotaan 1. yht‰lˆ puolittain luvulla 
-$-a_{i1}/a_{11}$, lasketaan tulos puolittain yhteen $i$:nnen yht‰lˆn kanssa, ja korvataan 
-tuloksella aiempi $i$:s yht‰lˆ, $i=2 \ldots n$. 
+Taulukkomuodossa laskien t√§m√§ muunnos toteutuu, kun kerrotaan 1. yht√§l√∂ puolittain luvulla 
+$-a_{i1}/a_{11}$, lasketaan tulos puolittain yhteen $i$:nnen yht√§l√∂n kanssa, ja korvataan 
+tuloksella aiempi $i$:s yht√§l√∂, $i=2 \ldots n$. 
 
-Ensimm‰isen eliminaatioaskeleen j‰lkeinen yht‰lˆryhm‰ on matriisimuodossa
+Ensimm√§isen eliminaatioaskeleen j√§lkeinen yht√§l√∂ryhm√§ on matriisimuodossa
 \[
 \begin{bmatrix}
 a_{11} & a_{12}       & \ldots & a_{1n} \\
@@ -72,8 +72,8 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 b_1 \\ \ b_2^{(1)} \\ \vdots \\ \ b_n^{(1)}
 \end{bmatrix}.
 \]
-Koska t‰ss‰ yht‰lˆryhm‰ss‰ $x_1$ esiintyy vain ensimm‰isess‰ yht‰lˆss‰, voidaan t‰m‰ yht‰lˆ 
-j‰tt‰‰ jatkossa omaan rauhaansa ja tarkastella supistettua yht‰lˆryhm‰‰
+Koska t√§ss√§ yht√§l√∂ryhm√§ss√§ $x_1$ esiintyy vain ensimm√§isess√§ yht√§l√∂ss√§, voidaan t√§m√§ yht√§l√∂ 
+j√§tt√§√§ jatkossa omaan rauhaansa ja tarkastella supistettua yht√§l√∂ryhm√§√§
 \[
 \begin{bmatrix}
 a_{22}^{(1)} & a_{23}^{(1)} & \ldots & a_{2n}^{(1)} \\
@@ -88,8 +88,8 @@ x_2 \\ x_3 \\ \vdots \\ x_n
 b_2^{(1)} \\ b_3^{(1)} \\ \vdots \\ b_n^{(1)}
 \end{bmatrix}.
 \]
-Jos $a_{22}^{(1)} \neq 0$, suoritetaan t‰h‰n yht‰lˆryhm‰‰n samanlainen eliminaatiomuunnos kuin
-edell‰, jolloin se muuntuu muotoon
+Jos $a_{22}^{(1)} \neq 0$, suoritetaan t√§h√§n yht√§l√∂ryhm√§√§n samanlainen eliminaatiomuunnos kuin
+edell√§, jolloin se muuntuu muotoon
 \[
 \begin{bmatrix}
 a_{22}^{(1)} & a_{23}^{(1)} & \ldots & a_{2n}^{(1)} \\
@@ -104,8 +104,8 @@ x_2 \\ x_3 \\ \vdots \\ x_n
 b_2^{(1)} \\ b_3^{(2)} \\ \vdots \\ b_n^{(2)}
 \end{bmatrix}.
 \]
-T‰ss‰ $x_2$ esiintyy vain ensimm‰isess‰ yht‰lˆss‰, joten yht‰lˆryhm‰ supistuu j‰lleen. 
-Yleisesti on $k-1$ eliminaatioaskeleen j‰lkeen koko yht‰lˆryhm‰ saatu muotoon
+T√§ss√§ $x_2$ esiintyy vain ensimm√§isess√§ yht√§l√∂ss√§, joten yht√§l√∂ryhm√§ supistuu j√§lleen. 
+Yleisesti on $k-1$ eliminaatioaskeleen j√§lkeen koko yht√§l√∂ryhm√§ saatu muotoon
 \[
 \left[\begin{array}{llllll}
 a_{11}  &  a_{12} & \ldots & a_{1k} & \ldots & a_{1n} \\
@@ -122,16 +122,16 @@ x_1 \\ x_2 \\ \vdots \\ x_k \\ \vdots \\ x_n
 b_1 \\ b_2^{(1)} \\ \vdots \\ b_k^{(k-1)} \\ \vdots \\ b_n^{(k-1)}
 \end{array}\right].
 \]
-Edellytyksen‰ t‰h‰n muotoon p‰‰semiseksi on siis, ett‰
+Edellytyksen√§ t√§h√§n muotoon p√§√§semiseksi on siis, ett√§
 \[
 a_{ll}^{(l-1)} \neq 0, \quad l=1 \ldots k-1,
 \]
-miss‰ $a_{11}^{(0)}=a_{11}$. Alkiota $a_{kk}^{(k-1)}$ sanotaan seuraavan eli $k$:nnen 
+miss√§ $a_{11}^{(0)}=a_{11}$. Alkiota $a_{kk}^{(k-1)}$ sanotaan seuraavan eli $k$:nnen 
 eliminaatioaskeleen
 \index{tukialkio (Gaussin alg.)}%
-\kor{tukialkioksi} (engl.\ pivot element). Mik‰li kaikki tukialkiot ovat
-nollasta poikkeavia ja myˆs $a_{nn}^{(n-1)} \neq 0$, p‰‰dyt‰‰n $n-1$ askeleen j‰lkeen
-yht‰lˆryhm‰‰n, jonka kerroinmatriisi on s‰‰nnˆllinen kolmiomatriisi:
+\kor{tukialkioksi} (engl.\ pivot element). Mik√§li kaikki tukialkiot ovat
+nollasta poikkeavia ja my√∂s $a_{nn}^{(n-1)} \neq 0$, p√§√§dyt√§√§n $n-1$ askeleen j√§lkeen
+yht√§l√∂ryhm√§√§n, jonka kerroinmatriisi on s√§√§nn√∂llinen kolmiomatriisi:
 \[
 \left[\begin{array}{llllll}
 a_{11} & a_{22} & \ldots & a_{1n} \\
@@ -146,14 +146,14 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 b_1 \\ b_2^{(1)} \\ \vdots \\ b_n^{(k-1)}
 \end{array}\right].
 \]
-Kuten pian n‰hd‰‰n, algoritmin l‰pimeno t‰ll‰ tavoin osoittaa, ett‰ alkuper‰isen yht‰lˆryhm‰n
-kerroinmatriisi $\mA$ on s‰‰nnˆllinen. Joka tapauksessa muunnettu yht‰lˆryhm‰ ratkeaa helposti
-purkamalla se lopusta lukien, vrt.\ Lauseen \ref{kolmiomatriisi} todistus edell‰. T‰t‰ 
+Kuten pian n√§hd√§√§n, algoritmin l√§pimeno t√§ll√§ tavoin osoittaa, ett√§ alkuper√§isen yht√§l√∂ryhm√§n
+kerroinmatriisi $\mA$ on s√§√§nn√∂llinen. Joka tapauksessa muunnettu yht√§l√∂ryhm√§ ratkeaa helposti
+purkamalla se lopusta lukien, vrt.\ Lauseen \ref{kolmiomatriisi} todistus edell√§. T√§t√§ 
 algoritmin vaihetta kutsutaan
 \index{takaisinsijoitus (Gaussin alg.)}%
 \kor{takaisinsijoitukseksi}.
-\begin{Exa} \label{ristikkoesimerkki} (Ks.\ Luku \ref{yht‰lˆryhm‰t}, Esimerkki \ref{ristikko}) 
-Ratkaise Gaussin eliminaatiolla yht‰lˆryhm‰
+\begin{Exa} \label{ristikkoesimerkki} (Ks.\ Luku \ref{yht√§l√∂ryhm√§t}, Esimerkki \ref{ristikko}) 
+Ratkaise Gaussin eliminaatiolla yht√§l√∂ryhm√§
 \[
 \begin{rmatrix} 3&-1&0&0&-1&1\\1&-3&0&2&-1&1\\0&0&3&1&-1&-1\\0&-2&1&3&-1&-1\\1&-1&1&1&-4&0\\
                 -1&1&\ \ 1&\ \ 1&0&-4\end{rmatrix}
@@ -161,12 +161,12 @@ Ratkaise Gaussin eliminaatiolla yht‰lˆryhm‰
 \ =\ F \begin{rmatrix} 0\\1\\0\\0\\0\\0 \end{rmatrix} 
    + G \begin{rmatrix} 0\\0\\0\\1\\0\\0 \end{rmatrix},
 \]
-miss‰ $F,G\in\R$. 
+miss√§ $F,G\in\R$. 
 \end{Exa}
-\ratk Ratkaisu on $\mx=F\mx_1+G\mx_2$, miss‰ $\mA\mx_1=\mb_1=[0\ 1\ 0\ 0\ 0\ 0]^T$ ja 
-$\mA\mx_2=\mb_2=[0\ 0\ 0\ 1\ 0\ 0]^T$, joten on ratkaistava kaksi lineaarista yht‰lˆryhm‰‰. 
-Gaussin algoritmilla voidaan molemmat yht‰lˆryhm‰t k‰sitell‰ samanaikaisesti: Kirjoitetaan 
-yht‰lˆryhm‰t taulukkomuotoon
+\ratk Ratkaisu on $\mx=F\mx_1+G\mx_2$, miss√§ $\mA\mx_1=\mb_1=[0\ 1\ 0\ 0\ 0\ 0]^T$ ja 
+$\mA\mx_2=\mb_2=[0\ 0\ 0\ 1\ 0\ 0]^T$, joten on ratkaistava kaksi lineaarista yht√§l√∂ryhm√§√§. 
+Gaussin algoritmilla voidaan molemmat yht√§l√∂ryhm√§t k√§sitell√§ samanaikaisesti: Kirjoitetaan 
+yht√§l√∂ryhm√§t taulukkomuotoon
 \[ 
        \left[\begin{array}{rrrrrr} 
              3&-1&0&0&-1&1\\1&-3&0&2&-1&1\\0&0&3&1&-1&-1\\
@@ -177,7 +177,7 @@ yht‰lˆryhm‰t taulukkomuotoon
              \end{array} \right. \right]
 \]
 ja ulotetaan eliminaatio koko taulukkoon. Seuraavassa muunnettu taulukko kunkin 
-eliminaatioaskeleen j‰lkeen.
+eliminaatioaskeleen j√§lkeen.
 \begin{align*}
 &(k=1) \qquad \left[\begin{array}{rrrrrr}
                     3&-1&0&0&-1&1\\0&-\frac{8}{3}&0&2&-\frac{2}{3}&\frac{2}{3}\\
@@ -215,13 +215,13 @@ eliminaatioaskeleen j‰lkeen.
                     0&0\\1&0\\0&0\\-\frac{3}{4}&1\\-\frac{1}{7}&-\frac{1}{7}\\1&-1
                     \end{array} \right. \right]
 \end{align*}
-Askelta $k=5$ ei t‰ss‰ tapauksessa tarvita, koska on $a_{65}^{(4)}=0$.
+Askelta $k=5$ ei t√§ss√§ tapauksessa tarvita, koska on $a_{65}^{(4)}=0$.
 
-Ratkaisu saadaan t‰st‰ takaisinsijoituksella. --- K‰ytet‰‰n t‰ss‰ kuitenkin toista, laskutyˆn
-kannalta samanarvoista mahdollisuutta, jossa eliminaatioalgoritmia k‰ytet‰‰n uudelleen 
-'takaperin'. Koska kerroinmatriisi on yl‰kolmio, niin takaisin p‰in eliminoitaessa muuttuu
+Ratkaisu saadaan t√§st√§ takaisinsijoituksella. --- K√§ytet√§√§n t√§ss√§ kuitenkin toista, laskuty√∂n
+kannalta samanarvoista mahdollisuutta, jossa eliminaatioalgoritmia k√§ytet√§√§n uudelleen 
+'takaperin'. Koska kerroinmatriisi on yl√§kolmio, niin takaisin p√§in eliminoitaessa muuttuu
 matriisissa kullakin eliminaatioaskeleella vain tukialkion kohdalla oleva sarake, tai tarkemmin
-t‰m‰n l‰vist‰j‰n yl‰puolinen osa. Eliminaatiovaiheet takaisin p‰in ovat seuraavat.
+t√§m√§n l√§vist√§j√§n yl√§puolinen osa. Eliminaatiovaiheet takaisin p√§in ovat seuraavat.
 \begin{align*}
 &(k=5) \qquad \left[\begin{array}{rrrrrr}
                     3&-1&0&0&-1&0\\[0.5mm] 0&-\frac{8}{3}&0&2&-\frac{2}{3}&0\\[0.5mm]
@@ -275,81 +275,81 @@ t‰m‰n l‰vist‰j‰n yl‰puolinen osa. Eliminaatiovaiheet takaisin p‰in ovat seuraava
                     \end{array} \right. \right].
 \end{align*}
 
-Kysytty yht‰lˆryhm‰n ratkaisu on n‰in muodoin
+Kysytty yht√§l√∂ryhm√§n ratkaisu on n√§in muodoin
 \[ 
 \begin{bmatrix} x_1\\x_2\\x_3\\x_4\\x_5\\x_6 \end{bmatrix}\ =\
                \frac{F}{22} \begin{rmatrix} -6\\-30\\5\\-25\\1\\-11 \end{rmatrix}
               +\frac{G}{22} \begin{rmatrix} 5\\25\\-6\\30\\1\\11 \end{rmatrix}. \quad \loppu
 \]
 
-\subsection*{Gaussin algoritmin tyˆm‰‰r‰}
-\index{Gaussin algoritmi (eliminaatio)!c@tyˆm‰‰r‰|vahv}
+\subsection*{Gaussin algoritmin ty√∂m√§√§r√§}
+\index{Gaussin algoritmi (eliminaatio)!c@ty√∂m√§√§r√§|vahv}
 
 Gaussin algoritmi koostuu siis kahdesta vaiheesta, eliminaatiovaiheesta ja 
-takaisinsijoituksesta. Englannin kieless‰ k‰ytet‰‰n myˆs termej‰ 'forward sweep' ja
-'backward sweep'. N‰ist‰ ensimm‰inen 'pyyhk‰isy' on tyˆm‰‰r‰‰ (laskenta-aikaa) ajatellen 
-huomattavasti raskaampi. T‰m‰ n‰hd‰‰n eliminaatiovaiheen yleisest‰ algoritmimuodosta, joka on
+takaisinsijoituksesta. Englannin kieless√§ k√§ytet√§√§n my√∂s termej√§ 'forward sweep' ja
+'backward sweep'. N√§ist√§ ensimm√§inen 'pyyhk√§isy' on ty√∂m√§√§r√§√§ (laskenta-aikaa) ajatellen 
+huomattavasti raskaampi. T√§m√§ n√§hd√§√§n eliminaatiovaiheen yleisest√§ algoritmimuodosta, joka on
 \begin{align*}
 a_{ij}^{(k)} &= a_{ij}^{(k-1)} - a_{ik}^{(k-1)}a_{kj}^{(k-1)}/a_{kk}^{(k-1)}, \quad 
                                                                          i,j = k+1 \ldots n, \\
 b_i^{(k)} &= b_i^{(k-1)} - a_{ik}^{(k-1)}b_k^{(k-1)}/a_{kk}^{(k-1)}, \quad i = k+1 \ldots n.
 \end{align*}
-T‰ss‰ on jakolaskut $\,a_{ik}^{(k-1)}/a_{kk}^{(k-1)}\,,\ i=k+1 \ldots n\,$ syyt‰ laskea ensin,
-jolloin algoritmi on ohjelmointikielell‰
+T√§ss√§ on jakolaskut $\,a_{ik}^{(k-1)}/a_{kk}^{(k-1)}\,,\ i=k+1 \ldots n\,$ syyt√§ laskea ensin,
+jolloin algoritmi on ohjelmointikielell√§
 \begin{align*}
 l_{ik}\ &\leftarrow\ a_{ik}/a_{kk}\,, \qquad\ \ i=k+1 \ldots n, \\
 a_{ij}\ &\leftarrow\ a_{ij} - l_{ik}a_{kj}\,, \quad\, i,j=k+1 \ldots n, \\
 b_i\    &\leftarrow\ b_i - l_{ik}b_k\,, \qquad i=k+1 \ldots n.
 \end{align*}
-Tyˆm‰‰r‰‰ arvioitaessa pidett‰kˆˆn tyˆyksikkˆn‰ laskuoperaatiota, joka koostuu yhdest‰ 
-kertolaskusta (tai jakolaskusta) ja yhdest‰ yhteen- tai v‰hennyslaskusta. Algoritmista n‰hd‰‰n,
-ett‰ algoritmin tyˆl‰in osa koostuu muunnoksista $\,a_{ij}^{(k)} \leftarrow a_{ij}^{(k-1)}$.
-N‰iden vaatima tyˆm‰‰r‰ koko eliminaatiovaiheessa on mainittuina operaatioina
+Ty√∂m√§√§r√§√§ arvioitaessa pidett√§k√∂√∂n ty√∂yksikk√∂n√§ laskuoperaatiota, joka koostuu yhdest√§ 
+kertolaskusta (tai jakolaskusta) ja yhdest√§ yhteen- tai v√§hennyslaskusta. Algoritmista n√§hd√§√§n,
+ett√§ algoritmin ty√∂l√§in osa koostuu muunnoksista $\,a_{ij}^{(k)} \leftarrow a_{ij}^{(k-1)}$.
+N√§iden vaatima ty√∂m√§√§r√§ koko eliminaatiovaiheessa on mainittuina operaatioina
 \[
 W = (n-1)^2+(n-2)^2 + \cdots + 1 = \frac{1}{6}(n-1)n(2n-1).
 \]
 Muut algoritmin osat, kuten muunnokset $b_i^{(k)} \leftarrow b_i^{(k-1)}$ ja takaisinsijoitukset
-ovat tyˆm‰‰r‰lt‰‰n suuruusluokkaa $\ordoO{n^2}$, joten Gaussin algoritmin tyˆm‰‰r‰ on
+ovat ty√∂m√§√§r√§lt√§√§n suuruusluokkaa $\ordoO{n^2}$, joten Gaussin algoritmin ty√∂m√§√§r√§ on
 \[
 \boxed{\quad W\ =\ \frac{1}{3}\,n^3 + \ordoO{n^2}. \quad}
 \]
-T‰st‰ n‰hd‰‰n, ett‰ esimerkiksi tuhannen yht‰lˆn yht‰lˆryhm‰n ($W \approx 0.3 \cdot 10^9$) 
-ratkaiseminen tietokoneella ei ole ongelma laskenta-ajan kannalta. Sen sijaan yht‰lˆryhm‰
-kokoa $n=10^6$ ($W \approx 0.3 \cdot 10^{18}$) saattaa jo olla ylivoimainen teht‰v‰. ---
-N‰inkin suuria yht‰lˆryhmi‰ ratkotaan nykyisin, mutta silloin k‰ytet‰‰n yleens‰ hyv‰ksi
-kerroinmatriisin erikoisominaisuuksia. Toinen, perinteisesti suosittu vaihtoehto on k‰ytt‰‰
-teht‰v‰‰n sopivia
-\kor{iteratiivisia} (likim‰‰r‰isi‰) ratkaisutapoja. Suhteessa iteratiivisiin menetelmiin
+T√§st√§ n√§hd√§√§n, ett√§ esimerkiksi tuhannen yht√§l√∂n yht√§l√∂ryhm√§n ($W \approx 0.3 \cdot 10^9$) 
+ratkaiseminen tietokoneella ei ole ongelma laskenta-ajan kannalta. Sen sijaan yht√§l√∂ryhm√§
+kokoa $n=10^6$ ($W \approx 0.3 \cdot 10^{18}$) saattaa jo olla ylivoimainen teht√§v√§. ---
+N√§inkin suuria yht√§l√∂ryhmi√§ ratkotaan nykyisin, mutta silloin k√§ytet√§√§n yleens√§ hyv√§ksi
+kerroinmatriisin erikoisominaisuuksia. Toinen, perinteisesti suosittu vaihtoehto on k√§ytt√§√§
+teht√§v√§√§n sopivia
+\kor{iteratiivisia} (likim√§√§r√§isi√§) ratkaisutapoja. Suhteessa iteratiivisiin menetelmiin
 sanotaan Gaussin algoritmiin perustuvaa ratkaisua \kor{suoraksi} ratkaisutavaksi.
-Kohtuullisilla $n$:n arvoilla yht‰lˆryhm‰n suora ratkaisu Gaussin algoritmilla on edelleen
-kilpailukykyinen menetelm‰, ja tietokoneiden suorituskyvyn kasvaessa se on myˆs voittanut alaa
-iteratiivisilta menetelmilt‰. Etenkin silloin kun algoritmi menee l‰pi em. suoraviivaisella
-tavalla se on myˆs hyvin helppo ohjelmoida.
+Kohtuullisilla $n$:n arvoilla yht√§l√∂ryhm√§n suora ratkaisu Gaussin algoritmilla on edelleen
+kilpailukykyinen menetelm√§, ja tietokoneiden suorituskyvyn kasvaessa se on my√∂s voittanut alaa
+iteratiivisilta menetelmilt√§. Etenkin silloin kun algoritmi menee l√§pi em. suoraviivaisella
+tavalla se on my√∂s hyvin helppo ohjelmoida.
 
-\subsection*{Neliˆmatriisin $LU$-hajotelma}
-\index{LU@$LU$-hajotelma (neliˆmatriisin)|vahv}
-\index{matriisin ($\nel$neliˆmatriisin)!f@$\nel$$LU$-hajotelma|vahv}
+\subsection*{Neli√∂matriisin $LU$-hajotelma}
+\index{LU@$LU$-hajotelma (neli√∂matriisin)|vahv}
+\index{matriisin ($\nel$neli√∂matriisin)!f@$\nel$$LU$-hajotelma|vahv}
 
-Gaussin eliminaatiolla, sik‰li kuin se onnistuu edell‰ kuvatulla tavalla, saadaan yht‰lˆryhm‰lle
-$\mA\mx=\mb$ ratkaisu jokaisella $\mb\in\R^n$, joten Lauseen \ref{s‰‰nnˆllisyyskriteerit}
-perusteella kerroinmatriisin on oltava s‰‰nnˆllinen. Ko.\ lauseeseen (jota ei viel‰ ole 
-todistettu) ei kuitenkaan tarvitse vedota, sill‰ kerroinmatriisin s‰‰nnˆllisyys tulee Gaussin
-algoritmilla suoraan todistetuksi. P‰‰ttely on seuraava: Ensinn‰kin todetaan, ett‰ Gaussin
-algoritmin eliminaatiovaihe muuntaa alkuper‰isen yht‰lˆryhm‰n
+Gaussin eliminaatiolla, sik√§li kuin se onnistuu edell√§ kuvatulla tavalla, saadaan yht√§l√∂ryhm√§lle
+$\mA\mx=\mb$ ratkaisu jokaisella $\mb\in\R^n$, joten Lauseen \ref{s√§√§nn√∂llisyyskriteerit}
+perusteella kerroinmatriisin on oltava s√§√§nn√∂llinen. Ko.\ lauseeseen (jota ei viel√§ ole 
+todistettu) ei kuitenkaan tarvitse vedota, sill√§ kerroinmatriisin s√§√§nn√∂llisyys tulee Gaussin
+algoritmilla suoraan todistetuksi. P√§√§ttely on seuraava: Ensinn√§kin todetaan, ett√§ Gaussin
+algoritmin eliminaatiovaihe muuntaa alkuper√§isen yht√§l√∂ryhm√§n
 \[
-\mA†\mx = \mb
+\mA¬†\mx = \mb
 \]
 muotoon
 \[
 \mU \mx = \mc = \mR \mb,
 \]
-miss‰ $\mU$ on muunnettu kerroinmatriisi, eli yl‰kolmiomatriisi, jonka l‰vist‰j‰alkiot ovat 
-$a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. Matriisi $\mR$ ei ole eliminaatiovaiheen j‰lkeen 
-suoraan n‰ht‰viss‰, mutta se saadaan selville tarkastelemalla yht‰lˆryhm‰‰
+miss√§ $\mU$ on muunnettu kerroinmatriisi, eli yl√§kolmiomatriisi, jonka l√§vist√§j√§alkiot ovat 
+$a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. Matriisi $\mR$ ei ole eliminaatiovaiheen j√§lkeen 
+suoraan n√§ht√§viss√§, mutta se saadaan selville tarkastelemalla yht√§l√∂ryhm√§√§
 \[
 \mL \my = \mb,
 \]
-miss‰ $\mL$ on alakolmiomatriisi, joka m‰‰ritell‰‰n
+miss√§ $\mL$ on alakolmiomatriisi, joka m√§√§ritell√§√§n
 \[
 [\mL]_{ik} = \begin{cases}
 \,0, &\text{jos}\ i<k, \\
@@ -357,8 +357,8 @@ miss‰ $\mL$ on alakolmiomatriisi, joka m‰‰ritell‰‰n
 \,l_{ik}=a_{ik}^{(k-1)}/a_{kk}^{(k-1)}\,, &\text{jos}\ i>k.
 \end{cases}
 \]
-T‰ss‰ siis $a_{ik}^{(k-1)}, \ i=k \ldots n$, ovat muunnetun kerroinmatriisin alkioita $k-1$ 
-eliminaatioaskeleen j‰lkeen:
+T√§ss√§ siis $a_{ik}^{(k-1)}, \ i=k \ldots n$, ovat muunnetun kerroinmatriisin alkioita $k-1$ 
+eliminaatioaskeleen j√§lkeen:
 \[
 \begin{array}{ccc}
 a_{k-1,k-1}^{(k-2)} \\
@@ -369,16 +369,16 @@ a_{k-1,k-1}^{(k-2)} \\
 0 & a_{nk}^{(k-1)}
 \end{array}
 \]
-Matriisin $\mL$ muodosta n‰hd‰‰n, ett‰ jos em.\ yht‰lˆryhm‰‰n sovelletaan Gaussin algoritmia, 
-niin jo eliminaatiovaihe antaa ratkaisun $\my=\mL^{-1}\mb$. Toisaalta n‰hd‰‰n vertaamalla 
-Gaussin algoritmeja sovellettuna yht‰lˆryhmiin $\mL\my=\mb$ ja $\mA\mx=\mb$, ett‰ 
+Matriisin $\mL$ muodosta n√§hd√§√§n, ett√§ jos em.\ yht√§l√∂ryhm√§√§n sovelletaan Gaussin algoritmia, 
+niin jo eliminaatiovaihe antaa ratkaisun $\my=\mL^{-1}\mb$. Toisaalta n√§hd√§√§n vertaamalla 
+Gaussin algoritmeja sovellettuna yht√§l√∂ryhmiin $\mL\my=\mb$ ja $\mA\mx=\mb$, ett√§ 
 eliminaatiovaiheen muunnokset $b_i^{(k)} \leftarrow b_i^{(k-1)}$ ovat kummassakin tapauksessa 
-t‰sm‰lleen samat. Siis on p‰‰telty:
+t√§sm√§lleen samat. Siis on p√§√§telty:
 \[
 \my = \inv{\mL} \mb = \mR \mb.
 \]
-Koska t‰m‰ p‰tee $\forall \mb \in \R^n$, on $\mR=\inv{\mL}$ 
-(Propositio \ref{matriisien yht‰suuruus}), ja n‰in ollen
+Koska t√§m√§ p√§tee $\forall \mb \in \R^n$, on $\mR=\inv{\mL}$ 
+(Propositio \ref{matriisien yht√§suuruus}), ja n√§in ollen
 \[
 \mA \mx = \mb \ \ekv \ \mL \mU \mx = \mb
 \]
@@ -386,17 +386,17 @@ Siis $\mA \mx = \mL \mU \mx \ \forall \mx \in \R^n$, joten
 \[
 \boxed{\kehys\quad \mA=\mL\mU. \quad}
 \]
-T‰t‰ sanotaan matriisin \kor{$LU$-hajotelmaksi} (engl. $LU$-decomposition). Sen laskemiseksi ei
+T√§t√§ sanotaan matriisin \kor{$LU$-hajotelmaksi} (engl. $LU$-decomposition). Sen laskemiseksi ei
 siis tarvita muuta kuin Gaussin algoritmin eliminaatiovaihe, kunhan muistetaan tallettaa 
 matriisi $\mL$, eli luvut
 \[
 [\mL]_{ik} = l_{ik} = a_{ik}^{(k-1)}/a_{kk}^{(k-1)}, \quad i=k+1 \ldots n, \ k=1  \ldots n-1.
 \]
-N‰m‰ tulevat eliminaation kuluessa joka tapauksessa lasketuksi, mutta ilman talletusta $\mL$ ei
-j‰‰ n‰kyviin (koska yht‰lˆryhm‰n ratkaisualgoritmi laskee valmiiksi vektorin 
+N√§m√§ tulevat eliminaation kuluessa joka tapauksessa lasketuksi, mutta ilman talletusta $\mL$ ei
+j√§√§ n√§kyviin (koska yht√§l√∂ryhm√§n ratkaisualgoritmi laskee valmiiksi vektorin 
 $\inv{\mL} \mb = \mR \mb$).
-\jatko \begin{Exa} (jatko) Seuraamalla eliminaatiovaiheita ($k=1\,\ldots\,4$) n‰hd‰‰n, ett‰
-esimerkin yht‰lˆryhm‰ss‰ kerroinmatriisin $LU$-hajotelma on
+\jatko \begin{Exa} (jatko) Seuraamalla eliminaatiovaiheita ($k=1\,\ldots\,4$) n√§hd√§√§n, ett√§
+esimerkin yht√§l√∂ryhm√§ss√§ kerroinmatriisin $LU$-hajotelma on
 \[
 \mA =\begin{rmatrix} 
      1&0&0&0&0&0 \\ \frac{1}{3}&1&0&0&0&0 \\ 0&0&1&0&0&0 \\ 
@@ -413,29 +413,29 @@ esimerkin yht‰lˆryhm‰ss‰ kerroinmatriisin $LU$-hajotelma on
 \end{Exa} 
 
 Matriisin $LU$-hajotelma siis onnistuu Gaussin eliminaatiolla, jos 
-$\,a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. T‰llˆin $\mL$ ja $\mU$ ovat s‰‰nnˆllisi‰ 
-(Lause \ref{kolmiomatriisi}), joten $\mA$ on s‰‰nnˆllinen ja
+$\,a_{kk}^{(k-1)} \neq 0, \ k=1 \ldots n$. T√§ll√∂in $\mL$ ja $\mU$ ovat s√§√§nn√∂llisi√§ 
+(Lause \ref{kolmiomatriisi}), joten $\mA$ on s√§√§nn√∂llinen ja
 \[
 \inv{\mA} = \inv{\mU} \inv{\mL}.
 \]
-Mainittu tukialkioita koskeva ehto on siis riitt‰v‰ ehto matriisin s‰‰nnˆllisyydelle. 
-Seuraavassa luvussa n‰hd‰‰n, ett‰ kun Gaussin algoritmia hieman muunnellaan, se ratkaisee 
-neliˆmatriisin s‰‰nnˆllisyyskysymyksen yleisess‰kin tapauksessa. 
+Mainittu tukialkioita koskeva ehto on siis riitt√§v√§ ehto matriisin s√§√§nn√∂llisyydelle. 
+Seuraavassa luvussa n√§hd√§√§n, ett√§ kun Gaussin algoritmia hieman muunnellaan, se ratkaisee 
+neli√∂matriisin s√§√§nn√∂llisyyskysymyksen yleisess√§kin tapauksessa. 
 
-\subsection*{K‰‰nteismatriisin laskeminen}
+\subsection*{K√§√§nteismatriisin laskeminen}
 
-Sik‰li kuin Gaussin eliminaatio yht‰lˆryhm‰lle $\mA \mx = \mb$ onnistuu edell‰ kuvatulla tavalla
-(tukialkiot $\neq 0$), niin kerroinmatriisi on siis s‰‰nnˆllinen, jolloin yht‰lˆryhm‰n ratkaisu
-voidaan kirjoittaa $\mx=\mA^{-1}\mb$. Jos halutaan laskea myˆs k‰‰nteismatriisi $\mA^{-1}$
-eik‰ vain ratkaisua $\mx$, niin er‰s (etenkin k‰sinlaskussa luonteva) menettely on soveltaa
-Gaussin algoritmia \pain{s}y\pain{mbolisesti} siten, ett‰ $\mb$:n alkioille $\,b_i$ ei anneta
-numeroarvoja. Algoritmia k‰ytt‰en ratkaisu saadaan t‰llˆin muotoon $\mx = \mB \mb$, jolloin 
+Sik√§li kuin Gaussin eliminaatio yht√§l√∂ryhm√§lle $\mA \mx = \mb$ onnistuu edell√§ kuvatulla tavalla
+(tukialkiot $\neq 0$), niin kerroinmatriisi on siis s√§√§nn√∂llinen, jolloin yht√§l√∂ryhm√§n ratkaisu
+voidaan kirjoittaa $\mx=\mA^{-1}\mb$. Jos halutaan laskea my√∂s k√§√§nteismatriisi $\mA^{-1}$
+eik√§ vain ratkaisua $\mx$, niin er√§s (etenkin k√§sinlaskussa luonteva) menettely on soveltaa
+Gaussin algoritmia \pain{s}y\pain{mbolisesti} siten, ett√§ $\mb$:n alkioille $\,b_i$ ei anneta
+numeroarvoja. Algoritmia k√§ytt√§en ratkaisu saadaan t√§ll√∂in muotoon $\mx = \mB \mb$, jolloin 
 on $\mA^{-1}=\mB$.
 \begin{Exa} Laske matriisin
 \[ 
 \mA\ =\ \begin{rmatrix} 1&1&0 \\ 1&0&1 \\ 1&-1&-1 \end{rmatrix} 
 \]
-k‰‰nteismatriisi. 
+k√§√§nteismatriisi. 
 \end{Exa}
 \ratk Eliminaatiolla ja takaisinsijoituksella saadaan
 \begin{align*}
@@ -451,29 +451,29 @@ k‰‰nteismatriisi.
               b_1 + b_2 + b_3 \\ 2b_1 - b_2 - b_3 \\ -b_1 + 2b_2 - b_3 
               \end{cmatrix}.
 \end{align*}
-Tuloksesta voidaan lukea k‰‰nteismatriisi:
+Tuloksesta voidaan lukea k√§√§nteismatriisi:
 \[ 
 \begin{rmatrix} x_1 \\ x_2 \\ x_3 \end{rmatrix}\
     =\ \dfrac{1}{3} \begin{rmatrix} 1&1&1 \\ 2&-1&-1 \\ -1&2&-1 \end{rmatrix}
                     \begin{rmatrix} b_1 \\ b_2 \\ b_3 \end{rmatrix}
     =\ \mA^{-1}\mb. \loppu
 \]
-Edellist‰ suoraviivaisempi tapa laskea k‰‰nteismatriisi on k‰ytt‰‰ hyv‰ksi matriisialgebran
-identieetti‰ (vrt.\ Luku \ref{matriisialgebra})
+Edellist√§ suoraviivaisempi tapa laskea k√§√§nteismatriisi on k√§ytt√§√§ hyv√§ksi matriisialgebran
+identieetti√§ (vrt.\ Luku \ref{matriisialgebra})
 \[
 \mA^{-1}\ =\ \mA^{-1} \mI\ =\ \mA^{-1}\,[\me_1 \ldots \me_n]\ 
                            =\  [\mA^{-1}\me_1 \ldots \mA^{-1}\me_n].
 \]
-T‰m‰n mukaisesti $\mA^{-1}$:n sarakkeet voidaan laskea ratkaisemalla lineaarinen yht‰lˆryhm‰
-$\mA \mx = \mb$ kun $\mb = \me_i,\ i = 1 \ldots n$. Koska Gaussin algoritmissa voidaan k‰sitell‰
-yht‰ aikaa useita eri vektoreita $\mb$ (vrt.\ Esimerkki \ref{ristikkoesimerkki}), voidaan myˆs 
-$\mA^{-1}$:n sarakkeet m‰‰r‰t‰ kaikki yhdell‰ kertaa. K‰‰nteismatriisin laskeminen voidaan 
-t‰llˆin kuvata kaksivaiheisena operaationa (eliminaatio ja takaisinsijoitus)
+T√§m√§n mukaisesti $\mA^{-1}$:n sarakkeet voidaan laskea ratkaisemalla lineaarinen yht√§l√∂ryhm√§
+$\mA \mx = \mb$ kun $\mb = \me_i,\ i = 1 \ldots n$. Koska Gaussin algoritmissa voidaan k√§sitell√§
+yht√§ aikaa useita eri vektoreita $\mb$ (vrt.\ Esimerkki \ref{ristikkoesimerkki}), voidaan my√∂s 
+$\mA^{-1}$:n sarakkeet m√§√§r√§t√§ kaikki yhdell√§ kertaa. K√§√§nteismatriisin laskeminen voidaan 
+t√§ll√∂in kuvata kaksivaiheisena operaationa (eliminaatio ja takaisinsijoitus)
 \[
  [\,\mA \mid \mI\ ]\ \map\ [\,\mU \mid \mL^{-1}\,]\ \map\ [\,\mI \mid \mA^{-1}\ ].
 \]
-Vastaavalla tavalla menetell‰‰n itse asiassa em.\ symbolisessa laskussa, sill‰ kun kirjoitetaan
-$\mb = \sum_{i=1}^n b_i \me_i$, niin p‰tee (vrt.\ Luku \ref{matriisialgebra})
+Vastaavalla tavalla menetell√§√§n itse asiassa em.\ symbolisessa laskussa, sill√§ kun kirjoitetaan
+$\mb = \sum_{i=1}^n b_i \me_i$, niin p√§tee (vrt.\ Luku \ref{matriisialgebra})
 \[
 \mA^{-1} \mb\ =\ \sum_{i=1}^n b_i \mA^{-1} \me_i\ =\ [\mA^{-1} \me_1 \ldots \mA^{-1} \me_n]\,\mb.
 \]
@@ -494,31 +494,31 @@ $\mb = \sum_{i=1}^n b_i \me_i$, niin p‰tee (vrt.\ Luku \ref{matriisialgebra})
          \right]\ =\ [\,\mI \mid \mA^{-1}\ ]. \quad \loppu
 \end{align*}
 \end{Exa}
-K‰‰nteismatriisi voidaan myˆs laskea k‰ytt‰en $LU$-hajotelmaan perustuvaa kaavaa
-$\mA^{-1}=\mU^{-1}\mL^{-1}$, eli laskemalla ensin ym.\ tavalla erikseen k‰‰nteismatriisit 
-$\mL^{-1}$ ja $\mU^{-1}$ ja sitten n‰iden tulo. Sek‰ t‰ll‰ tavoin ett‰ ym.\ algoritmin 
-mukaisesti laskien tulee tyˆm‰‰r‰ksi $W=n^3+\ordoO{n^2}$ 
-(Harj.teht.\,\ref{H-m-3: tyˆm‰‰ri‰ 2}) --- siis noin kolminkertainen tyˆm‰‰r‰ verrattuna
-$LU$-hajotelman laskemiseen tai yksitt‰isen yht‰lˆryhm‰n ratkaisuun. Osoittautuukin, ett‰ 
-yht‰lˆryhmi‰ numeerisesti ratkaistaessa ei k‰‰nteismatriisin laskeminen yksinkertaisesti 
-kannata. Nimitt‰in vaikka ratkaistaisiin useita yht‰lˆryhmi‰ kerroinmatriisin 
-pysyess‰ samana (esim.\ vaihteleva kuormitus ristikkorakenteessa, vrt.\ Luku 
-\ref{yht‰lˆryhm‰t}), niin Gaussin algoritmin eliminaatiovaiheen toistaminen pystyt‰‰n
-v‰ltt‰m‰‰n pelk‰n $LU$-hajotelman avulla: Kun hajotelman matriisit $\mL$ ja $\mU$ tallennetaan, 
-niin yht‰lˆryhm‰ $\mA \mx = \mb$ voidaan purkaa kahdeksi per‰kk‰iseksi yht‰lˆryhm‰ksi:
+K√§√§nteismatriisi voidaan my√∂s laskea k√§ytt√§en $LU$-hajotelmaan perustuvaa kaavaa
+$\mA^{-1}=\mU^{-1}\mL^{-1}$, eli laskemalla ensin ym.\ tavalla erikseen k√§√§nteismatriisit 
+$\mL^{-1}$ ja $\mU^{-1}$ ja sitten n√§iden tulo. Sek√§ t√§ll√§ tavoin ett√§ ym.\ algoritmin 
+mukaisesti laskien tulee ty√∂m√§√§r√§ksi $W=n^3+\ordoO{n^2}$ 
+(Harj.teht.\,\ref{H-m-3: ty√∂m√§√§ri√§ 2}) --- siis noin kolminkertainen ty√∂m√§√§r√§ verrattuna
+$LU$-hajotelman laskemiseen tai yksitt√§isen yht√§l√∂ryhm√§n ratkaisuun. Osoittautuukin, ett√§ 
+yht√§l√∂ryhmi√§ numeerisesti ratkaistaessa ei k√§√§nteismatriisin laskeminen yksinkertaisesti 
+kannata. Nimitt√§in vaikka ratkaistaisiin useita yht√§l√∂ryhmi√§ kerroinmatriisin 
+pysyess√§ samana (esim.\ vaihteleva kuormitus ristikkorakenteessa, vrt.\ Luku 
+\ref{yht√§l√∂ryhm√§t}), niin Gaussin algoritmin eliminaatiovaiheen toistaminen pystyt√§√§n
+v√§ltt√§m√§√§n pelk√§n $LU$-hajotelman avulla: Kun hajotelman matriisit $\mL$ ja $\mU$ tallennetaan, 
+niin yht√§l√∂ryhm√§ $\mA \mx = \mb$ voidaan purkaa kahdeksi per√§kk√§iseksi yht√§l√∂ryhm√§ksi:
 \[ 
 \mL\mU\mx=\mb \qekv \mL \my = \mb, \quad \mU \mx = \my. 
 \]
-N‰m‰ ratkeavat eteen- ja takaisinsijoituksilla, jolloin yht‰lˆryhm‰n ratkaisemisen tyˆm‰‰r‰ksi
-tulee $W \sim n^2$ (ks.\ Harj.teht.\,\ref{H-m-3: tyˆm‰‰ri‰ 1}b). Jos $\mA^{-1}$ olisi
-tallennettu, olisi tyˆm‰‰r‰ sama, joten k‰‰nteismatriisin laskemisella ei voiteta mit‰‰n (!). 
+N√§m√§ ratkeavat eteen- ja takaisinsijoituksilla, jolloin yht√§l√∂ryhm√§n ratkaisemisen ty√∂m√§√§r√§ksi
+tulee $W \sim n^2$ (ks.\ Harj.teht.\,\ref{H-m-3: ty√∂m√§√§ri√§ 1}b). Jos $\mA^{-1}$ olisi
+tallennettu, olisi ty√∂m√§√§r√§ sama, joten k√§√§nteismatriisin laskemisella ei voiteta mit√§√§n (!). 
 
 \Harj
 \begin{enumerate}
 
 
 \item
-Kirjoita seuraavat yht‰lˆryhm‰t taulukkomuotoon ja ratkaise Gaussin algoritmilla. Laske myˆs
+Kirjoita seuraavat yht√§l√∂ryhm√§t taulukkomuotoon ja ratkaise Gaussin algoritmilla. Laske my√∂s
 kerroinmatriisien $LU$-hajotelmat.
 \begin{align*}
 &\text{a)}\ \ \begin{cases} \,x+y=33 \\ \,2x+4y=100 \end{cases} \qquad\qquad
@@ -550,7 +550,7 @@ Olkoon
 \mb_1 = \begin{bmatrix} 1\\1\\1\\1 \end{bmatrix}, \quad
 \mb_2 = \begin{bmatrix} 5\\3\\4\\0 \end{bmatrix}
 \]
-Ratkaise Gaussin algoritmilla yht‰lˆryhm‰t $\mA\mx=\mb_1$ ja $\mA\mx=\mb_2$ ja laske matriisin
+Ratkaise Gaussin algoritmilla yht√§l√∂ryhm√§t $\mA\mx=\mb_1$ ja $\mA\mx=\mb_2$ ja laske matriisin
 $\mA$ $LU$-hajotelma.
 
 \item
@@ -558,24 +558,24 @@ Olkoon
 \[
 \mA=\begin{bmatrix} 1&0&0&1\\1&1&0&2\\1&0&1&0\\1&1&2&1 \end{bmatrix}.
 \]
-Laske k‰‰nteismatriisi $\mA^{-1}$ Gaussin algoritmilla \vspace{1mm}\newline 
-a) ratkaisemalla yht‰lˆryhm‰ $\mA\mx=\mb$ yleisell‰ $\mb\in\R^4$ (symbolinen lasku), \newline
-b) ratkaisemalla taulukkomuodossa yht‰lˆryhm‰t $\mA\mx=\me_i,\ i=1 \ldots 4$
+Laske k√§√§nteismatriisi $\mA^{-1}$ Gaussin algoritmilla \vspace{1mm}\newline 
+a) ratkaisemalla yht√§l√∂ryhm√§ $\mA\mx=\mb$ yleisell√§ $\mb\in\R^4$ (symbolinen lasku), \newline
+b) ratkaisemalla taulukkomuodossa yht√§l√∂ryhm√§t $\mA\mx=\me_i,\ i=1 \ldots 4$
 
 \item
-N‰yt‰, ett‰ jos lineaarisen yht‰lˆryhm‰n kerroimatriisi $\mA$ on symmetrinen, niin Gaussin 
-algoritmi s‰ilytt‰‰ symmetrisen‰ sen matriisin osan, johon eliminaatio ei ole viel‰ edennyt,
-ts.\ $(k-1)$:n eliminaatioaskeleen j‰lkeen p‰tee
+N√§yt√§, ett√§ jos lineaarisen yht√§l√∂ryhm√§n kerroimatriisi $\mA$ on symmetrinen, niin Gaussin 
+algoritmi s√§ilytt√§√§ symmetrisen√§ sen matriisin osan, johon eliminaatio ei ole viel√§ edennyt,
+ts.\ $(k-1)$:n eliminaatioaskeleen j√§lkeen p√§tee
 \[
 a_{ji}^{(k-1)}=a_{ij}^{(k-1)} \quad \forall\,i,j \ge k.
 \]
-P‰‰ttele, ett‰ Gaussin algoritmin vaatima laskutyˆ on symmetrisen kerroinmatriisin tapauksessa
+P√§√§ttele, ett√§ Gaussin algoritmin vaatima laskuty√∂ on symmetrisen kerroinmatriisin tapauksessa
 $W=\frac{1}{6}\,n^3+\ordoO{n^2}$.
 
-\item \label{H-m-3: tyˆm‰‰ri‰ 1}
-Olkoon $\mA,\mB$ matriiseja kokoa $n \times n$, $\mL,\mU$ ala- ja yl‰kolmiomatriiseja samaa
-kokoa ja $\mb\in\R^n$. N‰yt‰ oikeaksi seuraavat laskuoperaatioiden tyˆm‰‰ri‰ koskevat arviot
-(tyˆyksikkˆ = kertolasku + yhteenlasku).
+\item \label{H-m-3: ty√∂m√§√§ri√§ 1}
+Olkoon $\mA,\mB$ matriiseja kokoa $n \times n$, $\mL,\mU$ ala- ja yl√§kolmiomatriiseja samaa
+kokoa ja $\mb\in\R^n$. N√§yt√§ oikeaksi seuraavat laskuoperaatioiden ty√∂m√§√§ri√§ koskevat arviot
+(ty√∂yksikk√∂ = kertolasku + yhteenlasku).
 \begin{align*}
 \text{a)} \qquad\qquad\qquad &\mA,\mb\,\map\ \mA\mb \qquad\qquad\qquad\, n^2+\ordoO{n} \\
 \text{b)} \qquad\qquad\qquad &\mL,\mb\ \map\ 
@@ -585,9 +585,9 @@ kokoa ja $\mb\in\R^n$. N‰yt‰ oikeaksi seuraavat laskuoperaatioiden tyˆm‰‰ri‰ kos
                               \mL\mU \qquad\qquad\qquad  \tfrac{1}{3}\,n^3+\ordoO{n^2}
 \end{align*}
 
-\item (*) \label{H-m-3: tyˆm‰‰ri‰ 2}
-N‰yt‰, ett‰ laskuoperaation $\mA\map\mA^{-1}$ tyˆm‰‰r‰ Gaussin algoritmin eri vaihtoehdoissa on
-($\mA$ kokoa $n \times n$, tyˆyksikkˆ = kertolasku + yhteenlasku)
+\item (*) \label{H-m-3: ty√∂m√§√§ri√§ 2}
+N√§yt√§, ett√§ laskuoperaation $\mA\map\mA^{-1}$ ty√∂m√§√§r√§ Gaussin algoritmin eri vaihtoehdoissa on
+($\mA$ kokoa $n \times n$, ty√∂yksikk√∂ = kertolasku + yhteenlasku)
 \begin{align*}
 \text{a)} \qquad &[\,\mA \mid \mI\ ]\ \map\ [\,\mI \mid \mA^{-1}\ ] \qquad n^3+\ordoO{n^2} \\
 \text{b)} \qquad &\mA\map\mA^{-1}\ = \mU^{-1}\mL^{-1} \qquad\, n^3+\ordoO{n^2}

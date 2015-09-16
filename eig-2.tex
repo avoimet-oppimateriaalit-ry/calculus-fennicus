@@ -1,41 +1,41 @@
-\section{Neliˆmuotojen luokittelu} \label{diagonalisointi}
+\section{Neli√∂muotojen luokittelu} \label{diagonalisointi}
 \alku
-\index{neliˆmuoto|vahv}
+\index{neli√∂muoto|vahv}
 
-Yleinen $\R^n$:n \kor{neliˆmuoto} on funktio $f(\mx)=\mx^T\mA\mx,\ \mx\in\R^n$, miss‰ $\mA$ on
+Yleinen $\R^n$:n \kor{neli√∂muoto} on funktio $f(\mx)=\mx^T\mA\mx,\ \mx\in\R^n$, miss√§ $\mA$ on
 reaalinen ja symmetrinen matriisi kokoa $n\times n$ 
-(ks.\ Esimerkki \ref{osittaisderivaatat}:\,\ref{neliˆmuoto}). T‰ss‰ luvussa tarkastellaan
-neliˆmuodon $f$ luokittelua sen mukaan, mink‰ merkkisi‰ arvoja $f$ saa muualla kuin origossa.
-Yleisess‰ tapauksessa luokitteluongelman ratkaisu nojaa edellisess‰ luvussa esitettyyn
-symmetrisen matriisin ominais\-arvoteoriaan ja t‰h‰n perustuvaan matriisin diagonalisointiin
+(ks.\ Esimerkki \ref{osittaisderivaatat}:\,\ref{neli√∂muoto}). T√§ss√§ luvussa tarkastellaan
+neli√∂muodon $f$ luokittelua sen mukaan, mink√§ merkkisi√§ arvoja $f$ saa muualla kuin origossa.
+Yleisess√§ tapauksessa luokitteluongelman ratkaisu nojaa edellisess√§ luvussa esitettyyn
+symmetrisen matriisin ominais\-arvoteoriaan ja t√§h√§n perustuvaan matriisin diagonalisointiin
 (Lauseet \ref{symmetrisen matriisin ominaisarvoteoria} ja \ref{diagonalisoituva matriisi}).
-T‰m‰ ratkaisu myˆs tuottaa neliˆmuodon \kor{p‰‰akselikoordinaatiston}, jossa neliˆmuoto
+T√§m√§ ratkaisu my√∂s tuottaa neli√∂muodon \kor{p√§√§akselikoordinaatiston}, jossa neli√∂muoto
 (eli matriisi $\mA$) diagonalisoituu.
 
-Jatkossa luokitellaan ensin neliˆmuodot ja ratkaistaan luokitteluongelma, rajoittuen
-ei-triviaaleihin tapauksiin $\mA\neq\mo$ ja $n \ge 2$. T‰m‰n j‰lkeen tarkastellaan kahta
-neliˆmuotojen teorian sovellusta: $n$ muuttujan funktion kriittisen pisteen luokittelua
-mahdollisena paikallisena ‰‰riarvokohtana (Sovellus \#1) ja toisen asteen k‰yrien ja pintojen
+Jatkossa luokitellaan ensin neli√∂muodot ja ratkaistaan luokitteluongelma, rajoittuen
+ei-triviaaleihin tapauksiin $\mA\neq\mo$ ja $n \ge 2$. T√§m√§n j√§lkeen tarkastellaan kahta
+neli√∂muotojen teorian sovellusta: $n$ muuttujan funktion kriittisen pisteen luokittelua
+mahdollisena paikallisena √§√§riarvokohtana (Sovellus \#1) ja toisen asteen k√§yrien ja pintojen
 geometrista luokittelua (Sovellus \#2). 
 
-Jos $\mx\in\R^n$, $\mx\neq\mo$ ja kirjoitetaan $\me=\mx/|\mx|$, niin neliˆmuodolle
-$f(\mx)=\mx^T\mA\mx$ p‰tee
-\begin{equation} \label{neliˆmuodon skaalaus}
+Jos $\mx\in\R^n$, $\mx\neq\mo$ ja kirjoitetaan $\me=\mx/|\mx|$, niin neli√∂muodolle
+$f(\mx)=\mx^T\mA\mx$ p√§tee
+\begin{equation} \label{neli√∂muodon skaalaus}
 f(\mx)=f(|\mx|\me)=|\mx|^2\me^T\mA\me=|\mx|^2f(\me). \tag{$\star$}
 \end{equation}
-T‰m‰n mukaan nelˆmuodon arvojen etumerkkej‰ tutkittaessa riitt‰‰ m‰‰ritt‰‰ $f$:n arvojoukko
-$\R^n$:n yksikkˆpallolla
+T√§m√§n mukaan nel√∂muodon arvojen etumerkkej√§ tutkittaessa riitt√§√§ m√§√§ritt√§√§ $f$:n arvojoukko
+$\R^n$:n yksikk√∂pallolla
 \[
 B=\{\mx\in\R^n \ | \ \abs{\mx}=1\}.
 \]
-Arvojoukon $f(B)$ mukaisesti neliˆmuoto luokitellaan seuraavasti.
-\begin{Def} \label{neliˆmuodon luokittelu} \index{neliˆmuoto!a@luokittelu|emph}
-\index{positiividefiniittisyys!c@neliˆmuodon|emph}
-\index{negatiivisesti!b@definiitti (neliˆmuoto)|emph}
-\index{indefiniitti (neliˆmuoto)|emph}
-\index{semidefiniitti (neliˆmuoto)|emph}
-\index{puolidefiniitti (neliˆmuoto)|emph}
-Neliˆmuoto $f(\mx)=\mx^T\mA\mx$ on
+Arvojoukon $f(B)$ mukaisesti neli√∂muoto luokitellaan seuraavasti.
+\begin{Def} \label{neli√∂muodon luokittelu} \index{neli√∂muoto!a@luokittelu|emph}
+\index{positiividefiniittisyys!c@neli√∂muodon|emph}
+\index{negatiivisesti!b@definiitti (neli√∂muoto)|emph}
+\index{indefiniitti (neli√∂muoto)|emph}
+\index{semidefiniitti (neli√∂muoto)|emph}
+\index{puolidefiniitti (neli√∂muoto)|emph}
+Neli√∂muoto $f(\mx)=\mx^T\mA\mx$ on
 \begin{itemize}
 \item[-] \kor{positiivisesti definiitti}, jos $f(\mx)>0 \quad \forall \mx\in B$,
 \item[-] \kor{negatiivisesti definiitti}, jos $f(\mx)<0 \quad \forall \mx\in B$,
@@ -46,31 +46,31 @@ Neliˆmuoto $f(\mx)=\mx^T\mA\mx$ on
 \item[-] \kor{indefiniitti} (ei-definiitti), jos $f(\mx)> 0$ ja $f(\my)<0$ joillakin 
          $\mx,\my\in B$.
 \end{itemize}\end{Def} 
-Yksinkertaisimmassa eli kahden muuttujan tapauksessa neliˆmuodon definiitisyysongelma
-ratkeaa helposti. Kun merkit‰‰n $\mx=(x,y)$ ja $\mA=(a_{ij})$, niin yleinen kahden muuttujan
-neliˆmuoto on funktio
+Yksinkertaisimmassa eli kahden muuttujan tapauksessa neli√∂muodon definiitisyysongelma
+ratkeaa helposti. Kun merkit√§√§n $\mx=(x,y)$ ja $\mA=(a_{ij})$, niin yleinen kahden muuttujan
+neli√∂muoto on funktio
 \[
 f(x,y)=a_{11}x^2+2a_{12}xy+a_{22}y^2,\quad a_{ij}\in\R.
 \]
-Definiittisyyslaji saadaan m‰‰r‰tyksi esimerkiksi laskemalla suoraan $f$:n arvojoukko 
-yksikkˆympyr‰ll‰ $B=\{(x,y)\in\R^2 \ | \ x^2+y^2=1\}$. T‰m‰ k‰y parametrisoimalla $B$ muodossa
+Definiittisyyslaji saadaan m√§√§r√§tyksi esimerkiksi laskemalla suoraan $f$:n arvojoukko 
+yksikk√∂ympyr√§ll√§ $B=\{(x,y)\in\R^2 \ | \ x^2+y^2=1\}$. T√§m√§ k√§y parametrisoimalla $B$ muodossa
 $x=\cos t,\ y=\sin t,\ t\in [0,2\pi]$, jolloin tutkimuskohteeksi tulee funktio
 \[
 f(\cos t,\sin t)=F(t)=a_{11}\cos^2 t +2a_{12}\cos t\sin t+a_{22}\sin^2 t.
 \]
-$F$:n arvojouko $[F_{\text{min}},F_{\text{max}}]$ v‰lill‰ $[0,2\pi]$ m‰‰r‰‰ $f$:n definiittisyyden
+$F$:n arvojouko $[F_{\text{min}},F_{\text{max}}]$ v√§lill√§ $[0,2\pi]$ m√§√§r√§√§ $f$:n definiittisyyden
 lajin.
 
-Toinen laskutapa on m‰‰r‰t‰ $f$:n nollakohdat origon kautta kulkevilla suorilla
+Toinen laskutapa on m√§√§r√§t√§ $f$:n nollakohdat origon kautta kulkevilla suorilla
 $S_t:\ y=tx,\ t\in\R$ ja (erikseen) suoralla $S_y:\ x=0\,$:
 \begin{alignat*}{2}
 y = tx\ &:\quad &f(x,tx)&=(a_{11}+2a_{12}t+a_{22}t^2)x^2=F(t)x^2 \\
 x = 0 \ &:\quad &f(0,y) &= a_{22}y^2.
 \end{alignat*}
-Sen mukaan, onko $f(x,y)=0$ vain origossa, pitkin yht‰ suoraa, vai pitkin kahta origossa
-leikkaavaa suoraa, on p‰‰telt‰viss‰, ett‰ $f$ on vastaavasti definiitti, semidefiniitti tai
+Sen mukaan, onko $f(x,y)=0$ vain origossa, pitkin yht√§ suoraa, vai pitkin kahta origossa
+leikkaavaa suoraa, on p√§√§telt√§viss√§, ett√§ $f$ on vastaavasti definiitti, semidefiniitti tai
 indefiniitti.
-\begin{Exa} Luokittele neliˆmuoto $f(x,y)=x^2+axy+4y^2$, kun \newline
+\begin{Exa} Luokittele neli√∂muoto $f(x,y)=x^2+axy+4y^2$, kun \newline
 a) $a=3$, \ b) $a=4$, \ c) $a=5$.
 \end{Exa}
 \ratk
@@ -88,21 +88,21 @@ a) $a=3$, \ b) $a=4$, \ c) $a=5$.
          &\impl \ f \text{ on indefiniitti}. \loppu
 \end{align*}
 
-\subsection*{Neliˆmuodon diagonalisointi}
-\index{neliˆmuoto!b@diagonalisointi|vahv}
-\index{diagonalisointi!b@neliˆmuodon|vahv}
+\subsection*{Neli√∂muodon diagonalisointi}
+\index{neli√∂muoto!b@diagonalisointi|vahv}
+\index{diagonalisointi!b@neli√∂muodon|vahv}
 
-Useamman kuin kahden muuttujan tapauksessa nelˆmuodon luokitteluongelma ratkeaa luontevimmin
+Useamman kuin kahden muuttujan tapauksessa nel√∂muodon luokitteluongelma ratkeaa luontevimmin
 symmetrisen matriisin ominaisarvoteorian avulla: Suoritetaan matriisin $\mA$ diagonalisaatio
 \[
 \mD=\mC^T\mA\mC \ \ekv \ \mA=\mC\mD\mC^T,
 \]
-miss‰ $\mD=\text{diag}\,(\lambda_i)$ koostuu $\mA$:n ominaisarvoista ja $\mC$ 
-ortonormeeratuista ominaisvektoreista. T‰llˆin $f(\mx)$ saa muodon
+miss√§ $\mD=\text{diag}\,(\lambda_i)$ koostuu $\mA$:n ominaisarvoista ja $\mC$ 
+ortonormeeratuista ominaisvektoreista. T√§ll√∂in $f(\mx)$ saa muodon
 \[
 f(\mx)=\mx^T\mC\mD\mC^T\mx=(\mC^T\mx)^T\mD(\mC^T\mx).
 \]
-Siis jos tehd‰‰n $\R^n$:ss‰ muuttujan vaihto
+Siis jos tehd√§√§n $\R^n$:ss√§ muuttujan vaihto
 \[
 \my=\mC^T\mx\,\ \ekv\,\ \mx=\mC\my,
 \]
@@ -110,13 +110,13 @@ niin $f$ saa muodon
 \[
 f(\mx)=g(\my)=\my^T\mD\my=\sum_{i=1}^n\lambda_iy_i^2.
 \]
-Neliˆmuotoa $g(\my)$ sanotaan --- varsin hyv‰ll‰ syyll‰ --- $f$:n 
-\kor{diagonalisoiduksi muodoksi}. Huomattakoon, ett‰ $\mC$:n ollessa ortogonaalinen s‰ilytt‰‰
+Neli√∂muotoa $g(\my)$ sanotaan --- varsin hyv√§ll√§ syyll√§ --- $f$:n 
+\kor{diagonalisoiduksi muodoksi}. Huomattakoon, ett√§ $\mC$:n ollessa ortogonaalinen s√§ilytt√§√§
 muunnos $\mx\map\my=\mC^T\mx$ vektorin pituuden:
 \[
 \abs{\my}^2=\my^T\my=\mx^T\mC\mC^T\mx=\mx^T\mx=\abs{\mx}^2.
 \]
-M‰‰ritelm‰n \ref{neliˆmuodon luokittelu} mukaisesti neliˆmuodon luokitteluongelma ratkeaa n‰in
+M√§√§ritelm√§n \ref{neli√∂muodon luokittelu} mukaisesti neli√∂muodon luokitteluongelma ratkeaa n√§in
 $\mA$:n ominaisarvojen avulla seuraavasti:
 \vspace{2mm}
 \[
@@ -134,20 +134,20 @@ $\mA$:n ominaisarvojen avulla seuraavasti:
                                               \rule[-5mm]{0mm}{2mm}
 \end{alignedat}}
 \]
-Kun huomioidaan myˆs skaalaustulos \eqref{neliˆmuodon skaalaus}, niin em.\ luokittelujen
-nojalla p‰tee erityisesti
+Kun huomioidaan my√∂s skaalaustulos \eqref{neli√∂muodon skaalaus}, niin em.\ luokittelujen
+nojalla p√§tee erityisesti
 \begin{itemize}
 \item[-] $f$ positiivisesti definiitti $\,\qimpl f(\mx) \ge \lambda|\mx|^2\ \forall \mx\in\R^n$,
 \item[-] $f$ negatiivisesti definiitti $\qimpl f(\mx) \le -\lambda|\mx|^2\ \forall \mx\in\R^n$,
 \end{itemize}
-miss‰ $\lambda>0$ on pienin luvuista $|\lambda_i|$, $\lambda_i\in\sigma(\mA)$.
-\jatko \begin{Exa} (jatko) Esimerkiss‰ on
+miss√§ $\lambda>0$ on pienin luvuista $|\lambda_i|$, $\lambda_i\in\sigma(\mA)$.
+\jatko \begin{Exa} (jatko) Esimerkiss√§ on
 \[
 f(x,y) = \mx^T\mA\mx = \begin{bmatrix} x&y \end{bmatrix}
                        \begin{rmatrix} 1&\frac{a}{2}\\\frac{a}{2}&4 \end{rmatrix}
                        \begin{bmatrix} x\\y \end{bmatrix}.
 \]
-Esimerkin luokitteluihin tapauksissa a) $a=3$, \ b) $a=4$, \ c) $a=5$ p‰‰dyt‰‰n myˆs
+Esimerkin luokitteluihin tapauksissa a) $a=3$, \ b) $a=4$, \ c) $a=5$ p√§√§dyt√§√§n my√∂s
 laskemalla
 \[
 \text{a)}\,\ \sigma(\mA)=\{\frac{1}{2}(5 \pm 3\sqrt{2})\}, \quad
@@ -155,7 +155,7 @@ laskemalla
 \text{c)}\,\ \sigma(\mA)=\{\frac{1}{2}(5 \pm \sqrt{34}\}. \loppu
 \]
 \end{Exa} 
-\begin{Exa} Luokittele $\R^3$:n neliˆmuoto $\,f(x,y,z)=x^2+3y^2+z^2+4xz$.
+\begin{Exa} Luokittele $\R^3$:n neli√∂muoto $\,f(x,y,z)=x^2+3y^2+z^2+4xz$.
 \end{Exa}
 \ratk
 \begin{align*}
@@ -163,27 +163,27 @@ f(x,y,z) &= \begin{bmatrix} x & y & z \end{bmatrix} \begin{rmatrix}
 1 & 0 & 2 \\ 0 & 3 & 0 \\ 2 & 0 & 1 \end{rmatrix}\begin{bmatrix} x \\ y \\ z \end{bmatrix} \\
 &= \mx^T\mA\mx,\quad \mx=\begin{bmatrix} x & y & z \end{bmatrix}^T.
 \end{align*}
-T‰ss‰ on $\sigma(2\mA)=\{-2,6\}$ (edellisen luvun Esimerkki \ref{eig-ex1}), joten
+T√§ss√§ on $\sigma(2\mA)=\{-2,6\}$ (edellisen luvun Esimerkki \ref{eig-ex1}), joten
 $\sigma(\mA)=\{-1,3\}$ ja $f$ on siis indefiniitti. \loppu
 
-\subsection*{Neliˆmuodon p‰‰akselikoordinaatisto}
-\index{neliˆmuoto!c@p‰‰akselikoordinaatisto|vahv}
-\index{pzyzy@p‰‰akselikoordinaatisto|vahv}
+\subsection*{Neli√∂muodon p√§√§akselikoordinaatisto}
+\index{neli√∂muoto!c@p√§√§akselikoordinaatisto|vahv}
+\index{pzyzy@p√§√§akselikoordinaatisto|vahv}
 
-Neliˆmuodon $\mx^T\mA\mx$ definiittisyyslaji voidaan p‰‰tell‰ pelk‰st‰‰n $\mA$:n
-ominais\-arvojen avulla, mutta kiinnostava on myˆs tieto, millaisessa koordinaatistossa
-neliˆmuoto diagonalisoituu. T‰m‰n tiedon v‰litt‰v‰t $\mA$:n ortonormeeratut ominaisvektorit,
-jotka m‰‰r‰‰v‰t diagonalisoivan koordinaattimuunnoksen $\my=\mC^T\mx$. T‰m‰n mukaisesti
+Neli√∂muodon $\mx^T\mA\mx$ definiittisyyslaji voidaan p√§√§tell√§ pelk√§st√§√§n $\mA$:n
+ominais\-arvojen avulla, mutta kiinnostava on my√∂s tieto, millaisessa koordinaatistossa
+neli√∂muoto diagonalisoituu. T√§m√§n tiedon v√§litt√§v√§t $\mA$:n ortonormeeratut ominaisvektorit,
+jotka m√§√§r√§√§v√§t diagonalisoivan koordinaattimuunnoksen $\my=\mC^T\mx$. T√§m√§n mukaisesti
 vektorin $\my$ alkiot ovat vektorin $\mx$ koordinaatit kannassa $\{\mc_1, \ldots, \mc_n\}$,
-jonka muodostavat $\mC$:n sarakkeet. Jatkossa oletetaan, ett‰ kanta $\{\mc_1, \ldots, \mc_n\}$
-on myˆs p\pain{ositiivisesti} \pain{suunnistettu} (tarvittaessa yhden vektorin suunnan vaihto
+jonka muodostavat $\mC$:n sarakkeet. Jatkossa oletetaan, ett√§ kanta $\{\mc_1, \ldots, \mc_n\}$
+on my√∂s p\pain{ositiivisesti} \pain{suunnistettu} (tarvittaessa yhden vektorin suunnan vaihto
 vastakkaiseksi), jolloin on $\det\mC=1$ ja kannan vaihdossa $\{\me_i\} \ext \{\mc_i\}$ on kyse
 \pain{koordinaatiston} \pain{kierrosta} (ks.\ Luku \ref{lineaarikuvaukset}).
 
-Kierretty‰ koordinaatistoa, jossa neliˆmuoto $f(\mx)=\mx^T\mA\mx$ diagonalisoituu, sanotaan 
-ko.\ neliˆmuodon \kor{p‰‰akselikoordinaatistoksi}. Kyseisen koordinaatiston kantana toimivat
+Kierretty√§ koordinaatistoa, jossa neli√∂muoto $f(\mx)=\mx^T\mA\mx$ diagonalisoituu, sanotaan 
+ko.\ neli√∂muodon \kor{p√§√§akselikoordinaatistoksi}. Kyseisen koordinaatiston kantana toimivat
 siis $\mA$:n ortonormeeratut ja positiivisesti suunnistetut ominaisvektorit.
-\jatko \begin{Exa} (jatko) Esimerkiss‰ p‰‰akselikoordinaatiston (ortonormeeratut ja
+\jatko \begin{Exa} (jatko) Esimerkiss√§ p√§√§akselikoordinaatiston (ortonormeeratut ja
 positiivisesti suunnistetut) kantavektorit ovat
 \[
 \mc_1=\frac{1}{\sqrt{2}}\begin{bmatrix} 1&0&1 \end{bmatrix}^T, \quad
@@ -191,7 +191,7 @@ positiivisesti suunnistetut) kantavektorit ovat
 \mc_3=\frac{1}{\sqrt{2}}\begin{bmatrix} -1&0&1 \end{bmatrix}^T
 \]
 vastaten $\mA$:n ominaisarvoja $\lambda_1=\lambda_2=3$ ja $\lambda_3=-1$ (vrt.\ edellinen luku).
-Kun muunnettuja koordinaatteja merkit‰‰n $\my=(\xi,\eta,\zeta)$, niin koordinaatiston
+Kun muunnettuja koordinaatteja merkit√§√§n $\my=(\xi,\eta,\zeta)$, niin koordinaatiston
 kiertomuunnos on
 \[
 \my=\mC^T\mx \qekv \begin{bmatrix} \xi \\ \eta \\ \zeta \end{bmatrix} =
@@ -199,7 +199,7 @@ kiertomuunnos on
                    -\frac{1}{\sqrt{2}}&0&\frac{1}{\sqrt{2}} \end{rmatrix}
                    \begin{bmatrix} x\\y\\z \end{bmatrix},
 \]
-ja t‰ss‰ p‰‰akselikoordinaatistossa on siis
+ja t√§ss√§ p√§√§akselikoordinaatistossa on siis
 \[
 f(x,y,z)=g(\xi,\eta,\zeta)=3\xi^2+3\eta^2-\zeta^2. \loppu
 \]
@@ -208,97 +208,97 @@ f(x,y,z)=g(\xi,\eta,\zeta)=3\xi^2+3\eta^2-\zeta^2. \loppu
 \subsection*{Sovellus 1: Funktion kriittisen pisteen luokittelu}
 \index{kriittinen piste!a@luokittelu|vahv}
 
-Funktion $f(\mx)$ kriittisen pisteen luokittelu mahdollisena paikallisena ‰‰riarvokohtana
-(vrt.\ Propositio \ref{‰‰riarvopropositio-Rn}) on kysymys, jote ei toistaiseksi ole tarkastelu.
-Palataan nyt t‰h‰n kysymykseen neliˆmuotijen teorian valossa. Olkoon $\mc$ funktion $f$
-kriittinen piste, ts.\ $\Nabla f(\mc)=\mo$. T‰llˆin jos $f$ on $\mc$:n ymp‰ristˆss‰ riitt‰v‰n
-s‰‰nnˆllinen, niin usean muuttujan Taylorin kaavan (ks.\ Luku
-\ref{usean muuttujan taylorin polynomit}) perusteella p‰tee
+Funktion $f(\mx)$ kriittisen pisteen luokittelu mahdollisena paikallisena √§√§riarvokohtana
+(vrt.\ Propositio \ref{√§√§riarvopropositio-Rn}) on kysymys, jote ei toistaiseksi ole tarkastelu.
+Palataan nyt t√§h√§n kysymykseen neli√∂muotijen teorian valossa. Olkoon $\mc$ funktion $f$
+kriittinen piste, ts.\ $\Nabla f(\mc)=\mo$. T√§ll√∂in jos $f$ on $\mc$:n ymp√§rist√∂ss√§ riitt√§v√§n
+s√§√§nn√∂llinen, niin usean muuttujan Taylorin kaavan (ks.\ Luku
+\ref{usean muuttujan taylorin polynomit}) perusteella p√§tee
 \[
 f(\mx) = f(\mc)+\tfrac{1}{2}(\mx-\mc)^T\mH(\mc)(\mx-\mc)+\ord{\abs{\mx-\mc}^2},
 \]
-miss‰ $\mH(\mc)$ on funktion Hessen matriisi pisteess‰ $\mc\,$:
+miss√§ $\mH(\mc)$ on funktion Hessen matriisi pisteess√§ $\mc\,$:
 \[
 [\,\mH(\mc)\,]_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}(\mc),\quad i,j=1\ldots n.
 \]
-Sen seikan selvitt‰miseksi, onko $\mc$ $f$:n paikallinen ‰‰riarvokohta vai ei, on siis
+Sen seikan selvitt√§miseksi, onko $\mc$ $f$:n paikallinen √§√§riarvokohta vai ei, on siis
 ilmeisesti ensisijaisesti tutkittava, millaisia arvoja funktio
 \[
 g(\mx)=\frac{1}{2}(\mx-\mc)^T\mH(\mc)(\mx-\mc)
 \]
-saa pisteen $\mc$ l‰hiymp‰ristˆss‰. Kun siirret‰‰n origo pisteeseen $\mc$ 
-koordinaattimuunnoksella $\mx'=\mx-\mc$, niin tutkimuskohteeksi tulee $\R^n$:n neliˆmuoto
+saa pisteen $\mc$ l√§hiymp√§rist√∂ss√§. Kun siirret√§√§n origo pisteeseen $\mc$ 
+koordinaattimuunnoksella $\mx'=\mx-\mc$, niin tutkimuskohteeksi tulee $\R^n$:n neli√∂muoto
 $h(\mx')=g(\mx'+\mc) = (\mx')^T\mA\mx'$, $\mA=\frac{1}{2}\mH(\mc)$.
 
-Olkoon neliˆmuoto $h(\mx')$ positiivisesti definiitti. T‰llˆin p‰tee mainituin oletuksin jollakin
+Olkoon neli√∂muoto $h(\mx')$ positiivisesti definiitti. T√§ll√∂in p√§tee mainituin oletuksin jollakin
 $\delta>0$
 \[
 f(\mx) \ge f(\mc)+\lambda\abs{\mx-\mc}^2-c_\delta\abs{\mx-\mc}^2, \quad
                                \text{kun}\,\ 0<\abs{\mx-\mc}<\delta,
 \]
-miss‰ $\lambda>0$ ja $c_\delta\kohti 0$, kun $\delta\kohti 0$. Siis jos valitaan $\delta>0$ 
-siten, ett‰ $c_\delta\leq \lambda/2$, niin ko.\ $\delta$:n arvolla p‰tee
+miss√§ $\lambda>0$ ja $c_\delta\kohti 0$, kun $\delta\kohti 0$. Siis jos valitaan $\delta>0$ 
+siten, ett√§ $c_\delta\leq \lambda/2$, niin ko.\ $\delta$:n arvolla p√§tee
 \[
 f(\mx) \ge f(\mc)+\frac{1}{2}\lambda\abs{\mx-\mc}^2, \quad 0<\abs{\mx-\mc}<\delta.
 \]
-N‰in ollen $\mc$:ss‰ on $f$:n paikallinen minimi. Vastaavalla tavalla p‰‰tell‰‰n, ett‰ $\mc$
-on $f$:n paikallinen maksimipiste, jos $h(\mx')$ on negatiivisesti definiitti, ja ett‰ $\mc$ ei ole 
-$f$:n paikallinen ‰‰riarvo- eik‰ laakapiste, jos $h(\mx')$ on indefiniitti. P‰‰telm‰t
-yhdistettyin‰ ovat siis seuraavat.
-\begin{Prop} \label{‰‰riarvokriteerit Rn:ss‰}
-Jos funktiolle $f:A\kohti\R,\ A\subset\R^n$, on pisteen $\mc\in A$ jossakin ymp‰ristˆss‰
+N√§in ollen $\mc$:ss√§ on $f$:n paikallinen minimi. Vastaavalla tavalla p√§√§tell√§√§n, ett√§ $\mc$
+on $f$:n paikallinen maksimipiste, jos $h(\mx')$ on negatiivisesti definiitti, ja ett√§ $\mc$ ei ole 
+$f$:n paikallinen √§√§riarvo- eik√§ laakapiste, jos $h(\mx')$ on indefiniitti. P√§√§telm√§t
+yhdistettyin√§ ovat siis seuraavat.
+\begin{Prop} \label{√§√§riarvokriteerit Rn:ss√§}
+Jos funktiolle $f:A\kohti\R,\ A\subset\R^n$, on pisteen $\mc\in A$ jossakin ymp√§rist√∂ss√§
 voimassa approksimaatio
 \[
 f(\mx)=f(\mc)+g(\mx-\mc)+\ord{\abs{\mx-\mc}^2}, \quad \mx \in U_\delta(\ma) \subset A,
 \]
-miss‰ $g$ on neliˆmuoto, niin p‰tee
+miss√§ $g$ on neli√∂muoto, niin p√§tee
 \begin{enumerate}
 \item $g$ positiivisesti definiitti $\ \, \impl \ \mc$ on $f$:n paikallinen minimipiste.
 \item $g$ negatiivisesti definiitti $\ \impl \ \mc$ on $f$:n paikallinen maksimipiste.
-\item $g$ indefiniitti $\impl \ \mc$ ei ole $f$:n paikallinen ‰‰riarvo- eik‰ laakapiste.
+\item $g$ indefiniitti $\impl \ \mc$ ei ole $f$:n paikallinen √§√§riarvo- eik√§ laakapiste.
 \end{enumerate}
 \end{Prop}
-Huomattakoon, ett‰ neliˆmuodon indefiniittisyys on mahdollinen vain kahden tai useamman 
-muuttujan tilanteessa, sill‰ jos $n=1$, niin $\mx^T\mA\mx=Ax^2$, joten neliˆmuoto on joko
+Huomattakoon, ett√§ neli√∂muodon indefiniittisyys on mahdollinen vain kahden tai useamman 
+muuttujan tilanteessa, sill√§ jos $n=1$, niin $\mx^T\mA\mx=Ax^2$, joten neli√∂muoto on joko
 positiivisesti definiitti ($A>0$), negatiivisesti definiitti ($A<0$) tai $=0$ ($A=0$). Ehto
-$f''(c)>0$ on yhden muuttujan analyysista tuttu paikallisen minimin (riitt‰v‰) ehto. T‰m‰n
+$f''(c)>0$ on yhden muuttujan analyysista tuttu paikallisen minimin (riitt√§v√§) ehto. T√§m√§n
 vastine $n$ muuttujan tilanteessa on siis ehto
 \[
 \mx^T\mA\mx>0\quad\forall\mx\in\R^n,\ \mx\neq\mo\ ;\quad 
             \mA=\left(\frac{\partial^2 f}{\partial x_i\partial x_j}(\mc)\right),
 \]
-eli toisen derivaatan $f''(c)$ vastine $n$ muuttujan ‰‰riarvotarkastelussa on kaikkien toisen
+eli toisen derivaatan $f''(c)$ vastine $n$ muuttujan √§√§riarvotarkastelussa on kaikkien toisen
 kertaluvun osittaisderivaattojen muodostama Hessen matriisi.
 \begin{Exa}
-Tutki, onko seuraavilla funktioilla paikallista ‰‰riarvoa origossa: \vspace{1mm}\newline
+Tutki, onko seuraavilla funktioilla paikallista √§√§riarvoa origossa: \vspace{1mm}\newline
 a) \ $f(x,y)=\cos x+2y-2e^y,\,\ $ b) \ $f(x,y)=e^{-x^2}e^{-y^2}+3\sin xy$.
 \end{Exa}
-\ratk \ a) $f(x,y)=-1+(-\frac{1}{2}x^2-y^2)+\ldots$ \ Neliˆmuoto-osa on negatiivisesti
-definiitti. Siis $f$:ll‰ on origossa paikallinen maksimi. \vspace{1mm}\newline
-b) $\displaystyle{f(x,y)=1+(-x^2-y^2+3xy)+\ldots}$ \ Neliˆmuoto-osa on indefiniitti. Siis
-origo ei ole $f$:n paikallinen ‰‰riarvopiste eik‰ myˆsk‰‰n laakapiste. \loppu
+\ratk \ a) $f(x,y)=-1+(-\frac{1}{2}x^2-y^2)+\ldots$ \ Neli√∂muoto-osa on negatiivisesti
+definiitti. Siis $f$:ll√§ on origossa paikallinen maksimi. \vspace{1mm}\newline
+b) $\displaystyle{f(x,y)=1+(-x^2-y^2+3xy)+\ldots}$ \ Neli√∂muoto-osa on indefiniitti. Siis
+origo ei ole $f$:n paikallinen √§√§riarvopiste eik√§ my√∂sk√§√§n laakapiste. \loppu
 \begin{Exa}
-Selvit‰ funktion $\,f(x,y)=x^2+2y^2+2xy+4x+14y\,$ kriittisen pisteen $(3,-5)$ laatu 
-(vrt.\ Luvun \ref{usean muuttujan ‰‰riarvoteht‰v‰t} Esimerkki \ref{saari uudelleen}).
+Selvit√§ funktion $\,f(x,y)=x^2+2y^2+2xy+4x+14y\,$ kriittisen pisteen $(3,-5)$ laatu 
+(vrt.\ Luvun \ref{usean muuttujan √§√§riarvoteht√§v√§t} Esimerkki \ref{saari uudelleen}).
 \end{Exa}
-\ratk Siirret‰‰n kriittinen piste ensin origoon:
+\ratk Siirret√§√§n kriittinen piste ensin origoon:
 \begin{align*}
 &x=3+x',\ y=-5+y' \\
 &g(x',y')=f(3+x',-5+y') = (x')^2+2x'y'+2(y')^2-29.
 \end{align*}
-Koska $g$:n nelˆmuoto-osa on positiivisesti definiitti, on $f$:ll‰ on pisteess‰ $(3,-5)$ 
-paikallinen minimi. Funktion muodosta n‰hd‰‰n, ett‰ t‰m‰ on myˆs absoluuttinen minimi. \loppu
+Koska $g$:n nel√∂muoto-osa on positiivisesti definiitti, on $f$:ll√§ on pisteess√§ $(3,-5)$ 
+paikallinen minimi. Funktion muodosta n√§hd√§√§n, ett√§ t√§m√§ on my√∂s absoluuttinen minimi. \loppu
 
-Propositio \ref{‰‰riarvokriteerit Rn:ss‰} j‰tt‰‰ avoimeksi tapauksen, jossa neliˆmuoto $g(\mx')$
-on puolidefiniitti. Kuten tapauksessa $n=1$ ($f''(c)=0$), on mahdollisen ‰‰riarvokohdan laatu 
+Propositio \ref{√§√§riarvokriteerit Rn:ss√§} j√§tt√§√§ avoimeksi tapauksen, jossa neli√∂muoto $g(\mx')$
+on puolidefiniitti. Kuten tapauksessa $n=1$ ($f''(c)=0$), on mahdollisen √§√§riarvokohdan laatu 
 ratkaistava tapauskohtaisesti.
 \begin{Exa}
-M‰‰rittele kriittisen pisteen $(0,0)$ laatu, kun
+M√§√§rittele kriittisen pisteen $(0,0)$ laatu, kun
 \[
 f(x,y)=x^2+2xy+y^2+a(x+y)^3+bx^n,\quad a,b\in\R,\quad n\in\{3,4,\ldots\}.
 \]
 \end{Exa}
-\ratk Koska $f$:n neliˆmuoto-osa
+\ratk Koska $f$:n neli√∂muoto-osa
 \[
 g(x,y)=x^2+2xy+y^2=(x+y)^2
 \]
@@ -306,26 +306,26 @@ on positiivisesti puolidefiniiti, on tutkimuksia jatkettava ainakin suoralla $y=
 \[
 f(x,-x)=bx^n.
 \]
-P‰‰tell‰‰n: Jos $b=0$, on origo laakapiste. Jos $b>0$ ja $n$ on parillinen, on origo $f$:n 
+P√§√§tell√§√§n: Jos $b=0$, on origo laakapiste. Jos $b>0$ ja $n$ on parillinen, on origo $f$:n 
 paikallinen minimipiste. Muulloin, eli jos $b<0$ ja $n$ on parillinen, tai jos $b \neq 0$ ja
-$n$ on pariton, saa $f$ origon jokaisessa ymp‰ristˆss‰ sek‰ positiivisia ett‰ negatiivisia
-arvoja, joten origo ei ole paikallinen ‰‰riarvo- eik‰ laakapiste. \loppu
+$n$ on pariton, saa $f$ origon jokaisessa ymp√§rist√∂ss√§ sek√§ positiivisia ett√§ negatiivisia
+arvoja, joten origo ei ole paikallinen √§√§riarvo- eik√§ laakapiste. \loppu
 
-\subsection*{Sovellus 2: Toisen asteen k‰yr‰t ja pinnat}
-\index{toisen asteen k‰yr‰|vahv} \index{toisen asteen pinta|vahv}
+\subsection*{Sovellus 2: Toisen asteen k√§yr√§t ja pinnat}
+\index{toisen asteen k√§yr√§|vahv} \index{toisen asteen pinta|vahv}
 
-Palautettakoon mieliin Luvusta \ref{suorat ja tasot}, ett‰ yleisen \pain{toisen} \pain{asteen}
-\pain{k‰}y\pain{r‰n} yht‰lˆ tasossa on muotoa
+Palautettakoon mieliin Luvusta \ref{suorat ja tasot}, ett√§ yleisen \pain{toisen} \pain{asteen}
+\pain{k√§}y\pain{r√§n} yht√§l√∂ tasossa on muotoa
 \[
 Ax^2+By^2+2Cxy+Dx+Ey+F=0,
 \]
-miss‰ $A,\ldots,F\in\R$ ja ainakin yksi luvuista $A,B,C$ on nollasta poikkeava, ja yleisen 
-\pain{toisen} \pain{asteen} p\pain{innan} yht‰lˆ avaruudessa on muotoa
+miss√§ $A,\ldots,F\in\R$ ja ainakin yksi luvuista $A,B,C$ on nollasta poikkeava, ja yleisen 
+\pain{toisen} \pain{asteen} p\pain{innan} yht√§l√∂ avaruudessa on muotoa
 \[
 Ax^2+By^2+Cz^2+2Dxy+2Eyz+2Fxz+Gx+Hy+Iz+J=0,
 \]
-miss‰ $A,\ldots,J\in\R$ ja ainakin yksi luvuista $A,\ldots,F$ on nollasta poikkeava. Jos 
-merkit‰‰n
+miss√§ $A,\ldots,J\in\R$ ja ainakin yksi luvuista $A,\ldots,F$ on nollasta poikkeava. Jos 
+merkit√§√§n
 \begin{align*}
 &\text{Taso:}\qquad\,\ \mA=\begin{bmatrix} A&C\\C&B \end{bmatrix}, \quad 
                        \mx=\begin{bmatrix} x\\y \end{bmatrix}, \quad
@@ -334,34 +334,34 @@ merkit‰‰n
                        \mx=\begin{bmatrix} x\\y\\z \end{bmatrix}, \quad 
                        \ma=\begin{bmatrix} G\\H\\I \end{bmatrix}, \quad c=J,
 \end{align*}
-niin toisen asteen k‰yr‰n ja pinnan yht‰lˆt saadaan muotoon
+niin toisen asteen k√§yr√§n ja pinnan yht√§l√∂t saadaan muotoon
 \[
 \mx^T\mA\mx+\ma^T\mx+c=0.
 \]
-Suoritetaan t‰ss‰ koordinaattimuunnos
+Suoritetaan t√§ss√§ koordinaattimuunnos
 \[
 \mx=\mC\my+\mb,
 \]
-miss‰ $\my=[\xi,\eta]^T$ (taso) tai $\my=[\xi,\eta,\zeta]^T$ (avaruus), ja $\mC$ ja $\mb$ 
-valitaan niin, ett‰ yht‰lˆ saa muunnetuissa koordinaateissa mahdollisimman yksinkertaisen 
-muodon. Ensinn‰kin valitaan $\mC$ niin, ett‰ neliˆmuoto $\mx^T\mA\mx$ diagonalisoituu, eli 
+miss√§ $\my=[\xi,\eta]^T$ (taso) tai $\my=[\xi,\eta,\zeta]^T$ (avaruus), ja $\mC$ ja $\mb$ 
+valitaan niin, ett√§ yht√§l√∂ saa muunnetuissa koordinaateissa mahdollisimman yksinkertaisen 
+muodon. Ensinn√§kin valitaan $\mC$ niin, ett√§ neli√∂muoto $\mx^T\mA\mx$ diagonalisoituu, eli 
 valitaan $\mC$:n sarakkeiksi $\mA$:n ortonormeeratut ja positiivisesti suunnistetut 
-ominaisvektorit. T‰llˆin yht‰lˆ saadaan muotoon
+ominaisvektorit. T√§ll√∂in yht√§l√∂ saadaan muotoon
 \[
 \my^T\mD\my+\md^T\my+d=0
 \]
-miss‰ $\mD$ on diagonaalinen matriisi (diagonaalilla $\mA$:n ominaisarvot) ja 
+miss√§ $\mD$ on diagonaalinen matriisi (diagonaalilla $\mA$:n ominaisarvot) ja 
 \[
 \md=\mC^T(2\mA\mb+\ma), \quad d=\mb^T(\mA\mb+\ma)+c.
 \]
-Jos $\mA$ on s‰‰nnˆllinen matriisi, niin m‰‰r‰t‰‰n $\mb$ siten, ett‰ $\md=\mo$, muussa 
+Jos $\mA$ on s√§√§nn√∂llinen matriisi, niin m√§√§r√§t√§√§n $\mb$ siten, ett√§ $\md=\mo$, muussa 
 tapauksessa saatetaan $\mb$:n valinnalla termi $\md^T\my+d$ mahdollisimman yksinkertaiseen
-muotoon. (Jos kyseess‰ on avaruuden pinta ja $\lambda=0$ on $\mA$:n kaksinkertainen ominaisarvo,
-voi yht‰lˆn yksinkertaistumiseen vaikuttaa myˆs $\mC$:n valinnalla, ks.\ 
-Harj.teht.\,\ref{H-eig-3: pintojen erikoisluokka}.) Yht‰lˆn n‰in pelkistytty‰ voidaan sen
-m‰‰r‰‰m‰ k‰yr‰ tai pinta luokitella geometrisesti.
+muotoon. (Jos kyseess√§ on avaruuden pinta ja $\lambda=0$ on $\mA$:n kaksinkertainen ominaisarvo,
+voi yht√§l√∂n yksinkertaistumiseen vaikuttaa my√∂s $\mC$:n valinnalla, ks.\ 
+Harj.teht.\,\ref{H-eig-3: pintojen erikoisluokka}.) Yht√§l√∂n n√§in pelkistytty√§ voidaan sen
+m√§√§r√§√§m√§ k√§yr√§ tai pinta luokitella geometrisesti.
 
-Jos kyseess‰ on tasok‰yr‰, niin em.\ muunnokset johtavat yhteen seuraavista perusmuodoista:
+Jos kyseess√§ on tasok√§yr√§, niin em.\ muunnokset johtavat yhteen seuraavista perusmuodoista:
 \begin{itemize}
 \item[1.] $\displaystyle{\quad \frac{\xi^2}{a^2}+\frac{\eta^2}{b^2}=q, \quad 
                                             q\in\{1,0,-1\}, \quad a,b>0.}$ \\[2mm]
@@ -372,11 +372,11 @@ Jos kyseess‰ on tasok‰yr‰, niin em.\ muunnokset johtavat yhteen seuraavista peru
 \item[4.] $\displaystyle{\quad \xi^2=a \quad\,\ \text{tai} \quad \eta^2=a, \quad\,\ a\in\R.}$
 \end{itemize}
 \index{ellipsi} \index{hyperbeli} \index{paraabeli}%
-Tapauksessa 1 k‰yr‰ on \kor{ellipsi}, jos $q=1$, muulloin kyseess‰ on piste ($q=0$) tai tyhj‰
-joukko ($q=-1$). Tapauksessa 2 k‰yr‰ on \kor{hyperbeli}, jos $q=\pm 1$, muuten kysess‰ on kaksi
-toisensa leikkaavaa suoraa ($q=0$). Tapauksessa 3 k‰yr‰ on \kor{paraabeli}, ja tapauksessa 4 on
-kyseess‰ joko kaksi yhdensuuntaista suoraa ($a>0$), yksi suora ($a=0$), tai tyhj‰ joukko 
-($a<0$). Tapaukseen 1 p‰‰dyt‰‰n kun $\mA$ on definiitti (ominaisarvot samanmerkkiset),
+Tapauksessa 1 k√§yr√§ on \kor{ellipsi}, jos $q=1$, muulloin kyseess√§ on piste ($q=0$) tai tyhj√§
+joukko ($q=-1$). Tapauksessa 2 k√§yr√§ on \kor{hyperbeli}, jos $q=\pm 1$, muuten kysess√§ on kaksi
+toisensa leikkaavaa suoraa ($q=0$). Tapauksessa 3 k√§yr√§ on \kor{paraabeli}, ja tapauksessa 4 on
+kyseess√§ joko kaksi yhdensuuntaista suoraa ($a>0$), yksi suora ($a=0$), tai tyhj√§ joukko 
+($a<0$). Tapaukseen 1 p√§√§dyt√§√§n kun $\mA$ on definiitti (ominaisarvot samanmerkkiset),
 tapaukseen 2 kun $\mA$ on indefiniitti (ominaisarvot erimerkkiset) ja tapauksiin 3 ja 4 kun
 $\mA$ on puolidefiniitti (yksi ominaisarvo $=0$).
 \begin{Exa}
@@ -384,9 +384,9 @@ Etsi sellainen koordinaatisto, jossa funktion
 \[
 f(x,y)=13x^2-8xy+7y^2-42x+36y
 \]
-tasa-arvok‰yr‰t saavat toisen asteen k‰yr‰n perusmuodon. Kuvio!
+tasa-arvok√§yr√§t saavat toisen asteen k√§yr√§n perusmuodon. Kuvio!
 \end{Exa}
-\ratk Kirjoitetaan tasa-arvok‰yr‰n $S:\ f(x,y)=c\,$ yht‰lˆ ensin muotoon
+\ratk Kirjoitetaan tasa-arvok√§yr√§n $S:\ f(x,y)=c\,$ yht√§l√∂ ensin muotoon
 \[
 \begin{bmatrix} x&y \end{bmatrix}
 \begin{rmatrix} 13 & -4 \\ -4 & 7 \end{rmatrix}
@@ -399,8 +399,8 @@ ja ortonormeeratut, positiivisesti suunnistetut ominaisvektroit ovat
 \lambda_1=15,\,\ \mc_1=\frac{1}{\sqrt{5}}\begin{bmatrix} 2 \\ -1 \end{bmatrix},\quad
 \lambda_2= 5,\,\ \mc_2=\frac{1}{\sqrt{5}}\begin{bmatrix} 1 \\ 2 \end{bmatrix}.
 \]
-Suoritetaan koordinaattimuunnos kahdessa vaiheessa. Ensin kierto neliˆmuodon
-p‰‰akselikoordinaatistoon $(x',y')$ (edell‰ $\mb=\mo$)\,: 
+Suoritetaan koordinaattimuunnos kahdessa vaiheessa. Ensin kierto neli√∂muodon
+p√§√§akselikoordinaatistoon $(x',y')$ (edell√§ $\mb=\mo$)\,: 
 \[
 \begin{bmatrix} x\\y \end{bmatrix} =
 \frac{1}{\sqrt{5}}\begin{rmatrix} 2&1\\-1&2 \end{rmatrix}
@@ -421,9 +421,9 @@ Toinen vaihe on origon siirto, koordinaateiksi
 \text{Lopputulos:} \qquad f(x,y) = c \quad
     &\ekv\quad 3\xi^2+\eta^2=\frac{1}{5}(57+c). \hspace{4.2cm}
 \end{align*}
-T‰m‰n mukaan tasa-arvok‰yr‰ on joko ellipsi ($c>-57$), piste ($c=-57$) tai tyhj‰ joukko
+T√§m√§n mukaan tasa-arvok√§yr√§ on joko ellipsi ($c>-57$), piste ($c=-57$) tai tyhj√§ joukko
 ($c<-57$). Ellipsien
-yhteisi‰ p‰‰akseleita ovat suorat $\xi=0$ ja $\eta=0$, ja niiden yhteisess‰ keskipisteess‰
+yhteisi√§ p√§√§akseleita ovat suorat $\xi=0$ ja $\eta=0$, ja niiden yhteisess√§ keskipisteess√§
 \[
 (\xi,\eta)=(0,0)\,\ \ekv\,\ (x',y')=(4/\sqrt{5},-3/\sqrt{5})\,\ \ekv\,\ (x,y)=(1,-2)
 \]
@@ -432,11 +432,11 @@ $f$ saavuttaa absoluuttisen minimiarvonsa $f_{\text{min}}=-57$. \loppu
 \input{plots/koordkierto.tex}
 
 Toisen asteen pinnat voidaan em.\ koordinaattimuunnoksen antaman perusmuodon avulla luokitella
-seuraaviin yhdeks‰‰n p‰‰tyyppiin (yht‰lˆiss‰ voi koordinaattien j‰rjestyst‰ vaihdella).
+seuraaviin yhdeks√§√§n p√§√§tyyppiin (yht√§l√∂iss√§ voi koordinaattien j√§rjestyst√§ vaihdella).
 \index{ellipsoidi} \index{hyperboloidi} \index{paraboloidi}
-\index{lieriˆ} \index{kartio}
+\index{lieri√∂} \index{kartio}
 \index{yksivaippainen hyperboloidi} \index{kaksivaippainen hyperboloidi}
-\index{elliptinen lieriˆ} \index{hyperbolinen lieriˆ} \index{parabolinen lieriˆ}
+\index{elliptinen lieri√∂} \index{hyperbolinen lieri√∂} \index{parabolinen lieri√∂}
 \index{elliptinen paraboloidi} \index{hyperbolinen paraboloidi}%
 \begin{itemize}
 \item[1.] \kor{Ellipsoidi:} \hspace{38mm}
@@ -451,21 +451,21 @@ seuraaviin yhdeks‰‰n p‰‰tyyppiin (yht‰lˆiss‰ voi koordinaattien j‰rjestyst‰ vaih
           $\displaystyle\zeta={\frac{\xi^2}{a^2}+\frac{\eta^2}{b^2}}\,.$
 \item[6.] \kor{Hyperbolinen paraboloidi:} \hspace{11mm} 
           $\displaystyle{\zeta=\frac{\xi^2}{a^2}-\frac{\eta^2}{b^2}}\,.$
-\item[7.] \kor{Elliptinen lieriˆ:} \hspace{26mm} 
+\item[7.] \kor{Elliptinen lieri√∂:} \hspace{26mm} 
           $\displaystyle{\frac{\xi^2}{a^2}+\frac{\eta^2}{b^2}=1.}$
-\item[8.] \kor{Hyperbolinen lieriˆ:} \hspace{20mm} 
+\item[8.] \kor{Hyperbolinen lieri√∂:} \hspace{20mm} 
           $\displaystyle{\frac{\xi^2}{a^2}-\frac{\eta^2}{b^2}=1.}$
-\item[9.] \kor{Parabolinen lieriˆ:} \hspace{22mm} 
+\item[9.] \kor{Parabolinen lieri√∂:} \hspace{22mm} 
           $\displaystyle{\kehys\eta=a\xi^2. \phantom{\frac{\xi^2}{a^2}}}$
 \end{itemize}
 \vspace{3mm}
 \index{satulapinta}%
-Hyperbolinen paraboloidi on toiselta nimelt‰‰n \kor{satulapinta}.
-Tapauksissa 1--4 $\mA$ on s‰‰nnˆllinen matriisi, ja tapauksessa 1 ominaisarvot ovat lis‰ksi
+Hyperbolinen paraboloidi on toiselta nimelt√§√§n \kor{satulapinta}.
+Tapauksissa 1--4 $\mA$ on s√§√§nn√∂llinen matriisi, ja tapauksessa 1 ominaisarvot ovat lis√§ksi
 samanmerkkiset. Tapauksissa 5--8 on $\mA$:lla yksinkertainen ja tapauksessa 9 kaksinkertainen
 ominaisarvo $\lambda=0$.
-N‰iden p‰‰tyyppien lis‰ksi toisen asteen pinnan yht‰lˆ voi esitt‰‰ kahta toisensa leikkaavaa
-tasoa, kahta yhdensuuntaista tasoa, yht‰ tasoa, avaruussuoraa, pistett‰, tai ei mit‰‰n.
+N√§iden p√§√§tyyppien lis√§ksi toisen asteen pinnan yht√§l√∂ voi esitt√§√§ kahta toisensa leikkaavaa
+tasoa, kahta yhdensuuntaista tasoa, yht√§ tasoa, avaruussuoraa, pistett√§, tai ei mit√§√§n.
 \begin{Exa} Luokittele eri $c$:n arvoilla toisen asteen pinta
 \[
 5x^2+2y^2+2z^2+2xy-4yz-2xz+10x+2y-2z+c=0.
@@ -475,12 +475,12 @@ tasoa, kahta yhdensuuntaista tasoa, yht‰ tasoa, avaruussuoraa, pistett‰, tai ei 
 \[
 \mA=\begin{rmatrix} 5&1&-1\\1&2&-2\\-1&-2&2 \end{rmatrix}
 \]
-karakteristinen yht‰lˆ on
+karakteristinen yht√§l√∂ on
 \[
 \begin{vmatrix} 5-\lambda &1&-1\\1&2-\lambda &-2\\-1&-2&2-\lambda \end{vmatrix} 
            = -\lambda^3+9\lambda^2-18\lambda=0.
 \]
-Ominaisarvot ovat $\lambda_1=0$, $\lambda_2=3$ ja $\lambda_3=6$. N‰it‰ vastaavat, 
+Ominaisarvot ovat $\lambda_1=0$, $\lambda_2=3$ ja $\lambda_3=6$. N√§it√§ vastaavat, 
 ortonormeeratut ja positiivisesti suunnistetut ominaisvektorit ovat matriisin $\mC$ sarakkeiksi
 koottuna:
 \[
@@ -490,25 +490,25 @@ koottuna:
       \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}}
      \end{rmatrix}.
 \]
-Tehd‰‰n ensin koordinaatiston kiertomuunnos $\mC\mx'=\mx\ \ekv\ \mx'=\mC^T\mx$, miss‰ 
-$\mx=[x,y,z]^T,\ \mx'=[x',y',z']^T$, jolloin pinnan yht‰lˆ saadaan muotoon
+Tehd√§√§n ensin koordinaatiston kiertomuunnos $\mC\mx'=\mx\ \ekv\ \mx'=\mC^T\mx$, miss√§ 
+$\mx=[x,y,z]^T,\ \mx'=[x',y',z']^T$, jolloin pinnan yht√§l√∂ saadaan muotoon
 \begin{align*}
 0\,&=\,3(y')^2+6(z')^2+\frac{5}{\sqrt{3}}\,y'+\frac{22}{\sqrt{6}}\,z'+c \\
    &=\,3\left(y'+\frac{1}{\sqrt{3}}\right)^2+6\left(z'+\frac{2}{\sqrt{6}}\right)^2+c-5.
 \end{align*}
-T‰st‰ p‰‰st‰‰n perusmuotoon origon siirrolla:
+T√§st√§ p√§√§st√§√§n perusmuotoon origon siirrolla:
 \[
 \xi=x', \quad \eta=y'+\frac{1}{\sqrt{3}}\,, \quad 
 \zeta=z'+\frac{2}{\sqrt{6}} \qimpl 3\eta^2+6\zeta^2=5-c.
 \]
-T‰st‰ n‰hd‰‰n, ett‰ jos $c<5$, niin pinta on \pain{elli}p\pain{tinen} \pain{lieriˆ}. Lieriˆn
+T√§st√§ n√§hd√§√§n, ett√§ jos $c<5$, niin pinta on \pain{elli}p\pain{tinen} \pain{lieri√∂}. Lieri√∂n
 symmetria-akseli on suora $S:\,\eta=\zeta=0$. Suora $S$ kulkee pisteen 
 $\,(\xi,\eta,\zeta)=(0,0,0)$ eli pisteen $(x,y,z)=(-1,0,0)$ kautta ja sen suuntavektori 
-alkuper‰isess‰ koordinaatistossa on $\mt=[0,1,1]^T\vastaa\vec j+\vec k$ (ominaisarvoa 
-$\lambda_1=0$ vastaava $\mA$:n ominaisvektori, joka m‰‰r‰‰ $\xi$-akselin suunnan). Tapauksessa
-$c=5$ yht‰lˆ m‰‰rittelee vain suoran $S$ ja tapauksessa $c>5$ ei mit‰‰n. --- Suora $S$ on itse
-asiassa tasojen $\,T_1\,:\ x-y+z+1=0\,$ ja $\,T_2\,:\ 2x+y-z+2=0\,$ leikkaussuora, sill‰ 
-alkuper‰inen yht‰lˆ on sama kuin
+alkuper√§isess√§ koordinaatistossa on $\mt=[0,1,1]^T\vastaa\vec j+\vec k$ (ominaisarvoa 
+$\lambda_1=0$ vastaava $\mA$:n ominaisvektori, joka m√§√§r√§√§ $\xi$-akselin suunnan). Tapauksessa
+$c=5$ yht√§l√∂ m√§√§rittelee vain suoran $S$ ja tapauksessa $c>5$ ei mit√§√§n. --- Suora $S$ on itse
+asiassa tasojen $\,T_1\,:\ x-y+z+1=0\,$ ja $\,T_2\,:\ 2x+y-z+2=0\,$ leikkaussuora, sill√§ 
+alkuper√§inen yht√§l√∂ on sama kuin
 \[
 (x-y+z+1)^2+(2x+y-z+2)^2=5-c. \loppu
 \]
@@ -519,14 +519,14 @@ alkuper‰inen yht‰lˆ on sama kuin
 \begin{enumerate}
 
 \item
-Luokittele seuraavat neliˆmuodot m‰‰ritt‰m‰ll‰ a)-kohdassa arvojoukko yksikˆympyr‰ll‰ ja
+Luokittele seuraavat neli√∂muodot m√§√§ritt√§m√§ll√§ a)-kohdassa arvojoukko yksik√∂ympyr√§ll√§ ja
 b)- ja c)-kohdissa sijoituksella $y=tx$. \vspace{1mm}\newline
 a)\,\ $3x^2-16xy+16y^2 \qquad$
 b)\,\ $4x^2-16xy+16y^2 \qquad$
 c)\,\ $5x^2-16xy+16y^2$
 
 \item
-M‰‰rit‰ nelˆmuodon p‰‰akselikoordinaatisto ja diagonalisoitu muoto: \vspace{1mm}\newline
+M√§√§rit√§ nel√∂muodon p√§√§akselikoordinaatisto ja diagonalisoitu muoto: \vspace{1mm}\newline
 a)\,\ $f(x,y)=xy \qquad$
 b)\,\ $f(x,y)=4x^2-16xy+16y^2$ \newline
 c)\,\ $f(x,y)=-3x^2-3y^2+4xy \qquad$
@@ -534,19 +534,19 @@ d)\,\ $f(x,y,z)=2x^2+3y^2+2z^2-6xz$ \newline
 e)\,\ $f(x,y,z,u)=x^2+y^2+z^2+u^2+2yz+2xu$
 
 \item
-M‰‰rit‰ neliˆmuoto $f(x,y,z)$, jonka p‰‰akselikoordinaatiston kantavektorit ovat
+M√§√§rit√§ neli√∂muoto $f(x,y,z)$, jonka p√§√§akselikoordinaatiston kantavektorit ovat
 \[
 \mc_1=\frac{1}{7} \begin{rmatrix} 3\\-2\\6 \end{rmatrix}, \quad
 \mc_2=\frac{1}{7} \begin{rmatrix} -2\\6\\3 \end{rmatrix}, \quad
 \mc_3=\frac{1}{7} \begin{rmatrix} -6\\-3\\2 \end{rmatrix}
 \]
-ja jonka diagonalisoitu muoto p‰‰akselikoordinaatistossa on
+ja jonka diagonalisoitu muoto p√§√§akselikoordinaatistossa on
 \[
 g(\xi,\eta,\zeta)=49\xi^2-98\eta^2+147\zeta^2.
 \]
 
 \item 
-Tutki, onko origo funktion paikallinen ‰‰riarvokohta:
+Tutki, onko origo funktion paikallinen √§√§riarvokohta:
 \begin{align*}
 &\text{a)}\ \ f(x,y)=\cos(x-2y)-\sin xy \qquad
  \text{b)}\ \ f(x,y)=e^x y-xe^y+\sin(x-y) \\
@@ -558,7 +558,7 @@ Tutki, onko origo funktion paikallinen ‰‰riarvokohta:
 \end{align*}
 
 \item
-Luokittele origo funktion kriittisen‰ pisteen‰ eri parametrin $a$ arvoilla:
+Luokittele origo funktion kriittisen√§ pisteen√§ eri parametrin $a$ arvoilla:
 \[
 \text{a)}\ \ f(x,y)= \frac{1+x^2+2y^2}{1+axy} \qquad
 \text{b)}\ \ f(x,y)= \sin xy +a\cos(x+y)
@@ -579,8 +579,8 @@ Etsi seuraavien funktioiden kaikki kriittiset pisteet ja luokittele ne.
 \end{align*}
  
 \item
-Etsi karteesinen koordinaatisto, jossa seuraavien funktioiden tasa-arvok‰yr‰t ovat toisen
-asteen k‰yr‰n yksinkertaisinta perusmuotoa. Hahmottele tasa-arvok‰yrien kulku.
+Etsi karteesinen koordinaatisto, jossa seuraavien funktioiden tasa-arvok√§yr√§t ovat toisen
+asteen k√§yr√§n yksinkertaisinta perusmuotoa. Hahmottele tasa-arvok√§yrien kulku.
 \vspace{1mm}\newline
 a) \ $16x^2+9y^2+24xy \qquad$
 b) \ $2x^2+3y^2+2xy \qquad$
@@ -591,7 +591,7 @@ f) \ $2x^2+3y^2+2xy-4x-4y \qquad$
 g) \ $3x^2+4xy+y^2+2x$
 
 \item
-Etsi seuraaville toisen asteen pinnoille koordinaatisto, jossa pinnan yht‰lˆ pelkistyy
+Etsi seuraaville toisen asteen pinnoille koordinaatisto, jossa pinnan yht√§l√∂ pelkistyy
 perusmuotoonsa. Luokittele pinnat. \vspace{1mm}\newline
 a) \ $xy+yz+xz=0 \qquad$
 b) \ $xy-yz+xz=0 \qquad$
@@ -601,22 +601,22 @@ e) \ $x^2+y^2+z^2+8xy+6yz-24y+8z=0$ \newline
 f) \ $x^2+y^2+3z^2+2xy+4yz+4xz+x+y+z-18=0$ 
 
 \item (*)
-N‰yt‰, ett‰ er‰‰ll‰ $m\in\N$ p‰tee: Jos origon l‰pi kuljetaan pitkin k‰yri‰
+N√§yt√§, ett√§ er√§√§ll√§ $m\in\N$ p√§tee: Jos origon l√§pi kuljetaan pitkin k√§yri√§
 \[
 y=kx^n,\ k\in\R,\ n\in\N,\ n \neq m \quad \text{tai} \quad x=ky^n,\ k\in\R,\ n\in\N,
 \]
-niin funktiolla $f(x,y)=y^2+3x^{50}y+2x^{100}$ on kullakin k‰yr‰ll‰ origossa paikallinen minimi.
-N‰yt‰, ett‰ origo ei kuitenkaan ole $f$:n paikallinen minimipiste eik‰ edes laakapiste.
+niin funktiolla $f(x,y)=y^2+3x^{50}y+2x^{100}$ on kullakin k√§yr√§ll√§ origossa paikallinen minimi.
+N√§yt√§, ett√§ origo ei kuitenkaan ole $f$:n paikallinen minimipiste eik√§ edes laakapiste.
 
 \item \label{H-eig-3: pintojen erikoisluokka}
-Toisen asteen pinnan yht‰lˆ $\,\mx^T\mA\mx+\mb^T\mx+c=0,\ \mx^T=[x,y,z]$, on saatettu
+Toisen asteen pinnan yht√§l√∂ $\,\mx^T\mA\mx+\mb^T\mx+c=0,\ \mx^T=[x,y,z]$, on saatettu
 koordinatiston kierrolla muotoon
 \[
 \xi^2+G\xi+H\eta+I\zeta+J=0
 \]
-($\mA$:lla kaksinkertainen ominaisarvo $\lambda=0$). N‰yt‰, ett‰ uudella koordinaatiston
-kierrolla ja sen j‰lkeen origon siirolla yht‰lˆ saadaan perusmuotoon $\eta'=a(\xi')^2$ tai
-$(\xi')^2=a$ ($a\in\R$). Sovella menettely‰: \vspace{1mm}\newline
+($\mA$:lla kaksinkertainen ominaisarvo $\lambda=0$). N√§yt√§, ett√§ uudella koordinaatiston
+kierrolla ja sen j√§lkeen origon siirolla yht√§l√∂ saadaan perusmuotoon $\eta'=a(\xi')^2$ tai
+$(\xi')^2=a$ ($a\in\R$). Sovella menettely√§: \vspace{1mm}\newline
 a) \ $x^2+x+2y-2z-4=0 \qquad$
 b) \ $(x+y+2z)^2+x+y-z=0$ \newline
 c) \ $x^2+y^2+4z^2-2xy+4xz-4yz-1=0$ \newline
@@ -624,7 +624,7 @@ d) \ $x^2+4y^2+z^2+4xy+2xz+4yz-4x-3y-4z+4=0$ \newline
 e) \ $9x^2+4y^2+z^2-12xy-6xz+4yz+6x-4y+2z+2=0$
 
 \item (*)
-M‰‰rit‰ p‰‰akselikoordinaatisto ja luokittele pinta: \vspace{1mm}\newline
+M√§√§rit√§ p√§√§akselikoordinaatisto ja luokittele pinta: \vspace{1mm}\newline
 a) \ $17x^2+76y^2+54z^2-60xy+12xz+48yz+4x+16y+36z+6=0$ \newline
 b) \ $x^2-68y^2+18z^2+36xy+60xz-96yz-22x-53y+26z+121=0$ \newline
 c) \ $13x^2+40y^2+45z^2-36xy+24xz+12yz-34x-17y+44z+124=0$ \newline

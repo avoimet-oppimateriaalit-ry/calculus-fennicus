@@ -1,87 +1,87 @@
-\section{*Picardin--Lindelˆfin lause} \label{Picard-Lindelˆfin lause}
+\section{*Picardin--Lindel√∂fin lause} \label{Picard-Lindel√∂fin lause}
 \alku
 
-Palataan tutkimaan ensimm‰isen kertaluvun alkuarvoteht‰v‰‰
+Palataan tutkimaan ensimm√§isen kertaluvun alkuarvoteht√§v√§√§
 \begin{equation} \label{Picard-1}
 \begin{cases} \,y'=f(x,y), \\ \,y(x_0)=y_0 \end{cases}
 \end{equation}
-t‰ll‰ kertaa teoreettisemmalta kannalta. Asetetaan kysymys: Mill‰, funktiolle $f$ ja luvuille
-$x_0,y_0$, asetettavilla ehdoilla voidaan taata, ett‰ alkuarvoteht‰v‰ll‰ on yksik‰sitteinen
-ratkaisu pisteen $x_0$ ymp‰ristˆss‰? Vastauksen antaa seuraava kuuluisa lause.
-\begin{*Lause} \label{picard-lindelˆf} \index{Picardin--Lindelˆfin lause|emph}
-\index{differentiaaliyht‰lˆn!h@ratkeavuus|emph}%
-\vahv{(Picard--Lindelˆf\,\footnote[2]{Picardin--Lindelˆfin lauseen alkuper‰isversion esitti
-ja todisti t‰ss‰ esitetty‰ yleisemm‰ss‰ muodossa ranskalainen matemaatikko \hist{Emile Picard}
-(1853-1941) vuonna 1893. Suomalainen matemaatikko \hist{Ernst Lindelˆf} (1870-1946) tarkensi
-tulosta hiukan myˆhemmin. Lauseen v‰itt‰m‰n j‰lkimm‰inen osa (koskien ratkeavuutta koko
-tarkasteltavalla v‰lill‰) on Lindelˆfin k‰sialaa.
-\index{Picard, E.|av} \index{Lindelˆf, E.|av}})} Olkoon $T=[a,b]\times [c,d]\subset\Rkaksi$ ja
-oletetaan, ett‰ $f:T\kohti\R$ toteuttaa ehdot
+t√§ll√§ kertaa teoreettisemmalta kannalta. Asetetaan kysymys: Mill√§, funktiolle $f$ ja luvuille
+$x_0,y_0$, asetettavilla ehdoilla voidaan taata, ett√§ alkuarvoteht√§v√§ll√§ on yksik√§sitteinen
+ratkaisu pisteen $x_0$ ymp√§rist√∂ss√§? Vastauksen antaa seuraava kuuluisa lause.
+\begin{*Lause} \label{picard-lindel√∂f} \index{Picardin--Lindel√∂fin lause|emph}
+\index{differentiaaliyht√§l√∂n!h@ratkeavuus|emph}%
+\vahv{(Picard--Lindel√∂f\,\footnote[2]{Picardin--Lindel√∂fin lauseen alkuper√§isversion esitti
+ja todisti t√§ss√§ esitetty√§ yleisemm√§ss√§ muodossa ranskalainen matemaatikko \hist{Emile Picard}
+(1853-1941) vuonna 1893. Suomalainen matemaatikko \hist{Ernst Lindel√∂f} (1870-1946) tarkensi
+tulosta hiukan my√∂hemmin. Lauseen v√§itt√§m√§n j√§lkimm√§inen osa (koskien ratkeavuutta koko
+tarkasteltavalla v√§lill√§) on Lindel√∂fin k√§sialaa.
+\index{Picard, E.|av} \index{Lindel√∂f, E.|av}})} Olkoon $T=[a,b]\times [c,d]\subset\Rkaksi$ ja
+oletetaan, ett√§ $f:T\kohti\R$ toteuttaa ehdot
 \begin{itemize}
-\item[(i)]  Funktio $x \map f(x,y)$ on jatkuva v‰lill‰ $[a,b]$ jokaisella $y\in[c,d]$.
-\item[(ii)] Funktio $y \map f(x,y)$ on jokaisella $x\in[a,b]$ Lipschitz-jatkuva v‰lill‰ $[c,d]$
-            vakiolla, joka ei riipu $x$:st‰, ts.\ $\exists L\in\R_+$ siten, ett‰ p‰tee
+\item[(i)]  Funktio $x \map f(x,y)$ on jatkuva v√§lill√§ $[a,b]$ jokaisella $y\in[c,d]$.
+\item[(ii)] Funktio $y \map f(x,y)$ on jokaisella $x\in[a,b]$ Lipschitz-jatkuva v√§lill√§ $[c,d]$
+            vakiolla, joka ei riipu $x$:st√§, ts.\ $\exists L\in\R_+$ siten, ett√§ p√§tee
             \[
             |f(x,y_1)-f(x,y_2)| \le L\abs{y_1-y_2} \quad\forall (x,y_1)\in T, \ (x,y_2)\in T.
             \]
 \end{itemize}
-T‰llˆin, jos $(x_0,y_0)\in(a,b)\times(c,d)$, niin on olemassa $\delta>0$ siten, ett‰
-alkuarvoteht‰v‰ll‰
+T√§ll√∂in, jos $(x_0,y_0)\in(a,b)\times(c,d)$, niin on olemassa $\delta>0$ siten, ett√§
+alkuarvoteht√§v√§ll√§
 \[
 \begin{cases} \,y'=f(x,y),\quad x\in (x_0-\delta,x_0+\delta), \\ \,y(x_0)=y_0 \end{cases}
 \]
-on yksik‰sitteinen ratkaisu. Edelleen jos oletukset ovat voimassa, kun v‰lin $[c,d]$ tilalla
-on $\R$ ($T=[a,b]\times\R$), niin ratkaisu on olemassa ja yksik‰sitteinen koko avoimella
-v‰lill‰ $(a,b)$, kun $(x_0,y_0)\in(a,b)\times\R$.
+on yksik√§sitteinen ratkaisu. Edelleen jos oletukset ovat voimassa, kun v√§lin $[c,d]$ tilalla
+on $\R$ ($T=[a,b]\times\R$), niin ratkaisu on olemassa ja yksik√§sitteinen koko avoimella
+v√§lill√§ $(a,b)$, kun $(x_0,y_0)\in(a,b)\times\R$.
 \end{*Lause}
 
-Seuraavassa k‰yd‰‰n lyhyesti l‰pi Lauseen \ref{picard-lindelˆf} todistukset ideat ja
-p‰‰vaiheet. (Todistuksen tarkkaan l‰piviemiseen ovat k‰sitteelliset ev‰‰mme hieman vajavaiset.)
-L‰htˆkohtana on ajatus, ett‰ alkuarvoteht‰v‰n ratkaisu konstruoidaan nk.\ 
+Seuraavassa k√§yd√§√§n lyhyesti l√§pi Lauseen \ref{picard-lindel√∂f} todistukset ideat ja
+p√§√§vaiheet. (Todistuksen tarkkaan l√§piviemiseen ovat k√§sitteelliset ev√§√§mme hieman vajavaiset.)
+L√§ht√∂kohtana on ajatus, ett√§ alkuarvoteht√§v√§n ratkaisu konstruoidaan nk.\ 
 \index{kiintopisteiteraatio!Picardin iteraatio|(} \index{Picardin iteraatio|(}%
-\kor{Picardin iteraatiolla}. T‰ss‰ puolestaan idea on seuraava: Kun ollaan l‰hell‰ pistett‰
-$x_0$, niin voidaan olettaa, ett‰ $y(x)$ on l‰hell‰ $y_0$:aa. Ratkaisun ensimm‰inen
-approksimaatio on t‰m‰n mukaan vakio:
+\kor{Picardin iteraatiolla}. T√§ss√§ puolestaan idea on seuraava: Kun ollaan l√§hell√§ pistett√§
+$x_0$, niin voidaan olettaa, ett√§ $y(x)$ on l√§hell√§ $y_0$:aa. Ratkaisun ensimm√§inen
+approksimaatio on t√§m√§n mukaan vakio:
 \[
 y(x)\approx y_0(x)=y_0.
 \]
 
-Parannetaan t‰t‰ nyt asteittain ratkaisemalla palautuvasti alkuarvoteht‰v‰t
+Parannetaan t√§t√§ nyt asteittain ratkaisemalla palautuvasti alkuarvoteht√§v√§t
 \[
 \begin{cases}
 \,y_k'(x)=f(x,y_{k-1}(x)), \\
 \,y_k(x_0)=y_0,\quad k=1,2,\ldots
 \end{cases}
 \]
-Koska t‰ss‰ $y_{k-1}$ tunnetaan aikaisemmilta iteraatiokierroksilta (tai alkuehdosta), saadaan
-jokainen $y_k$ m‰‰r‰tyksi palautuvasti tunnetun funktion integraalina:
+Koska t√§ss√§ $y_{k-1}$ tunnetaan aikaisemmilta iteraatiokierroksilta (tai alkuehdosta), saadaan
+jokainen $y_k$ m√§√§r√§tyksi palautuvasti tunnetun funktion integraalina:
 \begin{equation} \label{Picard-2}
 y_0(x) = y_0, \quad y_k(x) = y_0+\int_{x_0}^x f(t,y_{k-1}(t))dt,\quad k=1,2,\ldots
 \end{equation}
-N‰in on m‰‰ritelty Picardin iteraatio. --- Huomattakoon, ett‰ t‰ss‰ on itse asiassa kyse
-\pain{kiinto}p\pain{isteiteraatiosta}, miss‰ 'pisteen' sijasta etsit‰‰n funktiota (vrt.\ Luku
-\ref{kiintopisteiteraatio}). Iteraatiota sovelletaan alkuarvoteht‰v‰n integroituun muotoon
+N√§in on m√§√§ritelty Picardin iteraatio. --- Huomattakoon, ett√§ t√§ss√§ on itse asiassa kyse
+\pain{kiinto}p\pain{isteiteraatiosta}, miss√§ 'pisteen' sijasta etsit√§√§n funktiota (vrt.\ Luku
+\ref{kiintopisteiteraatio}). Iteraatiota sovelletaan alkuarvoteht√§v√§n integroituun muotoon
 \[ 
 y(x) = y_0+\int_{x_0}^x f(t,y(t))\,dt,
 \]
-\index{integraaliyht‰lˆ}%
-eli Picardin iteraatiossa on kyse t‰m‰n \kor{integraaliyht‰lˆn} iteratiivisesta 
-ratkaisemisesta. --- Katkaisemalla iteraatio saadaan likim‰‰r‰inen ratkaisu, kuten
-kiintopisteiteraatioissa yleens‰.
+\index{integraaliyht√§l√∂}%
+eli Picardin iteraatiossa on kyse t√§m√§n \kor{integraaliyht√§l√∂n} iteratiivisesta 
+ratkaisemisesta. --- Katkaisemalla iteraatio saadaan likim√§√§r√§inen ratkaisu, kuten
+kiintopisteiteraatioissa yleens√§.
 
-Picardin iteraatiota voi siis pit‰‰ alkuarvoteht‰v‰n likim‰‰r‰isen ratkaisemisen menetelm‰n‰.
-Toisin kuin edellisess‰ luvussa tarkastellut numeeriset menetelm‰t, Picardin iteraatio on
-kuitenkin l‰hinn‰ 'ajattelumenetelm‰', sill‰ k‰yt‰nnˆss‰ iteraatioon sis‰ltyv‰t integraalit
-tulevat yleens‰ nopeasti hankaliksi.
-\begin{Exa} Laske kaksi ensimm‰ist‰ Picardin iteraattia $\,(y_k(x), \ k=1,2\,)$
-alkuarvoteht‰v‰lle
+Picardin iteraatiota voi siis pit√§√§ alkuarvoteht√§v√§n likim√§√§r√§isen ratkaisemisen menetelm√§n√§.
+Toisin kuin edellisess√§ luvussa tarkastellut numeeriset menetelm√§t, Picardin iteraatio on
+kuitenkin l√§hinn√§ 'ajattelumenetelm√§', sill√§ k√§yt√§nn√∂ss√§ iteraatioon sis√§ltyv√§t integraalit
+tulevat yleens√§ nopeasti hankaliksi.
+\begin{Exa} Laske kaksi ensimm√§ist√§ Picardin iteraattia $\,(y_k(x), \ k=1,2\,)$
+alkuarvoteht√§v√§lle
 \[
 \begin{cases}
 \,y'=x+y^2, \\ \,y(0)=1.
 \end{cases}
 \]
 \end{Exa}
-\ratk T‰ss‰ on $f(x,y)=x+y^2$, $x_0=0$, $y_0=1$, joten $y_0(x)=1$ ja
+\ratk T√§ss√§ on $f(x,y)=x+y^2$, $x_0=0$, $y_0=1$, joten $y_0(x)=1$ ja
 \begin{align*}
 y_1(x) &= 1+\int_0^x (t+1)\,dt=\underline{\underline{1+x+\frac{1}{2}x^2}}, \\
 y_2(x) &= 1+\int_0^x \left[t+\left(1+t+\frac{1}{2}t^2\right)^2\right]dt \\
@@ -89,35 +89,35 @@ y_2(x) &= 1+\int_0^x \left[t+\left(1+t+\frac{1}{2}t^2\right)^2\right]dt \\
 \end{align*}
 Seuraavaa iteraatti $y_3(x)$ olisi jo polynomi astetta $11$. \loppu
 
-Palataan Lauseen \ref{picard-lindelˆf} todistukseen, jossa siis ideana on konstruoida
-alkuarvoteht‰v‰n ratkaisu Picardin iteraatiolla \eqref{Picard-2}. Tarkoituksena on t‰llˆin
-osoittaa, ett‰ iteraatio suppenee kohti v‰lill‰ $[x_0-\delta,x_0+\delta]$ jatkuvaa funktiota
+Palataan Lauseen \ref{picard-lindel√∂f} todistukseen, jossa siis ideana on konstruoida
+alkuarvoteht√§v√§n ratkaisu Picardin iteraatiolla \eqref{Picard-2}. Tarkoituksena on t√§ll√∂in
+osoittaa, ett√§ iteraatio suppenee kohti v√§lill√§ $[x_0-\delta,x_0+\delta]$ jatkuvaa funktiota
 $y$, joka toteuttaa
 \begin{equation} \label{Picard-3}
 y(x)=y_0+\int_{x_0}^x f(t,y(t))dt,\quad x\in [x_0-\delta,x_0+\delta].
 \end{equation}
-Parametrin $\delta$ valinnalla ($\delta$ riitt‰v‰n pieni) taataan, ett‰ 
-$[x_0-\delta,x_0+\delta]\subset[a,b]$ ja ett‰ $y(x)$ ei 'karkaa' v‰lilt‰ $[c,d]$, ts.\ 
+Parametrin $\delta$ valinnalla ($\delta$ riitt√§v√§n pieni) taataan, ett√§ 
+$[x_0-\delta,x_0+\delta]\subset[a,b]$ ja ett√§ $y(x)$ ei 'karkaa' v√§lilt√§ $[c,d]$, ts.\ 
 $\,(x,y(x)) \in T\ \ \forall x \in [x_0-\delta,x_0+\delta]$ (vrt.\ vastaava ajatus Lauseen 
-\ref{separoituvan DY:n ratkaisu} todistuksessa). T‰llˆin oletuksen (i) mukaan yhdistetty 
-funktio $x \map f(x,y(x))$ on jatkuva v‰lill‰ $[x_0-\delta,x_0+\delta]$, jolloin yht‰lˆst‰ 
-\eqref{Picard-3} ja Analyysin peruslauseesta seuraa, ett‰ $y$ on jatkuvasti derivoituva v‰lill‰ 
-$[x_0-\delta,x_0+\delta]$. T‰llˆin $y$ on myˆs alkuarvoteht‰v‰n \eqref{Picard-1} ratkaisu 
-v‰lill‰ $(x_0-\delta,x_0+\delta)$.
+\ref{separoituvan DY:n ratkaisu} todistuksessa). T√§ll√∂in oletuksen (i) mukaan yhdistetty 
+funktio $x \map f(x,y(x))$ on jatkuva v√§lill√§ $[x_0-\delta,x_0+\delta]$, jolloin yht√§l√∂st√§ 
+\eqref{Picard-3} ja Analyysin peruslauseesta seuraa, ett√§ $y$ on jatkuvasti derivoituva v√§lill√§ 
+$[x_0-\delta,x_0+\delta]$. T√§ll√∂in $y$ on my√∂s alkuarvoteht√§v√§n \eqref{Picard-1} ratkaisu 
+v√§lill√§ $(x_0-\delta,x_0+\delta)$.
 
-Iteraation \eqref{Picard-2} suppenemisen toteamiseksi otetaan k‰yttˆˆn v‰lill‰ 
-$[x_0-\delta,x_0+\delta]$ m‰‰ritelty‰ jatkuvaa funktiota mittaava \kor{maksiminormi}
+Iteraation \eqref{Picard-2} suppenemisen toteamiseksi otetaan k√§ytt√∂√∂n v√§lill√§ 
+$[x_0-\delta,x_0+\delta]$ m√§√§ritelty√§ jatkuvaa funktiota mittaava \kor{maksiminormi}
 \index{maksiminormib@maksiminormi (funktion)} \index{normi!xb@maksiminormi (funktion)}%
 \[ 
 \norm{y} = \max\,\{\,\abs{y(x)} \mid  x_0-\delta \le x \le x_0+\delta\,\}. 
 \]
-T‰lle (niinkuin normeille yleens‰, vrt.\ Luku \ref{abstrakti skalaaritulo}) p‰tee 
-\pain{kolmioe}p\pain{‰}y\pain{ht‰lˆ}
+T√§lle (niinkuin normeille yleens√§, vrt.\ Luku \ref{abstrakti skalaaritulo}) p√§tee 
+\pain{kolmioe}p\pain{√§}y\pain{ht√§l√∂}
 \[
 \norm{y_1+y_2} \le \norm{y_1}+\norm{y_2}.
 \]
 
-L‰hdet‰‰n nyt Lauseen \ref{picard-lindelˆf} oletuksesta (ii) ja arvioidaan
+L√§hdet√§√§n nyt Lauseen \ref{picard-lindel√∂f} oletuksesta (ii) ja arvioidaan
 \begin{align*}
 \abs{y_{k+1}(x)-y_k(x)}\ 
      &=\ \left| \int_{x_0}^x [f(t,y_k(t))-f(t,y_{k-1}(t))]\,dt \right| \\ 
@@ -129,19 +129,19 @@ Tulos on kirjoitettavissa
 \[
 \norm{y_{k+1}-y_k}\ \le\ L\delta\,\norm{y_k-y_{k-1}}, \quad k=1,2,\ldots
 \]
-Merkit‰‰n nyt $q=L\delta$, ja oletetaan jatkossa, ett‰ $q < 1$ (j‰rjestett‰viss‰ valitsemalla
-$\delta<1/L$). K‰ytt‰m‰ll‰ saatua arviota palautuvasti seuraa
+Merkit√§√§n nyt $q=L\delta$, ja oletetaan jatkossa, ett√§ $q < 1$ (j√§rjestett√§viss√§ valitsemalla
+$\delta<1/L$). K√§ytt√§m√§ll√§ saatua arviota palautuvasti seuraa
 \[
 \norm{y_{k+1}-y_k}\ \le\ q^k\norm{y_1-y_0}, \quad k=1,2,\ldots
 \]
-Oletuksen (i) mukaan funtkio $g(x)=f(x,y_0)$ on jatkuva v‰lill‰ $[a,b]$, joten iteraatiokaavan
+Oletuksen (i) mukaan funtkio $g(x)=f(x,y_0)$ on jatkuva v√§lill√§ $[a,b]$, joten iteraatiokaavan
 \eqref{Picard-2} perusteella
 \[
 \norm{y_1-y_0} = \max_{x\in[x_0-\delta,x_0+\delta]}\,\Bigl|\int_{x_0}^x f(t,y_0)\,dt\Bigr| 
                  \le C\delta,
 \]
-miss‰ $C$ on $\abs{g}$:n maksimiarvo v‰lill‰ $[a,b]$. Yhdist‰m‰ll‰ saadut arviot ja k‰ytt‰m‰ll‰
-kolmioep‰yht‰lˆ‰ seuraa
+miss√§ $C$ on $\abs{g}$:n maksimiarvo v√§lill√§ $[a,b]$. Yhdist√§m√§ll√§ saadut arviot ja k√§ytt√§m√§ll√§
+kolmioep√§yht√§l√∂√§ seuraa
 \begin{align*}
 \norm{y_n-y_k}\ &=\ \norm{(y_n-y_{n-1})+(y_{n-1}-y_{n-2})+ \ldots + (y_{k+1}-y_k)} \\[3mm]
                 &\le\ \norm{y_n-y_{n-1}}+ \norm{y_{n-1}-y_{n-2}} + \ldots 
@@ -150,30 +150,30 @@ kolmioep‰yht‰lˆ‰ seuraa
                 &<\ C\delta q^k\sum_{i=0}^\infty q^i\,
                  =\,\frac{C\delta}{1-q}\,q^k, \quad 0 \le k < n.
 \end{align*}
-T‰st‰ voidaan p‰‰tell‰ ensinn‰kin, ett‰ jos $\delta$ on riitt‰v‰n pieni, niin
+T√§st√§ voidaan p√§√§tell√§ ensinn√§kin, ett√§ jos $\delta$ on riitt√§v√§n pieni, niin
 $\norm{y_n-y_0} \le C\delta/(1-\delta) \le \min\{y_0-c,\,d-y_0\}\ \forall n$, jolloin
-$y_n(x)$:n pako v‰lilt‰ $[c,d]$ on estetty. Toiseksi p‰‰tell‰‰n, ett‰ jono $\seq{y_k(x)}$ on
+$y_n(x)$:n pako v√§lilt√§ $[c,d]$ on estetty. Toiseksi p√§√§tell√§√§n, ett√§ jono $\seq{y_k(x)}$ on
 Cauchy jokaisella $x \in [x_0-\delta,x_0+\delta]$ ja siis suppenee:
 \[ 
 y_k(x) \kohti y(x)\in[c,d], \quad x \in [x_0-\delta,x_0+\delta]. 
 \]
 \index{tasainen suppeneminen}%
-On edelleen p‰‰telt‰viss‰, ett‰ t‰m‰ suppeneminen on itse asiassa \kor{tasaista} v‰lill‰
-$[x_0-\delta,x_0+\delta]$, ts.\ p‰tee
+On edelleen p√§√§telt√§viss√§, ett√§ t√§m√§ suppeneminen on itse asiassa \kor{tasaista} v√§lill√§
+$[x_0-\delta,x_0+\delta]$, ts.\ p√§tee
 \[
 \norm{y_k-y}\,=\,\max_{x\in[x_0-\delta,\,x_0+\delta]} \abs{y_k(x)-y(x)} 
                  \kohti\ 0, \quad \text{kun}\ k \kohti \infty,
 \]
-ja ett‰ raja-arvona konstruoitu $y(x)$ on jatkuva v‰lill‰ $[x_0-\delta,x_0+\delta]$. (T‰ss‰ on
-todistuksen k‰sitteellisesti vaativin kohta!) Ottamalla lopuksi iteraatiokaavassa 
-\eqref{Picard-2} puolittain raja-arvo, kun $k\kohti\infty$, p‰‰tell‰‰n, ett‰ $y(x)$ ratkaisee 
-probleeman \eqref{Picard-3}, jolloin Lauseen \ref{picard-lindelˆf} ensimm‰isest‰ v‰itt‰m‰st‰
-on todistettu ratkaisun olemassaoloa koskeva osa. Ratkaisun yksik‰sitteisyys on todettavissa
-suoraviivaisemmin, ks.\ Harj.teht.\,\ref{H-dy-8: ratkaisun yksik‰sitteisyys}. 
+ja ett√§ raja-arvona konstruoitu $y(x)$ on jatkuva v√§lill√§ $[x_0-\delta,x_0+\delta]$. (T√§ss√§ on
+todistuksen k√§sitteellisesti vaativin kohta!) Ottamalla lopuksi iteraatiokaavassa 
+\eqref{Picard-2} puolittain raja-arvo, kun $k\kohti\infty$, p√§√§tell√§√§n, ett√§ $y(x)$ ratkaisee 
+probleeman \eqref{Picard-3}, jolloin Lauseen \ref{picard-lindel√∂f} ensimm√§isest√§ v√§itt√§m√§st√§
+on todistettu ratkaisun olemassaoloa koskeva osa. Ratkaisun yksik√§sitteisyys on todettavissa
+suoraviivaisemmin, ks.\ Harj.teht.\,\ref{H-dy-8: ratkaisun yksik√§sitteisyys}. 
 
-Lauseen \ref{picard-lindelˆf} toista v‰itt‰m‰‰ todistettaessa ei jonon $\seq{y_k(x)}$ 
-pako-ongelmaa ole, joten v‰li $[x_0-\delta,x_0+\delta]$ voidaan korvata v‰lill‰ $[a,b]$.
-Tarkentamalla em.\ laskua osoittautuu, ett‰ voidaan myˆs arvioida
+Lauseen \ref{picard-lindel√∂f} toista v√§itt√§m√§√§ todistettaessa ei jonon $\seq{y_k(x)}$ 
+pako-ongelmaa ole, joten v√§li $[x_0-\delta,x_0+\delta]$ voidaan korvata v√§lill√§ $[a,b]$.
+Tarkentamalla em.\ laskua osoittautuu, ett√§ voidaan my√∂s arvioida
 \[
 \abs{y_{k+1}(x)-y_k(x)}\ \le\ C\,\frac{L^k\abs{x-x_0}^k}{k!}\,, \quad x\in[a,b].
 \]
@@ -182,61 +182,61 @@ sarjan sijasta eksponenttifunktion sarja
 \[ 
 e^{L\abs{x-x_0}} = \sum_{k=0}^\infty \frac{L^k\abs{x-x_0}^k}{k!}\,. 
 \]
-T‰m‰ suppenee kaikkialla, joten voidaan p‰‰tell‰ samalla tavoin kuin edell‰, ett‰ funktio
-$y(x)=\lim_k y_k(x)$ on integraaliyht‰lˆn \eqref{Picard-3} ratkaisu, t‰ll‰ kertaa koko v‰lill‰
- $[a,b]$. Alkuarvoteht‰v‰ \eqref{Picard-1} on n‰in ratkaistu yksik‰sitteisesti v‰lill‰ $(a,b)$.
+T√§m√§ suppenee kaikkialla, joten voidaan p√§√§tell√§ samalla tavoin kuin edell√§, ett√§ funktio
+$y(x)=\lim_k y_k(x)$ on integraaliyht√§l√∂n \eqref{Picard-3} ratkaisu, t√§ll√§ kertaa koko v√§lill√§
+ $[a,b]$. Alkuarvoteht√§v√§ \eqref{Picard-1} on n√§in ratkaistu yksik√§sitteisesti v√§lill√§ $(a,b)$.
 \index{kiintopisteiteraatio!Picardin iteraatio|)} \index{Picardin iteraatio|)}
 
 \begin{Exa}
-Alkuarvoteht‰v‰
+Alkuarvoteht√§v√§
 \[
 \begin{cases} \,y'=\sin y, \\ \,y(x_0)=y_0 \end{cases}
 \]
-toteuttaa Lauseen \ref{picard-lindelˆf} ehdot, kun $T=\R^2$, sill‰ $f(y)=\sin y$ on kaikilla 
-v‰leill‰ Lipschitz-jatkuva vakiolla $L=1$. Alkuarvoteht‰v‰ll‰ on siis yksik‰sitteinen ratkaisu
-v‰lill‰ $(-\infty,\infty)$ jokaisella $(x_0,y_0)\in\R^2$. Jos valitaan esim.\ $x_0=0$, niin
-n‰hd‰‰n, ett‰ $y_0$:n eri arvoja vastaavat ratkaisut lˆytyv‰t kaikki Esimerkiss‰ 
-\ref{separoituva DY}:\ref{muuan separoituva dy} laskettujen ratkaisujen joukosta. N‰in on tullut
-varmistetuksi, ett‰ mainitussa esimerkiss‰ lˆydettiin kaikki differentiaaliyht‰lˆn $y'=\sin y$
+toteuttaa Lauseen \ref{picard-lindel√∂f} ehdot, kun $T=\R^2$, sill√§ $f(y)=\sin y$ on kaikilla 
+v√§leill√§ Lipschitz-jatkuva vakiolla $L=1$. Alkuarvoteht√§v√§ll√§ on siis yksik√§sitteinen ratkaisu
+v√§lill√§ $(-\infty,\infty)$ jokaisella $(x_0,y_0)\in\R^2$. Jos valitaan esim.\ $x_0=0$, niin
+n√§hd√§√§n, ett√§ $y_0$:n eri arvoja vastaavat ratkaisut l√∂ytyv√§t kaikki Esimerkiss√§ 
+\ref{separoituva DY}:\ref{muuan separoituva dy} laskettujen ratkaisujen joukosta. N√§in on tullut
+varmistetuksi, ett√§ mainitussa esimerkiss√§ l√∂ydettiin kaikki differentiaaliyht√§l√∂n $y'=\sin y$
 ratkaisut. \loppu
 \end{Exa}
 \begin{Exa}
-Alkuarvoteht‰v‰lle
+Alkuarvoteht√§v√§lle
 \[
 \begin{cases} \,y'=\sqrt{\abs{y}}, \\ \,y(0)=0 \end{cases}
 \]
-Lauseen \ref{picard-lindelˆf} ehdot eiv‰t toteudu mill‰‰n joukon $T=(a,b)\times(c,d)$
-valinnalla, sill‰ on oltava $0\in(a,b)$, jolloin $f(y)=\sqrt{\abs{y}}$ ei ole Lipschitz-jatkuva
-v‰lill‰ $[a,b]$. Ratkaisu ei olekaan yksik‰sitteinen 
-(ks.\ Esimerkki \ref{DY-k‰sitteet}:\,\ref{erikoinen dy}b). \loppu
+Lauseen \ref{picard-lindel√∂f} ehdot eiv√§t toteudu mill√§√§n joukon $T=(a,b)\times(c,d)$
+valinnalla, sill√§ on oltava $0\in(a,b)$, jolloin $f(y)=\sqrt{\abs{y}}$ ei ole Lipschitz-jatkuva
+v√§lill√§ $[a,b]$. Ratkaisu ei olekaan yksik√§sitteinen 
+(ks.\ Esimerkki \ref{DY-k√§sitteet}:\,\ref{erikoinen dy}b). \loppu
 \end{Exa}
 \begin{Exa}
-Jos lineaarisessa alkuarvoteht‰v‰ss‰
+Jos lineaarisessa alkuarvoteht√§v√§ss√§
 \[
 \begin{cases}
 \,y'+P(x)y=R(x), \\ \,y(x_0)=y_0
 \end{cases}
 \]
-$P$ ja $Q$ ovat jatkuvia v‰lill‰ $[a,b]$, niin Lauseen \ref{picard-lindelˆf} ehdot ovat 
-voimassa, kun valitaan $T=[a,b]\times\R$. Nimitt‰in
+$P$ ja $Q$ ovat jatkuvia v√§lill√§ $[a,b]$, niin Lauseen \ref{picard-lindel√∂f} ehdot ovat 
+voimassa, kun valitaan $T=[a,b]\times\R$. Nimitt√§in
 \begin{itemize}
-\item[(i)]  Funktio $x \map f(x,y)=-P(x)y+R(x)$ \ on jatkuva v‰lill‰ $[a,b]$ jokaisella
+\item[(i)]  Funktio $x \map f(x,y)=-P(x)y+R(x)$ \ on jatkuva v√§lill√§ $[a,b]$ jokaisella
             $y\in\R$.
 \item[(ii)] $\abs{f(x,y_1)-f(x,y_2)}=\abs{P(x)}\abs{y_1-y_2}\leq L\abs{y_1-y_2},\quad 
-             (x,y_1), \ (x,y_2) \in T$, miss‰ $L=\D \max_{x\in [a,b]} \abs{P(x)}$.
+             (x,y_1), \ (x,y_2) \in T$, miss√§ $L=\D \max_{x\in [a,b]} \abs{P(x)}$.
 \end{itemize}
-Alkuarvoteht‰v‰ siis ratkeaa yksik‰sitteisesti v‰lill‰ $(a,b)$, kun $x_0\in (a,b)$.
-(Sama p‰‰teltiin Luvussa \ref{lineaarinen 1. kertaluvun DY} toisin keinoin.) \loppu
+Alkuarvoteht√§v√§ siis ratkeaa yksik√§sitteisesti v√§lill√§ $(a,b)$, kun $x_0\in (a,b)$.
+(Sama p√§√§teltiin Luvussa \ref{lineaarinen 1. kertaluvun DY} toisin keinoin.) \loppu
 \end{Exa}
 
 \pagebreak
-\subsection*{Differentiaaliyht‰lˆsysteemin ratkeavuus}
-\index{differentiaaliyht‰lˆn!h@ratkeavuus|vahv}
-\index{differentiaaliyht‰lˆ!g@--systeemi|vahv}
+\subsection*{Differentiaaliyht√§l√∂systeemin ratkeavuus}
+\index{differentiaaliyht√§l√∂n!h@ratkeavuus|vahv}
+\index{differentiaaliyht√§l√∂!g@--systeemi|vahv}
 
-Picardin-Lindelˆfin lauseen todellinen hienous piilee siin‰, ett‰ lauseen v‰itt‰m‰ voidaan
-yleist‰‰ hyvin suoraviivaisesti koskemaan yleist‰ normaalimuotoista 
-differentiaaliyht‰lˆsysteemi‰ (vrt.\ Luku \ref{DY-k‰sitteet})
+Picardin-Lindel√∂fin lauseen todellinen hienous piilee siin√§, ett√§ lauseen v√§itt√§m√§ voidaan
+yleist√§√§ hyvin suoraviivaisesti koskemaan yleist√§ normaalimuotoista 
+differentiaaliyht√§l√∂systeemi√§ (vrt.\ Luku \ref{DY-k√§sitteet})
 \[ \left\{ \begin{aligned} 
            y'_1(x) &= f_1(x,y_1, \ldots, y_n), \\
            y'_2(x) &= f_2(x,y_1, \ldots, y_n), \\
@@ -247,7 +247,7 @@ Alkuehdoiksi oletetaan
 \[ 
 y_i(x_0) = A_i, \quad i = 1 \ldots n, 
 \]
-miss‰ $x_0\in(a,b)$. Tarkastellaan esimerkkin‰ alkuarvoteht‰v‰‰ kokoa $n=2\,$:
+miss√§ $x_0\in(a,b)$. Tarkastellaan esimerkkin√§ alkuarvoteht√§v√§√§ kokoa $n=2\,$:
 \begin{equation} \label{Picard-4}
 \left\{ \begin{aligned}
 &y' = f_1(x,y,u), \\
@@ -255,67 +255,67 @@ miss‰ $x_0\in(a,b)$. Tarkastellaan esimerkkin‰ alkuarvoteht‰v‰‰ kokoa $n=2\,$:
 &y(x_0)=y_0,\ u(x_0)=u_0.
         \end{aligned} \right.
 \end{equation}
-Picardin-Lindelˆfin lauseen muotoilussa t‰lle ongelmalle asetetaan 
+Picardin-Lindel√∂fin lauseen muotoilussa t√§lle ongelmalle asetetaan 
 \[
 T=[a,b]\times[c_1,d_1]\times[c_2,d_2]\subset\R^3 \quad 
         \text{tai} \quad T=[a,b]\times\R^2\subset\R^3
 \]
 ja oletetaan
 \begin{itemize}
-\item[(i)]  Funktiot $\,x \map f_1(x,y,u)\,$ ja $\,x \map f_2(x,y,u)\,$ ovat jatkuvia v‰lill‰
+\item[(i)]  Funktiot $\,x \map f_1(x,y,u)\,$ ja $\,x \map f_2(x,y,u)\,$ ovat jatkuvia v√§lill√§
             $[a,b]$ jokaisella $\,(y,u)\in[c_1,d_1]\times[c_2,d_2]\,$ tai jokaisella
             $\,(y,u)\in\Rkaksi$.
 \item[(ii)] $f_1$ ja $f_2$ toteuttavat muuttujien $y,u$ suhteen Lipschitz-ehdon: \newline
-            Jollakin $L\in\R_+$ p‰tee
+            Jollakin $L\in\R_+$ p√§tee
             \begin{align*}
             \abs{f_i(x,y_1,u_1)-f_i(x,y_2,u_2)} 
                      &\le L\max\{\abs{y_1-y_2},\,\abs{u_1-u_2}\}, \quad i=1,2 \\
                      &\qquad\forall (x,y_1,u_1)\in T, \ (x,y_2,u_2)\in T.
             \end{align*}
 \end{itemize}
-N‰ill‰ oletuksilla p‰‰dyt‰‰n vastaavaan v‰itt‰m‰‰n kuin edell‰, ts.\ alkuarvoteht‰v‰ 
-\eqref{Picard-4} ratkeaa yksik‰sitteisesti, joko $x_0$:n l‰hell‰ v‰lill‰ 
-$(x_0-\delta,x_0+\delta)$, tai vahvemmin oletuksin koko v‰lill‰ $(a,b)$. Myˆs todistus on 
-perusidealtaan sama kuin edell‰: L‰htˆkohtana on ratkaisun konstruoiminen Picardin iteraatiolla
+N√§ill√§ oletuksilla p√§√§dyt√§√§n vastaavaan v√§itt√§m√§√§n kuin edell√§, ts.\ alkuarvoteht√§v√§ 
+\eqref{Picard-4} ratkeaa yksik√§sitteisesti, joko $x_0$:n l√§hell√§ v√§lill√§ 
+$(x_0-\delta,x_0+\delta)$, tai vahvemmin oletuksin koko v√§lill√§ $(a,b)$. My√∂s todistus on 
+perusidealtaan sama kuin edell√§: L√§ht√∂kohtana on ratkaisun konstruoiminen Picardin iteraatiolla
 \[ \left\{ \begin{aligned} 
 y_k(x) &= y_0+\int_{x_0}^x f_1(t,y_{k-1}(t),u_{k-1}(t))\,dt, \\
 u_k(x) &= u_0+\int_{x_0}^x f_2(t,y_{k-1}(t),u_{k-1}(t))\,dt, \quad k=1,2, \ldots 
            \end{aligned} \right. \]
 
 Palataan lopuksi Luvussa \ref{2. kertaluvun lineaarinen DY} tarkasteltuun toisen kertaluvun
-lineaariseen ja homogeeniseen alkuarvoteht‰v‰‰n
+lineaariseen ja homogeeniseen alkuarvoteht√§v√§√§n
 \begin{equation} \label{Picard-5}
 \begin{cases}
 \,y''+P(x)y'+Q(x)y=0, \\ \,y(0)=A, \ y'(0)=B.
 \end{cases}
 \end{equation}
-Kun t‰ss‰ kirjoitetaan $u=y'$, niin p‰‰st‰‰n systeemimuotoon \eqref{Picard-4}, miss‰
+Kun t√§ss√§ kirjoitetaan $u=y'$, niin p√§√§st√§√§n systeemimuotoon \eqref{Picard-4}, miss√§
 \[
 f_1(x,y,u)=u, \quad f_2(x,y,u) = -Q(x)y-P(x)u. 
 \]
-Jos $P$ ja $Q$ ovat jatkuvia v‰lill‰ $(a,b)$ (kuten oletettiin Luvussa 
+Jos $P$ ja $Q$ ovat jatkuvia v√§lill√§ $(a,b)$ (kuten oletettiin Luvussa 
 \ref{2. kertaluvun lineaarinen DY}), niin $x \map f_1(x,y,u)$ ja $x \map f_2(x,y,u)$ ovat
-jatkuvia v‰lill‰ $[a_1,b_1]$ jokaisella $(y,u)\in\Rkaksi$, kun $[a_1,b_1]\subset(a,b)$. Koska
+jatkuvia v√§lill√§ $[a_1,b_1]$ jokaisella $(y,u)\in\Rkaksi$, kun $[a_1,b_1]\subset(a,b)$. Koska
 \begin{align*}
 f_1(x,y_1,u_1)-f_1(x,y_2,u_2)\ &=\ u_1-u_2, \\
 f_2(x,y_1,u_1)-f_2(x,y_2,u_2)\ &=\ -Q(x)(y_1-y_2)-P(x)(u_1-u_2), 
 \end{align*}
-niin n‰hd‰‰n, ett‰ myˆs ehto (ii) toteutuu, kun asetetaan
+niin n√§hd√§√§n, ett√§ my√∂s ehto (ii) toteutuu, kun asetetaan
 \[ 
 L=\max\{1,\,L_1\}, \quad L_1 = \max_{x\in[a_1,b_1]}\bigl\{\abs{P(x)}+\abs{Q(x)}\bigr\}. 
 \]
-N‰in ollen Picardin--Lindelˆfin lauseen (vahvemman v‰itt‰m‰n) mukaan alkuarvoteht‰v‰ 
-\eqref{Picard-5} ratkeaa yksik‰sitteisesti v‰lill‰ $(a_1,b_1)$. Koska t‰m‰ on totta aina kun
-$[a_1,b_1] \subset (a,b)$, niin teht‰v‰ll‰ on yksik‰sitteinen ratkaisu koko avoimella v‰lill‰
-$(a,b)$. Lause \ref{lin-2: lause 2} on n‰in tullut todistetuksi Picardin--Lindelˆfin lauseen
+N√§in ollen Picardin--Lindel√∂fin lauseen (vahvemman v√§itt√§m√§n) mukaan alkuarvoteht√§v√§ 
+\eqref{Picard-5} ratkeaa yksik√§sitteisesti v√§lill√§ $(a_1,b_1)$. Koska t√§m√§ on totta aina kun
+$[a_1,b_1] \subset (a,b)$, niin teht√§v√§ll√§ on yksik√§sitteinen ratkaisu koko avoimella v√§lill√§
+$(a,b)$. Lause \ref{lin-2: lause 2} on n√§in tullut todistetuksi Picardin--Lindel√∂fin lauseen
 seuraamuksena.
 
 \Harj
 \begin{enumerate}
 
 \item
-Mit‰ voidaan Picardin--Lindelˆfin lauseen valossa sanoa seuraavien alkuarvoteht‰vien 
-ratkeavuudesta ja ratkaisujen yksik‰sitteisyydest‰ $\R$:ss‰ tai $\R$:n osav‰leill‰?
+Mit√§ voidaan Picardin--Lindel√∂fin lauseen valossa sanoa seuraavien alkuarvoteht√§vien 
+ratkeavuudesta ja ratkaisujen yksik√§sitteisyydest√§ $\R$:ss√§ tai $\R$:n osav√§leill√§?
 \begin{align*}
 &\text{a)}\ \ y'=\cos y+\frac{x}{y^2+1}\,,\,\ y(0)=A\in\R \\
 &\text{b)}\ \ y'=\frac{y}{\cosh x}+e^{x-y^2},\,\ y(0)=A\in\R \\ 
@@ -325,8 +325,8 @@ ratkeavuudesta ja ratkaisujen yksik‰sitteisyydest‰ $\R$:ss‰ tai $\R$:n osav‰leil
 \end{align*}
 
 \item
-M‰‰rit‰ seuraaville alkuarvoteht‰ville kaikki alkupisteen l‰hiymp‰ristˆss‰ p‰tev‰t ratkaisut.
-Vertaa Picardin--Lindelˆfin lauseen v‰itt‰m‰‰n. \vspace{1mm}\newline
+M√§√§rit√§ seuraaville alkuarvoteht√§ville kaikki alkupisteen l√§hiymp√§rist√∂ss√§ p√§tev√§t ratkaisut.
+Vertaa Picardin--Lindel√∂fin lauseen v√§itt√§m√§√§n. \vspace{1mm}\newline
 a) \ $y'=y^2,\,\ y(0)=1 \qquad\qquad\quad\,\ $
 b) \ $y'=y^2,\,\ y(0)=1000$ \newline
 c) \ $y'=y\sqrt{\abs{y}},\,\ y(0)=1 \qquad\quad\,\ \ $
@@ -335,14 +335,14 @@ e) \ $y'=\sqrt[4]{\abs{y}},\,\ y(0)=0.0001 \qquad\,$
 f) \ $y'=\sqrt[4]{\abs{y}},\,\ y(0)=0$
 
 \item 
-Halutaan laskea Neperin luku $e$ l‰htien tiedosta, ett‰ $e=y(1)$, miss‰ $y(x)$ ratkaisee
-alkuarvoteht‰v‰n $\,y'=y,\ y(0)=1$. Millainen laskukaava saadaan luvulle $e$, kun teht‰v‰ 
+Halutaan laskea Neperin luku $e$ l√§htien tiedosta, ett√§ $e=y(1)$, miss√§ $y(x)$ ratkaisee
+alkuarvoteht√§v√§n $\,y'=y,\ y(0)=1$. Millainen laskukaava saadaan luvulle $e$, kun teht√§v√§ 
 ratkaistaan Picardin iteraatiolla?
 
 \item 
-Laske seuraavissa alkuarvoteht‰viss‰ Picardin iteraatit $y_1(x)$ ja $y_2(x)$ ja vertaa 
+Laske seuraavissa alkuarvoteht√§viss√§ Picardin iteraatit $y_1(x)$ ja $y_2(x)$ ja vertaa 
 tarkkaan ratkaisuun. 
-(Vrt.\ Harj.teht.\ \ref{DYn numeeriset menetelm‰t}:\ref{H-dy-7: Euler-kokeita}.)
+(Vrt.\ Harj.teht.\ \ref{DYn numeeriset menetelm√§t}:\ref{H-dy-7: Euler-kokeita}.)
 \[
 \text{a)}\ \ \begin{cases} \,y'=-y^2, \\ \,y(0)=1 \end{cases}
 \text{b)}\ \ \begin{cases} \,y'=y^2, \\ \,y(0)=1 \end{cases}
@@ -351,19 +351,19 @@ tarkkaan ratkaisuun.
 \]
 
 \item
-Laske alkuarvoteht‰v‰lle
+Laske alkuarvoteht√§v√§lle
 \[
 \text{a)}\ \ \begin{cases} \,y''=-y, \\ \,y(0)=1,\ y'(0)=0 \end{cases} \quad
 \text{b)}\ \ \begin{cases} \,y''=-y, \\ \,y(0)=0,\ y'(0)=1 \end{cases}
 \]
-likim‰‰r‰inen ratkaisu iteroimalla $2n$ kertaa ($n\in\N$) Picardin iteraatiolla teht‰v‰n
+likim√§√§r√§inen ratkaisu iteroimalla $2n$ kertaa ($n\in\N$) Picardin iteraatiolla teht√§v√§n
 systeemimuodosta.
 
-\item (*) \label{H-dy-8: ratkaisun yksik‰sitteisyys}
-N‰yt‰, ett‰ Lauseen \ref{picard-lindelˆf} oletuksin alkuarvoteht‰v‰n \eqref{Picard-1} ratkaisu
-(jos olemassa) on yksik‰sitteinen v‰lill‰ $(x_0-\delta,x_0+\delta)$, kun $\delta$ on riitt‰v‰n
-pieni. \kor{Vihje}: Oleta $y_1(x)$ ja $y_2(x)$ ratkaisuiksi, l‰hde teht‰v‰n integraalimuodosta
-\eqref{Picard-3}, k‰yt‰ oletusta (ii) ja valitse $\delta<1/L$.
+\item (*) \label{H-dy-8: ratkaisun yksik√§sitteisyys}
+N√§yt√§, ett√§ Lauseen \ref{picard-lindel√∂f} oletuksin alkuarvoteht√§v√§n \eqref{Picard-1} ratkaisu
+(jos olemassa) on yksik√§sitteinen v√§lill√§ $(x_0-\delta,x_0+\delta)$, kun $\delta$ on riitt√§v√§n
+pieni. \kor{Vihje}: Oleta $y_1(x)$ ja $y_2(x)$ ratkaisuiksi, l√§hde teht√§v√§n integraalimuodosta
+\eqref{Picard-3}, k√§yt√§ oletusta (ii) ja valitse $\delta<1/L$.
 
 
 \end{enumerate}

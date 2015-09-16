@@ -4,34 +4,34 @@
 \index{affiinikuvaus|vahv}
 \index{funktio A!h@affiinikuvaus|vahv}
 
-\kor{Affiinikuvaukset} ovat lineaarikuvauksia hieman yleisempi‰ kuvauksia tyyppi‰
+\kor{Affiinikuvaukset} ovat lineaarikuvauksia hieman yleisempi√§ kuvauksia tyyppi√§
 \[ 
 \mf:\ \R^n \kohti \R^m, \quad \mf(\mx) = \mA\mx + \mb, 
 \]
-miss‰ $\mA$ on matriisi kokoa $m \times n$ ja $\mb \in \R^m$. Affiinikuvaukset ovat oma t‰rke‰
+miss√§ $\mA$ on matriisi kokoa $m \times n$ ja $\mb \in \R^m$. Affiinikuvaukset ovat oma t√§rke√§
 luokkansa lineaaristen ($\mb = \mv{0}$) ja yleisempien
-\index{epzy@ep‰lineaarinen kuvaus}%
-\kor{ep‰lineaaristen} (= ei-lineaaristen)
-kuvausten v‰limaastossa. Ominaisuuksiltaan affiinikuvaukset ovat l‰hell‰ lineaarikuvauksia. 
-Esim.\ jos $\mf_1(\mx) = \mA_1 \mx + \mb_1$ on affiinikuvaus tyyppi‰ 
-$\mf_1:\,\R^n \kohti \R^p$ ja $\mf_2(\mx) = \mA_2 \mx + \mb_2$ on affiinikuvaus typpi‰ 
-$\mf_2:\,\R^p \kohti \R^m$, niin yhdistetty kuvaus $\mf_2\circ\mv{f}_1$ on m‰‰ritelty ja myˆs 
+\index{epzy@ep√§lineaarinen kuvaus}%
+\kor{ep√§lineaaristen} (= ei-lineaaristen)
+kuvausten v√§limaastossa. Ominaisuuksiltaan affiinikuvaukset ovat l√§hell√§ lineaarikuvauksia. 
+Esim.\ jos $\mf_1(\mx) = \mA_1 \mx + \mb_1$ on affiinikuvaus tyyppi√§ 
+$\mf_1:\,\R^n \kohti \R^p$ ja $\mf_2(\mx) = \mA_2 \mx + \mb_2$ on affiinikuvaus typpi√§ 
+$\mf_2:\,\R^p \kohti \R^m$, niin yhdistetty kuvaus $\mf_2\circ\mv{f}_1$ on m√§√§ritelty ja my√∂s 
 affiininen:
 \[ 
 (\mf_2\circ\mf_1)(\mx) = \mA_2(\mA_1\mx + \mb_1) + \mb_2 
                        = \mA_2\mA_1\mx + (\mA_2\mb_1 + \mb_2), \quad \mx \in \R^n. 
 \]
-Samoin n‰hd‰‰n, ett‰ jos $\mf(\mx) =  \mA\mx + \mb$ on tyyppi‰ $\mf:\ \R^n \kohti \R^n$, niin 
-$\mf$ on k‰‰ntyv‰ t‰sm‰lleen kun $\mA$ on s‰‰nnˆllinen matriisi, jolloin myˆs
-\index{kzyzy@k‰‰nteiskuvaus}%
-k‰‰nteiskuvaus $\mf^{-1}$ on affiininen.
+Samoin n√§hd√§√§n, ett√§ jos $\mf(\mx) =  \mA\mx + \mb$ on tyyppi√§ $\mf:\ \R^n \kohti \R^n$, niin 
+$\mf$ on k√§√§ntyv√§ t√§sm√§lleen kun $\mA$ on s√§√§nn√∂llinen matriisi, jolloin my√∂s
+\index{kzyzy@k√§√§nteiskuvaus}%
+k√§√§nteiskuvaus $\mf^{-1}$ on affiininen.
 
-Edellisess‰ luvussa todettiin, ett‰ $\R^n$:n kannan vaihtoa vastaava koordinaattimuunnos on
-lineaarikuvaus. Jos kannan vaihtoon yhdistet‰‰n myˆs
+Edellisess√§ luvussa todettiin, ett√§ $\R^n$:n kannan vaihtoa vastaava koordinaattimuunnos on
+lineaarikuvaus. Jos kannan vaihtoon yhdistet√§√§n my√∂s
 \index{origon siirto}%
 \kor{origon siirto}, niin koordinaattimuunnoksesta tulee affiinikuvaus.
-\begin{Exa} Esit‰ affiinikuvauksina koordinaattien v‰liset muunnoskaavat $E^3$:n 
-koordinaatistojen $(O,\vec i,\vec j,\vec k\,)$ ja $(O',\vec a,\vec b,\vec c\,)$ v‰lill‰, kun
+\begin{Exa} Esit√§ affiinikuvauksina koordinaattien v√§liset muunnoskaavat $E^3$:n 
+koordinaatistojen $(O,\vec i,\vec j,\vec k\,)$ ja $(O',\vec a,\vec b,\vec c\,)$ v√§lill√§, kun
 ensin mainitussa koordinaatistossa on $O'=(1,-2,2)$ ja
 \[
 \vec a=\vec i+\vec j-\vec k,\ \ \vec b=\vec j+2\vec k,\ \ \vec c=\vec i+\vec k.
@@ -41,13 +41,13 @@ ensin mainitussa koordinaatistossa on $O'=(1,-2,2)$ ja
 \[
 x\vec i+y\vec j+z\vec k=\Vect{OO'}+x'\vec a+y'\vec b+z'\vec c.
 \]
-T‰m‰ on tulkittavissa vektorimuotoiseksi muunnoskaavaksi $(x',y',z') \map (x,y,z)$, jonka
+T√§m√§ on tulkittavissa vektorimuotoiseksi muunnoskaavaksi $(x',y',z') \map (x,y,z)$, jonka
 matriisimuoto on affiinikuvaus:
 \[
 \begin{bmatrix} x\\y\\z \end{bmatrix} = \begin{rmatrix} 1\\-2\\2 \end{rmatrix} +
 \begin{rmatrix} 1&0&1\\1&1&0\\-1&2&1 \end{rmatrix} \begin{bmatrix} x'\\y'\\z' \end{bmatrix}.
 \]
-Ratkaisemalla t‰st‰ $[x',y',z']^T$ saadaan k‰‰nteismuunnokseksi
+Ratkaisemalla t√§st√§ $[x',y',z']^T$ saadaan k√§√§nteismuunnokseksi
 \[
 \begin{bmatrix} x'\\y'\\z' \end{bmatrix} = 
 \frac{1}{4}\begin{rmatrix} 1&2&-1\\-1&2&1\\3&-2&1 \end{rmatrix} 
@@ -58,20 +58,20 @@ Ratkaisemalla t‰st‰ $[x',y',z']^T$ saadaan k‰‰nteismuunnokseksi
 \subsection*{Geometriset kuvaukset}
 \index{geometrinen kuvaus|vahv}
 
-\kor{Geometrisilla kuvauksilla} ymm‰rret‰‰n yleens‰ euklidisen pisteavaruuden $E^2$ tai $E^3$
+\kor{Geometrisilla kuvauksilla} ymm√§rret√§√§n yleens√§ euklidisen pisteavaruuden $E^2$ tai $E^3$
 kuvauksia, joilla on jokin (verrattain yksinkertainen) geometrinen merkitys. 
-Koordinaattiavaruuteen palauttamalla voidaan geometriset kuvaukset aina tulkita myˆs $\R^2$:n 
+Koordinaattiavaruuteen palauttamalla voidaan geometriset kuvaukset aina tulkita my√∂s $\R^2$:n 
 tai $\R^3$:n kuvauksina. Jatkossa rajoitutaan yksinkertaisimpiin geometrisiin kuvauksiin,
-jotka ovat affiinisia. T‰llaisia ovat mm.\ seuraavat kuvaukset $P \map Q$ tyyppi‰ 
-$f:\ \Ekaksi\kohti\Ekaksi$ tai $f:\ \Ekolme\kohti\Ekolme$ tai n‰iden yhdistelyt.
+jotka ovat affiinisia. T√§llaisia ovat mm.\ seuraavat kuvaukset $P \map Q$ tyyppi√§ 
+$f:\ \Ekaksi\kohti\Ekaksi$ tai $f:\ \Ekolme\kohti\Ekolme$ tai n√§iden yhdistelyt.
 \index{suuntaisprojektio} \index{yhdensuuntaisprojektio} \index{peilaus}
 \index{skaalaus (homotetia)} \index{homotetia (skaalaus)} \index{translaatio (siirto)}
 \index{siirto (translaatio)} \index{kierto!a@geom.\ kuvaus}%
 \begin{itemize}
 \item[---] \kor{siirto} eli \kor{translaatio}: $\ \Vect{OQ} = \Vect{OP} + \vec{b}\ $ 
            ($\vec{b}$ annettu)
-\item[---] \kor{kierto} tasossa origon ymp‰ri: $\ \Vect{OQ} = \Vect{OP}$ kierrettyn‰ kulman 
-            $\varphi$ verran vastap‰iv‰‰n ($\varphi \in \R$ annettu)
+\item[---] \kor{kierto} tasossa origon ymp√§ri: $\ \Vect{OQ} = \Vect{OP}$ kierrettyn√§ kulman 
+            $\varphi$ verran vastap√§iv√§√§n ($\varphi \in \R$ annettu)
 \item[---] \kor{yhdensuuntaisprojektio} avaruustasolle $T$ (tason suoralle $S$) suoran $L$,
            tai vektorin $\vec v=L$:n suuntavektori, suunnassa: $\Q \in T$ tai $Q \in S$ ja
            $\Vect{PQ}=\lambda\vec v,\ \lambda\in\R\ $ ($\,\vec v\,$ ei $T$:n/$S$:n suuntainen)
@@ -85,13 +85,13 @@ $f:\ \Ekaksi\kohti\Ekaksi$ tai $f:\ \Ekolme\kohti\Ekolme$ tai n‰iden yhdistelyt.
            $\ \Vect{OQ} = \lambda\,\Vect{OP}\ $ ($\lambda \in \R$ annettu)
 \end{itemize}
 Geometrirista kuvauksista yksinkertaisimmat ovat siirto ja homotetia, joiden affiinimuodot ovat 
-$\mv{f}(\mx) = \mI\mx + \mb$ ja $\mv{f}(\mx)=\lambda\mI\mx$ ($\mI$ yksikkˆmatriisi). Yleinen
-affinikuvaus $\mv{f}(\mx) = \mA\mx + \mb$ on lineaarikuvauksen ja siirron yhdistelm‰:
+$\mv{f}(\mx) = \mI\mx + \mb$ ja $\mv{f}(\mx)=\lambda\mI\mx$ ($\mI$ yksikk√∂matriisi). Yleinen
+affinikuvaus $\mv{f}(\mx) = \mA\mx + \mb$ on lineaarikuvauksen ja siirron yhdistelm√§:
 \[ 
 \mx \Map \mA\mx \Map \mA\mx + \mb. 
 \]
 Jos yhdensuuntaisprojektiossa taso $T$/suora $S$ tai suuntaisprojektiossa suora $S$ kulkee
-origon kautta, on $\mf(\mo)=\mo$, jolloin projektio on lineaarikuvuas. N‰iden projektioiden
+origon kautta, on $\mf(\mo)=\mo$, jolloin projektio on lineaarikuvuas. N√§iden projektioiden
 erikoistapauksia ovat ortogonaaliprojektiot, joissa projisoidaan tasoa/suoraa vastaan
 kohtisuorasti.
 \begin{Exa} \label{3d-projektio matriiseilla} Taso $T$ kulkee origon kautta ja sen 
@@ -101,7 +101,7 @@ projisoidaan kohtisuorasti tason $T$ pisteeksi
 \[ 
 Q\ \vastaa\ y_1 \vec{i} + y_2 \vec{j} + y_3 \vec{k}\ =\ z_1 \vec{v}_1 + z_2 \vec{v}_2. 
 \]
-M‰‰rit‰ vastaavien lineaarikuvausten
+M√§√§rit√§ vastaavien lineaarikuvausten
 \[ 
 A:\ \mx \Map \my = [y_1,y_2,y_3]^T, \quad\quad  B:\ \mx \Map \mz = [z_1,z_2]^T 
 \]
@@ -121,7 +121,7 @@ matriisit $\mA,\mB$.
                          \begin{rmatrix} x_1\\x_2\\x_3 \end{rmatrix} \\[2mm]
              &\ekv \quad \mC\mz = \mv{D}\mx.
 \end{align*}
-Siis $\mz = \mB\mx$, miss‰
+Siis $\mz = \mB\mx$, miss√§
 \[ 
 \mB\ =\ \mC^{-1}\mv{D}\ =\ \frac{1}{3} \begin{rmatrix} 2&-1\\-1&2 \end{rmatrix} 
                                        \begin{rmatrix} 1&1&0\\0&1&1 \end{rmatrix}\ 
@@ -136,32 +136,32 @@ niin
    \begin{rmatrix} 1&0\\1&1\\0&1 \end{rmatrix} \begin{rmatrix} z_1\\z_2 \end{rmatrix}\ =\ 
    \begin{rmatrix} 1&0\\1&1\\0&1 \end{rmatrix} \mB \begin{rmatrix} x_1\\x_2\\x_3 \end{rmatrix}. 
 \]
-Siis $\my = \mA\mx$, miss‰
+Siis $\my = \mA\mx$, miss√§
 \[ 
 \mA\ =\ \frac{1}{3} \begin{rmatrix} 1&0\\1&1\\0&1 \end{rmatrix} 
                     \begin{rmatrix} 2&1&-1\\-1&1&2 \end{rmatrix}\ =\ 
         \frac{1}{3} \begin{rmatrix} 2&1&-1\\1&2&1\\-1&1&2 \end{rmatrix}. 
 \]
-\pain{Tarkistus}: Soveltamalla yht‰lˆryhm‰‰n $\mA\mx = \mv{0}$ Gaussin algoritmia saadaan 
-ratkaisuksi $\mx = t[1,-1,1]^T,\ t\in\R$. T‰m‰ sopii yhteen sen tiedon kanssa, ett‰ tason $T$
+\pain{Tarkistus}: Soveltamalla yht√§l√∂ryhm√§√§n $\mA\mx = \mv{0}$ Gaussin algoritmia saadaan 
+ratkaisuksi $\mx = t[1,-1,1]^T,\ t\in\R$. T√§m√§ sopii yhteen sen tiedon kanssa, ett√§ tason $T$
 normaalivektori on $\ \vec n = \vec i-\vec j+\vec k$. \quad \loppu
 
-Ortogonaaliprojektion avulla voidaan myˆs peilauskuvaus m‰‰ritell‰ helposti: Jos $P_0$ on
-$P$:n projektiopiste, niin $\Vect{OQ} = \Vect{OP} + 2\,\Vect{PP}_0$ m‰‰ritt‰‰ peilikuvan $Q$.
+Ortogonaaliprojektion avulla voidaan my√∂s peilauskuvaus m√§√§ritell√§ helposti: Jos $P_0$ on
+$P$:n projektiopiste, niin $\Vect{OQ} = \Vect{OP} + 2\,\Vect{PP}_0$ m√§√§ritt√§√§ peilikuvan $Q$.
 \jatko \begin{Exa} (jatko) Taso $T$ kulkee pisteen $(1,-1,2)$ kautta ja tason suuntavektoreita
-ovat $\ \vec{v}_1 = \vec{i} + \vec{j}\ $ ja $\ \vec{v}_2 = \vec{j} + \vec{k}$. M‰‰rit‰ 
+ovat $\ \vec{v}_1 = \vec{i} + \vec{j}\ $ ja $\ \vec{v}_2 = \vec{j} + \vec{k}$. M√§√§rit√§ 
 peilauskuvaus $(x_1,x_2,x_3) \triangleq P \Map Q \triangleq (y_1,y_2,y_3)$ 
 affiinikuvauksena $\my = \mA\mx + \mb$. 
 \end{Exa}
-\ratk Merkit‰‰n $\ma = [1,-1,2]^T$ ja olkoon projektiopiste $P_0 \triangleq (z_1,z_2,z_3)$. 
-T‰llˆin $\mz-\ma = A(\mx-\ma)$, miss‰ $A$ on edellisess‰ esimerkiss‰ laskettu lineaarikuvaus. 
-Kun t‰m‰n matriisia merkit‰‰n nyt symbolilla $\mA_0$, niin on siis
+\ratk Merkit√§√§n $\ma = [1,-1,2]^T$ ja olkoon projektiopiste $P_0 \triangleq (z_1,z_2,z_3)$. 
+T√§ll√∂in $\mz-\ma = A(\mx-\ma)$, miss√§ $A$ on edellisess√§ esimerkiss√§ laskettu lineaarikuvaus. 
+Kun t√§m√§n matriisia merkit√§√§n nyt symbolilla $\mA_0$, niin on siis
 \[ 
 \mz - \ma = \mA_0(\mx - \ma), \quad  \mA_0\ =\ \frac{1}{3} \begin{rmatrix} 
                                                            2&1&-1\\1&2&1\\-1&1&2 
                                                            \end{rmatrix}. 
 \]
-N‰in ollen
+N√§in ollen
 \begin{align*}
 \my\ &=\ \mx + 2(\mz - \mx)\ =\ (2\mA_0-\mI)\mx + 2(\mI-\mA_0)\ma \\[2mm]
      &=\ \frac{1}{3} \begin{rmatrix} 1&2&-2\\2&1&2\\-2&2&1 \end{rmatrix} 
@@ -171,8 +171,8 @@ N‰in ollen
 \end{align*}
 \begin{Exa} Tulkitse kierto tasossa lineaarikuvauksina $\mx \map \my = \mA\mx$. \end{Exa}
 \ratk  Vektorin kierto tasossa annetun kulman $\varphi$ verran on tulkittavissa joko
-lineaarikuvauksena tyyppi‰ $A: \R^2\kohti\R^2$ tai kompleksitason kuvauksena
-$z = x_1 + i x_2 \Map w = y_1 + iy_2$. J‰lkimm‰isen tulkinnan perusteella on
+lineaarikuvauksena tyyppi√§ $A: \R^2\kohti\R^2$ tai kompleksitason kuvauksena
+$z = x_1 + i x_2 \Map w = y_1 + iy_2$. J√§lkimm√§isen tulkinnan perusteella on
 \begin{align*}
  y_1 + i y_2 &= (\cos\varphi + i \sin\varphi)(x_1 + i x_2) \\ 
              &= (x_1\cos\varphi - x_2\sin\varphi) + i(x_1\sin\varphi + x_2\cos\varphi),
@@ -184,14 +184,14 @@ joten $A$:n matriisi on
         \end{rmatrix}. \qquad \loppu 
 \]
 \index{kierto!a@geom.\ kuvaus}%
-Myˆs pisteen \kor{kierto avaruussuoran ymp‰ri} on tulkittavissa affiinikuvauksena: Jos $P_0$ on
+My√∂s pisteen \kor{kierto avaruussuoran ymp√§ri} on tulkittavissa affiinikuvauksena: Jos $P_0$ on
 $P$:n kohtisuora projektio suoralle $S$ (erikoistapaus yhdensuuntaisprojektiosta 
-avaruussuoralle), niin $\Vect{OQ} = \Vect{OP}_0 + \Vect{P_0 Q}$, miss‰ $\Vect{P_0 Q} =$ vektori
-$\Vect{P_0 P}$ kierrettyn‰ pisteen $P_0$ kautta kulkevassa tasossa, jonka normaali on $S$. 
+avaruussuoralle), niin $\Vect{OQ} = \Vect{OP}_0 + \Vect{P_0 Q}$, miss√§ $\Vect{P_0 Q} =$ vektori
+$\Vect{P_0 P}$ kierrettyn√§ pisteen $P_0$ kautta kulkevassa tasossa, jonka normaali on $S$. 
 \jatko \begin{Exa} (jatko) Vektorin $\vec{r} = x_1 \vec{i} + x_2 \vec{j} + x_3 \vec{k}$ 
-kiertyess‰ $x_1$-akselin ymp‰ri pysyy komponentti  $x_1$ muuttumattomana ja $[x_2,x_3]^T$
-muuntuu kuten tasokierrossa. N‰in ollen kierto vastaa lineaarikuvausta 
-$\mv{f}(\mx) = \mA\mx$, miss‰
+kiertyess√§ $x_1$-akselin ymp√§ri pysyy komponentti  $x_1$ muuttumattomana ja $[x_2,x_3]^T$
+muuntuu kuten tasokierrossa. N√§in ollen kierto vastaa lineaarikuvausta 
+$\mv{f}(\mx) = \mA\mx$, miss√§
 \[ 
 \mA\ =\ \begin{rmatrix} 
          1&0&0\\0&\cos\varphi&-\sin\varphi\\0&\sin\varphi&\cos\varphi 
@@ -199,162 +199,162 @@ $\mv{f}(\mx) = \mA\mx$, miss‰
 \] 
 \end{Exa}
 
-Siirron, taso- tai avaruuskierron, peilauksen ja skaalauksen yhdistelmi‰ $E^n$:ss‰ 
+Siirron, taso- tai avaruuskierron, peilauksen ja skaalauksen yhdistelmi√§ $E^n$:ss√§ 
 ($n=2$ tai $n=3$) kutsutaan
 \index{euklidinen kuvaus}%
-\kor{euklidisiksi kuvauksiksi}\footnote[2]{Kuvausta $K \Map \mv{f}(K)$, miss‰ $\mv{f}$ on
-pelk‰st‰‰n siirtojen ja kiertojen yhdistelm‰, sanotaan \kor{euklidiseksi liikkeeksi},
-mekaniikassa (kun $K \subset \Ekolme$ edustaa kiinte‰‰ kappaletta) j‰yk‰n kappaleen
+\kor{euklidisiksi kuvauksiksi}\footnote[2]{Kuvausta $K \Map \mv{f}(K)$, miss√§ $\mv{f}$ on
+pelk√§st√§√§n siirtojen ja kiertojen yhdistelm√§, sanotaan \kor{euklidiseksi liikkeeksi},
+mekaniikassa (kun $K \subset \Ekolme$ edustaa kiinte√§√§ kappaletta) j√§yk√§n kappaleen
 liikkeeksi. \index{euklidinen liike|av}}. Euklidisen tason kahta pistejoukkoa
-$K_1 \subset E^2$ ja $K_2 \subset E^2$ (n‰m‰ voivat olla geometrisia kuvioita kuten kolmioita)
+$K_1 \subset E^2$ ja $K_2 \subset E^2$ (n√§m√§ voivat olla geometrisia kuvioita kuten kolmioita)
 \index{yhdenmuotoisuus}%
 sanotaan \kor{yhdenmuotoisiksi}, jos on olemassa euklidinen kuvaus $\mv{f}:\ E^2 \kohti E^2$
-siten, ett‰ $K_2 = \mv{f}(K_1)$. Jos $\mv{f}$ koostuu vain siirroista, kierroista ja
-peilauksista, niin sanotaan, ett‰ $K_1$ ja $\mv{f}(K_2)$ ovat
+siten, ett√§ $K_2 = \mv{f}(K_1)$. Jos $\mv{f}$ koostuu vain siirroista, kierroista ja
+peilauksista, niin sanotaan, ett√§ $K_1$ ja $\mv{f}(K_2)$ ovat
 \index{yhtenevyys}%
-\kor{yhtenev‰t}.
+\kor{yhtenev√§t}.
 
 \subsection*{*$\R^n$:n geometriaa}
 
 Geometrinen ajattelu voidaan ulottaa yleisesti avaruuteen $\R^n$, jolloin $\R^n$:n alkiot ovat
-(kuvitellun) euklidisen pisteavaruuden $E^n$ pisteiden vastineita. Sanonta 'pisteess‰ $\mx$' on
-t‰llˆin tulkittava niin, ett‰ piste $P \in E^n$ ja sen vastine $\mx \in \R^n$ 
+(kuvitellun) euklidisen pisteavaruuden $E^n$ pisteiden vastineita. Sanonta 'pisteess√§ $\mx$' on
+t√§ll√∂in tulkittava niin, ett√§ piste $P \in E^n$ ja sen vastine $\mx \in \R^n$ 
 ($=P$:n koordinaatit $\R^n$:n valitussa ortonormeeratussa kannassa) samastetaan, tai
-j‰lkimm‰inen tulkitaan edellisen 'nimeksi'. Kun omaksutaan t‰m‰ ajattelutapa, niin geometrian
+j√§lkimm√§inen tulkitaan edellisen 'nimeksi'. Kun omaksutaan t√§m√§ ajattelutapa, niin geometrian
 pisteet, janat, kolmiot ym.\ voidaan tuoda luontevasti suoraan avaruuteen $\R^n$.
 
-Seuraavassa luetellaan er‰it‰ tavallisimpia geometrian k‰sitteit‰ avaruuteen $\R^n$ tuotuina ja
-yleistettyin‰:
+Seuraavassa luetellaan er√§it√§ tavallisimpia geometrian k√§sitteit√§ avaruuteen $\R^n$ tuotuina ja
+yleistettyin√§:
 \begin{itemize}
 \item[---] \kor{Piste} on alkio $\ma \in \R^n$. \index{piste ($\R^n$:n)}
 \item[---] \kor{Suora} on pistejoukko \index{suora}
-           $S = \{\mx \in \R^n \mid \mx = \mx_0 + t\mv{v},\ t \in \R\}$, miss‰ \\ 
+           $S = \{\mx \in \R^n \mid \mx = \mx_0 + t\mv{v},\ t \in \R\}$, miss√§ \\ 
            $\mx_0,\mv{v} \in \R^n$ ja $\mv{v} \neq \mv{0}$.
 \item[---] \kor{Hypertaso} (\kor{taso} tapauksessa $n=3$) on pistejoukko \\
            $T = \{\mx \in \R \mid \mx = \mx_0 + \sum_{i=1}^{n-1} t_i \mv{v}_i,\ \mv{t} 
-              = (t_i) \in \R^{n-1}\}$, miss‰ \\
+              = (t_i) \in \R^{n-1}\}$, miss√§ \\
            $\mx_0,\mv{v}_i \in \R^n$ ja $\{\mv{v}_1, \ldots \mv{v}_{n-1}\}$ on lineaarisesti 
            riippumaton. \index{taso!a@hypertaso, $m$-taso} \index{hypertaso}
 \item[---] \kor{$m$-taso} ($m$-ulotteinen taso) on pistejoukko \\
            $T = \{\mx \in \R \mid \mx = \mx_0 + \sum_{i=1}^{m} t_i \mv{v}_i,\ \mv{t} 
-              = (t_i) \in \R^m\}$, miss‰ \\
+              = (t_i) \in \R^m\}$, miss√§ \\
            $2 \le m \le n-1,\ \mx_0,\mv{v}_i \in \R^n$ ja $\{\mv{v}_1, \ldots \mv{v}_m\}$ on 
            lineaarisesti riippumaton.
 \item[---] \kor{Jana}  on pistejoukko 
            $S = \{\mx \in \R^n \mid \mx 
               = \lambda\ma_1 + (1-\lambda)\ma_2,\ \lambda \in [0,1]\}$, \\
-           miss‰ $\ma_1,\ma_2 \in \R^n$ ja $\ma_1 \neq \ma_2$. \index{jana ($\R^n$:n)}
+           miss√§ $\ma_1,\ma_2 \in \R^n$ ja $\ma_1 \neq \ma_2$. \index{jana ($\R^n$:n)}
 \item[---] \kor{Kolmio} on pistejoukko \\
            $K = \{\mx \in \R^n \mid \mx = \sum_{i=1}^3 \lambda_i \ma_i,\ 
-                             \lambda_i \in [0,1],\ \ \sum_{i=1}^3 \lambda_i = 1\}$, miss‰ \\
+                             \lambda_i \in [0,1],\ \ \sum_{i=1}^3 \lambda_i = 1\}$, miss√§ \\
            $\ma_1,\ma_2,\ma_3 \in \R^n$ ja $\{\ma_2-\ma_1,\ma_3-\ma_1\}$ on lineaarisesti 
            riippumaton. \index{kolmio ($\R^n$:n)}
-\item[---] \kor{$m$-simpleksi} ($2†\le m \le n+1$) on pistejoukko \\
+\item[---] \kor{$m$-simpleksi} ($2¬†\le m \le n+1$) on pistejoukko \\
            $K = \{\mx \in \R^n \mid \mx 
               = \sum_{i=1}^m \lambda_i \ma_i,\ \lambda_i \in [0,1],\ \ 
-                \sum_{i=1}^m \lambda_i = 1\}$, miss‰ \\
+                \sum_{i=1}^m \lambda_i = 1\}$, miss√§ \\
            $\ma_i \in \R^n$ ja $\{\ma_2-\ma_1, \ldots, \ma_m-\ma_1\}$ on lineaarisesti 
            riippumaton. \index{simpleksi}
-\item[---] \kor{$m$-suuntaiss‰rmiˆ} ($2 \le m \le n$) on pistejoukko \\
+\item[---] \kor{$m$-suuntaiss√§rmi√∂} ($2 \le m \le n$) on pistejoukko \\
            $K = \{\mx \in \R^n \mid \mx 
-              = \mx_0+\sum_{i=1}^m \lambda_i \ma_i,\ \lambda_i \in [0,1]\}$, miss‰ 
+              = \mx_0+\sum_{i=1}^m \lambda_i \ma_i,\ \lambda_i \in [0,1]\}$, miss√§ 
            $\mx_0,\ma_i\in\R^n$ ja $\{\ma_1,\ldots,\ma_m\}$ on lineaarisesti riippumaton
-           \index{suuntaiss‰rmiˆ ($\R^n$:n)}
+           \index{suuntaiss√§rmi√∂ ($\R^n$:n)}
 \item[---] \kor{Pallo (kuula)} on pistejoukko 
-           $B(\mx_0,R) = \{\mx \in \R^n \mid \abs{\mx-\mx_0} \le R\}$, miss‰ \\
+           $B(\mx_0,R) = \{\mx \in \R^n \mid \abs{\mx-\mx_0} \le R\}$, miss√§ \\
            $\mx_0 \in \R^n$ ja $R>0$. \index{kuula}
 \item[---] \kor{Pallopinta} on pistejoukko $K = \{\mx \in \R^n \mid \abs{\mx-\mx_0} = R\}$, 
-           miss‰ \\
+           miss√§ \\
            $\mx_0 \in \R^n$ ja $R>0$. \index{pallo(pinta)}
 \item[---] \kor{$n$-suorakulmio} (koordinaatiakselien mukaan suunnattu) on pistejoukko \\
-           $K = \{\mx = (x_i) \in \R^n \mid x_i \in [a_i,b_i],\ i = 1 \ldots n\}$, miss‰ \\
+           $K = \{\mx = (x_i) \in \R^n \mid x_i \in [a_i,b_i],\ i = 1 \ldots n\}$, miss√§ \\
            $a_i,b_i \in \R,\ a_i < b_i,\ i = 1 \ldots n$. \index{n@$n$-suorakulmio}
 \end{itemize}
-M‰‰ritelmien  mukaisesti hypertaso = $(n-1)$--ulotteinen taso, $2$-simpleksi = jana, 
+M√§√§ritelmien  mukaisesti hypertaso = $(n-1)$--ulotteinen taso, $2$-simpleksi = jana, 
 $3$-simpleksi = kolmio ja $\R^3$:n $4$-simpleksi = tetraedri. Hypertason ja $m$-tason 
-m‰‰ritelmiss‰ sanotaan vektoreita $\mv{v}_i$ ko.\ tason
+m√§√§ritelmiss√§ sanotaan vektoreita $\mv{v}_i$ ko.\ tason
 \index{suuntavektori}%
 \kor{suuntavektoreiksi}. Simpleksin 
-\index{kzy@k‰rkipiste (simpleksin)}%
-m‰‰ritelm‰ss‰ pisteet $\ma_i$ ovat simpleksin \kor{k‰rkipisteet} (engl.\ vertex). Jos
-$n$-suorakulmiossa on $b_i-a_i = a,\ i = 1 \ldots n$, niin kyseess‰ on 
+\index{kzy@k√§rkipiste (simpleksin)}%
+m√§√§ritelm√§ss√§ pisteet $\ma_i$ ovat simpleksin \kor{k√§rkipisteet} (engl.\ vertex). Jos
+$n$-suorakulmiossa on $b_i-a_i = a,\ i = 1 \ldots n$, niin kyseess√§ on 
 \index{n@$n$-kuutio}%
 \kor{$n$-kuutio} (sivun pituus $\,a$).
 
-Ym.\ m‰‰ritelm‰ss‰ on hypertaso ja $m$-taso esitetty
+Ym.\ m√§√§ritelm√§ss√§ on hypertaso ja $m$-taso esitetty
 \index{parametri(sointi)!e@hypertason, $m$-tason}%
-\kor{parametrisessa} muodossa suuntavektoreittensa $\mv{v}_i$ avulla. Hypertasolle voidaan myˆs
-kirjoittaa \kor{hypertason yht‰lˆ} muodossa
+\kor{parametrisessa} muodossa suuntavektoreittensa $\mv{v}_i$ avulla. Hypertasolle voidaan my√∂s
+kirjoittaa \kor{hypertason yht√§l√∂} muodossa
 \[ 
 T:\ \ \scp{\mx-\mx_0}{\mv{n}} = \mv{n}^T(\mx-\mx_0) = 0, 
 \]
-miss‰ vektori $\mv{n}$ on $T$:n
+miss√§ vektori $\mv{n}$ on $T$:n
 \index{normaali(vektori)!b@tason, hypertason}%
 \kor{normaali}, eli kohtisuorassa vektoreita $\mv{v}_i$ vastaan.
-T‰llainen $\mv{n}$ on lˆydett‰viss‰ esim.\ ortogonaaliprojektion avulla, vrt.\ Esimerkki 
-\ref{projektioesimerkki} edellisess‰ luvussa. Yleisemmin voidaan $m$-taso m‰‰ritell‰ 
-yht‰lˆryhm‰ll‰
+T√§llainen $\mv{n}$ on l√∂ydett√§viss√§ esim.\ ortogonaaliprojektion avulla, vrt.\ Esimerkki 
+\ref{projektioesimerkki} edellisess√§ luvussa. Yleisemmin voidaan $m$-taso m√§√§ritell√§ 
+yht√§l√∂ryhm√§ll√§
 \[ 
 T:\ \ \scp{\mx-\mx_0}{\mv{n}_i} = 0, \quad i = 1 \ldots n-m, 
 \]
-miss‰ vektorit $\mv{n}_i$ ovat kesken‰‰n lineaarisesti riippumattomia $T$:n normaalivektoreita.
-Hypertasoihin ja $m$-tasoihin liittyvi‰ geometrisia ongelmia voidaan tyypillisesti ratkaista 
+miss√§ vektorit $\mv{n}_i$ ovat kesken√§√§n lineaarisesti riippumattomia $T$:n normaalivektoreita.
+Hypertasoihin ja $m$-tasoihin liittyvi√§ geometrisia ongelmia voidaan tyypillisesti ratkaista 
 matriisialgebran avulla.
-\begin{Exa} Mill‰ ehdolla hypertasot
+\begin{Exa} Mill√§ ehdolla hypertasot
 \[ 
 T_i:\ \ \scp{\mx-\ma_i}{\mv{n}_i} = 0, \quad i = 1, \ldots, n 
 \]
-leikkaavat t‰sm‰lleen yhdess‰ pisteess‰? 
+leikkaavat t√§sm√§lleen yhdess√§ pisteess√§? 
 \end{Exa}
-\ratk Matriisialgebran mukaan tasojen $T_i$ yht‰lˆt muodostavat lineaarisen yht‰lˆryhm‰n 
-$\mA\mx = \mb$, miss‰ \mA:n $i$:s rivi $= \mv{n}_i^T$ ja $[\mb]_i = \scp{\ma_i}{\mv{n}_i}$. 
-Siis vastaus on: T‰sm‰lleen sill‰ ehdolla, ett‰ $\mA$ on s‰‰nnˆllinen eli ett‰ normaalivektorit
+\ratk Matriisialgebran mukaan tasojen $T_i$ yht√§l√∂t muodostavat lineaarisen yht√§l√∂ryhm√§n 
+$\mA\mx = \mb$, miss√§ \mA:n $i$:s rivi $= \mv{n}_i^T$ ja $[\mb]_i = \scp{\ma_i}{\mv{n}_i}$. 
+Siis vastaus on: T√§sm√§lleen sill√§ ehdolla, ett√§ $\mA$ on s√§√§nn√∂llinen eli ett√§ normaalivektorit
 $\mv{n}_i$ muodostavat lineaarisesti riippumattoman systeemin ($\R^n$:n kannan). \loppu  
 
-\subsection*{*Lineaarinen optimointi $\R^n$:ss‰}
+\subsection*{*Lineaarinen optimointi $\R^n$:ss√§}
 \index{lineaarinen optimointi|vahv} \index{optimointi!a@lineaarinen optimointi|vahv}
 
 Reaaliarvoisen $\R^n$:n lineaarikuvauksen $L:\ \R^n \kohti \R$ yleinen muoto on
 \[ 
 L\mx = \ma^T \mx,
 \]
-miss‰ $\ma \in \R^n$ (oletetaan jatkossa: $\ma\neq\mv{0}$). T‰llaisen funktion maksimi- tai 
-minimiarvon etsimist‰ annetussa joukossa $K \subset \R^n$ sanotaan \kor{lineaarisen optimoinnin}
-teht‰v‰ksi. Jos $T$ on hypertaso, jonka yht‰lˆ on
+miss√§ $\ma \in \R^n$ (oletetaan jatkossa: $\ma\neq\mv{0}$). T√§llaisen funktion maksimi- tai 
+minimiarvon etsimist√§ annetussa joukossa $K \subset \R^n$ sanotaan \kor{lineaarisen optimoinnin}
+teht√§v√§ksi. Jos $T$ on hypertaso, jonka yht√§l√∂ on
 \[ 
 T:\ \ \scp{\ma}{\mx-\mx_0}=\ma^T(\mx-\mx_0)= 0, 
 \]
-niin $L\mx = \ma^T \mx_0=$ vakio, kun $\mx \in T$, eli t‰llaiset hypertasot ovat $L$:n 
+niin $L\mx = \ma^T \mx_0=$ vakio, kun $\mx \in T$, eli t√§llaiset hypertasot ovat $L$:n 
 \index{tasa-arvopinta}%
 \kor{tasa-arvopintoja}. Toisaalta jos tarkastellaan $L$:n arvoja pisteen $\mv{c}$ kautta 
 kulkevalla, tasa-arvopintoja vastaan kohtisuoralla suoralla
 \[ 
 S:\ \ \mx = \mv{c} + t \ma,\ \ t \in \R, 
 \]
-niin n‰hd‰‰n, ett‰ t‰ll‰ suoralla on
+niin n√§hd√§√§n, ett√§ t√§ll√§ suoralla on
 \[
 L\mx = L(\mv{c}+t\ma) = \alpha t+\beta, \quad \alpha = \abs{\ma}^2 > 0,\ \beta = \ma^T\mv{c}.
 \]
-Jos nyt $L$:n tasa-arvopintojen yht‰lˆss‰ valitaan $\mx_0 = \mv{c}+t\ma \in S$, ja merkit‰‰n 
-t‰t‰ tasa-arvopintaa (hypertasoa) $T_t$:ll‰, niin parametria $t$ vaihtelemalla tulee koko
-avaruus $\R^n$ 'pyyhityksi' hypertasoilla $T_t$. T‰llˆin n‰hd‰‰n heti, ett‰ jos $L$:ll‰ on 
-pistejoukossa $K$ maksimi- tai minimiarvo, niin t‰m‰n on oltava vastaavasti pienin\,/\,suurin 
+Jos nyt $L$:n tasa-arvopintojen yht√§l√∂ss√§ valitaan $\mx_0 = \mv{c}+t\ma \in S$, ja merkit√§√§n 
+t√§t√§ tasa-arvopintaa (hypertasoa) $T_t$:ll√§, niin parametria $t$ vaihtelemalla tulee koko
+avaruus $\R^n$ 'pyyhityksi' hypertasoilla $T_t$. T√§ll√∂in n√§hd√§√§n heti, ett√§ jos $L$:ll√§ on 
+pistejoukossa $K$ maksimi- tai minimiarvo, niin t√§m√§n on oltava vastaavasti pienin\,/\,suurin 
 luku reaalilukujoukossa
 \[
 A = \{t\in\R \mid T_t \cap K \neq \emptyset\}.
 \]
-Optimointiongelma on n‰in 'ratkaistu' geometrisesti. --- Idean soveltaminen k‰yt‰ntˆˆn kyll‰kin
-edellytt‰‰, ett‰ joukko $A$ on m‰‰r‰tt‰viss‰. Seuraavassa esimerkiss‰ $K$ on geometrisesti 
-yksinkertainen ja $n$ kohtuullinen, jolloin ongelma ratkeaa 'k‰sipelill‰'. 
-\begin{Exa} M‰‰rit‰ funktion $f(x_1,x_2,x_3,x_4) = 2x_1-4x_2+5x_3-6x_4$ pienin ja suurin arvo
+Optimointiongelma on n√§in 'ratkaistu' geometrisesti. --- Idean soveltaminen k√§yt√§nt√∂√∂n kyll√§kin
+edellytt√§√§, ett√§ joukko $A$ on m√§√§r√§tt√§viss√§. Seuraavassa esimerkiss√§ $K$ on geometrisesti 
+yksinkertainen ja $n$ kohtuullinen, jolloin ongelma ratkeaa 'k√§sipelill√§'. 
+\begin{Exa} M√§√§rit√§ funktion $f(x_1,x_2,x_3,x_4) = 2x_1-4x_2+5x_3-6x_4$ pienin ja suurin arvo
 $\R^4$:n pallossa
 \[
 K= \{\mx\in\R^4 \mid \abs{\mx-\mx_0} \le R\}, \quad 
-               \text{miss‰}\,\ \mx_0=(1,-1,3,2)\,\ \text{ja}\,\ R=3. 
+               \text{miss√§}\,\ \mx_0=(1,-1,3,2)\,\ \text{ja}\,\ R=3. 
 \]
 \end{Exa}
-\ratk T‰ss‰ on $f(\mx)=L\mx=\ma^T\mx,\ \ma=[2,-4,5,-6]^T,\ \mx=[x_1,x_2,x_3,x_4]^T$. Jos $T_t$
-on $\R^4$:n hypertaso, joka kulkee pisteen $P_t \vastaa \mx_0+t\ma$ kautta, niin p‰tee
+\ratk T√§ss√§ on $f(\mx)=L\mx=\ma^T\mx,\ \ma=[2,-4,5,-6]^T,\ \mx=[x_1,x_2,x_3,x_4]^T$. Jos $T_t$
+on $\R^4$:n hypertaso, joka kulkee pisteen $P_t \vastaa \mx_0+t\ma$ kautta, niin p√§tee
 \[
 T_t \cap K \neq \emptyset \qekv \abs{t\ma}=\abs{t}\abs{\ma} 
                                           \le 3 \qekv \abs{t}\ 
@@ -371,38 +371,38 @@ f_{min}=9+81\cdot\left(-\frac{1}{3}\right)=\underline{\underline{-18}}, \quad
 f_{max}=9+81\cdot\frac{1}{3}=\underline{\underline{36}}. \loppu
 \]
 
-Sovelluksissa hyvin yleinen on lineaarisen optimoinnin ongelma, jossa $K$ on m‰‰ritelty 
-\index{lineaarinen ep‰yht‰lˆ}%
-\kor{lineaaristen ep‰yht‰lˆiden} avulla muodossa
+Sovelluksissa hyvin yleinen on lineaarisen optimoinnin ongelma, jossa $K$ on m√§√§ritelty 
+\index{lineaarinen ep√§yht√§l√∂}%
+\kor{lineaaristen ep√§yht√§l√∂iden} avulla muodossa
 \[
 K = \{\mx\in\R^n \mid \ma_i^T\mx \le c_i\,,\ i=1\,\ldots\,m\},
 \]
-miss‰ $\ma_i\in\R^n,\ \ma_i\neq\mv{0}$, ja $c_i\in\R$. Joukkoa $K$ voi luonnehtia geometrisesti
+miss√§ $\ma_i\in\R^n,\ \ma_i\neq\mv{0}$, ja $c_i\in\R$. Joukkoa $K$ voi luonnehtia geometrisesti
 \index{monitahokas ($\R^n$:n)}%
-\kor{monitahokkaaksi}, jota hypertasot $T_i\,:\ \ma_i^T\mx=c_i$ rajoittavat (yleens‰ on $m>n$).
-T‰llaista ongelmaa on perinteisesti kutsuttu
+\kor{monitahokkaaksi}, jota hypertasot $T_i\,:\ \ma_i^T\mx=c_i$ rajoittavat (yleens√§ on $m>n$).
+T√§llaista ongelmaa on perinteisesti kutsuttu
 \index{lineaarinen optimointi!lineaarinen ohjelmointi}%
-\kor{lineaarisen ohjelmoinnin} (engl.\ linear programming) ongelmaksi. Ongelman sek‰ suoraan
-(periaatteessa tarkkaan) ett‰ likim‰‰r‰iseen iteratiiviseen ratkaisuun on kehitetty algoritmeja.
+\kor{lineaarisen ohjelmoinnin} (engl.\ linear programming) ongelmaksi. Ongelman sek√§ suoraan
+(periaatteessa tarkkaan) ett√§ likim√§√§r√§iseen iteratiiviseen ratkaisuun on kehitetty algoritmeja.
 
 \Harj
 \begin{enumerate}
 
 \item
-Millaiseksi muuntuu \, a) suorakulmio, jonka k‰rjet ovat pisteiss‰ $(1,1)$, $(3,1)$, $(3,2)$ ja
-$(1,2)$, \ b) yksikkympyr‰ $S:\,x^2+y^2=1$ affiinikuvauksessa
+Millaiseksi muuntuu \, a) suorakulmio, jonka k√§rjet ovat pisteiss√§ $(1,1)$, $(3,1)$, $(3,2)$ ja
+$(1,2)$, \ b) yksikkympyr√§ $S:\,x^2+y^2=1$ affiinikuvauksessa
 \[
 \mf(x,y)=\begin{bmatrix} 1&2\\3&4 \end{bmatrix} \begin{bmatrix} x\\y \end{bmatrix} +
          \begin{bmatrix} 5\\6 \end{bmatrix} \ ?
 \]
-Piirr‰ kuva! M‰‰rit‰ myˆs k‰yr‰n $S'=\mf(S)$ yht‰lˆ.
+Piirr√§ kuva! M√§√§rit√§ my√∂s k√§yr√§n $S'=\mf(S)$ yht√§l√∂.
 
 \item
-Esit‰ affiinikuvuaksena: $\mf:\,\R^2\kohti\R^2$ tai $\mf:\,\R^3\kohti\R^3$\,: 
+Esit√§ affiinikuvuaksena: $\mf:\,\R^2\kohti\R^2$ tai $\mf:\,\R^3\kohti\R^3$\,: 
 \vspace{1mm}\newline
 a) \ Kohtisuora projektio tasossa suoralle $x+2y+1=0$ \newline
 b) \ Projektio suoralle $x-3y-2=0$ suoran $y=2x$ suunnassa \newline
-c) \ Kierto tasossa pisteen $(2,3)$ ymp‰ri $60\aste$ vastap‰iv‰‰n \newline
+c) \ Kierto tasossa pisteen $(2,3)$ ymp√§ri $60\aste$ vastap√§iv√§√§n \newline
 d) \ Projektio tasolle $T:\,x+2z-3y+3=0$ vektorin $\vec i+\vec j-\vec k$ suunnassa \newline
 e) \ Peilaus tason $T:\,3x-2y+z-5=0$ suhteen \newline
 f) \ Peilaus avaruussuoran $S:\,\vec r=(1+t)\vec i+(t-2)\vec j+(2t-3)\vec k$ suhteen
@@ -412,22 +412,22 @@ Taso $T$ kulkee origon kautta ja sen suuntavektoreita ovat $\vec a_1=\vec i+\vec
 $\vec a_2=\vec j-2\vec k$. Suora $S$ kulkee pisteen $(0,1,2)$ kautta ja sen suuntavektori on
 $\vec a_3=-\vec i+\vec j+\vec k$. \vspace{1mm}\newline
 a) Olkoon $\my=[y_1,y_2,y_3]^T$ vektorin $x_i\vec i+x_2\vec j+x_3\vec k$ koordinaatit kannassa
-$\{\vec a_1,\vec a_2,\vec a_3\}$. M‰‰rit‰ lineaarikuvaus $\mx\map\my$, ts.\ matriisi $\mC$
-siten, ett‰ $\my=\mC\mx$. \newline
-b) K‰ytt‰en a-kohdan tulosta ja matriisialgebraa m‰‰rit‰ affiinikuvaus $\mf(\mx)=\mA\mx+\mb$,
+$\{\vec a_1,\vec a_2,\vec a_3\}$. M√§√§rit√§ lineaarikuvaus $\mx\map\my$, ts.\ matriisi $\mC$
+siten, ett√§ $\my=\mC\mx$. \newline
+b) K√§ytt√§en a-kohdan tulosta ja matriisialgebraa m√§√§rit√§ affiinikuvaus $\mf(\mx)=\mA\mx+\mb$,
 joka suorittaa pisteen $P=(x_1,x_2,x_3)$ suuntaisprojisoinnin suoralle $S$ tason $T$
 suunnassa ($\mf:\,\R^3\kohti\R^3$). \newline
-c) M‰‰rittele affiinikuvaus tyyppi‰ $\mf:\,\R^3\kohti\R^2$, joka suorittaa pisteen
+c) M√§√§rittele affiinikuvaus tyyppi√§ $\mf:\,\R^3\kohti\R^2$, joka suorittaa pisteen
 $P=(x_1,x_2,x_3)$ projisoinnin suoran $S$ sunnassa tason $T$ pisteeksi $Q$, joka on ilmoitettu
 koordinaatteina kannassa $\{\ma_1,\ma_2\}$. 
 
 \item
-Vektori $\vec b$ saadaan vektorista $\vec a=2\vec i+\vec j+2\vec k$ kiert‰m‰ll‰ $\vec a$:ta
-ensin $x$-akselin ymp‰ri kulma $30\aste$ ja n‰in saatua vektoria edelleen $y$-akselin ymp‰ri
-$60\aste$ (kierrot positiivisten koordinaattiakselien suunnasta katsoen vastap‰iv‰‰n). M‰‰rit‰
-kummankin kierto-operaation (lineaarikuvauksia) matriisit, n‰iden avulla koko operaation
-matriisi $\mA$ ja $\mA$:n avulla vektori $\vec b$. Mit‰ vektoria mainituilla tavoilla
-kierrett‰ess‰ saadaan lopputulokseksi $\vec b=\vec k$\,?
+Vektori $\vec b$ saadaan vektorista $\vec a=2\vec i+\vec j+2\vec k$ kiert√§m√§ll√§ $\vec a$:ta
+ensin $x$-akselin ymp√§ri kulma $30\aste$ ja n√§in saatua vektoria edelleen $y$-akselin ymp√§ri
+$60\aste$ (kierrot positiivisten koordinaattiakselien suunnasta katsoen vastap√§iv√§√§n). M√§√§rit√§
+kummankin kierto-operaation (lineaarikuvauksia) matriisit, n√§iden avulla koko operaation
+matriisi $\mA$ ja $\mA$:n avulla vektori $\vec b$. Mit√§ vektoria mainituilla tavoilla
+kierrett√§ess√§ saadaan lopputulokseksi $\vec b=\vec k$\,?
 
 \item
 Osoita lineaarikuvaus
@@ -435,16 +435,16 @@ Osoita lineaarikuvaus
 \mf(x,y)=\frac{1}{25}\begin{rmatrix} 7&-24\\-24&-7 \end{rmatrix} 
                      \begin{bmatrix} x\\y \end{bmatrix}
 \]
-peilaukseksi er‰‰n suoran suhteen ja m‰‰rit‰ suoran yht‰lˆ.
+peilaukseksi er√§√§n suoran suhteen ja m√§√§rit√§ suoran yht√§l√∂.
 
 \item
-Kolmion $A$ k‰rjet ovat pisteiss‰ $(0,0)$, $(1,0)$ ja $(0,1)$ ja kolmion $B$ k‰rjet ovat 
-pisteiss‰ $(-1,1)$, $(-2,2)$ ja $(-3,0)$. M‰‰rit‰ kaikki kolmiot $C$, joille p‰tee $C=\mv{f}(B)$
-ja $B=\mv{f}(A)$, miss‰ $\mv{f}$ on tason affiinikuvaus.
+Kolmion $A$ k√§rjet ovat pisteiss√§ $(0,0)$, $(1,0)$ ja $(0,1)$ ja kolmion $B$ k√§rjet ovat 
+pisteiss√§ $(-1,1)$, $(-2,2)$ ja $(-3,0)$. M√§√§rit√§ kaikki kolmiot $C$, joille p√§tee $C=\mv{f}(B)$
+ja $B=\mv{f}(A)$, miss√§ $\mv{f}$ on tason affiinikuvaus.
 
 \item
-Seuraavat lineaarikuvaukset m‰‰rittelev‰t yhdensuuntaisprojektion origon kautta kulkevalle
-tasolle $T$ suoran $S$ sunnassa. M‰‰rit‰ $T$:n yht‰lˆ ja $S$:n suuntavektori.
+Seuraavat lineaarikuvaukset m√§√§rittelev√§t yhdensuuntaisprojektion origon kautta kulkevalle
+tasolle $T$ suoran $S$ sunnassa. M√§√§rit√§ $T$:n yht√§l√∂ ja $S$:n suuntavektori.
 \begin{align*}
 &\text{a)}\ \ \begin{bmatrix} x'\\y'\\z' \end{bmatrix} =
               \frac{1}{5}\begin{rmatrix} 4&1&-3\\1&4&3\\-1&1&2 \end{rmatrix}
@@ -455,48 +455,48 @@ tasolle $T$ suoran $S$ sunnassa. M‰‰rit‰ $T$:n yht‰lˆ ja $S$:n suuntavektori.
 \end{align*}
 
 \item 
-N‰yt‰, ett‰ jos affiinimuunnos $\mf:\,\R^n\kohti\R^n$, miss‰ $n=2$ tai $n=3$, on k‰‰ntyv‰, niin
+N√§yt√§, ett√§ jos affiinimuunnos $\mf:\,\R^n\kohti\R^n$, miss√§ $n=2$ tai $n=3$, on k√§√§ntyv√§, niin
 $\mf$  \vspace{1mm}\newline
 a) kuvaa suoran suoraksi ($n=2,3$) ja tason tasoksi ($n=3$) \newline
 b) kuvaa janan janaksi ja kolmion kolmioksi \newline
 c) kuvaa tetraedrin tetraedriksi ($n=3$), \newline
-d) s‰ilytt‰‰ suorien ja tasojen yhdensuuntaisuuden, \newline
-e) s‰ilytt‰‰ kahden yhdensuuntaisen janan pituuksien suhteen. \newline
-f) Miten ominaisuus c) muuttuu, jos $\mf$ ei ole k‰‰ntyv‰?
+d) s√§ilytt√§√§ suorien ja tasojen yhdensuuntaisuuden, \newline
+e) s√§ilytt√§√§ kahden yhdensuuntaisen janan pituuksien suhteen. \newline
+f) Miten ominaisuus c) muuttuu, jos $\mf$ ei ole k√§√§ntyv√§?
 
 \item
-Miss‰ joukon $A\subset\R^4$ pisteess‰ funktio
+Miss√§ joukon $A\subset\R^4$ pisteess√§ funktio
 \[
 f(\mx)=x_1-2x_2-x_3+2x_4
 \]
 saavuttaa suurimman arvonsa, kun $A$ on \vspace{1mm}\newline
-a) yksikkˆkkuutio: $A=\{\mx\in\R^4 \mid \abs{x_i} \le 1,\ i=1 \ldots 4\}$, \newline
-b) yksikkˆpallo: $A=\{\mx\in\R^4 \mid x_1^2+\ldots+x_4^2 \le 1\}$\,?
+a) yksikk√∂kkuutio: $A=\{\mx\in\R^4 \mid \abs{x_i} \le 1,\ i=1 \ldots 4\}$, \newline
+b) yksikk√∂pallo: $A=\{\mx\in\R^4 \mid x_1^2+\ldots+x_4^2 \le 1\}$\,?
 
 \item (*)
-M‰‰rit‰ affiinikuvaus $\mf:\,\R^3\kohti\R^3$, joka suorittaa kierron suoran
-$S:\ x=1+6t,\ y=1-3t,\ z=-2t\,$ ymp‰ri, suunnasta $\vec v=6\vec i-3\vec j-2\vec j$ katsoen
-kulman $\varphi$ verran vastap‰iv‰‰n. \kor{Vihje}: M‰‰rit‰ $\mv{f}$ ensin koordinaatistossa,
+M√§√§rit√§ affiinikuvaus $\mf:\,\R^3\kohti\R^3$, joka suorittaa kierron suoran
+$S:\ x=1+6t,\ y=1-3t,\ z=-2t\,$ ymp√§ri, suunnasta $\vec v=6\vec i-3\vec j-2\vec j$ katsoen
+kulman $\varphi$ verran vastap√§iv√§√§n. \kor{Vihje}: M√§√§rit√§ $\mv{f}$ ensin koordinaatistossa,
 jossa $S$ on koordinaattiakseli --- ks.\
 Harj.teht.\,\ref{lineaarikuvaukset}:\,\ref{H-m-6: kiertoja}a!
 
 \item (*)
-Ratkaise lineaarisen optimoinnin teht‰v‰ $f(x,y,z)=x+2y+3x=$max! ehdoilla
+Ratkaise lineaarisen optimoinnin teht√§v√§ $f(x,y,z)=x+2y+3x=$max! ehdoilla
 \[
 \begin{cases}
 x \ge 0,\ y \ge 0,\ z \ge 0, \\ 2x+y-2z \le 6, \\ -x+5y+z \le 8, \\ 4x+2y+7z \le 23.
 \end{cases}
 \]
-\kor{Vihje}: Riitt‰‰ tutkia monitahokkaan k‰rkipisteet!
+\kor{Vihje}: Riitt√§√§ tutkia monitahokkaan k√§rkipisteet!
 
 \item (*) \index{zzb@\nim!Illaksi kotiin}
-(Illaksi kotiin) Liikemies n‰kee lentokoneesta kotitalonsa suunnassa
-$-2\vec i-3\vec j-\vec k$. Talon perusosa on suorakulmainen s‰rmiˆ, jonka korkeus $=1$ ja
-jonka maan pinnalla olevat nurkat ovat $xy$-tason pisteiss‰ $(0,0)$, $(3,0)$, $(3,2)$ ja
-$(0,2)$. Talossa on symmetrinen harjakatto, harjan korkeus $=2$ ja suunta $=\vec i$. R‰yst‰‰t
-talon sivuilla ja p‰‰dyiss‰ ulottuvat e‰isyydelle $0.2$ seinist‰. M‰‰rittele affiinikuvaus
-$\mf:\,\R^3\map\R^2$, joka muuntaa kolmiulotteisen todellisuuden liikemiehen n‰kem‰ksi
-projektiokuvaksi (oleta luonteva p‰‰n asento). Piirr‰ kuva talosta sellaisena kuin liikemies
-sen n‰kee.
+(Illaksi kotiin) Liikemies n√§kee lentokoneesta kotitalonsa suunnassa
+$-2\vec i-3\vec j-\vec k$. Talon perusosa on suorakulmainen s√§rmi√∂, jonka korkeus $=1$ ja
+jonka maan pinnalla olevat nurkat ovat $xy$-tason pisteiss√§ $(0,0)$, $(3,0)$, $(3,2)$ ja
+$(0,2)$. Talossa on symmetrinen harjakatto, harjan korkeus $=2$ ja suunta $=\vec i$. R√§yst√§√§t
+talon sivuilla ja p√§√§dyiss√§ ulottuvat e√§isyydelle $0.2$ seinist√§. M√§√§rittele affiinikuvaus
+$\mf:\,\R^3\map\R^2$, joka muuntaa kolmiulotteisen todellisuuden liikemiehen n√§kem√§ksi
+projektiokuvaksi (oleta luonteva p√§√§n asento). Piirr√§ kuva talosta sellaisena kuin liikemies
+sen n√§kee.
 
 \end{enumerate}

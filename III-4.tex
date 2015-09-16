@@ -2,31 +2,31 @@
 \alku
 \index{vektoric@vektoriavaruus!b@kompleksikertoiminen|vahv}
 
-Luvussa \ref{tasonvektorit} esiteltiin algebra nimelt‰ (lineaarinen)
-vektoriavaruus, symbolisesti $(U,\K)$, miss‰ $U$ on vektorien muodostama joukko ja $\K$ on
-nk.\ skalaarien muodostama vektoriavaruuden kertojakunta. Vektoriavaruudessa on m‰‰ritelty
+Luvussa \ref{tasonvektorit} esiteltiin algebra nimelt√§ (lineaarinen)
+vektoriavaruus, symbolisesti $(U,\K)$, miss√§ $U$ on vektorien muodostama joukko ja $\K$ on
+nk.\ skalaarien muodostama vektoriavaruuden kertojakunta. Vektoriavaruudessa on m√§√§ritelty
 kaksi laskuoperaatiota, vektorien yhteenlasku ja skalaarilla kertominen, jotka ovat
-funktioita tyyppi‰
+funktioita tyyppi√§
 
 \begin{tabular}{ll}
 yhteenlasku: &$U \times U \kohti U$, \\
 skalaarilla kertominen: &$\K \times U \kohti U$.
 \end{tabular}
 
-Sis‰tuloavaruudeksi sanotaan vektoriavaruutta, jossa on m‰‰ritelty myˆs skalaaritulo
-(eli sis‰tulo, ks.\ Luku \ref{abstrakti skalaaritulo}) funktiona tyyppi‰
+Sis√§tuloavaruudeksi sanotaan vektoriavaruutta, jossa on m√§√§ritelty my√∂s skalaaritulo
+(eli sis√§tulo, ks.\ Luku \ref{abstrakti skalaaritulo}) funktiona tyyppi√§
 
 \begin{tabular}{ll}
 skalaaritulo: &$\qquad\qquad\,\ U \times U \kohti \K$.
 \end{tabular}
 
-T‰h‰n asti on k‰sitelty l‰hinn‰ tapausta $\K = \R$, jolloin puhutaan \kor{reaalikertoimisesta} 
-avaruudesta. Laajennus reaaliluvuista kompleksilukuihin mahdollistaa nyt myˆs 
+T√§h√§n asti on k√§sitelty l√§hinn√§ tapausta $\K = \R$, jolloin puhutaan \kor{reaalikertoimisesta} 
+avaruudesta. Laajennus reaaliluvuista kompleksilukuihin mahdollistaa nyt my√∂s 
 \kor{kompleksikertoimisen} vektoriavaruuden, jossa $\K = \C$. Kompleksikertoiminen 
 vektoriavaruus ei algebrana oleellisesti poikkea reaalikertoimisesta niin kauan kuin vain 
-vektorien yhteenlasku ja skalaarilla kertominen on m‰‰ritelty. Sen sijaan skalaaritulon 
-m‰‰rittely funktiona tyyppi‰ $U \times U \kohti \C$ aiheuttaa teoriaan lis‰piirteit‰, jotka on
-otettava huomioon. Kompleksikertoimisen sis‰tuloavaruuden $(U, \C)$ sis‰tulon 
+vektorien yhteenlasku ja skalaarilla kertominen on m√§√§ritelty. Sen sijaan skalaaritulon 
+m√§√§rittely funktiona tyyppi√§ $U \times U \kohti \C$ aiheuttaa teoriaan lis√§piirteit√§, jotka on
+otettava huomioon. Kompleksikertoimisen sis√§tuloavaruuden $(U, \C)$ sis√§tulon 
 $\scp{\cdot}{\cdot}$ on toteutettava seuraavat ehdot (vrt.\ Luvun \ref{abstrakti skalaaritulo}
 ehdot reaalikertoimiselle tapaukselle)\,:
 \begin{enumerate}
@@ -48,47 +48,47 @@ ehdot reaalikertoimiselle tapaukselle)\,:
 \item[(b)] $\scp{\mpu}{\mpu} = 0 \ \ekv \ \mpu = \mathbf{0}$.
 \end{itemize}
 \end{enumerate}
-Havaitaan, ett‰ reaalikertoimisesta tapauksesta poikkeavat vain symmetriaehto (1) sek‰ 
+Havaitaan, ett√§ reaalikertoimisesta tapauksesta poikkeavat vain symmetriaehto (1) sek√§ 
 sekvilineaarisuusehto (2b) (sekvilineaarinen = $1\frac{1}{2}-$lineaarinen, engl.\ sesquilinear 
 -- vrt. bilineaarinen = kaksoislineaarinen, engl.\ bilinear). Itse asissa vain symmetriaehdon
-ero on olennainen, sill‰ (1) \& (2a) $\impl$ (2b) (Harj.teht.\,\ref{H-III-4: skalaaritulo}).
-Huomattakoon, ett‰ symmetriaehto (1) pit‰‰ erikoistapauksena sis‰ll‰‰n ehdon
+ero on olennainen, sill√§ (1) \& (2a) $\impl$ (2b) (Harj.teht.\,\ref{H-III-4: skalaaritulo}).
+Huomattakoon, ett√§ symmetriaehto (1) pit√§√§ erikoistapauksena sis√§ll√§√§n ehdon
 $\scp{\mpu}{\mpv} = \scp{\mpv}{\mpu}$, kun $\scp{\mpu}{\mpv} \in \R$, joten aiemmin asetettuja
-reaalikertoimisen tapauksen ehtoja ei erillisin‰ en‰‰ tarvita. Koska ehto (1) myˆs takaa, ett‰ 
-$\scp{\mpu}{\mpu}\in\R\,\ \forall \mpu \in U$, niin ehto (3a) on mielek‰s. Uusista ehdoista
-aksioomina tarpeellisia ovat (1), (2a), (3a) ja (3b):n osa $[\impl]$, sill‰ (1) \& (2a)
+reaalikertoimisen tapauksen ehtoja ei erillisin√§ en√§√§ tarvita. Koska ehto (1) my√∂s takaa, ett√§ 
+$\scp{\mpu}{\mpu}\in\R\,\ \forall \mpu \in U$, niin ehto (3a) on mielek√§s. Uusista ehdoista
+aksioomina tarpeellisia ovat (1), (2a), (3a) ja (3b):n osa $[\impl]$, sill√§ (1) \& (2a)
 $\impl$ (2b), kuten sanottu, ja (2a) $\impl$ (3b):n osa $[\Leftarrow]$.
 
-Skalaaritulon keskeinen ominaisuus on Cauchyn--Schwarzin ep‰yht‰lˆ, joka vapautettiin 
-geometriasta Luvussa \ref{abstrakti skalaaritulo}. Varmistetaan nyt, ett‰ ep‰yht‰lˆ p‰tee myˆs
+Skalaaritulon keskeinen ominaisuus on Cauchyn--Schwarzin ep√§yht√§l√∂, joka vapautettiin 
+geometriasta Luvussa \ref{abstrakti skalaaritulo}. Varmistetaan nyt, ett√§ ep√§yht√§l√∂ p√§tee my√∂s
 kompleksikertoimisessa tapauksessa (vrt. Lause \ref{schwarzR}).
-\begin{Lause} \label{schwarzC} \index{Cauchyn!f@--Schwarzin ep‰yht‰lˆ|emph}
+\begin{Lause} \label{schwarzC} \index{Cauchyn!f@--Schwarzin ep√§yht√§l√∂|emph}
 Jokaiselle aksioomat 1--3 toteuttavalle kompleksikertoimisen vektoriavaruuden $U$
-skalaaritulolle p‰tee Cauchyn--Schwarzin ep‰yht‰lˆ
+skalaaritulolle p√§tee Cauchyn--Schwarzin ep√§yht√§l√∂
 \[
 \abs{\scp{\mpu}{\mpv}} \leq \abs{\mpu} \abs{\mpv},
 \]
-miss‰
+miss√§
 \[
 \abs{\mpu}=\scp{\mpu}{\mpu}^{1/2}.
 \]
 \tod
-Tapaus $\mpu = \mathbf{0}$ on j‰lleen selv‰, joten voidaan olettaa $\mpu \neq \mathbf{0}$, 
-jolloin on $\scp{\mpu}{\mpu}>0$ aksioomien (3a,b) perusteella. L‰hdet‰‰n j‰lleen ep‰yht‰lˆst‰
+Tapaus $\mpu = \mathbf{0}$ on j√§lleen selv√§, joten voidaan olettaa $\mpu \neq \mathbf{0}$, 
+jolloin on $\scp{\mpu}{\mpu}>0$ aksioomien (3a,b) perusteella. L√§hdet√§√§n j√§lleen ep√§yht√§l√∂st√§
 \[
 \scp{\beta \mpu + \mpv}{\beta \mpu + \mpv} \geq 0,
 \]
 joka nyt on voimassa $\forall \beta \in \C$ (aksiooma (3a)).
 
-K‰ytt‰m‰ll‰ sekvilineaarisuusehtoja (2a,b), symmetriaehtoa (1) ja Luvun 
-\ref{kompleksiluvuilla laskeminen} kaavoja (2),\,(3),\,(7) t‰m‰ purkautuu muotoon
+K√§ytt√§m√§ll√§ sekvilineaarisuusehtoja (2a,b), symmetriaehtoa (1) ja Luvun 
+\ref{kompleksiluvuilla laskeminen} kaavoja (2),\,(3),\,(7) t√§m√§ purkautuu muotoon
 \begin{align*}
 \scp{\beta \mpu}{\beta \mpu} + \scp{\beta \mpu}{\mpv} + \scp{\mpv}{\beta \mpu} 
                                                       + \scp{\mpv}{\mpv} &\geq 0 \\
 \ekv \ \abs{\beta}^2 \scp{\mpu}{\mpu} + 2 \; \text{Re} \; \{ \beta \scp{\mpu}{\mpv} \} 
                                       + \scp{\mpv}{\mpv} &\geq 0.
 \end{align*}
-Koska t‰m‰ on voimassa $\forall \beta \in \C$ ja koska $\scp{\mpu}{\mpu} > 0$, voidaan valita
+Koska t√§m√§ on voimassa $\forall \beta \in \C$ ja koska $\scp{\mpu}{\mpu} > 0$, voidaan valita
 \[
 \beta = - \frac{\overline{\scp{\mpu}{\mpv}}}{\scp{\mpu}{\mpu}}\,,
 \]
@@ -99,22 +99,22 @@ jolloin Luvun \ref{kompleksiluvuilla laskeminen} kaavojen (3),\,(6) perusteella 
 & \ekv \ \abs{\scp{\mpu}{\mpv}} \leq \abs{\mpu} \abs{\mpv}. \quad\loppu
 \end{align*}
 \end{Lause}
-\begin{Exa} Yksinkertaisin esimerkki kompleksikertoimisesta sis‰tuloavaruudesta on $\C$ itse,
-ts.\ $(U, \C)$, miss‰ $U=\C$. Nimitt‰in koska kompleksilukujen yhteenlasku on samanlainen 
-operaatio kuin tason vektoreiden yhteenlasku, ja kertolasku voidaan tulkita myˆs skalaarilla
-kertomiseksi, niin $(\C,\C)$ on vektoriavaruus. Kun t‰ss‰ avaruudessa m‰‰ritell‰‰n skalaaritulo
+\begin{Exa} Yksinkertaisin esimerkki kompleksikertoimisesta sis√§tuloavaruudesta on $\C$ itse,
+ts.\ $(U, \C)$, miss√§ $U=\C$. Nimitt√§in koska kompleksilukujen yhteenlasku on samanlainen 
+operaatio kuin tason vektoreiden yhteenlasku, ja kertolasku voidaan tulkita my√∂s skalaarilla
+kertomiseksi, niin $(\C,\C)$ on vektoriavaruus. Kun t√§ss√§ avaruudessa m√§√§ritell√§√§n skalaaritulo
 \[
 \scp{u}{v} = u \overline{v}, \quad u,v \in \C,
 \]
 toteutuvat em. ehdot 1--3 (vrt. Luvun \ref{kompleksiluvuilla laskeminen} kaavat). 
-Cauchyn--Schwarzin ep‰yht‰lˆ pelkistyy t‰ss‰ erikoistapauksessa yht‰lˆksi:
+Cauchyn--Schwarzin ep√§yht√§l√∂ pelkistyy t√§ss√§ erikoistapauksessa yht√§l√∂ksi:
 \[
 \abs{\scp{u}{v}} = \abs{u \overline{v}} = \abs{u}\abs{v}, \quad u,v \in \C. \loppu
 \]
 \end{Exa}
-\begin{Exa} Kompleksikertoimisia sis‰tuloavaruuksia ovat myˆs avaruuksien $(\Rkaksi, \R)$ ja
-$(\R^3,\R)$ laajennukset $(\C^2,\C)$ ja $(\C^3,\C)$. Esimerkiksi $(\C^3,\C)$:ss‰ skalaaritulo
-m‰‰ritell‰‰n
+\begin{Exa} Kompleksikertoimisia sis√§tuloavaruuksia ovat my√∂s avaruuksien $(\Rkaksi, \R)$ ja
+$(\R^3,\R)$ laajennukset $(\C^2,\C)$ ja $(\C^3,\C)$. Esimerkiksi $(\C^3,\C)$:ss√§ skalaaritulo
+m√§√§ritell√§√§n
 \begin{align*}
 &\mpu =(u_1,u_2,u_3) \in \C^3, \quad \mpv =(v_1,v_2,v_3) \in \C^3\,: \\
 &\scp{\mpu}{\mpv} = \sum_{i=1}^3 u_i \overline{v_i}.
@@ -131,7 +131,7 @@ Avaruuden $(\C^n, \C),\ (n=2,3)$
 \begin{enumerate}
 
 \item \label{H-III-4: skalaaritulo}
-N‰yt‰, ett‰ skalaaritulon sekvilineaarisuusominaisuus (2b) seuraa ehdoista (1) ja (2a).
+N√§yt√§, ett√§ skalaaritulon sekvilineaarisuusominaisuus (2b) seuraa ehdoista (1) ja (2a).
 
 \item
 Ovatko avaruuden $(\C^2,\C)$ vektorit 
@@ -141,8 +141,8 @@ Ovatko avaruuden $(\C^2,\C)$ vektorit
 lineaarisesti riippumattomat?
  
 \item
-Jaa sis‰tuloavaruuden $(\C^2,\C)$ vektori $\mpu=(1+i,2-3i)$ kahteen komponenttiin siten, ett‰
-toinen komponentti on vektorin $\mpv=(1-i,2+i)$ suuntainen ja toinen $\mpv$:t‰ vastaan
+Jaa sis√§tuloavaruuden $(\C^2,\C)$ vektori $\mpu=(1+i,2-3i)$ kahteen komponenttiin siten, ett√§
+toinen komponentti on vektorin $\mpv=(1-i,2+i)$ suuntainen ja toinen $\mpv$:t√§ vastaan
 kohtisuora.
 
 \end{enumerate}

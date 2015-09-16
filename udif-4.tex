@@ -1,30 +1,30 @@
-\section{Vektorikent‰t: Divergenssi ja roottori} \label{divergenssi ja roottori}
+\section{Vektorikent√§t: Divergenssi ja roottori} \label{divergenssi ja roottori}
 \sectionmark{Divergenssi ja roottori}
 \alku
 \index{osittaisdifferentiaalioperaattori!vektorioperaattorit|vahv}
 
-T‰ss‰ luvussa tarkastellaan funktioita, jotka riippuvat kahdesta tai kolmesta fysikaalisesta
-p\pain{aikka}muuttujasta ($x,y$ tai $x,y,z$), mahdollisesti lis‰ksi fysikaalisesta
+T√§ss√§ luvussa tarkastellaan funktioita, jotka riippuvat kahdesta tai kolmesta fysikaalisesta
+p\pain{aikka}muuttujasta ($x,y$ tai $x,y,z$), mahdollisesti lis√§ksi fysikaalisesta
 \pain{aika}muuttujasta $t$. Funktiot voivat olla joko \pain{skalaarifunktioita}, eli
 reaaliarvoisia (tai skalaariarvoisia, kirjaimellisesti 'skaalaajafunktioita') tai
 vektoriarvoisia, eli
-\index{vektorikentt‰} \index{funktio A!i@vektorikentt‰}%
-\kor{vektorikentti‰} (engl.\ vector field). Jatkossa ajatellaan ainoastaan fysikaalisia
-vektorikentti‰, joissa on joko kaksi (tasokentt‰) tai kolme (avaruuskentt‰) komponenttia.
+\index{vektorikentt√§} \index{funktio A!i@vektorikentt√§}%
+\kor{vektorikentti√§} (engl.\ vector field). Jatkossa ajatellaan ainoastaan fysikaalisia
+vektorikentti√§, joissa on joko kaksi (tasokentt√§) tai kolme (avaruuskentt√§) komponenttia.
 Skalaarifunktiot, joita
-\index{skalaarikentt‰}%
-kutsutaan myˆs \kor{skalaarikentiksi}, voivat siis olla tyyppi‰ $f(x,y)$, $f(x,y,z)$,
-$f(x,y,t)$ tai $f(x,y,z,t)$ (joskus aikamuuttuja halutaan kirjoittaa ensimm‰iseksi,
-esim.\ $f(t,x,y,z)$) ja vektorikent‰t esim.\ tyyppi‰
+\index{skalaarikentt√§}%
+kutsutaan my√∂s \kor{skalaarikentiksi}, voivat siis olla tyyppi√§ $f(x,y)$, $f(x,y,z)$,
+$f(x,y,t)$ tai $f(x,y,z,t)$ (joskus aikamuuttuja halutaan kirjoittaa ensimm√§iseksi,
+esim.\ $f(t,x,y,z)$) ja vektorikent√§t esim.\ tyyppi√§
 \[ 
 \vec F(x,y,z,t) = F_1(x,y,z,t)\,\vec i + F_2(x,y,z,t)\,\vec j + F_3(x,y,z,t)\,\vec k. 
 \]
-Fysikaalisia vektorikentti‰ ovat esim. virtaavan nesteen, kaasun, yms.\ nopeusvektoreiden 
-muodostama \pain{virtauskentt‰}, (esim.\ gravitaatioon liittyv‰) \pain{voimakentt‰}, 
-s‰hkˆmagneettisiin ilmiˆihin liittyv‰t \pain{s‰hkˆkentt‰} ja \pain{ma}g\pain{neettikentt‰}, ym.
-T‰llaiset fysikaaliset kent‰t ovat joko \pain{staattisia} tai \pain{d}y\pain{naamisia}, riippuen
-siit‰ onko muuttujien joukossa myˆs aika ($t$) vai ei. Vektorikentt‰ kuvataan usein graafisesti
-'nuolikentt‰n‰' (kuvassa virtauskentt‰).
+Fysikaalisia vektorikentti√§ ovat esim. virtaavan nesteen, kaasun, yms.\ nopeusvektoreiden 
+muodostama \pain{virtauskentt√§}, (esim.\ gravitaatioon liittyv√§) \pain{voimakentt√§}, 
+s√§hk√∂magneettisiin ilmi√∂ihin liittyv√§t \pain{s√§hk√∂kentt√§} ja \pain{ma}g\pain{neettikentt√§}, ym.
+T√§llaiset fysikaaliset kent√§t ovat joko \pain{staattisia} tai \pain{d}y\pain{naamisia}, riippuen
+siit√§ onko muuttujien joukossa my√∂s aika ($t$) vai ei. Vektorikentt√§ kuvataan usein graafisesti
+'nuolikentt√§n√§' (kuvassa virtauskentt√§).
 
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -53,49 +53,49 @@ siit‰ onko muuttujien joukossa myˆs aika ($t$) vai ei. Vektorikentt‰ kuvataan us
 \path(5,0.5)(7,0.5)
 \multiput(1,0.5)(1,0){11}{\line(-1,-1){0.25}}
 \end{picture}
-%\caption{Esimerkki virtauskent‰st‰}
+%\caption{Esimerkki virtauskent√§st√§}
 \end{center}
 \end{figure}
 \index{differentiaalioperaattori!c@osittaisderivoinnin}%
-Vektorikentt‰‰n kohdistuvina differentiaalioperaattorit 
-$\,\partial_x,\partial_y,\partial_z,\partial_t\,$ ymm‰rret‰‰n samalla tavoin kuin skalaarin ja
-vektorin kertolaskussa, eli operaattorit kohdistuvat vektorikent‰n jokaiseen komponenttiin. 
+Vektorikentt√§√§n kohdistuvina differentiaalioperaattorit 
+$\,\partial_x,\partial_y,\partial_z,\partial_t\,$ ymm√§rret√§√§n samalla tavoin kuin skalaarin ja
+vektorin kertolaskussa, eli operaattorit kohdistuvat vektorikent√§n jokaiseen komponenttiin. 
 Esim.
 \[ 
 \partial_x\vec F(x,y,z,t) 
         = \pder{F_1}{x}\,\vec i + \pder{F_2}{x}\,\vec j + \pder{F_3}{x}\,\vec k.
 \]
 
-\subsection*{Gradienttikent‰t}
-\index{gradienttikentt‰|vahv}
+\subsection*{Gradienttikent√§t}
+\index{gradienttikentt√§|vahv}
 
-Jos $f$ on skalaarifunktio (skalaarikentt‰) edell‰ mainittua tyyppi‰, niin funktion
-gradientti ymm‰rret‰‰n vain paikkamuuttujiin $x,y$ tai $x,y,z$ kohdistuvana. Gradientti toimii
-t‰llˆin differentiaalioperaattorina, joka muuntaa skalaarifunktion vektoriarvoiseksi funktioksi
-eli vektorikent‰ksi. Monet fysikaaliset vektorikent‰t ovat t‰llaisia \kor{gradienttikentti‰}.
-Jos $\vec F$ on gradienttikentt‰ ja
+Jos $f$ on skalaarifunktio (skalaarikentt√§) edell√§ mainittua tyyppi√§, niin funktion
+gradientti ymm√§rret√§√§n vain paikkamuuttujiin $x,y$ tai $x,y,z$ kohdistuvana. Gradientti toimii
+t√§ll√∂in differentiaalioperaattorina, joka muuntaa skalaarifunktion vektoriarvoiseksi funktioksi
+eli vektorikent√§ksi. Monet fysikaaliset vektorikent√§t ovat t√§llaisia \kor{gradienttikentti√§}.
+Jos $\vec F$ on gradienttikentt√§ ja
 \[
 \vec F=-\nabla u
 \]
-(miinusmerkki fysikaalisista mukavuussyist‰), niin sanotaan, ett‰ $u$ on kent‰n $\vec F$ 
-\index{potentiaali (vektorikent‰n)} \index{skalaaripotentiaali}%
+(miinusmerkki fysikaalisista mukavuussyist√§), niin sanotaan, ett√§ $u$ on kent√§n $\vec F$ 
+\index{potentiaali (vektorikent√§n)} \index{skalaaripotentiaali}%
 \kor{(skalaari)potentiaali}.
-\begin{Exa} Fysikaalisia esimerkkej‰ potentiaaleista ja gradienttikentist‰ ovat esimerkiksi\,:
+\begin{Exa} Fysikaalisia esimerkkej√§ potentiaaleista ja gradienttikentist√§ ovat esimerkiksi\,:
 
 \vspace{3mm}
 \begin{tabular}{ll}
-\pain{Potentiaali} & \pain{Gradienttikentt‰} \\ \\
-$u=$ gravitaatiopotentiaali \hspace{2cm} & $\vec G=-\nabla u=$ gravitaatiokentt‰ \\ \\
-$u=$ s‰hkˆpotentiaali & $\vec E=-\nabla u=$ s‰hkˆkentt‰ \\ \\
-$u=$ l‰mpˆtila & $\vec J=-\lambda\nabla u=$ l‰mpˆvirran tiheys
+\pain{Potentiaali} & \pain{Gradienttikentt√§} \\ \\
+$u=$ gravitaatiopotentiaali \hspace{2cm} & $\vec G=-\nabla u=$ gravitaatiokentt√§ \\ \\
+$u=$ s√§hk√∂potentiaali & $\vec E=-\nabla u=$ s√§hk√∂kentt√§ \\ \\
+$u=$ l√§mp√∂tila & $\vec J=-\lambda\nabla u=$ l√§mp√∂virran tiheys
 \end{tabular}
 \vspace{2mm}
 
 \index{Fourierb@Fourier'n laki}%
-Yhteytt‰ $\vec J=-\lambda\nabla u$ sanotaan l‰mpˆopissa \pain{Fourier'n} \pain{laiksi}. Sen 
-mukaan siis l‰mpˆenergia virtaa l‰mpˆtilan negatiivisen gradientin $-\nabla u$ suuntaan ja 
-virtatiheys (yksikkˆ W/m$^2$) on gradientin itseisarvoon verrannollinen. 
-Verrannollisuuskerrointa sanotaan materiaalin \pain{l‰mmˆn}j\pain{ohtavuudeksi}. \loppu
+Yhteytt√§ $\vec J=-\lambda\nabla u$ sanotaan l√§mp√∂opissa \pain{Fourier'n} \pain{laiksi}. Sen 
+mukaan siis l√§mp√∂energia virtaa l√§mp√∂tilan negatiivisen gradientin $-\nabla u$ suuntaan ja 
+virtatiheys (yksikk√∂ W/m$^2$) on gradientin itseisarvoon verrannollinen. 
+Verrannollisuuskerrointa sanotaan materiaalin \pain{l√§mm√∂n}j\pain{ohtavuudeksi}. \loppu
 \end{Exa}
 
 \subsection*{Divergenssi ja roottori. Laplacen operaattori}
@@ -105,13 +105,13 @@ Verrannollisuuskerrointa sanotaan materiaalin \pain{l‰mmˆn}j\pain{ohtavuudeksi}.
 \index{divergenssi|vahv} \index{roottori|vahv} \index{Laplacen operaattori|vahv}
 
 Differentiaalioperaattori $\nabla=\partial_x\vec i+\partial_y\vec i+\partial_z\vec k$ voidaan 
-myˆs ymm‰rt‰‰ operaattorina, jonka kohteena ovat vektoriarvoiset funktiot eli vektorikent‰t. 
-T‰llˆin operaattori $\nabla$ operoi kohdefunktioon $\vec F$ joko pistetulon (skalaaritulon) tai
-ristitulon (vektoritulon) v‰lityksell‰. Kun kohdefunktioksi oletetaan
+my√∂s ymm√§rt√§√§ operaattorina, jonka kohteena ovat vektoriarvoiset funktiot eli vektorikent√§t. 
+T√§ll√∂in operaattori $\nabla$ operoi kohdefunktioon $\vec F$ joko pistetulon (skalaaritulon) tai
+ristitulon (vektoritulon) v√§lityksell√§. Kun kohdefunktioksi oletetaan
 \[
 \vec F(x,y,z)=F_1(x,y,z)\vec i + F_2(x,y,z)\vec j + F_3(x,y,z)\vec k,
 \]
-niin tulevat n‰in m‰‰ritellyksi kent‰n $\vec F$ \kor{divergenssi} (engl. divergence)
+niin tulevat n√§in m√§√§ritellyksi kent√§n $\vec F$ \kor{divergenssi} (engl. divergence)
 \[
 \boxed{\kehys\quad \nabla\cdot\vec F
            =\partial_x F_1+\partial_y F_2+\partial_z F_3 \quad\text{(divergenssi)}\quad}
@@ -129,7 +129,7 @@ Roottorin laskukaavan purettu muoto on
                         - (\partial_x F_3 - \partial_z F_1)\vec j
                         + (\partial_x F_2 - \partial_y F_1)\vec k. 
 \]
-Divergenssi‰ ja roottoria merkit‰‰n myˆs symboleilla div ja rot (tai $\Vect{\text{rot}}$). 
+Divergenssi√§ ja roottoria merkit√§√§n my√∂s symboleilla div ja rot (tai $\Vect{\text{rot}}$). 
 Tavallisia lukutapoja ovat 'nabla piste' ja 'nabla risti', vastaten gradientin $\nabla f$ 
 lukutapaa 'nabla f'.
 \begin{Exa} Funktion $\vec F(x,y,z)=x^2\vec i+y^2z\vec j-(2xz+yz^2)\vec k$ divergenssi ja 
@@ -142,30 +142,30 @@ roottori ovat
                    &= -(y^2+z^2)\vec i+2z\vec j. \loppu
 \end{align*}
 \end{Exa}
-Piste- ja ristitulojen kautta tulevat m‰‰ritellyksi myˆs mm.\ operaattoritulot 
+Piste- ja ristitulojen kautta tulevat m√§√§ritellyksi my√∂s mm.\ operaattoritulot 
 \[
 (1)\ \ \nabla\cdot\nabla \qquad (2)\ \ \nabla(\nabla\cdot\,) \qquad
 (3)\ \ \nabla\times(\nabla\times\,) \qquad (4)\ \ \nabla\times\nabla
 \]
-N‰ist‰ viimeinen on nollaoperaattori:
+N√§ist√§ viimeinen on nollaoperaattori:
 \[
 \boxed{\kehys\quad \nabla\times\nabla=\vec 0. \quad }
 \]
-Nollaoperaattori on myˆs $\nabla\cdot(\nabla\times\,)$, ts.\ p‰tee (vrt.\ Luku \ref{ristitulo})
+Nollaoperaattori on my√∂s $\nabla\cdot(\nabla\times\,)$, ts.\ p√§tee (vrt.\ Luku \ref{ristitulo})
 \[
 \boxed{\kehys\quad \nabla\cdot\nabla\times\vec F = (\nabla\times\nabla)\cdot\vec F = 0. \quad}
 \]
-Operaattorien (1), (2) ja (3) v‰lill‰ on yhteys
-(Harj.teht.\,\ref{H-udif-4: nablaamiss‰‰ntˆj‰}f --- vrt.\ Luku \ref{ristitulo})
+Operaattorien (1), (2) ja (3) v√§lill√§ on yhteys
+(Harj.teht.\,\ref{H-udif-4: nablaamiss√§√§nt√∂j√§}f --- vrt.\ Luku \ref{ristitulo})
 \[
 \boxed{\kehys\quad \nabla\times(\nabla\times\vec F)=\nabla(\nabla\cdot\vec F)
                                                    -(\nabla\cdot\nabla)\vec F. \quad}
 \]
-Operaattoria $\nabla\cdot\nabla$, joka voi operoida sek‰ skalaariin ett‰ vektoriin, sanotaan 
-\kor{Laplacen operaattoriksi}. T‰m‰ on hyvin yleinen differentiaalioperaattori erilaisissa 
-fysiikan laeissa (ks.\ huomautukset j‰ljemp‰n‰), siksi sille on vakiintunut erillinen symboli 
-$\Delta$. Myˆs merkint‰‰ $\nabla^2$ k‰ytet‰‰n. Lukutapoja ovat 'Laplace' tai 'nabla toiseen'. 
-M‰‰ritelm‰ on siis
+Operaattoria $\nabla\cdot\nabla$, joka voi operoida sek√§ skalaariin ett√§ vektoriin, sanotaan 
+\kor{Laplacen operaattoriksi}. T√§m√§ on hyvin yleinen differentiaalioperaattori erilaisissa 
+fysiikan laeissa (ks.\ huomautukset j√§ljemp√§n√§), siksi sille on vakiintunut erillinen symboli 
+$\Delta$. My√∂s merkint√§√§ $\nabla^2$ k√§ytet√§√§n. Lukutapoja ovat 'Laplace' tai 'nabla toiseen'. 
+M√§√§ritelm√§ on siis
 \begin{align*}
 \nabla\cdot\nabla &= (\vec i \, \partial_x+\vec j \, \partial_y +\vec k \, \partial_z)\cdot
                      (\vec i \, \partial_x+\vec j \, \partial_y +\vec k \, \partial_z) \\
@@ -175,97 +175,97 @@ M‰‰ritelm‰ on siis
 \subsection*{Operaattorit $\nabla\star$ ja $\vec u\cdot\nabla$}
 \index{differentiaalioperaattori!h@$\nabla\star$, $\vec u\cdot\nabla$|vahv}
 
-Yleisi‰ 'nablaamiss‰‰ntˆj‰' voidaan usein yksinkertaistaa k‰ytt‰m‰ll‰ operaattorimerkint‰‰
-$\nabla\star$, miss‰ '$\star$' voi olla 'piste' ($\nabla\cdot$), 'risti' ($\nabla\times$) tai
-'tyhj‰' ($\nabla$). Viimeksi mainitussa tapauksessa tulkitaan kohde aina skalaarikent‰ksi,
-ts.\ $\nabla\vec F=\nabla F$. Operaattorimerkint‰ $\nabla\star$ on k‰tev‰ esimerkiksi tulon
-derivoimiss‰‰nnˆn yleistyksess‰: Jos $f=f(x,y,z)$ on skalaarikentt‰ ja $\vec F$
-kolmiulotteinen vektorikentt‰, niin p‰tee
+Yleisi√§ 'nablaamiss√§√§nt√∂j√§' voidaan usein yksinkertaistaa k√§ytt√§m√§ll√§ operaattorimerkint√§√§
+$\nabla\star$, miss√§ '$\star$' voi olla 'piste' ($\nabla\cdot$), 'risti' ($\nabla\times$) tai
+'tyhj√§' ($\nabla$). Viimeksi mainitussa tapauksessa tulkitaan kohde aina skalaarikent√§ksi,
+ts.\ $\nabla\vec F=\nabla F$. Operaattorimerkint√§ $\nabla\star$ on k√§tev√§ esimerkiksi tulon
+derivoimiss√§√§nn√∂n yleistyksess√§: Jos $f=f(x,y,z)$ on skalaarikentt√§ ja $\vec F$
+kolmiulotteinen vektorikentt√§, niin p√§tee
 \[
 \boxed{\kehys\quad \nabla\star(f\vec F)=\nabla f\star\vec F + f\nabla\star\vec F. \quad}
 \] 
-(Tapauksessa $\star=$ 'tyhj‰' t‰m‰ tulkitaan: $\nabla(fF)=F\nabla f+f\nabla F$.)
-Perustelu j‰tet‰‰n harjoitusteht‰v‰ksi (Harj.teht.\,\ref{H-udif-4: nablaamiss‰‰ntˆj‰}abc). 
+(Tapauksessa $\star=$ 'tyhj√§' t√§m√§ tulkitaan: $\nabla(fF)=F\nabla f+f\nabla F$.)
+Perustelu j√§tet√§√§n harjoitusteht√§v√§ksi (Harj.teht.\,\ref{H-udif-4: nablaamiss√§√§nt√∂j√§}abc). 
 
 \index{muuttuvakertoiminen diff.-oper.}%
-\kor{Muuttuvakertoimisista} vektoridifferentiaalioperaattoreista on syyt‰ mainita
+\kor{Muuttuvakertoimisista} vektoridifferentiaalioperaattoreista on syyt√§ mainita
 sovelluksissa yleinen operaattori
 \[
 \vec u\cdot\nabla  = u_1\partial_x + u_2\partial_y + u_3\partial_z,
 \]
-miss‰ $\vec u=\vec u(x,y,z)$ (tai $\vec u=\vec u(x,y,z,t)$) on vektorikentt‰. T‰m‰ on
-skalaarinen operaattori, joka voi kohdistua skalaari- tai vektorikentt‰‰n. Edellisess‰
-(ei j‰lkimm‰isess‰) tapauksessa $\vec u\cdot\nabla f$ on laskettavissa myˆs kaksivaiheisesti:
+miss√§ $\vec u=\vec u(x,y,z)$ (tai $\vec u=\vec u(x,y,z,t)$) on vektorikentt√§. T√§m√§ on
+skalaarinen operaattori, joka voi kohdistua skalaari- tai vektorikentt√§√§n. Edellisess√§
+(ei j√§lkimm√§isess√§) tapauksessa $\vec u\cdot\nabla f$ on laskettavissa my√∂s kaksivaiheisesti:
 \[
 f \map \nabla f \map \vec u\cdot\nabla f.
 \]
-Muuttuvakertoimisia operaattoreita yhdistelt‰ess‰ on huomioitava, ett‰ derivointi kohdistuu 
-t‰llˆin myˆs kertoimiin (vrt.\ Luku \ref{osittaisderivaatat}).
+Muuttuvakertoimisia operaattoreita yhdistelt√§ess√§ on huomioitava, ett√§ derivointi kohdistuu 
+t√§ll√∂in my√∂s kertoimiin (vrt.\ Luku \ref{osittaisderivaatat}).
 
-\subsection*{Vectorikent‰n l‰hde. Poissonin ja Laplacen yht‰lˆt}
+\subsection*{Vectorikent√§n l√§hde. Poissonin ja Laplacen yht√§l√∂t}
 
-Kun $\vec F$ on jokin fysikaalinen kentt‰, kuten s‰hkˆ-, magneetti-, virtaus- ym.\ kentt‰, 
-sanotaan divergenssi‰
+Kun $\vec F$ on jokin fysikaalinen kentt√§, kuten s√§hk√∂-, magneetti-, virtaus- ym.\ kentt√§, 
+sanotaan divergenssi√§
 \[
 \nabla\cdot\vec F=\rho
 \]
-\index{lzy@l‰hde (vektorikent‰n)}%
-kent‰n $\vec F$ \kor{l‰hteeksi}. Kent‰n ja l‰hteen $\rho$ v‰linen yhteys on t‰llaisissa 
-sovellutuksissa luonnonlaki, jossa l‰hde tulkitaan kent‰n $\vec F$ aiheuttajaksi --- siit‰ nimi
-'l‰hde'. Tyypillinen l‰htˆkohta onkin, ett‰ l‰hde on tunnettu ja kentt‰ halutaan m‰‰r‰t‰. 
-Esimerkiksi gravitaatiokentt‰‰ m‰‰r‰tt‰ess‰ on $\rho$ verrannollinen massatiheyteen ja 
-s‰hkˆkent‰n tapauksessa varaustiheyteen.
+\index{lzy@l√§hde (vektorikent√§n)}%
+kent√§n $\vec F$ \kor{l√§hteeksi}. Kent√§n ja l√§hteen $\rho$ v√§linen yhteys on t√§llaisissa 
+sovellutuksissa luonnonlaki, jossa l√§hde tulkitaan kent√§n $\vec F$ aiheuttajaksi --- siit√§ nimi
+'l√§hde'. Tyypillinen l√§ht√∂kohta onkin, ett√§ l√§hde on tunnettu ja kentt√§ halutaan m√§√§r√§t√§. 
+Esimerkiksi gravitaatiokentt√§√§ m√§√§r√§tt√§ess√§ on $\rho$ verrannollinen massatiheyteen ja 
+s√§hk√∂kent√§n tapauksessa varaustiheyteen.
 
-Jos vektorikent‰n $\vec F$ l‰hde $\rho$ on tunnettu ja lis‰ksi tiedet‰‰n, ett‰ $\vec F$ on 
-gradienttikentt‰, eli on olemassa potentiaali $u$ siten, ett‰ $\vec F = -\nabla u$ 
-(n‰in on esim.\ gravitaatio- ja s‰hkˆkent‰n tapauksessa), niin kent‰n ja l‰hteen v‰linen yhteys
+Jos vektorikent√§n $\vec F$ l√§hde $\rho$ on tunnettu ja lis√§ksi tiedet√§√§n, ett√§ $\vec F$ on 
+gradienttikentt√§, eli on olemassa potentiaali $u$ siten, ett√§ $\vec F = -\nabla u$ 
+(n√§in on esim.\ gravitaatio- ja s√§hk√∂kent√§n tapauksessa), niin kent√§n ja l√§hteen v√§linen yhteys
 $\nabla\vec F=\rho$ voidaan kirjoittaa muotoon
 \[
 -\Delta u=\rho.
 \]
-\index{Poissonin yht‰lˆ}%
-T‰t‰ sanotaan \kor{Poissonin yht‰lˆksi}. Sellaisissa pisteiss‰, joissa kentt‰ $\vec F$ on 
-\index{lzy@l‰hteetˆn vektorikentt‰} \index{vektorikentt‰!a@l‰hteetˆn}%
-\kor{l‰hteetˆn}, eli $\nabla\cdot\vec F=0$, toteuttaa kent‰n potentiaali
-\index{Laplacen yht‰lˆ}% 
-\kor{Laplacen yht‰lˆn}\footnote[2]{Laplacen ja Poissonin yht‰lˆiden nimet viittaavat 
+\index{Poissonin yht√§l√∂}%
+T√§t√§ sanotaan \kor{Poissonin yht√§l√∂ksi}. Sellaisissa pisteiss√§, joissa kentt√§ $\vec F$ on 
+\index{lzy@l√§hteet√∂n vektorikentt√§} \index{vektorikentt√§!a@l√§hteet√∂n}%
+\kor{l√§hteet√∂n}, eli $\nabla\cdot\vec F=0$, toteuttaa kent√§n potentiaali
+\index{Laplacen yht√§l√∂}% 
+\kor{Laplacen yht√§l√∂n}\footnote[2]{Laplacen ja Poissonin yht√§l√∂iden nimet viittaavat 
 ranskalaisiin matemaatikko-fyysikkoihin \hist{P.S. de Laplace} (1749-1827) ja 
-\hist{S.D. Poisson} (1781-1840), jotka tutkivat t‰m‰n tyyppisten yht‰lˆiden teoriaa. Yht‰lˆiden
-k‰yt‰nnˆllisen ratkaisemisen perustan loi samoihin aikoihin vaikuttanut \hist{J.B.J. Fourier} 
-(1768-1830). Myˆs Fourier oli matemaatikko-fysiikko, joka tutki erityisesti 
-l‰mmˆnjohtumisilmiˆit‰. N‰ist‰ tutkimuksista alkunsa saaneet \kor{Fourier-sarjat} ja 
-\kor{Fourier-muunnokset} ovat tehneet Fourier'n nimest‰ kuolemattoman.
+\hist{S.D. Poisson} (1781-1840), jotka tutkivat t√§m√§n tyyppisten yht√§l√∂iden teoriaa. Yht√§l√∂iden
+k√§yt√§nn√∂llisen ratkaisemisen perustan loi samoihin aikoihin vaikuttanut \hist{J.B.J. Fourier} 
+(1768-1830). My√∂s Fourier oli matemaatikko-fysiikko, joka tutki erityisesti 
+l√§mm√∂njohtumisilmi√∂it√§. N√§ist√§ tutkimuksista alkunsa saaneet \kor{Fourier-sarjat} ja 
+\kor{Fourier-muunnokset} ovat tehneet Fourier'n nimest√§ kuolemattoman.
 \index{Laplace, P. S. de|av} \index{Poisson, S. D.|av} \index{Fouriera@Fourier, F. B. J.|av} }
 \[
 \Delta u=0.
 \]
 \index{harmoninen funktio}%
-Funktiota, joka toteuttaa Laplacen yht‰lˆn, sanotaan \kor{harmoniseksi}.
+Funktiota, joka toteuttaa Laplacen yht√§l√∂n, sanotaan \kor{harmoniseksi}.
  
-Sovellustilanteissa Poissonin tai Laplacen yht‰lˆ esiintyy tyypillisesti
-\index{reuna-arvoteht‰v‰}% 
-\kor{reuna-arvo\-teht‰v‰ss‰} (engl.\ boundary value problem), jossa tarkasteltavan (avoimen)
-joukon $A$ --- tai niinkuin t‰llaisissa yhteyksiss‰ useammin sanotaan, \kor{alueen} $A$ 
+Sovellustilanteissa Poissonin tai Laplacen yht√§l√∂ esiintyy tyypillisesti
+\index{reuna-arvoteht√§v√§}% 
+\kor{reuna-arvo\-teht√§v√§ss√§} (engl.\ boundary value problem), jossa tarkasteltavan (avoimen)
+joukon $A$ --- tai niinkuin t√§llaisissa yhteyksiss√§ useammin sanotaan, \kor{alueen} $A$ 
 ($A\subset\Rkaksi$ tai $A\subset\Rkolme$) 
 \index{reuna (joukon, alueen)} \index{reunaehto}% 
 --- \kor{reunalla} $\partial A$ asetetaan jokin \kor{reunaehto}. Sovellustilanteessa reunaehto
-m‰‰r‰ytyy fysikaalisin perustein. Esimerkiksi jos reunalla asetetaan nk.\ (homogeeninen) 
+m√§√§r√§ytyy fysikaalisin perustein. Esimerkiksi jos reunalla asetetaan nk.\ (homogeeninen) 
 \index{Dirichletb@Dirichlet'n (reuna)ehto}%
-\kor{Dirichlet'n ehto}, niin saadaan reuna-arvoteht‰v‰n perusmuoto:
+\kor{Dirichlet'n ehto}, niin saadaan reuna-arvoteht√§v√§n perusmuoto:
 \[
 \begin{cases} 
--\Delta u=\rho &\text{$A$:n sis‰pisteiss‰}, \\ \,u=0 &\text{reunalla $\partial A$.}
+-\Delta u=\rho &\text{$A$:n sis√§pisteiss√§}, \\ \,u=0 &\text{reunalla $\partial A$.}
 \end{cases}
 \]
-T‰m‰ on osoitettavissa tietyin (funktiota $\rho$ ja reunaviivaa/pintaa $S=\partial A$ koskevin) 
-s‰‰nnˆllisyysehdoin yksik‰sitteisesti ratkeavaksi. Itse ratkaisemisen on yleens‰ tapahduttava
-numeerisin (likim‰‰r‰isin) keinoin, muutamia poikkeustilanteita lukuun ottamatta.
+T√§m√§ on osoitettavissa tietyin (funktiota $\rho$ ja reunaviivaa/pintaa $S=\partial A$ koskevin) 
+s√§√§nn√∂llisyysehdoin yksik√§sitteisesti ratkeavaksi. Itse ratkaisemisen on yleens√§ tapahduttava
+numeerisin (likim√§√§r√§isin) keinoin, muutamia poikkeustilanteita lukuun ottamatta.
 \begin{Exa}
-Jos $A$ on $R$-s‰teinen kiekko ($A\subset\Rkaksi$) tai kuula ($A\subset\Rkolme$) ja $\rho=Q=$ 
-vakio, niin reuna-arvoteht‰v‰n
+Jos $A$ on $R$-s√§teinen kiekko ($A\subset\Rkaksi$) tai kuula ($A\subset\Rkolme$) ja $\rho=Q=$ 
+vakio, niin reuna-arvoteht√§v√§n
 \[
 \begin{cases} 
--\Delta u=Q &\text{$A$:n sis‰pisteiss‰}, \\ \,u=0 &\text{reunalla $\partial A$}
+-\Delta u=Q &\text{$A$:n sis√§pisteiss√§}, \\ \,u=0 &\text{reunalla $\partial A$}
 \end{cases}
 \]
 ratkaisu on kummassakin tapauksessa toisen asteen polynomi:
@@ -275,33 +275,33 @@ A\subset\Rkolme: \quad  u(x,y,z) &= \frac{Q}{6}(R^2-x^2-y^2-z^2). \loppu
 \end{align*}
 \end{Exa}
 
-Poissonin ja Laplacen yht‰lˆt ovat esimerkkej‰ yht‰lˆist‰, joista k‰ytet‰‰n yleisnime‰ 
-\index{osittaisdifferentiaaliyht‰lˆ}
-\index{differentiaaliyht‰lˆ!r@osittaisdifferentiaaliyht‰lˆ}%
-\kor{osittaisdifferentiaaliyht‰lˆ} (engl.\ partial differential equation, lyh.\ PDE).
-Paitsi Poissonin ja Laplacen yht‰lˆiss‰, Laplacen operaattori esiintyy monissa muissakin 
-fysiikan osittaisdifferentiaaliyht‰lˆiss‰. Mainittakoon t‰ss‰ ainoastaan ajasta riippuvia 
-ilmiˆit‰ kuvaavat \kor{diffuusioyht‰lˆ} ja \kor{aaltoyht‰lˆ}, joiden perusmuodot ovat 
-(sovelluksissa n‰ist‰ esiintyy erilaisia variaatioita):
-\index{diffuusioyht‰lˆ} \index{aaltoyht‰lˆ}%
+Poissonin ja Laplacen yht√§l√∂t ovat esimerkkej√§ yht√§l√∂ist√§, joista k√§ytet√§√§n yleisnime√§ 
+\index{osittaisdifferentiaaliyht√§l√∂}
+\index{differentiaaliyht√§l√∂!r@osittaisdifferentiaaliyht√§l√∂}%
+\kor{osittaisdifferentiaaliyht√§l√∂} (engl.\ partial differential equation, lyh.\ PDE).
+Paitsi Poissonin ja Laplacen yht√§l√∂iss√§, Laplacen operaattori esiintyy monissa muissakin 
+fysiikan osittaisdifferentiaaliyht√§l√∂iss√§. Mainittakoon t√§ss√§ ainoastaan ajasta riippuvia 
+ilmi√∂it√§ kuvaavat \kor{diffuusioyht√§l√∂} ja \kor{aaltoyht√§l√∂}, joiden perusmuodot ovat 
+(sovelluksissa n√§ist√§ esiintyy erilaisia variaatioita):
+\index{diffuusioyht√§l√∂} \index{aaltoyht√§l√∂}%
 \begin{align*}
-\text{Diffuusioyht‰lˆ}: \quad   &\,u_t=\Delta u. \\
-\text{Aaltoyht‰lˆ}: \qquad\,\   &u_{tt}=\Delta u.
+\text{Diffuusioyht√§l√∂}: \quad   &\,u_t=\Delta u. \\
+\text{Aaltoyht√§l√∂}: \qquad\,\   &u_{tt}=\Delta u.
 \end{align*}
-Diffuusioyht‰lˆn tyyppi‰ on esimerkiksi (aikariippuva) 
-\pain{l‰mmˆn}j\pain{ohtumis}y\pain{ht‰lˆ}. \index{lzy@l‰mmˆnjohtumisyht‰lˆ}%
+Diffuusioyht√§l√∂n tyyppi√§ on esimerkiksi (aikariippuva) 
+\pain{l√§mm√∂n}j\pain{ohtumis}y\pain{ht√§l√∂}. \index{lzy@l√§mm√∂njohtumisyht√§l√∂}%
 
-\subsection*{Pyˆrrekentt‰.  Maxwellin yht‰lˆt}
+\subsection*{Py√∂rrekentt√§.  Maxwellin yht√§l√∂t}
 
-Fysikaalisen vektorikent‰n roottoria
+Fysikaalisen vektorikent√§n roottoria
 \[
 \nabla\times\vec F=\vec \omega
 \]
-\index{pyzz@pyˆrrekentt‰}%
-sanotaan kent‰n $\vec F$ \kor{pyˆrrekent‰ksi}. Pyˆrrekentill‰ on fysikaalinen merkitys 
-esimerkiksi virtausmekaniikassa, mutta erityisen keskeisell‰ sijalla ne ovat s‰hkˆmagneettisten
-kenttien teoriassa. T‰m‰ n‰hd‰‰n jo s‰hkˆmagneettisten kenttien perusyht‰lˆist‰, 
-\kor{Maxwellin yht‰lˆist‰} (\vahv{J.C. Maxwell}, 1864): \index{Maxwellin yht‰lˆt}
+\index{pyzz@py√∂rrekentt√§}%
+sanotaan kent√§n $\vec F$ \kor{py√∂rrekent√§ksi}. Py√∂rrekentill√§ on fysikaalinen merkitys 
+esimerkiksi virtausmekaniikassa, mutta erityisen keskeisell√§ sijalla ne ovat s√§hk√∂magneettisten
+kenttien teoriassa. T√§m√§ n√§hd√§√§n jo s√§hk√∂magneettisten kenttien perusyht√§l√∂ist√§, 
+\kor{Maxwellin yht√§l√∂ist√§} (\vahv{J.C. Maxwell}, 1864): \index{Maxwellin yht√§l√∂t}
 \[
 \left\{\begin{aligned}
 \nabla\times\vec E &= -\frac{\partial \vec B}{\partial t}\,, \\
@@ -310,78 +310,78 @@ kenttien teoriassa. T‰m‰ n‰hd‰‰n jo s‰hkˆmagneettisten kenttien perusyht‰lˆist‰,
 \nabla\cdot\vec B &= 0.
 \end{aligned}\right.
 \]
-T‰ss‰ esiintyvien kenttien nimet ovat:
+T√§ss√§ esiintyvien kenttien nimet ovat:
 \begin{align*}
-\vec E: \quad &\text{s‰hkˆkentt‰} \qquad\qquad \vec D: \quad \text{s‰hkˆvuon tiheys} \\
-\vec H: \quad &\text{magneettikentt‰} \qquad\, \vec B: \quad \text{magneettivuon tiheys} \\
+\vec E: \quad &\text{s√§hk√∂kentt√§} \qquad\qquad \vec D: \quad \text{s√§hk√∂vuon tiheys} \\
+\vec H: \quad &\text{magneettikentt√§} \qquad\, \vec B: \quad \text{magneettivuon tiheys} \\
 \rho  : \quad &\text{varaustiheys} \qquad\qquad \vec J: \quad \text{virtatiheys}
 \end{align*}
-Maxwellin yht‰lˆit‰ ratkaistaessa on huomioitava kenttien $\vec E,\vec D$ ja $\vec H,\vec B$
-keskin‰inen riippuvuus, joka on v‰liaineelle ominainen. Yksinkertisimmillaan riippuvuudet ovat
+Maxwellin yht√§l√∂it√§ ratkaistaessa on huomioitava kenttien $\vec E,\vec D$ ja $\vec H,\vec B$
+keskin√§inen riippuvuus, joka on v√§liaineelle ominainen. Yksinkertisimmillaan riippuvuudet ovat
 ilmaistavissa kahden materiaalivakion $\epsilon,\mu$ avulla muodossa 
 \[
 \vec D=\epsilon\vec E, \quad \vec B=\mu\vec H.
 \]
 
-\index{pyzz@pyˆrteetˆn vektorikentt‰} \index{vektorikentt‰!b@pyˆrteetˆn}%
-Vektorikentt‰‰ $\vec F$ sanotaan \kor{pyˆrteettˆm‰ksi} sellaisessa alueessa, jossa 
-$\nabla\times\vec F=\vec 0$. Kaikki gradienttikent‰t, eli skalaaripotentiaalin avulla 
-ilmaistavat kent‰t, ovat pyˆrteettˆmi‰ (koska $\nabla\times\nabla=\vec 0$). Maxwellin
-yht‰lˆiden mukaan s‰hkˆkentt‰ $\vec E$ on pyˆrteetˆn \pain{stationaarisessa} tilanteessa, jossa
-kent‰t ovat ajasta riippumattomia. Sek‰ l‰hteetˆn ett‰ pyˆrteetˆn on esimerkiksi 
-gravitaatiokentt‰ tyhj‰ss‰ (massattomassa) avaruudessa, ja yleisemminkin gradienttikentt‰ 
-l‰hteettˆm‰ss‰ alueessa.
+\index{pyzz@py√∂rteet√∂n vektorikentt√§} \index{vektorikentt√§!b@py√∂rteet√∂n}%
+Vektorikentt√§√§ $\vec F$ sanotaan \kor{py√∂rteett√∂m√§ksi} sellaisessa alueessa, jossa 
+$\nabla\times\vec F=\vec 0$. Kaikki gradienttikent√§t, eli skalaaripotentiaalin avulla 
+ilmaistavat kent√§t, ovat py√∂rteett√∂mi√§ (koska $\nabla\times\nabla=\vec 0$). Maxwellin
+yht√§l√∂iden mukaan s√§hk√∂kentt√§ $\vec E$ on py√∂rteet√∂n \pain{stationaarisessa} tilanteessa, jossa
+kent√§t ovat ajasta riippumattomia. Sek√§ l√§hteet√∂n ett√§ py√∂rteet√∂n on esimerkiksi 
+gravitaatiokentt√§ tyhj√§ss√§ (massattomassa) avaruudessa, ja yleisemminkin gradienttikentt√§ 
+l√§hteett√∂m√§ss√§ alueessa.
 
 \subsection*{Roottori tasossa}
 \index{differentiaalioperaattori!f@roottori $\nabla\times$|vahv}
 \index{roottori|vahv}
 
-Jos tason vektorikentt‰ tulkitaan ($z$-koordinaatista riippumattomaksi ja $xy$-tason
-suuntaiseksi) avaruuden vektorikent‰ksi, niin kent‰n roottori on
+Jos tason vektorikentt√§ tulkitaan ($z$-koordinaatista riippumattomaksi ja $xy$-tason
+suuntaiseksi) avaruuden vektorikent√§ksi, niin kent√§n roottori on
 \[
 \nabla\times[F_1(x,y)\,\vec i+F_2(x,y)\,\vec j\,] =(\partial_x F_2-\partial_y F_1)\,\vec k.
 \]
-T‰ss‰ on tapana kirjoittaa
+T√§ss√§ on tapana kirjoittaa
 \[
 \text{rot}\,\vec F = \frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}
-                   \quad (\text{tason vektorikentt‰}),
+                   \quad (\text{tason vektorikentt√§}),
 \]
-jolloin roottori tasossa tulee m‰‰ritellyksi skalaarisena operaattorina (kuten div). 
-\begin{Exa} Maxwellin yht‰lˆiden mukaan stationaarisessa tilanteessa magneettikent‰n $\vec H$
-pyˆrrekentt‰ on s‰hkˆvirran tiheys $\vec J$. Jos oletetetaan tyypillinen sovellustilanne,
+jolloin roottori tasossa tulee m√§√§ritellyksi skalaarisena operaattorina (kuten div). 
+\begin{Exa} Maxwellin yht√§l√∂iden mukaan stationaarisessa tilanteessa magneettikent√§n $\vec H$
+py√∂rrekentt√§ on s√§hk√∂virran tiheys $\vec J$. Jos oletetetaan tyypillinen sovellustilanne,
 jossa virta kulkee suorassa, $z$-akselin suuntaisessa johtimessa, niin $\vec J$ on muotoa
 \[
 \vec J(x,y,z)=\begin{cases} 
               \,I(x,y)\vec k, &\text{kun}\ (x,y) \in A, \\ \,\vec 0, &\text{muulloin}.
               \end{cases}
 \]
-T‰ss‰ $A\subset\Rkaksi$ edustaa johtimen poikkileikkausta ja $I$ on (skalaarinen) virran tiheys
-johtimessa. Magneettikentt‰ on $xy$-tason suuntainen ja $z$-koordinaatista riippumaton,
-ts.\ muotoa $\vec H = H_1(x,y)\vec i + H_2(x,y)\vec j$, jolloin Maxwellin yht‰lˆ 
-$\nabla\times\vec H=\vec J$ pelkistyy johtimen poikkipinnalla skalaariseksi yht‰lˆksi
+T√§ss√§ $A\subset\Rkaksi$ edustaa johtimen poikkileikkausta ja $I$ on (skalaarinen) virran tiheys
+johtimessa. Magneettikentt√§ on $xy$-tason suuntainen ja $z$-koordinaatista riippumaton,
+ts.\ muotoa $\vec H = H_1(x,y)\vec i + H_2(x,y)\vec j$, jolloin Maxwellin yht√§l√∂ 
+$\nabla\times\vec H=\vec J$ pelkistyy johtimen poikkipinnalla skalaariseksi yht√§l√∂ksi
 \[
 \text{rot}\,\vec H = \partial_x H_2 - \partial_y H_1 = I(x,y).
 \]
-Johtimen ulkopuolella magneettikentt‰ on pyˆrteetˆn: $\text{rot}\,\vec H=0$. \loppu
+Johtimen ulkopuolella magneettikentt√§ on py√∂rteet√∂n: $\text{rot}\,\vec H=0$. \loppu
 \end{Exa}
 
-\subsection*{*Navier--Stokesin virtausyht‰lˆt}
-\index{Navier--Stokesin yht‰lˆt|vahv}
+\subsection*{*Navier--Stokesin virtausyht√§l√∂t}
+\index{Navier--Stokesin yht√§l√∂t|vahv}
 
-Nesteen tai kaasun (esim.\ veden tai ilman) virtausta hallitsevat perusyht‰lˆt ovat nk.\
-\index{szy@s‰ilymislaki}%
-\kor{s‰ilymislakeja} (engl.\ conservation laws), jotka ilmaisevat matemaattisesti
-(osittaisdifferentiaaliyht‰lˆin‰) \pain{massan}, \pain{liikem‰‰r‰n} ja \pain{ener}g\pain{ian}
-s‰ilymisen virtauksessa. Massan ja liikem‰‰r‰n s‰ilymislaeissa esiintyv‰t vektori- ja
-skalaarikent‰t ovat
+Nesteen tai kaasun (esim.\ veden tai ilman) virtausta hallitsevat perusyht√§l√∂t ovat nk.\
+\index{szy@s√§ilymislaki}%
+\kor{s√§ilymislakeja} (engl.\ conservation laws), jotka ilmaisevat matemaattisesti
+(osittaisdifferentiaaliyht√§l√∂in√§) \pain{massan}, \pain{liikem√§√§r√§n} ja \pain{ener}g\pain{ian}
+s√§ilymisen virtauksessa. Massan ja liikem√§√§r√§n s√§ilymislaeissa esiintyv√§t vektori- ja
+skalaarikent√§t ovat
 \begin{align*}
 \vec u: \quad &\text{virtausnopeus} \\
      p: \quad &\text{paine} \\
   \rho: \quad &\text{(massa)tiheys}
 \end{align*}
 Jos virtaavan aineen massatiheys voidaan olettaa vakioksi (esim.\ vesi, monissa
-virtaustilanteissa myˆs ilma) ja lis‰ksi virtaus on ulkoisista voimista vapaa, niin liikem‰‰r‰n
-ja massan s‰ilymislait voidaan kirjoittaa \kor{Navier--Stokesin yht‰lˆin‰}
+virtaustilanteissa my√∂s ilma) ja lis√§ksi virtaus on ulkoisista voimista vapaa, niin liikem√§√§r√§n
+ja massan s√§ilymislait voidaan kirjoittaa \kor{Navier--Stokesin yht√§l√∂in√§}
 (\vahv{C.-L. Navier, G.G. Stokes}, 1822) 
 \[
 \left\{ \begin{aligned}
@@ -389,13 +389,13 @@ ja massan s‰ilymislait voidaan kirjoittaa \kor{Navier--Stokesin yht‰lˆin‰}
                                                \nabla\cdot\vec u &=0.
 \end{aligned} \right.
 \]
-T‰ss‰ $\nu$ on virtaavan aineen (kinemaattinen) \pain{viskositeetti}.
-%\footnote[2]{Virtausmekaniikan yht‰lˆiden numeerinen ratkaiseminen
-%tietokoneilla on nykyisin arkip‰iv‰‰ lentokoneiden aerodynamiikassa, laivojen
-%hydrodynamiikassa, meteorologiassa, ym.\ sovelluksissa. Yht‰lˆihin liittyy silti myˆs avoimia
-%matemaattisia ongelmia. Esimerkiksi Navier--Stokesin yht‰lˆiden nk.\ globaalia (ajassa ja
-%paikassa rajoittamatonta) ratkeavuutta (tai vastaesimerkill‰: ratkeamattomuutta) s‰‰nnˆllisest‰
-%alkutilanteesta ei ole pystytty osoittamaan matemaattisesti. --- Kyseess‰ on er‰s tunnettu
+T√§ss√§ $\nu$ on virtaavan aineen (kinemaattinen) \pain{viskositeetti}.
+%\footnote[2]{Virtausmekaniikan yht√§l√∂iden numeerinen ratkaiseminen
+%tietokoneilla on nykyisin arkip√§iv√§√§ lentokoneiden aerodynamiikassa, laivojen
+%hydrodynamiikassa, meteorologiassa, ym.\ sovelluksissa. Yht√§l√∂ihin liittyy silti my√∂s avoimia
+%matemaattisia ongelmia. Esimerkiksi Navier--Stokesin yht√§l√∂iden nk.\ globaalia (ajassa ja
+%paikassa rajoittamatonta) ratkeavuutta (tai vastaesimerkill√§: ratkeamattomuutta) s√§√§nn√∂llisest√§
+%alkutilanteesta ei ole pystytty osoittamaan matemaattisesti. --- Kyseess√§ on er√§s tunnettu
 %''miljoonan dollarin ongelma'', jonka ratkaisjalle on yhdysvaltalainen Clay-instituutti
 %luvannut mainitun suuruisen palkkion.}
 
@@ -414,15 +414,15 @@ e) \ $f(y,z)\vec i+g(x,z)\vec j+h(x,y)\vec k$
 Olkoon
 $\vec F(x,y,z)=(x y-z^2)\,\vec i + x y z \,\vec j + (x-y^2-z^2)\,\vec k$. \vspace{1mm}\newline
 a) Laske $\,\nabla\cdot\vec F$, $\,\nabla(\nabla\cdot\vec F)$, $\,\nabla\times\vec F$, 
-$\,\nabla\times(\nabla\times\vec F)\,$ ja $\,\Delta \vec F$ ja tarkista, ett‰ p‰tee
+$\,\nabla\times(\nabla\times\vec F)\,$ ja $\,\Delta \vec F$ ja tarkista, ett√§ p√§tee
 $\,\nabla\times(\nabla\times\vec F) 
             = \nabla(\nabla\cdot\vec F)-\Delta\vec F$. \vspace{1mm}\newline
 b) Laske $(\vec F\cdot\nabla)\vec F$ ja $(\vec F\times\nabla)\cdot\vec F$.
 
-\item \label{H-udif-4: nablaamiss‰‰ntˆj‰}
-Olkoon $\vec F$ ja $\vec G$ tason tai avaruuden (mahdollisesti ajasta riippuvia) vektorikentti‰
-ja $f$ ja $g$ skalaarikentti‰. Perustele seuraavat s‰‰nnˆt
-(oletetaan riitt‰v‰ derivoituvuus): \vspace{1mm}\newline
+\item \label{H-udif-4: nablaamiss√§√§nt√∂j√§}
+Olkoon $\vec F$ ja $\vec G$ tason tai avaruuden (mahdollisesti ajasta riippuvia) vektorikentti√§
+ja $f$ ja $g$ skalaarikentti√§. Perustele seuraavat s√§√§nn√∂t
+(oletetaan riitt√§v√§ derivoituvuus): \vspace{1mm}\newline
 a) \ $\nabla(fg)=g\nabla f+f\nabla g\qquad\qquad\qquad\ \ \ $
 b) \ $\nabla\cdot(f\vec F)=\vec F\cdot\nabla f+f\,\nabla\cdot\vec F$ \vspace{1mm}\newline
 c) \ $\nabla\times(f\vec F)=\nabla f\times\vec F+f\,\nabla\times\vec F\qquad\ $
@@ -441,18 +441,18 @@ h) \ $(\vec u\,\square)\circ f\vec F
      $\,\ \circ\in\{\,\cdot\,,\times\,\}$ \newline
 
 \item
-a) N‰yt‰, ett‰ seuraavat funktiot ovat m‰‰rittelyjoukossaan harmonisia:
+a) N√§yt√§, ett√§ seuraavat funktiot ovat m√§√§rittelyjoukossaan harmonisia:
 \begin{align*}
 &xy,\ \ x^2-y^2,\ \ x^3-3xy^2,\ \ x^3y-xy^3,\ \ \ln(x^2+y^2),\ \ \Arctan\frac{y}{x} \\
 &e^{ax}(A\sin ay+B\cos ay)\ \ (a,A,B\in\R)
 \end{align*}
-b) Monen muuttujan Laplacen operaattori m‰‰ritell‰‰n
-$\Delta=\partial_1^2+ \ldots + \partial_n^2$. Tutki, millaisille reaalifunktioille $f$ p‰tee: 
+b) Monen muuttujan Laplacen operaattori m√§√§ritell√§√§n
+$\Delta=\partial_1^2+ \ldots + \partial_n^2$. Tutki, millaisille reaalifunktioille $f$ p√§tee: 
 $f\bigl(\abs{\mx})=f(\sqrt{x_1^2 + \ldots + x_n^2}\,\bigr)$ on harmoninen muualla kuin origossa.
 
 \item
-Seuraavilla osittaisdifferentiaaliyht‰lˆill‰ v‰itet‰‰n olevan annettua muotoa olevia ratkaisuja.
-Tarkista v‰itt‰m‰t (funktiot $f$ ja $g$ oletetaan kahdesti derivoituviksi).
+Seuraavilla osittaisdifferentiaaliyht√§l√∂ill√§ v√§itet√§√§n olevan annettua muotoa olevia ratkaisuja.
+Tarkista v√§itt√§m√§t (funktiot $f$ ja $g$ oletetaan kahdesti derivoituviksi).
 \vspace{1mm}\newline
 a) \ $u_{tt}=c^2u_{xx}\,,\ \ u(x,t)=f(x+ct)+g(x-ct)$ \vspace{1mm}\newline
 b) \ $u_{xx}+u_{yy}=2u_{xy}\,,\ \ u(x,y)=xf(x+y)+yg(x+y)$ \vspace{1mm}\newline
@@ -462,35 +462,35 @@ d) \ $u_t=u_{xx}\,,\ \ u(x,t)=t^{-1/2}e^{-x^2/4t}$ \vspace{1mm}\newline
 e) \ $u_t=u_{xx}+u_{yy}\,,\ \ u(x,y,t)=t^{-1}e^{-(x^2+y^2)/4t}$
 
 \item
-N‰yt‰, ett‰ osittaisdifferentiaaliyht‰lˆn $u_{xy}=0$ yleinen ratkaisu $\R^2$:ssa on
-$u(x,y)=f(x)+g(y)$, miss‰ $f:\,\R\kohti\R$ ja $g:\,\R\kohti\R$ ovat mit‰ tahansa $\R$:ss‰ 
+N√§yt√§, ett√§ osittaisdifferentiaaliyht√§l√∂n $u_{xy}=0$ yleinen ratkaisu $\R^2$:ssa on
+$u(x,y)=f(x)+g(y)$, miss√§ $f:\,\R\kohti\R$ ja $g:\,\R\kohti\R$ ovat mit√§ tahansa $\R$:ss√§ 
 derivoituvia funktioita.
 
 \item (*)
-Todista (olettaen riitt‰v‰ derivoituvuuus)\,:
+Todista (olettaen riitt√§v√§ derivoituvuuus)\,:
 \[
 \nabla\times(\vec F\times\vec G)=(\nabla\cdot\vec G)\vec F+(\vec G\cdot\nabla)\vec F
                                 -(\nabla\cdot\vec F)\vec G-(\vec F\cdot\nabla)\vec G.
 \]
 
 \item (*)
-Olkoon $A\subset\R^2$ tasasivuinen kolmio, jonka k‰rjet ovat $(0,0)$, $(a,0)$ ja
-$(a/2,\sqrt{3}a/2)$ $(a>0)$. N‰yt‰, ett‰ reuna-arvoteht‰v‰ll‰
+Olkoon $A\subset\R^2$ tasasivuinen kolmio, jonka k√§rjet ovat $(0,0)$, $(a,0)$ ja
+$(a/2,\sqrt{3}a/2)$ $(a>0)$. N√§yt√§, ett√§ reuna-arvoteht√§v√§ll√§
 \[
 \begin{cases} 
--\Delta u=Q &\text{$A$:n sis‰pisteiss‰}, \\ \,u=0 &\text{reunalla $\partial A$}
+-\Delta u=Q &\text{$A$:n sis√§pisteiss√§}, \\ \,u=0 &\text{reunalla $\partial A$}
 \end{cases}
 \]
 ($Q=$ vakio) on polynomiratkaisu.
 
 \item (*)
-Tarkastellaan Maxwellin yht‰lˆit‰ homogeenisessa v‰liaineessa, jossa $\rho=0$, $\vec J=\vec 0$
-ja kenttien $\vec D,\vec E$ ja $\vec B,\vec H$ v‰lill‰ on yhteydet $\vec D=\epsilon\vec E$ ja 
-$\vec B=\mu\vec H$ ($\epsilon$ ja $\mu$ materiaalivakioita). N‰yt‰, ett‰ kaikki mainitut
-kent‰t, sik‰li kuin riitt‰v‰n s‰‰nnˆllisi‰, toteuttavat vektorimuotoisen aaltoyht‰lˆn
+Tarkastellaan Maxwellin yht√§l√∂it√§ homogeenisessa v√§liaineessa, jossa $\rho=0$, $\vec J=\vec 0$
+ja kenttien $\vec D,\vec E$ ja $\vec B,\vec H$ v√§lill√§ on yhteydet $\vec D=\epsilon\vec E$ ja 
+$\vec B=\mu\vec H$ ($\epsilon$ ja $\mu$ materiaalivakioita). N√§yt√§, ett√§ kaikki mainitut
+kent√§t, sik√§li kuin riitt√§v√§n s√§√§nn√∂llisi√§, toteuttavat vektorimuotoisen aaltoyht√§l√∂n
 \[
 \vec F_{tt}=c^2\Delta\vec F,
 \]
-miss‰ $c=(\epsilon\mu)^{-1/2}$ (= valon nopeus v‰liaineessa). 
+miss√§ $c=(\epsilon\mu)^{-1/2}$ (= valon nopeus v√§liaineessa). 
 
 \end{enumerate}

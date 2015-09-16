@@ -1,32 +1,32 @@
-\chapter{Differentiaaliyhtälöt}
-\index{differentiaaliyhtälö|vahv}
+\chapter{DifferentiaaliyhtÃ¤lÃ¶t}
+\index{differentiaaliyhtÃ¤lÃ¶|vahv}
 
-''Luonnonlait on kirjoitettu matematiikan kielellä'', lausui fyysikko ja tähtitieteilijä
+''Luonnonlait on kirjoitettu matematiikan kielellÃ¤'', lausui fyysikko ja tÃ¤htitieteilijÃ¤
 \index{Galilei, G.}%
-\hist{Galileo Galilei} (1564-1642). Galilein yhä ajankohtainen lausuma tuo erityisesti mieleen
-\kor{differentiaaliyhtälöt}, sillä melkeinpä kaikki luonnonlait ovat sellaisia. Paitsi
-luonnonlaeissa, differentiaaliyhtälöitä tavataan nykyisin mitä erilaisimmissa (ihmisen
-luomissa) fysiikan, biologian, talousieteen ym.\ matemaattisissa malleissa. --- Tällaisten
-'kantaäitinä' voi pitää aiemmin Luvuissa \ref{exp(x) ja ln(x)} ja 
+\hist{Galileo Galilei} (1564-1642). Galilein yhÃ¤ ajankohtainen lausuma tuo erityisesti mieleen
+\kor{differentiaaliyhtÃ¤lÃ¶t}, sillÃ¤ melkeinpÃ¤ kaikki luonnonlait ovat sellaisia. Paitsi
+luonnonlaeissa, differentiaaliyhtÃ¤lÃ¶itÃ¤ tavataan nykyisin mitÃ¤ erilaisimmissa (ihmisen
+luomissa) fysiikan, biologian, talousieteen ym.\ matemaattisissa malleissa. --- TÃ¤llaisten
+'kantaÃ¤itinÃ¤' voi pitÃ¤Ã¤ aiemmin Luvuissa \ref{exp(x) ja ln(x)} ja 
 \ref{eksponenttifunktio fysiikassa} tarkasteltua eksponentiaalisen kasvun tai vaimenemisen
 mallia.
 
-Tässä luvussa käydään ensin läpi differentiaaliyhtälöihin liittyvät peruskäsitteet
-(Luku \ref{DY-käsitteet}), minkä jälkeen tarkastellaan differentiaaliyhtälöiden klassisia
-ratkaisumenetelmiä ja näihin liittyviä sovellusesimerkkejä
-(Luvut \ref{separoituva DY}--\ref{2. kertaluvun lineaarinen DY}). Differentiaaliyhtälöiden
-perinteinen ratkaisemistekniikka on Luvuissa \ref{integraalifunktio}--\ref{osamurtokehitelmät}
-läpikäytyyn integroimistekniikkaan pitkälti perustuva (ja tähän tekniikkaan verrattavissa oleva)
-matematiikan taitolaji. Joillekin differentiaaliyhtälöiden erikoistyypeille ratkaisut ovat 
-löydettävissä pelkällä 'sivistyneellä arvauksella', muissa tapauksissa ratkaiseminen pyritään
+TÃ¤ssÃ¤ luvussa kÃ¤ydÃ¤Ã¤n ensin lÃ¤pi differentiaaliyhtÃ¤lÃ¶ihin liittyvÃ¤t peruskÃ¤sitteet
+(Luku \ref{DY-kÃ¤sitteet}), minkÃ¤ jÃ¤lkeen tarkastellaan differentiaaliyhtÃ¤lÃ¶iden klassisia
+ratkaisumenetelmiÃ¤ ja nÃ¤ihin liittyviÃ¤ sovellusesimerkkejÃ¤
+(Luvut \ref{separoituva DY}--\ref{2. kertaluvun lineaarinen DY}). DifferentiaaliyhtÃ¤lÃ¶iden
+perinteinen ratkaisemistekniikka on Luvuissa \ref{integraalifunktio}--\ref{osamurtokehitelmÃ¤t}
+lÃ¤pikÃ¤ytyyn integroimistekniikkaan pitkÃ¤lti perustuva (ja tÃ¤hÃ¤n tekniikkaan verrattavissa oleva)
+matematiikan taitolaji. Joillekin differentiaaliyhtÃ¤lÃ¶iden erikoistyypeille ratkaisut ovat 
+lÃ¶ydettÃ¤vissÃ¤ pelkÃ¤llÃ¤ 'sivistyneellÃ¤ arvauksella', muissa tapauksissa ratkaiseminen pyritÃ¤Ã¤n
 palauttamaan 'integroimisiin' eli \kor{kvadratuureihin}.
 
-Differentiaaliyhtälöiden matemaattisessa paljoudessa perinteisin menetelmin ratkeavia voi pitää
-harvinaisuuksina, mutta sovelluksissa tällaiset erikoistapaukset ovat kuitenkin melko yleisiä.
-Luvuissa \ref{separoituva DY}--\ref{2. kertaluvun lineaarinen DY} käydään läpi näistä 
-erikoistapauksista tavallisimmat. Luvussa \ref{DYn numeeriset menetelmät} tarkastellaan
-perinteisiä ratkaisumenetelmiä yleispätevämpiä \kor{numeerisia} menetelmiä, joilla
-differentiaaliyhtälöiden ja myös useamman yhtälön muodostamien 
-\kor{differentiaaliyhtälösysteemien} ratkaisuja voidaan laskea likimäärin. Likimääräisen
-ratkaisemisen ideoihin perustuu myös differentiaaliyhtälöiden teorian päälause,
-\kor{Picardin--Lindelöfin lause}, joka esitellään Luvussa \ref{Picard-Lindelöfin lause}.
+DifferentiaaliyhtÃ¤lÃ¶iden matemaattisessa paljoudessa perinteisin menetelmin ratkeavia voi pitÃ¤Ã¤
+harvinaisuuksina, mutta sovelluksissa tÃ¤llaiset erikoistapaukset ovat kuitenkin melko yleisiÃ¤.
+Luvuissa \ref{separoituva DY}--\ref{2. kertaluvun lineaarinen DY} kÃ¤ydÃ¤Ã¤n lÃ¤pi nÃ¤istÃ¤ 
+erikoistapauksista tavallisimmat. Luvussa \ref{DYn numeeriset menetelmÃ¤t} tarkastellaan
+perinteisiÃ¤ ratkaisumenetelmiÃ¤ yleispÃ¤tevÃ¤mpiÃ¤ \kor{numeerisia} menetelmiÃ¤, joilla
+differentiaaliyhtÃ¤lÃ¶iden ja myÃ¶s useamman yhtÃ¤lÃ¶n muodostamien 
+\kor{differentiaaliyhtÃ¤lÃ¶systeemien} ratkaisuja voidaan laskea likimÃ¤Ã¤rin. LikimÃ¤Ã¤rÃ¤isen
+ratkaisemisen ideoihin perustuu myÃ¶s differentiaaliyhtÃ¤lÃ¶iden teorian pÃ¤Ã¤lause,
+\kor{Picardin--LindelÃ¶fin lause}, joka esitellÃ¤Ã¤n Luvussa \ref{Picard-LindelÃ¶fin lause}.

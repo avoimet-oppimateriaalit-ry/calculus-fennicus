@@ -2,27 +2,27 @@
 
   \item \ohje
     \subitem --luvun tai osaluvun otsikkoon, \vahv{234}
-    \subitem --lauseeseen tai m\"a\"aritelm\"a\"an, \emph{234}
+    \subitem --lauseeseen tai määritelmään, \emph{234}
     \subitem --tekstiin, 234
     \subitem --alaviitteeseen, \av{234}
 
   \indexspace
 
   \item a posteriori, 571
-  \item aaltoyht\"al\"o, 787
+  \item aaltoyhtälö, 787
   \item absoluuttinen maksimi, minimi, 342, 821
   \item adaptiivinen Simpson, \vahv{571}
   \item additiivisuus
     \subitem integraalin, 518, 526, 887
     \subitem mitan, 557, 884
-    \subitem kokonaism\"a\"ar\"an, 930
+    \subitem kokonaismäärän, 930
   \item affiinikuvaus, \vahv{726}
-  \item aidosti kasvava, v\"ahenev\"a, monotoninen
+  \item aidosti kasvava, vähenevä, monotoninen
     \subitem lukujono, \emph{45}
     \subitem reaalifunktio, \emph{245}
   \item aidosti konveksi, \av{353}
   \item aito osajoukko, \av{2}
-  \item aksiomaattinen (m\"a\"arittely), 108
+  \item aksiomaattinen (määrittely), 108
   \item aksiooma, 4
   \item aladiagonaali, 677
   \item alakolmiomatriisi, \emph{676}
@@ -33,15 +33,15 @@
   \item algoritmi, \av{46}
   \item alhaalta rajoitettu, 106
   \item aliavaruus, \vahv{146}, \vahv{719}
-  \item alideterminanttis\"a\"ant\"o, \emph{708}
+  \item alideterminanttisääntö, \emph{708}
   \item aliharmoninen sarja, 114
   \item alikunta, \vahv{19}
-  \item alim\"a\"ar\"aytyv\"a (yht\"al\"oryhm\"a), 658
+  \item alimääräytyvä (yhtälöryhmä), 658
   \item alkeisfunktio, 489
     \subitem nimetty, \see{funktio C}{1}
   \item alkio (joukon), 2
   \item alkio (vektorin, matriisin), 659, 660
-  \item alkuarvoteht\"av\"a, 357, 580, 581
+  \item alkuarvotehtävä, 357, 580, 581
   \item alkuehto (DY:n), 357, \vahv{580}
   \item alkuluku, 34
   \item alternoiva sarja, \vahv{116}
@@ -57,7 +57,7 @@
   \item Arkhimedes, \av{558}
   \item arkusfunktiot, 257
   \item arvojoukko, 162, 242
-  \item askelmenetelm\"a, 641, \vahv{646}
+  \item askelmenetelmä, 641, \vahv{646}
   \item askelpituus, 642
   \item aste (polynomin), 226
   \item asteroidi, 289
@@ -68,25 +68,25 @@
   \item autonominen DY, \vahv{591}
   \item avaruusintegraali, \vahv{908}
     \subitem $n$-ulotteinen, \vahv{913}
-    \subitem k\"ayr\"av.\ koordinaateissa, \vahv{924}
-  \item avaruusk\"ayr\"a, \see{k\"ayr\"a}{1}
+    \subitem käyräv.\ koordinaateissa, \vahv{924}
+  \item avaruuskäyrä, \see{käyrä}{1}
   \item avaruuskulma, \vahv{956}
-  \item avaruusympyr\"a, 197
+  \item avaruusympyrä, 197
   \item avoin alue, \av{994}
   \item avoin joukko, \emph{378}, \emph{380}, \emph {749}
-  \item avoin v\"ali, 110
+  \item avoin väli, 110
 
   \indexspace
 
   \item Banachin kiintopistelause, \av{813}
   \item Bernoulli, J., \av{375}
-  \item Bernoullin differentiaaliyht\"al\"o, 615
-  \item Bernoullin ep\"ayht\"al\"o, \emph{39}
-  \item Besselin differentiaaliyht\"al\"o, 636
+  \item Bernoullin differentiaaliyhtälö, 615
+  \item Bernoullin epäyhtälö, \emph{39}
+  \item Besselin differentiaaliyhtälö, 636
   \item Besselin funktio, 637
   \item bijektio, \vahv{256}
   \item bilineaarisuus, 152, 157
-  \item binaarij\"arjestelm\"a, 7
+  \item binaarijärjestelmä, 7
   \item binomikaava, -kerroin, \emph{37}
   \item bitti, 7, 48
   \item Bolzano, B., \av{103}
@@ -104,11 +104,11 @@
     \subitem suppenemiskriteeri, \emph{97}
     \subitem kriteeri sarjoille, \emph{117}
     \subitem kriteeri integraaleille, \emph{549}
-    \subitem jono $\R^n$:ss\"a, 814
-    \subitem --Schwarzin ep\"ayht\"al\"o, \emph{158}, \emph{239}, 666
+    \subitem jono $\R^n$:ssä, 814
+    \subitem --Schwarzin epäyhtälö, \emph{158}, \emph{239}, 666
   \item Cayleyn--Hamiltonin lause, 855
   \item Cramer, G., \av{711}
-  \item Cramerin s\"a\"ant\"o, \emph{711}
+  \item Cramerin sääntö, \emph{711}
 
   \indexspace
 
@@ -118,10 +118,10 @@
   \item Dedekindin leikkaus, \av{108}
   \item derivaatta, \emph{319}
     \subitem toispuolinen, \vahv{343}
-  \item derivoimiss\"a\"ann\"ot
-    \subitem summa, tulo, osam\"a\"ar\"a, \vahv{321}
+  \item derivoimissäännöt
+    \subitem summa, tulo, osamäärä, \vahv{321}
     \subitem yhdistetty funktio, \emph{323}
-    \subitem k\"a\"anteisfunktio, \emph{324}
+    \subitem käänteisfunktio, \emph{324}
     \subitem implisiittifunktio, \vahv{325}
     \subitem potenssisarja, \emph{327}
     \subitem trigonometriset funktiot, \vahv{337}
@@ -141,12 +141,12 @@
   \item diagonaalimatriisi, \emph{676}
   \item diagonalisointi
     \subitem matriisin, \vahv{851}
-    \subitem neli\"omuodon, \vahv{858}
+    \subitem neliömuodon, \vahv{858}
   \item diedrikulma, 188
   \item differenssiapproksimaatio, \vahv{468}
   \item differentiaali, 422, 769, 771
-  \item Differentiaalilaskun v\"aliarvolause, \emph{350}
-    \subitem yleistetty v\"aliarvolause, \emph{358}
+  \item Differentiaalilaskun väliarvolause, \emph{350}
+    \subitem yleistetty väliarvolause, \emph{358}
   \item differentiaalioperaattori
     \subitem derivoinnin, 320
     \subitem lineaarisen DY:n, 606, 628
@@ -157,10 +157,10 @@
     \subitem Laplacen operaattori, \vahv{783}, 794
     \subitem $\nabla\star$, $\vec u\cdot\nabla$, \vahv{785}
     \subitem Jacobin matriisi, 799
-  \item differentiaaliyht\"al\"o (DY), \vahv{355}, \vahv{575}
+  \item differentiaaliyhtälö (DY), \vahv{355}, \vahv{575}
     \subitem eksponenttifunktion, 399, \vahv{417}, \vahv{425}
     \subitem yleinen, 576
-    \subitem k\"ayr\"aparven, \vahv{578}
+    \subitem käyräparven, \vahv{578}
     \subitem kohtisuorien leikkaajien, \vahv{579}
     \subitem --systeemi, \vahv{581}, \vahv{645}, \vahv{654}
     \subitem separoituva, \vahv{587}
@@ -175,32 +175,32 @@
     \subitem lineaarinen, \see{lineaarinen DY}{1}
     \subitem Bernoullin, 615
     \subitem Riccatin, 584, 616
-    \subitem osittaisdifferentiaaliyht\"al\"o, 787
-  \item differentiaaliyht\"al\"on
+    \subitem osittaisdifferentiaaliyhtälö, 787
+  \item differentiaaliyhtälön
     \subitem normaalimuoto, 576, 581
-    \subitem yksitt\"aisratkaisu, yleinen ratk., \vahv{576}
+    \subitem yksittäisratkaisu, yleinen ratk., \vahv{576}
     \subitem erikoisratkaisu, \vahv{578}
-    \subitem alkuarvoteht\"av\"a, 580
-    \subitem reuna-arvoteht\"av\"a, 580
-    \subitem ratkaisun s\"a\"ann\"ollisyys, \vahv{582}
+    \subitem alkuarvotehtävä, 580
+    \subitem reuna-arvotehtävä, 580
+    \subitem ratkaisun säännöllisyys, \vahv{582}
     \subitem ratkaiseminen kvadratuureilla, \vahv{583}
     \subitem ratkeavuus, \emph{589}, \emph{631}, \emph{649}, \vahv{654}
     \subitem numeerinen ratkaiseminen, \vahv{641}
   \item differentioituvuus, \emph{772}, 799
-  \item diffuusioyht\"al\"o, 787
+  \item diffuusioyhtälö, 787
   \item dimensio, \vahv{146}, 660, 716
   \item Dirichlet'n funktio, 297
   \item Dirichlet'n (reuna)ehto, 786
   \item divergenssi, \vahv{783}
-    \subitem k\"ayr\"av. koordinaateissa, 794
+    \subitem käyräv. koordinaateissa, 794
   \item divergoiminen, \see{hajaantuminen}{1}
 
   \indexspace
 
   \item ei-singulaarinen matriisi, \emph{670}
-  \item eksakti differentiaaliyht\"al\"o, 766
+  \item eksakti differentiaaliyhtälö, 766
   \item eksistenssilause, \av{78}
-  \item eksplisiittinen (askel)menetelm\"a, 647
+  \item eksplisiittinen (askel)menetelmä, 647
   \item eksponentiaali-integraalifunktio, \av{476}
   \item eksponenttifunktio, \vahv{391}
     \subitem aksioomat, \emph{392}, 399, \emph{409}
@@ -212,19 +212,19 @@
   \item ellipsi, 432, 811, 864
   \item ellipsoidi, 283, 866
   \item elliptinen integraali, 562
-  \item elliptinen lieri\"o, 866
+  \item elliptinen lieriö, 866
   \item elliptinen paraboloidi, 866
   \item elliptinen piste (pinnan), 872
-  \item ep\"ahomogeeninen DY, 607
-  \item ep\"ajatkuvuus (funktion), \emph{295}
-  \item ep\"ajatkuvuus (vektorikent\"an), \vahv{979}
-  \item ep\"akonstruktiivinen p\"a\"attely, \vahv{104}
-  \item ep\"alineaarinen kuvaus, 726
-  \item ep\"alineaarinen operaattori, \av{606}
-  \item ep\"alineaarinen yht\"al\"oryhm\"a, 798
-  \item ep\"aoleellinen integraali, 544, \vahv{901}
-  \item ep\"aoleellinen \"a\"ariarvo(piste), \emph{340}
-  \item ep\"asuora todistus, 27
+  \item epähomogeeninen DY, 607
+  \item epäjatkuvuus (funktion), \emph{295}
+  \item epäjatkuvuus (vektorikentän), \vahv{979}
+  \item epäkonstruktiivinen päättely, \vahv{104}
+  \item epälineaarinen kuvaus, 726
+  \item epälineaarinen operaattori, \av{606}
+  \item epälineaarinen yhtälöryhmä, 798
+  \item epäoleellinen integraali, 544, \vahv{901}
+  \item epäoleellinen ääriarvo(piste), \emph{340}
+  \item epäsuora todistus, 27
   \item erikoisratkaisu (DY:n), \vahv{578}
   \item eristetty piste (joukon), 305
   \item Eukleides, 127
@@ -240,8 +240,8 @@
   \item Eulerin
     \subitem kaava, 411
     \subitem vakio, 555
-    \subitem differentiaaliyht\"al\"o, \vahv{623}
-    \subitem menetelm\"a, \vahv{642}
+    \subitem differentiaaliyhtälö, \vahv{623}
+    \subitem menetelmä, \vahv{642}
   \item evoluutta, \vahv{443}
 
   \indexspace
@@ -257,22 +257,22 @@
     \subitem kahden ja kolmen muuttujan, \vahv{265}
     \subitem $n$ muuttujan (vektorim.), 746
     \subitem kompleksifunktio, 229, \vahv{376}, \vahv{409}
-    \subitem parametrinen k\"ayr\"a ja pinta, \vahv{276}
+    \subitem parametrinen käyrä ja pinta, \vahv{276}
     \subitem lineaarikuvaus, \vahv{714}
     \subitem affiinikuvaus, \vahv{726}
-    \subitem vektorikentt\"a, 782
+    \subitem vektorikenttä, 782
     \subitem $n$ muuttujan vektoriarvoinen, 798
     \subitem operaattori, \see{differentiaaliop.}{1}
   \item funktio B: funktioiden \emph{algebra}
     \subitem monotoninen, \vahv{245}, \vahv{351}
     \subitem parillinen, pariton, 167, \vahv{249}
     \subitem jaksollinen, 167, \emph{250}
-    \subitem paloittain m\"a\"aritelty, 243
+    \subitem paloittain määritelty, 243
     \subitem yhdistetty, \vahv{247}, \vahv{272}
     \subitem yhdistely laskutoimituksilla, \vahv{248}
     \subitem muuttujan vaihto, \vahv{248}
-    \subitem k\"ayr\"av.\ koordinaatistoissa, \vahv{269}
-    \subitem k\"a\"anteisfunktio, \vahv{253}, 808
+    \subitem käyräv.\ koordinaatistoissa, \vahv{269}
+    \subitem käänteisfunktio, \vahv{253}, 808
     \subitem implisiittifunktio, \vahv{259, 260}, \vahv{273}
   \item funktio C: nimetyt \emph{alkeis}funktiot
     \subitem $\sin$, $\cos$, \vahv{166}, 411
@@ -286,7 +286,7 @@
     \subitem $\arsinh$, $\arcosh$, $\artanh$, \vahv{412}
   \item funktioavaruus, \vahv{290}
   \item funktioevaluaatio, 165
-  \item funktion raja-arvo, \emph{307}, \emph{309}, \vahv{314}, 
+  \item funktion raja-arvo, \emph{307}, \emph{309}, \vahv{314},
 		\vahv{746}
     \subitem raja-arvojen yhdistely, \vahv{310}
     \subitem laskeminen sijoituksella, \vahv{311}
@@ -298,7 +298,7 @@
   \item Gauss, C.F., \av{233}
   \item Gaussin algoritmi (eliminaatio), \vahv{681}
     \subitem tuettu, \vahv{693}
-    \subitem ty\"om\"a\"ar\"a, \vahv{686}
+    \subitem työmäärä, \vahv{686}
   \item Gaussin lause (kaava), \emph{972, 973}
     \subitem yleistetty, \vahv{974}
   \item geneerinen vakio, 490
@@ -307,17 +307,17 @@
   \item geometrinen kuvaus, \vahv{727}
   \item geometrinen luku, \vahv{130}
   \item geometrinen sarja, 36
-  \item globaali \"a\"ariarvo, 821
+  \item globaali ääriarvo, 821
   \item gradientti, \vahv{769}
     \subitem monen muuttujan, \vahv{771}
     \subitem differentioituvuus, \vahv{772}
     \subitem suunnattu derivaatta, \vahv{774}
-    \subitem k\"ayr\"av. koordinaateissa, 794
-  \item gradienttikentt\"a, \vahv{783}, \vahv{964}, \emph{994}, 
+    \subitem käyräv. koordinaateissa, 794
+  \item gradienttikenttä, \vahv{783}, \vahv{964}, \emph{994},
 		\emph{996}
   \item Greenin kaavat, 971, 973
   \item Guldin, P., \av{934}
-  \item Guldinin s\"a\"ant\"o, \av{934}, 958
+  \item Guldinin sääntö, \av{934}, 958
 
   \indexspace
 
@@ -327,13 +327,13 @@
     \subitem integraalin, 547
   \item harmoninen funktio, 786
   \item harmoninen sarja, 114
-  \item harmoninen v\"ar\"ahtely, 172, 599
+  \item harmoninen värähtely, 172, 599
   \item heksadesimaaliluku, 49
   \item hermiittinen matriisi, 667
   \item Hermiten
     \subitem polynomi, 407
     \subitem interpolaatio(polynomi), 481
-    \subitem differentiaaliyht\"al\"o, 636
+    \subitem differentiaaliyhtälö, 636
   \item Hessen matriisi, 839
   \item Hilbert, D., \av{128}
   \item hitausmomentti, \vahv{935}
@@ -341,35 +341,35 @@
   \item homogeeninen DY, \see{lineaarinen DY}{1}
   \item homotetia (skaalaus), 727
   \item Hooken laki, 741
-  \item hylkiv\"a (kiintopiste), 366
+  \item hylkivä (kiintopiste), 366
   \item hyperbeli, 286, 864
-  \item hyperbolinen lieri\"o, 866
+  \item hyperbolinen lieriö, 866
   \item hyperbolinen paraboloidi, 866
   \item hyperbolinen piste (pinnan), 872
   \item hyperboliset funktiot, \vahv{412}
   \item hyperboloidi, 286, 288, 866
   \item hypertaso, 730
   \item hyposykloidi, 289
-  \item hyppyep\"ajatkuvuus, 313
-  \item H\"older-jatkuvuus, 389
+  \item hyppyepäjatkuvuus, 313
+  \item Hölder-jatkuvuus, 389
 
   \indexspace
 
   \item identiteettikuvaus, --matriisi, 670
-  \item identtisesti (ep\"a)tosi, 25
+  \item identtisesti (epä)tosi, 25
   \item imaginaariluku $i$, \emph{223}
   \item imaginaariosa, \emph{224}
   \item implikaatio, 2, \vahv{26}
   \item implisiittifunktio, \vahv{259, 260}, \vahv{273}
   \item Implisiittifunktiolause, \emph{812}
-  \item implisiittinen (askel)menetelm\"a, 647
+  \item implisiittinen (askel)menetelmä, 647
   \item implisiittinen derivointi, \vahv{325}
   \item implisiittinen Euler, 646
   \item implisiittinen osittaisderivointi, \vahv{760}
-  \item indefiniitti (neli\"omuoto), \emph{856}
+  \item indefiniitti (neliömuoto), \emph{856}
   \item indeksi
-    \subitem summa- ja tulomerkinn\"an, 11
-    \subitem jonomerkinn\"an, 35
+    \subitem summa- ja tulomerkinnän, 11
+    \subitem jonomerkinnän, 35
     \subitem moni-indeksi, 756
   \item induktio(periaate), \vahv{37}
   \item induktioaskel, -oletus, 37
@@ -377,16 +377,16 @@
   \item injektio, 253, \vahv{256}
   \item integraalifunktio, \vahv{355}, \vahv{486}
   \item Integraalilaskun peruslause, \emph{356}
-  \item Integraalilaskun v\"aliarvolause, \emph{540}
-  \item integraaliyht\"al\"o, 595, 650
+  \item Integraalilaskun väliarvolause, \emph{540}
+  \item integraaliyhtälö, 595, 650
   \item integroimisvakio, 357, 486
-  \item integroiva tekij\"a (DY:n), 609
+  \item integroiva tekijä (DY:n), 609
   \item interpolaatiopolynomi, \vahv{473}
     \subitem Lagrangen, 473, \vahv{476}
     \subitem yleistetty, \vahv{480}
     \subitem Hermiten, 481
   \item irrationaalinen luku, 111
-  \item isoympyr\"a, 197
+  \item isoympyrä, 197
   \item iteroitu integraali, 897
   \item itseinen suppeneminen, \emph{118}
   \item itseisarvo, 18, 138, \emph{224}
@@ -396,10 +396,10 @@
   \item Jacobi, K. G. J., \av{799}
   \item Jacobin determinantti, 922
   \item Jacobin matriisi, 799
-  \item jako (osav\"aleihin), 512, 523
+  \item jako (osaväleihin), 512, 523
   \item jako (suorakulmioihin), 886
   \item jakoalgoritmi (polynomien), 501
-  \item jakoj\"a\"ann\"os, 47
+  \item jakojäännös, 47
   \item jakokulma-algoritmi, \vahv{46}
   \item jakopiste, 513
   \item jaksollinen desimaaliluku, 48, \vahv{69}
@@ -411,24 +411,24 @@
   \item jatkamismenettely (algoritmi), \vahv{803}
   \item jatkuvasti derivoituvuus, \emph{345, 346}
   \item jatkuvuus (yhden muuttujan), \emph{295}
-    \subitem v\"alill\"a, \vahv{297}
-    \subitem yhdistelys\"a\"ann\"ot, \emph{297}
+    \subitem välillä, \vahv{297}
+    \subitem yhdistelysäännöt, \emph{297}
     \subitem yhdistetyn funktion, \emph{298}
     \subitem funktion $\sqrt[m]{x}$, \vahv{299}
-    \subitem k\"a\"anteisfunktion, \emph{303}, \vahv{385}
+    \subitem käänteisfunktion, \emph{303}, \vahv{385}
     \subitem oikealta, vasemmalta, 308
     \subitem paloittainen, \vahv{313}
     \subitem kompaktissa joukossa, \emph{383}
     \subitem tasainen, \vahv{387}
   \item jatkuvuus (usean muuttujan), \vahv{746}
     \subitem funktion $f(x,y)$, \emph{747}, \emph{749}
-    \subitem yhdistelys\"a\"ann\"ot, \emph{748}
+    \subitem yhdistelysäännöt, \emph{748}
     \subitem funktion $f(x,y,z)$, 750
     \subitem funktion $f(\mx),\ \mx\in\R^n$, 750
     \subitem kompaktissa joukossa, \emph{751}
   \item jono, 35
   \item Jordan, C., \av{884}
-  \item Jordan-k\"ayr\"a, 942
+  \item Jordan-käyrä, 942
   \item Jordan-mitta
     \subitem pinta-alamitta, \vahv{884}, \emph{888}, \vahv{890}
     \subitem $\R$:n pituusmitta, \vahv{893}
@@ -441,28 +441,28 @@
   \item juuri (kompleksiluvun), \vahv{234}
   \item juuriluku, 21
   \item juuritesti (sarjaopin), 124
-  \item j\"alki (tensorin), \emph{880}
-  \item j\"arjestetty joukko, \av{35}
-  \item j\"arjestetty kunta, \vahv{17}
-  \item j\"arjestysrelaatio, 10
+  \item jälki (tensorin), \emph{880}
+  \item järjestetty joukko, \av{35}
+  \item järjestetty kunta, \vahv{17}
+  \item järjestysrelaatio, 10
     \subitem $\Q$:n, \vahv{9}
     \subitem $\R$:n, \emph{89}, \vahv{102}
-  \item j\"a\"ann\"ostermi (Lagrangen), 452, 835
+  \item jäännöstermi (Lagrangen), 452, 835
 
   \indexspace
 
   \item kaarenpituus, \vahv{332}, \vahv{561}
   \item kaarenpituusmitta, 561, \vahv{943}
   \item kaarenpituusparametrisaatio, \vahv{944}
-  \item kaareutuvuus (funktion, k\"ayr\"an), \vahv{353}
-  \item kaarevuus (k\"ayr\"an), \vahv{440}
+  \item kaareutuvuus (funktion, käyrän), \vahv{353}
+  \item kaarevuus (käyrän), \vahv{440}
   \item kaarevuus (pinnan), \vahv{870}
-  \item kaarevuuskeski\"o, \vahv{443}, 872
+  \item kaarevuuskeskiö, \vahv{443}, 872
   \item kaarevuusmatriisi, 871
-  \item kaarevuuss\"ade, 441, 872
+  \item kaarevuussäde, 441, 872
   \item kaarevuustensori, 877
-  \item kaarevuusympyr\"a, 443
-  \item kaari (k\"ayr\"an), 277, 332
+  \item kaarevuusympyrä, 443
+  \item kaari (käyrän), 277, 332
   \item kahden muuttujan funktio, \vahv{265}
   \item kaksinkertainen nollakohta, 370
   \item kaksipaikkainen predikaatti, 29
@@ -472,12 +472,12 @@
   \item kanta, \vahv{140}, 178, 659, 717
     \subitem ortonormeerattu, \vahv{154}, 178, 666, 717
     \subitem kannan vaihto, 145, \vahv{716}
-  \item kantaluku (lukuj\"arjestelm\"an), 6
+  \item kantaluku (lukujärjestelmän), 6
   \item kantapolynomi (Lagrangen), 476
   \item karakteristinen funktio, 888
-  \item karakteristinen yht\"al\"o (polynomi)
-    \subitem differentiaaliyht\"al\"on, 617, 625
-    \subitem neli\"omatriisin, 845
+  \item karakteristinen yhtälö (polynomi)
+    \subitem differentiaaliyhtälön, 617, 625
+    \subitem neliömatriisin, 845
   \item karteesinen tulo, \av{141}
   \item kartio, \vahv{198}, 866
   \item kasvava, \see{monotoninen}{1}
@@ -485,13 +485,13 @@
   \item kerroin (DY:n), 606, 628
   \item kerroin (polynomin), 226
   \item kerroin (potenssisarjan), 118
-  \item kerroin (yht\"al\"oryhm\"an), 658
+  \item kerroin (yhtälöryhmän), 658
   \item kertaluku
     \subitem juuren (nollakohdan), 231
     \subitem suppenemisnopeuden, 368
     \subitem tarkkuuden, 469, 571, 646
     \subitem derivaatan, 321
-    \subitem differentiaaliyht\"al\"on, 576
+    \subitem differentiaaliyhtälön, 576
     \subitem osittaisderivaatan, 755, 756
     \subitem ominaisarvon, 845
   \item kertojakunta, 140
@@ -501,13 +501,13 @@
     \subitem funktion, 541
     \subitem aritmeettinen, geometrinen, 833
   \item keskijana (kolmion), 135
-  \item keskipistes\"a\"ant\"o, 566, 646, \vahv{891}, 908
-  \item keski\"o (kolmion), 139
-  \item keski\"o (joukon), \vahv{932}
-  \item ketjus\"a\"ant\"o (os.-derivoinnin), \vahv{759}, \emph{763}
+  \item keskipistesääntö, 566, 646, \vahv{891}, 908
+  \item keskiö (kolmion), 139
+  \item keskiö (joukon), \vahv{932}
+  \item ketjusääntö (os.-derivoinnin), \vahv{759}, \emph{763}
   \item ketjuviiva, 564, \vahv{601}
   \item kiekko, \av{197}
-  \item kierevyys (k\"ayr\"an), 449
+  \item kierevyys (käyrän), 449
   \item kierevyys (pinnan), 871
   \item kierto
     \subitem geom.\ kuvaus, 181, 727, 729, 890
@@ -523,26 +523,26 @@
   \item Kirchhoffin laki, 736
   \item klassinen Runge-Kutta, 646
   \item kohtisuora leikkaus
-    \subitem k\"ayrien, 430
-    \subitem k\"ayr\"aparvien, 431, \vahv{579}
+    \subitem käyrien, 430
+    \subitem käyräparvien, 431, \vahv{579}
   \item kohtisuoruus (vektoreiden), 150
   \item kokonainen funktio, 378
   \item kokonaisluvut, \vahv{5}
     \subitem kokonaislukuosa (desim.-luvun), 43
-  \item kokonaism\"a\"ar\"a, \vahv{927}
+  \item kokonaismäärä, \vahv{927}
     \subitem integraalikaava, 927
     \subitem aksioomat, \vahv{930}
     \subitem momentti, \vahv{930}
-    \subitem painopiste, keski\"o, \vahv{932}
+    \subitem painopiste, keskiö, \vahv{932}
     \subitem hitausmomentti, \vahv{935}
   \item kolmen muuttujan funktio, \vahv{267}
   \item kolmikko, \av{35}
   \item kolmio ($\R^n$:n), 730
-  \item kolmioep\"ayht\"al\"o
-    \subitem j\"arjestetyn kunnan, \emph{19}
+  \item kolmioepäyhtälö
+    \subitem järjestetyn kunnan, \emph{19}
     \subitem tason vektoreiden, 138
     \subitem normiavaruuden, 159
-    \subitem sis\"atuloavaruuden, 161
+    \subitem sisätuloavaruuden, 161
     \subitem kompleksilukujen, \vahv{226}
     \subitem integraalien, 518
   \item kolmiomatriisi, \vahv{676}
@@ -564,9 +564,9 @@
   \item komponentti (vektorin), 141
   \item koneluku, 50
   \item konjugaatti, \emph{224}
-  \item konservatiivinen vektorikentt\"a, 994
+  \item konservatiivinen vektorikenttä, 994
   \item konsistenssivirhe, 643
-  \item konstruktiivinen (m\"a\"arittely), 108
+  \item konstruktiivinen (määrittely), 108
   \item kontraktio(kuvaus), 374, 813
   \item Kontraktiokuvauslause, 374, \emph{813}
   \item konveksi, konkaavi, \av{353}
@@ -574,7 +574,7 @@
   \item koordinaatisto, \vahv{140}
     \subitem koordinaatiston vaihto, \vahv{145}
     \subitem karteesinen, 154, 179
-    \subitem k\"ayr\"aviivainen, \vahv{204}
+    \subitem käyräviivainen, \vahv{204}
     \subitem koordinaatiston kierto, \vahv{718}
   \item koordinaatti (pisteen), 142
   \item koordinaatti (vektorin), 141
@@ -616,44 +616,44 @@
   \item kvadratuuripiste, -paino, 565
   \item kvanttori, \vahv{29}
   \item kymmenjakokonstruktio, \vahv{90}
-  \item kymmenj\"arjestelm\"a, 6
-  \item k\"arkipiste (simpleksin), 731
-  \item k\"ayp\"a (kriittinen piste), 823
-  \item k\"ayr\"a, \av{265}, \vahv{276}, \av{301}, \vahv{430}, 
+  \item kymmenjärjestelmä, 6
+  \item kärkipiste (simpleksin), 731
+  \item käypä (kriittinen piste), 823
+  \item käyrä, \av{265}, \vahv{276}, \av{301}, \vahv{430},
 		\vahv{440}
-  \item k\"ayr\"aintegraali, \see{viivaintegraali}{1}
-  \item k\"ayr\"aparvi, 431, \vahv{578, 579}
-  \item k\"ayr\"aviivaiset koordinaatistot, \vahv{204}
+  \item käyräintegraali, \see{viivaintegraali}{1}
+  \item käyräparvi, 431, \vahv{578, 579}
+  \item käyräviivaiset koordinaatistot, \vahv{204}
     \subitem --funktiot, \vahv{269}
-    \subitem --py\"or\"ahdyspinnat, \vahv{283}
+    \subitem --pyörähdyspinnat, \vahv{283}
     \subitem --differentiaalioperaattorit, \vahv{791}
     \subitem --integraalit, \vahv{924}, 948, 953
-  \item K\"a\"anteisfunktiolause, \emph{810}, \vahv{815}
-  \item k\"a\"annepiste, 353
-  \item k\"a\"anteisalkio (kunnan), 14
-  \item k\"a\"anteisfunktio, \vahv{253}, 808
+  \item Käänteisfunktiolause, \emph{810}, \vahv{815}
+  \item käännepiste, 353
+  \item käänteisalkio (kunnan), 14
+  \item käänteisfunktio, \vahv{253}, 808
     \subitem paikallinen, \emph{809}
-  \item k\"a\"anteiskuvaus, 715, 726
-  \item k\"a\"anteismatriisi, \emph{670}
-  \item k\"a\"anteisosoitin, 219
-  \item k\"a\"antymispiste, 444
-  \item k\"a\"antyv\"a matriisi, 670
+  \item käänteiskuvaus, 715, 726
+  \item käänteismatriisi, \emph{670}
+  \item käänteisosoitin, 219
+  \item kääntymispiste, 444
+  \item kääntyvä matriisi, 670
 
   \indexspace
 
   \item l'Hospital G. de, \av{359}
-  \item l'Hospitalin s\"a\"ann\"ot, \emph{359}
+  \item l'Hospitalin säännöt, \emph{359}
   \item laakapiste, \emph{821}
   \item Lagrange, J. L., \av{452}
   \item Lagrangen
-    \subitem j\"a\"ann\"ostermi, 452
+    \subitem jäännöstermi, 452
     \subitem interpolaatio(polynomi), 473, \vahv{476}
-    \subitem kertojien menetelm\"a, \vahv{825}
-  \item Laguerren differentiaaliyht\"al\"o, 636
+    \subitem kertojien menetelmä, \vahv{825}
+  \item Laguerren differentiaaliyhtälö, 636
   \item Laplace, P. S. de, \av{786}
   \item Laplacen operaattori, \vahv{783}
-    \subitem k\"ayr\"av. koordinaateissa, 794
-  \item Laplacen yht\"al\"o, 786
+    \subitem käyräv. koordinaateissa, 794
+  \item Laplacen yhtälö, 786
   \item laskuoperaatiot
     \subitem rationaalilukujen, 3--9, 12
     \subitem kunnan, 14
@@ -662,7 +662,7 @@
     \subitem tason vektoreiden, 137--139, \vahv{149}
     \subitem  yleisen vektoriavaruuden, 140
     \subitem vektoriavaruuden $(\Rkaksi,\R)$, 141
-    \subitem avaruusvektoreiden, 176--177, \vahv{180}, \vahv{184}, 
+    \subitem avaruusvektoreiden, 176--177, \vahv{180}, \vahv{184},
 		\vahv{187}
     \subitem vektoriavaruuden $(\R^3,\R)$, 178
     \subitem osoittimien, \vahv{216}
@@ -670,53 +670,53 @@
     \subitem reaalifunktioiden, \emph{249}
     \subitem $n$-vektoreiden, matriisien, \vahv{658}
   \item Lause (teoreema), \av{5}
-  \item lause (v\"aitelause), \av{25}
+  \item lause (väitelause), \av{25}
   \item Lebesgue, H., \av{544}
   \item Lebesguen integraali, \av{544}
-  \item Legendren differentiaaliyht\"al\"o, 636
+  \item Legendren differentiaaliyhtälö, 636
   \item Legendren polynomi, 639
   \item Leibniz, G. W., 421, \av{516}
-  \item Leibnizin s\"a\"ant\"o, 322
+  \item Leibnizin sääntö, 322
   \item leikkaus (joukkojen), 31
   \item leikkauskulma, 197
   \item Lemma (apulause), \av{5}
-  \item lieri\"o, \vahv{198}, 866
-  \item lieri\"okoordinaatisto, \vahv{208}
+  \item lieriö, \vahv{198}, 866
+  \item lieriökoordinaatisto, \vahv{208}
   \item liikerata, \vahv{278}
   \item liittoluku, \emph{224}
   \item liittomatriisi, 667
-  \item liit\"ant\"alaki, 3
+  \item liitäntälaki, 3
   \item limes, 54
-  \item Lindel\"of, E., \av{649}
+  \item Lindelöf, E., \av{649}
   \item lineaarialgebra, 657
   \item lineaarikombinaatio, \see{l.-yhdistely}{1}
   \item lineaarikuvaus, \vahv{714}
     \subitem lineaarikuvauksen matriisi, 715
-  \item lineaarinen differentiaaliyht\"al\"o
+  \item lineaarinen differentiaaliyhtälö
     \subitem homogeeninen, 607, \vahv{628, 629}, \vahv{631}
-    \subitem t\"aydellinen, 607, \vahv{619}, 635
+    \subitem täydellinen, 607, \vahv{619}, 635
     \subitem 1.\ kertaluvun, \vahv{606}
     \subitem 2.\ kertaluvun, \vahv{617}, \vahv{628}
     \subitem korkeamman kertaluvun, \vahv{625}
     \subitem vakiokertoiminen, \vahv{610}, \vahv{617}
     \subitem Eulerin, \vahv{623}
-    \subitem Besselin, Hermiten, Laguerren, $\quad$        Legendren, T\v{s}eby\v{s}evin, 
+    \subitem Besselin, Hermiten, Laguerren, $\quad$        Legendren, T\v{s}eby\v{s}evin,
 		636
     \subitem vakio(ide)n variointi, 607, \vahv{635}
-    \subitem integroivan tekij\"an menettely, \vahv{609}
+    \subitem integroivan tekijän menettely, \vahv{609}
     \subitem jaksolliset ratkaisut, \vahv{612, 613}
     \subitem kompleksiarvoiset ratkaisut, \vahv{621}
     \subitem sarjaratkaisut, \vahv{637}
-  \item lineaarinen ep\"ayht\"al\"o, 733
+  \item lineaarinen epäyhtälö, 733
   \item lineaarinen interpolaatio, 474
   \item lineaarinen optimointi, \vahv{732}
     \subitem lineaarinen ohjelmointi, 733, 823
   \item lineaarinen rajoite, 823
-  \item lineaarinen riippumattomuus, \vahv{144}, 178, 290, 628, 716, 
+  \item lineaarinen riippumattomuus, \vahv{144}, 178, 290, 628, 716,
 		\emph{848}
   \item lineaarinen riippuvuus, 144, 628, 716
   \item lineaarinen suppeneminen, 368
-  \item lineaarinen yht\"al\"oryhm\"a, 658
+  \item lineaarinen yhtälöryhmä, 658
   \item lineaarisuus
     \subitem derivoinnin, 321, 754
     \subitem integroinnin, 518, \emph{527}, 887
@@ -724,7 +724,7 @@
   \item lineaariyhdistely, 141, 660, 758
   \item linearisaatio (funktion), \emph{319}, 800
   \item Lipschitz, R., \av{354}
-  \item Lipschitz-ehto (pisteess\"a), \av{364}
+  \item Lipschitz-ehto (pisteessä), \av{364}
   \item Lipschitz-jatkuvuus, \emph{354}
   \item liukuluku, \vahv{49}
   \item logaritmifunktio, \vahv{402}, \vahv{414}
@@ -737,7 +737,7 @@
     \subitem operaattori, 25
     \subitem ristiriita, 25
     \subitem tautologia, 27
-  \item $LU$-hajotelma (neli\"omatriisin), \vahv{687}
+  \item $LU$-hajotelma (neliömatriisin), \vahv{687}
   \item lukujono, 35, \vahv{92}
     \subitem palautuva (rekursiivinen), 36
     \subitem sarja, \vahv{36}
@@ -748,15 +748,15 @@
     \subitem osajono, \emph{98}
   \item lukujonon raja-arvo, \emph{57}, \emph{77}
     \subitem raja-arvojen yhdistely, \emph{64}
-    \subitem 'voileip\"alause', \emph{68}
-  \item lukuj\"arjestelm\"at, \vahv{6}
+    \subitem 'voileipälause', \emph{68}
+  \item lukujärjestelmät, \vahv{6}
   \item lukusuora, 133
   \item luonnollinen logaritmi, 402
   \item luonnolliset luvut, 2
-  \item l\"ahde (vektorikent\"an), 785
-  \item l\"ahteet\"on vektorikentt\"a, 786
-  \item l\"amm\"onjohtumisyht\"al\"o, 787, 979
-  \item l\"avist\"aj\"a, -alkio, 677
+  \item lähde (vektorikentän), 785
+  \item lähteetön vektorikenttä, 786
+  \item lämmönjohtumisyhtälö, 787, 979
+  \item lävistäjä, -alkio, 677
 
   \indexspace
 
@@ -771,17 +771,17 @@
   \item maksiminormi ($\R^2$:n), 160
   \item maksiminormi (funktion), 651
   \item massamitta, \vahv{934}
-  \item massan s\"ailymislaki, \vahv{976}
+  \item massan säilymislaki, \vahv{976}
   \item matriisi, 660
   \item matriisialgebra, \vahv{658}
-  \item matriisin ($\nel$neli\"omatriisin)
+  \item matriisin ($\nel$neliömatriisin)
     \subitem ja vektorin kertolasku, 660
     \subitem ja toisen matriisin tulo, 663
     \subitem transponointi, transpoosi, 664
     \subitem liittomatriisi, 667
-    \subitem s\"a\"ann\"ollisyysaste (rangi), 697, 698
-    \subitem $\nel$k\"a\"anteismatriisi, 670
-    \subitem $\nel$s\"a\"ann\"ollisyyskriteerit, \emph{672}
+    \subitem säännöllisyysaste (rangi), 697, 698
+    \subitem $\nel$käänteismatriisi, 670
+    \subitem $\nel$säännöllisyyskriteerit, \emph{672}
     \subitem $\nel$$LU$-hajotelma, \vahv{687}
     \subitem $\nel$yleinen tulohajotelma, \vahv{696}
     \subitem $\nel$determinantti, \vahv{705}
@@ -790,9 +790,9 @@
     \subitem $\nel$karakteristinen polynomi, 845
   \item matriisinormi, 669
   \item matriisitulo, \vahv{662}
-  \item Maxwellin yht\"al\"ot, 787
+  \item Maxwellin yhtälöt, 787
   \item melkein kaikkialla, \av{885}
-  \item merkitsev\"at numerot, 50
+  \item merkitsevät numerot, 50
     \subitem merkitsevien numeroiden kato, 50
   \item merkkinen kaarevuus, 443
   \item minimi (funktion)
@@ -803,13 +803,13 @@
   \item mitta, mitallisuus, 556, 884
     \subitem Jordan-mitta, \emph{888}, \vahv{893}, 908, 913
     \subitem massamitta, \vahv{934}
-    \subitem todenn\"ak\"oisyysmitta, \vahv{938}
+    \subitem todennäköisyysmitta, \vahv{938}
   \item mittasuhde, \see{muuntosuhde}{1}
   \item modus tollens, 33
   \item moduuli (kompleksiluvun), \emph{224}
   \item momentti (voiman), \vahv{930}
   \item moni-indeksi, 756
-  \item moniaskelmenetelm\"a, 641
+  \item moniaskelmenetelmä, 641
   \item monihaarainen implisiittifunktio, \vahv{260}
   \item monitahokas ($\R^n$:n), 733
   \item monotoninen
@@ -817,21 +817,21 @@
     \subitem reaalifunktio, \emph{245}, \vahv{351}
   \item murtopotenssi, 22
   \item muuntosuhde integraalissa
-    \subitem $\R$:ss\"a, \vahv{920}
-    \subitem $\R^n$:ss\"a, \vahv{921}
-    \subitem k\"ayr\"av.\ koordinaatistoissa, \vahv{924}
+    \subitem $\R$:ssä, \vahv{920}
+    \subitem $\R^n$:ssä, \vahv{921}
+    \subitem käyräv.\ koordinaatistoissa, \vahv{924}
     \subitem viivaintegraalissa, 945, 948
     \subitem pintaintegraalissa, 953
   \item muutosnopeus, \vahv{423}
   \item muuttujan vaihto (sijoitus), \vahv{248}
-    \subitem k\"ayr\"av.\ koordinaatteihin, \vahv{269}
+    \subitem käyräv.\ koordinaatteihin, \vahv{269}
     \subitem integraalissa, \vahv{496}, \vahv{538}, \vahv{917}
   \item muuttuvakertoiminen diff.-oper., 758, 785
-  \item m\"a\"arittelyjoukko, 162, 242
-  \item m\"a\"ar\"atty integraali, \vahv{516}, \vahv{523}
-  \item m\"a\"ar\"a\"am\"at\"on integraali, 486
-  \item M\"obiuksen nauha, 990
-  \item M\"obius, A., \av{990}
+  \item määrittelyjoukko, 162, 242
+  \item määrätty integraali, \vahv{516}, \vahv{523}
+  \item määräämätön integraali, 486
+  \item Möbiuksen nauha, 990
+  \item Möbius, A., \av{990}
 
   \indexspace
 
@@ -841,44 +841,44 @@
   \item nabla, \see{differentiaalioperaattori}{1}
   \item napakoordinaatisto, \vahv{205}
   \item napakulma, 205, \emph{224}
-  \item Navier--Stokesin yht\"al\"ot, \vahv{788}
+  \item Navier--Stokesin yhtälöt, \vahv{788}
   \item negaatio (looginen), 25
   \item negatiivinen osa (funktion), 903
   \item negatiivisesti
     \subitem suunnistettu (kanta), 718
-    \subitem definiitti (neli\"omuoto), \emph{856}
-  \item neli\"omatriisi, 663, \vahv{670}
+    \subitem definiitti (neliömuoto), \emph{856}
+  \item neliömatriisi, 663, \vahv{670}
     \subitem symmetrinen, 665, \vahv{850}
     \subitem hermiittinen, 667
     \subitem vinosymmetrinen, 669
-    \subitem s\"a\"ann\"ollinen/singulaarinen, \emph{670}
+    \subitem säännöllinen/singulaarinen, \emph{670}
     \subitem ortogonaalinen, \vahv{674}
     \subitem diagonaalinen, \emph{676}
     \subitem tridiagonaalinen, 712
     \subitem diagonalisoituva, \emph{852}
-  \item neli\"omuoto, 757, \vahv{856}
+  \item neliömuoto, 757, \vahv{856}
     \subitem luokittelu, \emph{856}
     \subitem diagonalisointi, \vahv{858}
-    \subitem p\"a\"aakselikoordinaatisto, \vahv{859}
+    \subitem pääakselikoordinaatisto, \vahv{859}
   \item Neperin luku, \vahv{81}
   \item Nevanlinna, R., \av{215}
   \item Nevillen kaavio, \av{479}
   \item Newton, I., 421
-  \item Newtonin menetelm\"a, \vahv{369}
-    \subitem yht\"al\"oryhm\"alle, \vahv{800}, \vahv{804}
+  \item Newtonin menetelmä, \vahv{369}
+    \subitem yhtälöryhmälle, \vahv{800}, \vahv{804}
   \item nolla-alkio (kunnan), 14
   \item nollafunktio, 290
   \item nollajatko (funktion), 885
   \item nollamatriisi, 662
   \item nollamittaisuus, 885
   \item nollaosoitin, 216
-  \item nollas\"a\"ant\"o
+  \item nollasääntö
     \subitem tulon, 23
     \subitem determinantin, 703
   \item nollavektori, 138, 659
   \item nopeusvektori, \vahv{435}
   \item normaali(vektori)
-    \subitem suoran, k\"ayr\"an, 191, 197, \vahv{430}
+    \subitem suoran, käyrän, 191, 197, \vahv{430}
     \subitem tason, hypertason, 195, 731
     \subitem pinnan, 197, 776, \vahv{778}
   \item normaalimuoto
@@ -900,12 +900,12 @@
   \item odotusarvo, 938
   \item Ohmin laki, 737
   \item oikea puoli (DY:n), 606, 628
-  \item oikeak\"atinen (vektori)systeemi, 178
+  \item oikeakätinen (vektori)systeemi, 178
   \item oikealta derivoituva, \emph{343}
   \item oikealta jatkuva, 308
   \item oikeanpuoleinen raja-arvo, \emph{307}
   \item oktaaliluku, 49
-  \item oleellinen \"a\"ariarvo(piste), \emph{340}
+  \item oleellinen ääriarvo(piste), \emph{340}
   \item ominaisarvo, -vektori, -pari, 844
   \item ominaisavaruus, 845
   \item operaattori
@@ -926,29 +926,29 @@
   \item ortonormeerattu kanta, \see{kanta}{1}
   \item osajono, \emph{98}
   \item osajoukko, 2
-  \item osamurtokehitelm\"a, 491, \vahv{501}
+  \item osamurtokehitelmä, 491, \vahv{501}
   \item osasumma (sarjan), 36
   \item osittaisderivaatta, \vahv{754}
-    \subitem vaihtos\"a\"ant\"o, 755, \emph{762}
+    \subitem vaihtosääntö, 755, \emph{762}
     \subitem monen muuttujan, \vahv{756}
-    \subitem ketjus\"a\"ann\"ot, \vahv{759}, \emph{763}
+    \subitem ketjusäännöt, \vahv{759}, \emph{763}
     \subitem implisiittinen osittaisdervointi, \vahv{760}
     \subitem derivointi integraalin alla, \vahv{761}, \emph{764}
     \subitem suunnattu derivaatta, \vahv{774}
   \item osittaisdifferentiaalioperaattori, \vahv{757}
     \subitem vektorioperaattorit, \vahv{782}, \vahv{791}
-  \item osittaisdifferentiaaliyht\"al\"o, 787
+  \item osittaisdifferentiaaliyhtälö, 787
   \item osittaisintegrointi, \vahv{493}, \vahv{538}
   \item osittaissummaus, 543
   \item osittelulaki, 3
-  \item oskuloivat k\"ayr\"at, 448
+  \item oskuloivat käyrät, 448
   \item osoitinkunta, \vahv{216}
   \item osoitintulo, 219
 
   \indexspace
 
-  \item paikallinen k\"a\"anteisfunktio, \emph{809}
-  \item paikallinen maksimi, minimi, \"a\"ariarvo, \emph{340}, 
+  \item paikallinen käänteisfunktio, \emph{809}
+  \item paikallinen maksimi, minimi, ääriarvo, \emph{340},
 		\emph{465}, \emph{821}
   \item paikkavektori, 190
   \item painopiste, \vahv{932}
@@ -959,23 +959,23 @@
   \item pallokuori, 925
   \item pallonpintakoordinaatit, 209
   \item paloittainen
-    \subitem funktion m\"a\"arittely, 243
+    \subitem funktion määrittely, 243
     \subitem jatkuvuus, \vahv{313}
     \subitem sileys, 346
   \item Pappos, \av{934}
-  \item Pappuksen (Pappoksen) s\"a\"ant\"o, \vahv{933}
+  \item Pappuksen (Pappoksen) sääntö, \vahv{933}
   \item paraabeli, 279, 864
   \item paraabelin segmentti, 558
-  \item parabolinen lieri\"o, 866
+  \item parabolinen lieriö, 866
   \item parabolinen piste (pinnan), 872
   \item paraboloidi, 284, 866
   \item parametri(sointi)
     \subitem suoran, 190
     \subitem tason, 194
-    \subitem k\"ayr\"an, \vahv{276}
+    \subitem käyrän, \vahv{276}
     \subitem pinnan, \vahv{281}
     \subitem hypertason, $m$-tason, 731
-  \item parametrinen k\"ayr\"a, \vahv{276}, \vahv{430}, \vahv{440}
+  \item parametrinen käyrä, \vahv{276}, \vahv{430}, \vahv{440}
   \item parametrinen pinta, \vahv{281}, \vahv{778}, 951
   \item pari, \av{35}
   \item parillinen, pariton
@@ -986,7 +986,7 @@
   \item Pascalin kolmio, 39
   \item Peano, G., \av{4}, \av{884}
   \item Peanon aksioomat, \av{4}
-  \item Peanon k\"ayr\"a, \av{942}
+  \item Peanon käyrä, \av{942}
   \item peilaus, 727, 890
   \item peilausinvarianssi (mitan), \vahv{890}
   \item periodinen funktio, 250
@@ -994,15 +994,15 @@
   \item permutaatiomatriisi, \vahv{674}
   \item perusalue, 970
   \item perusmuoto
-    \subitem tason suoran yht\"al\"on, 191
-    \subitem avaruustason yht\"al\"on, 195
+    \subitem tason suoran yhtälön, 191
+    \subitem avaruustason yhtälön, 195
     \subitem kompleksiluvun, 223
-    \subitem singulaarisen yht\"al\"oryhm\"an, 694
+    \subitem singulaarisen yhtälöryhmän, 694
   \item perussuorakulmio, 884
   \item Picard, E., \av{649}
   \item Picardin iteraatio, 649--653
-  \item Picardin--Lindel\"ofin lause, \emph{649}
-  \item pienin yl\"araja, \emph{106}
+  \item Picardin--Lindelöfin lause, \emph{649}
+  \item pienin yläraja, \emph{106}
   \item pinta, 281
   \item pinta-ala
     \subitem avaruuskolmion, \vahv{185}
@@ -1014,15 +1014,15 @@
   \item pintaintegraali, \vahv{951}
   \item piste ($\R^n$:n), 730
   \item pisteavaruus, 128, 147, 176
-  \item pisteitt\"ainen jatkuvuus, 387
+  \item pisteittäinen jatkuvuus, 387
   \item pistetulo, \emph{150}
   \item pistevieraat joukot, 31
   \item pituusmitta (Jordanin), \vahv{893}
   \item Poisson, S. D., \av{786}
-  \item Poissonin yht\"al\"o, 786
+  \item Poissonin yhtälö, 786
   \item polaarikoordinaatisto, \see{napak.}{205}
   \item polkuintegraali, \vahv{960}
-    \subitem ty\"ointegraali, \vahv{962}, \vahv{964}
+    \subitem työintegraali, \vahv{962}, \vahv{964}
     \subitem vektoriarvoinen p.-integraali, \vahv{965}
     \subitem kiertointegraali, 986
   \item polttopiste (ellipsin), 433
@@ -1032,7 +1032,7 @@
   \item positiividefiniittisyys
     \subitem skalaaritulon, 152, 157, 238
     \subitem normin, 159
-    \subitem neli\"omuodon, \emph{856}
+    \subitem neliömuodon, \emph{856}
   \item positiivinen osa (funktion), 903
   \item positiivinen suunnistus
     \subitem kannan, 718
@@ -1040,35 +1040,35 @@
   \item positiivisuus (mitan), 884
   \item potenssifunktio, 243
   \item potenssisarja, \vahv{118}
-    \subitem suppenemiss\"ade, \emph{119, 120}
-    \subitem suppenemisv\"ali, 121
+    \subitem suppenemissäde, \emph{119, 120}
+    \subitem suppenemisväli, 121
     \subitem derivointi, \emph{327}
-  \item potentiaali (vektorikent\"an), 783
+  \item potentiaali (vektorikentän), 783
   \item predikaatti, \vahv{29}
   \item primitiivi, 2
-  \item Propositio (tosi v\"aitt\"am\"a), \av{5}
-  \item propositio (v\"aitelause), 25
-  \item puoliavoin v\"ali, 110
-  \item puolidefiniitti (neli\"omuoto), \emph{856}
+  \item Propositio (tosi väittämä), \av{5}
+  \item propositio (väitelause), 25
+  \item puoliavoin väli, 110
+  \item puolidefiniitti (neliömuoto), \emph{856}
   \item puolikartio, 199
-  \item puolisuunnikass\"a\"ant\"o, 566
+  \item puolisuunnikassääntö, 566
   \item puolituskonstruktio, \vahv{90}
   \item pystyvektori, 659
-  \item py\"oristys (desimaaliluvun), 50
-    \subitem py\"oristysvirhe, 50
-  \item py\"orrekentt\"a, 787
-  \item py\"orteet\"on vektorikentt\"a, 788, \vahv{994}
-  \item py\"or\"ahdyspinta, \vahv{283}
-  \item p\"aivitys (Jacobin matriisin), 804
-  \item p\"a\"aakselikoordinaatisto, \vahv{859}
-  \item p\"a\"ahaara (funktion), 257, 262
-  \item p\"a\"ahitausmomentti, 937
-  \item p\"a\"akaarevuus(koordinaatisto), 872
-  \item p\"a\"akaarevuuss\"ade, 872
-  \item p\"a\"anormaalivektori, 442
-  \item p\"a\"atepiste (v\"alin), 110
-  \item p\"a\"attelyketju, 28
-  \item p\"a\"attym\"at\"on desimaaliluku, \av{43}
+  \item pyöristys (desimaaliluvun), 50
+    \subitem pyöristysvirhe, 50
+  \item pyörrekenttä, 787
+  \item pyörteetön vektorikenttä, 788, \vahv{994}
+  \item pyörähdyspinta, \vahv{283}
+  \item päivitys (Jacobin matriisin), 804
+  \item pääakselikoordinaatisto, \vahv{859}
+  \item päähaara (funktion), 257, 262
+  \item päähitausmomentti, 937
+  \item pääkaarevuus(koordinaatisto), 872
+  \item pääkaarevuussäde, 872
+  \item päänormaalivektori, 442
+  \item päätepiste (välin), 110
+  \item päättelyketju, 28
+  \item päättymätön desimaaliluku, \av{43}
 
   \indexspace
 
@@ -1078,9 +1078,9 @@
     \subitem lukuparien jonon, \emph{746}
     \subitem kahden muuttujan funktion, \emph{747}
     \subitem $\R^n$:n jonon, 750
-    \subitem m\"a\"ar\"atyn integraalin, 516, \emph{523}
+    \subitem määrätyn integraalin, 516, \emph{523}
   \item rajatta kasvava (lukujono), 55
-  \item rajatta v\"ahenev\"a (lukujono), 56
+  \item rajatta vähenevä (lukujono), 56
   \item rajoitettu
     \subitem lukujono, \emph{64}, \vahv{75}
     \subitem joukko, \emph{380}, \emph{751}
@@ -1088,7 +1088,7 @@
   \item rajoitettu optimointi, \vahv{822}
   \item rajoittuma (funktion), 256
   \item rajoitusehto (optimoinnin), 822
-  \item rangi (s\"a\"ann\"ollisyysaste), 697, 698
+  \item rangi (säännöllisyysaste), 697, 698
   \item rationaalifunktio, 243, 378
     \subitem osamurtohajotelma, \emph{503}, 510
   \item rationaaliluvut, \vahv{2}
@@ -1102,7 +1102,7 @@
     \subitem Dedekindin leikkauksina, \av{108}
   \item reaalilukujen
     \subitem laskuoperaatiot, \emph{86}, \vahv{102}
-    \subitem j\"arjestysrelaatio, \emph{89}, \vahv{102}
+    \subitem järjestysrelaatio, \emph{89}, \vahv{102}
   \item reaaliosa, \emph{224}
   \item reduktiokaavat (integraalien), \vahv{494}
   \item refleksiivisyys (relaation), 32
@@ -1110,9 +1110,9 @@
   \item relaatio, 10, 32
   \item repulsiivinen (kiintopiste), 366
   \item reuna (joukon, alueen), \emph{381}, 786, 823
-  \item reuna-arvoteht\"av\"a, 580, 786
+  \item reuna-arvotehtävä, 580, 786
   \item reunaehto, \vahv{580}, 786
-  \item Riccatin differentiaaliyht\"al\"o, 584, 616
+  \item Riccatin differentiaaliyhtälö, 584, 616
   \item Riemann, G. F. B., \av{524}
   \item Riemann-integroituvuus, \emph{524}, \emph{529}
     \subitem laajennettu, \emph{545, 546}
@@ -1121,16 +1121,16 @@
   \item Riemannin
     \subitem integraali, \emph{524}, \vahv{885}
     \subitem summa, 525, 887
-    \subitem yl\"a- ja alasumma, 528, 887
-    \subitem yl\"a- ja alaintegraali, \emph{528}, 887
-  \item riitt\"av\"a ehto, 26
+    \subitem ylä- ja alasumma, 528, 887
+    \subitem ylä- ja alaintegraali, \emph{528}, 887
+  \item riittävä ehto, 26
   \item ristiriita (looginen), 25
   \item ristitulo (vektoritulo), \emph{180}
   \item rivi (matriisin), 660
   \item rivituenta (Gaussin alg.), 693
   \item Rollen lause, \emph{350}
   \item roottori, \vahv{783}, \vahv{788}
-    \subitem k\"ayr\"av. koordinaateissa, 794
+    \subitem käyräv. koordinaateissa, 794
   \item Runge-Kutta (klassinen), 646
   \item ruuviviiva, 208
 
@@ -1152,46 +1152,46 @@
     \subitem ali-, yliharmoninen, 114
     \subitem vuorotteleva (alternoiva), \vahv{116}
     \subitem potenssisarja, \vahv{118}
-  \item sarjamenetelm\"a (integroinnin), \vahv{507}
+  \item sarjamenetelmä (integroinnin), \vahv{507}
   \item sarjan summa, \vahv{60}
   \item sarjaoppi (klassinen), \vahv{113}, \vahv{551}
   \item sarjaratkaisu (lineaarisen DY:n), \vahv{637}
-  \item Sarrus'n s\"a\"ant\"o, 707
+  \item Sarrus'n sääntö, 707
   \item satulapinta, 866
   \item satulapiste, 822, 872
   \item satunnaisluku(jono), 105
   \item satunnaismuuttuja, 938
   \item sekantti ($\sec$), \see{funktio C}{1}
-  \item sekantti (k\"ayr\"an), 372, 430
-  \item sekanttimenetelm\"a, \vahv{372}
+  \item sekantti (käyrän), 372, 430
+  \item sekanttimenetelmä, \vahv{372}
   \item sekvilineaarisuus, 238
-  \item semidefiniitti (neli\"omuoto), \emph{856}
+  \item semidefiniitti (neliömuoto), \emph{856}
   \item separoituva DY, \vahv{587}
-  \item sidottu \"a\"ariarvoteht\"av\"a, 823
+  \item sidottu ääriarvotehtävä, 823
   \item siirto (translaatio), 727, 890
   \item siirtoinvarianssi (mitan), \vahv{890}
   \item sijoitus, \see{muuttujan vaihto}{1}
-  \item sijoituskaava (m\"a\"ar.\ integraalin), 517
+  \item sijoituskaava (määr.\ integraalin), 517
   \item sileys(aste), \vahv{345}
   \item similaarisuus, \emph{852}
   \item simpleksi, 731
   \item Simpson, T., \av{566}
-  \item Simpsonin s\"a\"ant\"o, 566
+  \item Simpsonin sääntö, 566
   \item singulaarinen matriisi, \emph{670}
-  \item singulaarinen yht\"al\"oryhm\"a, 658, \vahv{693}
+  \item singulaarinen yhtälöryhmä, 658, \vahv{693}
     \subitem perusmuotoinen, 694
   \item sini ($\sin$), \see{funktio C}{1}
-  \item sis\"amitta (Jordanin), 889
-  \item sis\"apiste, 110, \emph{381}
-  \item sis\"atulo, \see{skalaaritulo}{1}
-  \item sis\"atuloavaruus, 160
+  \item sisämitta (Jordanin), 889
+  \item sisäpiste, 110, \emph{381}
+  \item sisätulo, \see{skalaaritulo}{1}
+  \item sisätuloavaruus, 160
   \item sivunormaalivektori, 449
   \item skaalaus (desimaaliluvun), \vahv{49}
   \item skaalaus (homotetia), 727
   \item skaalaus (vektorin), 138
   \item skaalautuvuus (normin), 159
   \item skalaari, 138, 140, \vahv{880}
-  \item skalaarikentt\"a, 782
+  \item skalaarikenttä, 782
   \item skalaarikolmitulo, \vahv{184}
   \item skalaaripotentiaali, 783
   \item skalaaritulo
@@ -1200,23 +1200,23 @@
     \subitem $\R^n$:n euklidinen, \emph{158}, 179, 665
     \subitem abstrakti, 157
   \item spektri (matriisin), 844
-  \item Steinerin s\"a\"ant\"o, 935
+  \item Steinerin sääntö, 935
   \item Stirlingin kaava, 479
   \item Stokes, G. G., \av{987}
   \item Stokesin lause, \vahv{986}
     \subitem yleistetty, \vahv{991}
   \item suhdetesti (sarjaopin), 124
-  \item suhteellinen \"a\"ariarvo, \emph{340}, 821
+  \item suhteellinen ääriarvo, \emph{340}, 821
   \item suljettu alue, \av{994}
   \item suljettu joukko, \emph{380}, \emph{751}
-  \item suljettu k\"ayr\"a, 277, 942
+  \item suljettu käyrä, 277, 942
   \item suljettu muoto (integroinnin), 489
-  \item suljettu v\"ali, 110
+  \item suljettu väli, 110
   \item sulkeuma (joukon), \emph{381}
-  \item summakaava (m\"a\"ar.\ integraalin), 516
-  \item summamerkint\"a, \vahv{11}
+  \item summakaava (määr.\ integraalin), 516
+  \item summamerkintä, \vahv{11}
   \item suora, \vahv{190}, 730
-  \item suoristuva (k\"ayr\"a), 333, 943
+  \item suoristuva (käyrä), 333, 943
   \item superlineaarinen (suppeneminen), 368
   \item suppeneminen
     \subitem lukujonon, \emph{57}, \emph{77}, 92, \emph{97}
@@ -1225,55 +1225,55 @@
     \subitem kiintopisteiteraation, \vahv{363}, \emph{813}
     \subitem integraalin, 547, 901
   \item suppenemisallas, 802
-  \item suppenemiss\"ade, \emph{119, 120}
-  \item suppenemisv\"ali, 121
+  \item suppenemissäde, \emph{119, 120}
+  \item suppenemisväli, 121
   \item supremum, \emph{106}
   \item surjektio, \vahv{256}
   \item suunnattu derivaatta, \vahv{774}
-  \item suunnikasyht\"al\"o, 161
+  \item suunnikasyhtälö, 161
   \item suunnistus (kannan), 718
   \item suunnistuva pinta, 987
   \item suuntaisprojektio, 727
-  \item suuntaiss\"armi\"o ($\R^n$:n), 731
+  \item suuntaissärmiö ($\R^n$:n), 731
   \item suuntavektori, 143, 190, 194, 731
   \item suurennussuhde, \see{muuntosuhde}{1}
   \item suurin alaraja, 106
-  \item suuruusluokkamerkinn\"at, \emph{462}
+  \item suuruusluokkamerkinnät, \emph{462}
   \item sykloidi, 280, 436
     \subitem brakistokroni, \av{375}, 605
   \item syklometriset funktiot, 257
-  \item sylinterikoordinaatisto, \see{lieri\"ok.}{205}
+  \item sylinterikoordinaatisto, \see{lieriök.}{205}
   \item symbolinen laskenta, 92
   \item symmetrisyys
     \subitem relaation, 32
     \subitem skalaaritulon, 152, 157
-    \subitem neli\"omatriisin, 665
-  \item s\"ailymislaki, 788, \vahv{976}, \vahv{978}
-  \item s\"a\"ann\"ollinen matriisi, \emph{670}
-  \item s\"a\"ann\"ollinen yht\"al\"oryhm\"a, 658
-  \item s\"a\"ann\"ollisyysaste (rangi), 697, 698
+    \subitem neliömatriisin, 665
+  \item säilymislaki, 788, \vahv{976}, \vahv{978}
+  \item säännöllinen matriisi, \emph{670}
+  \item säännöllinen yhtälöryhmä, 658
+  \item säännöllisyysaste (rangi), 697, 698
 
   \indexspace
 
   \item takaisinsijoitus (Gaussin alg.), 683
   \item tangentti ($\tan$), \see{funktio C}{1}
-  \item tangentti (k\"ayr\"an), 197, 319, \vahv{430}
+  \item tangentti (käyrän), 197, 319, \vahv{430}
   \item tangenttitaso, 197, 776
-  \item tangenttivektori (k\"ayr\"an), 434
+  \item tangenttivektori (käyrän), 434
   \item tangenttivektori (pinnan), 778
-  \item tasa-arvok\"ayr\"a, 265
+  \item tasa-arvokäyrä, 265
   \item tasa-arvopinta, 268, 281, 732, \vahv{776}
   \item tasa-asteinen DY, \vahv{593}
   \item tasainen jatkuvuus, \vahv{387}
   \item tasainen suppeneminen, 652
   \item tasajakauma, 938
-  \item tasav\"alinen jako, 512
+  \item tasavälinen jako, 512
   \item taso, \vahv{194}
     \subitem hypertaso, $m$-taso, 730
   \item tasointegraali, \vahv{884}, \vahv{896}
-    \subitem ep\"aoleellinen, \vahv{901}
-    \subitem k\"ayr\"av.\ koordinaateissa, \vahv{924}
-  \item tasok\"ayr\"a, \see{k\"ayr\"a}{1}
+    \subitem epäoleellinen, \vahv{901}
+    \subitem käyräv.\ koordinaateissa, \vahv{924}
+  \item tasokäyrä, \see{käyrä}{1}
   \item tautologia (looginen), 27
   \item Taylor, B., \av{452}
   \item Taylorin lause, \vahv{452}, \vahv{459}
@@ -1292,19 +1292,19 @@
   \item tihennys (jaon), 529
   \item tiheys(funktio), \vahv{927}, 934
     \subitem pinta-, viivatiheys, 928
-    \subitem todenn\"ak\"oisyystiheys, 938
+    \subitem todennäköisyystiheys, 938
   \item tiheysparametri, 512, 523, 886
-  \item tihe\"a (osajoukko), 109
+  \item tiheä (osajoukko), 109
   \item tilavuus
     \subitem tetraedrin, \vahv{185}
-    \subitem suuntaiss\"armi\"on, \vahv{187}
-    \subitem $\R^n$:n suuntaiss\"armi\"on, \vahv{914}
+    \subitem suuntaissärmiön, \vahv{187}
+    \subitem $\R^n$:n suuntaissärmiön, \vahv{914}
   \item tilavuusmitta, 908
     \subitem $n$-ulotteinen, 913
-  \item todenn\"ak\"oisyysmitta, -tiheys, 938
+  \item todennäköisyysmitta, -tiheys, 938
   \item todistus, 26
-    \subitem suora, ep\"asuora, 27
-  \item toisen asteen k\"ayr\"a, 199, \vahv{863}
+    \subitem suora, epäsuora, 27
+  \item toisen asteen käyrä, 199, \vahv{863}
   \item toisen asteen pinta, 199, \vahv{863}
   \item toispuolinen derivaatta, \vahv{343}
   \item toispuolinen raja-arvo, 307
@@ -1313,24 +1313,24 @@
   \item totuustaulu, 28
   \item transitiivisuus (relaation), 32
   \item transkendenttinen luku, \vahv{111}
-  \item transkendenttinen yht\"al\"o, 260
+  \item transkendenttinen yhtälö, 260
   \item translaatio (siirto), 727
   \item transpoosi (matriisin), \vahv{664}
   \item trapetsi, 566, 646
   \item tridiagonaalinen matriisi, 712
   \item trigonometriset funktiot, \vahv{166}, \vahv{170}
-  \item T\v{s}eby\v{s}evin differentiaaliyht\"al\"o, 636
+  \item T\v{s}eby\v{s}evin differentiaaliyhtälö, 636
   \item T\v{s}eby\v{s}evin polynomi, 640
   \item tuettu Gaussin algoritmi, \vahv{693}
   \item tukialkio (Gaussin alg.), 683
-  \item tulohajotelma (neli\"omatriisin), \vahv{696}
-  \item tulomerkint\"a, \vahv{11}
-  \item tyhj\"a joukko, 30
-  \item ty\"ointegraali, \vahv{962}, \vahv{964}
-  \item t\"ahden muotoinen, 836
-  \item t\"aydellinen DY, \see{lineaarinen DY}{1}
-  \item t\"aydellinen tuenta (Gaussin alg.), 694
-  \item t\"aydennyskonstruktio, 109
+  \item tulohajotelma (neliömatriisin), \vahv{696}
+  \item tulomerkintä, \vahv{11}
+  \item tyhjä joukko, 30
+  \item työintegraali, \vahv{962}, \vahv{964}
+  \item tähden muotoinen, 836
+  \item täydellinen DY, \see{lineaarinen DY}{1}
+  \item täydellinen tuenta (Gaussin alg.), 694
+  \item täydennyskonstruktio, 109
 
   \indexspace
 
@@ -1344,8 +1344,8 @@
   \item vaakavektori, 665
   \item vaihdantalaki, 3
   \item vaihekulma, 172, 216, \emph{224}
-  \item vaihtos\"a\"ant\"o
-    \subitem m\"a\"ar\"atyn integraalin, 517
+  \item vaihtosääntö
+    \subitem määrätyn integraalin, 517
     \subitem determinantin, 703
     \subitem osittaisderivoinnin, 755, \emph{762}
   \item vakio(ide)n variointi, 607, \vahv{635}
@@ -1353,7 +1353,7 @@
   \item vasemmalta derivoituva, \emph{343}
   \item vasemmalta jatkuva, 308
   \item vasemmanpuoleinen raja-arvo, \emph{307}
-  \item vasenk\"atinen vektorisysteemi, \av{178}
+  \item vasenkätinen vektorisysteemi, \av{178}
   \item vasta-alkio (kunnan), 14
   \item vastaavuus ($\vast$), 141, \av{256}
   \item vastaoletus, 27
@@ -1370,39 +1370,39 @@
   \item vektoriarvoinen funktio, 276, 798
   \item vektoriavaruus, \vahv{140}
     \subitem kompleksikertoiminen, \vahv{238}
-  \item vektorikentt\"a, 782, 798
-    \subitem l\"ahteet\"on, 786
-    \subitem py\"orteet\"on, 788, \vahv{994}
+  \item vektorikenttä, 782, 798
+    \subitem lähteetön, 786
+    \subitem pyörteetön, 788, \vahv{994}
     \subitem konservatiivinen, 994
-    \subitem ep\"ajatkuva, \vahv{979}
+    \subitem epäjatkuva, \vahv{979}
   \item vektorikolmitulo, \vahv{187}
   \item vektorimuuttujan funktio, 746, 798
   \item vektoritulo (ristitulo), \emph{180}
   \item venytetty sykloidi, 287
-  \item verhok\"ayr\"a, 586
+  \item verhokäyrä, 586
   \item vertailuperiaate
     \subitem integraalien, 518, \emph{527}, 887
     \subitem mittojen, 556
-    \subitem kokonaism\"a\"arien, 930
+    \subitem kokonaismäärien, 930
   \item viivaintegraali, \vahv{942}
   \item viivoitinpinta, \vahv{285}
   \item vinosymmetrinen matriisi, 669
-  \item viritt\"a\"a (aliavaruus), 147, 719
-  \item viritt\"a\"a (suunnikas, s\"armi\"o), 187
-  \item viritt\"a\"a (v\"ali), 474
+  \item virittää (aliavaruus), 147, 719
+  \item virittää (suunnikas, särmiö), 187
+  \item virittää (väli), 474
   \item Vivian'in ikkuna, 958
   \item vuo, vuontiheys, 976
   \item vuorotteleva sarja, \vahv{116}
-  \item v\"ahenev\"a, \see{monotoninen}{1}
-  \item v\"aitelause, \av{25}
-  \item v\"ali, 110
-  \item v\"aliarvolauseet
+  \item vähenevä, \see{monotoninen}{1}
+  \item väitelause, \av{25}
+  \item väli, 110
+  \item väliarvolauseet
     \subitem jatkuvien funktioiden, \emph{301}
     \subitem differentiaalilaskun, \emph{350}, \emph{358}
     \subitem integraalilaskun, \emph{540}
     \subitem $\R^n$:n, \emph{774}
-  \item v\"alipiste(ist\"o), 513, 523
-  \item v\"altt\"am\"at\"on ehto, 26
+  \item välipiste(istö), 513, 523
+  \item välttämätön ehto, 26
 
   \indexspace
 
@@ -1420,118 +1420,118 @@
   \item yhden muuttujan funktio, \vahv{242}
   \item yhdenmuotoisuus, 129, 730
   \item yhdensuuntaisprojektio, 727
-  \item yhdesti yhten\"ainen alue, 995
+  \item yhdesti yhtenäinen alue, 995
   \item yhdiste (unioni), 31
   \item yhdistetty
-    \subitem keskipistes\"a\"ant\"o, 566, 891, 908
+    \subitem keskipistesääntö, 566, 891, 908
     \subitem trapetsi, Simpson, 567
   \item yhdistetty funktio, \vahv{247}, \vahv{272}
   \item yhtenevyys, 730, 890
-  \item yhten\"ainen (joukko), 994
-  \item yht\"al\"oryhm\"a
+  \item yhtenäinen (joukko), 994
+  \item yhtälöryhmä
     \subitem lineaarinen, 658
-    \subitem ep\"alineaarinen, 798
-  \item ykk\"osalkio (kunnan), 14
-  \item ykk\"ososoitin, 219
-  \item yksiaskelmenetelm\"a, 641
-  \item yksikk\"omatriisi, 670
-  \item yksikk\"ovektori, 149, 660
-    \subitem yksikk\"otangenttivektori, 434
-  \item yksikk\"oympyr\"a, 133
+    \subitem epälineaarinen, 798
+  \item ykkösalkio (kunnan), 14
+  \item ykkösosoitin, 219
+  \item yksiaskelmenetelmä, 641
+  \item yksikkömatriisi, 670
+  \item yksikkövektori, 149, 660
+    \subitem yksikkötangenttivektori, 434
+  \item yksikköympyrä, 133
   \item yksinkertainen
     \subitem nollakohta (juuri), 231, 369
     \subitem ominaisarvo, 845
-    \subitem k\"ayr\"a, kaari, 277, 332, 942
+    \subitem käyrä, kaari, 277, 332, 942
   \item yksipaikkainen predikaatti, 29
   \item yksipuolinen pinta, 990
-  \item yksitt\"aisratkaisu (DY:n), \vahv{576}
+  \item yksittäisratkaisu (DY:n), \vahv{576}
   \item yksivaippainen hyperboloidi, 286, 866
   \item yleinen ratkaisu (DY:n), \vahv{576}
-  \item ylh\"a\"alt\"a rajoitettu, 106
+  \item ylhäältä rajoitettu, 106
   \item yliharmoninen sarja, 114
-  \item ylim\"a\"ar\"aytyv\"a (yht\"al\"oryhm\"a), 658
+  \item ylimääräytyvä (yhtälöryhmä), 658
   \item ylinumeroituva joukko, 41, \vahv{109}
-  \item yl\"adiagonaali, 677
-  \item yl\"akolmiomatriisi, \emph{676}
-  \item yl\"araja (joukon), 106
-  \item ympyr\"a, \vahv{197}
-  \item ($\delta$-)ymp\"arist\"o, 111, 378, 380, 749
+  \item ylädiagonaali, 677
+  \item yläkolmiomatriisi, \emph{676}
+  \item yläraja (joukon), 106
+  \item ympyrä, \vahv{197}
+  \item ($\delta$-)ympäristö, 111, 378, 380, 749
 
   \indexspace
 
-  \item \"a\"arellinen desimaaliluku, 43
-  \item \"a\"arellinen, \"a\"aret\"on v\"ali, 110
-  \item \"a\"arellinen, \"a\"aret\"on joukko, 40
-  \item \"a\"aret\"on desimaaliluku, \vahv{43}
-    \subitem \"a\"aret\"on binaariluku, \vahv{48}
+  \item äärellinen desimaaliluku, 43
+  \item äärellinen, ääretön väli, 110
+  \item äärellinen, ääretön joukko, 40
+  \item ääretön desimaaliluku, \vahv{43}
+    \subitem ääretön binaariluku, \vahv{48}
     \subitem jaksollinen desimaaliluku, \vahv{69}
-  \item \"a\"ariarvo (paikallinen), \emph{340}, \emph{465}, \emph{821}
-  \item \"a\"ariarvoteht\"av\"a, \vahv{342}, \vahv{821}
-    \subitem sidottu \"a\"ariarvoteht\"av\"a, 823
+  \item ääriarvo (paikallinen), \emph{340}, \emph{465}, \emph{821}
+  \item ääriarvotehtävä, \vahv{342}, \vahv{821}
+    \subitem sidottu ääriarvotehtävä, 823
 
   \indexspace
 
   \item \sov
     \subitem Adaptiivinen Simpson, \vahv{571}
     \subitem Ceres ja Dawn, 208
-    \subitem Harmoninen v\"ar\"ahtely, \vahv{172}, 599
+    \subitem Harmoninen värähtely, \vahv{172}, 599
     \subitem Heijastuslaki, 431
     \subitem Heittoparaabeli, 278
     \subitem Ilmanpaine, 426
     \subitem Irtoaminen, 446
-    \subitem J\"a\"ahdytystorni, 285
-    \subitem J\"a\"ahtymislaki, 419
+    \subitem Jäähdytystorni, 285
+    \subitem Jäähtymislaki, 419
     \subitem Ketjuviiva, \vahv{601}
     \subitem Kiihdytys, 314
     \subitem Koronkorko, 426
     \subitem Lentosuunta, 211
     \subitem Liikelaki, 536
     \subitem Logistinen kasvumalli, 592
-    \subitem L\"amm\"on johtuminen, \vahv{978}
+    \subitem Lämmön johtuminen, \vahv{978}
     \subitem Magneettinen permeabiliteetti, 877
-    \subitem Massan s\"ailymislaki virtauksessa, \vahv{976}
+    \subitem Massan säilymislaki virtauksessa, \vahv{976}
     \subitem Moottori, 424
     \subitem Radioaktiivinen hajoaminen, 417, 425
     \subitem Ristikkorakenne, \vahv{739}
-    \subitem R\"aj\"ahdys, 600
+    \subitem Räjähdys, 600
     \subitem Sulkuportti, 931
     \subitem Sykloidi, 279, 436
-    \subitem S\"ateilyn vaimeneminen, 417, 426
-    \subitem S\"ahk\"opiiri: RC, 418, \vahv{613}
-    \subitem S\"ahk\"opiiri: LR, 419
-    \subitem S\"ahk\"opiiri: Vastusverkko, \vahv{736}
+    \subitem Säteilyn vaimeneminen, 417, 426
+    \subitem Sähköpiiri: RC, 418, \vahv{613}
+    \subitem Sähköpiiri: LR, 419
+    \subitem Sähköpiiri: Vastusverkko, \vahv{736}
     \subitem Tomografia, 267
     \subitem Vapaa putoamisliike, 445
 
-  \indexspace    
+  \indexspace
 
   \item \nim
     \subitem Arkhimedeen algoritmi, 573
-    \subitem Autojen s\"ailyminen, 985
+    \subitem Autojen säilyminen, 985
     \subitem Big Ben, 24
-    \subitem Funktio avaimenrei\"ass\"a, 275
+    \subitem Funktio avaimenreiässä, 275
     \subitem Haukka ja kaksi kanaa, 202
     \subitem Hypetia, Utopia ja Apatia, 596
-    \subitem H\"airi\"o kent\"ass\"a, 1000
+    \subitem Häiriö kentässä, 1000
     \subitem IKEA, 429
     \subitem Illaksi kotiin, 735
     \subitem Jyrkin lasku, 781
-    \subitem J\"anis ja huuhkaja, 605
+    \subitem Jänis ja huuhkaja, 605
     \subitem Keplerin laki, 797
-    \subitem Kiukkulintu ja kuulanty\"ont\"aj\"at, 288
-    \subitem Koirak\"ayr\"a, 585
-    \subitem K\"oysi katolla, 950
+    \subitem Kiukkulintu ja kuulantyöntäjät, 288
+    \subitem Koirakäyrä, 585
+    \subitem Köysi katolla, 950
     \subitem Laskiainen, 1.\ lasku, 375
     \subitem Laskiainen, 2.\ lasku, 605
     \subitem Laskiainen, 3.\ lasku, 950
     \subitem Lusi, 429
-    \subitem Matemaatikon m\"okki, 408
+    \subitem Matemaatikon mökki, 408
     \subitem Monumentti, 941
     \subitem Mummon nelilaskin, 53
     \subitem N:s ydinvoimala, 958
     \subitem Naudat laitumella, 669
     \subitem Palloaberraatio, 438
-    \subitem Pieni\"a ihmeit\"a, 408
+    \subitem Pieniä ihmeitä, 408
     \subitem Pisin heitto?, 349
     \subitem Polttolasi, 439
     \subitem Puimakone, 429
@@ -1544,7 +1544,7 @@
     \subitem Sotaharjoitus 2, 449
     \subitem Sotaharjoitus 3, 586
     \subitem Tutka, 439
-    \subitem T\"oyssy, 626
+    \subitem Töyssy, 626
     \subitem Vasikka-aitaus, 349
     \subitem Zeppeliini, 975
 

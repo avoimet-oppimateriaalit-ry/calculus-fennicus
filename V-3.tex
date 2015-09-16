@@ -1,41 +1,41 @@
 \section{Derivaatta} \label{derivaatta}
 \alku
 
-Tarkastellaan funktion $f$ approksimoimista pisteen $a\in\DF_f$ l‰hell‰ perustuen
-erilaisiin olettamuksiin funktion ennustettavuudesta. Ensinn‰kin jos $f$ jatkuva
-pisteess‰ $a$, niin M‰‰ritelm‰n \ref{vaihtoehtoinen jatkuvuus} mukaan $f$ on $a$:n l‰hell‰
-likimain vakio: $f(x) \approx f(a)$ kun $x \approx a$. T‰m‰n approksimaation virhe on
-$a$:n l‰hell‰ tyypillisesti muotoa $f(x)-f(a) \approx L(x-a)$, miss‰ $L$ on $f$:st‰ ja $a$:sta
+Tarkastellaan funktion $f$ approksimoimista pisteen $a\in\DF_f$ l√§hell√§ perustuen
+erilaisiin olettamuksiin funktion ennustettavuudesta. Ensinn√§kin jos $f$ jatkuva
+pisteess√§ $a$, niin M√§√§ritelm√§n \ref{vaihtoehtoinen jatkuvuus} mukaan $f$ on $a$:n l√§hell√§
+likimain vakio: $f(x) \approx f(a)$ kun $x \approx a$. T√§m√§n approksimaation virhe on
+$a$:n l√§hell√§ tyypillisesti muotoa $f(x)-f(a) \approx L(x-a)$, miss√§ $L$ on $f$:st√§ ja $a$:sta
 riippuva vakio. Erikoistapauksia (kuten $f(x)=$ vakio tai $f(x)=x^2,\ a=0$) lukuunottamatta
 mainittu virhearvio on yleisesti paras mahdollinen.
 \begin{Exa} Jos $f(x)=x^3$ ja $a \neq 0$, niin
 \[
 f(x)-f(a) \,=\, x^3-a^3 \,=\, (x-a)(x^2+ax+a^2) \,=\, (x-a)g(x).
 \]
-T‰ss‰ $g(x)=x^2+ax+a^2$ on (polynomina) jatkuva, joten pisteen $x=a$ l‰hell‰ on
-$f(x)-f(a) \approx L(x-a)$, miss‰ $L=g(a)=3a^2$. \loppu
+T√§ss√§ $g(x)=x^2+ax+a^2$ on (polynomina) jatkuva, joten pisteen $x=a$ l√§hell√§ on
+$f(x)-f(a) \approx L(x-a)$, miss√§ $L=g(a)=3a^2$. \loppu
 \end{Exa} 
-Jos jatkuvalle funktiolle halutaan pisteen $a$ l‰hell‰ olennaisesti tarkempi approksimaatio
-kuin $f(x) \approx f(a)$, on approksimaation oltava jotakin muuta tyyppi‰ kuin 
-$f(x) \approx A =$ vakio, sill‰ n‰ist‰ vaihtoehdoista valinta $A=f(a)$ on paras. Koska 
-vakio = polynomi astetta $n=0$, niin luonteva seuraava yritys on k‰ytt‰‰ approksimaatiossa
+Jos jatkuvalle funktiolle halutaan pisteen $a$ l√§hell√§ olennaisesti tarkempi approksimaatio
+kuin $f(x) \approx f(a)$, on approksimaation oltava jotakin muuta tyyppi√§ kuin 
+$f(x) \approx A =$ vakio, sill√§ n√§ist√§ vaihtoehdoista valinta $A=f(a)$ on paras. Koska 
+vakio = polynomi astetta $n=0$, niin luonteva seuraava yritys on k√§ytt√§√§ approksimaatiossa
 polynomia $p$ astetta $n=1$. Kun ennakkoehdoksi asetetaan $p(a)=f(a)$, niin approksimaatio
 saa muodon
 \[
 f(x) \approx f(a) + k(x-a).
 \]
-T‰ss‰ kerroin $k \in \R$ m‰‰r‰t‰‰n (jos mahdollista) niin, ett‰ virheelle
-$g(x)=f(x)-f(a)-k(x-a)$ saadaan $a$:n l‰hell‰ olennaisesti parempi arvio kuin
+T√§ss√§ kerroin $k \in \R$ m√§√§r√§t√§√§n (jos mahdollista) niin, ett√§ virheelle
+$g(x)=f(x)-f(a)-k(x-a)$ saadaan $a$:n l√§hell√§ olennaisesti parempi arvio kuin
 $\abs{g(x)} \le L\abs{x-a}$. Asetetaan minimiehdoksi
 \[
 \lim_{x \kohti a}\,\frac{g(x)}{x-a} = 0 
                   \,\ \ekv\,\ \lim_{x \kohti a} \left[\frac{f(x)-f(a)}{x-a}-k\right] = 0
                   \,\ \ekv\,\ \lim_{x \kohti a} \frac{f(x)-f(a)}{x-a} = k.
 \]
-Riippuen funktiosta $f$ kerroin $k$ siis joko m‰‰r‰ytyy t‰st‰ ehdosta yksik‰sitteisesti
-(raja-arvo oikealla olemassa  reaalilukuna) tai sitten kerrointa ei voi m‰‰r‰t‰, jolloin
-ym.\ approksimaatioyritys katsotaan ep‰onnistuneeksi.
-\jatko \begin{Exa} (jatko) Esimerkin funktiolle p‰tee
+Riippuen funktiosta $f$ kerroin $k$ siis joko m√§√§r√§ytyy t√§st√§ ehdosta yksik√§sitteisesti
+(raja-arvo oikealla olemassa  reaalilukuna) tai sitten kerrointa ei voi m√§√§r√§t√§, jolloin
+ym.\ approksimaatioyritys katsotaan ep√§onnistuneeksi.
+\jatko \begin{Exa} (jatko) Esimerkin funktiolle p√§tee
 \begin{align*}
 f(x) &\,=\, f(a)+(x-a)(x^2+ax+a^2) \\
      &\,=\, f(a)+3a^2(x-a)+(x-a)(x^2+ax-2a^2) \\
@@ -44,28 +44,28 @@ f(x) &\,=\, f(a)+(x-a)(x^2+ax+a^2) \\
 Siis jos valitaan $k=3a^2$, niin $g(x)/(x-a)=(x-a)(x+2a) \kohti 0$ kun $x \kohti a$, joten
 approksimaatio onnistui. \loppu
 \end{Exa}
-\begin{Def} \vahv{(Derivaatta)} \label{derivaatan m‰‰ritelm‰}
+\begin{Def} \vahv{(Derivaatta)} \label{derivaatan m√§√§ritelm√§}
 \index{derivaatta|emph} \index{derivoituvuus|emph} \index{linearisaatio (funktion)|emph}
 %\index{funktion approksimointi!ab@linearisaatiolla|emph}
-Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on pisteess‰ $a\in\DF_f$ \kor{derivoituva} 
+Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on pisteess√§ $a\in\DF_f$ \kor{derivoituva} 
 (engl.\ differentiable), jos $(a-\delta,a+\delta)\subset\DF_f$ jollakin $\delta>0$ ja on
 olemassa raja-arvo
 \[
 \lim_{x\kohti a} \frac{f(x)-f(a)}{x-a} = k \in \R.
 \]
-Lukua $k$ kutsutaan $f$:n \kor{derivaataksi} (engl. derivative) pisteess‰ $a$, ja merkit‰‰n 
-$k=f'(a)$. Jos $f$ on pisteess‰ $a$ derivoituva, niin polynomia 
+Lukua $k$ kutsutaan $f$:n \kor{derivaataksi} (engl. derivative) pisteess√§ $a$, ja merkit√§√§n 
+$k=f'(a)$. Jos $f$ on pisteess√§ $a$ derivoituva, niin polynomia 
 \[ 
 p(x) = f(a) + f'(a)(x-a) 
 \]
 sanotaan $f$:n \kor{linearisoivaksi approksimaatioksi} eli \kor{linearisaatioksi}
-pisteess‰ $a$.
+pisteess√§ $a$.
 \end{Def}
 Linearisoivan approksimaation geometrinen vastine on pisteen $P=(a,f(a))$ kautta kulkeva suora,
 jonka
-\index{kulmakerroin} \index{tangentti (k‰yr‰n)}%
-\kor{kulmakerroin} on $k=f'(a)\ (=p'(a))$. Sanotaan, ett‰ ko.\ suora on k‰yr‰n
-$S: y=f(x)$ \kor{tangentti} pisteess‰ $P$. T‰m‰n mukaisesti siis 'derivaatta on tangentin
+\index{kulmakerroin} \index{tangentti (k√§yr√§n)}%
+\kor{kulmakerroin} on $k=f'(a)\ (=p'(a))$. Sanotaan, ett√§ ko.\ suora on k√§yr√§n
+$S: y=f(x)$ \kor{tangentti} pisteess√§ $P$. T√§m√§n mukaisesti siis 'derivaatta on tangentin
 kulmakerroin'.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -80,10 +80,10 @@ kulmakerroin'.
 \end{picture}
 \end{figure}
 \jatko \begin{Exa} (jatko) Esimerkin tuloksen perusteella funktio $\,f(x)=x^3\,$ on 
-derivoituva jokaisessa pisteess‰ $a\in\R$ ja $f'(a)=3a^2$. K‰yr‰n $S: y=x^3$ tangentin
-yht‰lˆ pisteess‰ $x=a$ on siis $y=p(x)=a^3+3a^2(x-a)$. \loppu \end{Exa}
-\begin{Exa} \label{ei-derivoituva f} Funktio $f(x)=\abs{x-a}$ ei ole derivoituva pisteess‰
-$a$, sill‰
+derivoituva jokaisessa pisteess√§ $a\in\R$ ja $f'(a)=3a^2$. K√§yr√§n $S: y=x^3$ tangentin
+yht√§l√∂ pisteess√§ $x=a$ on siis $y=p(x)=a^3+3a^2(x-a)$. \loppu \end{Exa}
+\begin{Exa} \label{ei-derivoituva f} Funktio $f(x)=\abs{x-a}$ ei ole derivoituva pisteess√§
+$a$, sill√§
 \[
 \frac{f(x)-f(a)}{x-a} \,=\, \begin{cases} 
                             \ \ 1, \quad &\text{kun}\ x>a, \\
@@ -91,107 +91,107 @@ $a$, sill‰
                             \end{cases} \loppu
 \]
 \end{Exa}
-Jos $f$ on derivoituva pisteess‰ $a$, niin M‰‰ritelm‰n \ref{derivaatan m‰‰ritelm‰} ja
-Lauseen \ref{funktion raja-arvojen yhdistelys‰‰nnˆt} perusteelle p‰tee
+Jos $f$ on derivoituva pisteess√§ $a$, niin M√§√§ritelm√§n \ref{derivaatan m√§√§ritelm√§} ja
+Lauseen \ref{funktion raja-arvojen yhdistelys√§√§nn√∂t} perusteelle p√§tee
 \[
 \lim_{x \kohti a} f(x) \,=\, \lim_{x \kohti a}\left[f(a)+(x-a)\,\frac{f(x)-f(a)}{x-a}\right]
                       \,=\, f(a) + 0 \cdot f'(a) = f(a).
 \]
 Siis derivoituvuus on jatkuvuutta vahvempi ominaisuus:
 \[
-\boxed{\kehys\quad f \text{ derivoituva pisteess‰ } a \ 
-                              \impl \ f \text{ jatkuva pisteess‰ } a. \quad}
+\boxed{\kehys\quad f \text{ derivoituva pisteess√§ } a \ 
+                              \impl \ f \text{ jatkuva pisteess√§ } a. \quad}
 \]
 
 \subsection*{Derivaatta operaattorina}
 
-Kun derivaatan m‰‰ritelm‰ss‰ kirjoitetaan $x-a=\Delta x$ ja asetetaan $a$:n tilalle $x$, niin
-m‰‰ritelm‰ saa muodon
+Kun derivaatan m√§√§ritelm√§ss√§ kirjoitetaan $x-a=\Delta x$ ja asetetaan $a$:n tilalle $x$, niin
+m√§√§ritelm√§ saa muodon
 \[
 f'(x) = \lim_{\Delta x\kohti 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}\,.
 \]
-Derivaatan muita merkintˆj‰ ovat
+Derivaatan muita merkint√∂j√§ ovat
 \[
 \boxed{\quad f'(x)=\frac{\ykehys df}{\akehys dx}=\frac{d}{dx}f=\dif f(x). \quad}
 \]
-Kahdessa viimeksi kirjoitetussa merkinn‰ss‰ tulkitaan derivaatta kohteestaan erillisen‰
+Kahdessa viimeksi kirjoitetussa merkinn√§ss√§ tulkitaan derivaatta kohteestaan erillisen√§
 \kor{operaattorina} eli 'funktion funktiona':
 \[
 \dif:f \map f', \quad \dif = \frac{d}{dx}\,.
 \]
-Operaattoreiksi sanotaan yleisemmin sellaisia funktioita, joiden sek‰ m‰‰rittely- ett‰ 
+Operaattoreiksi sanotaan yleisemmin sellaisia funktioita, joiden sek√§ m√§√§rittely- ett√§ 
 maalijoukkona ovat (esim.\ reaalimuuttujan) funktiot. Derivoinnin suorittavaa
 'funktion funktiota' $\dif$ sanotaan
 \index{differentiaalioperaattori!a@derivoinnin}%
 \kor{differentiaalioperaattoriksi}.
 
-Differentiaalioperaattori voi m‰‰ritelm‰ns‰ mukaisesti toimia vain sellaisissa pisteiss‰,
-joissa $f$ on derivoituva, ts. $f'$:n m‰‰rittelyjoukossa
+Differentiaalioperaattori voi m√§√§ritelm√§ns√§ mukaisesti toimia vain sellaisissa pisteiss√§,
+joissa $f$ on derivoituva, ts. $f'$:n m√§√§rittelyjoukossa
 \[
-\DF_{f'}=\{x\in\DF_f \ | \ f \text{ derivoituva pisteess‰ } x\}.
+\DF_{f'}=\{x\in\DF_f \ | \ f \text{ derivoituva pisteess√§ } x\}.
 \]
-Useat tavalliset funktiot ovat derivoituvia 'melkein kaikkialla' niin, ett‰ $\DF_{f'}$
-saadaan $\DF_f$:st‰ poistamalla enint‰‰n ‰‰rellinen tai numeroituva m‰‰r‰ pisteit‰. 
-\begin{Exa} Funktio $f(x)=x-[x]$, miss‰ $[x]=$ suurin kokonaisluku, jolle p‰tee $[x] \le x$,
-on derivoituva muualla paitsi pisteiss‰ $k \in \Z$, eli $D_{f'}=\{x\in\R \mid x\not\in\Z\}$. 
-T‰ss‰ joukossa on $f'(x)=1$. (Vrt.\ Esimerkki \ref{sahafunktio} edellisess‰ luvussa.) \loppu
+Useat tavalliset funktiot ovat derivoituvia 'melkein kaikkialla' niin, ett√§ $\DF_{f'}$
+saadaan $\DF_f$:st√§ poistamalla enint√§√§n √§√§rellinen tai numeroituva m√§√§r√§ pisteit√§. 
+\begin{Exa} Funktio $f(x)=x-[x]$, miss√§ $[x]=$ suurin kokonaisluku, jolle p√§tee $[x] \le x$,
+on derivoituva muualla paitsi pisteiss√§ $k \in \Z$, eli $D_{f'}=\{x\in\R \mid x\not\in\Z\}$. 
+T√§ss√§ joukossa on $f'(x)=1$. (Vrt.\ Esimerkki \ref{sahafunktio} edellisess√§ luvussa.) \loppu
 \end{Exa}
 
-Jos $f$:n derivaatta $f'$ on edelleen derivoituva pisteess‰ $x$, voidaan m‰‰ritell‰ $f$:n 
-\kor{toinen derivaatta} pisteess‰ $x$:
+Jos $f$:n derivaatta $f'$ on edelleen derivoituva pisteess√§ $x$, voidaan m√§√§ritell√§ $f$:n 
+\kor{toinen derivaatta} pisteess√§ $x$:
 \[
 f''(x)=\lim_{\Delta x\kohti 0} \frac{f'(x+\Delta x)-f'(x)}{\Delta x} = \dif f'(x)
       = \dif(\dif f(x)) = \dif^2 f(x).
 \]
-Pisteiss‰, joissa $f''$ on edelleen on derivoituva, voidaan m‰‰ritell‰ kolmas derivaatta
-$f'''(x)$ jne. Yleisesti funktion \kor{$n$:s derivaatta} pisteess‰ $x$ on
+Pisteiss√§, joissa $f''$ on edelleen on derivoituva, voidaan m√§√§ritell√§ kolmas derivaatta
+$f'''(x)$ jne. Yleisesti funktion \kor{$n$:s derivaatta} pisteess√§ $x$ on
 \[
 f^{(n)}=\frac{d^n}{dx^n}f(x)=\dif^n f(x).
 \]
 \index{kertaluku!ba@derivaatan}%
-Sanotaan, ett‰ $n$ on derivaatan $f^{(n)}$ \kor{kertaluku}, ja sovitaan, ett‰ $f^{(0)}=f$.
+Sanotaan, ett√§ $n$ on derivaatan $f^{(n)}$ \kor{kertaluku}, ja sovitaan, ett√§ $f^{(0)}=f$.
 
-\subsection*{Derivoimiss‰‰nnˆt}
-\index{derivoimiss‰‰nnˆt!a@summa, tulo, osam‰‰r‰|vahv}
+\subsection*{Derivoimiss√§√§nn√∂t}
+\index{derivoimiss√§√§nn√∂t!a@summa, tulo, osam√§√§r√§|vahv}
 
-Yleisiss‰ \kor{derivoimiss‰‰nnˆiss‰} esitet‰‰n laskukaavat funktioiden algebrallisten
+Yleisiss√§ \kor{derivoimiss√§√§nn√∂iss√§} esitet√§√§n laskukaavat funktioiden algebrallisten
 johdannaisten 
 \[
 f,g,\lambda\ \map\ \lambda f,\ f+g,\ fg,\ f/g,\ f \circ g,\ f^{-1}
 \]
-derivaattojen laskemiseksi $f'$:n ja $g'$:n avulla. Derivoimiss‰‰nnˆist‰ yksinkertaisimmat
+derivaattojen laskemiseksi $f'$:n ja $g'$:n avulla. Derivoimiss√§√§nn√∂ist√§ yksinkertaisimmat
 ovat
 \begin{align*}
 \dif(\lambda f) &= \lambda f', \quad \lambda\in\R, \\
 \dif(f+g)       &= f'+g',
 \end{align*}
-jotka voidaan yhdist‰‰ s‰‰nnˆksi
+jotka voidaan yhdist√§√§ s√§√§nn√∂ksi
 \begin{equation} \label{D1}
 \boxed{\kehys\quad \dif(\alpha f + \beta g)=\alpha \dif f + \beta \dif g, \quad 
                    \alpha,\beta\in\R. \quad}
 \end{equation}
 \index{lineaarisuus!a@derivoinnin}%
-S‰‰ntˆ \eqref{D1} merkitsee, ett‰ $\dif$ on \kor{lineaarinen} operaattori. S‰‰ntˆ on p‰tev‰
-jokaisessa pisteess‰, jossa $f$ ja $g$ ovat molemmat derivoituvia, kuten voidaan helposti
-todeta raja-arvojen yhdistelys‰‰ntˆjen (Lause \ref{funktion raja-arvojen yhdistelys‰‰nnˆt})
-perusteella. Samoin ehdoin p‰tee tulon derivoimiss‰‰ntˆ
+S√§√§nt√∂ \eqref{D1} merkitsee, ett√§ $\dif$ on \kor{lineaarinen} operaattori. S√§√§nt√∂ on p√§tev√§
+jokaisessa pisteess√§, jossa $f$ ja $g$ ovat molemmat derivoituvia, kuten voidaan helposti
+todeta raja-arvojen yhdistelys√§√§nt√∂jen (Lause \ref{funktion raja-arvojen yhdistelys√§√§nn√∂t})
+perusteella. Samoin ehdoin p√§tee tulon derivoimiss√§√§nt√∂
 \begin{equation} \label{D2}
 \boxed{\kehys\quad \dif(fg)=f'g+fg'. \quad}
 \end{equation}
-T‰m‰n perustelemiseksi kirjoitetaan
+T√§m√§n perustelemiseksi kirjoitetaan
 \begin{multline*}
 f(x+\Delta x)g(x+\Delta x)-f(x)g(x) \\
               =[f(x+\Delta x)-f(x)]g(x+\Delta x)+f(x)[g(x+\Delta x)-g(x)],
 \end{multline*}
-jaetaan puolittain $\Delta x$:ll‰, ja sovelletaan mainittuja raja-arvojen 
-yhdistelys‰‰ntˆj‰. Huomioidaan myˆs, ett‰ $g$ on (derivoituvana) jatkuva $x$:ss‰. 
-\begin{Exa} \label{potderiv 1} L‰htem‰ll‰ ilmeisest‰ derivoimiss‰‰nnˆst‰ $\dif x = 1$ ja 
-soveltamalla s‰‰ntˆ‰ \eqref{D2} funktiojonoon
-$f_1(x) = x,\ f_n(x)=xf_{n-1}(x),\ n = 2,3,\ldots\,$ n‰hd‰‰n induktiolla oikeaksi s‰‰ntˆ 
+jaetaan puolittain $\Delta x$:ll√§, ja sovelletaan mainittuja raja-arvojen 
+yhdistelys√§√§nt√∂j√§. Huomioidaan my√∂s, ett√§ $g$ on (derivoituvana) jatkuva $x$:ss√§. 
+\begin{Exa} \label{potderiv 1} L√§htem√§ll√§ ilmeisest√§ derivoimiss√§√§nn√∂st√§ $\dif x = 1$ ja 
+soveltamalla s√§√§nt√∂√§ \eqref{D2} funktiojonoon
+$f_1(x) = x,\ f_n(x)=xf_{n-1}(x),\ n = 2,3,\ldots\,$ n√§hd√§√§n induktiolla oikeaksi s√§√§nt√∂ 
 \[
 \dif x^m=mx^{m-1}, \quad m\in\N\cup\{0\}.
 \]
-Toinen tapa johtaa t‰m‰ tulos on l‰hte‰ suoraan derivaatan m‰‰ritelm‰st‰ ja k‰ytt‰‰
+Toinen tapa johtaa t√§m√§ tulos on l√§hte√§ suoraan derivaatan m√§√§ritelm√§st√§ ja k√§ytt√§√§
 binomikaavaan perustuvaa hajotelmaa:
 \begin{align*}
 \frac{(x+\Delta x)^m-x^m}{\Delta x}\,=\ 
@@ -199,7 +199,7 @@ binomikaavaan perustuvaa hajotelmaa:
               \kohti\ &mx^{m-1}, \quad \text{kun}\ \Delta x \kohti 0. \loppu
 \end{align*}
 \end{Exa}
-Kun esimerkin tuloksen ohella huomioidaan myˆs s‰‰ntˆ \eqref{D1}, n‰hd‰‰n ett‰ polynomin
+Kun esimerkin tuloksen ohella huomioidaan my√∂s s√§√§nt√∂ \eqref{D1}, n√§hd√§√§n ett√§ polynomin
 derivaatta on toinen polynomi (astetta alempi).
 \begin{Exa}
 \begin{align*}
@@ -213,49 +213,49 @@ f^{(n)}(x) &=0, \quad n\geq 6 \loppu
 \end{align*}
 \end{Exa}
 
-Jos $f$ ja $g$ ovat $n$ kertaa derivoituvia pisteess‰ $x$, niin soveltamalla s‰‰nnˆn
-\eqref{D2} oikealla puolella uudelleen samaa s‰‰ntˆ‰ yhdess‰ s‰‰nnˆn \eqref{D1} kanssa
+Jos $f$ ja $g$ ovat $n$ kertaa derivoituvia pisteess√§ $x$, niin soveltamalla s√§√§nn√∂n
+\eqref{D2} oikealla puolella uudelleen samaa s√§√§nt√∂√§ yhdess√§ s√§√§nn√∂n \eqref{D1} kanssa
 saadaan johdetuksi binomikaavaa (Propositio \ref{binomikaava}) muistuttava
-\kor{Leibnizin s‰‰ntˆ} \index{Leibnizin s‰‰ntˆ}
+\kor{Leibnizin s√§√§nt√∂} \index{Leibnizin s√§√§nt√∂}
 \[
 \boxed{\quad \dif^n(fg) = \sum_{k=0}^n \binom{\ykehys n}{\akehys k}\,f^{(k)}g^{(n-k)}. \quad}
 \]
 
-Jos $\,h(x)=(f/g)(x)$, niin tulon derivoimiss‰‰ntˆ \eqref{D2} sovellettuna identiteettiin
-$h(x)g(x)=f(x)\,$ antaa tuloksen $h'g+hg'=f'$. Pisteiss‰, joissa $g(x) \neq 0$, voidaan t‰st‰
-ratkaista $h$:n eli osam‰‰r‰n derivoimiss‰‰nnˆksi
+Jos $\,h(x)=(f/g)(x)$, niin tulon derivoimiss√§√§nt√∂ \eqref{D2} sovellettuna identiteettiin
+$h(x)g(x)=f(x)\,$ antaa tuloksen $h'g+hg'=f'$. Pisteiss√§, joissa $g(x) \neq 0$, voidaan t√§st√§
+ratkaista $h$:n eli osam√§√§r√§n derivoimiss√§√§nn√∂ksi
 \begin{equation} \label{D3}
 \boxed{\quad \dif\left(\frac{f}{g}\right)
            =\frac{\ykehys f'}{\akehys g}-\frac{fg'}{g^2}=\frac{f'g-fg'}{g^2}\,. \quad}
 \end{equation}
-S‰‰nnˆst‰ \eqref{D3} sek‰ polynomin derivoimiss‰‰nnˆst‰ n‰hd‰‰n, ett‰ jokainen
-rationaalifunktio $f=p/q$ ($p$ ja $q$ polynomeja) on koko m‰‰rittelyjoukossaan, eli joukossa
-$\{x\in\R \mid q(x) \neq 0\}$, derivoituva mielivaltaisen monta kertaa ja ett‰ derivaatat ovat
-ovat samassa joukossa m‰‰riteltyj‰ rationaalifunktioita.
-\begin{Exa} \label{ratfunktion derivaatta} S‰‰nnˆn \eqref{D3} ensimm‰isen laskukaavan mukaan
+S√§√§nn√∂st√§ \eqref{D3} sek√§ polynomin derivoimiss√§√§nn√∂st√§ n√§hd√§√§n, ett√§ jokainen
+rationaalifunktio $f=p/q$ ($p$ ja $q$ polynomeja) on koko m√§√§rittelyjoukossaan, eli joukossa
+$\{x\in\R \mid q(x) \neq 0\}$, derivoituva mielivaltaisen monta kertaa ja ett√§ derivaatat ovat
+ovat samassa joukossa m√§√§riteltyj√§ rationaalifunktioita.
+\begin{Exa} \label{ratfunktion derivaatta} S√§√§nn√∂n \eqref{D3} ensimm√§isen laskukaavan mukaan
 \[
 \frac{d}{dx}\left(\frac{x}{1-x^2}\right) = \frac{1}{1-x^2}+\frac{2x^2}{(1-x^2)^2}
                                          = \frac{1+x^2}{(1-x^2)^2}\,. \loppu
 \]
 \end{Exa}
-\begin{Exa} \label{potder 2} Soveltamalla s‰‰ntˆ‰ \eqref{D3} tapaukseen $f(x)=1$,
-$g(x)=x^m,\ m\in\N$ n‰hd‰‰n, ett‰ Esimerkin \ref{potderiv 1} s‰‰ntˆ $\dif x^m = mx^{m-1}$ on
-p‰tev‰ $\forall m\in\Z$. \loppu
+\begin{Exa} \label{potder 2} Soveltamalla s√§√§nt√∂√§ \eqref{D3} tapaukseen $f(x)=1$,
+$g(x)=x^m,\ m\in\N$ n√§hd√§√§n, ett√§ Esimerkin \ref{potderiv 1} s√§√§nt√∂ $\dif x^m = mx^{m-1}$ on
+p√§tev√§ $\forall m\in\Z$. \loppu
 \end{Exa}
 \begin{Lause} (\vahv{Yhdistetyn funktion derivaatta}) \label{yhdistetyn funktion derivaatta}
-\index{derivoimiss‰‰nnˆt!b@yhdistetty funktio|emph}% 
-Jos $g$ on derivoituva pisteess‰ $x$ ja $f$ on derivoituva pisteess‰ $g(x)$, niin $f \circ g$
-on derivoituva pisteess‰ $x$ ja
+\index{derivoimiss√§√§nn√∂t!b@yhdistetty funktio|emph}% 
+Jos $g$ on derivoituva pisteess√§ $x$ ja $f$ on derivoituva pisteess√§ $g(x)$, niin $f \circ g$
+on derivoituva pisteess√§ $x$ ja
 \[
 \boxed{\kehys\quad \dif f(g(x))=f'(g(x))\,g'(x). \quad}
 \]
 \end{Lause}
-\tod Merkit‰‰n $g(x+\Delta x)-g(x)=\Delta g$. T‰llˆin koska $f$ on derivoituva
-pisteess‰ $g(x)$, niin p‰tee (vrt.\ derivaatan m‰‰ritelm‰ edell‰)
+\tod Merkit√§√§n $g(x+\Delta x)-g(x)=\Delta g$. T√§ll√∂in koska $f$ on derivoituva
+pisteess√§ $g(x)$, niin p√§tee (vrt.\ derivaatan m√§√§ritelm√§ edell√§)
 \[
 f(g(x+\Delta x)) = f(g(x)+\Delta g) = f(g(x))+f'(g(x))\Delta g + h(\Delta g)\Delta g,
 \]
-miss‰ $h(\Delta g) \kohti 0$, kun $\Delta g \kohti 0$. Koska $g$ on derivoituva pisteess‰
+miss√§ $h(\Delta g) \kohti 0$, kun $\Delta g \kohti 0$. Koska $g$ on derivoituva pisteess√§
 $x$ ja koska $\,\Delta x \kohti 0\ \impl\ \Delta g \kohti 0$, niin seuraa
 \begin{align*}
 \dif (f\circ g)(x) &= \lim_{\Delta x \kohti 0}\,\frac{f(g(x+\Delta x))-f(g(x))}{\Delta x} \\
@@ -264,12 +264,12 @@ $x$ ja koska $\,\Delta x \kohti 0\ \impl\ \Delta g \kohti 0$, niin seuraa
                    &= f'(g(x))g'(x) + 0 \cdot g'(x) = f'(g(x))g'(x). \loppu
 \end{align*}
 
-Soveltamalla Lauseen \ref{yhdistetyn funktion derivaatta} s‰‰ntˆ‰ ja Esimerkin \ref{potder 2}
-tulosta funktioon $g\circ f$, miss‰ $g(x)=x^m$, saadaan derivoimiss‰‰ntˆ
+Soveltamalla Lauseen \ref{yhdistetyn funktion derivaatta} s√§√§nt√∂√§ ja Esimerkin \ref{potder 2}
+tulosta funktioon $g\circ f$, miss√§ $g(x)=x^m$, saadaan derivoimiss√§√§nt√∂
 \begin{equation} \label{D4}
 \boxed{\kehys\quad \dif[f(x)]^m=m[f(x)]^{m-1}f'(x),\quad m\in\Z. \quad}
 \end{equation}
-\begin{Exa} Jatkamalla Esimerkist‰ \ref{ratfunktion derivaatta} s‰‰nnˆill‰ \eqref{D2},
+\begin{Exa} Jatkamalla Esimerkist√§ \ref{ratfunktion derivaatta} s√§√§nn√∂ill√§ \eqref{D2},
 \eqref{D4} ja \eqref{D1} saadaan
 \begin{align*}
 \frac{d^2}{dx^2}\left(\frac{x}{1-x^2}\right)=\frac{d}{dx}\left(\frac{1+x^2}{(1-x^2)^2}\right) 
@@ -277,118 +277,118 @@ tulosta funktioon $g\circ f$, miss‰ $g(x)=x^m$, saadaan derivoimiss‰‰ntˆ
                    &=\frac{6x+2x^3}{(1-x^2)^3}\,. \loppu
 \end{align*}
 \end{Exa}
-Jos $f(x)=x^{m/n}$, $m\in\Z$, $n\in\N$, $x>0$, niin $\,[f(x)]^n=x^m$. Derivoimalla t‰ss‰
-puolittain s‰‰nnˆll‰ \eqref{D4} saadaan
+Jos $f(x)=x^{m/n}$, $m\in\Z$, $n\in\N$, $x>0$, niin $\,[f(x)]^n=x^m$. Derivoimalla t√§ss√§
+puolittain s√§√§nn√∂ll√§ \eqref{D4} saadaan
 \[
 n[f(x)]^{n-1}f'(x) = mx^{m-1} \qimpl f'(x) = (m/n)\,x^{m/n-1}.
 \]
-N‰in on johdettu yleisen potenssifunktion derivoimiss‰‰ntˆ
+N√§in on johdettu yleisen potenssifunktion derivoimiss√§√§nt√∂
 \[ 
 \boxed{\kehys\quad \dif x^\alpha = \alpha x^{\alpha-1}, \quad x\in\R_+\,, \ \alpha\in\Q. \quad}
 \]
 
 \begin{Exa} Derivoi $\D f(x) = \sqrt[3]{1+\sqrt{x}}$. \end{Exa}
-\ratk Potenssifunktion ja yhdistetyn funktion derivoimiss‰‰ntˆjen perusteella
+\ratk Potenssifunktion ja yhdistetyn funktion derivoimiss√§√§nt√∂jen perusteella
 \begin{align*}
 f'(x) = \frac{1}{3}(1+\sqrt{x})^{-2/3}\cdot\frac{1}{2}\,x^{-1/2}
       &=\,\frac{(1+\sqrt{x})^{1/3}}{6\sqrt{x}\,(1+\sqrt{x})} \\
       &=\,\frac{\sqrt[3]{1+\sqrt{x}}}{6(x+\sqrt{x})}\,, \quad x>0. \loppu
 \end{align*}
 
-Yhdistetyn funktion derivoimiss‰‰nnˆst‰ (Lause \ref{yhdistetyn funktion derivaatta}) voi
-johtaa myˆs yleisen k‰‰nteisfunktion derivoimiss‰‰nnˆn: Oletetaan, ett‰ $f$ on derivoituva
-pisteess‰ $x$ ja ett‰ k‰‰nteisfunktio $g=\inv{f}$ on derivoituva pisteess‰ $f(x)$. T‰llˆin
-identiteetist‰ $\,g(f(x))=x\,$ seuraa derivoimalla puolittain, ett‰ $\ g'(f(x))f'(x)=1$.
-Siis tehdyin oletuksin ja lis‰oletuksella $f'(x) \neq 0$ p‰tee
+Yhdistetyn funktion derivoimiss√§√§nn√∂st√§ (Lause \ref{yhdistetyn funktion derivaatta}) voi
+johtaa my√∂s yleisen k√§√§nteisfunktion derivoimiss√§√§nn√∂n: Oletetaan, ett√§ $f$ on derivoituva
+pisteess√§ $x$ ja ett√§ k√§√§nteisfunktio $g=\inv{f}$ on derivoituva pisteess√§ $f(x)$. T√§ll√∂in
+identiteetist√§ $\,g(f(x))=x\,$ seuraa derivoimalla puolittain, ett√§ $\ g'(f(x))f'(x)=1$.
+Siis tehdyin oletuksin ja lis√§oletuksella $f'(x) \neq 0$ p√§tee
 \begin{equation} \label{D5}
 \boxed{\quad \dif\inv{f}(y)=\frac{1}{f'(x)},\quad y=f(x). \quad}
 \end{equation}
-K‰‰nteisfunktion derivoituvuuden perustelee tarkemmin seuraava lause.
-\begin{Lause} (\vahv{K‰‰nteisfunktion derivaatta}) \label{k‰‰nteisfunktion derivoituvuus}
-\index{derivoimiss‰‰nnˆt!c@k‰‰nteisfunktio|emph}%
+K√§√§nteisfunktion derivoituvuuden perustelee tarkemmin seuraava lause.
+\begin{Lause} (\vahv{K√§√§nteisfunktion derivaatta}) \label{k√§√§nteisfunktion derivoituvuus}
+\index{derivoimiss√§√§nn√∂t!c@k√§√§nteisfunktio|emph}%
 Olkoon $f: [a-\delta,a+\delta] \kohti U$ jatkuva bijektio jollakin $\delta>0$ ja olkoon
-$f$ derivoituvua pisteess‰ $a$. T‰llˆin $\inv{f}: U \kohti [a-\delta,a+\delta]$ on
-derivoituva pisteess‰ $b=f(a)$ t‰sm‰lleen kun $f'(a) \neq 0$, jolloin 
+$f$ derivoituvua pisteess√§ $a$. T√§ll√∂in $\inv{f}: U \kohti [a-\delta,a+\delta]$ on
+derivoituva pisteess√§ $b=f(a)$ t√§sm√§lleen kun $f'(a) \neq 0$, jolloin 
 $\,\dif \inv{f}(b)=1/f'(a)$.
 \end{Lause}
-\tod Koska $f$ on jatkuva ja $1-1$ v‰lill‰ $[a-\delta,a+\delta]$ ja $f$:n arvojoukko
-ko.\ valill‰ $=U$, niin Lauseen \ref{ensimm‰inen v‰liarvolause} mukaan p‰tee
-$[b-\eps,b+\eps] \subset U$, miss‰
+\tod Koska $f$ on jatkuva ja $1-1$ v√§lill√§ $[a-\delta,a+\delta]$ ja $f$:n arvojoukko
+ko.\ valill√§ $=U$, niin Lauseen \ref{ensimm√§inen v√§liarvolause} mukaan p√§tee
+$[b-\eps,b+\eps] \subset U$, miss√§
 \[
 \eps \,=\, \min\{\,\abs{f(a-\delta)-f(a)},\,\abs{f(a+\delta)-f(a)}\,\} \,>\, 0.
 \]
-T‰llˆin jos $f'(a) \neq 0$, niin tekem‰ll‰ v‰lill‰ $[b-\eps,b+\eps]$ muuttujan
+T√§ll√∂in jos $f'(a) \neq 0$, niin tekem√§ll√§ v√§lill√§ $[b-\eps,b+\eps]$ muuttujan
 vaihto $y=f(x)$ seuraa lauseiden \ref{raja-arvo sijoituksella} ja
-\ref{funktion raja-arvojen yhdistelys‰‰nnˆt} perusteella
+\ref{funktion raja-arvojen yhdistelys√§√§nn√∂t} perusteella
 \[
 \lim_{y \kohti b} \frac{\invf(y)-\invf(b)}{y-b} 
            \,=\,\lim_{x \kohti a} \frac{x-a}{f(x)-f(a)}
            \,=\,\left[\lim_{x \kohti a} \frac{f(x)-f(a)}{x-a}\right]^{-1} 
            \,=\, \frac{1}{f'(a)}\,,
 \]
-joten $\inv{f}$ on derivoituva $b$:ss‰ ja $\dif\inv{f}(b)=1/f'(a)$ (M‰‰ritelm‰
-\ref{derivaatan m‰‰ritelm‰}). Jos $f'(a)=0$, seuraa Lauseesta \ref{raja-arvo sijoituksella}
-vastaavasti, ett‰
+joten $\inv{f}$ on derivoituva $b$:ss√§ ja $\dif\inv{f}(b)=1/f'(a)$ (M√§√§ritelm√§
+\ref{derivaatan m√§√§ritelm√§}). Jos $f'(a)=0$, seuraa Lauseesta \ref{raja-arvo sijoituksella}
+vastaavasti, ett√§
 \[
 \lim_{y \kohti b} \left|\frac{\invf(y)-\invf(b)}{y-b}\right|
             \,=\, \lim_{x \kohti a} \left|\frac{x-a}{f(x)-f(a)}\right|
             \,=\ \infty,
 \]
-joten t‰ss‰ tapauksessa $\invf$ ei ole derivoituva $b$:ss‰. \loppu
-\begin{Exa} \label{algebrallinen k‰‰nteisfunktio: derivaatta} Funktiolle $f(x)=x^5+3x$ 
-Lauseen \ref{k‰‰nteisfunktion derivoituvuus} oletukset ovat voimassa jokaisella $a\in\R$
-(myˆs jokaisella $\delta>0$, ks.\ Esimerkki \ref{algebrallinen k‰‰nteisfunktio} Luvussa
-\ref{k‰‰nteisfunktio}), joten s‰‰ntˆ \eqref{D5} on soveltuva: 
+joten t√§ss√§ tapauksessa $\invf$ ei ole derivoituva $b$:ss√§. \loppu
+\begin{Exa} \label{algebrallinen k√§√§nteisfunktio: derivaatta} Funktiolle $f(x)=x^5+3x$ 
+Lauseen \ref{k√§√§nteisfunktion derivoituvuus} oletukset ovat voimassa jokaisella $a\in\R$
+(my√∂s jokaisella $\delta>0$, ks.\ Esimerkki \ref{algebrallinen k√§√§nteisfunktio} Luvussa
+\ref{k√§√§nteisfunktio}), joten s√§√§nt√∂ \eqref{D5} on soveltuva: 
 \[
 \dif\inv{f}(y)=\frac{1}{5x^4+3}, \quad y=x^5+3x.
 \]
 
 Esimerkiksi $\dif\inv{f}(0)=1/3$, koska $y=0 \impl x=0$. Jos halutaan laskea 
-$\dif\inv{f}(1)$, on ensin ratkaistava (numeerisesti) yht‰lˆ $x^5+3x=1$. Jos ratkaisu
-merkit‰‰n $x=a$, niin $\dif\inv{f}(1)=1/(5a^4+3)$. \loppu 
+$\dif\inv{f}(1)$, on ensin ratkaistava (numeerisesti) yht√§l√∂ $x^5+3x=1$. Jos ratkaisu
+merkit√§√§n $x=a$, niin $\dif\inv{f}(1)=1/(5a^4+3)$. \loppu 
 \end{Exa}
 
 \subsection*{Implisiittinen derivointi}
-\index{implisiittinen derivointi|vahv} \index{derivoimiss‰‰nnˆt!d@implisiittifunktio|vahv}
+\index{implisiittinen derivointi|vahv} \index{derivoimiss√§√§nn√∂t!d@implisiittifunktio|vahv}
 
-Jos funktio $y(x)$ on m‰‰ritelty implisiittisesti muodossa (vrt.\ Luku \ref{k‰‰nteisfunktio})
+Jos funktio $y(x)$ on m√§√§ritelty implisiittisesti muodossa (vrt.\ Luku \ref{k√§√§nteisfunktio})
 \[ 
 F(x,y) = 0 \qekv y = y(x), 
 \]
-niin derivaatta $y'(x)$ on mahdollista laskea derivoimalla puolittain yht‰lˆ
+niin derivaatta $y'(x)$ on mahdollista laskea derivoimalla puolittain yht√§l√∂
 \[ 
 F(x,y(x)) = 0.
 \]
-T‰llaista ep‰suoraa menettely‰ sanotaan \kor{implisiittiseksi derivoinniksi}. Toistaiseksi
-tunnetuilla derivointis‰‰nnˆill‰ implisiittinen derivointi onnistuu esim.\ silloin kun
+T√§llaista ep√§suoraa menettely√§ sanotaan \kor{implisiittiseksi derivoinniksi}. Toistaiseksi
+tunnetuilla derivointis√§√§nn√∂ill√§ implisiittinen derivointi onnistuu esim.\ silloin kun
 funktio F on (kahden muuttujan) polynomi tai rationaalifunktio.
-\jatko \begin{Exa} (jatko) Jos esimerkiss‰ merkit‰‰n $\inv{f}(x)=y(x)$, niin $y(x)$ voidaan
-tulkita implisiittifunktioksi, joka m‰‰r‰ytyy yht‰lˆst‰ $\,y^5+3y=x$, eli
+\jatko \begin{Exa} (jatko) Jos esimerkiss√§ merkit√§√§n $\inv{f}(x)=y(x)$, niin $y(x)$ voidaan
+tulkita implisiittifunktioksi, joka m√§√§r√§ytyy yht√§l√∂st√§ $\,y^5+3y=x$, eli
 \[
 [y(x)]^5+3y(x)=x, \quad x\in\R.
 \]
-Kun t‰ss‰ derivoidaan puolittain soveltaen yhdistetyn funktion derivoimiss‰‰ntˆ‰ ja s‰‰ntˆ‰
+Kun t√§ss√§ derivoidaan puolittain soveltaen yhdistetyn funktion derivoimiss√§√§nt√∂√§ ja s√§√§nt√∂√§
 \eqref{D1}, niin seuraa
 \[ 
 \bigl[5[y(x)]^4+3\bigr]\,y'(x)=1\ \impl\ \ y'(x)=\frac{1}{5y^4+3} \quad (y=y(x)). \loppu
 \]
 \end{Exa}
-\begin{Exa} Yht‰lˆ 
+\begin{Exa} Yht√§l√∂ 
 \[ 
 x^2 + y^2 = 1 
 \]
-m‰‰rittelee v‰lill‰ $[-1,1]$ kaksihaaraisen implisiittifunktion, jonka kumpikin haara on
-derivoituva v‰lill‰ $(-1,1)$. Jos $x\in(-1,1)$, niin $y'(x)$ lasketaan helposti
-implisiittisell‰ dervoinnilla:
+m√§√§rittelee v√§lill√§ $[-1,1]$ kaksihaaraisen implisiittifunktion, jonka kumpikin haara on
+derivoituva v√§lill√§ $(-1,1)$. Jos $x\in(-1,1)$, niin $y'(x)$ lasketaan helposti
+implisiittisell√§ dervoinnilla:
 \begin{align*}
  \dif[x^2 + (y(x))^2] &= 2x + 2y(x)y'(x) = \dif\,1 = 0
                       &\impl \quad y'(x) = -\,\dfrac{x}{y}\,,\ \ y=y(x).
 \end{align*}
-Tulos on p‰tev‰ kummallakin implisiittifunktion haaralla
+Tulos on p√§tev√§ kummallakin implisiittifunktion haaralla
 \[ 
 y(x) = \pm \sqrt{1-x^2}\,, 
 \]
-kuten myˆs suoralla derivoinnilla voi todeta:
+kuten my√∂s suoralla derivoinnilla voi todeta:
 \[
 y(x) = \pm\sqrt{1-x^2}\,\ \impl\,\ y'(x) = \pm\left(\frac{-x}{\sqrt{1-x^2}}\right) 
                                          = -\,\frac{x}{y(x)}\,, \quad x \in (-1,1). \loppu
@@ -397,45 +397,45 @@ y(x) = \pm\sqrt{1-x^2}\,\ \impl\,\ y'(x) = \pm\left(\frac{-x}{\sqrt{1-x^2}}\righ
 
 \subsection*{Potenssisarjan derivointi}
 
-T‰h‰nastisten tarkastelujen perusteella voidaan pit‰‰ p‰‰s‰‰ntˆn‰, ett‰ tavanomaiset
-(algebran keinoin lausekkeina m‰‰ritellyt) funktiot ovat derivoituvia m‰‰rittelyjoukossaan,
-lukuunottamatta mahdollisia erillisi‰ pisteit‰, joita voi olla ‰‰rellinen tai joskus
-numeroituva m‰‰r‰. N‰ytet‰‰n luvun lopuksi, ett‰ p‰‰s‰‰nnˆst‰ eiv‰t tee poikkeusta myˆsk‰‰n
-funktiot, jotka on m‰‰ritelty potenssisarjojen summina. T‰llaisten funktioiden myˆt‰
-derivoituvien funktioiden joukko laajenee itse asiassa merkitt‰v‰sti, kuten myˆhemmin tullaan
-n‰kem‰‰n.
+T√§h√§nastisten tarkastelujen perusteella voidaan pit√§√§ p√§√§s√§√§nt√∂n√§, ett√§ tavanomaiset
+(algebran keinoin lausekkeina m√§√§ritellyt) funktiot ovat derivoituvia m√§√§rittelyjoukossaan,
+lukuunottamatta mahdollisia erillisi√§ pisteit√§, joita voi olla √§√§rellinen tai joskus
+numeroituva m√§√§r√§. N√§ytet√§√§n luvun lopuksi, ett√§ p√§√§s√§√§nn√∂st√§ eiv√§t tee poikkeusta my√∂sk√§√§n
+funktiot, jotka on m√§√§ritelty potenssisarjojen summina. T√§llaisten funktioiden my√∂t√§
+derivoituvien funktioiden joukko laajenee itse asiassa merkitt√§v√§sti, kuten my√∂hemmin tullaan
+n√§kem√§√§n.
 
-Olkoon reaalifunktio $f$ m‰‰ritelty muodossa
+Olkoon reaalifunktio $f$ m√§√§ritelty muodossa
 \[
 f(x) = \sum_{k=0}^\infty a_k x^k.
 \]
-Oletetaan, ett‰ t‰ss‰ potenssisarjan suppenemiss‰de on joko $\rho\in\R_+$ tai $\rho=\infty$.
-T‰llˆin suurin avoin v‰li, joka sis‰ltyy $f$:n m‰‰rittelyjoukkoon, on $(-\rho,\rho)$
-(vrt.\ Luku \ref{potenssisarja}). Jatkossa n‰ytet‰‰n, ett‰ $f$ on derivoituva koko t‰ll‰
-v‰lill‰ ja ett‰ derivaatta voidaan laskea yksinkertaisesti derivoimalla sarja termeitt‰in,
-ts.\ p‰tee
+Oletetaan, ett√§ t√§ss√§ potenssisarjan suppenemiss√§de on joko $\rho\in\R_+$ tai $\rho=\infty$.
+T√§ll√∂in suurin avoin v√§li, joka sis√§ltyy $f$:n m√§√§rittelyjoukkoon, on $(-\rho,\rho)$
+(vrt.\ Luku \ref{potenssisarja}). Jatkossa n√§ytet√§√§n, ett√§ $f$ on derivoituva koko t√§ll√§
+v√§lill√§ ja ett√§ derivaatta voidaan laskea yksinkertaisesti derivoimalla sarja termeitt√§in,
+ts.\ p√§tee
 \[
 f'(x) = \sum_{k=1}^\infty k a_k x^{k-1}, \quad x \in (-\rho,\rho).
 \]
-Derivoinnin tuloksena saadun sarjan suppenemiss‰de on myˆs $\rho$ (Lause
-\ref{potenssisarjan skaalaus}), joten $f'$ on edelleen derivoituva v‰lill‰ $(-\rho,\rho)$,
+Derivoinnin tuloksena saadun sarjan suppenemiss√§de on my√∂s $\rho$ (Lause
+\ref{potenssisarjan skaalaus}), joten $f'$ on edelleen derivoituva v√§lill√§ $(-\rho,\rho)$,
 ja derivoinnin tulos on siis
 \[
 f''(x) = \sum_{k=2}^\infty k(k-1)\,a_k x^{k-2}, \quad x \in (-\rho,\rho).
 \]
-Myˆs t‰m‰n sarjan suppenemiss‰de $=\rho$ (Lause \ref{potenssisarjan skaalaus}),
-joten $f''$ on v‰lill‰ $(-\rho,\rho)$ edelleen derivoituva, jne. P‰‰tell‰‰n, ett‰
-potenssisarjan summana m‰‰ritelty funktio on avoimella suppenemisv‰lill‰‰n itse asiassa
-mielivaltaisen monta kertaa derivoituva funktio (!). P‰‰telm‰ perustui siis potenssisarjojen
-suppenemisteoriaan ja seuraavaan v‰itt‰m‰‰n, joka on todistettavissa suoraan derivaatan
-m‰‰ritelm‰st‰ l‰htien (eli aiempiin derivoimiss‰‰ntˆihin vetoamatta).
+My√∂s t√§m√§n sarjan suppenemiss√§de $=\rho$ (Lause \ref{potenssisarjan skaalaus}),
+joten $f''$ on v√§lill√§ $(-\rho,\rho)$ edelleen derivoituva, jne. P√§√§tell√§√§n, ett√§
+potenssisarjan summana m√§√§ritelty funktio on avoimella suppenemisv√§lill√§√§n itse asiassa
+mielivaltaisen monta kertaa derivoituva funktio (!). P√§√§telm√§ perustui siis potenssisarjojen
+suppenemisteoriaan ja seuraavaan v√§itt√§m√§√§n, joka on todistettavissa suoraan derivaatan
+m√§√§ritelm√§st√§ l√§htien (eli aiempiin derivoimiss√§√§nt√∂ihin vetoamatta).
 \begin{Lause} \label{potenssisarja on derivoituva} \vahv{(Potenssisarjan derivaatta)}\,
-\index{potenssisarja!b@derivointi|emph} \index{derivoimiss‰‰nnˆt!e@potenssisarja|emph}%
-Jos potenssisarjan $\sum_{k=0}^\infty a_k x^k$ suppenemiss‰de on $\rho>0$, niin sarjan summana 
-m‰‰ritelty funktio $f(x)$ on derivoituva v‰lill‰ $(-\rho,\rho)$ ja ko.\ v‰lill‰ p‰tee 
+\index{potenssisarja!b@derivointi|emph} \index{derivoimiss√§√§nn√∂t!e@potenssisarja|emph}%
+Jos potenssisarjan $\sum_{k=0}^\infty a_k x^k$ suppenemiss√§de on $\rho>0$, niin sarjan summana 
+m√§√§ritelty funktio $f(x)$ on derivoituva v√§lill√§ $(-\rho,\rho)$ ja ko.\ v√§lill√§ p√§tee 
 $f'(x)=\sum_{k=1}^\infty k a_k x^{k-1}$. 
 \end{Lause}
-\tod Olkoon $x\in (-\rho,\rho)$ ja valitaan $\Delta x \neq 0$ siten, ett‰
+\tod Olkoon $x\in (-\rho,\rho)$ ja valitaan $\Delta x \neq 0$ siten, ett√§
 \[
 \abs{x}+\abs{\Delta x} \le \rho_0<\rho.
 \]
@@ -444,7 +444,7 @@ Binomikaavan mukaan
 (x+\Delta x)^k\ &=\ \sum_{l=0}^k \binom{k}{l} (\Delta x)^l x^{k-l} \\
                 &=\ x^k + kx^{k-1}\Delta x + \sum_{l=2}^k \binom{k}{l} (\Delta x)^l x^{k-l}.
 \end{align*}
-Kirjoitetaan t‰ss‰ viimeinen termi summausindeksin vaihdolla muotoon
+Kirjoitetaan t√§ss√§ viimeinen termi summausindeksin vaihdolla muotoon
 \begin{align*}
 \sum_{l=2}^k \binom{k}{l} (\Delta x)^l x^{k-l}\ 
               &= \sum_{i=0}^{k-2} \binom{k}{i+2} (\Delta x)^{i+2} x^{k-2-i} \\
@@ -455,7 +455,7 @@ ja edelleen
 \sum_{i=0}^{k-2} \binom{k}{i+2} (\Delta x)^i\,x^{k-2-i} 
                 = \sum_{i=0}^{k-2} c_i\,\binom{k-2}{i} (\Delta x)^i\,x^{k-2-i},
 \]
-miss‰
+miss√§
 \[
 c_i = \binom{k}{i+2} \binom{k-2}{i}^{-1} 
     = \frac{k!}{(k-i-2)!\,(i+2)!} \cdot \frac{(k-i-2)!\,i!}{(k-2)!} 
@@ -475,7 +475,7 @@ ja oli $\abs{x}+\abs{\Delta x} \le \rho_0$, niin saadaan jokaisella $k \ge 2$ ar
  &= \frac{1}{2}k^2\abs{\Delta x}(\abs{x}+\abs{\Delta x})^{k-2} \\
  &\le \frac{1}{2}k^2\abs{\Delta x}\rho_0^{k-2}.
 \end{align*}
-N‰in ollen
+N√§in ollen
 \begin{align*}
 \left| \frac{f(x+\Delta x)-f(x)}{\Delta x} - \sum_{k=1}^\infty ka_kx^{k-1} \right|\ 
        &=\ \left|\sum_{k=2}^\infty a_k
@@ -484,17 +484,17 @@ N‰in ollen
              \left|\frac{(x+\Delta x)^k - x^k}{\Delta x} - kx^{k-1}\right| \\
        &\le\ \abs{\Delta x}\sum_{k=2}^\infty \frac{1}{2}k^2\abs{a_k}\rho_0^{k-2}.
 \end{align*}
-T‰ss‰ oikealla oleva sarja suppenee Lauseen \ref{potenssisarjan skaalaus} perusteella, koska
+T√§ss√§ oikealla oleva sarja suppenee Lauseen \ref{potenssisarjan skaalaus} perusteella, koska
 $\rho_0<\rho$, joten
 \[
 \left|\frac{f(x+\Delta x)-f(x)}{\Delta x} - \sum_{k=1}^\infty ka_kx^{k-1}\right| 
        \le\ C\,\abs{\Delta x}, \quad\ C = \sum_{k=2}^\infty \frac{1}{2}k^2\abs{a_k}\rho_0^{k-2}.
 \]
-Saatu arvio on p‰tev‰, kun $x \in (-\rho,\rho)$ ja $\abs{\Delta x} < \delta$, miss‰ esim.\ 
+Saatu arvio on p√§tev√§, kun $x \in (-\rho,\rho)$ ja $\abs{\Delta x} < \delta$, miss√§ esim.\ 
 \[ 
 \delta = \frac{1}{2}\,(\rho-\abs{x}) > 0. 
 \]
-Siis $f$ on jokaisessa pisteess‰ $x \in (-\rho,\rho)$ derivoituva ja
+Siis $f$ on jokaisessa pisteess√§ $x \in (-\rho,\rho)$ derivoituva ja
 \[
 f'(x) = \lim_{\Delta x \kohti 0}\,\frac{f(x+\Delta x)-f(x)}{\Delta x}\ 
       =\ \sum_{k=1}^\infty ka_kx^{k-1}. \loppu
@@ -518,8 +518,8 @@ q\sum_{k=1}^\infty kq^{k-1} \,=\, \sum_{k=1}^\infty kq^k \,=\, \frac{q}{(1-q)^2}
 \begin{enumerate}
 
 \item
-Laske suoraan m‰‰ritelm‰st‰ (derivoimiss‰‰ntˆj‰ k‰ytt‰m‰tt‰) linearisoiva approksimaatio
-seuraaville funktioille pisteess‰ $a=1$. Piirr‰ myˆs kuva! 
+Laske suoraan m√§√§ritelm√§st√§ (derivoimiss√§√§nt√∂j√§ k√§ytt√§m√§tt√§) linearisoiva approksimaatio
+seuraaville funktioille pisteess√§ $a=1$. Piirr√§ my√∂s kuva! 
 \[
 \text{a)}\,\ f(x)=\frac{x}{1+2x} \qquad 
 \text{b)}\,\ f(x)=\frac{x}{2+x^2} \qquad
@@ -527,8 +527,8 @@ seuraaville funktioille pisteess‰ $a=1$. Piirr‰ myˆs kuva!
 \]
 
 \item
-Laske seuraavien funktioiden derivaatat pisteess‰ $a\in\DF_f$ suoraan derivaatan
-m‰‰ritelm‰st‰:
+Laske seuraavien funktioiden derivaatat pisteess√§ $a\in\DF_f$ suoraan derivaatan
+m√§√§ritelm√§st√§:
 \[
 \text{a)}\,\ f(x)=x^3+3x^2 \qquad 
 \text{b)}\,\ f(x)=\frac{1}{x} \qquad
@@ -536,7 +536,7 @@ m‰‰ritelm‰st‰:
 \]
 
 \item
-Olkoon $f$ derivoituva pisteess‰ $a$. M‰‰rit‰ seuraavat raja-arvot $f(a)$:n ja $f'(a)$:n
+Olkoon $f$ derivoituva pisteess√§ $a$. M√§√§rit√§ seuraavat raja-arvot $f(a)$:n ja $f'(a)$:n
 avulla:
 \begin{align*}
 &\text{a)}\ \lim_{h \kohti 0} \frac{f(a+h^2)-f(a-h)}{h} \qquad
@@ -545,7 +545,7 @@ avulla:
 \end{align*}
 
 \item \label{H-V-4: trig-esim}
-L‰htien derivaatan m‰‰ritelm‰st‰ m‰‰rit‰ $f'(0)$ tai n‰yt‰, ett‰ $f$ ei ole derivoituva
+L√§htien derivaatan m√§√§ritelm√§st√§ m√§√§rit√§ $f'(0)$ tai n√§yt√§, ett√§ $f$ ei ole derivoituva
 $0$:ssa:
 \begin{align*}
 &\text{a)}\,\ f(x)=\begin{cases}
@@ -564,8 +564,8 @@ $0$:ssa:
 \end{align*}
 
 \item
-Palauta osam‰‰r‰n derivoimiss‰‰ntˆ tulon derivoimiss‰‰ntˆˆn johtamalla ensin funktion
-$1/f$ derivoimiss‰‰ntˆ suoraan derivaatan m‰‰ritelm‰st‰.
+Palauta osam√§√§r√§n derivoimiss√§√§nt√∂ tulon derivoimiss√§√§nt√∂√∂n johtamalla ensin funktion
+$1/f$ derivoimiss√§√§nt√∂ suoraan derivaatan m√§√§ritelm√§st√§.
 
 \item
 Laske kohdissa a)--c) $f^{(n)}(x)$ kun $n=1,2$ ja kohdissa d)--f) derivaatan
@@ -580,7 +580,7 @@ $f^{(n)}(x),\ n\in\N$ yleinen lauseke:
 \end{align*}
 
 \item
-Tiedet‰‰n, ett‰ $f(2)=1$, $f'(2)=3$ ja $f''(2)=-1$. Laske
+Tiedet√§√§n, ett√§ $f(2)=1$, $f'(2)=3$ ja $f''(2)=-1$. Laske
 \[
 \text{a)}\ \left[\frac{d}{dx}\left(\frac{x^2}{f(x)}\right)\right]_{x=2} \qquad
 \text{b)}\ \left[\frac{d}{dx}\left(\frac{f(x)}{x^2}\right)\right]_{x=2} \qquad
@@ -588,26 +588,26 @@ Tiedet‰‰n, ett‰ $f(2)=1$, $f'(2)=3$ ja $f''(2)=-1$. Laske
 \]
 
 \item
-Funktio $f$ m‰‰ritell‰n funktion $g(x)=x^2-3x+4$ kaksihaaraisena k‰‰nteisfunktiona. Laske
-$f'(2)$ molemmilla haaroilla \ a) ratkaisemalla ensin yht‰lˆ $g(x)=2$ ja k‰ytt‰m‰ll‰
-k‰‰nteisfunktion derivoimiss‰‰ntˆ‰, \ b) ratkaisemalla $\,g(y)=x\,\impl\,y=f(x)$,
+Funktio $f$ m√§√§ritell√§n funktion $g(x)=x^2-3x+4$ kaksihaaraisena k√§√§nteisfunktiona. Laske
+$f'(2)$ molemmilla haaroilla \ a) ratkaisemalla ensin yht√§l√∂ $g(x)=2$ ja k√§ytt√§m√§ll√§
+k√§√§nteisfunktion derivoimiss√§√§nt√∂√§, \ b) ratkaisemalla $\,g(y)=x\,\impl\,y=f(x)$,
 derivoimalla ja sijoittamalla $x=2$. 
 
 \item
-Seuraavat yht‰lˆt m‰‰rittelev‰t implisiittifunktion $y(x)$. Laske implisiittisell‰
-derivoinnilla $y'(x)$ annetussa pisteess‰ $(x,y)=(x,y(x))$\,: \newline
+Seuraavat yht√§l√∂t m√§√§rittelev√§t implisiittifunktion $y(x)$. Laske implisiittisell√§
+derivoinnilla $y'(x)$ annetussa pisteess√§ $(x,y)=(x,y(x))$\,: \newline
 a) \ $2x^2+3y^2=5,\ (x,y)=(1,1)$ \newline
 b) \ $2x^2+3y^2=5,\ (x,y)=(1,-1)$ \newline
 c) \ $x^2y^3-x^3y^2=12,\ (x,y)=(-1,2)$ \newline
 d) \ $(x-1)(x+2y+1)=y^2,\ (x,y)=(2,-1)$
 
 \item
-Funktio $g$ on funktion $f$ k‰‰nteisfunktio eli $y=f(x)\,\ekv\, x=g(y)$. Johda
-derivoimiss‰‰ntˆ
+Funktio $g$ on funktion $f$ k√§√§nteisfunktio eli $y=f(x)\,\ekv\, x=g(y)$. Johda
+derivoimiss√§√§nt√∂
 \[
 g''(y)=-\frac{f''(x)}{[f'(x)]^3}\,, \quad y=f(x)
 \]
-ja laske s‰‰nnˆll‰ $g''(1)$, kun $f(x)=x^5+2x+1$.
+ja laske s√§√§nn√∂ll√§ $g''(1)$, kun $f(x)=x^5+2x+1$.
 
 \item
 Laske implisiittisesti derivoimalla $y''$ $x$:n ja $y$:n avulla:
@@ -616,18 +616,18 @@ Laske implisiittisesti derivoimalla $y''$ $x$:n ja $y$:n avulla:
 \]
 
 \item \label{H-V-3: cos ja sin potenssisarjoina}
-a) N‰yt‰, ett‰ $\,xy''=y$, kun m‰‰ritell‰‰n
+a) N√§yt√§, ett√§ $\,xy''=y$, kun m√§√§ritell√§√§n
 \[
 y(x)=\sum_{k=1}^\infty \frac{x^k}{k!(k-1)!}\,, \quad x\in\R.
 \]
-b) N‰yt‰, ett‰ $\,u'=-v$ ja $\,v'=u$, kun m‰‰ritell‰‰n
+b) N√§yt√§, ett√§ $\,u'=-v$ ja $\,v'=u$, kun m√§√§ritell√§√§n
 \[
 u(x)=\sum_{k=0}^\infty (-1)^k \frac{x^{2k}}{(2k)!}\,, \quad
 v(x)=\sum_{k=0}^\infty (-1)^k \frac{x^{2k+1}}{(2k+1)!}\,, \quad x\in\R.
 \]
  
 \item
-Seuraavat funktiot ovat rationaalifunktioita v‰lill‰ $(-1,1)$. Laske funktioiden lausekkeet
+Seuraavat funktiot ovat rationaalifunktioita v√§lill√§ $(-1,1)$. Laske funktioiden lausekkeet
 potenssisarjaa $\sum_{k=0}^\infty x^k$ derivoimalla.
 \begin{align*}
 &\text{a)}\ f(x)=\sum_{k=2}^\infty kx^k \qquad 
@@ -639,22 +639,22 @@ potenssisarjaa $\sum_{k=0}^\infty x^k$ derivoimalla.
 \end{align*}
 
 \item (*)
-Todista Leibnizin s‰‰ntˆ.
+Todista Leibnizin s√§√§nt√∂.
 
 \item (*) 
 Olkoon $a\in\R$ reaalikertoimisen polynomin $p$ nollakohta ja olkoon $m\in\N,\ m\ge 2$.
-N‰yt‰, ett‰ $a$ on $m$-kertainen nollakohta t‰sm‰lleen kun $p^{(k)}(a)=0,\ k=1 \ldots m-1$
+N√§yt√§, ett√§ $a$ on $m$-kertainen nollakohta t√§sm√§lleen kun $p^{(k)}(a)=0,\ k=1 \ldots m-1$
 ja $p^{(m)}(a) \neq 0$.
 
 \item (*)
-a) N‰yt‰, ett‰ jos potenssisarja $\sum_k a_k x^k$ suppenee v‰lill‰ $(-\rho,\rho)$ ja
-funktio $g$ on derivoituva v‰lill‰ $(a,b)\subset(-\rho,\rho)$, niin funktion
+a) N√§yt√§, ett√§ jos potenssisarja $\sum_k a_k x^k$ suppenee v√§lill√§ $(-\rho,\rho)$ ja
+funktio $g$ on derivoituva v√§lill√§ $(a,b)\subset(-\rho,\rho)$, niin funktion
 \[
 f(x) = \sum_{k=0}^\infty x^k g(x), \quad x\in(a,b)
 \]
-derivaatta v‰lill‰ $(a,b)$ on laskettavissa derivoimalla sarja
-termeitt‰in.\vspace{1mm}\newline
-b) M‰‰rit‰ $f'(x)$ ja $f''(x)$ v‰lill‰ $(0,\infty)$, kun
+derivaatta v√§lill√§ $(a,b)$ on laskettavissa derivoimalla sarja
+termeitt√§in.\vspace{1mm}\newline
+b) M√§√§rit√§ $f'(x)$ ja $f''(x)$ v√§lill√§ $(0,\infty)$, kun
 \[
 f(x) = \sum_{k=0}^\infty \frac{1}{k!}\,x^{k+\tfrac{1}{2}}, \quad x \ge 0.
 \]

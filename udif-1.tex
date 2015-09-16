@@ -6,74 +6,74 @@
 \index{funktion raja-arvo|vahv}
 
 Kahden ja kolmen reaalimuuttujan funktioiden algebraa on tarkasteltu aiemmin Luvussa 
-\ref{kahden ja kolmen muuttujan funktiot}. T‰ss‰ ja seuraavissa luvuissa kohteena ovat kahden
-ja kolmen muuttujan funktioiden lis‰ksi yleisemm‰t $n$ reaalimuuttujan reaaliarvoiset funktiot 
+\ref{kahden ja kolmen muuttujan funktiot}. T√§ss√§ ja seuraavissa luvuissa kohteena ovat kahden
+ja kolmen muuttujan funktioiden lis√§ksi yleisemm√§t $n$ reaalimuuttujan reaaliarvoiset funktiot 
 muotoa
 \[
 y=f(x_1,\ldots,x_n).
 \]
-T‰ss‰ voi k‰ytt‰‰ myˆs matriisilaskun merkint‰‰
+T√§ss√§ voi k√§ytt√§√§ my√∂s matriisilaskun merkint√§√§
 \[
 y=f(\mx), \quad \mx\in\R^n
 \] 
 \index{funktio A!d@$n$ muuttujan (vektorim.)} \index{vektorimuuttujan funktio}%
 ($\mx$ pysty- tai vaakavektori) ja puhua \kor{vektorimuuttujan} funktiosta. Mahdollista
-(ja matemaattisissa teksteiss‰  tavallistakin) on matriisilaskun merkinn‰n sijasta k‰ytt‰‰ myˆs
-vektorimuuttujalle yksinkertaista symbolia $x$, eli merkit‰
+(ja matemaattisissa teksteiss√§  tavallistakin) on matriisilaskun merkinn√§n sijasta k√§ytt√§√§ my√∂s
+vektorimuuttujalle yksinkertaista symbolia $x$, eli merkit√§
 \[
 y=f(x),\quad x=(x_1,\ldots,x_n)\in\R^n.
 \]
-Jatkossa k‰ytet‰‰n eri merkint‰tapoja rinnakkain, jolloin matriisialgebran merkinnˆiss‰ $\mx$ 
-tarkoittaa pystyvektoria. Kahden ja kolmen muuttujan tapauksissa merkit‰‰n vektorimuuttuja
+Jatkossa k√§ytet√§√§n eri merkint√§tapoja rinnakkain, jolloin matriisialgebran merkinn√∂iss√§ $\mx$ 
+tarkoittaa pystyvektoria. Kahden ja kolmen muuttujan tapauksissa merkit√§√§n vektorimuuttuja
 vanhaan tapaan $(x,y)$ tai $(x,y,z)$. 
 
-Funktion j\pain{atkuvuuden} ja \pain{ra}j\pain{a}-\pain{arvon} k‰sitteet, jotka toistaiseksi
+Funktion j\pain{atkuvuuden} ja \pain{ra}j\pain{a}-\pain{arvon} k√§sitteet, jotka toistaiseksi
 on liitetty vain yhden muuttujan funktioihin 
-(ks.\ Luvut \ref{jatkuvuuden k‰site}--\ref{funktion raja-arvo}), ovat yleistett‰viss‰ melko
+(ks.\ Luvut \ref{jatkuvuuden k√§site}--\ref{funktion raja-arvo}), ovat yleistett√§viss√§ melko
 suoraviivaisesti useamman muuttujan funktioita koskeviksi. Aloitetaan kahden muuttujan
 funktioista.
 
 \subsection*{Funktio $f(x,y)$}
 
-Kahden muuttujan funktion jatkuvuuden ja raja-arvon m‰‰ritelmien alustukseksi tarvitaan
+Kahden muuttujan funktion jatkuvuuden ja raja-arvon m√§√§ritelmien alustukseksi tarvitaan
 \begin{Def} \label{lukuparijonon suppeneminen} \index{raja-arvo!c@lukuparien jonon|emph}
 \index{suppeneminen!ab@lukuparien jonon|emph}
-Jono $\seq{(x_n,y_n)}$, miss‰ 
-$(x_n,y_n) \in \R^2,\ n\in\N$, \kor{suppenee kohti} (l‰hestyy) \kor{lukuparia} (pistett‰) 
-$(x,y)$ t‰sm‰lleen kun $x_n \kohti x$ ja $y_n \kohti y$. 
+Jono $\seq{(x_n,y_n)}$, miss√§ 
+$(x_n,y_n) \in \R^2,\ n\in\N$, \kor{suppenee kohti} (l√§hestyy) \kor{lukuparia} (pistett√§) 
+$(x,y)$ t√§sm√§lleen kun $x_n \kohti x$ ja $y_n \kohti y$. 
 \end{Def}
-Kun lukuparien jonon suppenemiselle k‰ytet‰‰n aiempaan tapaan merkint‰‰ '\kohti', niin on siis 
+Kun lukuparien jonon suppenemiselle k√§ytet√§√§n aiempaan tapaan merkint√§√§ '\kohti', niin on siis 
 sovittu:
 \[ 
 (x_n,y_n) \kohti (x,y) \qekv x_n \kohti x\ \ \ja\ \ y_n \kohti y. 
 \]
-T‰m‰n kanssa yht‰pit‰v‰ sopimus on 
+T√§m√§n kanssa yht√§pit√§v√§ sopimus on 
 (ks.\ Harj.teht.\,\ref{jonon raja-arvo}:\,\ref{H-I-6: lukujonopari}d)
 \[
 (x_n,y_n)\kohti(x,y) \qekv (x_n-x)^2+(y_n-y)^2 \kohti 0.
 \]
-T‰m‰n mukaan siis $(x_n,y_n)\kohti(x,y)$ tarkoittaa yksinkertaisesti, ett‰ pisteen
-$(x_n,y_n)$ (geometrinen) et‰isyys pisteest‰ $(x,y)$ l‰hestyy (lukujonona) $0$:aa, kun
+T√§m√§n mukaan siis $(x_n,y_n)\kohti(x,y)$ tarkoittaa yksinkertaisesti, ett√§ pisteen
+$(x_n,y_n)$ (geometrinen) et√§isyys pisteest√§ $(x,y)$ l√§hestyy (lukujonona) $0$:aa, kun
 $n\kohti\infty$. Jos erityisesti $(x,y)=(0,0)$, niin polaarimuunnoksen $x_n=r_n\cos\varphi_n$,
 $y_n=r_n\sin\varphi_n$ perusteella on
 \[
 (x_n,y_n)\kohti(0,0) \qekv r_n \kohti 0 \qquad \text{(polaarikoordinaatisto)}.
 \]
-Koska t‰m‰ ei aseta mit‰‰n rajoituksia jonolle $\seq{\varphi_n}$, niin l‰hestyminen voi
+Koska t√§m√§ ei aseta mit√§√§n rajoituksia jonolle $\seq{\varphi_n}$, niin l√§hestyminen voi
 tapahtua esim.\ pitkin puolisuoraa, jolla $\varphi_n=\varphi=$ vakio, tai se voi olla
-suunnaltaan 'hyppelehtiv‰‰', esim.\ spiraalimaista. Joka tapauksessa mahdollisia
-l‰hestymis\-\pain{suuntia} (vastaten puolisuoria) on ‰‰rettˆm‰n monta. --- T‰m‰ on olennainen
-ero verrattuna yhden muuttujan tilanteeseen, jossa pistett‰ voi l‰hesty‰ vain kahdesta eri
+suunnaltaan 'hyppelehtiv√§√§', esim.\ spiraalimaista. Joka tapauksessa mahdollisia
+l√§hestymis\-\pain{suuntia} (vastaten puolisuoria) on √§√§rett√∂m√§n monta. --- T√§m√§ on olennainen
+ero verrattuna yhden muuttujan tilanteeseen, jossa pistett√§ voi l√§hesty√§ vain kahdesta eri
 suunnasta.
 
-Kun kaksiulotteinen 'l‰hestyminen' $(x_n,y_n)\kohti(x,y)$ on n‰in m‰‰ritelty, on
-M‰‰ritelmien \ref{funktion jatkuvuus} (jatkuvuus) ja \ref{funktion raja-arvon m‰‰ritelm‰}
-(funktion raja-arvo) yleist‰minen kahden muuttujan tilanteeseen suoraviivaista:
+Kun kaksiulotteinen 'l√§hestyminen' $(x_n,y_n)\kohti(x,y)$ on n√§in m√§√§ritelty, on
+M√§√§ritelmien \ref{funktion jatkuvuus} (jatkuvuus) ja \ref{funktion raja-arvon m√§√§ritelm√§}
+(funktion raja-arvo) yleist√§minen kahden muuttujan tilanteeseen suoraviivaista:
 \begin{Def} \label{kahden muuttujan jatkuvuus} 
 \index{jatkuvuusb@jatkuvuus (usean muuttujan)!a@funktion $f(x,y)$|emph}
 Funktio $f:\ \DF_f\subset\R^2\kohti\R$ on
-\kor{jatkuva} pisteess‰ $(x,y)\in\DF_f$ t‰sm‰lleen kun kaikille reaalilukuparien jonoille
-$\seq{(x_n,y_n)}$ p‰tee
+\kor{jatkuva} pisteess√§ $(x,y)\in\DF_f$ t√§sm√§lleen kun kaikille reaalilukuparien jonoille
+$\seq{(x_n,y_n)}$ p√§tee
 \[
 (x_n,y_n)\in\DF_f\,\ \forall n\,\ \ja\,\ (x_n,y_n)\kohti(x,y)\,\ 
                                   \impl\,\ f(x_n,y_n) \kohti f(x,y).
@@ -81,24 +81,24 @@ $\seq{(x_n,y_n)}$ p‰tee
 \end{Def}
 \begin{Def} \label{kahden muuttujan raja-arvo}
 \index{raja-arvo!d@kahden muuttujan funktion|emph}
-Funktiolla $f(x,y)$ on pisteess‰ $(a,b)$
-\kor{raja-arvo} $A\in\R$, jos jokaiselle reaalilukuparien jonolle $\seq{(x_n,y_n)}$ p‰tee
+Funktiolla $f(x,y)$ on pisteess√§ $(a,b)$
+\kor{raja-arvo} $A\in\R$, jos jokaiselle reaalilukuparien jonolle $\seq{(x_n,y_n)}$ p√§tee
 \[
 (a,b)\neq(x_n,y_n)\in\DF_f\,\ \forall n\,\ \ja\,\ (x_n,y_n) \kohti (a,b)\,\ 
                                              \impl\,\ f(x_n,y_n) \kohti A, 
 \]
-ja oletus on voimassa jollekin jonolle $\seq{(x_n,y_n)}$. Raja-arvo merkit‰‰n
+ja oletus on voimassa jollekin jonolle $\seq{(x_n,y_n)}$. Raja-arvo merkit√§√§n
 \[
 \lim_{(x,y)\kohti(a,b)}f(x,y)=A.
 \]
 \end{Def}
-Kuten yhden muuttujan tapauksessa, M‰‰ritelm‰ \ref{kahden muuttujan raja-arvo} est‰‰ raja-arvon
-m‰‰rittelyn sellaisessa (eristetyss‰) pistess‰ $(a,b)$, jota kohti l‰hestyminen
-$(x_n,y_n)\kohti(a,b)$ joukosta $\DF_f$ k‰sin ei ole mahdollista lis‰ehdolla
-$(x_n,y_n)\neq(a,b)\ \forall n$. M‰‰ritelm‰ss‰ \ref{kahden muuttujan jatkuvuus} t‰t‰ lis‰ehtoa
-ei ole, joten jos $(a,b)\in\DF_f$ on $\DF_f$:n eristetty piste, niin $f$ on jatkuva pisteess‰
-$(a,b)$ (vrt.\ Harj.teht.\,\ref{jatkuvuuden k‰site}:\,\ref{H-V-1: eristetty piste}).
-\begin{Exa} \label{udif-1: esim 1} M‰‰ritell‰‰n funktiot
+Kuten yhden muuttujan tapauksessa, M√§√§ritelm√§ \ref{kahden muuttujan raja-arvo} est√§√§ raja-arvon
+m√§√§rittelyn sellaisessa (eristetyss√§) pistess√§ $(a,b)$, jota kohti l√§hestyminen
+$(x_n,y_n)\kohti(a,b)$ joukosta $\DF_f$ k√§sin ei ole mahdollista lis√§ehdolla
+$(x_n,y_n)\neq(a,b)\ \forall n$. M√§√§ritelm√§ss√§ \ref{kahden muuttujan jatkuvuus} t√§t√§ lis√§ehtoa
+ei ole, joten jos $(a,b)\in\DF_f$ on $\DF_f$:n eristetty piste, niin $f$ on jatkuva pisteess√§
+$(a,b)$ (vrt.\ Harj.teht.\,\ref{jatkuvuuden k√§site}:\,\ref{H-V-1: eristetty piste}).
+\begin{Exa} \label{udif-1: esim 1} M√§√§ritell√§√§n funktiot
 \[
 f_1(x,y)=\frac{x^2y}{x^2+y^2}\,, \quad
 f_2(x,y)=\frac{xy}{x^2+y^2}\,, \quad (x,y)\in\R^2,\ (x,y)\neq(0,0).
@@ -110,35 +110,35 @@ Tutki, ovatko funktiot jatkuvia origossa, kun asetetaan $f_1(0,0)=f_2(0,0)=0$.
 &g_1(r,\varphi) \,=\, f_1(r\cos\varphi,r\sin\varphi) \,=\, r\cos^2\varphi\sin\varphi, \\
 &g_2(r,\varphi) \,=\, f_2(r\cos\varphi,r\sin\varphi) \,=\, \cos\varphi\sin\varphi
 \end{align*}
-p‰‰tell‰‰n: Jos $(x_n,y_n) \vastaa (r_n,\varphi_n)$, niin
+p√§√§tell√§√§n: Jos $(x_n,y_n) \vastaa (r_n,\varphi_n)$, niin
 \[
 r_n \kohti 0 \qimpl |f_1(x_n,y_n)| \,=\, |g_1(r_n,\varphi_n)|
                                    \,\le\, r_n \,\kohti\, 0 \,=\, f(0,0),
 \]
-joten $f_1$ on jatkuva pisteess‰ $(0,0)$. Sen sijaan $f_2$ on ep‰jatkuva origossa, sill‰
+joten $f_1$ on jatkuva pisteess√§ $(0,0)$. Sen sijaan $f_2$ on ep√§jatkuva origossa, sill√§
 $r_n \kohti 0\ \not\impl\ g_2(r_n,\varphi_n) \kohti 0$.  \loppu
 
-Raja-arvoille ja jatkuvuudelle p‰tev‰t samanlaiset yhdistelys‰‰nnˆt kuin yhden muuttujan 
-tapauksessa, sill‰ n‰iden tulosten taustalla oleva logiikka ja algebra ei olennaisesti riipu 
-muuttujien lukum‰‰r‰st‰. Jatkuvuuden yhdistelytulokset ovat seuraavat:
-\index{jatkuvuusb@jatkuvuus (usean muuttujan)!b@yhdistelys‰‰nnˆt|emph}%
+Raja-arvoille ja jatkuvuudelle p√§tev√§t samanlaiset yhdistelys√§√§nn√∂t kuin yhden muuttujan 
+tapauksessa, sill√§ n√§iden tulosten taustalla oleva logiikka ja algebra ei olennaisesti riipu 
+muuttujien lukum√§√§r√§st√§. Jatkuvuuden yhdistelytulokset ovat seuraavat:
+\index{jatkuvuusb@jatkuvuus (usean muuttujan)!b@yhdistelys√§√§nn√∂t|emph}%
 \begin{Lause} \label{yhdistelylause 1} Jos $f:\ D_f \kohti \R,\ D_f \subset \R^2$, ja
-$g:\ D_g \kohti \R,\ D_g \subset \R^2$, ovat jatkuvia pisteess‰ $(x,y) \in D_f \cap D_g$, niin 
-myˆs $\lambda f\ (\lambda \in \R)$, $f+g$ ja $fg$ ovat jatkuvia pisteess‰ $(x,y)$. Jos lis‰ksi
-$g(x,y) \neq 0$, niin myˆs $f/g$ on jatkuva pisteess‰ $(x,y)$. 
+$g:\ D_g \kohti \R,\ D_g \subset \R^2$, ovat jatkuvia pisteess√§ $(x,y) \in D_f \cap D_g$, niin 
+my√∂s $\lambda f\ (\lambda \in \R)$, $f+g$ ja $fg$ ovat jatkuvia pisteess√§ $(x,y)$. Jos lis√§ksi
+$g(x,y) \neq 0$, niin my√∂s $f/g$ on jatkuva pisteess√§ $(x,y)$. 
 \end{Lause}
 \begin{Lause} \label{yhdistelylause 2} Jos $f: D_f \kohti \R,\ D_f \subset \R^2$, on jatkuva 
-pisteess‰ $(x,y) \in D_f$ ja $g: D_g \kohti \R,\ D_g \subset \R$, on jatkuva pisteess‰
-$f(x,y)\in\DF_g$, niin yhdistetty funktio $g \circ f$ on jatkuva pisteess‰ $(x,y)$. 
+pisteess√§ $(x,y) \in D_f$ ja $g: D_g \kohti \R,\ D_g \subset \R$, on jatkuva pisteess√§
+$f(x,y)\in\DF_g$, niin yhdistetty funktio $g \circ f$ on jatkuva pisteess√§ $(x,y)$. 
 \end{Lause}
 
-M‰‰ritelm‰n \ref{kahden muuttujan jatkuvuus} mukainen jatkuvuus yksitt‰isess‰ pisteess‰
+M√§√§ritelm√§n \ref{kahden muuttujan jatkuvuus} mukainen jatkuvuus yksitt√§isess√§ pisteess√§
 laajenee luonnollisella tavalla jatkuvuudeksi joukossa: $f$ on jatkuva joukossa
-$A\subset\DF_f$, jos $f$ on jatkuva $A$:n jokaisessa pisteess‰. Kuten yhden muuttujan
-tapauksessa, tavanomaiset 'yhden lausekkeen funktiot' ovat jatkuvia koko m‰‰rittelyjoukossaan.
-\jatko \begin{Exa} (jatko) Jos esimerkiss‰ j‰tet‰‰n $f_1(0,0)$ ja $f_2(0,0)$ erikseen
-m‰‰rittelem‰tt‰, niin esimerkin funktiot ovat Lauseen \ref{yhdistelylause 1} perusteella
-jatkuvia koko yhteisess‰ m‰‰ritelyjoukossaan
+$A\subset\DF_f$, jos $f$ on jatkuva $A$:n jokaisessa pisteess√§. Kuten yhden muuttujan
+tapauksessa, tavanomaiset 'yhden lausekkeen funktiot' ovat jatkuvia koko m√§√§rittelyjoukossaan.
+\jatko \begin{Exa} (jatko) Jos esimerkiss√§ j√§tet√§√§n $f_1(0,0)$ ja $f_2(0,0)$ erikseen
+m√§√§rittelem√§tt√§, niin esimerkin funktiot ovat Lauseen \ref{yhdistelylause 1} perusteella
+jatkuvia koko yhteisess√§ m√§√§ritelyjoukossaan
 \[
 \DF_{f_1} = \DF_{f_2} = \{(x,y)\in\R^2 \mid (x,y)\neq(0,0)\}.
 \]
@@ -146,69 +146,69 @@ Funktiolla $f_1$ on origossa raja-arvo
 \[
 \lim_{(x,y)\kohti(0,0)}f_1(x,y)=0
 \]
-(M‰‰ritelm‰ \ref{kahden muuttujan raja-arvo}), joten $f_1$ saadaan origossa (ja siis koko
+(M√§√§ritelm√§ \ref{kahden muuttujan raja-arvo}), joten $f_1$ saadaan origossa (ja siis koko
 $\R^2$:ssa) jatkuvaksi asettamalla $f_1(0,0)=0$ (funktion jatkaminen!). Funktiolla $f_2$ ei
-t‰t‰ raja-arvoa ole, joten $f_2$:n jatkaminen origoon ei ole mahdollista. \loppu
+t√§t√§ raja-arvoa ole, joten $f_2$:n jatkaminen origoon ei ole mahdollista. \loppu
 \end{Exa}
-\begin{Exa} Rationaalifunktion $f(x,y)=p(x,y)/q(x,y)$ ($p$ ja $q$ polynomeja) m‰‰rittelyjoukko
+\begin{Exa} Rationaalifunktion $f(x,y)=p(x,y)/q(x,y)$ ($p$ ja $q$ polynomeja) m√§√§rittelyjoukko
 on $\DF_f=\{(x,y)\in\R^2 \mid q(x,y) \ne 0\}$. Lauseen \ref{yhdistelylause 1} mukaan $p$ ja $q$
-ovat jatkuvia koko m‰‰rittelyjoukossaan ($=\R^2$), samoin $f$. \loppu
+ovat jatkuvia koko m√§√§rittelyjoukossaan ($=\R^2$), samoin $f$. \loppu
 \end{Exa}
-\begin{Exa} Miss‰ pisteiss‰ funktio $f(x,y) = \sqrt{y-x^2}/(x-y^2)$ on a) m‰‰ritelty,
+\begin{Exa} Miss√§ pisteiss√§ funktio $f(x,y) = \sqrt{y-x^2}/(x-y^2)$ on a) m√§√§ritelty,
 b) jatkuva? 
 \end{Exa}
-\ratk a) M‰‰rittelyjoukko on
+\ratk a) M√§√§rittelyjoukko on
 $\,D_f = \{\,(x,y) \in \R^2 \mid y \ge x^2\ \ja\ x \neq y^2\,\}$. \newline 
-b) Kyseess‰ on yhdistetty ja yhdistelty funktio $f = (g \circ f_1)/f_2$, miss‰ 
+b) Kyseess√§ on yhdistetty ja yhdistelty funktio $f = (g \circ f_1)/f_2$, miss√§ 
 \[ \begin{aligned} &f_1(x,y)=y-x^2,\ D_{f_1} = \R^2, \quad f_2(x,y)=x-y^2,\ D_{f_2} = \R^2, \\
                    &g(t) = \sqrt{t},\ D_g = [0,\infty) \subset \R. 
    \end{aligned} \]
 Lauseiden \ref{yhdistelylause 1} ja \ref{yhdistelylause 2} perusteella $f$ on jatkuva koko 
-m‰‰rittelyjoukossaan. \loppu 
+m√§√§rittelyjoukossaan. \loppu 
 
-Kuten yhden muuttujan tapauksessa, myˆs kahden muuttujan funktion jatkuvuus ja raja-arvo
-voidaan m‰‰ritell‰ vaihtoehtoisesti vetoamatta luku(pari)jonoi\-hin. Vaihtoehtoisessa
-'$(\eps,\delta)$-m‰‰ritelm‰ss‰' tarvitaan avointa v‰li‰ $(x-\delta,x+\delta)$ vastaava
-\index{ympzy@($\delta$-)ymp‰ristˆ}%
-\kor{ymp‰ristˆ}, tarkemmin \kor{pisteen avoin $\delta$-ymp‰ristˆ}, jota merkit‰‰n
-$U_\delta(x,y)$ ($\delta>0$). Kuten yhdess‰ ulottuvuudessa, t‰ll‰ tarkoitetaan joukkoa, joka
-ymp‰rˆi pistett‰ $\delta$:n verran, tai $\delta$:aan verrannollisen matkan, j\pain{oka}
-\pain{suuntaan}. Tyypillisesti $U_\delta(x,y)$ ajatellaan joko neliˆn tai kiekon muotoiseksi,
+Kuten yhden muuttujan tapauksessa, my√∂s kahden muuttujan funktion jatkuvuus ja raja-arvo
+voidaan m√§√§ritell√§ vaihtoehtoisesti vetoamatta luku(pari)jonoi\-hin. Vaihtoehtoisessa
+'$(\eps,\delta)$-m√§√§ritelm√§ss√§' tarvitaan avointa v√§li√§ $(x-\delta,x+\delta)$ vastaava
+\index{ympzy@($\delta$-)ymp√§rist√∂}%
+\kor{ymp√§rist√∂}, tarkemmin \kor{pisteen avoin $\delta$-ymp√§rist√∂}, jota merkit√§√§n
+$U_\delta(x,y)$ ($\delta>0$). Kuten yhdess√§ ulottuvuudessa, t√§ll√§ tarkoitetaan joukkoa, joka
+ymp√§r√∂i pistett√§ $\delta$:n verran, tai $\delta$:aan verrannollisen matkan, j\pain{oka}
+\pain{suuntaan}. Tyypillisesti $U_\delta(x,y)$ ajatellaan joko neli√∂n tai kiekon muotoiseksi,
 eli
 \begin{align*}
 \text{joko}&: \quad U_\delta(x,y)=(x-\delta,x+\delta)\times(y-\delta,y+\delta), \\
  \text{tai}&: \quad U_\delta(x,y)=\{(x',y')\in\R^2 \mid (x'-x)^2+(y'-y)^2<\delta^2\}.
 \end{align*}
-Jatkuvuuden vaihtoehtoinen m‰‰ritelm‰ on (vrt.\ M‰‰ritelm‰ \ref{vaihtoehtoinen jatkuvuus})
+Jatkuvuuden vaihtoehtoinen m√§√§ritelm√§ on (vrt.\ M√§√§ritelm√§ \ref{vaihtoehtoinen jatkuvuus})
 \begin{Def} \label{kahden muuttujan vaihtoehtoinen jatkuvuus}
 \index{jatkuvuusb@jatkuvuus (usean muuttujan)!a@funktion $f(x,y)$|emph}
-Funktio $f:\ \DF_f\subset\R^2\kohti\R$ on jatkuva pistess‰ $(x,y)\in\DF_f$ t‰sm‰lleen kun
-jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett‰
+Funktio $f:\ \DF_f\subset\R^2\kohti\R$ on jatkuva pistess√§ $(x,y)\in\DF_f$ t√§sm√§lleen kun
+jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett√§
 \[
 |f(x',y')-f(x,y)| < \eps\ \ \forall (x',y') \in U_\delta(x,y)\cap\DF_f.
 \]
 \end{Def}
-M‰‰ritelm‰t \ref{kahden muuttujan jatkuvuus} ja \ref{kahden muuttujan vaihtoehtoinen jatkuvuus}
-voidaan osoittaa yht‰pit‰viksi samaan tapaan kuin yhden muuttujan tapauksessa (vrt.\ Lause
-\ref{jatkuvuuskriteerien yht‰pit‰vyys}).
+M√§√§ritelm√§t \ref{kahden muuttujan jatkuvuus} ja \ref{kahden muuttujan vaihtoehtoinen jatkuvuus}
+voidaan osoittaa yht√§pit√§viksi samaan tapaan kuin yhden muuttujan tapauksessa (vrt.\ Lause
+\ref{jatkuvuuskriteerien yht√§pit√§vyys}).
 
-Ymp‰ristˆ $U_\delta(x,y)$ on nimens‰ mukaisesti esimerkki \kor{avoimesta} joukosta, jonka
-yleisempi m‰‰ritelm‰ on (vrt.\ M‰‰ritelm‰ \ref{analyyttinen funktio} joukoille $A\in\C$)
+Ymp√§rist√∂ $U_\delta(x,y)$ on nimens√§ mukaisesti esimerkki \kor{avoimesta} joukosta, jonka
+yleisempi m√§√§ritelm√§ on (vrt.\ M√§√§ritelm√§ \ref{analyyttinen funktio} joukoille $A\in\C$)
 \begin{Def} \label{avoin joukko} \index{avoin joukko|emph } 
 Joukko $A\subset\R^2$ on \kor{avoin}, jos jokaisella$(x,y) \in A$ on olemassa $\delta>0$ siten,
-ett‰ $U_\delta(x,y) \subset A$.
+ett√§ $U_\delta(x,y) \subset A$.
 \end{Def}
  
 \subsection*{Funktio $f(x,y,z)$}
 
-M‰‰ritelmill‰ \ref{kahden muuttujan jatkuvuus} ja \ref{kahden muuttujan raja-arvo} on ilmeiset
-vastineensa kolmen muuttujan funktioille $f(x,y,z)$. Esimerkiksi jatkuvuusehto pisteess‰
+M√§√§ritelmill√§ \ref{kahden muuttujan jatkuvuus} ja \ref{kahden muuttujan raja-arvo} on ilmeiset
+vastineensa kolmen muuttujan funktioille $f(x,y,z)$. Esimerkiksi jatkuvuusehto pisteess√§
 $(x,y,z)\in\DF_f$ on \index{jatkuvuusb@jatkuvuus (usean muuttujan)!c@funktion $f(x,y,z)$}%
 \[
 (x_n,y_n,z_n)\in\DF_f\,\ \forall n\,\ \ja\,\ (x_n,y_n,z_n)\kohti(x,y,z)\,\
                                       \impl\,\ f(x_n,y_n,z_n) \kohti f(x,y,z),
 \]
-miss‰ (vrt.\ Harj.teht.\,\ref{jonon raja-arvo}:\,\ref{H-I-6: lukujonopari}e)
+miss√§ (vrt.\ Harj.teht.\,\ref{jonon raja-arvo}:\,\ref{H-I-6: lukujonopari}e)
 \begin{align*}
 (x_n,y_n,z_n)\kohti(x,y,z) &\qekv x_n \kohti x\ \ja\ y_n \kohti y\ \ja\ z_n \kohti z \\
                            &\qekv (x_n-x)^2+(y_n-y)^2+(z_n-z)^2 \kohti 0.
@@ -218,66 +218,66 @@ $\vastaa(r_n,\theta_n\varphi_n)$ perusteella on
 \[
 (x_n,y_n,z_n)\kohti(0,0,0) \qekv r_n \kohti 0 \qquad \text{(pallokoordinaatisto)}.
 \]
-\begin{Exa} T‰sm‰lleen mill‰ ehdoilla luvuille $\alpha,\beta,\gamma\in\R$ on
+\begin{Exa} T√§sm√§lleen mill√§ ehdoilla luvuille $\alpha,\beta,\gamma\in\R$ on
 \[
 \lim_{(x,y,z)\kohti(0,0,0)}f(x,y,z)=0, \quad \text{kun} \quad
 f(x,y,z)=\frac{|x|^\alpha|y|^\beta|z|^\gamma}{x^2+y^2+z^2}\,?
 \]
 \end{Exa}
-\ratk Tehd‰‰n pallokoordinaatimuunnos:
+\ratk Tehd√§√§n pallokoordinaatimuunnos:
 \[
 f(x,y,z) = g(r,\theta,\varphi) = r^{\alpha+\beta+\gamma-2}|
                                  \sin\theta|^{\alpha+\beta}|\cos\theta|^\gamma
                                  |\cos\varphi|^\alpha|\sin\varphi|^\beta.
 \]
-P‰‰tell‰‰n, ett‰ $\,r_n \kohti 0\ \impl\ g(r_n,\theta_n,\varphi_n) \kohti 0\,$ on tosi
-t‰sm‰lleen ehdoilla
+P√§√§tell√§√§n, ett√§ $\,r_n \kohti 0\ \impl\ g(r_n,\theta_n,\varphi_n) \kohti 0\,$ on tosi
+t√§sm√§lleen ehdoilla
 \[
 \alpha+\beta+\gamma > 2,\,\ \alpha \ge 0,\,\ \beta \ge 0,\,\ \gamma \ge 0. \loppu
 \]
 
 \subsection*{Funktio $f(\mx),\  \mx\in\R^n$}
 
-Yleiselle $n$ muuttujan reaaliarvoiselle funktiolle $f$ jatkuvuuseehto pisteess‰
+Yleiselle $n$ muuttujan reaaliarvoiselle funktiolle $f$ jatkuvuuseehto pisteess√§
 $\mx\in\DF_f$ on
 \index{jatkuvuusb@jatkuvuus (usean muuttujan)!d@funktion $f(\mx),\ \mx\in\R^n$}%
 \[
 \mx_k\in\DF_f\,\ \forall k\,\ \mx_k \kohti \mx\,\ \impl\,\ f(\mx_k) \kohti f(\mx),
 \]
 \index{suppeneminen!ac@$\R^n$:n jonon} \index{raja-arvo!e@$\R^n$:n jonon}%
-miss‰ $\seq{\mx_k}$ on $\R^n$:n vektorijono ja \kor{suppeneminen} $\mx_k \kohti \mx$ kohti
+miss√§ $\seq{\mx_k}$ on $\R^n$:n vektorijono ja \kor{suppeneminen} $\mx_k \kohti \mx$ kohti
 \kor{raja-arvoa} $\mx\in\R^n$ tarkoittaa:
 \[
 \mx_k \kohti \mx \qekv (\mx_k)_i \kohti (\mx)_i=x_i\,,\,\ i=1 \ldots n
                  \qekv |\mx_k-\mx| \kohti 0,
 \]
-miss‰ $|\cdot|$ on $\R^n$:n euklidinen normi. M‰‰ritelmien
+miss√§ $|\cdot|$ on $\R^n$:n euklidinen normi. M√§√§ritelmien
 \ref{kahden muuttujan vaihtoehtoinen jatkuvuus} ja \ref{avoin joukko} $n$-ulotteisissa
-vastineissa ymp‰ristˆ $U_\delta(\mx)$ tulkitaan joko $n$-ulotteiseksi kuutioksi, jonka s‰rm‰n
-pituus $=2\delta$, tai $n$-ulotteiseksi kuulaksi, jonka s‰de $=\delta$.
+vastineissa ymp√§rist√∂ $U_\delta(\mx)$ tulkitaan joko $n$-ulotteiseksi kuutioksi, jonka s√§rm√§n
+pituus $=2\delta$, tai $n$-ulotteiseksi kuulaksi, jonka s√§de $=\delta$.
 
 \subsection*{*Jatkuvuus kompaktissa joukossa}
 
-Asetetaan (vrt.\ M‰‰ritelm‰t \ref{avoimet ym. joukot} ja \ref{jatkuvuus kompaktissa joukossa})
+Asetetaan (vrt.\ M√§√§ritelm√§t \ref{avoimet ym. joukot} ja \ref{jatkuvuus kompaktissa joukossa})
 \begin{Def} \label{kompakti joukko - Rn} Joukko $K\subset\R^n$ on
 \begin{itemize} \index{suljettu joukko|emph} \index{rajoitettu!b@joukko|emph}
 \index{kompakti joukko|emph}
-\item[-] \kor{suljettu}, jos kaikille $\R^n$:n vektorijonoille $\seq{\mx_k}$ p‰tee: \newline
+\item[-] \kor{suljettu}, jos kaikille $\R^n$:n vektorijonoille $\seq{\mx_k}$ p√§tee: \newline
          $\,\mx_k \in K\ \forall k\ \ja\ \mx_k \kohti \mx\in\R^n\ \impl\ \mx \in K$,
-\item[-] \kor{rajoitettu}, jos $\exists C\in\R_+$ siten, ett‰ 
+\item[-] \kor{rajoitettu}, jos $\exists C\in\R_+$ siten, ett√§ 
          $\,|\mx| \le C\ \forall \mx \in K$,
 \item[-] \kor{kompakti}, jos $K$ on suljettu ja rajoitettu.
 \end{itemize}
 \end{Def}
-Suljetun joukon vaihtoehtoinen m‰‰ritelm‰ on (vrt.\ Lause \ref{avoin vs suljettu})
+Suljetun joukon vaihtoehtoinen m√§√§ritelm√§ on (vrt.\ Lause \ref{avoin vs suljettu})
 
 \begin{Lause} \label{avoin vs suljettu - Rn} \index{komplementti (joukon)|emph}
-Joukko $A\subset\R^n$ on suljettu t‰sm‰lleen kun $A$:n \kor{komplementti}
+Joukko $A\subset\R^n$ on suljettu t√§sm√§lleen kun $A$:n \kor{komplementti}
 $\complement(A)=\{\mx\in\R^n \mid \mx \not\in A\}$ on avoin.
 \end{Lause}
 \tod Harj.teht.\,\ref{H-udif-1: avoin vs suljettu}.
 \begin{Exa} Kompakteja joukkoja $K\subset\R^n$ ovat esimerkiksi (suljettu) $n$-ulot\-teinen
-suorakulmainen s‰rmiˆ
+suorakulmainen s√§rmi√∂
 \[
 K=[a_1,b_1]\times[a_2,b_2]\times\ldots\times[a_n,b_n]
 \]
@@ -285,33 +285,33 @@ ja (suljettu) $n$-ulotteinen kuula
 \[
 K = \{\mx\in\R^n \mid |\mx-\mx_0| \le R\}.
 \]
-Myˆs jokainen ‰‰rellinen $\R^n$:n osajoukko on kompakti
-(Harj.teht.\,\ref{H-udif-1: ‰‰rellinen joukko}). \loppu
+My√∂s jokainen √§√§rellinen $\R^n$:n osajoukko on kompakti
+(Harj.teht.\,\ref{H-udif-1: √§√§rellinen joukko}). \loppu
 \end{Exa}
-Kompaktin joukon k‰site on keskeinen seuraavassa Weierstrassin lauseen
-\ref{Weierstrassin peruslause} yleistyksess‰, joka tapuksessa $n=1$ on todistettu aiemmin
-Lauseena \ref{weierstrass}. Yleisemp‰‰ todistusta ei esitet‰; todettakoon ainoastaan, ett‰
+Kompaktin joukon k√§site on keskeinen seuraavassa Weierstrassin lauseen
+\ref{Weierstrassin peruslause} yleistyksess√§, joka tapuksessa $n=1$ on todistettu aiemmin
+Lauseena \ref{weierstrass}. Yleisemp√§√§ todistusta ei esitet√§; todettakoon ainoastaan, ett√§
 todistuksen logiikka on hyvin samanlainen kuin yhden muuttujan tapauksessa, ks.\ Luku
-\ref{jatkuvuuden logiikka}. Asetetaan ensin (vrt.\ M‰‰ritelm‰
+\ref{jatkuvuuden logiikka}. Asetetaan ensin (vrt.\ M√§√§ritelm√§
 \ref{jatkuvuus kompaktissa joukossa})
 \begin{Def} \label{jatkuvuus kompaktissa joukossa - Rn} 
 \index{jatkuvuusb@jatkuvuus (usean muuttujan)!e@kompaktissa joukossa|emph}
 Funktio $f:\ \DF_f\subset\R^n\kohti\R$ on \kor{jatkuva kompaktissa joukossa} $K\subset\DF_f$,
-jos jokaiselle $\R^n$:n vektorijonolle $\seq{\mx_k}$ p‰tee
+jos jokaiselle $\R^n$:n vektorijonolle $\seq{\mx_k}$ p√§tee
 \[
 \mx_k \in K\ \forall k\,\ \ja\,\ \mx_k \kohti \mx\,\ \impl\,\ f(\mx_k) \kohti f(\mx).
 \]
 \end{Def}
 \begin{*Lause} \label{weierstrass - Rn} \index{Weierstrassin lause|emph}
 Jos funktio $f:\ \DF_f\subset\R^n\kohti\R$ on jatkuva
-kompaktissa joukossa $K\subset\DF_f$, niin $f$ saavuttaa $K$:ssa pienimm‰n ja suurimman arvonsa.
+kompaktissa joukossa $K\subset\DF_f$, niin $f$ saavuttaa $K$:ssa pienimm√§n ja suurimman arvonsa.
 \end{*Lause}
 
 \Harj
 \begin{enumerate}
 
 \item
-Kohdissa a)--h) m‰‰rit‰ raja-arvo tai p‰‰ttele, ettei raja-arvoa ole. Kohdissa i)--j) m‰‰rit‰
+Kohdissa a)--h) m√§√§rit√§ raja-arvo tai p√§√§ttele, ettei raja-arvoa ole. Kohdissa i)--j) m√§√§rit√§
 kaikki kertoimien $a,b,c$ arvot, joilla raja-arvo on olemassa. Siirtyminen napa- tai 
 pallokoordinaatistoon voi auttaa.
 \begin{align*}
@@ -328,9 +328,9 @@ pallokoordinaatistoon voi auttaa.
 \end{align*}
 
 \item
-Kohdissa a)--i) jatka funktion $f$ m‰‰ritelm‰ niin, ett‰ funktiosta tulee jatkuva
-mahdollisimman suuressa $\R^2$:n tai $\R^3$:n osajoukossa. Kohdissa j)--m) m‰‰rit‰ kaikki
-pisteet, joissa $f$ on ep‰jatkuva. 
+Kohdissa a)--i) jatka funktion $f$ m√§√§ritelm√§ niin, ett√§ funktiosta tulee jatkuva
+mahdollisimman suuressa $\R^2$:n tai $\R^3$:n osajoukossa. Kohdissa j)--m) m√§√§rit√§ kaikki
+pisteet, joissa $f$ on ep√§jatkuva. 
 \begin{align*}
 &\text{a)}\ \ f(x,y)=\frac{x\sqrt[4]{\abs{y}}}{|x|+|y|} \qquad
  \text{b)}\ \ f(x,y)=\frac{\sqrt{(1+x^2)(1+y^2)}-1}{x^2+y^2} \\
@@ -359,36 +359,36 @@ pisteet, joissa $f$ on ep‰jatkuva.
 \end{align*}
 
 \item (*) \label{H-udif-1: kiero raja-arvo}
-M‰‰ritell‰‰n $f:\,\Rkaksi\map\R$ seuraavasti:
+M√§√§ritell√§√§n $f:\,\Rkaksi\map\R$ seuraavasti:
 \[
 f(x,y)=\begin{cases} 
        \,1, &\text{kun}\ x^2<y<2 x^2\\ \,0, &\text{muulloin}
        \end{cases}
 \]
-Osoita, ett‰ funktiolla on sama raja-arvo origossa l‰hestytt‰ess‰ origoa mit‰
-tahansa suoraa $S:\ ax+by=0\ (a,b\in\R)$ pitkin, mutta siit‰ huolimatta ei ole olemassa
+Osoita, ett√§ funktiolla on sama raja-arvo origossa l√§hestytt√§ess√§ origoa mit√§
+tahansa suoraa $S:\ ax+by=0\ (a,b\in\R)$ pitkin, mutta siit√§ huolimatta ei ole olemassa
 raja-arvoa $\,\lim_{(x,y)\to (0,0)} f(x,y)$.
 
 \item (*) \label{H-udif-1: avoin vs suljettu}
 Todista Lause \ref{avoin vs suljettu - Rn}.
 
 \item (*)
-Olkoon $f(x,y)=p(x,y)/q(x,y)$, miss‰ $p$ ja $q$ ovat m‰‰riteltyj‰ ja jatkuvia koko $\R^2$:ssa
+Olkoon $f(x,y)=p(x,y)/q(x,y)$, miss√§ $p$ ja $q$ ovat m√§√§riteltyj√§ ja jatkuvia koko $\R^2$:ssa
 (esim.\ polynomeja). \vspace{1mm}\newline
-a) N‰yt‰ suoraan Lauseen \ref{kahden muuttujan vaihtoehtoinen jatkuvuus} avulla, ett‰
+a) N√§yt√§ suoraan Lauseen \ref{kahden muuttujan vaihtoehtoinen jatkuvuus} avulla, ett√§
 $\DF_f\subset\R^2$ on avoin. \vspace{1mm}\newline
-b) P‰‰ttele $\DF_f$ avoimeksi osoittamalla ensin M‰‰ritelm‰‰n \ref{kompakti joukko - Rn}
-nojaten, ett‰ $\{(x,y)\in\R^2 \mid q(x,y)=0\}$ on suljettu joukko ja vetoamalla Lauseeseen
+b) P√§√§ttele $\DF_f$ avoimeksi osoittamalla ensin M√§√§ritelm√§√§n \ref{kompakti joukko - Rn}
+nojaten, ett√§ $\{(x,y)\in\R^2 \mid q(x,y)=0\}$ on suljettu joukko ja vetoamalla Lauseeseen
 \ref{avoin vs suljettu - Rn}.
 
-\item (*) \label{H-udif-1: ‰‰rellinen joukko}
+\item (*) \label{H-udif-1: √§√§rellinen joukko}
 Olkoon $\ma_i\in\R^n,\ i=1 \ldots m\,\ (m\in\N)$, $\ma_i\neq\ma_j$ kun $i \neq j$, ja
 $\,K=\{\ma_1,\ldots,\ma_m\}$. \vspace{1mm}\newline
-a) N‰yt‰, ett‰ $K\subset\R^n$ on kompakti joukko. \vspace{1mm}\newline
-b) N‰yt‰, ett‰ jos $f:\ \DF_f\subset\R^n\kohti\R$ on mik‰ tahansa funktio, jolle p‰tee
-$\ma_i\in\DF_f,\ i=1 \ldots m$, niin $f$ on jatkuva $K$:ssa M‰‰ritelm‰n
+a) N√§yt√§, ett√§ $K\subset\R^n$ on kompakti joukko. \vspace{1mm}\newline
+b) N√§yt√§, ett√§ jos $f:\ \DF_f\subset\R^n\kohti\R$ on mik√§ tahansa funktio, jolle p√§tee
+$\ma_i\in\DF_f,\ i=1 \ldots m$, niin $f$ on jatkuva $K$:ssa M√§√§ritelm√§n
 \ref{jatkuvuus kompaktissa joukossa - Rn} mukaisesti. \vspace{1mm}\newline
-c) Tarkista, ett‰ Lauseen \ref{weierstrass - Rn} v‰itt‰m‰ on sopusoinnussa b)-kohdan tuloksen
+c) Tarkista, ett√§ Lauseen \ref{weierstrass - Rn} v√§itt√§m√§ on sopusoinnussa b)-kohdan tuloksen
 kanssa.
 
 \end{enumerate}

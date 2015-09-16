@@ -6,14 +6,14 @@
 \index{funktio A!e@kompleksifunktio|vahv}
 
 Peruseksponenttifunktio voidaan laajentaa kompleksimuuttujan funktioksi $\exp: \C\kohti\C$
-niin, ett‰ sen keskeiset ominaisuudet s‰ilyv‰t. M‰‰ritelm‰ kompleksialueella --- joka toimii
-myˆs reaalimuuttujaan rajoitettuna --- on seuraava.
+niin, ett√§ sen keskeiset ominaisuudet s√§ilyv√§t. M√§√§ritelm√§ kompleksialueella --- joka toimii
+my√∂s reaalimuuttujaan rajoitettuna --- on seuraava.
 \begin{Def} \index{kompleksimuuttujan!c@eksponenttifunktio|emph}
 \index{funktio C!f@$\exp$ ($e^x$, $e^z$)|emph}
 Peruseksponenttifunktio $\exp (z)=e^z$ on funktio, jolla on ominaisuudet (aksioomat)
 \index{eksponenttifunktio!a@aksioomat|emph}
 \begin{itemize}
-\item[(C1)] $\exp (z)$ on m‰‰ritelty $\forall z\in\C$,
+\item[(C1)] $\exp (z)$ on m√§√§ritelty $\forall z\in\C$,
 \item[(C2)] $\exp(x+i0)=e^x\ \forall x\in\R$,
 \item[(C3)] $\exp(z)$ on derivoituva origossa,
 \item[(C4)] $\exp (z_1+z_2)=\exp(z_1)\exp(z_2)\quad\forall z_1,z_2\in\C$.
@@ -21,13 +21,13 @@ Peruseksponenttifunktio $\exp (z)=e^z$ on funktio, jolla on ominaisuudet (aksioo
 \end{Def}
 Aksiooman C2 mukaan $e^z$ on reaalisen eksponenttifunktion laajennus kompleksitasoon.
 Aksiooma C3 (vrt.\ Luku \ref{analyyttiset funktiot}) vastaa edellisen luvun aksioomaa E3'.
-Kompleksiselle eksponenttifunktille t‰m‰ aksiooman muoto on v‰ltt‰m‰tˆn, sill‰ pelkk‰
+Kompleksiselle eksponenttifunktille t√§m√§ aksiooman muoto on v√§ltt√§m√§t√∂n, sill√§ pelkk√§
 jatkuvuusoletus (vastaten reaalisen eksponenttifunktion aksioomaa E3) ei takaisi funktion
-$\exp(z)$ yksik‰sitteisyytt‰ kompleksifunktiona
+$\exp(z)$ yksik√§sitteisyytt√§ kompleksifunktiona
 (ks.\ Harj.teht.\,\ref{H-VII-3: E(z) vaihtoehto}). Aksioomilla C1--C4 sen sijaan $\exp(z)$
-tulee yksik‰sitteisesti m‰‰ritellyksi. Osoitetaan t‰ss‰ ainoastaan, ett‰ aksioomien
-mukainen funktio $\,\exp(z)\,$ on olemassa, ja annetaan samalla funktiolle koko $\C$:ss‰
-p‰tev‰ laskus‰‰ntˆ.
+tulee yksik√§sitteisesti m√§√§ritellyksi. Osoitetaan t√§ss√§ ainoastaan, ett√§ aksioomien
+mukainen funktio $\,\exp(z)\,$ on olemassa, ja annetaan samalla funktiolle koko $\C$:ss√§
+p√§tev√§ laskus√§√§nt√∂.
 \begin{Lause} \label{funktio exp(z)}
 Funktio
 \begin{equation} \label{exp(z):n laskukaava}
@@ -35,8 +35,8 @@ Funktio
 \end{equation}
 toteuttaa aksioomat C1--C4.
 \end{Lause}
-\tod (C4) \  Jos $z_1=x_1+iy_1$, $z_2=x_2+iy_2$, niin m‰‰ritelm‰n \eqref{exp(z):n laskukaava} 
-ja kompleksialgebran laskus‰‰ntˆjen (ks.\ Luku \ref{kompleksiluvuilla laskeminen})
+\tod (C4) \  Jos $z_1=x_1+iy_1$, $z_2=x_2+iy_2$, niin m√§√§ritelm√§n \eqref{exp(z):n laskukaava} 
+ja kompleksialgebran laskus√§√§nt√∂jen (ks.\ Luku \ref{kompleksiluvuilla laskeminen})
 perusteella 
 \begin{align*}
 e^{z_1+z_2} &\,=\, e^{x_1+x_2}[1\vkulma(y_1+y_2)] \\
@@ -45,93 +45,93 @@ e^{z_1+z_2} &\,=\, e^{x_1+x_2}[1\vkulma(y_1+y_2)] \\
            &\,=\, e^{z_1}\cdot e^{z_2}.
 \end{align*}
 
-(C3) \ K‰ytet‰‰n hajotelmia
+(C3) \ K√§ytet√§√§n hajotelmia
 \begin{align*}
 e^x &= 1+x+ r_1(x), \\
 \cos y &= 1+ r_2(y), \\
 \sin y &= y + r_3(y),
 \end{align*}
-miss‰ $\lim_{t \kohti 0} t^{-1}r_i(t)=0$ (vrt.\ Luvut \ref{kaarenpituus} ja 
-\ref{exp(x) ja ln(x)}). N‰iden ja s‰‰nnˆn \eqref{exp(z):n laskukaava} perusteella on
+miss√§ $\lim_{t \kohti 0} t^{-1}r_i(t)=0$ (vrt.\ Luvut \ref{kaarenpituus} ja 
+\ref{exp(x) ja ln(x)}). N√§iden ja s√§√§nn√∂n \eqref{exp(z):n laskukaava} perusteella on
 \begin{align*}
 e^z &= [1+x+r_1(x)]\,[1+iy+r_2(y)+ir_3(y)] \\
     &= 1 + x +iy + r(z) \\
     & = 1+z+r(z), \quad z=x+iy,
 \end{align*}
-miss‰ j‰‰nnˆstermille p‰tee $\,\lim_{z \kohti 0} z^{-1}r(z)=0$. N‰in ollen
+miss√§ j√§√§nn√∂stermille p√§tee $\,\lim_{z \kohti 0} z^{-1}r(z)=0$. N√§in ollen
 \[
 \lim_{z \kohti 0} \frac{e^z-e^0}{z} = \lim_{z \kohti 0} \frac{e^z-1}{z} 
                                     = \lim_{z \kohti 0} \left(1+\frac{r(z)}{z}\right) = 1.
 \]
 Siis $e^z$ on origossa derivoituva ja derivaatan arvo $=1$.
 
-(C2) ja (C1) \ Ilmeisi‰. \loppu
+(C2) ja (C1) \ Ilmeisi√§. \loppu
 
 Funktio $e^z$ on derivoituva, ei ainoastaan origossa (aksiooma C3), vaan koko
-kompleksitasossa, sill‰ ominaisuudet C3--C4 yhdist‰m‰ll‰ seuraa
+kompleksitasossa, sill√§ ominaisuudet C3--C4 yhdist√§m√§ll√§ seuraa
 \[
 \lim_{\Delta z \kohti 0} \frac{e^{z+\Delta z}-e^z}{\Delta z} 
            = e^z \lim_{\Delta z \kohti 0} \frac{e^{\Delta z}-1}{\Delta z} = e^z, \quad z\in\C.
 \]
-Derivoimiss‰‰ntˆ on siis sama kuin reaaliselle (perus)eksponenttifunktiolle:
-\index{derivoimiss‰‰nnˆt!g@eksponenttifunktio}%
+Derivoimiss√§√§nt√∂ on siis sama kuin reaaliselle (perus)eksponenttifunktiolle:
+\index{derivoimiss√§√§nn√∂t!g@eksponenttifunktio}%
 \begin{equation} \label{exp(z):n derivaatta}
 \boxed{\kehys\quad \dif\,e^z = e^z.\quad}
 \end{equation}
-T‰m‰n mukaan kompleksifunktio $e^z$ on koko kompleksitasossa analyyttinen eli kokonainen funktio 
-(vrt.\ Luku \ref{analyyttiset funktiot}). T‰h‰n ja aksioomaan C2 viitaten sanotaankin,
+T√§m√§n mukaan kompleksifunktio $e^z$ on koko kompleksitasossa analyyttinen eli kokonainen funktio 
+(vrt.\ Luku \ref{analyyttiset funktiot}). T√§h√§n ja aksioomaan C2 viitaten sanotaankin,
 \index{analyyttinen jatko}%
-ett‰ $e^z$ on reaalisen eksponenttifunktion \kor{analyyttinen jatko} koko kompleksitasoon.
+ett√§ $e^z$ on reaalisen eksponenttifunktion \kor{analyyttinen jatko} koko kompleksitasoon.
 
-Derivoimiss‰‰nnˆst‰ \eqref{exp(z):n derivaatta} (joka siis seuraa suoraan aksioomista 
-C3--C4) voidaan myˆs p‰‰tell‰, ett‰ aksioomien C1--C4 mukainen funktio on yksik‰sitteinen.
-Nimitt‰in jos funktio $E(z)$ toteuttaa n‰m‰ aksioomat, niin on $DE(z)=E(z)$, jolloin
-derivoimalla funktiota $u(z)=E(z)e^{-z}$ todetaan, ett‰ $Du(z)=0$ 
+Derivoimiss√§√§nn√∂st√§ \eqref{exp(z):n derivaatta} (joka siis seuraa suoraan aksioomista 
+C3--C4) voidaan my√∂s p√§√§tell√§, ett√§ aksioomien C1--C4 mukainen funktio on yksik√§sitteinen.
+Nimitt√§in jos funktio $E(z)$ toteuttaa n√§m√§ aksioomat, niin on $DE(z)=E(z)$, jolloin
+derivoimalla funktiota $u(z)=E(z)e^{-z}$ todetaan, ett√§ $Du(z)=0$ 
 (vrt.\ Lauseen \ref{exp-dy} todistus). Koska aksiooman C2 mukaan on $u(0)=1$, on
-p‰‰telt‰viss‰ (sivuutetaan yksityiskohdat), ett‰ $u(z)=1\ \ekv\ E(z)=e^z\ \forall z\in\C$.
+p√§√§telt√§viss√§ (sivuutetaan yksityiskohdat), ett√§ $u(z)=1\ \ekv\ E(z)=e^z\ \forall z\in\C$.
 
-M‰‰ritelm‰st‰ \eqref{exp(z):n laskukaava} n‰hd‰‰n, ett‰
+M√§√§ritelm√§st√§ \eqref{exp(z):n laskukaava} n√§hd√§√§n, ett√§
 \[
 \abs{e^z} = e^x > 0 \quad \forall\ z=x+iy \in \C,
 \]
-joten kompleksisellakaan eksponenttifunktiolla ei ole nollakohtia. Kun m‰‰ritelm‰ss‰ valitaan
+joten kompleksisellakaan eksponenttifunktiolla ei ole nollakohtia. Kun m√§√§ritelm√§ss√§ valitaan
 $x=\text{Re}\,z=0$, saadaan 
 \kor{Eulerin kaava} \index{Eulerin!a@kaava}
 \begin{equation} \label{eulerin kaava}
 \boxed{\kehys\quad e^{iy}=\cos y + i\sin y,\quad y\in\R. \quad}
 \end{equation}
-Eulerin kaavaa \eqref{eulerin kaava} k‰ytt‰en voidaan trigonometriset funktiot $\cos$ ja $\sin$
+Eulerin kaavaa \eqref{eulerin kaava} k√§ytt√§en voidaan trigonometriset funktiot $\cos$ ja $\sin$
 lausua kompleksisen eksponenttifunktion avulla:
 \begin{equation} \label{sin ja cos exp(z):n avulla}
 \boxed{\kehys\quad \cos x=\tfrac{1}{2}\,(e^{ix}+e^{-ix}),\quad 
                    \sin x=\tfrac{1}{2i}\,(e^{ix}-e^{-ix}),\quad x\in\R. \quad}
 \end{equation}
-T‰ll‰ perusteella voidaan $\cos$ ja $\sin$ myˆs laajentaa kompleksimuuttujan funktioiksi. 
-M‰‰ritelm‰t ovat
+T√§ll√§ perusteella voidaan $\cos$ ja $\sin$ my√∂s laajentaa kompleksimuuttujan funktioiksi. 
+M√§√§ritelm√§t ovat
 \index{funktio C!a@$\sin$, $\cos$} \index{kompleksimuuttujan!d@sini ja kosini}%
 \begin{equation} \label{sin z ja cos z}
 \boxed{\kehys\quad \cos z=\tfrac{1}{2}\,(e^{iz}+e^{-iz})\,,\quad 
                    \sin z=\tfrac{1}{2i}\,(e^{iz}-e^{-iz})\,,\quad z\in\C. \quad}
 \end{equation}
-Kaikki trigonometrisisille funktioille ominaiset laskus‰‰nnˆt 
-(vrt. Luku \ref{trigonometriset funktiot}) ulottuvat myˆs kompleksialueelle. Esimerkiksi
-s‰‰nnˆt
+Kaikki trigonometrisisille funktioille ominaiset laskus√§√§nn√∂t 
+(vrt. Luku \ref{trigonometriset funktiot}) ulottuvat my√∂s kompleksialueelle. Esimerkiksi
+s√§√§nn√∂t
 \begin{align*}
 &\cos^2 z+\sin^2 z = 1, \\
 &\cos 2z = \cos^2 z-\sin^2 z, \quad \sin 2z = 2\sin z \cos z, \\
 &\dif\sin z = \cos z, \quad \dif\cos z = -\sin z
 \end{align*}
-ovat todennettavissa suoraan m‰‰ritelmist‰ \eqref{sin z ja cos z} ja $e^z$:n
-derivoimiss‰‰nnˆst‰ \eqref{exp(z):n derivaatta}. N‰hd‰‰n myˆs, ett‰ $\sin z$ ja $\cos z$
-ovat ($e^z$:n tavoin) analyyttisi‰ koko kompleksitasossa eli kokonaisia funktioita.
-\begin{Exa} Etsi yht‰lˆn $\,\sin z = 2\,$ kaikki ratkaisut kompleksitasosta. 
+ovat todennettavissa suoraan m√§√§ritelmist√§ \eqref{sin z ja cos z} ja $e^z$:n
+derivoimiss√§√§nn√∂st√§ \eqref{exp(z):n derivaatta}. N√§hd√§√§n my√∂s, ett√§ $\sin z$ ja $\cos z$
+ovat ($e^z$:n tavoin) analyyttisi√§ koko kompleksitasossa eli kokonaisia funktioita.
+\begin{Exa} Etsi yht√§l√∂n $\,\sin z = 2\,$ kaikki ratkaisut kompleksitasosta. 
 \end{Exa}
-\ratk Kun merkit‰‰n $t=e^{iz}$, niin m‰‰ritelm‰n \eqref{sin z ja cos z} mukaan
+\ratk Kun merkit√§√§n $t=e^{iz}$, niin m√§√§ritelm√§n \eqref{sin z ja cos z} mukaan
 \begin{align*}
 \sin z = 2\,\ \ekv\,\ \frac{1}{2i}\,(t-t^{-1}) = 2\,\ &\ekv\,\ t^2-4it-1=0 \\
                                                       &\ekv\,\ t = (2\pm\sqrt{3})i.
 \end{align*}
-M‰‰ritelm‰n \eqref{exp(z):n laskukaava} ja aksiooman C3 mukaan
+M√§√§ritelm√§n \eqref{exp(z):n laskukaava} ja aksiooman C3 mukaan
 \[
 t=e^{iz} = e^{-y+ix} = e^{-y}e^{ix}, \quad z=x+iy,
 \]
@@ -140,7 +140,7 @@ joten on oltava
 \begin{cases} \,e^{-y}=\abs{t}=2\pm\sqrt{3}, \\ \,e^{ix}=i  \end{cases} \ekv\quad
 \begin{cases} \,y=-\ln(2\pm\sqrt{3}), \\ \,x=\frac{\pi}{2}+2k\pi,\,\ k\in\Z. \end{cases}
 \]
-T‰ss‰ on $\,\ln(2-\sqrt{3})=-\ln(2+\sqrt{3})$, joten ratkaisut ovat
+T√§ss√§ on $\,\ln(2-\sqrt{3})=-\ln(2+\sqrt{3})$, joten ratkaisut ovat
 \[ 
 z= \frac{\pi}{2}+2k\pi\,\pm\,\ln(\sqrt{3}+2)i, \quad k\in\Z. \loppu
 \]
@@ -150,26 +150,26 @@ z= \frac{\pi}{2}+2k\pi\,\pm\,\ln(\sqrt{3}+2)i, \quad k\in\Z. \loppu
 \index{funktio C!h@$\sinh$, $\cosh$, $\tanh$|vahv}
 \index{funktio C!i@$\arsinh$, $\arcosh$, $\artanh$|vahv}
 
-Hyberboliset funktiot ovat eksponenttifunktion johdannaisia, joilla on samantyyppisi‰ 
-ominaisuuksia kuin trigonometrisill‰ funktioilla. \kor{Hyberbolinen kosini}, symboli $\cosh$
+Hyberboliset funktiot ovat eksponenttifunktion johdannaisia, joilla on samantyyppisi√§ 
+ominaisuuksia kuin trigonometrisill√§ funktioilla. \kor{Hyberbolinen kosini}, symboli $\cosh$
 (cosinus hyperbolicus), ja \kor{hyberbolinen sini}, symboli $\sinh$ (sinus hyperbolicus) 
-m‰‰ritell‰‰n (vrt.\ trigonometristen funktioiden m‰‰ritelm‰ \eqref{sin z ja cos z})
+m√§√§ritell√§√§n (vrt.\ trigonometristen funktioiden m√§√§ritelm√§ \eqref{sin z ja cos z})
 \begin{equation} \label{sinh ja cosh}
 \boxed{\kehys\quad \cosh z=\tfrac{1}{2}(e^{z}+e^{-z}),\quad 
                    \sinh z=\tfrac{1}{2}(e^{z}-e^{-z}),\quad z\in\C. \quad}
 \end{equation}
-Esimerkiksi seuraavat laskulait ovat m‰‰ritelm‰st‰ todennettavissa (vrt.\ trigonometristen
+Esimerkiksi seuraavat laskulait ovat m√§√§ritelm√§st√§ todennettavissa (vrt.\ trigonometristen
 funktioiden vastaavat):
-\index{derivoimiss‰‰nnˆt!i@hyperboliset funktiot}
+\index{derivoimiss√§√§nn√∂t!i@hyperboliset funktiot}
 \begin{align*}
 &\cosh^2 z - \sinh^2 z = 1, \\
 &\cosh 2z = \cosh^2 z + \sinh^2 z, \quad \sinh 2z = 2\sinh z\cosh z, \\
 &\dif\sinh z = \cosh z, \quad \dif\cosh z = \sinh z.
 \end{align*}
 Reaalisilla muuttujan arvoilla $\cosh x=\frac{1}{2}(e^x+e^{-x})$ on parillinen ja 
-$\sinh x=\frac{1}{2}(e^x-e^{-x})$ on pariton funktio. Edellinen on aidosti kasvava v‰lill‰ 
-$[0,\infty)$ ja bijektio kuvauksena $\cosh: [0,\infty)\kohti[1,\infty)$. J‰lkimm‰inen on 
-aidosti kasvava koko $\R$:ss‰ ja bijektio kuvauksena $\sinh:\R\kohti\R$.
+$\sinh x=\frac{1}{2}(e^x-e^{-x})$ on pariton funktio. Edellinen on aidosti kasvava v√§lill√§ 
+$[0,\infty)$ ja bijektio kuvauksena $\cosh: [0,\infty)\kohti[1,\infty)$. J√§lkimm√§inen on 
+aidosti kasvava koko $\R$:ss√§ ja bijektio kuvauksena $\sinh:\R\kohti\R$.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{picture}(10,5)(-4,-1)
@@ -215,30 +215,30 @@ aidosti kasvava koko $\R$:ss‰ ja bijektio kuvauksena $\sinh:\R\kohti\R$.
 \end{picture}
 \end{figure}
 
-Reaalifunktioiden $\cosh$ ja $\sinh$ k‰‰nteisfunktioita ($\cosh$ rajoitettu v‰lille 
+Reaalifunktioiden $\cosh$ ja $\sinh$ k√§√§nteisfunktioita ($\cosh$ rajoitettu v√§lille 
 $[0,\infty)$ tai $(-\infty,0]$) sanotaan
 \index{area-funktiot}%
-\kor{area-funktioiksi} ja merkit‰‰n arcosh, arsinh. Laskus‰‰nnˆt saadaan
+\kor{area-funktioiksi} ja merkit√§√§n arcosh, arsinh. Laskus√§√§nn√∂t saadaan
 ratkaisemalla
 \begin{align*}
 \frac{1}{2}(e^y+e^{-y})=x \ \ekv \ y=\arcosh x, \\
 \frac{1}{2}(e^y-e^{-y})=x \ \ekv \ y=\arsinh x.
 \end{align*}
-N‰m‰ ovat toisen asteen yht‰lˆit‰ tuntemattoman $t=e^y$ suhteen, joten $y$ on ilmaistavissa 
+N√§m√§ ovat toisen asteen yht√§l√∂it√§ tuntemattoman $t=e^y$ suhteen, joten $y$ on ilmaistavissa 
 logaritmien avulla:
 \[ \boxed{
 \begin{aligned}
 \ykehys\quad y = \arcosh x &= \pm \ln\left(x+\sqrt{x^2-1}\,\right), \quad x \ge 1, \quad \\
              y = \arsinh x &= \ln\left(x+\sqrt{x^2+1}\,\right), \quad x\in\R. \akehys
 \end{aligned} } \]
-T‰ss‰ arcosh:n p‰‰haara $\Arcosh$ saadaan etumerkill‰ +. Toisen haaran voi 
-kirjoittaa myˆs muotoon
+T√§ss√§ arcosh:n p√§√§haara $\Arcosh$ saadaan etumerkill√§ +. Toisen haaran voi 
+kirjoittaa my√∂s muotoon
 \[
 y\ =\ -\ln\left(x+\sqrt{x^2-1}\,\right)\ =\ \ln\frac{1}{x+\sqrt{x^2-1}}\ 
                                          =\ \ln\left(x-\sqrt{x^2-1}\,\right).
 \]
 
-\kor{Hyberbolinen tangentti} $\tanh$ (tangens hyperbolicus) m‰‰ritell‰‰n (ol.\ reaalimuuttuja)
+\kor{Hyberbolinen tangentti} $\tanh$ (tangens hyperbolicus) m√§√§ritell√§√§n (ol.\ reaalimuuttuja)
 \[
 \boxed{\quad \tanh x\ =\ \frac{\ykehys\sinh x}{\akehys\cosh x}\ 
                       =\ \frac{e^x-e^{-x}}{e^x+e^{-x}}\ 
@@ -276,14 +276,14 @@ y\ =\ -\ln\left(x+\sqrt{x^2-1}\,\right)\ =\ \ln\frac{1}{x+\sqrt{x^2-1}}\
 %\caption{$y=\tanh x$}
 \end{center}
 \end{figure}
-Hyperbolinen tangentti on bijektio: $\ \tanh:\ \R \kohti (-1,1)$. K‰‰nteisfunktio on
+Hyperbolinen tangentti on bijektio: $\ \tanh:\ \R \kohti (-1,1)$. K√§√§nteisfunktio on
 \[
 \boxed{\kehys\quad \artanh\,x 
              = \frac{1}{2}\,\ln \left(\frac{1+x}{1-x}\right),\quad \abs{x}<1. \quad}
 \]
 
-Myˆhemp‰‰ k‰yttˆ‰ varten todettakoon viel‰ hyperbolisten k‰‰nteisfunktioiden derivoimiskaavat
-\index{derivoimiss‰‰nnˆt!i@hyperboliset funktiot}%
+My√∂hemp√§√§ k√§ytt√∂√§ varten todettakoon viel√§ hyperbolisten k√§√§nteisfunktioiden derivoimiskaavat
+\index{derivoimiss√§√§nn√∂t!i@hyperboliset funktiot}%
 \[ \boxed{ \begin{aligned}
 \quad &\dif\ln(x+\sqrt{x^2+1}\,)\,=\,\frac{\ygehys 1}{\sqrt{x^2+1}}\,, \quad x\in\R, \\
       &\dif\,\bigl|\ln(x+\sqrt{x^2-1}\,\bigr|\,=\,\frac{\ykehys 1}{\sqrt{x^2-1}}\,, \quad 
@@ -297,40 +297,40 @@ Myˆhemp‰‰ k‰yttˆ‰ varten todettakoon viel‰ hyperbolisten k‰‰nteisfunktioiden der
 \index{logaritmifunktio|vahv}
 \index{funktio C!g@$\log$, $\ln$|vahv}
 
-Kompleksinen (perus)logaritmifunktio m‰‰ritell‰‰n
+Kompleksinen (perus)logaritmifunktio m√§√§ritell√§√§n
 \[
 e^w=z \ \ekv \ w=\log z.
 \]
 Kun kirjoitetaan $w=u+iv$ ja otetaan $z$:lle polaariesitys $z=r(\cos\varphi+i\sin\varphi)$,
-niin yht‰lˆst‰
+niin yht√§l√∂st√§
 \[
 e^w=z\ \ekv\ e^u(\cos v+i\sin v) = r(\cos\varphi+i\sin\varphi)
 \]
-n‰hd‰‰n, ett‰ on oltava
+n√§hd√§√§n, ett√§ on oltava
 \[
 \begin{cases}
 \,e^u=r\ \ekv\ u = \ln r = \ln\abs{z}, \\
 \,v=\varphi +2k\pi,\quad k\in\Z.
 \end{cases}
 \]
-Kyseess‰ on siis ‰‰rettˆm‰n monihaarainen funktio. Logaritmifunktion $\log z$ m‰‰ritelm‰ksi
-sovitaan t‰m‰n funktion p‰‰haara, jossa $k=0$\,:
+Kyseess√§ on siis √§√§rett√∂m√§n monihaarainen funktio. Logaritmifunktion $\log z$ m√§√§ritelm√§ksi
+sovitaan t√§m√§n funktion p√§√§haara, jossa $k=0$\,:
 \[
 \boxed{\kehys\quad \log z = \ln\abs{z}+i\arg z, \quad 0 \le \arg z < 2\pi. \quad}
 \]
-N‰in m‰‰ritelty funktio ei ole jatkuva positiivisella reaaliakselilla, sill‰ jos $z_n=x+iy_n$,
+N√§in m√§√§ritelty funktio ei ole jatkuva positiivisella reaaliakselilla, sill√§ jos $z_n=x+iy_n$,
 $x>0$, niin $z_n\kohti x$, kun $y_n\kohti 0$, mutta
 \begin{align*}
 y_n\kohti 0^+ \ &\impl \ \log z_n\kohti \ln x, \\
 y_n\kohti 0^- \ &\impl \ \log z_n\kohti \ln x+2\pi i.
 \end{align*}
-Muissa m‰‰rittelyjoukon pisteiss‰ $\log z$ on paitsi jatkuva myˆs derivoituva
+Muissa m√§√§rittelyjoukon pisteiss√§ $\log z$ on paitsi jatkuva my√∂s derivoituva
 (ks.\ Harj.teht.\,\ref{H-exp-3: logaritmin derivaatta}), eli $\log z$ on analyyttinen nk.\
 \index{aukileikattu kompleksitaso} \index{kompleksitaso!a@aukileikattu}%
 \kor{aukileikatussa kompleksitasossa}, josta origo ja positiivinen reaaliakseli on poistettu.
 
-Johtuen kompleksisen logaritmifunktion haaraisuudesta eiv‰t reaalialueen laskus‰‰nnˆt yleisty
-sellaisenaan. Esimerkiksi tulon logaritmi on em.\ m‰‰ritelm‰n perusteella
+Johtuen kompleksisen logaritmifunktion haaraisuudesta eiv√§t reaalialueen laskus√§√§nn√∂t yleisty
+sellaisenaan. Esimerkiksi tulon logaritmi on em.\ m√§√§ritelm√§n perusteella
 (vrt. Luku \ref{exp(x) ja ln(x)})
 \[
 \log (z_1z_2)=\begin{cases}
@@ -338,7 +338,7 @@ sellaisenaan. Esimerkiksi tulon logaritmi on em.\ m‰‰ritelm‰n perusteella
 \,\log z_1+\log z_2 -2\pi i,\  &\text{muulloin}.
 \end{cases}
 \]
-\begin{Exa} Funktion $\log$ m‰‰ritelm‰n mukaisesti
+\begin{Exa} Funktion $\log$ m√§√§ritelm√§n mukaisesti
 \begin{align*}
 &\log(-1)    \,=\, \log(1\vkulma{\pi})           
              \,=\, \ln 1 + \pi i \,=\, \pi i, \\[2mm]
@@ -348,7 +348,7 @@ sellaisenaan. Esimerkiksi tulon logaritmi on em.\ m‰‰ritelm‰n perusteella
              \,=\, \frac{1}{2}\ln 2+\frac{5\pi}{4}\,i.\loppu
 \end{align*}
 \end{Exa}
-Kompleksisen logaritmifunktion avulla voidaan m‰‰ritell‰ (vrt.\ edellisen luvun kaava
+Kompleksisen logaritmifunktion avulla voidaan m√§√§ritell√§ (vrt.\ edellisen luvun kaava
 \eqref{exp-kaava 5})
 \[
 \boxed{\kehys\quad z^y = e^{y\log z}, \quad z,y\in\C,\ z\neq 0. \quad}
@@ -363,15 +363,15 @@ Kompleksisen logaritmifunktion avulla voidaan m‰‰ritell‰ (vrt.\ edellisen luvun 
 \begin{enumerate}
 
 \item \label{H-VII-3: E(z) vaihtoehto}
-M‰‰ritell‰‰n funktion $e^x$ laajennus kompleksitasoon kaavalla
+M√§√§ritell√§√§n funktion $e^x$ laajennus kompleksitasoon kaavalla
 \[
 \exp(z)=\exp(x+iy)=e^x(\cos ay + i\sin ay),
 \]
-miss‰ $a\in\R,\ a \neq 1$. Mitk‰ kompleksisen eksponenttifunktion aksioomista ovat voimassa 
-t‰lle funktiolle?
+miss√§ $a\in\R,\ a \neq 1$. Mitk√§ kompleksisen eksponenttifunktion aksioomista ovat voimassa 
+t√§lle funktiolle?
 
 \item
-Tarkista seuraavien kaavojen p‰tevyys, kun $z\in\C$\,:
+Tarkista seuraavien kaavojen p√§tevyys, kun $z\in\C$\,:
 \begin{align*}
 &\text{a)}\ \ \sin^2 z+\cos^2 z=1, \quad \sin 2z=2\sin z\cos z, \quad \cos 2z=2\cos^2 z-1 \\
 &\text{b)}\ \ \dif\sin z=\cos z, \quad \dif\cos z=-\sin z
@@ -379,26 +379,26 @@ Tarkista seuraavien kaavojen p‰tevyys, kun $z\in\C$\,:
 
 \item
 a) Lausu $\sinh\frac{x}{2}$ ja $\cosh\frac{x}{2}$ $\cosh x$:n avulla. \newline
-b) Millaisilla luvuilla $n$ p‰tee $\,(\cosh x+\sinh x)^n=\cosh nx+\sinh nx\,$?
+b) Millaisilla luvuilla $n$ p√§tee $\,(\cosh x+\sinh x)^n=\cosh nx+\sinh nx\,$?
 
 \item
-a) M‰‰ritell‰‰n $\coth x=1/\tanh x\ (x\in\R,\ x \neq 0)$. Mik‰ on funktion 
+a) M√§√§ritell√§√§n $\coth x=1/\tanh x\ (x\in\R,\ x \neq 0)$. Mik√§ on funktion 
 $f(x)=4\tanh x+\coth x$ arvojoukko? \\
-b) Miss‰ pisteess‰ funktio
+b) Miss√§ pisteess√§ funktio
 $\D f(x)=\frac{\sinh x}{1-a\cosh x}\,, \quad x\in\R$ \vspace{1mm}\newline
 saavuttaa suurimman arvonsa, kun $a\in\R,\ a>1$\,?
 
 \item
-N‰yt‰, ett‰ yht‰lˆll‰ $\,\cos x\cosh x+1=0\,$ on ‰‰rettˆm‰n monta reaalista ratkaisua.
+N√§yt√§, ett√§ yht√§l√∂ll√§ $\,\cos x\cosh x+1=0\,$ on √§√§rett√∂m√§n monta reaalista ratkaisua.
 
 \item
-a) N‰yt‰, ett‰ funktioilla $\Arcosh$ ja $\arsinh$ on asymptoottina funktio 
+a) N√§yt√§, ett√§ funktioilla $\Arcosh$ ja $\arsinh$ on asymptoottina funktio 
 $\ln (2x)=\ln x + \ln 2$, kun $x\kohti\infty$. \newline
-b) Laske funktioiden $\arsinh x$ ja $\Arcosh x$ derivaatat sek‰ implisiittisesti
-derivoimalla ett‰ suoraan ko.\ funktioiden lausekkeista.
+b) Laske funktioiden $\arsinh x$ ja $\Arcosh x$ derivaatat sek√§ implisiittisesti
+derivoimalla ett√§ suoraan ko.\ funktioiden lausekkeista.
 
 \item
-Sievenn‰:
+Sievenn√§:
 \[
 \text{a)}\ \ \Arcosh(\cosh x) \qquad
 \text{b)}\ \ \tanh(\Arcosh x) \qquad 
@@ -417,12 +417,12 @@ e) \ $e^i,\ i^e,\ \log i,\ 5^{-i},\ i^{-\pi},\ i^i$
 Tietokoneohjelma laskee luvun $(-\pi)^\pi$ numeroarvoksi $-32.9139-15.6897i$. Tarkista lasku! 
 
 \item
-M‰‰rit‰ (tarkasti perusmuodossa $x+iy$) seuraavien yht‰lˆiden kaikki ratkaisut 
+M√§√§rit√§ (tarkasti perusmuodossa $x+iy$) seuraavien yht√§l√∂iden kaikki ratkaisut 
 kompleksitasossa: \newline
 a) \ $e^z=e,\quad$ b) \ $\cos z=-2,\quad$ c) $\cosh z=-1,\quad$ d) \ $\sin z=i$.  
 
 \item
-M‰‰rit‰ seuraaville funktioille suurin kompleksitason avoin osajoukko $G$, jossa funktio on 
+M√§√§rit√§ seuraaville funktioille suurin kompleksitason avoin osajoukko $G$, jossa funktio on 
 analyyttinen:
 \[
 \text{a)}\ \ f(z)=\frac{1}{e^z+1} \qquad \text{b)}\ \ f(z)=\frac{z}{\cos z} \qquad
@@ -430,7 +430,7 @@ analyyttinen:
 \]
 
 \item (*) \label{H-exp-3: logaritmin derivaatta}
-Johda suoraan derivaatan m‰‰ritelm‰st‰ derivoimss‰‰ntˆ
+Johda suoraan derivaatan m√§√§ritelm√§st√§ derivoimss√§√§nt√∂
 \[
 \dif\log z = \frac{1}{z}\,, \quad z=r\vkulma\varphi,\,\ r>0,\,\ 0<\varphi<2\pi.
 \]

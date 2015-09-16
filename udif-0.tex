@@ -1,34 +1,34 @@
 \chapter[Usean muuttujan differentiaalilaskenta]{Usean muuttujan \\ 
 differentiaalilaskenta}
 
-T‰ss‰ luvussa tarkastelun kohteena ovat \kor{vektorimuuttujan}, eli useamman reaalimuuttujan
-funktiot tyyppi‰ $f:\,\R^n\kohti\R$ ja vektorimuuttujan \kor{vektoriarvoiset} funktiot
-tyyppi‰ $\mf:\,\R^n\kohti\R^m$. Edellisten erikoistapaukset, kahden ja kolmen
-\mbox{reaalimuuttujan} funktiot, ovat ennest‰‰n tuttuja Luvusta
-\ref{kahden ja kolmen muuttujan funktiot}. Myˆs vektoriarvoisia funktioita on tavattu jo
-aiemmin, sill‰ sek‰ Luvussa \ref{parametriset k‰yr‰t} esitellyt parametriset k‰yr‰t ja
-parametriset pinnat ett‰ Luvuissa \ref{lineaarikuvaukset}--\ref{affiinikuvaukset} k‰sitellyt
-lineaari- ja affiinikuvaukset ovat t‰llaisten erikoistapauksia. Vektoriarvoisia funktioita ovat
-myˆs tason ja avaruuden \kor{vektorikent‰t}, joissa vektori ymm‰rret‰‰n
+T√§ss√§ luvussa tarkastelun kohteena ovat \kor{vektorimuuttujan}, eli useamman reaalimuuttujan
+funktiot tyyppi√§ $f:\,\R^n\kohti\R$ ja vektorimuuttujan \kor{vektoriarvoiset} funktiot
+tyyppi√§ $\mf:\,\R^n\kohti\R^m$. Edellisten erikoistapaukset, kahden ja kolmen
+\mbox{reaalimuuttujan} funktiot, ovat ennest√§√§n tuttuja Luvusta
+\ref{kahden ja kolmen muuttujan funktiot}. My√∂s vektoriarvoisia funktioita on tavattu jo
+aiemmin, sill√§ sek√§ Luvussa \ref{parametriset k√§yr√§t} esitellyt parametriset k√§yr√§t ja
+parametriset pinnat ett√§ Luvuissa \ref{lineaarikuvaukset}--\ref{affiinikuvaukset} k√§sitellyt
+lineaari- ja affiinikuvaukset ovat t√§llaisten erikoistapauksia. Vektoriarvoisia funktioita ovat
+my√∂s tason ja avaruuden \kor{vektorikent√§t}, joissa vektori ymm√§rret√§√§n
 geometris--fysikaalisena 'nuolivektorina'.
 
-Luvussa \ref{usean muuttujan jatkuvuus} yleistet‰‰n Luvuista
-\ref{jatkuvuuden k‰site}--\ref{funktion raja-arvo} tutut jatkuvuuden ja raja-arvon k‰sitteet
-useamman muuttujan funktioille. T‰m‰n j‰lkeen luvun keskeisen sis‰llˆn muodostavat erilaiset
-\pain{derivaatan} k‰sitteen laajennukset useamman muuttujan tilanteisiin ja n‰ihin
-laajennuksiin liittyv‰ laskutekniikka (differentiaalilaskenta) ja sovellukset. Yleisempin‰
-derivaatan k‰sittein‰ esitell‰‰n t‰ss‰ luvussa \kor{osittaisderivaatat} ja niist‰ muodostettu
-\kor{gradientti} (Luvut \ref{osittaisderivaatat}--\ref{gradientti}), vektorikenttiin liittyv‰t
+Luvussa \ref{usean muuttujan jatkuvuus} yleistet√§√§n Luvuista
+\ref{jatkuvuuden k√§site}--\ref{funktion raja-arvo} tutut jatkuvuuden ja raja-arvon k√§sitteet
+useamman muuttujan funktioille. T√§m√§n j√§lkeen luvun keskeisen sis√§ll√∂n muodostavat erilaiset
+\pain{derivaatan} k√§sitteen laajennukset useamman muuttujan tilanteisiin ja n√§ihin
+laajennuksiin liittyv√§ laskutekniikka (differentiaalilaskenta) ja sovellukset. Yleisempin√§
+derivaatan k√§sittein√§ esitell√§√§n t√§ss√§ luvussa \kor{osittaisderivaatat} ja niist√§ muodostettu
+\kor{gradientti} (Luvut \ref{osittaisderivaatat}--\ref{gradientti}), vektorikenttiin liittyv√§t
 \kor{divergenssi} ja \kor{roottori}
-(Luvut \ref{divergenssi ja roottori}--\ref{div ja rot k‰yr‰viivaisissa}) ja lopulta yleisempiin
-vektoriarvoisiin funktioihin eli \kor{ep‰lineaarisiin kuvauksiin} liittyen 
+(Luvut \ref{divergenssi ja roottori}--\ref{div ja rot k√§yr√§viivaisissa}) ja lopulta yleisempiin
+vektoriarvoisiin funktioihin eli \kor{ep√§lineaarisiin kuvauksiin} liittyen 
 \kor{Jacobin matriisi} (Luku \ref{jacobiaani}). Sovelluksina tarkastellaan mm.\ geometrisia
-teht‰vi‰ kuten \kor{pinnan tangenttitason} m‰‰ritt‰mist‰ (Luku \ref{gradientti}), fysiikan 
-\kor{osittaisdifferentiaaliyht‰lˆit‰} 
-(Luvut \ref{divergenssi ja roottori}--\ref{div ja rot k‰yr‰viivaisissa}), 
-\kor{ep‰lineaarisia yht‰lˆryhmi‰} ja niiden numeerista ratkaisemista (Luku \ref{jacobiaani})
-ja \kor{optimoinnin} ongelmia (Luku \ref{usean muuttujan ‰‰riarvoteht‰v‰t}). Luvussa
-\ref{k‰‰nteisfunktiolause} esitell‰‰n kolme ep‰lineaarisiin yht‰lˆryhmiin liittyv‰‰
-\kor{ep‰lineaarisen analyysin} vahvaa lausetta. Viimeisess‰ osaluvussa
-(Luku \ref{usean muuttujan taylorin polynomit}) m‰‰ritell‰‰n \kor{Taylorin polynomi} useamman
+teht√§vi√§ kuten \kor{pinnan tangenttitason} m√§√§ritt√§mist√§ (Luku \ref{gradientti}), fysiikan 
+\kor{osittaisdifferentiaaliyht√§l√∂it√§} 
+(Luvut \ref{divergenssi ja roottori}--\ref{div ja rot k√§yr√§viivaisissa}), 
+\kor{ep√§lineaarisia yht√§l√∂ryhmi√§} ja niiden numeerista ratkaisemista (Luku \ref{jacobiaani})
+ja \kor{optimoinnin} ongelmia (Luku \ref{usean muuttujan √§√§riarvoteht√§v√§t}). Luvussa
+\ref{k√§√§nteisfunktiolause} esitell√§√§n kolme ep√§lineaarisiin yht√§l√∂ryhmiin liittyv√§√§
+\kor{ep√§lineaarisen analyysin} vahvaa lausetta. Viimeisess√§ osaluvussa
+(Luku \ref{usean muuttujan taylorin polynomit}) m√§√§ritell√§√§n \kor{Taylorin polynomi} useamman
 muuttujan funktioille. 

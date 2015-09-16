@@ -2,30 +2,30 @@
 \sectionmark{Differentiaali}
 \alku
 
-Jos $f$ on derivoituva pisteess‰ $x$, niin linearisoivan approksimaatioperiaatteen mukaisesti
+Jos $f$ on derivoituva pisteess√§ $x$, niin linearisoivan approksimaatioperiaatteen mukaisesti
 on likimain
 \[
 \Delta f(x)=f(x+\Delta x)-f(x)\approx f'(x)\Delta x,
 \]
 kun $\abs{\Delta x}$ on pieni. Lauseketta $f'(x)\Delta x$ sanotaan $f$:n
 \index{differentiaali}%
-\kor{differentiaaliksi} pisteess‰ $x$ ja merkit‰‰n
+\kor{differentiaaliksi} pisteess√§ $x$ ja merkit√§√§n
 \[
 df(x,\Delta x) = f'(x)\Delta x.
 \]
-Differentiaalin avulla voi siis arvioida likim‰‰rin funktion arvon muutoksen $\Delta f$, joka
-vastaa muuttujan pient‰ muutosta $\Delta x$. Jos approksimaation virhett‰ merkit‰‰n
+Differentiaalin avulla voi siis arvioida likim√§√§rin funktion arvon muutoksen $\Delta f$, joka
+vastaa muuttujan pient√§ muutosta $\Delta x$. Jos approksimaation virhett√§ merkit√§√§n
 \[
 r(x,\Delta x) = f(x+\Delta x)-f(x)-f'(x)\Delta x,
 \]
-niin derivaatan m‰‰ritelm‰n mukaisesti p‰tee
+niin derivaatan m√§√§ritelm√§n mukaisesti p√§tee
 \[
 \lim_{\Delta x \kohti 0} \frac{r(x,\Delta x)}{\Delta x} = 0.
 \]
 \begin{Exa}
-Neliˆn muotoista mˆkki‰, joka on ulkomitoiltaan $6\text{ m}\times 6\text{ m}$, kaupataan 
-$36\text{ m}^2$:n mˆkkin‰. Arvioi mˆkin todellinen lattiapinta-ala differentiaalin avulla
-olettaen sein‰n paksuudeksi $20\text{ cm}$.
+Neli√∂n muotoista m√∂kki√§, joka on ulkomitoiltaan $6\text{ m}\times 6\text{ m}$, kaupataan 
+$36\text{ m}^2$:n m√∂kkin√§. Arvioi m√∂kin todellinen lattiapinta-ala differentiaalin avulla
+olettaen sein√§n paksuudeksi $20\text{ cm}$.
 \end{Exa}
 \ratk Jos $f(x)=x^2$, niin lattiapinta-ala on differentiaalin avulla arvioiden
 \[
@@ -35,21 +35,21 @@ Arvoilla $x=6\text{ m}$, $\Delta x=0.4\text{ m}$ (huom!) saadaan
 \[
 A\approx 31.2\text{ m}^2.
 \]
-Approksimaation virhe on t‰ss‰ tapauksessa tarkasti
+Approksimaation virhe on t√§ss√§ tapauksessa tarkasti
 \[
 r(x,\Delta x) = (\Delta x)^2 = 0.16\text{ m}^2,
 \]
 eli 'todellinen' lattiapinta-ala on $A\approx 31.4\text{ m}^2$. \loppu
 
-J‰ljemp‰n‰ Luvussa \ref{taylorin lause} n‰ytet‰‰n, ett‰ differentiaaliin perustuvan
+J√§ljemp√§n√§ Luvussa \ref{taylorin lause} n√§ytet√§√§n, ett√§ differentiaaliin perustuvan
 approksimaation virhe on yleisesti suuruusluokkaa $\,\sim (\Delta x)^2\,$ silloin kun
-funktio on riitt‰v‰n s‰‰nnˆllinen (kuten esimerkiss‰).
+funktio on riitt√§v√§n s√§√§nn√∂llinen (kuten esimerkiss√§).
 \begin{Exa}
-Ideaalikaasun adiabaattisissa (‰killisiss‰) paineen ja tiheyden vaihteluissa p‰tee tilanyht‰lˆ
+Ideaalikaasun adiabaattisissa (√§killisiss√§) paineen ja tiheyden vaihteluissa p√§tee tilanyht√§l√∂
 \[
 p\rho^{-\gamma}=K=\text{vakio},
 \]
-miss‰ $\gamma$ on kaasulle ominainen vakio ($\gamma>1$). Jos tiheys muuttuu 2\%, niin paljonko
+miss√§ $\gamma$ on kaasulle ominainen vakio ($\gamma>1$). Jos tiheys muuttuu 2\%, niin paljonko
 muuttuu paine?
 \end{Exa}
 \ratk Koska $\,p=K\rho^\gamma=f(\rho)$, niin
@@ -67,29 +67,29 @@ Derivaatan tavallisin tulkinta fysiikan ym.\ sovelluksissa on
 \[
 \boxed{\kehys\quad \text{Derivaatta}=\text{(hetkellinen) muutosnopeus}. \quad}
 \]
-Jos $m$ on jokin fysikaalinen suure, joka muuttuu ajan $(t)$ (mittayksikkˆ s) mukana, eli 
+Jos $m$ on jokin fysikaalinen suure, joka muuttuu ajan $(t)$ (mittayksikk√∂ s) mukana, eli 
 $m=m(t)$, niin hetkellinen muutosnopeus on
 \[
 \lim_{\Delta t\kohti 0} \frac{m(t+\Delta t)-m(t)}{\Delta t} 
                  = \lim_{\Delta t \kohti 0} \frac{\Delta m}{\Delta t} = m'(t).
 \]
-Jos $m$:n yksikkˆ on M, niin muutosnopeuden yksikkˆ on M/s.
+Jos $m$:n yksikk√∂ on M, niin muutosnopeuden yksikk√∂ on M/s.
 \begin{Exa}
-Jos $A=\text{kansantalous}$ (yksikkˆ E), niin talouskasvu on $A$:n hetkellinen muutosnopeus
-(yksikkˆ E/s). Kun sanotaan 'talouskasvu kiihtyy' tai 'talouskasvu hidastuu', tarkoitetaan 
-$A'(t)$:n muutosnopeutta, eli toista derivaattaa $A''(t)$ (yksikkˆ E/s$^2$). \loppu
+Jos $A=\text{kansantalous}$ (yksikk√∂ E), niin talouskasvu on $A$:n hetkellinen muutosnopeus
+(yksikk√∂ E/s). Kun sanotaan 'talouskasvu kiihtyy' tai 'talouskasvu hidastuu', tarkoitetaan 
+$A'(t)$:n muutosnopeutta, eli toista derivaattaa $A''(t)$ (yksikk√∂ E/s$^2$). \loppu
 \end{Exa}
-Jos kappale liikkuu siten, ett‰ sen sijainti hetkell‰ $t$ on $x(t)$ (yksiulotteinen liike),
+Jos kappale liikkuu siten, ett√§ sen sijainti hetkell√§ $t$ on $x(t)$ (yksiulotteinen liike),
 niin tunnetusti
 \[
 x'(t)=\text{\pain{no}p\pain{eus}},\quad x''(t)=\text{\pain{kiiht}y\pain{v}yy\pain{s}}.
 \]
 \begin{Exa}
-Kaksimetrinen mies k‰velee nelj‰n metrin korkeudella olevan katulampun ali hetkell‰ $t=0$. 
-M‰‰rit‰ miehen varjon k‰rjen paikka, nopeus ja kiihtyvyys hetkell‰ $t\geq 0$, kun mies k‰velee
+Kaksimetrinen mies k√§velee nelj√§n metrin korkeudella olevan katulampun ali hetkell√§ $t=0$. 
+M√§√§rit√§ miehen varjon k√§rjen paikka, nopeus ja kiihtyvyys hetkell√§ $t\geq 0$, kun mies k√§velee
 vakionopeudella $v_0=2$ m/s. (Ol.\ katu vaakasuora).
 \end{Exa}
-\ratk Varjon k‰rjen paikka m‰‰r‰ytyy ehdosta (ks.\ kuvio alla)
+\ratk Varjon k√§rjen paikka m√§√§r√§ytyy ehdosta (ks.\ kuvio alla)
 \[
 \frac{x(t)-v_0t}{2}=\frac{x(t)}{4},
 \]
@@ -124,12 +124,12 @@ x''(t)&=0. \quad\loppu
 \end{center}
 \end{figure}
 \index{zza@\sov!Moottori}%
-\begin{Exa}: \vahv{Moottori}. M‰nn‰nvarren, jonka pituus = 2 (mittayksikkˆ = $10$ cm),
-kampiakseliin kiinnitetty p‰‰ liikkuu pitkin yksikkˆympyr‰‰ siten, ett‰ napakulma hetkell‰ $t$
-on $\varphi(t)=at$ ($a=$ vakio), ja toinen p‰‰ (johon m‰nt‰ on kiinnitetty) liukuu pitkin
-$x$-akselia. a) Arvioi differentiaalin avulla, paljonko m‰nt‰ liikkuu kampiakselin pyˆriess‰
-kulmasta $\varphi=30^\circ$ kulmaan $\varphi+\Delta\varphi=31^\circ$. b) Mik‰ on m‰nn‰n nopeuden 
-(vauhdin) maksimiarvo, kun kampiakselin pyˆrimisnopeus on $3600$ kierrosta/min ? 
+\begin{Exa}: \vahv{Moottori}. M√§nn√§nvarren, jonka pituus = 2 (mittayksikk√∂ = $10$ cm),
+kampiakseliin kiinnitetty p√§√§ liikkuu pitkin yksikk√∂ympyr√§√§ siten, ett√§ napakulma hetkell√§ $t$
+on $\varphi(t)=at$ ($a=$ vakio), ja toinen p√§√§ (johon m√§nt√§ on kiinnitetty) liukuu pitkin
+$x$-akselia. a) Arvioi differentiaalin avulla, paljonko m√§nt√§ liikkuu kampiakselin py√∂riess√§
+kulmasta $\varphi=30^\circ$ kulmaan $\varphi+\Delta\varphi=31^\circ$. b) Mik√§ on m√§nn√§n nopeuden 
+(vauhdin) maksimiarvo, kun kampiakselin py√∂rimisnopeus on $3600$ kierrosta/min ? 
 \end{Exa}
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -150,7 +150,7 @@ kulmasta $\varphi=30^\circ$ kulmaan $\varphi+\Delta\varphi=31^\circ$. b) Mik‰ on
 \multiput(9.156,1.8)(0,0.4){2}{\line(1,0){0.8}}
 \end{picture}
 \end{figure}
-\ratk a) Kampiakselin kiertokulman ollessa $\varphi$ on m‰nn‰n paikka
+\ratk a) Kampiakselin kiertokulman ollessa $\varphi$ on m√§nn√§n paikka
 \[
 x(\varphi) = \cos\varphi + \sqrt{4-\sin^2\varphi} 
            = \cos\varphi + \sqrt{\rule{0mm}{4mm}3+\cos^2\varphi}.
@@ -173,103 +173,103 @@ x'(t)  &= a\left(-\sin at - \frac{\cos at\sin at}{\sqrt{3+\cos^2 at}}\right), \\
 x''(t) &= a^2\left(-\cos at + \frac{\sin^2 at-\cos^2 at}{\sqrt{3+\cos^2 at}}
                             - \frac{\cos^2 at\,\sin^2 at}{(3+\cos^2 at)^{3/2}}\right).
 \end{align*}
-Nopeuden $x'(t)$ ‰‰riarvokohdissa on oltava
+Nopeuden $x'(t)$ √§√§riarvokohdissa on oltava
 \[
 x''(t)=0\ \ \ekv\ \ \cos at\left(3+\cos^2 at\right)^{3/2} = 3-6\cos^2 at-\cos^4 at.
 \]
-Neliˆim‰ll‰ puolittain ja merkitsem‰ll‰ $u=\cos^2 at$ t‰m‰ sievenee polynomiyht‰lˆksi
+Neli√∂im√§ll√§ puolittain ja merkitsem√§ll√§ $u=\cos^2 at$ t√§m√§ sievenee polynomiyht√§l√∂ksi
 \[
 u^3+u^2-21u+3=0.
 \]
-V‰lill‰ $[0,1]$ t‰ll‰ on yksik‰sitteinen ratkaisu
+V√§lill√§ $[0,1]$ t√§ll√§ on yksik√§sitteinen ratkaisu
 \[
 u = 0.143987..\ \impl\ \cos\varphi(t) = \sqrt{0.143987..} = 0.379456..\ 
                 \impl\ \varphi(t) \approx 68\aste.
 \]
-T‰t‰ vastaa vauhdin maksimiarvo
+T√§t√§ vastaa vauhdin maksimiarvo
 \[
 \abs{x'(t)} = a\sqrt{1-u}\left(1+\sqrt{\frac{u}{3+u}}\right) \approx 1.12\,a.
 \]
-Annetulla pyˆrimisnopeudella on $a=60 \cdot 2\pi/$s, joten numeroarvoksi saadaan
+Annetulla py√∂rimisnopeudella on $a=60 \cdot 2\pi/$s, joten numeroarvoksi saadaan
 \[
 v_{max} \approx 1.12 \cdot 120\pi\,\text{s}^{-1} \cdot 10\,\text{cm} 
                           \approx \underline{\underline{42\,\text{m/s}}}. \loppu
 \]
 
-\subsection*{Differentiaali ja differentiaaliyht‰lˆt}
-\index{differentiaaliyht‰lˆ!a@eksponenttifunktion|vahv}
+\subsection*{Differentiaali ja differentiaaliyht√§l√∂t}
+\index{differentiaaliyht√§l√∂!a@eksponenttifunktion|vahv}
 
-Differentiaaleihin perustuva ajattelu on hyvin tavallista silloin, kun luonnonilmiˆt‰ 
-(tai muuta ilmiˆt‰) kuvaava matemaattinen malli on differentiaaliyht‰lˆ, ja halutaan 
-j\pain{ohtaa} t‰m‰ yht‰lˆ. Seuraavissa esimerkeiss‰ p‰‰dyt‰‰n eksponenttifunktion
-differentiaaliyht‰lˆˆn $y'=ay$ fysikaalisesta (tai muusta) lainalaisuudesta muotoa
+Differentiaaleihin perustuva ajattelu on hyvin tavallista silloin, kun luonnonilmi√∂t√§ 
+(tai muuta ilmi√∂t√§) kuvaava matemaattinen malli on differentiaaliyht√§l√∂, ja halutaan 
+j\pain{ohtaa} t√§m√§ yht√§l√∂. Seuraavissa esimerkeiss√§ p√§√§dyt√§√§n eksponenttifunktion
+differentiaaliyht√§l√∂√∂n $y'=ay$ fysikaalisesta (tai muusta) lainalaisuudesta muotoa
 \[ 
 \Delta y(x)\ =\ y(x+\Delta x)-y(x)\ \approx\ ay(x)\Delta x, \quad 
                                        \text{kun}\ \abs{\Delta x}\ \text{pieni}. 
 \]
-Kun tulkitaan t‰m‰n tarkoittavan, ett‰
+Kun tulkitaan t√§m√§n tarkoittavan, ett√§
 \[ 
 \Delta y(x) = ay(x)\Delta x + r(x,\Delta x), 
 \]
-miss‰ $\lim_{\Delta x \kohti 0} r(x,\Delta x)/\Delta x = 0$, niin jakamalla $\Delta x$:ll‰ ja 
-antamalla $\Delta x \kohti 0$ saadaan '‰‰rettˆm‰n pienille' muutoksille p‰tev‰ laki
+miss√§ $\lim_{\Delta x \kohti 0} r(x,\Delta x)/\Delta x = 0$, niin jakamalla $\Delta x$:ll√§ ja 
+antamalla $\Delta x \kohti 0$ saadaan '√§√§rett√∂m√§n pienille' muutoksille p√§tev√§ laki
 \[ 
 \lim_{\Delta x \kohti 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx} = ay(x). 
 \]
 \index{zza@\sov!Radioaktiivinen hajoaminen}%
-\begin{Exa}: \vahv{Radioaktiivinen hajoaminen}. Radioaktiivisessa aineessa on yksitt‰isen
-ytimen todenn‰kˆisyys hajota (ja niinmuodoin 'kadota') aikav‰lill‰ $[t,t+\Delta t]$
-verrannollinen aikav‰lin pituuteen $\Delta t$, kun $\Delta t$ on pieni. Jos radioaktiivisten
-(toistaiseksi hajoamattomien) ytimien lukum‰‰r‰ hetkell‰ $t$ on $A(t)$, niin saadaan
-likim‰‰r‰iseksi hajoamislaiksi
+\begin{Exa}: \vahv{Radioaktiivinen hajoaminen}. Radioaktiivisessa aineessa on yksitt√§isen
+ytimen todenn√§k√∂isyys hajota (ja niinmuodoin 'kadota') aikav√§lill√§ $[t,t+\Delta t]$
+verrannollinen aikav√§lin pituuteen $\Delta t$, kun $\Delta t$ on pieni. Jos radioaktiivisten
+(toistaiseksi hajoamattomien) ytimien lukum√§√§r√§ hetkell√§ $t$ on $A(t)$, niin saadaan
+likim√§√§r√§iseksi hajoamislaiksi
 \[
 \frac{A(t+\Delta t)-A(t)}{A(t)}\ =\ \frac{\Delta A}{A(t)}\ \approx\ -a\Delta t,
 \]
-miss‰ $a$ on ytimille ominainen vakio (dimensiottomana positiivinen, mittayksikkˆ 1/s). Rajalla
+miss√§ $a$ on ytimille ominainen vakio (dimensiottomana positiivinen, mittayksikk√∂ 1/s). Rajalla
 $\Delta t\kohti 0$ saadaan tarkka hajoamislaki
 (vrt.\ Esimerkki \ref{eksponenttifunktio fysiikassa}:\,\ref{radioaktiivisuus})
 \[
 A'(t)=-aA(t) \qimpl A(t) = A(0)\,e^{-at}, \quad t \ge 0. \loppu
 \]
 \end{Exa}
-\index{zza@\sov!Szy@S‰teilyn vaimeneminen}%
-\begin{Exa}: \vahv{S‰teilyn vaimeneminen}. S‰teilyn kulkiessa homogeenisessa v‰liaineessa on
-yksityisen hiukkasen todenn‰kˆisyys tˆrm‰t‰ v‰liaineen atomiytimeen verrannollinen kuljettuun
-matkaan $\Delta x$, kun $\abs{\Delta x}$ on pieni. Jos s‰teilyn intensiteetti on $I(x)$
-(hiukkasta/m$^2$/s), niin s‰teily vaimenee t‰llˆin tˆrm‰ysten johdosta m‰‰r‰ll‰
+\index{zza@\sov!Szy@S√§teilyn vaimeneminen}%
+\begin{Exa}: \vahv{S√§teilyn vaimeneminen}. S√§teilyn kulkiessa homogeenisessa v√§liaineessa on
+yksityisen hiukkasen todenn√§k√∂isyys t√∂rm√§t√§ v√§liaineen atomiytimeen verrannollinen kuljettuun
+matkaan $\Delta x$, kun $\abs{\Delta x}$ on pieni. Jos s√§teilyn intensiteetti on $I(x)$
+(hiukkasta/m$^2$/s), niin s√§teily vaimenee t√§ll√∂in t√∂rm√§ysten johdosta m√§√§r√§ll√§
 \[
 I(x+\Delta x)-I(x)\ =\ \Delta I\ \approx\ -aI(x)\Delta x,
 \]
-miss‰ $a$ on aineelle ominainen vakio (dimensiottomana positiivinen, mittayksikkˆ 1/m). Jos 
-t‰ss‰ oletetaan, ett‰ approksimaation virhe on $r(x,\Delta x)$, miss‰ 
-$\lim_{\Delta x \kohti 0} r(x,\Delta x)/\Delta x = 0$, niin jakamalla $\Delta x$:ll‰ ja 
-antamalla $\Delta x \kohti 0$ saadaan tarkka s‰teilyn vaimenemislaki
-(vrt.\ Esimerkki \ref{eksponenttifunktio fysiikassa}:\,\ref{s‰teilyvaimennus})
+miss√§ $a$ on aineelle ominainen vakio (dimensiottomana positiivinen, mittayksikk√∂ 1/m). Jos 
+t√§ss√§ oletetaan, ett√§ approksimaation virhe on $r(x,\Delta x)$, miss√§ 
+$\lim_{\Delta x \kohti 0} r(x,\Delta x)/\Delta x = 0$, niin jakamalla $\Delta x$:ll√§ ja 
+antamalla $\Delta x \kohti 0$ saadaan tarkka s√§teilyn vaimenemislaki
+(vrt.\ Esimerkki \ref{eksponenttifunktio fysiikassa}:\,\ref{s√§teilyvaimennus})
 \[
 I'(x)=-aI(x) \qimpl I(x) = I(0)\,e^{-ax}, \quad x \ge 0. \loppu 
 \]
 \end{Exa}
 \index{zza@\sov!Koronkorko}%
-\begin{Exa}: \vahv{Koronkorko}. P‰‰oman kasvaessa jatkuvaa (koron)korkoa noudattaa p‰‰oman
-m‰‰r‰ $A(t)$ lakia
+\begin{Exa}: \vahv{Koronkorko}. P√§√§oman kasvaessa jatkuvaa (koron)korkoa noudattaa p√§√§oman
+m√§√§r√§ $A(t)$ lakia
 \[ 
 A(t+\Delta t) - A(t)\ =\ \Delta A\ \approx\ aA(t)\Delta t \quad (\Delta t\ \text{pieni}), 
 \]
-miss‰ $a = \tfrac{p}{100T}$, korkoprosentin ollessa $p$ ajassa $T$ (esim.\ $\,T = 1$ vuosi).
-Rajalla $\Delta t \kohti 0$ p‰‰dyt‰‰n p‰‰oman kasvulakiin
+miss√§ $a = \tfrac{p}{100T}$, korkoprosentin ollessa $p$ ajassa $T$ (esim.\ $\,T = 1$ vuosi).
+Rajalla $\Delta t \kohti 0$ p√§√§dyt√§√§n p√§√§oman kasvulakiin
 \[ 
 A'(t) = aA(t) \qimpl A(t) = A(0)\,e^{at}, \quad t \ge 0. \loppu 
 \] 
 \end{Exa}
 \index{zza@\sov!Ilmanpaine}%
-\begin{Exa}: \vahv{Ilmanpaine}.\ M‰‰rit‰ ilmanpaine korkeudella $x$ maan pinnasta. Oletetaan 
-vakiol‰mpˆtila. \end{Exa}
+\begin{Exa}: \vahv{Ilmanpaine}.\ M√§√§rit√§ ilmanpaine korkeudella $x$ maan pinnasta. Oletetaan 
+vakiol√§mp√∂tila. \end{Exa}
 \ratk Jos ilman tiheys korkeudella $x$ on $\rho(x)$, niin voimatasapainon perusteella saadaan
-paineen muutoksen ja tiheyden v‰lille yhteys
+paineen muutoksen ja tiheyden v√§lille yhteys
 \[ 
 \Delta p = p(x+\Delta x) - p(x) = - g\rho(x) \Delta x + r(x,\Delta x), 
 \]
-miss‰ $g \approx 10\ \text{m/s}^2$ on maan vetovoiman kiihtyvyys ja 
+miss√§ $g \approx 10\ \text{m/s}^2$ on maan vetovoiman kiihtyvyys ja 
 $r(x,\Delta x)/\Delta x \kohti 0$, kun $\Delta x \kohti 0$. 
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -284,16 +284,16 @@ $r(x,\Delta x)/\Delta x \kohti 0$, kun $\Delta x \kohti 0$.
 %\caption{Paineen differentiaalinen muutos}
 \end{center}
 \end{figure}
-Kaasun tilanyht‰lˆ vakiol‰mpˆtilassa on
+Kaasun tilanyht√§l√∂ vakiol√§mp√∂tilassa on
 \[ 
 p/\rho = K = \text{vakio}. 
 \]
-Sijoittamalla t‰st‰ $\rho(x) = p(x)/K$ tasapainoyht‰lˆˆn ja antamalla $\Delta x \kohti 0$ 
-p‰‰dyt‰‰n paineen v‰henemislakiin
+Sijoittamalla t√§st√§ $\rho(x) = p(x)/K$ tasapainoyht√§l√∂√∂n ja antamalla $\Delta x \kohti 0$ 
+p√§√§dyt√§√§n paineen v√§henemislakiin
 \[ 
 p' = - p/a \qimpl p(x) = p(0) e^{-x/a}, 
 \]
-miss‰
+miss√§
 \[ 
 a\ =\ \dfrac{K}{g}\ =\ \dfrac{p(0)}{\rho(0)g}\ 
       \approx\ \dfrac{10^5\ \text{N/m}^2}{1\ \text{kg/m}^3 \cdot 10\ \text{m/s}^2}\ 
@@ -312,93 +312,93 @@ c) \ $f(x)=e^x,\quad$ d) $f(x)=\ln(1+x),\quad$ e) \ $f(x)=\tan\tfrac{\pi x}{2},\
 f) \ $f(x)=x^x$.
 
 \item
-Arvioi differentiaalin avulla, paljonko kuution a) tilavuus kasvaa, kun s‰rm‰ pitenee $p\%$, \ 
+Arvioi differentiaalin avulla, paljonko kuution a) tilavuus kasvaa, kun s√§rm√§ pitenee $p\%$, \ 
 b) pinta-ala pienenee, kun tilavuus pienenee $p\%$.
 
 \item
-Lentokone lent‰‰ suoraan maassa olevan katsojan yli $10$ km:n korkeudella. Lentokoneen
-n‰kyess‰ vaakatasoon n‰hden kulmassa $60\aste$ havaitaan, ett‰ kulma muuttuu $4.3\aste$
-viidess‰ sekunnissa. Arvioi koneen nopeus k‰ytt‰en differentiaalia.
+Lentokone lent√§√§ suoraan maassa olevan katsojan yli $10$ km:n korkeudella. Lentokoneen
+n√§kyess√§ vaakatasoon n√§hden kulmassa $60\aste$ havaitaan, ett√§ kulma muuttuu $4.3\aste$
+viidess√§ sekunnissa. Arvioi koneen nopeus k√§ytt√§en differentiaalia.
 
 \item
-Hiiht‰j‰, jonka paino on $80$ kg, laskee m‰ke‰, jonka kaltevuus on vakio. Hiiht‰j‰n nopeus $v$
+Hiiht√§j√§, jonka paino on $80$ kg, laskee m√§ke√§, jonka kaltevuus on vakio. Hiiht√§j√§n nopeus $v$
 nousee arvoon $50$ km/h, jolloin painovoima, kitka ja ilmanvastus saavuttavat tasapainon.
-Painovoima ja kitkavoima ovat verrannollisia hiiht‰j‰n massaan $m$ ja ilmanvastusvoima on
-$F_v=\text{vakio}\times Av^\gamma$, miss‰ $A$ on hiiht‰j‰n efektiivinen poikkipinta-ala ja 
+Painovoima ja kitkavoima ovat verrannollisia hiiht√§j√§n massaan $m$ ja ilmanvastusvoima on
+$F_v=\text{vakio}\times Av^\gamma$, miss√§ $A$ on hiiht√§j√§n efektiivinen poikkipinta-ala ja 
 $\gamma \ge 1$ on vakio. \newline
-Oletetaan lis‰ksi, ett‰ $m=\text{vakio}\times L^{2.4}$ ja $A=\text{vakio}\times L^{1.2}$, miss‰ 
-$L$ on hiiht‰j‰n vatsanymp‰rys. Arvioi tapauksissa a) $\gamma =1$, b) $\gamma=2$, kuinka paljon
-prosentteina hiiht‰j‰n laskuvauhti kasvaa tai pienenee h‰nen lihottuaan $2$ kg. K‰yt‰ 
+Oletetaan lis√§ksi, ett√§ $m=\text{vakio}\times L^{2.4}$ ja $A=\text{vakio}\times L^{1.2}$, miss√§ 
+$L$ on hiiht√§j√§n vatsanymp√§rys. Arvioi tapauksissa a) $\gamma =1$, b) $\gamma=2$, kuinka paljon
+prosentteina hiiht√§j√§n laskuvauhti kasvaa tai pienenee h√§nen lihottuaan $2$ kg. K√§yt√§ 
 differentiaalia! (Muut olosuhteet, kuten keli, oletetaan vakioksi.)
 
 \item
-a) Valmistettaessa $x$ kpl j‰‰kaappeja on tuotantokustannus
+a) Valmistettaessa $x$ kpl j√§√§kaappeja on tuotantokustannus
 \[
 K(x)=8000+200x+\max\{0,\,200x-0.5x^2\}.
 \]
-Arvioi differentiaalin avulla yhden j‰‰kaapin nk.\ marginaalinen tuotantokustannus, eli luku
+Arvioi differentiaalin avulla yhden j√§√§kaapin nk.\ marginaalinen tuotantokustannus, eli luku
 $K(x+1)-K(x)$, kun $x=200$. \vspace{1mm}\newline
-b) Er‰‰n valtion verotuksessa on marginaalinen (eli pienen lis‰tulon) veroprosentti vuositulon
-$x$ (yksikkˆ $10^5$ euroa) funktiona
+b) Er√§√§n valtion verotuksessa on marginaalinen (eli pienen lis√§tulon) veroprosentti vuositulon
+$x$ (yksikk√∂ $10^5$ euroa) funktiona
 \[
 p(x)=20+10\,\min\{x+3x^2,\,4\}.
 \]
-Mill‰ vuositulon arvolla marginaalinen veroprosentti $=50$\,? Ent‰ mill‰ vuositulon arvolla
+Mill√§ vuositulon arvolla marginaalinen veroprosentti $=50$\,? Ent√§ mill√§ vuositulon arvolla
 vero on puolet vuositulosta?
 
 \item
-a) Kuution pinta-ala kasvaa $50\ \text{cm}^2/\text{s}$. Mik‰ on tilavuuden kasvunopeus, kun
-s‰rm‰n pituus $=20$ cm? \vspace{1mm}\newline
-b) Vesis‰iliˆn tilavuus on $400$ l. S‰iliˆst‰ lasketaan vett‰ niin, ett‰ veden m‰‰r‰
-(yksikkˆ l) s‰iliˆss‰ hetkell‰ $t$ (yksikkˆ min) on
+a) Kuution pinta-ala kasvaa $50\ \text{cm}^2/\text{s}$. Mik√§ on tilavuuden kasvunopeus, kun
+s√§rm√§n pituus $=20$ cm? \vspace{1mm}\newline
+b) Vesis√§ili√∂n tilavuus on $400$ l. S√§ili√∂st√§ lasketaan vett√§ niin, ett√§ veden m√§√§r√§
+(yksikk√∂ l) s√§ili√∂ss√§ hetkell√§ $t$ (yksikk√∂ min) on
 \[
 V(t)=(20-t)^2, \quad 0 \le t \le 20.
 \]
-Mik‰ on veden hetkellinen virtausnopeus s‰iliˆst‰ silloin, kun s‰iliˆ on vett‰ puolillaan?
+Mik√§ on veden hetkellinen virtausnopeus s√§ili√∂st√§ silloin, kun s√§ili√∂ on vett√§ puolillaan?
 
 \item
 Piste $P$ liikkuu pitkin $x$-akselia negatiiviseen suuntaan vakionopeudella $v_1$ ja piste $Q$
-liikkuu $y$-akselia pitkin negatiiviseen suuntaan vakionopeudella $v_2$. Hetkell‰ $t=0$ on
-$P=(a,0)$ ja $Q=(0,b)$, miss‰ $a,b>0$. Jos $s(t)$ janan $PQ$ pituus hetkell‰ $t$, niin mill‰ 
-hetkell‰ on $s'(t)=0$, ja mik‰ on $s$:n pienin arvo?
+liikkuu $y$-akselia pitkin negatiiviseen suuntaan vakionopeudella $v_2$. Hetkell√§ $t=0$ on
+$P=(a,0)$ ja $Q=(0,b)$, miss√§ $a,b>0$. Jos $s(t)$ janan $PQ$ pituus hetkell√§ $t$, niin mill√§ 
+hetkell√§ on $s'(t)=0$, ja mik√§ on $s$:n pienin arvo?
 
 \item \index{zzb@\nim!IKEA}
-(IKEA) Kaupan pys‰kˆintialueelle tulee aikav‰lill‰ $[0,T]$ $Q_{in}(t)$ autoa/h ja alueelta
-l‰htee $Q_{out}(t)$ autoa/h (hetkellisi‰ arvoja). Johda differentiaaliyht‰lˆ
-(= autojen s‰ilymislaki!) pys‰kˆintialueella olevien autojen m‰‰r‰lle $m(t)$ hetkell‰ $t$, ja
-ratkaise $m(t)$ aikav‰lill‰ $\,[0,T]\,$, kun $\,T=6$h, pys‰kˆinti\-alueella on $120$ autoa
-hetkell‰ $t=0$ ja
+(IKEA) Kaupan pys√§k√∂intialueelle tulee aikav√§lill√§ $[0,T]$ $Q_{in}(t)$ autoa/h ja alueelta
+l√§htee $Q_{out}(t)$ autoa/h (hetkellisi√§ arvoja). Johda differentiaaliyht√§l√∂
+(= autojen s√§ilymislaki!) pys√§k√∂intialueella olevien autojen m√§√§r√§lle $m(t)$ hetkell√§ $t$, ja
+ratkaise $m(t)$ aikav√§lill√§ $\,[0,T]\,$, kun $\,T=6$h, pys√§k√∂inti\-alueella on $120$ autoa
+hetkell√§ $t=0$ ja
 \[
 Q_{in}(t)=200(1-t/T), \quad Q_{out}(t)=270(t/T)^2.
 \]
-Jos halutaan vain selvitt‰‰, mill‰ ajan hetkell‰ pys‰kˆintialueella on eniten autoja, niin
-miten t‰m‰ saadaan yksinkertaisimmin selville?
+Jos halutaan vain selvitt√§√§, mill√§ ajan hetkell√§ pys√§k√∂intialueella on eniten autoja, niin
+miten t√§m√§ saadaan yksinkertaisimmin selville?
 
 \item (*) \index{zzb@\nim!Lusi}
-(Lusi) Moottoritie kapenee kaksikaistaiseksi tieksi L:ss‰. Moottoritiet‰ pitkin tulee L:‰‰n
-$Q(t)$ autoa/h (hetkellinen arvo), ja L:st‰ alkavalle kapeammalle tielle mahtuu ajamaan
-enint‰‰n $Q_0=1800$ autoa/h. Olkoon $m(t)=$ L:‰‰n ruuhkautuneiden autojen m‰‰r‰ hetkell‰
-$t$ (aikayksikkˆ =h). Muodosta ruuhkautumisen matemaattinen malli ja ratkaise sen avulla
-$m(t)$ aikav‰lill‰ $t\in[0,20]$, kun tiedet‰‰n, ett‰ $m(0)=0$ ja
+(Lusi) Moottoritie kapenee kaksikaistaiseksi tieksi L:ss√§. Moottoritiet√§ pitkin tulee L:√§√§n
+$Q(t)$ autoa/h (hetkellinen arvo), ja L:st√§ alkavalle kapeammalle tielle mahtuu ajamaan
+enint√§√§n $Q_0=1800$ autoa/h. Olkoon $m(t)=$ L:√§√§n ruuhkautuneiden autojen m√§√§r√§ hetkell√§
+$t$ (aikayksikk√∂ =h). Muodosta ruuhkautumisen matemaattinen malli ja ratkaise sen avulla
+$m(t)$ aikav√§lill√§ $t\in[0,20]$, kun tiedet√§√§n, ett√§ $m(0)=0$ ja
 \[
 Q(t)=540+\max\,\{0,\,1440t-180t^2\}.
 \]
 
 \item (*) \index{zzb@\nim!Puimakone} 
-(Puimakone) Hihnapyˆr‰n keskipiste on origossa ja s‰de on $R=0.3$ (yksikkˆ m). Hihnapyˆr‰‰
-pyˆritt‰‰ myˆt‰p‰iv‰‰n hihna, joka koskettaa pyˆr‰‰ napakulmissa $\varphi\in[0,\pi]$. Hihnaa
-liikutetaan toisella samans‰teisell‰, moottorik‰yttˆisell‰ hihnapyˆr‰ll‰, joka sijaitsee
+(Puimakone) Hihnapy√∂r√§n keskipiste on origossa ja s√§de on $R=0.3$ (yksikk√∂ m). Hihnapy√∂r√§√§
+py√∂ritt√§√§ my√∂t√§p√§iv√§√§n hihna, joka koskettaa py√∂r√§√§ napakulmissa $\varphi\in[0,\pi]$. Hihnaa
+liikutetaan toisella samans√§teisell√§, moottorik√§ytt√∂isell√§ hihnapy√∂r√§ll√§, joka sijaitsee
 negatiivisella $y$-akselilla.
 \begin{multicols}{2} \raggedcolumns
-Olkoon $F(\varphi)$ hihnaa j‰nnitt‰v‰ voima napakulmassa $\varphi,\ \varphi\in[0,\pi]$ ja
-olkoon $\mu$ hihnan ja hihnapyˆr‰n v‰linen kitkakerroin. Tarkastelemalla v‰lill‰ 
+Olkoon $F(\varphi)$ hihnaa j√§nnitt√§v√§ voima napakulmassa $\varphi,\ \varphi\in[0,\pi]$ ja
+olkoon $\mu$ hihnan ja hihnapy√∂r√§n v√§linen kitkakerroin. Tarkastelemalla v√§lill√§ 
 $[\varphi-\Delta\varphi/2,\varphi+\Delta\varphi/2]$ olevan hihnan palan voimatasapainoa johda 
-differentiaaliyht‰lˆ
+differentiaaliyht√§l√∂
 \[
 F'(\varphi) = -\mu F(\varphi), \quad \varphi\in(0,\pi)
 \]
-ja laske hihnaa j‰nnitt‰v‰t voimat $F_1$ ja $F_2$ hihnapyˆrien v‰lisiss‰ hihnan osissa
-(ks.\ kuva), kun $\mu=0.2$ ja hihnapyˆr‰‰ v‰‰nt‰v‰ momentti on $M=(F_1-F_2)R=1200$ Nm. 
+ja laske hihnaa j√§nnitt√§v√§t voimat $F_1$ ja $F_2$ hihnapy√∂rien v√§lisiss√§ hihnan osissa
+(ks.\ kuva), kun $\mu=0.2$ ja hihnapy√∂r√§√§ v√§√§nt√§v√§ momentti on $M=(F_1-F_2)R=1200$ Nm. 
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{picture}(5,6)(0,0)

@@ -5,43 +5,43 @@
 \begin{Def} \label{reaalinen E(x)} \index{eksponenttifunktio!a@aksioomat|emph}
 Reaalifunktio $E$ on \kor{eksponenttifunktio}, jos
 \begin{itemize}
-\item[(E1)] $E(x)$ on m‰‰ritelty $\forall x\in\R$,
+\item[(E1)] $E(x)$ on m√§√§ritelty $\forall x\in\R$,
 \item[(E2)] $E(0)\neq 0$,
-\item[(E3)] $E$ on jatkuva pisteess‰ $x=0$,
+\item[(E3)] $E$ on jatkuva pisteess√§ $x=0$,
 \item[(E4)] $E(x+y)=E(x)E(y)\quad\forall x,y\in\R$.
 \end{itemize}
 \end{Def}
-Eksponenttifunktion keskeisint‰ aksioomaa E4 voi sovellustilanteissa usein pit‰‰ 
-jopa luonnonlakina. Myˆs aksiooman E3 taustalla voi n‰hd‰ fysikaalisia syit‰,
-vrt.\ sovellusesimerkit j‰ljemp‰n‰ Luvussa \ref{eksponenttifunktio fysiikassa}.
+Eksponenttifunktion keskeisint√§ aksioomaa E4 voi sovellustilanteissa usein pit√§√§ 
+jopa luonnonlakina. My√∂s aksiooman E3 taustalla voi n√§hd√§ fysikaalisia syit√§,
+vrt.\ sovellusesimerkit j√§ljemp√§n√§ Luvussa \ref{eksponenttifunktio fysiikassa}.
 \begin{Lause} \label{eksponenttifunktion ominaisuudet}
 Jokaisella eksponenttifunktiolla $E$ on seuraavat ominaisuudet:
 \begin{itemize}
 \item[(a)] $E(x)>0\quad\forall x\in\R$.
 \item[(b)] $E(0)=1$.
-\item[(c)] $E$ on jatkuva koko $\R$:ss‰.
-\item[(d)] Jos $x\in\Q$, niin $E(x)$ m‰‰r‰ytyy yksik‰sitteisesti luvusta $E(1)=b$ ja
+\item[(c)] $E$ on jatkuva koko $\R$:ss√§.
+\item[(d)] Jos $x\in\Q$, niin $E(x)$ m√§√§r√§ytyy yksik√§sitteisesti luvusta $E(1)=b$ ja
 \[
 \boxed{\kehys\quad E(x)=b^x\quad\forall x\in\Q. \quad}
 \]
-\item[(e)] $E$ on $\R$:ssa aidosti kasvava, kun $b=E(1)>1$, ja aidosti v‰henev‰, kun $b<1$.
+\item[(e)] $E$ on $\R$:ssa aidosti kasvava, kun $b=E(1)>1$, ja aidosti v√§henev√§, kun $b<1$.
            Jos $b=1$, on $E(x)=1\ \forall x\in\R$.
 \end{itemize}
 \end{Lause}
 \tod (a) \ Koska $E(x)\cdot E(-x)=E(x-x)=E(0)\neq 0$ (E4,\,E2), on oltava 
-$E(x)\neq 0 \ \forall x\in\R$. Toisaalta on myˆs
+$E(x)\neq 0 \ \forall x\in\R$. Toisaalta on my√∂s
 $E(x)=E(\tfrac{x}{2}+\tfrac{x}{2})=[E(\tfrac{x}{2})]^2 \ge 0$ (E4), joten on oltava
 $E(x)>0 \ \forall x\in\R$.
 
 (b) \ Koska $E(0)\neq 0$ (E2) ja $E(0)=E(0+0)=[E(0)]^2$ (E4), on oltava $E(0)=1$.
 
 (c) \ Jos $x_n \kohti x\in\R$, niin $x_n-x \kohti 0\ \impl\ E(x_n-x) \kohti E(0)=1$
-(E3,(b)). Aksiooman E4 perusteella p‰tee t‰llˆin 
+(E3,(b)). Aksiooman E4 perusteella p√§tee t√§ll√∂in 
 \[
 E(x_n) = E(x)E(x_n-x) \kohti E(x)\cdot 1 = E(x).
 \]
-Koska t‰m‰ on tosi jokaiselle reaalilukujonolle, jolle $\lim_n x_n=x\in\R$, niin $E$ on
-jatkuva $x$:ss‰ ja siis koko $\R$:ss‰.
+Koska t√§m√§ on tosi jokaiselle reaalilukujonolle, jolle $\lim_n x_n=x\in\R$, niin $E$ on
+jatkuva $x$:ss√§ ja siis koko $\R$:ss√§.
 
 (d) \ Jos $E(1)=b$, niin aksiooman E4 mukaan
 \begin{align*}
@@ -59,60 +59,60 @@ E\left(\frac{m}{n}\right)\cdot E\left(-\frac{m}{n}\right)=E(0)=1 \
 \]
 niin on osoitettu:
 \[
-E\left(\frac{m}{n}\right) = b^{m/n} \quad \forall m\in\Z,\ n\in\N \qekv \text{v‰ite (d)}.
+E\left(\frac{m}{n}\right) = b^{m/n} \quad \forall m\in\Z,\ n\in\N \qekv \text{v√§ite (d)}.
 \]
 
-(e) \ Olkoon $b>1$ ja $x_1<x_2$. Oletetaan ensin, ett‰ $x_1,x_2\in\Q$, jolloin on
-$x=x_2-x_1\in\Q$ ja $x>0$, joten $x=p/q$ jollakin $p,q\in\N$. T‰llˆin on v‰itt‰m‰n (d) ja
-murtopotenssien laskus‰‰ntˆjen perusteella
+(e) \ Olkoon $b>1$ ja $x_1<x_2$. Oletetaan ensin, ett√§ $x_1,x_2\in\Q$, jolloin on
+$x=x_2-x_1\in\Q$ ja $x>0$, joten $x=p/q$ jollakin $p,q\in\N$. T√§ll√∂in on v√§itt√§m√§n (d) ja
+murtopotenssien laskus√§√§nt√∂jen perusteella
 \[
 E(x_1)-E(x_2) \,=\, b^{x_1}-b^{x_2}  \,=\, b^{x_1}\left(1-b^x\right) 
                                     \,=\, b^{x_1}\left(1-\sqrt[q]{b^p}\right).
 \]
-T‰ss‰ on $\sqrt[q]{b^p}>1$, koska $b>1$, joten $E(x_1)-E(x_2)<0$. On p‰‰telty, ett‰ jos
-$b>1$, niin $\forall x_1,x_2\in\Q$ p‰tee: $x_1<x_2\ \impl\ E(x_1)<E(x_2)$.
+T√§ss√§ on $\sqrt[q]{b^p}>1$, koska $b>1$, joten $E(x_1)-E(x_2)<0$. On p√§√§telty, ett√§ jos
+$b>1$, niin $\forall x_1,x_2\in\Q$ p√§tee: $x_1<x_2\ \impl\ E(x_1)<E(x_2)$.
 
 Seuraavaksi olkoon $x_1,x_2\in\R$ ja $x_1<x_2$ (edelleen $b>1$). Valitaan $t_1,t_2\in\Q$
-siten, ett‰ $x_1<t_1<t_2<x_2$ ja rationaalilukujonot $\seq{\alpha_n}$ ja $\seq{\beta_n}$
-siten, ett‰ $\lim_n\alpha_n=x_1$, $\lim_n\beta_n=x_2$ ja lis‰ksi $\alpha_n<x_1\ \forall n$ ja
-$\beta_n>x_2\ \forall n$. T‰llˆin koska $\alpha_n,t_1,t_2,\beta_n\in\Q$ ja
-$\alpha_n<t_1<t_2<\beta_n$, niin aiemman p‰‰ttelyn perusteella on
+siten, ett√§ $x_1<t_1<t_2<x_2$ ja rationaalilukujonot $\seq{\alpha_n}$ ja $\seq{\beta_n}$
+siten, ett√§ $\lim_n\alpha_n=x_1$, $\lim_n\beta_n=x_2$ ja lis√§ksi $\alpha_n<x_1\ \forall n$ ja
+$\beta_n>x_2\ \forall n$. T√§ll√∂in koska $\alpha_n,t_1,t_2,\beta_n\in\Q$ ja
+$\alpha_n<t_1<t_2<\beta_n$, niin aiemman p√§√§ttelyn perusteella on
 $E(\alpha_n)<E(t_1)<E(t_2)<E(\beta_n)\ \forall n$. Toisaalta koska $\alpha_n \kohti x_1$ ja
-$\beta_n \kohti x_2$, niin v‰itt‰m‰n (c) perusteella $E(\alpha_n) \kohti E(x_1)$ ja
-$E(\beta_n) \kohti E(x_2)$. Koska t‰ss‰ on $E(\alpha_n)<E(t_1)\ \forall n$ ja
+$\beta_n \kohti x_2$, niin v√§itt√§m√§n (c) perusteella $E(\alpha_n) \kohti E(x_1)$ ja
+$E(\beta_n) \kohti E(x_2)$. Koska t√§ss√§ on $E(\alpha_n)<E(t_1)\ \forall n$ ja
 $E(\beta_n)>E(t_2)\ \forall n$, niin seuraa $E(x_1) \le E(t_1)$ ja $E(x_2) \ge E(t_2)$
-(Lause \ref{jonotuloksia} [V1]), joten on n‰ytetty, ett‰
+(Lause \ref{jonotuloksia} [V1]), joten on n√§ytetty, ett√§
 \[
 E(x_1) = \lim_n E(\alpha_n) \le E(t_1) < E(t_2) \le \lim_n E(\beta_n) = E(x_2).
 \]
-Siis $E(x_1)<E(x_2)$. T‰m‰ perustui vain oletukseen, ett‰ $x_1,x_2\in\R$ ja $x_1<x_2$, joten
-v‰itt‰m‰ (e) on todistettu tapauksessa $b>1$. Tapauksessa $b<1$ on todistus vastaava.
-Tapauksessa $b=1$ on v‰itt‰mien (d) ja (c) mukaan $E(x)=1\ \forall x\in\Q$
+Siis $E(x_1)<E(x_2)$. T√§m√§ perustui vain oletukseen, ett√§ $x_1,x_2\in\R$ ja $x_1<x_2$, joten
+v√§itt√§m√§ (e) on todistettu tapauksessa $b>1$. Tapauksessa $b<1$ on todistus vastaava.
+Tapauksessa $b=1$ on v√§itt√§mien (d) ja (c) mukaan $E(x)=1\ \forall x\in\Q$
 $\impl\ E(x)=1\ \forall x\in\R$. \loppu
 
-Lauseesta \ref{eksponenttifunktion ominaisuudet} on syyt‰ huomauttaa, ett‰ siin‰ ei oteta
-tarkemmin kantaa, millainen eksponenttifunktioiden joukko on. Tulee ainoastaan n‰ytetyksi,
-ett‰ funktio $E(x)=1\ \forall x\in\R$ kuuluu joukkoon, jolloin j‰‰ jopa se mahdollisuus, ett‰
-t‰m‰ on eksponenttifunktioista ainoa (!). Eksponenttifunktion olemassaolokysymys ehdolla
-$E(1)=b \neq 1$ onkin oma ongelmansa, jonka ratkaiseminen edellytt‰‰ syv‰llisempi‰
-lukujonoteoreettisia tarkasteluja. N‰m‰ tarkastelut esitet‰‰n luvun lopussa, jolloin tulee
+Lauseesta \ref{eksponenttifunktion ominaisuudet} on syyt√§ huomauttaa, ett√§ siin√§ ei oteta
+tarkemmin kantaa, millainen eksponenttifunktioiden joukko on. Tulee ainoastaan n√§ytetyksi,
+ett√§ funktio $E(x)=1\ \forall x\in\R$ kuuluu joukkoon, jolloin j√§√§ jopa se mahdollisuus, ett√§
+t√§m√§ on eksponenttifunktioista ainoa (!). Eksponenttifunktion olemassaolokysymys ehdolla
+$E(1)=b \neq 1$ onkin oma ongelmansa, jonka ratkaiseminen edellytt√§√§ syv√§llisempi√§
+lukujonoteoreettisia tarkasteluja. N√§m√§ tarkastelut esitet√§√§n luvun lopussa, jolloin tulee
 todistetuksi
 \begin{*Lause} \label{eksponenttifunktion olemassaolo} Aksioomat E1--E4 toteuttava
-eksponenttifunktio $E(x)$ on olemassa ja m‰‰r‰ytyy yksik‰sitteisesti ehdosta $E(1)=b$
+eksponenttifunktio $E(x)$ on olemassa ja m√§√§r√§ytyy yksik√§sitteisesti ehdosta $E(1)=b$
 jokaisella $b\in\R_+$.
 \end{*Lause}
-Jatkossa k‰ytet‰‰n eksponenttifunktiolle merkint‰‰ $E(x)=b^x$ myˆs kun $x\not\in\Q$. T‰llˆin
-siis tarkoitetaan funktiota, joka toteuttaa aksioomien E1--E4 lis‰ksi ehdon $E(1)=b$.
-Mainitun merkinn‰n myˆt‰ tulee m‰‰ritellyksi myˆs yleinen potenssifunktio
+Jatkossa k√§ytet√§√§n eksponenttifunktiolle merkint√§√§ $E(x)=b^x$ my√∂s kun $x\not\in\Q$. T√§ll√∂in
+siis tarkoitetaan funktiota, joka toteuttaa aksioomien E1--E4 lis√§ksi ehdon $E(1)=b$.
+Mainitun merkinn√§n my√∂t√§ tulee m√§√§ritellyksi my√∂s yleinen potenssifunktio
 $f(x)=x^\alpha,\ x>0,\ \alpha\in\R$, eli rajoituksesta $\alpha\in\Q$ voidaan luopua.
 \begin{Exa} Luku $\pi^\pi$ on eksponenttifunktion $E(x)=\pi^x$ ja potenssifunktion
-$f(x)=x^\pi$ yhteinen arvo $\pi$:ss‰. Lauseen \ref{eksponenttifunktion ominaisuudet} v‰itt‰m‰n
-(c) perusteella $\pi^\pi$ on laskettavissa esimerkiksi raja-arvona $\pi^\pi=\lim_n a_n$, miss‰
+$f(x)=x^\pi$ yhteinen arvo $\pi$:ss√§. Lauseen \ref{eksponenttifunktion ominaisuudet} v√§itt√§m√§n
+(c) perusteella $\pi^\pi$ on laskettavissa esimerkiksi raja-arvona $\pi^\pi=\lim_n a_n$, miss√§
 \begin{align*}
 \seq{a_n}\ &=\ \{\,\pi^3,\,\pi^{3.1},\,\pi^{3.14},\,\ldots\,\} \\
            &=\ \{\,\pi^3,\,\sqrt[10]{\pi^{31}}\,,\,\sqrt[100]{\pi^{314}}\,,\,\ldots\,\}.
 \end{align*}
-Algoritmina t‰m‰ on hitaanpuoleinen (tarkka arvo $\,36.46215960..\,$)\,:
+Algoritmina t√§m√§ on hitaanpuoleinen (tarkka arvo $\,36.46215960..\,$)\,:
 \begin{align*}
 a_0 = &31.00627668.. \\
 a_1 = &34.76679088.. \\
@@ -123,18 +123,18 @@ a_5 = &36.46204884.. \quad \loppu
 \end{align*}
 \end{Exa}
 
-Eksponenttifunktion $b^x$ keskeiset laskus‰‰nnˆt ovat
+Eksponenttifunktion $b^x$ keskeiset laskus√§√§nn√∂t ovat
 \[
 \boxed{\kehys\quad b^xb^y=b^{x+y}, \quad a^xb^x=(ab)^x, \quad(b^x)^y=b^{xy},
                                                        \quad a,b\in\R_+,\ x,y\in\R. \quad}
 \]
-N‰ist‰ s‰‰nnˆist‰ ensimm‰inen on perusaksiooma E4, joka yleist‰‰ murtopotensseille tutun
-laskus‰‰nnˆn $b^xb^y=b^{x+y}\ \forall x,y\in\Q$. Muutkin s‰‰nnˆt voi tulkita vastaavien
-murtopotenssien laskus‰‰ntˆjen (vrt.\ Luku \ref{kunta}) yleistyksiksi. N‰iden perustelu
-j‰tet‰‰n harjoitusteht‰viksi (Harj.teht.\,\ref{H-exp-1: s‰‰ntˆ 1}--\ref{H-exp-1: s‰‰ntˆ 2}).
+N√§ist√§ s√§√§nn√∂ist√§ ensimm√§inen on perusaksiooma E4, joka yleist√§√§ murtopotensseille tutun
+laskus√§√§nn√∂n $b^xb^y=b^{x+y}\ \forall x,y\in\Q$. Muutkin s√§√§nn√∂t voi tulkita vastaavien
+murtopotenssien laskus√§√§nt√∂jen (vrt.\ Luku \ref{kunta}) yleistyksiksi. N√§iden perustelu
+j√§tet√§√§n harjoitusteht√§viksi (Harj.teht.\,\ref{H-exp-1: s√§√§nt√∂ 1}--\ref{H-exp-1: s√§√§nt√∂ 2}).
 
 Koska eksponenttifunktio $E(x)$ on jatkuva ja aidosti monotoninen, kun $E(1)=b\neq 1$, niin 
-Ensimm‰isest‰ v‰liarvolauseesta (Lause \ref{ensimm‰inen v‰liarvolause}) ja ilmeisist‰ 
+Ensimm√§isest√§ v√§liarvolauseesta (Lause \ref{ensimm√§inen v√§liarvolause}) ja ilmeisist√§ 
 raja-arvotuloksista
 \[
 \lim_{x\kohti\infty} b^x=\begin{cases}
@@ -142,7 +142,7 @@ raja-arvotuloksista
 0, &\text{jos } b<1
 \end{cases}
 \]
-on p‰‰telt‰viss‰:
+on p√§√§telt√§viss√§:
 \[ 
 \boxed{\kehys\quad E(x)=b^x\ \ \text{on bijektio}\ \ E:\R\kohti\R_+ 
              \quad \text{jokaisella}\ b\in\R_+,\ b \neq 1. \quad}
@@ -185,113 +185,113 @@ on p‰‰telt‰viss‰:
 
 \subsection*{*Eksponenttifunktion konstruktio}
 
-Jatkossa esitett‰v‰ Lauseen \ref{eksponenttifunktion olemassaolo} todistus on
+Jatkossa esitett√§v√§ Lauseen \ref{eksponenttifunktion olemassaolo} todistus on
 konstruktiivinen, ts.\ todistuksessa konstruoidaan luku $E(x)\in\R$
-jokaisella $x\in\R$ niin, ett‰ aksioomat E1--E4 sek‰ lis‰ehto $E(1)=b\in\R_+$ toteutuvat.
-Koska Lauseen \ref{eksponenttifunktion ominaisuudet} perusteella jo tiedet‰‰n, ett‰
-$E(x)=b^x\ \forall x\in\Q$, niin riitt‰‰ m‰‰ritell‰ $E(x)$ myˆs irrationaalisilla $x$:n
-arvoilla ja varmistaa, ett‰ n‰in m‰‰ritellylle funktiolle aksioomat E3 ja E4 ovat voimassa.
+jokaisella $x\in\R$ niin, ett√§ aksioomat E1--E4 sek√§ lis√§ehto $E(1)=b\in\R_+$ toteutuvat.
+Koska Lauseen \ref{eksponenttifunktion ominaisuudet} perusteella jo tiedet√§√§n, ett√§
+$E(x)=b^x\ \forall x\in\Q$, niin riitt√§√§ m√§√§ritell√§ $E(x)$ my√∂s irrationaalisilla $x$:n
+arvoilla ja varmistaa, ett√§ n√§in m√§√§ritellylle funktiolle aksioomat E3 ja E4 ovat voimassa.
 Todistetaan ensin aputulos.
 \begin{Lem} \label{exp-aputulos} Jos $b\in\R_+$, niin funktio $F(x)=b^x$, $\DF_F=\Q$, on
-jatkuva pisteess‰ $x=0$, ts.\ jokaiselle rationaalilukujonolle $\seq{x_n}$ p‰tee:
+jatkuva pisteess√§ $x=0$, ts.\ jokaiselle rationaalilukujonolle $\seq{x_n}$ p√§tee:
 $x_n \kohti 0\ \impl\ F(x_n) \kohti 1$.
 \end{Lem}
-\tod Jos $\seq{x_n}$ on rationaalilukujono, jolle p‰tee $x_n \kohti 0$, niin
-$\forall k\in\N$ on olemassa indeksi $N_k\in\N$ siten, ett‰ $\abs{x_n}<1/k\ \forall n>N_k$ 
-(M‰‰ritelm‰ \ref{jonon raja}, $\eps=1/k$). Koska funktio $F(x)=b^x$ on monotoninen $\Q$:ssa
-(jopa aidosti, jos $b \neq 1$, ks.\ Lauseen \ref{eksponenttifunktion ominaisuudet} v‰itt‰m‰n
-(c) todistus), niin t‰llˆin p‰tee
+\tod Jos $\seq{x_n}$ on rationaalilukujono, jolle p√§tee $x_n \kohti 0$, niin
+$\forall k\in\N$ on olemassa indeksi $N_k\in\N$ siten, ett√§ $\abs{x_n}<1/k\ \forall n>N_k$ 
+(M√§√§ritelm√§ \ref{jonon raja}, $\eps=1/k$). Koska funktio $F(x)=b^x$ on monotoninen $\Q$:ssa
+(jopa aidosti, jos $b \neq 1$, ks.\ Lauseen \ref{eksponenttifunktion ominaisuudet} v√§itt√§m√§n
+(c) todistus), niin t√§ll√∂in p√§tee
 \[
 \abs{b^{x_n}-1}\, \le \,\abs{b^{1/k}-1}, \quad \text{kun}\ n>N_k.
 \]
-T‰ss‰ $b^{1/k} \kohti 1$, kun $k \kohti \infty$ (Propositio \ref{juurilemma}), joten
-$\forall \eps>0$ on olemassa indeksi $m$ siten, ett‰ $\abs{b^{1/m}-1}<\eps$. Valitsemalla
+T√§ss√§ $b^{1/k} \kohti 1$, kun $k \kohti \infty$ (Propositio \ref{juurilemma}), joten
+$\forall \eps>0$ on olemassa indeksi $m$ siten, ett√§ $\abs{b^{1/m}-1}<\eps$. Valitsemalla
 $k=m$ seuraa siis
 \[
 \abs{b^{x_n}-1} < \eps, \quad \text{kun}\ n>N_m\,.
 \]
-T‰ss‰ $\eps>0$ on mielivaltainen ja $N_m\in\N$, joten lukujonon suppenemisen m‰‰ritelm‰n
+T√§ss√§ $\eps>0$ on mielivaltainen ja $N_m\in\N$, joten lukujonon suppenemisen m√§√§ritelm√§n
 mukaan $\,b^{x_n} \kohti 1$. \loppu
 
-\vahv{Konstruktio}. \ Halutaan m‰‰ritell‰ $E(x)$, kun $x\in\R,\ x\not\in\Q$. Koska tiedet‰‰n,
-ett‰ $E$ (sik‰li kuin olemasa) on jatkuva $\R$:ss‰
-(Lause \ref{eksponenttifunktion ominaisuudet} (c)), niin m‰‰rittelyn perustaksi voidaan ottaa
-jatkaminen (vrt.\ Luku \ref{funktion raja-arvo})\,: L‰htien funktion $b^x$ alkuper‰isest‰
-m‰‰rittelyjoukosta $\Q$ laajennetaan m‰‰rittelyjoukko $\R$:ksi jatkuvuuden perusteella.
-T‰m‰ merkitsee, ett‰ jokaiselle rationaalilukujonolle $\seq{x_n}$ on oltava voimassa
+\vahv{Konstruktio}. \ Halutaan m√§√§ritell√§ $E(x)$, kun $x\in\R,\ x\not\in\Q$. Koska tiedet√§√§n,
+ett√§ $E$ (sik√§li kuin olemasa) on jatkuva $\R$:ss√§
+(Lause \ref{eksponenttifunktion ominaisuudet} (c)), niin m√§√§rittelyn perustaksi voidaan ottaa
+jatkaminen (vrt.\ Luku \ref{funktion raja-arvo})\,: L√§htien funktion $b^x$ alkuper√§isest√§
+m√§√§rittelyjoukosta $\Q$ laajennetaan m√§√§rittelyjoukko $\R$:ksi jatkuvuuden perusteella.
+T√§m√§ merkitsee, ett√§ jokaiselle rationaalilukujonolle $\seq{x_n}$ on oltava voimassa
 \begin{equation} \label{exp-jatko}
 x_n \kohti x\in\R \qimpl \lim_n b^{x_n} \,=\, \lim_n E(x_n) \,=\, E(x).
 \end{equation}
-Jotta t‰m‰ ehto voisi toimia $E(x)$:n m‰‰ritelm‰n‰, on ensinn‰kin varmistettava, ett‰ 
-$\forall x\in\R$ ja jokaiselle rationaalilukujonolle $\seq{x_n}$ p‰tee
-\begin{equation} \label{exp-v‰ite 1}
+Jotta t√§m√§ ehto voisi toimia $E(x)$:n m√§√§ritelm√§n√§, on ensinn√§kin varmistettava, ett√§ 
+$\forall x\in\R$ ja jokaiselle rationaalilukujonolle $\seq{x_n}$ p√§tee
+\begin{equation} \label{exp-v√§ite 1}
 x_n \kohti x \qimpl \text{$\seq{E(x_n)}\,$ on Cauchy}.
 \end{equation}
-Sik‰li kuin t‰m‰ on tosi, niin Cauchyn suppenemiskriteerin (Lause \ref{Cauchyn kriteeri})
-mukaan $E(x_n) \kohti y\in\R$. T‰m‰ ei kuitenkaan viel‰ todista funktioriippuvuutta
-$x \map y$, sill‰ on mahdollista, ett‰ $y$ riippuu jonosta $\seq{x_n}$ eik‰ vain sen
-raja-arvosta $x$. Siksi on viel‰ n‰ytett‰v‰, ett‰ jokaisella $x\in\R$ ja kaikille
-rationaalilukujonoille $\seq{x_n}$ ja $\seq{x_n'}$ p‰tee
-\begin{equation} \label{exp-v‰ite 2}
+Sik√§li kuin t√§m√§ on tosi, niin Cauchyn suppenemiskriteerin (Lause \ref{Cauchyn kriteeri})
+mukaan $E(x_n) \kohti y\in\R$. T√§m√§ ei kuitenkaan viel√§ todista funktioriippuvuutta
+$x \map y$, sill√§ on mahdollista, ett√§ $y$ riippuu jonosta $\seq{x_n}$ eik√§ vain sen
+raja-arvosta $x$. Siksi on viel√§ n√§ytett√§v√§, ett√§ jokaisella $x\in\R$ ja kaikille
+rationaalilukujonoille $\seq{x_n}$ ja $\seq{x_n'}$ p√§tee
+\begin{equation} \label{exp-v√§ite 2}
 x_n,x_n'\in\Q\,\ \ja\ x_n \kohti x\ \ja\ x_n' \kohti x \qimpl E(x_n)-E(x_n') \kohti 0.
 \end{equation}
-Jos ehdot \eqref{exp-v‰ite 1} ja \eqref{exp-v‰ite 2} toteutuvat kaikille
-rationaalilukujonoille $\seq{x_n}$ ja $\seq{x_n'}$, niin on n‰ytetty, ett‰ jokaisella
-$x\in\R$ (myˆs kun $x\in\Q$) on olemassa yksik‰sitteinen $y\in\R$ siten, ett‰ jokaiselle
-rationaalilukujonolle $\seq{x_n}$ p‰tee
+Jos ehdot \eqref{exp-v√§ite 1} ja \eqref{exp-v√§ite 2} toteutuvat kaikille
+rationaalilukujonoille $\seq{x_n}$ ja $\seq{x_n'}$, niin on n√§ytetty, ett√§ jokaisella
+$x\in\R$ (my√∂s kun $x\in\Q$) on olemassa yksik√§sitteinen $y\in\R$ siten, ett√§ jokaiselle
+rationaalilukujonolle $\seq{x_n}$ p√§tee
 \[
 x_n \kohti x\in\R \qimpl E(x_n) \kohti y.
 \]
-T‰llˆin $y$ riippuu vain raja-arvosta $x$, jolloin riippuvuus $x \map y$ voidaan ilmaista
+T√§ll√∂in $y$ riippuu vain raja-arvosta $x$, jolloin riippuvuus $x \map y$ voidaan ilmaista
 funktiosymbolilla $E$, eli  voidaan kirjoittaa $y=E(x)$ jatkamisperiaatteen \eqref{exp-jatko}
 mukaisesti.
 
-Jatkamisen perustana olevat v‰itt‰m‰t \eqref{exp-v‰ite 1} ja \eqref{exp-v‰ite 2}
-saadaan todistetuksi vedoten jo todettuun aksiooman E4 p‰tevyyteen murtopotenssien
-laskus‰‰ntˆn‰ (eli rationaalisilla $x$:n ja $y$:n arvoilla) ja Lemmaan \ref{exp-aputulos}.
-Ensinn‰kin jos $\seq{x_n}$ on rationaalilukujono, niin (E4):n mukaan
+Jatkamisen perustana olevat v√§itt√§m√§t \eqref{exp-v√§ite 1} ja \eqref{exp-v√§ite 2}
+saadaan todistetuksi vedoten jo todettuun aksiooman E4 p√§tevyyteen murtopotenssien
+laskus√§√§nt√∂n√§ (eli rationaalisilla $x$:n ja $y$:n arvoilla) ja Lemmaan \ref{exp-aputulos}.
+Ensinn√§kin jos $\seq{x_n}$ on rationaalilukujono, niin (E4):n mukaan
 \[
 E(x_n)-E(x_m) = E(x_m)[E(x_n-x_m)-1].
 \]
-Jos t‰ss‰ $x_n \kohti x\in\R$, niin $\seq{x_n}$ on Cauchy, joten $x_n-x_m \kohti 0$, kun 
-$n,m \kohti \infty$. T‰llˆin myˆs $E(x_n-x_m) \kohti 1$ (Lemma \ref{exp-aputulos}). Koska
-$\seq{E(x_n)}=\seq{b^{x_n}}$ on ep‰ilem‰tt‰ rajoitettu jono, niin p‰‰tell‰‰n
+Jos t√§ss√§ $x_n \kohti x\in\R$, niin $\seq{x_n}$ on Cauchy, joten $x_n-x_m \kohti 0$, kun 
+$n,m \kohti \infty$. T√§ll√∂in my√∂s $E(x_n-x_m) \kohti 1$ (Lemma \ref{exp-aputulos}). Koska
+$\seq{E(x_n)}=\seq{b^{x_n}}$ on ep√§ilem√§tt√§ rajoitettu jono, niin p√§√§tell√§√§n
 (ks.\ Lause \ref{jonotuloksia} [V3])
 \begin{align*}
 n,m \kohti \infty &\qimpl [E(x_n-x_m)-1]\ \kohti\ 0 \\
                   &\qimpl E(x_m)[E(x_n-x_m)-1]\ =\ E(x_n)-E(x_m)\ \kohti\ 0,
 \end{align*}
-mik‰ todistaa v‰itt‰m‰n \eqref{exp-v‰ite 1}. V‰itt‰m‰ \eqref{exp-v‰ite 2} n‰ytet‰‰n toteen 
-vastaavalla tavalla l‰htien hajotelmasta
+mik√§ todistaa v√§itt√§m√§n \eqref{exp-v√§ite 1}. V√§itt√§m√§ \eqref{exp-v√§ite 2} n√§ytet√§√§n toteen 
+vastaavalla tavalla l√§htien hajotelmasta
 \[
 E(x_n)-E(x_n') = E(x_n')[E(x_n-x_n')-1].
 \]   
-Funktio $E(x)$ on n‰in m‰‰ritelty yksik‰sitteisesti koko $\R$:ss‰ tunnetun funktion 
-$b^x,\ x\in\Q$, $b\in\R_+$ jatkona, jolloin myˆs ehto $E(1)=b$ toteutuu. Viel‰ on osoitettava,
-ett‰ n‰in m‰‰ritelty $E$ on eksponenttifunktio.
+Funktio $E(x)$ on n√§in m√§√§ritelty yksik√§sitteisesti koko $\R$:ss√§ tunnetun funktion 
+$b^x,\ x\in\Q$, $b\in\R_+$ jatkona, jolloin my√∂s ehto $E(1)=b$ toteutuu. Viel√§ on osoitettava,
+ett√§ n√§in m√§√§ritelty $E$ on eksponenttifunktio.
 
-\vahv{Aksiooma E3}. Jatkuvuuden m‰‰ritelm‰n mukaisesti on n‰ytett‰v‰, ett‰ jokaiselle
-reaalilukujonolle $\seq{x_n}$ p‰tee
+\vahv{Aksiooma E3}. Jatkuvuuden m√§√§ritelm√§n mukaisesti on n√§ytett√§v√§, ett√§ jokaiselle
+reaalilukujonolle $\seq{x_n}$ p√§tee
 \[
 x_n \kohti 0 \qimpl E(x_n) \kohti E(0)=1.
 \]
 Olkoon siis $\seq{x_n}$ reaalilukujono, jolle $\lim_n x_n=0$. Valitaan rationaalilukujono
-$\seq{\alpha_n}$ siten, ett‰ $\lim_n\alpha_n=0$ ja lis‰ksi jokaisella $n$ on joko (i)
+$\seq{\alpha_n}$ siten, ett√§ $\lim_n\alpha_n=0$ ja lis√§ksi jokaisella $n$ on joko (i)
 $0 \le x_n \le \alpha_n$ tai (ii) $\alpha_n \le x_n \le 0$. Lauseen 
-\ref{eksponenttifunktion ominaisuudet} v‰itt‰m‰n (e) mukaan edell‰ konstruoitu funktio $E$ on
-$\R$:ss‰ monotoninen, sill‰ todistus perustui vain funktion $F(x)=b^x,\ x\in\Q\,$
-ominaisuuksiin sek‰ jatkuvuusehtoon \eqref{exp-jatko}. Oletuksien (i) tai (ii) ja
+\ref{eksponenttifunktion ominaisuudet} v√§itt√§m√§n (e) mukaan edell√§ konstruoitu funktio $E$ on
+$\R$:ss√§ monotoninen, sill√§ todistus perustui vain funktion $F(x)=b^x,\ x\in\Q\,$
+ominaisuuksiin sek√§ jatkuvuusehtoon \eqref{exp-jatko}. Oletuksien (i) tai (ii) ja
 monotonisuuden perusteella
 \[
 \abs{E(x_n)-1} \le \abs{E(\alpha_n)-1}\,\ \forall n.
 \]
-T‰ss‰ on $\alpha_n\in\Q\ \forall n$ ja $\alpha_n \kohti 0$, joten $E(\alpha_n) \kohti 1$
-(Lemma \ref{exp-aputulos}). Siis myˆs $E(x_n) \kohti 1$, eli $E$ on jatkuva pisteess‰ $x=0$.
+T√§ss√§ on $\alpha_n\in\Q\ \forall n$ ja $\alpha_n \kohti 0$, joten $E(\alpha_n) \kohti 1$
+(Lemma \ref{exp-aputulos}). Siis my√∂s $E(x_n) \kohti 1$, eli $E$ on jatkuva pisteess√§ $x=0$.
 
 \vahv{Aksiooma E4}. \ Olkoon $x,y\in\R$ ja $\seq{x_n},\seq{y_n}$ rationaalilukujonoja,
-joille p‰tee $x_n \kohti x$ ja $y_n \kohti y$. T‰llˆin jokaisella $n$ p‰tee
-$E(x_n+y_n)=E(x_n)E(y_n)$, joten $E$:n m‰‰ritelm‰n \eqref{exp-jatko} ja lukujonojen
-raja-arvojen yhdistelys‰‰ntˆjen perusteella
+joille p√§tee $x_n \kohti x$ ja $y_n \kohti y$. T√§ll√∂in jokaisella $n$ p√§tee
+$E(x_n+y_n)=E(x_n)E(y_n)$, joten $E$:n m√§√§ritelm√§n \eqref{exp-jatko} ja lukujonojen
+raja-arvojen yhdistelys√§√§nt√∂jen perusteella
 \begin{align*}
 E(x+y)-E(x)E(y) &= \lim_n E(x_n+y_n) - \lim_n E(x_n) \cdot \lim_n E(y_n) \\
                 &= \lim_n [E(x_n+y_n)-E(x_n)E(y_n)] \\
@@ -302,41 +302,41 @@ E(x+y)-E(x)E(y) &= \lim_n E(x_n+y_n) - \lim_n E(x_n) \cdot \lim_n E(y_n) \\
 \begin{enumerate}
 
 \item
-Tarkista, mitk‰ eksponenttifunktion aksioomat toteuttaa 
+Tarkista, mitk√§ eksponenttifunktion aksioomat toteuttaa 
 \begin{align*}
 &\text{a)}\ \ E(x)=0,\,\ x\in\R, \\
 &\text{b)}\ \ E(x)=\begin{cases} 
                    b^x, &\text{jos}\ x\in\Q, \\ 0, &\text{jos}\ x\in\R,\ x\not\in\Q. 
                    \end{cases}
 \end{align*}
-Mik‰ tunnettu funktio sis‰ltyy j‰lkimm‰iseen joukkoon?
+Mik√§ tunnettu funktio sis√§ltyy j√§lkimm√§iseen joukkoon?
 
 \item
-Olkoon $\alpha\in\R$. N‰yt‰ eksponenttifunktion ominaisuuksiin vedoten, ett‰ funktio
-$f(x)=x^\alpha$ on v‰lill‰ $(0,\infty)$ aidosti kasvava, jos $\alpha>0$, ja aidosti v‰henev‰,
+Olkoon $\alpha\in\R$. N√§yt√§ eksponenttifunktion ominaisuuksiin vedoten, ett√§ funktio
+$f(x)=x^\alpha$ on v√§lill√§ $(0,\infty)$ aidosti kasvava, jos $\alpha>0$, ja aidosti v√§henev√§,
 jos $\alpha<0$.
 
 \item
-N‰yt‰, ett‰ approksimaation
+N√§yt√§, ett√§ approksimaation
 \[
 \pi^e \approx \sqrt[100]{\pi^{271}}\,=\,a
 \]
-suhteelliselle virheelle p‰tee arvio
+suhteelliselle virheelle p√§tee arvio
 \[
 0\,<\,\frac{\pi^e-a}{\pi^e}\,<\,\sqrt[100]{\pi}-1.
 \]
 
-\item \label{H-exp-1: s‰‰ntˆ 1}
-Perustele eksponenttifunktion jatkuvuuteen vedoten laskus‰‰ntˆ $a^xb^x=(ab)^x$,
-$x\in\R,\ a,b\in\R_+$. Oletetaan s‰‰ntˆ tunnetuksi, kun $x\in\Q$.
+\item \label{H-exp-1: s√§√§nt√∂ 1}
+Perustele eksponenttifunktion jatkuvuuteen vedoten laskus√§√§nt√∂ $a^xb^x=(ab)^x$,
+$x\in\R,\ a,b\in\R_+$. Oletetaan s√§√§nt√∂ tunnetuksi, kun $x\in\Q$.
 
-\item (*) \label{H-exp-1: s‰‰ntˆ 2}
-Halutaan todistaa laskus‰‰ntˆ $(b^x)^y=b^{xy}\ (b\in\R_+\,,\ x,y\in\R)$ eli s‰‰ntˆ
+\item (*) \label{H-exp-1: s√§√§nt√∂ 2}
+Halutaan todistaa laskus√§√§nt√∂ $(b^x)^y=b^{xy}\ (b\in\R_+\,,\ x,y\in\R)$ eli s√§√§nt√∂
 \[
 E(x)^y=E(xy), \quad x,y\in\R,
 \]
-kun $E(x)=b^x$. \ a) N‰yt‰, ett‰ jos $y\in\Q$, niin s‰‰ntˆ seuraa aksioomasta E4. \
-b) N‰yt‰ eksponenttifunktion jatkuvuuteen vedoten, ett‰ s‰‰ntˆ on p‰tev‰ myˆs, kun 
+kun $E(x)=b^x$. \ a) N√§yt√§, ett√§ jos $y\in\Q$, niin s√§√§nt√∂ seuraa aksioomasta E4. \
+b) N√§yt√§ eksponenttifunktion jatkuvuuteen vedoten, ett√§ s√§√§nt√∂ on p√§tev√§ my√∂s, kun 
 $y\in\R,\ y\not\in\Q$.
 
 \end{enumerate} 

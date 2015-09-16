@@ -1,29 +1,29 @@
-%poistokamaa vanhasta Luvusta IV-5: Parametriset k‰yr‰t
-\begin{Exa} Kuvan piirt‰mist‰ varten halutaan parametrisoida avaruuden pistejoukko $S$, joka 
-koostuu pisteist‰
+%poistokamaa vanhasta Luvusta IV-5: Parametriset k√§yr√§t
+\begin{Exa} Kuvan piirt√§mist√§ varten halutaan parametrisoida avaruuden pistejoukko $S$, joka 
+koostuu pisteist√§
 \[
 P \vastaa (x,y,z): \quad \begin{cases} x^2 + y^2 + z^2 = 1 \\ x+y+z = 1 \end{cases}
 \]
-M‰‰rittele jokin parametrisaatio. 
+M√§√§rittele jokin parametrisaatio. 
 \end{Exa}
-\ratk Kyseess‰ on origokeskisen pallon ja tason $\,T:\ x+y+z = 1\,$ leikkausviiva, joten $S$ on
-ympyr‰viiva tasolla $T$. Ympyr‰viivan keskipiste on $T$:n piste $P$, joka on l‰hinn‰ origoa $O$.
-T‰llˆin vektorin $\Vect{OP}$ on oltava $T$:n normaalivektorin suuntainen, eli 
+\ratk Kyseess√§ on origokeskisen pallon ja tason $\,T:\ x+y+z = 1\,$ leikkausviiva, joten $S$ on
+ympyr√§viiva tasolla $T$. Ympyr√§viivan keskipiste on $T$:n piste $P$, joka on l√§hinn√§ origoa $O$.
+T√§ll√∂in vektorin $\Vect{OP}$ on oltava $T$:n normaalivektorin suuntainen, eli 
 $\Vect{OP} = c(\vec{i}+\vec{j}+\vec{k})$ jollakin $c$. Koska $A = (1,0,0) \in S$, niin $c$ 
-m‰‰r‰ytyy ehdosta
+m√§√§r√§ytyy ehdosta
 \[ 
 \Vect{OP} \cdot \Vect{PA} 
      = c(\vec{i}+\vec{j}+\vec{k}) \cdot [\vec{i}-c(\vec{i}+\vec{j}+\vec{k}] = c-3c^2 = 0. 
 \]
-K‰yp‰ ratkaisu on $c=1/3$, joten er‰s tason $T$ suuntavektori on
+K√§yp√§ ratkaisu on $c=1/3$, joten er√§s tason $T$ suuntavektori on
 \[ 
 \vec{v}_1 = \overrightarrow{PA} = \frac{1}{3}(2\vec{i}-\vec{j}-\vec{k}). 
 \]
-T‰ss‰ $P$ on ympyr‰viivan $S$ keskipiste ja $A \in S$, joten ympyr‰viivan s‰de on
+T√§ss√§ $P$ on ympyr√§viivan $S$ keskipiste ja $A \in S$, joten ympyr√§viivan s√§de on
 \[ 
 R = \abs{\vec{v}_1} = \frac{\sqrt{6}}{3}\,. 
 \]
-Haetaan tasolle $T$ toinen suuntavektori $\vec{v}_2 = \overrightarrow{OB}$ siten ett‰ 
+Haetaan tasolle $T$ toinen suuntavektori $\vec{v}_2 = \overrightarrow{OB}$ siten ett√§ 
 $\,\vec{v}_1 \cdot \vec{v}_2 = 0$ ja $\abs{\vec{v}_2}=R$ (jolloin $B \in S$). Ehdot ovat
 \begin{align*}
 \vec{v}_2\ =\ a\,(\Vect{OP} \times \vec{v}_1)\ 
@@ -31,12 +31,12 @@ $\,\vec{v}_1 \cdot \vec{v}_2 = 0$ ja $\abs{\vec{v}_2}=R$ (jolloin $B \in S$). Eh
                         = \dfrac{\sqrt{6}}{3}\\
 \qimpl \vec{v}_2\ &= \pm \dfrac{1}{\sqrt{3}}(\vec{j}-\vec{k}).
 \end{align*}
-Kun t‰ss‰ valitaan etumerkki $+$, niin ympyr‰viivalle $S$ saadaan parametrisaatio 
-(vrt.\ Esimerkki \ref{ympyr‰n parametrisaatio})
+Kun t√§ss√§ valitaan etumerkki $+$, niin ympyr√§viivalle $S$ saadaan parametrisaatio 
+(vrt.\ Esimerkki \ref{ympyr√§n parametrisaatio})
 \[ 
 \vec{r}(t) = \Vect{OP} + R\cos t\,\vec{v}_1 + R\sin t\,\vec{v}_2, \quad t \in [0,2\pi]. 
 \]
-Komponenttimuodossa t‰m‰ on
+Komponenttimuodossa t√§m√§ on
 \[ \begin{cases}
 x = \dfrac{1}{3} + \dfrac{2\sqrt{6}}{9} \cos t, \\[2mm]
 y = \dfrac{1}{3} - \dfrac{\sqrt{6}}{9} \cos t + \dfrac{\sqrt{2}}{3} \sin t, \\[2mm]

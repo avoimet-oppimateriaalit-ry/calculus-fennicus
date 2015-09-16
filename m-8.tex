@@ -1,80 +1,80 @@
-\section[Lineaaristen yhtälöryhmien sovellusesimerkkejä]{*Lineaaristen yhtälöryhmien 
-perinteisiä \\ sovellusesimerkkejä} 
-\label{yhtälöryhmät} 
-\sectionmark{Perinteiset lineaariset yhtälöryhmät}
+\section[Lineaaristen yhtÃ¤lÃ¶ryhmien sovellusesimerkkejÃ¤]{*Lineaaristen yhtÃ¤lÃ¶ryhmien 
+perinteisiÃ¤ \\ sovellusesimerkkejÃ¤} 
+\label{yhtÃ¤lÃ¶ryhmÃ¤t} 
+\sectionmark{Perinteiset lineaariset yhtÃ¤lÃ¶ryhmÃ¤t}
 \alku
 
 Tietokoneiden avulla suoritettavalle laajamittaiselle tieteellis-tekniselle laskennalle 
---- esimerkiksi numeeriselle sään ennustamiselle --- on tyypillistä, että huomattava osa 
-tietokoneen käyttämästä laskenta-ajasta kuluu suurten lineaaristen yhtälöryhmien ratkaisuun. 
-Yhtälöryhmiin päädytään, kun tarkastelun kohteena olevat luonnonlait (säätä ennustettaessa 
-virtausmekaniikan perusyhtälöt) \kor{diskretoidaan}, eli muunnetaan numeerisen laskennan 
-kannalta soveliaaseen likimääräiseen muotoon. Laskemisen palauttaminen nimenomaan
-\pain{lineaarisiksi} yhtälöryhmiksi on malleissa tavallista senkin vuoksi, että lähinnä
-vain tämän tyyppisten perustehtävien numeerisen ratkaisemisen tietokone viime kädessä 'osaa'.
+--- esimerkiksi numeeriselle sÃ¤Ã¤n ennustamiselle --- on tyypillistÃ¤, ettÃ¤ huomattava osa 
+tietokoneen kÃ¤yttÃ¤mÃ¤stÃ¤ laskenta-ajasta kuluu suurten lineaaristen yhtÃ¤lÃ¶ryhmien ratkaisuun. 
+YhtÃ¤lÃ¶ryhmiin pÃ¤Ã¤dytÃ¤Ã¤n, kun tarkastelun kohteena olevat luonnonlait (sÃ¤Ã¤tÃ¤ ennustettaessa 
+virtausmekaniikan perusyhtÃ¤lÃ¶t) \kor{diskretoidaan}, eli muunnetaan numeerisen laskennan 
+kannalta soveliaaseen likimÃ¤Ã¤rÃ¤iseen muotoon. Laskemisen palauttaminen nimenomaan
+\pain{lineaarisiksi} yhtÃ¤lÃ¶ryhmiksi on malleissa tavallista senkin vuoksi, ettÃ¤ lÃ¤hinnÃ¤
+vain tÃ¤mÃ¤n tyyppisten perustehtÃ¤vien numeerisen ratkaisemisen tietokone viime kÃ¤dessÃ¤ 'osaa'.
 
-Modernien tieteellis-teknisten laskentatehtävien ohella suuren lineaarisen yhtälöryhmän ongelma
-on keskeinen myös monissa perinteisemmissä --- usein tietokonetta paljon vanhemmissa --- 
-matemaattisissa malleissa, joita esiintyy erityisesti insinööritieteissä. Seuraavassa esitetään
-kaksi tällaista klassista sovellusesimerkkiä, toinen sähkötekniikasta ja toinen rakenteiden 
+Modernien tieteellis-teknisten laskentatehtÃ¤vien ohella suuren lineaarisen yhtÃ¤lÃ¶ryhmÃ¤n ongelma
+on keskeinen myÃ¶s monissa perinteisemmissÃ¤ --- usein tietokonetta paljon vanhemmissa --- 
+matemaattisissa malleissa, joita esiintyy erityisesti insinÃ¶Ã¶ritieteissÃ¤. Seuraavassa esitetÃ¤Ã¤n
+kaksi tÃ¤llaista klassista sovellusesimerkkiÃ¤, toinen sÃ¤hkÃ¶tekniikasta ja toinen rakenteiden 
 mekaniikasta.
 
-\subsection*{Sähköpiiri: Vastusverkko}
-\index{zza@\sov!Szyhkzzc@Sähköpiiri: Vastusverkko|vahv}
+\subsection*{SÃ¤hkÃ¶piiri: Vastusverkko}
+\index{zza@\sov!Szyhkzzc@SÃ¤hkÃ¶piiri: Vastusverkko|vahv}
 
 \begin{multicols}{2}
-\parbox{2in}{Tarkastellaan klassista sähköpiiriä, joka on pelkkien \pain{vastusten} muodostama
+\parbox{2in}{Tarkastellaan klassista sÃ¤hkÃ¶piiriÃ¤, joka on pelkkien \pain{vastusten} muodostama
 verkko. Olkoot verkon solmupisteet $P_i,\ i = 1 \ldots n$, ja olkoot pisteet $P_i,\,P_j$ 
-yhdistetty vastuksella $R_{ij}$ (jollei suoraa yhteyttä ole, asetetaan $1/R_{ij}\,=\,0$
-yhtälöryhmässä \eqref{m-8.3} jäljempänä). Oheisessa kuvassa on yleinen neljän solmun verkko.}
+yhdistetty vastuksella $R_{ij}$ (jollei suoraa yhteyttÃ¤ ole, asetetaan $1/R_{ij}\,=\,0$
+yhtÃ¤lÃ¶ryhmÃ¤ssÃ¤ \eqref{m-8.3} jÃ¤ljempÃ¤nÃ¤). Oheisessa kuvassa on yleinen neljÃ¤n solmun verkko.}
 \begin{figure}[H]
 \begin{center}
 \epsfig{file=kuvat/kuvaM-1.ps}
 \end{center}
 \end{figure}
 \end{multicols}
-Jos merkitään $I_{ij} =$ \pain{virta} vastuksen $R_{ij}$ läpi, positiivisena $P_i$:stä poispäin
+Jos merkitÃ¤Ã¤n $I_{ij} =$ \pain{virta} vastuksen $R_{ij}$ lÃ¤pi, positiivisena $P_i$:stÃ¤ poispÃ¤in
 (vrt.\ kuvio), niin 
 \index{Kirchhoffin laki}%
 \pain{Kirchhoffin} \pain{lain} (\hist{G.R. Kirchhoff}, 1845) mukaan
 \begin{equation} \label{m-8.1}
 \sum_{j=1}^n I_{ij}\ =\ I_i, \quad i = 1 \ldots n,
 \end{equation}
-missä $I_i =$ solmuun $P_i$ ulkoapäin syötetty virta. Toisaalta
+missÃ¤ $I_i =$ solmuun $P_i$ ulkoapÃ¤in syÃ¶tetty virta. Toisaalta
 \index{Ohmin laki}%
 \pain{Ohmin} \pain{lain} (\hist{G.S. Ohm}, 1826) mukaan
 \begin{equation} \label{m-8.2}
 R_{ij} I_{ij}\ =\ V_i - V_j, \quad i,j = 1 \ldots n,
 \end{equation}
-missä $V_i =$ j\pain{ännite} solmussa $P_i$. Ohmin lakia \eqref{m-8.2} käyttäen voidaan virrat
-$I_{ij}$ yhtälöryhmässä \eqref{m-8.1} lausua jännitteiden avulla, jolloin tuloksena on systeemi
+missÃ¤ $V_i =$ j\pain{Ã¤nnite} solmussa $P_i$. Ohmin lakia \eqref{m-8.2} kÃ¤yttÃ¤en voidaan virrat
+$I_{ij}$ yhtÃ¤lÃ¶ryhmÃ¤ssÃ¤ \eqref{m-8.1} lausua jÃ¤nnitteiden avulla, jolloin tuloksena on systeemi
 \begin{equation} \label{m-8.3}
 \sum_{j=1}^n a_{ij} V_j\ =\ I_i, \quad i = 1 \ldots n,
 \end{equation}
-missä
+missÃ¤
 \[
 a_{ii}\ =\ \sum_{j=1}^n (1/R_{ij}), \quad a_{ij}\ =\ -1/R_{ij},\,\ i \neq j.
 \]
-Tämä on lineaarinen yhtälöryhmä kokoa $n \times n$, missä $x_i = V_i$, $b_i = I_i$. 
-\begin{Exa} Jos nelisolmuisessa verkossa (vrt.\ kuvio edellä) on 
-$R_{ij} = R,\ i,j = 1 \ldots 4,\ i \neq j$, niin jännitteille
-$V_i$ saadaan yhtälöryhmä
+TÃ¤mÃ¤ on lineaarinen yhtÃ¤lÃ¶ryhmÃ¤ kokoa $n \times n$, missÃ¤ $x_i = V_i$, $b_i = I_i$. 
+\begin{Exa} Jos nelisolmuisessa verkossa (vrt.\ kuvio edellÃ¤) on 
+$R_{ij} = R,\ i,j = 1 \ldots 4,\ i \neq j$, niin jÃ¤nnitteille
+$V_i$ saadaan yhtÃ¤lÃ¶ryhmÃ¤
 \[ \left\{ \begin{array}{rrrrrrrrl} 3V_1&-& V_2&-& V_3&-& V_4&\ \ =\ \ &RI_1\\
                                     -V_1&+&3V_2&-& V_3&-& V_4&\ \ =\ \ &RI_2\\
                                     -V_1&-& V_2&+&3V_3&-& V_4&\ \ =\ \ &RI_3\\
                                     -V_1&-& V_2&-& V_3&+&3V_4&\ \ =\ \ &RI_4
 \end{array} \right. \]
-Tämä on singulaarinen systeemi: Jos esim.\ $I_1 = I \neq 0$ ja $I_2 = I_3 = I_4 = 0$, niin 
-ratkaisua ei ole. Jos myös $I_1 = 0$, niin $V_i = V,\ i = 1 \ldots 4$ on ratkaisu millä tahansa
-$V \in \R$, ts.\ ratkaisuja on äärettömän monta. \loppu 
+TÃ¤mÃ¤ on singulaarinen systeemi: Jos esim.\ $I_1 = I \neq 0$ ja $I_2 = I_3 = I_4 = 0$, niin 
+ratkaisua ei ole. Jos myÃ¶s $I_1 = 0$, niin $V_i = V,\ i = 1 \ldots 4$ on ratkaisu millÃ¤ tahansa
+$V \in \R$, ts.\ ratkaisuja on Ã¤Ã¤rettÃ¶mÃ¤n monta. \loppu 
 \end{Exa}
  
-Esimerkin singulaarisuusongelma on yhtälöryhmän \eqref{m-8.3} ominaisuus yleisemminkin.
-Nimittän kertoimien $a_{ij}$ ym.\ lausekkeista nähdään, että
+Esimerkin singulaarisuusongelma on yhtÃ¤lÃ¶ryhmÃ¤n \eqref{m-8.3} ominaisuus yleisemminkin.
+NimittÃ¤n kertoimien $a_{ij}$ ym.\ lausekkeista nÃ¤hdÃ¤Ã¤n, ettÃ¤
 \[
 \sum_{j=1}^n a_{kj}\ =\ \sum_{i=1}^n a_{ik}\ =\ 0, \quad k = 1 \ldots n.
 \]
-Tästä on kaksi seuraamusta: Ensinnäkin jos yhtälöryhmän \eqref{m-8.3} yhtälöt lasketaan 
+TÃ¤stÃ¤ on kaksi seuraamusta: EnsinnÃ¤kin jos yhtÃ¤lÃ¶ryhmÃ¤n \eqref{m-8.3} yhtÃ¤lÃ¶t lasketaan 
 puolittain yhteen saadaan
 \[
 (\sum_{i=1}^n a_{i1})\,V_1 + \ldots + (\sum_{i=1}^n a_{in})\,V_n\ =\ \sum_{i=1}^n I_i,
@@ -83,68 +83,68 @@ eli
 \begin{equation} \label{m-8.4}
 0\ =\ \sum_{i=1}^n I_i.
 \end{equation}
-Toiseksi nähdään, että jos $\seq{V_i}$ on systeemin \eqref{m-8.4} ratkaisu, niin myös 
-$\seq{V_i + V}$ on ratkaisu millä tahansa $V \in \R$, sillä
+Toiseksi nÃ¤hdÃ¤Ã¤n, ettÃ¤ jos $\seq{V_i}$ on systeemin \eqref{m-8.4} ratkaisu, niin myÃ¶s 
+$\seq{V_i + V}$ on ratkaisu millÃ¤ tahansa $V \in \R$, sillÃ¤
 \[
 \sum_{j=1}^n a_{ij} (V_j + V)\ =\ \sum_{j=1}^n a_{ij} V_j\ +\ (\sum_{j=1}^n a_{ij})\,V\ 
                                =\ I_i + 0\ =\ I_i, \quad i = 1 \ldots n.
 \]
-On siis päätelty: (a) Jos yhtälöryhmällä \eqref{m-8.3} on ratkaisu, niin ehto \eqref{m-8.4} 
-toteutuu, ts.\ tämä on \pain{välttämätön} \pain{ehto} ratkeavuudelle. (b) Jos yhtälöryhmä 
-\eqref{m-8.3} on ratkeava, niin ratkaisuja on äärettömän monta. Yhtälöryhmä \eqref{m-8.3} on 
+On siis pÃ¤Ã¤telty: (a) Jos yhtÃ¤lÃ¶ryhmÃ¤llÃ¤ \eqref{m-8.3} on ratkaisu, niin ehto \eqref{m-8.4} 
+toteutuu, ts.\ tÃ¤mÃ¤ on \pain{vÃ¤lttÃ¤mÃ¤tÃ¶n} \pain{ehto} ratkeavuudelle. (b) Jos yhtÃ¤lÃ¶ryhmÃ¤ 
+\eqref{m-8.3} on ratkeava, niin ratkaisuja on Ã¤Ã¤rettÃ¶mÃ¤n monta. YhtÃ¤lÃ¶ryhmÃ¤ \eqref{m-8.3} on 
 siis yleisesti singulaarinen.
 
-Singulaarisuusongelma on merkki siitä, että matemaattista mallia ei ole ajateltu 
+Singulaarisuusongelma on merkki siitÃ¤, ettÃ¤ matemaattista mallia ei ole ajateltu 
 (fysikaaliselta kannalta) aivan loppuun asti. --- Ongelmaan onkin yksinkertainen 
-'sähkömiehen ratkaisu': \pain{Maadoitetaan} verkon yksi solmu $P_k$. Matemaattisessa mallissa
-tämä merkitsee solmussa $P_k$ asetettavia ehtoja
+'sÃ¤hkÃ¶miehen ratkaisu': \pain{Maadoitetaan} verkon yksi solmu $P_k$. Matemaattisessa mallissa
+tÃ¤mÃ¤ merkitsee solmussa $P_k$ asetettavia ehtoja
 \begin{equation} \label{m-8.5}
 V_k\ =\ V_{ref}, \quad I_k\ =\ - \sum_{i \neq k} I_i.
 \end{equation}
-Ensimmäinen ehto asettaa jännitteelle $V_k$ jonkin valinnaisen referenssiarvon $V_{ref}$, esim.\
-$V_{ref} = 0$. Tämä on luvallista, koska fysikaalisesti merkitseviä ovat vain jännite-erot. 
-Toisessa ehdossa voidaan $I_k$ tulkita \pain{maadoitusvirraksi}, joka määräytyy fysikaalisesti
-siten, että syöttövirtojen tasapainoehto \eqref{m-8.4} (myös fysikaalinen ehto!) toteutuu. Ehto
-$V_k = V_{ref}$ poistaa $V_k$:n tuntemattomien joukosta, jolloin yhtälöryhmä \eqref{m-8.3} 
+EnsimmÃ¤inen ehto asettaa jÃ¤nnitteelle $V_k$ jonkin valinnaisen referenssiarvon $V_{ref}$, esim.\
+$V_{ref} = 0$. TÃ¤mÃ¤ on luvallista, koska fysikaalisesti merkitseviÃ¤ ovat vain jÃ¤nnite-erot. 
+Toisessa ehdossa voidaan $I_k$ tulkita \pain{maadoitusvirraksi}, joka mÃ¤Ã¤rÃ¤ytyy fysikaalisesti
+siten, ettÃ¤ syÃ¶ttÃ¶virtojen tasapainoehto \eqref{m-8.4} (myÃ¶s fysikaalinen ehto!) toteutuu. Ehto
+$V_k = V_{ref}$ poistaa $V_k$:n tuntemattomien joukosta, jolloin yhtÃ¤lÃ¶ryhmÃ¤ \eqref{m-8.3} 
 voidaan kirjoittaa muotoon
 \[
 \sum_{j \neq k} a_{ij} V_j\ =\ I_i - a_{ik} V_{ref}\ = J_i, \quad i = 1 \ldots n.
 \]
-Tästä voidaan edelleen $k$:s yhtälö poistaa tarpeettomana. Nimittäin koska
+TÃ¤stÃ¤ voidaan edelleen $k$:s yhtÃ¤lÃ¶ poistaa tarpeettomana. NimittÃ¤in koska
 \[
 \sum_{i=1}^n a_{ij} = 0 \qimpl a_{kj} = - \sum_{i \neq k} a_{ij}, \qquad j = 1 \ldots n,
 \]
-niin olettamalla yhtälöryhmän \eqref{m-8.3} muut yhtälöt ($i \neq k$) sekä ehdon \eqref{m-8.5}
-jälkimmäinen osa toteutuviksi päätellään
+niin olettamalla yhtÃ¤lÃ¶ryhmÃ¤n \eqref{m-8.3} muut yhtÃ¤lÃ¶t ($i \neq k$) sekÃ¤ ehdon \eqref{m-8.5}
+jÃ¤lkimmÃ¤inen osa toteutuviksi pÃ¤Ã¤tellÃ¤Ã¤n
 \begin{align*}
 \sum_{j=1}^n a_{kj} V_j\ &=\ - \sum_{j=1}^n (\sum_{i \neq k} a_{ij})\,V_j \\
                          &=\ - \sum_{i \neq k} (\sum_{j=1}^n a_{ij} V_j)\ 
                           =\ - \sum_{i \neq k} I_i\ =\ I_k.
 \end{align*}
-(Tässä tehty summeerausjärjestyksen vaihto perustuu yhteenlaskun vaihdantalakiin.) Tuloksen 
-perusteella $k$:s yhtälö on muiden yhtälöiden ja lisäehdon \eqref{m-8.5} seuraus, siis 
+(TÃ¤ssÃ¤ tehty summeerausjÃ¤rjestyksen vaihto perustuu yhteenlaskun vaihdantalakiin.) Tuloksen 
+perusteella $k$:s yhtÃ¤lÃ¶ on muiden yhtÃ¤lÃ¶iden ja lisÃ¤ehdon \eqref{m-8.5} seuraus, siis 
 tarpeeton.
 
-Em. toimenpiteiden jälkeen on sähköpiirin matemaattinen malli supistunut lineaariseksi 
-yhtälöryhmäksi kokoa $(n-1) \times (n-1)$. Tapauksessa $V_{ref} = 0$ redusoitu malli saadaan
-yksinkertaisesti poistamalla yhtälöryhmän taulukkomuodosta taulukon $k$:s sarake
-(vastaten ehtoa $V_k = 0$) ja $k$:s rivi ($k$:nnen yhtälön poisto). Malli saa tällöin muodon 
+Em. toimenpiteiden jÃ¤lkeen on sÃ¤hkÃ¶piirin matemaattinen malli supistunut lineaariseksi 
+yhtÃ¤lÃ¶ryhmÃ¤ksi kokoa $(n-1) \times (n-1)$. Tapauksessa $V_{ref} = 0$ redusoitu malli saadaan
+yksinkertaisesti poistamalla yhtÃ¤lÃ¶ryhmÃ¤n taulukkomuodosta taulukon $k$:s sarake
+(vastaten ehtoa $V_k = 0$) ja $k$:s rivi ($k$:nnen yhtÃ¤lÃ¶n poisto). Malli saa tÃ¤llÃ¶in muodon 
 \begin{equation} \label{m-8.6}
 \sum_{j \neq k} a_{ij} V_j\ =\ I_i, \quad i = 1 \ldots n,\ \ i \neq k.
 \end{equation}
-Osoittautuu (tarkemmat perustelut sivuutetaan), että yhtälöryhmä \eqref{m-8.6} on aina 
-säännöllinen.
+Osoittautuu (tarkemmat perustelut sivuutetaan), ettÃ¤ yhtÃ¤lÃ¶ryhmÃ¤ \eqref{m-8.6} on aina 
+sÃ¤Ã¤nnÃ¶llinen.
 \jatko \begin{Exa} (jatko) \ Jos asetetaan solmussa $P_4$ maadoitusehto $V_4 = 0$, niin 
-tapauksessa $I_1 = I,\ I_2 = I_3 = 0$ on redusoidulla systeemillä
+tapauksessa $I_1 = I,\ I_2 = I_3 = 0$ on redusoidulla systeemillÃ¤
 \[ \left\{ \begin{array}{rrrrrrl}  3V_1&-& V_2&-& V_3&\ \ =\ \ &RI\\
                                   -V_1&+&3V_2&-& V_3&\ \ =\ \ & 0\\
                                   -V_1&-& V_2&+&3V_3&\ \ =\ \ &0
 \end{array} \right. \] 
-(yksikäsitteinen) ratkaisu
+(yksikÃ¤sitteinen) ratkaisu
 \[
 V_1 = \frac{1}{2}\,RI, \quad V_2 = \frac{1}{4}\,RI, \quad V_3 = \frac{1}{4}\,RI.
 \]
-Ratkaisun perusteella solmujen $P_1$ ja $P_4$ välinen efektiivinen vastus (kokonaisvastus) on
+Ratkaisun perusteella solmujen $P_1$ ja $P_4$ vÃ¤linen efektiivinen vastus (kokonaisvastus) on
 \[
 R_{eff}\ =\ \frac{V_1 - V_4}{I}\ =\ \frac{1}{2}\,R. \quad \loppu
 \] \end{Exa}
@@ -153,19 +153,19 @@ R_{eff}\ =\ \frac{V_1 - V_4}{I}\ =\ \frac{1}{2}\,R. \quad \loppu
 \index{zza@\sov!Ristikkorakenne|vahv}
 
 Tarkastellaan kimmoisten \pain{sauvo}j\pain{en} muodostamaa ristikkorakennetta, jossa sauvat on
-liitetty toisiinsa solmupisteissä $P_i,\ i = 1 \ldots p$. Oletetaan, että liitokset välittävät
-sauvasta toiseen vain vetoa/puristusta, eivät vääntöä (esim.\ löysä pulttiliitos). Sauvassa, 
-jonka päätepisteet ovat $P_i,\,P_j$, olkoon sauvaa venyttävä \pain{voima}
+liitetty toisiinsa solmupisteissÃ¤ $P_i,\ i = 1 \ldots p$. Oletetaan, ettÃ¤ liitokset vÃ¤littÃ¤vÃ¤t
+sauvasta toiseen vain vetoa/puristusta, eivÃ¤t vÃ¤Ã¤ntÃ¶Ã¤ (esim.\ lÃ¶ysÃ¤ pulttiliitos). Sauvassa, 
+jonka pÃ¤Ã¤tepisteet ovat $P_i,\,P_j$, olkoon sauvaa venyttÃ¤vÃ¤ \pain{voima}
 \[
 \vec{F}_{ij}\ =\ F_{ij} \vec{t}_{ij},
 \]
-missä $\vec{t}_{ij}$ on vektorin $\Vect{P_i P}_j$ suuntainen yksikkövektori 
-(kyseessä on puristus, jos $F_{ij} < 0$). Tällöin \pain{voimatasa}p\pain{aino} pisteessä $P_i$
-edellyttää, että
+missÃ¤ $\vec{t}_{ij}$ on vektorin $\Vect{P_i P}_j$ suuntainen yksikkÃ¶vektori 
+(kyseessÃ¤ on puristus, jos $F_{ij} < 0$). TÃ¤llÃ¶in \pain{voimatasa}p\pain{aino} pisteessÃ¤ $P_i$
+edellyttÃ¤Ã¤, ettÃ¤
 \begin{equation} \label{m-8.7}
 \sum_{j \in \Lambda_i} \vec{F}_{ij}\,+\,\vec{G}_i\,=\,\vec{0}, \quad i = 1 \ldots p,
 \end{equation}
-missä $\{\,P_j \mid j \in \Lambda_i\,\}$ on niiden solmupisteiden joukko, joihin $P_i$ on 
+missÃ¤ $\{\,P_j \mid j \in \Lambda_i\,\}$ on niiden solmupisteiden joukko, joihin $P_i$ on 
 yhdistetty sauvalla, ja $\vec{G}_i =$ ulkoinen kuorma solmussa $P_i$.
 \begin{figure}[H]
 \begin{center}
@@ -173,27 +173,27 @@ yhdistetty sauvalla, ja $\vec{G}_i =$ ulkoinen kuorma solmussa $P_i$.
 \end{center}
 \end{figure}
 Kuvassa kuormitustilaa on purettu kahdeksi nk.\ \pain{va}p\pain{aaka}pp\pain{alekuvioksi}, 
-joissa kummasakin vallitsee voimatasapaino. --- Huomattakoon, että liitoksia koskeva 
-tasapainoehto \eqref{m-8.7} on hyvin samankaltainen kuin sähköpiirejä koskeva Kirchhoffin laki
-\eqref{m-8.1}, joka myös on tasapainoehto (virtoja koskeva).
+joissa kummasakin vallitsee voimatasapaino. --- Huomattakoon, ettÃ¤ liitoksia koskeva 
+tasapainoehto \eqref{m-8.7} on hyvin samankaltainen kuin sÃ¤hkÃ¶piirejÃ¤ koskeva Kirchhoffin laki
+\eqref{m-8.1}, joka myÃ¶s on tasapainoehto (virtoja koskeva).
 
-Kun yhtälöryhmässä \eqref{m-8.7} vektoriyhtälöt puretaan koordinaattimuotoon karteesisessa 
-koordinaatistossa, niin skalaaristen yhtälöiden kokonaismääräksi tulee $2p$ tai $3p$ riippuen
-siitä, onko kyseessä taso- vai avaruusristikkorakenne. Tuntemattomien $F_{ij}$ lukumäärä on 
-luonnollisesti sama kuin sauvojen lukumäärä rakenteessa. Yhtälöryhmä \eqref{m-8.7} voi olla 
-suoraan yksikäsitteisesti ratkeava, jolloin sanotaan, että rakenne on 
-\pain{staattisesti} \pain{määrä}y\pain{t}y\pain{vä}. Tavallisempi tilanne on kuitenkin, että 
-systeemi \eqref{m-8.7} on alimääräytyvä, eli \pain{staattisesti} \pain{määräämätön}. Tällöin 
-tarvitaan tasapainolakien lisäksi toinen fysiikan laki,
+Kun yhtÃ¤lÃ¶ryhmÃ¤ssÃ¤ \eqref{m-8.7} vektoriyhtÃ¤lÃ¶t puretaan koordinaattimuotoon karteesisessa 
+koordinaatistossa, niin skalaaristen yhtÃ¤lÃ¶iden kokonaismÃ¤Ã¤rÃ¤ksi tulee $2p$ tai $3p$ riippuen
+siitÃ¤, onko kyseessÃ¤ taso- vai avaruusristikkorakenne. Tuntemattomien $F_{ij}$ lukumÃ¤Ã¤rÃ¤ on 
+luonnollisesti sama kuin sauvojen lukumÃ¤Ã¤rÃ¤ rakenteessa. YhtÃ¤lÃ¶ryhmÃ¤ \eqref{m-8.7} voi olla 
+suoraan yksikÃ¤sitteisesti ratkeava, jolloin sanotaan, ettÃ¤ rakenne on 
+\pain{staattisesti} \pain{mÃ¤Ã¤rÃ¤}y\pain{t}y\pain{vÃ¤}. Tavallisempi tilanne on kuitenkin, ettÃ¤ 
+systeemi \eqref{m-8.7} on alimÃ¤Ã¤rÃ¤ytyvÃ¤, eli \pain{staattisesti} \pain{mÃ¤Ã¤rÃ¤Ã¤mÃ¤tÃ¶n}. TÃ¤llÃ¶in 
+tarvitaan tasapainolakien lisÃ¤ksi toinen fysiikan laki,
 \index{Hooken laki}%
 \pain{Hooken} \pain{laki} 
-(\hist{R. Hooke}, 1678). Hooken lain mukaan jokainen sauva käyttäytyy ristikkoa kuormitettaessa
-kuten jousi, ts.\ voima $F_{ij}$ on suoraan verrannollinen sauvan \pain{ven}y\pain{mään}.
+(\hist{R. Hooke}, 1678). Hooken lain mukaan jokainen sauva kÃ¤yttÃ¤ytyy ristikkoa kuormitettaessa
+kuten jousi, ts.\ voima $F_{ij}$ on suoraan verrannollinen sauvan \pain{ven}y\pain{mÃ¤Ã¤n}.
 
-\mbox{\parbox{2in}{Oletetaan, että ristikkoa kuormitettaessa solmu $P_i$ 
-(paikkavektori $\vec{r}_i$) siirtyy paikkaan $Q_i$, ja merkitään \pain{siirt}y\pain{mää} 
-$\vec{u}_i = \Vect{P_i Q}_i$. Olettaen, että siirtymät ovat pieniä verrattuna sauvan pituuteen, 
-voidaan kunkin sauvan venymä (negatiivinen venymä tarkoittaa puristumaa) laskea likimäärin 
+\mbox{\parbox{2in}{Oletetaan, ettÃ¤ ristikkoa kuormitettaessa solmu $P_i$ 
+(paikkavektori $\vec{r}_i$) siirtyy paikkaan $Q_i$, ja merkitÃ¤Ã¤n \pain{siirt}y\pain{mÃ¤Ã¤} 
+$\vec{u}_i = \Vect{P_i Q}_i$. Olettaen, ettÃ¤ siirtymÃ¤t ovat pieniÃ¤ verrattuna sauvan pituuteen, 
+voidaan kunkin sauvan venymÃ¤ (negatiivinen venymÃ¤ tarkoittaa puristumaa) laskea likimÃ¤Ã¤rin 
 kaavasta (vrt.\ kuvio)}}
 \mbox{\parbox{4in}{\epsfig{file=kuvat/kuvaM-3.ps}}}
 \[
@@ -201,48 +201,48 @@ kaavasta (vrt.\ kuvio)}}
                                      \approx\ (\vec{u}_j - \vec{u}_i) \cdot \vec{t}_{ij}.
 \]
 
-(Approksimaatiossa oletetaan, että siirtymien $\vec{u}_i$ ja $\vec{u}_j$ sauvaa vastaan 
-kohtisuorat komponentit eivät vaikuta sauvan pituuteen.) Hooken lain mukaan venymä on suoraan
+(Approksimaatiossa oletetaan, ettÃ¤ siirtymien $\vec{u}_i$ ja $\vec{u}_j$ sauvaa vastaan 
+kohtisuorat komponentit eivÃ¤t vaikuta sauvan pituuteen.) Hooken lain mukaan venymÃ¤ on suoraan
 verrannollinen voimaan, eli
 \begin{equation} \label{m-8.8}
 F_{ij}\ =\ K_{ij} (\vec{u}_j - \vec{u}_i) \cdot \vec{t}_{ij},
 \end{equation}
-missä $K_{ij}$ on sauvalle ominainen kerroin (jousivakio). --- Huomattakon jälleen analogia 
-sähköpiireihin: Siirtymät $\vec{u}_i$ vastaavat jännitteitä, voimat $F_{ij}$ virtoja, ja 
+missÃ¤ $K_{ij}$ on sauvalle ominainen kerroin (jousivakio). --- Huomattakon jÃ¤lleen analogia 
+sÃ¤hkÃ¶piireihin: SiirtymÃ¤t $\vec{u}_i$ vastaavat jÃ¤nnitteitÃ¤, voimat $F_{ij}$ virtoja, ja 
 Hooken laki \eqref{m-8.8} vertautuu vastuksia koskevaan Ohmin lakiin. Jos sauvat ovat 
 tasapaksuisia ja tehty homogeenisesta materiaalista, on jousivakio $K_{ij}$ suoraan 
-verrannollinen sauvan poikkipinta-alaan ja kääntäen verrannollinen sauvan pituuteen. Jousivakio
-riippuu myös materiaalin laadusta nk.\ \pain{kimmokertoimen} (materiaalivakio) kautta. 
+verrannollinen sauvan poikkipinta-alaan ja kÃ¤Ã¤ntÃ¤en verrannollinen sauvan pituuteen. Jousivakio
+riippuu myÃ¶s materiaalin laadusta nk.\ \pain{kimmokertoimen} (materiaalivakio) kautta. 
 
-Hooken lakia \eqref{m-8.8} käyttäen tulee yhtälöryhmästä \eqref{m-8.7} lineaarinen, 
-tuntemattomina siirtymävektorien $\vec{u}_i$ koordinaatit. Tuntemattomien määrä on siis joko 
-$2p$ (tasoristikko) tai $3p$ (avaruusristikko). Jotta yhtälöryhmästä saataisiin säännöllinen, on
-ristikko vielä 'maadoitettava', eli tuettava riittävästi. Tuentaehdot voivat olla esim.\ muotoa 
+Hooken lakia \eqref{m-8.8} kÃ¤yttÃ¤en tulee yhtÃ¤lÃ¶ryhmÃ¤stÃ¤ \eqref{m-8.7} lineaarinen, 
+tuntemattomina siirtymÃ¤vektorien $\vec{u}_i$ koordinaatit. Tuntemattomien mÃ¤Ã¤rÃ¤ on siis joko 
+$2p$ (tasoristikko) tai $3p$ (avaruusristikko). Jotta yhtÃ¤lÃ¶ryhmÃ¤stÃ¤ saataisiin sÃ¤Ã¤nnÃ¶llinen, on
+ristikko vielÃ¤ 'maadoitettava', eli tuettava riittÃ¤vÃ¤sti. Tuentaehdot voivat olla esim.\ muotoa 
 $\vec{u}_k = \vec{0}$, jolloin solmun $P_k$ siirtyminen rakennetta kuormitettaessa on estetty.
-Tällaisessa solmussa ei voimatasapainoehtoja tarvitse kirjoittaa, sillä tasapainosta huolehtivat
-(tuntemattomat) tukivoimat, jotka vastaavat sähköpiirin maadoitusvirtoja. Tuentaehdoilla on 
-yleisesti estettävä sellaiset siirtymätilat, jotka eivät aiheuta rakenteessa mitään kuormituksia
-($F_{ij} = 0\ \forall\ i,j$). Erityisesti koko rakenteen liikkuminen jäykkänä kappaleena on 
-matemaattisessa mallissa estettävä. Kun tällaiset riittävät (fysikaalisesti usein ilmeiset)
-lisäehdot on asetettu, tulee yhtälöryhmästä \eqref{m-8.7}--\eqref{m-8.8} säännöllinen.
-Siirtymät $\vec{u}_i$ voidaan tällöin ratkaista ensin, ja näiden avulla edelleen 
-(fysikaalisesti ehkä kiinnostavammat) kuormitukset $F_{ij}$ Hooken laeista \eqref{m-8.8}.
+TÃ¤llaisessa solmussa ei voimatasapainoehtoja tarvitse kirjoittaa, sillÃ¤ tasapainosta huolehtivat
+(tuntemattomat) tukivoimat, jotka vastaavat sÃ¤hkÃ¶piirin maadoitusvirtoja. Tuentaehdoilla on 
+yleisesti estettÃ¤vÃ¤ sellaiset siirtymÃ¤tilat, jotka eivÃ¤t aiheuta rakenteessa mitÃ¤Ã¤n kuormituksia
+($F_{ij} = 0\ \forall\ i,j$). Erityisesti koko rakenteen liikkuminen jÃ¤ykkÃ¤nÃ¤ kappaleena on 
+matemaattisessa mallissa estettÃ¤vÃ¤. Kun tÃ¤llaiset riittÃ¤vÃ¤t (fysikaalisesti usein ilmeiset)
+lisÃ¤ehdot on asetettu, tulee yhtÃ¤lÃ¶ryhmÃ¤stÃ¤ \eqref{m-8.7}--\eqref{m-8.8} sÃ¤Ã¤nnÃ¶llinen.
+SiirtymÃ¤t $\vec{u}_i$ voidaan tÃ¤llÃ¶in ratkaista ensin, ja nÃ¤iden avulla edelleen 
+(fysikaalisesti ehkÃ¤ kiinnostavammat) kuormitukset $F_{ij}$ Hooken laeista \eqref{m-8.8}.
 
 \begin{Exa} \label{ristikko} \ \ 
 
-\parbox{2in}{Oheisessa (taso)ristikossa on sauvoja kahta tyyppiä, jousivakiot $K_1$ ja $K_2$. 
-Sauvoja on $7$ kpl ja yhtälöryhmässä \eqref{m-8.7} on $3 \times 2 = 6$ yhtälöä 
+\parbox{2in}{Oheisessa (taso)ristikossa on sauvoja kahta tyyppiÃ¤, jousivakiot $K_1$ ja $K_2$. 
+Sauvoja on $7$ kpl ja yhtÃ¤lÃ¶ryhmÃ¤ssÃ¤ \eqref{m-8.7} on $3 \times 2 = 6$ yhtÃ¤lÃ¶Ã¤ 
 (tuetuissa solmuissa $A,\,B$ voimatasapainosta huolehtivat tukivoimat), joten rakenne on 
-staattisesti määräämätön. Kun siirtymiä solmuissa $P_i$ merkitään}
+staattisesti mÃ¤Ã¤rÃ¤Ã¤mÃ¤tÃ¶n. Kun siirtymiÃ¤ solmuissa $P_i$ merkitÃ¤Ã¤n}
 \mbox{\parbox{4in}{\epsfig{file=kuvat/kuvaM-4.ps}}}
 \[
 \vec{u}_i\ =\ u_i \vec{i} + v_i \vec{j}, \quad i = 1,2,3,
 \]
-niin lyhennysmerkinnöin
+niin lyhennysmerkinnÃ¶in
 \[
 a   = 1 + 2 K_2 / K_1, \quad b = 2 K_2 / K_1, \quad g_1 = G_1 / K_2, \quad g_2 = - G_2 / K_2
 \]
-yhtälöryhmä \eqref{m-8.7}--\eqref{m-8.8} saa muodon
+yhtÃ¤lÃ¶ryhmÃ¤ \eqref{m-8.7}--\eqref{m-8.8} saa muodon
 \[ \left\{ \begin{array}{rrrrrrrrrrrrl} 
 au_1&-&v_1& &    & &    &-& u_3&+& v_3&\quad 
                    = \quad&0\\ u_1&-&av_1& &    &+&bv_2&-& u_3&+& v_3&\quad = \quad&g_1\\
@@ -252,9 +252,9 @@ au_1&-&v_1& &    & &    &-& u_3&+& v_3&\quad
                    = \quad&0\\-u_1&+& v_1&+& u_2&+& v_2& &    &-&4v_3&\quad = \quad&0
 \end{array} \right. \]
 
-Tämä on säännöllinen ryhmä, josta siirtymät $u_i,\,v_i$ ovat ratkaistavissa. Sauvoja venyttävät
-tai puristavat voimat ovat tämän jälkeen laskettavissa Hooken \mbox{laeista \eqref{m-8.8}.} 
-Esimerkiksi sauvaa $P_1 P_3$ venyttää (negatiivisena puristaa) voima
+TÃ¤mÃ¤ on sÃ¤Ã¤nnÃ¶llinen ryhmÃ¤, josta siirtymÃ¤t $u_i,\,v_i$ ovat ratkaistavissa. Sauvoja venyttÃ¤vÃ¤t
+tai puristavat voimat ovat tÃ¤mÃ¤n jÃ¤lkeen laskettavissa Hooken \mbox{laeista \eqref{m-8.8}.} 
+Esimerkiksi sauvaa $P_1 P_3$ venyttÃ¤Ã¤ (negatiivisena puristaa) voima
 \[
 F_{13}\ =\ K_2\,[(u_3 - u_1)\vec{i} + (v_3 - v_1)\vec{j}\,] 
                           \cdot \frac{1}{\sqrt{2}}\,(-\vec{i}+\vec{j}) 
@@ -266,30 +266,30 @@ F_{13}\ =\ K_2\,[(u_3 - u_1)\vec{i} + (v_3 - v_1)\vec{j}\,]
 \begin{enumerate}
 
 \item
-Vastuspiirin solmut ovat tasasivuisen kolmion $ABC$ kärjet ja kolmion keskipiste $D$. Sivuilla
-$AB$, $BC$ ja $CA$ on vastukset $R_1=1$, $R_2=2$ ja $R_3=3$. Kolmion kärjet $A$, $B$ ja $C$
-on yhdistetty keskipisteeseen vastuksilla $R_4=R_5=2$ ja $R_6=3$. Olettaen virtasyöttö $I$
-solmuun $A$ ja maadoitus solmuun $C$, muodosta lineaarinen yhtälöryhmä solmujen $A,B,D$ 
-jännitteille ja laske solmujen $A$ ja $C$ välinen vastus.
+Vastuspiirin solmut ovat tasasivuisen kolmion $ABC$ kÃ¤rjet ja kolmion keskipiste $D$. Sivuilla
+$AB$, $BC$ ja $CA$ on vastukset $R_1=1$, $R_2=2$ ja $R_3=3$. Kolmion kÃ¤rjet $A$, $B$ ja $C$
+on yhdistetty keskipisteeseen vastuksilla $R_4=R_5=2$ ja $R_6=3$. Olettaen virtasyÃ¶ttÃ¶ $I$
+solmuun $A$ ja maadoitus solmuun $C$, muodosta lineaarinen yhtÃ¤lÃ¶ryhmÃ¤ solmujen $A,B,D$ 
+jÃ¤nnitteille ja laske solmujen $A$ ja $C$ vÃ¤linen vastus.
 
 \item
-Kuution kärjet $P_i,\ i=0 \ldots 7$, on numeroitu siten, että $P_0$ ja $P_7$ ovat vastakkaiset
-kärjet kuution yhdellä sivulla. Kärjet ovat solmuja virtapiirissä, jonka johdot kulkevat
-pitkin kuution särmiä ja jokaisella särmällä vastus $=R$. Solmujen jännitteistä ($x_i$)
-tiedetään, että $x_0=E$ (jännitelähde) ja $x_7=0$. Muodosta lineaarinen yhtälöryhmä
-jännitteille $x_i,\ i=1 \ldots 6$. Ratkaise ja laske solmujen $P_0$ ja $P_7$ välinen vastus.
+Kuution kÃ¤rjet $P_i,\ i=0 \ldots 7$, on numeroitu siten, ettÃ¤ $P_0$ ja $P_7$ ovat vastakkaiset
+kÃ¤rjet kuution yhdellÃ¤ sivulla. KÃ¤rjet ovat solmuja virtapiirissÃ¤, jonka johdot kulkevat
+pitkin kuution sÃ¤rmiÃ¤ ja jokaisella sÃ¤rmÃ¤llÃ¤ vastus $=R$. Solmujen jÃ¤nnitteistÃ¤ ($x_i$)
+tiedetÃ¤Ã¤n, ettÃ¤ $x_0=E$ (jÃ¤nnitelÃ¤hde) ja $x_7=0$. Muodosta lineaarinen yhtÃ¤lÃ¶ryhmÃ¤
+jÃ¤nnitteille $x_i,\ i=1 \ldots 6$. Ratkaise ja laske solmujen $P_0$ ja $P_7$ vÃ¤linen vastus.
 
 \item (*) \index{zzb@\nim!Silta}
-(Silta) Tason ristikkorakenteen solmut $P_1,\ldots,P_7$ ovat pisteissä $(0,0)$, $(1,1)$,
-$(2,0)$, $(3,1)$, $(4,0)$, $(5,1)$ ja $(6,0)$. Solmut on yhdistetty sauvoilla siten, että
-muodostuu viisi vierekkäistä tasakylkistä ja suorakulmaista kolmiota. Solmu $P_1$ on jäykästi
+(Silta) Tason ristikkorakenteen solmut $P_1,\ldots,P_7$ ovat pisteissÃ¤ $(0,0)$, $(1,1)$,
+$(2,0)$, $(3,1)$, $(4,0)$, $(5,1)$ ja $(6,0)$. Solmut on yhdistetty sauvoilla siten, ettÃ¤
+muodostuu viisi vierekkÃ¤istÃ¤ tasakylkistÃ¤ ja suorakulmaista kolmiota. Solmu $P_1$ on jÃ¤ykÃ¤sti
 tuettu ja solmun $P_7$ siirtyminen suuntaan $\vec j$ on estetty, muita tukia ei ole. Solmuihin
-$P_3$ ja $P_5$ vaikuttavat kuormat ovat $\vec F_3=-a G\vec j$ ja $\vec F_5=-bG\vec j$, missä
+$P_3$ ja $P_5$ vaikuttavat kuormat ovat $\vec F_3=-a G\vec j$ ja $\vec F_5=-bG\vec j$, missÃ¤
 $a,b \ge 0$ ovat dimensiottomia vakioita. Muita kuormia ei ole. Merkitse sauvoja
-venyttäviä (negatiivisena puristavia) voimia symboleilla $T_i=x_iG$ ($11$ sauvaa!) ja kirjoita
-näiden avulla solmujen tasapainoyhtälöt. Ratkaise systeemi (mahdollista, koska rakenne on
-staattisesti määräytyvä), ja vastaa ratkaisun perusteella kysymykseen: Jos jokainen sauva
-kestää puristusta $G$:n verran ja vetoa rajattomasti, niin millaiset kuormat ovat mahdollisia
-rakenteen romahtamatta? Piirrä kuva $ab$-tasoon!
+venyttÃ¤viÃ¤ (negatiivisena puristavia) voimia symboleilla $T_i=x_iG$ ($11$ sauvaa!) ja kirjoita
+nÃ¤iden avulla solmujen tasapainoyhtÃ¤lÃ¶t. Ratkaise systeemi (mahdollista, koska rakenne on
+staattisesti mÃ¤Ã¤rÃ¤ytyvÃ¤), ja vastaa ratkaisun perusteella kysymykseen: Jos jokainen sauva
+kestÃ¤Ã¤ puristusta $G$:n verran ja vetoa rajattomasti, niin millaiset kuormat ovat mahdollisia
+rakenteen romahtamatta? PiirrÃ¤ kuva $ab$-tasoon!
 
 \end{enumerate}

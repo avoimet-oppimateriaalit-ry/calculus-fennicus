@@ -4,29 +4,29 @@
 \index{yhden muuttujan funktio|vahv}
 
 Yhden (reaali)muuttujan (reaaliarvoisella) funktiolla eli reaalifunktiolla tarkoitetaan
-funktiota tyyppi‰
+funktiota tyyppi√§
 \[
 f:\DF_f \kohti \R, \quad \DF_f \subset \R.
 \]
-\index{mzyzy@m‰‰rittelyjoukko}%
-T‰ss‰ $\DF_f$ on $f$:n \kor{m‰‰rittelyjoukko} (l‰htˆjoukko, engl. domain) ja joukko
+\index{mzyzy@m√§√§rittelyjoukko}%
+T√§ss√§ $\DF_f$ on $f$:n \kor{m√§√§rittelyjoukko} (l√§ht√∂joukko, engl. domain) ja joukko
 \[
 \RF_f=\{y\in\R \mid y=f(x)\,\ \text{jollakin}\ x\in\DF_f\}
 \]
 \index{arvojoukko}%
-on $f$:n \kor{arvojoukko} (engl.\ range eli 'kantama').\footnote[2]{Suomenkielisiss‰
-teksteiss‰ m‰‰rittely- ja arvojoukoille k‰ytet‰‰n myˆs merkintˆj‰ $M_f,A_f$.} Funktion $f$ 
+on $f$:n \kor{arvojoukko} (engl.\ range eli 'kantama').\footnote[2]{Suomenkielisiss√§
+teksteiss√§ m√§√§rittely- ja arvojoukoille k√§ytet√§√§n my√∂s merkint√∂j√§ $M_f,A_f$.} Funktion $f$ 
 \index{kuvaaja}%
-\kor{kuvaaja} (engl.\ graph) joukossa $A \subset \DF_f$ on euklidisen tason (yleens‰
-karteesisen) koordinaatiston avulla m‰‰ritelty pistejoukko
+\kor{kuvaaja} (engl.\ graph) joukossa $A \subset \DF_f$ on euklidisen tason (yleens√§
+karteesisen) koordinaatiston avulla m√§√§ritelty pistejoukko
 \[
 G_{f,A}=\{\,P \vastaa (x,y) \in \R^2 \mid x \in A\,\ja\, y=f(x)\,\} \subset \Ekaksi.
 \]
-Kuvaajan tarkoituksena on 'geometrisoida' funktio niin, ett‰ n‰kˆhavainnot tulevat 
+Kuvaajan tarkoituksena on 'geometrisoida' funktio niin, ett√§ n√§k√∂havainnot tulevat 
 mahdollisiksi.\footnote[3]{Kuvaaja on geometrinen vastine reaalifunktion joukko-opilliselle
-m‰‰ritelm‰lle $\Rkaksi$:n osa\-joukkona, ks.\ Luku \ref{trigonometriset funktiot}.}
+m√§√§ritelm√§lle $\Rkaksi$:n osa\-joukkona, ks.\ Luku \ref{trigonometriset funktiot}.}
 Esimerkiksi arvojoukko $\RF_f$ on kuvaajasta helppo hahmottaa, ja sellainen
-usein luontevalta tuntuva sanonta kuin '$f$ pisteess‰ $x$' ($=f(x)$) sis‰lt‰‰ myˆs 
+usein luontevalta tuntuva sanonta kuin '$f$ pisteess√§ $x$' ($=f(x)$) sis√§lt√§√§ my√∂s 
 geometrisointiajatuksen ($x \vastaa P \in E^1$, vrt.\ Luku \ref{tasonvektorit}).
 \setlength{\unitlength}{1mm}
 \begin{figure}[H]
@@ -39,7 +39,7 @@ geometrisointiajatuksen ($x \vastaa P \in E^1$, vrt.\ Luku \ref{tasonvektorit}).
 \put(41,-1){$\bullet$} \dashline{2}(42,31)(42,0)
 \dashline{2}(-40,10)(-40,0) \dashline{2}(60,30)(60,0) \dashline{2}(50,37)(0,37) 
 \dashline{2}(20,-9)(0,-9)
-\put(8,22){\vector(-1,1){7}}\put(10,21){$f$ pisteess‰ $x$}
+\put(8,22){\vector(-1,1){7}}\put(10,21){$f$ pisteess√§ $x$}
 \put(50,-9){\vector(-1,1){7}}\put(52,-10){piste $x$}
 \put(-40,-12.2){$\underbrace{\hspace{100mm}}_{\D \DF_f}$}
 \put(-12,13){$\RF_f \left\{ \begin{array}{c} \vspace{40mm} \end{array} \right.$}
@@ -49,25 +49,25 @@ geometrisointiajatuksen ($x \vastaa P \in E^1$, vrt.\ Luku \ref{tasonvektorit}).
 \end{figure}
 
 Reaalimuuttujan funktiota $f$ tutkitaan useimmiten jollakin avoimella, suljetulla tai 
-puoliavoimella v‰lill‰, jolle $f$:n m‰‰rittelyjoukko voidaan haluttaessa ajatella rajatuksi
-ko.\ tarkastelussa. Kerrattakoon Luvusta \ref{reaaliluvut} merkinn‰t
+puoliavoimella v√§lill√§, jolle $f$:n m√§√§rittelyjoukko voidaan haluttaessa ajatella rajatuksi
+ko.\ tarkastelussa. Kerrattakoon Luvusta \ref{reaaliluvut} merkinn√§t
 \begin{align*}
-\text{avoin v‰li:} \quad       &(a,b)\ =\ \{x\in\R \mid a<x<b\}, \\
-\text{suljettu v‰li:} \quad    &[a,b]\,\ =\ \{x\in\R \mid a\leq x\leq b\}, \\
-\text{puoliavoin v‰li:} \quad  &(a,b]\,\ \text{tai}\,\ [a,b)
-\intertext{ja myˆs yleisess‰ k‰ytˆss‰ olevat '‰‰rettˆm‰n v‰lin' merkinn‰t}
+\text{avoin v√§li:} \quad       &(a,b)\ =\ \{x\in\R \mid a<x<b\}, \\
+\text{suljettu v√§li:} \quad    &[a,b]\,\ =\ \{x\in\R \mid a\leq x\leq b\}, \\
+\text{puoliavoin v√§li:} \quad  &(a,b]\,\ \text{tai}\,\ [a,b)
+\intertext{ja my√∂s yleisess√§ k√§yt√∂ss√§ olevat '√§√§rett√∂m√§n v√§lin' merkinn√§t}
               (0,\infty)\ =\,\ &\{x\in\R \mid x>0\} = \R_+, \\
              (-\infty,0)\ =\,\ &\{x\in\R \mid x<0\} = \R_-, \\
         (-\infty,\infty)\ =\,\ &\R.
 \end{align*}
-Usein yhden muuttujan reaalifunktioista ilmoitetaan vain laskus‰‰ntˆ (liitt‰miss‰‰ntˆ)
-muodossa 'funktio $f(x)$'. T‰llˆin oletetaan (ellei toisin mainita), ett‰ m‰‰rittelyjoukko
+Usein yhden muuttujan reaalifunktioista ilmoitetaan vain laskus√§√§nt√∂ (liitt√§miss√§√§nt√∂)
+muodossa 'funktio $f(x)$'. T√§ll√∂in oletetaan (ellei toisin mainita), ett√§ m√§√§rittelyjoukko
 $\DF_f$ on suurin mahdollinen ts.
 \[
-\DF_f=\{x\in\R \ | \ y=f(x) \text{†m‰‰ritelty yksik‰sitteisesti ja } y\in\R\}.
+\DF_f=\{x\in\R \ | \ y=f(x) \text{¬†m√§√§ritelty yksik√§sitteisesti ja } y\in\R\}.
 \]
-\begin{Exa} \label{reaalifunktioita} \index{funktio B!d@paloittain m‰‰ritelty}
-\index{paloittainen!a@funktion m‰‰rittely}
+\begin{Exa} \label{reaalifunktioita} \index{funktio B!d@paloittain m√§√§ritelty}
+\index{paloittainen!a@funktion m√§√§rittely}
 \begin{align*}
 &\text{a)}\ \ f(x)=x^4+x^2+1 \qquad 
  \text{b)}\ \ f(x)=x^2/(x-1)^2 \qquad 
@@ -85,26 +85,26 @@ $\DF_f$ on suurin mahdollinen ts.
 \item[c)] Trigonometrinen funktio: 
            $\ \DF_f=\{x\in\R \mid x/\pi\not\in\Z\}$, $\,\RF_f=\R$.
 \item[d)] \kor{Potenssifunktio}: $\ \DF_f=\RF_f=[0,\infty)$.
-\item[e)] \kor{Paloittain m‰‰ritelty} funktio: $\ \DF_f = \R$, $\,\RF_f = (-\infty,1]$.
-\item[f)] Potenssisarja: M‰‰rittelyjoukko on $\,\DF_f = [-1,1]$
-          (vrt.\ Luku \ref{potenssisarja}). Arvojoukko on vaikeampi m‰‰ritt‰‰, mutta
+\item[e)] \kor{Paloittain m√§√§ritelty} funktio: $\ \DF_f = \R$, $\,\RF_f = (-\infty,1]$.
+\item[f)] Potenssisarja: M√§√§rittelyjoukko on $\,\DF_f = [-1,1]$
+          (vrt.\ Luku \ref{potenssisarja}). Arvojoukko on vaikeampi m√§√§ritt√§√§, mutta
           osoittautuu: $\,\RF_f = [-\tfrac{\pi^2}{12},\tfrac{\pi^2}{6}]$. (Sivuutetaan
           perustelut.) \loppu
 \end{itemize}
 \end{Exa}
 \index{rationaalifunktio} \index{potenssifunktio}%
-Esimerkin b-kohdan rationaalifunktion yleisempi muoto on $f(x)=p(x)/q(x)$, miss‰ $p$ ja $q$
-ovat (reaalikertoimisia) polynomeja. M‰‰rittelyjoukko on t‰llˆin
+Esimerkin b-kohdan rationaalifunktion yleisempi muoto on $f(x)=p(x)/q(x)$, miss√§ $p$ ja $q$
+ovat (reaalikertoimisia) polynomeja. M√§√§rittelyjoukko on t√§ll√∂in
 $\DF_f=\{x\in\R \mid q(x) \neq 0\}$. Potenssifunktion (esimerkin d-kohta) yleinen muoto on
-$f(x)=x^\alpha$, miss‰ (toistaiseksi) $\alpha\in\Q$. M‰‰rittelyjoukko on joko
+$f(x)=x^\alpha$, miss√§ (toistaiseksi) $\alpha\in\Q$. M√§√§rittelyjoukko on joko
 $\DF_f=[0,\infty)$ ($\alpha>0,\ \alpha\not\in\N$), 
 $\DF_f=(0,\infty)=\R_+$ ($\alpha<0,\ \alpha\not\in\Z$),
 $\DF_f=\{x\in\R\ |\ x \neq 0\}$ ($\alpha\in\Z,\ \alpha \le 0$) tai
 $\DF_f=\R$ ($\alpha\in\N$). 
-\begin{Exa} \label{er‰‰n polynomin arvojoukko} M‰‰rit‰ funktion $f(x) = x^2-7x+11$ arvojoukko
-v‰lill‰ $[1,4]$. \end{Exa}
-\ratk Teht‰v‰n asettelun mukaisesti rajataan funktion m‰‰rittelyjoukko t‰ss‰ v‰liksi
-$A = [1,4]$, jolloin arvojoukolle luonteva merkint‰ on $f(A)$. Koska
+\begin{Exa} \label{er√§√§n polynomin arvojoukko} M√§√§rit√§ funktion $f(x) = x^2-7x+11$ arvojoukko
+v√§lill√§ $[1,4]$. \end{Exa}
+\ratk Teht√§v√§n asettelun mukaisesti rajataan funktion m√§√§rittelyjoukko t√§ss√§ v√§liksi
+$A = [1,4]$, jolloin arvojoukolle luonteva merkint√§ on $f(A)$. Koska
 \[ 
 f(x) = \left(x - \dfrac{7}{2}\right)^2 - \dfrac{49}{4} + 11 
                                        = \left(x - \dfrac{7}{2}\right)^2 - \dfrac{5}{4}\,, 
@@ -113,31 +113,31 @@ niin $f(A)$:n minimi on
 \[ 
 f_{\text{min}} = \min\,\{f(x) \mid x \in [1,4]\,\} = f(7/2) = -5/4, 
 \]
-ja $f(A)$:n maksimi saavutetaan mahdollisimman et‰‰ll‰ pisteest‰ $x = 7/2$, eli pisteess‰ 
+ja $f(A)$:n maksimi saavutetaan mahdollisimman et√§√§ll√§ pisteest√§ $x = 7/2$, eli pisteess√§ 
 $x=1$\,:
 \[ 
 f_{\text{max}} = \max\,\{f(x) \mid x \in [1,4]\,\} = f(1) = 5. 
 \]
-T‰h‰n asti on p‰‰telty: $y \in f(A)\,\impl\,-5/4 \le y \le 5$, eli $f(A) \subset [-5/4,5]$. 
-Toisaalta jos $y \in [-5/4,5]$, niin yht‰lˆll‰ $f(x)=y$ on ratkaisu
+T√§h√§n asti on p√§√§telty: $y \in f(A)\,\impl\,-5/4 \le y \le 5$, eli $f(A) \subset [-5/4,5]$. 
+Toisaalta jos $y \in [-5/4,5]$, niin yht√§l√∂ll√§ $f(x)=y$ on ratkaisu
 \[
 x = \dfrac{7}{2} - \sqrt{y + \dfrac{5}{4}}\,,
 \]
-joka on v‰lill‰ $[1,4]$. Siis p‰tee $y \in [-5/4,5]\,\impl\,y \in f(A)$, eli 
-$[-5/4,5] \subset f(A)$. Koska on sek‰ $f(A) \subset [-5/4,5]\,$ ett‰ 
+joka on v√§lill√§ $[1,4]$. Siis p√§tee $y \in [-5/4,5]\,\impl\,y \in f(A)$, eli 
+$[-5/4,5] \subset f(A)$. Koska on sek√§ $f(A) \subset [-5/4,5]\,$ ett√§ 
 $\,[-5/4,5] \subset f(A)$, niin on 
 \[
 f(A) = [-5/4,5]. \loppu 
 \]
-Esimerkiss‰ on kyse tyypillisest‰ 'funktiotutkimuksesta', jossa on annettu joukko
-$A \subset \DF_f$ (reaalifunktion tapauksessa usein v‰li) ja on m‰‰r‰tt‰v‰ $B=f(A)$ eli
-funktion arvojoukko, kun m‰‰rittelyjoukko rajataan $A$:ksi. Ongelma voi olla asetettu myˆs
-k‰‰nteisesti niin, ett‰ tunnetaan joukko $B$, ja on m‰‰r‰tt‰v‰ joukko 
-$A = \{x \in \DF_f \mid f(x) \in B\}$. Esimerkiksi funktion nollakohtia m‰‰r‰tt‰ess‰ on 
-ratkaistava k‰‰nteinen ongelma, kun $B=\{0\}$, eli on \pain{ratkaistava} y\pain{ht‰lˆ} 
-$f(x)=0$. Jos $B=[0,\infty)$, niin on \pain{ratkaistava} \pain{e}p\pain{‰}y\pain{ht‰lˆ}
+Esimerkiss√§ on kyse tyypillisest√§ 'funktiotutkimuksesta', jossa on annettu joukko
+$A \subset \DF_f$ (reaalifunktion tapauksessa usein v√§li) ja on m√§√§r√§tt√§v√§ $B=f(A)$ eli
+funktion arvojoukko, kun m√§√§rittelyjoukko rajataan $A$:ksi. Ongelma voi olla asetettu my√∂s
+k√§√§nteisesti niin, ett√§ tunnetaan joukko $B$, ja on m√§√§r√§tt√§v√§ joukko 
+$A = \{x \in \DF_f \mid f(x) \in B\}$. Esimerkiksi funktion nollakohtia m√§√§r√§tt√§ess√§ on 
+ratkaistava k√§√§nteinen ongelma, kun $B=\{0\}$, eli on \pain{ratkaistava} y\pain{ht√§l√∂} 
+$f(x)=0$. Jos $B=[0,\infty)$, niin on \pain{ratkaistava} \pain{e}p\pain{√§}y\pain{ht√§l√∂}
 $f(x) \ge 0$. 
-\jatko \begin{Exa} (jatko) Jos esimerkiss‰ asetetaan $\DF_f=\R$ ja $B=\{0,1\}$, niin
+\jatko \begin{Exa} (jatko) Jos esimerkiss√§ asetetaan $\DF_f=\R$ ja $B=\{0,1\}$, niin
 \begin{align*}
 A &= \{x\in\R \mid f(x) \in B\} \\
   &= \{x\in\R \mid x^2-7x+11=0\,\tai\,x^2-7x+11=1\} \\
@@ -148,12 +148,12 @@ A &= \{x\in\R \mid f(x) \in B\} \\
 \subsection*{Monotoniset funktiot}
 \index{funktio B!a@monotoninen|vahv}
 
-Yht‰lˆit‰ ja ep‰yht‰lˆit‰ ratkaistaessa, ja muutenkin funktioita tutkittaessa, on k‰yt‰nnˆss‰ 
-suurta hyˆty‰ seuraavasta yhden muuttujan funktioille 'luonnetta' antavasta m‰‰ritelm‰st‰
-(vrt.\ M‰‰ritelm‰ \ref{monotoninen jono} lukujonoille).
+Yht√§l√∂it√§ ja ep√§yht√§l√∂it√§ ratkaistaessa, ja muutenkin funktioita tutkittaessa, on k√§yt√§nn√∂ss√§ 
+suurta hy√∂ty√§ seuraavasta yhden muuttujan funktioille 'luonnetta' antavasta m√§√§ritelm√§st√§
+(vrt.\ M√§√§ritelm√§ \ref{monotoninen jono} lukujonoille).
 \begin{Def} \label{monotoninen funktio} \index{monotoninen!b@reaalifunktio|emph}
-\index{aidosti kasvava, v‰henev‰, monotoninen!b@reaalifunktio|emph}
-Yhden reaalimuuttujan funktio on \kor{kasvava} (engl.\ increasing) \kor{v‰lill‰}
+\index{aidosti kasvava, v√§henev√§, monotoninen!b@reaalifunktio|emph}
+Yhden reaalimuuttujan funktio on \kor{kasvava} (engl.\ increasing) \kor{v√§lill√§}
 $A \subset \DF_f$, jos
 \[
 \forall x_1,x_2 \in A\,\bigl[\,x_1 < x_2 \ \impl \ f(x_1) \leq f(x_2)\,\bigr]
@@ -162,15 +162,15 @@ ja \kor{aidosti} (engl. strictly) \kor{kasvava}, jos
 \[
 \forall x_1,x_2 \in A\,\bigl[\,x_1 < x_2 \ \impl \ f(x_1) < f(x_2)\,\bigr].
 \]
-Vastaavasti $f$ on \kor{v‰henev‰} (engl.\ decreasing) \kor{v‰lill‰} $A \subset \DF_f$, jos
+Vastaavasti $f$ on \kor{v√§henev√§} (engl.\ decreasing) \kor{v√§lill√§} $A \subset \DF_f$, jos
 \[
 \forall x_1,x_2 \in A\,\bigl[\,x_1 < x_2 \ \impl \ f(x_1) \geq f(x_2)\,\bigr]
 \]
-ja \kor{aidosti v‰henev‰}, jos
+ja \kor{aidosti v√§henev√§}, jos
 \[
 \forall x_1,x_2 \in A\,\bigl[\,x_1 < x_2 \ \impl \ f(x_1) > f(x_2)\,\bigr].
 \]
-Jos $f$ on v‰lill‰ A jompaa kumpaa tyyppi‰, niin sanotaan, ett‰ $f$ on ko.\ v‰lill‰ (aidosti) 
+Jos $f$ on v√§lill√§ A jompaa kumpaa tyyppi√§, niin sanotaan, ett√§ $f$ on ko.\ v√§lill√§ (aidosti) 
 \kor{monotoninen}. \end{Def}
 \begin{figure}[H]
 \setlength{\unitlength}{1mm}
@@ -187,27 +187,27 @@ Jos $f$ on v‰lill‰ A jompaa kumpaa tyyppi‰, niin sanotaan, ett‰ $f$ on ko.\ v‰li
 \put(95,32){$y=f(x)$}
 \put(35,32){$y=f(x)$}
 \put(30,10){$f$ kasvava}
-\put(83,10){$f$ aidosti v‰henev‰}
+\put(83,10){$f$ aidosti v√§henev√§}
 \end{picture}
-%\caption{Esimerkkej‰}
+%\caption{Esimerkkej√§}
 \end{center}
-\begin{Exa} Identiteetist‰
+\begin{Exa} Identiteetist√§
 \[
 \sqrt{x_1}-\sqrt{x_2}=\frac{x_1-x_2}{\sqrt{x_1}+\sqrt{x_2}}\,, 
                                \quad x_1,x_2 \ge 0, \ x_1 \neq x_2
 \]
-n‰hd‰‰n, ett‰ funktio $f(x)=\sqrt{x}$ on v‰lill‰ $[0,\infty)$ (eli m‰‰rittelyjoukossaan)
+n√§hd√§√§n, ett√§ funktio $f(x)=\sqrt{x}$ on v√§lill√§ $[0,\infty)$ (eli m√§√§rittelyjoukossaan)
 aidosti kasvava. \loppu
 \end{Exa}
 \end{figure}
 \begin{multicols}{2} \raggedcolumns
-Jos $f$ on v‰lill‰ $A\subset\DF_f$ aidosti kasvava ja $c\in A$, niin ep‰yht‰lˆll‰
+Jos $f$ on v√§lill√§ $A\subset\DF_f$ aidosti kasvava ja $c\in A$, niin ep√§yht√§l√∂ll√§
 \[
 f(x) \leq c
 \]
-on v‰lille $A$ rajattuna helppo ratkaisu:
+on v√§lille $A$ rajattuna helppo ratkaisu:
 \[
-x\in A \cap (-\infty,a],\ \text{ miss‰ } f(a)=c.
+x\in A \cap (-\infty,a],\ \text{ miss√§ } f(a)=c.
 \]
 \begin{figure}[H]
 \setlength{\unitlength}{1mm}
@@ -225,30 +225,30 @@ x\in A \cap (-\infty,a],\ \text{ miss‰ } f(a)=c.
 \end{center}
 \end{figure}
 \end{multicols}
-\jatko\begin{Exa} (jatko) Jos $a>0$, niin ep‰yht‰lˆn $\sqrt{x} \le a$ ratkaisu on
+\jatko\begin{Exa} (jatko) Jos $a>0$, niin ep√§yht√§l√∂n $\sqrt{x} \le a$ ratkaisu on
 \[
 \{x\in\R \mid \sqrt{x} \le a\} \,=\, \{x\in[0,\infty) \mid x \le a^2\} 
                                \,=\, [0,a^2\,]. \loppu
 \]
 \end{Exa}
-Jos funktio ei ole koko tarkasteltavalla v‰lill‰ monotoninen, on funktiotutkimuksen
-ensimm‰inen askel usein v‰lin jakaminen sellaisiin osav‰leihin, joilla monotonisuus toteutuu.
+Jos funktio ei ole koko tarkasteltavalla v√§lill√§ monotoninen, on funktiotutkimuksen
+ensimm√§inen askel usein v√§lin jakaminen sellaisiin osav√§leihin, joilla monotonisuus toteutuu.
 \begin{Exa}
-$f(x)=\sqrt{\abs{x}} \quad (\DF_f=\R)$ on aidosti v‰henev‰ v‰lill‰ $(-\infty,0]$ ja aidosti 
-kasvava v‰lill‰ $[0,\infty)$. \loppu
+$f(x)=\sqrt{\abs{x}} \quad (\DF_f=\R)$ on aidosti v√§henev√§ v√§lill√§ $(-\infty,0]$ ja aidosti 
+kasvava v√§lill√§ $[0,\infty)$. \loppu
 \end{Exa}
 \begin{Exa} Jos $f(x) = -x^2+6x+1$, niin kirjoittamalla
 \[ f(x) = -(x-3)^2 + 10 \]
-n‰hd‰‰n, ett‰ $f$ on aidosti kasvava v‰lill‰ $(-\infty,3]$ ja aidosti v‰henev‰ v‰lill‰ 
+n√§hd√§√§n, ett√§ $f$ on aidosti kasvava v√§lill√§ $(-\infty,3]$ ja aidosti v√§henev√§ v√§lill√§ 
 $[3,\infty)$. \loppu \end{Exa} 
 \begin{Exa}
-Trigonometristen funktioiden m‰‰ritelmien (Luku \ref{trigonometriset funktiot}) perusteella 
-seuraavat v‰itt‰m‰t ovat uskottavia (myˆs tosia).
+Trigonometristen funktioiden m√§√§ritelmien (Luku \ref{trigonometriset funktiot}) perusteella 
+seuraavat v√§itt√§m√§t ovat uskottavia (my√∂s tosia).
 \begin{itemize}
-\item[$\sin x$:] Aidosti monotoninen v‰leill‰ 
+\item[$\sin x$:] Aidosti monotoninen v√§leill√§ 
                  $[(k-\frac{1}{2})\pi,(k+\frac{1}{2})\pi],\ k\in\Z$\,: kasvava kun $k$ on
-                 parillinen ja v‰henev‰ kun $k$ on pariton.
-\item[$\cos x$:] Aidosti monotoninen v‰leill‰ $[k\pi,(k+1)\pi],\ k\in\Z$\,: v‰henev‰ kun $k$
+                 parillinen ja v√§henev√§ kun $k$ on pariton.
+\item[$\cos x$:] Aidosti monotoninen v√§leill√§ $[k\pi,(k+1)\pi],\ k\in\Z$\,: v√§henev√§ kun $k$
                  on parillinen ja kasvava kun $k$ on pariton.
 \end{itemize}
 \begin{figure}[H]
@@ -319,9 +319,9 @@ seuraavat v‰itt‰m‰t ovat uskottavia (myˆs tosia).
 \end{picture} 
 \end{figure}
 \begin{itemize}
-\item[$\tan x$:] Aidosti kasvava v‰leill‰
-                 $((k-\frac{1}{2})\pi,(k+\frac{1}{2})\pi),†\ k \in \Z$.
-\item[$\cot x$:] Aidosti v‰henev‰ v‰leill‰ $((k\pi,(k+1)\pi),†\ k \in \Z$. \loppu
+\item[$\tan x$:] Aidosti kasvava v√§leill√§
+                 $((k-\frac{1}{2})\pi,(k+\frac{1}{2})\pi),¬†\ k \in \Z$.
+\item[$\cot x$:] Aidosti v√§henev√§ v√§leill√§ $((k\pi,(k+1)\pi),¬†\ k \in \Z$. \loppu
 \end{itemize}
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -393,18 +393,18 @@ seuraavat v‰itt‰m‰t ovat uskottavia (myˆs tosia).
 \index{funktio B!e@yhdistetty|vahv}
 \index{yhdistetty funktio|vahv}
 
-Kahden funktion $f,g$ \kor{yhdistetty} (engl. composite) \kor{funktio} merkit‰‰n
-$f \circ g$ ja m‰‰ritell‰‰n laskus‰‰nnˆll‰
+Kahden funktion $f,g$ \kor{yhdistetty} (engl. composite) \kor{funktio} merkit√§√§n
+$f \circ g$ ja m√§√§ritell√§√§n laskus√§√§nn√∂ll√§
 \[
 (f \circ g)(x)=f(g(x)).
 \]
-Tavallinen ‰‰nt‰mistapa on hieman arkinen 'f pallo g'. 
+Tavallinen √§√§nt√§mistapa on hieman arkinen 'f pallo g'. 
 \begin{Exa}
 Palautuva lukujono muotoa
 \[
 x_0 \in \R, \quad x_n=f(x_{n-1}), \quad n=1,2,\ldots
 \]
-voidaan tulkita 'sis‰kk‰isten', ts. yhdistettyjen funktioiden avulla:
+voidaan tulkita 'sis√§kk√§isten', ts. yhdistettyjen funktioiden avulla:
 \begin{align*}
 x_1 &= f(x_0), \\ 
 x_2 &= f(x_1) = f(f(x_0))=(f \circ f)(x_0), \\
@@ -421,16 +421,16 @@ x_3 &= f(f(f(x_0)))=(f \circ f \circ f)(x_0), \quad \text{jne.} \loppu
 %        & \cfrac{\ddots \quad }{1+x_0}
 %\end{aligned} \quad \right\} n \text{ kpl} \quad\loppu
 %\]
-Yhdistetyn funktion m‰‰rittelyjoukko on aina rajattava niin, ett‰ funktiot eiv‰t 'riitele'.
-T‰llˆin suurimmaksi mahdolliseksi m‰‰rittelyjoukoksi (joka yleens‰ oletetaan, ellei toisin 
+Yhdistetyn funktion m√§√§rittelyjoukko on aina rajattava niin, ett√§ funktiot eiv√§t 'riitele'.
+T√§ll√∂in suurimmaksi mahdolliseksi m√§√§rittelyjoukoksi (joka yleens√§ oletetaan, ellei toisin 
 mainita) tulee
 \[
 \DF_{f\circ g}=\{x \in \DF_g \ | \ g(x) \in \DF_f\} \subset \DF_g.
 \]
-Jos n‰in m‰‰ritelty joukko $\DF_{f \circ g}$ on tyhj‰, ei yhdistetty‰ funktiota voi m‰‰ritell‰.
-\begin{Exa} M‰‰rittele yhdistetyt funktiot $f \circ g$ ja $g \circ f$, kun 
+Jos n√§in m√§√§ritelty joukko $\DF_{f \circ g}$ on tyhj√§, ei yhdistetty√§ funktiota voi m√§√§ritell√§.
+\begin{Exa} M√§√§rittele yhdistetyt funktiot $f \circ g$ ja $g \circ f$, kun 
 $f(x)=\sqrt{a-x},\quad$ $g(x)=\sqrt{x-b}\ (a,b\in\R)$. \end{Exa}
-\ratk Laskus‰‰nnˆt ovat
+\ratk Laskus√§√§nn√∂t ovat
 \[
 (f\circ g)(x) = \sqrt{a-\sqrt{x-b}}, \quad (g\circ f)(x) = \sqrt{\sqrt{a-x}-b}.
 \]
@@ -450,7 +450,7 @@ Siis
                \,[b,b+a^2], &\text{ jos } a \geq 0.
                \end{cases}
 \]
-Vastaavalla tavalla p‰‰tell‰‰n
+Vastaavalla tavalla p√§√§tell√§√§n
 \begin{align*}
 \DF_{g\circ f}&=\{\,x\in (-\infty,a] \ | \ \sqrt{a-x} \in [b,\infty)\,\} \\
               &=\begin{cases}
@@ -463,28 +463,28 @@ Vastaavalla tavalla p‰‰tell‰‰n
 \index{funktio B!g@muuttujan vaihto|vahv}
 \index{muuttujan vaihto (sijoitus)|vahv}
 
-Jos tutkimuskohteena oleva funktio $f$ joukossa $A\subset\DF_f$ on esitett‰viss‰
-yhdistettyn‰ funktiona $f(x)=g(v(x))$, niin usein auttaa \kor{muuttujan vaihto} eli
-\kor{sijoitus} $t=v(x)$. T‰llˆin voidaan siirty‰ tutkimaan (mahdollisesti yksinkertaisempaa)
+Jos tutkimuskohteena oleva funktio $f$ joukossa $A\subset\DF_f$ on esitett√§viss√§
+yhdistettyn√§ funktiona $f(x)=g(v(x))$, niin usein auttaa \kor{muuttujan vaihto} eli
+\kor{sijoitus} $t=v(x)$. T√§ll√∂in voidaan siirty√§ tutkimaan (mahdollisesti yksinkertaisempaa)
 funktiota $g(t)$ joukossa $B=v(A)$.
-\begin{Exa} M‰‰rit‰ funktion $f(x)=x-7\sqrt{x}+11$ arvojoukko $f(A)$ v‰lill‰ $A=[1,16]$.
+\begin{Exa} M√§√§rit√§ funktion $f(x)=x-7\sqrt{x}+11$ arvojoukko $f(A)$ v√§lill√§ $A=[1,16]$.
 \end{Exa}
-\ratk Sijoituksella $t=\sqrt{x}$ tutkimuskohteeksi tulee funktio $g(t)=t^2-7t+11$ v‰lill‰
-$B=[1,4]$. Siis $f(A)=g(B)=[-5/4,5]$ (Esimerkki \ref{er‰‰n polynomin arvojoukko}). \loppu
+\ratk Sijoituksella $t=\sqrt{x}$ tutkimuskohteeksi tulee funktio $g(t)=t^2-7t+11$ v√§lill√§
+$B=[1,4]$. Siis $f(A)=g(B)=[-5/4,5]$ (Esimerkki \ref{er√§√§n polynomin arvojoukko}). \loppu
 
 
 \subsection*{Funktioiden yhdistely laskutoimituksilla}
 \index{funktio B!f@yhdistely laskutoimituksilla|vahv}
 
-Reaaliarvoisia funktioita on mahdollista yhdistell‰ peruslaskutoimituksilla samalla tavoin kuin 
-lukujonoja. T‰llˆin ajatellaan, ett‰ kun lukujonoja lasketaan yhteen, kerrotaan ja jaetaan 
-termeitt‰in, niin funktioita yhdistell‰‰n vastaavalla tavalla \kor{pisteitt‰in}. N‰in ajatellen
-saadaan m‰‰ritellyksi funktioiden v‰liset peruslaskutoimitukset. Yhden reaalimuuttujan
-funktioille t‰sm‰llisempi m‰‰ritelm‰ on seuraava:
-\begin{Def} (\vahv{Funktioiden yhdistely}) \label{funktioiden yhdistelys‰‰nnˆt}
+Reaaliarvoisia funktioita on mahdollista yhdistell√§ peruslaskutoimituksilla samalla tavoin kuin 
+lukujonoja. T√§ll√∂in ajatellaan, ett√§ kun lukujonoja lasketaan yhteen, kerrotaan ja jaetaan 
+termeitt√§in, niin funktioita yhdistell√§√§n vastaavalla tavalla \kor{pisteitt√§in}. N√§in ajatellen
+saadaan m√§√§ritellyksi funktioiden v√§liset peruslaskutoimitukset. Yhden reaalimuuttujan
+funktioille t√§sm√§llisempi m√§√§ritelm√§ on seuraava:
+\begin{Def} (\vahv{Funktioiden yhdistely}) \label{funktioiden yhdistelys√§√§nn√∂t}
 \index{laskuoperaatiot!f@reaalifunktioiden|emph}
 Jos $f:\DF_f \rightarrow \R$, $g:\DF_g\rightarrow\R$, $\DF_f,\DF_g \subset \R$, niin funktiot
-$\lambda f$ $(\lambda\in\R)$, $f+g$, $fg$ ja $f/g$ m‰‰ritell‰‰n
+$\lambda f$ $(\lambda\in\R)$, $f+g$, $fg$ ja $f/g$ m√§√§ritell√§√§n
 \[
 \begin{array}{clll}
 (1) & (\lambda f)(x)&=\ \lambda f(x), \quad & x \in \DF_f \\ \\
@@ -494,17 +494,17 @@ $\lambda f$ $(\lambda\in\R)$, $f+g$, $fg$ ja $f/g$ m‰‰ritell‰‰n
 \end{array} 
 \]
 \end{Def}
-Ainoa uusi piirre lukujonoihin n‰hden on, ett‰ funktioita yhdistelt‰ess‰ on m‰‰rittelyjoukkoa 
-rajoitettava, ellei ole $\DF_f=\DF_g$. Perusmuotoisten 'jonofunktioiden' tapauksessa t‰t‰
-ongelmaa ei ollut, koska m‰‰rittelyjoukko oli aina sama $(=\N)$. Huomattakoon erityisesti, ett‰
-funktion $f/g$ m‰‰rittelyjoukko on ym. m‰‰ritelm‰n mukaisesti
+Ainoa uusi piirre lukujonoihin n√§hden on, ett√§ funktioita yhdistelt√§ess√§ on m√§√§rittelyjoukkoa 
+rajoitettava, ellei ole $\DF_f=\DF_g$. Perusmuotoisten 'jonofunktioiden' tapauksessa t√§t√§
+ongelmaa ei ollut, koska m√§√§rittelyjoukko oli aina sama $(=\N)$. Huomattakoon erityisesti, ett√§
+funktion $f/g$ m√§√§rittelyjoukko on ym. m√§√§ritelm√§n mukaisesti
 \[
 \DF_{f/g}=\{x\in\R \ | \ x\in\DF_f\ \wedge\ x\in\DF_g\ \wedge\ g(x)\neq 0\}.
 \]
-T‰ss‰ vaatimus $g(x)\neq 0$ esiintyi jo lukujonojen yhteydess‰, vrt. Lause 
-\ref{raja-arvojen yhdistelys‰‰nnˆt}.
+T√§ss√§ vaatimus $g(x)\neq 0$ esiintyi jo lukujonojen yhteydess√§, vrt. Lause 
+\ref{raja-arvojen yhdistelys√§√§nn√∂t}.
 \begin{Exa}
-M‰‰ritelm‰n \ref{funktioiden yhdistelys‰‰nnˆt} s‰‰nnˆn (4) mukaisesti on
+M√§√§ritelm√§n \ref{funktioiden yhdistelys√§√§nn√∂t} s√§√§nn√∂n (4) mukaisesti on
 \[
 \tan=\sin/\cos, \quad \cot = \cos/\sin. \loppu
 \]
@@ -515,8 +515,8 @@ M‰‰ritelm‰n \ref{funktioiden yhdistelys‰‰nnˆt} s‰‰nnˆn (4) mukaisesti on
 \index{parillinen, pariton!b@funktio|vahv}
 
 \begin{Def} \label{parilliset ja parittomat funktiot} Jos $f: \DF_f \kohti \R$ ja $f$:n 
-m‰‰rittelyjoukko $\DF_f \subset \R$ on origon suhteen symmetrinen, ts. p‰tee 
-$-x \in \DF_f\ \forall x\in\DF_f$, niin sanotaan, ett‰ $f$ on \kor{parillinen} (engl. even), jos
+m√§√§rittelyjoukko $\DF_f \subset \R$ on origon suhteen symmetrinen, ts. p√§tee 
+$-x \in \DF_f\ \forall x\in\DF_f$, niin sanotaan, ett√§ $f$ on \kor{parillinen} (engl. even), jos
 \[
 f(-x)=f(x) \quad \forall x\in\DF_f,
 \]
@@ -524,28 +524,28 @@ ja \kor{pariton} (engl. odd), jos
 \[
 f(-x)=-f(x) \quad \forall x\in\DF_f.
 \] \end{Def}
-\begin{Exa} Trigonometrisist‰ funktioista kosini on parillinen ja sini pariton. Potenssifunktio
+\begin{Exa} Trigonometrisist√§ funktioista kosini on parillinen ja sini pariton. Potenssifunktio
 $f(x) = x^n,\ n \in \Z$, on parillinen/pariton kun $n$ on parillinen/pariton. Funktio 
-$f(x)=0\ \forall x\in\DF_f$ (esim.\ $\DF_f=\R$) on funktioista ainoa, joka on sek‰ parillinen
-ett‰ pariton. \loppu 
+$f(x)=0\ \forall x\in\DF_f$ (esim.\ $\DF_f=\R$) on funktioista ainoa, joka on sek√§ parillinen
+ett√§ pariton. \loppu 
 \end{Exa}
 
-Yhdistelt‰ess‰ funktioita M‰‰ritelm‰n \ref{funktioiden yhdistelys‰‰nnˆt} mukaisesti ovat 
-seuraavat s‰‰nnˆt helposti todennettavissa:
+Yhdistelt√§ess√§ funktioita M√§√§ritelm√§n \ref{funktioiden yhdistelys√§√§nn√∂t} mukaisesti ovat 
+seuraavat s√§√§nn√∂t helposti todennettavissa:
 \begin{itemize}
 \item[(1)]  $f$ ja $g$ parillisia/parittomia $\ \impl\ $ $f+g$, $\lambda f$ ja $1/f$ 
             parillisia/parittomia
 \item[(2a)] $f$ ja $g$ parillisia/parittomia $\ \impl\ $ $fg$ parillinen
 \item[(2b)] $f$ parillinen ja $g$ pariton $\ \impl\ $ $fg$ pariton
 \end{itemize}
-\jatko \begin{Exa} (jatko) Ym.\ s‰‰ntˆjen perusteella (ja muutenkin) voidaan p‰‰tell‰: 
+\jatko \begin{Exa} (jatko) Ym.\ s√§√§nt√∂jen perusteella (ja muutenkin) voidaan p√§√§tell√§: 
 a) Trigonometriset funktiot $\tan$ ja $\cot$ ovat parittomia. b) Polynomi 
-$f(x) = \sum_{k=0}^n a_k x^k$ on parillinen/pariton t‰sm‰lleen kun $a_k = 0$ jokaisella 
+$f(x) = \sum_{k=0}^n a_k x^k$ on parillinen/pariton t√§sm√§lleen kun $a_k = 0$ jokaisella 
 parittomalla/parillisella indeksin $k$ arvolla. \loppu 
 \end{Exa} 
-Jos funktio on origon suhteen symmetrisesti m‰‰ritelty, mutta parillisuuden suhteen 'ep‰puhdas',
-niin se voidaan aina esitt‰‰ parillisen ja parittoman funktion summana. Nimitt‰in 
-$f = f_+ + f_-$, miss‰
+Jos funktio on origon suhteen symmetrisesti m√§√§ritelty, mutta parillisuuden suhteen 'ep√§puhdas',
+niin se voidaan aina esitt√§√§ parillisen ja parittoman funktion summana. Nimitt√§in 
+$f = f_+ + f_-$, miss√§
 \[
 f_+(x)=\frac{1}{2}[f(x)+f(-x)], \quad f_-(x)=\frac{1}{2}[f(x)-f(-x)].
 \]
@@ -575,7 +575,7 @@ f(x)\ =\ \begin{cases} 0, & \text{kun } x \leq 0 \\ x, & \text{kun } x > 0 \end{
 \put(59,5){$f_+$}
 \put(89,5){$f_-$}
 \end{picture}
-%\caption{Funktion esitt‰minen parillisen ja parittoman funktion summana}
+%\caption{Funktion esitt√§minen parillisen ja parittoman funktion summana}
 \end{center}
 \end{figure}
 
@@ -584,13 +584,13 @@ f(x)\ =\ \begin{cases} 0, & \text{kun } x \leq 0 \\ x, & \text{kun } x > 0 \end{
 \begin{Def} \index{funktio B!c@jaksollinen|emph} \index{jaksollinen funktio|emph}
 \index{periodinen funktio} 
 Reaalifunktio $f$ on \kor{jaksollinen} eli \kor{periodinen}, jos jollakin
-$a\in\R_+$ p‰tee $\,x \pm a\in\DF_f\ \forall x\in\DF_f$ ja
+$a\in\R_+$ p√§tee $\,x \pm a\in\DF_f\ \forall x\in\DF_f$ ja
 \[
 f(x+a)=f(x) \quad \forall x\in\DF_f.
 \]
-T‰llˆin $a$ on $f$:n \kor{jakso}.
+T√§ll√∂in $a$ on $f$:n \kor{jakso}.
 \end{Def}
-M‰‰ritelm‰n mukaisesti myˆs jokainen jakson monikerta on jakso. Jaksoista pienin on nimelt‰‰n
+M√§√§ritelm√§n mukaisesti my√∂s jokainen jakson monikerta on jakso. Jaksoista pienin on nimelt√§√§n
 \kor{perusjakso} (usein vain 'jaksoksi' sanottu).
 \begin{Exa} Funktiot $\,\abs{\sin x}$, $\,\abs{\cos x}$, $\,\tan x$ ja $\,\cot x\,$ ovat 
 jaksollisia, \newline (perus)jaksona $a=\pi$. \loppu
@@ -616,7 +616,7 @@ f(x) = x-k, \quad \text{kun}\ x\in[k,k+1),\ k\in\Z.
 \begin{enumerate}
 
 \item
-M‰‰rit‰ algebran keinoin seuraavien reaalifunktioiden arvojoukot: \newline
+M√§√§rit√§ algebran keinoin seuraavien reaalifunktioiden arvojoukot: \newline
 a) \ $x^2+2x+8,\quad$
 b) \ $1-x-4x^2 \quad$
 c) \ $1/(2+x+x^2) \quad$
@@ -631,32 +631,32 @@ k) \ $\sum_{k=0}^\infty x^{2k} \quad$
 l) \ $\sum_{k=0}^\infty (-1)^k x^{2k}$
 
 \item
-Selvit‰ algebran keinoin, mill‰ v‰leill‰ seuraavat funktiot ovat aidosti kasvavia ja mill‰
-aidosti v‰henevi‰: \,\ a)\, $1/x^4$, \,\ b)\, $x/(x+1)$, \,\ c)\, $\abs{x^2+x-2}$, \newline 
+Selvit√§ algebran keinoin, mill√§ v√§leill√§ seuraavat funktiot ovat aidosti kasvavia ja mill√§
+aidosti v√§henevi√§: \,\ a)\, $1/x^4$, \,\ b)\, $x/(x+1)$, \,\ c)\, $\abs{x^2+x-2}$, \newline 
 d)\, $1/(x^2+2x+2)$, \,\ e)\, $1/(x^2+3x+2)$, \,\ f)\, $x^4/(2-x^4)$ \,\ 
 g)\, $\max\{0,\sin x\}$
 
 \item
-Mitk‰ ovat seuraavien yhdistettyjen funktioiden m‰‰rittely- ja arvojoukot? \newline
+Mitk√§ ovat seuraavien yhdistettyjen funktioiden m√§√§rittely- ja arvojoukot? \newline
 a) \ $\sqrt{8-2x} \quad$ 
 b) \ $\sqrt{1-x-x^2}\quad$
 c) \ $1/(1-\sqrt{2-x}) \quad$
 d) \ $\cos(\sin x)$
 
 \item
-M‰‰rit‰ yhdistettyjen funktioiden $f \circ g$ ja $g \circ f$ laskus‰‰nnˆt ja m‰‰rittelyjoukot
+M√§√§rit√§ yhdistettyjen funktioiden $f \circ g$ ja $g \circ f$ laskus√§√§nn√∂t ja m√§√§rittelyjoukot
 seuraavissa tapauksissa: \newline
 a) \ $f(x)=1/\sqrt{x+1},\,\ g(x)=\sqrt{x-1}$ \newline
 b) \ $f(x)=\sqrt{x+1},\,\ g(x)=x/(1-2x) \quad$ \newline
 c) \ $f(x)=\sqrt{2x+1},\,\ g(x)=\sin x$
 
 \item
-a) Olkoon $f(x)=1-4\sqrt{x}$. Mitk‰ ovat funktioiden $f \circ f$ ja $f \circ f \circ f$
-m‰‰rittelyjoukot? \ b) Olkoon $g(x)=\frac{1}{2}x+1$. Millainen reaalifunktio on 
-$f(x)=\lim_n g_n(x)$, miss‰ $g_1=g$, $g_2=g \circ g$, $g_3=g \circ g \circ g$, jne.\,?
+a) Olkoon $f(x)=1-4\sqrt{x}$. Mitk√§ ovat funktioiden $f \circ f$ ja $f \circ f \circ f$
+m√§√§rittelyjoukot? \ b) Olkoon $g(x)=\frac{1}{2}x+1$. Millainen reaalifunktio on 
+$f(x)=\lim_n g_n(x)$, miss√§ $g_1=g$, $g_2=g \circ g$, $g_3=g \circ g \circ g$, jne.\,?
 
 \item
-M‰‰rit‰ algebran keinoin seuraavien funktioiden arvojoukot: \newline
+M√§√§rit√§ algebran keinoin seuraavien funktioiden arvojoukot: \newline
 a) \ $1-\sqrt[4]{17x}+\sqrt{x} \quad$
 b) \ $2+5x^{48}-x^{96} \quad$
 c) \ $x-4\sqrt{x}+3-4\abs{\sqrt{x}-1}$ \newline
@@ -666,23 +666,23 @@ f) \ $\sin x + \cos 2x \quad$
 g) \ $2\sin x - \abs{\cos 2x}$ 
 
 \item
-a) N‰yt‰, ett‰ jos $g$ on kasvava v‰lill‰ $A\subset\DF_g$ ja $f$ on kasvava v‰lill‰ 
-$B=g(A)\subset\DF_f$, niin $f \circ g$ on kasvava v‰lill‰ $A$. Sovella v‰itt‰m‰‰ funktioon
-$f(x)=\sqrt{x^2+x-2}$ v‰lill‰ $[1,\infty)$. \newline
-b) N‰yt‰, ett‰ jos $f$ ja $g$ ovat (aidosti) kasvavia v‰lill‰ $A\subset\DF_f\cap\DF_g$, niin
+a) N√§yt√§, ett√§ jos $g$ on kasvava v√§lill√§ $A\subset\DF_g$ ja $f$ on kasvava v√§lill√§ 
+$B=g(A)\subset\DF_f$, niin $f \circ g$ on kasvava v√§lill√§ $A$. Sovella v√§itt√§m√§√§ funktioon
+$f(x)=\sqrt{x^2+x-2}$ v√§lill√§ $[1,\infty)$. \newline
+b) N√§yt√§, ett√§ jos $f$ ja $g$ ovat (aidosti) kasvavia v√§lill√§ $A\subset\DF_f\cap\DF_g$, niin
 samoin on funktio $f+g$. Miten on funktion $fg$ laita?
 
 \item
-M‰‰rittele $f+g$, $fg$ ja $f/g$ (m‰‰rittelyjoukko ja sievennetty laskus‰‰ntˆ), kun \ 
+M√§√§rittele $f+g$, $fg$ ja $f/g$ (m√§√§rittelyjoukko ja sievennetty laskus√§√§nt√∂), kun \ 
 a) \ $f(x)=g(x)=x+1$, \ \ 
 b) \ $f(x)=\abs{x}+x,\ g(x)=\abs{x}-x$, \newline
 c) \ $f(x)=\sin x \sin 2x,\ g(x)=2\cos^3 x$.
 
 \item
-N‰yt‰: a) Funktion jako parilliseen ja parittomaan osaan on yksik‰sitteinen.
-b) Jos $g$ on parillinen, niin $f \circ g$ on parillinen tai ei m‰‰ritelty.
+N√§yt√§: a) Funktion jako parilliseen ja parittomaan osaan on yksik√§sitteinen.
+b) Jos $g$ on parillinen, niin $f \circ g$ on parillinen tai ei m√§√§ritelty.
 c) Jos $f$ on parillinen/pariton ja $g$ on pariton, niin $f \circ g$ on parillinen/pariton
-   tai ei m‰‰ritelty.
+   tai ei m√§√§ritelty.
 
 \item
 Jaa seuraavat funktiot parilliseen ja parittomaan osaan: \newline
@@ -690,32 +690,32 @@ a) \ $f(x)=2+x-3x^2+x^4+x^5+\sin x-3\cos x$ \newline
 b) \ $f(x)=|x+1|+|x-1|-x+2x^2$\newline
 c) \ $f(x)=\sin(x+\frac{\pi}{4})+\cos(x+\frac{\pi}{3})$
 
-\item \label{H-IV-1: n‰yttˆj‰}
-a) N‰yt‰, ett‰ jos $f$ on (aidosti) kasvava/v‰henev‰ v‰leill‰ $A_1$ ja $A_2$ ja
-$A_1 \cap A_2 \neq \emptyset$, niin $f$ on (aidosti) kasvava/v‰henev‰ v‰lill‰ 
+\item \label{H-IV-1: n√§ytt√∂j√§}
+a) N√§yt√§, ett√§ jos $f$ on (aidosti) kasvava/v√§henev√§ v√§leill√§ $A_1$ ja $A_2$ ja
+$A_1 \cap A_2 \neq \emptyset$, niin $f$ on (aidosti) kasvava/v√§henev√§ v√§lill√§ 
 $A=A_1 \cup A_2$. \newline
-b) Olkoon $\DF_f=\R$ ja $f$ (aidosti) kasvava v‰lill‰ $[0,\infty)$. N‰yt‰, ett‰ jos lis‰ksi
-$f$ on parillinen/pariton, niin $f$ on (aidosti) v‰henev‰ v‰lill‰ $(-\infty,0]$\,/\, 
-(aidosti) kasvava $\R$:ss‰.
+b) Olkoon $\DF_f=\R$ ja $f$ (aidosti) kasvava v√§lill√§ $[0,\infty)$. N√§yt√§, ett√§ jos lis√§ksi
+$f$ on parillinen/pariton, niin $f$ on (aidosti) v√§henev√§ v√§lill√§ $(-\infty,0]$\,/\, 
+(aidosti) kasvava $\R$:ss√§.
 
 \item
-Funktio $f(x)=\sin\frac{x}{5}+\cos\frac{x}{7}$ on jaksollinen. Mik‰ on perusjakso? 
+Funktio $f(x)=\sin\frac{x}{5}+\cos\frac{x}{7}$ on jaksollinen. Mik√§ on perusjakso? 
 
 \item
-Funktion $g$ jakso on $a=2$ ja $g(x)=1-\abs{x}$, kun $x\in[-1,1]$. M‰‰rit‰ funktion
+Funktion $g$ jakso on $a=2$ ja $g(x)=1-\abs{x}$, kun $x\in[-1,1]$. M√§√§rit√§ funktion
 $f(x)=g(x)+cx-5$ nollakohdat, kun\, a) $c=1$, \ b) $c=1/2$.
 
 \item
-M‰‰ritell‰‰n porrasfunktio
+M√§√§ritell√§√§n porrasfunktio
 \[
 f(x)=k, \quad \text{kun}\ \ 2k-2 \le x < 2k,\ k\in\Z.
 \]
-M‰‰rit‰ $a\in\R$ ja jaksollinen funktio $g$ siten, ett‰ $f(x)=ax+g(x),\ x\in\R$.
+M√§√§rit√§ $a\in\R$ ja jaksollinen funktio $g$ siten, ett√§ $f(x)=ax+g(x),\ x\in\R$.
 
 \item (*) \label{H-IV-1: funktioalgebran haasteita}
 Todista pelkin algebran keinoin: \vspace{1mm}\newline
 a) Funktion $f(x)=(3x^2+3)/(x^2+x+1)$ arvojoukko on $\RF_f=[2,6]$. \newline
-b) Funktio $f(x)=x^2/(x+1)$ on aidosti kasvava v‰leill‰ $(-\infty,-2]$ ja $[0,\infty)$
-ja aidosti v‰henev‰ v‰leill‰ $[-2,-1)$ ja $(-1,0]$.
+b) Funktio $f(x)=x^2/(x+1)$ on aidosti kasvava v√§leill√§ $(-\infty,-2]$ ja $[0,\infty)$
+ja aidosti v√§henev√§ v√§leill√§ $[-2,-1)$ ja $(-1,0]$.
 
 \end{enumerate}

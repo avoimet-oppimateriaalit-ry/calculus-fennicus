@@ -1,30 +1,30 @@
 \section{Riemannin integraalin laajennukset} \label{integraalin laajennuksia}
 \alku
 
-Riemannin integraalin m‰‰ritelm‰ss‰ on perusoletuksena, ett‰ integroitava funktio $f$ on sek‰ 
-\pain{m‰‰ritelt}y ett‰ \pain{ra}j\pain{oitettu} koko integroimisv‰lill‰, jonka on oltava 
-(‰‰rellinen) \pain{sul}j\pain{ettu} v‰li. Ilman n‰it‰ rajoituksia ei integraalia voi
-yleisesti m‰‰ritell‰ Riemannin summien (tai yl‰- ja alasummien) raja-arvona, ts.\ rajoitukset
-ovat v‰ltt‰m‰ttˆmi‰, jotta $f$ olisi Riemann-integroituva. Monien sovellusten kannalta
+Riemannin integraalin m√§√§ritelm√§ss√§ on perusoletuksena, ett√§ integroitava funktio $f$ on sek√§ 
+\pain{m√§√§ritelt}y ett√§ \pain{ra}j\pain{oitettu} koko integroimisv√§lill√§, jonka on oltava 
+(√§√§rellinen) \pain{sul}j\pain{ettu} v√§li. Ilman n√§it√§ rajoituksia ei integraalia voi
+yleisesti m√§√§ritell√§ Riemannin summien (tai yl√§- ja alasummien) raja-arvona, ts.\ rajoitukset
+ovat v√§ltt√§m√§tt√∂mi√§, jotta $f$ olisi Riemann-integroituva. Monien sovellusten kannalta
 kuitenkin mainitut rajoitukset ovat turhan voimakkaita tai jopa keinotekoisia. Esimerkiksi
-koska tiedet‰‰n, ett‰ integraalin arvo ei riipu $f$:n arvoista yksitt‰isess‰ (tai ‰‰rellisen
-monessa) pisteess‰, niin tuntuu turhalta  ylip‰‰ns‰ vaatia, ett‰ $f$ on m‰‰ritelty jokaisessa
-integroimisv‰lin pisteess‰. T‰llaisten turhien rajoitusten poistamiseksi on tullut tavaksi
-konstruoida Riemannin integraalin m‰‰ritelm‰lle erilaisia laajennuksia, joita sanotaan
-\index{epzyoi@ep‰oleellinen integraali}%
-\kor{ep‰oleellisiksi} (engl.\ improper, kirjaimellisesti 'sopimaton' tai 'hyvien tapojen
+koska tiedet√§√§n, ett√§ integraalin arvo ei riipu $f$:n arvoista yksitt√§isess√§ (tai √§√§rellisen
+monessa) pisteess√§, niin tuntuu turhalta  ylip√§√§ns√§ vaatia, ett√§ $f$ on m√§√§ritelty jokaisessa
+integroimisv√§lin pisteess√§. T√§llaisten turhien rajoitusten poistamiseksi on tullut tavaksi
+konstruoida Riemannin integraalin m√§√§ritelm√§lle erilaisia laajennuksia, joita sanotaan
+\index{epzyoi@ep√§oleellinen integraali}%
+\kor{ep√§oleellisiksi} (engl.\ improper, kirjaimellisesti 'sopimaton' tai 'hyvien tapojen
 vastainen') Riemannin
-integraaleiksi. Laajennukset eiv‰t johda kovin selke‰‰n yleiseen integraalin m‰‰ritelm‰‰n, vaan
-niiden tarkoituksena on l‰hinn‰ 'paikata' alkuper‰ist‰ m‰‰ritelm‰‰ niin, ett‰ tavallisimmat
-sovelluksissa esiintyv‰t tapaukset tulevat katetuiksi. Jatkossa esitet‰‰n n‰ist‰ laajennuksista
+integraaleiksi. Laajennukset eiv√§t johda kovin selke√§√§n yleiseen integraalin m√§√§ritelm√§√§n, vaan
+niiden tarkoituksena on l√§hinn√§ 'paikata' alkuper√§ist√§ m√§√§ritelm√§√§ niin, ett√§ tavallisimmat
+sovelluksissa esiintyv√§t tapaukset tulevat katetuiksi. Jatkossa esitet√§√§n n√§ist√§ laajennuksista
 tavallisimmat.\footnote[2]{Riemannin integraalin ongelmat havaittiin jo 1800-luvun
-j‰lkipuoliskolla, jolloin mittojen ja integraalien teoria kehittyi voimakkaasti. Lopullisen
-ratkaisun ongelmaan toi ranskalaisen \hist{Henri Lebesgue}n (1875-1941) vuonna 1906 esitt‰m‰
-m‰‰ritelm‰, joka on sittemmin tunnettu \kor{Lebesguen integraalina}. Lebesguen integraali
-poistaa Riemannin integraalin kauneusvirheet, mutta sen m‰‰rittely vaatii syv‰llisempi‰
+j√§lkipuoliskolla, jolloin mittojen ja integraalien teoria kehittyi voimakkaasti. Lopullisen
+ratkaisun ongelmaan toi ranskalaisen \hist{Henri Lebesgue}n (1875-1941) vuonna 1906 esitt√§m√§
+m√§√§ritelm√§, joka on sittemmin tunnettu \kor{Lebesguen integraalina}. Lebesguen integraali
+poistaa Riemannin integraalin kauneusvirheet, mutta sen m√§√§rittely vaatii syv√§llisempi√§
 mittateoreettisia pohdiskeluja. \index{Lebesgue, H.|av} \index{Lebesguen integraali|av}}
 
-Jos $f$ on rajoitettu ja Riemann-integroituva v‰lill‰ $[a,b]$, niin funktion
+Jos $f$ on rajoitettu ja Riemann-integroituva v√§lill√§ $[a,b]$, niin funktion
 \[
 F(x)=\int_a^x f(t)\, dt
 \]
@@ -36,12 +36,12 @@ kun $0<\eps<b-a$, joten
 \[
 \int_a^b f(x)\, dx = \lim_{\eps \kohti 0^+} \int_{a+\eps}^b f(x)\, dx.
 \]
-Oikealla oleva raja-arvo ei riipu $f$:n arvoista pisteess‰ $a$ --- itse asiassa raja-arvo ei
-riipu edes siit‰, onko $f$ m‰‰ritelty t‰ss‰ pisteess‰. T‰m‰n perusteella on varsin luontevaa
-m‰‰ritell‰ integraali ko.\ raja-arvona (mik‰li olemassa) silloinkin, kun $f$ ei ole pisteess‰ 
-$a$ m‰‰ritelty ja/tai $f$ ei ole rajoitettu ko. pistett‰ l‰hestytt‰ess‰.
-\begin{Exa} \label{ep‰oleellinen esim1} Jos $f(x)=1/\sqrt{x-a}$, niin $f$ ei ole v‰lill‰ 
-$[a,b]$ rajoitettu (eik‰ pisteess‰ $a$ m‰‰ritelty), mutta em.\ raja-arvo on olemassa: 
+Oikealla oleva raja-arvo ei riipu $f$:n arvoista pisteess√§ $a$ --- itse asiassa raja-arvo ei
+riipu edes siit√§, onko $f$ m√§√§ritelty t√§ss√§ pisteess√§. T√§m√§n perusteella on varsin luontevaa
+m√§√§ritell√§ integraali ko.\ raja-arvona (mik√§li olemassa) silloinkin, kun $f$ ei ole pisteess√§ 
+$a$ m√§√§ritelty ja/tai $f$ ei ole rajoitettu ko. pistett√§ l√§hestytt√§ess√§.
+\begin{Exa} \label{ep√§oleellinen esim1} Jos $f(x)=1/\sqrt{x-a}$, niin $f$ ei ole v√§lill√§ 
+$[a,b]$ rajoitettu (eik√§ pisteess√§ $a$ m√§√§ritelty), mutta em.\ raja-arvo on olemassa: 
 \begin{align*}
 \int_{a+\eps}^b \frac{1}{\sqrt{x-a}}\,dx\ 
                       =\ \sijoitus{x=a+\eps}{x=b} 2\sqrt{x-a}\
@@ -49,35 +49,35 @@ $[a,b]$ rajoitettu (eik‰ pisteess‰ $a$ m‰‰ritelty), mutta em.\ raja-arvo on olem
                      &\kohti\ 2\sqrt{b-a}, \quad \text{kun}\,\ \eps \kohti 0^+. \loppu
 \end{align*}
 \end{Exa}
-Kun em.\ raja-arvomenettely‰ sovelletaan integroimisv‰lin kummassakin p‰‰tepisteess‰, tullaan
-seuraavaan m‰‰ritelm‰‰n.
+Kun em.\ raja-arvomenettely√§ sovelletaan integroimisv√§lin kummassakin p√§√§tepisteess√§, tullaan
+seuraavaan m√§√§ritelm√§√§n.
 \begin{Def} \vahv{(Riemannin integraalin 1. laajennus)} \label{1. R-laajennus}
 \index{Riemann-integroituvuus!a@laajennettu|emph} Olkoon $a<c<b$. Jos $f$ on rajoitettu ja
-Riemann-integroituva v‰leill‰ $[a+\eps,c]$ ja $[c,b-\eps]$ aina kun $\eps>0$
-($\eps<\min\{c-a,b-c\}$), niin m‰‰ritell‰‰n
+Riemann-integroituva v√§leill√§ $[a+\eps,c]$ ja $[c,b-\eps]$ aina kun $\eps>0$
+($\eps<\min\{c-a,b-c\}$), niin m√§√§ritell√§√§n
 \[
 \int_a^b f(x)\, dx = \lim_{\eps \kohti 0^+} \int_{a+\eps}^c f(x)\,dx
                    + \lim_{\eps \kohti 0^+} \int_c^{b-\eps} f(x)\,dx,
 \]
-sik‰li kuin oikealla puolella olevat raja-arvot ovat olemassa. Sanotaan t‰llˆin, ett‰ $f$ on
-integroituva v‰lill‰ $[a,b]$.
+sik√§li kuin oikealla puolella olevat raja-arvot ovat olemassa. Sanotaan t√§ll√∂in, ett√§ $f$ on
+integroituva v√§lill√§ $[a,b]$.
 \end{Def}
-M‰‰ritelm‰n voi esitt‰‰ hieman lyhyemmin muodossa
+M√§√§ritelm√§n voi esitt√§√§ hieman lyhyemmin muodossa
 \[
 \int_a^b f(x)\,dx = \lim_{\eps_1,\eps_2 \kohti 0^+} \int_{a+\eps_1}^{b-\eps_2} f(x)\,dx,
 \]
-miss‰ raja-arvomerkint‰ oikealla tarkoittaa, ett‰ $\eps_1 \kohti 0^+$ ja $\eps_2 \kohti 0^+$
-toisistaan riippumatta. Jos oletetaan, ett‰ $f$:ll‰ on v‰lill‰ $(a,b)$ integraalifunktio $F$,
-niin noudattaen lyhennetty‰ merkint‰tapaa on M‰‰ritelm‰n \ref{1. R-laajennus} mukaisesti
+miss√§ raja-arvomerkint√§ oikealla tarkoittaa, ett√§ $\eps_1 \kohti 0^+$ ja $\eps_2 \kohti 0^+$
+toisistaan riippumatta. Jos oletetaan, ett√§ $f$:ll√§ on v√§lill√§ $(a,b)$ integraalifunktio $F$,
+niin noudattaen lyhennetty√§ merkint√§tapaa on M√§√§ritelm√§n \ref{1. R-laajennus} mukaisesti
 \[
 \int_a^b f(x)\,dx = \lim_{\eps_1,\eps_2 \kohti 0^+}\sijoitus{a+\eps_1}{b-\eps_2} F(x)
                   = F(a^+)-F(b^-).
 \]
-Siis $f$ on t‰ss‰ tapauksessa integroituva t‰sm‰lleen kun raja-arvot $F(a^+)$ ja $F(b^-)$ ovat
-olemassa eli kun $F$ on jatkuva v‰lill‰ $[a,b]$.
-\jatko \begin{Exa} (jatko) Funktiolla $\,f(x)=1/\sqrt{x-a}\,$ on v‰lill‰ $[a,b]$ jatkuva
-integraalifunktio $F(x)=2\sqrt{x-a}$. Integraalin arvoa laskettaessa on k‰yt‰nnˆss‰
-turvallista (ja hyv‰ksytty‰) ohittaa M‰‰ritelm‰n \ref{1. R-laajennus} raja-arvoprosessi eli
+Siis $f$ on t√§ss√§ tapauksessa integroituva t√§sm√§lleen kun raja-arvot $F(a^+)$ ja $F(b^-)$ ovat
+olemassa eli kun $F$ on jatkuva v√§lill√§ $[a,b]$.
+\jatko \begin{Exa} (jatko) Funktiolla $\,f(x)=1/\sqrt{x-a}\,$ on v√§lill√§ $[a,b]$ jatkuva
+integraalifunktio $F(x)=2\sqrt{x-a}$. Integraalin arvoa laskettaessa on k√§yt√§nn√∂ss√§
+turvallista (ja hyv√§ksytty√§) ohittaa M√§√§ritelm√§n \ref{1. R-laajennus} raja-arvoprosessi eli
 laskea suoraan
 \[
 \int_a^b \frac{1}{\sqrt{x-a}}\,dx \,=\, \sijoitus{x=a}{x=b} 2\sqrt{x-a} 
@@ -85,41 +85,41 @@ laskea suoraan
 \]
 \end{Exa}
 
-Koska integraalin additiivisuutta on luonnollista pit‰‰ myˆs em.\ tavalla laajennettujen
-(ep‰oleellisten) integraalien ominaisuutena, saadaan v‰littˆm‰sti seuraava laajennus.
+Koska integraalin additiivisuutta on luonnollista pit√§√§ my√∂s em.\ tavalla laajennettujen
+(ep√§oleellisten) integraalien ominaisuutena, saadaan v√§litt√∂m√§sti seuraava laajennus.
 \begin{Def}
 \vahv{(Riemannin integraalin 2. laajennus)} \label{2. R-laajennus}
 \index{Riemann-integroituvuus!a@laajennettu|emph} Jos $a=c_0<c_1<\ldots <c_n=b$ ja $f$ on
-integroituva v‰leill‰ $[c_{k-1},c_k]$, $k=1\ldots n$, niin $f$ on integroituva v‰lill‰ $[a,b]$
+integroituva v√§leill√§ $[c_{k-1},c_k]$, $k=1\ldots n$, niin $f$ on integroituva v√§lill√§ $[a,b]$
 ja
 \[
 \int_a^b f(x)\, dx=\sum_{k=1}^m \int_{c_{k-1}}^{c_k} f(x)\, dx.
 \]
 \end{Def}
-T‰m‰n m‰‰ritelm‰n mukaisesti on esimerkiksi v‰lill‰ $[a,b]$ paloittain jatkuva funktio ko.\ 
-v‰lill‰ integroituva. M‰‰ritelm‰n mukaisesti integraalin arvo on t‰llˆin riippumaton siit‰, 
-miten $f$ on m‰‰ritelty (tai onko lainkaan m‰‰ritelty) ep‰jatkuvuuspisteiss‰.
-\begin{Exa} Jos $f(x)=k$, kun $k-1 < x < k$, $k=1 \ldots n\,$ ($f(k)$ joko m‰‰ritelty tai ei,
-kun $k=0 \ldots n$), niin M‰‰ritelm‰n \ref{2. R-laajennus} mukaisesti
+T√§m√§n m√§√§ritelm√§n mukaisesti on esimerkiksi v√§lill√§ $[a,b]$ paloittain jatkuva funktio ko.\ 
+v√§lill√§ integroituva. M√§√§ritelm√§n mukaisesti integraalin arvo on t√§ll√∂in riippumaton siit√§, 
+miten $f$ on m√§√§ritelty (tai onko lainkaan m√§√§ritelty) ep√§jatkuvuuspisteiss√§.
+\begin{Exa} Jos $f(x)=k$, kun $k-1 < x < k$, $k=1 \ldots n\,$ ($f(k)$ joko m√§√§ritelty tai ei,
+kun $k=0 \ldots n$), niin M√§√§ritelm√§n \ref{2. R-laajennus} mukaisesti
 \[
 \int_0^n f(x)\, dx \,=\, \sum_{k=1}^n \int_{k-1}^k f(x)\, dx
                    \,=\, \sum_{k=1}^n k \,=\, \frac{1}{2}n(n+1). \loppu
 \]
 \end{Exa}
-Lopuksi laajennetaan integraalin k‰site koskemaan ‰‰rettˆmi‰ v‰lej‰ $[a,\infty)$, \newline
+Lopuksi laajennetaan integraalin k√§site koskemaan √§√§rett√∂mi√§ v√§lej√§ $[a,\infty)$, \newline
 $(-\infty,b]$ ja $(-\infty,\infty)\,$:
 \begin{Def} \vahv{(Riemannin integraalin 3. laajennus)} \label{3. R-laajennus}
-\index{Riemann-integroituvuus!a@laajennettu|emph} Jos $f$ on integroituva v‰leill‰ $[a,M]$
+\index{Riemann-integroituvuus!a@laajennettu|emph} Jos $f$ on integroituva v√§leill√§ $[a,M]$
 jokaisella $M>a$ ja on olemassa raja-arvo
 \[
 A=\lim_{M\kohti\infty} \int_a^M f(x)\,dx,
 \]
-niin sanotaan, ett‰ $f$ on integroituva v‰lill‰ $[a,\infty)$, lukua $A$ sanotaan $f$:n
-integraaliksi ko. v‰lill‰, ja merkit‰‰n
+niin sanotaan, ett√§ $f$ on integroituva v√§lill√§ $[a,\infty)$, lukua $A$ sanotaan $f$:n
+integraaliksi ko. v√§lill√§, ja merkit√§√§n
 \[
 A=\int_a^\infty f(x)\,dx.
 \]
-Vastaavasti m‰‰ritell‰‰n
+Vastaavasti m√§√§ritell√§√§n
 \begin{align*}
 \int_{-\infty}^b f(x)\, dx 
                  &= \lim_{M\kohti\infty} \int_{-M}^b f(x)\, dx, \\
@@ -128,7 +128,7 @@ Vastaavasti m‰‰ritell‰‰n
 \end{align*}
 \end{Def}
 \begin{Exa}
-Funktio $f(x)=1/(1+x^2)$ on integroituva v‰lill‰ $(-\infty,\infty)$, sill‰ M‰‰ritelm‰n
+Funktio $f(x)=1/(1+x^2)$ on integroituva v√§lill√§ $(-\infty,\infty)$, sill√§ M√§√§ritelm√§n
 \ref{3. R-laajennus} mukaisesti
 \begin{align*}
 \int_{-\infty}^\infty \frac{1}{1+x^2} 
@@ -147,22 +147,22 @@ Funktio $f(x)=1/(1+x^2)$ on integroituva v‰lill‰ $(-\infty,\infty)$, sill‰ M‰‰ri
 %        \,=\, 2\left(\frac{\pi}{2}-0\right) \,=\, \pi. \loppu
 %\]
 \end{Exa}
-Jos $f$ on tarkasteltavalla (‰‰rellisell‰ tai ‰‰rettˆm‰ll‰) v‰lill‰ integroituva joko 
-tavanomaisessa tai laajennetussa mieless‰, niin sanotaan, ett‰ $f$:n integraali ko. v‰lin yli
+Jos $f$ on tarkasteltavalla (√§√§rellisell√§ tai √§√§rett√∂m√§ll√§) v√§lill√§ integroituva joko 
+tavanomaisessa tai laajennetussa mieless√§, niin sanotaan, ett√§ $f$:n integraali ko. v√§lin yli
 \index{suppeneminen!c@integraalin} \index{hajaantuminen!c@integraalin}%
-\kor{suppenee}. Jos $f$ ei ole integroituva, niin sanotaan, ett‰ integraali
-\kor{hajaantuu}. Kuten esimerkiss‰, integraalin suppeneminen selvi‰‰ helposti
-integraalifunktion avulla, sik‰li kuin sellainen on integroimsv‰lill‰ lˆydett‰viss‰. Nimitt‰in
-M‰‰ritelm‰n \ref{3. R-laajennus} mukaan myˆs ‰‰rettˆmill‰ integroimisv‰leill‰ $[a,\infty)$,
-$(-\infty,b]$ ja $(-\infty,\infty)$ p‰tee: jos $f$:n integraalifunktio v‰lill‰ $(a,b)$ on $F$,
-niin integraalin $\int_a^b f(x)\,dx$ arvo (sik‰li kuin olemassa) on
+\kor{suppenee}. Jos $f$ ei ole integroituva, niin sanotaan, ett√§ integraali
+\kor{hajaantuu}. Kuten esimerkiss√§, integraalin suppeneminen selvi√§√§ helposti
+integraalifunktion avulla, sik√§li kuin sellainen on integroimsv√§lill√§ l√∂ydett√§viss√§. Nimitt√§in
+M√§√§ritelm√§n \ref{3. R-laajennus} mukaan my√∂s √§√§rett√∂mill√§ integroimisv√§leill√§ $[a,\infty)$,
+$(-\infty,b]$ ja $(-\infty,\infty)$ p√§tee: jos $f$:n integraalifunktio v√§lill√§ $(a,b)$ on $F$,
+niin integraalin $\int_a^b f(x)\,dx$ arvo (sik√§li kuin olemassa) on
 \[
 \int_a^b f(x)\,dx \,=\, \lim_{x \kohti b^+}F(x)-\lim_{x \kohti a^-}F(x),
 \]
-eli integraali suppenee t‰sm‰lleen kun molemmat raja-arvot oikealla puolella ovat olemassa.
-Mik‰li koko integroimisv‰lill‰ toimivaa integraalifunktiota ei lˆydy, voidaan v‰li aina jakaa
-‰‰relliseen m‰‰r‰‰n osav‰lej‰, k‰ytt‰‰ integraalin additiivisuutta ja tutkia integraalin
-suppeneminen kullakin osav‰lill‰ erikseen.
+eli integraali suppenee t√§sm√§lleen kun molemmat raja-arvot oikealla puolella ovat olemassa.
+Mik√§li koko integroimisv√§lill√§ toimivaa integraalifunktiota ei l√∂ydy, voidaan v√§li aina jakaa
+√§√§relliseen m√§√§r√§√§n osav√§lej√§, k√§ytt√§√§ integraalin additiivisuutta ja tutkia integraalin
+suppeneminen kullakin osav√§lill√§ erikseen.
 \begin{Exa}
 Raja-arvoissa hieman 'oikaisten' voidaan laskea
 \begin{align*}
@@ -175,92 +175,92 @@ Raja-arvoissa hieman 'oikaisten' voidaan laskea
 \intertext{Varomaton on sen sijaan lasku}
 \int_{-\infty}^\infty \frac{1}{x^2}\,dx   &= \sijoitus{-\infty}{\infty} -\frac{1}{x} = 0,
 \end{align*}
-sill‰ huomaamatta j‰i, ett‰ $F(x)=-1/x$ ei ole funktion $f(x)=1/x^2$ integraalifunktio koko
-v‰lill‰ $(-\infty,\infty)$. Jakamalla integraali kahteen osaan v‰leille $(-\infty,0]$ ja 
-$[0,\infty)$ n‰hd‰‰n, ett‰ se hajaantuu. \loppu
+sill√§ huomaamatta j√§i, ett√§ $F(x)=-1/x$ ei ole funktion $f(x)=1/x^2$ integraalifunktio koko
+v√§lill√§ $(-\infty,\infty)$. Jakamalla integraali kahteen osaan v√§leille $(-\infty,0]$ ja 
+$[0,\infty)$ n√§hd√§√§n, ett√§ se hajaantuu. \loppu
 \end{Exa} 
 
-\subsection*{Ep‰oleellisten integraalien vertailu}
+\subsection*{Ep√§oleellisten integraalien vertailu}
 
-Silloin kun ep‰oleellisen integraalin suppenevuutta ei voida suoraan tutkia integraalifunktion
-avulla, tai se on hankalaa, voidaan suppenevuus yleens‰ selvitt‰‰ vertaamalla integraalia 
-yksinkertaisempaan, laskettavissa olevaan integraaliin. Vertailussa l‰hdet‰‰n ennest‰‰n
+Silloin kun ep√§oleellisen integraalin suppenevuutta ei voida suoraan tutkia integraalifunktion
+avulla, tai se on hankalaa, voidaan suppenevuus yleens√§ selvitt√§√§ vertaamalla integraalia 
+yksinkertaisempaan, laskettavissa olevaan integraaliin. Vertailussa l√§hdet√§√§n ennest√§√§n
 tutusta vertailuperiaatteesta (Lause \ref{integraalien vertailuperiaate})
 \[
 f(x)\leq g(x)\quad\forall x\in [a,b] \ \impl \ \int_a^b f(x)\, dx\leq\int_a^b g(x)\,dx.
 \]
-Sovellettaessa t‰t‰ ep‰oleellisiin integraaleihin ‰‰rellisell‰ v‰lill‰ $[a,b]$ riitt‰‰
-olettaa, ett‰ $f(x) \le g(x)$ on voimassa avoimella v‰lill‰ $(a,b)$
-(M‰‰ritelm‰ \ref{1. R-laajennus}) tai avoimilla osav‰leill‰ $\ (c_{k-1},c_k)\subset(a,b)$,
-$\,k=1 \ldots n\,$ (M‰‰ritelm‰ \ref{2. R-laajennus}), sill‰ koska vertailuperiaate on p‰tev‰
-tavallisille Riemannin integraaleille, se pysyy voimassa myˆs m‰‰ritelmien raja-arvoille.
+Sovellettaessa t√§t√§ ep√§oleellisiin integraaleihin √§√§rellisell√§ v√§lill√§ $[a,b]$ riitt√§√§
+olettaa, ett√§ $f(x) \le g(x)$ on voimassa avoimella v√§lill√§ $(a,b)$
+(M√§√§ritelm√§ \ref{1. R-laajennus}) tai avoimilla osav√§leill√§ $\ (c_{k-1},c_k)\subset(a,b)$,
+$\,k=1 \ldots n\,$ (M√§√§ritelm√§ \ref{2. R-laajennus}), sill√§ koska vertailuperiaate on p√§tev√§
+tavallisille Riemannin integraaleille, se pysyy voimassa my√∂s m√§√§ritelmien raja-arvoille.
 Vertailtaessa integraaleja $\int_a^\infty f(x)\,dx$ ja $\int_a^\infty g(x)\,dx$
-(M‰‰ritelm‰ \ref{3. R-laajennus}) riitt‰‰ vastaavasti olettaa, ett‰ $f(x) \le g(x)$ v‰leill‰
-$\,(c_{k-1},c_k)$, $\,k=1,2,\ldots$ miss‰ $\,a=c_0<c_1<\ldots$ ja $\,\lim_kc_k=\infty$.
+(M√§√§ritelm√§ \ref{3. R-laajennus}) riitt√§√§ vastaavasti olettaa, ett√§ $f(x) \le g(x)$ v√§leill√§
+$\,(c_{k-1},c_k)$, $\,k=1,2,\ldots$ miss√§ $\,a=c_0<c_1<\ldots$ ja $\,\lim_kc_k=\infty$.
 
-Tarkastellaan esimerkkin‰ integraalia $\int_a^\infty f(x)\,dx$.
-(Integraali $\int_{-\infty}^b f(x)\,dx$ palautuu t‰h‰n muuttujan vaihdolla $t=-x$.)
+Tarkastellaan esimerkkin√§ integraalia $\int_a^\infty f(x)\,dx$.
+(Integraali $\int_{-\infty}^b f(x)\,dx$ palautuu t√§h√§n muuttujan vaihdolla $t=-x$.)
 Funktioille, jotka
-eiv‰t vaihda merkki‰‰n integroimisv‰lill‰ (lukuunottamatta mahdollisia erillisi‰ pisteit‰,
-jotka eiv‰t vaikuta integraalin arvoon), voi integraalien suppenemistarkasteluissa k‰ytt‰‰
+eiv√§t vaihda merkki√§√§n integroimisv√§lill√§ (lukuunottamatta mahdollisia erillisi√§ pisteit√§,
+jotka eiv√§t vaikuta integraalin arvoon), voi integraalien suppenemistarkasteluissa k√§ytt√§√§
 seuraavia vertailuperiaatteita, vrt.\ vastaavat periaatteet positiivitermisille sarjoille
-(Lause \ref{sarjojen vertailu}). Yksinkertaisuuden vuoksi oletetetaan t‰ss‰ funktiot
-m‰‰ritellyksi ja ep‰yht‰lˆt voimassa oleviksi koko v‰lill‰ $[a,\infty)$. 
+(Lause \ref{sarjojen vertailu}). Yksinkertaisuuden vuoksi oletetetaan t√§ss√§ funktiot
+m√§√§ritellyksi ja ep√§yht√§l√∂t voimassa oleviksi koko v√§lill√§ $[a,\infty)$. 
 \begin{Lause} \label{integraalien majorointi ja minorointi}
 \index{majoranttiperiaate|emph} \index{minoranttiperiaate|emph}% 
 (\vahv{Majorantti- ja minoranttiperiaatteet integraaleille})\newline
-Jos $f$ ja $g$ ovat m‰‰riteltyj‰ v‰lill‰ $[a,\infty)$, integroituvia v‰lill‰ $[a,M]$ jokaisella
-$\,M>a\,$ ja $\,0 \le f(x) \le g(x)\ \forall x\in[a,\infty)$, niin p‰tee
+Jos $f$ ja $g$ ovat m√§√§riteltyj√§ v√§lill√§ $[a,\infty)$, integroituvia v√§lill√§ $[a,M]$ jokaisella
+$\,M>a\,$ ja $\,0 \le f(x) \le g(x)\ \forall x\in[a,\infty)$, niin p√§tee
 \begin{align*}
 &\int_a^\infty g(x)\,dx\ \text{suppenee} \,\ \qimpl \int_a^\infty f(x)\,dx\ \text{suppenee}, \\
 &\int_a^\infty f(x)\,dx\ \text{hajaantuu} \qimpl \int_a^\infty g(x)\,dx\ \text{hajaantuu}.
 \end{align*}
 \end{Lause}
-\tod V‰itt‰m‰t ovat loogisesti ekvivalentteja, joten riitt‰‰ todistaa ensimm‰inen.
-Oletetaan siis, ett‰ $\int_a^\infty g(x)\,dx$ suppenee. Koska $f(x) \ge 0$ v‰lill‰
-$[a,\infty)$, niin funktio $F(x)=\int_a^x f(t)\,dt$ on ko.\ v‰lill‰ kasvava:
+\tod V√§itt√§m√§t ovat loogisesti ekvivalentteja, joten riitt√§√§ todistaa ensimm√§inen.
+Oletetaan siis, ett√§ $\int_a^\infty g(x)\,dx$ suppenee. Koska $f(x) \ge 0$ v√§lill√§
+$[a,\infty)$, niin funktio $F(x)=\int_a^x f(t)\,dt$ on ko.\ v√§lill√§ kasvava:
 \[
 F(x_2)-F(x_1) \,=\, \int_{x_1}^{x_2} f(t)\,dt \,\ge\, 0, \quad \text{kun}\ a \le x_1 < x_2.
 \]
-Samasta syyst‰ $G(x)=\int_a^x g(t)\,dt$ on kasvava v‰lill‰ $[a,\infty)$, ja koska
+Samasta syyst√§ $G(x)=\int_a^x g(t)\,dt$ on kasvava v√§lill√§ $[a,\infty)$, ja koska
 $f(x) \le g(x),\ x\in[a,\infty)\,$ ja integraali $\int_a^\infty g(t)\,dt\,$ suppenee, niin
-voidaan p‰‰tell‰:
+voidaan p√§√§tell√§:
 \[
 F(x)\,\le\,G(x)\,\le\,\lim_{x\kohti\infty}G(x)\,=\,\int_a^\infty g(t)\,dt, \quad x\in[a,\infty).
 \]
-N‰in ollen $F(x)$ on v‰lill‰ $[0,\infty)$ sek‰ kasvava ett‰ rajoitettu. Lauseen
-\ref{monotonisen funktion raja-arvo} mukaan on t‰llˆin olemassa raja-arvo
+N√§in ollen $F(x)$ on v√§lill√§ $[0,\infty)$ sek√§ kasvava ett√§ rajoitettu. Lauseen
+\ref{monotonisen funktion raja-arvo} mukaan on t√§ll√∂in olemassa raja-arvo
 $\,\lim_{x\kohti\infty}F(x)=\int_a^\infty f(x)\,dx$. \loppu
 \begin{Exa} Lauseen \ref{integraalien majorointi ja minorointi} perusteella integraali
-$\,\int_1^\infty e^{-x}/x\,\,dx\,$ suppenee, sill‰ v‰lill‰ $[1,\infty)\,$ on
+$\,\int_1^\infty e^{-x}/x\,\,dx\,$ suppenee, sill√§ v√§lill√§ $[1,\infty)\,$ on
 $\,e^{-x}/x \le e^{-x}\,$ ja integraali $\,\int_0^\infty e^{-x}\,dx\,$ suppenee:
 \[
 \int_1^\infty e^{-x}\,dx\,=\,\sijoitus{1}{\infty} (-e^{-x})\,=\,1. \loppu
 \]
 \end{Exa}
 Lauseen \ref{integraalien majorointi ja minorointi} majorantti- ja minoranttiperiaatteet
-yleistyv‰t sopivin oletuksin koskemaan muitakin ep‰oleellisia integraaleja. Esimerkiksi
-olettaen ett‰ $0 \le f(x) \le g(x)\ \forall x\in(a,b)$, M‰‰ritelm‰n \ref{1. R-laajennus}
-mukaisille integraaleille p‰tee
+yleistyv√§t sopivin oletuksin koskemaan muitakin ep√§oleellisia integraaleja. Esimerkiksi
+olettaen ett√§ $0 \le f(x) \le g(x)\ \forall x\in(a,b)$, M√§√§ritelm√§n \ref{1. R-laajennus}
+mukaisille integraaleille p√§tee
 \[
 \int_a^b g(x)\,dx\ \text{suppenee} \qimpl \int_a^b f(x)\,dx\ \text{suppenee}.
 \]
 \begin{Exa} Integraalia $\,\int_0^1 e^{-x}/x\,\,dx$ voi tutkia muuttujan vaihdolla $t=1/x$,
-jolloin Lause \ref{integraalien majorointi ja minorointi} soveltuu. Suorempi p‰‰ttely kuitenkin
-riitt‰‰: Integraali hajaantuu, koska $\,e^{-x}/x \ge e^{-1}x^{-1} > 0,\ x\in(0,1]\,$ ja
+jolloin Lause \ref{integraalien majorointi ja minorointi} soveltuu. Suorempi p√§√§ttely kuitenkin
+riitt√§√§: Integraali hajaantuu, koska $\,e^{-x}/x \ge e^{-1}x^{-1} > 0,\ x\in(0,1]\,$ ja
 $\,\int_0^1 x^{-1}\,dx$ hajaantuu. \loppu
 \end{Exa}
 
 \subsection*{Cauchyn kriteeri integraaleille}
 
-Seuraava yleinen suppenemiskriteeri toimii kaikille ep‰oleellisille integraaleille muotoa
+Seuraava yleinen suppenemiskriteeri toimii kaikille ep√§oleellisille integraaleille muotoa
 $\,\int_a^\infty f(x)\,dx$, vrt.\ vastaava Cauchyn kriteeri sarjoille
 (Lause \ref{Cauchyn sarjakriteeri}).
 \begin{Lause} \label{Cauchyn integraalikriteeri} (\vahv{Cauchyn kriteeri integraaleille})
 \index{Cauchyn!e@kriteeri integraaleille|emph}
-Olkoon $f$ on integroituva v‰lill‰ $[a,M]$ jokaisella $M>a$. T‰llˆin integraali
-$\int_a^\infty f(x)\, dx$ suppenee t‰sm‰lleen kun jokaisella $\eps>0$ on olemassa $M>a$ siten,
-ett‰ p‰tee
+Olkoon $f$ on integroituva v√§lill√§ $[a,M]$ jokaisella $M>a$. T√§ll√∂in integraali
+$\int_a^\infty f(x)\, dx$ suppenee t√§sm√§lleen kun jokaisella $\eps>0$ on olemassa $M>a$ siten,
+ett√§ p√§tee
 \[
 \bigl|\int_{M_1}^{M_2} f(x)\,dx\,\bigr| \,<\, \eps, \quad \text{kun}\ M_1,M_2>M.
 \]
@@ -271,9 +271,9 @@ ett‰ p‰tee
                             &\kohti \int_a^\infty f(x)\, dx-\int_a^\infty f(x)\, dx=0, \quad 
                                                       \text{kun}\,\ M_1,M_2\kohti\infty,
 \end{align*}
-joten Cauchyn kriteeri on t‰ytetty.
+joten Cauchyn kriteeri on t√§ytetty.
 
-$\boxed{\Leftarrow}\quad$ Oletetaan, ett‰ Cauchyn kriteeri on t‰ytetty ja merkit‰‰n
+$\boxed{\Leftarrow}\quad$ Oletetaan, ett√§ Cauchyn kriteeri on t√§ytetty ja merkit√§√§n
 \[
 A_n=\int_a^n f(x)\, dx,\quad n\in\N, \ n>a.
 \]
@@ -285,13 +285,13 @@ joten $\{A_n\}$ on Cauchyn jono, ja siis (Lause \ref{Cauchyn kriteeri})
 \[
 A_n\kohti A\in\R, \quad \text{kun}\ n\kohti\infty.
 \]
-K‰ytt‰m‰ll‰ t‰t‰ tulosta ja vetoamalla uudelleen oletukseen todetaan, ett‰ jos $\eps>0$, niin
-valitsemalla $M\in\R$ ja $n\in\N$ riitt‰v‰n suuriksi on
+K√§ytt√§m√§ll√§ t√§t√§ tulosta ja vetoamalla uudelleen oletukseen todetaan, ett√§ jos $\eps>0$, niin
+valitsemalla $M\in\R$ ja $n\in\N$ riitt√§v√§n suuriksi on
 \begin{align*}
 \bigl|\int_a^M f(x)\, dx-A\,\bigr|\ &\le\ \bigl|\int_a^M f(x)\,dx-A_n\,\bigr|+|A_n-A| \\
                                     &= \bigl|\int_n^M f(x)\,dx\,\bigr|+|A_n-A|<\eps.
 \end{align*}
-N‰in ollen $f$ on integroituva v‰lill‰ $[a,\infty)$:
+N√§in ollen $f$ on integroituva v√§lill√§ $[a,\infty)$:
 \[
 \lim_{M\kohti\infty}\int_a^M f(x)\,dx = A. \loppu
 \]
@@ -303,20 +303,20 @@ Suppeneeko vai hajaantuuko integraali $\D\,\int_0^\infty \frac{\cos x}{\sqrt{x}}
 \int_0^\infty \frac{\cos x}{\sqrt{x}}\,dx = \int_0^{\pi/2} \frac{\cos x}{\sqrt{x}}\,dx
                                           + \int_{\pi/2}^\infty \frac{\cos x}{\sqrt{x}}\,dx.
 \]
-Integroimalla osittain ensimm‰isess‰ osassa todetaan
+Integroimalla osittain ensimm√§isess√§ osassa todetaan
 \[
 \int_0^{\pi/2} \frac{\cos x}{\sqrt{x}}\,dx  
             = \sijoitus{0}{\pi/2} 2\sqrt{x}\cos x + \int_0^{\pi/2} 2\sqrt{x}\sin x\,dx
             = 2 \int_0^{\pi/2} \sqrt{x}\sin x\,dx.
 \]
-Funktio $f(x)=\sqrt{x}\sin x$ on jatkuva v‰lill‰ $[0,\pi/2]$, joten t‰m‰ osa integraalista
-suppenee. Integraalin loppuosassa integroidaan osittain toisin p‰in:
+Funktio $f(x)=\sqrt{x}\sin x$ on jatkuva v√§lill√§ $[0,\pi/2]$, joten t√§m√§ osa integraalista
+suppenee. Integraalin loppuosassa integroidaan osittain toisin p√§in:
 \[
 \int_{\pi/2}^M \frac{1}{\sqrt{x}}\cos x \, dx 
                    = \sijoitus{\pi/2}{M}\frac{1}{\sqrt{x}}\sin x
                             +\frac{1}{2}\int_{\pi/2}^M x^{-3/2}\sin x\,dx.
 \]
-T‰ss‰
+T√§ss√§
 \[
 \sijoitus{\pi/2}{M}\frac{1}{\sqrt{x}}\sin x \kohti -\sqrt{\frac{2}{\pi}}, \quad
                                                         \text{kun}\,\ M\kohti\infty,
@@ -325,36 +325,36 @@ joten suppenemiskysymys siirtyy koskemaan integraalia
 \[
 \int_{\pi/2}^\infty x^{-3/2}\sin x \, dx.
 \]
-Kolmioep‰yht‰lˆn (Luku \ref{m‰‰r‰tty integraali}, ep‰yht‰lˆ \eqref{int-4: kolmioep‰yht‰lˆ})
-avulla arvioiden todetaan, ett‰ jos $\,\pi/2<M_1<M_2$, niin
+Kolmioep√§yht√§l√∂n (Luku \ref{m√§√§r√§tty integraali}, ep√§yht√§l√∂ \eqref{int-4: kolmioep√§yht√§l√∂})
+avulla arvioiden todetaan, ett√§ jos $\,\pi/2<M_1<M_2$, niin
 \begin{align*}
 \left|\int_{M_1}^{M_2} x^{-3/2}\sin x\,dx\right| 
            &\le \int_{M_1}^{M_2} x^{-3/2}\abs{\sin x\,}\,dx \\
            &\le \int_{M_1}^{M_2} x^{-3/2} \, dx \\
            &= -2\sijoitus{M_1}{M_2} x^{-1/2}\kohti 0, \quad \text{kun}\,\ M_1,M_2\kohti\infty,
 \end{align*}
-joten Cauchyn kriteerin perusteella myˆs t‰m‰ osa integraalista suppenee. Siis vastaus on:
+joten Cauchyn kriteerin perusteella my√∂s t√§m√§ osa integraalista suppenee. Siis vastaus on:
 Suppenee! \loppu
 
 \subsection*{Integraalit ja sarjat}
 \index{sarjaoppi (klassinen)|vahv}
 
-Edell‰ on jo n‰hty, ett‰ integraalien $\int_a^\infty f(x)\,dx$ ja sarjojen suppenemisteoriat
+Edell√§ on jo n√§hty, ett√§ integraalien $\int_a^\infty f(x)\,dx$ ja sarjojen suppenemisteoriat
 muistuttavat toisiaan. Laskennallisemmaltakin kannalta integraalien ja sarjojen yhteys on
-merkitt‰v‰, sill‰ osoittautuu, ett‰ integraaalien avulla voidaan sek‰ yksinkertaistaa
-sarjojen suppenemistarkasteluja ett‰ tehostaa sarjojen summien numeerista laskemista.
+merkitt√§v√§, sill√§ osoittautuu, ett√§ integraaalien avulla voidaan sek√§ yksinkertaistaa
+sarjojen suppenemistarkasteluja ett√§ tehostaa sarjojen summien numeerista laskemista.
 
-Tarkastellaan esimerkkin‰ sarjaa $\,\sum_{k=1}^\infty f(k)$, miss‰ oletetaan, ett‰ $f$ on
-m‰‰ritelty v‰lill‰ $\,[1,\infty)\,$ ja lis‰ksi jollakin $n\in\N$ p‰tee:
+Tarkastellaan esimerkkin√§ sarjaa $\,\sum_{k=1}^\infty f(k)$, miss√§ oletetaan, ett√§ $f$ on
+m√§√§ritelty v√§lill√§ $\,[1,\infty)\,$ ja lis√§ksi jollakin $n\in\N$ p√§tee:
 \begin{itemize}
-\item[(i)]  $f$ on v‰henev‰ v‰lill‰ $\,[n,\infty)$ ja $\,\lim_{x\kohti\infty}f(x)=0$.
+\item[(i)]  $f$ on v√§henev√§ v√§lill√§ $\,[n,\infty)$ ja $\,\lim_{x\kohti\infty}f(x)=0$.
 \end{itemize}
-Oletuksesta (i) seuraa, ett‰ $f(x) \ge 0$ v‰lill‰ $[n,\infty)$ ja jokaisella $k \ge n$ on
+Oletuksesta (i) seuraa, ett√§ $f(x) \ge 0$ v√§lill√§ $[n,\infty)$ ja jokaisella $k \ge n$ on
 voimassa
 \[
 f(k+1)\leq f(x)\leq f(k), \quad \text{kun}\,\ x\in [k,k+1].
 \]
-N‰in ollen
+N√§in ollen
 \[
 \int_k^{k+1} f(k+1)\, dx\ \le\ \int_k^{k+1} f(x)\, dx\ \leq\ \int_{k}^{k+1} f(k)\, dx,
 \]
@@ -378,71 +378,71 @@ f(k+1)\ \leq\ \int_k^{k+1} f(x)\, dx\ \leq\ f(k).
 \end{picture}
 \end{center}
 \end{figure}
-Summaamalla em.\ tulos yli indeksien $\,k=n\ldots N-1$ ($N>n$) ja k‰ytt‰m‰ll‰ integraalin
+Summaamalla em.\ tulos yli indeksien $\,k=n\ldots N-1$ ($N>n$) ja k√§ytt√§m√§ll√§ integraalin
 additiivisuutta saadaan
 \[
 \sum_{k=n+1}^N f(k) \,\le\, \int_n^N f(x)\,dx \ \le\ \sum_{k=n}^{N-1} f(k)
                                              \ =\, \sum_{k=n+1}^{N-1} f(k) + f(n).
 \]
-Koska t‰ss‰ $\lim_nf(n)=0$ oletuksen (i) mukaan, niin Cauchyn sarja- ja integraalikriteerien
+Koska t√§ss√§ $\lim_nf(n)=0$ oletuksen (i) mukaan, niin Cauchyn sarja- ja integraalikriteerien
 (Lauseet \ref{Cauchyn sarjakriteeri} ja \ref{Cauchyn integraalikriteeri}) perusteella
-p‰‰tell‰‰n, ett‰ sarja $\sum_{k=1}^\infty f(k)$ suppenee t‰sm‰lleen kun integraali
-$\int_n^\infty f(x)\,dx$ suppenee. Lis‰ksi rajalla $N\kohti\infty$ saadaan arviot
+p√§√§tell√§√§n, ett√§ sarja $\sum_{k=1}^\infty f(k)$ suppenee t√§sm√§lleen kun integraali
+$\int_n^\infty f(x)\,dx$ suppenee. Lis√§ksi rajalla $N\kohti\infty$ saadaan arviot
 \begin{align*}
            &\sum_{k=n+1}^\infty f(k) 
               \,\le\, \int_n^\infty f(x)\,dx \,\le\, \sum_{k=n+1}^\infty f(k) + f(n) \\
 \ekv \quad &\int_n^\infty f(x)\,dx - f(n) 
               \,\le\, \sum_{k=n+1}^\infty f(k) \,\le\, \int_n^\infty f(x)\,dx.
 \end{align*}
-T‰st‰ seuraa sarjan summan laskemisen kannalta mielenkiintoinen tulos:
+T√§st√§ seuraa sarjan summan laskemisen kannalta mielenkiintoinen tulos:
 \begin{align*}
 \sum_{k=1}^\infty f(k) &\,=\, \sum_{k=1}^{n} f(k) + \int_n^\infty f(x)\,dx\,-\eps_n \\
                       &\,=\, \sum_{k=1}^{n-1} f(k) + \int_n^\infty f(x)\,dx\,+\delta_n,
 \end{align*}
-miss‰ $\,0 \le \eps_n \le f(n)\,$ ja $\,0 \le \delta_n \le f(n)\,$ ($\delta_n=f(n)-\eps_n$).
-T‰m‰ tarkoittaa, ett‰ kun sarjan 'h‰nt‰' (indeksist‰ $n$ tai $n+1$ alkaen) lasketaan 
-integraalina, niin t‰ll‰ tavoin saatavista approksimaatioista
+miss√§ $\,0 \le \eps_n \le f(n)\,$ ja $\,0 \le \delta_n \le f(n)\,$ ($\delta_n=f(n)-\eps_n$).
+T√§m√§ tarkoittaa, ett√§ kun sarjan 'h√§nt√§' (indeksist√§ $n$ tai $n+1$ alkaen) lasketaan 
+integraalina, niin t√§ll√§ tavoin saatavista approksimaatioista
 \begin{align}
 \sum_{k=1}^\infty f(k)\ 
          &\approx\ \sum_{k=1}^{n-1} f(k) + \int_n^\infty f(x)\,dx \label{appr a} \tag{a} \\
          &\approx\ \sum_{k=1}^{n} f(k) + \int_n^\infty f(x)\,dx \label{appr b} \tag{b}
 \end{align}
-\eqref{appr a} antaa sarjan summalle alalikiarvon ja \eqref{appr b} yl‰likiarvon, ja kummankin
-virhe on enint‰‰n $f(n)=$ sarjan $n$:s termi (= approksimaatioiden erotus). Tulos on siis
-p‰tev‰, mik‰li em.\ oletus (i) on voimassa.
-%Seuraavaa esimerkki‰ voi verrata aiempiin suppenemistarkasteluihin Luvussa \ref{potenssisarja}
+\eqref{appr a} antaa sarjan summalle alalikiarvon ja \eqref{appr b} yl√§likiarvon, ja kummankin
+virhe on enint√§√§n $f(n)=$ sarjan $n$:s termi (= approksimaatioiden erotus). Tulos on siis
+p√§tev√§, mik√§li em.\ oletus (i) on voimassa.
+%Seuraavaa esimerkki√§ voi verrata aiempiin suppenemistarkasteluihin Luvussa \ref{potenssisarja}
 %(Lause \ref{harmoninen sarja}).
 \begin{Exa} \label{sarja vs integraali}
-Mill‰ $\alpha$:n arvoilla ($\alpha\in\R$) sarja $\,\sum_{k=1}^\infty 1/k^\alpha\,$ suppenee?
+Mill√§ $\alpha$:n arvoilla ($\alpha\in\R$) sarja $\,\sum_{k=1}^\infty 1/k^\alpha\,$ suppenee?
 \end{Exa}
-\ratk Sarja ep‰ilem‰tt‰ hajaantuu, jos $\alpha \le 0$. Jos $\alpha>0$, niin oletus (i) on
-voimassa, kun $n=1$. Integraali $\,\int_1^\infty x^{-\alpha}\,dx\,$ suppenee t‰sm‰lleen kun
-$\alpha>1$, joten sarja suppenee t‰sm‰lleen samalla ehdolla. \loppu
+\ratk Sarja ep√§ilem√§tt√§ hajaantuu, jos $\alpha \le 0$. Jos $\alpha>0$, niin oletus (i) on
+voimassa, kun $n=1$. Integraali $\,\int_1^\infty x^{-\alpha}\,dx\,$ suppenee t√§sm√§lleen kun
+$\alpha>1$, joten sarja suppenee t√§sm√§lleen samalla ehdolla. \loppu
 
 Esimerkin kysymys ratkaistiin jo aiemmin (Lause \ref{harmoninen sarja}) mutta vaivalloisemmin.
-Paitsi yksinkertaistaa suppenemistarkastelun, integraaliin vertaaminen helpottaa usein myˆs
+Paitsi yksinkertaistaa suppenemistarkastelun, integraaliin vertaaminen helpottaa usein my√∂s
 sarjan summan numeerista laskemista.
-\jatko \begin{Exa} (jatko) Esimerkin suppenevan (yliharmonisen) sarjan summalle p‰tee
+\jatko \begin{Exa} (jatko) Esimerkin suppenevan (yliharmonisen) sarjan summalle p√§tee
 approksimaation (b) perusteella
 \[
 \sum_{k=1}^\infty\frac{1}{k^\alpha}\ 
    \approx\ \sum_{k=1}^n\frac{1}{k^\alpha}+\frac{1}{\alpha-1}\,n^{1-\alpha}, \quad \alpha>1.
 \]
-T‰m‰ on yl‰likiarvo, jota voi verrata pelkk‰‰n sarjan katkaisuun eli alalikiarvoon
+T√§m√§ on yl√§likiarvo, jota voi verrata pelkk√§√§n sarjan katkaisuun eli alalikiarvoon
 \[
 \sum_{k=1}^\infty\frac{1}{k^\alpha}\ \approx\ \sum_{k=1}^n\frac{1}{k^\alpha}\,.
 \]
-Edellisen virhe on enint‰‰n $\,n^{-\alpha}$, j‰lkimm‰isen 
+Edellisen virhe on enint√§√§n $\,n^{-\alpha}$, j√§lkimm√§isen 
 $n^{1-\alpha}/(\alpha-1)+\mathcal{O}(n^{-\alpha})$. Esim.\ jos $\alpha=5/4$, on tarkkuusero
-k‰yt‰nnˆss‰ dramaattinen, ks.\ Harj.teht.\,\ref{H-int-7: hidas sarja}. \loppu
+k√§yt√§nn√∂ss√§ dramaattinen, ks.\ Harj.teht.\,\ref{H-int-7: hidas sarja}. \loppu
 \end{Exa}
-Huomautettakoon, ett‰ esimerkiss‰ viel‰kin tehokkaampi algoritmivaihtoehto on
+Huomautettakoon, ett√§ esimerkiss√§ viel√§kin tehokkaampi algoritmivaihtoehto on
 approksimaatioiden (a) ja (b) keskiarvo eli
 \[
 \sum_{k=1}^\infty \frac{1}{k^\alpha} \,\approx\,
 \sum_{k=1}^n\frac{1}{k^\alpha}+\frac{1}{\alpha-1}\,n^{1-\alpha}-\frac{1}{2}\,n^{-\alpha}\,.
 \]
-T‰m‰n virhe on suuruusluokkaa $\mathcal{O}(n^{-1-\alpha})$
+T√§m√§n virhe on suuruusluokkaa $\mathcal{O}(n^{-1-\alpha})$
 (ks.\ Harj.teht.\,\ref{numeerinen integrointi}:\ref{H-int-9: hidas sarja}).
 
 \pagebreak
@@ -451,7 +451,7 @@ T‰m‰n virhe on suuruusluokkaa $\mathcal{O}(n^{-1-\alpha})$
 \begin{enumerate}
 
 \item
-Laske tai osoita hajaantuvaksi kohdissa a)--o). Kohdissa p)--ˆ) m‰‰rit‰ $k$:n arvot ($k\in\R$),
+Laske tai osoita hajaantuvaksi kohdissa a)--o). Kohdissa p)--√∂) m√§√§rit√§ $k$:n arvot ($k\in\R$),
 joilla integraali suppenee.
 \begin{align*}
 &\text{a)}\ \ \int_0^6 \frac{2x}{x^2-4}\,dx \qquad
@@ -479,9 +479,9 @@ joilla integraali suppenee.
  \text{x)}\ \ \int_0^\infty \frac{\abs{k}^x}{\sqrt{e^x+1}}\,dx \qquad
  \text{y)}\ \ \int_0^\infty x^k\ln x\,dx \\
 &\text{z)}\ \ \int_0^1 \frac{e^x}{(1-x^2)^k}\,dx \qquad
- \text{Â)}\ \ \int_0^\infty \abs{x^2-1}^k e^{-x}\,dx \qquad
- \text{‰)}\ \ \int_{-\infty}^\infty \frac{\ln\abs{x}}{\abs{x^3+1}^k}\,dx \\
-&\text{ˆ)}\ \ \int_{-\infty}^\infty\left[\sqrt[4]{|\sin x\cos x|}\ e^{|x|}\,(\ln|x|)^8\right]^kdx
+ \text{√•)}\ \ \int_0^\infty \abs{x^2-1}^k e^{-x}\,dx \qquad
+ \text{√§)}\ \ \int_{-\infty}^\infty \frac{\ln\abs{x}}{\abs{x^3+1}^k}\,dx \\
+&\text{√∂)}\ \ \int_{-\infty}^\infty\left[\sqrt[4]{|\sin x\cos x|}\ e^{|x|}\,(\ln|x|)^8\right]^kdx
 \end{align*}
 
 \item
@@ -501,26 +501,26 @@ Todista suppeneminen sijoituksella $t=1/x$\,:
 \]
 
 \item
-Sievenn‰ ja piirr‰ kuvaaja:
+Sievenn√§ ja piirr√§ kuvaaja:
 \[
 f(x)=\int_0^\pi \frac{x\sin t}{\sqrt{1+2x\cos t+x^2}}\,dx.
 \]
 
 \item \label{H-int-7: Gamma} \index{Gammafunktio ($\Gamma$-funktio)}
-\kor{Gammafunktio} ($\Gamma$-funktio) m‰‰ritell‰‰n 
+\kor{Gammafunktio} ($\Gamma$-funktio) m√§√§ritell√§√§n 
 \[
 \Gamma(x)=\int_0^{\infty} t^{x-1} e^{-t}\,dt.
 \]
-N‰yt‰ tosiksi seuraavat v‰itt‰m‰t ja hahmottele n‰iden perusteella
+N√§yt√§ tosiksi seuraavat v√§itt√§m√§t ja hahmottele n√§iden perusteella
 $\Gamma$-\-funktion kulku. (Kohdassa e) on $\Gamma(1/2)=\sqrt{\pi} \approx 1.77$, ks.\
 Propositio \ref{Gamma(1/2)}.) \vspace{1.5mm}\newline
-a) \ $\Gamma$ on m‰‰ritelty v‰lill‰ $(0,\infty)$. \newline
+a) \ $\Gamma$ on m√§√§ritelty v√§lill√§ $(0,\infty)$. \newline
 b) \ $\Gamma(x+1) = x \Gamma(x)\ \forall x>0$. \newline
 c) \ $\Gamma(n)=(n-1)!\,\ \forall n\in\N$. \newline
 d) \ $\lim_{x \kohti 0^+} \Gamma(x)=\lim_{x\kohti\infty} \Gamma(x)=\infty$. \newline
 e) \ $\Gamma(1/2)=2\,\Gamma(3/2)=\int_{-\infty}^\infty e^{-x^2}\,dx$.
 \item
-a) Halutaan selvitt‰‰, mill‰ $\alpha$:n arvoilla ($\alpha\in\R$) sarja
+a) Halutaan selvitt√§√§, mill√§ $\alpha$:n arvoilla ($\alpha\in\R$) sarja
 \[
 \sum_{k=2}^\infty \frac{1}{k(\ln k)^\alpha}
 \]
@@ -533,28 +533,28 @@ b) Olkoon $n\in\N$ suuri luku. Perustele integraalin avulla arviot
     \,\ln n+\mathcal{O}(n^{-1}),                               &\text{kun}\ \alpha=-1.
                         \end{cases}
 \]
-Mik‰ on j‰‰nnˆstermi $\mathcal{O}(n^\alpha)$ tarkasti tapauksissa $\alpha=0$ ja $\alpha=1$\,?
+Mik√§ on j√§√§nn√∂stermi $\mathcal{O}(n^\alpha)$ tarkasti tapauksissa $\alpha=0$ ja $\alpha=1$\,?
 
 \item \label{H-int-7: hidas sarja}
-K‰ytett‰viss‰ on tietokone, joka laskee summan $s_n=\sum_{k=1}^n k^{-5/4}$ ajassa $10^{-10}n$
+K√§ytett√§viss√§ on tietokone, joka laskee summan $s_n=\sum_{k=1}^n k^{-5/4}$ ajassa $10^{-10}n$
 sekuntia. Summien $s_n$ avulla halutaan laskea raja-arvo $s=\lim_ns_n$ kuuden desimaalin
 tarkkuudella (virhe < $5 \cdot 10^{-7}$). Arvioi laskenta-aika \newline
 a) vuosimiljardeina approksimaatioilla $\,s \approx s_n$, \newline
 b) mikrosekunteina approksimaatioilla $\,s \approx s_n+4/\sqrt[4]{n}$.
 
 \item (*) \index{Eulerin!b@vakio}
-\kor{Eulerin vakio} $\gamma=0.5772156649..\,$ m‰‰ritell‰‰n
+\kor{Eulerin vakio} $\gamma=0.5772156649..\,$ m√§√§ritell√§√§n
 \[
 \gamma\,=\,\lim_{n\kohti\infty} \left(\sum_{k=1}^n \frac{1}{k}\,-\,\ln n\right)\,
         =\,\sum_{k=1}^\infty a_k, \quad a_k=\frac{1}{k}-\ln\left(1+\frac{1}{k}\right).
 \]
-a) Perustele j‰lkimm‰inen laskukaava sek‰ ko.\ sarjan suppeneminen. \newline
-b) N‰yt‰, ett‰ suurilla $n\in\N$ p‰tee
+a) Perustele j√§lkimm√§inen laskukaava sek√§ ko.\ sarjan suppeneminen. \newline
+b) N√§yt√§, ett√§ suurilla $n\in\N$ p√§tee
    $\,\sum_{k=1}^na_k + \frac{1}{2n} = \gamma + \mathcal{O}(n^{-2})$.
         
 \item (*)
-Arvioi luku $n!$ sek‰ ylh‰‰lt‰ ett‰ alhaalta vertaamalla lukua 
+Arvioi luku $n!$ sek√§ ylh√§√§lt√§ ett√§ alhaalta vertaamalla lukua 
 $\ln(n!) = \ln 1 + \ln 2 + \dots + \ln n$ integraaliin. Kuinka moninumeroinen luku on $1000!$
-(kymmenj‰rjestelm‰ss‰)\,?
+(kymmenj√§rjestelm√§ss√§)\,?
 
 \end{enumerate}

@@ -3,39 +3,39 @@
 \index{funktio A!e@kompleksifunktio|vahv}
 
 Kompleksifunktiolla tarkoitetaan kompleksimuuttujan kompleksiarvoista funktiota eli
-funktiota tyyppi‰ $f: \DF_f\kohti\C,\ \DF_f\subset\C$. T‰llainen on esimerkiksi Luvussa
-\ref{III-3} tarkasteltu (koko $\C$:ss‰ m‰‰ritelty) polynomi. Koska $z$ on
-tulkittavissa tason (kompleksitason) pisteeksi, niin kompleksifunktio voidaan ymm‰rt‰‰
-myˆs kahden reaalimuuttujan kompleksiarvoisena funktiona kirjoittamalla (vrt.\ Luvun
+funktiota tyyppi√§ $f: \DF_f\kohti\C,\ \DF_f\subset\C$. T√§llainen on esimerkiksi Luvussa
+\ref{III-3} tarkasteltu (koko $\C$:ss√§ m√§√§ritelty) polynomi. Koska $z$ on
+tulkittavissa tason (kompleksitason) pisteeksi, niin kompleksifunktio voidaan ymm√§rt√§√§
+my√∂s kahden reaalimuuttujan kompleksiarvoisena funktiona kirjoittamalla (vrt.\ Luvun
 \ref{III-3} Esimerkki \ref{kompleksipolynomin juuret})
 \[
 f(x+iy) = u(x,y)+iv(x,y),
 \]
-miss‰ $u(x,y)=\text{Re}\,f(x+iy)$ ja $v(x,y)=\text{Im}\,f(x+iy)$. Huolimatta t‰st‰ erosta
-suhteessa yhden reaalimuuttujan funktioihin voidaan kompleksifunktioille m‰‰ritell‰ k‰sitteet
+miss√§ $u(x,y)=\text{Re}\,f(x+iy)$ ja $v(x,y)=\text{Im}\,f(x+iy)$. Huolimatta t√§st√§ erosta
+suhteessa yhden reaalimuuttujan funktioihin voidaan kompleksifunktioille m√§√§ritell√§ k√§sitteet
 jatkuvuus, raja-arvo ja derivoituvuus aivan samalla tavoin kuin reaalifunktioille. Esimerkiksi
-$f$ on jatkuva pisteess‰ $z\in\DF_f$ t‰sm‰lleen kun kaikille kompleksilukujonoille $\seq{z_n}$
-p‰tee (vrt.\ M‰‰ritelm‰ \ref{funktion jatkuvuus})
+$f$ on jatkuva pisteess√§ $z\in\DF_f$ t√§sm√§lleen kun kaikille kompleksilukujonoille $\seq{z_n}$
+p√§tee (vrt.\ M√§√§ritelm√§ \ref{funktion jatkuvuus})
 \[ 
 z_n\in\DF_f\ \ja\ z_n \kohti z \qimpl f(z_n) \kohti f(z).
 \]
-T‰ss‰ lukujonojen $\seq{z_n}$ ja $\seq{f(z_n)}$ suppeneminen viittaa M‰‰ritelm‰‰n
-\ref{jonon raja}, joka toimii sellaisenaan myˆs kompleksilukujen jonoille, kunhan merkinn‰n
-$\abs{\cdot}$ tulkitaan tarkoittavan kompleksiluvun itseisarvoa. M‰‰ritelm‰n mukaan p‰tee
+T√§ss√§ lukujonojen $\seq{z_n}$ ja $\seq{f(z_n)}$ suppeneminen viittaa M√§√§ritelm√§√§n
+\ref{jonon raja}, joka toimii sellaisenaan my√∂s kompleksilukujen jonoille, kunhan merkinn√§n
+$\abs{\cdot}$ tulkitaan tarkoittavan kompleksiluvun itseisarvoa. M√§√§ritelm√§n mukaan p√§tee
 erityisesti (kuten reaalilukujonoillekin)
 \[ 
 z_n \kohti z \qekv \abs{z_n - z} \kohti 0.
 \]
-Jos t‰ss‰ on $z=0$, niin p‰tee siis
+Jos t√§ss√§ on $z=0$, niin p√§tee siis
 \[
 z_n=r_n\vkulma{\varphi_n} \kohti 0 \qekv r_n \kohti 0.
 \]
-T‰m‰n mukaan l‰hestyminen kohti kompleksitason pistett‰ (t‰ss‰ origoa) voi tapahtua
-‰‰rettˆm‰n monesta eri suunnasta ($\varphi_n=\varphi\in[0,2\pi)\ \forall n$) tai suuntia
-vaihdellen (esim.\ spiraalimainen l‰hestyminen). Jatkossa n‰hd‰‰n, ett‰ t‰m‰ kvalitatiivinen
-ero suhteessa reaalilukujonoon (jolla mahdollisia l‰hestymissuuntia kohti raja-arvoa on vain
-kaksi) voi tuottaa kompleksifunktoiden raja-arvotarkasteluissa yll‰tyksi‰.
-\begin{Exa} Funktio $f(z)=\overline{z}$ (eli $f(x+iy)=x-iy$) on jatkuva $\C$:ss‰, sill‰
+T√§m√§n mukaan l√§hestyminen kohti kompleksitason pistett√§ (t√§ss√§ origoa) voi tapahtua
+√§√§rett√∂m√§n monesta eri suunnasta ($\varphi_n=\varphi\in[0,2\pi)\ \forall n$) tai suuntia
+vaihdellen (esim.\ spiraalimainen l√§hestyminen). Jatkossa n√§hd√§√§n, ett√§ t√§m√§ kvalitatiivinen
+ero suhteessa reaalilukujonoon (jolla mahdollisia l√§hestymissuuntia kohti raja-arvoa on vain
+kaksi) voi tuottaa kompleksifunktoiden raja-arvotarkasteluissa yll√§tyksi√§.
+\begin{Exa} Funktio $f(z)=\overline{z}$ (eli $f(x+iy)=x-iy$) on jatkuva $\C$:ss√§, sill√§
 kompleksialgebran (ks.\ Luku \ref{kompleksiluvuilla laskeminen}) mukaan
 \[
 \abs{f(z_n)-f(z)} = \abs{\overline{z_n}-\overline{z}} 
@@ -43,15 +43,15 @@ kompleksialgebran (ks.\ Luku \ref{kompleksiluvuilla laskeminen}) mukaan
 \]
 aina kun $z_n \kohti z$. \loppu
 \end{Exa}
-Myˆs jatkuvuuden vaihtoehtoinen m‰‰ritelm‰ (M‰‰ritelm‰ \ref{vaihtoehtoinen jatkuvuus})
-toimii sellaisenaan kompleksifunktioille, samoin funktion raja-arvon m‰‰ritelm‰.
-Raja-arvon k‰sitteeseen perustuva funktion derivaatta m‰‰ritell‰‰n myˆs samoin kuin
+My√∂s jatkuvuuden vaihtoehtoinen m√§√§ritelm√§ (M√§√§ritelm√§ \ref{vaihtoehtoinen jatkuvuus})
+toimii sellaisenaan kompleksifunktioille, samoin funktion raja-arvon m√§√§ritelm√§.
+Raja-arvon k√§sitteeseen perustuva funktion derivaatta m√§√§ritell√§√§n my√∂s samoin kuin
 reaalifunktioille:
 \[ 
 f'(z) = \lim_{\Delta z \kohti 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}. 
 \]
 \index{derivoituvuus}%
-Jos raja-arvo on olemassa, niin sanotaan, ett‰ $f$ on \kor{derivoituva} pisteess‰ $z$. 
+Jos raja-arvo on olemassa, niin sanotaan, ett√§ $f$ on \kor{derivoituva} pisteess√§ $z$. 
 \begin{Exa} \label{kompleksifunktioiden derivoituvuus} Tutki kompleksifunktioiden
 \[ 
 \text{a)}\ f(z) = \bar{z}, \quad \text{b)}\ f(x+iy) = x^2 + iy^2, \quad 
@@ -64,100 +64,100 @@ derivoituvuutta. \end{Exa}
 \frac{f(z + \Delta z_n) - f(z)}{\Delta z_n} 
              = \frac{\cos\varphi_n - i\sin\varphi_n}{\cos\varphi_n + i\sin\varphi_n}. 
 \]
-N‰hd‰‰n, ettei vaadittua raja-arvoa ole, eli $f$ ei ole miss‰‰n pisteess‰ derivoituva.
+N√§hd√§√§n, ettei vaadittua raja-arvoa ole, eli $f$ ei ole miss√§√§n pisteess√§ derivoituva.
 
-b) Jos t‰ss‰ merkit‰‰n $\Delta z_n = \Delta x_n + i\Delta y_n$, niin
+b) Jos t√§ss√§ merkit√§√§n $\Delta z_n = \Delta x_n + i\Delta y_n$, niin
 \[ 
 \frac{f(z + \Delta z_n) - f(z)}{\Delta z_n} 
     = 2\,\frac{x\Delta x_n + iy\Delta y_n}{\Delta x_n + i\Delta y_n}
                            + \frac{(\Delta x_n)^2 + (\Delta y_n)^2}{\Delta x_n + i\Delta y_n}. 
 \]
-Siirtym‰ll‰ polaariesitykseen n‰hd‰‰n, ett‰ j‰lkimm‰inen termi oikealla $\kohti 0$ aina kun 
-$\abs{\Delta z_n} = r_n \kohti 0$. Ensimm‰isell‰ termill‰ sen sijaan on vain l‰hestymissuunnasta
+Siirtym√§ll√§ polaariesitykseen n√§hd√§√§n, ett√§ j√§lkimm√§inen termi oikealla $\kohti 0$ aina kun 
+$\abs{\Delta z_n} = r_n \kohti 0$. Ensimm√§isell√§ termill√§ sen sijaan on vain l√§hestymissuunnasta
 riippuvia suunnattuja raja-arvoja, ellei ole $x=y=t$, jolloin ko.\ termi yksinkertaistuu muotoon
-$2t$. P‰‰tell‰‰n siis, ett‰ $f$ on derivoituva ainoastaan kompleksitason suoralla
-$z = t(1+i),\ t \in \R$, ja t‰ll‰ suoralla $f'(z) = 2Rez$. 
+$2t$. P√§√§tell√§√§n siis, ett√§ $f$ on derivoituva ainoastaan kompleksitason suoralla
+$z = t(1+i),\ t \in \R$, ja t√§ll√§ suoralla $f'(z) = 2Rez$. 
 
-c) T‰ss‰ esimerkiss‰ ollaan onnekkaampia, sill‰ $f(x+iy) = (x+iy)^2$, jolloin
+c) T√§ss√§ esimerkiss√§ ollaan onnekkaampia, sill√§ $f(x+iy) = (x+iy)^2$, jolloin
 \[ 
 \frac{f(z + \Delta z) - f(z)}{\Delta z} = \frac{(z+\Delta z)^2 - z^2}{\Delta z} 
                                         = 2z + \Delta z, \quad \Delta z \neq 0. 
 \]
-Siis $f$ on derivoituva jokaisessa pisteess‰ $z \in \C$ ja $f'(z) = 2z$. \quad \loppu
+Siis $f$ on derivoituva jokaisessa pisteess√§ $z \in \C$ ja $f'(z) = 2z$. \quad \loppu
 
-Esimerkki kertoo, ett‰ kompleksifunktion derivoituvuus on kaikkea muuta kuin 'l‰pihuutojuttu'
-siin‰kin tapauksessa, ett‰ funktion reaali- ja imaginaariosat ovat s‰‰nnˆllisi‰ funktioita
-(kuten esimerkiss‰ polynomeja). Derivoituvuus onkin kom\-pleksifunktiolle paljon vaativampi
+Esimerkki kertoo, ett√§ kompleksifunktion derivoituvuus on kaikkea muuta kuin 'l√§pihuutojuttu'
+siin√§kin tapauksessa, ett√§ funktion reaali- ja imaginaariosat ovat s√§√§nn√∂llisi√§ funktioita
+(kuten esimerkiss√§ polynomeja). Derivoituvuus onkin kom\-pleksifunktiolle paljon vaativampi
 ominaisuus kuin reaalifunktiolle.
 
-Seuraavassa m‰‰ritelm‰ss‰ laajennetaan derivoituvuusehto koskemaan kompleksitason
+Seuraavassa m√§√§ritelm√§ss√§ laajennetaan derivoituvuusehto koskemaan kompleksitason
 \kor{avointa} osajoukkoa $G\subset\C$.
 \begin{Def} (\vahv{Analyyttinen kompleksifunktio}) \label{analyyttinen funktio}
 \index{analyyttinen kompleksifunktio|emph} \index{avoin joukko|emph}
-\index{ympzy@($\delta$-)ymp‰ristˆ} 
+\index{ympzy@($\delta$-)ymp√§rist√∂} 
 Kompleksitason osa\-joukko $G\subset\C$ on \kor{avoin}, jos jokaisella $z_0 \in G$ on
-\kor{ymp‰ristˆ}
+\kor{ymp√§rist√∂}
 \[ 
 U_{\delta}(z_0) = \{z \in \C \mid \abs{z-z_0}<\delta\},\ \ \delta>0
 \]
-siten, ett‰ $U_{\delta} \subset G$. Kompleksifunktio, joka on derivoituva ei-tyhj‰ss‰,
-avoimessa joukossa $G\subset\C$, on \kor{analyyttinen} $G$:ss‰.
+siten, ett√§ $U_{\delta} \subset G$. Kompleksifunktio, joka on derivoituva ei-tyhj√§ss√§,
+avoimessa joukossa $G\subset\C$, on \kor{analyyttinen} $G$:ss√§.
 \end{Def}
-Analyyttiset funktiot muodostavat kompleksifunktioiden t‰rke‰n ja paljon tutkitun
-'v‰hemmistˆn'.\footnote[2]{Analyyttisten kompleksifunktioiden teorian tarkempi esittely
-kuuluu toisiin yhteyksiin. Mainittakoon teorian tuloksista kuitenkin, ett‰ jos $f$ on
-analyyttinen $G$:ss‰, niin samoin on $f'$, jolloin $f$ on itse asiassa mielivaltaisen monta
-kertaa derivoituva $G$:ss‰. --- T‰m‰ tulos kertoo osaltaan, ett‰ kompleksifunktion analyytisyys
+Analyyttiset funktiot muodostavat kompleksifunktioiden t√§rke√§n ja paljon tutkitun
+'v√§hemmist√∂n'.\footnote[2]{Analyyttisten kompleksifunktioiden teorian tarkempi esittely
+kuuluu toisiin yhteyksiin. Mainittakoon teorian tuloksista kuitenkin, ett√§ jos $f$ on
+analyyttinen $G$:ss√§, niin samoin on $f'$, jolloin $f$ on itse asiassa mielivaltaisen monta
+kertaa derivoituva $G$:ss√§. --- T√§m√§ tulos kertoo osaltaan, ett√§ kompleksifunktion analyytisyys
 on paljon voimakkaampi ominaisuus kuin reaalifunktion derivoituvuus.}
-\jatko \begin{Exa} (jatko) Esimerkiss‰ c-kohdan funktio $f(z) = z^2$ on analyyttinen koko 
-kompleksitasossa ($G = \C$), kun taas a- ja b- kohtien funktiot eiv‰t ole analyyttisi‰
-miss‰‰n. \loppu 
+\jatko \begin{Exa} (jatko) Esimerkiss√§ c-kohdan funktio $f(z) = z^2$ on analyyttinen koko 
+kompleksitasossa ($G = \C$), kun taas a- ja b- kohtien funktiot eiv√§t ole analyyttisi√§
+miss√§√§n. \loppu 
 \end{Exa}
 \index{kokonainen funktio}%
-Jos $f$ on analyyttinen koko kompleksitasossa, niin sanotaan, ett‰ $f$ on  \kor{kokonainen} 
-(engl.\ entire) funktio. Kaikki polynomit $p(z)$ (myˆs kompleksikertoimiset) ovat kokonaisia 
-funktioita, sill‰ polynomin derivoimiss‰‰ntˆ perustuu vain kunta-algebraan, joka ei lainkaan 
-muutu siirrytt‰ess‰ reaalimuuttujasta kompleksimuuttujaan (vrt.\ Esimerkki 
-\ref{kompleksifunktioiden derivoituvuus}, c-kohta). Algebraan perustuvat myˆs funktioiden
-summan, tulon, osam‰‰r‰n ja yhdistetyn funktion derivoimiss‰‰nnˆt reaalifunktioille, joten
-niiss‰kin voidaan reaalimuuttujan $x$ tilalle vaihtaa kompeksimuuttuja $z$ s‰‰nnˆn 
+Jos $f$ on analyyttinen koko kompleksitasossa, niin sanotaan, ett√§ $f$ on  \kor{kokonainen} 
+(engl.\ entire) funktio. Kaikki polynomit $p(z)$ (my√∂s kompleksikertoimiset) ovat kokonaisia 
+funktioita, sill√§ polynomin derivoimiss√§√§nt√∂ perustuu vain kunta-algebraan, joka ei lainkaan 
+muutu siirrytt√§ess√§ reaalimuuttujasta kompleksimuuttujaan (vrt.\ Esimerkki 
+\ref{kompleksifunktioiden derivoituvuus}, c-kohta). Algebraan perustuvat my√∂s funktioiden
+summan, tulon, osam√§√§r√§n ja yhdistetyn funktion derivoimiss√§√§nn√∂t reaalifunktioille, joten
+niiss√§kin voidaan reaalimuuttujan $x$ tilalle vaihtaa kompeksimuuttuja $z$ s√§√§nn√∂n 
 \index{kompleksimuuttujan!b@rationaalifunktio} \index{rationaalifunktio}%
-muuttumatta. N‰iden s‰‰ntˆjen perusteella voidaan erityisesti jokainen (kompleksikertoiminen)
+muuttumatta. N√§iden s√§√§nt√∂jen perusteella voidaan erityisesti jokainen (kompleksikertoiminen)
 \kor{kompleksimuuttujan rationaalifunktio} derivoida samalla tavoin kuin reaalimuuttujan 
-tapauksessa. Rationaalifunktiot ovatkin M‰‰ritelm‰n \ref{analyyttinen funktio} mukaisesti
-analyyttisi‰ koko m‰‰rittelyjoukossaan, sill‰ jos $f(z) = p(z)/q(z)$ ($p$ ja $q$ polynomeja)
-ja $z_0\in\DF_f$, niin $q(z_0) \neq 0$, jolloin $q(z) \neq 0$ myˆs jossakin ymp‰ristˆss‰
-$U_{\delta}(z_0)$. T‰llˆin $U_{\delta}(z_0)\subset\DF_f$, eli $\DF_f$ on avoin joukko.
+tapauksessa. Rationaalifunktiot ovatkin M√§√§ritelm√§n \ref{analyyttinen funktio} mukaisesti
+analyyttisi√§ koko m√§√§rittelyjoukossaan, sill√§ jos $f(z) = p(z)/q(z)$ ($p$ ja $q$ polynomeja)
+ja $z_0\in\DF_f$, niin $q(z_0) \neq 0$, jolloin $q(z) \neq 0$ my√∂s jossakin ymp√§rist√∂ss√§
+$U_{\delta}(z_0)$. T√§ll√∂in $U_{\delta}(z_0)\subset\DF_f$, eli $\DF_f$ on avoin joukko.
 \begin{Exa} Rationaalifunktiot
 \[
 f(z) = \frac{1}{z^2 + 1}\,, \quad g(z) = \frac{i}{z^2 + iz}
 \]
-on m‰‰ritelty koko kompleksitasossa lukuunottamatta pisteit‰ $\pm i$ ($f$) ja $0,-i$ ($g$).
-M‰‰rittelyjoukot ovat avoimia, ja molemmat funktiot ovat m‰‰rittelyjoukossaan derivoituvia,
-siis analyyttisi‰. Derivaatat lasketaan kuten reaalimuuttujan tapauksessa:
+on m√§√§ritelty koko kompleksitasossa lukuunottamatta pisteit√§ $\pm i$ ($f$) ja $0,-i$ ($g$).
+M√§√§rittelyjoukot ovat avoimia, ja molemmat funktiot ovat m√§√§rittelyjoukossaan derivoituvia,
+siis analyyttisi√§. Derivaatat lasketaan kuten reaalimuuttujan tapauksessa:
 \[ 
 f'(z) = -\frac{2z}{(z^2 + 1)^2}\,, \quad g'(z) = -\frac{i(2z+i)}{(z^2 + iz)^2}\,. \loppu 
 \] 
 \end{Exa}
 
-Jos kompleksifunktio on analyyttinen nollakohtansa ymp‰ristˆss‰, niin nollakohtaa voidaan
-etsi‰ Newtonin iteraatiolla
+Jos kompleksifunktio on analyyttinen nollakohtansa ymp√§rist√∂ss√§, niin nollakohtaa voidaan
+etsi√§ Newtonin iteraatiolla
 \[
 z_{n+1} = z_n - \frac{f(z_n)}{f'(z_n)}\,, \quad n=0,1,\ldots
 \]
-Esimerkiksi polynomin yksinkertaista nollakohtaa etsitt‰ess‰ algoritmi toimii erinomaisesti,
-kunhan alkuarvaus on riitt‰v‰n hyv‰
+Esimerkiksi polynomin yksinkertaista nollakohtaa etsitt√§ess√§ algoritmi toimii erinomaisesti,
+kunhan alkuarvaus on riitt√§v√§n hyv√§
 (ks.\ Harj.teht.\,\ref{H-V-8: Newton 1}--\ref{H-V-8: Newton 3}).
 
 \Harj
 \begin{enumerate}
 
 \item
-N‰yt‰ suoraan kompleksifunktion derivaatan m‰‰ritelm‰st‰, ett‰ \newline
+N√§yt√§ suoraan kompleksifunktion derivaatan m√§√§ritelm√§st√§, ett√§ \newline
 a) \ $\dif z^{-1}=-z^{-2},\quad$ b) \ $\dif (z+i)^{-2}=-2(z+i)^{-3}.$
 
 \item
-Miss‰ kompleksitason osajoukossa seuraavat funktiot ovat analyyttisi‰?
+Miss√§ kompleksitason osajoukossa seuraavat funktiot ovat analyyttisi√§?
 \begin{align*}
 &\text{a)}\ \ f(z)=z^3+iz \qquad \text{b)}\ \ f(z)=\frac{z+1}{z^2+z+1} \qquad
  \text{c)}\ \ f(z)=\frac{1}{z^3-8} \\
@@ -167,18 +167,18 @@ Miss‰ kompleksitason osajoukossa seuraavat funktiot ovat analyyttisi‰?
 \end{align*}
 
 \item \label{H-V-8: Newton 1}
-N‰yt‰, ett‰ jos $a\in\C,\ a \neq 0$, niin Newtonin iteraatio
+N√§yt√§, ett√§ jos $a\in\C,\ a \neq 0$, niin Newtonin iteraatio
 \[
 z_0\in\C, \quad z_{n+1} = \frac{1}{2}\left(z_n + \frac{a}{z_n}\right), \quad n=0,1,\ldots
 \]
-(vrt.\ Luku \ref{kiintopisteiteraatio}, Esimerkki \ref{neliˆjuuri a}) suppenee kvadraattisesti
+(vrt.\ Luku \ref{kiintopisteiteraatio}, Esimerkki \ref{neli√∂juuri a}) suppenee kvadraattisesti
 kohti funktion $f(z)=z^2-a$ nollakohtaa, jos alkuarvaus $z_0$ on nollakohtaa (kumpaa tahansa)
-riitt‰v‰n l‰hell‰. Kokeile iteraation toimivuuttaa tapauksessa $a=i$ valinnoilla a) $z_0=1$, \
+riitt√§v√§n l√§hell√§. Kokeile iteraation toimivuuttaa tapauksessa $a=i$ valinnoilla a) $z_0=1$, \
 b) $z_0=i$, \ c) $z_0=-1-i$.
 
 \item \label{H-V-8: Newton 2}
-Etsi polynomin $f(z)=z^4+z+4$ nollakohdat likim‰‰rin Newtonin menetelm‰ll‰. Huomaa, ett‰
-Newtonin iteraatio ei t‰ss‰ tapauksessa suppene reaalisilla alkuarvauksilla --- miksei?
+Etsi polynomin $f(z)=z^4+z+4$ nollakohdat likim√§√§rin Newtonin menetelm√§ll√§. Huomaa, ett√§
+Newtonin iteraatio ei t√§ss√§ tapauksessa suppene reaalisilla alkuarvauksilla --- miksei?
 
 \item (*) \label{H-V-8: Newton 3}
 Todista Lauseen \ref{Newtonin konvergenssi} vastine analyyttiselle kompleksifunktiolle

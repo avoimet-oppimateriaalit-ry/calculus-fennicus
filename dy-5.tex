@@ -1,104 +1,104 @@
-\section{Lineaariset, vakiokertoimiset DY:t.  \\ Eulerin differentiaaliyhtälö} 
+\section{Lineaariset, vakiokertoimiset DY:t.  \\ Eulerin differentiaaliyhtÃ¤lÃ¶} 
 \label{vakikertoimiset ja Eulerin DYt}
 \sectionmark{Vakiokertoimiset ja Eulerin DY:t}
 \alku
-\index{lineaarinen differentiaaliyhtälö!d@2.\ kertaluvun|vahv}
-\index{lineaarinen differentiaaliyhtälö!f@vakiokertoiminen|vahv}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!d@2.\ kertaluvun|vahv}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!f@vakiokertoiminen|vahv}
 \index{vakiokertoiminen DY|vahv}
 
-Edellisessä luvussa ratkaistiin jo ensimmäisen kertaluvun lineaarinen ja vakiokertoiminen
-differentiaaliyhtälö $y'+ay=f(x)$. Sovelluksissa yleinen on myös vastaava toisen kertaluvun
-differentiaaliyhtälö, jonka yleinen muoto on
+EdellisessÃ¤ luvussa ratkaistiin jo ensimmÃ¤isen kertaluvun lineaarinen ja vakiokertoiminen
+differentiaaliyhtÃ¤lÃ¶ $y'+ay=f(x)$. Sovelluksissa yleinen on myÃ¶s vastaava toisen kertaluvun
+differentiaaliyhtÃ¤lÃ¶, jonka yleinen muoto on
 \begin{equation} \label{linvak-ty}
 y''+ay'+by=f(x), \quad a,b\in\R.
 \end{equation}
-Tämän ratkaisemiseksi tarkastellaan ensin vastaavaa homogeenista yhtälöä
+TÃ¤mÃ¤n ratkaisemiseksi tarkastellaan ensin vastaavaa homogeenista yhtÃ¤lÃ¶Ã¤
 \begin{equation} \label{linvak-hy}
 y''+ay'+by=0.
 \end{equation}
-Kun tämän ratkaisua etsitään yritteellä
+Kun tÃ¤mÃ¤n ratkaisua etsitÃ¤Ã¤n yritteellÃ¤
 \[
 y(x)=e^{rx},
 \]
-niin sijoittamalla yhtälöön saadaan vakion $r$ määrämiseksi
-\index{karakteristinen yhtälö (polynomi)!a@differentiaaliyhtälön}%
-\kor{karakteristinen yhtälö}
+niin sijoittamalla yhtÃ¤lÃ¶Ã¶n saadaan vakion $r$ mÃ¤Ã¤rÃ¤miseksi
+\index{karakteristinen yhtÃ¤lÃ¶ (polynomi)!a@differentiaaliyhtÃ¤lÃ¶n}%
+\kor{karakteristinen yhtÃ¤lÃ¶}
 \[
-\boxed{\kehys\quad r^2+ar+b=0 \quad\text{(karakteristinen yhtälö).}\quad}
+\boxed{\kehys\quad r^2+ar+b=0 \quad\text{(karakteristinen yhtÃ¤lÃ¶).}\quad}
 \]
-Karakteristisen yhtälön juuret ovat
+Karakteristisen yhtÃ¤lÃ¶n juuret ovat
 \[
 r=-\frac{a}{2}\pm\sqrt{\frac{a^2}{4}-b}\,,
 \]
 jolloin on kolme mahdollisuutta:
 
-\underline{1. \ $a^2-4b>0$}. \ Tässä tapauksessa karakteristisella yhtälöllä on kaksi erisuurta 
-reaalijuurta $r_1$ ja $r_2$ ja homogeeniyhtälöllä \eqref{linvak-hy} siis ratkaisut
+\underline{1. \ $a^2-4b>0$}. \ TÃ¤ssÃ¤ tapauksessa karakteristisella yhtÃ¤lÃ¶llÃ¤ on kaksi erisuurta 
+reaalijuurta $r_1$ ja $r_2$ ja homogeeniyhtÃ¤lÃ¶llÃ¤ \eqref{linvak-hy} siis ratkaisut
 \[
 y_1(x)=e^{r_1x},\quad y_2(x)=e^{r_2x}.
 \]
-Ratkaisu on myös $y(x)=C_1y_1(x)+C_2y_2(x)\ (C_1,C_2\in\R)$, sillä jos yhtälö \eqref{linvak-hy}
+Ratkaisu on myÃ¶s $y(x)=C_1y_1(x)+C_2y_2(x)\ (C_1,C_2\in\R)$, sillÃ¤ jos yhtÃ¤lÃ¶ \eqref{linvak-hy}
 kirjoitetaan $\dyf y=0$, niin $\dyf$ on lineaarinen operaattori, jolloin on
 $\dyf(C_1y_1+C_2y_2)=C_1\dyf y_1+C_2\dyf y_2=0$. Siis jokainen $y(x)$ muotoa
 \[
 y(x)=C_1e^{r_1x}+C_2e^{r_2x}, \quad C_1,C_2\in\R
 \]
-on homogeeniyhtälön \eqref{linvak-hy} ratkaisu. Näytetään nyt, että kyseessä on yhtälön
-\eqref{linvak-hy} yleinen ratkaisu eli mikä tahansa ratkaisu on tätä muotoa. Tätä silmällä
-pitäen kirjoitetaan ensin karakteristinen yhtälö muotoon
+on homogeeniyhtÃ¤lÃ¶n \eqref{linvak-hy} ratkaisu. NÃ¤ytetÃ¤Ã¤n nyt, ettÃ¤ kyseessÃ¤ on yhtÃ¤lÃ¶n
+\eqref{linvak-hy} yleinen ratkaisu eli mikÃ¤ tahansa ratkaisu on tÃ¤tÃ¤ muotoa. TÃ¤tÃ¤ silmÃ¤llÃ¤
+pitÃ¤en kirjoitetaan ensin karakteristinen yhtÃ¤lÃ¶ muotoon
 \[
 r^2+ar+b \,=\, (r-r_1)(r-r_2) \,=\, r^2-(r_1+r_2)r+r_1r_2 \,=\, 0,
 \]
-missä siis $a=-r_1-r_2$ ja $b=r_1r_2$. Olkoon $y(x)$ homogeeniyhtälön \eqref{linvak-hy}
-ratkaisu. Tällöin derivoimalla funktio $u(x)=y'(x)-r_2y(x)$ todetaan, että
+missÃ¤ siis $a=-r_1-r_2$ ja $b=r_1r_2$. Olkoon $y(x)$ homogeeniyhtÃ¤lÃ¶n \eqref{linvak-hy}
+ratkaisu. TÃ¤llÃ¶in derivoimalla funktio $u(x)=y'(x)-r_2y(x)$ todetaan, ettÃ¤
 \[
 u'-r_1u = y''-(r_1+r_2)y'+r_1r_2y = y''+ay'+by=0.
 \]
-Siis $u(x)$ ja $y(x)$ ovat ratkaistavissa differentiaaliyhtälöryhmästä
+Siis $u(x)$ ja $y(x)$ ovat ratkaistavissa differentiaaliyhtÃ¤lÃ¶ryhmÃ¤stÃ¤
 \[
 \begin{cases}
 \,u'-r_1u=0, \\ \,y'-r_2y=u(x).
 \end{cases}
 \]
-Kun tässä ensimmäisen yhtälön yleinen ratkaisu $u(x)=C_1e^{r_1x}\ (C_1\in\R)$ sijoitetaan
-jälkimmäiseen yhtälöön, niin todetaan tämän yksittäisratkaisuksi
+Kun tÃ¤ssÃ¤ ensimmÃ¤isen yhtÃ¤lÃ¶n yleinen ratkaisu $u(x)=C_1e^{r_1x}\ (C_1\in\R)$ sijoitetaan
+jÃ¤lkimmÃ¤iseen yhtÃ¤lÃ¶Ã¶n, niin todetaan tÃ¤mÃ¤n yksittÃ¤isratkaisuksi
 $y_0(x)=(r_1-r_2)^{-1}C_1e^{r_1x}$ (vrt.\ edellinen luku) ja yleiseksi ratkaisuksi siis
 \[
 y(x)=\frac{C_1}{r_1-r_2}\,e^{r_1x}+C_2e^{r_2x}.
 \]
-Tässä voidaan $C_1$:n tilalle kirjoittaa yhtä hyvin $(r_1-r_2)C_1$, joten todetaan, että
-jokainen yhtälön \eqref{linvak-hy} ratkaisu on muotoa $y(x)=C_1e^{r_1x}+C_2e^{r_2x}$,
-$C_1,C_2\in\R$. Jokainen tällainen funktio oli myös ratkaisu, joten kyseessä on yleinen
+TÃ¤ssÃ¤ voidaan $C_1$:n tilalle kirjoittaa yhtÃ¤ hyvin $(r_1-r_2)C_1$, joten todetaan, ettÃ¤
+jokainen yhtÃ¤lÃ¶n \eqref{linvak-hy} ratkaisu on muotoa $y(x)=C_1e^{r_1x}+C_2e^{r_2x}$,
+$C_1,C_2\in\R$. Jokainen tÃ¤llainen funktio oli myÃ¶s ratkaisu, joten kyseessÃ¤ on yleinen
 ratkaisu.
 
-\underline{2. \ $a^2-4b=0$}. \ Tässä tapauksessa karakteristisella yhtälöllä on kaksoisjuuri 
-$r=-a/2$, joten em.\ yhtälöryhmässä on $r_1=r_2=r$. Kun ensimmäisen yhtälön yleinen ratkaisu
-$u(x)=C_1e^{rx}\ (C_1\in\R)$ sijoitetaan jälkimmäiseen, niin tämän yksittäisratkaisu on
+\underline{2. \ $a^2-4b=0$}. \ TÃ¤ssÃ¤ tapauksessa karakteristisella yhtÃ¤lÃ¶llÃ¤ on kaksoisjuuri 
+$r=-a/2$, joten em.\ yhtÃ¤lÃ¶ryhmÃ¤ssÃ¤ on $r_1=r_2=r$. Kun ensimmÃ¤isen yhtÃ¤lÃ¶n yleinen ratkaisu
+$u(x)=C_1e^{rx}\ (C_1\in\R)$ sijoitetaan jÃ¤lkimmÃ¤iseen, niin tÃ¤mÃ¤n yksittÃ¤isratkaisu on
 $y_0(x)=C_1xe^{rx}$ (vrt.\ edellinen luku) ja yleinen ratkaisu siis
 \[
 y(x)=(C_1x+C_2)e^{rx},\quad r=-\frac{a}{2}\,.
 \]
-Tämä on myös yhtälön \eqref{linvak-hy} yleinen ratkaisu.
+TÃ¤mÃ¤ on myÃ¶s yhtÃ¤lÃ¶n \eqref{linvak-hy} yleinen ratkaisu.
 
-\underline{3. \ $a^2-4b<0$}. \ Tässä tapauksessa karakteristisen yhtälön juuret muodostavat
+\underline{3. \ $a^2-4b<0$}. \ TÃ¤ssÃ¤ tapauksessa karakteristisen yhtÃ¤lÃ¶n juuret muodostavat
 konjugaattiparin
 \[
 r_{1,2}=\alpha\pm i\beta,\quad \alpha=-\frac{a}{2}, \ \beta=\sqrt{b-\frac{a^2}{4}}\,.
 \]
-Sijoituksella $y(x)=e^{\alpha x}u(x)$ yhtälö \eqref{linvak-hy} muuntuu muotoon
+Sijoituksella $y(x)=e^{\alpha x}u(x)$ yhtÃ¤lÃ¶ \eqref{linvak-hy} muuntuu muotoon
 \[
 u''+\beta^2 u = 0.
 \]
-Tämä on ratkaistavissa 1.\ kertalukuun palutuvana DY:nä (ks.\ Luku \ref{toisen kertaluvun dy}),
-mutta suoremminkin voi päätellä, että ratkaisuja ovat
+TÃ¤mÃ¤ on ratkaistavissa 1.\ kertalukuun palutuvana DY:nÃ¤ (ks.\ Luku \ref{toisen kertaluvun dy}),
+mutta suoremminkin voi pÃ¤Ã¤tellÃ¤, ettÃ¤ ratkaisuja ovat
 $u_1(x)=\cos\beta x$ ja $u_2(x)=\sin\beta x$ ja yleinen ratkaisu siis ilmeisesti
-$u(x)=C_1\cos\beta x+C_2\sin\beta x,\ C_1,C_2\in\R$. Näin saadaan yhtälön \eqref{linvak-hy}
+$u(x)=C_1\cos\beta x+C_2\sin\beta x,\ C_1,C_2\in\R$. NÃ¤in saadaan yhtÃ¤lÃ¶n \eqref{linvak-hy}
 yleiseksi ratkaisuksi
 \[
 \kehys y(x)=e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x).
 \]
 \begin{Exa}
-Ratkaise reuna-arvotehtävä
+Ratkaise reuna-arvotehtÃ¤vÃ¤
 \[
 \begin{cases}
 y''-y'+2y=0,\quad x\in (0,1), \\
@@ -106,8 +106,8 @@ y(0)=1, \ y(1)=0.
 \end{cases}
 \]
 \end{Exa}
-\ratk Karakteristisen yhtälön $r^2-r-2$ juuret ovat $r_1=2$, $r_2=-1$, joten 
-differentiaaliyhtälön yleinen ratkaisu on
+\ratk Karakteristisen yhtÃ¤lÃ¶n $r^2-r-2$ juuret ovat $r_1=2$, $r_2=-1$, joten 
+differentiaaliyhtÃ¤lÃ¶n yleinen ratkaisu on
 \[
 y(x)=C_1e^{2x}+C_2e^{-x}.
 \]
@@ -122,178 +122,178 @@ e^2&C_1 \ + \ & e^{-1}&C_2 & &=0
 \,C_2=\,e^3/(e^3-1).
 \end{cases}
 \]
-Siis reuna-arvotehtävän ratkaisu on
+Siis reuna-arvotehtÃ¤vÃ¤n ratkaisu on
 \[
 y(x)=\frac{1}{e^3-1}(-e^{2x}+e^{3-x}). \loppu
 \] 
 
-\subsection*{Täydellinen vakiokertoiminen yhtälö}
-\index{lineaarinen differentiaaliyhtälö!b@täydellinen|vahv}
+\subsection*{TÃ¤ydellinen vakiokertoiminen yhtÃ¤lÃ¶}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!b@tÃ¤ydellinen|vahv}
 
-Koska differentiaaliyhtälö \eqref{linvak-ty} on lineaarinen, niin sen ratkaisulle pätee sama
-yleisperiaate kuin ensimmäisen kertaluvun lineaariselle DY:lle: Täydellisen yhtälön yleinen
-ratkaisu = homogeenisen yhtälön yleinen ratkaisu + täydellisen yhtälön yksittäisratkaisu
-$y_0(x)$. Yksittäisratkaisun määräämiseksi tarkastellaan tässä yhteydessä vain 'sivistyneen
-arvauksen' menetelmiä, jotka toimivat silloin, kun $f(x)$ yhtälössä \eqref{linvak-ty} on
-riittävän yksinkertaista muotoa. (Yleisempi menetelmä esitetään seuraavassa luvussa; ks.\ myös
+Koska differentiaaliyhtÃ¤lÃ¶ \eqref{linvak-ty} on lineaarinen, niin sen ratkaisulle pÃ¤tee sama
+yleisperiaate kuin ensimmÃ¤isen kertaluvun lineaariselle DY:lle: TÃ¤ydellisen yhtÃ¤lÃ¶n yleinen
+ratkaisu = homogeenisen yhtÃ¤lÃ¶n yleinen ratkaisu + tÃ¤ydellisen yhtÃ¤lÃ¶n yksittÃ¤isratkaisu
+$y_0(x)$. YksittÃ¤isratkaisun mÃ¤Ã¤rÃ¤Ã¤miseksi tarkastellaan tÃ¤ssÃ¤ yhteydessÃ¤ vain 'sivistyneen
+arvauksen' menetelmiÃ¤, jotka toimivat silloin, kun $f(x)$ yhtÃ¤lÃ¶ssÃ¤ \eqref{linvak-ty} on
+riittÃ¤vÃ¤n yksinkertaista muotoa. (Yleisempi menetelmÃ¤ esitetÃ¤Ã¤n seuraavassa luvussa; ks.\ myÃ¶s
 Harj.teht.\,\ref{H-dy-5: linvak-ty}.)
 \begin{Exa}
 Ratkaise $y''+y=x^2+2e^{2x}$.
 \end{Exa}
-\ratk Yritetään yksittäisratkaisua muodossa
+\ratk YritetÃ¤Ã¤n yksittÃ¤isratkaisua muodossa
 \[
 y(x)=Ax^2+Bx+C+De^{2x}.
 \]
-Sijoittamalla yhtälöön todetaan tämä ratkaisuksi kun $A=1$, $B=0$, $C=-2$ ja $D=2/5$.
-Homogeenisen yhtälön yleinen ratkaisu on
+Sijoittamalla yhtÃ¤lÃ¶Ã¶n todetaan tÃ¤mÃ¤ ratkaisuksi kun $A=1$, $B=0$, $C=-2$ ja $D=2/5$.
+Homogeenisen yhtÃ¤lÃ¶n yleinen ratkaisu on
 \[
 y(x)=C_1\cos x+C_2\sin x,
 \]
-joten täydellisen yhtälön yleinen ratkaisu on
+joten tÃ¤ydellisen yhtÃ¤lÃ¶n yleinen ratkaisu on
 \[
 y(x)=C_1\cos x+C_2\sin x+x^2-2+\frac{2}{5}e^{2x}. \loppu
 \]
 
-Jos yleisemmin yhtälön \eqref{linvak-ty} oikea puoli $R(x)$ on muotoa
+Jos yleisemmin yhtÃ¤lÃ¶n \eqref{linvak-ty} oikea puoli $R(x)$ on muotoa
 \[
 \text{a)} \ \, R(x)=x^ne^{\alpha x}, \quad \text{tai} \quad 
 \text{b)} \ \, R(x)=x^n(A\cos\omega x + B\sin\omega x),
 \]
-missä $n\in \{0,1,2,\ldots\}$, $\alpha\in\R$, ja $\omega\in\R$, $\omega\neq 0$, niin yhtälön
-\eqref{linvak-ty} yksittäisratkaisu on löydettävissä vastaavasti muodossa
+missÃ¤ $n\in \{0,1,2,\ldots\}$, $\alpha\in\R$, ja $\omega\in\R$, $\omega\neq 0$, niin yhtÃ¤lÃ¶n
+\eqref{linvak-ty} yksittÃ¤isratkaisu on lÃ¶ydettÃ¤vissÃ¤ vastaavasti muodossa
 \begin{itemize}
 \item[a)] $y(x)=p(x)e^{\alpha x}$,
 \item[b)] $y(x)=p(x)\cos\omega x+q(x)\sin\omega x$,
 \end{itemize}
-missä $p$ ja $q$ ovat polynomeja. Pääsääntöisesti $p$ ja $q$ ovat astetta $n$. Poikkeuksen
-muodostavat ne tapaukset, joissa pääsäännön mukainen yrite sattuu olemaan homogeenisen yhtälön
-ratkaisu. Tapauksessa a) tämä on mahdollista kun $n=0$ tai $n=1$, tapauksessa b) kun $n=0$. 
-Tällöin polynomin astetta on nostettava yhdellä, tapauksessa a) mahdollisesti kahdella, jotta
-yksittäisratkaisu löytyisi.
+missÃ¤ $p$ ja $q$ ovat polynomeja. PÃ¤Ã¤sÃ¤Ã¤ntÃ¶isesti $p$ ja $q$ ovat astetta $n$. Poikkeuksen
+muodostavat ne tapaukset, joissa pÃ¤Ã¤sÃ¤Ã¤nnÃ¶n mukainen yrite sattuu olemaan homogeenisen yhtÃ¤lÃ¶n
+ratkaisu. Tapauksessa a) tÃ¤mÃ¤ on mahdollista kun $n=0$ tai $n=1$, tapauksessa b) kun $n=0$. 
+TÃ¤llÃ¶in polynomin astetta on nostettava yhdellÃ¤, tapauksessa a) mahdollisesti kahdella, jotta
+yksittÃ¤isratkaisu lÃ¶ytyisi.
 \begin{Exa}
-Ratkaise alkuarvotehtävä
+Ratkaise alkuarvotehtÃ¤vÃ¤
 \[
 \begin{cases} \,y''+2y'+y=e^{-x},\,\ x\in\R, \\ \,y(1)=y'(1)=0. \end{cases}
 \]
 \end{Exa}
-\ratk Karaktristisella yhtälöllä on kaksoisjuuri $r=-1$, joten homogeenisen yhtälön yleinen
-ratkaisu on $y(x)=(C_1+C_2x)e^{-x}$. Koska sekä $f(x)=e^{-x}$ että $xe^{-x}$ ovat homogeenisen
-yhtälön ratkaisuja, niin yksittäisratkaisua on etsittävä muodossa
+\ratk Karaktristisella yhtÃ¤lÃ¶llÃ¤ on kaksoisjuuri $r=-1$, joten homogeenisen yhtÃ¤lÃ¶n yleinen
+ratkaisu on $y(x)=(C_1+C_2x)e^{-x}$. Koska sekÃ¤ $f(x)=e^{-x}$ ettÃ¤ $xe^{-x}$ ovat homogeenisen
+yhtÃ¤lÃ¶n ratkaisuja, niin yksittÃ¤isratkaisua on etsittÃ¤vÃ¤ muodossa
 \[
 y(x)=(Ax^2+Bx+C)\,e^{-x}.
 \]
-Tämä osoittautuu ratkaisuksi, kun valitaan $A=1/2$ ja $B,C\in\R$, eli saatiin suoraan yleinen
+TÃ¤mÃ¤ osoittautuu ratkaisuksi, kun valitaan $A=1/2$ ja $B,C\in\R$, eli saatiin suoraan yleinen
 ratkaisu
 \[
 y(x)=\Bigl(\frac{1}{2}x^2+Bx+C\Bigr)e^{-x}, \quad B,C\in\R.
 \]
-(Samaan tulokseen olisi tultu, jos yritteessä olisi valittu 'viisaammin' $B=C=0$ ja lisätty 
-homogeenisen yhtälön yleinen ratkaisu vasta jälkikäteen.) Alkuehdot toteutuvat, kun
-$A=-1$ ja $B=1/2$, joten alkuarvotehtävän ratkaisu on
+(Samaan tulokseen olisi tultu, jos yritteessÃ¤ olisi valittu 'viisaammin' $B=C=0$ ja lisÃ¤tty 
+homogeenisen yhtÃ¤lÃ¶n yleinen ratkaisu vasta jÃ¤lkikÃ¤teen.) Alkuehdot toteutuvat, kun
+$A=-1$ ja $B=1/2$, joten alkuarvotehtÃ¤vÃ¤n ratkaisu on
 \[
 y(x) = \frac{1}{2}(x-1)^2e^{-x}.  \loppu
 \]
 
 \subsection*{Kompleksiarvoiset ratkaisut}
-\index{lineaarinen differentiaaliyhtälö!j@kompleksiarvoiset ratkaisut|vahv}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!j@kompleksiarvoiset ratkaisut|vahv}
 \index{kompleksiarvoinen ratkaisu (DY:n)|vahv}
 
-Vakiokertoimisia differentiaaliyhtälöitä ratkaistaessa on usein kätevää suorittaa laskut 
-kompleksiarvoisia funktioita käyttäen silloinkin, kun pyritään reaaliseen lopputulokseen.
-Menetelmä on kätevä erityisesti silloin, kun karakteristisen yhtälön juuret ovat 
-kompleksilukuja, tai kun täydellisen yhtälön \eqref{linvak-ty} oikealla puolella esiintyy
-trigonometrisia funktioita. Kompleksifunktioilla laskettaessa hyväksytään homogeenisen yhtälön
-ratkaisuyritteessä
+Vakiokertoimisia differentiaaliyhtÃ¤lÃ¶itÃ¤ ratkaistaessa on usein kÃ¤tevÃ¤Ã¤ suorittaa laskut 
+kompleksiarvoisia funktioita kÃ¤yttÃ¤en silloinkin, kun pyritÃ¤Ã¤n reaaliseen lopputulokseen.
+MenetelmÃ¤ on kÃ¤tevÃ¤ erityisesti silloin, kun karakteristisen yhtÃ¤lÃ¶n juuret ovat 
+kompleksilukuja, tai kun tÃ¤ydellisen yhtÃ¤lÃ¶n \eqref{linvak-ty} oikealla puolella esiintyy
+trigonometrisia funktioita. Kompleksifunktioilla laskettaessa hyvÃ¤ksytÃ¤Ã¤n homogeenisen yhtÃ¤lÃ¶n
+ratkaisuyritteessÃ¤
 \[
 y(x)=e^{rx}
 \]
-suoraan myös kompleksiset $r$:n arvot. Kyseessä on tällöin reaalimuuttujan kompleksiarvoinen
-funktio, jonka derivaatta määritellään normaaliin tapaan eli erotusosamäärän raja-arvona. Kun
-derivaatan määritelmässä merkitään po.\ funktion tapauksessa
+suoraan myÃ¶s kompleksiset $r$:n arvot. KyseessÃ¤ on tÃ¤llÃ¶in reaalimuuttujan kompleksiarvoinen
+funktio, jonka derivaatta mÃ¤Ã¤ritellÃ¤Ã¤n normaaliin tapaan eli erotusosamÃ¤Ã¤rÃ¤n raja-arvona. Kun
+derivaatan mÃ¤Ã¤ritelmÃ¤ssÃ¤ merkitÃ¤Ã¤n po.\ funktion tapauksessa
 \[
 z=rx,\quad \Delta z=r\Delta x,
 \]
-niin nähdään, että
+niin nÃ¤hdÃ¤Ã¤n, ettÃ¤
 \[
 \frac{y(x+\Delta x)-y(x)}{\Delta x}=r\,\frac{e^{z+\Delta z}-e^z}{\Delta z}\,.
 \]
-Tässä $\Delta x\kohti 0 \ \impl \ \Delta z\kohti 0$, joten kompleksifunktion $e^z$ 
-derivoimissäännön perusteella (ks.\ Luku \ref{kompleksinen eksponenttifunktio}) voidaan todeta,
-että pätee odotetusti
+TÃ¤ssÃ¤ $\Delta x\kohti 0 \ \impl \ \Delta z\kohti 0$, joten kompleksifunktion $e^z$ 
+derivoimissÃ¤Ã¤nnÃ¶n perusteella (ks.\ Luku \ref{kompleksinen eksponenttifunktio}) voidaan todeta,
+ettÃ¤ pÃ¤tee odotetusti
 \[
 \boxed{\quad \frac{d}{dx}\,e^{rx}=re^{rx},\quad r\in\C. \quad}
 \]
-\begin{Exa} Ratkaise differentiaaliyhtälö \eqref{linvak-hy} kompleksifunktioiden avulla, kun
+\begin{Exa} Ratkaise differentiaaliyhtÃ¤lÃ¶ \eqref{linvak-hy} kompleksifunktioiden avulla, kun
 $a^2-4b<0$.
 \end{Exa}
-\ratk Karakteristisen yhtälön juuret ovat $r_{1,2}=\alpha \pm i\beta$, joten yleinen ratkaisu
-saadaan aiempaan tapaan ratkaisemalla yhtälöryhmä
+\ratk Karakteristisen yhtÃ¤lÃ¶n juuret ovat $r_{1,2}=\alpha \pm i\beta$, joten yleinen ratkaisu
+saadaan aiempaan tapaan ratkaisemalla yhtÃ¤lÃ¶ryhmÃ¤
 \[
 \begin{cases}
 \,u'-r_1u=0, \\ \,y'-r_2y=u(x).
 \end{cases}
 \]
-Kuten aiemmin (vrt.\ tapaus $r_1,r_2\in\R$ edellä) saadaan yleiseksi ratkaisuksi
+Kuten aiemmin (vrt.\ tapaus $r_1,r_2\in\R$ edellÃ¤) saadaan yleiseksi ratkaisuksi
 \begin{align*}
 y(x) &= C_1e^{r_1 x}+C_2e^{r_2 x} \\
      &= e^{\alpha x}(C_1e^{i\beta x}+C_2e^{-i\beta x}),\quad C_1,C_2\in\C.
 \end{align*}
---- Huomattakoon, että tässä ei kertoimia $C_1,C_2$ ole syytä rajoittaa reaalisiksi. Kun
+--- Huomattakoon, ettÃ¤ tÃ¤ssÃ¤ ei kertoimia $C_1,C_2$ ole syytÃ¤ rajoittaa reaalisiksi. Kun
 huomioidaan Eulerin kaava
 \[
 e^{\pm i\beta x}=\cos\beta x\pm i\sin \beta x,
 \]
-niin nähdään, että ratkaisu on esitettävissä yhtäpitävästi muodossa
+niin nÃ¤hdÃ¤Ã¤n, ettÃ¤ ratkaisu on esitettÃ¤vissÃ¤ yhtÃ¤pitÃ¤vÃ¤sti muodossa
 \begin{align*}
 &y(x)=e^{\alpha x}(D_1\cos\beta x+D_2\sin\beta x), \\[1mm]
-&\text{missä} \quad
+&\text{missÃ¤} \quad
 \begin{cases} \,D_1 = C_1+C_2, \\ \,D_2 =i(C_1-C_2). \end{cases}
 \end{align*}
-Tästä nähdään, että valitsemalla $C_2=\overline{C}_1$ ($= C_1$:n konjugaatti) saadaan yleinen
-reaalinen ratkaisu aiemmin esitetyssä muodossa. \loppu
+TÃ¤stÃ¤ nÃ¤hdÃ¤Ã¤n, ettÃ¤ valitsemalla $C_2=\overline{C}_1$ ($= C_1$:n konjugaatti) saadaan yleinen
+reaalinen ratkaisu aiemmin esitetyssÃ¤ muodossa. \loppu
 
-Esimerkin menettelyllä voidaan hakea homogeenisen yhtälön \eqref{linvak-hy} yleinen ratkaisu
-myös kompleksikertoimisessa tapauksessa ($a,b\in\C$), mikäli sellainen tilanne eteen tulisi.
-Tutkitaan sen sijaan sovelluksissa hyvin yleistä laskentatapaa, jossa reaalikertoimiselle
-täydelliselle yhtälölle
+Esimerkin menettelyllÃ¤ voidaan hakea homogeenisen yhtÃ¤lÃ¶n \eqref{linvak-hy} yleinen ratkaisu
+myÃ¶s kompleksikertoimisessa tapauksessa ($a,b\in\C$), mikÃ¤li sellainen tilanne eteen tulisi.
+Tutkitaan sen sijaan sovelluksissa hyvin yleistÃ¤ laskentatapaa, jossa reaalikertoimiselle
+tÃ¤ydelliselle yhtÃ¤lÃ¶lle
 \[
 \dyf y = y''+ay'+by = \begin{cases} \,\sin\omega x \\ \,\cos\omega x \end{cases}
 \]
-etsitään yksittäisratkaisu käyttäen hyväksi kompleksifunktioita. Menetelmä perustuu seuraavaan
-yksinkertaiseen havaintoon: Jos $f(x)=f_1(x)+if_2(x)$, missä $f_1$ ja $f_2$ ovat reaaliarvoisia,
-niin $y$ on yhtälön $\dyf y=f$ yksittäisratkaisu täsmälleen kun $y=y_1+iy_2$, missä
-$\dyf y_1=f_1$ ja $\dyf y_2=f_2$. (Tämä on helposti todettavissa $\dyf$:n lineaarisuuden ja
-kertoimien $a,b$ reaalisuuden perusteella --- kompleksikertoimisessa tapauksessa sääntö ei 
-päde.)
-\begin{Exa} Etsi yksittäisratkaisu differentiaaliyhtälölle $y''-y'+y=\sin\omega x$ 
-($\omega\neq 0$) käyttäen kompleksifunktioita.
+etsitÃ¤Ã¤n yksittÃ¤isratkaisu kÃ¤yttÃ¤en hyvÃ¤ksi kompleksifunktioita. MenetelmÃ¤ perustuu seuraavaan
+yksinkertaiseen havaintoon: Jos $f(x)=f_1(x)+if_2(x)$, missÃ¤ $f_1$ ja $f_2$ ovat reaaliarvoisia,
+niin $y$ on yhtÃ¤lÃ¶n $\dyf y=f$ yksittÃ¤isratkaisu tÃ¤smÃ¤lleen kun $y=y_1+iy_2$, missÃ¤
+$\dyf y_1=f_1$ ja $\dyf y_2=f_2$. (TÃ¤mÃ¤ on helposti todettavissa $\dyf$:n lineaarisuuden ja
+kertoimien $a,b$ reaalisuuden perusteella --- kompleksikertoimisessa tapauksessa sÃ¤Ã¤ntÃ¶ ei 
+pÃ¤de.)
+\begin{Exa} Etsi yksittÃ¤isratkaisu differentiaaliyhtÃ¤lÃ¶lle $y''-y'+y=\sin\omega x$ 
+($\omega\neq 0$) kÃ¤yttÃ¤en kompleksifunktioita.
 \end{Exa}
 \ratk Koska $\sin \omega x = \text{Im} \, (e^{i\omega x})$, niin probleema voidaan ratkaista
-etsimällä kompleksiarvoinen yksittäisratkaisu differentiaaliyhtälölle
+etsimÃ¤llÃ¤ kompleksiarvoinen yksittÃ¤isratkaisu differentiaaliyhtÃ¤lÃ¶lle
 \[
 y''-y'+y=e^{i\omega x},
 \]
-ja ottamalla ratkaisusta imaginaariosa. Kompleksinen ratkaisu löytyy helposti sijottamalla
-yrite $y(x)=Ae^{i\omega x}\ (A\in\C)$ yhtälöön:
+ja ottamalla ratkaisusta imaginaariosa. Kompleksinen ratkaisu lÃ¶ytyy helposti sijottamalla
+yrite $y(x)=Ae^{i\omega x}\ (A\in\C)$ yhtÃ¤lÃ¶Ã¶n:
 \begin{align*}
      &(-\omega^2-i\omega+1)Ae^{i\omega x}=e^{i\omega x}\quad\forall x \\
      &\qimpl A=\frac{1}{1-\omega^2-i\omega}=\frac{1-\omega^2+i\omega}{\omega^4-\omega^2+1} \\
      &\qimpl y(x) \,=\, \frac{1-\omega^2+i\omega}{\omega^4-\omega^2+1}\,e^{i\omega x}
           \,=\, \frac{1-\omega^2+i\omega}{\omega^4-\omega^2+1}\,(\cos\omega x + i\sin\omega x).
 \end{align*}
-Kysytty ratkaisu on tämän imaginaariosa, eli
+Kysytty ratkaisu on tÃ¤mÃ¤n imaginaariosa, eli
 \[
 y(x)=\frac{1}{\omega^4-\omega^2+1}\,[\,\omega\cos\omega x + (1-\omega^2)\sin\omega x\,]. \loppu
 \]
 
-Esimerkissä olisi luonnollisesti tultu toimeen myös reaalisella yritteellä 
-$y(x)=A\cos\omega x+B\sin\omega x\ (A,B\in\R)$, mutta laskusta olisi tullut ikävämpi.
+EsimerkissÃ¤ olisi luonnollisesti tultu toimeen myÃ¶s reaalisella yritteellÃ¤ 
+$y(x)=A\cos\omega x+B\sin\omega x\ (A,B\in\R)$, mutta laskusta olisi tullut ikÃ¤vÃ¤mpi.
 
-\subsection*{Eulerin differentiaaliyhtälö}
-\index{lineaarinen differentiaaliyhtälö!fa@Eulerin|vahv}
-\index{Eulerin!c@differentiaaliyhtälö|vahv}
+\subsection*{Eulerin differentiaaliyhtÃ¤lÃ¶}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!fa@Eulerin|vahv}
+\index{Eulerin!c@differentiaaliyhtÃ¤lÃ¶|vahv}
 
-Differentiaaliyhtälöä muotoa
+DifferentiaaliyhtÃ¤lÃ¶Ã¤ muotoa
 \[
 x^2y''+axy'+by=f(x)
 \]
@@ -301,13 +301,13 @@ sanotaan (toisen kertaluvun) \kor{Eulerin} DY-tyypiksi. Perusmuodossa
 \[
 y''+ax^{-1}y'+bx^{-2}y=x^{-2}f(x)
 \]
-on $x=0$ kertoimien epäjatkuvuuspiste, joten Eulerin differentiaaliyhtälöä on tarkasteltava
-erikseen väleillä $(-\infty,0)$ ja $(0,\infty)$ --- sovelluksissa yleensä välillä $(0,\infty)$.
-Kummallakin välillä yhtälö palautuu vakiokertoimiseksi sijoituksella
+on $x=0$ kertoimien epÃ¤jatkuvuuspiste, joten Eulerin differentiaaliyhtÃ¤lÃ¶Ã¤ on tarkasteltava
+erikseen vÃ¤leillÃ¤ $(-\infty,0)$ ja $(0,\infty)$ --- sovelluksissa yleensÃ¤ vÃ¤lillÃ¤ $(0,\infty)$.
+Kummallakin vÃ¤lillÃ¤ yhtÃ¤lÃ¶ palautuu vakiokertoimiseksi sijoituksella
 \[
 \abs{x}=e^t \ \ekv \ t=\ln\abs{x},
 \]
-sillä kun esim. välillä $(0,\infty)$ kirjoitetaan
+sillÃ¤ kun esim. vÃ¤lillÃ¤ $(0,\infty)$ kirjoitetaan
 \[
 y(x)=y(e^t)=u(t)=u(\ln x),
 \]
@@ -317,18 +317,18 @@ y'(x)  &\,=\, \frac{1}{x}u'(\ln x)=\frac{1}{x}u'(t), \\
 y''(x) &\,=\, \frac{1}{x^2} u''(\ln x)-\frac{1}{x^2}u'(\ln x)
         \,=\, \frac{1}{x^2}[u''(t)-u'(t)],
 \end{align*}
-joten yhtälö saadaan vakiokertoimiseen muotoon
+joten yhtÃ¤lÃ¶ saadaan vakiokertoimiseen muotoon
 \[
 u''(t)+(a-1)u'(t)+bu(t)=f(e^t).
 \]
-Välillä $(-\infty,0)$ tulee oikealle puolelle $f(-e^t)$, muuten tulos on sama.
+VÃ¤lillÃ¤ $(-\infty,0)$ tulee oikealle puolelle $f(-e^t)$, muuten tulos on sama.
 
-Homogeenista Eulerin yhtälöä ei käytännössä tarvitse muuntaa vakiokertoimiseksi, sillä
-ratkaisua voi etsiä suoraan yritteellä
+Homogeenista Eulerin yhtÃ¤lÃ¶Ã¤ ei kÃ¤ytÃ¤nnÃ¶ssÃ¤ tarvitse muuntaa vakiokertoimiseksi, sillÃ¤
+ratkaisua voi etsiÃ¤ suoraan yritteellÃ¤
 \[
 y(x)=x^r.
 \]
-Tällöin $r$:n määräämiseksi saadaan toisen asteen karakteristinen yhtälö. Riippuen siitä, 
+TÃ¤llÃ¶in $r$:n mÃ¤Ã¤rÃ¤Ã¤miseksi saadaan toisen asteen karakteristinen yhtÃ¤lÃ¶. Riippuen siitÃ¤, 
 millaisia juuret ovat, yleiseksi ratkaisuksi tulee jokin seuraavista:
 \begin{itemize}
 \item[a)] $y(x)=C_1x^{r_1}+C_2x^{r_2}$,
@@ -336,30 +336,30 @@ millaisia juuret ovat, yleiseksi ratkaisuksi tulee jokin seuraavista:
 \item[c)] $y(x)=x^\alpha[\,C_1\cos (\beta\ln\abs{x})+C_2\sin (\beta\ln\abs{x})\,]$.
 \end{itemize}
 Tapauksessa a) juuret ovat reaaliset ja erisuuruiset, tapauksessa b) on reaalinen kaksoisjuuri,
-ja tapauksessa c) juurina on konjugaattipari $\alpha\pm i\beta$. Väitetyt yleisen ratkaisun
-muodot voi päätellä em.\ muunnoksen avulla.
+ja tapauksessa c) juurina on konjugaattipari $\alpha\pm i\beta$. VÃ¤itetyt yleisen ratkaisun
+muodot voi pÃ¤Ã¤tellÃ¤ em.\ muunnoksen avulla.
 
-Täydellinen Eulerin yhtälö ratkaistaan suotuisissa tapauksissa 'sivistyneellä arvauksella'.
+TÃ¤ydellinen Eulerin yhtÃ¤lÃ¶ ratkaistaan suotuisissa tapauksissa 'sivistyneellÃ¤ arvauksella'.
 Arvauksen muodon voi johtaa ajatellen muunnosta vakiokertoimiseen tilanteeseen.
 \begin{Exa}
-Ratkaise alkuarvotehtävä
+Ratkaise alkuarvotehtÃ¤vÃ¤
 \[
 \begin{cases} \,x^2y''+3xy'+y=1/x,\,\ x>0, \\ \,y(1)=1,\ y'(1)=0. \end{cases}
 \]
 \end{Exa}
-\ratk Homogeenisessa yhtälössä sijoitus $y(x)=x^r$ johtaa karakteristiseen yhtälöön
+\ratk Homogeenisessa yhtÃ¤lÃ¶ssÃ¤ sijoitus $y(x)=x^r$ johtaa karakteristiseen yhtÃ¤lÃ¶Ã¶n
 \[
 r(r-1)+3r+1=r^2+2r+1=0.
 \]
-Tällä on kaksoisjuuri $r=-1$, joten homogeenisen yhtälön yleinen ratkaisu on
+TÃ¤llÃ¤ on kaksoisjuuri $r=-1$, joten homogeenisen yhtÃ¤lÃ¶n yleinen ratkaisu on
 \[
 y(x)=\frac{1}{x}(C_1+C_2\ln x).
 \]
-Koska oikea puoli $f(x)=x^{-1}$ on homogeenisen yhtälön ratkaisu, samoin kuin 
-$x^{-1}\ln\abs{x}$, niin täydellisen yhtälön yksittäisratkaisu on etsittävä muodossa
+Koska oikea puoli $f(x)=x^{-1}$ on homogeenisen yhtÃ¤lÃ¶n ratkaisu, samoin kuin 
+$x^{-1}\ln\abs{x}$, niin tÃ¤ydellisen yhtÃ¤lÃ¶n yksittÃ¤isratkaisu on etsittÃ¤vÃ¤ muodossa
 \begin{align*}
 y_0(x)   &= Ax^{-1}(\ln x)^2.
-\intertext{Kun sijoitetaan yhtälöön tämä sekä derivaatat}
+\intertext{Kun sijoitetaan yhtÃ¤lÃ¶Ã¶n tÃ¤mÃ¤ sekÃ¤ derivaatat}
 y_0'(x)  &= Ax^{-2}[\,-(\ln x)^2+2\ln x\,], \\
 y_0''(x) &= Ax^{-3}[\,2(\ln x)^2-6\ln x+2\,],
 \end{align*}
@@ -370,34 +370,34 @@ y(x)=\frac{1}{x}\left(C_1+C_2\ln x+\frac{1}{2}(\ln x)^2\right).
 Alkuehdot toteutuvat, kun valitaan $C_1=C_2=1$. \loppu
 
 \subsection*{Korkeamman kertaluvun vakiokertoimiset DY:t}
-\index{lineaarinen differentiaaliyhtälö!e@korkeamman kertaluvun|vahv}
+\index{lineaarinen differentiaaliyhtÃ¤lÃ¶!e@korkeamman kertaluvun|vahv}
 
-Yleinen lineaarinen, vakiokertoiminen, homogeeninen, $n$:nnen kertaluvun differentiaaliyhtälö
+Yleinen lineaarinen, vakiokertoiminen, homogeeninen, $n$:nnen kertaluvun differentiaaliyhtÃ¤lÃ¶
 \[
 y^{(n)}+a_{n-1}y^{(n-1)}+\cdots +a_0y=0
 \]
-voidaan ratkaista yritteellä $y(x)=e^{rx}$, kuten tapauksissa $n=1,2$. Saadaan
-\index{karakteristinen yhtälö (polynomi)!a@differentiaaliyhtälön}%
-karakteristinen yhtälö
+voidaan ratkaista yritteellÃ¤ $y(x)=e^{rx}$, kuten tapauksissa $n=1,2$. Saadaan
+\index{karakteristinen yhtÃ¤lÃ¶ (polynomi)!a@differentiaaliyhtÃ¤lÃ¶n}%
+karakteristinen yhtÃ¤lÃ¶
 \[
 r^n+a_{n-1}r^{n-1}+\cdots+a_0=0,
 \]
-jonka kutakin juurta vastaa juuren kertaluvun mukainen määrä lineaarisesti riippumattomia 
-ratkaisuja. Jos kyseessä on $m$-kertainen reaalijuuri, niin nämä ratkaisut ovat
+jonka kutakin juurta vastaa juuren kertaluvun mukainen mÃ¤Ã¤rÃ¤ lineaarisesti riippumattomia 
+ratkaisuja. Jos kyseessÃ¤ on $m$-kertainen reaalijuuri, niin nÃ¤mÃ¤ ratkaisut ovat
 \[
 x^ke^{rx},\quad k=0\ldots m-1.
 \]
-Jos kyseessä on $m$-kertainen konjugaattipari $\alpha\pm i\beta$, niin vastaavat ratkaisut ovat
+Jos kyseessÃ¤ on $m$-kertainen konjugaattipari $\alpha\pm i\beta$, niin vastaavat ratkaisut ovat
 \[
 x^ke^{\alpha x}\cos\beta x,\quad x^ke^{\alpha x}\sin\beta x,\quad k=0\ldots m-1.
 \]
-Homogeenisen yhtälön yleinen ratkaisu saadaan kaikkien näiden ratkaisujen (yhteensä $n$ kpl)
-lineaarisena yhdistelynä.
+Homogeenisen yhtÃ¤lÃ¶n yleinen ratkaisu saadaan kaikkien nÃ¤iden ratkaisujen (yhteensÃ¤ $n$ kpl)
+lineaarisena yhdistelynÃ¤.
 \begin{Exa}
 Ratkaise $\,y'''-y=x^2,\,\ x\in\R$.
 \end{Exa}
-\ratk Yksittäisratkaisu on $y(x)=-x^2$. Homogeenista yhtälöä ratkaistaessa tulee
-karakteristiseksi yhtälöksi $\,r^3-1=0$. Juuret ovat
+\ratk YksittÃ¤isratkaisu on $y(x)=-x^2$. Homogeenista yhtÃ¤lÃ¶Ã¤ ratkaistaessa tulee
+karakteristiseksi yhtÃ¤lÃ¶ksi $\,r^3-1=0$. Juuret ovat
 \[
 r_1=1, \quad r_{2,3}= -\frac{1}{2} \pm i\frac{\sqrt{3}}{2}\,,
 \]
@@ -407,22 +407,22 @@ y(x)=C_1e^x
     +e^{-x/2}\left(C_2\cos\frac{\sqrt{3}x}{2}+C_3\sin\frac{\sqrt{3}x}{2}\right)-x^2. \loppu
 \]
 
-Kuten esimerkissä, voidaan täydellisen yhtälön ratkaisu usein löytää kokeilemalla. Yleisempiin
-menetelmiin ei juuri käytännön tarvetta olekaan. 
+Kuten esimerkissÃ¤, voidaan tÃ¤ydellisen yhtÃ¤lÃ¶n ratkaisu usein lÃ¶ytÃ¤Ã¤ kokeilemalla. Yleisempiin
+menetelmiin ei juuri kÃ¤ytÃ¤nnÃ¶n tarvetta olekaan. 
 
-Todettakoon lopuksi, että yleinen $n$:nnen kertaluvun homogeeninen Eulerin DY
+Todettakoon lopuksi, ettÃ¤ yleinen $n$:nnen kertaluvun homogeeninen Eulerin DY
 \[
 x^{n}y^{(n)}+a_{n-1}x^{n-1}y^{(n-1)}+ \ldots + a_0y = 0
 \]
-ratkaistaan yritteellä $y(x)=x^r$ samaan tapaan kuin edellä.
+ratkaistaan yritteellÃ¤ $y(x)=x^r$ samaan tapaan kuin edellÃ¤.
 
 \Harj
 \begin{enumerate}
 
 \item
 Ratkaise (yleinen ratkaisu kohdissa a)--n), yleinen ratkaisu kaikilla lukupareilla
-$(a,b)\in\Rkaksi$ kohdissa o)--t), alku- tai reuna-arvotehtävän ratkaisu 
-kohdissa u)--ö)): \vspace{1mm}\newline
+$(a,b)\in\Rkaksi$ kohdissa o)--t), alku- tai reuna-arvotehtÃ¤vÃ¤n ratkaisu 
+kohdissa u)--Ã¶)): \vspace{1mm}\newline
 a) \ $y''+y'-30y=0 \qquad\qquad$
 b) \ $y''+4y'+y= 0$ \newline
 c) \ $y''+6y'+10y=0 \qquad\quad\ \ $
@@ -448,30 +448,30 @@ v) \ $y''+2y'+2y=0,\,\ y(0)=1,\ y'(0)=0$ \newline
 x) \ $y''-4y'-5y=0,\,\ y(0)=1,\ \lim_{x\kohti\infty}y(x)=0$ \newline
 y) \ $y''+3y'+2y=0,\,\ y(0)=y(1)=1$ \newline
 x) \ $y''-4y'+5y=\sin x,\,\ y(0)=0,\ y'(0)=-1$ \newline
-å) \ $y''-3y'+x^2-1=0,\,\ y(0)=1,\ y'(0)=0$ \newline
-ä) \ $y''-5y'+6y=e^x,\,\ y(0)=y(1)=0$ \newline
-ö) \ $4y''+8y'+5y=x^2,\,\ y(0)=y(\pi)=1$
+Ã¥) \ $y''-3y'+x^2-1=0,\,\ y(0)=1,\ y'(0)=0$ \newline
+Ã¤) \ $y''-5y'+6y=e^x,\,\ y(0)=y(1)=0$ \newline
+Ã¶) \ $4y''+8y'+5y=x^2,\,\ y(0)=y(\pi)=1$
 
 \item
-Etsi seuraaville differentiaaliyhtälöille ensin kompleksiarvoinen yksittäisratkaisu, kun
-yhtälön oikea puoli on $f(x)=e^{i\omega x}$ ($\omega\in\R,\ \omega \neq 0$), ja määritä sen
-avulla reaalinen yksittäisratkaisu. \vspace{1mm}\newline
+Etsi seuraaville differentiaaliyhtÃ¤lÃ¶ille ensin kompleksiarvoinen yksittÃ¤isratkaisu, kun
+yhtÃ¤lÃ¶n oikea puoli on $f(x)=e^{i\omega x}$ ($\omega\in\R,\ \omega \neq 0$), ja mÃ¤Ã¤ritÃ¤ sen
+avulla reaalinen yksittÃ¤isratkaisu. \vspace{1mm}\newline
 a) \ $y''-2y'+2y=\sin\omega x \qquad$ 
 b) \ $y''-3y'+2y=\sin\omega x$ \newline
 c) \ $y''+4y'+4y=\cos\omega x \qquad$
 d) \ $y''+y'+y=\sin\omega x-2\cos\omega x$
 
 \item \index{zzb@\nim!Resonanssi}
-(Resonanssi) Kappaleeseen, jonka massa $=m$ ja paikka $=y(t)$ hetkellä $t$, kohdistuu
-jousivoima ja lisäksi ulkoinen kuorma $f(t)$, jolloin $y(t)$ toteuttaa liikeyhälön
-$\,my''=-ky+f(t)$. Määritä $y(t),\ t \ge 0$ alkuehdoilla $y(0)=y'(0)=0$, kun
+(Resonanssi) Kappaleeseen, jonka massa $=m$ ja paikka $=y(t)$ hetkellÃ¤ $t$, kohdistuu
+jousivoima ja lisÃ¤ksi ulkoinen kuorma $f(t)$, jolloin $y(t)$ toteuttaa liikeyhÃ¤lÃ¶n
+$\,my''=-ky+f(t)$. MÃ¤Ã¤ritÃ¤ $y(t),\ t \ge 0$ alkuehdoilla $y(0)=y'(0)=0$, kun
 $f(t)=F\sin\omega t$ ($F=$ vakio). Tarkastele erikseen tapaukset \,a) $\,\omega\neq\omega_0\,$
-ja \,b) $\omega=\omega_0$, missä $\,\omega_0=\sqrt{k/m}\,$ (nk.\ resonanssitaajuus).
+ja \,b) $\omega=\omega_0$, missÃ¤ $\,\omega_0=\sqrt{k/m}\,$ (nk.\ resonanssitaajuus).
 
-\item \index{zzb@\nim!Tzz@Töyssy}
-(Töyssy) Auton etupyörä osuu töyssyyn, jolloin pyörän liikeyhtälö pystysuunnassa on
-$\,my''=F_1+F_2$, missä $m=$ pyörän massa, $F_1=-ky$ on jousivoima ja $F_2=-cy'$ on
-iskunvaimentimen vastusvoima. Hahmottele ratkaisu $y(t)$ (aikayksikkö s) alkuehdoilla
+\item \index{zzb@\nim!Tzz@TÃ¶yssy}
+(TÃ¶yssy) Auton etupyÃ¶rÃ¤ osuu tÃ¶yssyyn, jolloin pyÃ¶rÃ¤n liikeyhtÃ¤lÃ¶ pystysuunnassa on
+$\,my''=F_1+F_2$, missÃ¤ $m=$ pyÃ¶rÃ¤n massa, $F_1=-ky$ on jousivoima ja $F_2=-cy'$ on
+iskunvaimentimen vastusvoima. Hahmottele ratkaisu $y(t)$ (aikayksikkÃ¶ s) alkuehdoilla
 $y(0)=0$ m, $y'(0)=60$ m/s, kun $m=15$ kg, $k=6 \cdot 10^5$ kg/s$^2$ ja iskunvaimennin on
 a) uusi: $c=7500$ kg/s, b) pian vaihdettava: $c=6000$ kg/s,\, c) heti vaihdettava:
 $c=4500$ kg/s.
@@ -489,13 +489,13 @@ h) \ $(3x+2)^2y''+(9x+6)y'-36y=81x+18$ \newline
 i) \,\ $x^2y''+(2a+1)xy'+by=0$
 
 \item
-a) Määritä kaikki välillä $(0,\infty)$ derivoituvat funktiot, jotka toteuttavat yhtälön
+a) MÃ¤Ã¤ritÃ¤ kaikki vÃ¤lillÃ¤ $(0,\infty)$ derivoituvat funktiot, jotka toteuttavat yhtÃ¤lÃ¶n
 $\,x^2y'(x)=2\int_0^x y(t)\,dt,\ x>0$. \newline
-b) Ratkaise differentiaaliyhtälö $\,x^2y'''+2(x^2-x)y''+(x^2-2x+2)y'=x^3$ tekemällä sijoitus
+b) Ratkaise differentiaaliyhtÃ¤lÃ¶ $\,x^2y'''+2(x^2-x)y''+(x^2-2x+2)y'=x^3$ tekemÃ¤llÃ¤ sijoitus
 $u=y'/x$.
 
 \item
-Ratkaise (yleinen ratkaisu tai alkuarvotehtävän ratkaisu): \vspace{1mm}\newline
+Ratkaise (yleinen ratkaisu tai alkuarvotehtÃ¤vÃ¤n ratkaisu): \vspace{1mm}\newline
 a) \ $y^{(5)}+2y'''+y'=0 \qquad\quad\,$
 b) \ $y^{(7)}+3y^{(6)}+3y^{(5)}+y^{(4)}=0$ \newline
 c) \ $y'''+3y''-2y=\sin x \qquad$
@@ -509,20 +509,20 @@ j) \ $y'''-ay'=0,\,\ y(0)=0,\ y'(0)=1,\ y''(0)=2,\,\ a\in\R$ \newline
 k) \ $x^3y'''+xy'-y=\sqrt{x},\,\ y(1)=1,\ y'(1)=y''(1)=0$
 
 \item (*) \index{zzb@\nim!Pystyammunta}
-(Pystyammunta) Luoti ammutaan suoraan ylöspäin lähtönopeudella $800$ m/s. Lennon aikana
+(Pystyammunta) Luoti ammutaan suoraan ylÃ¶spÃ¤in lÃ¤htÃ¶nopeudella $800$ m/s. Lennon aikana
 luotiin vaikuttaa nopeuteen verrannollinen vastusvoima, jolloin nousukorkeus $y(t)$ toteuttaa
-differentiaaliyhtälön
+differentiaaliyhtÃ¤lÃ¶n
 \[
 y''+ay'+g=0, 
 \]
-missä $g=9.8$ m/s$^2$, $a=0.10$ s$^{-1}$ luodin nousuvaiheessa ja $a=0.20$ s$^{-1}$
-putoamisvaiheessa. Määritä luodin lennon lakikorkeus, lentoon kuluva aika ja luodin paluunopeus
+missÃ¤ $g=9.8$ m/s$^2$, $a=0.10$ s$^{-1}$ luodin nousuvaiheessa ja $a=0.20$ s$^{-1}$
+putoamisvaiheessa. MÃ¤Ã¤ritÃ¤ luodin lennon lakikorkeus, lentoon kuluva aika ja luodin paluunopeus
 sen pudotessa maahan. 
 
 \item (*) \label{H-dy-5: linvak-ty}
-Vakiokertoimisessa differentiaaliyhtälössä $\,y''+ay'+by=f(x)\,$ olkoon karakteristisen
-yhtälön juuret $r_1,r_2\in\C$. Kirjoittamalla differentiaaliyhtälö systeemiksi funktioille $y$
-ja $u=y'-r_2y$ näytä, että yhtälön yksittäisratkaisu alkuehdoilla $y(x_0)=y'(x_0)=0$ on
+Vakiokertoimisessa differentiaaliyhtÃ¤lÃ¶ssÃ¤ $\,y''+ay'+by=f(x)\,$ olkoon karakteristisen
+yhtÃ¤lÃ¶n juuret $r_1,r_2\in\C$. Kirjoittamalla differentiaaliyhtÃ¤lÃ¶ systeemiksi funktioille $y$
+ja $u=y'-r_2y$ nÃ¤ytÃ¤, ettÃ¤ yhtÃ¤lÃ¶n yksittÃ¤isratkaisu alkuehdoilla $y(x_0)=y'(x_0)=0$ on
 \[
 y_0(x)=\int_{x_0}^x e^{r_1(x-t)}\left[\int_{x_0}^t e^{r_2(t-s)}f(s)\,ds\right]dt.
 \]

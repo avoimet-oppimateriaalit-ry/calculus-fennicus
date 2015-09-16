@@ -1,14 +1,14 @@
-\section{Differentiaalilaskun v‰liarvolause} \label{v‰liarvolause 2}
+\section{Differentiaalilaskun v√§liarvolause} \label{v√§liarvolause 2}
 \alku
 
-Seuraava lause kuuluu matemaattisen analyysin huomattavimpiin ja myˆs hyvin usein k‰ytettyihin
-perustuloksiin. Lause on v‰liarvolauseiden sarjan toinen --- vrt.\ Ensimm‰inen v‰liarvolause 
-Luvussa \ref{jatkuvuuden k‰site} (Lause \ref{ensimm‰inen v‰liarvolause}). 
-\begin{Lause} \label{toinen v‰liarvolause}
-\index{Differentiaalilaskun v‰liarvolause|emph}
-\index{vzy@v‰liarvolauseet!b@differentiaalilaskun|emph} 
-\vahv{(Toinen v‰liarvolause -- Differentiaalilaskun v‰liarvolause)} Jos $f:\DF_f\kohti\R$, 
-$\DF_f\subset\R$, on jatkuva v‰lill‰ $[a,b]\subset\DF_f$ ja derivoituva v‰lill‰ $(a,b)$, niin 
+Seuraava lause kuuluu matemaattisen analyysin huomattavimpiin ja my√∂s hyvin usein k√§ytettyihin
+perustuloksiin. Lause on v√§liarvolauseiden sarjan toinen --- vrt.\ Ensimm√§inen v√§liarvolause 
+Luvussa \ref{jatkuvuuden k√§site} (Lause \ref{ensimm√§inen v√§liarvolause}). 
+\begin{Lause} \label{toinen v√§liarvolause}
+\index{Differentiaalilaskun v√§liarvolause|emph}
+\index{vzy@v√§liarvolauseet!b@differentiaalilaskun|emph} 
+\vahv{(Toinen v√§liarvolause -- Differentiaalilaskun v√§liarvolause)} Jos $f:\DF_f\kohti\R$, 
+$\DF_f\subset\R$, on jatkuva v√§lill√§ $[a,b]\subset\DF_f$ ja derivoituva v√§lill√§ $(a,b)$, niin 
 jollakin $\xi\in (a,b)$ on
 \[
 f(b)-f(a)=f'(\xi)(b-a).
@@ -16,8 +16,8 @@ f(b)-f(a)=f'(\xi)(b-a).
 \end{Lause} 
 \vspace{1mm}
 \begin{multicols}{2} \raggedcolumns
-Lauseen v‰itt‰m‰ on geometrisesti hyvin uskottava (vrt.\ kuvio), mutta todistuksessa joudutaan 
-kuitenkin tekemisiin jatkuvuuden syv‰llisemm‰n logiikan kanssa.
+Lauseen v√§itt√§m√§ on geometrisesti hyvin uskottava (vrt.\ kuvio), mutta todistuksessa joudutaan 
+kuitenkin tekemisiin jatkuvuuden syv√§llisemm√§n logiikan kanssa.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -54,57 +54,57 @@ kuitenkin tekemisiin jatkuvuuden syv‰llisemm‰n logiikan kanssa.
 \end{center}
 \end{figure}
 \end{multicols}
-Lauseen \ref{toinen v‰liarvolause} todistamiseksi palautetaan v‰itt‰m‰ ensinn‰kin 
-yksinkertaisemmaksi m‰‰rittelem‰ll‰
+Lauseen \ref{toinen v√§liarvolause} todistamiseksi palautetaan v√§itt√§m√§ ensinn√§kin 
+yksinkertaisemmaksi m√§√§rittelem√§ll√§
 \[
 g(x)=f(x)-f(a)\cdot\frac{b-x}{b-a}-f(b)\cdot\frac{x-a}{b-a}, \quad x\in [a,b].
 \]
-T‰llˆin on $g(a)=g(b)=0$ ja p‰tee
+T√§ll√∂in on $g(a)=g(b)=0$ ja p√§tee
 \[
 f(b)-f(a) = f'(\xi)(b-a) \qekv g'(\xi) = 0.
 \]
-Lauseen \ref{toinen v‰liarvolause} v‰itt‰m‰ saa n‰in seuraavan pelkistetymm‰n muodon 
-(vrt.\ Ensimm‰inen v‰liarvolause ja sen pelkistetty muoto, Bolzanon lause, Luvussa 
-\ref{jatkuvuuden k‰site})\,:
+Lauseen \ref{toinen v√§liarvolause} v√§itt√§m√§ saa n√§in seuraavan pelkistetymm√§n muodon 
+(vrt.\ Ensimm√§inen v√§liarvolause ja sen pelkistetty muoto, Bolzanon lause, Luvussa 
+\ref{jatkuvuuden k√§site})\,:
 \begin{Lause} \label{Rollen lause} \vahv{(Rollen lause)} \index{Rollen lause|emph}
-Jos $f$ on jatkuva v‰lill‰ $[a,b]$ ja derivoituva v‰lill‰ $(a,b)$ ja $f(a)=f(b)=0$, niin
+Jos $f$ on jatkuva v√§lill√§ $[a,b]$ ja derivoituva v√§lill√§ $(a,b)$ ja $f(a)=f(b)=0$, niin
 $f'(\xi)=0$ jollakin $\xi\in (a,b)$. 
 \end{Lause}
-\tod Koska $f$ on jatkuva v‰lill‰ $[a,b]$, niin Weierstrassin lauseen 
+\tod Koska $f$ on jatkuva v√§lill√§ $[a,b]$, niin Weierstrassin lauseen 
 (Lause \ref{Weierstrassin peruslause}) perusteella $f$ saavuttaa minimi- ja maksimiarvonsa 
-v‰lill‰ $[a,b]$. Kun suljetaan pois ilmeinen tapaus $f(x)=0 \ \forall x\in [a,b]$ (jolloin
+v√§lill√§ $[a,b]$. Kun suljetaan pois ilmeinen tapaus $f(x)=0 \ \forall x\in [a,b]$ (jolloin
 $f'(\xi)=0 \ \forall \xi\in (a,b)$), niin on oltava
 \begin{align*}
 \text{joko:} \quad f(\xi) &= f_{\text{min}}<0, \quad \xi\in (a,b), \\
 \text{tai:} \quad f(\xi) &= f_{\text{max}}>0, \quad \xi\in (a,b).
 \end{align*}
-Kummassakin tapauksessa on oltava $f'(\xi)=0$ (Lause \ref{‰‰riarvolause}). Lause 
-\ref{Rollen lause} on n‰in todistettu, ja t‰m‰n v‰littˆm‰n‰ seurauksena myˆs Lause 
-\ref{toinen v‰liarvolause}. --- Huomattakoon, ett‰ todistus oli verrattain mutkaton vain siksi, 
-ett‰ siin‰ oli 'kova ydin' (Weierstrassin lause). \loppu
-\begin{Exa} Funktio $f(x)=\sqrt{\abs{x}}$ toteuttaa Lauseen \ref{toinen v‰liarvolause} ehdot
-v‰lill‰ $[0,1]$, ja v‰itetty $\xi$ on yksik‰sitteinen: $\xi=\tfrac{1}{4}\in(0,1)$. V‰lill‰
-$[-1,1]$ Lauseen \ref{toinen v‰liarvolause} ehdot eiv‰t toteudu, koska $f$ ei ole derivoituva
-pisteess‰ $x=0$. V‰itetty‰ pistett‰ $\xi$ (jossa olisi oltava $f'(\xi)=0$) ei t‰ss‰ tapauksessa
-myˆsk‰‰n ole. \loppu
+Kummassakin tapauksessa on oltava $f'(\xi)=0$ (Lause \ref{√§√§riarvolause}). Lause 
+\ref{Rollen lause} on n√§in todistettu, ja t√§m√§n v√§litt√∂m√§n√§ seurauksena my√∂s Lause 
+\ref{toinen v√§liarvolause}. --- Huomattakoon, ett√§ todistus oli verrattain mutkaton vain siksi, 
+ett√§ siin√§ oli 'kova ydin' (Weierstrassin lause). \loppu
+\begin{Exa} Funktio $f(x)=\sqrt{\abs{x}}$ toteuttaa Lauseen \ref{toinen v√§liarvolause} ehdot
+v√§lill√§ $[0,1]$, ja v√§itetty $\xi$ on yksik√§sitteinen: $\xi=\tfrac{1}{4}\in(0,1)$. V√§lill√§
+$[-1,1]$ Lauseen \ref{toinen v√§liarvolause} ehdot eiv√§t toteudu, koska $f$ ei ole derivoituva
+pisteess√§ $x=0$. V√§itetty√§ pistett√§ $\xi$ (jossa olisi oltava $f'(\xi)=0$) ei t√§ss√§ tapauksessa
+my√∂sk√§√§n ole. \loppu
 \end{Exa}
-Differentiaalilaskun v‰liarvolauseella on hyvin monia k‰yttˆmuotoja tutkittaessa derivoituvien
-(tai 'melkein derivoituvien') funktioiden ominaisuuksia. Jatkossa esitell‰‰n n‰ist‰ 
-k‰yttˆmuodoista keskeisimm‰t.
+Differentiaalilaskun v√§liarvolauseella on hyvin monia k√§ytt√∂muotoja tutkittaessa derivoituvien
+(tai 'melkein derivoituvien') funktioiden ominaisuuksia. Jatkossa esitell√§√§n n√§ist√§ 
+k√§ytt√∂muodoista keskeisimm√§t.
 
 \subsection*{Funktion monotonisuus}
 \index{funktio B!a@monotoninen|vahv} \index{monotoninen!b@reaalifunktio|vahv}
 
-Yksinkertaisissa tapauksissa voidaan pelkin algebran keinoin selvitt‰‰, mill‰ v‰leill‰ annettu
-funktio on monotoninen (kasvava tai v‰henev‰, vrt.\ Luku \ref{yhden muuttujan funktiot}).
-Yleisemmin teht‰v‰ helpottuu huomattavasti, kun otetaan k‰yttˆˆn seuraava Lauseesta
-\ref{toinen v‰liarvolause} johdettava v‰itt‰m‰.
+Yksinkertaisissa tapauksissa voidaan pelkin algebran keinoin selvitt√§√§, mill√§ v√§leill√§ annettu
+funktio on monotoninen (kasvava tai v√§henev√§, vrt.\ Luku \ref{yhden muuttujan funktiot}).
+Yleisemmin teht√§v√§ helpottuu huomattavasti, kun otetaan k√§ytt√∂√∂n seuraava Lauseesta
+\ref{toinen v√§liarvolause} johdettava v√§itt√§m√§.
 \begin{Lause} \label{monotonisuuskriteeri}
-Olkoon $f$ jatkuva v‰lill‰ $[a,b]$ ja olkoon $X\subset (a,b)$ ‰‰rellinen pistejoukko siten,
-ett‰ p‰tee
+Olkoon $f$ jatkuva v√§lill√§ $[a,b]$ ja olkoon $X\subset (a,b)$ √§√§rellinen pistejoukko siten,
+ett√§ p√§tee
 \begin{itemize}
-\item[(1)] $f$ on derivoituva jokaisessa pisteess‰ $x\in (a,b),\ x \notin X$.
-\item[(2)] On voimassa $(\star)\ \forall x\in (a,b),\ x\notin X$, miss‰ ($\star$) on jokin 
+\item[(1)] $f$ on derivoituva jokaisessa pisteess√§ $x\in (a,b),\ x \notin X$.
+\item[(2)] On voimassa $(\star)\ \forall x\in (a,b),\ x\notin X$, miss√§ ($\star$) on jokin 
            seuraavista vaihtoehdoista:
            \[
            \begin{array}{ll}
@@ -113,21 +113,21 @@ ett‰ p‰tee
            \end{array}
            \]
 \end{itemize}
-T‰llˆin $f$ on (a) kasvava, (b) aidosti kasvava, (c) v‰henev‰, (d) aidosti v‰henev‰ v‰lill‰ 
+T√§ll√∂in $f$ on (a) kasvava, (b) aidosti kasvava, (c) v√§henev√§, (d) aidosti v√§henev√§ v√§lill√§ 
 $[a,b]$.
 \end{Lause}
-\tod Ol. $x_1,x_2\in [a,b]$, $x_1<x_2$. Koska joukko $X$ on ‰‰rellinen, niin voidaan valita 
-pistejoukko $\{t_1,\ldots,t_{n-1}\}\subset X$ (mahdollisesti tyhj‰ joukko) siten, ett‰
+\tod Ol. $x_1,x_2\in [a,b]$, $x_1<x_2$. Koska joukko $X$ on √§√§rellinen, niin voidaan valita 
+pistejoukko $\{t_1,\ldots,t_{n-1}\}\subset X$ (mahdollisesti tyhj√§ joukko) siten, ett√§
 \[
 x_1=t_0<t_1<\ldots <t_n=x_2\ \ \text{ja}\ \ (t_{k-1},t_k)\cap X=\emptyset, \ k=1\ldots n.
 \]
-T‰llˆin kun kirjoitetaan $f(x_2)-f(x_1)$ teleskooppisummaksi ja sovelletaan Lausetta
-\ref{toinen v‰liarvolause}, niin seuraa
+T√§ll√∂in kun kirjoitetaan $f(x_2)-f(x_1)$ teleskooppisummaksi ja sovelletaan Lausetta
+\ref{toinen v√§liarvolause}, niin seuraa
 \[
 f(x_2)-f(x_1) \,=\, \sum_{k=1}^n [f(t_k)-f(t_{k-1})]
               \,=\, \sum_{k=1}^n f'(\xi_k)(t_k-t_{k-1}), \quad \xi_k\in (t_{k-1},t_k),
 \]
-jolloin tehtyjen oletuksien perusteella p‰‰tell‰‰n
+jolloin tehtyjen oletuksien perusteella p√§√§tell√§√§n
 \[
 f(x_2)-f(x_1)=\begin{cases}
 \ge 0 &\text{(a)}, \\
@@ -138,71 +138,71 @@ f(x_2)-f(x_1)=\begin{cases}
 \]
 
 Sovellettaessa Lausetta \ref{monotonisuuskriteeri} voidaan joukkoon $X$ aina lukea $f'$:n 
-nollakohdat, sik‰li kuin niit‰ on ‰‰rellinen m‰‰r‰. ƒ‰rellinen m‰‰r‰ $f'$:n nollakohtia ei siis
-h‰iritse funktion (aitoakaan) monotonisuutta, kunhan $f'$:n merkki ei nollakohdissa vaihdu.
+nollakohdat, sik√§li kuin niit√§ on √§√§rellinen m√§√§r√§. √Ñ√§rellinen m√§√§r√§ $f'$:n nollakohtia ei siis
+h√§iritse funktion (aitoakaan) monotonisuutta, kunhan $f'$:n merkki ei nollakohdissa vaihdu.
 \begin{Exa} Funktio
 $\D f(x)=\begin{cases} 
          \,x^3, &\text{kun}\ -1\leq x\leq 1, \\ \,x, &\text{kun} \quad 1<x\leq 2
          \end{cases}$
 
-on jatkuva v‰lill‰ $[-1,2]$ ja derivoituva v‰lill‰ $(-1,2)$ lukuunottamatta pistett‰ $x=1$.
+on jatkuva v√§lill√§ $[-1,2]$ ja derivoituva v√§lill√§ $(-1,2)$ lukuunottamatta pistett√§ $x=1$.
 Kun valitaan $X=\{0,1\}$, niin Lauseen \ref{monotonisuuskriteeri} oletus (b) on voimassa,
-joten $f$ on v‰lill‰ $[-1,2]$ aidosti kasvava. \loppu
+joten $f$ on v√§lill√§ $[-1,2]$ aidosti kasvava. \loppu
 \end{Exa}
 \begin{Exa} \label{monotonisuus: esim} Edellisen luvun Esimerkin
-\ref{kriittiset pisteet: esim} mukaan funktiolle $f(x)=x^2/(x+1)$ p‰tee: $f'(x)>0$
-v‰leill‰ $(-\infty,-2)$ ja $(0,\infty)$ ja $f'(x)<0$ v‰leill‰ $(-2,-1)$ ja $(-1,0)$. Lauseen
-\ref{monotonisuuskriteeri} perusteella p‰‰tell‰‰n, ett‰ $f$ on aidosti kasvava v‰leill‰
-$(-\infty,-2]$ ja $[0,\infty)$ (eli n‰iden v‰lien suljetuilla osav‰leill‰) ja vastaavasti
-aidosti v‰henev‰ v‰leill‰ $[-2,-1)$ ja $(-1,0]$. 
-(Samaan tulokseen tullaan pelkin algebran keinoinkin, mutta tyˆl‰‰mmin:
+\ref{kriittiset pisteet: esim} mukaan funktiolle $f(x)=x^2/(x+1)$ p√§tee: $f'(x)>0$
+v√§leill√§ $(-\infty,-2)$ ja $(0,\infty)$ ja $f'(x)<0$ v√§leill√§ $(-2,-1)$ ja $(-1,0)$. Lauseen
+\ref{monotonisuuskriteeri} perusteella p√§√§tell√§√§n, ett√§ $f$ on aidosti kasvava v√§leill√§
+$(-\infty,-2]$ ja $[0,\infty)$ (eli n√§iden v√§lien suljetuilla osav√§leill√§) ja vastaavasti
+aidosti v√§henev√§ v√§leill√§ $[-2,-1)$ ja $(-1,0]$. 
+(Samaan tulokseen tullaan pelkin algebran keinoinkin, mutta ty√∂l√§√§mmin:
 Harj.teht.\,\ref{yhden muuttujan funktiot}:\ref{H-IV-1: funktioalgebran haasteita}b.)
 \loppu \end{Exa}
 
 \subsection*{Kriittisen pisteen laatu}
 \index{kriittinen piste!a@luokittelu|vahv}
 
-Lauseen \ref{monotonisuuskriteeri} monotonisuuskriteereill‰ voidaan yleens‰ selvitt‰‰ helposti,
-onko funktion kriittinen piste paikallinen ‰‰riarvokohta (ja mink‰laatuinen) vai ei. Nimitt‰in
-asia selvi‰‰ (ellei $f$ ole poikkeuksellisen 'pahantapainen') tutkimalla derivaatan merkki‰ 
-kriittisen pisteen l‰hiymp‰ristˆss‰. Esimerkiksi jos $f'(x)<0$ v‰lill‰ $(c-\delta_1,c)$ ja 
-$f'(x)>0$ v‰lill‰ $(c,\,c+\delta_2)$ joillakin $\delta_1\,,\delta_2>0$, niin $f$ on v‰lill‰ 
-$[c-\delta_1,c]$ aidosti v‰henev‰ ja v‰lill‰ $[c,c+\delta_2]$ aidosti kasvava, jolloin $c$:n 
-on oltava paikallinen minimikohta. P‰‰ttelyss‰ riitt‰‰, ett‰ $f$ on pisteess‰ $c$ jatkuva, ts.\
-derivoituvuutta ei tarvitse olettaa (vrt.\ Lause \ref{‰‰riarvolause 2}).
-\jatko \begin{Exa} (jatko) Esimerkiss‰ $f$:n kriittiset pisteet ovat $-2$ ja $0$. Derivaatan
-merkin perusteella p‰‰tell‰‰n, ett‰ $x=-2$ on $f$:n paikallinen maksimikohta ja $x=0$ on
+Lauseen \ref{monotonisuuskriteeri} monotonisuuskriteereill√§ voidaan yleens√§ selvitt√§√§ helposti,
+onko funktion kriittinen piste paikallinen √§√§riarvokohta (ja mink√§laatuinen) vai ei. Nimitt√§in
+asia selvi√§√§ (ellei $f$ ole poikkeuksellisen 'pahantapainen') tutkimalla derivaatan merkki√§ 
+kriittisen pisteen l√§hiymp√§rist√∂ss√§. Esimerkiksi jos $f'(x)<0$ v√§lill√§ $(c-\delta_1,c)$ ja 
+$f'(x)>0$ v√§lill√§ $(c,\,c+\delta_2)$ joillakin $\delta_1\,,\delta_2>0$, niin $f$ on v√§lill√§ 
+$[c-\delta_1,c]$ aidosti v√§henev√§ ja v√§lill√§ $[c,c+\delta_2]$ aidosti kasvava, jolloin $c$:n 
+on oltava paikallinen minimikohta. P√§√§ttelyss√§ riitt√§√§, ett√§ $f$ on pisteess√§ $c$ jatkuva, ts.\
+derivoituvuutta ei tarvitse olettaa (vrt.\ Lause \ref{√§√§riarvolause 2}).
+\jatko \begin{Exa} (jatko) Esimerkiss√§ $f$:n kriittiset pisteet ovat $-2$ ja $0$. Derivaatan
+merkin perusteella p√§√§tell√§√§n, ett√§ $x=-2$ on $f$:n paikallinen maksimikohta ja $x=0$ on
 paikallinen minimikohta. \loppu
 \end{Exa}
 
-\subsection*{Funktion (k‰yr‰n) kaareutuvuus}
-\index{kaareutuvuus (funktion, k‰yr‰n)|vahv}
+\subsection*{Funktion (k√§yr√§n) kaareutuvuus}
+\index{kaareutuvuus (funktion, k√§yr√§n)|vahv}
 
-Jos $f'(x)$:n merkki kertoo, onko $f$ kasvava tai v‰henev‰, niin $f''(x)$:n merkki puolestaan 
-kertoo funktion $f$ (tai k‰yr‰n $y=f(x)$) \kor{kaareutumissuunnan}. Jos $f$ on derivoituva
-avoimella v‰lill‰ $(a,b)$, niin sanotaan, ett‰ $f$ on ko.\ v‰lill‰ \kor{ylˆs}(p‰in) 
-\kor{kaareutuva} (egl.\ concave up), jos $f'$ on ko.\ v‰lill‰ aidosti kasvava, ja
-\kor{alas}(p‰in) \kor{kaareutuva} (engl.\ concave down), jos $f'$ on aidosti v‰henev‰ v‰lill‰
-$(a,b)$. Jos $f$ on kahdesti derivoituva, lukuunottamatta mahdollisesti ‰‰rellist‰
-pistejoukkoa, niin $f$:n kaareutumissuunta voidaan p‰‰tell‰ $f''$:n merkist‰ Lauseen
+Jos $f'(x)$:n merkki kertoo, onko $f$ kasvava tai v√§henev√§, niin $f''(x)$:n merkki puolestaan 
+kertoo funktion $f$ (tai k√§yr√§n $y=f(x)$) \kor{kaareutumissuunnan}. Jos $f$ on derivoituva
+avoimella v√§lill√§ $(a,b)$, niin sanotaan, ett√§ $f$ on ko.\ v√§lill√§ \kor{yl√∂s}(p√§in) 
+\kor{kaareutuva} (egl.\ concave up), jos $f'$ on ko.\ v√§lill√§ aidosti kasvava, ja
+\kor{alas}(p√§in) \kor{kaareutuva} (engl.\ concave down), jos $f'$ on aidosti v√§henev√§ v√§lill√§
+$(a,b)$. Jos $f$ on kahdesti derivoituva, lukuunottamatta mahdollisesti √§√§rellist√§
+pistejoukkoa, niin $f$:n kaareutumissuunta voidaan p√§√§tell√§ $f''$:n merkist√§ Lauseen
 \ref{monotonisuuskriteeri} mukaisesti. Kaareutuvuuden geometrinen tulkinta on ilmeinen,
-vrt.\ kuvio.\footnote[2]{Kaareutuvuuden synonyymin‰ k‰ytet‰‰n matemaattisissa teksteiss‰
-myˆs termi‰ \kor{kuperuus} (ylˆs tai alas), mutta t‰llˆin saattaa j‰‰d‰ ep‰selv‰ksi, kumpaa
-kaareutumissuuntaa tarkoitetaan. Kaareutuvuuden (kuperuuden) k‰site voidaan m‰‰ritell‰ 
-yleisemmin myˆs derivaatoista riippumatta, jolloin k‰ytet‰‰n useammin termej‰ \kor{konveksi}
-ja \kor{konkaavi}. Funktiota $f$ sanotaan konveksiksi v‰lill‰ $[a,b]\in\DF_f$, jos $f$:ll‰ on
+vrt.\ kuvio.\footnote[2]{Kaareutuvuuden synonyymin√§ k√§ytet√§√§n matemaattisissa teksteiss√§
+my√∂s termi√§ \kor{kuperuus} (yl√∂s tai alas), mutta t√§ll√∂in saattaa j√§√§d√§ ep√§selv√§ksi, kumpaa
+kaareutumissuuntaa tarkoitetaan. Kaareutuvuuden (kuperuuden) k√§site voidaan m√§√§ritell√§ 
+yleisemmin my√∂s derivaatoista riippumatta, jolloin k√§ytet√§√§n useammin termej√§ \kor{konveksi}
+ja \kor{konkaavi}. Funktiota $f$ sanotaan konveksiksi v√§lill√§ $[a,b]\in\DF_f$, jos $f$:ll√§ on
 ominaisuus
 \[ 
 f\bigl(\,tx_1 + (1-t)x_2\bigr) \le t f(x_1) + (1-t)f(x_2), \quad 
                    \text{kun}\ x_1,x_2\in[a,b]\ \text{ja}\ t \in [0,1]. 
 \]
-Jos t‰ss‰ ehdossa ep‰yht‰lˆ toteutuu muodossa '$<$' aina kun $x_1 \neq x_2$ ja $t \in (0,1)$,
-niin $f$ on v‰lill‰ $[a,b]$ \kor{aidosti konveksi}. Geometrisesti aito konveksisuus
-tarkoittaa, ett‰ jos $x_1,\,x_2\in[a,b]$ ja $x_1 < x_2$, niin funktion $f$ kuvaaja on
+Jos t√§ss√§ ehdossa ep√§yht√§l√∂ toteutuu muodossa '$<$' aina kun $x_1 \neq x_2$ ja $t \in (0,1)$,
+niin $f$ on v√§lill√§ $[a,b]$ \kor{aidosti konveksi}. Geometrisesti aito konveksisuus
+tarkoittaa, ett√§ jos $x_1,\,x_2\in[a,b]$ ja $x_1 < x_2$, niin funktion $f$ kuvaaja on
 pisteiden $(x_1,f(x_1))$ ja $(x_2,f(x_2))$ kautta kulkevan suoran alapuolella avoimella
-v‰lill‰ $(x_1,x_2)$. V‰lill‰ $[a,b]$ jatkuva ja v‰lill‰ $(a,b)$ ylˆs kaareutuva (riitt‰v‰sti
-derivoituva) funktio on m‰‰ritelmien mukaisesti aidosti konveksi. Alasp‰in kaareutuvuutta
-vastaava k‰site konkaavius m‰‰ritell‰‰n vastaavasti.\index{kuperuus|av}
+v√§lill√§ $(x_1,x_2)$. V√§lill√§ $[a,b]$ jatkuva ja v√§lill√§ $(a,b)$ yl√∂s kaareutuva (riitt√§v√§sti
+derivoituva) funktio on m√§√§ritelmien mukaisesti aidosti konveksi. Alasp√§in kaareutuvuutta
+vastaava k√§site konkaavius m√§√§ritell√§√§n vastaavasti.\index{kuperuus|av}
 \index{konveksi, konkaavi|av} \index{aidosti konveksi|av}} 
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -215,38 +215,38 @@ vastaava k‰site konkaavius m‰‰ritell‰‰n vastaavasti.\index{kuperuus|av}
 \curve(0.5,0.5,2.5,1.3,4,3) \put(1,2){$y=f(x)$}
 \curve(6.5,0.5,8,2.8,10,2.6) \put(8,2){$y=f(x)$}
 \put(1.3,-1){$f''>0$} \put(7.3,-1){$f''<0$}
-\put(0.3,-1.6){(ylˆs kaareutuva)} \put(6.4,-1.6){(alas kaareutuva)}
+\put(0.3,-1.6){(yl√∂s kaareutuva)} \put(6.4,-1.6){(alas kaareutuva)}
 \end{picture}
 \end{center}
 \end{figure}
-Pistett‰, jossa kaareutumissuunta vaihtuu, sanotaan (funktion/k‰yr‰n)
-\index{kzyzy@k‰‰nnepiste}
-\kor{k‰‰nnepisteeksi} (engl.\ inflection point). Jos $f''$ on jatkuva k‰‰nnepisteess‰ $c$, niin
+Pistett√§, jossa kaareutumissuunta vaihtuu, sanotaan (funktion/k√§yr√§n)
+\index{kzyzy@k√§√§nnepiste}
+\kor{k√§√§nnepisteeksi} (engl.\ inflection point). Jos $f''$ on jatkuva k√§√§nnepisteess√§ $c$, niin
 on oltava $f''(c)=0$.
-\begin{Exa} Derivoimalla todetaan, ett‰ kolmannen asteen polynomilla 
-$f(x)=x^3+ax^2+bx+c\ (a,b,c\in\R)$ on t‰sm‰lleen yksi k‰‰nnepiste: $\,x=-\tfrac{1}{3}a$.
-V‰lill‰ $(-\infty,-\tfrac{1}{3}a)$ $f$ on alas ja v‰lill‰ $(-\tfrac{1}{3}a,\infty)$ ylˆs
+\begin{Exa} Derivoimalla todetaan, ett√§ kolmannen asteen polynomilla 
+$f(x)=x^3+ax^2+bx+c\ (a,b,c\in\R)$ on t√§sm√§lleen yksi k√§√§nnepiste: $\,x=-\tfrac{1}{3}a$.
+V√§lill√§ $(-\infty,-\tfrac{1}{3}a)$ $f$ on alas ja v√§lill√§ $(-\tfrac{1}{3}a,\infty)$ yl√∂s
 kaareutuva. \loppu
 \end{Exa}
 
 \subsection*{Lipschitz-jatkuvuus}
 
-Luvussa \ref{jatkuvuuden k‰site} m‰‰ritelty funktion jatkuvuus voidaan tulkita funktiota
+Luvussa \ref{jatkuvuuden k√§site} m√§√§ritelty funktion jatkuvuus voidaan tulkita funktiota
 koskevaksi \pain{minimi}oletukseksi, kun halutaan taata fuktioevaluaation $x \map f(x)$
-luotettavuus. Seuraavassa esitell‰‰n 'pelkk‰‰ jatkuvuutta' vahvempi jatkuvuuden laji, jolla
-jatkossa on silloin t‰llˆin (etenkin teoreettista) k‰yttˆ‰.
+luotettavuus. Seuraavassa esitell√§√§n 'pelkk√§√§ jatkuvuutta' vahvempi jatkuvuuden laji, jolla
+jatkossa on silloin t√§ll√∂in (etenkin teoreettista) k√§ytt√∂√§.
 \begin{Def} \label{funktion l-jatkuvuus} \index{Lipschitz-jatkuvuus|emph}
 Funktio $f$ on \kor{Lipschitz-jatkuva} eli \kor{Lipschitz}\footnote[2]{\hist{Rudolf Lipschitz}
-(1832-1903) oli saksalainen matemaatikko.\index{Lipschitz, R.|av}} \kor{v‰lill‰}
-$[a,b]\subset\DF_f$, jos jollakin $L\in\R_+$ p‰tee
+(1832-1903) oli saksalainen matemaatikko.\index{Lipschitz, R.|av}} \kor{v√§lill√§}
+$[a,b]\subset\DF_f$, jos jollakin $L\in\R_+$ p√§tee
 \[
 \abs{f(x_1)-f(x_2)}\leq L\abs{x_1-x_2} \quad \forall x_1,x_2\in [a,b].
 \]
 \end{Def}
-M‰‰ritelm‰n lukua $L$ sanotaan $f$:n \kor{Lipschitz-vakioksi} v‰lill‰ $[a,b]$. Vakio $L$ ei
-ole yksik‰sitteinen, sill‰ jos $L$ on $f$:n Lipschitz-vakio, niin m‰‰ritelm‰n mukaan samoin
-on jokainen $L_1 > L$. Jos $f$ on Lipschitz v‰lill‰ $[a,b]$, niin $f$:n pienin
-Lipschitz-vakion arvo on pienin yl‰raja (m‰‰ritelm‰n perusteella rajoitetulle)
+M√§√§ritelm√§n lukua $L$ sanotaan $f$:n \kor{Lipschitz-vakioksi} v√§lill√§ $[a,b]$. Vakio $L$ ei
+ole yksik√§sitteinen, sill√§ jos $L$ on $f$:n Lipschitz-vakio, niin m√§√§ritelm√§n mukaan samoin
+on jokainen $L_1 > L$. Jos $f$ on Lipschitz v√§lill√§ $[a,b]$, niin $f$:n pienin
+Lipschitz-vakion arvo on pienin yl√§raja (m√§√§ritelm√§n perusteella rajoitetulle)
 reaalilukujoukolle
 \[
 A = \left\{ y = \frac{\abs{f(x_1)-f(x_2)}}{\abs{x_1-x_2}}\ 
@@ -254,249 +254,249 @@ A = \left\{ y = \frac{\abs{f(x_1)-f(x_2)}}{\abs{x_1-x_2}}\
 \]
 ts.\ $\ L_{min} = \sup A$ (vrt.\ Luku \ref{reaalilukujen ominaisuuksia}).
 
-Lipschitz-jatkuvuus on k‰sitteen‰ l‰hell‰ derivoituvuutta, ja Lipschitz-jatkuvia funktioita
+Lipschitz-jatkuvuus on k√§sitteen√§ l√§hell√§ derivoituvuutta, ja Lipschitz-jatkuvia funktioita
 voikin luonnehtia 'melkein derivoituviksi'.
-\begin{Exa} Funktio $f(x)=\abs{x}$ on jokaisella v‰lill‰ Lipschitz-jatkuva vakiolla $L=1$
-(= pienin $L$:n arvo), sill‰ kolmioep‰yht‰lˆn nojalla
+\begin{Exa} Funktio $f(x)=\abs{x}$ on jokaisella v√§lill√§ Lipschitz-jatkuva vakiolla $L=1$
+(= pienin $L$:n arvo), sill√§ kolmioep√§yht√§l√∂n nojalla
 \[
 \abs{f(x_1)-f(x_2)} \,=\, \abs{\abs{x_1}-\abs{x_2}} 
                     \,\le\, \abs{x_1-x_2}, \quad x_1,\,x_2\in\R. \loppu
 \]
 \end{Exa}
-Esimerkin funktio on myˆs paloittain jatkuvasti derivoituva jokaisella v‰lill‰
-(M‰‰ritelm‰ \ref{paloittainen sileys}, $\,m=1$). Yhdess‰ jatkuvuuden kanssa t‰m‰ on
-yleisemminkin riitt‰v‰ tae Lipschitz-jatkuvuudelle:
-\begin{Lause} \label{Lipschitz-kriteeri} Jos $f$ on v‰lill‰ $[a,b]$ jatkuva ja paloittain
-jatkuvasti derivoituva, niin $f$ on Lipschitz-jatkuva v‰lill‰ $[a,b]$.
+Esimerkin funktio on my√∂s paloittain jatkuvasti derivoituva jokaisella v√§lill√§
+(M√§√§ritelm√§ \ref{paloittainen sileys}, $\,m=1$). Yhdess√§ jatkuvuuden kanssa t√§m√§ on
+yleisemminkin riitt√§v√§ tae Lipschitz-jatkuvuudelle:
+\begin{Lause} \label{Lipschitz-kriteeri} Jos $f$ on v√§lill√§ $[a,b]$ jatkuva ja paloittain
+jatkuvasti derivoituva, niin $f$ on Lipschitz-jatkuva v√§lill√§ $[a,b]$.
 \end{Lause}
-Todistuksen (Harj.teht.\,\ref{H-V-6: Lipschitz-kriteeri}) johdannoksi n‰ytett‰kˆˆn toteen
-seuraava v‰itt‰m‰, jonka osav‰tt‰m‰n (ii) Lause \ref{Lipschitz-kriteeri} yleist‰‰. Todistus
-on tyypillinen esimerkki Diferentiaalilaskun v‰liarvolauseen soveltamisesta.
+Todistuksen (Harj.teht.\,\ref{H-V-6: Lipschitz-kriteeri}) johdannoksi n√§ytett√§k√∂√∂n toteen
+seuraava v√§itt√§m√§, jonka osav√§tt√§m√§n (ii) Lause \ref{Lipschitz-kriteeri} yleist√§√§. Todistus
+on tyypillinen esimerkki Diferentiaalilaskun v√§liarvolauseen soveltamisesta.
 \begin{Lause} \label{Lipschitz-kriteeri 1}
-Jos $f$ on v‰lill‰ $[a,b]$ jatkuvasti derivoituva, niin
+Jos $f$ on v√§lill√§ $[a,b]$ jatkuvasti derivoituva, niin
 \begin{align*}
 \text{(i)}  \quad 
             &\dif_+f(a) = f'(a^+),\,\ \dif_-f(b) = f'(b^-), \\
 \text{(ii)} \quad 
-            &\text{$f$ on v‰lill‰ $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on} \\
+            &\text{$f$ on v√§lill√§ $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on} \\
             &L=\max_{x\in [a,b]} \abs{f'(x)}.
 \end{align*}
 \end{Lause}
-\tod (i) Olkoon $\seq{x_n}$ jono, jolle p‰tee $a < x_n \le b\ \forall n$ ja $x_n \kohti a^+$. 
-T‰llˆin Lauseen \ref{toinen v‰liarvolause} mukaan jokaisella $n$ on olemassa 
-$\xi_n \in (a,x_n)$ siten, ett‰
+\tod (i) Olkoon $\seq{x_n}$ jono, jolle p√§tee $a < x_n \le b\ \forall n$ ja $x_n \kohti a^+$. 
+T√§ll√∂in Lauseen \ref{toinen v√§liarvolause} mukaan jokaisella $n$ on olemassa 
+$\xi_n \in (a,x_n)$ siten, ett√§
 \[
 \frac{f(x_n)-f(a)}{x_n-a} = f'(\xi_n).
 \]
-T‰ss‰ $\xi_n \kohti a^+$ kun $x_n \kohti a^+$, joten toispuolisen derivaatan $\dif_+f(a)$ 
-m‰‰ritelm‰n ja $f'$:n oletetun toispuolisen jatkuvuuden perusteella seuraa
+T√§ss√§ $\xi_n \kohti a^+$ kun $x_n \kohti a^+$, joten toispuolisen derivaatan $\dif_+f(a)$ 
+m√§√§ritelm√§n ja $f'$:n oletetun toispuolisen jatkuvuuden perusteella seuraa
 \[
 \dif_+f(a) = \lim_{x_n\kohti a^+}\,\frac{f(x_n)-f(a)}{x_n-a} 
            = \lim_{x_n\kohti a^+} f'(\xi_n) = f'(a^+).
 \]
-V‰itt‰m‰n (i) toinen osa todistetaan vastaavasti.
+V√§itt√§m√§n (i) toinen osa todistetaan vastaavasti.
 
-(ii) Jos $x_1,x_2\in [a,b]$ ja $x_1<x_2$, niin Lauseen \ref{toinen v‰liarvolause} mukaan
+(ii) Jos $x_1,x_2\in [a,b]$ ja $x_1<x_2$, niin Lauseen \ref{toinen v√§liarvolause} mukaan
 \[
 f(x_2)-f(x_1)=f'(\xi)(x_2-x_1),\quad \xi\in (x_1,x_2).
 \]
-Koska $f'$ on jatkuva v‰lill‰ $[a,b]$, niin Weierstrassin lauseen (Lause
-\ref{Weierstrassin peruslause}) mukaan $\abs{f'(x)}$ saavuttaa v‰lill‰ $[a,b]$ maksimiarvonsa.
-Kun t‰m‰ merkit‰‰n $=L$, niin n‰hd‰‰n, ett‰ $L$ kelpaa $f$:n Lipschitz-vakion arvoksi.
-Valitsemalla $x_1$ ja $x_2$ $\abs{f'(x)}$:n maksimikohdan l‰helt‰ (vrt.\ osav‰itt‰m‰n (i)
-todistus) n‰hd‰‰n myˆs helposti, ett‰ t‰m‰ $L$:n arvo on pienin mahdollinen. \loppu
+Koska $f'$ on jatkuva v√§lill√§ $[a,b]$, niin Weierstrassin lauseen (Lause
+\ref{Weierstrassin peruslause}) mukaan $\abs{f'(x)}$ saavuttaa v√§lill√§ $[a,b]$ maksimiarvonsa.
+Kun t√§m√§ merkit√§√§n $=L$, niin n√§hd√§√§n, ett√§ $L$ kelpaa $f$:n Lipschitz-vakion arvoksi.
+Valitsemalla $x_1$ ja $x_2$ $\abs{f'(x)}$:n maksimikohdan l√§helt√§ (vrt.\ osav√§itt√§m√§n (i)
+todistus) n√§hd√§√§n my√∂s helposti, ett√§ t√§m√§ $L$:n arvo on pienin mahdollinen. \loppu
 \begin{Exa} Jos $0<a<b$, niin funktio $f(x)=\sqrt{x}$ on Lauseen \ref{Lipschitz-kriteeri 1}
-mukaan v‰lill‰ $[a,b]$ Lipschitz-jatkuva vakiolla $L=1/(2\sqrt{a})$. V‰leill‰ $[0,b]$ $f$ ei
-ole Lipschitz-jatkuva (ainoastaan jatkuva), sill‰ jos valitaan $x_1=0$ ja $x_2>0$, niin
+mukaan v√§lill√§ $[a,b]$ Lipschitz-jatkuva vakiolla $L=1/(2\sqrt{a})$. V√§leill√§ $[0,b]$ $f$ ei
+ole Lipschitz-jatkuva (ainoastaan jatkuva), sill√§ jos valitaan $x_1=0$ ja $x_2>0$, niin
 \[
 \frac{\abs{f(x_1)-f(x_2)}}{\abs{x_1-x_2}} = \frac{1}{\sqrt{x_2}} \kohti \infty, \quad
                                             \text{kun}\ x_2 \kohti 0^+. \loppu
 \]
 \end{Exa}
 
-\subsection*{Differentiaaliyht‰lˆ $y'=f(x)$. Integraalifunktio}
-\index{differentiaaliyht‰lˆ|vahv} \index{integraalifunktio|vahv}
+\subsection*{Differentiaaliyht√§l√∂ $y'=f(x)$. Integraalifunktio}
+\index{differentiaaliyht√§l√∂|vahv} \index{integraalifunktio|vahv}
 
-Derivoimiss‰‰ntˆjen perusteella 'vakion derivaatta on nolla', ts.\ jos $f(x)=C$, $x\in(a,b)$
-jollakin $C\in\R$, niin $f'(x)=0,\ x\in(a,b)$. Differentiaalilaskun v‰li\-arvo\-lauseesta 
-seuraa, ett‰ v‰itt‰m‰ p‰tee myˆs k‰‰nteisesti muodossa: \pain{vain} vakion derivaatta $=0$. 
-T‰m‰ yksinkertainen tulos osoittautuu seuraamuksiltaan huomattavaksi.
+Derivoimiss√§√§nt√∂jen perusteella 'vakion derivaatta on nolla', ts.\ jos $f(x)=C$, $x\in(a,b)$
+jollakin $C\in\R$, niin $f'(x)=0,\ x\in(a,b)$. Differentiaalilaskun v√§li\-arvo\-lauseesta 
+seuraa, ett√§ v√§itt√§m√§ p√§tee my√∂s k√§√§nteisesti muodossa: \pain{vain} vakion derivaatta $=0$. 
+T√§m√§ yksinkertainen tulos osoittautuu seuraamuksiltaan huomattavaksi.
 \begin{Lause} (\vahv{Integraalilaskun\footnote[2]{\kor{Integraalilaskenta} on matematiikan
 laji, jota tarkastellaan perusteellisemmin Luvussa \ref{Integraali}.} peruslause}) 
 \label{Integraalilaskun peruslause} \index{Integraalilaskun peruslause|emph}
-Jos $f$ on derivoituva v‰lill‰ $(a,b)$ ja $f'(x)=0\ \forall x\in(a,b)$, niin jollakin $C\in\R$
+Jos $f$ on derivoituva v√§lill√§ $(a,b)$ ja $f'(x)=0\ \forall x\in(a,b)$, niin jollakin $C\in\R$
 on $f(x)=C,\ x\in(a,b)$.
 \end{Lause}
-\tod Jos $c\in(a,b)$ ja $x\in(a,b),\ x \neq c$, niin Differentiaalilaskun v‰liarvolauseen
-oletukset ovat voimassa v‰lill‰ $[c,x]$ ($x>c$) tai v‰lill‰ $[x,c]$ ($x<c$). N‰in ollen
+\tod Jos $c\in(a,b)$ ja $x\in(a,b),\ x \neq c$, niin Differentiaalilaskun v√§liarvolauseen
+oletukset ovat voimassa v√§lill√§ $[c,x]$ ($x>c$) tai v√§lill√§ $[x,c]$ ($x<c$). N√§in ollen
 $f(x)-f(c)=f'(\xi)(x-c)$ jollakin $\xi\in(c,x)\subset(a,b)$ tai $\xi\in(x,c)\subset(a,b)$.
 Koska $f'(\xi)=0\ \forall\xi\in(a,b)$, niin seuraa $f(x)=f(c)=C,\ x\in(a,b)$. \loppu
 
-Lause \ref{Integraalilaskun peruslause} voidaan tulkita v‰itt‰m‰n‰, joka koskee hyvin
-yksinkertaista (itse asiassa kaikkein yksinkertaisinta) \kor{differentiaaliyht‰lˆ‰}
+Lause \ref{Integraalilaskun peruslause} voidaan tulkita v√§itt√§m√§n√§, joka koskee hyvin
+yksinkertaista (itse asiassa kaikkein yksinkertaisinta) \kor{differentiaaliyht√§l√∂√§}
 \[
 y'=0.
 \]
-T‰ss‰ $y(x)$ on tarkasteltavalla v‰lill‰ $(a,b)$ derivoituva (tuntematon)
-funktio\footnote[3]{Differentiaaliyht‰lˆiss‰ k‰ytet‰‰n yleens‰ funktiosymbolia $y$ (ei $f$),
-koska kyseeess‰ on ep‰suorasti m‰‰ritelty funktio (tai funktiojoukko), vrt.\ 
-implisiittifunktiot (Luku \ref{k‰‰nteisfunktio}).}. 
-Differentiaaliyht‰lˆn \kor{ratkaisu} on jokainen funktio $y(x)$, joka toteuttaa yht‰lˆn ko.\
-v‰lill‰. Lauseen \ref{Integraalilaskun peruslause} mukaan diferentiaaliyht‰lˆn $y'=0$ jokainen
-ratkaisu on vakio, eli ko.\ differentiaaliyht‰lˆn \kor{yleinen ratkaisu} v‰lill‰ $(a,b)$ on
+T√§ss√§ $y(x)$ on tarkasteltavalla v√§lill√§ $(a,b)$ derivoituva (tuntematon)
+funktio\footnote[3]{Differentiaaliyht√§l√∂iss√§ k√§ytet√§√§n yleens√§ funktiosymbolia $y$ (ei $f$),
+koska kyseeess√§ on ep√§suorasti m√§√§ritelty funktio (tai funktiojoukko), vrt.\ 
+implisiittifunktiot (Luku \ref{k√§√§nteisfunktio}).}. 
+Differentiaaliyht√§l√∂n \kor{ratkaisu} on jokainen funktio $y(x)$, joka toteuttaa yht√§l√∂n ko.\
+v√§lill√§. Lauseen \ref{Integraalilaskun peruslause} mukaan diferentiaaliyht√§l√∂n $y'=0$ jokainen
+ratkaisu on vakio, eli ko.\ differentiaaliyht√§l√∂n \kor{yleinen ratkaisu} v√§lill√§ $(a,b)$ on
 \[
 y(x)=C, \quad x\in(a,b),
 \]
-miss‰ $C$ on nk.\ \kor{m‰‰r‰‰m‰tˆn vakio} ($C\in\R$). 
+miss√§ $C$ on nk.\ \kor{m√§√§r√§√§m√§t√∂n vakio} ($C\in\R$). 
 
-Em.\ tulos on helposti yleistett‰viss‰ koskemaan differentiaaliyht‰lˆ‰
+Em.\ tulos on helposti yleistett√§viss√§ koskemaan differentiaaliyht√§l√∂√§
 \[
 y'(x)=f(x), \quad x\in(a,b),
 \]
-miss‰ $f$ on tunnettu funktio v‰lill‰ $(a,b)$.
-\begin{Kor} \label{toiseksi yksinkertaisin dy} Jos $F$ on v‰lill‰ $(a,b)$ derivoituva funktio
-ja $\,F'(x)=f(x)$, $x\in(a,b)$, niin differentiaaliyht‰lˆn $y'=f(x)$ yleinen ratkaisu v‰lill‰
+miss√§ $f$ on tunnettu funktio v√§lill√§ $(a,b)$.
+\begin{Kor} \label{toiseksi yksinkertaisin dy} Jos $F$ on v√§lill√§ $(a,b)$ derivoituva funktio
+ja $\,F'(x)=f(x)$, $x\in(a,b)$, niin differentiaaliyht√§l√∂n $y'=f(x)$ yleinen ratkaisu v√§lill√§
 $(a,b)$ on
 \[
 y(x)=F(x)+C, \quad x\in(a,b).
 \]
 \end{Kor}
-\tod Jos $y$ differentiaaliyht‰lˆn ratkaisu ja merkit‰‰n $u(x)=y(x)-F(x)$, niin
+\tod Jos $y$ differentiaaliyht√§l√∂n ratkaisu ja merkit√§√§n $u(x)=y(x)-F(x)$, niin
 $\,u'(x)=f(x)-f(x)=0$, $x\in(a,b)$, jolloin Lauseen \ref{Integraalilaskun peruslause} mukaan
 on oltava
 \[
 u(x)=C\,\ \ekv\,\ y(x)=F(x)+C, \quad x\in(a,b). \loppu
  \]
-\begin{Exa} \label{V-6: dyex1} Differentiaaliyht‰lˆn
+\begin{Exa} \label{V-6: dyex1} Differentiaaliyht√§l√∂n
 \[
 y'=x^3-2x, \quad x\in\R
 \]
-(t‰ss‰ $(a,b)=(-\infty,\infty)$) ratkaisemiseksi on etsitt‰v‰ funktio $F$, jolle p‰tee
-$F'(x)=x^3-2x,\ x\in\R$. Derivoimiss‰‰ntˆjen perusteella n‰hd‰‰n, ett‰ voidaan valita
+(t√§ss√§ $(a,b)=(-\infty,\infty)$) ratkaisemiseksi on etsitt√§v√§ funktio $F$, jolle p√§tee
+$F'(x)=x^3-2x,\ x\in\R$. Derivoimiss√§√§nt√∂jen perusteella n√§hd√§√§n, ett√§ voidaan valita
 $F(x)=\frac{1}{4}x^4-x^2$, joten yleinen ratkaisu on
 \[
 y(x)=\frac{1}{4}x^4-x^2+C. \loppu
 \]
 \end{Exa}
-\begin{Exa} Mik‰ on differentiaaliyht‰lˆn
+\begin{Exa} Mik√§ on differentiaaliyht√§l√∂n
 \[
 y''=0, \quad x\in\R
 \]
-yleinen ($\R$:ss‰ kahdesti derivoituva) ratkaisu?
+yleinen ($\R$:ss√§ kahdesti derivoituva) ratkaisu?
 \end{Exa}
-\ratk Jos merkit‰‰n $u(x)=y'(x)$, niin differentiaaliyht‰lˆ pelkistyy muotoon $u'=0$, joten
-$u(x)=C_1\,,\ x\in\R$ (Lause\ref{Integraalilaskun peruslause}), ja n‰in ollen
-$y'=C_1\,,\ x\in\R$. Korollaarin \ref{toiseksi yksinkertaisin dy} ja derivoimiss‰‰ntˆjen mukaan
-on t‰llˆin oltava
+\ratk Jos merkit√§√§n $u(x)=y'(x)$, niin differentiaaliyht√§l√∂ pelkistyy muotoon $u'=0$, joten
+$u(x)=C_1\,,\ x\in\R$ (Lause\ref{Integraalilaskun peruslause}), ja n√§in ollen
+$y'=C_1\,,\ x\in\R$. Korollaarin \ref{toiseksi yksinkertaisin dy} ja derivoimiss√§√§nt√∂jen mukaan
+on t√§ll√∂in oltava
 \[
 y(x)=C_1x+C_2\,, \quad x\in\R.
 \]
-T‰ss‰ $C_1$ ja $C_2$ ovat molemmat m‰‰r‰‰m‰ttˆmi‰ (toisistaan riippumattomia) vakioita, joten
+T√§ss√§ $C_1$ ja $C_2$ ovat molemmat m√§√§r√§√§m√§tt√∂mi√§ (toisistaan riippumattomia) vakioita, joten
 yleinen ratkaisu koostuu kaikista polynomeista astetta $\le 1$. \loppu
 
-Differentiaaliyht‰lˆn $y'=f(x)$ ratkaisuja sanotaan funktion $f$ \kor{integraalifunktioiksi}.
-Integraalifunktio on siis m‰‰r‰‰m‰tˆnt‰ vakiota, nk.\ 
+Differentiaaliyht√§l√∂n $y'=f(x)$ ratkaisuja sanotaan funktion $f$ \kor{integraalifunktioiksi}.
+Integraalifunktio on siis m√§√§r√§√§m√§t√∂nt√§ vakiota, nk.\ 
 \index{integroimisvakio}%
 \kor{integroimisvakiota} vaille
-yksik‰sitteinen. Sovelluksissa integroimisvakio m‰‰r‰ytyy usein (sovelluksesta per‰isin
+yksik√§sitteinen. Sovelluksissa integroimisvakio m√§√§r√§ytyy usein (sovelluksesta per√§isin
 olevasta) 
-\index{alkuehto (DY:n)} \index{alkuarvoteht‰v‰}%
-\kor{alkuehdosta} muotoa $y(x_0)=y_0$. Kyseess‰ on t‰llˆin nk.\ \kor{alkuarvoteht‰v‰}
+\index{alkuehto (DY:n)} \index{alkuarvoteht√§v√§}%
+\kor{alkuehdosta} muotoa $y(x_0)=y_0$. Kyseess√§ on t√§ll√∂in nk.\ \kor{alkuarvoteht√§v√§}
 (engl.\ initial value problem)
 \[ \begin{cases}
    \,y'=f(x), \quad x\in(a,b), \\ \,y(x_0)=y_0,
    \end{cases} \]
-miss‰ $x_0\in(a,b)$ ja $y_0\in\R$ on annettu. Ratkaisu on
+miss√§ $x_0\in(a,b)$ ja $y_0\in\R$ on annettu. Ratkaisu on
 \[
 y(x)=F(x)-F(x_0)+y_0\,,
 \]
-miss‰ $F$ on (mik‰ tahansa) $f$:n integraalifunktio. Ratkaisu on yksik‰sitteinen, sill‰
-$F(x)-F(x_0)$ ei muutu, jos $F$:‰‰n lis‰t‰‰n vakio.
-\jatko \begin{Exa} (jatko) Alkuarvoteht‰v‰n
+miss√§ $F$ on (mik√§ tahansa) $f$:n integraalifunktio. Ratkaisu on yksik√§sitteinen, sill√§
+$F(x)-F(x_0)$ ei muutu, jos $F$:√§√§n lis√§t√§√§n vakio.
+\jatko \begin{Exa} (jatko) Alkuarvoteht√§v√§n
 \[ \begin{cases}
    \,y''=0, \quad x\in\R, \\ \,y(1)=0,\ y'(1)=2
    \end{cases} \]
-yksik‰sitteinen ratkaisu on $y(x)=2x-2$. \loppu
+yksik√§sitteinen ratkaisu on $y(x)=2x-2$. \loppu
 \end{Exa}
 
 Annetun funktion $f$ 'integroiminen' eli integraalifunktion etsiminen on hyvin perinteinen
 matematiikan taitolaji, jonka laajempi esittely kuuluu integraalilaskun yhteyteen
-(ks.\ Luvut \ref{integraalifunktio}--\ref{osamurtokehitelm‰t} j‰ljemp‰n‰). Toistaiseksi
-todettakoon ainoastaan, ett‰ derivoimiss‰‰ntˆjen perusteella helposti integroitavissa
+(ks.\ Luvut \ref{integraalifunktio}--\ref{osamurtokehitelm√§t} j√§ljemp√§n√§). Toistaiseksi
+todettakoon ainoastaan, ett√§ derivoimiss√§√§nt√∂jen perusteella helposti integroitavissa
 ovat mm.\ trigonometriset funktiot $\,\sin\,$ ja $\,\cos$, samoin polynomit (vrt.\ Esimerkki
-\ref{V-6: dyex1}). Myˆs funktio, joka on m‰‰ritelty v‰lill‰ $(-\rho,\rho)$ suppenevan
-potenssisarjan summana on ko.\ v‰lill‰ (yll‰tt‰v‰nkin) helposti integroitavissa. Esimerkki
+\ref{V-6: dyex1}). My√∂s funktio, joka on m√§√§ritelty v√§lill√§ $(-\rho,\rho)$ suppenevan
+potenssisarjan summana on ko.\ v√§lill√§ (yll√§tt√§v√§nkin) helposti integroitavissa. Esimerkki
 valaiskoon asiaa.
-\begin{Exa} Funktion $f(x)=x^2/(1-x)$ integraalifunktio ei ole (lausekkeena) esitett‰viss‰
-toistaiseksi tunnettujen funktioiden avulla. V‰lill‰ $(-1,1)$ on integraalifunktio
-kuitenkin m‰‰r‰tt‰viss‰, sill‰ t‰ll‰ v‰lill‰ p‰tee
+\begin{Exa} Funktion $f(x)=x^2/(1-x)$ integraalifunktio ei ole (lausekkeena) esitett√§viss√§
+toistaiseksi tunnettujen funktioiden avulla. V√§lill√§ $(-1,1)$ on integraalifunktio
+kuitenkin m√§√§r√§tt√§viss√§, sill√§ t√§ll√§ v√§lill√§ p√§tee
 \[
 f(x)=\frac{x^2}{1-x}=x^2\sum_{k=0}^\infty x^k=\sum_{k=0}^\infty x^{k+2}, \quad x\in(-1,1).
 \]
-Potenssisarjan derivoimiss‰‰nnˆn (Lause \ref{potenssisarja on derivoituva}) perusteella
-p‰‰tell‰‰n, ett‰ $f$:n integraalifunktio v‰lill‰ $(-1,1)$ on
+Potenssisarjan derivoimiss√§√§nn√∂n (Lause \ref{potenssisarja on derivoituva}) perusteella
+p√§√§tell√§√§n, ett√§ $f$:n integraalifunktio v√§lill√§ $(-1,1)$ on
 \[
 F(x)\,=\,C+\sum_{k=0}^\infty \frac{x^{k+3}}{k+3}\,
       =\,C+\frac{x^3}{3}+\frac{x^4}{4}+ \ldots \loppu
 \]
 \end{Exa}
 
-\subsection*{l'Hospitalin s‰‰nnˆt}
+\subsection*{l'Hospitalin s√§√§nn√∂t}
 
-\kor{l'Hospitalin s‰‰nnˆill‰} tarkoitetaan derivointiin perustuvia raja-arvojen
-laskus‰‰ntˆj‰ muotoa
+\kor{l'Hospitalin s√§√§nn√∂ill√§} tarkoitetaan derivointiin perustuvia raja-arvojen
+laskus√§√§nt√∂j√§ muotoa
 \[
 \lim_{x \kohti a^\pm} \frac{f(x)}{g(x)} = \lim_{x \kohti a^\pm} \frac{f'(x)}{g'(x)}\,.
 \]
-Hankalien raja-arvojen laskemisessa n‰m‰ s‰‰nnˆt ovat varteenotettava --- myˆs helposti
+Hankalien raja-arvojen laskemisessa n√§m√§ s√§√§nn√∂t ovat varteenotettava --- my√∂s helposti
 muistettava --- vaihtoehto esim.\ muuttujan vaihdolle (vrt.\ Luku \ref{funktion raja-arvo}).
-S‰‰nnˆt p‰tev‰t lievin lis‰ehdoin sellaisissa tapauksissa, joissa $f(a)/g(a)$ on joko muotoa
+S√§√§nn√∂t p√§tev√§t lievin lis√§ehdoin sellaisissa tapauksissa, joissa $f(a)/g(a)$ on joko muotoa
 $0/0$ tai $\infty/\infty$.
 
-l'Hospitalin s‰‰ntˆjen taustalla on j‰lleen Differentiaalilaskun v‰liarvolause, tarkemmin
-seuraava nk.\ \kor{yleistetty v‰liarvolause}, joka sekin on Rollen lauseesta johdettavissa
-(Harj.teht.\,\ref{H-V-6: yleistetty v‰liarvolause}).
-\begin{Lause} \label{yleistetty v‰liarvolause} 
-\index{vzy@v‰liarvolauseet!b@differentiaalilaskun|emph}
-\index{Differentiaalilaskun v‰liarvolause!yleistetty v‰liarvolause|emph} Jos $f$ ja $g$ ovat
-molemmat jatkuvia v‰lill‰ $[a,b]$ ja derivoituvia v‰lill‰ $(a,b)$ ja lis‰ksi $g'(x) \neq 0$
-$\forall x\in(a,b)$, niin on olemassa $\xi\in(a,b)$ siten, ett‰
+l'Hospitalin s√§√§nt√∂jen taustalla on j√§lleen Differentiaalilaskun v√§liarvolause, tarkemmin
+seuraava nk.\ \kor{yleistetty v√§liarvolause}, joka sekin on Rollen lauseesta johdettavissa
+(Harj.teht.\,\ref{H-V-6: yleistetty v√§liarvolause}).
+\begin{Lause} \label{yleistetty v√§liarvolause} 
+\index{vzy@v√§liarvolauseet!b@differentiaalilaskun|emph}
+\index{Differentiaalilaskun v√§liarvolause!yleistetty v√§liarvolause|emph} Jos $f$ ja $g$ ovat
+molemmat jatkuvia v√§lill√§ $[a,b]$ ja derivoituvia v√§lill√§ $(a,b)$ ja lis√§ksi $g'(x) \neq 0$
+$\forall x\in(a,b)$, niin on olemassa $\xi\in(a,b)$ siten, ett√§
 \[
 \frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(\xi)}{g'(\xi)}\,.
 \]
 \end{Lause}
 \begin{Lause} (\vahv{l'Hospitalin\footnote[2]{Ranskalainen markiisi ja matemaatikko
-\hist{Guillaume de l'Hospital} (1661-1704) tunnetaan ennen muuta h‰nen julkaisemastaan
-ensimm‰isest‰ differentiaalilaskennan oppikirjasta (1696).
-\index{l'Hospital G. de|av}} s‰‰nnˆt}) \label{Hospital} \index{l'Hospitalin s‰‰nnˆt|emph}
+\hist{Guillaume de l'Hospital} (1661-1704) tunnetaan ennen muuta h√§nen julkaisemastaan
+ensimm√§isest√§ differentiaalilaskennan oppikirjasta (1696).
+\index{l'Hospital G. de|av}} s√§√§nn√∂t}) \label{Hospital} \index{l'Hospitalin s√§√§nn√∂t|emph}
 \begin{itemize}
-\item[1.] Olkoot $f$ ja $g$ derivoituvia v‰lill‰ $(a,a+\delta),\ \delta>0$, ja olkoon
-          $g'(x) \neq 0$ t‰ll‰ v‰lill‰. Edelleen olkoon
-          $\lim_{x \kohti a^+}f(x)=\lim_{x \kohti a^+}g(x) = 0$. T‰llˆin p‰tee
+\item[1.] Olkoot $f$ ja $g$ derivoituvia v√§lill√§ $(a,a+\delta),\ \delta>0$, ja olkoon
+          $g'(x) \neq 0$ t√§ll√§ v√§lill√§. Edelleen olkoon
+          $\lim_{x \kohti a^+}f(x)=\lim_{x \kohti a^+}g(x) = 0$. T√§ll√∂in p√§tee
           \[
           \lim_{x \kohti a^+} \frac{f(x)}{g(x)} = \lim_{x \kohti a^+} \frac{f'(x)}{g'(x)} = A
           \]
-          sik‰li kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
-\item[2.] Olkoot $f$ ja $g$ derivoituvia v‰lill‰ $(M,\infty),\ M\in\R$, ja olkoon
-          $g'(x) \neq 0$ t‰ll‰ v‰lill‰. Edelleen olkoon
-          $\lim_{x\kohti\infty}f(x)=\lim_{x\kohti\infty}g(x)=0$. T‰llˆin p‰tee
+          sik√§li kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
+\item[2.] Olkoot $f$ ja $g$ derivoituvia v√§lill√§ $(M,\infty),\ M\in\R$, ja olkoon
+          $g'(x) \neq 0$ t√§ll√§ v√§lill√§. Edelleen olkoon
+          $\lim_{x\kohti\infty}f(x)=\lim_{x\kohti\infty}g(x)=0$. T√§ll√∂in p√§tee
           \[
           \lim_{x\kohti\infty} \frac{f(x)}{g(x)} = \lim_{x\kohti\infty} \frac{f'(x)}{g'(x)} = A
           \]
-          sik‰li kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
-\item[3.] S‰‰nnˆt 1--2 ovat p‰tevi‰ myˆs, kun funktioiden $f$ ja $g$ raja-arvoja koskevat
+          sik√§li kuin raja-arvo oikealla on olemassa ($A\in\R$ tai $A=\pm\infty$).
+\item[3.] S√§√§nn√∂t 1--2 ovat p√§tevi√§ my√∂s, kun funktioiden $f$ ja $g$ raja-arvoja koskevat
           oletukset muutetaan muotoon: $\,\lim|f(x)|=\lim|g(x)|=\infty$.
 \end{itemize}
 \end{Lause}
-\tod \ S‰‰ntˆ 1. Asetetaan $f(a)=g(a)=0$, jolloin oletusten perusteella $f$ ja $g$ ovat
-jatkuvia v‰lill‰ $[a,b]$, kun $a<b<a+\delta$. N‰in ollen jos $a<x<a+\delta$, niin
-Lauseen \ref{yleistetty v‰liarvolause} perusteella p‰tee jollakin $\xi\in(a,x)$
+\tod \ S√§√§nt√∂ 1. Asetetaan $f(a)=g(a)=0$, jolloin oletusten perusteella $f$ ja $g$ ovat
+jatkuvia v√§lill√§ $[a,b]$, kun $a<b<a+\delta$. N√§in ollen jos $a<x<a+\delta$, niin
+Lauseen \ref{yleistetty v√§liarvolause} perusteella p√§tee jollakin $\xi\in(a,x)$
 \[
 \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(\xi)}{g'(\xi)}\,.
 \]
-T‰ss‰ $\xi \kohti a^+$ kun $x \kohti a^+$, joten s‰‰ntˆ seuraa.
+T√§ss√§ $\xi \kohti a^+$ kun $x \kohti a^+$, joten s√§√§nt√∂ seuraa.
 
-S‰‰ntˆ 2. Tehd‰‰n muuttujan vaihto $x=1/t$ ja sovelletaan 1.\ s‰‰ntˆ‰:
+S√§√§nt√∂ 2. Tehd√§√§n muuttujan vaihto $x=1/t$ ja sovelletaan 1.\ s√§√§nt√∂√§:
 \[
 \lim_{x\kohti\infty}\frac{f(x)}{g(x)} 
    \,=\, \lim_{t \kohti 0^+} \frac{f(\tfrac{1}{t})}{g(\tfrac{1}{t})}
@@ -505,35 +505,35 @@ S‰‰ntˆ 2. Tehd‰‰n muuttujan vaihto $x=1/t$ ja sovelletaan 1.\ s‰‰ntˆ‰:
    \,=\, \lim_{t \kohti 0^+} \frac{f'(\tfrac{1}{t})}{g'(\tfrac{1}{t})}
    \,=\, \lim_{x\kohti\infty} \frac{f'(x)}{g'(x)}\,.
 \]
-S‰‰ntˆ 3. Myˆs t‰m‰ perustuu Lauseeseen \ref{yleistetty v‰liarvolause}, mutta todistus on
-melko tyˆl‰s. Todistus sivuutetaan (ks.\ Harj.teht\,\ref{H-V-6: Hospital 3}). \loppu
+S√§√§nt√∂ 3. My√∂s t√§m√§ perustuu Lauseeseen \ref{yleistetty v√§liarvolause}, mutta todistus on
+melko ty√∂l√§s. Todistus sivuutetaan (ks.\ Harj.teht\,\ref{H-V-6: Hospital 3}). \loppu
 
-Lauseen \ref{Hospital} s‰‰nnˆill‰ on ilmeiset vastineensa raja-arvoille 
-$\lim_{x \kohti a^-}f(x)/g(x)$ ja $\lim_{x \kohti -\infty}f(x)/g(x)$. S‰‰nnˆt ovat samoin p‰tev‰t
-raja-arvolle $\lim_{x \kohti a}f(x)/g(x)$ ($a\in\R$) olettaen, ett‰ $f$ ja $g$ ovat 
-derivoituvia v‰leill‰ $(a-\delta,a)$ ja $(a,a+\delta)$ ja $g'(x) \neq 0$ n‰ill‰ v‰leill‰.
-\begin{Exa} l'Hospitalin 1. s‰‰nnˆll‰ laskien saadaan 
+Lauseen \ref{Hospital} s√§√§nn√∂ill√§ on ilmeiset vastineensa raja-arvoille 
+$\lim_{x \kohti a^-}f(x)/g(x)$ ja $\lim_{x \kohti -\infty}f(x)/g(x)$. S√§√§nn√∂t ovat samoin p√§tev√§t
+raja-arvolle $\lim_{x \kohti a}f(x)/g(x)$ ($a\in\R$) olettaen, ett√§ $f$ ja $g$ ovat 
+derivoituvia v√§leill√§ $(a-\delta,a)$ ja $(a,a+\delta)$ ja $g'(x) \neq 0$ n√§ill√§ v√§leill√§.
+\begin{Exa} l'Hospitalin 1. s√§√§nn√∂ll√§ laskien saadaan 
 (vrt.\ Esimerkki \ref{funktion raja-arvo}:\ref{raja-arvo muuttujan vaihdolla})
 \[
 \lim_{x \kohti 81} \frac{\sqrt{x}-9}{\sqrt[4]{x}-3} 
   \,=\, \lim_{x \kohti 81} \frac{\tfrac{1}{2}x^{-1/2}}{\tfrac{1}{4}x^{-3/4}}
   \,=\, \lim_{x \kohti 81} 2x^{1/4} \,=\, 6.
 \] 
-Samaa s‰‰ntˆ‰ soveltaen seuraa myˆs
+Samaa s√§√§nt√∂√§ soveltaen seuraa my√∂s
 \[
 \lim_{x \kohti 0} \frac{\sin x}{x} \,=\, \lim_{x \kohti 0}\frac{\cos x}{1} \,=\, 1.
 \]
-T‰m‰ lasku kuitenkin k‰tkee keh‰p‰‰telm‰n: Raja-arvoa laskettaessa k‰ytet‰‰n
-derivoimiss‰‰ntˆ‰, joka perustui ko.\ raja-arvoon (!) (ks.\ Luku \ref{kaarenpituus}). \loppu
+T√§m√§ lasku kuitenkin k√§tkee keh√§p√§√§telm√§n: Raja-arvoa laskettaessa k√§ytet√§√§n
+derivoimiss√§√§nt√∂√§, joka perustui ko.\ raja-arvoon (!) (ks.\ Luku \ref{kaarenpituus}). \loppu
 \end{Exa}
 
 \Harj
 \begin{enumerate}
 
 \item
-M‰‰rit‰ seuraavien funktioiden kriittiset pisteet ja v‰lit, joilla funktiot ovat aidosti
-kasvavia tai v‰henevi‰. M‰‰rit‰ myˆs funktioiden absoluuttiset minimi- ja maksimiarvot
-m‰‰rittelyjoukossaan, sik‰li kuin olemassa. Hahmottele funktioiden kuvaajat.
+M√§√§rit√§ seuraavien funktioiden kriittiset pisteet ja v√§lit, joilla funktiot ovat aidosti
+kasvavia tai v√§henevi√§. M√§√§rit√§ my√∂s funktioiden absoluuttiset minimi- ja maksimiarvot
+m√§√§rittelyjoukossaan, sik√§li kuin olemassa. Hahmottele funktioiden kuvaajat.
 \begin{align*}
 &\text{a)}\ f(x)=1-6x+9x^2-5x^3 \qquad
  \text{b)}\ f(x)=x^4+x \qquad
@@ -551,33 +551,33 @@ m‰‰rittelyjoukossaan, sik‰li kuin olemassa. Hahmottele funktioiden kuvaajat.
 \end{align*}
 
 \item
-a) M‰‰rit‰ funktion $f(x)=3x^4-2x^3+15x^2+10x-20$ pienin Lipschitz-vakio v‰lill‰ $[0,6]$. \
-b) N‰yt‰, ett‰ jos $f$ on Lipscitz-jatkuva v‰lill‰ $[a,b]$ vakiolla $L$, niin k‰yr‰n
-$S: y=f(x)$ kaari v‰lill‰ $[a,b]$ on suoristuva ja kaarenpituudelle p‰tee arvio
-$s \le \sqrt{1+L^2}\,(b-a)$. \ c) N‰yt‰, ett‰ jos $f$ ja $g$ ovat Lipschitz-jatkuvia
-v‰lill‰ $[a,b]$ vakioilla $L_1$ ja $L_2$, niin $\alpha f+\beta g$ on v‰lill‰ $[a,b]$
+a) M√§√§rit√§ funktion $f(x)=3x^4-2x^3+15x^2+10x-20$ pienin Lipschitz-vakio v√§lill√§ $[0,6]$. \
+b) N√§yt√§, ett√§ jos $f$ on Lipscitz-jatkuva v√§lill√§ $[a,b]$ vakiolla $L$, niin k√§yr√§n
+$S: y=f(x)$ kaari v√§lill√§ $[a,b]$ on suoristuva ja kaarenpituudelle p√§tee arvio
+$s \le \sqrt{1+L^2}\,(b-a)$. \ c) N√§yt√§, ett√§ jos $f$ ja $g$ ovat Lipschitz-jatkuvia
+v√§lill√§ $[a,b]$ vakioilla $L_1$ ja $L_2$, niin $\alpha f+\beta g$ on v√§lill√§ $[a,b]$
 Lipschitz-jatkuva vakiolla $L=\abs{\alpha}L_1+\abs{\beta}L_2$ $(\alpha,\beta\in\R)$.
 
 \item \label{H-V-6: Lipschitz-kriteeri}
-N‰yt‰, ett‰ jos $f$ on jatkuva ja paloittain jatkuvasti derivoituva v‰lill‰ $[a,b]$, niin
-$f$ on v‰lill‰ $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on
-$L=\max_{x\in[a,b]} g(x)$, miss‰ $g(a)=\abs{\dif_+f(a)}$, $\,g(b)=\abs{\dif_-f(b)}$ ja
+N√§yt√§, ett√§ jos $f$ on jatkuva ja paloittain jatkuvasti derivoituva v√§lill√§ $[a,b]$, niin
+$f$ on v√§lill√§ $[a,b]$ Lipschitz-jatkuva vakiolla, jonka pienin arvo on
+$L=\max_{x\in[a,b]} g(x)$, miss√§ $g(a)=\abs{\dif_+f(a)}$, $\,g(b)=\abs{\dif_-f(b)}$ ja
 $g(x)=$ $\max\{\abs{\dif_-f(x)},\,\abs{\dif_+f(x)}\},\ x\in(a,b)$.
 Laske tulosta soveltaen funktioiden $\,f(x)=\abs{x-1}+\abs{x}+\abs{x+1}\,$ ja
-$\,g(x)=\max\{2x^3-2x,\,-2x^2-4x,\,3-2x\}\,$ pienin Lipschitz-vakio v‰lill‰ $[-2,2]$.
+$\,g(x)=\max\{2x^3-2x,\,-2x^2-4x,\,3-2x\}\,$ pienin Lipschitz-vakio v√§lill√§ $[-2,2]$.
 
 \item
-M‰‰rit‰ seuraavien funktioiden k‰‰nnepisteet ja kaareutumissuunnat eri $\R$:n
-osav‰leill‰: \vspace{1mm}\newline
+M√§√§rit√§ seuraavien funktioiden k√§√§nnepisteet ja kaareutumissuunnat eri $\R$:n
+osav√§leill√§: \vspace{1mm}\newline
 a) \ $f(x)=3x^5+35x^4+100x^2-200x\ \quad$   b) \ $f(x)=3x^5-10x^4+10x^2$ \newline
 c) \ $f(x)=2x^3+x+1-1/x\ \qquad\qquad\quad$ d) \ $f(x)=x/(x^2+1)$
 
 \item
-Johda kaava $\,\Arcsin x + \Arccos x=\frac{\pi}{2},\ x\in(-1,1)\,$ derivoimiss‰‰nnˆist‰ ja
+Johda kaava $\,\Arcsin x + \Arccos x=\frac{\pi}{2},\ x\in(-1,1)\,$ derivoimiss√§√§nn√∂ist√§ ja
 Lauseesta \ref{Integraalilaskun peruslause}.
 
 \item
-Ratkaise (yleinen ratkaisu tai alkuarvoteht‰v‰n ratkaisu) joko lausekkeena tai potenssisarjan
+Ratkaise (yleinen ratkaisu tai alkuarvoteht√§v√§n ratkaisu) joko lausekkeena tai potenssisarjan
 avulla:
 \begin{align*}
 &\text{a)}\,\ y'=4x^7-5x^3+3,\,\ x\in\R \qquad
@@ -595,29 +595,29 @@ avulla:
 \end{align*}
 
 \item
-N‰yt‰, ett‰ jos $y(x)$ on $\R$:ss‰ $n$ kertaa derivoituva ($n\in\N$) ja $y^{(n)}=0$, niin
-$y$ on polynomi astetta $\le n$. Mik‰ on $y(x)$:n lauseke alkuehdoilla $y(x_0)=c_0$,
+N√§yt√§, ett√§ jos $y(x)$ on $\R$:ss√§ $n$ kertaa derivoituva ($n\in\N$) ja $y^{(n)}=0$, niin
+$y$ on polynomi astetta $\le n$. Mik√§ on $y(x)$:n lauseke alkuehdoilla $y(x_0)=c_0$,
 $y'(x_0)=c_1\,,\ \ldots,\ y^{(n-1)}(x_0)=c_{n-1}$\,?
 
 \item
-N‰yt‰ Korollaarin \ref{toiseksi yksinkertaisin dy} avulla, ett‰ v‰lill‰ $(-1,1)$ p‰tee:
+N√§yt√§ Korollaarin \ref{toiseksi yksinkertaisin dy} avulla, ett√§ v√§lill√§ $(-1,1)$ p√§tee:
 \[
 \Arctan x=\sum_{k=0}^\infty \frac{(-1)^{k}}{2k+1}\,x^{2k+1}
          = x-\frac{x^3}{3}+\frac{x^5}{5}- \ldots
 \]
 
-\item \label{H-V-6: yleistetty v‰liarvolause}
-Todista Lause \ref{yleistetty v‰liarvolause} soveltamalla Rollen lausetta funktioon
+\item \label{H-V-6: yleistetty v√§liarvolause}
+Todista Lause \ref{yleistetty v√§liarvolause} soveltamalla Rollen lausetta funktioon
 \[
 h(x) = [f(b)-f(a)][g(x)-g(a)]-[g(b)-g(a)][f(x)-f(a)].
 \]
 Miksei voi olla $g(a)=g(b)$\,?
 
 \item
-Yrit‰ laskea l'Hospitalin s‰‰nnˆll‰ raja-arvo $\,\lim_{x\kohti\infty} x/\sqrt{x^2+1}$.
+Yrit√§ laskea l'Hospitalin s√§√§nn√∂ll√§ raja-arvo $\,\lim_{x\kohti\infty} x/\sqrt{x^2+1}$.
 
 \item
-Laske l'Hospitalin s‰‰nˆill‰:
+Laske l'Hospitalin s√§√§n√∂ill√§:
 \begin{align*}
 &\text{a)}\ \lim_{x \kohti -3} \frac{x^2+3x}{x^2-9} \qquad
  \text{b)}\ \lim_{x \kohti 3^-} \frac{\abs{x^2-4x+3}}{2x^2-5x-3} \qquad
@@ -636,28 +636,28 @@ Laske l'Hospitalin s‰‰nˆill‰:
 \end{align*}
 
 \item (*)
-Olkoon $f$ ja $g$ Lipschitz-jatkuvia v‰lill‰ $[a,b]$. Todista: \ a) $fg$ on Lipschitz
-v‰lill‰ $[a,b]$.\, b) Jos lis‰ksi $g(x) \neq 0\ \forall x\in[a,b]$, niin $f/g$ on Lipschitz
-v‰lill‰ $[a,b]$.
+Olkoon $f$ ja $g$ Lipschitz-jatkuvia v√§lill√§ $[a,b]$. Todista: \ a) $fg$ on Lipschitz
+v√§lill√§ $[a,b]$.\, b) Jos lis√§ksi $g(x) \neq 0\ \forall x\in[a,b]$, niin $f/g$ on Lipschitz
+v√§lill√§ $[a,b]$.
 
 \item (*)
-a) Funktio $y(x)$ on alkuarvoteht‰v‰n
+a) Funktio $y(x)$ on alkuarvoteht√§v√§n
 $y'=\frac{1}{1+x^7}\,,\,\ x\in(-1,1),\,\ y(0)=1$
-ratkaisu. Laske $y(\tfrac{1}{2})$ kahdeksan merkitsev‰n numeron tarkkuudella.
+ratkaisu. Laske $y(\tfrac{1}{2})$ kahdeksan merkitsev√§n numeron tarkkuudella.
 \vspace{1mm}\newline
-b) M‰‰rit‰ differentiaaliyht‰lˆn $y'=\frac{1}{\sqrt{x}\,(1+x)}$
-yleinen ratkaisu sarjamuotoisena v‰lill‰ $(0,1)$.
+b) M√§√§rit√§ differentiaaliyht√§l√∂n $y'=\frac{1}{\sqrt{x}\,(1+x)}$
+yleinen ratkaisu sarjamuotoisena v√§lill√§ $(0,1)$.
 
 \item (*) \label{H-V-6: Hospital 3}
-Halutaan todistaa, ett‰ laskus‰‰ntˆ 
+Halutaan todistaa, ett√§ laskus√§√§nt√∂ 
 \[
 \lim_{x \kohti a^+} \frac{f'(x)}{g'(x)} = A\in\R \qimpl
 \lim_{x \kohti a^+} \frac{f(x)}{g(x)} = A
 \]
-(Lause \ref{Hospital}: 1.\ s‰‰ntˆ, kun $A\in\R$) on p‰tev‰ myˆs, kun funktioiden $f$ ja $g$
+(Lause \ref{Hospital}: 1.\ s√§√§nt√∂, kun $A\in\R$) on p√§tev√§ my√∂s, kun funktioiden $f$ ja $g$
 raja-arvoja koskeva oletus muutetaan muotoon: $\,\lim_{x \kohti a^+}\abs{f(x)}=\infty$ ja
-$\lim_{x \kohti a^+}\abs{g(x)}=\infty$. Tarkista ja t‰ydenn‰ todistukseksi p‰‰ttely: \newline
-Jos $a<x<t<a+\delta$, niin jollakin $\xi\in(x,t)$ p‰tee
+$\lim_{x \kohti a^+}\abs{g(x)}=\infty$. Tarkista ja t√§ydenn√§ todistukseksi p√§√§ttely: \newline
+Jos $a<x<t<a+\delta$, niin jollakin $\xi\in(x,t)$ p√§tee
 \begin{align*}
 \frac{f(x)-f(t)}{g(x)-g(t)}\,
   &=\, \frac{f'(\xi)}{g'(\xi)} \\[2mm]
@@ -668,7 +668,7 @@ Jos $a<x<t<a+\delta$, niin jollakin $\xi\in(x,t)$ p‰tee
   &\le\, \left|\frac{f'(\xi)}{g'(\xi)}-A\right|
        + \frac{1}{|g(x)|}\left(|f(t)|+|g(t)|\left|\frac{f'(\xi)}{g'(\xi)}\right|\right).
 \end{align*}
-Jos nyt $\eps>0$, niin viimeksi kirjoitetussa ep‰yht‰lˆss‰ voidaan valita ensin $t$ ja sitten
-$x$ niin, ett‰ ep‰yht‰lˆn oikea puoli on pienempi kuin $\eps$.
+Jos nyt $\eps>0$, niin viimeksi kirjoitetussa ep√§yht√§l√∂ss√§ voidaan valita ensin $t$ ja sitten
+$x$ niin, ett√§ ep√§yht√§l√∂n oikea puoli on pienempi kuin $\eps$.
 
 \end{enumerate}
