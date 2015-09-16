@@ -19,18 +19,18 @@ Juhani Pitkäranta: Calculus Fennicus
 
 # Kääntäminen:<a id="orgheadline1"></a>
 
-1.  Ensin LaTeX kaksi kertaa:
+Ensin LaTeX kaksi kertaa:
 
     latex calculus.tex
     latex calculus.tex
 
-1.  Sitten Pitkärannan omat indeksifilut tilalle ja LaTeX kerran:
+Sitten Pitkärannan omat indeksifilut tilalle ja LaTeX kerran:
 
     cp calculus.toca calculus.toc
     cp calculus.inda calculus.ind
     latex calculus.tex
 
-1.  Sitten pdf:ksi:
+Sitten pdf:ksi:
 
     dvips calculus.dvi; ps2pdf calculus.ps
 
