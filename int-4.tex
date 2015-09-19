@@ -1,26 +1,26 @@
-\section{Integraalifunktion numeerinen laskeminen. \\ M‰‰r‰tty integraali}
-\label{m‰‰r‰tty integraali}
-\sectionmark{M‰‰r‰tty integraali}
+\section{Integraalifunktion numeerinen laskeminen. \\ M√§√§r√§tty integraali}
+\label{m√§√§r√§tty integraali}
+\sectionmark{M√§√§r√§tty integraali}
 \alku
 
-Annetun funktion integraalifunktion m‰‰r‰‰miseksi on toistaiseksi tarkasteltu erilaisia
-funktioalgebran keinoja. N‰iss‰ funktio on tunnettava laskus‰‰ntˆn‰ eli jonakin
-algebrallisena lausekkeena tarkasteltavalla v‰lill‰ tai sen osav‰leill‰. Sovelluksia
-ajatellen t‰llainen oletus on melko rajoittava, sill‰ funktio voi yht‰ hyvin olla pelkk‰
-pisteitt‰in m‰‰ritelty 'luettelo'. N‰in on esimerkiksi, jos funktion arvoja voidaan
-k‰yt‰nnˆss‰ vain mitata tai jos funktion m‰‰ritelm‰ on ep‰suora niin, ett‰ funktioevaluaatio
-$x \map f(x)$ onnistuu vain numeerisesti. Jos t‰llaisella funktiolla on integraalifunktio,
-niin luonnollisesti integraalifunktionkaan arvoja ei voida k‰yt‰nnˆss‰ laskea muuten kuin
-numeerisesti. Mutta miten? --- Jatkossa ratkaistaan t‰m‰ ongelma johtamalla yleisp‰tev‰
-laskukaava numeeriselle funktioevaluaatiolle $x \map F(x)$, miss‰ $F$ on annetun funktion
+Annetun funktion integraalifunktion m√§√§r√§√§miseksi on toistaiseksi tarkasteltu erilaisia
+funktioalgebran keinoja. N√§iss√§ funktio on tunnettava laskus√§√§nt√∂n√§ eli jonakin
+algebrallisena lausekkeena tarkasteltavalla v√§lill√§ tai sen osav√§leill√§. Sovelluksia
+ajatellen t√§llainen oletus on melko rajoittava, sill√§ funktio voi yht√§ hyvin olla pelkk√§
+pisteitt√§in m√§√§ritelty 'luettelo'. N√§in on esimerkiksi, jos funktion arvoja voidaan
+k√§yt√§nn√∂ss√§ vain mitata tai jos funktion m√§√§ritelm√§ on ep√§suora niin, ett√§ funktioevaluaatio
+$x \map f(x)$ onnistuu vain numeerisesti. Jos t√§llaisella funktiolla on integraalifunktio,
+niin luonnollisesti integraalifunktionkaan arvoja ei voida k√§yt√§nn√∂ss√§ laskea muuten kuin
+numeerisesti. Mutta miten? --- Jatkossa ratkaistaan t√§m√§ ongelma johtamalla yleisp√§tev√§
+laskukaava numeeriselle funktioevaluaatiolle $x \map F(x)$, miss√§ $F$ on annetun funktion
 integraalifunktio. Laskukaava johdattaa samalla integraalifunktiosta riippumattomaan
-\kor{m‰‰r‰tyn integraalin} k‰sitteeseen.
+\kor{m√§√§r√§tyn integraalin} k√§sitteeseen.
 
-Oletetaan, ett‰ $f$ on m‰‰ritelty (reaalifunktiona) v‰lill‰ $[a,b]$, eli jokaiseen
-$x\in[a,b]$ liittyy yksik‰sitteinen luku $f(x)\in\R$. T‰smennet‰‰n $f$:n
-integraalifunktion m‰‰ritt‰misen ongelma v‰lill‰ $(a,b)$ seuraavasti:
+Oletetaan, ett√§ $f$ on m√§√§ritelty (reaalifunktiona) v√§lill√§ $[a,b]$, eli jokaiseen
+$x\in[a,b]$ liittyy yksik√§sitteinen luku $f(x)\in\R$. T√§smennet√§√§n $f$:n
+integraalifunktion m√§√§ritt√§misen ongelma v√§lill√§ $(a,b)$ seuraavasti:
 \begin{itemize}
-\item[(P)] Etsi funktio $y(x)$, joka on jatkuva v‰lill‰ $[a,b]$, derivoituva v‰lill‰ $(a,b)$
+\item[(P)] Etsi funktio $y(x)$, joka on jatkuva v√§lill√§ $[a,b]$, derivoituva v√§lill√§ $(a,b)$
 ja toteuttaa
 \[
 \begin{cases}
@@ -29,47 +29,47 @@ ja toteuttaa
 \end{cases}
 \]
 \end{itemize}
-T‰m‰n mukaan etsit‰‰n siis funktiota, joka on $f$:n integraalifunktio v‰lill‰ $(a,b)$ ja
-toteuttaa lis‰ksi asetetun jatkuvuusehdon ja alkuehdon. Koska derivoituvuus jo takaa
-jatkuvuuden v‰lill‰ $(a,b)$, niin jatkuvuusehto merkitsee ainoastaan lis‰ehtoja:
-$y(x)$ on oikealta jatkuva $a$:ssa ja vasemmalta jatkuva $b$:s‰. 
+T√§m√§n mukaan etsit√§√§n siis funktiota, joka on $f$:n integraalifunktio v√§lill√§ $(a,b)$ ja
+toteuttaa lis√§ksi asetetun jatkuvuusehdon ja alkuehdon. Koska derivoituvuus jo takaa
+jatkuvuuden v√§lill√§ $(a,b)$, niin jatkuvuusehto merkitsee ainoastaan lis√§ehtoja:
+$y(x)$ on oikealta jatkuva $a$:ssa ja vasemmalta jatkuva $b$:s√§. 
 
-Sik‰li kuin probleemalla (P) on ratkaisu, takaa asetettu alkuehto ratkaisun
-yksik‰sitteisyyden (vrt.\ Korollaari \ref{toiseksi yksinkertaisin dy}). Vaikeampaan
-kysymykseen, joka koskee ratkaisun olemassoloa, antaa er‰‰n vastauksen seuraava huomattava
+Sik√§li kuin probleemalla (P) on ratkaisu, takaa asetettu alkuehto ratkaisun
+yksik√§sitteisyyden (vrt.\ Korollaari \ref{toiseksi yksinkertaisin dy}). Vaikeampaan
+kysymykseen, joka koskee ratkaisun olemassoloa, antaa er√§√§n vastauksen seuraava huomattava
 lause.
-\begin{*Lause} \label{P:n ratkeavuus} Jos $f$ on jatkuva v‰lill‰ $[a,b]$, niin probleemalla
+\begin{*Lause} \label{P:n ratkeavuus} Jos $f$ on jatkuva v√§lill√§ $[a,b]$, niin probleemalla
 (P) on ratkaisu.
 \end{*Lause}
-Lause \ref{P:n ratkeavuus} on keskeinen osav‰itt‰m‰ yleisemm‰ss‰ lauseessa, joka tunnetaan
-\kor{Analyysin peruslauseen} nimell‰. T‰m‰ muotoillaan ja (osittain) todistetaan j‰ljemp‰n‰
-Luvussa \ref{analyysin peruslause}. T‰ss‰ luvussa asetetaan kysymys toisin: Jos yksinkertaisesti
-\pain{oletetaan}, ett‰ (P) ratkeaa, niin miten luku $y(x)\in\R$ voidaan k‰yt‰nnˆss‰
-\pain{laskea}, kun $x\in(a,b]$ on annettu? Jatkossa tarkastellaan t‰t‰ kysymyst‰ ensin
-tapauksessa $x=b$, jolloin teht‰v‰n‰ on siis laskea luku $y(b)$, kun $y(x)$ on m‰‰ritelty
-ep‰suorasti (P):n ratkaisuna. Koska $y(b)$ on reaaliluku, niin ko.\ lukua ei yleisesti voi
-laskea 'tarkasti', vaan k‰yt‰nnˆss‰ on tyydytt‰v‰ konstruoimaan $y(b)$ jonkin (viime k‰dess‰
-rationaalisen) lukujonon $\seq{Y_n}$ raja-arvona. Teht‰v‰n‰ on siis m‰‰ritt‰‰ algoritmi, jolla
-on mahdollista laskea jokaisella $n\in\N$ luku $Y_n$ siten, ett‰ $\,\lim_nY_n=y(b)$.
+Lause \ref{P:n ratkeavuus} on keskeinen osav√§itt√§m√§ yleisemm√§ss√§ lauseessa, joka tunnetaan
+\kor{Analyysin peruslauseen} nimell√§. T√§m√§ muotoillaan ja (osittain) todistetaan j√§ljemp√§n√§
+Luvussa \ref{analyysin peruslause}. T√§ss√§ luvussa asetetaan kysymys toisin: Jos yksinkertaisesti
+\pain{oletetaan}, ett√§ (P) ratkeaa, niin miten luku $y(x)\in\R$ voidaan k√§yt√§nn√∂ss√§
+\pain{laskea}, kun $x\in(a,b]$ on annettu? Jatkossa tarkastellaan t√§t√§ kysymyst√§ ensin
+tapauksessa $x=b$, jolloin teht√§v√§n√§ on siis laskea luku $y(b)$, kun $y(x)$ on m√§√§ritelty
+ep√§suorasti (P):n ratkaisuna. Koska $y(b)$ on reaaliluku, niin ko.\ lukua ei yleisesti voi
+laskea 'tarkasti', vaan k√§yt√§nn√∂ss√§ on tyydytt√§v√§ konstruoimaan $y(b)$ jonkin (viime k√§dess√§
+rationaalisen) lukujonon $\seq{Y_n}$ raja-arvona. Teht√§v√§n√§ on siis m√§√§ritt√§√§ algoritmi, jolla
+on mahdollista laskea jokaisella $n\in\N$ luku $Y_n$ siten, ett√§ $\,\lim_nY_n=y(b)$.
 
-Olkoon $n\in\N$ annettu. Lukua $Y_n$ m‰‰r‰tt‰ess‰ otetaan l‰htˆkohdaksi v‰lin $[a,b]$
-\index{jako (osav‰leihin)}%
-\kor{jako osav‰leihin} $[x_{k-1},x_k]$, $k=1 \ldots n$, miss‰ 
+Olkoon $n\in\N$ annettu. Lukua $Y_n$ m√§√§r√§tt√§ess√§ otetaan l√§ht√∂kohdaksi v√§lin $[a,b]$
+\index{jako (osav√§leihin)}%
+\kor{jako osav√§leihin} $[x_{k-1},x_k]$, $k=1 \ldots n$, miss√§ 
 $a = x_0 < x_1 < \ldots < x_n = b$. Jako voi olla esim.\ 
-\index{tasav‰linen jako}%
-\kor{tasav‰linen}, jolloin on
-$x_k=a+kh_n$, miss‰ $h_n=(b-a)/n$. Yleisemmin osav‰lijakoja rajoitetaan ainoastaan ehdolla
+\index{tasav√§linen jako}%
+\kor{tasav√§linen}, jolloin on
+$x_k=a+kh_n$, miss√§ $h_n=(b-a)/n$. Yleisemmin osav√§lijakoja rajoitetaan ainoastaan ehdolla
 \begin{equation} \label{int-4: tiheysehto}
-\lim_nh_n=0, \quad \text{miss‰}\,\ h_n = \max_{k=1 \ldots n} (x_k-x_{k-1}),\,\ n\in\N.
+\lim_nh_n=0, \quad \text{miss√§}\,\ h_n = \max_{k=1 \ldots n} (x_k-x_{k-1}),\,\ n\in\N.
                                                                        \tag{$\star$}
 \end{equation}
-T‰ss‰ $h_n$ on osav‰lijaon nk.\ 
+T√§ss√§ $h_n$ on osav√§lijaon nk.\ 
 \index{tiheysparametri}%
-\kor{tiheysparametri}. Tasav‰lisille jaoille raja-arvoehto
+\kor{tiheysparametri}. Tasav√§lisille jaoille raja-arvoehto
 \eqref{int-4: tiheysehto} luonnollisesti toteutuu.
 
 Kun pisteet $x_k,\ k = 0 \ldots n$ on valittu em.\ tavalla, niin (P):n ratkaisulle $y(x)$
-voidaan ensinn‰kin kirjoittaa
+voidaan ensinn√§kin kirjoittaa
 \[
 y(b) \,=\, [y(x_n)-y(x_{n-1})]+ \ldots +[y(x_1)-y(x_0)]+y(x_0)
 \]
@@ -77,99 +77,99 @@ ja alkuehdon $y(x_0)=y(a)=0$ perusteella siis
 \[
 y(b)=\sum_{k=0}^n [y(x_k)-y(x_{k-1})].
 \]
-Funktio $y(x)$ toteuttaa Differentiaalilaskun v‰liarvolauseen ehdot osav‰leill‰ $\quad$
-$[x_{k-1},x_k]$ ja lis‰ksi $y'(x)=f(x),\ x\in(x_{k-1},x_k)$. V‰liarvolauseen mukaan on t‰llˆin
-olemassa pisteet $\xi_k\in(x_{k-1},x_k),\ k=1 \ldots n$ siten, ett‰
+Funktio $y(x)$ toteuttaa Differentiaalilaskun v√§liarvolauseen ehdot osav√§leill√§ $\quad$
+$[x_{k-1},x_k]$ ja lis√§ksi $y'(x)=f(x),\ x\in(x_{k-1},x_k)$. V√§liarvolauseen mukaan on t√§ll√∂in
+olemassa pisteet $\xi_k\in(x_{k-1},x_k),\ k=1 \ldots n$ siten, ett√§
 \[
 y(x_k)-y(x_{k-1})=f(\xi_k)(x_k-x_{k-1}), \quad k=1\ldots n.
 \]
-Yhdist‰m‰ll‰ kaksi viimeist‰ tulosta on p‰‰telty, ett‰ (P):n ratkaisulle p‰tee
+Yhdist√§m√§ll√§ kaksi viimeist√§ tulosta on p√§√§telty, ett√§ (P):n ratkaisulle p√§tee
 \[
 y(b)=\sum_{k=1}^nf(\xi_k)(x_k-x_{k-1}).
 \]
-T‰m‰ ei toimi suoraan laskukaavana, koska pisteit‰ $\xi_k$ ei tunneta, mutta kaava on
-luonteva l‰htˆkohta approksimatiolle: Korvataan tuntemattomat pisteet $\xi_k$ joillakin
-\pain{valituilla} pisteill‰ $\xi_k\in[x_{k-1},x_k]$, esim.\ $\xi_k=x_{k-1}$ tai
-$\xi_k=(x_{k-1}+x_k)/2$. Kun valinta on jokaisella osav‰lill‰ tehty, niin lasketaan
+T√§m√§ ei toimi suoraan laskukaavana, koska pisteit√§ $\xi_k$ ei tunneta, mutta kaava on
+luonteva l√§ht√∂kohta approksimatiolle: Korvataan tuntemattomat pisteet $\xi_k$ joillakin
+\pain{valituilla} pisteill√§ $\xi_k\in[x_{k-1},x_k]$, esim.\ $\xi_k=x_{k-1}$ tai
+$\xi_k=(x_{k-1}+x_k)/2$. Kun valinta on jokaisella osav√§lill√§ tehty, niin lasketaan
 \[
 Y_n = \sum_{k=1}^nf(\xi_k)(x_k-x_{k-1}).
 \]
-N‰in muodostuu lukujono $\seq{Y_n}$, jonka $n$:s termi siis lasketaan seuraavasti:
+N√§in muodostuu lukujono $\seq{Y_n}$, jonka $n$:s termi siis lasketaan seuraavasti:
 \begin{itemize}
-\item[A1.] Valitaan \kor{jakopisteet} $x_k,\ k=0 \ldots n$ niin, ett‰
+\item[A1.] Valitaan \kor{jakopisteet} $x_k,\ k=0 \ldots n$ niin, ett√§
            $a=x_0 < x_1 < \ldots < x_n=b$. \index{jakopiste}%
-\item[A2.] Valitaan \kor{v‰lipisteet} $\xi_k\in[x_{k-1},x_k],\ k=1 \ldots n$.
-           \index{vzy@v‰lipiste(istˆ)}%
+\item[A2.] Valitaan \kor{v√§lipisteet} $\xi_k\in[x_{k-1},x_k],\ k=1 \ldots n$.
+           \index{vzy@v√§lipiste(ist√∂)}%
 \item[A3.] Lasketaan $Y_n=\sum_{k=1}^n f(\xi_k)(x_k-x_{k-1})$.
 \end{itemize}
-T‰m‰n mukaisesti $Y_n$:n laskemiseksi riitt‰‰ suorittaa ‰‰rellinen m‰‰r‰ laskuoperaatioita:
-$n$ kpl (k‰yt‰nnˆss‰ yleens‰ likim‰‰r‰isi‰) funktioevaluaatioita $x \map f(x)$ ja lis‰ksi
+T√§m√§n mukaisesti $Y_n$:n laskemiseksi riitt√§√§ suorittaa √§√§rellinen m√§√§r√§ laskuoperaatioita:
+$n$ kpl (k√§yt√§nn√∂ss√§ yleens√§ likim√§√§r√§isi√§) funktioevaluaatioita $x \map f(x)$ ja lis√§ksi
 $n$ kertolaskua ja $n-1$ yhteenlaskua.
 
 Verrattaessa algoritmilla A1--A3 laskettua lukua $Y_n$ lukuun $y(b)$ on em.\ tarkkaa
-$y(b)$:n lauseketta verrattava $Y_n$:n vastaavaan lausekkeeseen (A3). N‰iss‰ v‰lipisteet
-$\xi_k$ eiv‰t ole samat, joten kirjoitettakoon lausekkeessa (A3) $\xi_k$:n tilalle $\eta_k$.
-Approksimaatiolle $\,Y_n \approx y(b)$ saadaan t‰llˆin virhekaava
+$y(b)$:n lauseketta verrattava $Y_n$:n vastaavaan lausekkeeseen (A3). N√§iss√§ v√§lipisteet
+$\xi_k$ eiv√§t ole samat, joten kirjoitettakoon lausekkeessa (A3) $\xi_k$:n tilalle $\eta_k$.
+Approksimaatiolle $\,Y_n \approx y(b)$ saadaan t√§ll√∂in virhekaava
 \[
 y(b)-Y_n \,=\, \sum_{k=1}^n[f(\xi_k)-f(\eta_k)](x_k-x_{k-1}).
 \]
-Virheen arvioimiseksi on siis pystytt‰v‰ arvioimaan erotuksia $f(\xi_k)-f(\eta_k)$, kun
-pisteist‰ $\xi_k$ ja $\eta_k$ tiedet‰‰n ainoastaan, ett‰ ne ovat samalla osav‰lill‰
-$[x_{k-1},x_k]$. Arvion onnistumiseksi toivotulla tavalla on ilmeisesti teht‰v‰ jokin
-s‰‰nnˆllisyys\-oletus funktiosta $f$. --- Yleisesti jos $f$ on riitt‰v‰n s‰‰nnˆllinen, on
-$\abs{f(\xi)-f(\eta)}$ enint‰‰n verrannollinen lukuun $\abs{\xi-\eta}$, ts.\
-$f(\xi)-f(\eta)=\Ord{\abs{\xi-\eta}}$. T‰m‰n takaava minimioletus on, ett‰ $f$ on v‰lill‰
-$[a,b]$ Lipschitz-jatkuva, ts.\ $\exists\,L\in\R_+$ (= $f$:n Lipschitz-vakio) siten, ett‰
+Virheen arvioimiseksi on siis pystytt√§v√§ arvioimaan erotuksia $f(\xi_k)-f(\eta_k)$, kun
+pisteist√§ $\xi_k$ ja $\eta_k$ tiedet√§√§n ainoastaan, ett√§ ne ovat samalla osav√§lill√§
+$[x_{k-1},x_k]$. Arvion onnistumiseksi toivotulla tavalla on ilmeisesti teht√§v√§ jokin
+s√§√§nn√∂llisyys\-oletus funktiosta $f$. --- Yleisesti jos $f$ on riitt√§v√§n s√§√§nn√∂llinen, on
+$\abs{f(\xi)-f(\eta)}$ enint√§√§n verrannollinen lukuun $\abs{\xi-\eta}$, ts.\
+$f(\xi)-f(\eta)=\Ord{\abs{\xi-\eta}}$. T√§m√§n takaava minimioletus on, ett√§ $f$ on v√§lill√§
+$[a,b]$ Lipschitz-jatkuva, ts.\ $\exists\,L\in\R_+$ (= $f$:n Lipschitz-vakio) siten, ett√§
 \[
 \abs{f(\xi)-f(\eta)} \le L \abs{\xi-\eta} \quad \forall\ \xi,\eta\in[a,b]
 \]
-(ks.\ M‰‰ritelm‰ \ref{funktion l-jatkuvuus} ja myˆs Lause \ref{Lipschitz-kriteeri}).
+(ks.\ M√§√§ritelm√§ \ref{funktion l-jatkuvuus} ja my√∂s Lause \ref{Lipschitz-kriteeri}).
 
-Kun oletetaan $f$:n Lipschitz-jatkuvuus, niin p‰tee
+Kun oletetaan $f$:n Lipschitz-jatkuvuus, niin p√§tee
 \[
 \abs{f(\xi_k)-f(\eta_k)} \le L\abs{\xi_k-\eta_k}, \quad k=1 \ldots n.
 \]
-T‰ss‰ on $\,\abs{\xi_k-\eta_k} \le x_k-x_{k-1}$, koska $\xi_k,\eta_k\in[x_{k-1},x_k]$ ja
+T√§ss√§ on $\,\abs{\xi_k-\eta_k} \le x_k-x_{k-1}$, koska $\xi_k,\eta_k\in[x_{k-1},x_k]$ ja
 edelleen $x_k-x_{k-1} \le h_n$, joten $\,\abs{f(\xi_k)-f(\eta_k)} \le Lh_n,\ k=1 \ldots n$.
-Kun k‰ytet‰‰n n‰it‰ arvioita yhdess‰ kolmioep‰yht‰lˆn kanssa em.\ virhekaavassa, niin seuraa
+Kun k√§ytet√§√§n n√§it√§ arvioita yhdess√§ kolmioep√§yht√§l√∂n kanssa em.\ virhekaavassa, niin seuraa
 \begin{align*}
 \abs{y(b)-Y_n)} \,&\le\, \sum_{k=1}^n \abs{f(\xi_k)-f(\eta_k)}(x_k-x_{k-1}) \\
                   &\le\, Lh_n\sum_{k=1}^n (x_k-x_{k-1}) \,=\, L(b-a)h_n.
 \end{align*}
 
-On p‰‰dytty seuraavaan tulokseen.
-\begin{Lause} \label{summakaavalause} Olkoon $f$ Lipschitz-jatkuva v‰lill‰ $[a,b]$ vakiolla
-$L$ ja olkoon $y(x)$ probleeman (P) ratkaisu. T‰llˆin jos $\seq{Y_n}$ on mik‰ tahansa
+On p√§√§dytty seuraavaan tulokseen.
+\begin{Lause} \label{summakaavalause} Olkoon $f$ Lipschitz-jatkuva v√§lill√§ $[a,b]$ vakiolla
+$L$ ja olkoon $y(x)$ probleeman (P) ratkaisu. T√§ll√∂in jos $\seq{Y_n}$ on mik√§ tahansa
 algoritmilla A1--A3 laskettu lukujono raja-arvoehdolla \eqref{int-4: tiheysehto}, niin
 $\,\lim_nY_n=y(b)$, tarkemmin 
-$\abs{y(b)-Y_n} \le L(b-a)h_n\ \forall n\in\N$.\footnote[2]{Kuten n‰hd‰‰n j‰ljemp‰n‰
-Luvussa \ref{analyysin peruslause}, Lauseen \ref{summakaavalause} raja-arvov‰itt‰m‰
-(ilman tarkennusta) on tosi myˆs, jos $f$ oletetetaan ainoastaan jatkuvaksi v‰lill‰ $[a,b]$.
-Mit‰‰n kvantitatiivista virhearviota approksimaatiolle $Y_n \approx y(b)$ ei pelk‰n
+$\abs{y(b)-Y_n} \le L(b-a)h_n\ \forall n\in\N$.\footnote[2]{Kuten n√§hd√§√§n j√§ljemp√§n√§
+Luvussa \ref{analyysin peruslause}, Lauseen \ref{summakaavalause} raja-arvov√§itt√§m√§
+(ilman tarkennusta) on tosi my√∂s, jos $f$ oletetetaan ainoastaan jatkuvaksi v√§lill√§ $[a,b]$.
+Mit√§√§n kvantitatiivista virhearviota approksimaatiolle $Y_n \approx y(b)$ ei pelk√§n
 jatkuvuusoletuksen perusteella saada.}
 \end{Lause}
 
-Edell‰ laskettiin toistaiseksi (P):n ratkaisu vain pisteess‰ $x=b$. Tulos on kuitenkin
-helposti yleistett‰viss‰. Nimitt‰in jos $y(x)$ on (P):n ratkaisu ja kiinnitet‰‰n $x\in(a,b]$,
-niin funktio $y(t),\ t\in[a,x]$ on jatkuva v‰lill‰ $[a,x]$ (koska on jatkuva v‰lill‰
-$[a,b]$) ja ratkaisu alkuarvoteht‰v‰lle
+Edell√§ laskettiin toistaiseksi (P):n ratkaisu vain pisteess√§ $x=b$. Tulos on kuitenkin
+helposti yleistett√§viss√§. Nimitt√§in jos $y(x)$ on (P):n ratkaisu ja kiinnitet√§√§n $x\in(a,b]$,
+niin funktio $y(t),\ t\in[a,x]$ on jatkuva v√§lill√§ $[a,x]$ (koska on jatkuva v√§lill√§
+$[a,b]$) ja ratkaisu alkuarvoteht√§v√§lle
 \[
 \begin{cases}
 \,y'(t)=f(t),\,\ t\in(a,x), \\ \,y(a)=0.
 \end{cases}
 \]
-Kyseess‰ on siis probleema (P), miss‰ muuttujana on $x$:n sijasta $t$ ja $b$:n tilalla on $x$.
-N‰in muodoin kun tehd‰‰n samat vaihdokset algoritmissa A1--A3, niin saadaan lasketuksi $y(x)$
-miss‰ tahansa halutussa pisteess‰ $x\in(a,b]$.
-\begin{Exa} Ratkaise alkuarvoteht‰v‰ $\,y'(x)=x,\ x>0,\ y(0)=0$ algoritmilla A1--A3.
+Kyseess√§ on siis probleema (P), miss√§ muuttujana on $x$:n sijasta $t$ ja $b$:n tilalla on $x$.
+N√§in muodoin kun tehd√§√§n samat vaihdokset algoritmissa A1--A3, niin saadaan lasketuksi $y(x)$
+miss√§ tahansa halutussa pisteess√§ $x\in(a,b]$.
+\begin{Exa} Ratkaise alkuarvoteht√§v√§ $\,y'(x)=x,\ x>0,\ y(0)=0$ algoritmilla A1--A3.
 \end{Exa}
-\ratk  Kiinnitet‰‰n $x>0$ ja tarkastellaan v‰li‰ $[0,x]$. Asetetaan jakopisteet $t_k$
-tasav‰lisesti, eli $t_k=kx/n,\ k=0 \ldots n$, jolloin laskukaavan (A3) mukaan on
+\ratk  Kiinnitet√§√§n $x>0$ ja tarkastellaan v√§li√§ $[0,x]$. Asetetaan jakopisteet $t_k$
+tasav√§lisesti, eli $t_k=kx/n,\ k=0 \ldots n$, jolloin laskukaavan (A3) mukaan on
 \[
 Y_n \,=\, \sum_{k=1}^n f(\xi_k)(t_k-t_{k-1}) 
     \,=\, \sum_{k=1}^n \xi_k\,\frac{x}{n}\,.
 \]
-V‰lipisteiden valinnassa kokeiltakoon vaihtoehtoja \ a) $\xi_k=t_k$, \ b) $\xi_k=t_{k-1}$ ja
+V√§lipisteiden valinnassa kokeiltakoon vaihtoehtoja \ a) $\xi_k=t_k$, \ b) $\xi_k=t_{k-1}$ ja
 \ c) $\xi_k=(t_{k-1}+t_k)/2$, \ $k=1 \ldots n$, jolloin saadaan:
 \begin{align*}
 \text{a)}\ \ Y_n &\,=\, \sum_{k=1}^{n}k\,\frac{x}{n}\cdot\frac{x}{n}
@@ -183,34 +183,34 @@ V‰lipisteiden valinnassa kokeiltakoon vaihtoehtoja \ a) $\xi_k=t_k$, \ b) $\xi_k
 \text{c)}\ \ Y_n &\,=\, \sum_{k=1}^{n}\frac{1}{2}\left[(k-1)\,\frac{x}{n}+k\,\frac{x}{n}\right]
                                                                             \cdot\frac{x}{n}
                   \,=\, \frac{x^2}{n^2}\sum_{k=1}^{n} \left(k-\frac{1}{2}\right)
-                  \,=\, \frac{x≤}{n^2}\cdot\frac{1}{2}\,n^2
+                  \,=\, \frac{x¬≤}{n^2}\cdot\frac{1}{2}\,n^2
                   \,=\, \frac{x^2}{2}\,.
 \end{align*}
-Havaitaan, ett‰ kaikissa tapauksissa on $\,\lim_nY_n=\tfrac{1}{2}x^2$. Lause
+Havaitaan, ett√§ kaikissa tapauksissa on $\,\lim_nY_n=\tfrac{1}{2}x^2$. Lause
 \ref{summakaavalause} soveltuu ($L=1$), joten $\,y(x)=\tfrac{1}{2}x^2,\ x>0$. \loppu
 
-Esimerkiss‰ p‰tee approksimaatiolle $Y_n \approx y(x)$ Lauseen \ref{summakaavalause} mukaan 
+Esimerkiss√§ p√§tee approksimaatiolle $Y_n \approx y(x)$ Lauseen \ref{summakaavalause} mukaan 
 virhearvio $\,\abs{y(x)-Y_n} \le x^2/n\,$ ($L=1,\ b-a=x,\ h_n=x/n$). Havaitut virheet ovat
 \ a) $y(x)-Y_n=-\tfrac{x^2}{2n}$, \ b) $y(x)-Y_n=\tfrac{x^2}{2n}$, \ $y(x)-Y_n=0$, joten
-n‰m‰ ovat arvion kanssa sopusoinnussa.
+n√§m√§ ovat arvion kanssa sopusoinnussa.
 
-Jos (P):n ratkaisu $y(x)$ halutaan laskea useammassa pisteess‰, voidaan algoritmi A1--A3
-k‰ynnist‰‰ jokaista laskentapistett‰ varten erikseen, kuten esimerkiss‰. Numeerisesti
-laskettaessa algoritmi kannattaa kuitenkin ottaa tehokkaampaan k‰yttˆˆn huomioimalla, ett‰
-kaavan (A3) mukaan luku $Y_n$ tullaan laskeneeksi k‰yt‰nnˆss‰ palautuvasti muodossa
+Jos (P):n ratkaisu $y(x)$ halutaan laskea useammassa pisteess√§, voidaan algoritmi A1--A3
+k√§ynnist√§√§ jokaista laskentapistett√§ varten erikseen, kuten esimerkiss√§. Numeerisesti
+laskettaessa algoritmi kannattaa kuitenkin ottaa tehokkaampaan k√§ytt√∂√∂n huomioimalla, ett√§
+kaavan (A3) mukaan luku $Y_n$ tullaan laskeneeksi k√§yt√§nn√∂ss√§ palautuvasti muodossa
 \[
 Y_0=0, \quad Y_k=Y_{k-1}+f(\xi_k)(x_k-x_{k-1}), \quad k=1 \ldots n.
 \]
-Luvut $Y_k=\sum_{i=1}^k f(\xi_i)(x_i-x_{i-1}),\ k=1 \ldots n-1$ saadaan t‰llˆin summauksen
-v‰lituloksina. N‰m‰ ovat algoritmin A1--A3 mukaisia approksimaatioita luvuille $y(x_k)$, kun
-jakopistein‰ ovat $x_i,\ i=0 \ldots k$ v‰lill‰ $[a,x_k]$. Samoin oletuksin kuin edell‰ myˆs
-n‰iden virhe on $\Ord{h_n}$, tarkemmin $|y(x_k)-Y_k| \le L(x_k-a)h_n,\ k=1 \ldots n-1$.
-Luvut $Y_k$ kannattaa siis kaikki huomioida, jolloin saadaan k‰sitys funktiosta $y(x)$ koko
-tarkasteltavalla v‰lill‰ ilman lis‰tyˆt‰.
+Luvut $Y_k=\sum_{i=1}^k f(\xi_i)(x_i-x_{i-1}),\ k=1 \ldots n-1$ saadaan t√§ll√∂in summauksen
+v√§lituloksina. N√§m√§ ovat algoritmin A1--A3 mukaisia approksimaatioita luvuille $y(x_k)$, kun
+jakopistein√§ ovat $x_i,\ i=0 \ldots k$ v√§lill√§ $[a,x_k]$. Samoin oletuksin kuin edell√§ my√∂s
+n√§iden virhe on $\Ord{h_n}$, tarkemmin $|y(x_k)-Y_k| \le L(x_k-a)h_n,\ k=1 \ldots n-1$.
+Luvut $Y_k$ kannattaa siis kaikki huomioida, jolloin saadaan k√§sitys funktiosta $y(x)$ koko
+tarkasteltavalla v√§lill√§ ilman lis√§ty√∂t√§.
 \jatko \begin{Exa} (jatko) Kuviossa on valittu $x=2,\ n=4$ ja yhdistetty esimerkin
-valinnoilla lasketut pisteet $(x_k,Y_k)$ murtoviivaksi. T‰m‰ esitt‰‰ funktion $y(x)$
-kuvaajaa likim‰‰rin v‰lill‰ $[0,2]$. Tulos on tarkin tapauksessa (c), mutta muissakin
-tapauksissa tarkkuus kasvaa kiinte‰ll‰ $x$, kun $n\kohti\infty$.
+valinnoilla lasketut pisteet $(x_k,Y_k)$ murtoviivaksi. T√§m√§ esitt√§√§ funktion $y(x)$
+kuvaajaa likim√§√§rin v√§lill√§ $[0,2]$. Tulos on tarkin tapauksessa (c), mutta muissakin
+tapauksissa tarkkuus kasvaa kiinte√§ll√§ $x$, kun $n\kohti\infty$.
 \end{Exa} 
 \begin{figure}[H]
 \setlength{\unitlength}{0.5cm}
@@ -230,137 +230,137 @@ tapauksissa tarkkuus kasvaa kiinte‰ll‰ $x$, kun $n\kohti\infty$.
 \end{figure}
 
 
-\subsection*{M‰‰r‰tty integraali}
-\index{mzyzyrzy@m‰‰r‰tty integraali|vahv}
+\subsection*{M√§√§r√§tty integraali}
+\index{mzyzyrzy@m√§√§r√§tty integraali|vahv}
 
-Algoritmin A1--A3 mukaan lasketulla luvulla $y(b)=\lim_nY_n$, miss‰ $y(x)$ on probleeman (P)
-ratkaisu, on matematiikassa oma nimens‰ ja merkint‰ns‰: Lukua kutsutaan funktion $f$
-\kor{m‰‰r‰tyksi} \kor{integraaliksi yli v‰lin} $[a,b]$, merkit‰‰n
+Algoritmin A1--A3 mukaan lasketulla luvulla $y(b)=\lim_nY_n$, miss√§ $y(x)$ on probleeman (P)
+ratkaisu, on matematiikassa oma nimens√§ ja merkint√§ns√§: Lukua kutsutaan funktion $f$
+\kor{m√§√§r√§tyksi} \kor{integraaliksi yli v√§lin} $[a,b]$, merkit√§√§n
 \[
 y(b)=\int_a^b f(x)\,dx
 \]
-ja luetaan 'integraali $a$:sta $b$:hen $f(x)\,dx$'. Sanotaan edelleen, ett‰ $a$ on integraalin
-\kor{alaraja}, $b$ on \kor{yl‰raja} ja $[a,b]$ on \kor{integroimisv‰li}. Muuttuja $x$, eli
+ja luetaan 'integraali $a$:sta $b$:hen $f(x)\,dx$'. Sanotaan edelleen, ett√§ $a$ on integraalin
+\kor{alaraja}, $b$ on \kor{yl√§raja} ja $[a,b]$ on \kor{integroimisv√§li}. Muuttuja $x$, eli
 \kor{integroimismuuttuja}, on 'dummy' (kuten summausindeksi), ts.\ muuttuja voidaan vaihtaa
 integraalin merkityksen muuttumatta.
 
-M‰‰r‰tty integraali on siis integroitavasta funktiosta $f$ ja integroimisv‰list‰ riippuva
-reaaliluku, joka on k‰yt‰nnˆs‰ laskettavissa lukujonon raja-arvona algoritmin (A1)--(A3)
-mukaisesti. Kun $Y_n$:n laskukaavassa (A3) k‰ytet‰‰n erotuksille $x_k-x_{k-1}$
-lyhenysmerkint‰‰ $\Delta x_k$, niin m‰‰r‰tyn integraalin laskeminen edell‰ esitetyll‰ tavalla
-voidaan tiivist‰‰ \kor{summakaavaksi} \index{summakaava (m‰‰r.\ integraalin)}
+M√§√§r√§tty integraali on siis integroitavasta funktiosta $f$ ja integroimisv√§list√§ riippuva
+reaaliluku, joka on k√§yt√§nn√∂s√§ laskettavissa lukujonon raja-arvona algoritmin (A1)--(A3)
+mukaisesti. Kun $Y_n$:n laskukaavassa (A3) k√§ytet√§√§n erotuksille $x_k-x_{k-1}$
+lyhenysmerkint√§√§ $\Delta x_k$, niin m√§√§r√§tyn integraalin laskeminen edell√§ esitetyll√§ tavalla
+voidaan tiivist√§√§ \kor{summakaavaksi} \index{summakaava (m√§√§r.\ integraalin)}
 \begin{equation} \label{int-4: summakaava}
 \boxed{\quad \int_a^b f(x)\,dx = \Lim_n \sum_{k=1}^n f(\xi_k)\Delta x_k. \quad}
 \end{equation}
-\index{raja-arvo!f@m‰‰r‰tyn integraalin}%
-T‰ss‰ raja-arvomerkint‰‰n '$\Lim_n$' on sis‰llytetty ensinn‰kin algoritmissa A1--A3 asetetut
+\index{raja-arvo!f@m√§√§r√§tyn integraalin}%
+T√§ss√§ raja-arvomerkint√§√§n '$\Lim_n$' on sis√§llytetty ensinn√§kin algoritmissa A1--A3 asetetut
 rajoitukset koskien pisteiden $x_k$ ja $\xi_k$ valintaa, toiseksi ehto
-\eqref{int-4: tiheysehto} ja kolmanneksi vaatimus, ett‰ \pain{kaikki} algoritmin (A1)--(A3)
-mukaiset lukujonot $\seq{Y_n}$ suppenevat kohti \pain{samaa} raja-arvoa (= m‰‰r‰tyn integraalin
-arvo). Edell‰ esitetyn perusteella viimeksi mainittu vaatimus toteutuu (ja summakaava on siis
-p‰tev‰) ainakin oletuksin, ett‰ probleema (P) on ratkeava (perusoletus toistaiseksi!) ja $f$ on
-Lipschitz-jatkuva v‰lill‰ $[a,b]$.
+\eqref{int-4: tiheysehto} ja kolmanneksi vaatimus, ett√§ \pain{kaikki} algoritmin (A1)--(A3)
+mukaiset lukujonot $\seq{Y_n}$ suppenevat kohti \pain{samaa} raja-arvoa (= m√§√§r√§tyn integraalin
+arvo). Edell√§ esitetyn perusteella viimeksi mainittu vaatimus toteutuu (ja summakaava on siis
+p√§tev√§) ainakin oletuksin, ett√§ probleema (P) on ratkeava (perusoletus toistaiseksi!) ja $f$ on
+Lipschitz-jatkuva v√§lill√§ $[a,b]$.
 
-Em.\ oletuksilla probleeman (P) ratkaisulle johdettiin edell‰ myˆs yleisempi laskukaava, joka
-voidaan nyt kirjoittaa m‰‰r‰ttyn‰ integraalina:
+Em.\ oletuksilla probleeman (P) ratkaisulle johdettiin edell√§ my√∂s yleisempi laskukaava, joka
+voidaan nyt kirjoittaa m√§√§r√§ttyn√§ integraalina:
 \begin{equation} \label{int-4: P:n ratkaisukaava}
 y(x)=\int_a^x f(t)\,dt, \quad a < x \le b.
 \end{equation}
-Koska (P):n ratkaisu on (er‰s) $f$:n integraalifunktio v‰lill‰ $(a,b)$, niin kaava
-\eqref{int-4: P:n ratkaisukaava} yhdess‰ summakaavan \eqref{int-4: summakaava} kanssa antaa
-t‰h‰nastisesta integroimistekniikasta (myˆs derivoimiss‰‰nnˆist‰!) riippumattoman menetelm‰n
-integraalifunktion m‰‰r‰‰miseksi.\footnote[2]{Integraalifunktion merkinn‰n '$\int f(x)\,dx$'
-taustalla on m‰‰r‰tyn integraalin summakaava. Merkinn‰n otti k‰yttˆˆn \hist{G.W. Leibniz}
-ajatellen summakaavan 'rajank‰yntej‰' $\sum\hookrightarrow\int$ ja
-$\Delta x_k\hookrightarrow dx$, kun $n\kohti\infty$. Leibnizin omien p‰iv‰kirjamerkintˆjen
-mukaan integraalimerkinn‰n tarkka keksimisp‰iv‰ oli 29.10.1675. \index{Leibniz, G. W.|av}}
+Koska (P):n ratkaisu on (er√§s) $f$:n integraalifunktio v√§lill√§ $(a,b)$, niin kaava
+\eqref{int-4: P:n ratkaisukaava} yhdess√§ summakaavan \eqref{int-4: summakaava} kanssa antaa
+t√§h√§nastisesta integroimistekniikasta (my√∂s derivoimiss√§√§nn√∂ist√§!) riippumattoman menetelm√§n
+integraalifunktion m√§√§r√§√§miseksi.\footnote[2]{Integraalifunktion merkinn√§n '$\int f(x)\,dx$'
+taustalla on m√§√§r√§tyn integraalin summakaava. Merkinn√§n otti k√§ytt√∂√∂n \hist{G.W. Leibniz}
+ajatellen summakaavan 'rajank√§yntej√§' $\sum\hookrightarrow\int$ ja
+$\Delta x_k\hookrightarrow dx$, kun $n\kohti\infty$. Leibnizin omien p√§iv√§kirjamerkint√∂jen
+mukaan integraalimerkinn√§n tarkka keksimisp√§iv√§ oli 29.10.1675. \index{Leibniz, G. W.|av}}
 
-Toisaalta jos v‰lill‰ $(a,b)$ tunnetaan $f$:n integraalifunktio $F$ 
-(esim.\ alkeisfunktiona tai sarjana) ja $F$ on jatkuva v‰lill‰ $[a,b]$
-(v‰ltt‰m‰ntˆn lis‰oletus!), niin luvun $\int_a^b f(x)\,dx\,$ laskeminen k‰y p‰ins‰ suoraan
-$F$:n avulla. Nimitt‰in n‰ill‰ oletuksilla probleeman (P) ratkaisu on $y(x)=F(x)-F(a)$,
+Toisaalta jos v√§lill√§ $(a,b)$ tunnetaan $f$:n integraalifunktio $F$ 
+(esim.\ alkeisfunktiona tai sarjana) ja $F$ on jatkuva v√§lill√§ $[a,b]$
+(v√§ltt√§m√§nt√∂n lis√§oletus!), niin luvun $\int_a^b f(x)\,dx\,$ laskeminen k√§y p√§ins√§ suoraan
+$F$:n avulla. Nimitt√§in n√§ill√§ oletuksilla probleeman (P) ratkaisu on $y(x)=F(x)-F(a)$,
 jolloin
 \[
 \int_a^b f(x)\, dx \,=\, y(b) \,=\,F(b)-F(a).
 \]
-T‰m‰ tunnettuun integraalifunktioon $F$ perustuva m‰‰r‰tyn integraalin laskukaava esitet‰‰n
-yleens‰ \kor{sijoituskaavana} \index{sijoituskaava (m‰‰r.\ integraalin)}
+T√§m√§ tunnettuun integraalifunktioon $F$ perustuva m√§√§r√§tyn integraalin laskukaava esitet√§√§n
+yleens√§ \kor{sijoituskaavana} \index{sijoituskaava (m√§√§r.\ integraalin)}
 \begin{equation} \label{int-4: sijoituskaava}
 \boxed{\kehys\quad \int_a^b f(x)\,dx = \sijoitus{x=a}{x=b} F(t) 
                                      = \sijoitus{a}{b} F(x). \quad}
 \end{equation}
-T‰ss‰ oikea puoli luetaan 'sijoitus $a$:sta $b$:hen $F(x)$'. Kaava \eqref{int-4: sijoituskaava}
-saadaan p‰tev‰ksi myˆs tapauksessa $a>b$, kun \pain{sovitaan}, ett‰ m‰‰r‰tylle integraalille
-on voimassa \kor{vaihtos‰‰ntˆ} \index{vaihtoszyzy@vaihtos‰‰ntˆ!a@m‰‰r‰tyn integraalin}
-\begin{equation} \label{int-4: vaihtos‰‰ntˆ}
+T√§ss√§ oikea puoli luetaan 'sijoitus $a$:sta $b$:hen $F(x)$'. Kaava \eqref{int-4: sijoituskaava}
+saadaan p√§tev√§ksi my√∂s tapauksessa $a>b$, kun \pain{sovitaan}, ett√§ m√§√§r√§tylle integraalille
+on voimassa \kor{vaihtos√§√§nt√∂} \index{vaihtoszyzy@vaihtos√§√§nt√∂!a@m√§√§r√§tyn integraalin}
+\begin{equation} \label{int-4: vaihtos√§√§nt√∂}
 \boxed{\quad \int_{a}^b f(x)\, dx=-\int_{b}^a f(x)\, dx. \quad}
 \end{equation}
-Mukavuussyist‰ oletetaan t‰m‰ p‰tev‰ksi myˆs kun $a=b$, jolloin tulee sovituksi, ett‰
+Mukavuussyist√§ oletetaan t√§m√§ p√§tev√§ksi my√∂s kun $a=b$, jolloin tulee sovituksi, ett√§
 \[
 \int_a^a f(x)\, dx=0.
 \]
 
-Huomautettakoon m‰‰r‰tyn integraalin k‰sitteest‰, ett‰ toistaiseksi kyse ei ole muusta kuin
-erikoisesta merkinn‰st‰ luvulle $y(b)$ siin‰ tapauksessa, ett‰ probleemalla (P) on ratkaisu
-$y(x)$. Samaa ajatusta kertaavat myˆs sijoituskaava \eqref{int-4: sijoituskaava} ja
-vaihtos‰‰ntˆ \eqref{int-4: vaihtos‰‰ntˆ}. Seuraavassa luvussa n‰hd‰‰n, ett‰
-m‰‰r‰tyst‰ integraalista tulee (P):n ratkeavuudesta (ja yleisemminkin integraalifunktion
-olemassaolosta) riippumaton k‰site, kun m‰‰ritelm‰ksi otetaan suoraan summakaava
-\eqref{int-4: summakaava}, johon edell‰ p‰‰dyttiin numeerisena laskukaavana luvulle $y(b)$.
-Myˆhemmiss‰ luvuissa m‰‰r‰tyn integraalin k‰site saa edelleen lis‰‰ 'eloa' erilaisista
-sovelluksista. Kuten tullaan n‰kem‰‰n, sovelluksissa m‰‰r‰ttyyn integraaliin p‰‰dyt‰‰n
-suoraan summakaavan kautta. T‰llˆin sijoituskaava \eqref{int-4: sijoituskaava} n‰ytt‰ytyy
-oikotien‰ integraalin arvon 'tarkkaan' laskemiseen silloin, kun funktiolle $f$ on lˆydett‰viss‰
-(edellisten lukujen menetelmin) v‰lill‰ $[a,b]$ jatkuva integraalifunktio $F$.  
+Huomautettakoon m√§√§r√§tyn integraalin k√§sitteest√§, ett√§ toistaiseksi kyse ei ole muusta kuin
+erikoisesta merkinn√§st√§ luvulle $y(b)$ siin√§ tapauksessa, ett√§ probleemalla (P) on ratkaisu
+$y(x)$. Samaa ajatusta kertaavat my√∂s sijoituskaava \eqref{int-4: sijoituskaava} ja
+vaihtos√§√§nt√∂ \eqref{int-4: vaihtos√§√§nt√∂}. Seuraavassa luvussa n√§hd√§√§n, ett√§
+m√§√§r√§tyst√§ integraalista tulee (P):n ratkeavuudesta (ja yleisemminkin integraalifunktion
+olemassaolosta) riippumaton k√§site, kun m√§√§ritelm√§ksi otetaan suoraan summakaava
+\eqref{int-4: summakaava}, johon edell√§ p√§√§dyttiin numeerisena laskukaavana luvulle $y(b)$.
+My√∂hemmiss√§ luvuissa m√§√§r√§tyn integraalin k√§site saa edelleen lis√§√§ 'eloa' erilaisista
+sovelluksista. Kuten tullaan n√§kem√§√§n, sovelluksissa m√§√§r√§ttyyn integraaliin p√§√§dyt√§√§n
+suoraan summakaavan kautta. T√§ll√∂in sijoituskaava \eqref{int-4: sijoituskaava} n√§ytt√§ytyy
+oikotien√§ integraalin arvon 'tarkkaan' laskemiseen silloin, kun funktiolle $f$ on l√∂ydett√§viss√§
+(edellisten lukujen menetelmin) v√§lill√§ $[a,b]$ jatkuva integraalifunktio $F$.  
 
-Seuraavassa esitet‰‰n m‰‰r‰tyn integraalin kolme keskeist‰ ominaisuutta. N‰m‰ pysyv‰t voimassa,
-kun m‰‰rittelyn perustaksi jatkossa otetaan summakaava \eqref{int-4: summakaava}, mutta
+Seuraavassa esitet√§√§n m√§√§r√§tyn integraalin kolme keskeist√§ ominaisuutta. N√§m√§ pysyv√§t voimassa,
+kun m√§√§rittelyn perustaksi jatkossa otetaan summakaava \eqref{int-4: summakaava}, mutta
 toistaiseksi ominaisuudet perustellaan vedoten oletettuun probleeman (P) ratkeavuuteen. 
 
 
 \subsection*{Additiivisuus. Lineaarisuus. Vertailuperiaate}
 
 Jos probleema (P) on ratkeava, niin jokaisella $c\in(a,b)$ voidaan kirjoittaa
-$y(b)=y(c)+[y(b)-y(c)]$ eli m‰‰r‰tyn integraalin avulla ilmaistuna
+$y(b)=y(c)+[y(b)-y(c)]$ eli m√§√§r√§tyn integraalin avulla ilmaistuna
 \index{additiivisuus!a@integraalin}%
-\begin{equation} \label{int-4: additiivisuuss‰‰ntˆ}
+\begin{equation} \label{int-4: additiivisuuss√§√§nt√∂}
 \boxed{\quad \int_a^b f(x)\,dx = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx. \quad}
 \end{equation}
-T‰m‰n s‰‰nnˆn perusteella sanotaan, ett‰ m‰‰r‰tty integraali on \kor{additiivinen}
-\kor{integroimisv‰lin suhteen}. Kun huomiodaan myˆs vaihtos‰‰ntˆ \eqref{int-4: vaihtos‰‰ntˆ},
-niin todetaan, ett‰ additiivisuuss‰‰ntˆ \eqref{int-4: additiivisuuss‰‰ntˆ} on p‰tev‰ lukujen
-$a,b,c$ suuruusj‰rjestyksest‰ riippumatta edellytt‰en, ett‰ probleema (P) on ratkaistavissa,
+T√§m√§n s√§√§nn√∂n perusteella sanotaan, ett√§ m√§√§r√§tty integraali on \kor{additiivinen}
+\kor{integroimisv√§lin suhteen}. Kun huomiodaan my√∂s vaihtos√§√§nt√∂ \eqref{int-4: vaihtos√§√§nt√∂},
+niin todetaan, ett√§ additiivisuuss√§√§nt√∂ \eqref{int-4: additiivisuuss√§√§nt√∂} on p√§tev√§ lukujen
+$a,b,c$ suuruusj√§rjestyksest√§ riippumatta edellytt√§en, ett√§ probleema (P) on ratkaistavissa,
 kun $a$:n tilalla on $\min\{a,b,c\}$ ja $b$:n tilalla $\max\{a,b,c\}$.
 
-Olkoon (P):n ratkaisu $F(x)$ ja lis‰ksi olkoon (P):ll‰ ratkaisu $G(x)$, kun $f$:n tilalla on
-funktio $g$. T‰llˆin jos $\alpha,\beta\in\R$, niin $y(x)=\alpha F(x)+\beta G(x)\,$ on
+Olkoon (P):n ratkaisu $F(x)$ ja lis√§ksi olkoon (P):ll√§ ratkaisu $G(x)$, kun $f$:n tilalla on
+funktio $g$. T√§ll√∂in jos $\alpha,\beta\in\R$, niin $y(x)=\alpha F(x)+\beta G(x)\,$ on
 (P):n ratkaisu, kun $f$:n tilalla on $\alpha f +\beta g$. Erityisesti on siis
-$y(b)=\alpha F(b)+\beta G(b)$, eli m‰‰r‰tylle integraalille p‰tee \kor{lineaarisuuss‰‰ntˆ}
-(vrt.\ m‰‰r‰‰m‰ttˆm‰n integraalin vastaava s‰‰ntˆ \ref{integraalifunktio}:\,(I-1))
+$y(b)=\alpha F(b)+\beta G(b)$, eli m√§√§r√§tylle integraalille p√§tee \kor{lineaarisuuss√§√§nt√∂}
+(vrt.\ m√§√§r√§√§m√§tt√∂m√§n integraalin vastaava s√§√§nt√∂ \ref{integraalifunktio}:\,(I-1))
 \index{lineaarisuus!b@integroinnin}%
-\begin{equation} \label{int-4: lineaarisuuss‰‰ntˆ}
+\begin{equation} \label{int-4: lineaarisuuss√§√§nt√∂}
 \boxed{\quad \int_a^b [\alpha f(x)+\beta g(x)]\, dx 
         = \alpha\int_a^b f(x)\, dx + \beta\int_a^b g(x)\, dx, \quad \alpha,\beta\in\R. \quad}
 \end{equation}
-Jos mainittujen oletusten lis‰ksi oletetetaan, ett‰ ett‰ $f(x) \le g(x)\ \forall x\in[a,b]$,
-niin $F'(x)-G'(x) = f(x)-g(x) \le 0,\ x\in(a,b)$, jolloin $F(x)-G(x)$ on v‰henev‰ v‰lill‰
+Jos mainittujen oletusten lis√§ksi oletetetaan, ett√§ ett√§ $f(x) \le g(x)\ \forall x\in[a,b]$,
+niin $F'(x)-G'(x) = f(x)-g(x) \le 0,\ x\in(a,b)$, jolloin $F(x)-G(x)$ on v√§henev√§ v√§lill√§
 $[a,b]$ (Lause \ref{monotonisuuskriteeri}). Erityisesti on $F(b)-G(b) \le F(0)-G(0) = 0$ eli
-$F(b) \le G(b)$. N‰in ollen m‰‰r‰tyille integraaleille p‰tee \kor{vertailuperiaate}
+$F(b) \le G(b)$. N√§in ollen m√§√§r√§tyille integraaleille p√§tee \kor{vertailuperiaate}
 \index{vertailuperiaate!a@integraalien}%
 \begin{equation} \label{int-4: vertailuperiaate}
 \boxed{\quad f(x)\leq g(x)\quad\forall x\in [a,b] 
              \ \impl \ \int_a^b f(x)\,dx \le \int_a^b g(x)\,dx. \quad}
 \end{equation}
 Koska $\pm f(x) \le \abs{f(x)}$ ja $\int_a^b [\pm f(x)]\,dx = \pm\int_a^b f(x)\,dx$
-(lineaarisuuss‰‰ntˆ!), niin vertailuperiaattetta soveltaen seuraa erityisesti
-\begin{equation} \label{int-4: kolmioep‰yht‰lˆ}
+(lineaarisuuss√§√§nt√∂!), niin vertailuperiaattetta soveltaen seuraa erityisesti
+\begin{equation} \label{int-4: kolmioep√§yht√§l√∂}
 \boxed{\quad \left|\int_a^b f(x)\, dx\right|\leq \int_a^b\abs{f(x)}\,dx. \quad}
 \end{equation}
-T‰t‰ sanotaan 
-\index{kolmioep‰yht‰lˆ!f@integraalien}%
-\kor{integraalien kolmioep‰yht‰lˆksi}.\footnote[2]{Ep‰yht‰lˆ
-\eqref{int-4: kolmioep‰yht‰lˆ} on sukua j‰rjestetyn kunnan kolmioep‰yht‰lˆlle, joka p‰tee
-summakaavan \eqref{int-4: summakaava} ‰‰rellisille summille.}
+T√§t√§ sanotaan 
+\index{kolmioep√§yht√§l√∂!f@integraalien}%
+\kor{integraalien kolmioep√§yht√§l√∂ksi}.\footnote[2]{Ep√§yht√§l√∂
+\eqref{int-4: kolmioep√§yht√§l√∂} on sukua j√§rjestetyn kunnan kolmioep√§yht√§l√∂lle, joka p√§tee
+summakaavan \eqref{int-4: summakaava} √§√§rellisille summille.}
 \begin{Exa} Sijoituskaavan \eqref{int-4: sijoituskaava} perusteella on
 \begin{align*}
 &\int_0^2 \sin x\, dx=\sijoitus{0}{2}(-\cos x)=\sijoitus{2}{0}\cos x=1-\cos 2, \\
@@ -368,18 +368,18 @@ summakaavan \eqref{int-4: summakaava} ‰‰rellisille summille.}
 \end{align*}
 \end{Exa}
 \begin{Exa} Laske $\int_0^2 f(x)\,dx$, kun $f(x)=\max\{\sqrt{x},x^2\}$. \end{Exa}
-\ratk Todetaan ensin, ett‰ $f(x)=\sqrt{x}$ v‰lill‰ $[0,1]$ ja $f(x)=x^2$ v‰lill‰ $[1,2]$.
-T‰llˆin k‰ytt‰m‰ll‰ ensin additiivisuuss‰‰ntˆ‰ \eqref{int-4: additiivisuuss‰‰ntˆ} ja sitten
+\ratk Todetaan ensin, ett√§ $f(x)=\sqrt{x}$ v√§lill√§ $[0,1]$ ja $f(x)=x^2$ v√§lill√§ $[1,2]$.
+T√§ll√∂in k√§ytt√§m√§ll√§ ensin additiivisuuss√§√§nt√∂√§ \eqref{int-4: additiivisuuss√§√§nt√∂} ja sitten
 sijoituskaavaa \eqref{int-4: sijoituskaava} saadaan
 \[
 \int_0^2 f(x)\,dx \,=\, \int_0^1 \sqrt{x}\,dx + \int_1^2 x^2\,dx
                   \,=\, \sijoitus{0}{1}\frac{2}{3}\,x^{3/2}+\sijoitus{1}{2}\frac{1}{3}\,x^3
                   \,=\, 3. \ \loppu
 \]
-\begin{Exa} M‰‰rit‰ funktion $f(x)=\min\{3x,4-x^2\}$ integraalifunktio $\R$:ss‰ k‰ytt‰en
-hyv‰ksi m‰‰r‰tty‰ integraalia. \end{Exa}
-\ratk Funktio $\,y(x)=\int_0^x f(t)\,dt\,$ on kysytty integraalifunktio lis‰ehdolla $y(0)=0$.
-Koska $f(x)=3x$, kun $x\in[-4,1]$, ja $f(x)=4-x^2$, kun $x \ge 1$ tai $x \le -4$, niin p‰tee
+\begin{Exa} M√§√§rit√§ funktion $f(x)=\min\{3x,4-x^2\}$ integraalifunktio $\R$:ss√§ k√§ytt√§en
+hyv√§ksi m√§√§r√§tty√§ integraalia. \end{Exa}
+\ratk Funktio $\,y(x)=\int_0^x f(t)\,dt\,$ on kysytty integraalifunktio lis√§ehdolla $y(0)=0$.
+Koska $f(x)=3x$, kun $x\in[-4,1]$, ja $f(x)=4-x^2$, kun $x \ge 1$ tai $x \le -4$, niin p√§tee
 \begin{align*}
 x\in[-4,1]       \qimpl y(x) &= \int_0^x 3t\,dt = \sijoitus{0}{x}\frac{3}{2}\,t^2 
                               = \frac{3}{2}\,x^2, \\[1mm]
@@ -392,7 +392,7 @@ x\in(-\infty,-4] \qimpl y(x) &= y(-4)+[y(x)-y(-4)] \\[3mm]
                              &= 24+\sijoitus{-4}{x}\left(4t-\frac{1}{3}\,t^3\right)
                               = -\frac{1}{3}\,x^3 + 4x +\frac{56}{3}\,.
 \end{align*}
-T‰ss‰ $y(1)=3/2$ ja $y(-4)=24$ saatiin ensimm‰isest‰ lausekkeesta. Yleinen integraalifunktio
+T√§ss√§ $y(1)=3/2$ ja $y(-4)=24$ saatiin ensimm√§isest√§ lausekkeesta. Yleinen integraalifunktio
 on $F(x)=y(x)+C,\ C\in\R$, joten
 \[
 \int f(x)\,dx\,= \begin{cases}
@@ -401,10 +401,10 @@ on $F(x)=y(x)+C,\ C\in\R$, joten
                   -\frac{1}{3}\,x^3 + 4x -\frac{13}{6}+C,  &\text{kun}\,\ x>1.
                 \end{cases} \quad\loppu
 \]
-\begin{Exa} Sievenn‰ lauseke $\D \,\frac{d}{dx}\int_{\sqrt{x}}^{1/\sqrt{x}}e^{-t^2},\ x>0$.
+\begin{Exa} Sievenn√§ lauseke $\D \,\frac{d}{dx}\int_{\sqrt{x}}^{1/\sqrt{x}}e^{-t^2},\ x>0$.
 \end{Exa}
-\ratk Funktiolla $e^{-t^2}$ on $\R$:ss‰ sarjamuotoinen integraalifunktio $F(t)$, mutta
-sievennyksess‰ riitt‰‰ tieto, ett‰ $F(t)$ on olemassa:
+\ratk Funktiolla $e^{-t^2}$ on $\R$:ss√§ sarjamuotoinen integraalifunktio $F(t)$, mutta
+sievennyksess√§ riitt√§√§ tieto, ett√§ $F(t)$ on olemassa:
 \begin{align*}
 \frac{d}{dx}\int_{\sqrt{x}}^{1/\sqrt{x}}e^{-t^2}\, dt 
            &\,=\,\frac{d}{dx} [F(\frac{1}{\sqrt{x}})-F(\sqrt{x})] \\
@@ -414,25 +414,25 @@ sievennyksess‰ riitt‰‰ tieto, ett‰ $F(t)$ on olemassa:
 \begin{Exa} Arvioi virhe approksimaatiossa
 $\ \D\int_{10}^{20}\frac{x^4}{x^5+1}\,dx \approx \ln 2$.
 \end{Exa}
-\ratk Integroimisv‰lill‰ on
+\ratk Integroimisv√§lill√§ on
 \[
 \frac{x^4}{x^5+1}=\frac{1}{x}-\frac{1}{x(x^5+1)}\,,
 \]
-joten lineaarisuuss‰‰nnˆn \eqref{int-4: lineaarisuuss‰‰ntˆ} ja sijoituskaavan
+joten lineaarisuuss√§√§nn√∂n \eqref{int-4: lineaarisuuss√§√§nt√∂} ja sijoituskaavan
 \eqref{int-4: sijoituskaava} nojalla on
 \[
 \int_{10}^{20}\frac{x^4}{x^5+1}\,dx \,=\, \int_{10}^{20}\frac{1}{x}\,dx-\delta
                                    \,=\, \sijoitus{10}{20}\ln x -\delta
                                    \,=\, \ln 2 - \delta,
 \]
-miss‰ on edelleen vertailuperiaatteen \eqref{int-4: vertailuperiaate} ja sijoituskaavan nojalla
+miss√§ on edelleen vertailuperiaatteen \eqref{int-4: vertailuperiaate} ja sijoituskaavan nojalla
 \[
 0 \,\le\, \delta = \int_{10}^{20}\frac{1}{x(x^5+1)}\,dx
                  \,\le\, \int_{10}^{20}\frac{1}{x^6}\,dx
                  \,=\, \sijoitus{10}{20}-\frac{1}{5x^5}
                  \,<\, 2 \cdot 10^{-6}.
 \]
-Siis approksimaatio on yl‰likiarvo, jonka virhe on alle $2 \cdot 10^{-6}$. \loppu
+Siis approksimaatio on yl√§likiarvo, jonka virhe on alle $2 \cdot 10^{-6}$. \loppu
 
 \Harj
 \begin{enumerate}
@@ -456,14 +456,14 @@ Ratkaise probleema (P), tai osoita ratkeamattomuus, kun $[a,b]=[0,1]$ ja
 \end{align*} 
 
 \item
-Ratkaise alkuarvoteht‰v‰ $\,y'(x)=f(x),\ x>0,\ y(0)=0$ k‰ytt‰m‰ll‰ algoritmia A1--A3 ja
-tasav‰lisi‰ jakoja v‰lill‰ $[0,x]$, kun \ a) $f(x)=x^2$, \newline
+Ratkaise alkuarvoteht√§v√§ $\,y'(x)=f(x),\ x>0,\ y(0)=0$ k√§ytt√§m√§ll√§ algoritmia A1--A3 ja
+tasav√§lisi√§ jakoja v√§lill√§ $[0,x]$, kun \ a) $f(x)=x^2$, \newline
 b) $f(x)=x^3$, \ c) $f(x)=e^{-x}$, \ d) $f(x)=2^x$. \newline
-Lis‰tietoja: $\,\sum_{k=1}^n k^2 = \frac{1}{6}\,n(n+1)(2n+1),\,\
+Lis√§tietoja: $\,\sum_{k=1}^n k^2 = \frac{1}{6}\,n(n+1)(2n+1),\,\
 \sum_{k=1}^n k^3 = \frac {1}{4}\,n^2(n+1)^2$.
 
 \item
-Laske seuraavat raja-arvot tulkitsemalla ne m‰‰r‰tyiksi integraaleiksi.
+Laske seuraavat raja-arvot tulkitsemalla ne m√§√§r√§tyiksi integraaleiksi.
 \begin{align*}
 &\text{a)}\ \ \lim_{n\kohti\infty} \frac{1}{n^4}\left[1^3+2^3+ \ldots +(4n-1)^3\right] \qquad
  \text{b)}\ \ \lim_{n\kohti\infty} \sum_{k=1}^n \frac{1}{n+k} \\
@@ -474,7 +474,7 @@ Laske seuraavat raja-arvot tulkitsemalla ne m‰‰r‰tyiksi integraaleiksi.
 \end{align*}
 
 \item
-Laske s‰‰ntˆjen \eqref{int-4: sijoituskaava}--\eqref{int-4: lineaarisuuss‰‰ntˆ} avulla tarkasti
+Laske s√§√§nt√∂jen \eqref{int-4: sijoituskaava}--\eqref{int-4: lineaarisuuss√§√§nt√∂} avulla tarkasti
 (jos mahdollista) tai numeerisena likiarvona:
 \begin{align*}
 &\text{a)}\,\ \int_{-2}^2 (x^2+3)^2\,dx \qquad
@@ -500,7 +500,7 @@ Laske seuraavien funktioiden derivaatat vapaan muuttujan suhteen.
 \end{align*}
 
 \item
-M‰‰rit‰ seuraavien funktioiden integraalifunktiot $\R$:ss‰ k‰ytt‰en hyv‰ksi m‰‰r‰tty‰
+M√§√§rit√§ seuraavien funktioiden integraalifunktiot $\R$:ss√§ k√§ytt√§en hyv√§ksi m√§√§r√§tty√§
 integraalia:
 \begin{align*}
 &\text{a)}\ \ f(x)=|x|-|x-2| \qquad
@@ -509,7 +509,7 @@ integraalia:
 \end{align*}
 
 \item
-M‰‰rit‰ seuraavien funktioiden pienimm‰t arvot ja piirr‰ funktioiden \newline kuvaajat.
+M√§√§rit√§ seuraavien funktioiden pienimm√§t arvot ja piirr√§ funktioiden \newline kuvaajat.
 \[
 \text{a)}\ \ f(x)=\int_0^1 \abs{x-t}\,dt \qquad
 \text{b)}\ \ f(x)=\int_0^\pi (x\cos t-t\cos x)^2\,dt
@@ -527,25 +527,25 @@ Todista:
 \end{align*}
 
 \item (*)
-Perustele likim‰‰r‰inen laskukaava
+Perustele likim√§√§r√§inen laskukaava
 \[
 \int_1^2 \frac{e^{-x}}{x}\,dx \,\approx\, \ln 2+\sum_{k=1}^n \frac{(-1)^k}{k \cdot k!}(2^k-1),
                                           \quad n\in\N,\,\ n \gg 1
 \]
-ja arvioi t‰m‰n virhe, kun $n=10$.
+ja arvioi t√§m√§n virhe, kun $n=10$.
 
 \item (*) 
 Olkoon $\D F(x)=\int_0^{2x-x^2} \cos\left(\frac{1}{1+t^2}\right)\,dt, \quad
            G(x)=\int_4^{x^2} e^{t^2}\,dt$. \vspace{2mm}\newline
-a) Tutki, saavuttaako $F$ jollakin $x$ pienimm‰n tai suurimman arvonsa. \newline
+a) Tutki, saavuttaako $F$ jollakin $x$ pienimm√§n tai suurimman arvonsa. \newline
 b) Laske raja-arvo $\ \lim_{x \kohti 2} G(x)/(x^3-8)$.
 
 \item (*)
-Probleemassa (P) olkoon $[a,b]=[-1,1]$, $f(0)=0$ ja $f$:n m‰‰ritelm‰ muualla kuin origossa
+Probleemassa (P) olkoon $[a,b]=[-1,1]$, $f(0)=0$ ja $f$:n m√§√§ritelm√§ muualla kuin origossa
 \[
 \text{a)}\,\ f(x)=\frac{1}{x}\left(\sin\frac{1}{x}+x\cos\frac{1}{x}\right), \quad
 \text{b)}\,\ f(x)=\frac{1}{x}\left(\sin\frac{1}{x^2}+x^2\cos\frac{1}{x^2}\right).
 \]
-N‰yt‰, ett‰ probleema (P) \ a) ei ratkea, \ b) ratkeaa. 
+N√§yt√§, ett√§ probleema (P) \ a) ei ratkea, \ b) ratkeaa. 
 
 \end{enumerate}

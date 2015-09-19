@@ -1,17 +1,17 @@
-%T‰h‰n on siirretty ylij‰‰m‰osia vanhoista luvuista II.7 ja II.8 (3/09)
+%T√§h√§n on siirretty ylij√§√§m√§osia vanhoista luvuista II.7 ja II.8 (3/09)
 
 \subsection*{Ortogonaaliprojektio}
 
-Avaruusvektoreiden muodostamalla vektoriavaruudella $V$ on aliavaruuksia $V$:n itsens‰ lis‰ksi
-kahta tyyppi‰: 1-ulotteisia, joiden geometrinen vastine on origon kautta kulkeva avaruussuora,
+Avaruusvektoreiden muodostamalla vektoriavaruudella $V$ on aliavaruuksia $V$:n itsens√§ lis√§ksi
+kahta tyyppi√§: 1-ulotteisia, joiden geometrinen vastine on origon kautta kulkeva avaruussuora,
 ja 2-ulotteisia, joiden geometrinen vastine on origon kautta kulkeva taso.
 Jos $W \subset V$ on $V$:n aito aliavaruus (ts. $W \neq V$), niin mielivaltainen $\vec u \in V$
-voidaan jakaa yksik‰sitteisesti kahteen kesken‰‰n ortogonaaliseen komponenttiin siten, ett‰ 
-komponenteista toinen on $W$:ss‰ ja toinen $W$:t‰ vastaan kohtisuora:
+voidaan jakaa yksik√§sitteisesti kahteen kesken√§√§n ortogonaaliseen komponenttiin siten, ett√§ 
+komponenteista toinen on $W$:ss√§ ja toinen $W$:t√§ vastaan kohtisuora:
 \[
 \vec u = \vec w + \vec w^{\perp}, \quad  \vec w \in W, \ \vec w^{\perp} \perp W.
 \]
-T‰ss‰ $\vec w = \vec u$:n \kor{ortogonaaliprojektio} $W$:lle m‰‰r‰ytyy ehdosta
+T√§ss√§ $\vec w = \vec u$:n \kor{ortogonaaliprojektio} $W$:lle m√§√§r√§ytyy ehdosta
 \[
 (\vec u - \vec w) \cdot \vec v = 0 \quad \forall \vec v \in W.
 \]
@@ -19,22 +19,22 @@ Jos esimerkiksi $W$ on 2-ulotteinen, eli muotoa
 \[
 W=\{\vec v = \lambda \vec a + \mu \vec b \ | \ \lambda, \mu \in \R \},
 \]
-niin riitt‰‰ asettaa ehdot
+niin riitt√§√§ asettaa ehdot
 \[
 (\vec u - \vec w) \cdot \vec a =(\vec u -\vec w) \cdot \vec b =0,
 \]
-sill‰ t‰llˆin on myˆs
+sill√§ t√§ll√∂in on my√∂s
 \begin{align*}
 (\vec u - \vec w)(\lambda \vec a + \mu \vec b)
              &=\lambda(\vec u - \vec w) \cdot \vec a + \mu (\vec u-\vec w) \cdot \vec b \\
              &=\lambda \cdot 0 + \mu \cdot 0 = 0 \quad \forall \lambda, \mu \in \R.
 \end{align*}
-N‰in ollen riitt‰‰, ett‰ ortogonaalisuusehto p‰tee $W$:n kantavektoreille. Kun siis $\vec w$:t‰
+N√§in ollen riitt√§√§, ett√§ ortogonaalisuusehto p√§tee $W$:n kantavektoreille. Kun siis $\vec w$:t√§
 haetaan muodossa
 \[
 \vec w = x \vec a +y \vec b,
 \]
-on $x$:lle ja $y$:lle haettava (jos mahdollista) sellaiset arvot, ett‰
+on $x$:lle ja $y$:lle haettava (jos mahdollista) sellaiset arvot, ett√§
 \[
 \vec w \cdot \vec a = \vec u \cdot \vec a \quad \ja \quad \vec w \cdot \vec b 
                     = \vec u \cdot \vec b
@@ -44,24 +44,24 @@ eli
 (\vec a \cdot \vec a)x+(\vec a \cdot \vec b)y  = \vec u \cdot \vec a \\
 (\vec a \cdot \vec b)x+(\vec b \cdot \vec b)y\,= \vec u \cdot \vec b
 \end{cases} \]
-T‰ll‰ yht‰lˆryhm‰ll‰ on yksik‰sitteinen ratkaisu t‰sm‰lleen kun
+T√§ll√§ yht√§l√∂ryhm√§ll√§ on yksik√§sitteinen ratkaisu t√§sm√§lleen kun
 \[
 (\vec a \cdot \vec a)(\vec b \cdot \vec b) - (\vec a \cdot \vec b)^2 \neq 0
                                            \qekv \vec a \neq \vec 0\ 
                                             \ja\ \vec b \neq \vec 0\ 
                                             \ja\ \abs{\cos{\kulma(\vec a,\vec b)}} \neq 1
 \]
-Siis yht‰lˆryhm‰ ratkeaa yksik‰sitteisesti t‰sm‰lleen kun $\{\vec a, \vec b\}$ on lineaarisesti
+Siis yht√§l√∂ryhm√§ ratkeaa yksik√§sitteisesti t√§sm√§lleen kun $\{\vec a, \vec b\}$ on lineaarisesti
 riippumaton systeemi.
 
 Euklidisessa avaruudessa $\Ekolme$ vastaa $2$-ulotteista aliavaruutta $W \subset V$ origon
 kautta kulkeva taso $T$, jonka suuntavektoreina ovat $W$:n kantavektorit. Vektorin 
-$\vec u = \Vect{OP}$ ortogonaaliprojektion hakeminen $W$:ss‰ vastaa t‰llˆin geometrista
-ongelmaa: Etsi $Q \in T$, siten ett‰ p‰tee
+$\vec u = \Vect{OP}$ ortogonaaliprojektion hakeminen $W$:ss√§ vastaa t√§ll√∂in geometrista
+ongelmaa: Etsi $Q \in T$, siten ett√§ p√§tee
 \[
 \Vect{QP} \ \perp \ \Vect{QA} \quad \forall A \in T.
 \]
-Etsitty ortogonaaliprojektio on t‰llˆin $\vec w=\Vect{OQ}$, ja $\vec n =\Vect{QP}$ on tason $T$
+Etsitty ortogonaaliprojektio on t√§ll√∂in $\vec w=\Vect{OQ}$, ja $\vec n =\Vect{QP}$ on tason $T$
 \kor{normaalivektori}, eli vektori, joka on kaikkia tason suuntaisia vektoreita vastaan
 kohtisuora.
 \begin{figure}[H]
@@ -70,7 +70,7 @@ kohtisuora.
 \end{center}
 \end{figure}
 \begin{Exa}
-Taso $T$ kulkee pisteiden $(0,0,0), \ (2,1,1)$ ja $(2,3,-3)$ kautta. M‰‰r‰‰ vektorin 
+Taso $T$ kulkee pisteiden $(0,0,0), \ (2,1,1)$ ja $(2,3,-3)$ kautta. M√§√§r√§√§ vektorin 
 $\vec u=\vec i +2\vec j -3\vec k$ ortogonaaliprojektio tasolle.
 \end{Exa}
 \ratk Ortogonaaliprojektio on muotoa 
@@ -90,7 +90,7 @@ ja on siis oltava
 (\vec u - \vec w) \cdot \vec b &= (1-2x-2y) \cdot 2 + (2-x-3y) \cdot 3 + (-3-x+3y) \cdot (-3) \\
                                &=17-4x-22y=0.
 \end{align*}
-Ratkaisemalla yht‰lˆryhm‰
+Ratkaisemalla yht√§l√∂ryhm√§
 \[
 \left\{\begin{array}{ll}
 6x+4y &= 1 \\
@@ -105,7 +105,7 @@ joten kysytty projektio on
 \[
 \vec w = \frac{1}{58}(52\vec i +124\vec j -170\vec k).
 \]
-Sivutuotteena saatiin myˆs tason $T$ normaalivektori:
+Sivutuotteena saatiin my√∂s tason $T$ normaalivektori:
 \begin{align*}
 \vec n &= \vec u - \vec w 
            = \frac{1}{58}\left[(58-52)\vec i + (116-124)\vec j +(-174+170) \vec k\right] \\
@@ -127,7 +127,7 @@ Kuviossa on
 \sin{\kulma (\vec u, \vec w)} = \frac{\abs{\vec n}}{\abs{\vec u}} = \frac{1}{\sqrt{406}}
                                 \qimpl \kulma (\vec u, \vec w) \approx 3^{\circ},
 \]
-joten $\vec u$ on l‰hes tason $T$ suuntainen. \loppu
+joten $\vec u$ on l√§hes tason $T$ suuntainen. \loppu
 
 \pagebreak
 
@@ -137,7 +137,7 @@ Jos $\vec a$ ja $\vec b$ ovat tason vektoreita,
 \[
 \vec a=x_1\vec i + y_1 \vec j, \quad \vec b=x_2\vec i + y_2 \vec j,
 \]
-niin n‰iden v‰linen ristitulo voidaan m‰‰ritell‰ lis‰‰m‰ll‰ kolmas ulottuvuus:
+niin n√§iden v√§linen ristitulo voidaan m√§√§ritell√§ lis√§√§m√§ll√§ kolmas ulottuvuus:
 \[
 \vec a \times \vec b = \left| \begin{array}{ccc}
 \vec i & \vec j & \vec k \\
@@ -160,31 +160,31 @@ x_2 & y_2
 =(x_1y_2-x_2y_1)\vec k.
 \]
 Koska lopputulos on joka tapauksessa tason normaalin $\vec k$ suuntainen, ei ristitulon
-vektoriluonteella ole t‰ss‰ olennaista merkityst‰. Tason vektoreiden ristitulo voidaankin
-m‰‰ritell‰ yht‰ hyvin reaaliarvoisena (skalaariarvoisena):
+vektoriluonteella ole t√§ss√§ olennaista merkityst√§. Tason vektoreiden ristitulo voidaankin
+m√§√§ritell√§ yht√§ hyvin reaaliarvoisena (skalaariarvoisena):
 \[
 \vec a \times \vec b = \left|\begin{array}{cc} x_1 & y_1 \\ x_2 & y_2 \end{array} \right| 
                      = \left|\begin{array}{cc} x_1 & x_2 \\ y_1 & y_2 \end{array} \right|
                      = x_1y_2-x_2y_1.
 \]
-N‰in m‰‰riteltyn‰ tason ristitulo ei siis ole 'vektoritulo', vaan toisen tyyppinen 
-'skalaaritulo', eli kuvaus tyyppi‰ $V \times V \map \R$.\footnote[1]{Laskukaavansa mukaisesti
-tason ristitulo on itse asiassa 'skalaarikaksitulo', joka on l‰heist‰ sukua avaruuden
+N√§in m√§√§riteltyn√§ tason ristitulo ei siis ole 'vektoritulo', vaan toisen tyyppinen 
+'skalaaritulo', eli kuvaus tyyppi√§ $V \times V \map \R$.\footnote[1]{Laskukaavansa mukaisesti
+tason ristitulo on itse asiassa 'skalaarikaksitulo', joka on l√§heist√§ sukua avaruuden
 skalaarikolmitulolle.} 
-\begin{Exa} Jos $K$ on tason kolmio, jonka k‰rjet ovat $(0,0)$, $(x_1,y_1)$ ja $(x_2,y_2)$,
-niin $K$:n pinta-ala on (vrt.\ Esimerkki \ref{avaruuskolmion ala} edell‰)
+\begin{Exa} Jos $K$ on tason kolmio, jonka k√§rjet ovat $(0,0)$, $(x_1,y_1)$ ja $(x_2,y_2)$,
+niin $K$:n pinta-ala on (vrt.\ Esimerkki \ref{avaruuskolmion ala} edell√§)
 \[
 \text{ala}(K)=\frac{1}{2}\abs{\vec a\times\vec b}=\frac{1}{2}\abs{x_1y_2-x_2y_1}\,. \loppu
 \]
 \end{Exa}
 
-Geometrinen m‰‰ritelm‰ tason skalaariselle ristitulolle on
+Geometrinen m√§√§ritelm√§ tason skalaariselle ristitulolle on
 \[
 \vec a \times \vec b = \begin{cases} 
 \ \ \,\abs{\vec a}\abs{\vec b} \sin\alpha, 
-     &\text{ jos } \vec a \text{ on myˆt‰p‰iv‰‰n } \vec b \text{:st‰ kulmassa } \alpha\le\pi, \\
+     &\text{ jos } \vec a \text{ on my√∂t√§p√§iv√§√§n } \vec b \text{:st√§ kulmassa } \alpha\le\pi, \\
      -\abs{\vec a}\abs{\vec b} \sin\alpha, 
-     &\text{ jos } \vec a \text{ on vastap‰iv‰‰n } \vec b \text{:st‰ kulmassa } \alpha\le\pi.
+     &\text{ jos } \vec a \text{ on vastap√§iv√§√§n } \vec b \text{:st√§ kulmassa } \alpha\le\pi.
 \end{cases}
 \]
 \begin{figure}[H]
@@ -200,14 +200,14 @@ Geometrinen m‰‰ritelm‰ tason skalaariselle ristitulolle on
 \end{picture}
 \end{center}
 \end{figure}
-T‰ss‰ m‰‰ritelm‰ss‰ siis 'kulman sini' lasketaan sis‰kulman mitan avulla kuten aiemmin. 
-Toisaalta tasossa on luontevaa mitata kahden vektorin v‰linen kulma \pain{suunnatulla} 
+T√§ss√§ m√§√§ritelm√§ss√§ siis 'kulman sini' lasketaan sis√§kulman mitan avulla kuten aiemmin. 
+Toisaalta tasossa on luontevaa mitata kahden vektorin v√§linen kulma \pain{suunnatulla} 
 mittauksella seuraavasti:
 \begin{align*}
-\skulma(\vec a, \vec b) \ = \ &\text{vektorien } \vec a, \vec b \text{ v‰linen kulma mitattuna } 
-         \vec a \text{:sta l‰htien vastap‰iv‰‰n}, \\ &0 \leq \skulma(\vec a, \vec b) < 2\pi.
+\skulma(\vec a, \vec b) \ = \ &\text{vektorien } \vec a, \vec b \text{ v√§linen kulma mitattuna } 
+         \vec a \text{:sta l√§htien vastap√§iv√§√§n}, \\ &0 \leq \skulma(\vec a, \vec b) < 2\pi.
 \end{align*}
-T‰ss‰ mittauksessa vektorien $\vec a,\vec b$ j‰rjestys on t‰rke‰, sill‰ m‰‰ritelm‰n mukaisesti
+T√§ss√§ mittauksessa vektorien $\vec a,\vec b$ j√§rjestys on t√§rke√§, sill√§ m√§√§ritelm√§n mukaisesti
 on $\displaystyle{\skulma(\vec a,\vec b)=2\pi-\skulma(\vec b,\vec a)}$ (paitsi jos
 $\vec a\uparrow\uparrow\vec b$, jolloin 
 $\displaystyle{\skulma(\vec a,\vec b) = \skulma(\vec b,\vec a) = 0}$).
@@ -223,19 +223,19 @@ $\displaystyle{\skulma(\vec a,\vec b) = \skulma(\vec b,\vec a) = 0}$).
 \end{picture}
 \end{center}
 \end{figure}
-Suunnatulla kulman mittauksella tason ristitulon geometrisesta m‰‰ritelm‰st‰ tulee 
+Suunnatulla kulman mittauksella tason ristitulon geometrisesta m√§√§ritelm√§st√§ tulee 
 yksinkertaisempi:
 \[
 \vec a \times \vec b =\abs{\vec a}\abs{\vec b}\sin{\skulma(\vec a, \vec b)}. 
 \]
-Myˆs avaruusvektorien ristitulo voidaan m‰‰ritell‰ suunatulla kulman mittauksella, nimitt‰in
-(vrt.\ M‰‰ritelm‰ \ref{ristitulon m‰‰ritelm‰})
+My√∂s avaruusvektorien ristitulo voidaan m√§√§ritell√§ suunatulla kulman mittauksella, nimitt√§in
+(vrt.\ M√§√§ritelm√§ \ref{ristitulon m√§√§ritelm√§})
 \[
 \vec a \times \vec b = \abs{\vec a}\abs{\vec b}\sin\skulma(\vec a,\vec b)\,\vec n,
 \]
-miss‰ $\vec n$ on vektoreita $\vec a$ ja $\vec b$ vastaan kohtisuora yksikkˆvektori (kumpi
+miss√§ $\vec n$ on vektoreita $\vec a$ ja $\vec b$ vastaan kohtisuora yksikk√∂vektori (kumpi
 tahansa kahdesta vaihtoehdosta!) ja $\displaystyle{\skulma(\vec a,\vec b)}$ on suunnattu 
-kulman mitta \pain{$\vec n$:n} \pain{osoittamasta} \pain{suunnasta} \pain{n‰ht}y\pain{n‰}. 
-Tavallisemmin avaruusvektoreiden ristitulo m‰‰ritell‰‰n kuitenkin em.\ tavalla 
-'k‰tisyyss‰‰ntˆj‰' k‰ytt‰en, jolloin ristitulon suunta on (ehk‰) helpommin geometrisesti 
+kulman mitta \pain{$\vec n$:n} \pain{osoittamasta} \pain{suunnasta} \pain{n√§ht}y\pain{n√§}. 
+Tavallisemmin avaruusvektoreiden ristitulo m√§√§ritell√§√§n kuitenkin em.\ tavalla 
+'k√§tisyyss√§√§nt√∂j√§' k√§ytt√§en, jolloin ristitulon suunta on (ehk√§) helpommin geometrisesti 
 hahmotettavissa.

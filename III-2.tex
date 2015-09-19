@@ -1,41 +1,41 @@
-\section{Kompleksiluvut ja niillä laskeminen} 
+\section{Kompleksiluvut ja niillÃ¤ laskeminen} 
 \label{kompleksiluvuilla laskeminen}
 \alku
 \sectionmark{Kompleksiluvut}
 \index{laskuoperaatiot!e@kompleksilukujen|vahv}
 
-\kor{Kompleksilukujen} määrittelyn lähtökohdaksi otetaan matematiikassa usein kunta 
-$(\Rkaksi,+,\cdot)$, jossa laskutoimitukset on määritelty edellisen luvun säännöillä 
-\eqref{yhteenlasku} ja \eqref{kertolasku}. Suoraviivaisin määritelmä on yksinkertaisesti sopia,
-että $(\Rkaksi,+,\cdot)$ itse on kompleksilukujen kunta, ts. kompleksiluvut ovat $\Rkaksi$:n 
-lukupareja, joiden väliset laskutoimitukset on määritelty mainitulla tavalla. Käytännön 
-laskurutiineissa käytetään kuitenkin yleensä havainnollisempia kompleksilukujen esitystapoja. 
-Näitä ovat edellä kuvattu polaarimuoto (osoitinmuoto) tai sitäkin yleisempi,
+\kor{Kompleksilukujen} mÃ¤Ã¤rittelyn lÃ¤htÃ¶kohdaksi otetaan matematiikassa usein kunta 
+$(\Rkaksi,+,\cdot)$, jossa laskutoimitukset on mÃ¤Ã¤ritelty edellisen luvun sÃ¤Ã¤nnÃ¶illÃ¤ 
+\eqref{yhteenlasku} ja \eqref{kertolasku}. Suoraviivaisin mÃ¤Ã¤ritelmÃ¤ on yksinkertaisesti sopia,
+ettÃ¤ $(\Rkaksi,+,\cdot)$ itse on kompleksilukujen kunta, ts. kompleksiluvut ovat $\Rkaksi$:n 
+lukupareja, joiden vÃ¤liset laskutoimitukset on mÃ¤Ã¤ritelty mainitulla tavalla. KÃ¤ytÃ¤nnÃ¶n 
+laskurutiineissa kÃ¤ytetÃ¤Ã¤n kuitenkin yleensÃ¤ havainnollisempia kompleksilukujen esitystapoja. 
+NÃ¤itÃ¤ ovat edellÃ¤ kuvattu polaarimuoto (osoitinmuoto) tai sitÃ¤kin yleisempi,
 komponenttimuodosta johdettu kolmas esitystapa, joka seuraavassa otetaan kompleksilukujen
-käytännöllisen määrittelyn lähtökohdaksi.
+kÃ¤ytÃ¤nnÃ¶llisen mÃ¤Ã¤rittelyn lÃ¤htÃ¶kohdaksi.
 
-Aloitetaan merkitsemällä $\Rkaksi$:n '$x$-akselia' symbolilla $\Rkaksi_0$:
+Aloitetaan merkitsemÃ¤llÃ¤ $\Rkaksi$:n '$x$-akselia' symbolilla $\Rkaksi_0$:
 \[
 \Rkaksi_0 = \{(x,0) \ | \ x \in \R\}.
 \]
-Havaitaan, että $\Rkaksi_0$ sisältää $(\Rkaksi,+,\cdot)$:n nolla-alkion $(0,0)$, samoin 
-ykkösalkion $(1,0)$. Lisäksi jos $(x,0)$, $(y,0)$ ovat mitkä tahansa kaksi $\Rkaksi_0$:n 
-alkiota, niin edellisen luvun laskusääntöjen perusteella näiden summa, erotus, tulo ja
-osamäärä (jos $y \neq 0$) ovat myös $\Rkaksi_0$:ssa. Nämä tosiasiat yhdessä merkitsevät, että 
+Havaitaan, ettÃ¤ $\Rkaksi_0$ sisÃ¤ltÃ¤Ã¤ $(\Rkaksi,+,\cdot)$:n nolla-alkion $(0,0)$, samoin 
+ykkÃ¶salkion $(1,0)$. LisÃ¤ksi jos $(x,0)$, $(y,0)$ ovat mitkÃ¤ tahansa kaksi $\Rkaksi_0$:n 
+alkiota, niin edellisen luvun laskusÃ¤Ã¤ntÃ¶jen perusteella nÃ¤iden summa, erotus, tulo ja
+osamÃ¤Ã¤rÃ¤ (jos $y \neq 0$) ovat myÃ¶s $\Rkaksi_0$:ssa. NÃ¤mÃ¤ tosiasiat yhdessÃ¤ merkitsevÃ¤t, ettÃ¤ 
 $(\Rkaksi_0,+,\cdot)$ on itsekin kunta ja siis $(\Rkaksi,+,\cdot)$:n \pain{alikunta} 
-(vrt.\ Luku \ref{kunta}). Toisaalta havaitaan, että $\Rkaksi_0$:n ja  $\R$:n välinen ilmeinen
+(vrt.\ Luku \ref{kunta}). Toisaalta havaitaan, ettÃ¤ $\Rkaksi_0$:n ja  $\R$:n vÃ¤linen ilmeinen
 vastaavuus
 \[
 (x,0) \in \Rkaksi_0 \ \leftrightarrow \ x \in \R
 \]  
 ulottuu samanlaisena laskutoimituksiin: Jos $\Rkaksi_0$:ssa suoritetaan laskutoimitus kunnan 
-$(\Rkaksi,+,\cdot)$ säännöillä, niin tätä vastaa $(\R,+,\cdot)$:n laskutoimitus normaalissa 
+$(\Rkaksi,+,\cdot)$ sÃ¤Ã¤nnÃ¶illÃ¤, niin tÃ¤tÃ¤ vastaa $(\R,+,\cdot)$:n laskutoimitus normaalissa 
 reaalilukujen kunnassa. Esimerkiksi kertolasku
 \[
 (x_1,0) \cdot (x_2,0) = (x_1x_2,0)
 \]
-(sovellettu edellisen luvun sääntöä \eqref{kertolasku}) vastaa kertolaskua $\R$:ssä, kun 
-käytetään em.\ vastaavuusperiaatetta:
+(sovellettu edellisen luvun sÃ¤Ã¤ntÃ¶Ã¤ \eqref{kertolasku}) vastaa kertolaskua $\R$:ssÃ¤, kun 
+kÃ¤ytetÃ¤Ã¤n em.\ vastaavuusperiaatetta:
 \[
 \begin{array}{rccccc}
 \Rkaksi_0: &(x_1,0) &\cdot &(x_2,0) &= &(x_1x_2,0) \\
@@ -43,55 +43,55 @@ käytetään em.\ vastaavuusperiaatetta:
 \R: &x_1 &\cdot &x_2 &= &x_1x_2
 \end{array}
 \]
-Sama pätee yhteelaskulle, joten kunnilla $(\Rkaksi_0,+,\cdot)$ ja $(\R,+,\cdot)$ ei käytännön 
-laskennan kannalta ole mitään eroa. Tehdäänkin tämän perusteella kunnassa $(\Rkaksi,+,\cdot)$ 
+Sama pÃ¤tee yhteelaskulle, joten kunnilla $(\Rkaksi_0,+,\cdot)$ ja $(\R,+,\cdot)$ ei kÃ¤ytÃ¤nnÃ¶n 
+laskennan kannalta ole mitÃ¤Ã¤n eroa. TehdÃ¤Ã¤nkin tÃ¤mÃ¤n perusteella kunnassa $(\Rkaksi,+,\cdot)$ 
 samastussopimus
 \[ (x,0) = x \quad \forall x \in \R. \]
-Tällä sopimuksella reaalilukujen kunnasta $(\R,+,\cdot)$ tulee kunnan $(\Rkaksi,+,\cdot)$ 
-alikunta. Merkitään vielä $(0,1)=i$, 
-jolloin pätee
+TÃ¤llÃ¤ sopimuksella reaalilukujen kunnasta $(\R,+,\cdot)$ tulee kunnan $(\Rkaksi,+,\cdot)$ 
+alikunta. MerkitÃ¤Ã¤n vielÃ¤ $(0,1)=i$, 
+jolloin pÃ¤tee
 \begin{align*} 
 (x,y) = (x,0) + (0,y) &= (x,0) + (y,0)(0,1) \\
                       &= x + yi = x+iy. 
 \end{align*}
-Kunnan $(\Rkaksi,+,\cdot)$ kertolaskun määritelmän ja tehdyn samastussopimuksen mukaan on
+Kunnan $(\Rkaksi,+,\cdot)$ kertolaskun mÃ¤Ã¤ritelmÃ¤n ja tehdyn samastussopimuksen mukaan on
 \[ 
 i^2 = i \cdot i = (-1,0) = -1. 
 \]
-\begin{Def} \vahv{(Kompleksiluvut)} \label{kompleksilukujen määritelmä}
+\begin{Def} \vahv{(Kompleksiluvut)} \label{kompleksilukujen mÃ¤Ã¤ritelmÃ¤}
 \index{kompleksiluvut|emph} \index{imaginaariluku $i$|emph}
-Kompleksilukujen joukko $\C$ sisältää reaaliluvut ja lisäksi nk.\ \kor{imaginaariluvun} $i$,
+Kompleksilukujen joukko $\C$ sisÃ¤ltÃ¤Ã¤ reaaliluvut ja lisÃ¤ksi nk.\ \kor{imaginaariluvun} $i$,
 joka toteuttaa
 \[
 i^2=i \cdot i = -1 \in \R. 
 \]
-Kompleksiluvut ovat kunta $(\C,+,\cdot)$, missä jokaisella $z\in\C$ on yksikäsitteinen
+Kompleksiluvut ovat kunta $(\C,+,\cdot)$, missÃ¤ jokaisella $z\in\C$ on yksikÃ¤sitteinen
 esitysmuoto
 \[
 z=x+iy, \quad x,y \in \R.
 \]
 Erityisesti on $x+0i=x\in\R$ ja $0+1i=i$.
 \end{Def}
-Määritelmän mukaisesti $(\C,+,\cdot)$ syntyy reaalilukujen kunnan $(\R,+,\cdot)$ laajennuksena,
-kun lukujoukkoon $\R$ lisätään imaginaariluku $i$ ja huomioidaan kunnan perusaksiooma (K0)
+MÃ¤Ã¤ritelmÃ¤n mukaisesti $(\C,+,\cdot)$ syntyy reaalilukujen kunnan $(\R,+,\cdot)$ laajennuksena,
+kun lukujoukkoon $\R$ lisÃ¤tÃ¤Ã¤n imaginaariluku $i$ ja huomioidaan kunnan perusaksiooma (K0)
 --- vrt.\ Luvun \ref{kunta} Esimerkki \ref{muuan kunta}, jossa kuntaa $(\Q,+,\cdot)$ 
-laajennettiin vastaavalla tavalla lisäämällä luku $a=\sqrt{2}$. Luvulle $i$ asetettu ehto 
-$i^2=-1$ ei toteudu millekään $i\in\R$, joten $i$ on 'aidosti imaginaarinen' luku. 
-Osoitinkunnassa $(\Pkunta, + , \cdot)$ laskusääntöä $i^2=-1$ vastaa tulos
+laajennettiin vastaavalla tavalla lisÃ¤Ã¤mÃ¤llÃ¤ luku $a=\sqrt{2}$. Luvulle $i$ asetettu ehto 
+$i^2=-1$ ei toteudu millekÃ¤Ã¤n $i\in\R$, joten $i$ on 'aidosti imaginaarinen' luku. 
+Osoitinkunnassa $(\Pkunta, + , \cdot)$ laskusÃ¤Ã¤ntÃ¶Ã¤ $i^2=-1$ vastaa tulos
 \[
 \pti \cdot \pti = 1 \vkulma{\pi} = -(1 \vkulma{0}) = - \pointer{1}.
 \]
 
-Määritelmän \ref{kompleksilukujen määritelmä} perusteella kompleksiluvuilla voi operoida 
+MÃ¤Ã¤ritelmÃ¤n \ref{kompleksilukujen mÃ¤Ã¤ritelmÃ¤} perusteella kompleksiluvuilla voi operoida 
 jokseenkin normaalisti, eli reaalilukujen algebrasta tutulla tavalla. Normaalista poikkeaa
-vain laskusääntö $i^2=-1$. Laskennassa kompleksiluvun esitysmuotoja voi vaihdella vapaasti 
-edellisen luvun muunnossääntöjen puitteissa. Tavallisimmin käytetään joko Määritelmän 
+vain laskusÃ¤Ã¤ntÃ¶ $i^2=-1$. Laskennassa kompleksiluvun esitysmuotoja voi vaihdella vapaasti 
+edellisen luvun muunnossÃ¤Ã¤ntÃ¶jen puitteissa. Tavallisimmin kÃ¤ytetÃ¤Ã¤n joko MÃ¤Ã¤ritelmÃ¤n 
 \index{perusmuoto!bb@kompleksiluvun}%
-\ref{kompleksilukujen määritelmä} mukaista kompleksiluvun \kor{perusmuotoa}, tai sitten
-polaarimuotoa. Saman luvun eri esitysmuotojen välillä käytetään jatkossa joko
-vastaavuusmerkintää '$\vastaa$' tai, sikäli kuin luontevaa, yksinkertaisesti samastusta '$=$'.
+\ref{kompleksilukujen mÃ¤Ã¤ritelmÃ¤} mukaista kompleksiluvun \kor{perusmuotoa}, tai sitten
+polaarimuotoa. Saman luvun eri esitysmuotojen vÃ¤lillÃ¤ kÃ¤ytetÃ¤Ã¤n jatkossa joko
+vastaavuusmerkintÃ¤Ã¤ '$\vastaa$' tai, sikÃ¤li kuin luontevaa, yksinkertaisesti samastusta '$=$'.
 \begin{Exa} Saata kompleksiluku $(2+3i)\cdot(5-2i)$ perusmuotoon $x+iy$. \end{Exa}
-\ratk Määritelmän \ref{kompleksilukujen määritelmä} perusteella
+\ratk MÃ¤Ã¤ritelmÃ¤n \ref{kompleksilukujen mÃ¤Ã¤ritelmÃ¤} perusteella
 \[
 (2+3i)\cdot(5-2i) = 2\cdot 5 - 2\cdot 2i + 5\cdot 3i - 3\cdot 2\cdot i^2 = 16+11i. \loppu
 \]
@@ -127,8 +127,8 @@ z=x+iy \in \C \ \vastaa \ (x,y) \in \Rkaksi \ \vastaa \ r \vkulma{\varphi} \in \
               $\overline{z}=x-iy \ \vastaa \ (x,-y) \ \vastaa \ r \vkulma{-\varphi}\,$.
 \end{itemize}
 \end{Def}
-Kompleksiluvuilla laskettaessa seuraavia Määritelmään \ref{kompleksilukujen terminologiaa} 
-liittyviä kaavoja tarvitaan usein:
+Kompleksiluvuilla laskettaessa seuraavia MÃ¤Ã¤ritelmÃ¤Ã¤n \ref{kompleksilukujen terminologiaa} 
+liittyviÃ¤ kaavoja tarvitaan usein:
 \[ \boxed{ \begin{aligned}
 \quad\ykehys &\text{(1)} \qquad \overline{z_1+z_2} = \overline{z_1} + \overline{z_2} \\
              &\text{(2)} \qquad \overline{z_1z_2} = \overline{z_1}\,\,\overline{z_2} \\
@@ -140,11 +140,11 @@ liittyviä kaavoja tarvitaan usein:
                                                = 2i\,\text{Im} \, z \qquad\\
              &\text{(8)} \qquad \overline{\overline{z}} = z \akehys
            \end{aligned} } \]
-Nämä voi helposti perustella määritelmistä (kaavat (2)--(5) suorimmin polaarimuodosta). 
+NÃ¤mÃ¤ voi helposti perustella mÃ¤Ã¤ritelmistÃ¤ (kaavat (2)--(5) suorimmin polaarimuodosta). 
 
-\jatko \begin{Exa} (jatko) Esimerkissä laskettiin kompleksiluvun $z \neq 0$ käänteisluku 
-$z^{-1}$. Koska $z \neq 0\,\ekv\,\overline{z} \neq 0$, niin kaavaa (3) käyttäen voidaan
-päätellä myös seuraavasti:
+\jatko \begin{Exa} (jatko) EsimerkissÃ¤ laskettiin kompleksiluvun $z \neq 0$ kÃ¤Ã¤nteisluku 
+$z^{-1}$. Koska $z \neq 0\,\ekv\,\overline{z} \neq 0$, niin kaavaa (3) kÃ¤yttÃ¤en voidaan
+pÃ¤Ã¤tellÃ¤ myÃ¶s seuraavasti:
 \begin{align*}
            & zz^{-1} = 1 \\
 \ekv \quad &\overline{z}(zz^{-1}) = \overline{z} \\
@@ -152,21 +152,21 @@ päätellä myös seuraavasti:
 \ekv \quad &\abs{z}^2z^{-1} = \overline{z} \\
 \ekv \quad &z^{-1} = \abs{z}^{-2} \overline{z}.
 \end{align*}
-Tämä vastaa normaalia lavennusmenettelyä
+TÃ¤mÃ¤ vastaa normaalia lavennusmenettelyÃ¤
 \[
 z^{-1} = \frac{1}{a+ib} = \frac{(a - ib)}{(a+ib)(a-ib)} 
 = \frac{1}{a^2+b^2}(a-ib)\,.
 \]
-Vielä nopeampi on kuitenkin osoitinlasku:
+VielÃ¤ nopeampi on kuitenkin osoitinlasku:
 \[
 z = r \vkulma \varphi\ \impl\ z^{-1} = r^{-1} \vkulma{-\varphi} 
   = r^{-2}(r \vkulma{-\varphi}) = \abs{z}^{-2} \overline{z}. \loppu
 \]
 \end{Exa}
 \begin{Exa} Saata $z=(1+i)^7$ perusmuotoon $x+iy$. \end{Exa}
-\ratk Tässäkin polaariesitys on tehokkain: Koska
+\ratk TÃ¤ssÃ¤kin polaariesitys on tehokkain: Koska
 \[
-1+i = r \vkulma{\varphi}\,,\quad \text{missä}\ \quad r
+1+i = r \vkulma{\varphi}\,,\quad \text{missÃ¤}\ \quad r
     = \sqrt{1+1} = \sqrt{2}, \quad \varphi = \frac{\pi}{4}\,, \\
 \]
 niin
@@ -176,18 +176,18 @@ niin
           &=\ 8 \sqrt{2}\,(\cos\tfrac{\pi}{4} - i\,\sin\tfrac{\pi}{4}) \\[1mm]                
           &=\ 8(1-i). \loppu
 \end{align*}
-Kompleksialgebran kaavoista maininnan arvoinen on vielä
+Kompleksialgebran kaavoista maininnan arvoinen on vielÃ¤
 \index{de Moivren kaava}%
 \kor{de Moivren kaava}
 \[
 \boxed{\kehys\quad \text{(9)} \qquad (\cos \varphi + i \sin \varphi)^n 
                                         = \cos n \varphi + i \sin n \varphi. \quad}
 \]
-Tämä seuraa välittömästi, kun osoitinlaskennan tulos
+TÃ¤mÃ¤ seuraa vÃ¤littÃ¶mÃ¤sti, kun osoitinlaskennan tulos
 \[
 (1 \vkulma{\varphi})^n = 1 \vkulma{n \varphi}
 \]
-esitetään kompleksilukujen perusmuodossa.
+esitetÃ¤Ã¤n kompleksilukujen perusmuodossa.
 \begin{Exa} de Moivren kaavan ja binomikaavan mukaan
 \begin{align*}
 \cos 3 \varphi + i \sin 3 \varphi\ &=\ (\cos \varphi + i \sin \varphi)^3 \\
@@ -204,41 +204,41 @@ esitetään kompleksilukujen perusmuodossa.
 (vrt. Luvun \ref{trigonometriset funktiot} Esimerkki \ref{sin kolme alpha}). \loppu
 \end{Exa}
 
-\subsection*{Kolmioepäyhtälö $\C$:ssä}
-\index{kolmioepäyhtälö!e@kompleksilukujen|vahv}
+\subsection*{KolmioepÃ¤yhtÃ¤lÃ¶ $\C$:ssÃ¤}
+\index{kolmioepÃ¤yhtÃ¤lÃ¶!e@kompleksilukujen|vahv}
 
 Kompleksilukujen yhteenlasku on samanlainen operaatio kuin tason vektorien yhteenlasku, ja
-myös kompleksiluvun itseisarvo vastaa vektorin itseisarvoa. Tästä syystä kompleksiluvuille
-pätee myös samaa muotoa oleva kolmioepäyhtälö kuin vektoreille:
+myÃ¶s kompleksiluvun itseisarvo vastaa vektorin itseisarvoa. TÃ¤stÃ¤ syystÃ¤ kompleksiluvuille
+pÃ¤tee myÃ¶s samaa muotoa oleva kolmioepÃ¤yhtÃ¤lÃ¶ kuin vektoreille:
 \[
 \boxed{\kehys\quad \abs{\abs{z_1}-\abs{z_2}} \le \abs{z_1 + z_2} \leq \abs{z_1} + \abs{z_2}, 
                                                                  \quad z_1,z_2 \in \C. \quad}
 \]
 
-Kolmioepäyhtälö on hyvin keskeinen työkalu kompleksilukuihin perustuvassa matemaattisessa
-analyysissä eli \kor{kompleksianalyysissä}. Tyypillisenä esimerkkinä kolmioepäyhtälön käytöstä 
-tarkasteltakoon väittämää, joka koskee yleistä
+KolmioepÃ¤yhtÃ¤lÃ¶ on hyvin keskeinen tyÃ¶kalu kompleksilukuihin perustuvassa matemaattisessa
+analyysissÃ¤ eli \kor{kompleksianalyysissÃ¤}. TyypillisenÃ¤ esimerkkinÃ¤ kolmioepÃ¤yhtÃ¤lÃ¶n kÃ¤ytÃ¶stÃ¤ 
+tarkasteltakoon vÃ¤ittÃ¤mÃ¤Ã¤, joka koskee yleistÃ¤
 \index{kompleksimuuttujan!a@polynomi} \index{polynomi (kompleksimuuttujan)}%
 \kor{kompleksimuuttujan polynomia} muotoa
 \[
 p(z) = c_0 + c_1z + \cdots + c_nz^n = \sum_{k=0}^{n} c_k z^k, \quad c_n \neq 0. 
 \]
-Tässä siis $z \in \C$ on \kor{kompleksimuuttuja} ja myös luvut $c_k$, eli polynomin
+TÃ¤ssÃ¤ siis $z \in \C$ on \kor{kompleksimuuttuja} ja myÃ¶s luvut $c_k$, eli polynomin
 \index{kerroin (polynomin)} \index{aste (polynomin)}% 
 \kor{kertoimet}, ovat kompleksilukuja. Luku $n\in\N\cup\{0\}$ on polynomin \kor{aste}.
 
-Kun kompleksimuuttujan polynomiin sovelletaan kolmioepäyhtälöä sekä em.\ kaavoja (4),\,(5), 
-tullaan väittämään, jonka mukaan polynomin itseisarvo $\abs{p(z)}$ kasvaa riittävän suurilla 
+Kun kompleksimuuttujan polynomiin sovelletaan kolmioepÃ¤yhtÃ¤lÃ¶Ã¤ sekÃ¤ em.\ kaavoja (4),\,(5), 
+tullaan vÃ¤ittÃ¤mÃ¤Ã¤n, jonka mukaan polynomin itseisarvo $\abs{p(z)}$ kasvaa riittÃ¤vÃ¤n suurilla 
 $\abs{z}$:n arvoilla kvalitatiivisesti samalla tavoin kuin polynomin korkeimman asteisen
-termin itseisarvo, eli riittävän suurilla $\abs{z}$:n arvoilla
+termin itseisarvo, eli riittÃ¤vÃ¤n suurilla $\abs{z}$:n arvoilla
 \[ 
 \abs{p(z)} \sim \abs{c_n z^n} = \abs{c_n}\abs{z}^n 
 \]
-(tässä on käytetty kaavaa (4)). Väittämä voidaan muotoilla täsmällisemmin esim.\ seuraavasti
-(ks.\ myös Harj.teht.\,\ref{H-III-2: polynomin kasvu}):
+(tÃ¤ssÃ¤ on kÃ¤ytetty kaavaa (4)). VÃ¤ittÃ¤mÃ¤ voidaan muotoilla tÃ¤smÃ¤llisemmin esim.\ seuraavasti
+(ks.\ myÃ¶s Harj.teht.\,\ref{H-III-2: polynomin kasvu}):
 \begin{Prop} \label{polynomin kasvu} \vahv{(Polynomin kasvu)} Jos 
-$p(z) = \sum_{k=0}^{n} c_k z^k$, missä  $c_k \in \C$, $n \in \N$ ja $c_n \neq 0$, niin on
-olemassa $R \in \R_+\,$ siten, että pätee
+$p(z) = \sum_{k=0}^{n} c_k z^k$, missÃ¤  $c_k \in \C$, $n \in \N$ ja $c_n \neq 0$, niin on
+olemassa $R \in \R_+\,$ siten, ettÃ¤ pÃ¤tee
 \[
 \frac{1}{2}\abs{c_n}\abs{z}^n\,\le\,\abs{p(z)}\,\le\,\frac{3}{2}\abs{c_n}\abs{z}^n,\quad 
                                         \text{kun} \ z \in \C\ \text{ja}\ \abs{z} \ge R.
@@ -248,11 +248,11 @@ olemassa $R \in \R_+\,$ siten, että pätee
 \[
 p(z) = c_n z^n(1 + b_{n-1}z^{-1} + \cdots + b_0z^{-n}),
 \]
-missä $b_k = c_k / c_n$. Käyttämällä kolmioepäyhtälön ensimmäistä ja toista osaa muodoissa
+missÃ¤ $b_k = c_k / c_n$. KÃ¤yttÃ¤mÃ¤llÃ¤ kolmioepÃ¤yhtÃ¤lÃ¶n ensimmÃ¤istÃ¤ ja toista osaa muodoissa
 \[
 \abs{z_1+z_2} \ge \abs{z_1}-\abs{z_2}, \quad -\abs{z_1 + z_2} \geq - \abs{z_1} - \abs{z_2}
 \]
-sekä kaavoja (4),\,(5), päätellään
+sekÃ¤ kaavoja (4),\,(5), pÃ¤Ã¤tellÃ¤Ã¤n
 \begin{align*}
 \abs{p(z)} &=   \abs{c_n}\abs{z}^n \abs{1 + b_{n-1}z^{-1} + \cdots + b_0 z^{-n}} \\
            &\ge   \abs{c_n}\abs{z}^n (1 - \abs{b_{n-1}z^{-1} + \cdots + b_0 z^{-n}}) \\
@@ -264,18 +264,18 @@ Kun
 \[
 \abs{z} \geq \max \{1, \ 2(\abs{b_{n-1}} + \cdots + \abs{b_0}) \} = R,
 \]
-niin pätee
+niin pÃ¤tee
 \[
 \frac{\abs{b_{n-1}}}{\abs{z}} + \cdots + \frac{\abs{b_0}}{\abs{z}^n} \leq
 \frac{\abs{b_{n-1}} + \cdots + \abs{b_0}}{\abs{z}} \leq \frac{1}{2}\,,
 \]
-joten seuraa väittämän ensimmäinen osa:
+joten seuraa vÃ¤ittÃ¤mÃ¤n ensimmÃ¤inen osa:
 \[
 \abs{p(z)} \ge \frac{1}{2} \abs{c_n}\abs{z}^n, \quad \text{kun} \ \abs{z} \geq R.
 \]
-Jälkimmäinen osa seuraa vastaavasti soveltamalla kolmioepäyhtälön jälkimmäistä osaa. \loppu
+JÃ¤lkimmÃ¤inen osa seuraa vastaavasti soveltamalla kolmioepÃ¤yhtÃ¤lÃ¶n jÃ¤lkimmÃ¤istÃ¤ osaa. \loppu
 \begin{Exa} Jos $p(z) = z^5 -4i\,z^3 + 10z + (30+40i)$, niin em.\ todistuksen logiikkaa 
-seuraamalla nähdään, että
+seuraamalla nÃ¤hdÃ¤Ã¤n, ettÃ¤
 \begin{align*}
 \abs{p(z)} &\ge \abs{z}^5
                 \left(1 - \frac{\abs{5i}}{\abs{z}^2} - \frac{10}{\abs{z}^4} 
@@ -286,7 +286,7 @@ seuraamalla nähdään, että
                                                      - \frac{50}{\abs{z}}\right) \\
            &=   \abs{z}^5\left(1 - \frac{65}{\abs{z}}\right), \quad \text{kun}\ \abs{z} \ge 1.
 \end{align*}
-Vastaavasti päätellään, että $\abs{p(z)}\le\abs{z}^5(1+65\abs{z}^{-1})$, kun $\abs{z} \ge 1$,
+Vastaavasti pÃ¤Ã¤tellÃ¤Ã¤n, ettÃ¤ $\abs{p(z)}\le\abs{z}^5(1+65\abs{z}^{-1})$, kun $\abs{z} \ge 1$,
 joten seuraa
 \[
 \frac{1}{2}\abs{z}^5\,\le\,\abs{p(z)}\,\le\,\frac{3}{2}\abs{z}^5, \quad 
@@ -299,7 +299,7 @@ joten seuraa
 
 \item
 Muunna seuraavat kompleksiluvut perusmuotoon $x+iy$ annetusta osoitinmuodosta tai 
-osoitinmuotoon annetusta perusmuodosta. Käytä tarvittaessa likiarvoja.
+osoitinmuotoon annetusta perusmuodosta. KÃ¤ytÃ¤ tarvittaessa likiarvoja.
 \[
 \text{a)}\,\ \sqrt{2}\vkulma{-\tfrac{5\pi}{4}} \quad\
 \text{b)}\,\ \sqrt{3}-2i \quad\
@@ -314,17 +314,17 @@ b) \ $(1-i)(1+i\sqrt{3})^{-1} \quad$
 c) \ $(\sqrt{2}+1+i)^8$
 
 \item
-Laske itseisarvo ja vaihekulma käyttäen polaarimuotoa: \newline
+Laske itseisarvo ja vaihekulma kÃ¤yttÃ¤en polaarimuotoa: \newline
 a) \ $(1+i)^6 \quad$ 
 b) \ $(1-i\sqrt{3})(1-i)^2 \quad$
 c) \ $(2-2i)(\sqrt{3}+i)^{-2}$
 
 \item
-Olkoon $z=\tfrac{1}{2}(1+i\sqrt{3})$. Millä $n\in\Z$ pätee\, a) $z^n=z$, \ b) $z^n=-z$\,?
+Olkoon $z=\tfrac{1}{2}(1+i\sqrt{3})$. MillÃ¤ $n\in\Z$ pÃ¤tee\, a) $z^n=z$, \ b) $z^n=-z$\,?
 
 \item
-Kompleksilukujen itseisarvoille pätee $\abs{z_1 z_2}^2=\abs{z_1}^2\abs{z_2}^2$. Tarkista kaavan
-pätevyys suoraan kompleksilukujen perusmuodosta, eli kirjoittamalla \newline
+Kompleksilukujen itseisarvoille pÃ¤tee $\abs{z_1 z_2}^2=\abs{z_1}^2\abs{z_2}^2$. Tarkista kaavan
+pÃ¤tevyys suoraan kompleksilukujen perusmuodosta, eli kirjoittamalla \newline
 $z_1=x_1+iy_1\,, \ z_2=x_2+iy_2\,$.
 
 \item
@@ -333,26 +333,26 @@ a) $\sin 5x$:lle lauseke $\sin x$:n polynomina, \newline
 b) $\sin^5x$:lle lauseke muodossa $\,a\sin x+b\sin 3x+c\sin 5x,\ a,b,c\in\R$.
 
 \item
-Jos kompleksilukujen kunnassa on määritelty järjestysrelaatio, niin ensimmäisen
-järjestysaksiooman (J1) mukaan on oltava joko $i>0$, $i=0$ tai $i<0$. Päättele, että
-järjestysrelaatiota ei voi määritellä.
+Jos kompleksilukujen kunnassa on mÃ¤Ã¤ritelty jÃ¤rjestysrelaatio, niin ensimmÃ¤isen
+jÃ¤rjestysaksiooman (J1) mukaan on oltava joko $i>0$, $i=0$ tai $i<0$. PÃ¤Ã¤ttele, ettÃ¤
+jÃ¤rjestysrelaatiota ei voi mÃ¤Ã¤ritellÃ¤.
 
 \item
-Määritä jokin $R$ siten, että pätee
+MÃ¤Ã¤ritÃ¤ jokin $R$ siten, ettÃ¤ pÃ¤tee
 \[
 \abs{z}^5\,\le\,\abs{2z^5+1000z^4-10^4(3+4i)}\,\le\,3\abs{z}^5, \quad 
                                                                     \text{kun} \abs{z} \ge R.
 \]
 
 \item (*)
-Todista, että kaikilla $z_1,z_2\in\C$ pätee $(1+\abs{z_1}^2)(1+\abs{z_2}^2)\ge\abs{1+z_1z_2}^2$.
+Todista, ettÃ¤ kaikilla $z_1,z_2\in\C$ pÃ¤tee $(1+\abs{z_1}^2)(1+\abs{z_2}^2)\ge\abs{1+z_1z_2}^2$.
 
 \item (*) \label{H-III-2: polynomin kasvu}
-Näytä, että Propositon \ref{polynomin kasvu} oletuksin on olemassa $R\in\R_+$ siten, että
+NÃ¤ytÃ¤, ettÃ¤ Propositon \ref{polynomin kasvu} oletuksin on olemassa $R\in\R_+$ siten, ettÃ¤
 \[
 0.999\abs{c_n}\abs{z}^n\,\le\,\abs{p(z)}\,\le\,1.001\abs{c_n}\abs{z}^n,\quad 
                                         \text{kun} \ z \in \C\ \text{ja}\ \abs{z} \ge R.
 \]
-Millaisesta vielä yleisemmästä väittämästä tämä on erikoistapaus?
+Millaisesta vielÃ¤ yleisemmÃ¤stÃ¤ vÃ¤ittÃ¤mÃ¤stÃ¤ tÃ¤mÃ¤ on erikoistapaus?
 
 \end{enumerate}

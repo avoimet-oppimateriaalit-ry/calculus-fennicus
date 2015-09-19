@@ -3,8 +3,8 @@
 \index{Stokesin lause|vahv}
 
 Tarkastellaan aluksi tason perusaluetta $A$ (ks.\ Luku \ref{gaussin lause}) ja $A$:ssa
-m‰‰ritelty‰ vektorikentt‰‰ $\vec F(x,y)=F_1(x,y)\vec i + F_2(x,y)\vec j$. Kun tulkitaan $\vec F$
-avaruuden vektorikent‰ksi, niin $\vec F$:n roottori on
+m√§√§ritelty√§ vektorikentt√§√§ $\vec F(x,y)=F_1(x,y)\vec i + F_2(x,y)\vec j$. Kun tulkitaan $\vec F$
+avaruuden vektorikent√§ksi, niin $\vec F$:n roottori on
 (vrt.\ Luku \ref{divergenssi ja roottori})
 \[
 \nabla\times\vec F
@@ -16,8 +16,8 @@ joten Greenin tasokaavojen (ks.\ Luku \ref{gaussin lause}) perusteella
 \int_A \text{rot}\,\vec F\,dxdy &= \int_{\partial A} (-n_yF_1+n_xF_2)\,ds \\
 &= \int_{\partial A} \vec t\cdot\vec F\,ds,
 \end{align*}
-miss‰ $\vec t$ on reunan tangenttivektori suunnistettuna kuvan mukaisesti, eli $\vec t$ osoittaa
-oikealle reunan ulkonormaalin suunnalta katsottuna. T‰t‰ sanotaan reunan 
+miss√§ $\vec t$ on reunan tangenttivektori suunnistettuna kuvan mukaisesti, eli $\vec t$ osoittaa
+oikealle reunan ulkonormaalin suunnalta katsottuna. T√§t√§ sanotaan reunan 
 \index{positiivinen suunnistus!b@reunan}%
 \kor{positiiviseksi suunnistukseksi}.
 \begin{figure}[H]
@@ -27,70 +27,70 @@ oikealle reunan ulkonormaalin suunnalta katsottuna. T‰t‰ sanotaan reunan
 \end{figure}
 \index{kiertointegraali} \index{polkuintegraali!c@kiertointegraali}%
 Integraalia yli $\partial A$:n, em. tavalla laskettuna, sanotaan \kor{kiertointegraaliksi}
-ja merkit‰‰n symbolilla $\oint_{\partial A}$. Huomioiden, ett‰
+ja merkit√§√§n symbolilla $\oint_{\partial A}$. Huomioiden, ett√§
 (vrt.\ Luku \ref{polkuintegraalit})
 \[
 \vec t\,ds=d\vec r
 \] 
-n‰hd‰‰n, ett‰ kiertointegraali on yhdistelm‰ polkuintegraaleja (itse asiassa tyˆintegraaleja),
-joissa kukin reunan $\partial A$ erillinen osa kierret‰‰n suunnistuksen m‰‰r‰‰m‰ll‰ tavalla.
-Tulos mainituin merkinnˆin on siis
+n√§hd√§√§n, ett√§ kiertointegraali on yhdistelm√§ polkuintegraaleja (itse asiassa ty√∂integraaleja),
+joissa kukin reunan $\partial A$ erillinen osa kierret√§√§n suunnistuksen m√§√§r√§√§m√§ll√§ tavalla.
+Tulos mainituin merkinn√∂in on siis
 \begin{equation} \label{Stokesin tasokaava}
 \int_A \text{rot}\,\vec F\,dxdy=\oint_{\partial A} \vec F\cdot d\vec r.
 \end{equation}
 
-Olkoon seuraavaksi $\vec F$ avaruuden vektorikentt‰ ja $A$ perusalue avaruustasolla $T$.
-Valitaan karteesinen koordinaatisto siten, ett‰ $T$ on $xy$-taso ja kirjoitetaan t‰ss‰ 
+Olkoon seuraavaksi $\vec F$ avaruuden vektorikentt√§ ja $A$ perusalue avaruustasolla $T$.
+Valitaan karteesinen koordinaatisto siten, ett√§ $T$ on $xy$-taso ja kirjoitetaan t√§ss√§ 
 koordinaatistossa $\vec F=F_1\vec i+F_2\vec j+F_3\vec k$ ja 
-$\text{rot}\vec F=\partial_x F_2-\partial_y F_1$. T‰llˆin n‰hd‰‰n, ett‰ integraalikaava 
-\eqref{Stokesin tasokaava} s‰ilytt‰‰ p‰tevyytens‰, koska kaavassa oikealla puolella
+$\text{rot}\vec F=\partial_x F_2-\partial_y F_1$. T√§ll√∂in n√§hd√§√§n, ett√§ integraalikaava 
+\eqref{Stokesin tasokaava} s√§ilytt√§√§ p√§tevyytens√§, koska kaavassa oikealla puolella
 on $d\vec r\cdot\vec k=0$, jolloin $\vec F \cdot d\vec r = (F_1\vec i+F_2\vec j) \cdot d\vec r$.
-Koska kaavassa vasemmalla puolella voidaan myˆs kirjoittaa 
-$\,\text{rot}\vec F=(\nabla\times\vec F)\cdot\vec k$, niin voidaan vet‰‰ yleisempi johtop‰‰tˆs:
-Jos $\vec F$ on jatkuvasti derivoituva avaruuden vektorikentt‰ ja $A$ on perusalue
-avaruustasolla, jonka yksikkˆnormaalivektori on $\vec n$, niin p‰tee integraalikaava
+Koska kaavassa vasemmalla puolella voidaan my√∂s kirjoittaa 
+$\,\text{rot}\vec F=(\nabla\times\vec F)\cdot\vec k$, niin voidaan vet√§√§ yleisempi johtop√§√§t√∂s:
+Jos $\vec F$ on jatkuvasti derivoituva avaruuden vektorikentt√§ ja $A$ on perusalue
+avaruustasolla, jonka yksikk√∂normaalivektori on $\vec n$, niin p√§tee integraalikaava
 \begin{equation} \label{Stokesin avaruustasokaava}
 \int_A (\nabla\times\vec F)\cdot\vec n\,dS = \oint_{\partial A} \vec F\cdot d\vec r.
 \end{equation}
-T‰ss‰ on normaalin $\vec n$ suunta ja reunan $\partial A$ suunnistus sidottava toisiinsa siten,
-ett‰ kun reunaviivaa katsellaan normaalin $\vec n$ osoittamalta puolelta, niin tilanne on kuvan
+T√§ss√§ on normaalin $\vec n$ suunta ja reunan $\partial A$ suunnistus sidottava toisiinsa siten,
+ett√§ kun reunaviivaa katsellaan normaalin $\vec n$ osoittamalta puolelta, niin tilanne on kuvan
 mukainen.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvapot-12.pstex_t}
 \end{center}
 \end{figure}
-Kaava \eqref{Stokesin avaruustasokaava} on erikoistapaus viel‰kin yleisemm‰st‰ tuloksesta,
+Kaava \eqref{Stokesin avaruustasokaava} on erikoistapaus viel√§kin yleisemm√§st√§ tuloksesta,
 joka tunnetaan \linebreak \kor{Stokesin\footnote[2]{\vahv{Sir George Gabriel Stokes} 
 (1819-1903) oli englantilainen fyysikko--matemaatikko. \index{Stokes, G. G.|av}} lauseen}
-nimell‰. Stokesin lauseen mukaan kaava \eqref{Stokesin avaruustasokaava} on tietyin edellytyksin
-yleistett‰viss‰ koskemaan myˆs avaruuden kaarevia pintoja. T‰m‰ yleisempi tulos on
+nimell√§. Stokesin lauseen mukaan kaava \eqref{Stokesin avaruustasokaava} on tietyin edellytyksin
+yleistett√§viss√§ koskemaan my√∂s avaruuden kaarevia pintoja. T√§m√§ yleisempi tulos on
 integraalikaava (Stokesin kaava)
 \begin{equation} \label{Stokesin avaruuskaava}
 \boxed{\quad \int_A (\nabla\times\vec F)\cdot d\vec a
                               =\oint_{\partial A} \vec F\cdot d\vec r. \quad}
 \end{equation}
-T‰ss‰ $\vec F$ on avaruuden vektorikentt‰, $A$ on (riitt‰v‰n s‰‰nnˆllisen muotoinen) alue
-avaruuden (riitt‰v‰n s‰‰nnˆllisell‰) pinnalla $S$ ja $d\vec a=\vec n\,dS$, miss‰ $dS$
-viittaa $S$:n pinta-alamittaan ja $\vec n=$ pinnan yksikkˆnormaalivektori.
+T√§ss√§ $\vec F$ on avaruuden vektorikentt√§, $A$ on (riitt√§v√§n s√§√§nn√∂llisen muotoinen) alue
+avaruuden (riitt√§v√§n s√§√§nn√∂llisell√§) pinnalla $S$ ja $d\vec a=\vec n\,dS$, miss√§ $dS$
+viittaa $S$:n pinta-alamittaan ja $\vec n=$ pinnan yksikk√∂normaalivektori.
 
-Kaavassa \eqref{Stokesin avaruuskaava} edellytet‰‰n, ett‰ pinnan normaali $\vec n$ ja
-reunaviivan $\partial A$ suunnistus on sidottu toisiinsa edell‰ kuvatulla tavalla.
-T‰llaisen suunnistuksen j‰rjest‰minen ei ole ongelma siin‰ tapauksessa, ett‰ $A$ on
-avaruustasolla. Avaruuden kaarevilla pinnoilla voi kuitenkin ongelmia tulla, ja yleisess‰
+Kaavassa \eqref{Stokesin avaruuskaava} edellytet√§√§n, ett√§ pinnan normaali $\vec n$ ja
+reunaviivan $\partial A$ suunnistus on sidottu toisiinsa edell√§ kuvatulla tavalla.
+T√§llaisen suunnistuksen j√§rjest√§minen ei ole ongelma siin√§ tapauksessa, ett√§ $A$ on
+avaruustasolla. Avaruuden kaarevilla pinnoilla voi kuitenkin ongelmia tulla, ja yleisess√§
 Stokesin lauseessa pintaa $A$ onkin rajoitettava geometrisella ehdolla: Pinnan on oltava
 \index{suunnistuva pinta}%
 oletetulla tavalla \kor{suunnistuva}. Tarkastellaan asiaa esimerkkien valossa.
 
 \begin{multicols}{2} \raggedcolumns
 \begin{Exa} Puolipallo on suunnistuva (vrt.\ kuvio), joten Stokesin kaava
-\eqref{Stokesin avaruuskaava} on sille p‰tev‰. Kaavan voi myˆs todistaa pallokoordinaatteja
-k‰ytt‰en: Olkoon pallo $R$-s‰teinen ja
+\eqref{Stokesin avaruuskaava} on sille p√§tev√§. Kaavan voi my√∂s todistaa pallokoordinaatteja
+k√§ytt√§en: Olkoon pallo $R$-s√§teinen ja
 \[
 \vec F=F(r,\theta,\varphi)\vec e_r+F_\theta(r,\theta,\varphi)\vec e_\theta
                                   +F_\varphi(r,\theta,\varphi)\vec e_\varphi.
 \]
-T‰llˆin (vrt.\ Luku \ref{divergenssi ja roottori})
+T√§ll√∂in (vrt.\ Luku \ref{divergenssi ja roottori})
 \[
 \nabla\times\vec F=\frac{1}{r\sin\theta}[\partial_\theta(\sin\theta\,F_\varphi)
                   -\partial_\varphi F_\theta]\vec e_r
@@ -119,23 +119,23 @@ joten kun valitaan $\vec n=\vec e_r$ (toinen vaihtoehto olisi $\vec n=-\vec e_r$
 \end{align*}
 Reunaviivalla $\partial A$ on $\,\theta=\frac{\pi}{2}\,$ ja
 $\,\vec F\cdot d\vec r=\vec F\cdot (R\,d\varphi\,\vec e_\varphi)=RF_\varphi\,d\varphi$,
-joten todetaan kaava \eqref{Stokesin avaruuskaava} p‰tev‰ksi puolipallolle. \loppu
+joten todetaan kaava \eqref{Stokesin avaruuskaava} p√§tev√§ksi puolipallolle. \loppu
 
 %\pagebreak
 \begin{Exa} Toisessa esimerkkitapauksessa tarkastellaan pintaa, joka saadaan poistamalla
-suorakulmaisen s‰rmiˆn ulkopinnasta kaksi vierekk‰ist‰ sivutahkoa, vrt.\ kuvio.
+suorakulmaisen s√§rmi√∂n ulkopinnasta kaksi vierekk√§ist√§ sivutahkoa, vrt.\ kuvio.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvapot-14.pstex_t}
 \end{center}
 \end{figure}
-T‰ss‰ tapauksessa pinta koostuu tasopinnoista $A_i$, joille kullekin p‰tee Stokesin kaava
+T√§ss√§ tapauksessa pinta koostuu tasopinnoista $A_i$, joille kullekin p√§tee Stokesin kaava
 \eqref{Stokesin avaruuskaava}, eli
 \[
 \int_{A_i} (\nabla\times\vec F)\cdot d\vec a=\oint_{\partial A_i} \vec F\cdot d\vec r.
 \]
-Kun normaalin suunta jokaisella osalla valitaan osoittamaan s‰rmiˆn ulkopuolelle, niin n‰hd‰‰n,
-ett‰
+Kun normaalin suunta jokaisella osalla valitaan osoittamaan s√§rmi√∂n ulkopuolelle, niin n√§hd√§√§n,
+ett√§
 \begin{align*}
 \int_A (\nabla\times\vec F)\cdot d\vec a 
 &= \sum_{i} \int_{A_i} (\nabla\times\vec F)\cdot d\vec a \\
@@ -143,9 +143,9 @@ ett‰
 &= \int_{\partial A} \vec F\cdot d\vec r,
 \end{align*}
 \begin{multicols}{2} \raggedcolumns
-\parbox{5cm}{sill‰ viivaintegraalit osien yhteisten s‰rmien $\partial A_i\cap\partial A_j$ yli
+\parbox{5cm}{sill√§ viivaintegraalit osien yhteisten s√§rmien $\partial A_i\cap\partial A_j$ yli
 kumoutuvat summauksessa, vrt.\ kuvio. Siis kaava \eqref{Stokesin avaruuskaava} on
-p‰tev‰ t‰ss‰kin tapauksessa. Samaan tulokseen tultaisiin myˆs poistamalla s‰rmiˆst‰ mitk‰
+p√§tev√§ t√§ss√§kin tapauksessa. Samaan tulokseen tultaisiin my√∂s poistamalla s√§rmi√∂st√§ mitk√§
 sivutahkot tahansa (1--5 kpl). \loppu}
 \begin{figure}[H]
 \begin{center}
@@ -154,8 +154,8 @@ sivutahkot tahansa (1--5 kpl). \loppu}
 \end{figure}
 \end{multicols}
 \end{Exa}
-\begin{Exa} Kolmantena esimerkkin‰ tarkastellaan pintaa, joka saadaan lieriˆvaipasta
-leikkaamalla vaippa poikki, kiert‰m‰ll‰ toista p‰‰t‰ $180\aste$, ja liitt‰m‰ll‰ p‰‰t j‰lleen
+\begin{Exa} Kolmantena esimerkkin√§ tarkastellaan pintaa, joka saadaan lieri√∂vaipasta
+leikkaamalla vaippa poikki, kiert√§m√§ll√§ toista p√§√§t√§ $180\aste$, ja liitt√§m√§ll√§ p√§√§t j√§lleen
 yhteen.
 \begin{figure}[H]
 \begin{center}
@@ -163,60 +163,60 @@ yhteen.
 \end{center}
 \end{figure}
 %\epsfig{file=kuvat/sylvaippa.eps} $\hookrightarrow$ \epsfig{file=kuvat/moebius.eps}
-\index{Mzz@Mˆbiuksen nauha}%
-Tuloksena oleva pinta on nk. \kor{Mˆbiuksen nauha}\footnote[2]{\hist{August Mˆbius} (1790--1868)
-oli saksalainen matemaatikko. \index{Mzz@Mˆbius, A.|av}}. Mˆbiuksen nauhalle Stokesin kaava
-\eqref{Stokesin avaruuskaava} \pain{ei} ole p‰tev‰. Sen sijaan kaava on kyll‰ voimassa, jos
-liitossauma j‰tet‰‰n avoimeksi ja viivaintegraalit sauman kummallakin puolella huomioidaan
-kaavassa \eqref{Stokesin avaruuskaava}. Mˆbiuksen nauhan tapauksessa n‰m‰ saumaintegraalit
-lasketaan samansuuntaisina, jolloin ne eiv‰t saumaa yhteen liitett‰ess‰ kumoudu, toisin kuin
-lieriˆpinnan tapauksessa, vrt.\ kuvio.
+\index{Mzz@M√∂biuksen nauha}%
+Tuloksena oleva pinta on nk. \kor{M√∂biuksen nauha}\footnote[2]{\hist{August M√∂bius} (1790--1868)
+oli saksalainen matemaatikko. \index{Mzz@M√∂bius, A.|av}}. M√∂biuksen nauhalle Stokesin kaava
+\eqref{Stokesin avaruuskaava} \pain{ei} ole p√§tev√§. Sen sijaan kaava on kyll√§ voimassa, jos
+liitossauma j√§tet√§√§n avoimeksi ja viivaintegraalit sauman kummallakin puolella huomioidaan
+kaavassa \eqref{Stokesin avaruuskaava}. M√∂biuksen nauhan tapauksessa n√§m√§ saumaintegraalit
+lasketaan samansuuntaisina, jolloin ne eiv√§t saumaa yhteen liitett√§ess√§ kumoudu, toisin kuin
+lieri√∂pinnan tapauksessa, vrt.\ kuvio.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvapot-17.pstex_t}
 \end{center}
 \end{figure}
-Mˆbiuksen nauha on siis erimerkki ei--suunnistuvasta pinnasta, jolle Stokesin kaava 
-\eqref{Stokesin avaruuskaava} ei p‰de. Mˆbiuksen nauha on itse asiassa
+M√∂biuksen nauha on siis erimerkki ei--suunnistuvasta pinnasta, jolle Stokesin kaava 
+\eqref{Stokesin avaruuskaava} ei p√§de. M√∂biuksen nauha on itse asiassa
 \index{yksipuolinen pinta}%
 \kor{yksipuolinen} pinta, jolla normaalin $\vec n$ suuntaa ei voida valita ristiriidattomasti
-niin, ett‰ se muuttuisi jatkuvasti pintaa pitkin kuljettaessa.
-(Jos pinta leikataan auki, niin liimauskohdassa normaali on ep‰jatkuva.) \loppu
+niin, ett√§ se muuttuisi jatkuvasti pintaa pitkin kuljettaessa.
+(Jos pinta leikataan auki, niin liimauskohdassa normaali on ep√§jatkuva.) \loppu
 \end{Exa}
 
 Stokesin lause voidaan yksinkertaisen pinnan tapauksessa todistaa pinnan parametrisaatiota
-k‰ytt‰en, mutta todistus on t‰llˆin melko tekninen ja vaatii suhteellisen voimakkaita
-s‰‰nnˆllisyysoletuksia. L‰pin‰kyv‰mpi ja yleisp‰tev‰mpi todistus saadaan, kun pintaa
+k√§ytt√§en, mutta todistus on t√§ll√∂in melko tekninen ja vaatii suhteellisen voimakkaita
+s√§√§nn√∂llisyysoletuksia. L√§pin√§kyv√§mpi ja yleisp√§tev√§mpi todistus saadaan, kun pintaa
 approksimoidaan kolmion muotoisilla tasopinnoilla, samalla tavoin kuin pinta-alamitan
-m‰‰rittelyss‰ (vrt. Luku \ref{pintaintegraalit}). Koska Stokesin tasokaava p‰tee jokaiselle
-tasokolmiopinnalle, seuraa summaamalla, ett‰ Stokesin kaava \eqref{Stokesin avaruuskaava}
-p‰tee myˆs kolmioista muodostetulle pinnan $A$ approksimaatiolle --- edellytt‰en, ett‰
-summauksessa viivaintegraalit yli vierekk‰isten kolmioiden yhteisten sivujen kumoutuvat.
-Suunnistuvuusehto on juuri t‰ss‰. Sik‰li kuin pinta on suunnistuva, saadaan kolmioverkkoa
-tihent‰m‰ll‰ raja-arvotulos \eqref{Stokesin avaruuskaava} edellytt‰en, ett‰ vektorikentt‰
-$\vec F$, pinta $A$ (pinnan parametrisaatio), ja reunaviiva $\partial A$ ovat riitt‰v‰n
-s‰‰nnˆllisi‰. Vektorikent‰n osalta riitt‰‰, ett‰ se on jatkuvasti derivoituva
-(todellisuudessa riitt‰‰ hieman v‰hempikin), eiv‰tk‰ pintaa $A$ koskevat olettamuksetkaan ole
-k‰yt‰nnˆn kannalta kovin rajoittavia, vrt.\ esimerkit edell‰.
+m√§√§rittelyss√§ (vrt. Luku \ref{pintaintegraalit}). Koska Stokesin tasokaava p√§tee jokaiselle
+tasokolmiopinnalle, seuraa summaamalla, ett√§ Stokesin kaava \eqref{Stokesin avaruuskaava}
+p√§tee my√∂s kolmioista muodostetulle pinnan $A$ approksimaatiolle --- edellytt√§en, ett√§
+summauksessa viivaintegraalit yli vierekk√§isten kolmioiden yhteisten sivujen kumoutuvat.
+Suunnistuvuusehto on juuri t√§ss√§. Sik√§li kuin pinta on suunnistuva, saadaan kolmioverkkoa
+tihent√§m√§ll√§ raja-arvotulos \eqref{Stokesin avaruuskaava} edellytt√§en, ett√§ vektorikentt√§
+$\vec F$, pinta $A$ (pinnan parametrisaatio), ja reunaviiva $\partial A$ ovat riitt√§v√§n
+s√§√§nn√∂llisi√§. Vektorikent√§n osalta riitt√§√§, ett√§ se on jatkuvasti derivoituva
+(todellisuudessa riitt√§√§ hieman v√§hempikin), eiv√§tk√§ pintaa $A$ koskevat olettamuksetkaan ole
+k√§yt√§nn√∂n kannalta kovin rajoittavia, vrt.\ esimerkit edell√§.
 
-Stokesin lauseella, kuten Gaussin lauseellakin, on useampiulotteiset vastineensa. N‰m‰ kuuluvat
-matematiikan alaan nimelt‰ \kor{differentiaaligeometria}. T‰llaisiin laajempiin yhteyksiin
-sijoittuu luontevimmin myˆs Stokesin lauseen tarkempi todistus, joka t‰ss‰ sivuutetaan.
+Stokesin lauseella, kuten Gaussin lauseellakin, on useampiulotteiset vastineensa. N√§m√§ kuuluvat
+matematiikan alaan nimelt√§ \kor{differentiaaligeometria}. T√§llaisiin laajempiin yhteyksiin
+sijoittuu luontevimmin my√∂s Stokesin lauseen tarkempi todistus, joka t√§ss√§ sivuutetaan.
 \begin{Exa}
-Kappale liikkuu voimakent‰ss‰
+Kappale liikkuu voimakent√§ss√§
 \[
 \vec F=\frac{F}{a}\,(y\,\vec i-2z\,\vec j+3x\,\vec k\,)
 \]
-pitkin ympyr‰rataa, joka on pallopinnan $x^2+y^2+z^2=a^2$ ja tason $x+y+z=0$ leikkausviiva. 
-M‰‰rit‰ Stokesin lauseen avulla voimakent‰n tekem‰ tyˆ yhden kierroksen aikana, kun
-kiertosuunta on pisteest‰ $(10,10,10)$ katsottuna myˆt‰p‰iv‰‰n.
+pitkin ympyr√§rataa, joka on pallopinnan $x^2+y^2+z^2=a^2$ ja tason $x+y+z=0$ leikkausviiva. 
+M√§√§rit√§ Stokesin lauseen avulla voimakent√§n tekem√§ ty√∂ yhden kierroksen aikana, kun
+kiertosuunta on pisteest√§ $(10,10,10)$ katsottuna my√∂t√§p√§iv√§√§n.
 \end{Exa}
-\ratk Kappaleen liikerata on $\partial A$, miss‰ $A$ on origokeskinen, $a$-s‰teinen kiekko
+\ratk Kappaleen liikerata on $\partial A$, miss√§ $A$ on origokeskinen, $a$-s√§teinen kiekko
 tasolla $x+y+z=0$. Stokesin lauseen mukaan
 \[
 W=\oint_{\partial A} \vec F\cdot d\vec r=\int_A (\nabla\times\vec F)\cdot\vec n\,dS.
 \]
-T‰ss‰ on
+T√§ss√§ on
 \[
 \nabla\times\vec F
 =\frac{F}{a} \left|\begin{array}{ccc} 
@@ -234,23 +234,23 @@ W = \int_A \frac{2F}{\sqrt{3}\,a}\,dS = \frac{2F}{\sqrt{3}\,a}\mu(A)
 \subsection*{Yleistetty Stokesin lause}
 \index{Stokesin lause!a@yleistetty|vahv}
 
-Kuten Gaussin lause, voidaan myˆs Stokesin lause yleist‰‰ niin, ett‰ pistetulon tilalla voi olla
+Kuten Gaussin lause, voidaan my√∂s Stokesin lause yleist√§√§ niin, ett√§ pistetulon tilalla voi olla
 yleisempi vektoritulo, eli joko ristitulo tai skalaarin ja vektorin kertolasku. Yleistetty
 Stokesin kaava on
 \[
 \boxed{\quad \oint_{\partial A} d\vec r\ast\vec F=\int_A (d\vec a\times\nabla)\ast\vec F. \quad}
 \]
-T‰ss‰ on j‰lleen asetettava $\vec F\hookrightarrow f$, kun $\ast=$ `tyhj‰'. Yleistetty kaava
-p‰tee samanlaisin edellytyksin kuin peruskaava \eqref{Stokesin avaruuskaava}, ja sen voi myˆs 
-perustella samaan tapaan kuin edell‰, eli l‰htem‰ll‰ kaavan tasomuodosta.
+T√§ss√§ on j√§lleen asetettava $\vec F\hookrightarrow f$, kun $\ast=$ `tyhj√§'. Yleistetty kaava
+p√§tee samanlaisin edellytyksin kuin peruskaava \eqref{Stokesin avaruuskaava}, ja sen voi my√∂s 
+perustella samaan tapaan kuin edell√§, eli l√§htem√§ll√§ kaavan tasomuodosta.
 
 \Harj
 \begin{enumerate}
 
 \item 
 Olkoon $A=\{(x,y)\in \R^2 \mid x^2+y^2 \le 1\,\ja\,x \ge 0\}$. Laske seuraavat kiertointegraalit
-yli $\partial A$:n (vastap‰iv‰‰n kiert‰en) sek‰ suoraan viivaintegraaleina ett‰ muuntamalla ne
-ensin tasointegraaleiksi (yleistetty‰) Stokesin kaavaa k‰ytt‰en. \vspace{1mm}\newline
+yli $\partial A$:n (vastap√§iv√§√§n kiert√§en) sek√§ suoraan viivaintegraaleina ett√§ muuntamalla ne
+ensin tasointegraaleiksi (yleistetty√§) Stokesin kaavaa k√§ytt√§en. \vspace{1mm}\newline
 a) \ $\oint_{\partial A} \left[\,y^2\,dx+(x+y^2)\,dy\,\right] \qquad$
 b) \ $\oint_{\partial A} (x+y^2)\,d\vec r$ \newline
 c) \ $\oint_{\partial A} (xy^2\vec i+\abs{y}\vec j\,) \cdot d\vec r \qquad\qquad$
@@ -262,27 +262,27 @@ b) Stokesin lauseen avulla, kun $\vec F=x\vec k$ ja $A \subset S$ vastaa
 parametrien arvoja $(u,v)\in [0,1]\times[0,3]$ pinnalla $\,S:\ x=8u^2,\ y=v^2,\ z=4uv$.
 
 \item
-N‰yt‰ Stokesin lauseen avulla, ett‰ jos $S$ on pallon $K:\,x^2+y^2+z^2=R^2$ ja tason 
-$T:\,x+y+z=0$ leikkausk‰yr‰, niin $\oint_S (y\,dx+z\,dy+x\,dz)=\pm\sqrt{3}\pi R^2$.
+N√§yt√§ Stokesin lauseen avulla, ett√§ jos $S$ on pallon $K:\,x^2+y^2+z^2=R^2$ ja tason 
+$T:\,x+y+z=0$ leikkausk√§yr√§, niin $\oint_S (y\,dx+z\,dy+x\,dz)=\pm\sqrt{3}\pi R^2$.
 
 \item
 Laske pintaintegraali $\int_A \nabla\times(\vec k\times\vec r\,) \cdot d\vec a$, kun $S$, 
-$A \subset S$ ja $S$:n yksikkˆnormaalivektorin $\vec n=n_x\vec i+n_y\vec j+n_z\vec k$
+$A \subset S$ ja $S$:n yksikk√∂normaalivektorin $\vec n=n_x\vec i+n_y\vec j+n_z\vec k$
 suunta on annettu seuraavilla ehdoilla. \vspace{1mm}\newline
 a) \ $S:\,z=0, \quad A:\,x^2+y^2 \le 1, \quad n_z \ge 0$ \newline
 b) \ $S:\,x^2+y^2+z^2=1, \quad A:\,z \ge 0, \quad n_z \ge 0$ \newline
 c) \ $S:\,x^2+y^2+z^2=1, \quad A:\,z \le 0, \quad n_z \le 0$
 
 \item
-Halutaan laskea kiertointegraali $\oint_S \vec F \cdot d\vec r$ yli suljetun k‰yr‰n
+Halutaan laskea kiertointegraali $\oint_S \vec F \cdot d\vec r$ yli suljetun k√§yr√§n
 $S:\,\vec r=\cos t\,\vec i+\sin t\,\vec j+\sin 2t\,\vec k,\ t\in[0,2\pi]$, kun
 $\vec F=(e^x-y^3)\vec i+(e^y+x^3)\vec j+e^z\vec k$. Laske integraali Stokesin kaavan avulla
-huomioimalla, ett‰ $S$ on pinnalla $z=2xy$.
+huomioimalla, ett√§ $S$ on pinnalla $z=2xy$.
 
 \item
-Olkoon $S$ lieriˆn $K:(x-1)^2+4y^2=16$ ja tason $T:2x+y+z=3$ \linebreak leikkausk‰yr‰ ja
+Olkoon $S$ lieri√∂n $K:(x-1)^2+4y^2=16$ ja tason $T:2x+y+z=3$ \linebreak leikkausk√§yr√§ ja
 $\vec F=[\sin(x^2)+y^2+z^2]\vec i+(2xy+z)\vec j+(xz+2yz)\vec k$. Laske \linebreak
-$\oint_S \vec F \cdot d\vec r$, kun $S$:n suunnistus on vastap‰iv‰‰n kaukaa positiiviselta
+$\oint_S \vec F \cdot d\vec r$, kun $S$:n suunnistus on vastap√§iv√§√§n kaukaa positiiviselta
 $z$-akselilta katsoen.
 
 \item
@@ -294,27 +294,27 @@ Laske Stokesin kaavan avulla pintaintegraali
 \[
 \int_{A} \nabla\times[(x-z^2)\vec i+(x^3+z)\vec j+xy\vec k] \cdot d\vec a,
 \]
-miss‰ $A$ on kartiopinnan $\,S:\,x^2+y^2=(z-1)^2$ tasojen $z=0$ ja $z=1$ v‰liin j‰‰v‰ osa.
+miss√§ $A$ on kartiopinnan $\,S:\,x^2+y^2=(z-1)^2$ tasojen $z=0$ ja $z=1$ v√§liin j√§√§v√§ osa.
 
 \item 
-S‰hkˆvirran tiheys $\vec J$ ja magneettikent‰n voimakkuus $\vec H$ ovat lieriˆkoordinaatistossa
-muotoa $\vec J= J(r)\vec e_z$, $\vec H = H(r)\vec e_\varphi$. M‰‰r‰‰ $H(r)$ funktion $J(r)$ 
-avulla k‰ytt‰m‰ll‰ Maxwellin yht‰lˆ‰ $\nabla\times\vec H = \vec J$ ja Stokesin kaavaa 
+S√§hk√∂virran tiheys $\vec J$ ja magneettikent√§n voimakkuus $\vec H$ ovat lieri√∂koordinaatistossa
+muotoa $\vec J= J(r)\vec e_z$, $\vec H = H(r)\vec e_\varphi$. M√§√§r√§√§ $H(r)$ funktion $J(r)$ 
+avulla k√§ytt√§m√§ll√§ Maxwellin yht√§l√∂√§ $\nabla\times\vec H = \vec J$ ja Stokesin kaavaa 
 sopivasti valitulla pinnalla $A$.
 
 \item
-N‰yt‰ yleistetty Stokesin kaava oikeaksi siin‰ tapauksessa, ett‰ $\vec F$ on avaruuden
-vektorikentt‰ ja $A \subset T$, miss‰ $T$ on avaruustaso.
+N√§yt√§ yleistetty Stokesin kaava oikeaksi siin√§ tapauksessa, ett√§ $\vec F$ on avaruuden
+vektorikentt√§ ja $A \subset T$, miss√§ $T$ on avaruustaso.
 
 \item
-Olkoon $S$ yksinkertainen suljettu k‰yr‰ avaruustasolla $T$, jonka yksikkˆnormaalivektori on
-$\vec n=a\vec i+b\vec j+c\vec k$. N‰yt‰, ett‰ $S$:n sis‰‰n j‰‰v‰n pinnan $A$ ala on
+Olkoon $S$ yksinkertainen suljettu k√§yr√§ avaruustasolla $T$, jonka yksikk√∂normaalivektori on
+$\vec n=a\vec i+b\vec j+c\vec k$. N√§yt√§, ett√§ $S$:n sis√§√§n j√§√§v√§n pinnan $A$ ala on
 \[
 \mu(A)=\frac{1}{2}\left|\oint_S \bigl[(bz-cy)dx+(cx-az)dy+(ay-bx)dz\bigr]\right|.
 \]
 
 \item
-M‰‰ritell‰‰n pinta $A$ parametrisaatiolla
+M√§√§ritell√§√§n pinta $A$ parametrisaatiolla
 \[
 A:\quad \begin{cases}
         \,x=\cos 2u(a+bv\sin nu), \\ \,y=\sin 2u(a+bv\sin nu), \\ \,z=bv\cos nu,
@@ -322,12 +322,12 @@ A:\quad \begin{cases}
 (u,v) \in \bigl[-\tfrac{\pi}{2},\tfrac{\pi}{2}\,\bigr)\times
           \bigl[-\tfrac{\pi}{2},\tfrac{\pi}{2}\,\bigr],
 \]
-miss‰ $0<b<a$ ja $n\in\N$. Millainen on $A$:n reuna $\partial A\,$? Mill‰ $n$:n arvoilla $A$ on
+miss√§ $0<b<a$ ja $n\in\N$. Millainen on $A$:n reuna $\partial A\,$? Mill√§ $n$:n arvoilla $A$ on
 suunnistuva pinta?
 
 \item (*)
 Laske kiertointegraali $\oint_S \vec F \cdot d\vec r$, kun
-$\,\vec F=ye^x\vec i+(x^2+e^x)\vec j+e^z\vec k\,$ ja $S$ on suljettu parametrinen k‰yr‰
+$\,\vec F=ye^x\vec i+(x^2+e^x)\vec j+e^z\vec k\,$ ja $S$ on suljettu parametrinen k√§yr√§
 \begin{align*}
 \vec r \,=\ &(2\cos t-3\sin t)\vec i+(2+3\cos t+6\sin t)\vec j+(1+6\cos t-2\sin t)\vec k, \\
             &\,t\in[0,2\pi].

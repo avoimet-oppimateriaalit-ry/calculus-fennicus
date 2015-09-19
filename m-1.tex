@@ -3,8 +3,8 @@
 \index{matriisialgebra|vahv}
 \index{laskuoperaatiot!g@$n$-vektoreiden, matriisien|vahv}
 
-\index{lineaarinen yhtälöryhmä} \index{yhtzy@yhtälöryhmä!a@lineaarinen}%
-Yleinen $m$ yhtälön ja $n$ tuntemattoman \kor{lineaarinen yhtälöryhmä} (-systeemi) on muotoa
+\index{lineaarinen yhtÃ¤lÃ¶ryhmÃ¤} \index{yhtzy@yhtÃ¤lÃ¶ryhmÃ¤!a@lineaarinen}%
+Yleinen $m$ yhtÃ¤lÃ¶n ja $n$ tuntemattoman \kor{lineaarinen yhtÃ¤lÃ¶ryhmÃ¤} (-systeemi) on muotoa
 \begin{equation} \label{m.1.1}
 \begin{cases}
 \begin{aligned}
@@ -15,33 +15,33 @@ a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n \ \               &= \quad b_m.
 \end{aligned}
 \end{cases}
 \end{equation}
-\index{kerroin (yhtälöryhmän)}%
-Tässä $m,n \in \N$, $\ a_{ij}$:t ovat yhtälöryhmän \kor{kertoimet}, ja myös luvut 
-$b_i,\ i = 1 \ldots m$, jotka muodostavat yhtälöryhmän nk. 'oikean puolen' (tai 'vakiotermin'),
-oletetaan tunnetuiksi. Tuntemattomia ovat siis $x_i,\ i = 1 \ldots n$, ja ongelmana yleensä
-näiden löytäminen, eli yhtälöryhmän \kor{ratkaiseminen}. Jatkossa oletetaan pääsääntöisesti, 
-että $\ a_{ij}, x_i, b_i \in \R$. Yleisemmin voitaisiin olettaa, että 
-$\ a_{ij}, x_i, b_i \in \K$, missä $\K$ on mikä tahansa kunta, sillä yhtälöryhmää 
+\index{kerroin (yhtÃ¤lÃ¶ryhmÃ¤n)}%
+TÃ¤ssÃ¤ $m,n \in \N$, $\ a_{ij}$:t ovat yhtÃ¤lÃ¶ryhmÃ¤n \kor{kertoimet}, ja myÃ¶s luvut 
+$b_i,\ i = 1 \ldots m$, jotka muodostavat yhtÃ¤lÃ¶ryhmÃ¤n nk. 'oikean puolen' (tai 'vakiotermin'),
+oletetaan tunnetuiksi. Tuntemattomia ovat siis $x_i,\ i = 1 \ldots n$, ja ongelmana yleensÃ¤
+nÃ¤iden lÃ¶ytÃ¤minen, eli yhtÃ¤lÃ¶ryhmÃ¤n \kor{ratkaiseminen}. Jatkossa oletetaan pÃ¤Ã¤sÃ¤Ã¤ntÃ¶isesti, 
+ettÃ¤ $\ a_{ij}, x_i, b_i \in \R$. Yleisemmin voitaisiin olettaa, ettÃ¤ 
+$\ a_{ij}, x_i, b_i \in \K$, missÃ¤ $\K$ on mikÃ¤ tahansa kunta, sillÃ¤ yhtÃ¤lÃ¶ryhmÃ¤Ã¤ 
 kirjoitettaessa ja ratkaistaessa tarvitaan vain kunnan laskuoperaatioita. Esimerkiksi voisi olla 
-$\K = \C$ tai (kuten yksinkertaisissa esimerkeissä usein) $\K = \Q$.
+$\K = \C$ tai (kuten yksinkertaisissa esimerkeissÃ¤ usein) $\K = \Q$.
 
-Yhtälöryhmän \eqref{m.1.1} sanotaan olevan \kor{kokoa} $m \times n$ ('$m$ kertaa $n$'). 
-Yhtälöryhmällä ei välttämättä ole ratkaisua lainkaan, tai ratkaisu voi olla monikäsitteinen. Jos
-yhtälöryhmällä on y\pain{ksikäsitteinen} ratkaisu, valittiinpa oikealla puolella olevat luvut
-$b_i$ miten tahansa, niin sanotaan, että yhtälöryhmä on
-\index{szyzy@säännöllinen yhtälöryhmä}%
-\kor{säännöllinen}. Muulloin, eli jos
-ratkaisua ei ole jollakin $(b_i)$ tai ratkaisu on monikäsitteinen, yhtälöryhmä on 
-\index{singulaarinen yhtälöryhmä}%
-epäsäännöllinen eli \kor{singulaarinen}. Yhtälöryhmän säännöllisyys tai singulaarisuus ei siis
-riipu luvuista $b_i$ vaan on ainoastaan kerrointaulukon $(a_{ij})$ ominaisuus. Tullaan mäkemään,
-että ehto $m=n$ on välttämätön ehto säännöllisyydelle, ts.\ säännöllisessä ryhmässä on 
-yhtälöiden lukumäärän ($m$) ja tuntemattomien lukumäärän ($n$) täsmättävä. Tapauksessa $m>n$ 
-\index{ylimääräytyvä (yhtälöryhmä)} \index{alimääräytyvä (yhtälöryhmä)}%
-sanotaan yhtälöryhmää \eqref{m.1.1} \kor{ylimääräytyväksi} (engl.\ overdetermined), tapauksessa
-$m<n$ \kor{alimääräytyväksi} (engl.\ underdetermined). Nämä ovat siis aina singulaarisia 
-systeemejä. 
-\begin{Exa} Singulaarisia systeemejä tyyppiä $m=n=2$ ovat esimerkiksi
+YhtÃ¤lÃ¶ryhmÃ¤n \eqref{m.1.1} sanotaan olevan \kor{kokoa} $m \times n$ ('$m$ kertaa $n$'). 
+YhtÃ¤lÃ¶ryhmÃ¤llÃ¤ ei vÃ¤lttÃ¤mÃ¤ttÃ¤ ole ratkaisua lainkaan, tai ratkaisu voi olla monikÃ¤sitteinen. Jos
+yhtÃ¤lÃ¶ryhmÃ¤llÃ¤ on y\pain{ksikÃ¤sitteinen} ratkaisu, valittiinpa oikealla puolella olevat luvut
+$b_i$ miten tahansa, niin sanotaan, ettÃ¤ yhtÃ¤lÃ¶ryhmÃ¤ on
+\index{szyzy@sÃ¤Ã¤nnÃ¶llinen yhtÃ¤lÃ¶ryhmÃ¤}%
+\kor{sÃ¤Ã¤nnÃ¶llinen}. Muulloin, eli jos
+ratkaisua ei ole jollakin $(b_i)$ tai ratkaisu on monikÃ¤sitteinen, yhtÃ¤lÃ¶ryhmÃ¤ on 
+\index{singulaarinen yhtÃ¤lÃ¶ryhmÃ¤}%
+epÃ¤sÃ¤Ã¤nnÃ¶llinen eli \kor{singulaarinen}. YhtÃ¤lÃ¶ryhmÃ¤n sÃ¤Ã¤nnÃ¶llisyys tai singulaarisuus ei siis
+riipu luvuista $b_i$ vaan on ainoastaan kerrointaulukon $(a_{ij})$ ominaisuus. Tullaan mÃ¤kemÃ¤Ã¤n,
+ettÃ¤ ehto $m=n$ on vÃ¤lttÃ¤mÃ¤tÃ¶n ehto sÃ¤Ã¤nnÃ¶llisyydelle, ts.\ sÃ¤Ã¤nnÃ¶llisessÃ¤ ryhmÃ¤ssÃ¤ on 
+yhtÃ¤lÃ¶iden lukumÃ¤Ã¤rÃ¤n ($m$) ja tuntemattomien lukumÃ¤Ã¤rÃ¤n ($n$) tÃ¤smÃ¤ttÃ¤vÃ¤. Tapauksessa $m>n$ 
+\index{ylimÃ¤Ã¤rÃ¤ytyvÃ¤ (yhtÃ¤lÃ¶ryhmÃ¤)} \index{alimÃ¤Ã¤rÃ¤ytyvÃ¤ (yhtÃ¤lÃ¶ryhmÃ¤)}%
+sanotaan yhtÃ¤lÃ¶ryhmÃ¤Ã¤ \eqref{m.1.1} \kor{ylimÃ¤Ã¤rÃ¤ytyvÃ¤ksi} (engl.\ overdetermined), tapauksessa
+$m<n$ \kor{alimÃ¤Ã¤rÃ¤ytyvÃ¤ksi} (engl.\ underdetermined). NÃ¤mÃ¤ ovat siis aina singulaarisia 
+systeemejÃ¤. 
+\begin{Exa} Singulaarisia systeemejÃ¤ tyyppiÃ¤ $m=n=2$ ovat esimerkiksi
 \[
 \begin{cases} 
 \begin{aligned} x_1 +  x_2 &= b_1, \\ x_1  +  x_2 &= b_2 \end{aligned} 
@@ -52,8 +52,8 @@ systeemejä.
 \] 
 \end{Exa}
 
-Jatkossa suoritettavien algebrallisten tarkastelujen lähtökohtana on yleinen lineaarinen 
-yhtälöryhmä \eqref{m.1.1}. Kirjoitetaan yhtälöryhmä ensinnäkin taulukkomuotoon 
+Jatkossa suoritettavien algebrallisten tarkastelujen lÃ¤htÃ¶kohtana on yleinen lineaarinen 
+yhtÃ¤lÃ¶ryhmÃ¤ \eqref{m.1.1}. Kirjoitetaan yhtÃ¤lÃ¶ryhmÃ¤ ensinnÃ¤kin taulukkomuotoon 
 (1. abstraktiovaihe)
 \[
 \begin{bmatrix} a_{11} x_1\ + & \ldots & +\ a_{1n} x_n \\ \vdots & & \vdots \\ 
@@ -64,43 +64,43 @@ eli
 \begin{equation} \label{m.1.2}
 \mv{y}\ =\ \mv{b},
 \end{equation}
-missä
+missÃ¤
 \[ 
 \mv{b}\ =\ \begin{bmatrix} b_1 \\ \vdots \\ b_m \end{bmatrix}, \qquad
 \mv{y}\ =\ \begin{bmatrix} y_1 \\ \vdots \\ y_m \end{bmatrix}, \qquad 
     y_i = \sum_{j=1}^n a_{ij} x_j. 
 \]
-Tässä $\mv{b},\,\mv{y}$ ovat nk.\
+TÃ¤ssÃ¤ $\mv{b},\,\mv{y}$ ovat nk.\
 \index{pystyvektori} \index{vektorib@vektori (algebrallinen)!c@$\R^n$:n}%
 \kor{pystyvektoreita} (engl.\ column vector). Jatkossa
-käytetään pystyvektoreiden symboleina lihavoituja pieniä kirjaimia 
+kÃ¤ytetÃ¤Ã¤n pystyvektoreiden symboleina lihavoituja pieniÃ¤ kirjaimia 
 $\mv{a},\mv{b},\mv{x},\mv{y}$, jne.
 
-Ym.\ pystyvektoreissa $\mv{y},\,\mv{b}$ on $m$ vektorin \kor{koko} (tai tyyppi), mikä voidaan 
-ilmaista myös termillä $m$\kor{-vektori}. Luvut $b_i,\,y_i$ ovat ko.\ vektoreiden
+Ym.\ pystyvektoreissa $\mv{y},\,\mv{b}$ on $m$ vektorin \kor{koko} (tai tyyppi), mikÃ¤ voidaan 
+ilmaista myÃ¶s termillÃ¤ $m$\kor{-vektori}. Luvut $b_i,\,y_i$ ovat ko.\ vektoreiden
 \index{alkio (vektorin, matriisin)}%
-\kor{alkiot} (tai komponentit). Voidaan myös käyttää merkintöjä 
+\kor{alkiot} (tai komponentit). Voidaan myÃ¶s kÃ¤yttÃ¤Ã¤ merkintÃ¶jÃ¤ 
 \[
 [\mb]_i = b_i, \quad \mb = (b_i), \quad \mb = (b_i)_{i=1}^m.
 \]
 
-Termi 'vektori' viittaa siihen, että pystyvektoreille voidaan määritellä vektoreiden 
-peruslaskuoperaatiot, eli vektorien yhteenlasku ja skalaarilla kertominen. Määritelmät ovat
+Termi 'vektori' viittaa siihen, ettÃ¤ pystyvektoreille voidaan mÃ¤Ã¤ritellÃ¤ vektoreiden 
+peruslaskuoperaatiot, eli vektorien yhteenlasku ja skalaarilla kertominen. MÃ¤Ã¤ritelmÃ¤t ovat
 \[ 
 \mv{x} + \mv{y} = \begin{bmatrix} x_1 + y_1 \\ \vdots \\ x_n + y_n \end{bmatrix}, \qquad
  \lambda \mv{x} = \begin{bmatrix} \lambda x_1 \\ \vdots \\ \lambda x_n \end{bmatrix} \qquad 
                                                                 (\lambda \in \R).
 \]
 Yhteenlaskussa vektoreiden $\mv{x},\,\mv{y}$ on oltava \pain{samaa} \pain{kokoa}, muuten 
-yhteenlaskua ei voi määritellä. Laskuoperaatioissa siis lasketaan yhteen ja kerrotaan 
+yhteenlaskua ei voi mÃ¤Ã¤ritellÃ¤. Laskuoperaatioissa siis lasketaan yhteen ja kerrotaan 
 alkioittain, kuten aiemmin tehtiin Luvuissa \ref{tasonvektorit} ja \ref{ristitulo} 
-käsiteltäessä $\R^2$:n lukupareja ja $\R^3$:n lukukolmikkoja vektoreina. Pystyvektoreita kokoa
-$n$ voidaankin pitää näiden entuudestaan tuttujen 'algebravektoreiden' yleistyksenä. (Lukuparien
-tai \mbox{-kolmikoiden} käsittely pystyvektorina ei mitenkään vaikuta vektorioperaatioihin.)
-Yhdenmukaisesti aiempien merkintöjen kanssa sovitaan, että pystyvektorit kokoa $n$ muodostavat
-vektoriavaruuden nimeltä $\R^n$. Avaruuden $\R^n$
+kÃ¤siteltÃ¤essÃ¤ $\R^2$:n lukupareja ja $\R^3$:n lukukolmikkoja vektoreina. Pystyvektoreita kokoa
+$n$ voidaankin pitÃ¤Ã¤ nÃ¤iden entuudestaan tuttujen 'algebravektoreiden' yleistyksenÃ¤. (Lukuparien
+tai \mbox{-kolmikoiden} kÃ¤sittely pystyvektorina ei mitenkÃ¤Ã¤n vaikuta vektorioperaatioihin.)
+Yhdenmukaisesti aiempien merkintÃ¶jen kanssa sovitaan, ettÃ¤ pystyvektorit kokoa $n$ muodostavat
+vektoriavaruuden nimeltÃ¤ $\R^n$. Avaruuden $\R^n$
 \index{nollavektori}%
-\kor{nollavektori} on aiempaan tapaan vektori, jonka kaikki alkiot ovat nollia. Tätä merkitään
+\kor{nollavektori} on aiempaan tapaan vektori, jonka kaikki alkiot ovat nollia. TÃ¤tÃ¤ merkitÃ¤Ã¤n
 symbolilla $\mv{0}$. Avaruuden $\R^n$ luonnollinen
 \index{kanta}%
 \kor{kanta} saadaan, kun kirjoitetaan
@@ -119,27 +119,27 @@ eli
            = \begin{cases} 1, \quad \text{jos}\ i=j, \\ 0, \quad \text{jos}\ i \neq j. 
              \end{cases} 
 \]
-Tässä symboli $\delta_{ij}$ on nk.\
+TÃ¤ssÃ¤ symboli $\delta_{ij}$ on nk.\
 \index{Kroneckerin delta}%
 \kor{Kroneckerin delta} (-symboli). Vektoreita $\me_i$ sanotaan $\R^n$:n
-\index{yksikkövektori}%
-\kor{yksikkövektoreiksi}. Jokainen $\mx \in \R^n$ voidaan siis kirjoittaa 
-(ilmeisen yksikäsitteisesti) vektorien $\me_i$
+\index{yksikkÃ¶vektori}%
+\kor{yksikkÃ¶vektoreiksi}. Jokainen $\mx \in \R^n$ voidaan siis kirjoittaa 
+(ilmeisen yksikÃ¤sitteisesti) vektorien $\me_i$
 \index{lineaariyhdistely}%
-\kor{lineaariyhdistelynä}, eli $\{\me_1, \ldots \me_n\}$ on $\R^n$:n kanta. Koska kannassa on
-$n$ vektoria, sanotaan, että $R^n$:n
+\kor{lineaariyhdistelynÃ¤}, eli $\{\me_1, \ldots \me_n\}$ on $\R^n$:n kanta. Koska kannassa on
+$n$ vektoria, sanotaan, ettÃ¤ $R^n$:n
 \index{dimensio}%
 \kor{dimensio} on $n$:
 \[ 
 \text{dim}\,\R^n = n. 
 \]
 
-Toistaiseksi ei siis ole väliä, ovatko $\R^n$:n vektorit 'pystyssä' vai 'kumossa', kunhan 
-yhtälössä \eqref{m.1.2} vain tulkitaan yhtäsuuruusmerkki normaaliin tapaan, eli
+Toistaiseksi ei siis ole vÃ¤liÃ¤, ovatko $\R^n$:n vektorit 'pystyssÃ¤' vai 'kumossa', kunhan 
+yhtÃ¤lÃ¶ssÃ¤ \eqref{m.1.2} vain tulkitaan yhtÃ¤suuruusmerkki normaaliin tapaan, eli
 \[
 \mv{y} = \mv{b} \quad \ekv \quad y_i = b_i,\ \ i = 1 \ldots n.
 \]
-Seuraavssa (toisessa) abstraktion vaiheessa kuitenkin tulee ero, kun yhtälössä \eqref{m.1.2} 
+Seuraavssa (toisessa) abstraktion vaiheessa kuitenkin tulee ero, kun yhtÃ¤lÃ¶ssÃ¤ \eqref{m.1.2} 
 kertoimet $a_{ij}$ erotetaan erilliseksi olioksi kirjoittamalla
 \[ 
 \mv{y}\ =\ \begin{bmatrix} y_1 \\ \vdots \\ y_m \end{bmatrix}\ =\ 
@@ -147,32 +147,32 @@ kertoimet $a_{ij}$ erotetaan erilliseksi olioksi kirjoittamalla
                            a_{m1} & \quad & \ldots & \quad & a_{mn} \end{bmatrix}
            \begin{bmatrix} x_1 \\ \\ \vdots \\ \\ x_n \end{bmatrix}\ =\ \mv{A} \mv{x}, 
 \]
-jolloin alkuperäinen yhtälöryhmä \eqref{m.1.1} tulee kirjoitetuksi muotoon
+jolloin alkuperÃ¤inen yhtÃ¤lÃ¶ryhmÃ¤ \eqref{m.1.1} tulee kirjoitetuksi muotoon
 \begin{equation} \label{m.1.3}
 \mv{A} \mv{x}\ =\ \mv{b}.
 \end{equation}
 \index{matriisi} \index{rivi (matriisin)} \index{sarake (matriisin)}
 \index{alkio (vektorin, matriisin)}%
-Olio $\mv{A}$, joka siis näyttää kaksiulotteiselta lukutaulukolta, on nimeltään \kor{matriisi}
-(engl.\ matrix). Indeksit $m,n$ määräävät, että matriisi on \kor{tyyppiä} tai \kor{kokoa} 
-$m \times n$ ('$m$ kertaa $n$'). Tässä $m$ on matriisin (vaaka)\kor{rivien} (engl.\ row) ja $n$ 
-\kor{sarakkeiden} (tai pysyrivien, engl.\ column) lukumäärä. Luvut $a_{ij}$ ovat nimeltään 
-matriisin \kor{alkiot} tai \kor{elementit}. Näille voidaan myös käyttää merkintää 
-$[\mv{A}]_{ij}$, ja voidaan myös kirjoittaa
+Olio $\mv{A}$, joka siis nÃ¤yttÃ¤Ã¤ kaksiulotteiselta lukutaulukolta, on nimeltÃ¤Ã¤n \kor{matriisi}
+(engl.\ matrix). Indeksit $m,n$ mÃ¤Ã¤rÃ¤Ã¤vÃ¤t, ettÃ¤ matriisi on \kor{tyyppiÃ¤} tai \kor{kokoa} 
+$m \times n$ ('$m$ kertaa $n$'). TÃ¤ssÃ¤ $m$ on matriisin (vaaka)\kor{rivien} (engl.\ row) ja $n$ 
+\kor{sarakkeiden} (tai pysyrivien, engl.\ column) lukumÃ¤Ã¤rÃ¤. Luvut $a_{ij}$ ovat nimeltÃ¤Ã¤n 
+matriisin \kor{alkiot} tai \kor{elementit}. NÃ¤ille voidaan myÃ¶s kÃ¤yttÃ¤Ã¤ merkintÃ¤Ã¤ 
+$[\mv{A}]_{ij}$, ja voidaan myÃ¶s kirjoittaa
 \[
 \mv{A}\ =\ (a_{ij}) \qquad \text{tai} \quad\quad \mv{A}\ 
         =\ (a_{ij},\ i = 1 \ldots m,\ j = 1 \ldots n).
 \]
-Määritelmän mukaisesti pystyvektori kokoa $m$ ($m$-vektori) on matriisi tyyppiä $m \times 1$.
-Jatkossa erotetaan matriisit kuitenkin yleisemmin vektoreista käyttämällä matriisien symboleina
+MÃ¤Ã¤ritelmÃ¤n mukaisesti pystyvektori kokoa $m$ ($m$-vektori) on matriisi tyyppiÃ¤ $m \times 1$.
+Jatkossa erotetaan matriisit kuitenkin yleisemmin vektoreista kÃ¤yttÃ¤mÃ¤llÃ¤ matriisien symboleina
 lihavoituja isoja kirjaimia $\mv{A},\,\mv{B}$, jne.
 
-Kuten vektori, matriisikin 'elää' vasta sille määriteltyjen laskuoperaatioiden kautta. Yhtälössä
-\eqref{m.1.3} esiityy jo eräs kaikkein keskeisimmistä operaatioista:
-\index{matriisin ($\nel$neliömatriisin)!a@ja vektorin kertolasku}%
-\pain{matriisin} j\pain{a} \pain{vektorin} \pain{kertolasku}. Vertaamalla yhtälöitä
-\eqref{m.1.1}--\eqref{m.1.3} nähdään heti, mikä on tämän kertolaskun määritelmä: $\mv{A}\mv{x}$
-on pystyvektori kokoa $m$, jonka alkiot $[\mv{A}\mv{x}]_i$ määritellään
+Kuten vektori, matriisikin 'elÃ¤Ã¤' vasta sille mÃ¤Ã¤riteltyjen laskuoperaatioiden kautta. YhtÃ¤lÃ¶ssÃ¤
+\eqref{m.1.3} esiityy jo erÃ¤s kaikkein keskeisimmistÃ¤ operaatioista:
+\index{matriisin ($\nel$neliÃ¶matriisin)!a@ja vektorin kertolasku}%
+\pain{matriisin} j\pain{a} \pain{vektorin} \pain{kertolasku}. Vertaamalla yhtÃ¤lÃ¶itÃ¤
+\eqref{m.1.1}--\eqref{m.1.3} nÃ¤hdÃ¤Ã¤n heti, mikÃ¤ on tÃ¤mÃ¤n kertolaskun mÃ¤Ã¤ritelmÃ¤: $\mv{A}\mv{x}$
+on pystyvektori kokoa $m$, jonka alkiot $[\mv{A}\mv{x}]_i$ mÃ¤Ã¤ritellÃ¤Ã¤n
 \[ 
 \boxed{ \begin{aligned} \quad \ykehys [\mv{A}\mv{x}]_i\ 
     &=\ \sum_{j=1}^n a_{ij} x_j, \quad i = 1 \ldots m, \\
@@ -180,27 +180,27 @@ on pystyvektori kokoa $m$, jonka alkiot $[\mv{A}\mv{x}]_i$ määritellään
     &\qquad\quad \mv{A}  = (\,a_{ij},\ i = 1 \ldots m,\ j = 1 \ldots n\,). \quad\akehys \\
         \end{aligned} } 
 \]
-Määritelmän mukaisesti on $\mv{A}$:n sarakkeiden lukumäärän täsmättävä vektorin $\mv{x}$ kokoon,
-jotta $\mv{A}\mv{x}$ olisi määritelty. Tämäntyyppiset y\pain{hteenso}p\pain{ivuusehdot}
-rajoittavat kaikkia matriisien välisiä laskuoperaatioita.
+MÃ¤Ã¤ritelmÃ¤n mukaisesti on $\mv{A}$:n sarakkeiden lukumÃ¤Ã¤rÃ¤n tÃ¤smÃ¤ttÃ¤vÃ¤ vektorin $\mv{x}$ kokoon,
+jotta $\mv{A}\mv{x}$ olisi mÃ¤Ã¤ritelty. TÃ¤mÃ¤ntyyppiset y\pain{hteenso}p\pain{ivuusehdot}
+rajoittavat kaikkia matriisien vÃ¤lisiÃ¤ laskuoperaatioita.
 
-Toinen matriisin ja vektorin tulon esitysmuoto saadaan, kun merkitään $\mv{a}_j = \mA$:n $j$:s
+Toinen matriisin ja vektorin tulon esitysmuoto saadaan, kun merkitÃ¤Ã¤n $\mv{a}_j = \mA$:n $j$:s
 sarake, ts.
 \[ 
 \mv{a}_j = \begin{bmatrix} a_{1j} \\ \vdots \\ a_{mj} \end{bmatrix}. 
 \]
-Kun \mA\ esitetään sarakkeittensa avulla, niin em.\ määritelmästä nähdään, että pätee
+Kun \mA\ esitetÃ¤Ã¤n sarakkeittensa avulla, niin em.\ mÃ¤Ã¤ritelmÃ¤stÃ¤ nÃ¤hdÃ¤Ã¤n, ettÃ¤ pÃ¤tee
 \[ 
 \boxed{ \quad\kehys\mA = [\ma_1 \ldots \ma_n] \qimpl \mA\mx = \sum_{j=1}^n x_j \mv{a}_j. \quad}
 \]
 Siis matriisin \mA\ ja vektorin $\mx = (x_i)$ tulo on \mA:n sarakkeiden $\mv{a}_j$ 
-lineaarinen yhdistely, kertoimina $x_j$. Erityisesti siis pätee 
+lineaarinen yhdistely, kertoimina $x_j$. Erityisesti siis pÃ¤tee 
 \[
 \mA = [\mv{a}_1 \ldots \mv{a}_n ] \qimpl \mA\me_k=\ma_k, \quad k=1 \ldots n.
 \]
-Tästä on puolestaan helppo päätellä seuraava tulos, jolla on käyttöä jatkossa.
-\begin{Prop} \label{matriisien yhtäsuuruus} Jos $\mA$ ja $\mB$ ovat matriiseja kokoa 
-$m \times n$, niin pätee
+TÃ¤stÃ¤ on puolestaan helppo pÃ¤Ã¤tellÃ¤ seuraava tulos, jolla on kÃ¤yttÃ¶Ã¤ jatkossa.
+\begin{Prop} \label{matriisien yhtÃ¤suuruus} Jos $\mA$ ja $\mB$ ovat matriiseja kokoa 
+$m \times n$, niin pÃ¤tee
 \[
 \mA\mx=\mB\mx\ \ \forall \mx\in\R^n \qimpl \mA=\mB.
 \]
@@ -226,24 +226,24 @@ $m \times n$, niin pätee
 \] 
 \end{Exa}
 
-Ym.\ määritelmästä nähdään, että matriisilla kertominen on kerrottavan vektorin suhteen 
+Ym.\ mÃ¤Ã¤ritelmÃ¤stÃ¤ nÃ¤hdÃ¤Ã¤n, ettÃ¤ matriisilla kertominen on kerrottavan vektorin suhteen 
 lineaarinen laskutoimitus:
 \[ 
 \mv{A}(\lambda \mv{x} + \mu \mv{y})\ =\ \lambda \mv{Ax} + \mu \mv{Ay} \quad 
                                                \forall\ \lambda,\mu \in \R.
 \]
-(Tässä luonnollisesti edellytetään, että $\mv{x}$ ja $\mv{y}$ ovat samaa kokoa ja $\mv{A}$:n 
+(TÃ¤ssÃ¤ luonnollisesti edellytetÃ¤Ã¤n, ettÃ¤ $\mv{x}$ ja $\mv{y}$ ovat samaa kokoa ja $\mv{A}$:n 
 kanssa yhteensopivia).
 
-Matriiseille määritellään skalaarilla kertominen ja samankokoisten matriisien yhteenlasku 
+Matriiseille mÃ¤Ã¤ritellÃ¤Ã¤n skalaarilla kertominen ja samankokoisten matriisien yhteenlasku 
 samalla tavoin kuin vektoreille, eli suoritetaan laskuoperaatiot alkioittain. Siis jos
 $\mv{A} = (a_{ij})$ ja $\mv{B} = (b_{ij})$ ovat samaa kokoa, niin
 \[ 
 [\lambda \mv{A}]_{ij}\ =\ \lambda a_{ij}, \quad\quad [\mv{A}+\mv{B}]_{ij}\ =\ a_{ij} + b_{ij}. 
 \]
-Vektorioperaatiot $\R^n$:ssä voidaan tulkita näiden operaatioiden erikoistapauksiksi 
-($\mv{A}$ ja $\mv{B}$ kokoa $n \times 1$). Kuten samankokoiset vektorit, myös samankokoiset 
-matriisit muodostavat näillä laskuoperaatioilla varustettuna vektoriavaruuden. Tämän avaruuden
+Vektorioperaatiot $\R^n$:ssÃ¤ voidaan tulkita nÃ¤iden operaatioiden erikoistapauksiksi 
+($\mv{A}$ ja $\mv{B}$ kokoa $n \times 1$). Kuten samankokoiset vektorit, myÃ¶s samankokoiset 
+matriisit muodostavat nÃ¤illÃ¤ laskuoperaatioilla varustettuna vektoriavaruuden. TÃ¤mÃ¤n avaruuden
 nolla-alkio on nk.\
 \index{nollamatriisi}%
 \kor{nollamatriisi}, jonka kaikki alkiot ovat nollia (symboli $\mv{0}$).
@@ -251,22 +251,22 @@ nolla-alkio on nk.\
 \subsection*{Matriisitulo}
 \index{matriisitulo|vahv}
 
-Kahden matriisin $\mv{A},\,\mv{B}$ tulo eli \kor{matriisitulo} voidaan määritellä, edellyttäen
-että matriisit ovat kooltaan yhteensopivat. Olkoon $\mv{x}$ pystyvektori kokoa $n$ ja olkoon 
+Kahden matriisin $\mv{A},\,\mv{B}$ tulo eli \kor{matriisitulo} voidaan mÃ¤Ã¤ritellÃ¤, edellyttÃ¤en
+ettÃ¤ matriisit ovat kooltaan yhteensopivat. Olkoon $\mv{x}$ pystyvektori kokoa $n$ ja olkoon 
 $\mv{A} = (a_{ij})$ kokoa $m \times p$ ja $\mv{B} = (b_{ij})$ kokoa $p \times n$ 
-($m,n,p \in \N$). Tällöin yhdistetty matriisi-vektoritulo $\mv{A}(\mv{Bx})$ on määritelty, kun
-$\mv{x} \in \R^n$. Halutaan kirjoittaa tämä muodossa
+($m,n,p \in \N$). TÃ¤llÃ¶in yhdistetty matriisi-vektoritulo $\mv{A}(\mv{Bx})$ on mÃ¤Ã¤ritelty, kun
+$\mv{x} \in \R^n$. Halutaan kirjoittaa tÃ¤mÃ¤ muodossa
 \begin{equation} \label{m.1.4}
 \mA(\mB\mx)\ =\ (\mv{AB})\,\mv{x}, \quad \mx\in\R^n
 \end{equation}
-ja ottaa tämä matriisitulon $\mv{AB}$ määritelmäksi. Tällöin on oltava
+ja ottaa tÃ¤mÃ¤ matriisitulon $\mv{AB}$ mÃ¤Ã¤ritelmÃ¤ksi. TÃ¤llÃ¶in on oltava
 \begin{align*}
 [\mv{(AB)x}]_i\ =\ [\mA(\mv{Bx})]_i\ &=\ \sum_{k=1}^p a_{ik}[\mv{Bx}]_k\ 
                                       =\ \sum_{k=1}^p a_{ik}\,\sum_{j=1}^n b_{kj} x_j \\
                                      &=\ \sum_{j=1}^n\,( \sum_{k=1}^p a_{ik} b_{kj}) x_j
                                       =\ \sum_{j=1}^n [\mv{AB}]_{ij}x_j\,.
 \end{align*}
-Siis nähdään, että \eqref{m.1.4} toteutuu, kun määritellään
+Siis nÃ¤hdÃ¤Ã¤n, ettÃ¤ \eqref{m.1.4} toteutuu, kun mÃ¤Ã¤ritellÃ¤Ã¤n
 \[ \boxed{ \begin{aligned}              
     \quad \ykehys [\mv{AB}]_{ij}\ 
          =\ \sum_{k=1}^p &a_{ik} b_{kj}, \quad i = 1 \ldots m,\ \ j = 1 \ldots n, \quad\quad \\
@@ -274,55 +274,55 @@ Siis nähdään, että \eqref{m.1.4} toteutuu, kun määritellään
           \akehys \mv{B} &=  (\,b_{ij},\,\ i = 1 \ldots\,p,\,\ j = 1 \ldots n\,). \\
            \end{aligned} } 
 \]
-\index{matriisin ($\nel$neliömatriisin)!ab@ja toisen matriisin tulo}%
-Matriisitulo on näin määritelty yksikäsitteisesti, sillä Proposition 
-\ref{matriisien yhtäsuuruus} mukaan \eqref{m.1.4} voi toteutua vain yhdelle matriisille 
-$\mA\mB$. Määritelmästä nähdään, että $(\mv{AB})$:n $j$:s sarake $\ = \mv{Ab}_j$, missä 
-$\mv{b}_j=(b_{kj},\ k=1 \ldots p)$ on $\mv{B}$:n $j$:s sarake. Näin ollen jos $\mv{B}$ esitetään
-sarakkeittensa avulla, niin matriisitulolle $\mA\mB$ saadaan myös esitysmuoto
+\index{matriisin ($\nel$neliÃ¶matriisin)!ab@ja toisen matriisin tulo}%
+Matriisitulo on nÃ¤in mÃ¤Ã¤ritelty yksikÃ¤sitteisesti, sillÃ¤ Proposition 
+\ref{matriisien yhtÃ¤suuruus} mukaan \eqref{m.1.4} voi toteutua vain yhdelle matriisille 
+$\mA\mB$. MÃ¤Ã¤ritelmÃ¤stÃ¤ nÃ¤hdÃ¤Ã¤n, ettÃ¤ $(\mv{AB})$:n $j$:s sarake $\ = \mv{Ab}_j$, missÃ¤ 
+$\mv{b}_j=(b_{kj},\ k=1 \ldots p)$ on $\mv{B}$:n $j$:s sarake. NÃ¤in ollen jos $\mv{B}$ esitetÃ¤Ã¤n
+sarakkeittensa avulla, niin matriisitulolle $\mA\mB$ saadaan myÃ¶s esitysmuoto
 \[ 
 \boxed{ \quad\kehys \mv{B} 
                  = \begin{bmatrix} \mb_1 & \ldots & \mb_n \end{bmatrix} \quad \impl \quad
           \mA\mB = \begin{bmatrix} \mA\mb_1 & \ldots & \mA\mb_n \end{bmatrix}. \quad } 
 \]
-Matriisitulo palautuu näin matriisin ja vektorin tuloiksi: Kerrotaan $\mv{B}$:n kukin 
+Matriisitulo palautuu nÃ¤in matriisin ja vektorin tuloiksi: Kerrotaan $\mv{B}$:n kukin 
 sarakevektori $\mv{A}$:lla ja sijoitetaan tulokset $(\mv{AB})$:n sarakkeiksi. 
 
-Matriisitulon taustalla olevasta sopimuksesta \eqref{m.1.4} voidaan päätellä, että matriisitulo
-on liitännäinen. Nimittäin jos $\mv{A},\,\mv{B},\,\mv{C},\,\mv{x}$ ovat kooltaan yhteensopivia,
-niin sopimuksen \eqref{m.1.4} mukaan pätee jokaisella $\mx\in\R^n$
+Matriisitulon taustalla olevasta sopimuksesta \eqref{m.1.4} voidaan pÃ¤Ã¤tellÃ¤, ettÃ¤ matriisitulo
+on liitÃ¤nnÃ¤inen. NimittÃ¤in jos $\mv{A},\,\mv{B},\,\mv{C},\,\mv{x}$ ovat kooltaan yhteensopivia,
+niin sopimuksen \eqref{m.1.4} mukaan pÃ¤tee jokaisella $\mx\in\R^n$
 \[ 
 [\mv{A}(\mv{BC})]\mv{x}\ =\ \mv{A}[(\mv{BC})\mv{x}]\ =\ \mv{A}[\mv{B}(\mv{Cx})] 
                          =\ (\mv{AB})(\mv{Cx})\ =\ [(\mv{AB})\mv{C}]\mv{x}, 
 \]
-jolloin on oltava (Propositio \ref{matriisien yhtäsuuruus})
+jolloin on oltava (Propositio \ref{matriisien yhtÃ¤suuruus})
 \[ 
 \boxed{ \quad \rule[-2mm]{0mm}{6mm}\mv{A}(\mv{BC})\ =\ (\mv{AB})\mv{C}. \quad } 
 \]
-Vaihdannainen matriisitulo ei sen sijaan ole. Nimittäin ensinnäkin tuloon liittyvät 
-yhteensopivuussäännöt ovat varsin rajoittavia: Tulot $\mv{AB}$ ja $\mv{BA}$ eivät välttämättä
-ole molemmat määriteltyjä, ja vaikka olisivat, eivät välttämättä samaa tyyppiä. Jos $\mv{A}$ ja
+Vaihdannainen matriisitulo ei sen sijaan ole. NimittÃ¤in ensinnÃ¤kin tuloon liittyvÃ¤t 
+yhteensopivuussÃ¤Ã¤nnÃ¶t ovat varsin rajoittavia: Tulot $\mv{AB}$ ja $\mv{BA}$ eivÃ¤t vÃ¤lttÃ¤mÃ¤ttÃ¤
+ole molemmat mÃ¤Ã¤riteltyjÃ¤, ja vaikka olisivat, eivÃ¤t vÃ¤lttÃ¤mÃ¤ttÃ¤ samaa tyyppiÃ¤. Jos $\mv{A}$ ja
 $\mv{B}$ ovat molemmat kokoa $n \times n$, eli samankokoisia
-\index{neliömatriisi}%
-\kor{neliömatriiseja} (engl.\ square matrix), niin asia on näiltä osin kunnossa, mutta
-tällöinkin on yleisesti $\mv{AB} \neq \mv{BA}$.
+\index{neliÃ¶matriisi}%
+\kor{neliÃ¶matriiseja} (engl.\ square matrix), niin asia on nÃ¤iltÃ¤ osin kunnossa, mutta
+tÃ¤llÃ¶inkin on yleisesti $\mv{AB} \neq \mv{BA}$.
 
-Neliömatriisit ovat lineaaristen yhtälöryhmien algebran kannalta huomattavan tärkeä matriisien
-erikoisluokka, josta puhutaan enemmän seuraavassa luvussa. Todettakoon tässä yhteydessä 
-kuitenkin, että jos samankokoisten neliömatriisien tapauksessa sattuu olemaan voimassa 
-$\mv{AB} = \mv{BA}$, niin sanotaan, että matriisit $\mv{A}$ ja $\mv{B}$ \kor{kommutoivat}\,:
+NeliÃ¶matriisit ovat lineaaristen yhtÃ¤lÃ¶ryhmien algebran kannalta huomattavan tÃ¤rkeÃ¤ matriisien
+erikoisluokka, josta puhutaan enemmÃ¤n seuraavassa luvussa. Todettakoon tÃ¤ssÃ¤ yhteydessÃ¤ 
+kuitenkin, ettÃ¤ jos samankokoisten neliÃ¶matriisien tapauksessa sattuu olemaan voimassa 
+$\mv{AB} = \mv{BA}$, niin sanotaan, ettÃ¤ matriisit $\mv{A}$ ja $\mv{B}$ \kor{kommutoivat}\,:
 \index{kommutoivat matriisit}%
 \[ 
 \mv{AB}\ = \mv{BA} \quad \ekv \quad \text{$\mv{A}$ ja $\mv{B}$\, kommutoivat}. \]
-Jokainen neliömatriisi kommutoi triviaalisti ainakin itsensä kanssa.
+Jokainen neliÃ¶matriisi kommutoi triviaalisti ainakin itsensÃ¤ kanssa.
 \begin{Exa} Matriisien
 \[ 
 \mv{A} = \begin{rmatrix} 1 & -1 \\ -1 & 2 \end{rmatrix}, \quad 
 \mv{B} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}, \quad
 \mv{C} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} 
 \]
-yhdeksästä mahdollisesta keskinäisestä tulosta $\mv{AC}$, $\mv{BC}$ ja $\mv{CC}$ eivät ole 
-määriteltyjä, muut ovat:
+yhdeksÃ¤stÃ¤ mahdollisesta keskinÃ¤isestÃ¤ tulosta $\mv{AC}$, $\mv{BC}$ ja $\mv{CC}$ eivÃ¤t ole 
+mÃ¤Ã¤riteltyjÃ¤, muut ovat:
 \begin{gather*}
 \mv{AB} = \left[ \mv{A} \begin{rmatrix} 0 \\ 0 \end{rmatrix}\ 
                  \mv{A} \begin{rmatrix} 1 \\ 0 \end{rmatrix} \right] 
@@ -337,23 +337,23 @@ määriteltyjä, muut ovat:
 \end{gather*}                            
 \end{Exa}
 
-Esimerkissä neliömatriisit $\mv{A}$ ja $\mv{B}$ siis eivät kommutoi. Neliömatriisille määritelty
-tulo $\mv{AA}$ voidaan kirjoittaa  $\mv{A}^2$, ja määritellä yleisemminkin neliömatriisin 
+EsimerkissÃ¤ neliÃ¶matriisit $\mv{A}$ ja $\mv{B}$ siis eivÃ¤t kommutoi. NeliÃ¶matriisille mÃ¤Ã¤ritelty
+tulo $\mv{AA}$ voidaan kirjoittaa  $\mv{A}^2$, ja mÃ¤Ã¤ritellÃ¤ yleisemminkin neliÃ¶matriisin 
 potenssiin korotus:
 \[ 
 \mA^k = \underbrace{\mv{AA} \cdots \mv{A}}_{k\ \text{kpl}}\,, \quad 
-                         k \in \N \quad (\text{$\mv{A}$ neliömatriisi}). 
+                         k \in \N \quad (\text{$\mv{A}$ neliÃ¶matriisi}). 
 \]
-Esimerkistä nähdään, että neliömatriisin tapauksessa voi olla $\mv{B}^2 = \mv{0}$ 
+EsimerkistÃ¤ nÃ¤hdÃ¤Ã¤n, ettÃ¤ neliÃ¶matriisin tapauksessa voi olla $\mv{B}^2 = \mv{0}$ 
 (= nollamatriisi), vaikka $\mv{B} \neq \mv{0}$.
 
 \subsection*{Matriisin transpoosi}
 \index{transpoosi (matriisin)|vahv}
 
-Vielä on määrittelemättä yksi keskeinen matriisialgebran operaatio,
-\index{matriisin ($\nel$neliömatriisin)!b@transponointi, transpoosi}%
-\kor{transponointi}. Tällä tarkoitetaan yksinkertaisesti matriisin $\mv{A}$ rivien ja
-sarakkeiden vaihtoa keskenään. Tulosta merkitään $\mv{A}^T$ ja kutsutaan $\mv{A}$:n
+VielÃ¤ on mÃ¤Ã¤rittelemÃ¤ttÃ¤ yksi keskeinen matriisialgebran operaatio,
+\index{matriisin ($\nel$neliÃ¶matriisin)!b@transponointi, transpoosi}%
+\kor{transponointi}. TÃ¤llÃ¤ tarkoitetaan yksinkertaisesti matriisin $\mv{A}$ rivien ja
+sarakkeiden vaihtoa keskenÃ¤Ã¤n. Tulosta merkitÃ¤Ã¤n $\mv{A}^T$ ja kutsutaan $\mv{A}$:n
 \kor{transpoosiksi}\,:
 \[ 
 \boxed{ \quad \kehys [\mv{A}^T]_{ij} = [\mv{A}]_{ji}. \quad } 
@@ -364,26 +364,26 @@ sarakkeiden vaihtoa keskenään. Tulosta merkitään $\mv{A}^T$ ja kutsutaan $\mv{A}
 \mv{C}^T = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}. \quad \loppu
 \] 
 \end{Exa}
-Kuten esimerkissä, neliömatriisin tapauksessa (ei muussa) on mahdollista, että 
-$\mv{A}^T = \mv{A}$, jolloin sanotaan, että $\mv{A}$ on \kor{symmetrinen}:
-\index{symmetrisyys!c@neliömatriisin} \index{neliömatriisi!a@symmetrinen}%
+Kuten esimerkissÃ¤, neliÃ¶matriisin tapauksessa (ei muussa) on mahdollista, ettÃ¤ 
+$\mv{A}^T = \mv{A}$, jolloin sanotaan, ettÃ¤ $\mv{A}$ on \kor{symmetrinen}:
+\index{symmetrisyys!c@neliÃ¶matriisin} \index{neliÃ¶matriisi!a@symmetrinen}%
 \[ 
 \mv{A}^T = \mA \quad \ekv \quad \mv{A}\,\ \text{symmetrinen}. 
 \]
 
-Transponoinnin laskusäännöistä tärkeimmät ovat
+Transponoinnin laskusÃ¤Ã¤nnÃ¶istÃ¤ tÃ¤rkeimmÃ¤t ovat
 \[ 
 \boxed{ \quad \kehys (\mv{A}^T)^T = \mv{A}, \quad (\mv{AB})^T =  \mv{B}^T \mv{A}^T. \quad } 
 \]
-Näistä ensimmäinen on ilmeinen, ja myös jälkimmäisen (tulon transponointisäännön) voi johtaa 
-suoraviivaisesti matriisitulon määritelmästä (Harj.teht.\,\ref{H-m-1: todistuksia}a). Kun tulon
-transponontisääntöä sovelletaan useampikertaiseen matriisituloon, saadaan yleisempi sääntö
+NÃ¤istÃ¤ ensimmÃ¤inen on ilmeinen, ja myÃ¶s jÃ¤lkimmÃ¤isen (tulon transponointisÃ¤Ã¤nnÃ¶n) voi johtaa 
+suoraviivaisesti matriisitulon mÃ¤Ã¤ritelmÃ¤stÃ¤ (Harj.teht.\,\ref{H-m-1: todistuksia}a). Kun tulon
+transponontisÃ¤Ã¤ntÃ¶Ã¤ sovelletaan useampikertaiseen matriisituloon, saadaan yleisempi sÃ¤Ã¤ntÃ¶
 \[ 
 (\mA_1 \mA_2 \ldots \mA_n)^T\ =\ \mA_n^T \mA_{n-1}^T \ldots \mA_1^T. 
 \]
-Siis tulon transpoosi $=$ transpoosien tulo käänteisessä järjestyksessä. 
+Siis tulon transpoosi $=$ transpoosien tulo kÃ¤Ã¤nteisessÃ¤ jÃ¤rjestyksessÃ¤. 
 
-Muista matriisialgebran laskusäännöistä mainittakoon vielä määritelmien perusteella ilmeiset 
+Muista matriisialgebran laskusÃ¤Ã¤nnÃ¶istÃ¤ mainittakoon vielÃ¤ mÃ¤Ã¤ritelmien perusteella ilmeiset 
 (oletetaan matriisien yhteensopivuus)
 \[ 
 \begin{aligned}
@@ -396,44 +396,44 @@ Muista matriisialgebran laskusäännöistä mainittakoon vielä määritelmien perustee
 
 \subsection*{Vaakavektorit --- euklidinen skalaaritulo ja normi}
 
-Kun pystyvektori $\mv{x} = (x_i)_{i=1}^n$ tulkitaan matriisiksi kokoa $n \times 1$, niin tällä
-matriisilla on transpoosi, jota merkitään $\mv{x}^T$ ja sanotaan
+Kun pystyvektori $\mv{x} = (x_i)_{i=1}^n$ tulkitaan matriisiksi kokoa $n \times 1$, niin tÃ¤llÃ¤
+matriisilla on transpoosi, jota merkitÃ¤Ã¤n $\mv{x}^T$ ja sanotaan
 \index{vaakavektori}%
 \kor{vaakavektoriksi} 
 (engl.\ row vector). Vektorialgebran kannalta pysty- ja vaakavektoreilla ei ole eroa, joten 
-vektoriavaruus $\R^n$ voidaan yhtä hyvin ajatella vaakavektoreista koostuvaksi. Matriisialgebran
+vektoriavaruus $\R^n$ voidaan yhtÃ¤ hyvin ajatella vaakavektoreista koostuvaksi. Matriisialgebran
 kannalta sen sijaan pysty- ja vaakavektorit ovat erilaisia olioita. Erityisen mielenkiintoinen
-on matriisitulo $\mv{x}^T \mv{y}$, missä $\mv{y} = (y_i)_{i=1}^n$ on samaa kokoa oleva 
-pystyvektori kuin $\mv{x}$. Matriisitulon määritelmän mukaan  $\mv{x}^T \mv{y}$ on matriisi
+on matriisitulo $\mv{x}^T \mv{y}$, missÃ¤ $\mv{y} = (y_i)_{i=1}^n$ on samaa kokoa oleva 
+pystyvektori kuin $\mv{x}$. Matriisitulon mÃ¤Ã¤ritelmÃ¤n mukaan  $\mv{x}^T \mv{y}$ on matriisi
 kokoa $1 \times 1$ eli skalaari:
 \[ 
 \mv{x}^T \mv{y} = \sum_{i=1}^n x_i y_i\ \in \R. 
 \]
-Tässä on itse asiassa määritelty matriisialgebran keinoin $\R^n$:n 
+TÃ¤ssÃ¤ on itse asiassa mÃ¤Ã¤ritelty matriisialgebran keinoin $\R^n$:n 
 \index{euklidinen!c@skalaaritulo} \index{skalaaritulo!c@$\R^n$:n euklidinen}%
 \kor{euklidinen skalaaritulo}
 \[ 
 \boxed{ \quad \scp{\mv{x}}{\mv{y}} = \mv{x}^T \mv{y} = \mv{y}^T \mv{x} 
                                    =  \sum_{i=1}^n x_i y_i, \quad \mv{x},\mv{y} \in \R^n. \quad}
 \]
-Tämä on aiemmin Luvuissa \ref{tasonvektorit} ja \ref{ristitulo} määriteltyjen $\R^2$:n
+TÃ¤mÃ¤ on aiemmin Luvuissa \ref{tasonvektorit} ja \ref{ristitulo} mÃ¤Ã¤riteltyjen $\R^2$:n
 ja $\R^3$:n skalaaritulojen yleistys.
-\index{Cauchyn!f@--Schwarzin epäyhtälö}%
-Cauchyn-Schwarzin epäyhtälö $\R^n$:n euklidiselle skalaaritulolle on (ks.\ Lause \ref{schwarzR})
+\index{Cauchyn!f@--Schwarzin epÃ¤yhtÃ¤lÃ¶}%
+Cauchyn-Schwarzin epÃ¤yhtÃ¤lÃ¶ $\R^n$:n euklidiselle skalaaritulolle on (ks.\ Lause \ref{schwarzR})
 \[ 
 \abs{\scp{\mv{x}}{\mv{y}}} \le \abs{\mv{x}} \abs{\mv{y}}, \quad \mv{x},\mv{y} \in \R^n, 
 \]
-missä
+missÃ¤
 \[ 
 \abs{\mv{x}} = \scp{\mv{x}}{\mv{x}}^{1/2} = (\mv{x}^T \mv{x})^{1/2}  
                                           = \bigl(\,\sum_{i=1}^n x_i^2 \,\bigr)^{1/2}
 \]
 \index{euklidinen!b@normi} \index{normi!euklidinen}%
-on $\R^n$:n \kor{euklidinen normi}. Viitaten näin määriteltyyn skalaarituloon ja normiin 
-käytetään avaruudesta $\R^n$ yleisesti nimitystä
+on $\R^n$:n \kor{euklidinen normi}. Viitaten nÃ¤in mÃ¤Ã¤riteltyyn skalaarituloon ja normiin 
+kÃ¤ytetÃ¤Ã¤n avaruudesta $\R^n$ yleisesti nimitystÃ¤
 \index{euklidinen!d@avaruus $\R^n$}%
-\kor{euklidinen avaruus} $\R^n$. Edellä 
-määritelty $\R^n$:n luonnollinen kanta $\{\me_1, \ldots, \me_n\}$ on euklidisen avaruuden 
+\kor{euklidinen avaruus} $\R^n$. EdellÃ¤ 
+mÃ¤Ã¤ritelty $\R^n$:n luonnollinen kanta $\{\me_1, \ldots, \me_n\}$ on euklidisen avaruuden 
 \index{kanta!a@ortonormeerattu}%
 kantana \kor{ortonormeerattu}:
 \[ 
@@ -441,34 +441,34 @@ kantana \kor{ortonormeerattu}:
 \]
 
 Jos $\mx\in\R^n$, $\my\in\R^m$ ja \mA\ on matriisi kokoa $m \times n$, niin skalaaritulo 
-$\scp{\mA\mx}{\my} = (\mA\mx)^T \my$ on määritelty. Tässä on tulon transponointisäännön mukaan
-$(\mA\mx)^T = \mx^T \mA^T$, joten pätee
+$\scp{\mA\mx}{\my} = (\mA\mx)^T \my$ on mÃ¤Ã¤ritelty. TÃ¤ssÃ¤ on tulon transponointisÃ¤Ã¤nnÃ¶n mukaan
+$(\mA\mx)^T = \mx^T \mA^T$, joten pÃ¤tee
 \[ 
 \boxed{\quad \kehys \scp{\mA\mx}{\my} = \scp{\mx}{\mA^T \my}. \quad} 
 \] 
-Huomautettakoon vielä, että jos $\mA$ on kokoa $m \times p$, $\mB$ on kokoa $p \times n$, ja
-merkitään $\mA^T=[\ma_1 \ldots \ma_m]$ (eli $\mA$:n $i$:s rivi $=\ma_i^T$) ja 
-$\mB=[\mb_1 \ldots \mb_n]$, niin matriisitulon määritelmän perusteella
+Huomautettakoon vielÃ¤, ettÃ¤ jos $\mA$ on kokoa $m \times p$, $\mB$ on kokoa $p \times n$, ja
+merkitÃ¤Ã¤n $\mA^T=[\ma_1 \ldots \ma_m]$ (eli $\mA$:n $i$:s rivi $=\ma_i^T$) ja 
+$\mB=[\mb_1 \ldots \mb_n]$, niin matriisitulon mÃ¤Ã¤ritelmÃ¤n perusteella
 \[
 [\mA\mB]_{ij} = \ma_i^T\mb_j = \scp{\ma_i}{\mb_j}.
 \]
-Tulo $\mA\mB$ on siis taulukko, joka muodostuu $\mA$:n rivien $\mB$:n sarakkeiden välisistä
+Tulo $\mA\mB$ on siis taulukko, joka muodostuu $\mA$:n rivien $\mB$:n sarakkeiden vÃ¤lisistÃ¤
 ($\R^p$:n) skalaarituloista.
 
 \subsection*{Kompleksiset vektorit ja matriisit}
 \index{kompleksinen vektori ja matriisi|vahv}
 
-Koska matriisialgebrassa on perimmältään kyse vain matriisialkioiden välisistä 
-peruslaskutoimituksista ja niiden yhdistelystä, voidaan matriisialkioiden ajatella kuuluvan 
-$\R$:n sijasta mihin tahansa kuntaan $\K$. Yksinkertaisissa laskuesimerkeissä 
-(kuten esimerkit edellä) on usein $\K = \Q$. Yleisemmisssä matemaattisissa tarkasteluissa,
-samoin monissa sovelluksissa (esim.\ sähkötekniikassa) on sallittava matriisialkioiden 
-kompleksiarvoisuus, jolloin $\K = \C$. Tässä tapauksessa pystyvektorit kokoa $n$ muodostavat
+Koska matriisialgebrassa on perimmÃ¤ltÃ¤Ã¤n kyse vain matriisialkioiden vÃ¤lisistÃ¤ 
+peruslaskutoimituksista ja niiden yhdistelystÃ¤, voidaan matriisialkioiden ajatella kuuluvan 
+$\R$:n sijasta mihin tahansa kuntaan $\K$. Yksinkertaisissa laskuesimerkeissÃ¤ 
+(kuten esimerkit edellÃ¤) on usein $\K = \Q$. YleisemmisssÃ¤ matemaattisissa tarkasteluissa,
+samoin monissa sovelluksissa (esim.\ sÃ¤hkÃ¶tekniikassa) on sallittava matriisialkioiden 
+kompleksiarvoisuus, jolloin $\K = \C$. TÃ¤ssÃ¤ tapauksessa pystyvektorit kokoa $n$ muodostavat
 euklidisen avaruuden $\C^n$, jonka skalaaritulo on
 \[ 
 \scp{\mv{x}}{\mv{y}} = \sum_{i=1}^n x_i \bar{y}_i = \mv{x}^T \bar{\mv{y}}. 
 \]
-Tässä $\bar{\mv{y}}$, yleisemmin $\bar{\mv{A}}$, tarkoittaa kompleksista konjugointia 
+TÃ¤ssÃ¤ $\bar{\mv{y}}$, yleisemmin $\bar{\mv{A}}$, tarkoittaa kompleksista konjugointia 
 alkioittain. 
 \begin{Exa} Jos
 \[ 
@@ -482,26 +482,26 @@ niin
 \end{gather*} 
 \end{Exa}
 Matriisia $\mv{A}^* = \bar{\mv{A}}^T$ sanotaan $\mv{A}$:n
-\index{liittomatriisi} \index{matriisin ($\nel$neliömatriisin)!c@liittomatriisi}%
+\index{liittomatriisi} \index{matriisin ($\nel$neliÃ¶matriisin)!c@liittomatriisi}%
 \kor{liittomatriisiksi} (engl.\ adjoint). Jos $\mx \in \C^n$, $\my \in \C^m$ ja \mA\ on
 kompleksinen matriisi kokoa $m \times n$, niin liittomatriisin ja $\C^m$:n skalaaritulon
-määritelmistä seuraa helposti (vrt. reaalinen tapaus edellä)
+mÃ¤Ã¤ritelmistÃ¤ seuraa helposti (vrt. reaalinen tapaus edellÃ¤)
 \[ 
 \boxed{\quad \kehys \scp{\mA\mx}{\my} = \scp{\mx}{\mA^*\my}. \quad} 
 \]
-Jos $\mv{A} = \{a_{ij}\}_{i,j = 1}^n$ on neliömatriisi ja $\mv{A}^* = \mv{A}$, ts.\ 
-$a_{ji} = \bar{a}_{ij}\ \forall i,j$, niin sanotaan, että $\mv{A}$ on
-\index{hermiittinen matriisi} \index{neliömatriisi!b@hermiittinen}%
+Jos $\mv{A} = \{a_{ij}\}_{i,j = 1}^n$ on neliÃ¶matriisi ja $\mv{A}^* = \mv{A}$, ts.\ 
+$a_{ji} = \bar{a}_{ij}\ \forall i,j$, niin sanotaan, ettÃ¤ $\mv{A}$ on
+\index{hermiittinen matriisi} \index{neliÃ¶matriisi!b@hermiittinen}%
 \kor{hermiittinen} (engl.\ Hermitean):
 \[ 
 \mv{A}^* = \mv{A} \quad \ekv \quad \mv{A}\,\ \text{hermiittinen}. 
 \]
-Jokainen reaalinen ja symmetrinen matriisi on määritelmän mukaan myös hermiittinen.
+Jokainen reaalinen ja symmetrinen matriisi on mÃ¤Ã¤ritelmÃ¤n mukaan myÃ¶s hermiittinen.
 \begin{Exa} Yleinen hermiittinen matriisi kokoa $2 \times 2$ on muotoa
 \[ 
 \mv{A} = \begin{bmatrix} a & c \\ \bar{c} & b \end{bmatrix}, 
 \]
-missä $a,b \in \R$ ja $c \in \C$. \loppu 
+missÃ¤ $a,b \in \R$ ja $c \in \C$. \loppu 
 \end{Exa}
 
 \Harj
@@ -524,16 +524,16 @@ Olkoon
 Laske $\mA\mB$, $\mA\mC$, $\mB\mC$, $\mC\mA$ ja $\mB\mA^T$. 
 
 \item 
-Millä matriisien tyyppiä koskevilla oletuksilla tulot $\mA\mB$ ja $\mB\mA$ ovat \newline
-a) molemmat määriteltyjä, b) samaa tyyppiä?
+MillÃ¤ matriisien tyyppiÃ¤ koskevilla oletuksilla tulot $\mA\mB$ ja $\mB\mA$ ovat \newline
+a) molemmat mÃ¤Ã¤riteltyjÃ¤, b) samaa tyyppiÃ¤?
 
 \item
 Olkoon 
 \[
 \ma=[1,3,5,2], \quad \mb=[-1,3,2,4]^T, \quad \mA=((-1)^{i+j},\, i=1,2,\, j=1,2,3,4).
 \]
-Laske vektorien/matriisien $\ma,\,\mb,\,\mA$ keskinäisistä (kaksittaisista) tuloista kaikki,
-jotka ovat määriteltyjä.
+Laske vektorien/matriisien $\ma,\,\mb,\,\mA$ keskinÃ¤isistÃ¤ (kaksittaisista) tuloista kaikki,
+jotka ovat mÃ¤Ã¤riteltyjÃ¤.
 
 \item
 Matriisit $\mA$ ja $\mB$ ovat kokoa $10 \times 10$ ja niiden alkiot ovat $a_{ij}=i+j$ ja
@@ -545,11 +545,11 @@ Olkoon
 \mA=a\begin{bmatrix} 1&1&1\\1&1&1\\1&1&1 \end{bmatrix}, \quad
 \mB=\begin{rmatrix} b&-c&-c\\-c&d&d\\-c&d&d \end{rmatrix}.
 \]
-Määritä luvut $a,b,c,d$ siten, että $\mA\neq\mv{0}$, $\mB\neq\mv{0}$, $\mA^2=\mA$, $\mB^2=\mB$
+MÃ¤Ã¤ritÃ¤ luvut $a,b,c,d$ siten, ettÃ¤ $\mA\neq\mv{0}$, $\mB\neq\mv{0}$, $\mA^2=\mA$, $\mB^2=\mB$
 ja $\mA\mB=\mv{0}$. 
 
 \item
-Määritä matriisi $\mA$, kun tiedetään, että
+MÃ¤Ã¤ritÃ¤ matriisi $\mA$, kun tiedetÃ¤Ã¤n, ettÃ¤
 \[
 \mA\begin{bmatrix} 1\\1\\1 \end{bmatrix} = \begin{bmatrix} 1\\3\\4\\2 \end{bmatrix}, \quad
 \mA\begin{bmatrix} 1\\1\\0 \end{bmatrix} = \begin{bmatrix} 1\\2\\3\\4 \end{bmatrix}, \quad
@@ -565,7 +565,7 @@ Hae kaikki matriisit $\mB$, jotka kommutoivat matriisin
 kanssa. 
 
 \item 
-Olkoon $\mA$ ja $\mB$ samaa kokoa olevia neliömatriiseja. Todista: \vspace{1mm}\newline
+Olkoon $\mA$ ja $\mB$ samaa kokoa olevia neliÃ¶matriiseja. Todista: \vspace{1mm}\newline
 a) \ $(\mA + \mB)^2=\mA^2+2\mA\mB+\mB^2$ $\ \ekv\ $ $\mA$ ja $\mB$ kommutoivat \newline
 b) \ $\mA$ ja $\mB$ symmetriset $\ \not\impl\ $ $\mA\mB$ symmetrinen \newline
 c) \ $\mA$ ja $\mB$ symmetriset ja kommutoivat $\ \impl\ $ $\mA\mB$ symmetrinen
@@ -577,11 +577,11 @@ Laske \ a) $\mA^k\ \forall k\in\N$, \ b) $\mB=(\mI+\mA)^{100}$, kun
 \mI=\begin{bmatrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1 \end{bmatrix}.
 \]
 
-\item \label{H-m-1: todistuksia} \index{neliömatriisi!c@vinosymmetrinen}
+\item \label{H-m-1: todistuksia} \index{neliÃ¶matriisi!c@vinosymmetrinen}
 \index{vinosymmetrinen matriisi}
-a) Todista matriisitulon transponointisääntö $(\mA\mB)^T=\mB^T\mA^T$. \vspace{1mm}\newline
-b) Näytä, että jokainen neliömatriisi on esitettävissä yksikäsitteisesti muodossa 
-$\mA=\mB+\mC$, missä $\mB$ on symmetrinen ja $\mC$ on \kor{vinosymmetrinen}: \newline
+a) Todista matriisitulon transponointisÃ¤Ã¤ntÃ¶ $(\mA\mB)^T=\mB^T\mA^T$. \vspace{1mm}\newline
+b) NÃ¤ytÃ¤, ettÃ¤ jokainen neliÃ¶matriisi on esitettÃ¤vissÃ¤ yksikÃ¤sitteisesti muodossa 
+$\mA=\mB+\mC$, missÃ¤ $\mB$ on symmetrinen ja $\mC$ on \kor{vinosymmetrinen}: \newline
 $\mC+\mC^T=\mv{0}$.
 
 \item
@@ -591,7 +591,7 @@ Olkoon
 \mb=\begin{rmatrix} 2\\-1\\3 \end{rmatrix}, \quad
 \mx=\begin{bmatrix} x\\y\\z \end{bmatrix}.
 \]
-Sievennä lauseke $\,f(x,y,z)=\mx^T\mA\mx+\mb^T\mx\,$ toisen asteen polynomiksi.
+SievennÃ¤ lauseke $\,f(x,y,z)=\mx^T\mA\mx+\mb^T\mx\,$ toisen asteen polynomiksi.
 
 \item
 Laske $\mA\mx$, $\mB\mx$, $\mA\mB$, $(\mA\mB)^*$ ja $\mB^*\mA^*$, kun
@@ -607,10 +607,10 @@ alkiona, niin ko.\ avaruuden euklidista normia vastaa \kor{matriisinormi}
 \[
 \norm{\mA} = \left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}.
 \]
-Näytä, että pätee $\,\abs{\mA\mx} \le \norm{\mA}\abs{\mx}\ \forall \mx\in\R^n$.
+NÃ¤ytÃ¤, ettÃ¤ pÃ¤tee $\,\abs{\mA\mx} \le \norm{\mA}\abs{\mx}\ \forall \mx\in\R^n$.
 
 \item (*) 
-Olkoon $x\in\R$ ja määritellään
+Olkoon $x\in\R$ ja mÃ¤Ã¤ritellÃ¤Ã¤n
 \[
 \mA       = \begin{bmatrix} x&1&0&0\\0&x&1&0\\0&0&x&1\\0&0&0&x\end{bmatrix}, \quad
 \mI=\begin{bmatrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1 \end{bmatrix}, \quad
@@ -619,11 +619,11 @@ Olkoon $x\in\R$ ja määritellään
 Laske matriisin $\exp(\mA)$ alkiot $x$:n funktiona.
 
 \item (*) \index{zzb@\nim!Naudat laitumella}
-(Naudat laitumella) Nautalaumassa on on $83$ täysin ruskeata eläintä, $77$ sarvipäätä,
-$36$ sukupuoleltaan sonnia, $22$ ruskeata sarvipäätä, $15$ ruskeata sonnia, $25$ sarvipäistä
-sonnia ja $7$ ruskeata sarvipäistä sonnia. Kaikki lauman eläimet kuuluvat johonkin mainituista
-ryhmistä. Montako eläintä laumassa on? \kor{Vihje}: Jaa eläimet pistevieraisiin ryhmiin,
-esim.\ ruskeita sarvipäisiä sonneja $x_1$ kpl $\ldots$ ei-ruskeita sarvettomia lehmiä
-$x_8$ kpl. Kirjoita lineaarinen yhtälöryhmä ja ratkaise!
+(Naudat laitumella) Nautalaumassa on on $83$ tÃ¤ysin ruskeata elÃ¤intÃ¤, $77$ sarvipÃ¤Ã¤tÃ¤,
+$36$ sukupuoleltaan sonnia, $22$ ruskeata sarvipÃ¤Ã¤tÃ¤, $15$ ruskeata sonnia, $25$ sarvipÃ¤istÃ¤
+sonnia ja $7$ ruskeata sarvipÃ¤istÃ¤ sonnia. Kaikki lauman elÃ¤imet kuuluvat johonkin mainituista
+ryhmistÃ¤. Montako elÃ¤intÃ¤ laumassa on? \kor{Vihje}: Jaa elÃ¤imet pistevieraisiin ryhmiin,
+esim.\ ruskeita sarvipÃ¤isiÃ¤ sonneja $x_1$ kpl $\ldots$ ei-ruskeita sarvettomia lehmiÃ¤
+$x_8$ kpl. Kirjoita lineaarinen yhtÃ¤lÃ¶ryhmÃ¤ ja ratkaise!
 
 \end{enumerate}

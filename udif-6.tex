@@ -1,10 +1,10 @@
-\section[Ep‰lineaariset yht‰lˆryhm‰t: Jacobin matriisi \\ ja Newtonin menetelm‰]
-{Ep‰lineaariset yht‰lˆryhm‰t: Jacobin \\ matriisi ja Newtonin menetelm‰}
+\section[Ep√§lineaariset yht√§l√∂ryhm√§t: Jacobin matriisi \\ ja Newtonin menetelm√§]
+{Ep√§lineaariset yht√§l√∂ryhm√§t: Jacobin \\ matriisi ja Newtonin menetelm√§}
 \label{jacobiaani}
 \sectionmark{Jacobin matriisi}
 \alku
 
-Tarkastellaan yleist‰ $m$ yht‰lˆn ja $n$ tuntemattoman yht‰lˆryhm‰‰ muotoa
+Tarkastellaan yleist√§ $m$ yht√§l√∂n ja $n$ tuntemattoman yht√§l√∂ryhm√§√§ muotoa
 \[
 \left\{ \begin{aligned}
 &f_1(x_1,\ldots,x_n)\ =0 \\
@@ -12,34 +12,34 @@ Tarkastellaan yleist‰ $m$ yht‰lˆn ja $n$ tuntemattoman yht‰lˆryhm‰‰ muotoa
 &f_m(x_1,\ldots,x_n)=0
 \end{aligned} \right.
 \]
-miss‰ funktiot $f_i\,,\ i=1 \ldots m$, ovat $n$ reaalimuuttujan reaaliarvoisia funktioita, eli 
-funktioita tyyppi‰ $f_i\,:\ \DF_{f_i} \kohti \R,\ \DF_{f_i}\subset\R^n$. Yht‰lˆryhm‰ on 
-\index{epzy@ep‰lineaarinen yht‰lˆryhm‰} \index{yhtzy@yht‰lˆryhm‰!b@ep‰lineaarinen}
-\kor{ep‰lineaarinen}, jos se ei ole lineaarinen, eli jos ainakin yksi funktioista $f_i$ on 
-ei-affiininen kuvaus (vrt.\ Luku \ref{affiinikuvaukset}). Kun m‰‰ritell‰‰n
+miss√§ funktiot $f_i\,,\ i=1 \ldots m$, ovat $n$ reaalimuuttujan reaaliarvoisia funktioita, eli 
+funktioita tyyppi√§ $f_i\,:\ \DF_{f_i} \kohti \R,\ \DF_{f_i}\subset\R^n$. Yht√§l√∂ryhm√§ on 
+\index{epzy@ep√§lineaarinen yht√§l√∂ryhm√§} \index{yhtzy@yht√§l√∂ryhm√§!b@ep√§lineaarinen}
+\kor{ep√§lineaarinen}, jos se ei ole lineaarinen, eli jos ainakin yksi funktioista $f_i$ on 
+ei-affiininen kuvaus (vrt.\ Luku \ref{affiinikuvaukset}). Kun m√§√§ritell√§√§n
 \[
 \mf = (f_1,\ldots,f_m), \quad \DF_\mf = \DF_{f_1}\cap\DF_{f_2}\cap\cdots\cap\DF_{f_m}\,,
 \]
-niin ym.\ yht‰lˆryhm‰n voi kirjoittaa k‰tev‰sti vektorimuodossa\,:
+niin ym.\ yht√§l√∂ryhm√§n voi kirjoittaa k√§tev√§sti vektorimuodossa\,:
 \[
 \mf(\mx)=\mv{0}.
 \]
-T‰ss‰ siis $\mf$ on funktio (kuvaus) tyyppi‰ $\,\mf:\ \DF_\mf\kohti\R^m,\ \DF_\mf\subset\R^n$.
+T√§ss√§ siis $\mf$ on funktio (kuvaus) tyyppi√§ $\,\mf:\ \DF_\mf\kohti\R^m,\ \DF_\mf\subset\R^n$.
 \index{funktio A!j@$n$ muuttujan vektoriarvoinen} \index{vektoric@vektoriarvoinen funktio}
 \index{vektorimuuttujan funktio}%
-T‰m‰ on \kor{vektorimuuttujan vektoriarvoinen} funktio, jonka voi tulkita aiemmin Luvuissa 
-\ref{lineaarikuvaukset}--\ref{affiinikuvaukset} m‰‰riteltyjen lineaari- ja affiinikuvausten
-\index{vektorikentt‰}%
-yleistykseksi. Myˆs termi‰ \kor{vektorikentt‰} (vrt.\ Luku \ref{divergenssi ja roottori}) voi
-k‰ytt‰‰. Yht‰lˆryhmi‰ matriisialgebran keinoin k‰sitelt‰ess‰ tulkitaan $\mf$ tavallisesti
-pystyvektoriksi. Kuten n‰hd‰‰n jatkossa, matriisialgebraa tarvitaan muun muassa, kun halutaan
-m‰‰ritt‰‰ algoritmisin keinoin ko.\ yht‰lˆryhm‰n \kor{ratkaisut}, eli joukko
+T√§m√§ on \kor{vektorimuuttujan vektoriarvoinen} funktio, jonka voi tulkita aiemmin Luvuissa 
+\ref{lineaarikuvaukset}--\ref{affiinikuvaukset} m√§√§riteltyjen lineaari- ja affiinikuvausten
+\index{vektorikentt√§}%
+yleistykseksi. My√∂s termi√§ \kor{vektorikentt√§} (vrt.\ Luku \ref{divergenssi ja roottori}) voi
+k√§ytt√§√§. Yht√§l√∂ryhmi√§ matriisialgebran keinoin k√§sitelt√§ess√§ tulkitaan $\mf$ tavallisesti
+pystyvektoriksi. Kuten n√§hd√§√§n jatkossa, matriisialgebraa tarvitaan muun muassa, kun halutaan
+m√§√§ritt√§√§ algoritmisin keinoin ko.\ yht√§l√∂ryhm√§n \kor{ratkaisut}, eli joukko
 \[
 X=\{\mx\in\DF_\mf \mid \mf(\mx)=\mv{0}\}.
 \]
-Yht‰lˆryhmi‰ k‰yt‰nnˆss‰ (numeerisesti) ratkaistaessa on tavallisimmin $m=n$. 
+Yht√§l√∂ryhmi√§ k√§yt√§nn√∂ss√§ (numeerisesti) ratkaistaessa on tavallisimmin $m=n$. 
 \begin{Exa}
-Ep‰lineaaristen yht‰lˆryhmien
+Ep√§lineaaristen yht√§l√∂ryhmien
 \[ 
 \text{a)} \ \left\{ \begin{aligned} 
                     &3x+y+z+9=0 \\ &7x+y+3z+27=0 \\ &x^2+y^2+z^2-81=0 
@@ -70,14 +70,14 @@ Algebrallisin (tai b-kohdassa geometrisin) keinoin voidaan todeta ratkaisuiksi
 \end{Exa}
 
 \index{differentioituvuus}%
-Vektoriarvoista funktiota $\mf$ sanotaan \kor{differentioituvaksi} pisteess‰ $\mx\in\DF_\mf$,
-jos jokainen komponenttifunktio $f_i$ on ko.\ pisteess‰ differentioituva (M‰‰ritelm‰n 
-\ref{differentioituvuus} mieless‰). Jos $\mf$ on differentioituva, niin yhdist‰m‰ll‰ 
-komponenttifunktioiden differentiaalikehitelm‰t saadaan tulos
+Vektoriarvoista funktiota $\mf$ sanotaan \kor{differentioituvaksi} pisteess√§ $\mx\in\DF_\mf$,
+jos jokainen komponenttifunktio $f_i$ on ko.\ pisteess√§ differentioituva (M√§√§ritelm√§n 
+\ref{differentioituvuus} mieless√§). Jos $\mf$ on differentioituva, niin yhdist√§m√§ll√§ 
+komponenttifunktioiden differentiaalikehitelm√§t saadaan tulos
 \[
 \mf(\mx+\Delta\mx)=\mf(\mx)+\mJ\,\mf(\mx)\Delta\mx+\mr(\mx),
 \]
-miss‰ $\mJ$ on $\mf$:n \kor{Jacobin}\footnote[2]{Saksalainen matemaatikko \vahv{K.G.J. Jacobi}  
+miss√§ $\mJ$ on $\mf$:n \kor{Jacobin}\footnote[2]{Saksalainen matemaatikko \vahv{K.G.J. Jacobi}  
 eli vuosina 1804-1851. \index{Jacobi, K. G. J.|av}} \kor{matriisi} (engl. Jacobian)
 \index{Jacobin matriisi} \index{differentiaalioperaattori!i@Jacobin matriisi}%
 \[
@@ -88,23 +88,23 @@ eli vuosina 1804-1851. \index{Jacobi, K. G. J.|av}} \kor{matriisi} (engl. Jacobi
                            \dfrac{\partial f_m}{\partial x_n}(\mx)
                            \end{bmatrix}\quad \text{(Jacobin matriisi)} \quad}
 \]
-ja j‰‰nnˆsfunktiolle $\mr$ p‰tee arvio
+ja j√§√§nn√∂sfunktiolle $\mr$ p√§tee arvio
 \[
 \abs{\mr(\mx)} = o(\abs{\Delta\mx}), \quad \text{kun}\,\ \abs{\Delta x} \kohti 0.
 \]
 Tapauksessa $m=1$ Jacobin matriisi on sama kuin transponoitu gradientti, eli
 $\mJ f = (\Nabla f)^T$. Tapauksessa $n=1$ Jacobin matriisi puolestaan palautuu
 vektoriarvoisen yhden muuttujan funktion (tavalliseksi) derivaataksi.
-Tapauksissa $m=2,3$ t‰m‰ on ennest‰‰n tuttu parametrisen k‰yr‰n
-derivaattana (Luku \ref{derivaatta geometriassa}). Jacobin matriisi on siis j‰lleen
-derivaattak‰sitteen yleistys kahdellakin eri tavalla. M‰‰ritelm‰st‰ n‰hd‰‰n yleisemmin, ett‰
-Jacobin matriisi on esitett‰viss‰ joko gradienttien $\nabla f_i$ tai osittaisderivaattojen
+Tapauksissa $m=2,3$ t√§m√§ on ennest√§√§n tuttu parametrisen k√§yr√§n
+derivaattana (Luku \ref{derivaatta geometriassa}). Jacobin matriisi on siis j√§lleen
+derivaattak√§sitteen yleistys kahdellakin eri tavalla. M√§√§ritelm√§st√§ n√§hd√§√§n yleisemmin, ett√§
+Jacobin matriisi on esitett√§viss√§ joko gradienttien $\nabla f_i$ tai osittaisderivaattojen
 $\partial_j\mf$ avulla muodoissa
 \[
 \mJ\mf \,=\, [\nabla f_1 \ldots \nabla f_m]^T \,=\, [\partial_1\mf \ldots \partial_n\mf].
 \]
-\begin{Exa} \label{yryhm‰-esim}
-Kun yht‰lˆryhm‰
+\begin{Exa} \label{yryhm√§-esim}
+Kun yht√§l√∂ryhm√§
 \[ \begin{cases}
     \,x^3-2xy^5-x-2 = 0 \\
    -x^3y+2xy^2+y^5+3 = 0
@@ -119,25 +119,25 @@ kirjoitetaan muotoon $\mf(x,y)=\mo$, $\ \mf=[f_1,f_2]^T$, niin Jacobin matriisi 
 3x^2-2y^5-1 & -10xy^4 \\ -3x^2+2y^2 & -x^3+4xy+5y^4
 \end{bmatrix}.
 \]
-Yht‰lˆryhm‰n er‰s ratkaisu on $(x,y)=(2,1)$. T‰ss‰ pisteess‰ on
+Yht√§l√∂ryhm√§n er√§s ratkaisu on $(x,y)=(2,1)$. T√§ss√§ pisteess√§ on
 \[
 \mJ\,\mf(2,1)=\begin{rmatrix} 9 & -20 \\ -10 & 5 \end{rmatrix}. \loppu
 \]
 \end{Exa}
 
-Jos $\mf$ on differentioituva pisteess‰ $\ma$, niin approksimaatiota
+Jos $\mf$ on differentioituva pisteess√§ $\ma$, niin approksimaatiota
 \[
 \mf(\mx) \approx \mf(\ma) + \mJ\mf(\ma)(\mx-\ma)
 \]
 \index{linearisaatio (funktion)}% \index{funktion approksimointi!ab@linearisaatiolla}%
-sanotaan aiempaan tapaan (vrt.\ Luku \ref{derivaatta}) $\mf$:n \kor{linearisaatioksi} pisteess‰
+sanotaan aiempaan tapaan (vrt.\ Luku \ref{derivaatta}) $\mf$:n \kor{linearisaatioksi} pisteess√§
 $\ma$. (Oikeammin kyse on 'affinisaatiosta'.) Koska approksimaation virhe on suuruusluokkaa
-$\ord{\abs{\mx-\ma}}$ (differentioituvuuden m‰‰ritelm‰n mukaisesti), niin johtop‰‰tˆs on\,:
+$\ord{\abs{\mx-\ma}}$ (differentioituvuuden m√§√§ritelm√§n mukaisesti), niin johtop√§√§t√∂s on\,:
 \[
 \boxed{\quad\kehys \text{Differentioituva kuvaus}\ 
                  \approx\ \text{affiinikuvaus p\pain{aikallisesti}}. \quad}
 \]
-\jatko \begin{Exa} (jatko) Pisteen $(-1,1)\,\vastaa\,\ma=[-1,1]^T$ ymp‰ristˆss‰ on likimain
+\jatko \begin{Exa} (jatko) Pisteen $(-1,1)\,\vastaa\,\ma=[-1,1]^T$ ymp√§rist√∂ss√§ on likimain
 \[
 \mf(x,y)\,\approx\,\mf(-1,1)+\mJ(-1,1)(\mx-\ma)\,
      =\,\begin{rmatrix} 0\\3 \end{rmatrix}+\begin{rmatrix} 0&10\\-1&2 \end{rmatrix} 
@@ -145,16 +145,16 @@ $\ord{\abs{\mx-\ma}}$ (differentioituvuuden m‰‰ritelm‰n mukaisesti), niin johtop
 \]
 \end{Exa}
 
-\subsection*{Newtonin menetelm‰ yht‰lˆryhmille}
-\index{Newtonin menetelm‰!a@yht‰lˆryhm‰lle|vahv}
+\subsection*{Newtonin menetelm√§ yht√§l√∂ryhmille}
+\index{Newtonin menetelm√§!a@yht√§l√∂ryhm√§lle|vahv}
 
-Tarkastellaan yht‰lˆryhm‰‰ $\mf(\mx)=\mo$, miss‰ $\mf$ on tyyppi‰ $\mf:\ \R^n\kohti\R^n$.
-Newtonin menetelm‰ss‰ tehd‰‰n yht‰lˆryhm‰ss‰ linearisoiva approksimaatio pisteess‰ $\mx_k$,
+Tarkastellaan yht√§l√∂ryhm√§√§ $\mf(\mx)=\mo$, miss√§ $\mf$ on tyyppi√§ $\mf:\ \R^n\kohti\R^n$.
+Newtonin menetelm√§ss√§ tehd√§√§n yht√§l√∂ryhm√§ss√§ linearisoiva approksimaatio pisteess√§ $\mx_k$,
 eli ratkaistaan
 \[
 \mf(\mx_k)+\mJ(\mx_k)(\mx-\mx_k)=\mo.
 \]
-Kun ratkaisua merkit‰‰n $\mx=\mx_{k+1}$, on tuloksena iteraatiokaava
+Kun ratkaisua merkit√§√§n $\mx=\mx_{k+1}$, on tuloksena iteraatiokaava
 \[
 \mJ(\mx_k)(\mx_{k+1}-\mx_k)=-\mf(\mx_k)
 \]
@@ -162,52 +162,52 @@ eli
 \[
 \boxed{\kehys\quad \mx_{k+1}=\mx_k-\inv{\mJ(\mx_k)}\,\mf(\mx_k) \quad \text{(Newton)}. \quad}
 \]
-Perusajatus t‰ss‰ on t‰sm‰lleen sama kuin yhden yht‰lˆn ($n=1$) tapauksessa (vrt.\ Luku 
-\ref{kiintopisteiteraatio}): kyseess‰ on
+Perusajatus t√§ss√§ on t√§sm√§lleen sama kuin yhden yht√§l√∂n ($n=1$) tapauksessa (vrt.\ Luku 
+\ref{kiintopisteiteraatio}): kyseess√§ on
 \index{kiintopisteiteraatio}%
 \kor{kiintopisteiteraatio} muotoa
 \[
 \mx_{k+1}=\mF(\mx_k), \quad k=0,1,\ldots,
 \]
-miss‰ $\mF(\mx)=\mx-\mJ(\mx)^{-1}\mf(\mx)$. 
+miss√§ $\mF(\mx)=\mx-\mJ(\mx)^{-1}\mf(\mx)$. 
 
-Newtonin menetelm‰ suppenee myˆs yht‰lˆryhmien ratkaisussa samantapaisin oletuksin kuin yhden 
-yht‰lˆn tapauksessa. --- Kerrattakoon Luvusta \ref{usean muuttujan jatkuvuus}, ett‰
+Newtonin menetelm√§ suppenee my√∂s yht√§l√∂ryhmien ratkaisussa samantapaisin oletuksin kuin yhden 
+yht√§l√∂n tapauksessa. --- Kerrattakoon Luvusta \ref{usean muuttujan jatkuvuus}, ett√§
 vektorijonon $\seq{\mx_k}$ suppeneminen kohti vektoria $\mc\in\R^n$ tarkoittaa:
 \[
 \mx_k \kohti \mc \qekv \abs{\mx_k-\mc} \kohti 0 \quad (k\kohti\infty),
 \]
-miss‰ $\abs{\cdot}$ on $\R^n$:n euklidinen normi. Kuten tapauksessa $n=1$, Newtonin menetelm‰n
+miss√§ $\abs{\cdot}$ on $\R^n$:n euklidinen normi. Kuten tapauksessa $n=1$, Newtonin menetelm√§n
 \index{kvadraattinen!a@suppeneminen}%
-suppeneminen on myˆs (riitt‰vin oletuksin) \kor{kvadraattista} seuraavassa
-konvergenssilauseessa l‰hemmin m‰‰ritelt‰v‰ll‰ tavalla. Lause on todistuksineen varsin
+suppeneminen on my√∂s (riitt√§vin oletuksin) \kor{kvadraattista} seuraavassa
+konvergenssilauseessa l√§hemmin m√§√§ritelt√§v√§ll√§ tavalla. Lause on todistuksineen varsin
 suoraviivainen yleistys Lauseesta \ref{Newtonin konvergenssi}, mutta todistuksen yksityiskohdat
-ovat teknisempi‰. (Todistus nojaa usean muuttujan Taylorin lauseeseen, ks.\ Luku
-\ref{usean muuttujan taylorin polynomit} j‰ljemp‰n‰, vrt.\ myˆs
+ovat teknisempi√§. (Todistus nojaa usean muuttujan Taylorin lauseeseen, ks.\ Luku
+\ref{usean muuttujan taylorin polynomit} j√§ljemp√§n√§, vrt.\ my√∂s
 Harj.teht.\,\ref{taylorin lause}:\ref{H-dif-4: Newtonin konvergenssi}.) Sivuutetaan todistus.
 \begin{Lause} \label{Newtonin konvergenssi -Rn}
 Olkoon $\mf:\DF_\mf\kohti\R^n$, $\DF_\mf\subset\R^n$, $\mf=(f_i)$, ja olkoon $\mf(\mc)=\mo$, 
 $\mc\in\R^n$. Olkoot edelleen osittaisderivaatat $\partial^\alpha  f_i(\mx)$ olemassa ja 
-jatkuvia pisteen $\mc$ ymp‰ristˆss‰, kun $i=1\ldots n$ ja $\abs{\alpha}\leq 2$, ja olkoon 
-Jacobin matriisi $\mJ\,\mf(\mc)$ s‰‰nnˆllinen. T‰llˆin Newtonin iteraatio 
-$\mx_{k+1}=\mx_k-\inv{\mJ(\mx_k)}\,\mf(\mx_k)$ suppenee kohti $\mc$:t‰, mik‰li $\abs{\mx_0-\mc}$
-on riitt‰v‰n pieni, ja suppeneminen on kvadraattista:
+jatkuvia pisteen $\mc$ ymp√§rist√∂ss√§, kun $i=1\ldots n$ ja $\abs{\alpha}\leq 2$, ja olkoon 
+Jacobin matriisi $\mJ\,\mf(\mc)$ s√§√§nn√∂llinen. T√§ll√∂in Newtonin iteraatio 
+$\mx_{k+1}=\mx_k-\inv{\mJ(\mx_k)}\,\mf(\mx_k)$ suppenee kohti $\mc$:t√§, mik√§li $\abs{\mx_0-\mc}$
+on riitt√§v√§n pieni, ja suppeneminen on kvadraattista:
 \[
 \abs{\mx_{k+1}-\mc}\leq C\abs{\mx_k-\mc}^2\quad (C=\text{vakio}).
 \]
 \end{Lause}
-\begin{Exa} \label{Newton-2d: ex1} Etsi Newtonin menetelm‰ll‰ ratkaisu yht‰lˆryhm‰lle 
+\begin{Exa} \label{Newton-2d: ex1} Etsi Newtonin menetelm√§ll√§ ratkaisu yht√§l√∂ryhm√§lle 
 \[ \begin{cases}
     \,x^3-2xy^5-x=2.04 \\
     -x^3y+2xy^2+y^5=-0.05
 \end{cases} \]
-pisteen $(-1,1)$ l‰helt‰. 
+pisteen $(-1,1)$ l√§helt√§. 
 \end{Exa}
-\ratk T‰ss‰ on
+\ratk T√§ss√§ on
 \[
 \mf(x,y)= \begin{bmatrix} x^3-2xy^5-x-2.04 \\ -x^3y+2xy^2+y^5+0.05 \end{bmatrix}
 \]
-ja Jacobin matriisi $\mJ(x,y)$ on sama kuin Esimerkiss‰ \ref{yryhm‰-esim}. Iteraatiokaavan
+ja Jacobin matriisi $\mJ(x,y)$ on sama kuin Esimerkiss√§ \ref{yryhm√§-esim}. Iteraatiokaavan
 \[
 [x_{k+1},\,y_{k+1}]^T = [x_k,\,y_k]^T -\mJ(x_k,y_k)^{-1}\mf(x_k,y_k)
 \]
@@ -222,34 +222,34 @@ mukaan laskien saadaan
                                   &\vdots \quad \loppu
 \end{align*}
 
-Esimerkiss‰ Newtonin iteraatio suppeni nopeasti, koska alkuarvaus oli l‰hell‰ ratkaisua. Ellei
-hyv‰‰ alkuarvausta ole k‰ytett‰viss‰, voidaan ensin koettaa paikallistaa ratkaisut jollakin 
-yksinkertaisemmalla menetelm‰ll‰. Esimerkiksi jos yht‰lˆryhm‰ ei ole kooltaan suuri, voidaan 
-kokeilemalla tutkia, miss‰ funktio
+Esimerkiss√§ Newtonin iteraatio suppeni nopeasti, koska alkuarvaus oli l√§hell√§ ratkaisua. Ellei
+hyv√§√§ alkuarvausta ole k√§ytett√§viss√§, voidaan ensin koettaa paikallistaa ratkaisut jollakin 
+yksinkertaisemmalla menetelm√§ll√§. Esimerkiksi jos yht√§l√∂ryhm√§ ei ole kooltaan suuri, voidaan 
+kokeilemalla tutkia, miss√§ funktio
 \[
 F(\mx)=\sum_{i=1}^n [f_i(\mx)]^2
 \]
-saa pieni‰ arvoja. Viel‰kin suoraviivaisempi on 'yrityksen ja erehdyksen' menetelm‰: Iteroidaan
+saa pieni√§ arvoja. Viel√§kin suoraviivaisempi on 'yrityksen ja erehdyksen' menetelm√§: Iteroidaan
 \index{suppenemisallas}%
 vaihtelevilla alkuarvauksilla, kunnes sattumalta osutaan nk.\ \kor{suppenemisaltaaseen}, eli 
-riitt‰v‰n l‰helle jotakin ratkisua. Mik‰li iteraatio ei suppene esimerkiksi kymmenen kierroksen
-j‰lkeen, vaihdetaan alkuarvausta.
+riitt√§v√§n l√§helle jotakin ratkisua. Mik√§li iteraatio ei suppene esimerkiksi kymmenen kierroksen
+j√§lkeen, vaihdetaan alkuarvausta.
 \begin{Exa}
-Ratkaise yht‰lˆryhm‰
+Ratkaise yht√§l√∂ryhm√§
 \[
 \begin{cases}
 \,x^2+y^2= 1 \\ \,e^x+\sin y=1
 \end{cases}
 \]
 \end{Exa}
-\ratk T‰ss‰ on
+\ratk T√§ss√§ on
 \[
 \mf(x,y) = \begin{bmatrix} x^2+y^2-1 \\ e^x+\sin y-1 \end{bmatrix}, \qquad
 \mJ\,\mf(x,y) = \begin{bmatrix} 2x & 2y \\ e^x & \cos y \end{bmatrix},
 \]
 joten Newtonin iteraatio saa muodon
 \[
-\begin{bmatrix} x_{k+1} \\ y_{k+1}†\end{bmatrix} =
+\begin{bmatrix} x_{k+1} \\ y_{k+1}¬†\end{bmatrix} =
 \begin{bmatrix} x_k \\ y_k \end{bmatrix} - 
 \inv{\begin{bmatrix} 2x_k & 2y_k \\ e^{x_k} & \cos y^k \end{bmatrix}}
 \begin{bmatrix} x_k^2+y_k^2-1 \\ e^{x_k}+\sin y_k-1\end{bmatrix}.
@@ -259,7 +259,7 @@ Ratkaisuja on kaksi:
 A:\quad &(x,y)=(\phantom{-}0.5538..,\, -0.8327..\,) \\
 B:\quad &(x,y)=(-0.8089..,\phantom{-}\,0.5879..\,)
 \end{align*}
-Seuraavassa tuloksia alkuarvauksista riippuen. Merkint‰ * tarkoittaa ep‰onnistumista 
+Seuraavassa tuloksia alkuarvauksista riippuen. Merkint√§ * tarkoittaa ep√§onnistumista 
 (singulaarinen Jacobin matriisi tai iteraation hajaantuminen).
 \[
 \begin{array}{lll}
@@ -284,63 +284,63 @@ Seuraavassa tuloksia alkuarvauksista riippuen. Merkint‰ * tarkoittaa ep‰onnistum
 \end{array} \loppu
 \]
 
-\subsection*{Suuret yht‰lˆryhm‰t. Jatkamismenettely}
+\subsection*{Suuret yht√§l√∂ryhm√§t. Jatkamismenettely}
 \index{jatkamismenettely (algoritmi)|vahv}
 
-Newtonin menetelm‰‰ k‰ytet‰‰n yleisesti myˆs hyvin suurien ep‰lineaaristen yht‰lˆryhmien
-ratkaisuun. T‰llaiset ongelmat syntyv‰t usein osana laajempaa laskentaprosessia, jolloin
-on myˆs tavallista, ett‰ hyv‰ alkuarvaus on tarjolla laskennan aikaisemmista vaiheista.
-N‰in on  esimerkiksi ratkaistaessa differentiaaliyht‰lˆsysteemeit‰ numeerisilla
-askelmenetelmill‰ (ks.\ Luku \ref{DYn numeeriset menetelm‰t}). 
+Newtonin menetelm√§√§ k√§ytet√§√§n yleisesti my√∂s hyvin suurien ep√§lineaaristen yht√§l√∂ryhmien
+ratkaisuun. T√§llaiset ongelmat syntyv√§t usein osana laajempaa laskentaprosessia, jolloin
+on my√∂s tavallista, ett√§ hyv√§ alkuarvaus on tarjolla laskennan aikaisemmista vaiheista.
+N√§in on  esimerkiksi ratkaistaessa differentiaaliyht√§l√∂systeemeit√§ numeerisilla
+askelmenetelmill√§ (ks.\ Luku \ref{DYn numeeriset menetelm√§t}). 
 
-Jos halutaan vain ratkaista yksitt‰inen suurikokoinen yht‰lˆryhm‰ ilman ennakkotietoa
-ratkaisun (ratkaisujen) sijainnista, voi toimivan alkuarvauksen lˆyt‰minen Newtonin
-iteraatiolle olla hyvin vaikeaa. T‰llaisessa tilanteessa varsin yleisesti k‰ytetty on nk.
+Jos halutaan vain ratkaista yksitt√§inen suurikokoinen yht√§l√∂ryhm√§ ilman ennakkotietoa
+ratkaisun (ratkaisujen) sijainnista, voi toimivan alkuarvauksen l√∂yt√§minen Newtonin
+iteraatiolle olla hyvin vaikeaa. T√§llaisessa tilanteessa varsin yleisesti k√§ytetty on nk.
 \kor{jatkamismenettely} (engl.\ continuation method), jossa ratkaistava ongelma 
 parametrisoidaan muotoon
 \[
 P(t),\quad 0\leq t<1.
 \]
-Oletetaan, ett‰ $P(1)$ on ongelma, joka varsinaisesti halutaan ratkaista, ja ett‰ $P(0)$ on 
-helppo ratkaista. T‰llˆin jatkamismenettelyn ideana on ratkaista per‰kk‰in
+Oletetaan, ett√§ $P(1)$ on ongelma, joka varsinaisesti halutaan ratkaista, ja ett√§ $P(0)$ on 
+helppo ratkaista. T√§ll√∂in jatkamismenettelyn ideana on ratkaista per√§kk√§in
 \[
 P(t_0),P(t_1),\ldots,P(t_N),\quad t_N=1,
 \]
-miss‰ (esimerkiksi) $t_k=k\Delta t$. Jos $\Delta t$ on pieni ja parametrisointi suoritettu 
-hyvin, on probleeman $P(t_{k-1})$ ratkaisu hyv‰ alkuarvaus Newtonin iteraatiolle, kun 
-ratkaistaan probleemaa $P(t_k)$. N‰in voidaan askelittain edet‰ lopputilaan
-$t_N=1$.\footnote[2]{Jatkamismenettelyyn perustuvan algoritmin suunnittelussa on yleens‰
+miss√§ (esimerkiksi) $t_k=k\Delta t$. Jos $\Delta t$ on pieni ja parametrisointi suoritettu 
+hyvin, on probleeman $P(t_{k-1})$ ratkaisu hyv√§ alkuarvaus Newtonin iteraatiolle, kun 
+ratkaistaan probleemaa $P(t_k)$. N√§in voidaan askelittain edet√§ lopputilaan
+$t_N=1$.\footnote[2]{Jatkamismenettelyyn perustuvan algoritmin suunnittelussa on yleens√§
 apua probleeman fysikaalisesta taustasta. Esimerkiksi rakenteiden mekaniikan ongelmassa, jossa
 halutaan simuloida rakenteen suuria muodonmuutoksia kuormituksen alaisena, on luontevaa
-menetelll‰ kuten koej‰rjestelyss‰: Parametrisoidaan kuormituksen voimakkuus, eli l‰hdet‰‰n
-kuormittamattomasta tilasta ja lis‰t‰‰n kuormitusta pienin askelin, kunnes p‰‰dyt‰‰n haluttuun
-lopputilaan. Parametrin $t$ voi t‰llˆin kuvitella koej‰rjestelyyn liittyv‰ksi 
-aikamuuttujaksi. Aikamuuttujan lis‰‰minen (aikaparametrisointi) on luonnollista
-yleisemminkin silloin, kun fysiikasta per‰isin olevaan ongelmaan etsit‰‰n ajasta riippumatonta
+menetelll√§ kuten koej√§rjestelyss√§: Parametrisoidaan kuormituksen voimakkuus, eli l√§hdet√§√§n
+kuormittamattomasta tilasta ja lis√§t√§√§n kuormitusta pienin askelin, kunnes p√§√§dyt√§√§n haluttuun
+lopputilaan. Parametrin $t$ voi t√§ll√∂in kuvitella koej√§rjestelyyn liittyv√§ksi 
+aikamuuttujaksi. Aikamuuttujan lis√§√§minen (aikaparametrisointi) on luonnollista
+yleisemminkin silloin, kun fysiikasta per√§isin olevaan ongelmaan etsit√§√§n ajasta riippumatonta
 (tasapaino)ratkaisua.}
-Ellei parempaa ideaa ole k‰ytett‰viss‰, voi yleisen yht‰lˆryhm‰n parametrisoida vaikkapa
+Ellei parempaa ideaa ole k√§ytett√§viss√§, voi yleisen yht√§l√∂ryhm√§n parametrisoida vaikkapa
 muunnoksella muotoa
 \[
 \mf(\mx)=\mo\ \ext\ \\ \mg(\mx)+t\,[\,\mf(\mx)-\mg(\mx)\,]=\mo,
 \]
-miss‰ $\mg(\mx)=\mo$ on jokin helposti ratkeava (esim.\ lineaarinen) yht‰lˆryhm‰.
-\begin{Exa} Yht‰lˆryhm‰lle %[ratk: (x,y)=(5,4)]
+miss√§ $\mg(\mx)=\mo$ on jokin helposti ratkeava (esim.\ lineaarinen) yht√§l√∂ryhm√§.
+\begin{Exa} Yht√§l√∂ryhm√§lle %[ratk: (x,y)=(5,4)]
 \[
 \left\{ \begin{aligned}
         &x^3-2y^3+x+2y=10 \\ &x^3+y^3-2xy^2-3x-y=10
         \end{aligned} \right.
 \]
 antaa Newtonin algoritmi alkuarvauksilla $(x_0,y_0)=(1,1)$ ja $(x_0,y_0)=(-1,-1)$ ratkaisun
-$(x,y)=(-2.25872,-2.42834)$. Kokeillaan, lˆytyykˆ jokin muu ratkaisu jatkamismenettelyll‰:
-Parametrisoidaan yht‰lˆryhm‰ muotoon
+$(x,y)=(-2.25872,-2.42834)$. Kokeillaan, l√∂ytyyk√∂ jokin muu ratkaisu jatkamismenettelyll√§:
+Parametrisoidaan yht√§l√∂ryhm√§ muotoon
 \[
 \mf(t,\mx) = \begin{bmatrix}
              t(x^3-2y^3)+x+2y \\ t(x^3+2y^3-2xy^2)-3x-y
              \end{bmatrix}
            = \begin{bmatrix} 10\\10 \end{bmatrix}
 \]
-ja ratkaistaan t‰m‰ parametrin arvoilla $t_k=0.2k,\ k=0 \ldots 5$. Kun $k=0$, on ratkaisu
-$(x,y)=(-6,8)$. T‰st‰ eteenp‰in ($k=1 \ldots 5$) k‰ytet‰‰n edellisell‰ $k$:n arvolla saatua
+ja ratkaistaan t√§m√§ parametrin arvoilla $t_k=0.2k,\ k=0 \ldots 5$. Kun $k=0$, on ratkaisu
+$(x,y)=(-6,8)$. T√§st√§ eteenp√§in ($k=1 \ldots 5$) k√§ytet√§√§n edellisell√§ $k$:n arvolla saatua
 ratkaisua alkuarvauksena Newtonin iteraatiolle. Tulos:
 \begin{center}
 \begin{tabular}{ll}
@@ -352,35 +352,35 @@ $0.8$ & $(5.53177,4.43769)$ \\
 $1.0$ & $(5.00000,4.00000)$
 \end{tabular}
 \end{center}
-Ratkaisu $(x,y)=(5,4)$ lˆytyy myˆs alkuarvauksia vaihtelemalla. Esim.\ $(x_0,y_0)=(3,3)$ tai
-jopa $(x_0,y_0)=(0,0)$ johtavat t‰h‰n. \loppu
+Ratkaisu $(x,y)=(5,4)$ l√∂ytyy my√∂s alkuarvauksia vaihtelemalla. Esim.\ $(x_0,y_0)=(3,3)$ tai
+jopa $(x_0,y_0)=(0,0)$ johtavat t√§h√§n. \loppu
 \end{Exa}
 
 \subsection*{Yksinkertaistettu Newtonin iteraatio}
-\index{Newtonin menetelm‰!a@yht‰lˆryhm‰lle|vahv}
+\index{Newtonin menetelm√§!a@yht√§l√∂ryhm√§lle|vahv}
  
-Ep‰lineearista yht‰lˆryhm‰‰ Newtonin menetelm‰ll‰ ratkaistaessa on jokaisella 
+Ep√§lineearista yht√§l√∂ryhm√§√§ Newtonin menetelm√§ll√§ ratkaistaessa on jokaisella 
 iteraatiokierroksella suoritettava seuraavat laskuoperaatiot:
 \begin{itemize}
 \item[-] Funktioevaluaatio: $\ \mx_k\ \map\ \mf(\mx_k)=\my_k$.
-\item[-] Jacobin matriisin \kor{p‰ivitys} (engl.\ updating) 
-         $\ \mx_k\ \map\ \mJ\mf(\mx_k)=\mA_k$. \index{pzy@p‰ivitys (Jacobin matriisin)}
-\item[-] Lineaarisen yht‰lˆryhm‰n ratkaisu: 
+\item[-] Jacobin matriisin \kor{p√§ivitys} (engl.\ updating) 
+         $\ \mx_k\ \map\ \mJ\mf(\mx_k)=\mA_k$. \index{pzy@p√§ivitys (Jacobin matriisin)}
+\item[-] Lineaarisen yht√§l√∂ryhm√§n ratkaisu: 
          $\ \my_k\map\mpu_k=\mA_k^{-1}\my_k\ (\mA_k\mpu_k=\my_k)$.
-\item[-] V‰hennyslasku: $\ \mx_k\,,\mpu_k\ \map\ \mx_k-\mpu_k=\mx_{k+1}$.
+\item[-] V√§hennyslasku: $\ \mx_k\,,\mpu_k\ \map\ \mx_k-\mpu_k=\mx_{k+1}$.
 \end{itemize}
-Sek‰ Jacobin matriisin p‰ivitt‰minen ett‰ etenkin lineaarisen yht‰lˆryhm‰n ratkaiseminen ovat
-suhteellisen raskaita operaatioita, jos yht‰lˆryhm‰n koko on suuri. Hyvin suuria yht‰lˆryhmi‰
-ratkaistaessa saatetaankin p‰ivitt‰misess‰ hieman 'laiskotella', ts.\ p‰ivityst‰ ei suoriteta
-jokaisella iteraatiokierroksella. T‰m‰ helpottaa myˆs lineaaristen yht‰lˆryhmien (suoraa) 
-ratkaisemista, koska yht‰lˆryhmien kerroinmatriisi pysyy samana p‰ivityksien v‰liss‰. Riitt‰‰
-silloin laskea Jacobin matriisin $LU$-hajotelma jokaisen p‰ivityksen j‰lkeen ja pit‰‰ se tallessa
-seuraavaan p‰ivitykseen asti (vrt.\ Luku \ref{Gaussin algoritmi}). Riippuen siit‰, kuinka usein
-p‰ivitys suoritetaan, saadaan Newtonin menetelm‰lle erilaisia variaatioita, joista voidaan 
+Sek√§ Jacobin matriisin p√§ivitt√§minen ett√§ etenkin lineaarisen yht√§l√∂ryhm√§n ratkaiseminen ovat
+suhteellisen raskaita operaatioita, jos yht√§l√∂ryhm√§n koko on suuri. Hyvin suuria yht√§l√∂ryhmi√§
+ratkaistaessa saatetaankin p√§ivitt√§misess√§ hieman 'laiskotella', ts.\ p√§ivityst√§ ei suoriteta
+jokaisella iteraatiokierroksella. T√§m√§ helpottaa my√∂s lineaaristen yht√§l√∂ryhmien (suoraa) 
+ratkaisemista, koska yht√§l√∂ryhmien kerroinmatriisi pysyy samana p√§ivityksien v√§liss√§. Riitt√§√§
+silloin laskea Jacobin matriisin $LU$-hajotelma jokaisen p√§ivityksen j√§lkeen ja pit√§√§ se tallessa
+seuraavaan p√§ivitykseen asti (vrt.\ Luku \ref{Gaussin algoritmi}). Riippuen siit√§, kuinka usein
+p√§ivitys suoritetaan, saadaan Newtonin menetelm√§lle erilaisia variaatioita, joista voidaan 
 valita ongelmakohtaisesti tehokkain.
 
 Em.\ variaatioista yksinkertaisimmassa lasketaan Jacobin matriisi vain kerran,
-alkuarvauspisteess‰. Kun merkit‰‰n $\mA=\mJ(\mx_0)$, niin iteraatiokaavaksi tulee
+alkuarvauspisteess√§. Kun merkit√§√§n $\mA=\mJ(\mx_0)$, niin iteraatiokaavaksi tulee
 \[
 \mx_{k+1}=\mx_k-\mA^{-1}\mf(\mx_k), \quad k=0,1\ldots
 \]
@@ -390,10 +390,10 @@ alkuarvauspisteess‰. Kun merkit‰‰n $\mA=\mJ(\mx_0)$, niin iteraatiokaavaksi tule
 %&\mb_k\map\mpu_k\,:\ \mA\mpu_k=\mb_k, \\ 
 %&\mx_{k+1}=\mx_k-\mpu_k\,, \quad k=0,1,\ldots
 %\end{align*}
-T‰m‰ Newtonin menetelm‰n ‰‰rimm‰inen yksinkertaistus ei ole aidon Newtonin menetelm‰n veroinen
-k‰yt‰nnˆss‰, sill‰ se suppenee (sik‰li kuin suppenee) vain lineaarisesti 
+T√§m√§ Newtonin menetelm√§n √§√§rimm√§inen yksinkertaistus ei ole aidon Newtonin menetelm√§n veroinen
+k√§yt√§nn√∂ss√§, sill√§ se suppenee (sik√§li kuin suppenee) vain lineaarisesti 
 (vrt.\ Harj.teht.\,\ref{kiintopisteiteraatio}:\,\ref{H-V-7: yksinkertaistettu Newton},
-kun $n=1$). --- Sen sijaan teoreettisten tarkastelujen 'ajattelumenetelm‰ksi' t‰m‰ menetelm‰
+kun $n=1$). --- Sen sijaan teoreettisten tarkastelujen 'ajattelumenetelm√§ksi' t√§m√§ menetelm√§
 sopii hyvin, ks.\ seuraava luku. 
 \begin{Exa} Esimerkin \ref{Newton-2d: ex1} tilanteessa on
 \[
@@ -409,7 +409,7 @@ joten ym.\ tavalla yksinkertaistetuksi Newtonin iteraatiokaavaksi tulee
                x_k^3-2x_ky_k^5-x_k-2.04\\-x_k^3y_k+2x_ky_k^2+y_k^5-0.05 
                \end{array}\right].
 \]
-Iteraatio suppenee, mutta selv‰sti aitoa Newtonin iteraatiota hitaammin
+Iteraatio suppenee, mutta selv√§sti aitoa Newtonin iteraatiota hitaammin
 (vrt.\ Esimerkki \ref{Newton-2d: ex1}):
 \begin{align*}
 \qquad (x_0,y_0)\ &=\ (-1,\,1) \\
@@ -422,43 +422,43 @@ Iteraatio suppenee, mutta selv‰sti aitoa Newtonin iteraatiota hitaammin
 %      (x_7,y_7)\ &=\ (-0.915608,1.006500) \\
                   &\ \vdots \loppu
 \end{align*}
-%Iteraatio suppenee, mutta selv‰sti aitoa Newtonin iteraatiota hitaammin. \loppu
+%Iteraatio suppenee, mutta selv√§sti aitoa Newtonin iteraatiota hitaammin. \loppu
 \end{Exa}
 
 \Harj
 \begin{enumerate}
 
 \item
-Laske seuraavissa tapauksissa $\mf$:n Jakobin matriisi ensimm‰isess‰ annetussa pisteess‰,
-approksimoi $\mf$ affiinikuvauksella ja laske t‰m‰n avulla $\mf$:n arvo likim‰‰rin toisessa
-annetussa pisteess‰. Vertaa tarkkaan arvoon. \vspace{1mm}\newline
+Laske seuraavissa tapauksissa $\mf$:n Jakobin matriisi ensimm√§isess√§ annetussa pisteess√§,
+approksimoi $\mf$ affiinikuvauksella ja laske t√§m√§n avulla $\mf$:n arvo likim√§√§rin toisessa
+annetussa pisteess√§. Vertaa tarkkaan arvoon. \vspace{1mm}\newline
 a) \   $\mf(x,y)=(x^3+y^3,x^3-y^3),\,\ (1,1),\,\ (0.9,1.1)$ \newline
-b) \   $\mf(x,y)=(e^x\sin\pi y,e^{-x}\cos\pi y),\,\ (0,1/3),\,\ (-0.04,0.30)$†\newline
+b) \   $\mf(x,y)=(e^x\sin\pi y,e^{-x}\cos\pi y),\,\ (0,1/3),\,\ (-0.04,0.30)$¬†\newline
 c) \,\ $\mf(x,y,z)=(x^2y,x^2z,y^2-z^2),\,\ (1,3,3)\,\ (0.99,,3.02,2.97)$ \newline
 d) \   $\mf(x,y,z)=(x^2+yz,y^2-x\ln z),\,\ (2,2,1),\,\ (1.98,2.01,1.03)$ \newline
 e) \,\ $\mf(\mx)=(x_1x_2,\,x_1^2-x_3^2,\,x_2^2+x_3x_4,\,x_2x_4+x_4^2),\,\ (1,2,-2,-1),$ \newline 
        \phantom{e \,\ }  $(1.01,2.02,-2.02,-1.01)$
  
 \item 
-Yht‰lˆryhm‰ll‰
+Yht√§l√∂ryhm√§ll√§
 \[
 [\mf(x,y,z)]^T \,=\, [\,x^3 - x^2 y + x z^3,\,xyz + z^2,\,x^3 + y^3 + z^3\,] \,=\, \mb^T
 \]
 on muuan helppo ratkaisu, kun $\mb^T=[1,2,3]$. Approksimoimalla $\mf$ affiinikuvauksella ko.\ 
-ratkaisupisteen l‰hell‰ laske yht‰lˆryhm‰n ratkaisu likim‰‰rin, kun $\mb=[1.04,1.98,3.02]^T$.
+ratkaisupisteen l√§hell√§ laske yht√§l√∂ryhm√§n ratkaisu likim√§√§rin, kun $\mb=[1.04,1.98,3.02]^T$.
 
 \item
-Laske koordinaattimuunnoksien $(r,\varphi,z)\map(x,y,z)$ (lieriˆk. $\ext$ karteesinen) ja 
+Laske koordinaattimuunnoksien $(r,\varphi,z)\map(x,y,z)$ (lieri√∂k. $\ext$ karteesinen) ja 
 $(r,\theta,\varphi)\map(x,y,z)$ (pallok.\ $\ext$ karteesinen) Jacobin matriisit 
-$\mJ(r,\varphi,z)$ ja $\mJ(r,\theta,\varphi)$. Miss‰ pisteiss‰ $\mJ$ on singulaarinen matriisi?
+$\mJ(r,\varphi,z)$ ja $\mJ(r,\theta,\varphi)$. Miss√§ pisteiss√§ $\mJ$ on singulaarinen matriisi?
 
 \item
-Olkoon $\mf$ tyyppi‰ $\mf: \R^n\kohti\R^p$ ja $\mg$ tyyppi‰ $\mg: \R^p\kohti\R^m$. Johda
-yhdistetyn funktion $\mF(\mx)=(\mg\circ\mf)(\mx)=\mg[\mf(\mx)]$ Jacobin matriisin laskus‰‰ntˆ
-$\mJ\mF(\mx)=\mJ\mg[\mf(\mx)]\mJ\mf(\mx)$. \kor{Vihje}: Ketjus‰‰ntˆ!
+Olkoon $\mf$ tyyppi√§ $\mf: \R^n\kohti\R^p$ ja $\mg$ tyyppi√§ $\mg: \R^p\kohti\R^m$. Johda
+yhdistetyn funktion $\mF(\mx)=(\mg\circ\mf)(\mx)=\mg[\mf(\mx)]$ Jacobin matriisin laskus√§√§nt√∂
+$\mJ\mF(\mx)=\mJ\mg[\mf(\mx)]\mJ\mf(\mx)$. \kor{Vihje}: Ketjus√§√§nt√∂!
 
 \item
-Etsi seuraaville yht‰lˆryhmille ratkaisu Newtonin menetelm‰ll‰ l‰htien alkuarvauksesta
+Etsi seuraaville yht√§l√∂ryhmille ratkaisu Newtonin menetelm√§ll√§ l√§htien alkuarvauksesta
 $(x_0,y_0)=(1,1)$.
 \[
 \text{a)}\,\ \begin{cases} \,x^4+y^4=2xy^5\\ \,x+x^2+y^4=4 \end{cases} \quad
@@ -466,23 +466,23 @@ $(x_0,y_0)=(1,1)$.
 \]
 
 \item
-Etsi seuraavien yht‰lˆryhmien ratkaisut nelj‰n merkitsev‰n numeron tarkkuudella k‰ytt‰en
-kaksiulotteista Newtonin menetelm‰‰. Laske a)- ja b)-kohdissa ratkaisu myˆs vaihtoehtoisella
-tavalla, jossa eliminoidaan ensin toinen tuntemattomista ja k‰ytet‰‰n 1-ulotteista Newtonin
-menetelm‰‰. \vspace{1mm}\newline
+Etsi seuraavien yht√§l√∂ryhmien ratkaisut nelj√§n merkitsev√§n numeron tarkkuudella k√§ytt√§en
+kaksiulotteista Newtonin menetelm√§√§. Laske a)- ja b)-kohdissa ratkaisu my√∂s vaihtoehtoisella
+tavalla, jossa eliminoidaan ensin toinen tuntemattomista ja k√§ytet√§√§n 1-ulotteista Newtonin
+menetelm√§√§. \vspace{1mm}\newline
 a) \ $y-e^x=0,\,\ x-\sin y=0$ \newline
 b) \ $x^2+y^2=1,\,\ y=e^x\ $ (kaksi ratkaisua) \newline 
 c) \ $y-\sin x=0,\,\ x^2+(y+1)^2=2\ $ (kaksi ratkaisua) \newline
-d) \ $x^2-xy+2y^2=10,\,\ x^3y^2=2\ $ (nelj‰ ratkaisua) \newline
-e) \ $\sin x+\sin y=1,\,\ x^3=y^2<30\ $ (nelj‰ ratkaisua)
+d) \ $x^2-xy+2y^2=10,\,\ x^3y^2=2\ $ (nelj√§ ratkaisua) \newline
+e) \ $\sin x+\sin y=1,\,\ x^3=y^2<30\ $ (nelj√§ ratkaisua)
 
 \item 
-Selvit‰ (kaksiulotteista) Newtonin menetelm‰‰ k‰ytt‰en, miss‰ pisteiss‰ Cartesiuksen lehden
-$x^3 + y^3 = 3xy$ tangentin ja jonkin koordinaatiakselin v‰linen kulma on $45\aste$.
+Selvit√§ (kaksiulotteista) Newtonin menetelm√§√§ k√§ytt√§en, miss√§ pisteiss√§ Cartesiuksen lehden
+$x^3 + y^3 = 3xy$ tangentin ja jonkin koordinaatiakselin v√§linen kulma on $45\aste$.
 
 \item
-M‰‰rit‰ likim‰‰rin seuraavien yht‰lˆryhmien ratkaisut eliminoimalla ensin yksi tuntemattomista
-ja k‰ytt‰m‰ll‰ sen j‰lkeen Newtonin menetelm‰‰.
+M√§√§rit√§ likim√§√§rin seuraavien yht√§l√∂ryhmien ratkaisut eliminoimalla ensin yksi tuntemattomista
+ja k√§ytt√§m√§ll√§ sen j√§lkeen Newtonin menetelm√§√§.
 \[
 \text{a)}\ \ \begin{cases} x^2+y^2+z^2=1\\z=xy\\6xz=1 \end{cases} \
 \text{b)}\ \ \begin{cases} x^2+y^2+z^2=1\\y=\sin z\\z+z^2+z^3=x+y \end{cases} \
@@ -490,16 +490,16 @@ ja k‰ytt‰m‰ll‰ sen j‰lkeen Newtonin menetelm‰‰.
 \]
 
 \item
-Yht‰lˆryhm‰ll‰
+Yht√§l√∂ryhm√§ll√§
 \[
 x+yze^x \,=\, x^3+y^3z \,=\, y+e^{xyz} \,=\, 2.1
 \]
-on ratkaisu pisteen $(0,1,2)$ l‰hell‰. Iteroi t‰st‰ alkuarvauksesta kolme kertaa Newtonin
-menetelm‰n yksinkertaistetulla versiolla, jossa Jacobin matriisia ei p‰ivitet‰. Vertaa oikean 
+on ratkaisu pisteen $(0,1,2)$ l√§hell√§. Iteroi t√§st√§ alkuarvauksesta kolme kertaa Newtonin
+menetelm√§n yksinkertaistetulla versiolla, jossa Jacobin matriisia ei p√§ivitet√§. Vertaa oikean 
 Newtonin iteraation antamiin tuloksiin.
 
 \item (*)
-Etsi jatkamismenettely‰ ja Newtonin menetelm‰‰ k‰ytt‰en jokin ratkaisu yht‰lˆryhm‰lle
+Etsi jatkamismenettely√§ ja Newtonin menetelm√§√§ k√§ytt√§en jokin ratkaisu yht√§l√∂ryhm√§lle
 \[
 \left\{ \begin{aligned}
         &3x^3-y^3+z^3+x-2z+40=0 \\ 
@@ -507,23 +507,23 @@ Etsi jatkamismenettely‰ ja Newtonin menetelm‰‰ k‰ytt‰en jokin ratkaisu yht‰lˆryh
         &x^3+y^3+z^3-5x-5y+5z-40=0
         \end{aligned} \right.
 \] 
-% Er‰s atkaisu on (5,6,-6).)
+% Er√§s atkaisu on (5,6,-6).)
 
 \item (*)
-M‰‰rit‰ suora, joka sivuaa kahdessa eri pisteess‰ k‰yr‰‰
+M√§√§rit√§ suora, joka sivuaa kahdessa eri pisteess√§ k√§yr√§√§
 \[
 K:\ x^2y^2-2xy^3+y^4-4x^2y+6xy^2-2y^3+4x^2-3y^2-12x+y=20.
 \]
-% K‰yr‰n yht‰lˆ: 4x+3y+24=(x-y-1)^2(y-2)^2. S: 4x+3y+24=0. Sivuamispisteet (-3,-4) ja (-7.5,2).
+% K√§yr√§n yht√§l√∂: 4x+3y+24=(x-y-1)^2(y-2)^2. S: 4x+3y+24=0. Sivuamispisteet (-3,-4) ja (-7.5,2).
 
 \item (*)
-(Avaruuspys‰kˆinti) T‰htien v‰lisen avaruden pisteess‰ $P=(x,y,z)$ (pituusyksikkˆ = valovuosi)
-on avaruusasema. Avaruusasemaan vaikuttaa l‰himpien t‰htien vetovoima $\vec G=-k\nabla u$,
-miss‰ $k$ on vakio ja
+(Avaruuspys√§k√∂inti) T√§htien v√§lisen avaruden pisteess√§ $P=(x,y,z)$ (pituusyksikk√∂ = valovuosi)
+on avaruusasema. Avaruusasemaan vaikuttaa l√§himpien t√§htien vetovoima $\vec G=-k\nabla u$,
+miss√§ $k$ on vakio ja
 \[
 u(x,y,z) = \sum_{i=1}^n \frac{m_i}{|P-P_i|}\,,
 \]
-miss‰ $m_i$ on t‰hden $T_i$ massa ja $P_i$ sijainti. M‰‰rit‰ avaruuspys‰kˆinti‰ varten kaikki
+miss√§ $m_i$ on t√§hden $T_i$ massa ja $P_i$ sijainti. M√§√§rit√§ avaruuspys√§k√∂inti√§ varten kaikki
 pisteet $P$, joissa $\vec G=\vec 0$, kun $m_i=iM,\ i=1 \ldots n\,$ ($M=$ vakio)
 ja \vspace{1mm}\newline
 a) \ $n=3,\,\ P_1=(0,0,0),\ P_2=(1,0,0),\ P_3=(0,1,0)$, \newline

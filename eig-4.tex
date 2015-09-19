@@ -2,45 +2,45 @@
 \sectionmark{*Tensorit}
 \alku
 
-Kuten edell‰ on todettu, on neliˆmuodolla $\mx^T\mA\mx$ se ominaisuus, ett‰ koordinaatistoa 
-kierrett‰ess‰ neliˆmuodon matriisi muuntuu similaarisesti:
+Kuten edell√§ on todettu, on neli√∂muodolla $\mx^T\mA\mx$ se ominaisuus, ett√§ koordinaatistoa 
+kierrett√§ess√§ neli√∂muodon matriisi muuntuu similaarisesti:
 \[
 \mx\hookrightarrow\my=\mC^T\mx \ \impl \ \mA\hookrightarrow\mB=\mC^T\mA\mC.
 \]
-On myˆs n‰hty, ett‰ pinnan kaarevuusmatriisilla on t‰m‰ sama ominaisuus, kun koordinaatiston 
-kierto tapahtuu pinnan normaalin ymp‰ri. Yleisesti sanotaan sellaista oliota, jolla on 
-jokaisessa koordinaatistossa matriisin olomuoto, ja joka muuntuu koordinaatistoa kierrett‰ess‰
+On my√∂s n√§hty, ett√§ pinnan kaarevuusmatriisilla on t√§m√§ sama ominaisuus, kun koordinaatiston 
+kierto tapahtuu pinnan normaalin ymp√§ri. Yleisesti sanotaan sellaista oliota, jolla on 
+jokaisessa koordinaatistossa matriisin olomuoto, ja joka muuntuu koordinaatistoa kierrett√§ess√§
 \index{tensori}%
-ym.\ s‰‰nnˆn mukaan, \kor{tensoriksi}.\footnote[2]{Tensori on matematiikassa t‰ss‰ esitetty‰
-yleisempi k‰site. Tensorit liitet‰‰n, ei ainoastaan karteesisen koordinaatiston kiertoihin,
-vaan yleisempien k‰yr‰viivaisten kordinaatistojen v‰lisiin muunnoksiin. Muunnoksiin liittyv‰
+ym.\ s√§√§nn√∂n mukaan, \kor{tensoriksi}.\footnote[2]{Tensori on matematiikassa t√§ss√§ esitetty√§
+yleisempi k√§site. Tensorit liitet√§√§n, ei ainoastaan karteesisen koordinaatiston kiertoihin,
+vaan yleisempien k√§yr√§viivaisten kordinaatistojen v√§lisiin muunnoksiin. Muunnoksiin liittyv√§
 differentiaalilaskenta, nk.\ \kor{tensorilaskenta}, on oma matematiikan lajinsa. Tensoreilla ja
-tensorilaskennalla on paljon k‰yttˆ‰ fysiikassa.}
-Neliˆmuoto, matriisinsa kautta n‰htyn‰, on siis tensori, itse asiassa \kor{symmetrinen tensori}.
-Myˆs pinnan kaarevuus on symmetrinen tensori, ja kaarevuusmatriisin sijasta puhutaankin yleens‰
+tensorilaskennalla on paljon k√§ytt√∂√§ fysiikassa.}
+Neli√∂muoto, matriisinsa kautta n√§htyn√§, on siis tensori, itse asiassa \kor{symmetrinen tensori}.
+My√∂s pinnan kaarevuus on symmetrinen tensori, ja kaarevuusmatriisin sijasta puhutaankin yleens√§
 \index{kaarevuustensori}%
-\kor{kaarevuustensorista}. N‰in puhuen kaarevuus tulee selvemmin ymm‰rretyksi pinnan
-paikalliseksi geometriseksi ominaisuudeksi, joka vain n‰ytt‰ytyy erilaisena eri
+\kor{kaarevuustensorista}. N√§in puhuen kaarevuus tulee selvemmin ymm√§rretyksi pinnan
+paikalliseksi geometriseksi ominaisuudeksi, joka vain n√§ytt√§ytyy erilaisena eri
 koordinaatistoissa.
 
-Jos $f=f(x,y,z)$ on kahdesti jatkuvasti derivoituva, niin tietyss‰ pisteess‰ laskettu Hessen 
+Jos $f=f(x,y,z)$ on kahdesti jatkuvasti derivoituva, niin tietyss√§ pisteess√§ laskettu Hessen 
 matriisi
 \[
 \mA=\begin{bmatrix} 
     f_{xx} & f_{xy} & f_{xz} \\ f_{xy} & f_{yy} & f_{yz} \\ f_{xz} & f_{yz} & f_{zz} 
     \end{bmatrix}
 \]
-muuntuu koordinaatistoa kierrett‰ess‰ ym. similaarisuuss‰‰nnˆn mukaisesti. --- T‰m‰ n‰hd‰‰n 
-approksimoimalla $f$:‰‰ toisen asteen Taylorin polynomilla. Silloin voidaan ajatella, ett‰ $f$:n
-'toinen derivaatta' ei ole mihink‰‰n yksitt‰iseen koordinaatistoon sidottu toisten 
-osittaisderivaattojen matriisi, vaan pikemmin \pain{tensori}, jonka ilmiasuja n‰m‰ matriisit 
+muuntuu koordinaatistoa kierrett√§ess√§ ym. similaarisuuss√§√§nn√∂n mukaisesti. --- T√§m√§ n√§hd√§√§n 
+approksimoimalla $f$:√§√§ toisen asteen Taylorin polynomilla. Silloin voidaan ajatella, ett√§ $f$:n
+'toinen derivaatta' ei ole mihink√§√§n yksitt√§iseen koordinaatistoon sidottu toisten 
+osittaisderivaattojen matriisi, vaan pikemmin \pain{tensori}, jonka ilmiasuja n√§m√§ matriisit 
 ovat (!).
 
-Myˆs \pain{lineaarikuvaus} $\,A:\R^n\kohti\R^n$ voidaan ymm‰rt‰‰ tensorina, sill‰ jos
+My√∂s \pain{lineaarikuvaus} $\,A:\R^n\kohti\R^n$ voidaan ymm√§rt√§√§ tensorina, sill√§ jos
 \[
 A:\ \mx \map \my \ \ekv \ \my=\mA\mx,
 \]
-niin n‰hd‰‰n, ett‰ koordinaattimuunnoksessa
+niin n√§hd√§√§n, ett√§ koordinaattimuunnoksessa
 \[
 \mx=\mC\mx',\quad \my=\mC\my'\quad (\inv{\mC}=\mC^T)
 \]
@@ -50,13 +50,13 @@ lineaarikuvaus saa muodon
 \]
 \index{zza@\sov!Magneettinen permeabiliteetti}%
 \begin{Exa} \vahv{Magneettinen permeabiliteetti}.
-S‰hkˆmagnetiikassa magneettivuon tiheyden ($\vec B$) ja magneettikent‰n voimakkuuden ($\vec H$)
-v‰linen yksinkertaisin materiaalilaki on
+S√§hk√∂magnetiikassa magneettivuon tiheyden ($\vec B$) ja magneettikent√§n voimakkuuden ($\vec H$)
+v√§linen yksinkertaisin materiaalilaki on
 \[
 \vec B=\mu\vec H,
 \]
-miss‰ materiaalivakio $\mu$ on v‰liaineen \pain{ma}g\pain{neettinen} p\pain{ermeabiliteetti}.
-T‰m‰ laki on sama kaikissa koordinaatistoissa. Yleisemmin, jos materiaali on ep‰isotrooppinen,
+miss√§ materiaalivakio $\mu$ on v√§liaineen \pain{ma}g\pain{neettinen} p\pain{ermeabiliteetti}.
+T√§m√§ laki on sama kaikissa koordinaatistoissa. Yleisemmin, jos materiaali on ep√§isotrooppinen,
 voi $\vec B$:n ja $\vec H$:n riippuvuus olla yleisempi lineaarikuvaus muotoa
 \[
 \mB=\boldsymbol{\mu}\mH \qekv \begin{bmatrix} B_1 \\ B_2 \\ B_3 \end{bmatrix} =
@@ -65,18 +65,18 @@ voi $\vec B$:n ja $\vec H$:n riippuvuus olla yleisempi lineaarikuvaus muotoa
 \end{bmatrix}
 \begin{bmatrix} H_1 \\ H_2 \\ H_3 \end{bmatrix}.
 \]
-T‰llˆin $\boldsymbol{\mu}$ on tensori, eli matriisi $(\mu_{ij})$ muuntuu koordinaatistoa 
-kierrett‰ess‰ similaarisesti. \loppu
+T√§ll√∂in $\boldsymbol{\mu}$ on tensori, eli matriisi $(\mu_{ij})$ muuntuu koordinaatistoa 
+kierrett√§ess√§ similaarisesti. \loppu
 \end{Exa}
 \begin{Exa}
-Kahdesti jatkuvasti derivoituvasta funktiosta $f=f(x,y)$ tiedet‰‰n, ett‰ $f_{xx}(0,0)=24$, 
+Kahdesti jatkuvasti derivoituvasta funktiosta $f=f(x,y)$ tiedet√§√§n, ett√§ $f_{xx}(0,0)=24$, 
 $f_{yy}(0,0)=-24$ ja $f_{xy}(0,0)=-7$. Laske $f_{\xi\xi}(0,0)$, $f_{\xi\eta}(0,0)$ ja 
 $f_{\eta\eta}(0,0)$ koordinaatistossa $(\xi,\eta)$, jonka kantavektorit ovat
 \[
 \vec e_\xi=\frac{1}{5}(4\vec i + 3\vec j),\quad \vec e_\eta=\frac{1}{5}(-3\vec i +4\vec j).
 \]
 \end{Exa}
-\ratk Koordinaattimuunnos $(x,y)\hookrightarrow (\xi,\eta)$ m‰‰r‰ytyy ehdosta
+\ratk Koordinaattimuunnos $(x,y)\hookrightarrow (\xi,\eta)$ m√§√§r√§ytyy ehdosta
 \[
 %       &x\vec i+y\vec j=\xi\vec e_\xi+\eta\vec e_\eta
 %                =\frac{1}{5}(4\xi-3\eta)\vec i+\frac{1}{5}(3\xi+4\eta)\vec j \\
@@ -94,7 +94,7 @@ f_{\xi\xi}(0,0) & f_{\xi\eta}(0,0) \\ f_{\xi\eta}(0,0) & f_{\eta\eta}(0,0)
               \begin{rmatrix} 4 & -3 \\ 3 & 4 \end{rmatrix} \\
 &=\begin{rmatrix} 0&-25\\-25&0 \end{rmatrix}.
 \end{align*}
-Siis $f_{\xi\xi}(0,0)=f_{\eta\eta}(0,0)=0$, $f_{\xi\eta}=-25$. --- Er‰s oletukset toteuttava 
+Siis $f_{\xi\xi}(0,0)=f_{\eta\eta}(0,0)=0$, $f_{\xi\eta}=-25$. --- Er√§s oletukset toteuttava 
 funktio on
 \[
 f(x,y)=(4x+3y)(3x-4y)=-25\xi\eta. \loppu
@@ -104,61 +104,61 @@ f(x,y)=(4x+3y)(3x-4y)=-25\xi\eta. \loppu
 \index{vektoria@vektori (geometrinen)!a@tason \Ekaksi|vahv}
 \index{vektoria@vektori (geometrinen)!b@avaruuden \Ekolme|vahv}
 
-Jos tensori on olio, joka 'n‰ytt‰‰ matriisilta' jokaisessa (karteesisessa) koordinaatistossa,
+Jos tensori on olio, joka 'n√§ytt√§√§ matriisilta' jokaisessa (karteesisessa) koordinaatistossa,
 niin tason tai avaruuden vektori voidaan vastaavasti tulkita olioksi, jonka olomuoto on lukupari
-tai lukukolmikkko jokaisessa koordinaatistossa. Kuten tensori, t‰m‰ pari tai kolmikko muuntuu
-koordinaatistoa kierrett‰ess‰ systemaattisella tavalla. Esimerkiksi jos 
-$\vec v=x\vec i + y\vec j + z\vec k$ on avaruusvektori, niin muunnoss‰‰ntˆ 
-$\mx \vastaa (x,y,z) \map (x',y',z') \vastaa \mx'$ siirrytt‰ess‰ kierrettyyn koordinaatistoon,
+tai lukukolmikkko jokaisessa koordinaatistossa. Kuten tensori, t√§m√§ pari tai kolmikko muuntuu
+koordinaatistoa kierrett√§ess√§ systemaattisella tavalla. Esimerkiksi jos 
+$\vec v=x\vec i + y\vec j + z\vec k$ on avaruusvektori, niin muunnoss√§√§nt√∂ 
+$\mx \vastaa (x,y,z) \map (x',y',z') \vastaa \mx'$ siirrytt√§ess√§ kierrettyyn koordinaatistoon,
 jonka kantavektorien koordinaatit kannassa $\{\vec i,\vec j,\vec k\}$ ovat 
 ortogonaalimatriisin $\mC$ sarakkeet, on (vrt.\ Luku \ref{lineaarikuvaukset})
 \[
 \mC\mx'=\mx \qekv \mx'=\mC^T\mx.
 \]
-Siis ei ainoastaan tensorin, vaan myˆs vektorin 'perimm‰inen olemus' paljastuu vasta 
-koordinaatistoa kierrett‰ess‰ (!). --- Havaitaan myˆs, ett‰ symmetrisell‰ tensorilla ja 
-vektorilla on se yhteinen piirre, ett‰ lˆytyy koordinaatisto, tai koordinaatistoja, joissa 
+Siis ei ainoastaan tensorin, vaan my√∂s vektorin 'perimm√§inen olemus' paljastuu vasta 
+koordinaatistoa kierrett√§ess√§ (!). --- Havaitaan my√∂s, ett√§ symmetrisell√§ tensorilla ja 
+vektorilla on se yhteinen piirre, ett√§ l√∂ytyy koordinaatisto, tai koordinaatistoja, joissa 
 tensorin/vektorin ilmiasu matriisina/$\R^n$:n alkiona saa mahdollisimman yksinkertaisen muodon.
-Symmetrisen tensorin tapauksessa t‰m‰ yksinkertaisin muoto on diagonaalimatriisi. Tason tai 
-avaruuden vektorin yksinkertaisin muoto on lukupari $(a,0)$ tai lukukolmikko $(a,0,0)$, miss‰ 
-$a>0$ on vektorin pituus. T‰llaiseen koordinaatistoon siirrytt‰ess‰  palataan itse asiassa 
-vektorin alkuper‰iseen geometriseen ideaan --- vektorihan oli alunperin suunnattu jana. Vektorin
-suunnan pysyvyys koordinaatistoa kierrett‰ess‰ varmistetaan em.\ muunnoss‰‰nnˆll‰. Sen mukaan
-siis vektorin ilmiasu $\R^n$:n alkiona \pain{ei} ole pysyv‰, vaan nimenomaan muuttuu 
-koordinaatistoa kierrett‰ess‰, muunnoss‰‰nnˆn ilmaisemalla systemaattisella tavalla.
-\begin{Exa} Voidaan kuvitella (etenkin tapauksissa $n=2$ ja $n=3$), ett‰ euklidinen avaruus 
+Symmetrisen tensorin tapauksessa t√§m√§ yksinkertaisin muoto on diagonaalimatriisi. Tason tai 
+avaruuden vektorin yksinkertaisin muoto on lukupari $(a,0)$ tai lukukolmikko $(a,0,0)$, miss√§ 
+$a>0$ on vektorin pituus. T√§llaiseen koordinaatistoon siirrytt√§ess√§  palataan itse asiassa 
+vektorin alkuper√§iseen geometriseen ideaan --- vektorihan oli alunperin suunnattu jana. Vektorin
+suunnan pysyvyys koordinaatistoa kierrett√§ess√§ varmistetaan em.\ muunnoss√§√§nn√∂ll√§. Sen mukaan
+siis vektorin ilmiasu $\R^n$:n alkiona \pain{ei} ole pysyv√§, vaan nimenomaan muuttuu 
+koordinaatistoa kierrett√§ess√§, muunnoss√§√§nn√∂n ilmaisemalla systemaattisella tavalla.
+\begin{Exa} Voidaan kuvitella (etenkin tapauksissa $n=2$ ja $n=3$), ett√§ euklidinen avaruus 
 $\R^n$ on pisteavaruuden $E^n$ koordinaattiavaruus jossakin valitussa (karteesisessa) 
-koordinaatistossa. Jos nyt valittua pistett‰ $P \in E^n$ edustaa vektori $\mx$ (paikkavektori),
-niin koordinaatistoa kierrett‰ess‰ $P$:n koordinaatit muuntuvat kaavan $\mx'=\mC^T\mx$
-mukaisesti. Muunnoskaava varmistaa, ett‰ piste 'pysyy paikallaan', eli pisteen paikkavektori on
-vektori juuri t‰m‰n vaatimuksen vuoksi. Vastaavasti jos tarkastellaan funktion $f(\mx)$
-muuntumista koordinaatiston kierrossa, niin muunnoss‰‰nnˆll‰ $g(\mx')=f(\mC\mx')$ tarkoitetaan,
-ett‰ 'funktio pysyy paikallaan', ts.\ funktion arvo tietyss‰ (paikallaan pysyv‰ss‰) pisteess‰
+koordinaatistossa. Jos nyt valittua pistett√§ $P \in E^n$ edustaa vektori $\mx$ (paikkavektori),
+niin koordinaatistoa kierrett√§ess√§ $P$:n koordinaatit muuntuvat kaavan $\mx'=\mC^T\mx$
+mukaisesti. Muunnoskaava varmistaa, ett√§ piste 'pysyy paikallaan', eli pisteen paikkavektori on
+vektori juuri t√§m√§n vaatimuksen vuoksi. Vastaavasti jos tarkastellaan funktion $f(\mx)$
+muuntumista koordinaatiston kierrossa, niin muunnoss√§√§nn√∂ll√§ $g(\mx')=f(\mC\mx')$ tarkoitetaan,
+ett√§ 'funktio pysyy paikallaan', ts.\ funktion arvo tietyss√§ (paikallaan pysyv√§ss√§) pisteess√§
 ei muutu. \loppu \end{Exa}
-\begin{Exa} Olkoon $f=f(x,y,z)$ on differentioituva funktio. Kierret‰‰n koordinaatistoa 
+\begin{Exa} Olkoon $f=f(x,y,z)$ on differentioituva funktio. Kierret√§√§n koordinaatistoa 
 muunnoksella $\mC\mx'=\mx\ \ekv\ \mx'=\mC^T\mx\ (\mx=[x,y,z]^T,\ \mx'=[x',y',z']^T)$ ja 
-merkit‰‰n $g(\mx')=f(\mx)=f(\mC\mx')$. Olkoon $\nabla f(0,0,0)= a_1\vec i+a_2\vec j+a_3\vec k$.
-T‰llˆin jos $\ma=[a_1,a_2,a_3]^T$, niin differentioituvuuden m‰‰ritelm‰n mukaisesti on
+merkit√§√§n $g(\mx')=f(\mx)=f(\mC\mx')$. Olkoon $\nabla f(0,0,0)= a_1\vec i+a_2\vec j+a_3\vec k$.
+T√§ll√∂in jos $\ma=[a_1,a_2,a_3]^T$, niin differentioituvuuden m√§√§ritelm√§n mukaisesti on
 \[
 f(x,y,z)=f(0,0,0)+\ma^T\mx + o(\abs{\mx}).
 \]
-Ketjus‰‰ntˆjen perusteella myˆs $g$ on differentioituva origossa, joten jollakin 
+Ketjus√§√§nt√∂jen perusteella my√∂s $g$ on differentioituva origossa, joten jollakin 
 $\mb=[b_1,b_2,b_2]^T$ on
 \[
 g(x',y',z')=g(0,0,0)+\mb^T\mx' + o(\abs{\mx'})=f(0,0,0)+\mb^T\mx' + o(\abs{\mx'}).
 \]
-Kun n‰iss‰ hajotelmissa oletetaan, ett‰ $\mC\mx'=\mx$, niin $\abs{\mx'}=\abs{\mx}$ ja 
+Kun n√§iss√§ hajotelmissa oletetaan, ett√§ $\mC\mx'=\mx$, niin $\abs{\mx'}=\abs{\mx}$ ja 
 $g(x',y',z')=f(x,y,z)$, joten on oltava
 \[
 \ma^T\mx=\mb^T\mx'=\mb^T\mC^T\mx=(\mC\mb)^T\mx \qimpl \mC\mb=\ma.
 \]
-Tulos merkitsee, ett‰ funktion gradientti (tulkittuna pystyvektorina) muuntuu koordinaatistoa
-kierrett‰ess‰ kuten vektori. Samaan tulokseen tullaan myˆs laskemalla $g$:n gradientti suoraan
-ketjus‰‰ntˆjen avulla kaavasta $g(\mx')=f(\mC\mx')$. \loppu
+Tulos merkitsee, ett√§ funktion gradientti (tulkittuna pystyvektorina) muuntuu koordinaatistoa
+kierrett√§ess√§ kuten vektori. Samaan tulokseen tullaan my√∂s laskemalla $g$:n gradientti suoraan
+ketjus√§√§nt√∂jen avulla kaavasta $g(\mx')=f(\mC\mx')$. \loppu
 \end{Exa}
-Funktion gradientti on jo aiemminkin tulkittu vektoriksi, mutta t‰llˆin tulkinta perustui vain
-gradientin 'ulkon‰kˆˆn' kiinte‰ss‰ koordinaatistossa. Nyt voidaan siis vahvistaa, ett‰ tulkinta
-kest‰‰ myˆs koordinaatiston kierron:
+Funktion gradientti on jo aiemminkin tulkittu vektoriksi, mutta t√§ll√∂in tulkinta perustui vain
+gradientin 'ulkon√§k√∂√∂n' kiinte√§ss√§ koordinaatistossa. Nyt voidaan siis vahvistaa, ett√§ tulkinta
+kest√§√§ my√∂s koordinaatiston kierron:
 \[
 \boxed{\quad\kehys \text{Gradientti \kor{on} vektori}. \quad}
 \]
@@ -168,37 +168,37 @@ kest‰‰ myˆs koordinaatiston kierron:
 
 Jos tensorin ja vektorin todellinen luonne paljastuu vasta koordinaatiston kierrossa, niin 
 samoin on \pain{skalaarin} laita. Skalaari on olio, jonka ilmiasu jokaisessa koordinaatistossa
-on luku (t‰ss‰ reaaliluku), ja nimenomaan aina \pain{sama} luku. Esimerkiksi jos 
-$f=f(\mx),\ \mx\in\R^n$, on reaaliarvoinen funktio, niin $f$:n  arvo tietyss‰ 
-(kiinte‰ksi ajatellussa) pisteess‰ on skalaari. Vektoriin liittyv‰ skalaari on vektorin pituus,
+on luku (t√§ss√§ reaaliluku), ja nimenomaan aina \pain{sama} luku. Esimerkiksi jos 
+$f=f(\mx),\ \mx\in\R^n$, on reaaliarvoinen funktio, niin $f$:n  arvo tietyss√§ 
+(kiinte√§ksi ajatellussa) pisteess√§ on skalaari. Vektoriin liittyv√§ skalaari on vektorin pituus,
 koska pituus on reaaliluku, joka ei muutu koordinaatiston kierrossa. Kahteen vektoriin 
-$\mx,\my\in\R^n$ liittyv‰ skalaari on (nimens‰ mukaisesti) \pain{skalaaritulo}, sill‰ jos 
+$\mx,\my\in\R^n$ liittyv√§ skalaari on (nimens√§ mukaisesti) \pain{skalaaritulo}, sill√§ jos 
 $\mx'=\mC^T\mx$ ja $\my'=\mC^T\my$, niin
 \[
 (\mx')^T\my' = (\mC^T\mx)^T\mC^T\my = \mx^T\mC\mC^T\my = \mx^T\mI\my = \mx^T\my.
 \]
-Tensoreihin liittyv‰ mielenkiintoinen skalaari on tensorin \kor{j‰lki}:
-\begin{Def} \label{tensorin j‰lki} \index{jzy@j‰lki (tensorin)|emph}
+Tensoreihin liittyv√§ mielenkiintoinen skalaari on tensorin \kor{j√§lki}:
+\begin{Def} \label{tensorin j√§lki} \index{jzy@j√§lki (tensorin)|emph}
 Jos $T$ on $\R^n$:n tensori, jonka matriisi annetussa ortonormeeratussa koordinaatistossa on
-$\mA=(a_{ij})$, niin $T$:n \kor{j‰lki} (engl.\ trace) on
+$\mA=(a_{ij})$, niin $T$:n \kor{j√§lki} (engl.\ trace) on
 \[
 tr\,T = \sum_{i=1}^n a_{ii}\,.
 \]
 \end{Def}
-\begin{Lause} \label{j‰lki on skalaari} Tensorin j‰lki on skalaari. \end{Lause}
-\tod Olkoon $\mC$ ortogonaalimatriisi kokoa $n \times n$ ja $\mB=\mC^T\mA\mC$. Lause v‰itt‰‰,
-ett‰
+\begin{Lause} \label{j√§lki on skalaari} Tensorin j√§lki on skalaari. \end{Lause}
+\tod Olkoon $\mC$ ortogonaalimatriisi kokoa $n \times n$ ja $\mB=\mC^T\mA\mC$. Lause v√§itt√§√§,
+ett√§
 \[
 \sum_{i=1}^n [\mB]_{ii} = \sum_{i=1}^n [\mA]_ {ii}\,.
 \]
-L‰hdet‰‰n matriisitulon m‰‰ritelm‰st‰ ja vaihdetaan summausj‰rjestyst‰\,:
+L√§hdet√§√§n matriisitulon m√§√§ritelm√§st√§ ja vaihdetaan summausj√§rjestyst√§\,:
 \begin{align*}
 \sum_{i=1}^n [\mB]_{ii} 
          &= \sum_{i=1}^n\sum_{j=1}^n[\mC^T]_{ij}\,[\mA\mC]_{ji} \\
          &= \sum_{i=1}^n\sum_{j=1}^n[\mC^T]_{ij}\sum_{k=1}^n[\mA]_{jk}\,[\mC]_{ki} \\
          &= \sum_{j=1}^n\sum_{k=1}^n[\mA]_{jk}\left(\sum_{i=1}^n[\mC]_{ki}\,[\mC^T]_{ij}\right).
 \end{align*}
-T‰ss‰ on $\mC$:n ortogonaalisuuden perusteella
+T√§ss√§ on $\mC$:n ortogonaalisuuden perusteella
 \[
 \sum_{i=1}^n[\mC]_{ki}\,[\mC^T]_{ij} = [\mC\mC^T]_{kj} = [\mI]_{kj} = \delta_{kj}\,,
 \]
@@ -213,8 +213,8 @@ matriisi on
 \[
 \mA = \begin{bmatrix} u_{xx}(x,y) & u_{xy}(x,y) \\ u_{xy}(x,y) & u_{yy}(x,y) \end{bmatrix}.
 \]
-Kun koordinaatistoa kierret‰‰n muunnoksella $\mC[\xi,\eta]^T=[x,y]^T$ ja merkit‰‰n 
-$v(\xi,\eta)=u(x(\xi,\eta),y(\xi,\eta))$, niin $T$:n matriisi kierretyss‰ koordinaatistossa on
+Kun koordinaatistoa kierret√§√§n muunnoksella $\mC[\xi,\eta]^T=[x,y]^T$ ja merkit√§√§n 
+$v(\xi,\eta)=u(x(\xi,\eta),y(\xi,\eta))$, niin $T$:n matriisi kierretyss√§ koordinaatistossa on
 \[
 \begin{bmatrix} 
 v_{\xi\xi}(\xi,\eta) & v_{\xi\eta}(\xi,\eta) \\ v_{\xi\eta}(\xi,\eta) & v_{\eta\eta}(\xi,\eta)
@@ -223,15 +223,15 @@ v_{\xi\xi}(\xi,\eta) & v_{\xi\eta}(\xi,\eta) \\ v_{\xi\eta}(\xi,\eta) & v_{\eta\
         u_{xx}(x,y) & u_{xy}(x,y) \\ u_{xy}(x,y) & u_{yy}(x,y) 
         \end{bmatrix} \mC.
 \]
-Lauseen \ref{j‰lki on skalaari} mukaan p‰tee
+Lauseen \ref{j√§lki on skalaari} mukaan p√§tee
 \[
 (\partial_\xi^2+\partial_\eta^2)v(\xi,\eta)\,=\,(\partial_x^2+\partial_y^2)u(x,y). \loppu
 \]
 \end{Exa}
-Esimerkist‰ voidaan vet‰‰ se (yleisemminkin $\R^n$:ss‰ p‰tev‰) merkitt‰v‰ johtop‰‰tˆs, ett‰
-Laplacen operaattori $\Delta$ 'n‰ytt‰‰ samalta' kaikissa karteesisissa koordinaatistoissa.
-Koska $\Delta$ myˆs operoi sek‰ skalaareihin ett‰ vektoreihin kuten skalaari, niin voidaan
-kahdessa eri merkityksess‰ sanoa\,:
+Esimerkist√§ voidaan vet√§√§ se (yleisemminkin $\R^n$:ss√§ p√§tev√§) merkitt√§v√§ johtop√§√§t√∂s, ett√§
+Laplacen operaattori $\Delta$ 'n√§ytt√§√§ samalta' kaikissa karteesisissa koordinaatistoissa.
+Koska $\Delta$ my√∂s operoi sek√§ skalaareihin ett√§ vektoreihin kuten skalaari, niin voidaan
+kahdessa eri merkityksess√§ sanoa\,:
 \[
 \boxed{\quad\kehys \text{$\Delta$ \kor{on skalaarinen operaattori}}. \quad}
 \]
@@ -240,13 +240,13 @@ kahdessa eri merkityksess‰ sanoa\,:
 \begin{enumerate}
 
 \item
-Kahdesti jatkuvasti derivoituvasta funktiosta $f(x,y)$ tiedet‰‰n: $f_{xx}(0,0)=0$,
+Kahdesti jatkuvasti derivoituvasta funktiosta $f(x,y)$ tiedet√§√§n: $f_{xx}(0,0)=0$,
 $f_{yy}(0,0)=-2$ ja $f_{xy}(0,0)=2$. Laske $f_{\xi\xi}(0,0)$ ja $f_{\eta\eta}(0,0)$ sellaisessa
-kierretyss‰ koordinaatistossa, jossa $f_{\xi\eta}(0,0)=0$.
+kierretyss√§ koordinaatistossa, jossa $f_{\xi\eta}(0,0)=0$.
 
 \item
-Er‰‰ss‰ materiaalissa magneettikent‰n tiheyden ja magneettikent‰n voimakkuuden v‰lill‰ on
-riippuvuus $\mB=\boldsymbol{\mu}\mH$, miss‰ $\boldsymbol{\mu}$ on tensori, jonka
+Er√§√§ss√§ materiaalissa magneettikent√§n tiheyden ja magneettikent√§n voimakkuuden v√§lill√§ on
+riippuvuus $\mB=\boldsymbol{\mu}\mH$, miss√§ $\boldsymbol{\mu}$ on tensori, jonka
 matriisiesitys on
 \[
 \boldsymbol{\mu}= \begin{bmatrix} \mu&0&0 \\ 0&2\mu&0 \\ 0&0&3\mu \end{bmatrix}
@@ -261,19 +261,19 @@ Millainen on $\boldsymbol{\mu}$:n esitysmuoto peruskoordinaatiston kannassa
 $\{\vec i,\vec j,\vec k\}$\,?
 
 \item
-N‰yt‰, ett‰ jos $\vec a$ ja $\vec F$ ovat vektorikentti‰ (eli vektoriarvoisia funktioita),
-niin \, a) $\nabla\cdot\vec F$ on skalaarikentt‰, \ b) $(\vec a\cdot\nabla)\vec F$ on
-vektorikentt‰.
+N√§yt√§, ett√§ jos $\vec a$ ja $\vec F$ ovat vektorikentti√§ (eli vektoriarvoisia funktioita),
+niin \, a) $\nabla\cdot\vec F$ on skalaarikentt√§, \ b) $(\vec a\cdot\nabla)\vec F$ on
+vektorikentt√§.
 
 \item (*)
-a) N‰yt‰, ett‰ differentiaalioperaattori
+a) N√§yt√§, ett√§ differentiaalioperaattori
 \[
 A=a\partial_x^2+b\partial_y^2+c\partial_x\partial_y,
 \]
-miss‰ $a$, $b$ ja $c$ ovat skalaareita ($a,b,c\in\R$), s‰ilyy muuttumattomana $\Rkaksi$:n
-koordinaatiston kierrossa t‰sm‰lleen kun $a=b$ ja $c=0$,
+miss√§ $a$, $b$ ja $c$ ovat skalaareita ($a,b,c\in\R$), s√§ilyy muuttumattomana $\Rkaksi$:n
+koordinaatiston kierrossa t√§sm√§lleen kun $a=b$ ja $c=0$,
 eli kun $A=a\Delta$. \vspace{1mm}\newline
-b) Millaiseksi osittaisdifferentialiyht‰lˆ $u_{xx}-u_{yy}=0$ muuntuu kierretyss‰ 
+b) Millaiseksi osittaisdifferentialiyht√§l√∂ $u_{xx}-u_{yy}=0$ muuntuu kierretyss√§ 
 koordinaatistossa, jonka kantavektorit ovat
 \[
 \vec e_1=\frac{1}{\sqrt{2}}(\vec i+\vec j\,), \quad 
@@ -283,6 +283,6 @@ c) Jos $\vec a=\vec i+\vec j$, niin millaisen muodon differentiaalioperaattori
 \[
 (\vec a\cdot\nabla)^2 = (\partial_x)^2+(\partial_y)^2+2\partial_x\partial_y
 \]
-saa b-kohdan kierretyss‰ koordinaatistossa?
+saa b-kohdan kierretyss√§ koordinaatistossa?
 
 \end{enumerate}

@@ -1,16 +1,16 @@
-\section[Integraalien sovellukset: Tiheys ja kokonaism‰‰r‰]
-{Integraalien sovellukset: Tiheys ja  \\ kokonaism‰‰r‰} 
+\section[Integraalien sovellukset: Tiheys ja kokonaism√§√§r√§]
+{Integraalien sovellukset: Tiheys ja  \\ kokonaism√§√§r√§} 
 \label{pinta- ja tilavuusintegraalit}
 \sectionmark{Integraalien sovellukset}
 \alku
 
-Fysikaalisissa yhteyksiss‰ k‰ytet‰‰n tasointegraaleista usein nime‰ 
-p\pain{intainte}g\pain{raali} ja $\R^3$:n avasuusintegraalista nime‰ 
+Fysikaalisissa yhteyksiss√§ k√§ytet√§√§n tasointegraaleista usein nime√§ 
+p\pain{intainte}g\pain{raali} ja $\R^3$:n avasuusintegraalista nime√§ 
 \pain{tilavuusinte}g\pain{raali}. 
 \begin{multicols}{2}
 Tasointegraalista tulee 'pintaintegraali', kun taso ajatellaan $\R^3$:n (tai $\Ekolme$:n)
-avaruustasoksi ja pinta-alamitta ko.\ tasolla m‰‰ritellyksi Jordan-mitaksi. Fysikaalisesti $A$
-voi olla esimerkiksi levym‰isen kappaleen sivupinta tai yleisemm‰n kolmiulotteisen kappaleen
+avaruustasoksi ja pinta-alamitta ko.\ tasolla m√§√§ritellyksi Jordan-mitaksi. Fysikaalisesti $A$
+voi olla esimerkiksi levym√§isen kappaleen sivupinta tai yleisemm√§n kolmiulotteisen kappaleen
 ulkopinnan tasomainen osa.  
 \begin{figure}[H]
 \begin{center}
@@ -18,47 +18,47 @@ ulkopinnan tasomainen osa.
 \end{center}
 \end{figure}
 \end{multicols}
-Ym.\ tavalla  ymm‰rrettyn‰ tasointegraalista tulee myˆs matemattisena k‰sitteen‰ erikoistapaus 
-yleisemm‰st‰ \kor{pintaintegraalista} (engl.\ surface integral), jossa pinta voi olla kaareva.
-Pintaintegraaleja t‰ss‰ yleisemm‰ss‰ merkityksess‰ k‰sitell‰‰n edemp‰n‰ Luvussa 
-\ref{pintaintegraalit}. Myˆs yksiulotteinen integraali voidaan tulkita 'avaruudellisesti'
-ajattelemalla, ett‰ kyseess‰ on avaruussuoralla m‰‰ritelty pituusmitta. N‰in ymm‰rrettyn‰ 
-yksiulotteinen integraali on erikoistapaus avaruuden (myˆs tason) k‰yr‰‰n liitett‰v‰st‰ 
-\kor{viiva-} eli \kor{k‰yr‰integraalista}. N‰it‰ k‰sitell‰‰n seuraavassa luvussa.
+Ym.\ tavalla  ymm√§rrettyn√§ tasointegraalista tulee my√∂s matemattisena k√§sitteen√§ erikoistapaus 
+yleisemm√§st√§ \kor{pintaintegraalista} (engl.\ surface integral), jossa pinta voi olla kaareva.
+Pintaintegraaleja t√§ss√§ yleisemm√§ss√§ merkityksess√§ k√§sitell√§√§n edemp√§n√§ Luvussa 
+\ref{pintaintegraalit}. My√∂s yksiulotteinen integraali voidaan tulkita 'avaruudellisesti'
+ajattelemalla, ett√§ kyseess√§ on avaruussuoralla m√§√§ritelty pituusmitta. N√§in ymm√§rrettyn√§ 
+yksiulotteinen integraali on erikoistapaus avaruuden (my√∂s tason) k√§yr√§√§n liitett√§v√§st√§ 
+\kor{viiva-} eli \kor{k√§yr√§integraalista}. N√§it√§ k√§sitell√§√§n seuraavassa luvussa.
 
-Fysikaalisissa sovelluksissa sanotaan yleens‰ \pain{alueeksi} (tilavuusintegraalin tapauksessa
+Fysikaalisissa sovelluksissa sanotaan yleens√§ \pain{alueeksi} (tilavuusintegraalin tapauksessa
 joskus 'tilavuudeksi') joukkoa, jonka yli integroidaan. Termi \kor{alue} (engl.\ domain tai 
-region) on myˆs matematiikassa tietyn tyyppisist‰ joukoista k‰ytetty termi. Jatkossa 
-ymm‰rett‰kˆˆn alue kuitenkin 'fysikaalisena joukkona'.
+region) on my√∂s matematiikassa tietyn tyyppisist√§ joukoista k√§ytetty termi. Jatkossa 
+ymm√§rett√§k√∂√∂n alue kuitenkin 'fysikaalisena joukkona'.
  
-\subsection*{Tiheys ja kokonaism‰‰r‰}
-\index{tiheys(funktio)|vahv} \index{kokonaism‰‰r‰|vahv}
+\subsection*{Tiheys ja kokonaism√§√§r√§}
+\index{tiheys(funktio)|vahv} \index{kokonaism√§√§r√§|vahv}
 
-Olkoon $A\subset\R^d$ joukko tai fysikaalisemmin alue, miss‰ $d\in\{1,2,3\}$. Tyypillisess‰
+Olkoon $A\subset\R^d$ joukko tai fysikaalisemmin alue, miss√§ $d\in\{1,2,3\}$. Tyypillisess√§
 integraalien sovellustilanteessa tunnetaan fysikaalisen suureen \kor{tiheys} 
-(tiheysfunktio, jakauma) alueessa $A$ ja teht‰v‰n‰ on laskea suureen \kor{kokonaism‰‰r‰}
-kaavasta \index{kokonaism‰‰r‰!a@integraalikaava}%
+(tiheysfunktio, jakauma) alueessa $A$ ja teht√§v√§n√§ on laskea suureen \kor{kokonaism√§√§r√§}
+kaavasta \index{kokonaism√§√§r√§!a@integraalikaava}%
 \[
-\boxed{\kehys\quad \text{Kokonaism‰‰r‰ $A$:ssa = tiheyden integraali yli $A$:n.} \quad}
+\boxed{\kehys\quad \text{Kokonaism√§√§r√§ $A$:ssa = tiheyden integraali yli $A$:n.} \quad}
 \]
-Jos tiheysfunktio $=f$ ja kokonaism‰‰r‰‰ merkit‰‰n symbolilla $F$, niin laskukaava on siis
+Jos tiheysfunktio $=f$ ja kokonaism√§√§r√§√§ merkit√§√§n symbolilla $F$, niin laskukaava on siis
 \[
 F=\int_A f\,d\mu,
 \]
-miss‰ $\mu$ on $\R^d$:n Jordan-mitta. Tiheysfunktio ja kokonaism‰‰r‰ voivat olla myˆs
-vektoriarvoisia: Esimerkiksi jos $A\subset\R^3$ ja tiheysfunktio on $A$:ssa m‰‰ritelty
-vektorikett‰ $\vec f(x,y,z)=f_1(x,y,z)\vec i+f_2(x,y,z)\vec j+f_3(x,y,z)\vec k$, niin 
-kokonaism‰‰r‰ on
+miss√§ $\mu$ on $\R^d$:n Jordan-mitta. Tiheysfunktio ja kokonaism√§√§r√§ voivat olla my√∂s
+vektoriarvoisia: Esimerkiksi jos $A\subset\R^3$ ja tiheysfunktio on $A$:ssa m√§√§ritelty
+vektorikett√§ $\vec f(x,y,z)=f_1(x,y,z)\vec i+f_2(x,y,z)\vec j+f_3(x,y,z)\vec k$, niin 
+kokonaism√§√§r√§ on
 \[ 
 \vec F=\int_A \vec f\,d\mu=\vec i\int_A f_1\,dxdydz+\vec j\int_A f_2\,dxdydz
                                                    +\vec k\int_A f_3\,dxdydz.
 \]
 
-Sovellusesimerkkej‰ em.\ ajattelusta ovat vaikkapa seuraavat:
+Sovellusesimerkkej√§ em.\ ajattelusta ovat vaikkapa seuraavat:
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
-\ykehys\ tiheys & kokonaism‰‰r‰ \\ \hline & \\
+\ykehys\ tiheys & kokonaism√§√§r√§ \\ \hline & \\
 $\rho=\text{massatiheys}$ $[\text{kg}/\text{m}^d]$ 
 & $m=\text{kokonaismassa}$ $[\text{kg}]$ \\ & \\
 $\sigma=\text{varaustiheys}$ $[\text{C}/\text{m}^d]$ 
@@ -67,15 +67,15 @@ $\vec f=\text{voimatiheys}$ $[\text{N}/\text{m}^d]$
 & $\vec F=\text{kokonaisvoima}$ $[\text{N}]$ \\ & \\ \hline 
 \end{tabular}
 \end{center}
-Jos fysikaalinen suure on jakautunut tasomaiselle (tai yleisemm‰lle, ks.\ Luku
+Jos fysikaalinen suure on jakautunut tasomaiselle (tai yleisemm√§lle, ks.\ Luku
 \index{tiheys(funktio)!a@pinta-, viivatiheys}%
-\ref{pintaintegraalit}) pinnalle, niin tiheytt‰ sanotaan \kor{pintatiheydeksi}
-(esim. pintavaraustiheys, yksikkˆ $\text{C}/\text{m}^2$). Suoralle 
-(tai yleisemm‰lle k‰yr‰lle, ks.\ Luku \ref{viivaintegraalit}) jakautuneen suureen
-yhteydess‰ puhutaan vastaavasti \kor{viivatiheydest‰} (esim.\ massan viivatiheys
-langassa, yksikkˆ kg/m).
-\begin{Exa} Ilman tiheys korkeudella $x$ maanpinnasta olkoon $\rho(x)=\rho_0 e^{-x/a}$, miss‰
-$\rho_0=1\ \text{kg}/\text{m}^3$ ja $a=10$ km. Kuinka paljon ilmaa (yksikkˆ = kg) on
+\ref{pintaintegraalit}) pinnalle, niin tiheytt√§ sanotaan \kor{pintatiheydeksi}
+(esim. pintavaraustiheys, yksikk√∂ $\text{C}/\text{m}^2$). Suoralle 
+(tai yleisemm√§lle k√§yr√§lle, ks.\ Luku \ref{viivaintegraalit}) jakautuneen suureen
+yhteydess√§ puhutaan vastaavasti \kor{viivatiheydest√§} (esim.\ massan viivatiheys
+langassa, yksikk√∂ kg/m).
+\begin{Exa} Ilman tiheys korkeudella $x$ maanpinnasta olkoon $\rho(x)=\rho_0 e^{-x/a}$, miss√§
+$\rho_0=1\ \text{kg}/\text{m}^3$ ja $a=10$ km. Kuinka paljon ilmaa (yksikk√∂ = kg) on
 kuvitellussa, pystysuorassa ja $100$ km korkeassa putkessa, jonka poikkipinta-ala 
 $=1\ \text{m}^2\,$?
 \end{Exa}
@@ -92,13 +92,13 @@ m &= 1\,\frac{\text{kg}}{\text{m}} \cdot \int_0^{100\,\text{km}} e^{-x/a}\,dx \\
    = \underline{\underline{10000\,\text{kg}}}. \loppu
 \end{align*}
 \begin{Exa}
-Neliˆn muotoisella mets‰aukiolla $A=[0,a]\times[0,a]$ on lumi jakautunut ep‰tasaisesti siten,
-ett‰ massan pintatiheys on
+Neli√∂n muotoisella mets√§aukiolla $A=[0,a]\times[0,a]$ on lumi jakautunut ep√§tasaisesti siten,
+ett√§ massan pintatiheys on
 \[
 \rho(x,y)=36\rho_0\left[1+\left(\frac{x+y}{a}\right)^2\right], \quad 
                                      \rho_0=1 \ \text{kg}/\text{m}^2.
 \]
-Suuriko on lumen kumulatiivinen sadem‰‰r‰ $[\text{cm}]$, jos tasan jakautuneelle lumelle p‰tee 
+Suuriko on lumen kumulatiivinen sadem√§√§r√§ $[\text{cm}]$, jos tasan jakautuneelle lumelle p√§tee 
 $1\ \text{kg}/\text{m}^2 \vastaa 1 \ \text{cm}$?
 \end{Exa}
 \ratk Lumen kokonaismassa on
@@ -117,8 +117,8 @@ on hiekan massatiheys
 \[
 \rho(x,y,z) = \rho_0+\rho_1(x,y,z)=\rho_0+0.036\rho_0(1-z/R),
 \]
-miss‰ $\rho_0$ (= vakio) on kuivan hiekan ja $\rho_1$ on hiekkaan sitoutuneen veden
-tiheys. Montako prosenttia hiekkakasan koko massasta on vett‰?
+miss√§ $\rho_0$ (= vakio) on kuivan hiekan ja $\rho_1$ on hiekkaan sitoutuneen veden
+tiheys. Montako prosenttia hiekkakasan koko massasta on vett√§?
 \end{Exa}
 \ratk Kuivan hiekan massa on
 \begin{align*}
@@ -130,54 +130,54 @@ m_1 &= \int_A \rho_1\,dxdydz = 0.036\rho_0\left(\frac{2}{3}\pi R^3-\frac{1}{4}\p
 \end{align*}
 Veden suhteellinen osuus on siis $0.015/0.682 \approx 0.022$. Vastaus: $2.2\,\%$. \loppu
 
-\subsection*{Kokonaism‰‰r‰n aksioomat}
-\index{kokonaism‰‰r‰!b@aksioomat|vahv}
+\subsection*{Kokonaism√§√§r√§n aksioomat}
+\index{kokonaism√§√§r√§!b@aksioomat|vahv}
 
-Em.\ esimerkeiss‰ pidettiin tiheyden ja kokonaism‰‰r‰n v‰list‰ integraalikaavaa
-'annettuna' eli fysikaalisena l‰htˆoletuksena. Integraalikaava on kuitenkin mahdollista 
-johtaa paljon yksinkertaisemmista oletuksista, joita voidaan pit‰‰ edell‰ k‰ytettyjen
-matemaattisten mallien yhteisin‰ perusaksioomina. Olkoon tiheysfunktio $f$ ja merkit‰‰n
-kokonaism‰‰r‰‰ $A$:ssa ($A\subset\R^d$) symbolilla $F(A)$. Oletetaan:
-\index{additiivisuus!c@kokonaism‰‰r‰n} \index{vertailuperiaate!c@kokonaism‰‰rien}%
+Em.\ esimerkeiss√§ pidettiin tiheyden ja kokonaism√§√§r√§n v√§list√§ integraalikaavaa
+'annettuna' eli fysikaalisena l√§ht√∂oletuksena. Integraalikaava on kuitenkin mahdollista 
+johtaa paljon yksinkertaisemmista oletuksista, joita voidaan pit√§√§ edell√§ k√§ytettyjen
+matemaattisten mallien yhteisin√§ perusaksioomina. Olkoon tiheysfunktio $f$ ja merkit√§√§n
+kokonaism√§√§r√§√§ $A$:ssa ($A\subset\R^d$) symbolilla $F(A)$. Oletetaan:
+\index{additiivisuus!c@kokonaism√§√§r√§n} \index{vertailuperiaate!c@kokonaism√§√§rien}%
 \begin{itemize}
 \item[A1.] \pain{Additiivisuus}: \ Jos $\mu(A \cap B)=0$, niin $F(A \cup B)=F(A)+F(B)$.
-\item[A2.] \pain{Vertailu}p\pain{eriaate}: \ Jos jokaisella $\mx \in A$ p‰tee
+\item[A2.] \pain{Vertailu}p\pain{eriaate}: \ Jos jokaisella $\mx \in A$ p√§tee
            $m \le f(\mx) \le M$, niin \newline $m\,\mu(A) \le F(A) \le M\mu(A)$.
 \end{itemize}
-Jos nyt $A\subset\R^d$ ja halutaan m‰‰r‰t‰ kokonaism‰‰r‰ $F(A)$, niin tulkitaan
-tiheysfunktio $f$ m‰‰ritellyksi $A$:n ulkopuolella nollajatkona $f_0$. T‰llˆin jos 
-$T \supset A$ on suljettu v‰li\,/\,perussuorakulmio\,/\,suorakulmainen peruss‰rmiˆ ja
+Jos nyt $A\subset\R^d$ ja halutaan m√§√§r√§t√§ kokonaism√§√§r√§ $F(A)$, niin tulkitaan
+tiheysfunktio $f$ m√§√§ritellyksi $A$:n ulkopuolella nollajatkona $f_0$. T√§ll√∂in jos 
+$T \supset A$ on suljettu v√§li\,/\,perussuorakulmio\,/\,suorakulmainen peruss√§rmi√∂ ja
 $\mathcal{T}_h$ on $T$:n jako, niin oletuksista A1--A2 (kun $f=f_0$) seuraa
 \[
 \underline{\sigma}_h(f_0,\mathcal{T}_h) \le F(A) \le \overline{\sigma}_h(f_0,\mathcal{T}_h),
 \]
-miss‰ $\underline{\sigma}_h(f_0,\mathcal{T}_h)$ ja $\overline{\sigma}_h(f_0,\mathcal{T}_h)$
-ovat jakoon $\mathcal{T}_h$ liittyv‰t ala- ja yl‰summat 
-(vrt.\ Luvut \ref{riemannin integraali} ja \ref{tasointegraalit}). Koska t‰m‰ arvio on p‰tev‰
-jokaisella $\mathcal{T}_h$, niin sik‰li kuin $f$ on integroituva yli $A$:n, on oltava
-$F(A) = \int_A f\,d\mu$. Integraalikaava siis seuraa oletetuista (sovelluksissa yleens‰
-helposti hyv‰ksytt‰vist‰) aksioomista A1--A2.
-\begin{Exa} Olkoon $A=[a,b]$ ja $F(A)$ k‰yr‰n $y=f(x)$ ja $x$-akselin v‰liin
-j‰‰v‰n tasoalueen pinta-ala. T‰llˆin jos $f(x) \ge 0\ \forall x \in A$ ja $f$ on 
-integroituva v‰lill‰ $A$, niin aksioomista A1--A2 seuraa integraalikaava 
+miss√§ $\underline{\sigma}_h(f_0,\mathcal{T}_h)$ ja $\overline{\sigma}_h(f_0,\mathcal{T}_h)$
+ovat jakoon $\mathcal{T}_h$ liittyv√§t ala- ja yl√§summat 
+(vrt.\ Luvut \ref{riemannin integraali} ja \ref{tasointegraalit}). Koska t√§m√§ arvio on p√§tev√§
+jokaisella $\mathcal{T}_h$, niin sik√§li kuin $f$ on integroituva yli $A$:n, on oltava
+$F(A) = \int_A f\,d\mu$. Integraalikaava siis seuraa oletetuista (sovelluksissa yleens√§
+helposti hyv√§ksytt√§vist√§) aksioomista A1--A2.
+\begin{Exa} Olkoon $A=[a,b]$ ja $F(A)$ k√§yr√§n $y=f(x)$ ja $x$-akselin v√§liin
+j√§√§v√§n tasoalueen pinta-ala. T√§ll√∂in jos $f(x) \ge 0\ \forall x \in A$ ja $f$ on 
+integroituva v√§lill√§ $A$, niin aksioomista A1--A2 seuraa integraalikaava 
 $F(A)=\int_A f\,dx$. --- Vrt.\ Luvun \ref{pinta-ala ja kaarenpituus} tarkastelut.
 \end{Exa} 
 
 \subsection*{Momentti}
 \index{momentti (voiman)|vahv}
-\index{kokonaism‰‰r‰!c@momentti|vahv}
+\index{kokonaism√§√§r√§!c@momentti|vahv}
 
 Jos $\vec f=f_1\vec i+f_2\vec j+f_3\vec k$ on voimatiheys $\R^3$:ssa, niin ko.\ voimien
 \pain{momenttitihe}y\pain{s} avaruuden pisteen 
-$P_0\vastaa \vec r_0=x_0\vec i+y_0\vec j+z_0\vec k$ suhteen pisteess‰ $(x,y,z)$ on 
-$\,\vec m=(\vec r-\vec r_0)\times\vec f$, miss‰ $\vec r=x\vec i+y\vec j+z\vec k$.
-T‰m‰n mukaisesti alueeseen $A\subset\R^3$ jakautuneiden voimien \pain{kokonaismomentti}
+$P_0\vastaa \vec r_0=x_0\vec i+y_0\vec j+z_0\vec k$ suhteen pisteess√§ $(x,y,z)$ on 
+$\,\vec m=(\vec r-\vec r_0)\times\vec f$, miss√§ $\vec r=x\vec i+y\vec j+z\vec k$.
+T√§m√§n mukaisesti alueeseen $A\subset\R^3$ jakautuneiden voimien \pain{kokonaismomentti}
 pisteen $P_0$ suhteen on
 \[
 \vec M = \int_A \vec m\,d\mu
        = \int_A(\vec r-\vec r_0)\times\vec f\,d\mu,
 \]
-miss‰ $\mu$ on $\R^3$:n tilavuusmitta. Kaava on p‰tev‰ myˆs, jos $\vec f$ on pintatiheys
+miss√§ $\mu$ on $\R^3$:n tilavuusmitta. Kaava on p√§tev√§ my√∂s, jos $\vec f$ on pintatiheys
 avaruustasolla $T$ ($A \subset T$) tai viivatiheys avaruussuoralla $S$ ($A \subset S$),
 jolloin $\mu$ on vastaavasti $2$-ulotteinen tai $1$-ulotteinen Jordan-mitta. Esimerkiksi
 jos $\vec f$ on pintatiheys $xy$-tason alueessa $A$ ja $P_0=$ origo, niin kokonaismomentin
@@ -189,9 +189,9 @@ laskukaava on
 \end{align*}
 
 \begin{Exa} \vahv{Sulkuportti}. \index{zza@\sov!Sulkuportti}
-Kanavan sulkuportti on neliˆn muotoinen, sivun pituus 4 metri‰. Portti aukeaa oven tavoin. 
-Portin toisella puolen on vett‰ koko portin korkeudella (4\, m), toisella puolella ei ole
-vett‰. M‰‰rit‰ porttiin kohdistuva kokonaisvoima ja porttia auki v‰‰nt‰v‰ momentti $M$.
+Kanavan sulkuportti on neli√∂n muotoinen, sivun pituus 4 metri√§. Portti aukeaa oven tavoin. 
+Portin toisella puolen on vett√§ koko portin korkeudella (4\, m), toisella puolella ei ole
+vett√§. M√§√§rit√§ porttiin kohdistuva kokonaisvoima ja porttia auki v√§√§nt√§v√§ momentti $M$.
 \end{Exa}
 \begin{multicols}{2} \raggedcolumns
 \ratk
@@ -213,31 +213,31 @@ Porttiin kohdistuva kokonaisvoima on paineen (pintatiheyden) integraali:
 &= 1000\,G\,\text{m}^{-3}\vec k\int_0^a\left[\int_0^a (a-y)\,dy\right]dx \\
 &=500\,G\,\text{m}^{-3}a^3\vec k=\underline{\underline{32000\,G\vec k}}.
 \end{align*}
-Momentin (porttia kiinni v‰‰nt‰v‰n‰ positiivinen) $\vec j$-komponentti on
+Momentin (porttia kiinni v√§√§nt√§v√§n√§ positiivinen) $\vec j$-komponentti on
 \begin{align*}
 M_y &= -\int_A xf_3(x,y)\,dxdy 
      = -1000\,G\,\text{m}^{-3}\int_0^a\left[\int_0^a x(a-y)\,dy\right]dx \\
     &=-1000\,G\,\text{m}^{-3}\cdot\frac{1}{4}a^4=-64000\,G\,\text{m}.
 \end{align*}
-Siis luukkua auki v‰‰nt‰v‰ momentti on  
+Siis luukkua auki v√§√§nt√§v√§ momentti on  
 \[
 M = -M_y \approx \underline{\underline{6.3\cdot 10^5\,\text{Nm}}}. \loppu
 \]
 
-\subsection*{Painopiste. Keskiˆ}
+\subsection*{Painopiste. Keski√∂}
 \index{painopiste|vahv}
-\index{keskizzb@keskiˆ (joukon)|vahv}
-\index{kokonaism‰‰r‰!d@painopiste, keskiˆ|vahv}
+\index{keskizzb@keski√∂ (joukon)|vahv}
+\index{kokonaism√§√§r√§!d@painopiste, keski√∂|vahv}
 
 Tavallisin esimerkki avaruuteen jakautuneesta voimasta on g\pain{ravitaatio},
 jonka tiheys on
 \[
 \vec f(x,y,z)=\rho(x,y,z)g\vec e,\quad (x,y,z)\in A.
 \]
-T‰ss‰ $A$ voi edustaa esimerkiksi kiinte‰‰ kappaletta, $\rho=\text{massatiheys}$ 
+T√§ss√§ $A$ voi edustaa esimerkiksi kiinte√§√§ kappaletta, $\rho=\text{massatiheys}$ 
 $[\text{kg}/\text{m}^3]$, $g$ on gravitaation kiihtyvyys (maan pinnalla 
 $g\approx 9.8\,\text{m}/\text{s}^2$), ja $\vec e=$ gravitaatiovoiman suuntavektori 
-(yksikkˆvektori). Kokonaisvoiman
+(yksikk√∂vektori). Kokonaisvoiman
 \[
 \vec G=\int_A\vec f\,dxdydz=mg\vec e,\quad m=\int_A\rho\,dxdydz
 \]
@@ -247,9 +247,9 @@ $P_0 \vastaa \vec r_0=x_0\vec i+y_0\vec j+z_0\vec k$ suhteen on
 \vec M = \int_A(\vec r-\vec r_0)\times\vec e\,\rho g\,dxdydz 
        = g\left(\int_A (\vec r-\vec r_0)\rho\,dxdydz\right)\times\vec e.
 \]
-Pistett‰ $P_0$ sanotaan kappaleen p\pain{aino}p\pain{isteeksi} (engl. center of gravity),
+Pistett√§ $P_0$ sanotaan kappaleen p\pain{aino}p\pain{isteeksi} (engl. center of gravity),
 jos painovoimien momentti $P_0$:n suhteen $=\vec 0$ riippumatta vektorista $\vec e$ 
-(eli riippumatta kappaleen asennosta suhteessa painovoimakentt‰‰n). N‰in on t‰sm‰lleen
+(eli riippumatta kappaleen asennosta suhteessa painovoimakentt√§√§n). N√§in on t√§sm√§lleen
 kun
 \[
 \vec 0 = \int_A (\vec r-\vec r_0)\rho\,dxdydz 
@@ -260,7 +260,7 @@ joten painopisteen paikkavektori on
 \boxed{\kehys\quad \vec r_0 = \frac{1}{m(A)}\int_A \rho\vec r\,dxdydz, \quad 
                                              m(A)=\int_A \rho\,dxdydz. \quad}
 \]
-T‰ss‰ $m(A)=$ kappaleen massa. Painopisteen koordinaatit ovat siis
+T√§ss√§ $m(A)=$ kappaleen massa. Painopisteen koordinaatit ovat siis
 \[
 x_0=\frac{1}{m(A)}\int_A x\rho(x,y,z)\,dxdydz,\quad\text{jne.}
 \]
@@ -268,25 +268,25 @@ Jos $\rho=\rho_0=$ vakio, niin painopisteen paikkavektori on
 \[
 \vec r_0 = \frac{1}{\mu(A)}\int_A \vec r\,dxdydz \quad \text{($\rho=$ vakio)}.
 \]
-T‰m‰n matemaattinen yleistys on joukon $A \subset \R^n$ \kor{keskiˆ}, joka m‰‰ritell‰‰n
+T√§m√§n matemaattinen yleistys on joukon $A \subset \R^n$ \kor{keski√∂}, joka m√§√§ritell√§√§n
 \[
 \mx_0 = \frac{1}{\mu(A)}\int_A \mx\,d\mu 
       = \frac{1}{\mu(A)}\sum_{i=1}^n\left(\int_A x_i\,d\mu\right)\me_i,
 \]
-miss‰ $\mu$ on $n$-ulotteinen Jordan-mitta. Koska funktiot $f_i(\mx)=x_i$ ep‰ilem‰tt‰ ovat
+miss√§ $\mu$ on $n$-ulotteinen Jordan-mitta. Koska funktiot $f_i(\mx)=x_i$ ep√§ilem√§tt√§ ovat
 integroituvia jokaisen mitallisen joukon yli
-(Lause \ref{jatkuvan funktion integroituvuus Rn:ss‰}), niin joukon $A \subset \R^n$ keskiˆ on 
-m‰‰ritelty aina kun $A$ on mitallinen ja $\mu(A) \neq 0$.
-\begin{Exa} M‰‰rit‰ seuraavien joukkojen keskiˆt. 
+(Lause \ref{jatkuvan funktion integroituvuus Rn:ss√§}), niin joukon $A \subset \R^n$ keski√∂ on 
+m√§√§ritelty aina kun $A$ on mitallinen ja $\mu(A) \neq 0$.
+\begin{Exa} M√§√§rit√§ seuraavien joukkojen keski√∂t. 
 \begin{align*}
-&\text{a)}\,\ A=\{(x,y,z)\in\R^3 \ |†\ x^2+y^2\leq R^2 \ \ja \ x\geq 0 \ 
+&\text{a)}\,\ A=\{(x,y,z)\in\R^3 \ |¬†\ x^2+y^2\leq R^2 \ \ja \ x\geq 0 \ 
                                                           \ja \ z\in [-H/2,H/2]\,\} \\
 &\text{b)}\,\ A=\{(x,y,z)\in\R^3 \ | \ x^2+y^2+z^2\leq R^2 \ \ja \ x\geq 0\,\}
 \end{align*}
 \end{Exa}
-\ratk a)\ T‰ss‰ on $\mu(A)=\frac{1}{2}\pi R^2H$ (kuten integroimalla helposti selvi‰‰), ja
-symmetriasyist‰ $\int_A y\,dxdydz=\int_A z\,dxdydz=0$, joten $y_0=z_0=0$. Keskiˆn
-$x$-koordinaatti on lieriˆkoordinaateilla laskien
+\ratk a)\ T√§ss√§ on $\mu(A)=\frac{1}{2}\pi R^2H$ (kuten integroimalla helposti selvi√§√§), ja
+symmetriasyist√§ $\int_A y\,dxdydz=\int_A z\,dxdydz=0$, joten $y_0=z_0=0$. Keski√∂n
+$x$-koordinaatti on lieri√∂koordinaateilla laskien
 \begin{align*}
 x_0  = \frac{1}{\mu(A)}\int_A x\,dxdydz
     &= \frac{2}{\pi R^2H}\int_0^R\left\{\int_{-\pi/2}^{\pi/2}\left[\int_{-H/2}^{H/2}
@@ -296,30 +296,30 @@ x_0  = \frac{1}{\mu(A)}\int_A x\,dxdydz
     &= \frac{2}{\pi R^2H} \cdot \frac{1}{3}R^3 \cdot 2 \cdot H
      =\underline{\underline{\frac{4}{3\pi}R}}.
 \end{align*}
-b)\ \, T‰ss‰kin on $y_0=z_0=0$, ja
+b)\ \, T√§ss√§kin on $y_0=z_0=0$, ja
 (ks.\ Esimerkit \ref{avaruusintegraalit}:\,\ref{3-pallon tilavuus}--\ref{puolipallon momentti})
 \[
 x_0=\frac{1}{\mu(A)}\int_A x\,dxdydz = \frac{3}{2\pi R^3}\cdot\frac{\pi R^4}{4} 
                                      = \underline{\underline{\frac{3}{8}\,R}}. \loppu
 \]
 
-\subsection*{Pappuksen s‰‰ntˆ}
-\index{Pappuksen (Pappoksen) s‰‰ntˆ|vahv}
+\subsection*{Pappuksen s√§√§nt√∂}
+\index{Pappuksen (Pappoksen) s√§√§nt√∂|vahv}
 
-Olkoon $A$ $\,xy$-tason alue, jolle p‰tee $y \ge 0\ \forall (x,y) \in A$.
-Halutaan laskea sen pyˆr‰hdyskappaleen $V$ tilavuus, joka syntyy $A$:n pyˆr‰ht‰ess‰
-$x$-akselin ymp‰ri. Olkoon $B=\{x\in\R \mid (x,y)\in A\ \text{jollakin}\ y\in\R\}$.
-T‰llˆin $V$ voidaan esitt‰‰ muodossa
+Olkoon $A$ $\,xy$-tason alue, jolle p√§tee $y \ge 0\ \forall (x,y) \in A$.
+Halutaan laskea sen py√∂r√§hdyskappaleen $V$ tilavuus, joka syntyy $A$:n py√∂r√§ht√§ess√§
+$x$-akselin ymp√§ri. Olkoon $B=\{x\in\R \mid (x,y)\in A\ \text{jollakin}\ y\in\R\}$.
+T√§ll√∂in $V$ voidaan esitt√§√§ muodossa
 \begin{align*}
 &V = \{(x,y,z)\in\R^3 \mid x \in B\,\ja\,(y,z) \in C(x)\}, \\
-&\text{miss‰}\ \ C(x) = \{(y,z)\in\R^2 \mid \sqrt{y^2+z^2} \in D(x)\}, \\[1mm]
-&\text{miss‰}\ \ D(x) =\{y\in\R \mid (x,y) \in A\} \subset [0,\infty).
+&\text{miss√§}\ \ C(x) = \{(y,z)\in\R^2 \mid \sqrt{y^2+z^2} \in D(x)\}, \\[1mm]
+&\text{miss√§}\ \ D(x) =\{y\in\R \mid (x,y) \in A\} \subset [0,\infty).
 \end{align*}
-T‰m‰n perusteella on ensinn‰kin (vrt.\ Luku \ref{avaruusintegraalit})
+T√§m√§n perusteella on ensinn√§kin (vrt.\ Luku \ref{avaruusintegraalit})
 \[
 \mu(V)=\int_B \mu\bigl(C(x)\bigr)\,dx.
 \]
-Koska t‰ss‰ $C(x)$ on ympyr‰symmetrinen $yz$-tason origon suhteen, niin
+Koska t√§ss√§ $C(x)$ on ympyr√§symmetrinen $yz$-tason origon suhteen, niin
 napakoordinaattimuunnoksella $y=r\cos\varphi,\ z=r\sin\varphi$ saadaan
 pinta-ala $\mu\bigl(C(x)\bigr)$ lasketuksi muodossa
 \[
@@ -327,24 +327,24 @@ pinta-ala $\mu\bigl(C(x)\bigr)$ lasketuksi muodossa
                    =2\pi\int_{D(x)} r\,dr
                    =2\pi\int_{D(x)} y\,dy.
 \]
-N‰in ollen
+N√§in ollen
 \[
 \mu(V) = 2\pi\int_B\left[\int_{D(x)} y\,dy\right]dx = 2\pi\int_A y\,dxdy.
 \]
-T‰ss‰ voidaan viel‰ kirjoittaa $\int_A y\,dxdy = y_0\mu(A)$, miss‰ $\mu(A)=$ $A$:n
-pinta-ala ja $y_0=$ $A$:n keskiˆn $y$-koordinaatti. N‰in muodoin saadaan \kor{Pappuksen}
-(Pappoksen) \kor{s‰‰ntˆn‰}\footnote[2]{Pappuksen s‰‰ntˆ‰ on sanottu myˆs
-\kor{Guldinin s‰‰nnˆksi} sveitsil‰isen matemaatikon \hist{Paul Guldin}in (1577-1643) mukaan.
-S‰‰nnˆn keksi kuitenkin kreikkalainen \hist{Pappos} jo 300-luvulla. \index{Guldin, P.|av}
-\index{Guldinin s‰‰ntˆ|av} \index{Pappos|av}} tunnettu laskukaava
+T√§ss√§ voidaan viel√§ kirjoittaa $\int_A y\,dxdy = y_0\mu(A)$, miss√§ $\mu(A)=$ $A$:n
+pinta-ala ja $y_0=$ $A$:n keski√∂n $y$-koordinaatti. N√§in muodoin saadaan \kor{Pappuksen}
+(Pappoksen) \kor{s√§√§nt√∂n√§}\footnote[2]{Pappuksen s√§√§nt√∂√§ on sanottu my√∂s
+\kor{Guldinin s√§√§nn√∂ksi} sveitsil√§isen matemaatikon \hist{Paul Guldin}in (1577-1643) mukaan.
+S√§√§nn√∂n keksi kuitenkin kreikkalainen \hist{Pappos} jo 300-luvulla. \index{Guldin, P.|av}
+\index{Guldinin s√§√§nt√∂|av} \index{Pappos|av}} tunnettu laskukaava
 \[
 \boxed{\kehys\quad \mu(V)=\mu(A) \cdot s, \quad s=2\pi y_0 \quad 
-                                          \text{(Pappuksen s‰‰ntˆ)}. \quad}
+                                          \text{(Pappuksen s√§√§nt√∂)}. \quad}
 \]
-T‰ss‰ $s=\,$ $A$:n keskiˆn pyˆr‰hdyksess‰ kulkema matka.
-\begin{Exa} Kun ympyr‰viiva $\,K:\ x^2+(y-R)^2=a^2$, miss‰ $R \ge a$, pyˆr‰ht‰‰ 
-$x$-akselin ymp‰ri, niin syntyv‰n pyˆr‰hdyspinnan (toruksen) sis‰‰n j‰‰v‰n alueen
-tilavuus on Pappuksen s‰‰nnˆn mukaan $\mu(V)=\pi a^2 \cdot 2\pi R = 2\pi^2 a^2 R$.
+T√§ss√§ $s=\,$ $A$:n keski√∂n py√∂r√§hdyksess√§ kulkema matka.
+\begin{Exa} Kun ympyr√§viiva $\,K:\ x^2+(y-R)^2=a^2$, miss√§ $R \ge a$, py√∂r√§ht√§√§ 
+$x$-akselin ymp√§ri, niin syntyv√§n py√∂r√§hdyspinnan (toruksen) sis√§√§n j√§√§v√§n alueen
+tilavuus on Pappuksen s√§√§nn√∂n mukaan $\mu(V)=\pi a^2 \cdot 2\pi R = 2\pi^2 a^2 R$.
 \loppu
 \end{Exa}  
 
@@ -353,48 +353,48 @@ tilavuus on Pappuksen s‰‰nnˆn mukaan $\mu(V)=\pi a^2 \cdot 2\pi R = 2\pi^2 a^2 R
 \index{mitta, mitallisuus!b@massamitta|vahv}
 
 Jos $A \subset \R^3$ edustaa kolmiulotteista kappaletta, jonka massatiheys $\rho$ ei ole vakio,
-niin kappaleen painopiste m‰‰ritell‰‰n
+niin kappaleen painopiste m√§√§ritell√§√§n
 \[
 \vec r_0=\frac{1}{m(A)}\int_A \vec r\,\rho\,dxdydz, \quad m(A) = \int_A \rho\,dxdydz.
 \]
-Kun t‰ss‰ kirjoitetaan $dm=\rho\,dxdydz$, niin painopisteen lauseke voidaan esitt‰‰ hieman
+Kun t√§ss√§ kirjoitetaan $dm=\rho\,dxdydz$, niin painopisteen lauseke voidaan esitt√§√§ hieman
 elegantimmin muodossa
 \[
 \vec r_0=\frac{1}{m(A)}\int_A \vec r\,dm, \quad m(A)=\int_A dm.
 \]
-N‰in tulee m‰‰ritellyksi massatiheyteen $\rho$ liitett‰v‰ \pain{massamitta} $m$. Kyseess‰ on 
+N√§in tulee m√§√§ritellyksi massatiheyteen $\rho$ liitett√§v√§ \pain{massamitta} $m$. Kyseess√§ on 
 todellakin (additiivinen ja dimensiottomana positiivinen) mitta, joka siis $A$:n tilavuuden
-sijasta mittaa $A$:n sis‰lt‰m‰‰ kokonaismassaa. 
+sijasta mittaa $A$:n sis√§lt√§m√§√§ kokonaismassaa. 
 
-Yleisemmin jos $\rho(\mx)$ on $\R^n$:ss‰ m‰‰ritelty ei-negatiivinen funktio, joka on 
-integroituva yli joukon $A \subset \R^n$, niin $A$:lle voidaan  m‰‰ritell‰ mitta
+Yleisemmin jos $\rho(\mx)$ on $\R^n$:ss√§ m√§√§ritelty ei-negatiivinen funktio, joka on 
+integroituva yli joukon $A \subset \R^n$, niin $A$:lle voidaan  m√§√§ritell√§ mitta
 \[ 
 \mu_\rho(A) = \int_A \rho\,d\mu = \int_A d\mu_\rho. 
 \]
 \index{tiheys(funktio)}%
-Funktiota $\rho$ sanotaan t‰llˆin \kor{mitan} $\mu_\rho$ \kor{tiheysfunktioksi}. Rajoitettu
+Funktiota $\rho$ sanotaan t√§ll√∂in \kor{mitan} $\mu_\rho$ \kor{tiheysfunktioksi}. Rajoitettu
 joukko $A \subset \R^n$ katsotaan $\mu_\rho$-mitalliseksi, kun $\rho$ on integroituva 
-(tavallisessa tai laajennetussa mieless‰) yli $A$:n. --- Jordanin pituus-, pinta-ala- ja
-tilavuusmitat voidaan siis n‰hd‰ yleisempien mittojen erikoistapauksina: Jordanin mitan 
-mukainen joukon 'massasis‰ltˆ' saadaan asettamalla mitan tiheysfunktioksi $\rho=1$.
+(tavallisessa tai laajennetussa mieless√§) yli $A$:n. --- Jordanin pituus-, pinta-ala- ja
+tilavuusmitat voidaan siis n√§hd√§ yleisempien mittojen erikoistapauksina: Jordanin mitan 
+mukainen joukon 'massasis√§lt√∂' saadaan asettamalla mitan tiheysfunktioksi $\rho=1$.
 
 \subsection*{Hitausmomentti} 
 \index{hitausmomentti|vahv}
-\index{kokonaism‰‰r‰!e@hitausmomentti|vahv}
+\index{kokonaism√§√§r√§!e@hitausmomentti|vahv}
 
-Jos $A\subset\R^3$ edustaa kiinte‰‰ kappaletta ja $S$ on avaruussuora, niin kappaleen
-\pain{hitausmomentti} suoran $S$ suhteen m‰‰ritell‰‰n
+Jos $A\subset\R^3$ edustaa kiinte√§√§ kappaletta ja $S$ on avaruussuora, niin kappaleen
+\pain{hitausmomentti} suoran $S$ suhteen m√§√§ritell√§√§n
 \[
 I_S=\int_A r^2\rho\,dxdydz = \int_A r^2\,dm,
 \]
-miss‰ $m$ on edell‰ m‰‰ritelty massamitta ($\rho=$ massatiheys) ja $r=r(x,y,z)$ on pisteen 
-$(x,y,z)$ et‰isyys suorasta $S$. Hitaustiheys kappaleessa on siis
-$f=r^2\rho$.\footnote[2]{Hitausmomentti m‰‰rittelee fysikaalisesti kappaleen pyˆrimishitauden
-pyˆrimisakselin $S$ suhteen. Jos $\theta(t)$ on pyˆrimiskulma ajan hetkell‰ $t$, niin
-pyˆrimisliikkeen (Newtonin) yht‰lˆ on $I_S\theta''=M_S$, miss‰ $M_S$ on kappaleeseen vaikuttava
+miss√§ $m$ on edell√§ m√§√§ritelty massamitta ($\rho=$ massatiheys) ja $r=r(x,y,z)$ on pisteen 
+$(x,y,z)$ et√§isyys suorasta $S$. Hitaustiheys kappaleessa on siis
+$f=r^2\rho$.\footnote[2]{Hitausmomentti m√§√§rittelee fysikaalisesti kappaleen py√∂rimishitauden
+py√∂rimisakselin $S$ suhteen. Jos $\theta(t)$ on py√∂rimiskulma ajan hetkell√§ $t$, niin
+py√∂rimisliikkeen (Newtonin) yht√§l√∂ on $I_S\theta''=M_S$, miss√§ $M_S$ on kappaleeseen vaikuttava
 momentti $S$:n suuntaan.} 
 \begin{multicols}{2} \raggedcolumns
-Jos suora kulkee pisteen $P_0\vastaa\vec r_0$ kautta ja sen suuntavektori on yksikkˆvektori 
+Jos suora kulkee pisteen $P_0\vastaa\vec r_0$ kautta ja sen suuntavektori on yksikk√∂vektori 
 $\vec e$, niin (vrt.\ kuvio)
 \[
 r(x,y,z)=\abs{\vec e\times(\vec r-\vec r_0)}.
@@ -405,41 +405,41 @@ r(x,y,z)=\abs{\vec e\times(\vec r-\vec r_0)}.
 \end{center}
 \end{figure}
 \end{multicols}
-Olkoon edell‰ origo kappaleen painopiste ja merkit‰‰n $R=$ origon et‰isyys suorasta $S$, jolloin
+Olkoon edell√§ origo kappaleen painopiste ja merkit√§√§n $R=$ origon et√§isyys suorasta $S$, jolloin
 \[ 
 \vec e\times(\vec r - \vec r_0) = \vec e\times\vec r - R\vec n, \quad \abs{\vec n\,}=1 
 \]
-($\vec n=$ vakiovektori), ja n‰in ollen
+($\vec n=$ vakiovektori), ja n√§in ollen
 \[
 r^2\ =\ (\vec e\times\vec r - R\vec n)\cdot(\vec e\times\vec r - R\vec n)\
      =\ \abs{\vec e\times\vec r\,}^2 - 2R\,\vec n\cdot\vec e\times\vec r + R^2.
 \]
-Kun sijoitetaan t‰m‰ em.\ integraalikaavaan, niin saadaan
+Kun sijoitetaan t√§m√§ em.\ integraalikaavaan, niin saadaan
 \[ 
 I_S = \int_A \abs{\vec e\times\vec r\,}^2\,dm - 2R\vec n\cdot\vec e\times\int_A \vec r\,dm 
                                               + R^2\int_A dm. 
 \]
-T‰ss‰ ensimm‰inen termi $=$ kappaleen hitausmomentti origon kautta kulkevan, suoran $S$ 
+T√§ss√§ ensimm√§inen termi $=$ kappaleen hitausmomentti origon kautta kulkevan, suoran $S$ 
 suuntaisen suoran $S'$ suhteen, toinen termi $=0$, koska origo on kappaleen painopiste, ja 
-kolmas termi $=mR^2$, miss‰ $m=m(A)$ on kappaleen massa. Hitausmomentille on n‰in saatu 
-\kor{Steinerin s‰‰ntˆn‰} tunnettu palautuskaava
-\index{Steinerin s‰‰ntˆ}%
+kolmas termi $=mR^2$, miss√§ $m=m(A)$ on kappaleen massa. Hitausmomentille on n√§in saatu 
+\kor{Steinerin s√§√§nt√∂n√§} tunnettu palautuskaava
+\index{Steinerin s√§√§nt√∂}%
 \[
-\boxed{\kehys\quad I_S = I_{S'} + mR^2 \quad \text{(Steinerin s‰‰ntˆ).} \quad } 
+\boxed{\kehys\quad I_S = I_{S'} + mR^2 \quad \text{(Steinerin s√§√§nt√∂).} \quad } 
 \]
-T‰ss‰ siis $S$ ja $S'$ ovat yhdensuuntaiset suorat, $S'$ kulkee kappaleen painopisteen kautta,
-$R=$ suorien v‰linen et‰isyys, ja $m=$ kappaleen massa.
-\begin{Exa} Homogeenisen, $R$-s‰teisen ter‰skuulan massa $=m$. Laske kuulan hitausmomentti 
+T√§ss√§ siis $S$ ja $S'$ ovat yhdensuuntaiset suorat, $S'$ kulkee kappaleen painopisteen kautta,
+$R=$ suorien v√§linen et√§isyys, ja $m=$ kappaleen massa.
+\begin{Exa} Homogeenisen, $R$-s√§teisen ter√§skuulan massa $=m$. Laske kuulan hitausmomentti 
 a) kuulan keskipisteen kautta kulkevan suoran $S$, \ b) kuulaa sivuavan suoran $S'$ suhteen.
 \end{Exa}
-\ratk a)\ Symmetriasyist‰ hitausmomentti on $S$:n suuntavektorista $\vec e$ riippumaton. Kun
-valitaan $\vec e=\vec k$ ja huomioidaan, ett‰ $m=\rho_0\cdot\frac{4}{3}\pi R^3$, miss‰ $\rho_0$
+\ratk a)\ Symmetriasyist√§ hitausmomentti on $S$:n suuntavektorista $\vec e$ riippumaton. Kun
+valitaan $\vec e=\vec k$ ja huomioidaan, ett√§ $m=\rho_0\cdot\frac{4}{3}\pi R^3$, miss√§ $\rho_0$
 on kuulan massatiheys, niin (ks.\ edellisen luvun Esimerkki \ref{integraali yli pallokuoren})
 \[
 I_S = \int_A (x^2+z^2)\rho_0\,dxdydz = \rho_0\cdot\frac{8}{15}\pi R^5
                                      =\underline{\underline{\frac{2}{5}\,mR^2}}.
 \]
-b)\ Origo on kappaleen painopiste, joten a-kohdan ja Steinerin s‰‰nnˆn mukaan
+b)\ Origo on kappaleen painopiste, joten a-kohdan ja Steinerin s√§√§nn√∂n mukaan
 \[ 
 I_{S'} = \frac{2}{5}\,mR^2 + mR^2 = \underline{\underline{\frac{7}{5}\,mR^2}}. \loppu 
 \]
@@ -448,8 +448,8 @@ I_{S'} = \frac{2}{5}\,mR^2 + mR^2 = \underline{\underline{\frac{7}{5}\,mR^2}}. \
 \index{hitaustensori|vahv}
 \index{tensori!a@hitaustensori|vahv}
 
-Tarkastellaan viel‰ kappaleen hitausmomentin $I_S$ laskemista matriisialgebran keinoin. Jos
-suoran $S$ suuntavektori (yksikkˆvektori) on $\vec e = e_1\vec i + e_2\vec j + e_3\vec k$, niin
+Tarkastellaan viel√§ kappaleen hitausmomentin $I_S$ laskemista matriisialgebran keinoin. Jos
+suoran $S$ suuntavektori (yksikk√∂vektori) on $\vec e = e_1\vec i + e_2\vec j + e_3\vec k$, niin
 \begin{align*}
 \vec e\times\vec r &= \vec e \times(x\vec i + y\vec j + z\vec k) \\
                    &= (e_2 z - e_3 y)\vec i + (e_3 x - e_1 z)\vec j + (e_1 y - e_2 x)\vec k,
@@ -460,7 +460,7 @@ I_S = \int_A \abs{\vec e\times\vec r\,}^2\,dm
    &= \int_A\left[(e_2 z - e_3 y)^2 + (e_3 x - e_1 z)^2 + (e_1 y - e_2 x)^2\right]\,dm \\
    &= \sum_{i=1}^3\sum_{j=1}^3 I_{ij}e_ie_j = \me^T\mI\,\me,
 \end{align*}
-miss‰ $\me^T = [e_1,e_2,e_3]$ ja $\mI = (I_{ij})$ on symmetrinen nk.\ \pain{hitausmatriisi},
+miss√§ $\me^T = [e_1,e_2,e_3]$ ja $\mI = (I_{ij})$ on symmetrinen nk.\ \pain{hitausmatriisi},
 jonka alkiot ovat
 \begin{align*}
 I_{11}&=\int_A (y^2+z^2)\,dm, \quad I_{22}=\int_A (x^2+z^2)\,dm, \quad 
@@ -468,14 +468,14 @@ I_{11}&=\int_A (y^2+z^2)\,dm, \quad I_{22}=\int_A (x^2+z^2)\,dm, \quad
 I_{12}&=I_{21}=-\int_A xy\,dm, \quad I_{13}=I_{31}=-\int_A xz\,dm, \quad 
                                      I_{23}=I_{32}=-\int_A yz\,dm.
 \end{align*}
-Hitausmomentin m‰‰ritelm‰n mukaan l‰vist‰j‰alkiot $I_{ii}$ ovat hitausmomentteja 
-koordinaattiakselien suhteen. Kun n‰iss‰ alkioissa kirjoitetaan 
-$y^2+z^2=-x^2+(x^2+y^2+z^2)$ jne, niin n‰hd‰‰n, ett‰ hitausmomentille $I_S$ p‰tee myˆs
+Hitausmomentin m√§√§ritelm√§n mukaan l√§vist√§j√§alkiot $I_{ii}$ ovat hitausmomentteja 
+koordinaattiakselien suhteen. Kun n√§iss√§ alkioissa kirjoitetaan 
+$y^2+z^2=-x^2+(x^2+y^2+z^2)$ jne, niin n√§hd√§√§n, ett√§ hitausmomentille $I_S$ p√§tee my√∂s
 laskukaava
 \begin{equation} \label{hitausmomentin tensorikaava}
 \boxed{\kehys\quad I_S = J_0 - \me^T\mJ\,\me, \quad } \tag{$\star$}
 \end{equation}
-miss‰
+miss√§
 \[ 
 J_0 = \int_A (x^2+y^2+z^2)\,dm,\quad \mJ 
     = \int_A \begin{rmatrix} x^2&xy&xz\\xy&y^2&yz\\xz&yz&z^2 \end{rmatrix} dm. 
@@ -487,81 +487,81 @@ hitaustulomatriisi $\mJ$ eli integraalit
 J_{11} = \int_A x^2\, dm, \quad J_{12} = \int_A xy\,dm, \quad 
                                 J_{13}=\int_A xz\,dm, \quad \text{jne} 
 \]
-($6$ erilaista). T‰m‰n j‰lkeen hitausmomentti m‰‰r‰ytyy kaavasta
-\eqref{hitausmomentin tensorikaava}, miss‰ $\me$ on suoran $S$ suuntainen yksikkˆvektori
+($6$ erilaista). T√§m√§n j√§lkeen hitausmomentti m√§√§r√§ytyy kaavasta
+\eqref{hitausmomentin tensorikaava}, miss√§ $\me$ on suoran $S$ suuntainen yksikk√∂vektori
 ja $J_0 = J_{11}+J_{22}+J_{33}$.
 
-Jos edell‰ yksikkˆvektori $\vec e$ ilmaistaan kierretyss‰ koordinaatistossa 
-$\{\vec i',\vec j', \vec k'\}$ koordinaativektorina $\me'$, niin $\me=\mC\me'$, miss‰ $\mC$ on
+Jos edell√§ yksikk√∂vektori $\vec e$ ilmaistaan kierretyss√§ koordinaatistossa 
+$\{\vec i',\vec j', \vec k'\}$ koordinaativektorina $\me'$, niin $\me=\mC\me'$, miss√§ $\mC$ on
 ortogonaalinen matriisi (vrt.\ Luku \ref{lineaarikuvaukset}). Kaavassa
-\eqref{hitausmomentin tensorikaava} t‰m‰ muunnos merkitsee, ett‰ $\me$:n tilalle tulee
+\eqref{hitausmomentin tensorikaava} t√§m√§ muunnos merkitsee, ett√§ $\me$:n tilalle tulee
 $\me'$ ja $\mJ$:n tilalle $\mC^T\mJ\mC$ ($J_0$ ei muutu). Hitaustulomatriisi, samoin
-hitausmatriisi, muuntuu siis koordinaatistoa kierrett‰ess‰ kuten (symmetrinen) tensori,
-vrt.\ Luku \ref{tensorit}. Sanotaankin, ett‰ kyseess‰ on \kor{hitaustensori}, jolloin
-\pain{hitaus} (pyˆrimishitaus, vrt.\ alaviite edell‰) tulee ymm‰rretyksi koordinaatiston
+hitausmatriisi, muuntuu siis koordinaatistoa kierrett√§ess√§ kuten (symmetrinen) tensori,
+vrt.\ Luku \ref{tensorit}. Sanotaankin, ett√§ kyseess√§ on \kor{hitaustensori}, jolloin
+\pain{hitaus} (py√∂rimishitaus, vrt.\ alaviite edell√§) tulee ymm√§rretyksi koordinaatiston
 kierrosta riippumattomana kappaleen ominaisuutena suhteessa valittuun koordinaatiston origoon
-(pyˆrimiskeskus). P‰‰tell‰‰n edelleen, ett‰ koordinaatiston kierrolla lˆytyy
-aina \kor{p‰‰hitauskoordinaatisto}, jossa hitausmatriisi on diagonaalinen (!). Nimitt‰in t‰m‰
-lˆytyy ratkaisemalla hitausmatriisin ominaisarvo-ongelma (vrt.\ Luku \ref{diagonalisointi}).
+(py√∂rimiskeskus). P√§√§tell√§√§n edelleen, ett√§ koordinaatiston kierrolla l√∂ytyy
+aina \kor{p√§√§hitauskoordinaatisto}, jossa hitausmatriisi on diagonaalinen (!). Nimitt√§in t√§m√§
+l√∂ytyy ratkaisemalla hitausmatriisin ominaisarvo-ongelma (vrt.\ Luku \ref{diagonalisointi}).
 Ominaisarvoja, eli hitausmatriisin
-\index{pzyzy@p‰‰hitausmomentti}%
-l‰vist‰j‰alkioita p‰‰hitauskoordinaatistossa, sanotaan \kor{p‰‰hitausmomenteiksi}.
-\begin{Exa} M‰‰rit‰ homogeenisen kuution (sivun pituus $a$, massatiheys $\rho_0$, massa 
-$m=\rho_0 a^3$) hitausmomentti l‰vist‰j‰n suhteen.
+\index{pzyzy@p√§√§hitausmomentti}%
+l√§vist√§j√§alkioita p√§√§hitauskoordinaatistossa, sanotaan \kor{p√§√§hitausmomenteiksi}.
+\begin{Exa} M√§√§rit√§ homogeenisen kuution (sivun pituus $a$, massatiheys $\rho_0$, massa 
+$m=\rho_0 a^3$) hitausmomentti l√§vist√§j√§n suhteen.
 \end{Exa}
 \ratk Olkoon $A=[-a/2,a/2]\times[-a/2,a/2]\times[-a/2,a/2]$, jolloin symmetrian perusteella on
-$I_{ij}=0$ kun $i \neq j$ (p‰‰hitauskoordinaatisto). P‰‰hitausmomentit ovat myˆs symmetrian 
+$I_{ij}=0$ kun $i \neq j$ (p√§√§hitauskoordinaatisto). P√§√§hitausmomentit ovat my√∂s symmetrian 
 perusteella samansuuruiset, eli jokaisella $i=1,2,3$ on
 \[
 I_{ii} = \rho_0\int_A (y^2+z^2)\,dxdydz = 2\rho_0\int_A z^2\,dxdydx 
        = 2\rho_0 a^2\int_{-a/2}^{a/2} z^2\,dz = \frac{1}{6}\,ma^2.
 \]
-Koska hitausmatriisi on diagonaalinen ja l‰vist‰j‰alkiot ovat samansuuruiset, niin 
+Koska hitausmatriisi on diagonaalinen ja l√§vist√§j√§alkiot ovat samansuuruiset, niin 
 hitausmatriisi on sama kaikissa koordinaatistoissa, joiden origo on kuution
-keskipisteess‰ (painopisteess‰). Siis vastaus: $I_S=\underline{\underline{\frac{1}{6}ma^2}}$.
+keskipisteess√§ (painopisteess√§). Siis vastaus: $I_S=\underline{\underline{\frac{1}{6}ma^2}}$.
 \loppu
 
-\subsection*{*Todenn‰kˆisyysmitta}
-\index{mitta, mitallisuus!c@todenn‰kˆisyysmitta|vahv}
+\subsection*{*Todenn√§k√∂isyysmitta}
+\index{mitta, mitallisuus!c@todenn√§k√∂isyysmitta|vahv}
 
-Matematiikan lajissa nimelt‰ \kor{todenn‰kˆisyyslaskenta} tarkastellaan nk.\ 
+Matematiikan lajissa nimelt√§ \kor{todenn√§k√∂isyyslaskenta} tarkastellaan nk.\ 
 \index{satunnaismuuttuja}%
 \kor{satunnaismuuttujia} $\mx\in\R^n$. Jokaiseen satunnaismuuttujaan liittyy ko.\ muuttujalle
-ominainen \kor{todenn‰kˆisyysmitta} $P$, jonka tiheysfunktiota $f$ ($f(\mx) \ge 0\ \forall \mx$)
-\index{todenn‰kˆisyysmitta, -tiheys} \index{tiheys(funktio)!b@todenn‰kˆisyystiheys}%
-sanotaan \kor{todenn‰kˆisyystiheydeksi} tai \kor{-jakaumaksi}. Todenn‰kˆisyysmitalta 
-edellytet‰‰n, ett‰ koko $\R^n$ on $P$-mitallinen ja
+ominainen \kor{todenn√§k√∂isyysmitta} $P$, jonka tiheysfunktiota $f$ ($f(\mx) \ge 0\ \forall \mx$)
+\index{todenn√§k√∂isyysmitta, -tiheys} \index{tiheys(funktio)!b@todenn√§k√∂isyystiheys}%
+sanotaan \kor{todenn√§k√∂isyystiheydeksi} tai \kor{-jakaumaksi}. Todenn√§k√∂isyysmitalta 
+edellytet√§√§n, ett√§ koko $\R^n$ on $P$-mitallinen ja
 \[ 
 P(\R^n) = \int_{R^n} dP = \int_{\R^n} f\,d\mu = 1. 
 \]
-Joukon $A \subset  \R^n$ todenn‰kˆisyysmittaa sanotaan $A$:n \kor{todenn‰kˆisyydeksi}. 
-Todenn‰kˆisyysmitan avulla m‰‰ritelty‰ $\R^n$:n painopistett‰
+Joukon $A \subset  \R^n$ todenn√§k√∂isyysmittaa sanotaan $A$:n \kor{todenn√§k√∂isyydeksi}. 
+Todenn√§k√∂isyysmitan avulla m√§√§ritelty√§ $\R^n$:n painopistett√§
 \[ 
 \mx_0 = \int_{\R^n} \mx\,dP = \int_{R^n} \mx\,f(\mx)\,d\mu 
 \]
 \index{odotusarvo}%
 sanotaan (tarkasteltavan satunnaismuuttujan) \kor{odotusarvoksi}.
 \begin{Exa} Olkoon $A\subset\R^n$ mitallinen ja $\mu(A)>0$ ($\mu=\R^n$:n tilavuusmitta) ja 
-olkoon satunnaismuuttujan $\mx$ todenn‰kˆisyystiheys \kor{tasajakauma}
+olkoon satunnaismuuttujan $\mx$ todenn√§k√∂isyystiheys \kor{tasajakauma}
 \index{tasajakauma}%
 \[
 f(\mx)= \begin{cases} 
         1/\mu(A), \quad &\text{jos}\ \mx\in A, \\ 0, \quad &\text{muulloin}.
         \end{cases}
 \]
-T‰llˆin on
+T√§ll√∂in on
 \[
 P(B) = \int_B\,dP = \int_B f(\mx)\,d\mu = \frac{\mu(A \cap B)}{\mu(A)}\,, \quad B\subset\R^n.
 \]
-Odotusarvo $=A$:n keskiˆ. \loppu
+Odotusarvo $=A$:n keski√∂. \loppu
 \end{Exa}
 
 \Harj
 \begin{enumerate}
 
 \item
-Pullapitkossa, joka sijaitsee $x$-akselilla v‰lill‰ $[0,a]$, $a=44$ cm, ovat rusinat
-jauhautuneet siten, ett‰ rusinoiden viivatiheys on
+Pullapitkossa, joka sijaitsee $x$-akselilla v√§lill√§ $[0,a]$, $a=44$ cm, ovat rusinat
+jauhautuneet siten, ett√§ rusinoiden viivatiheys on
 \[
 \rho(x) = 1.5\rho_0\left[1+\frac{x}{a}\left(1-\frac{x}{a}\right)\right], \quad 
                                               x\in[0,a], \quad \rho_0=\frac{1}{\text{cm}}\,.
@@ -569,13 +569,13 @@ jauhautuneet siten, ett‰ rusinoiden viivatiheys on
 Montako (saman kokoista) rusinaa pullaan on pantu? 
 
 \item 
-Pisteen $P_0 \vastaa \vec r_0$ keskiet‰isyys joukon $A\subset R^2$ pisteist‰ voidaan m‰‰ritell‰
+Pisteen $P_0 \vastaa \vec r_0$ keskiet√§isyys joukon $A\subset R^2$ pisteist√§ voidaan m√§√§ritell√§
 integraalina $d=\frac{1}{\mu(A)} \int_A \abs{\vec r - \vec r_0}\,d\mu.$ Laske pisteen $(2,0)$ 
-keskiet‰isyys neliˆst‰ $A=[0,1]\times [0,1].$
+keskiet√§isyys neli√∂st√§ $A=[0,1]\times [0,1].$
 
 \item 
 Kolmion muotoisen levyn pinnalla $\,A:\,\ x\ge 0\ \ja\ x+|y| \le a$ vaikuttaa pinnan normaalin
-suuntainen paine $p=p_0(1-x^2/a^2),\,p_0=$ vakio. Laske paineesta aiheutuva kokonaisvoima sek‰
+suuntainen paine $p=p_0(1-x^2/a^2),\,p_0=$ vakio. Laske paineesta aiheutuva kokonaisvoima sek√§
 momentti origon suhteen.
 
 \item
@@ -587,12 +587,12 @@ Kasassa massatiheys on
 \[
 \rho(x,y,z) = \rho_0+\frac{\rho_0}{30}\left(1-\frac{x+y+z}{a}\right)^2,
 \]
-miss‰ $\rho_0$ (= vakio) on kuivan hiekan massatiheys ja loppuosa tiheydest‰ edustaa
-hiekkaan sitoutunutta vett‰. Jos kasan koko massa on $100$ kg, niin montako kiloa kasassa on
-vett‰?
+miss√§ $\rho_0$ (= vakio) on kuivan hiekan massatiheys ja loppuosa tiheydest√§ edustaa
+hiekkaan sitoutunutta vett√§. Jos kasan koko massa on $100$ kg, niin montako kiloa kasassa on
+vett√§?
 
 \item
-Kohdissa a)--k) m‰‰rit‰ joukon $A$ keskiˆ, muissa kohdissa kappaleen $A\subset\R^3$ painopiste,
+Kohdissa a)--k) m√§√§rit√§ joukon $A$ keski√∂, muissa kohdissa kappaleen $A\subset\R^3$ painopiste,
 kun massatiheys $\rho$ on annettu ($a>0,\ \rho_0=$ vakio). \vspace{1mm}\newline
 a) \ $\ A\subset\R^2:\,\ x,y \ge 0\ \ja\ x+y \le 1$ \newline
 b) \ $\ A\subset\R^2:\,\ 0 \le x \le 1\ \ja\,-x^2 \le y \le x^3$ \newline
@@ -613,89 +613,89 @@ n) \ $\ A:\,\ 0 \le x,y,z \le a,\,\ \rho=\rho_0(x^2+y^2+z^2)/a^2$ \newline
 o) \ $\ A:\,\ 0 \le x \le a\ \ja\ y^2+z^2 \le 4x^2,\,\ \rho=\rho_0 x/a$ \newline
 p) \ $\ A:\,\ 0 \le x \le a\pi/2\ \ja\ y^2+z^2 \le a^2\cos^2(x/a),\,\ \rho=\rho_0 (x/a)^2$
 \newline
-q) \ $\ A:\,\ x^2+y^2 \le a^2\ \ja\ 0 \le z \le 2a,\,\ \rho=\rho_0 z$†\newline
+q) \ $\ A:\,\ x^2+y^2 \le a^2\ \ja\ 0 \le z \le 2a,\,\ \rho=\rho_0 z$¬†\newline
 r) \ $\ A:\,\ x,y,z \ge 0\ \ja\ x^2+y^2+z^2 \le a^2,\,\ \rho=\rho_0 (x^2+y^2)/a^2$ \newline
 s) \ $\ A:\,\ x \ge 0\ \ja\ y^2+z^2 \le a^6/(a^2+x^2)^2,\,\ \rho=\rho_0 x/a$ \newline
 t) \ $\ A:\,\ x,y \ge 0\ \ja\ 0 \le z \le e^{-(x+y)/a},\,\ \rho=\rho_0(x^2+y^2)/a^2$
 
 \item 
-Kolmion muotoiseen patoluukkuun, jonka k‰rjet ovat pisteiss‰ $A=(0,0,0)$, $B=(0,0,-L)$ ja 
+Kolmion muotoiseen patoluukkuun, jonka k√§rjet ovat pisteiss√§ $A=(0,0,0)$, $B=(0,0,-L)$ ja 
 $C=(0,L,0)$, vaikuttaa veden paine $\vec p\,(y,z)=\rho g z \vec i$. Luukkua ollaan juuri 
-avaamassa (hallitusti), jolloin luukkuun vaikuttavat painekuorman lis‰ksi aukeamista hillitsev‰
+avaamassa (hallitusti), jolloin luukkuun vaikuttavat painekuorman lis√§ksi aukeamista hillitsev√§
 momentti $\vec M=M\vec k$ ja saranoiden tukivoimat $\vec F_A = F_A \vec i$ ja
 $\vec F_B=F_B\vec i$. Laske painekuormituksen kokonaisvoima ja momentti saranan $A$ suhteen ja
-n‰iden avulla edelleen (voima- ja momenttitasapainosta) tuntemattomat suureet $M,\, F_A$ ja
+n√§iden avulla edelleen (voima- ja momenttitasapainosta) tuntemattomat suureet $M,\, F_A$ ja
 $F_B$.
 
 \item
-Seuraavassa on annettu tasoalue $A$. M‰‰rit‰ Pappuksen s‰‰ntˆ‰ hyv‰ksi k‰ytt‰en a-kohdassa
-$A$:n keskiˆ ja muissa kohdissa tilavuus $\mu(V)$, miss‰ $V$ on pyˆr‰hdyskappale, joka
-syntyy $A$:n pyˆr‰ht‰ess‰ $x$-akselin ymp‰ri. \vspace{1mm}\newline
+Seuraavassa on annettu tasoalue $A$. M√§√§rit√§ Pappuksen s√§√§nt√∂√§ hyv√§ksi k√§ytt√§en a-kohdassa
+$A$:n keski√∂ ja muissa kohdissa tilavuus $\mu(V)$, miss√§ $V$ on py√∂r√§hdyskappale, joka
+syntyy $A$:n py√∂r√§ht√§ess√§ $x$-akselin ymp√§ri. \vspace{1mm}\newline
 a) \ $x^2+y^2 \le R^2,\,\ y \ge 0$. \newline
-b) \ Kolmio, jonka k‰rjet ovat $(2,1)$, $(1,2)$ ja $(4,2)$. \newline
-c) \ Suunnikas, jonka k‰rjet ovat $(3,2)$, $(1,3)$, $(4,6)$ ja $(6,5)$. \newline
-d) \ K‰yrien $y=x^2$ ja $y=\sqrt{x}$ v‰liin j‰‰v‰ alue v‰lill‰ $x\in[0,1]$. \newline 
-e) \ K‰yrien $x=\sin y$ ja $x=-\sin y$ v‰liin j‰‰v‰ alue v‰lill‰ $y\in[0,\pi]$. \newline
-f) \ Positiivisen $\,y$-akselin ja k‰yr‰n $x=e^{-y}$ v‰liin j‰‰v‰ alue.
+b) \ Kolmio, jonka k√§rjet ovat $(2,1)$, $(1,2)$ ja $(4,2)$. \newline
+c) \ Suunnikas, jonka k√§rjet ovat $(3,2)$, $(1,3)$, $(4,6)$ ja $(6,5)$. \newline
+d) \ K√§yrien $y=x^2$ ja $y=\sqrt{x}$ v√§liin j√§√§v√§ alue v√§lill√§ $x\in[0,1]$. \newline 
+e) \ K√§yrien $x=\sin y$ ja $x=-\sin y$ v√§liin j√§√§v√§ alue v√§lill√§ $y\in[0,\pi]$. \newline
+f) \ Positiivisen $\,y$-akselin ja k√§yr√§n $x=e^{-y}$ v√§liin j√§√§v√§ alue.
 
 \item
 Koordinaattitasojen ja tasojen $z=a$ ja $x+y+z=3a$ ($a>0$) rajaaman kappaleen hitausmomentti
-$z$-akselin suhteen on $I_z=kma^2$, miss‰ $m=$ kappaleen massa. Laske kerroin $k$, kun
+$z$-akselin suhteen on $I_z=kma^2$, miss√§ $m=$ kappaleen massa. Laske kerroin $k$, kun
 kappaleen massatiheys on a) $\rho=\rho_0$, b) $\rho=\rho_0(x+y+z)/a\,$ ($\rho_0=$ vakio).
 
 \item
 a) Homogeenista kappaletta rajaavat taso $z=a$ ja paraboloidi $\,x^2+y^2=az$, $a>0$. 
-Laske lieriˆkoordinaateilla
-kertoimet $k_x$, $k_y$ ja $k_z$ kaavoissa $I_x=k_xma^2$, $I_y=k_yma^2$ ja $I_z=k_zma^2$, miss‰
+Laske lieri√∂koordinaateilla
+kertoimet $k_x$, $k_y$ ja $k_z$ kaavoissa $I_x=k_xma^2$, $I_y=k_yma^2$ ja $I_z=k_zma^2$, miss√§
 $I_x,I_y,I_z$ ovat kappaleen hitausmomentit koordinaattiakselien suhteen ja $m=$ kappaleen
 massa. \vspace{1mm}\newline
-b) Mill‰ $\alpha$:n arvolla ($\alpha\in\R$) homogeenisen kappaleen 
-$A:\ 0 \le z/a \le (r/a)^\alpha$ (lieriˆkoordinaatit, $a>0$) hitausmomentit kaikkien kolmen
+b) Mill√§ $\alpha$:n arvolla ($\alpha\in\R$) homogeenisen kappaleen 
+$A:\ 0 \le z/a \le (r/a)^\alpha$ (lieri√∂koordinaatit, $a>0$) hitausmomentit kaikkien kolmen
 karteesisen koordinaatiakselin suhteen ovat samat? \vspace{1mm}\newline
-c) $R$-s‰teisen kuulan massatiheys pallokoordinaatistossa on $\rho(r)=\rho_0(r/R)^\alpha$
-($\rho_0=$ vakio) ja massa $=m$. Mill‰ $\alpha$:n arvolla kuulan hitausmomentti kuulan
+c) $R$-s√§teisen kuulan massatiheys pallokoordinaatistossa on $\rho(r)=\rho_0(r/R)^\alpha$
+($\rho_0=$ vakio) ja massa $=m$. Mill√§ $\alpha$:n arvolla kuulan hitausmomentti kuulan
 keskipisteen kautta kulkevan suoran suhteen on $I_S=\frac{1}{2}mR^2$\,?
 
 \item 
 Koivupuusta valmistettu kappale (homogeeninen, tiheys $=500$ kg/m$^3$) on muodoltaan 
-suorakulmainen s‰rmiˆ, jonka s‰rmien pituudet ovat $20$, $30$ ja $60$ cm. Laske kappaleen 
-hitausmomentit \ a) s‰rmien, b) l‰vist‰jien suhteen.
+suorakulmainen s√§rmi√∂, jonka s√§rmien pituudet ovat $20$, $30$ ja $60$ cm. Laske kappaleen 
+hitausmomentit \ a) s√§rmien, b) l√§vist√§jien suhteen.
 
 \item
-$R$-s‰teisen homogeenisen kuulan keskipiste $=(3a,-2a,6a)$ ja massa $=m$. M‰‰rit‰ jokin
-p‰‰hitauskoordinaatisto ja p‰‰hitausmomentit, kun pyˆrimiskeskus $=$ origo. \kor{Vihje}: Ks.\
+$R$-s√§teisen homogeenisen kuulan keskipiste $=(3a,-2a,6a)$ ja massa $=m$. M√§√§rit√§ jokin
+p√§√§hitauskoordinaatisto ja p√§√§hitausmomentit, kun py√∂rimiskeskus $=$ origo. \kor{Vihje}: Ks.\
 Harj.teht.\,\ref{lineaarikuvaukset}:\,\ref{H-m-6: kiertoja}a.
 
 \item 
-Jos $x$ ja $y$ ovat riippumattomia satunnaislukuja, niin todenn‰kˆisyys sille, ett‰ $(x,y)$ osuu
-joukkoon $A\subset\R^2$ on $P(A)=\mu(A \cap B)$ miss‰ $\mu$ on $\R^2$:n pinta-alamitta ja
-$B=[0,1]\times[0,1]$. Mill‰ todenn‰kˆisyydell‰ on \newline
+Jos $x$ ja $y$ ovat riippumattomia satunnaislukuja, niin todenn√§k√∂isyys sille, ett√§ $(x,y)$ osuu
+joukkoon $A\subset\R^2$ on $P(A)=\mu(A \cap B)$ miss√§ $\mu$ on $\R^2$:n pinta-alamitta ja
+$B=[0,1]\times[0,1]$. Mill√§ todenn√§k√∂isyydell√§ on \newline
 a) $x^2+y^2 < 1$, \,\ b) $x+y\ge 3/2$, \,\ c) $x+y=1$\,?
 
 \item (*)
 a) Koordinaattitasot ja taso $x+y+z=a>0$ rajaavat homogeenisen kappaleen, jonka massa $=m$.
-M‰‰rit‰ kappaleen p‰‰hitauskoordinaatisto ja p‰‰hitausmomentit, kun pyˆrimiskeskus
+M√§√§rit√§ kappaleen p√§√§hitauskoordinaatisto ja p√§√§hitausmomentit, kun py√∂rimiskeskus
 $=$ origo. \vspace{1mm}\newline
-b) Kappaleen massa $=m$ ja painopiste on origossa. N‰yt‰, ett‰ jos kappaleen hitaustulomatriisi
+b) Kappaleen massa $=m$ ja painopiste on origossa. N√§yt√§, ett√§ jos kappaleen hitaustulomatriisi
 origon suhteen $=\mJ$, niin hitaustulomatriisi pisteen $P=(x_0,y_0,z_0)$ suhteen on
-$\mJ+\ma\ma^T$, miss‰ $\ma^T=[x_0,y_0,z_0]$. \vspace{1mm}\newline
-c) Ratkaise a)-kohdan ongelma, kun pyˆrimiskeskus on painopiste.
+$\mJ+\ma\ma^T$, miss√§ $\ma^T=[x_0,y_0,z_0]$. \vspace{1mm}\newline
+c) Ratkaise a)-kohdan ongelma, kun py√∂rimiskeskus on painopiste.
 
 \item (*) \index{zzb@\nim!Monumentti}
 (Monumentti) Tuntemattoman matemaatikon muistomerkki on tehty umpiraudasta
-noudattaen seuraavia ohjeita koordinaatistossa, jossa positiivinen $x$-akseli osoittaa it‰‰n
-ja positiivinen $y$-akseli pohjoiseen. Maan pinnan taso on $xy$-taso ja pituusyksikkˆ on metri.
+noudattaen seuraavia ohjeita koordinaatistossa, jossa positiivinen $x$-akseli osoittaa it√§√§n
+ja positiivinen $y$-akseli pohjoiseen. Maan pinnan taso on $xy$-taso ja pituusyksikk√∂ on metri.
 \begin{enumerate}
-\item[1.] Id‰st‰ katsoen monumentin profiili on suorien $z=0,\, y=2$ ja k‰yr‰n $z=y^2$ 
+\item[1.] Id√§st√§ katsoen monumentin profiili on suorien $z=0,\, y=2$ ja k√§yr√§n $z=y^2$ 
           rajaama alue. 
-\item[2.] P‰‰lt‰ katsoen monumentin profiili on vinoneliˆ, jonka k‰rjet ovat pisteiss‰ 
+\item[2.] P√§√§lt√§ katsoen monumentin profiili on vinoneli√∂, jonka k√§rjet ovat pisteiss√§ 
           $A=(-\frac{3}{2},0)$, $B=(1,0)$, $C=(0,2)$ ja $D=(\frac{5}{2},2)$.
-\item[3.] Monumentin jokainen pystysuora, it‰-l‰nsisuuntainen poikkileikkaus on kolmio, jonka 
-          k‰rki on maan pinnalla janalla $BC$ ja t‰m‰n k‰rjen vastainen sivu on vaakasuora.
+\item[3.] Monumentin jokainen pystysuora, it√§-l√§nsisuuntainen poikkileikkaus on kolmio, jonka 
+          k√§rki on maan pinnalla janalla $BC$ ja t√§m√§n k√§rjen vastainen sivu on vaakasuora.
 \end{enumerate}
 a) Paljonko monumentti painaa? ($\rho=7800$ kg/m$^3$) \newline
-b) M‰‰rit‰ monumentin painopiste. \newline
-c) Monumentti tuetaan kiinnitt‰m‰ll‰ k‰rki $A$ maahan upotettuun betonipainoon. Kuinka suuri
-on t‰m‰n vastapainon massan v‰hint‰‰n oltava, jotta monumentti ei kaadu?
+b) M√§√§rit√§ monumentin painopiste. \newline
+c) Monumentti tuetaan kiinnitt√§m√§ll√§ k√§rki $A$ maahan upotettuun betonipainoon. Kuinka suuri
+on t√§m√§n vastapainon massan v√§hint√§√§n oltava, jotta monumentti ei kaadu?
 
 \end{enumerate}

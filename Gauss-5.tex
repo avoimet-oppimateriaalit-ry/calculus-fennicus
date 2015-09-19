@@ -1,77 +1,77 @@
-\section{Pyˆrteetˆn vektorikentt‰} \label{pyˆrteetˆn vektorikentt‰}
+\section{Py√∂rteet√∂n vektorikentt√§} \label{py√∂rteet√∂n vektorikentt√§}
 \alku
-\index{pyzz@pyˆrteetˆn vektorikentt‰|vahv}
-\index{vektorikentt‰!b@pyˆrteetˆn|vahv}
+\index{pyzz@py√∂rteet√∂n vektorikentt√§|vahv}
+\index{vektorikentt√§!b@py√∂rteet√∂n|vahv}
 
-Jos $\vec F$ on fysikaalinen virtaus-, s‰hkˆ-, magneetti- ym. kentt‰, sanotaan kentt‰‰
-$\vec \omega=\nabla\times\vec F$ kent‰n pyˆrrekent‰ksi (vrt.\ Luku 
-\ref{divergenssi ja roottori}). Stokesin lause ilmaisee yhteyden kent‰n $\vec F$ ja pyˆrrekent‰n
-$\vec\omega$ v‰lill‰:
+Jos $\vec F$ on fysikaalinen virtaus-, s√§hk√∂-, magneetti- ym. kentt√§, sanotaan kentt√§√§
+$\vec \omega=\nabla\times\vec F$ kent√§n py√∂rrekent√§ksi (vrt.\ Luku 
+\ref{divergenssi ja roottori}). Stokesin lause ilmaisee yhteyden kent√§n $\vec F$ ja py√∂rrekent√§n
+$\vec\omega$ v√§lill√§:
 \[
 \oint_{\partial A} \vec F\cdot d\vec r=\int_A \vec\omega\cdot d\vec a.
 \]
-T‰ll‰ yhteydell‰ on paljon k‰yttˆ‰ esimerkiksi s‰hkˆmagneetikassa, jossa pyˆrrekent‰t ovat 
-n‰kyv‰ss‰ roolissa jo perusyht‰lˆiss‰ (Maxwellin yht‰lˆiss‰, vrt.\ Luku 
-\ref{divergenssi ja roottori}). Jos $\vec F$ on pyˆrteetˆn kentt‰, eli jos $\vec\omega=\vec 0$,
+T√§ll√§ yhteydell√§ on paljon k√§ytt√∂√§ esimerkiksi s√§hk√∂magneetikassa, jossa py√∂rrekent√§t ovat 
+n√§kyv√§ss√§ roolissa jo perusyht√§l√∂iss√§ (Maxwellin yht√§l√∂iss√§, vrt.\ Luku 
+\ref{divergenssi ja roottori}). Jos $\vec F$ on py√∂rteet√∂n kentt√§, eli jos $\vec\omega=\vec 0$,
 antaa Stokesin lause tuloksen
 \begin{equation} \label{Kpot-1}
 \oint_{\partial A} \vec F\cdot d\vec r=0.
 \end{equation}
-Luvun \ref{polkuintegraalit} termein t‰m‰ voidaan lukea: Pyˆrteettˆm‰n vektorikent‰n tekem‰ tyˆ
-suljettua polkua pitkin = 0. Sanotaan, ett‰ kentt‰ $\vec F$ on t‰llˆin
-\index{konservatiivinen vektorikentt‰} \index{vektorikentt‰!c@konservatiivinen}%
-\kor{konservatiivinen} (energian s‰ilytt‰v‰).
+Luvun \ref{polkuintegraalit} termein t√§m√§ voidaan lukea: Py√∂rteett√∂m√§n vektorikent√§n tekem√§ ty√∂
+suljettua polkua pitkin = 0. Sanotaan, ett√§ kentt√§ $\vec F$ on t√§ll√∂in
+\index{konservatiivinen vektorikentt√§} \index{vektorikentt√§!c@konservatiivinen}%
+\kor{konservatiivinen} (energian s√§ilytt√§v√§).
 
-Jos $\vec F$ on gradienttikentt‰, ts. $\vec F=-\nabla u$, niin $\vec F$ on pyˆrteetˆn. Tulos 
-\eqref{Kpot-1} on t‰llˆin voimassa --- ja tiedettiin ilman Stokesin lausettakin, sill‰ 
-gradienttikent‰n tekem‰ tyˆ = 0, jos polun alku- ja loppupisteet ovat samat, vrt.\ Luku 
-\ref{polkuintegraalit}. --- Mutta ent‰ jos kysyt‰‰nkin toisin p‰in: Millainen on riitt‰v‰n 
-s‰‰nnˆllinen, mutta muuten mahdollisimman yleinen vektorikentt‰ $\vec F$, joka on joko (a)
-konservatiivinen tai (b) pyˆrteetˆn? Seuraavassa keskityt‰‰n vastaamaan n‰ihin kysymyksiin. 
-Tarkastellaan aluksi tason vektorikentti‰.
+Jos $\vec F$ on gradienttikentt√§, ts. $\vec F=-\nabla u$, niin $\vec F$ on py√∂rteet√∂n. Tulos 
+\eqref{Kpot-1} on t√§ll√∂in voimassa --- ja tiedettiin ilman Stokesin lausettakin, sill√§ 
+gradienttikent√§n tekem√§ ty√∂ = 0, jos polun alku- ja loppupisteet ovat samat, vrt.\ Luku 
+\ref{polkuintegraalit}. --- Mutta ent√§ jos kysyt√§√§nkin toisin p√§in: Millainen on riitt√§v√§n 
+s√§√§nn√∂llinen, mutta muuten mahdollisimman yleinen vektorikentt√§ $\vec F$, joka on joko (a)
+konservatiivinen tai (b) py√∂rteet√∂n? Seuraavassa keskityt√§√§n vastaamaan n√§ihin kysymyksiin. 
+Tarkastellaan aluksi tason vektorikentti√§.
 
-\index{yhtenzy@yhten‰inen (joukko)}%
-Olkoon $A\subset\R^2$ \pain{avoin} joukko. Sanotaan, ett‰ t‰llainen joukko on \kor{yhten‰inen}
-(engl.\ connected), jos mielivaltaiset kaksi $A$:n pistett‰ ovat yhdistett‰viss‰ jatkuvalla, 
-suoristuvalla parametrisella k‰yr‰ll‰, jonka p‰‰tepisteet ovat mainitut pisteet ja joka on 
-kokonaisuudessaan $A$:ssa. Jatkossa sanotaan avointa ja yhten‰ist‰ joukkoa
+\index{yhtenzy@yhten√§inen (joukko)}%
+Olkoon $A\subset\R^2$ \pain{avoin} joukko. Sanotaan, ett√§ t√§llainen joukko on \kor{yhten√§inen}
+(engl.\ connected), jos mielivaltaiset kaksi $A$:n pistett√§ ovat yhdistett√§viss√§ jatkuvalla, 
+suoristuvalla parametrisella k√§yr√§ll√§, jonka p√§√§tepisteet ovat mainitut pisteet ja joka on 
+kokonaisuudessaan $A$:ssa. Jatkossa sanotaan avointa ja yhten√§ist√§ joukkoa
 \index{alue}%
-\kor{alueeksi} (engl.\ domain)\footnote[2]{Alue m‰‰ritell‰‰n hieman yleisemmin joukkona
-$B = A \cup S$, miss‰ $A$ on avoin ja yhten‰inen ja $S \subset \partial A$. Jos
+\kor{alueeksi} (engl.\ domain)\footnote[2]{Alue m√§√§ritell√§√§n hieman yleisemmin joukkona
+$B = A \cup S$, miss√§ $A$ on avoin ja yhten√§inen ja $S \subset \partial A$. Jos
 $S = \emptyset$, niin $B=A$ on \kor{avoin alue}. Jos $S=\partial A$, niin $B=\overline{A}$ on
 \kor{suljettu alue}. \index{avoin alue|av} \index{suljettu alue|av}}. 
-\begin{Lause} \label{Lpot-1} \index{gradienttikentt‰|emph}
-Jos tason vektorikentt‰ $\vec F$ on jatkuva ja konservatiivinen alueessa $A \subset \R^2$, niin
-$\vec F$ on gradienttikentt‰, ts.\ $\vec F=-\nabla u$, miss‰ $u$ on $A$:ssa jatkuvasti
+\begin{Lause} \label{Lpot-1} \index{gradienttikentt√§|emph}
+Jos tason vektorikentt√§ $\vec F$ on jatkuva ja konservatiivinen alueessa $A \subset \R^2$, niin
+$\vec F$ on gradienttikentt√§, ts.\ $\vec F=-\nabla u$, miss√§ $u$ on $A$:ssa jatkuvasti
 derivoituva.
 \end{Lause}
-\tod Olkoon $\vec r_0\vastaa (x_0,y_0)\in A$ kiinte‰ ja $\vec r\vastaa (x,y)\in A$ muuttuva 
-$A$:n piste. Olkoon edelleen $p$ yksinkertainen, suoristuva parametrinen k‰yr‰ (polku) 
+\tod Olkoon $\vec r_0\vastaa (x_0,y_0)\in A$ kiinte√§ ja $\vec r\vastaa (x,y)\in A$ muuttuva 
+$A$:n piste. Olkoon edelleen $p$ yksinkertainen, suoristuva parametrinen k√§yr√§ (polku) 
 $\vec r=\vec r\,(t)$, $t\in [a,b]$, jolle $\vec r\,(a)=\vec r_0$ ja
-$\vec r_b=\vec r\vastaa (x,y)$. M‰‰ritell‰‰n
+$\vec r_b=\vec r\vastaa (x,y)$. M√§√§ritell√§√§n
 \[
 u(p,x,y)=-\int_p \vec F\cdot d\vec r.
 \]
-Jos $u$ ei riipu polun $p$ valinnasta, ts. $u(p,x,y)=u(x,y)$, niin jatkamalla polkua pisteest‰
-$\vec r$ seuraa jatkuvuusoletuksesta, ett‰
+Jos $u$ ei riipu polun $p$ valinnasta, ts. $u(p,x,y)=u(x,y)$, niin jatkamalla polkua pisteest√§
+$\vec r$ seuraa jatkuvuusoletuksesta, ett√§
 \[
 u(\vec r+\Delta\vec r\,)=-\vec F(\vec r\,)\cdot\Delta\vec r+o(|\Delta\vec r\,|).
 \]
-T‰m‰n mukaan $u$ on differentioituva ja $\nabla u=-\vec F$. Riitt‰‰ siis osoittaa, ett‰
-$u(p,x,y)$ riippuu vain polun p‰‰tepisteist‰. Olkoon $p_1$ ja $p_2$ kaksi polkua joilla on sama
-alkupiste $(x_0,y_0)$ ja sama loppupiste $(x,y)$. Jos vastaavat geometriset k‰yr‰t ovat $S_1$
+T√§m√§n mukaan $u$ on differentioituva ja $\nabla u=-\vec F$. Riitt√§√§ siis osoittaa, ett√§
+$u(p,x,y)$ riippuu vain polun p√§√§tepisteist√§. Olkoon $p_1$ ja $p_2$ kaksi polkua joilla on sama
+alkupiste $(x_0,y_0)$ ja sama loppupiste $(x,y)$. Jos vastaavat geometriset k√§yr√§t ovat $S_1$
 ja $S_2$, niin
 \[
 S_1\cup S_2=\bigcup_i S_i,\quad S_i\subset A,
 \]
-miss‰ $S_i$:t ovat suljettuja k‰yri‰ (vrt.\ kuvio).
+miss√§ $S_i$:t ovat suljettuja k√§yri√§ (vrt.\ kuvio).
 \vspace{3mm}
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvapot-18.pstex_t}
 \end{center}
 \end{figure}
-T‰llˆin 
+T√§ll√∂in 
 \[
 \int_{p_1} \vec F\cdot d\vec r-\int_{p_2} \vec F\cdot d\vec r
                          = \sum_i \oint_{S_i} \vec F\cdot d\vec r.
@@ -82,41 +82,41 @@ Koska $\vec F$ on konservatiivinen, on $\oint_{S_i} \vec F\cdot d\vec r=0$, jote
 \]
 Siis $u(p,x,y)=u(x,y)$ on polun valinnasta riippumaton. \loppu
 
-\index{yhdesti yhten‰inen alue}%
-Sanotaan, ett‰ alue $A\subset\R^2$ on \kor{yhdesti yhten‰inen} (engl.\ simply connected), jos
-p‰tee $B \subset A$ aina kun $B$ on alue, jolle $\partial B\subset A$. Kun kirjoitetaan
+\index{yhdesti yhten√§inen alue}%
+Sanotaan, ett√§ alue $A\subset\R^2$ on \kor{yhdesti yhten√§inen} (engl.\ simply connected), jos
+p√§tee $B \subset A$ aina kun $B$ on alue, jolle $\partial B\subset A$. Kun kirjoitetaan
 $S=\partial B$, niin ehdon hieman havainnollisempi muotoilu on: $A\subset\R^2$ on yhdesti
-yhten‰inen, jos jokainen suljettu k‰yr‰ $S \subset A$ voidaan kutistaa pisteeksi niin, ett‰
-k‰yr‰ pysyy kutistuessaan koko ajan $A$:ssa. Yhdesti yhtein‰inen joukko on 'j‰rvi ilman saaria'.
+yhten√§inen, jos jokainen suljettu k√§yr√§ $S \subset A$ voidaan kutistaa pisteeksi niin, ett√§
+k√§yr√§ pysyy kutistuessaan koko ajan $A$:ssa. Yhdesti yhtein√§inen joukko on 'j√§rvi ilman saaria'.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvapot-19.pstex_t}
 \end{center}
 \end{figure}
-Seuraava Stokesin lauseen seurannaistulos on vektorikenttien teorian keskeisimpi‰. Tuloksella
-on paljon k‰yttˆ‰ fysiikassa.
-\begin{Lause} \label{Lpot-2} \index{gradienttikentt‰|emph}
-Jos tason vektorikentt‰ $\vec F$ on jatkuvasti derivoituva ja pyˆrteetˆn (rot\,$\vec F=0$)
-yhdesti yhten‰isess‰ alueessa $A$, niin $\vec F$ on gradienttikentt‰.
+Seuraava Stokesin lauseen seurannaistulos on vektorikenttien teorian keskeisimpi√§. Tuloksella
+on paljon k√§ytt√∂√§ fysiikassa.
+\begin{Lause} \label{Lpot-2} \index{gradienttikentt√§|emph}
+Jos tason vektorikentt√§ $\vec F$ on jatkuvasti derivoituva ja py√∂rteet√∂n (rot\,$\vec F=0$)
+yhdesti yhten√§isess√§ alueessa $A$, niin $\vec F$ on gradienttikentt√§.
 \end{Lause}
-\tod Kent‰n potentiaali m‰‰ritet‰‰n polkuintegraalina kuten edell‰, jolloin riitt‰‰ j‰lleen
-osoittaa, ett‰ integraalin arvo riippuu vain polun p‰‰tepisteist‰. T‰m‰n todistamiseksi
-valitaan j‰lleen kaksi polkua, joilla on samat p‰‰tepisteet, jolloin (vrt.\ todistus edell‰)
+\tod Kent√§n potentiaali m√§√§ritet√§√§n polkuintegraalina kuten edell√§, jolloin riitt√§√§ j√§lleen
+osoittaa, ett√§ integraalin arvo riippuu vain polun p√§√§tepisteist√§. T√§m√§n todistamiseksi
+valitaan j√§lleen kaksi polkua, joilla on samat p√§√§tepisteet, jolloin (vrt.\ todistus edell√§)
 \[
 \int_{p_1} \vec F\cdot d\vec r-\int_{p_2} \vec F\cdot d\vec r
                                = \sum_i \oint_{S_i} \vec F\cdot d\vec r.
 \]
-Nytkin on oikea puoli = 0, sill‰ oletetun yhdesti yhten‰isyyden perusteella k‰yrien $S_i$ 
-sis‰‰ns‰ sulkemat alueet $A_i$ sis‰ltyv‰t joukkoon $A$, jolloin Stokesin tasokaavan
-(edellinen luvun kaava \eqref{Stokesin tasokaava}) ja $\vec F$:n pyˆrteettˆmyyden
+Nytkin on oikea puoli = 0, sill√§ oletetun yhdesti yhten√§isyyden perusteella k√§yrien $S_i$ 
+sis√§√§ns√§ sulkemat alueet $A_i$ sis√§ltyv√§t joukkoon $A$, jolloin Stokesin tasokaavan
+(edellinen luvun kaava \eqref{Stokesin tasokaava}) ja $\vec F$:n py√∂rteett√∂myyden
 perusteella
 \[
 \oint_{S_i} \vec F\cdot d\vec r=\int_{A_i} \text{rot}\,\vec F\,dxdy=0. \loppu
 \]
 \vspace{0.2mm}
 \begin{multicols}{2} \raggedcolumns
-Lauseiden \ref{Lpot-1}--\ref{Lpot-2} todistuksien perusteella gradienttikent‰n potentiaali
-saadaan lasketuksi tyˆintegraalina:
+Lauseiden \ref{Lpot-1}--\ref{Lpot-2} todistuksien perusteella gradienttikent√§n potentiaali
+saadaan lasketuksi ty√∂integraalina:
 \[
 u(\vec r\,)=-\int_{p:\,\vec r_0\,\kohti\,\vec r} \vec F\cdot d\vec r.
 \]
@@ -133,7 +133,7 @@ u(\vec r\,)=-\int_{p:\,\vec r_0\,\kohti\,\vec r} \vec F\cdot d\vec r.
 \end{center}
 \end{multicols}
 Laskukaavassa voidaan polku $p$ voidaan valita vapaasti, kunhan se pysyy alueessa $A$
-(jossa $\vec F$ on m‰‰ritelty). Jos $A$:n geometria ei aseta rajoituksia, voidaan polku valita
+(jossa $\vec F$ on m√§√§ritelty). Jos $A$:n geometria ei aseta rajoituksia, voidaan polku valita
 esimerkiksi seuraamaan koordinaattiakselien suuntaisia suoria, jolloin potentiaalin
 laskukaavaksi tulee
 \begin{align*}
@@ -141,17 +141,17 @@ laskukaavaksi tulee
      u(x,y) &= -\int_{x_0}^x F_1(t,y_0)\,dt-\int_{y_0}^y F_2(x,t)\,dt.
 \end{align*}
 \begin{Exa}
-Onko vektorikentt‰
+Onko vektorikentt√§
 \[
 \vec F(x,y)=(x^3-y^3+\cos x)\vec i-(3xy^2+e^{-y})\vec j
 \]
-gradienttikentt‰?
+gradienttikentt√§?
 \end{Exa}
 \ratk Koska
 \[
 \text{rot}\, \vec F=-\partial_x(3xy^2+e^{-y})-\partial_y(x^3-y^3+\cos x)=0,
 \]
-niin $\vec F$ on gradienttikentt‰ $\R^2$:ssa (Lause \ref{Lpot-2}). Valinnalla $(x_0,y_0)=(0,0)$ 
+niin $\vec F$ on gradienttikentt√§ $\R^2$:ssa (Lause \ref{Lpot-2}). Valinnalla $(x_0,y_0)=(0,0)$ 
 potentiaaliksi saadaan
 \begin{align*}
 u(x,y) &= -\int_0^x (t^3+\cos t)\,dt+\int_0^y (3xt^2+e^{-t})\,dt \\
@@ -162,8 +162,8 @@ Yleinen potentiaalifunktio on
 u(x,y)=-\frac{1}{4}x^4+xy^3-\sin x-e^{-y}+C\quad (C=\text{vakio}). \loppu
 \]
 \begin{Exa}
-Polaarikoordinaatistossa on m‰‰ritelty vektorikentt‰ $\vec F=\frac{1}{r}\,\vec e_\varphi$.
-Tutki, onko $\vec F$  gradienttikentt‰ alueessa $A$, kun \vspace{1mm}\newline
+Polaarikoordinaatistossa on m√§√§ritelty vektorikentt√§ $\vec F=\frac{1}{r}\,\vec e_\varphi$.
+Tutki, onko $\vec F$  gradienttikentt√§ alueessa $A$, kun \vspace{1mm}\newline
 a) $A=\{\,(x,y)\in\R^2 \; | \; x>0 \; \ja \; y>0\,\}$, \newline
 b) $A=\{\,(x,y)\in\R^2 \; | \; (x,y)\neq(0,0)\,\}$.
 \end{Exa}
@@ -172,10 +172,10 @@ b) $A=\{\,(x,y)\in\R^2 \; | \; (x,y)\neq(0,0)\,\}$.
 \vec F=F_r\vec e_r+F_\varphi \vec e_\varphi\,: \quad 
       \text{rot}\,\vec F=\frac{1}{r}\,\partial_r(rF_\varphi)-\frac{1}{r}\,\partial_\varphi F_r.
 \]
-T‰ss‰ on $F_r=0$ ja $F_\varphi=1/r$, joten $\vec F$ on pyˆrteetˆn jokaisessa alueessa, joka ei
-sis‰ll‰ origoa.
+T√§ss√§ on $F_r=0$ ja $F_\varphi=1/r$, joten $\vec F$ on py√∂rteet√∂n jokaisessa alueessa, joka ei
+sis√§ll√§ origoa.
 
-a) T‰ss‰ $A$ on yhdesti yhten‰inen, joten $\vec F$ on gradienttikentt‰. Valitsemalla $r_0>0$
+a) T√§ss√§ $A$ on yhdesti yhten√§inen, joten $\vec F$ on gradienttikentt√§. Valitsemalla $r_0>0$
 voidaan potentiaali $u(x,y)=v(r,\varphi)$ laskea polkuintegraalina
 \begin{align*}
 v(r,\varphi)
@@ -183,70 +183,70 @@ v(r,\varphi)
 &\impl\quad u(x,y) \,=\, -\underline{\underline{\Arcsin\left(\frac{y}{\sqrt{x^2+y^2}}\right)}}.
 \end{align*}
 
-b) T‰ss‰ $A$ ei ole yhdesti yhten‰inen, joten tutkitaan erikseen, onko $\vec F$ 
+b) T√§ss√§ $A$ ei ole yhdesti yhten√§inen, joten tutkitaan erikseen, onko $\vec F$ 
 konservatiivinen. Valitaan polku $p:\vec r=\vec r(\varphi)$, $0\leq\varphi\leq 2\pi$ siten,
-ett‰ $\vec r(\varphi)$ kiert‰‰ $r_0$-s‰teisen ympyr‰viivan:
+ett√§ $\vec r(\varphi)$ kiert√§√§ $r_0$-s√§teisen ympyr√§viivan:
 \[
 \vec r(\varphi)=r_0\,\vec e_r,\quad r_0>0,\ 0\leq\varphi\leq 2\pi.
 \]
-T‰llˆin polun alku- ja loppupisteet ovat samat, $\vec r(\varphi)\vastaa (x,y)\in A$ jokaisella
+T√§ll√∂in polun alku- ja loppupisteet ovat samat, $\vec r(\varphi)\vastaa (x,y)\in A$ jokaisella
 $\varphi$ ja
 \[
 \int_p \vec F\cdot d\vec r=\int_0^{2\pi} \frac{1}{r_0}\cdot r_0\,d\varphi=2\pi\neq 0,
 \]
-Siis $\vec F$ ei ole $A$:ssa konservatiivinen eik‰ n‰in muodoin myˆsk‰‰n gradienttikentt‰
+Siis $\vec F$ ei ole $A$:ssa konservatiivinen eik√§ n√§in muodoin my√∂sk√§√§n gradienttikentt√§
 $A$:ssa. \loppu
 
-\subsection*{Avaruuden pyˆrteetˆn vektorikentt‰}
+\subsection*{Avaruuden py√∂rteet√∂n vektorikentt√§}
 
 Vertaamalla Lauseen \ref{Lpot-1} todistusta Stokesin lauseen kolmiulotteiseen versioon 
-n‰hd‰‰n, ett‰ todistus (ja siis myˆs Lauseen \ref{Lpot-1} v‰itt‰m‰) on sellaisenaan p‰tev‰
-myˆs avaruuden vektorikent‰lle. Sik‰li kuin alueen geometria ei aseta rajoituksia, voidaan
-kolmiulotteisen, konservatiivisen vektorikent‰n 
+n√§hd√§√§n, ett√§ todistus (ja siis my√∂s Lauseen \ref{Lpot-1} v√§itt√§m√§) on sellaisenaan p√§tev√§
+my√∂s avaruuden vektorikent√§lle. Sik√§li kuin alueen geometria ei aseta rajoituksia, voidaan
+kolmiulotteisen, konservatiivisen vektorikent√§n 
 $\vec F = F_1(x,y,z)\vec i + F_2(x,y,z)\vec j + F_3(x,y,z)\vec k$ potentiaali laskea esimerkiksi
 polkuintegraalina
 \[
 u(x,y,z) = -\int_{x_0}^x F_1(t,y_0,z_0)\,dt -\int_{y_0}^y F_2(x,t,z_0)\,dt
                                             -\int_{z_0}^z F_3(x,y,t)\,dt.
 \]
-Myˆs Lause \ref{Lpot-2} yleistyy kolmeen ulottuvuuteen, kunhan yhdesti yhten‰isyys
-m‰‰ritell‰‰n sopivasti. Tarkastellaan yksinkertaisia, suljettuja, suoristuvia k‰yri‰
-$S\subset A$, joille on lˆydett‰viss‰ Stokesin lauseen ehdot t‰ytt‰v‰ pinta $B\subset\R^3$ 
-siten, ett‰ $\partial B=S$. Jos jokaiselle t‰llaiselle k‰yr‰lle on pinta $B$ viel‰ m‰‰r‰tt‰viss‰
-siten, ett‰ $B\subset A$, niin aluetta $A$ sanotaan yhdesti yhten‰iseksi. Esimerkiksi
+My√∂s Lause \ref{Lpot-2} yleistyy kolmeen ulottuvuuteen, kunhan yhdesti yhten√§isyys
+m√§√§ritell√§√§n sopivasti. Tarkastellaan yksinkertaisia, suljettuja, suoristuvia k√§yri√§
+$S\subset A$, joille on l√∂ydett√§viss√§ Stokesin lauseen ehdot t√§ytt√§v√§ pinta $B\subset\R^3$ 
+siten, ett√§ $\partial B=S$. Jos jokaiselle t√§llaiselle k√§yr√§lle on pinta $B$ viel√§ m√§√§r√§tt√§viss√§
+siten, ett√§ $B\subset A$, niin aluetta $A$ sanotaan yhdesti yhten√§iseksi. Esimerkiksi
 \[
 A=\{\,(x,y,z)\in\R^3 \; | \; a^2<x^2+y^2+z^2<R^2\,\} \quad (0 \le a < R)
 \]
-on yhdesti yhten‰inen (!). Sen sijaan
+on yhdesti yhten√§inen (!). Sen sijaan
 \[
 A=\{\,(x,y,z)\in\R^3 \; | \; x^2+y^2+z^2<R^2 \; \ja \; x^2+y^2>a^2\,\} \quad (0 \le a < R)
 \]
-ei ole yhdesti yhten‰inen, sill‰ jos
+ei ole yhdesti yhten√§inen, sill√§ jos
 \[
 S=\{\,(x,y,z)\in\R^3 \; | \; x^2+y^2=b^2 \; \ja \; z=0\,\},
 \]
 niin $S\subset A$, kun $a<b<R$, mutta jos $B\subset\R^3$ on pinta, niin ehdot $S=\partial B$ ja
-$B\subset A$ eiv‰t voi yht‰ aikaa toteutua.
+$B\subset A$ eiv√§t voi yht√§ aikaa toteutua.
 \begin{Exa}
-Pallokoordinaatistossa on m‰‰ritelty vektorikentt‰
+Pallokoordinaatistossa on m√§√§ritelty vektorikentt√§
 \[
 \vec F(r,\theta,\varphi)
             =\frac{1}{r^3}(2\cos\theta\,\vec e_r+\sin\theta\,\vec e_\theta),\quad r\neq 0.
 \]
-M‰‰r‰‰ kent‰n potentiaali, jos sellainen on.
+M√§√§r√§√§ kent√§n potentiaali, jos sellainen on.
 \end{Exa}
-\ratk T‰ss‰ on $\vec F=F_r\vec e_r+F_\theta\vec e_\theta+F_\varphi\vec e_\varphi$, miss‰
+\ratk T√§ss√§ on $\vec F=F_r\vec e_r+F_\theta\vec e_\theta+F_\varphi\vec e_\varphi$, miss√§
 \[
 F_r=2r^{-3}\cos\theta,\quad F_\theta=r^{-3}\sin\theta,\quad F_\varphi=0,
 \]
-joten (ks.\ Luku \ref{div ja rot k‰yr‰viivaisissa})
+joten (ks.\ Luku \ref{div ja rot k√§yr√§viivaisissa})
 \[
 \nabla\times\vec F = 0\,\vec e_r + 0\,\vec e_\theta
   + \frac{1}{r}[\partial_r(rF_\theta)-\partial_\theta F_r]\vec e_\varphi = \vec 0\quad (r\neq 0).
 \]
-Koska origon poissulkeminen ei aiheuta yhten‰isyysongelmia kolmessa dimensiossa, niin $\vec F$
-on gradienttikentt‰. Potentiaali voidaan laskea ottamalla l‰htˆpisteeksi esimerkisi
-$\vec r_0=(r_0,0,0)$, $r_0>0$, ja etenem‰ll‰ koordinaattiviivojen suuntaisia polkuja:
+Koska origon poissulkeminen ei aiheuta yhten√§isyysongelmia kolmessa dimensiossa, niin $\vec F$
+on gradienttikentt√§. Potentiaali voidaan laskea ottamalla l√§ht√∂pisteeksi esimerkisi
+$\vec r_0=(r_0,0,0)$, $r_0>0$, ja etenem√§ll√§ koordinaattiviivojen suuntaisia polkuja:
 \begin{align*}
 u(r,\theta,\varphi) &= -\int_{r_0}^r F_r(t,0,0)\,dt-\int_0^\theta F_\theta(r,t,0)r\,dt
                                  -\int_0^\varphi F_\varphi(r,\theta,t)r\sin\theta\,dt \\
@@ -261,19 +261,19 @@ Potentiaaliksi kelpaa siis $u(r,\theta,\varphi)=\underline{\underline{r^{-2}\cos
 \begin{enumerate}
 
 \item
-Totea vektorikentt‰ $\vec F(x,y)=(y+2x)\vec i+x\vec j$ pyˆrteettˆm‰ksi. Laske t‰t‰ havaintoa
-hyˆdyksi k‰ytt‰en polkuintegraali $\int_p \vec F \cdot d\vec r$, miss‰ $p$ kulkee pisteest‰
-$(1,0)$ origon kautta pisteeseen $(1,2)$ pitkin ympyr‰n kaarta.
+Totea vektorikentt√§ $\vec F(x,y)=(y+2x)\vec i+x\vec j$ py√∂rteett√∂m√§ksi. Laske t√§t√§ havaintoa
+hy√∂dyksi k√§ytt√§en polkuintegraali $\int_p \vec F \cdot d\vec r$, miss√§ $p$ kulkee pisteest√§
+$(1,0)$ origon kautta pisteeseen $(1,2)$ pitkin ympyr√§n kaarta.
 
 \item
-M‰‰rit‰ funktio $f$ siten, ett‰ $f(0)=1$ ja tason vektorikentt‰ 
+M√§√§rit√§ funktio $f$ siten, ett√§ $f(0)=1$ ja tason vektorikentt√§ 
 \[
 \vec F(x,y)=f(y)[2xy\vec i+x^2(y+1)\vec j\,]
 \] 
-on pyˆrteetˆn. Mik‰ t‰llˆin on kent‰n potentiaali?
+on py√∂rteet√∂n. Mik√§ t√§ll√∂in on kent√§n potentiaali?
 
 \item
-Osoita seuraavat vektorikent‰t koko avaruudessa pyˆrteettˆmiksi ja m‰‰rit‰ kenttien 
+Osoita seuraavat vektorikent√§t koko avaruudessa py√∂rteett√∂miksi ja m√§√§rit√§ kenttien 
 potentiaalit.
 \vspace{1mm}\newline
 a) \ $z\vec i+z\cos y\vec j+(x+\sin y)\vec k \qquad$
@@ -283,32 +283,32 @@ d) \ $-2xe^{-y}\vec i+(x^2e^{-y}+\sin z)\vec j+y\cos z\vec k$ \newline
 e) \ $(x^2+y^2+z^2)(x\vec i+y\vec j+z\vec k)=r^2\vec r$
 
 \item 
-Vektorikent‰st‰ $\vec F$ tiedet‰‰n, ett‰ se on koko avaruudessa pyˆrteetˆn ja muotoa 
-$\vec F(x,y,z)=xy^2\vec i+(\cos z+x^2y)\vec j+yf(z)\vec k$. M‰‰r‰‰ kent‰n 
-skalaaripotentiaali ja t‰m‰n avulla polkuintegraali $\int_p \vec F\cdot d\vec r$, miss‰
+Vektorikent√§st√§ $\vec F$ tiedet√§√§n, ett√§ se on koko avaruudessa py√∂rteet√∂n ja muotoa 
+$\vec F(x,y,z)=xy^2\vec i+(\cos z+x^2y)\vec j+yf(z)\vec k$. M√§√§r√§√§ kent√§n 
+skalaaripotentiaali ja t√§m√§n avulla polkuintegraali $\int_p \vec F\cdot d\vec r$, miss√§
 $p$:n alkupiste on $(0,0,0)$ ja loppupiste $(2,-1,3)$. 
 
-\item (*) \index{zzb@\nim!Hzy@H‰iriˆ kent‰ss‰}
-(H‰iriˆ kent‰ss‰) Tason vektorikentt‰‰n $\vec U_0=u_0\vec i$ ($u_0=$ vakio) tuodaan este
+\item (*) \index{zzb@\nim!Hzy@H√§iri√∂ kent√§ss√§}
+(H√§iri√∂ kent√§ss√§) Tason vektorikentt√§√§n $\vec U_0=u_0\vec i$ ($u_0=$ vakio) tuodaan este
 \[
 A=\{(x,y)\in\R^2 \mid x^2+y^2 \le R^2\},
 \] 
-jolloin kentt‰ h‰iriintyy muotoon $\vec U=u(x,y)\vec i + v(x,y)\vec j$. H‰iriintyneest‰
-kent‰st‰ $\vec U$ tiedet‰‰n, ett‰ se on sek‰ l‰hteetˆn ett‰ pyˆrteetˆn esteen ulkopuolella,
-ts.\ $\text{div}\,\vec U = \text{rot}\,\vec U=0$ muualla kuin $A$:ssa. Lis‰ksi tiedet‰‰n, ett‰
+jolloin kentt√§ h√§iriintyy muotoon $\vec U=u(x,y)\vec i + v(x,y)\vec j$. H√§iriintyneest√§
+kent√§st√§ $\vec U$ tiedet√§√§n, ett√§ se on sek√§ l√§hteet√∂n ett√§ py√∂rteet√∂n esteen ulkopuolella,
+ts.\ $\text{div}\,\vec U = \text{rot}\,\vec U=0$ muualla kuin $A$:ssa. Lis√§ksi tiedet√§√§n, ett√§
 $\vec U \cdot \vec n = 0\,$ reunalla $\partial A$ (eli kun $x^2+y^2=R^2$, $\vec n=\,$
-$\partial A$:n normaali) ja ett‰ $\vec U(x,y)\kohti\vec U_0$, kun $x^2+y^2\kohti\infty$.
-Ongelmana on lˆyt‰‰ n‰m‰ ehdot t‰ytt‰v‰ kentt‰ $\vec U$. Koska $A$:n ulkopuolinen alue ei
-ole yhdesti yhten‰inen, ei $\vec U$ v‰ltt‰m‰tt‰ ole gradienttikentt‰ (vaikka onkin 
-pyˆrteetˆn).
+$\partial A$:n normaali) ja ett√§ $\vec U(x,y)\kohti\vec U_0$, kun $x^2+y^2\kohti\infty$.
+Ongelmana on l√∂yt√§√§ n√§m√§ ehdot t√§ytt√§v√§ kentt√§ $\vec U$. Koska $A$:n ulkopuolinen alue ei
+ole yhdesti yhten√§inen, ei $\vec U$ v√§ltt√§m√§tt√§ ole gradienttikentt√§ (vaikka onkin 
+py√∂rteet√∂n).
 
-a) N‰yt‰, ett‰ problemalla on ratkaisu, jonka napakoordinaattimuoto on
+a) N√§yt√§, ett√§ problemalla on ratkaisu, jonka napakoordinaattimuoto on
 \[
 \vec U=-\nabla f(r)\cos\varphi + g(r)\vec e_\varphi
 \] 
-eli m‰‰rit‰ funktiot $f(r),g(r)$ mahdollisimman yleisess‰ muodossa niin, ett‰ annetut ehdot
+eli m√§√§rit√§ funktiot $f(r),g(r)$ mahdollisimman yleisess√§ muodossa niin, ett√§ annetut ehdot
 toteutuvat. (Muita ratkaisuja ei ongelmalla ole). \newline
-b) Totea, ett‰ em.\ ratkaisusta tulee yksik‰sitteinen, kun asetetaan lis‰ehto muotoa
-$v(R,0)=v_0$ (t‰ss‰ karteesiset koordinaatit).
+b) Totea, ett√§ em.\ ratkaisusta tulee yksik√§sitteinen, kun asetetaan lis√§ehto muotoa
+$v(R,0)=v_0$ (t√§ss√§ karteesiset koordinaatit).
 
 \end{enumerate}

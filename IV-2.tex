@@ -1,99 +1,99 @@
-\section{K‰‰nteisfunktio. Implisiittifunktiot} \label{k‰‰nteisfunktio}
-\sectionmark{K‰‰nteisfunktio} 
+\section{K√§√§nteisfunktio. Implisiittifunktiot} \label{k√§√§nteisfunktio}
+\sectionmark{K√§√§nteisfunktio} 
 \alku
-\index{funktio B!i@k‰‰nteisfunktio|vahv}
-\index{kzyzy@k‰‰nteisfunktio|vahv}
+\index{funktio B!i@k√§√§nteisfunktio|vahv}
+\index{kzyzy@k√§√§nteisfunktio|vahv}
 
-Sanotaan, ett‰ reaalifunktio $f: \DF_f\kohti\R$ on 1-1 ('yksi yhteen', engl.\
-one to one) eli \kor{k‰‰ntyv‰} (engl.\ invertible) eli
+Sanotaan, ett√§ reaalifunktio $f: \DF_f\kohti\R$ on 1-1 ('yksi yhteen', engl.\
+one to one) eli \kor{k√§√§ntyv√§} (engl.\ invertible) eli
 \index{injektio}%
-\kor{injektio} eli \kor{injektiivinen}, jos p‰tee
+\kor{injektio} eli \kor{injektiivinen}, jos p√§tee
 \[
 \forall x_1, x_2 \in \DF_f\ [\,x_1 \neq x_2 \ \impl \ f(x_1) \neq f(x_2)\,].
 \]
-Jos $f$ on 1-1 ja $y\in \RF_f$, niin yht‰lˆll‰
+Jos $f$ on 1-1 ja $y\in \RF_f$, niin yht√§l√∂ll√§
 \[
 f(x)=y \quad (x \in \DF_f)
 \]
-on y\pain{ksik‰sitteinen} ratkaisu. Koska jokaiseen $y\in\RF_f$ liittyy t‰ll‰ tavoin
-yksik‰sitteinen $x\in\DF_f$, niin kyseess‰ on funktioriippuvuus $y \map x$, joka
-merkit‰‰n 
+on y\pain{ksik√§sitteinen} ratkaisu. Koska jokaiseen $y\in\RF_f$ liittyy t√§ll√§ tavoin
+yksik√§sitteinen $x\in\DF_f$, niin kyseess√§ on funktioriippuvuus $y \map x$, joka
+merkit√§√§n 
 \[
 x=f^{-1}(y).
 \]
-Sanotaan, ett‰ $f^{-1}$ (luetaan '$f$ miinus 1', engl.\ '$f$ inverse') on $f$:n
-\kor{k‰‰nteisfunktio}. K‰‰nteisfunktion m‰‰rittelyjoukko on siis $\DF_{\inv{f}}=\RF_f$ ja
+Sanotaan, ett√§ $f^{-1}$ (luetaan '$f$ miinus 1', engl.\ '$f$ inverse') on $f$:n
+\kor{k√§√§nteisfunktio}. K√§√§nteisfunktion m√§√§rittelyjoukko on siis $\DF_{\inv{f}}=\RF_f$ ja
 arvojoukko $\RF_{\inv{f}}=\DF_f$.
-\begin{Exa} Funktiolle $f(x)=1/x\ (\DF_f=\{x\in\R \mid x \neq 0\})$ p‰tee
+\begin{Exa} Funktiolle $f(x)=1/x\ (\DF_f=\{x\in\R \mid x \neq 0\})$ p√§tee
 \[
 f(x_1)-f(x_2)\,=\,\frac{1}{x_1}-\frac{1}{x_2}\,=\,\frac{x_2-x_1}{x_1x_2}\,, \quad 
                                                             x_1\,,x_2 \in \DF_f\,.
 \]
-T‰m‰n perusteella on $f(x_1)-f(x_2) \neq 0\,$ aina kun $x_1,x_2 \neq 0\,$ ja $x_1 \neq x_2$,
-joten $f$ on 1-1. K‰‰nteisfunktio lˆydet‰‰n ratkaisemalla yht‰lˆ $f(x)=y$\,:
+T√§m√§n perusteella on $f(x_1)-f(x_2) \neq 0\,$ aina kun $x_1,x_2 \neq 0\,$ ja $x_1 \neq x_2$,
+joten $f$ on 1-1. K√§√§nteisfunktio l√∂ydet√§√§n ratkaisemalla yht√§l√∂ $f(x)=y$\,:
 \[
 x^{-1}=y \qimpl x=y^{-1}, \quad \text{jos}\,\ y \neq 0.
 \]
-Jos $y=0$, ei yht‰lˆll‰ ole ratkaisua, joten k‰‰nteisfunktion m‰‰rittelyjoukko ($=f$:n 
+Jos $y=0$, ei yht√§l√∂ll√§ ole ratkaisua, joten k√§√§nteisfunktion m√§√§rittelyjoukko ($=f$:n 
 arvojoukko) $=\{y\in\R \mid y \neq 0\}$, ja $f^{-1}(y)=1/y$. Koska siis $\DF_{f^{-1}}=\DF_f$ ja 
 $f^{-1}(y)=f(y)\ \forall y \in \DF_{f^{-1}}=\DF_f$, niin $f^{-1}=f$. \loppu
 \end{Exa}
 
-M‰‰ritelm‰n \ref{monotoninen funktio} nojalla on selviˆ, ett‰ jos funktion $f$ 
-m‰‰rittelyjoukko on \pain{v‰li} ja $f$ on ko.\ v‰lill‰ aidosti kasvava tai aidosti v‰henev‰
-(eli aidosti monotoninen), niin $f$ on 1-1. Aito monotonisuus onkin k‰yt‰nnˆss‰ tavallisin
-injektiivisyyden olomuoto silloin kun funktion m‰‰rittelyjoukko on v‰li (tai v‰liksi rajattu).
-\begin{Exa} \label{x^m:n k‰‰nteisfunktio} N‰yt‰, ett‰ funktio $f(x)=x^m,\ m\in\N$ on injektio,
-kun m‰‰rittelyjoukko rajataan v‰liksi $[0,\infty)$. M‰‰rit‰ k‰‰nteisfunktio.
+M√§√§ritelm√§n \ref{monotoninen funktio} nojalla on selvi√∂, ett√§ jos funktion $f$ 
+m√§√§rittelyjoukko on \pain{v√§li} ja $f$ on ko.\ v√§lill√§ aidosti kasvava tai aidosti v√§henev√§
+(eli aidosti monotoninen), niin $f$ on 1-1. Aito monotonisuus onkin k√§yt√§nn√∂ss√§ tavallisin
+injektiivisyyden olomuoto silloin kun funktion m√§√§rittelyjoukko on v√§li (tai v√§liksi rajattu).
+\begin{Exa} \label{x^m:n k√§√§nteisfunktio} N√§yt√§, ett√§ funktio $f(x)=x^m,\ m\in\N$ on injektio,
+kun m√§√§rittelyjoukko rajataan v√§liksi $[0,\infty)$. M√§√§rit√§ k√§√§nteisfunktio.
 \end{Exa}
 \ratk Kirjoitetaan (ks.\ Propositio \ref{kuntakaava})
 \[
 f(x_1)-f(x_2) \,=\, x_1^m-x_2^m \,=\, (x_1-x_2)(x_1^{m-1}+x_1^{m-2}x_2+\cdots +x_2^{m-1}).
 \]
-Jos t‰ss‰ on $x_1\,,x_2 \ge 0$ ja $x_1 \neq x_2$, niin viimeksi kirjoitetun tulon 
-j‰lkimm‰isess‰ tekij‰ss‰ on jokainen yhteenlaskettava ei-negatiivinen ja ainakin yksi on
-positiivinen (koska joko $x_1>0$ tai $x_2>0$), joten ko.\ tekij‰ on positiivinen. P‰‰tell‰‰n,
-ett‰ $f$ on v‰lill‰ $[0,\infty)$ aidosti kasvava:
+Jos t√§ss√§ on $x_1\,,x_2 \ge 0$ ja $x_1 \neq x_2$, niin viimeksi kirjoitetun tulon 
+j√§lkimm√§isess√§ tekij√§ss√§ on jokainen yhteenlaskettava ei-negatiivinen ja ainakin yksi on
+positiivinen (koska joko $x_1>0$ tai $x_2>0$), joten ko.\ tekij√§ on positiivinen. P√§√§tell√§√§n,
+ett√§ $f$ on v√§lill√§ $[0,\infty)$ aidosti kasvava:
 \[
 \forall x_1,x_2 \ge 0\,\ [\,x_1<x_2\ \impl\ f(x_1)<f(x_2)\,].
 \]
-Siis $f$ on injektio, joten yht‰lˆll‰ $f(x)=y\ (y\in\R)$ on enint‰‰n yksi ratkaisu $x$
-v‰lill‰ $[0,\infty)$. Jos $y<0$, ei ratkaisua ole. Jos $y=0$, on ratkaisu $x=0$. Lopulta
-jos $y>0$, on ratkaisu myˆs olemassa ja merkit‰‰n $x=\sqrt[m]{y}$. (Luku $\sqrt[m]{y}\in\R_+$
+Siis $f$ on injektio, joten yht√§l√∂ll√§ $f(x)=y\ (y\in\R)$ on enint√§√§n yksi ratkaisu $x$
+v√§lill√§ $[0,\infty)$. Jos $y<0$, ei ratkaisua ole. Jos $y=0$, on ratkaisu $x=0$. Lopulta
+jos $y>0$, on ratkaisu my√∂s olemassa ja merkit√§√§n $x=\sqrt[m]{y}$. (Luku $\sqrt[m]{y}\in\R_+$
 on laskettavissa esim.\ kymmenjakoalgoritmilla, vrt.\ Luku \ref{reaaliluvut}.) Kysytty
-k‰‰nteisfunktio on siis $\inv{f}(x)=\sqrt[m]{x}\,$, m‰‰rittelyjoukkona
+k√§√§nteisfunktio on siis $\inv{f}(x)=\sqrt[m]{x}\,$, m√§√§rittelyjoukkona
 $\DF_{\inv{f}}=\RF_f=[0,\infty)$. \loppu
 \jatko \begin{Exa} (jatko) Jos $m$ on p\pain{ariton}, niin $f(x)=x^m,\ \DF_f=\R$, on pariton
-ja n‰in muodoin aidosti kasvava koko $\R$:ss‰
-(ks.\ Harj.teht. \ref{yhden muuttujan funktiot}:\ref{H-IV-1: n‰yttˆj‰}b). Siis $f$ on
-injektio. Yht‰lˆll‰ $f(x)=y$ on t‰llˆin (yksik‰sitteinen) ratkaisu jokaisella $y\in\R$, sill‰
-jos $y<0$, niin ratkaisu on $x=-\sqrt[m]{-y}$. K‰‰nteisfunktio merkit‰‰n yleens‰
-yksinkertaisesti $f^{-1}(x) = \sqrt[m]{x}$, jolloin siis sovitaan, ett‰
+ja n√§in muodoin aidosti kasvava koko $\R$:ss√§
+(ks.\ Harj.teht. \ref{yhden muuttujan funktiot}:\ref{H-IV-1: n√§ytt√∂j√§}b). Siis $f$ on
+injektio. Yht√§l√∂ll√§ $f(x)=y$ on t√§ll√∂in (yksik√§sitteinen) ratkaisu jokaisella $y\in\R$, sill√§
+jos $y<0$, niin ratkaisu on $x=-\sqrt[m]{-y}$. K√§√§nteisfunktio merkit√§√§n yleens√§
+yksinkertaisesti $f^{-1}(x) = \sqrt[m]{x}$, jolloin siis sovitaan, ett√§
 \[
 \sqrt[m]{-x}=-\sqrt[m]{x}, \quad \text{kun $x>0$ ja $m$ on pariton}.\footnote[2]{Juurilukujen
-m‰‰rittelyn laajentaminen mainitulla tavalla ei ole aivan ongelmatonta, kuten n‰hd‰‰n laskusta
+m√§√§rittelyn laajentaminen mainitulla tavalla ei ole aivan ongelmatonta, kuten n√§hd√§√§n laskusta
 \[
 1=\sqrt[6]{1}=\sqrt[6]{(-1)^2}=(-1)^{2/6}=(-1)^{1/3}=\sqrt[3]{-1}=-1.
 \]
-T‰m‰n tyyppisten ristiriitojen v‰ltt‰miseksi on selvint‰ sopia, ett‰ reaalinen
-potenssifunktio $f(x)=x^\alpha$ on m‰‰ritelty v‰lill‰ $(-\infty,0)$ vain kun $\alpha\in\Z$.}
+T√§m√§n tyyppisten ristiriitojen v√§ltt√§miseksi on selvint√§ sopia, ett√§ reaalinen
+potenssifunktio $f(x)=x^\alpha$ on m√§√§ritelty v√§lill√§ $(-\infty,0)$ vain kun $\alpha\in\Z$.}
 \loppu \]
 \end{Exa}
-Seuraava yleinen s‰‰ntˆ on M‰‰ritelm‰st‰ \ref{monotoninen funktio} ja k‰‰nteisfunktion
-m‰‰ritelm‰st‰ helposti johdettavissa (Harj.teht.\,\ref{H-IV-2: todistus}a)\,:
+Seuraava yleinen s√§√§nt√∂ on M√§√§ritelm√§st√§ \ref{monotoninen funktio} ja k√§√§nteisfunktion
+m√§√§ritelm√§st√§ helposti johdettavissa (Harj.teht.\,\ref{H-IV-2: todistus}a)\,:
 \[
 \boxed{
 \begin{aligned} 
-\quad\ykehys f\,\ &\text{aidosti kasvava/v‰henev‰ v‰lill‰}\ A\subset\DF_f \\ 
-                  &\qimpl \inv{f}\,\ \text{aidosti kasvava/v‰henev‰ v‰leill‰}\ 
+\quad\ykehys f\,\ &\text{aidosti kasvava/v√§henev√§ v√§lill√§}\ A\subset\DF_f \\ 
+                  &\qimpl \inv{f}\,\ \text{aidosti kasvava/v√§henev√§ v√§leill√§}\ 
                                                           B \subset f(A). \quad\akehys
 \end{aligned} }
 \]
-\jatko \begin{Exa} (jatko) Koska $f(x)=x^m\ (m\in\N)$ on aidosti kasvava v‰lill‰
-$A=[0,\infty)$, niin $\inv{f}(x)=\sqrt[m]{x}$ on samoin aidosti kasvava v‰lill‰
+\jatko \begin{Exa} (jatko) Koska $f(x)=x^m\ (m\in\N)$ on aidosti kasvava v√§lill√§
+$A=[0,\infty)$, niin $\inv{f}(x)=\sqrt[m]{x}$ on samoin aidosti kasvava v√§lill√§
 $[0,\infty)=f(A)$. \loppu
 \end{Exa}
-K‰‰nteisfunktion m‰‰ritelm‰st‰ helposti todennettavissa ovat myˆs yleiset funktioalgebran lait
+K√§√§nteisfunktion m√§√§ritelm√§st√§ helposti todennettavissa ovat my√∂s yleiset funktioalgebran lait
 \[
 \boxed{ \begin{aligned}
 \ykehys\quad(\inv{f} \circ f)(x) &= x \quad \forall x\in \DF_f, \quad\\
@@ -101,7 +101,7 @@ K‰‰nteisfunktion m‰‰ritelm‰st‰ helposti todennettavissa ovat myˆs yleiset funkti
                  \inv{(\inv{f})} &= f. \akehys
 \end{aligned} }
 \]
-K‰‰nteisfunktion $\inv{f}$ kuvaaja saadaan vaihtamalla $x$ ja $y$ $f$:n kuvaajassa, eli 
+K√§√§nteisfunktion $\inv{f}$ kuvaaja saadaan vaihtamalla $x$ ja $y$ $f$:n kuvaajassa, eli 
 peilaamalla $f$:n kuvaaja suoran $y=x$ suhteen. Kuvassa $f(x)=x^2,\ \DF_f = [0,\infty)$.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -117,30 +117,30 @@ peilaamalla $f$:n kuvaaja suoran $y=x$ suhteen. Kuvassa $f(x)=x^2,\ \DF_f = [0,\
 \curve(0,0,1,1,4,2) \put(4.3,2){$y=\inv{f}(x)$}
 \dashline{1}(0,0)(4,4) \put(4,4.2){$y=x$}
 \end{picture}
-%\caption{K‰‰nteisfunktion $\inv{f}$ kuvaaja, kun $f(x)=x^2$}
+%\caption{K√§√§nteisfunktion $\inv{f}$ kuvaaja, kun $f(x)=x^2$}
 \end{center}
 \end{figure}
-\begin{Exa} \label{algebrallinen k‰‰nteisfunktio} Tutki funktion $f(x)=x^5+3x,\ \DF_f=\R$ 
-(mahdollista) k‰‰nteisfunktiota. \end{Exa}
+\begin{Exa} \label{algebrallinen k√§√§nteisfunktio} Tutki funktion $f(x)=x^5+3x,\ \DF_f=\R$ 
+(mahdollista) k√§√§nteisfunktiota. \end{Exa}
 \ratk Koska $f$ on pariton ja 
 \[
 f(x_1)-f(x_2)=(x_1-x_2)(x_1^4+x_1^3x_2+x_1^2x_2^2+x_1x_2^3+x_2^4+3),
 \]
-niin p‰‰tell‰n kuten Esimerkiss‰ \ref{x^m:n k‰‰nteisfunktio}, ett‰ $f$ on aidosti 
-kasvava koko $\R$:ss‰. K‰‰nteisfunktio $\inv{f}: \RF_f \kohti \R$ on siis olemassa. Kun
-$y \in \RF_f$, niin funktioevaluaatio $y \map x = \inv{f}(y)$ tarkoittaa yht‰lˆn
+niin p√§√§tell√§n kuten Esimerkiss√§ \ref{x^m:n k√§√§nteisfunktio}, ett√§ $f$ on aidosti 
+kasvava koko $\R$:ss√§. K√§√§nteisfunktio $\inv{f}: \RF_f \kohti \R$ on siis olemassa. Kun
+$y \in \RF_f$, niin funktioevaluaatio $y \map x = \inv{f}(y)$ tarkoittaa yht√§l√∂n
 \[
 x^5+3x=y
 \]
 ratkaisemista. Ratkeavuus jokaisella $y>0$ on osoitettavissa
-(Harj.teht.\,\ref{H-IV-2: ratkeavuus kymmenjaolla}), ja koska $f$ on pariton, niin yht‰lˆ
-ratkeaa myˆs jokaisella $y \le 0$, t.s.\ $\RF_f=\DF_{\inv{f}}=\R$. N‰hd‰‰n myˆs, ett‰ 
+(Harj.teht.\,\ref{H-IV-2: ratkeavuus kymmenjaolla}), ja koska $f$ on pariton, niin yht√§l√∂
+ratkeaa my√∂s jokaisella $y \le 0$, t.s.\ $\RF_f=\DF_{\inv{f}}=\R$. N√§hd√§√§n my√∂s, ett√§ 
 esimerkiksi $\inv{f}(0)=0$, $\inv{f}(4)=1$, ja $\inv{f}(-38)=-2$. Sen sijaan vaikkapa lukua
-$a=\inv{f}(1)$ ei voi m‰‰r‰t‰ 'tarkasti' edes juurilukujen avulla, vaan kyseess‰ on yleisempi
-(algebrallinen, vrt.\ Luku \ref{reaalilukujen ominaisuuksia}) luku. T‰llaisen luvun
-m‰‰rittelyss‰ on tyydytt‰v‰ reaaliluvun yleiseen m‰‰ritelm‰‰n, esim.\ ‰‰rettˆm‰n‰
+$a=\inv{f}(1)$ ei voi m√§√§r√§t√§ 'tarkasti' edes juurilukujen avulla, vaan kyseess√§ on yleisempi
+(algebrallinen, vrt.\ Luku \ref{reaalilukujen ominaisuuksia}) luku. T√§llaisen luvun
+m√§√§rittelyss√§ on tyydytt√§v√§ reaaliluvun yleiseen m√§√§ritelm√§√§n, esim.\ √§√§rett√∂m√§n√§
 desimaalilukuna (ks.\ Harj.teht.\,\ref{H-IV-2: ratkeavuus kymmenjaolla}). Symbolinen laskenta
-luvulla $a$ on toki myˆs mahdollista, mutta t‰llainen laskenta m‰‰ritelm‰n $a^5 + 3a = 1$
+luvulla $a$ on toki my√∂s mahdollista, mutta t√§llainen laskenta m√§√§ritelm√§n $a^5 + 3a = 1$
 perusteella on varsin rajoitettua. --- Laihan lohdun suokoon tulos
 \[
 \inv{a}=a^4+3. \loppu
@@ -149,74 +149,74 @@ perusteella on varsin rajoitettua. --- Laihan lohdun suokoon tulos
 \subsection*{Injektio, surjektio ja bijektio}
 \index{injektio|vahv} \index{surjektio|vahv} \index{bijektio|vahv}
 
-Kuten Esimerkiss‰ \ref{x^m:n k‰‰nteisfunktio} edell‰, on k‰‰nteisfunktioita tutkittaessa varsin 
-tavallista, ett‰ $f$ ei v‰ltt‰m‰tt‰ ole injektiivinen koko m‰‰rittelyjoukossaan, mutta on 
-kuitenkin injektio, jos m‰‰rittelyjoukkoa sopivasti rajoitetaan. K‰‰nteisfunktiotarkastelujen 
-l‰htˆkohdaksi voidaan t‰llˆin ottaa rajoitettu kuvaus
+Kuten Esimerkiss√§ \ref{x^m:n k√§√§nteisfunktio} edell√§, on k√§√§nteisfunktioita tutkittaessa varsin 
+tavallista, ett√§ $f$ ei v√§ltt√§m√§tt√§ ole injektiivinen koko m√§√§rittelyjoukossaan, mutta on 
+kuitenkin injektio, jos m√§√§rittelyjoukkoa sopivasti rajoitetaan. K√§√§nteisfunktiotarkastelujen 
+l√§ht√∂kohdaksi voidaan t√§ll√∂in ottaa rajoitettu kuvaus
 \[
 f:A\rightarrow B,
 \]
-miss‰ $A\subset D_f$ ja $B \supset f(A)$. Yleens‰ $A$ on $D_f$:n jokin \pain{osav‰li}. Joukkoon
-$A$ rajattua funktiota voidaan haluttaessa merkit‰ $f_{|A}$ ja sanoa, ett‰ kyseess‰ on 
+miss√§ $A\subset D_f$ ja $B \supset f(A)$. Yleens√§ $A$ on $D_f$:n jokin \pain{osav√§li}. Joukkoon
+$A$ rajattua funktiota voidaan haluttaessa merkit√§ $f_{|A}$ ja sanoa, ett√§ kyseess√§ on 
 \index{rajoittuma (funktion)}%
-\kor{f:n rajoittuma $A$:lle}. Jos t‰ss‰ $B$ on viel‰ onnistuttu valitsemaan siten, ett‰
-$B=f(A)$, niin sanotaan, ett‰ $f:A \kohti B$ on \kor{surjektio B:lle} (ransk. sur jeter = 
-heitt‰‰ p‰‰lle; englanninkielinen 'f onto B' sis‰lt‰‰ saman ajatuksen). Termi‰ k‰ytet‰‰n myˆs
+\kor{f:n rajoittuma $A$:lle}. Jos t√§ss√§ $B$ on viel√§ onnistuttu valitsemaan siten, ett√§
+$B=f(A)$, niin sanotaan, ett√§ $f:A \kohti B$ on \kor{surjektio B:lle} (ransk. sur jeter = 
+heitt√§√§ p√§√§lle; englanninkielinen 'f onto B' sis√§lt√§√§ saman ajatuksen). Termi√§ k√§ytet√§√§n my√∂s
 silloin kun $f$ ei ole injektio. Siis funktiosta $f: A \kohti B$ saadaan surjektio
-yksinkertaisesti rajaamalla maalijoukko $f(A)$:ksi. Jos $f:A \kohti B$ ($=f_{|A}$) on sek‰
-injektio ett‰ surjektio, niin sanotaan, ett‰ $f:A \kohti B$ on \kor{bijektio} (engl. one to one
-and onto). T‰llˆin myˆs k‰‰nteisfunktio $\inv{f}:B \kohti A$ (t‰ss‰ siis 
-$\inv{f} = (f_{|A})^{-1}$) on bijektio.\footnote[2]{Termit injektio, surjektio ja bijektio eiv‰t
-rajoitu reaalifunktioihin, vaan ne voidaan liitt‰‰ yht‰ hyvin yleiseen joukko-opilliseen
-funktiok‰sitteeseen (ks.\ Luku \ref{trigonometriset funktiot}). Jos $A$ ja $B$ ovat joukkoja,
-ja on olemassa bijektio $f:A \kohti B$, niin sanotaan, ett‰ $A$:n ja $B$:n v‰lill‰ on
-(bijektion $f$ luoma) \kor{k‰‰nt‰en yksik‰sitteinen vastaavuus} ja merkit‰‰n $A \vast B$.
-Esim.\ Luvun \ref{tasonvektorit} merkinn‰ss‰ $\Ekaksi\vast\Rkaksi$ tarkoitetaan t‰llaista
+yksinkertaisesti rajaamalla maalijoukko $f(A)$:ksi. Jos $f:A \kohti B$ ($=f_{|A}$) on sek√§
+injektio ett√§ surjektio, niin sanotaan, ett√§ $f:A \kohti B$ on \kor{bijektio} (engl. one to one
+and onto). T√§ll√∂in my√∂s k√§√§nteisfunktio $\inv{f}:B \kohti A$ (t√§ss√§ siis 
+$\inv{f} = (f_{|A})^{-1}$) on bijektio.\footnote[2]{Termit injektio, surjektio ja bijektio eiv√§t
+rajoitu reaalifunktioihin, vaan ne voidaan liitt√§√§ yht√§ hyvin yleiseen joukko-opilliseen
+funktiok√§sitteeseen (ks.\ Luku \ref{trigonometriset funktiot}). Jos $A$ ja $B$ ovat joukkoja,
+ja on olemassa bijektio $f:A \kohti B$, niin sanotaan, ett√§ $A$:n ja $B$:n v√§lill√§ on
+(bijektion $f$ luoma) \kor{k√§√§nt√§en yksik√§sitteinen vastaavuus} ja merkit√§√§n $A \vast B$.
+Esim.\ Luvun \ref{tasonvektorit} merkinn√§ss√§ $\Ekaksi\vast\Rkaksi$ tarkoitetaan t√§llaista
 vastaavuutta annetussa tason koordinaatistossa.
 \index{vastaavuus ($\ensuremath  {\leftrightarrow }$)|av}} 
 \begin{Exa} Jos $f(x)=x^m$, niin $f:\,[0,\infty)\kohti[0,\infty)$ on bijektio jokaisella
 $m\in\N$, samoin esim.\ $f:\,(0,\infty)\kohti(0,\infty)$, $f:\,[0,1]\kohti[0,1]$ ja
-$f:\,[1,\infty)\kohti[1,\infty)$ (vrt.\ Esimerkki \ref{x^m:n k‰‰nteisfunktio}). \loppu
+$f:\,[1,\infty)\kohti[1,\infty)$ (vrt.\ Esimerkki \ref{x^m:n k√§√§nteisfunktio}). \loppu
 \end{Exa} 
 \begin{Exa} Jos $f(x)=x^2$, niin \vspace{2mm}\newline
-$f:\ [-2,3]\kohti[0,10]\ \ $     on funktio, mutta ei injektio eik‰ surjektio. \newline
+$f:\ [-2,3]\kohti[0,10]\ \ $     on funktio, mutta ei injektio eik√§ surjektio. \newline
 $f:\ [-2,3]\kohti[0,9]\quad\,$   on surjektio, ei injektio. \newline
-$f:\ [0,3]\kohti[0,10]\quad\,\ $ on injektio, ei surjektio: k‰‰nteisfunktio
+$f:\ [0,3]\kohti[0,10]\quad\,\ $ on injektio, ei surjektio: k√§√§nteisfunktio
      $f^{-1}(x)=\sqrt{x}$. 
 \newline
-$f:\ [0,3]\kohti[0,9]\qquad$     on bijektio: k‰‰nteisfunktio $f^{-1}(x)=\sqrt{x}$. \newline
-$f:\ [-2,-1]\kohti[1,4]\,\ $     on bijektio: k‰‰nteisfunktio $f^{-1}(x)=-\sqrt{x}$. \loppu
+$f:\ [0,3]\kohti[0,9]\qquad$     on bijektio: k√§√§nteisfunktio $f^{-1}(x)=\sqrt{x}$. \newline
+$f:\ [-2,-1]\kohti[1,4]\,\ $     on bijektio: k√§√§nteisfunktio $f^{-1}(x)=-\sqrt{x}$. \loppu
 \end{Exa}
 
-\subsection*{Trigonometriset k‰‰nteisfunktiot}
+\subsection*{Trigonometriset k√§√§nteisfunktiot}
 \index{funktio C!d@$\Arcsin$, $\Arccos$, $\Arctan$, $\Arccot$|vahv}
 
-Trigonometriset funktiot eiv‰t ole injektiivisi‰ koko m‰‰rittelyjoukossaan, joten ne eiv‰t ole 
-'k‰‰ntyvi‰' tavallisessa mieless‰. Trigonometrisilla k‰‰nteisfunktioilla tarkoitetaankin 
-tavallisimmin funktioita, jotka saadaan rajoittamalla trigonometrinen funktio joko v‰lille 
+Trigonometriset funktiot eiv√§t ole injektiivisi√§ koko m√§√§rittelyjoukossaan, joten ne eiv√§t ole 
+'k√§√§ntyvi√§' tavallisessa mieless√§. Trigonometrisilla k√§√§nteisfunktioilla tarkoitetaankin 
+tavallisimmin funktioita, jotka saadaan rajoittamalla trigonometrinen funktio joko v√§lille 
 $[-\frac{\pi}{2},\frac{\pi}{2}]$ tai $(-\frac{\pi}{2},\frac{\pi}{2})$ ($\sin$, $\tan$) tai 
-v‰lille $[0,\pi]$ tai $(0,\pi)$ ($\cos$, $\cot$), jolloin funktio on ko. v‰lill‰ aidosti 
-monotoninen. N‰in saatuja k‰‰nteisfunktioita sanotaan
+v√§lille $[0,\pi]$ tai $(0,\pi)$ ($\cos$, $\cot$), jolloin funktio on ko. v√§lill√§ aidosti 
+monotoninen. N√§in saatuja k√§√§nteisfunktioita sanotaan
 \index{arkusfunktiot} \index{syklometriset funktiot}%
-\kor{arkusfunktioiksi} tai \kor{syklometrisiksi funktioiksi}. M‰‰ritelm‰t ovat
+\kor{arkusfunktioiksi} tai \kor{syklometrisiksi funktioiksi}. M√§√§ritelm√§t ovat
 \begin{alignat*}{2}
 x&=\sin y\ \ \ja \ &y \in \left[-\tfrac{\pi}{2},\tfrac{\pi}{2}\right] \ & \ekv\ y=\Arcsin x, \\
 x&=\cos y\,\ \ja \ &y \in \left[0,\pi\right]\quad\ \ & \ekv \ y=\Arccos x, \\
 x&=\tan y \ \ja \ &y \in \left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right) \ & \ekv\ y=\Arctan x, \\
 x&=\cot y\,\ \ja \ &y \in \left(0,\pi\right)\quad\ & \ekv \ y=\Arccot x.
 \end{alignat*}
-N‰m‰ luetaan 'arkus sini' jne. Kyseess‰ ovat trigonometristen k‰‰nteisfunktioiden nk.\
-\index{pzyzy@p‰‰haara (funktion)}%
-\kor{p‰‰haarat}.\footnote[2]{ Muille v‰leille rajoitettujen trigonometristen funktioiden 
-k‰‰nteisfunktioista k‰ytet‰‰n t‰ss‰ tekstiss‰ yhteismerkint‰‰ $\arcsin$, jne. --- ks.\ tarkempi
-m‰‰rittely luvun lopussa. Kirjallisuudessa trigonometristen k‰‰nteisfunktioiden merkint‰tavat
-ovat hieman kirjavat. Vanhempia p‰‰haarojen merkintˆj‰ ovat $\overline{\text{arc}}$sin, 
+N√§m√§ luetaan 'arkus sini' jne. Kyseess√§ ovat trigonometristen k√§√§nteisfunktioiden nk.\
+\index{pzyzy@p√§√§haara (funktion)}%
+\kor{p√§√§haarat}.\footnote[2]{ Muille v√§leille rajoitettujen trigonometristen funktioiden 
+k√§√§nteisfunktioista k√§ytet√§√§n t√§ss√§ tekstiss√§ yhteismerkint√§√§ $\arcsin$, jne. --- ks.\ tarkempi
+m√§√§rittely luvun lopussa. Kirjallisuudessa trigonometristen k√§√§nteisfunktioiden merkint√§tavat
+ovat hieman kirjavat. Vanhempia p√§√§haarojen merkint√∂j√§ ovat $\overline{\text{arc}}$sin, 
 $\overline{\text{arc}}$cos, $\overline{\text{arc}}$tan, $\overline{\text{arc}}$cot. Laskimissa
-tavallisia merkintˆj‰ $\,\sin^{-1}$, $\,\cos^{-1}$ ja $\,\tan^{-1}$ n‰kee myˆs k‰ytett‰v‰n 
-kirjallisuudessa. --- T‰ss‰ tekstiss‰ m‰‰ritell‰‰n $\,\sin^n x=(\sin x)^n\ \forall n\in\Z$,
+tavallisia merkint√∂j√§ $\,\sin^{-1}$, $\,\cos^{-1}$ ja $\,\tan^{-1}$ n√§kee my√∂s k√§ytett√§v√§n 
+kirjallisuudessa. --- T√§ss√§ tekstiss√§ m√§√§ritell√§√§n $\,\sin^n x=(\sin x)^n\ \forall n\in\Z$,
 jolloin $\sin^{-1}x=1/\sin x$.}
 
-Arkusfunktioiden m‰‰rittely- ja arvojoukot ovat m‰‰ritelmien perusteella seuraavat:
+Arkusfunktioiden m√§√§rittely- ja arvojoukot ovat m√§√§ritelmien perusteella seuraavat:
 \[
 \begin{array}{llll}
 \Arcsin x &: \quad & \DF_f=[-1,1], \quad & \RF_f=[-\tfrac{\pi}{2},\tfrac{\pi}{2}]. \\
@@ -225,8 +225,8 @@ Arkusfunktioiden m‰‰rittely- ja arvojoukot ovat m‰‰ritelmien perusteella seuraav
 \Arccot x &: \quad & \DF_f=\R, \quad     & \RF_f=(0,\pi).
 \end{array}
 \]
-Funktiot $\Arcsin$ ja $\Arctan$ ovat m‰‰rittelyv‰lill‰‰n aidosti kasvavia (kuten $\sin$ ja
-$\tan$), muut kaksi aidosti v‰henevi‰.
+Funktiot $\Arcsin$ ja $\Arctan$ ovat m√§√§rittelyv√§lill√§√§n aidosti kasvavia (kuten $\sin$ ja
+$\tan$), muut kaksi aidosti v√§henevi√§.
 \begin{figure}[H]
 \setlength{\unitlength}{1.3cm}
 \begin{picture}(5,5.4)(-2.2,-2.7)
@@ -305,16 +305,16 @@ $\tan$), muut kaksi aidosti v‰henevi‰.
 \end{picture} 
 \end{figure}
 
-Funktiopareista $\,(\Arcsin,\,\Arccos)\,$ ja $\,(\Arctan,\,\Arccot)\,$ riitt‰‰ sovellusk‰yttˆˆn
-valita yksi edustaja kummastakin parista (tavallisimmin valitaan $\Arcsin$ ja $\Arctan$), sill‰
-parien 'j‰sentenv‰linen' ratkeaa yksinkertaisiin yhteyksiin
+Funktiopareista $\,(\Arcsin,\,\Arccos)\,$ ja $\,(\Arctan,\,\Arccot)\,$ riitt√§√§ sovellusk√§ytt√∂√∂n
+valita yksi edustaja kummastakin parista (tavallisimmin valitaan $\Arcsin$ ja $\Arctan$), sill√§
+parien 'j√§sentenv√§linen' ratkeaa yksinkertaisiin yhteyksiin
 \[ 
 \boxed{ \begin{aligned}
 \ykehys\quad \Arcsin x + \Arccos x &= \frac{\pi}{2} \quad \forall x\in [-1,1], \quad \\
 \akehys\quad \Arctan x + \Arccot x &= \frac{\pi}{2} \quad \forall x\in\R.
 \end{aligned} }
 \]  
-N‰ist‰ esimerkiksi ensimm‰inen seuraa p‰‰ttelyll‰ (vrt.\ kuviot edell‰)
+N√§ist√§ esimerkiksi ensimm√§inen seuraa p√§√§ttelyll√§ (vrt.\ kuviot edell√§)
 \begin{align*}
 &\begin{cases}
 \,\dfrac{\pi}{2}-\Arccos x \in \left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right] \quad 
@@ -325,7 +325,7 @@ N‰ist‰ esimerkiksi ensimm‰inen seuraa p‰‰ttelyll‰ (vrt.\ kuviot edell‰)
 &\qimpl \frac{\pi}{2}- \Arccos x =\Arcsin x \quad \forall x\in[-1,1].
 \end{align*}
 \begin{Exa} Hahmottele funktion $\Arcsin(\cos x)$ kuvaaja. \end{Exa}
-\ratk Sievennet‰‰n ensin $\,y=\Arcsin(\cos x)$\,:
+\ratk Sievennet√§√§n ensin $\,y=\Arcsin(\cos x)$\,:
 \begin{align*}
 y&\,=\,\Arcsin (\cos x) \\[1mm]
  &\,\ekv\ \ y \in \left[-\frac{\pi}{2},\frac{\pi}{2}\right] \ \ja \ \sin y = \cos x \\
@@ -334,7 +334,7 @@ y&\,=\,\Arcsin (\cos x) \\[1mm]
  &\,\ekv\ \ y \in \left[-\frac{\pi}{2},\frac{\pi}{2}\right] \ \ja \ 
                                     y = \frac{\pi}{2} \pm x + n \cdot 2\pi, \ n\in\Z.
 \end{align*}
-T‰m‰n perusteella kuvaaja koostuu joukosta suoria rajoitettuna v‰lille 
+T√§m√§n perusteella kuvaaja koostuu joukosta suoria rajoitettuna v√§lille 
 $y\in[-\tfrac{\pi}{2},\tfrac{\pi}{2}]$ (ks.\ kuvio). \loppu
 \begin{figure}[H]
 \begin{center}
@@ -356,50 +356,50 @@ $y\in[-\tfrac{\pi}{2},\tfrac{\pi}{2}]$ (ks.\ kuvio). \loppu
 \index{funktio B!j@implisiittifunktio|vahv}
 \index{implisiittifunktio|vahv}
 
-Jos yht‰lˆst‰ muotoa
+Jos yht√§l√∂st√§ muotoa
 \[
 F(x,y)=0
 \]
-on $y$ ratkaistavissa yksik‰sitteisesti jokaisella $x \in A$ ($A\subset\R$), niin
-sanotaan, ett‰ yht‰lˆ m‰‰rittelee $A$:ssa \kor{implisiittifunktion} $y=f(x)$. Termill‰
-tarkoitetaan, ett‰ funktio on m‰‰ritelty ep‰suorasti eli \kor{implisiittisesti}. T‰llˆin
-\pain{ei} edellytet‰, ett‰ funktio on kirjoitettavissa suoraan (eli eksplisiittisesti)
-tunnettuna lausekkeena. Yht‰lˆss‰ $F$ on kahden reaalimuuttujan reaaliarvoinen funktio --- 
-k‰yt‰nnˆss‰ lauseke, jossa $x$ ja $y$ esiintyv‰t. (Kahden muuttujan funktioita itsen‰isin‰
-olioina k‰sitell‰‰n seuraavassa luvussa.)
+on $y$ ratkaistavissa yksik√§sitteisesti jokaisella $x \in A$ ($A\subset\R$), niin
+sanotaan, ett√§ yht√§l√∂ m√§√§rittelee $A$:ssa \kor{implisiittifunktion} $y=f(x)$. Termill√§
+tarkoitetaan, ett√§ funktio on m√§√§ritelty ep√§suorasti eli \kor{implisiittisesti}. T√§ll√∂in
+\pain{ei} edellytet√§, ett√§ funktio on kirjoitettavissa suoraan (eli eksplisiittisesti)
+tunnettuna lausekkeena. Yht√§l√∂ss√§ $F$ on kahden reaalimuuttujan reaaliarvoinen funktio --- 
+k√§yt√§nn√∂ss√§ lauseke, jossa $x$ ja $y$ esiintyv√§t. (Kahden muuttujan funktioita itsen√§isin√§
+olioina k√§sitell√§√§n seuraavassa luvussa.)
 
-Implisiittifunktiota merkitt‰ess‰ halutaan usein s‰ilytt‰‰ 'paikan tuntu' k‰ytt‰m‰ll‰
-yleismerkinn‰n $f(x)$ sijasta merkint‰‰ $y(x)$. T‰m‰n mukaisesti siis funktioriippuvuus
-$x \map y(x)$ m‰‰ritell‰‰n ep‰suoralla laskus‰‰nnˆll‰
+Implisiittifunktiota merkitt√§ess√§ halutaan usein s√§ilytt√§√§ 'paikan tuntu' k√§ytt√§m√§ll√§
+yleismerkinn√§n $f(x)$ sijasta merkint√§√§ $y(x)$. T√§m√§n mukaisesti siis funktioriippuvuus
+$x \map y(x)$ m√§√§ritell√§√§n ep√§suoralla laskus√§√§nn√∂ll√§
 \[
 F(x,y(x))=0, \quad x \in A.
 \]
-Yksinkertainen esimerkki implisiittifunktiosta on k‰‰nteisfunktio, sill‰ jos
-k‰‰nteisfunktion m‰‰rittelyss‰ vaihdetaan $x$ ja $y$, niin m‰‰ritelm‰ on
+Yksinkertainen esimerkki implisiittifunktiosta on k√§√§nteisfunktio, sill√§ jos
+k√§√§nteisfunktion m√§√§rittelyss√§ vaihdetaan $x$ ja $y$, niin m√§√§ritelm√§ on
 \[
 F(x,y)=x-f(y)=0,\,\ y\in\DF_f \qekv y(x)=\inv{f}(x).
 \]
---- Itse asiassa myˆs tavallinen funktio muuttuu 'implisiittiseksi', kun $y=f(x)$ 
+--- Itse asiassa my√∂s tavallinen funktio muuttuu 'implisiittiseksi', kun $y=f(x)$ 
 kirjoitetaan muotoon $F(x,y)=f(x)-y=0$.
-\begin{Exa} Jos $b \neq 0$, niin tason suoran perusmuotoinen yht‰lˆ
+\begin{Exa} Jos $b \neq 0$, niin tason suoran perusmuotoinen yht√§l√∂
 \[
 ax+by+c=0
 \]
-voidaan tulkita implisiittifunktion $y(x)=-(ax+c)/b$ m‰‰rittelyksi. \loppu
+voidaan tulkita implisiittifunktion $y(x)=-(ax+c)/b$ m√§√§rittelyksi. \loppu
 \end{Exa} 
-\begin{Exa} \label{muuan implisiittifunktio} Tarkasteltaessa yht‰lˆ‰
+\begin{Exa} \label{muuan implisiittifunktio} Tarkasteltaessa yht√§l√∂√§
 \[
 F(x,y)=x+y+\cos x\sin y=0
 \]
-osoittautuu (tarkemmat perustelut sivuutetaan), ett‰ yht‰lˆll‰ on yksik‰sitteinen ratkaisu
-$y(x)$ jokaisella $x\in\R$, t.s.\ yht‰lˆ m‰‰rittelee koko $\R$:ss‰ implisiittifunktion $y(x)$.
-Yht‰lˆst‰ on p‰‰telt‰viss‰, ett‰ $y(x)=-x$ kun $x=(n+\tfrac{1}{2})\pi$ ja samoin kun
-$x=n\pi$, $\,n\in\Z$. Muilla $x$:n arvoilla funktioevaluaatio $x \map y(x)$ on tyˆl‰‰mpi, sill‰
-kyseess‰ on nk.\ 
-\index{transkendenttinen yht‰lˆ}%
-\kor{transkendenttinen yht‰lˆ}, joka ratkeaa vain numeerisin keinoin.
-Yht‰lˆst‰ on myˆs $x$ ratkaistavissa yksik‰sitteisesti jokaisella $y\in\R$. N‰in m‰‰r‰ytyy
-(joskaan ei lausekkeena) funktio $y \map x(y)$, joka on funktion $x \map y(x)$ k‰‰nteisfunktio.
+osoittautuu (tarkemmat perustelut sivuutetaan), ett√§ yht√§l√∂ll√§ on yksik√§sitteinen ratkaisu
+$y(x)$ jokaisella $x\in\R$, t.s.\ yht√§l√∂ m√§√§rittelee koko $\R$:ss√§ implisiittifunktion $y(x)$.
+Yht√§l√∂st√§ on p√§√§telt√§viss√§, ett√§ $y(x)=-x$ kun $x=(n+\tfrac{1}{2})\pi$ ja samoin kun
+$x=n\pi$, $\,n\in\Z$. Muilla $x$:n arvoilla funktioevaluaatio $x \map y(x)$ on ty√∂l√§√§mpi, sill√§
+kyseess√§ on nk.\ 
+\index{transkendenttinen yht√§l√∂}%
+\kor{transkendenttinen yht√§l√∂}, joka ratkeaa vain numeerisin keinoin.
+Yht√§l√∂st√§ on my√∂s $x$ ratkaistavissa yksik√§sitteisesti jokaisella $y\in\R$. N√§in m√§√§r√§ytyy
+(joskaan ei lausekkeena) funktio $y \map x(y)$, joka on funktion $x \map y(x)$ k√§√§nteisfunktio.
 \loppu \end{Exa}
 
 \subsection*{Monihaaraiset implisiittifunktiot}
@@ -407,41 +407,41 @@ Yht‰lˆst‰ on myˆs $x$ ratkaistavissa yksik‰sitteisesti jokaisella $y\in\R$. N‰in
 \index{implisiittifunktio|vahv}
 \index{monihaarainen implisiittifunktio|vahv}
 
-Implisiittifunktion m‰‰rittely-yrityksiss‰ varsin tavallinen on tilanne, ett‰ yht‰lˆ $F(x,y)=0$
-ratkeaa $y$:n suhteen annetulla $x$, mutta ei yksik‰sitteisesti. Olkoon t‰llaisessa tilanteessa
-$A\subset\R$ v‰li (suljettu, avoin tai puoliavoin) ja tarkastellaan yht‰lˆ‰, kun $x \in A$.
-Oletetetaan, ett‰ on olemassa v‰lille $A$ ominainen indeksijoukko $\Lambda\subset\N$ 
-(voi olla myˆs $\Lambda=\N$) ja funktioj\pain{oukko}
+Implisiittifunktion m√§√§rittely-yrityksiss√§ varsin tavallinen on tilanne, ett√§ yht√§l√∂ $F(x,y)=0$
+ratkeaa $y$:n suhteen annetulla $x$, mutta ei yksik√§sitteisesti. Olkoon t√§llaisessa tilanteessa
+$A\subset\R$ v√§li (suljettu, avoin tai puoliavoin) ja tarkastellaan yht√§l√∂√§, kun $x \in A$.
+Oletetetaan, ett√§ on olemassa v√§lille $A$ ominainen indeksijoukko $\Lambda\subset\N$ 
+(voi olla my√∂s $\Lambda=\N$) ja funktioj\pain{oukko}
 %S_i=\{P \vastaa (x,y) \in \R^2 \mid x \in A \ \ja \ y=f_i(x)\},
 \[
 \mathcal{Y}=\{y_i, \ i \in \Lambda \}
 \]
-siten, ett‰ p‰tee
+siten, ett√§ p√§tee
 \[
 \forall x \in A\ [\,F(x,y)=0\ \ekv\ y\in\{y_i(x),\ i\in\Lambda\}\,].
 \]
-Sanotaan t‰llˆin, ett‰ $\mathcal{Y}$ on yht‰lˆn $F(x,y)=0$ v‰lill‰ $A$ m‰‰rittelem‰ 
+Sanotaan t√§ll√∂in, ett√§ $\mathcal{Y}$ on yht√§l√∂n $F(x,y)=0$ v√§lill√§ $A$ m√§√§rittelem√§ 
 \kor{monihaarainen} (moniarvoinen) \kor{implisiittifunktio}. Monihaarainen implisiittifunktio
 ei siis ole funktio vaan sellaisten joukko. Joukon $\mathcal{Y}$ alkioita $y_i$ sanotaan
 \index{haara (funktion)}%
 $\mathcal{Y}$:n \kor{haaroiksi} (engl. branch).\footnote[2]{Monihaarainen funktio $\mathcal{Y}$
-voidaan myˆs tulkita \kor{joukkoarvoiseksi} m‰‰rittelem‰ll‰
+voidaan my√∂s tulkita \kor{joukkoarvoiseksi} m√§√§rittelem√§ll√§
 \[ 
 \mathcal{Y}(x) = \{y_i(x),\ i \in \Lambda\},
 \]
-miss‰ $y_i,\ i \in \Lambda$ ovat $\mathcal{Y}$:n haarat tarkasteltavalla v‰lill‰ $A$. Koska
-$\mathcal{Y}(x)$ on (joukkona) yksik‰sitteinen jokaisella $x \in A$, niin $\mathcal{Y}$ on
-funktio tyyppi‰ $\mathcal{Y}: A \kohti \mathcal{B}$, miss‰ maalijoukko $\mathcal{B}$ on
+miss√§ $y_i,\ i \in \Lambda$ ovat $\mathcal{Y}$:n haarat tarkasteltavalla v√§lill√§ $A$. Koska
+$\mathcal{Y}(x)$ on (joukkona) yksik√§sitteinen jokaisella $x \in A$, niin $\mathcal{Y}$ on
+funktio tyyppi√§ $\mathcal{Y}: A \kohti \mathcal{B}$, miss√§ maalijoukko $\mathcal{B}$ on
 'joukkojen joukko' 
 $\mathcal{B} = \{\,\{t_i, \ i \in \Lambda\} \mid t_i \in \R\ \ \forall i \in \Lambda\,\}$.
 \index{joukkoarvoinen (funktio)|av}} 
-Kuviossa haaroja on kolme v‰lill‰ $A=[a,b]$.\footnote[3]{Jotta monihaaraisen funktion 
-$\mathcal{Y}=\{y_i\}$ haarat $y_i$ olisivat yksiselitteiset, on m‰‰rittelyss‰ estett‰v‰ 
-'hyppiminen haaralta toiselle'. Ehdon voi tulkita geometris--intuitiivisesti niin, ett‰
-kuvaajien $G_i=\{P=(x,y)\in\Ekaksi \mid y=y_i(x)\ \ja\ x \in A\}$ on oltava \kor{yhten‰isi‰}
-tason pistejoukkoja, ts.\ kuvaajissa ei sallita 'katkoksia'. (T‰sm‰llisemmin tarkoitetaan,
-ett‰ funktioiden $y_i$ on oltava \kor{jatkuvia}, ks.\ Luku \ref{jatkuvuuden k‰site}
-j‰ljemp‰n‰.)}
+Kuviossa haaroja on kolme v√§lill√§ $A=[a,b]$.\footnote[3]{Jotta monihaaraisen funktion 
+$\mathcal{Y}=\{y_i\}$ haarat $y_i$ olisivat yksiselitteiset, on m√§√§rittelyss√§ estett√§v√§ 
+'hyppiminen haaralta toiselle'. Ehdon voi tulkita geometris--intuitiivisesti niin, ett√§
+kuvaajien $G_i=\{P=(x,y)\in\Ekaksi \mid y=y_i(x)\ \ja\ x \in A\}$ on oltava \kor{yhten√§isi√§}
+tason pistejoukkoja, ts.\ kuvaajissa ei sallita 'katkoksia'. (T√§sm√§llisemmin tarkoitetaan,
+ett√§ funktioiden $y_i$ on oltava \kor{jatkuvia}, ks.\ Luku \ref{jatkuvuuden k√§site}
+j√§ljemp√§n√§.)}
 \begin{figure}[H]
 \begin{center}
 \setlength{\unitlength}{1cm}
@@ -540,56 +540,56 @@ j‰ljemp‰n‰.)}
 \end{figure}
 
 \begin{Exa}
-Yht‰lˆ $\,x^2+y^2=1\,$ m‰‰rittelee v‰lill‰ $[-1,1]$ kaksihaaraisen implisiittifunktion
-$\mathcal{Y}=\{y_+,y_-\}$, miss‰ $y_\pm = \pm \sqrt{1-x^2}$. \loppu
+Yht√§l√∂ $\,x^2+y^2=1\,$ m√§√§rittelee v√§lill√§ $[-1,1]$ kaksihaaraisen implisiittifunktion
+$\mathcal{Y}=\{y_+,y_-\}$, miss√§ $y_\pm = \pm \sqrt{1-x^2}$. \loppu
 \end{Exa}
-\begin{Exa} Millaisen monihaaraisen implisiittifunktion m‰‰rittelee yht‰lˆ \newline
-$y^4-2y^2+x^2-x=0\,$ eri $\R$:n osav‰leill‰?
+\begin{Exa} Millaisen monihaaraisen implisiittifunktion m√§√§rittelee yht√§l√∂ \newline
+$y^4-2y^2+x^2-x=0\,$ eri $\R$:n osav√§leill√§?
 \end{Exa}
-\ratk Jos $x\in\R$, niin yht‰lˆn mahdolliset ratkaisut $y\in\R$ ovat
+\ratk Jos $x\in\R$, niin yht√§l√∂n mahdolliset ratkaisut $y\in\R$ ovat
 \[
 y=\pm\sqrt{1\pm\sqrt{1+x-x^2}}.
 \]
-T‰ss‰ on
+T√§ss√§ on
 \begin{align*}
 1+x-x^2 &\ge 0 \qekv \frac{1}{2}(1-\sqrt{5}) \le x \le \frac{1}{2}(1+\sqrt{5}), \\
 1+x-x^2 &\ge 1 \qekv 0 \le x \le 1.
 \end{align*}
 
-P‰‰tell‰‰n, ett‰ v‰lill‰ $[0,1]$ funktio on kaksihaarainen: $\mathcal{Y}=\{y_1\,,\,y_2\}$,
-miss‰
+P√§√§tell√§√§n, ett√§ v√§lill√§ $[0,1]$ funktio on kaksihaarainen: $\mathcal{Y}=\{y_1\,,\,y_2\}$,
+miss√§
 \[
 y_1(x)=\sqrt{1+\sqrt{1+x-x^2}}\,, \quad y_2(x)=-\sqrt{1+\sqrt{1+x-x^2}}\,.
 \]
-V‰leill‰ $\,[\tfrac{1}{2}(1-\sqrt{5}),\,0]\,$ ja $\,[1,\,\tfrac{1}{2}(1+\sqrt{5})]\,$ on
-$0 \le 1+x-x^2 \le 1$, joten n‰ill‰ v‰leill‰ funktio on nelihaarainen: 
-$\mathcal{Y}=\{y_1\,,\,y_2\,,\,y_3\,,\,y_4\}$, miss‰ $y_1$ ja $y_2$ ovat samat kuin edell‰ ja
+V√§leill√§ $\,[\tfrac{1}{2}(1-\sqrt{5}),\,0]\,$ ja $\,[1,\,\tfrac{1}{2}(1+\sqrt{5})]\,$ on
+$0 \le 1+x-x^2 \le 1$, joten n√§ill√§ v√§leill√§ funktio on nelihaarainen: 
+$\mathcal{Y}=\{y_1\,,\,y_2\,,\,y_3\,,\,y_4\}$, miss√§ $y_1$ ja $y_2$ ovat samat kuin edell√§ ja
 \[
 y_3(x)=\sqrt{1-\sqrt{1+x-x^2}}\,, \quad  y_4(x)=-\sqrt{1-\sqrt{1+x-x^2}}\,.
 \]
 Jos $x\in(-\infty,\,\tfrac{1}{2}(1-\sqrt{5}))$ tai $x\in(\tfrac{1}{2}(1+\sqrt{5}),\,\infty)$,
-ei yht‰lˆ toteudu mill‰‰n $y\in\R$, joten n‰ill‰ v‰leill‰ yht‰lˆ ei m‰‰rittele mit‰‰n
+ei yht√§l√∂ toteudu mill√§√§n $y\in\R$, joten n√§ill√§ v√§leill√§ yht√§l√∂ ei m√§√§rittele mit√§√§n
 (reaali)funktiota. \loppu 
 
 \subsection*{Funktiot $\arcsin$, $\arccos$, $\arctan$}
 \index{funktio C!e@$\arcsin$, $\arccos$, $\arctan$|vahv}
 
-Funktiomerkinnˆill‰ $\,\arcsin$, $\arccos$ ja $\arctan$ tarkoitetaan yht‰lˆiden $x-\sin y =0$,
-$x-\cos y=0$ ja $x-\tan y=0$ m‰‰rittelemi‰ ‰‰rettˆm‰n monihaaraisia funktioita,
-m‰‰rittelyjoukkona joko v‰li $[-1,1]$ ($\arcsin,\,\arccos$) tai $\R$ ($\arctan$). Esimerkiksi
-$\arctan$  m‰‰ritell‰‰n
+Funktiomerkinn√∂ill√§ $\,\arcsin$, $\arccos$ ja $\arctan$ tarkoitetaan yht√§l√∂iden $x-\sin y =0$,
+$x-\cos y=0$ ja $x-\tan y=0$ m√§√§rittelemi√§ √§√§rett√∂m√§n monihaaraisia funktioita,
+m√§√§rittelyjoukkona joko v√§li $[-1,1]$ ($\arcsin,\,\arccos$) tai $\R$ ($\arctan$). Esimerkiksi
+$\arctan$  m√§√§ritell√§√§n
 \[
 \arctan = \{y_n, \ n\in\Z\},
 \]
-miss‰
+miss√§
 \[
 y_n(x)= \Arctan x + n\pi.
 \]
-T‰ss‰ $y_0(x)=\Arctan x\,$ on $\,\arctan$:n
-\index{pzyzy@p‰‰haara (funktion)}%
-\kor{p‰‰haara} (engl.\ principal branch).
+T√§ss√§ $y_0(x)=\Arctan x\,$ on $\,\arctan$:n
+\index{pzyzy@p√§√§haara (funktion)}%
+\kor{p√§√§haara} (engl.\ principal branch).
 \begin{Exa} \label{napakulman kaava} Jos $\varphi(x,y)$ on karteesisen koordinaatiston
-pistett‰ $(x,y)$ vastaava napakulma, $\varphi\in[0,2\pi)$, niin funktioriippuvuus 
+pistett√§ $(x,y)$ vastaava napakulma, $\varphi\in[0,2\pi)$, niin funktioriippuvuus 
 $(x,y)\map\varphi(x,y)$ on
 \[
 \varphi(x,y)=
@@ -601,7 +601,7 @@ $(x,y)\map\varphi(x,y)$ on
 3\pi/2,            &\text{jos}\ \ x=0\ \ja\ y<0.
 \end{cases}
 \]
-T‰ss‰ tarvittiin siis per‰ti kolmea $\arctan$:n haaraa (!).
+T√§ss√§ tarvittiin siis per√§ti kolmea $\arctan$:n haaraa (!).
 \loppu
 \begin{figure}[H]
 \begin{center}
@@ -614,24 +614,24 @@ T‰ss‰ tarvittiin siis per‰ti kolmea $\arctan$:n haaraa (!).
 \begin{enumerate}
 
 \item \label{H-IV-2: todistus}
-Todista: a) Jos $f$ on v‰lill‰ $A\subset\DF_f$ aidosti kasvava tai v‰henev‰, niin samoin
-on $f^{-1}$ v‰leill‰ $B \subset f(A)$.\, b) Jos $f$ on 1-1 ja pariton, niin samoin on
+Todista: a) Jos $f$ on v√§lill√§ $A\subset\DF_f$ aidosti kasvava tai v√§henev√§, niin samoin
+on $f^{-1}$ v√§leill√§ $B \subset f(A)$.\, b) Jos $f$ on 1-1 ja pariton, niin samoin on
 $\inv{f}$.
 
 \item
-a) Funktio $f(x)=x^2+x+2$ on k‰‰ntyv‰, kun se rajoitetaan v‰lille $(-\infty,a]$ tai v‰lille
-$[a,\infty)$. M‰‰rit‰ $a$ ja k‰‰nteisfunktio kummallakin v‰lill‰. \vspace{1mm}\newline
-b) N‰yt‰ algebran keinoin, ett‰ funktio $f(x)=x^3+2x$ on koko m‰‰rittelyjoukossaan ($=\R$)
-aidosti kasvava. M‰‰rit‰ $f^{-1}(-1)$, $f^{-1}(3)$, $f^{-1}(10)$, $f^{-1}(12)$ ja 
-$f^{-1}(4\sqrt{2})$ tarkasti, jos mahdollista, muuten likim‰‰rin yhden desimaalin
+a) Funktio $f(x)=x^2+x+2$ on k√§√§ntyv√§, kun se rajoitetaan v√§lille $(-\infty,a]$ tai v√§lille
+$[a,\infty)$. M√§√§rit√§ $a$ ja k√§√§nteisfunktio kummallakin v√§lill√§. \vspace{1mm}\newline
+b) N√§yt√§ algebran keinoin, ett√§ funktio $f(x)=x^3+2x$ on koko m√§√§rittelyjoukossaan ($=\R$)
+aidosti kasvava. M√§√§rit√§ $f^{-1}(-1)$, $f^{-1}(3)$, $f^{-1}(10)$, $f^{-1}(12)$ ja 
+$f^{-1}(4\sqrt{2})$ tarkasti, jos mahdollista, muuten likim√§√§rin yhden desimaalin
 tarkkuudella. \vspace{1mm}\newline
-c) Olkoon $f(x)=(1-x^n)^{1/n},\,\ \DF_f=[0,1],\ n\in\N$. N‰yt‰, ett‰ $f=\inv{f}$.
+c) Olkoon $f(x)=(1-x^n)^{1/n},\,\ \DF_f=[0,1],\ n\in\N$. N√§yt√§, ett√§ $f=\inv{f}$.
 \vspace{1mm}\newline
-d) Olkoon $f(x)=(ax+b)/(cx+d)$. Mill‰ vakioiden $a,b,c,d$ arvoilla on $f=\inv{f}$\,?
+d) Olkoon $f(x)=(ax+b)/(cx+d)$. Mill√§ vakioiden $a,b,c,d$ arvoilla on $f=\inv{f}$\,?
 
 \item
-Tarkastellaan funktioita $f: A \kohti R$. M‰‰rit‰ seuraavissa tapauksissa $B$ siten, ett‰
-$f: A \kohti B$ on surjektio. Onko $f: A \kohti B$ t‰llˆin myˆs bijektio? \vspace{1mm}\newline
+Tarkastellaan funktioita $f: A \kohti R$. M√§√§rit√§ seuraavissa tapauksissa $B$ siten, ett√§
+$f: A \kohti B$ on surjektio. Onko $f: A \kohti B$ t√§ll√∂in my√∂s bijektio? \vspace{1mm}\newline
 a) \ $f(x)=-x^5,\ A=(-4,-3]$ \newline
 b) \ $f(x)=x^2,\ A=[\sqrt{2}-\sqrt{3}\,,\sqrt{2}+\sqrt{3}\,]$ \newline
 c) \ $f(x)=-6x-x^2,\ A=(-5,-2)$ \newline
@@ -640,7 +640,7 @@ e) \ $f(x)=3+2\sin x,\ A=[3\pi/2,11\pi/6]$ \newline
 f) \ $f(x)=x+\Arcsin x,\ A=[-1,1]$
 
 \item
-Laske tarkka arvo lausekkeelle tai ratkaise yht‰lˆ:
+Laske tarkka arvo lausekkeelle tai ratkaise yht√§l√∂:
 \begin{align*}
 &\text{a)}\ \sin\left(\Arccos\left(-\frac{3}{5}\right)\right) \qquad\quad\ \
  \text{b)}\ \cos\left(\Arcsin\left(-\frac{3}{5}\right)\right) \\
@@ -661,13 +661,13 @@ Saata seuraavat funktiot muotoon $R\sin(x+\alpha)$:
 \end{align*}
 
 \item
-M‰‰rit‰ $R$ ja $\alpha$ siten, ett‰
+M√§√§rit√§ $R$ ja $\alpha$ siten, ett√§
 \[
 2\sin\left(x+\Arctan 2\sqrt{2}\right)+R\sin(x+\alpha)=6\sin x, \quad x\in\R.
 \]
 
 \item
-Sievenn‰ lauseke ja piirr‰ kuvaaja:
+Sievenn√§ lauseke ja piirr√§ kuvaaja:
 \begin{align*}
 &\text{a)}\ \ y=\Arccos(\sin x) \qquad\qquad\ \
  \text{b)}\ \ y=\Arctan(\tan x) \\
@@ -676,13 +676,13 @@ Sievenn‰ lauseke ja piirr‰ kuvaaja:
 \end{align*}
 
 \item
-N‰yt‰, ett‰ Esimerkin \ref{muuan implisiittifunktio} implisiittifunktio on esitett‰viss‰
-muodossa $y(x)=u(x)-x$, miss‰ $u$ on jaksollinen. Mik‰ on perusjakso? Onko $u(x)$
-parillinen/pariton? Hahmottele likim‰‰rin funktion $y(x)$ kuvaaja. 
+N√§yt√§, ett√§ Esimerkin \ref{muuan implisiittifunktio} implisiittifunktio on esitett√§viss√§
+muodossa $y(x)=u(x)-x$, miss√§ $u$ on jaksollinen. Mik√§ on perusjakso? Onko $u(x)$
+parillinen/pariton? Hahmottele likim√§√§rin funktion $y(x)$ kuvaaja. 
 
 \item
-Seuraavassa on m‰‰ritelty implisiittifunktioita, mahdollisesti useampihaaraisia. M‰‰rit‰ n‰iden
-haarat funktioina $x \map y(x)$ eri $\R$:n osav‰leill‰. Hahmottele funktiot myˆs graafisesti!
+Seuraavassa on m√§√§ritelty implisiittifunktioita, mahdollisesti useampihaaraisia. M√§√§rit√§ n√§iden
+haarat funktioina $x \map y(x)$ eri $\R$:n osav√§leill√§. Hahmottele funktiot my√∂s graafisesti!
 \begin{align*}
 &\text{a)}\ \ x^2+y^2+6x=0 \qquad\ \ \
  \text{b)}\ \ x^2-y^2-4x=0 \\[1mm]
@@ -695,27 +695,27 @@ haarat funktioina $x \map y(x)$ eri $\R$:n osav‰leill‰. Hahmottele funktiot myˆs
 \end{align*}
 
 \item
-Mitk‰ ovat monihaaraisen funktion $\arccos(\cos x)$ arvot, kun $x=13\pi/4$\,?
+Mitk√§ ovat monihaaraisen funktion $\arccos(\cos x)$ arvot, kun $x=13\pi/4$\,?
 
 \item
-a) M‰‰rittele monihaaraisen funktion $\arcsin=\{y_n\,,\ n\in\Z\}$ haarat p‰‰haaran $y_0$
-avulla. \ b) Ilmaise karteesisen koordinaatiston pisteiden ja napakulman v‰linen riippuvuus
+a) M√§√§rittele monihaaraisen funktion $\arcsin=\{y_n\,,\ n\in\Z\}$ haarat p√§√§haaran $y_0$
+avulla. \ b) Ilmaise karteesisen koordinaatiston pisteiden ja napakulman v√§linen riippuvuus
 $\varphi(x,y)$ funktioiden $y_n$ avulla.
 
 \item(*) \label{H-IV-2: ratkeavuus kymmenjaolla}
-Olkoon $f(x)=x^3+3x$ ja $y\in(0,\infty)$. Todista yht‰lˆn $f(x)=y$ ratkeavuus k‰ytt‰en
-kymmenjakoalgoritmia (ks.\ Luku \ref{reaaliluvut}). \kor{Vihje}: L‰hde tuloksista:
-$f$ on aidosti kasvava v‰lill‰ $[0,\infty)$ ja $\lim_n f(n)=\infty$.
+Olkoon $f(x)=x^3+3x$ ja $y\in(0,\infty)$. Todista yht√§l√∂n $f(x)=y$ ratkeavuus k√§ytt√§en
+kymmenjakoalgoritmia (ks.\ Luku \ref{reaaliluvut}). \kor{Vihje}: L√§hde tuloksista:
+$f$ on aidosti kasvava v√§lill√§ $[0,\infty)$ ja $\lim_n f(n)=\infty$.
 
 \item (*)
-Tutki, mill‰ arvoilla $x\in\R$ tai $(x,y)\in\Rkaksi$ p‰tee
+Tutki, mill√§ arvoilla $x\in\R$ tai $(x,y)\in\Rkaksi$ p√§tee
 \begin{align*}
 &\text{a)}\ \ 2\Arcsin x=\Arccos(1-2x^2) \\
 &\text{b)}\ \ \Arctan x+\Arctan y=\Arctan\frac{x+y}{1-xy} \hspace{4cm}
 \end{align*}
 
 \item(*)
-Tutki, mitk‰ seuraavista funktioista tyyppi‰ $\,f: \N\kohti\Q$ ovat injektioita: \newline
+Tutki, mitk√§ seuraavista funktioista tyyppi√§ $\,f: \N\kohti\Q$ ovat injektioita: \newline
 a) \ $f(n)=n^22^{-n}\,\ $ b)\ $f(n)=n^{333}2^{-n}\,\ $ c)\ $f(n)=n^{243}3^{-n}\,\ $ 
 d) \ $f(n)=n^{80}3^{-n}$
 

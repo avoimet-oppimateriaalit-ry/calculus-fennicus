@@ -1,26 +1,26 @@
 \subsection*{Taylorin lauseen todistus}
 
-Seuraavassa esitet‰‰n kaksi erilaista todistustapaa Taylorin lauseelle. Ensimm‰inen todistus 
-noudattaa 'pitk‰‰ kaavaa', jossa lauseen v‰itt‰m‰ pyrit‰‰n, paitsi todistamaan, myˆs
-johtamaan. T‰m‰ todistustapa on melko havainnollinen ja tekee v‰itt‰m‰st‰ itsest‰‰n varsin
-'uskottavan'. Tulos tosin j‰‰ hieman vaillinaiseksi: Piste $\xi$ pystyt‰‰n (ilman
-lis‰ponnistuksia) sijoittamaan vain suljetulle v‰lille $[x_0,x]$ tai $[x,x_0]$, ja lis‰ksi
-on oletettava $f^{(n+1)}$ jatkuvaksi v‰lill‰ $(a,b)$. Toisena todistusvaihtoehtona esitet‰‰n
-hyvin lyhyt ja elegantti todistus. Kummassakin todistustavassa p‰‰ttelyn kulmakivi on
-Differentiaalilaskun v‰liarvolause tai sen perusmuoto Rollen lause
-(Lauseet \ref{toinen v‰liarvolause} ja \ref{Rollen lause}).
+Seuraavassa esitet√§√§n kaksi erilaista todistustapaa Taylorin lauseelle. Ensimm√§inen todistus 
+noudattaa 'pitk√§√§ kaavaa', jossa lauseen v√§itt√§m√§ pyrit√§√§n, paitsi todistamaan, my√∂s
+johtamaan. T√§m√§ todistustapa on melko havainnollinen ja tekee v√§itt√§m√§st√§ itsest√§√§n varsin
+'uskottavan'. Tulos tosin j√§√§ hieman vaillinaiseksi: Piste $\xi$ pystyt√§√§n (ilman
+lis√§ponnistuksia) sijoittamaan vain suljetulle v√§lille $[x_0,x]$ tai $[x,x_0]$, ja lis√§ksi
+on oletettava $f^{(n+1)}$ jatkuvaksi v√§lill√§ $(a,b)$. Toisena todistusvaihtoehtona esitet√§√§n
+hyvin lyhyt ja elegantti todistus. Kummassakin todistustavassa p√§√§ttelyn kulmakivi on
+Differentiaalilaskun v√§liarvolause tai sen perusmuoto Rollen lause
+(Lauseet \ref{toinen v√§liarvolause} ja \ref{Rollen lause}).
 
-\underline{\vahv{Todistus 1.}} Oletetaan Lauseen \ref{Taylor} oletusten lis‰ksi, ett‰
-$f^{(n+1)}$ on jatkuva v‰lill‰ $(a,b)$. Olkoon $x_0 <x < b$ ja tarkastellaan v‰lill‰ $[x_0,x]$
+\underline{\vahv{Todistus 1.}} Oletetaan Lauseen \ref{Taylor} oletusten lis√§ksi, ett√§
+$f^{(n+1)}$ on jatkuva v√§lill√§ $(a,b)$. Olkoon $x_0 <x < b$ ja tarkastellaan v√§lill√§ $[x_0,x]$
 funktiota
 \[
 g(t)=f(t)-T_n(t,x_0).
 \]
-T‰llˆin Lause \ref{toinen v‰liarvolause} sovellettuna funktioon $g^{(n)}$ v‰itt‰‰, ett‰
+T√§ll√∂in Lause \ref{toinen v√§liarvolause} sovellettuna funktioon $g^{(n)}$ v√§itt√§√§, ett√§
 \[
 g^{(n)}(t)-g^{(n)}(x_0)=g^{(n+1)}(\xi)\,(t-x_0),\quad t\in (x_0,x],
 \]
-miss‰ $\,\xi=\xi(t)\in (x_0,t)$. Koska $g^{(n)}(x_0)=0$ ja koska
+miss√§ $\,\xi=\xi(t)\in (x_0,t)$. Koska $g^{(n)}(x_0)=0$ ja koska
 \[
 \frac{d^{n+1}}{dt^{n+1}}T_n(t,x_0)=0,
 \]
@@ -28,15 +28,15 @@ niin seuraa
 \[
 g^{(n)}(t)=f^{(n+1)}(\xi)(t-x_0), \quad t\in (x_0,x].
 \]
-Kun merkit‰‰n
+Kun merkit√§√§n
 \[
 m=\min_{t\in [x_0,x]} f^{(n+1)}(t), \quad M=\max_{t\in [x_0,x]} f^{(n+1)}(t),
 \]
-on p‰‰telty, ett‰
-\begin{equation} \label{Taylor-v‰litulos 1}
+on p√§√§telty, ett√§
+\begin{equation} \label{Taylor-v√§litulos 1}
 m(t-x_0) \le g^{(n)}(t) \le M(t-x_0),\quad t\in [x_0,x].
 \end{equation}
-Mik‰li $n\geq 1$, jatketaan p‰‰ttely‰ kirjoittamalla tulos \eqref{Taylor-v‰litulos 1} 
+Mik√§li $n\geq 1$, jatketaan p√§√§ttely√§ kirjoittamalla tulos \eqref{Taylor-v√§litulos 1} 
 ekvivalenttiin muotoon
 \[
 \begin{cases}
@@ -44,16 +44,16 @@ ekvivalenttiin muotoon
 \,\frac{d}{dt}[g^{(n-1)}(t)-\frac{1}{2}M(t-x_0)^2]   &\le\, 0,\ \ t\in [x_0,x].
 \end{cases}
 \]
-T‰st‰ n‰hd‰‰n, ett‰ (vrt. Lause \ref{monotonisuuskriteeri})
+T√§st√§ n√§hd√§√§n, ett√§ (vrt. Lause \ref{monotonisuuskriteeri})
 \begin{itemize}
-\item[(i)] $g^{(n-1)}(t)-\frac{1}{2}m(t-x_0)^2$ \quad   on kasvava v‰lill‰ $[x_0,x]$,
-\item[(ii)] $g^{(n-1)}(t)-\frac{1}{2}M(t-x_0)^2$ \,\ \  on v‰henev‰ v‰lill‰ $[x_0,x]$.
+\item[(i)] $g^{(n-1)}(t)-\frac{1}{2}m(t-x_0)^2$ \quad   on kasvava v√§lill√§ $[x_0,x]$,
+\item[(ii)] $g^{(n-1)}(t)-\frac{1}{2}M(t-x_0)^2$ \,\ \  on v√§henev√§ v√§lill√§ $[x_0,x]$.
 \end{itemize}
-Koska $g^{(n-1)}(x_0)=0$, p‰‰tell‰‰n ett‰
-\begin{equation} \label{Taylor-v‰litulos 2}
+Koska $g^{(n-1)}(x_0)=0$, p√§√§tell√§√§n ett√§
+\begin{equation} \label{Taylor-v√§litulos 2}
 \frac{1}{2}m(t-x_0)^2\leq g^{(n-1)}(t)\leq \frac{1}{2}M(t-x_0)^2,\quad t\in [x_0,x].
 \end{equation}
-Mik‰li $n \ge 2$, jatketaan p‰‰ttely‰ kirjoittamalla tulos \eqref{Taylor-v‰litulos 2} 
+Mik√§li $n \ge 2$, jatketaan p√§√§ttely√§ kirjoittamalla tulos \eqref{Taylor-v√§litulos 2} 
 ekvivalenttiin muotoon
 \[
 \begin{cases}
@@ -61,41 +61,41 @@ ekvivalenttiin muotoon
 \,\frac{d}{dt}[g^{(n-2)}(t)-\frac{1}{3!}M(t-x_0)^3] &\le 0,\ \ t\in [x_0,x],
 \end{cases}
 \]
-mist‰ p‰‰tell‰‰n samalla tavoin kuin edell‰, ett‰
-\begin{equation} \label{Taylor-v‰litulos 3}
+mist√§ p√§√§tell√§√§n samalla tavoin kuin edell√§, ett√§
+\begin{equation} \label{Taylor-v√§litulos 3}
 \frac{1}{3!}m(t-x_0)^3\leq g^{(n-2)}(t)\leq \frac{1}{3!}M(t-x_0)^3,\quad t\in [x_0,x].
 \end{equation}
-N‰in jatkaen (induktio) p‰‰dyt‰‰n lopulta tulokseen
-\begin{equation} \label{Taylor-v‰litulos 4}
+N√§in jatkaen (induktio) p√§√§dyt√§√§n lopulta tulokseen
+\begin{equation} \label{Taylor-v√§litulos 4}
 \frac{m}{(n+1)!}(t-x_0)^{n+1}\leq g(t)\leq \frac{M}{(n+1)!}(t-x_0)^{n+1},\quad t\in [x_0,x],
 \end{equation}
-joka $n$:n arvoilla $0,1,2$ jo saatiin v‰lituloksina 
-\eqref{Taylor-v‰litulos 1},\,\eqref{Taylor-v‰litulos 2},\,\eqref{Taylor-v‰litulos 3}.
+joka $n$:n arvoilla $0,1,2$ jo saatiin v√§lituloksina 
+\eqref{Taylor-v√§litulos 1},\,\eqref{Taylor-v√§litulos 2},\,\eqref{Taylor-v√§litulos 3}.
 
-Asetetaan lopuksi $t=x$ p‰‰ttelyn lopputuloksessa \eqref{Taylor-v‰litulos 4} ja kirjoitetaan
+Asetetaan lopuksi $t=x$ p√§√§ttelyn lopputuloksessa \eqref{Taylor-v√§litulos 4} ja kirjoitetaan
 tulos muotoon
 \[
 g(x)=\frac{c}{(n+1)!}\,(x-x_0)^{n+1},\quad c\in [m,M].
 \]
-Koska t‰ss‰ $m$ on $f^{(n+1)}$:n minimiarvo ja $M$ maksimiarvo v‰lill‰ $[x_0,x]$ ja koska 
-$f^{(n+1)}$ on jatkuva ko.\ v‰lill‰, niin Lauseen \ref{ensimm‰inen v‰liarvolause} mukaan on
+Koska t√§ss√§ $m$ on $f^{(n+1)}$:n minimiarvo ja $M$ maksimiarvo v√§lill√§ $[x_0,x]$ ja koska 
+$f^{(n+1)}$ on jatkuva ko.\ v√§lill√§, niin Lauseen \ref{ensimm√§inen v√§liarvolause} mukaan on
 \[
 c=f^{(n+1)}(\xi) \quad \text{jollakin}\ \xi\in [x_0,x].
 \]
-Taylorin lauseen v‰itt‰m‰ (muodossa $\xi\in[x_0\,,x]$) on n‰in todistettu tapauksessa $x>x_0$.
-Tapauksessa $x<x_0$ on p‰‰ttely vastaava. \loppu
+Taylorin lauseen v√§itt√§m√§ (muodossa $\xi\in[x_0\,,x]$) on n√§in todistettu tapauksessa $x>x_0$.
+Tapauksessa $x<x_0$ on p√§√§ttely vastaava. \loppu
 
 \vspace{0.5cm}
-\underline{\vahv{Todistus 2.}} \ T‰ss‰kin tapauksessa otetaan muuttujaksi $t$ ja ajatellaan
-$x \neq x_0$ kiinte‰ksi. Olkoon
+\underline{\vahv{Todistus 2.}} \ T√§ss√§kin tapauksessa otetaan muuttujaksi $t$ ja ajatellaan
+$x \neq x_0$ kiinte√§ksi. Olkoon
 \[
 g(t) = f(t) - T_n(t,x_0) - H(t-x_0)^{n+1}, \quad H = \frac{f(x)-T_n(x,x_0)}{(x-x_0)^{n+1}}\,. 
 \]
-T‰llˆin on $g^{(k)}(x_0)=0,\ k=0 \ldots n$, ja lis‰ksi $g(x)=0$. Koska $g(x_0)=g(x)=0$,
+T√§ll√∂in on $g^{(k)}(x_0)=0,\ k=0 \ldots n$, ja lis√§ksi $g(x)=0$. Koska $g(x_0)=g(x)=0$,
 niin Lauseen \ref{Rollen lause} mukaan on $g'(\xi_1)=0$ jollakin $\xi_1 \in (x_0,x)$ 
-(ol.\ $x_0<x$). T‰llˆin koska $g'(x_0)=g'(\xi_1)=0$, niin saman lauseen mukaan on
-$g''(\xi_2)=0$ jollakin $\xi_2 \in (x_0,\xi_1)$. Jatkamalla samalla tavoin p‰‰tell‰‰n, ett‰ 
+(ol.\ $x_0<x$). T√§ll√∂in koska $g'(x_0)=g'(\xi_1)=0$, niin saman lauseen mukaan on
+$g''(\xi_2)=0$ jollakin $\xi_2 \in (x_0,\xi_1)$. Jatkamalla samalla tavoin p√§√§tell√§√§n, ett√§ 
 $g^{(n)}(x_0)=g^{(n)}(\xi_n)=0$ jollakin $\xi_n \in (x_0,\xi_{n-1})$, jolloin Lauseen 
 \ref{Rollen lause} mukaan on $g^{(n+1)}(\xi_{n+1})=0$ jollakin 
 $\xi_{n+1} \in (x_0,\xi_n) \subset (x_0,x)$. Mutta $g^{(n+1)}(t) = f^{(n+1)}(t)-H(n+1)!$
---- Siis $f^{(n+1)}(\xi_{n+1})-H(n+1)!=0\ \impl$ v‰ite. \loppu
+--- Siis $f^{(n+1)}(\xi_{n+1})-H(n+1)!=0\ \impl$ v√§ite. \loppu

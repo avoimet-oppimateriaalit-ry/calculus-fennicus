@@ -11,6 +11,6 @@
 \fi\endgroup%
 \begin{picture}(2437,2208)(489,-2311)
 \put(1351,-2311){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$f$}}}
-\put(2926,-961){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$f$ ei k‰‰ntyv‰}}}
+\put(2926,-961){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$f$ ei k√§√§ntyv√§}}}
 \put(2926,-1186){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}($f^{-1}$ ei olemassa)}}}
 \end{picture}

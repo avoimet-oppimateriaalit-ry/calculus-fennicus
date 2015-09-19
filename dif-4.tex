@@ -2,29 +2,29 @@
 \sectionmark{Taylorin lause}
 \alku
 
-T‰ss‰ luvussa tarkastellaan funktioita, jotka ovat annetun pisteen $x_0$ ymp‰ristˆss‰
-riitt‰v‰n sileit‰, eli riitt‰v‰n monta kertaa (jatkuvasti) derivoituvia.
+T√§ss√§ luvussa tarkastellaan funktioita, jotka ovat annetun pisteen $x_0$ ymp√§rist√∂ss√§
+riitt√§v√§n sileit√§, eli riitt√§v√§n monta kertaa (jatkuvasti) derivoituvia.
 \begin{Def} \index{Taylorin polynomi|emph}
-Funktion $f:\DF_f\kohti\R$, $\DF_f\subset\R$, joka on $n$ kertaa derivoituva pisteess‰
-$x_0\in\DF_f$, \kor{Taylorin polynomi astetta $n$ pisteess‰ $x_0$} on
+Funktion $f:\DF_f\kohti\R$, $\DF_f\subset\R$, joka on $n$ kertaa derivoituva pisteess√§
+$x_0\in\DF_f$, \kor{Taylorin polynomi astetta $n$ pisteess√§ $x_0$} on
 \[
 \boxed{\kehys\quad T_n(x,x_0)=\sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k. \quad}
 \]
 \end{Def}
-M‰‰ritelm‰n mukaiset kolme ensimm‰ist‰ Taylorin polynomia ovat
+M√§√§ritelm√§n mukaiset kolme ensimm√§ist√§ Taylorin polynomia ovat
 \begin{align*}
 T_0(x,x_0)\ &=\ f(x_0), \\[2mm]
 T_1(x,x_0)\ &=\ f(x_0) + f'(x_0)(x-x_0), \\
 T_2(x,x_0)\ &=\ f(x_0) + f'(x_0)(x-x_0) + \frac{1}{2}f''(x_0)(x-x_0)^2.
 \end{align*}
-Erityisesti siis $\,T_1(x,x_0) = f$:n linearisoiva approksimaatio pisteess‰ $x_0$.
+Erityisesti siis $\,T_1(x,x_0) = f$:n linearisoiva approksimaatio pisteess√§ $x_0$.
 \begin{Prop}
-Funktion $f$ Taylorin polynomi $T_n(x,x_0)$ m‰‰r‰ytyy yksik‰sitteisesti ehdoista
+Funktion $f$ Taylorin polynomi $T_n(x,x_0)$ m√§√§r√§ytyy yksik√§sitteisesti ehdoista
 \[
 \frac{d^k}{dx^k}T_n(x,x_0)_{|\,x=x_0}\ =\ f^{(k)}(x_0),\quad k=0\ldots n.
 \]
 \end{Prop}
-\tod Helposti n‰hd‰‰n, ett‰ $T_n(x,x_0)$ toteuttaa mainitut ehdot. Jos jokin toinen polynomi 
+\tod Helposti n√§hd√§√§n, ett√§ $T_n(x,x_0)$ toteuttaa mainitut ehdot. Jos jokin toinen polynomi 
 $p(x)$ toteuttaa samat ehdot, eli
 \[
 p^{(k)}(x_0)=f^{(k)}(x_0),\quad k=0\ldots n,
@@ -37,10 +37,10 @@ toteuttaa
 \[
 q^{(k)}(x_0)=0,\quad k=0\ldots n.
 \]
-T‰llˆin koska $q^{(n)}(x_0)=n!\,a_n$, seuraa $a_n=0$, jolloin 
-$q^{(n-1)}(x_0)=(n-1)!\,a_{n-1} \ \impl \ a_{n-1}=0$, jne. Siis $q=0$, ja n‰in ollen em.\ 
-ehdoista m‰‰r‰ytyv‰ polynomi on yksik‰sitteinen. \loppu
-\begin{Exa} M‰‰rit‰ seuraavat Taylorin polynomit pisteess‰ $x_0=0\,$:
+T√§ll√∂in koska $q^{(n)}(x_0)=n!\,a_n$, seuraa $a_n=0$, jolloin 
+$q^{(n-1)}(x_0)=(n-1)!\,a_{n-1} \ \impl \ a_{n-1}=0$, jne. Siis $q=0$, ja n√§in ollen em.\ 
+ehdoista m√§√§r√§ytyv√§ polynomi on yksik√§sitteinen. \loppu
+\begin{Exa} M√§√§rit√§ seuraavat Taylorin polynomit pisteess√§ $x_0=0\,$:
 \begin{align*} 
 &\text{a)}\ \ f(x)=\sqrt[3]{1+x},\ \ n=2 \qquad \text{b)}\ \ f(x)=\tan x,\ \ n=5 \\ 
 &\text{c)}\ \ f(x)=\ln (1+x),\ \ n \in \N 
@@ -72,7 +72,7 @@ Taylorin polynomin derivaatta on
 \frac{d}{dx} T_n(x,x_0) = f'(x_0) + f''(x_0)(x-x_0) + \ldots 
                                   + \frac{f^{(n-1)}(x_0)}{(n-1)!}(x-x_0)^{n-1}.
 \]
-Derivoinnin tulos = $f'$:n Taylorin polynomi astetta $n-1$ pisteess‰ $x_0$, eli lyhyesti:
+Derivoinnin tulos = $f'$:n Taylorin polynomi astetta $n-1$ pisteess√§ $x_0$, eli lyhyesti:
 Taylorin polynomin derivaatta = derivaatan Taylorin polynomi (astetta alempi).
 
 \pagebreak
@@ -90,54 +90,54 @@ c) & $f(x)=1/(1+x)$ & : & $T_{n-1}(x,0)=1-x+\cdots +(-1)^{n-1}x^{n-1}$. \loppu
 \subsection*{Taylorin lause}
 \index{Taylorin lause|vahv}
 
-Taylorin polynomeihin perustuu seuraava huomattava approksimaatiolause. Todistus esitet‰‰n
+Taylorin polynomeihin perustuu seuraava huomattava approksimaatiolause. Todistus esitet√§√§n
 luvun lopussa.
 \begin{Lause} (\vahv{Taylorin lause}) \label{Taylor}
-Jos $f$ on jatkuva v‰lill‰ $[a,b]$ ja $n+1$ kertaa derivoituva v‰lill‰ $(a,b)$, niin jokaisella
-$x_0\in(a,b)$ ja $x\in[a,b],\ x \neq x_0$ p‰tee
+Jos $f$ on jatkuva v√§lill√§ $[a,b]$ ja $n+1$ kertaa derivoituva v√§lill√§ $(a,b)$, niin jokaisella
+$x_0\in(a,b)$ ja $x\in[a,b],\ x \neq x_0$ p√§tee
 \[
 f(x)=T_n(x,x_0)+R_n(x),
 \]
-miss‰
+miss√§
 \[
 R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}\,(x-x_0)^{n+1} \quad 
                 \text{jollakin}\,\ \xi\in (x_0,x)\ \text{ tai }\ \xi\in (x,x_0).
 \]
 \end{Lause}
-Taylorin lauseen mukaan funktiota, joka on tietyn pisteen $x_0$ ymp‰ristˆss‰
-s‰‰nnˆllinen, voi t‰ss‰ ymp‰ristˆss‰ approksimoida polynomilla --- nimitt‰in Taylorin
-polynomilla --- ja approksimaatio on yleisesti ottaen sit‰ tarkempi, mit‰ korkeampi on
-polynomin asteluku, ja mit‰ l‰hemp‰n‰ ollaan pistett‰ $x_0$. Tuloksen voi esitt‰‰
+Taylorin lauseen mukaan funktiota, joka on tietyn pisteen $x_0$ ymp√§rist√∂ss√§
+s√§√§nn√∂llinen, voi t√§ss√§ ymp√§rist√∂ss√§ approksimoida polynomilla --- nimitt√§in Taylorin
+polynomilla --- ja approksimaatio on yleisesti ottaen sit√§ tarkempi, mit√§ korkeampi on
+polynomin asteluku, ja mit√§ l√§hemp√§n√§ ollaan pistett√§ $x_0$. Tuloksen voi esitt√§√§
 kvalitatiivisesti muodossa:
 \[
-\boxed{\kehys\quad \text{\pain{Sile‰} funktio}\ 
-               \approx\ \text{polynomi \pain{l}y\pain{h}y\pain{ell‰} v‰lill‰}. \quad}
+\boxed{\kehys\quad \text{\pain{Sile√§} funktio}\ 
+               \approx\ \text{polynomi \pain{l}y\pain{h}y\pain{ell√§} v√§lill√§}. \quad}
 \]
 
-Taylorin lauseen tuloksella on perustavaa laatua oleva merkitys l‰hes kaikessa numeerisessa 
-laskennassa, johon sis‰ltyy funktioiden approksimointia. Virhetermille $R_n(x,x_0)$, eli 
-\index{jzyzy@j‰‰nnˆstermi (Lagrangen)}%
-Taylorin polynomiapproksimaation nk.\ \kor{j‰‰nnˆstermille} (engl.\ remainder), tunnetaan
-monia muotoja. Lauseen \ref{Taylor} esitt‰m‰‰ sanotaan j‰‰nnˆstermin
-\index{Lagrangen!a@j‰‰nnˆstermi}% 
+Taylorin lauseen tuloksella on perustavaa laatua oleva merkitys l√§hes kaikessa numeerisessa 
+laskennassa, johon sis√§ltyy funktioiden approksimointia. Virhetermille $R_n(x,x_0)$, eli 
+\index{jzyzy@j√§√§nn√∂stermi (Lagrangen)}%
+Taylorin polynomiapproksimaation nk.\ \kor{j√§√§nn√∂stermille} (engl.\ remainder), tunnetaan
+monia muotoja. Lauseen \ref{Taylor} esitt√§m√§√§ sanotaan j√§√§nn√∂stermin
+\index{Lagrangen!a@j√§√§nn√∂stermi}% 
 \kor{Lagrangen}\footnote[2]{Italialais-ranskalainen \hist{Joseph Louis}
 (synt.\ Giovanni Luigi) \hist{Lagrange} (1736-1813) oli aikansa huomattavimpia
-matemaatikkoja. Erityisesti differentiaalilaskennan (myˆs integraalilaskennan) kehitt‰misess‰
-Lagrangen panos oli merkitt‰v‰. Matematiikan ohella Lagrange tutki mekaniikkaa ja saavutti
-sill‰kin alalla pysyv‰n nimen. \index{Lagrange, J. L.|av} \index{Taylor, B.|av} 
+matemaatikkoja. Erityisesti differentiaalilaskennan (my√∂s integraalilaskennan) kehitt√§misess√§
+Lagrangen panos oli merkitt√§v√§. Matematiikan ohella Lagrange tutki mekaniikkaa ja saavutti
+sill√§kin alalla pysyv√§n nimen. \index{Lagrange, J. L.|av} \index{Taylor, B.|av} 
 
-Taylorin polynomit, Taylorin lause, ja erityisesti j‰ljemp‰m‰ esitett‰v‰t
+Taylorin polynomit, Taylorin lause, ja erityisesti j√§ljemp√§m√§ esitett√§v√§t
 \kor{Taylorin sarjat} viittaavat englantilaiseen matemaatikkoon \hist{Brook Taylor}iin 
-(1685-1731). Nime‰‰n kantavaa lausetta ei Taylor todellisuudessa tuntenut.} muodoksi.
+(1685-1731). Nime√§√§n kantavaa lausetta ei Taylor todellisuudessa tuntenut.} muodoksi.
 
-\begin{Exa} \label{Taylor ja exp,cos,sin} Soveltamalla derivointis‰‰ntˆj‰
+\begin{Exa} \label{Taylor ja exp,cos,sin} Soveltamalla derivointis√§√§nt√∂j√§
 \[ \begin{cases}
 \,D^ke^x=e^x,\quad k=0,1,2,\ldots \\
 \,D^{2k}\cos x=(-1)^k\cos x,\quad D^{2k+1}\cos x=(-1)^{k+1}\sin x, \quad k=0,1,2,\ldots \\
 \,D^{2k}\sin x=(-1)^k\sin x,\quad D^{2k+1}\sin x=(-1)^k\cos x, \quad k=0,1,2,\ldots
 \end{cases} \]
-ja Lausetta \ref{Taylor} n‰hd‰‰n, ett‰ jos $x\in\R,\ x \neq 0$ ja $n\in\N$, niin funktioille 
-$e^x,\ \cos x,\ \sin x$ p‰tee jollakin $\xi\in(0,x)\ (x>0)$ tai $\xi\in(x,0)\ (x<0)$ 
+ja Lausetta \ref{Taylor} n√§hd√§√§n, ett√§ jos $x\in\R,\ x \neq 0$ ja $n\in\N$, niin funktioille 
+$e^x,\ \cos x,\ \sin x$ p√§tee jollakin $\xi\in(0,x)\ (x>0)$ tai $\xi\in(x,0)\ (x<0)$ 
 \newline
 \[ \boxed{ \begin{aligned}
          e^x\ &=\ \Bigl(\,1+x+\frac{x^2}{2!}+\cdots +\frac{\ykehys x^n}{n!}\,\Bigr)
@@ -148,7 +148,7 @@ $e^x,\ \cos x,\ \sin x$ p‰tee jollakin $\xi\in(0,x)\ (x>0)$ tai $\xi\in(x,0)\ (x
                              \,+\,(-1)^{n+1}\frac{\cos\xi}{(2n+3)!}\,x^{2n+3}. \quad
            \end{aligned} } \]
 \newline
-T‰ss‰ on sulkeilla ymp‰rˆity Taylorin polynomit 
+T√§ss√§ on sulkeilla ymp√§r√∂ity Taylorin polynomit 
 \begin{align*}
 e^x\,:    \quad &T_n(x,0), \\
 \cos x\,: \quad &T_{2n}(x,0)=T_{2n+1}(x,0), \\
@@ -156,16 +156,16 @@ e^x\,:    \quad &T_n(x,0), \\
 \end{align*}
 \end{Exa}
 
-Taylorin lause on muotoiltavissa myˆs niin, ett‰ funktion $(n+1)$-kertaisen derivoituvuuden
+Taylorin lause on muotoiltavissa my√∂s niin, ett√§ funktion $(n+1)$-kertaisen derivoituvuuden
 sijasta oletetaan ainoastaan $n$-kertainen derivoituvuus ja derivaatan $f^{(n)}$ jatkuvuus.
-\begin{Lause} \label{Taylorin approksimaatiolause} Jos $f$ on $n$ kertaa derivoituva v‰lill‰
-$(a,b)$ ja $f^{(n)}$ on jatkuva ko.\ v‰lill‰, niin j‰‰nnˆstermille $R_n(x)=f(x)-T_n(x,x_0)$
-p‰tee jokaisella $x_0\in(a,b)$
+\begin{Lause} \label{Taylorin approksimaatiolause} Jos $f$ on $n$ kertaa derivoituva v√§lill√§
+$(a,b)$ ja $f^{(n)}$ on jatkuva ko.\ v√§lill√§, niin j√§√§nn√∂stermille $R_n(x)=f(x)-T_n(x,x_0)$
+p√§tee jokaisella $x_0\in(a,b)$
 \[
 \lim_{x \kohti x_0} \frac{R_n^{(k)}(x)}{(x-x_0)^{n-k}} = 0, \quad k = 0 \ldots n.
 \]
 \end{Lause}
-\tod Tapauksessa $n=0$ v‰itt‰m‰ on tosi jatkuvuuden m‰‰ritelm‰n nojalla. Jos $n \ge 1$, niin 
+\tod Tapauksessa $n=0$ v√§itt√§m√§ on tosi jatkuvuuden m√§√§ritelm√§n nojalla. Jos $n \ge 1$, niin 
 oletusten ja Taylorin lauseen perusteella on
 \begin{align*}
 f(x)\ &=\ T_{n-1}(x,x_0) + \frac{f^{(n)}(\xi)}{n!}(x-x_0)^n \\
@@ -173,22 +173,22 @@ f(x)\ &=\ T_{n-1}(x,x_0) + \frac{f^{(n)}(\xi)}{n!}(x-x_0)^n \\
                                + \frac{1}{n!}\,[f^{(n)}(\xi)-f^{(n)}(x_0)]\,(x-x_0)^n \\
       &=\ T_n(x,x_0) + \frac{1}{n!}\,[f^{(n)}(\xi)-f^{(n)}(x_0)]\,(x-x_0)^n, \quad x\in(a,b),
 \end{align*} 
-miss‰ $\xi=\xi(x)=x_0$, jos $x=x_0$, muulloin $\xi(x)\in(x_0,x)$ tai $\xi\in(x,x_0)$. Siis
+miss√§ $\xi=\xi(x)=x_0$, jos $x=x_0$, muulloin $\xi(x)\in(x_0,x)$ tai $\xi\in(x,x_0)$. Siis
 \[
 R_n(x)\ =\  \frac{1}{n!}\,[f^{(n)}(\xi(x))-f^{(n)}(x_0)]\,(x-x_0)^n,
 \]
-miss‰ $\xi(x) \kohti x_0$ kun $x \kohti x_0$. Koska $f^{(n)}$ on jatkuva $x_0$:ssa, niin
+miss√§ $\xi(x) \kohti x_0$ kun $x \kohti x_0$. Koska $f^{(n)}$ on jatkuva $x_0$:ssa, niin
 seuraa
  \[
 \lim_{x \kohti x_0} \frac{R_n(x)}{(x-x_0)^n} 
               = \lim_{x \kohti x_0} \frac{1}{n!}\,[f^{(n)}(\xi(x))-f^{(n)}(x_0)] = 0.
 \]
-Muut v‰itetyt raja-arvotulokset seuraavat t‰st‰ derivoimalla: Koska
+Muut v√§itetyt raja-arvotulokset seuraavat t√§st√§ derivoimalla: Koska
 \[
 f^{(k)}(x) = \left(\frac{d}{dx}\right)^k T_n(x,x_0) + R_n^{(k)}(x), \quad 
                                   x \in (x_0,x_0+a),\ \ k=1 \ldots n,
 \]
-ja koska t‰ss‰ $(d/dx)^k\,T_n(x,x_0) = f^{(k)}$:n Taylorin polynomi astetta $n-k$, niin jo 
+ja koska t√§ss√§ $(d/dx)^k\,T_n(x,x_0) = f^{(k)}$:n Taylorin polynomi astetta $n-k$, niin jo 
 todistetun perusteella
 \[
 \lim_{x \kohti x_0} \frac{R_n^{(k)}(x)}{(x-x_0)^{n-k}} = 0, \quad k=1 \ldots n. \loppu
@@ -196,32 +196,32 @@ todistetun perusteella
 
 \subsection*{Taylorin polynomien nopea laskeminen}
 
-Joskus $f$:n derivaatat ovat niin hankalia laskea, ett‰ Taylorin polynomin saa m‰‰r‰tyksi 
-suoremmin muilla menetelmill‰, jolloin polynomin avulla voi p‰invastoin m‰‰ritt‰‰ derivaatat 
-$f^{(k)}(x_0)$, $k=0\ldots n$ (!). Polynomia muilla keinoin m‰‰r‰tt‰ess‰ riitt‰‰, ett‰ 
-j‰‰nnˆstermi saadaan riitt‰v‰n pieneksi, sill‰ t‰ll‰kin kriteerill‰ polynomi on
-yksik‰sitteinen:
+Joskus $f$:n derivaatat ovat niin hankalia laskea, ett√§ Taylorin polynomin saa m√§√§r√§tyksi 
+suoremmin muilla menetelmill√§, jolloin polynomin avulla voi p√§invastoin m√§√§ritt√§√§ derivaatat 
+$f^{(k)}(x_0)$, $k=0\ldots n$ (!). Polynomia muilla keinoin m√§√§r√§tt√§ess√§ riitt√§√§, ett√§ 
+j√§√§nn√∂stermi saadaan riitt√§v√§n pieneksi, sill√§ t√§ll√§kin kriteerill√§ polynomi on
+yksik√§sitteinen:
 \begin{Prop} \label{Taylor-prop}
-Olkoon funktio $f$ $\,n$ kertaa derivoituva v‰lill‰ $(a,b)$ ja olkoon $f^{(n)}$ jatkuva
-v‰lill‰ $(a,b)$. T‰llˆin jos $p$ on polynomi astetta $\le n$ siten, ett‰ jollakin
-$x_0\in(a,b)$ p‰tee
+Olkoon funktio $f$ $\,n$ kertaa derivoituva v√§lill√§ $(a,b)$ ja olkoon $f^{(n)}$ jatkuva
+v√§lill√§ $(a,b)$. T√§ll√∂in jos $p$ on polynomi astetta $\le n$ siten, ett√§ jollakin
+$x_0\in(a,b)$ p√§tee
 \[
 \lim_{x \kohti x_0} \frac{f(x)-p(x)}{(x-x_0)^n}=0,
 \]
 niin $p(x) = f$:n Taylorin polynomi $T_n(x,x_0)$.
 \end{Prop}
-\tod Kun merkit‰‰n $q(x)=p(x)-T_n(x,x_0)$, niin raja-arvojen yhdistelys‰‰ntˆjen
-(Lause \ref{funktion raja-arvojen yhdistelys‰‰nnˆt}), Lauseen
+\tod Kun merkit√§√§n $q(x)=p(x)-T_n(x,x_0)$, niin raja-arvojen yhdistelys√§√§nt√∂jen
+(Lause \ref{funktion raja-arvojen yhdistelys√§√§nn√∂t}), Lauseen
 \ref{Taylorin approksimaatiolause} ja oletuksen mukaan
 \[
 \lim_{x \kohti x_0} \frac{q(x)}{(x-x_0)^n} 
      \,=\, \lim_{x \kohti x_0} \left[\frac{f(x)-T_n(x,x_0)}{(x-x_0)^n}
                                  - \frac{f(x)-p(x)}{(x-x_0)^n}\right] = 0-0 = 0.
 \]
-T‰m‰ on mahdollista vain kun $q(x)=0$, koska $q$ on polynomi astetta $\le n$. \loppu
+T√§m√§ on mahdollista vain kun $q(x)=0$, koska $q$ on polynomi astetta $\le n$. \loppu
 
-Seuraavissa esimerkeiss‰ k‰ytet‰‰n lyhennysmerkint‰‰ $[x^m]$ funktiosta muotoa $x^m g(x)$, 
-miss‰ $g$ on rajoitettu pisteen $x=0$ ymp‰ristˆss‰.
+Seuraavissa esimerkeiss√§ k√§ytet√§√§n lyhennysmerkint√§√§ $[x^m]$ funktiosta muotoa $x^m g(x)$, 
+miss√§ $g$ on rajoitettu pisteen $x=0$ ymp√§rist√∂ss√§.
 \begin{Exa} \label{nopea Taylor 1}
 $f(x)=(x+1)/\cos x,\quad$ $T_5(x,0)=\ ?$
 \end{Exa}
@@ -252,14 +252,14 @@ $f(x)=1/(1+x^4e^{x^2}),\quad$ $f^{(8)}(0)=\ ?$
 \subsection*{Taylorin sarjat}
 \index{Taylorin sarja|vahv}
 
-Kun j‰‰nnˆstermi Taylorin lauseessa \ref{Taylor} arvioidaan funktioille $\cos x$ ja $\sin x$, 
-niin n‰hd‰‰n, ett‰ (ks.\ Esimerkki \ref{Taylor ja exp,cos,sin} edell‰)
+Kun j√§√§nn√∂stermi Taylorin lauseessa \ref{Taylor} arvioidaan funktioille $\cos x$ ja $\sin x$, 
+niin n√§hd√§√§n, ett√§ (ks.\ Esimerkki \ref{Taylor ja exp,cos,sin} edell√§)
 \begin{alignat*}{2}
 \abs{\cos x -T_{2n}(x,0)}   &\leq \frac{1}{(2n+2)!}\abs{x}^{2n+2},\quad &x\in\R, \\
 \abs{\sin x -T_{2n+1}(x,0)} &\leq \frac{1}{(2n+3)!}\abs{x}^{2n+3},\quad &x\in\R.
 \end{alignat*}
 Koska $\abs{x}^n/n!\kohti 0 \ \forall x\in\R$, kun $n\kohti\infty$, niin jokaisella $x\in\R$
-p‰tee
+p√§tee
 \[ 
 \cos x = \lim_{n\kohti\infty}T_{2n}(x,0), \qquad \sin x = \lim_{n\kohti\infty} T_{2n+1}(x,0),
 \] 
@@ -275,22 +275,22 @@ Jos $f$ on mielivaltaisen monta kertaa derivoituva $x_0$:ssa, niin sarja
 \[
 \sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k 
 \]
-on $f$:n \kor{Taylorin sarja} $x_0$:ssa.\footnote[2]{Tapauksessa $x_0=0$ k‰ytet‰‰n Taylorin
-sarjasta myˆs nimityst‰ \kor{Maclaurinin sarja}. \index{Maclaurinin sarja|av}}
+on $f$:n \kor{Taylorin sarja} $x_0$:ssa.\footnote[2]{Tapauksessa $x_0=0$ k√§ytet√§√§n Taylorin
+sarjasta my√∂s nimityst√§ \kor{Maclaurinin sarja}. \index{Maclaurinin sarja|av}}
 \end{Def}
 Taylorin sarjojen teoriassa aivan ilmeisesti keskeisin kysymys on: Milloin sarja suppenee
-kohti $f(x)$:‰‰, ts. milloin p‰tee
+kohti $f(x)$:√§√§, ts. milloin p√§tee
 \[
 f(x)=\lim_{n\kohti\infty} T_n(x,x_0)=\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k \ ?
 \]
 Funktioiden $\sin x$ ja $\cos x$ kohdalla vastaus on: Aina, eli jokaisella $x\in\R$ 
-(myˆs jokaisella $x_0 \in \R$). Myˆs eksponenttifunktion $e^x$ kohdalla vastaus on sama; t‰lle
-Taylorin lause vahvistaa ennest‰‰n tunnetun tuloksen (vrt. Luku \ref{exp(x) ja ln(x)})
+(my√∂s jokaisella $x_0 \in \R$). My√∂s eksponenttifunktion $e^x$ kohdalla vastaus on sama; t√§lle
+Taylorin lause vahvistaa ennest√§√§n tunnetun tuloksen (vrt. Luku \ref{exp(x) ja ln(x)})
 \[
 \boxed{\quad e^x=\sum_{k=0}^\infty \frac{x^k}{k!}, \quad x\in\R. \quad}
 \]
-Tarkasti ottaen ym. kysymys Taylorin sarjan suppnemisesta sis‰lt‰‰ kaksi erillist‰
-kysymyst‰, kuten n‰hd‰‰n seuraavasta esimerkist‰.
+Tarkasti ottaen ym. kysymys Taylorin sarjan suppnemisesta sis√§lt√§√§ kaksi erillist√§
+kysymyst√§, kuten n√§hd√§√§n seuraavasta esimerkist√§.
 \begin{Exa} \label{outo Taylorin sarja} Funktio
 \[
 f(x)=\begin{cases}
@@ -298,75 +298,75 @@ e^{-1/x^2}, \quad   &\text{kun}\ x \neq 0, \\
 0\ ,                &\text{kun}\ x = 0
 \end{cases}
 \]
-on mielivaltaisen monta kertaa derivoituva pisteess‰ $x=0$ (myˆs muualla) ja
+on mielivaltaisen monta kertaa derivoituva pisteess√§ $x=0$ (my√∂s muualla) ja
 \[
 f^{(k)}(0)=0,\quad k=0,1,2,\ldots\,,
 \]
-joten $T_n(x,0)=0 \ \forall n$. T‰ss‰ tapauksessa siis Taylorin sarja suppenee $\forall x\in\R$,
+joten $T_n(x,0)=0 \ \forall n$. T√§ss√§ tapauksessa siis Taylorin sarja suppenee $\forall x\in\R$,
 mutta $\lim_n T_n(x,0) = 0 \neq f(x)$, kun $x \neq 0 $. \loppu
 \end{Exa}
-Esimerkin mukaan kahdella eri funktiolla voi olla sama Taylorin sarja (esimerkiss‰ funktioilla 
-$f$ ja $g=0$), joten Taylorin sarjan kertoimista (tai sarjan summasta) ei voi p‰‰tell‰ 
-funktiota, josta sarja on johdettu. Useille 'normaaleille' funktioille $f$ kuitenkin p‰tee,
-ett‰ $f$:n Taylorin sarjan summa $=f(x)$ aina kun sarja suppenee. T‰llaisia normaalitapauksia
+Esimerkin mukaan kahdella eri funktiolla voi olla sama Taylorin sarja (esimerkiss√§ funktioilla 
+$f$ ja $g=0$), joten Taylorin sarjan kertoimista (tai sarjan summasta) ei voi p√§√§tell√§ 
+funktiota, josta sarja on johdettu. Useille 'normaaleille' funktioille $f$ kuitenkin p√§tee,
+ett√§ $f$:n Taylorin sarjan summa $=f(x)$ aina kun sarja suppenee. T√§llaisia normaalitapauksia
 ovat esim.\ rationaalifunktiot.
 \begin{Exa}
 Funktion $f(x)=1/(1+4x^2)$ Taylorin polynomit origossa ovat
 \[
 T_{2n}(x,0)=T_{2n+1}(x,0)=\sum_{k=0}^n (-4)^kx^{2k},\quad n=0,1,\ldots
 \]
-Taylorin sarja eli potenssisarja $\{T_n(x,0), \ n=0,1,2,\ldots\}$ suppenee t‰ss‰ tapauksessa
-t‰sm‰lleen kun $\abs{x}<1/2$ (vrt.\ Luku \ref{potenssisarja}), ja t‰llˆin summa $=f(x)$\,:
+Taylorin sarja eli potenssisarja $\{T_n(x,0), \ n=0,1,2,\ldots\}$ suppenee t√§ss√§ tapauksessa
+t√§sm√§lleen kun $\abs{x}<1/2$ (vrt.\ Luku \ref{potenssisarja}), ja t√§ll√∂in summa $=f(x)$\,:
 \[
 \sum_{k=0}^\infty (-4)^kx^{2k} = \frac{1}{1+4x^2} 
                                = f(x), \quad x \in (-\tfrac{1}{2},\,\tfrac{1}{2}\,). \loppu
 \]
 \end{Exa}
 
-Taylorin sarjojen suppenemista tutkittaessa voidaan aina tehd‰ muuttujan vaihdos 
-$x-x_0\hookrightarrow x$, jolloin riitt‰‰ tarkastella yleist‰ potenssisarjaa muotoa
+Taylorin sarjojen suppenemista tutkittaessa voidaan aina tehd√§ muuttujan vaihdos 
+$x-x_0\hookrightarrow x$, jolloin riitt√§√§ tarkastella yleist√§ potenssisarjaa muotoa
 \[ 
 f(x) = \sum_{k=0}^n a_k x^k. 
 \]
-T‰llaisen sarjan suppenemiskysymys on ratkaistu Luvussa \ref{potenssisarja}: Lauseen 
-\ref{suppenemiss‰de} mukaan sarja suppenee joko (a) vain kun $x=0$ tai (b) v‰lill‰ 
-$(-\rho,\rho)$ (mahdollisesti myˆs kun $x = \pm \rho$), miss‰ $\rho$ on sarjan suppenemiss‰de
-($\rho \in \R_+$ tai $\rho = \infty$). Luvussa \ref{derivaatta} osoitettiin, ett‰ 
-potenssisarjan summana m‰‰ritelty funktio on mielivaltaisen monta kertaa derivoituva v‰lill‰ 
-$(-\rho,\rho)$ ja ett‰ derivaatat voidaan laskea derivoimalla sarja termeitt‰in
-(Lause \ref{potenssisarja on derivoituva}). N‰in ollen jos potenssisarjan
-$\sum_{k=0}^\infty a_k x^k$ suppenemiss‰de on $\rho>0$ ja $x_0 \in \R$, niin funktio
+T√§llaisen sarjan suppenemiskysymys on ratkaistu Luvussa \ref{potenssisarja}: Lauseen 
+\ref{suppenemiss√§de} mukaan sarja suppenee joko (a) vain kun $x=0$ tai (b) v√§lill√§ 
+$(-\rho,\rho)$ (mahdollisesti my√∂s kun $x = \pm \rho$), miss√§ $\rho$ on sarjan suppenemiss√§de
+($\rho \in \R_+$ tai $\rho = \infty$). Luvussa \ref{derivaatta} osoitettiin, ett√§ 
+potenssisarjan summana m√§√§ritelty funktio on mielivaltaisen monta kertaa derivoituva v√§lill√§ 
+$(-\rho,\rho)$ ja ett√§ derivaatat voidaan laskea derivoimalla sarja termeitt√§in
+(Lause \ref{potenssisarja on derivoituva}). N√§in ollen jos potenssisarjan
+$\sum_{k=0}^\infty a_k x^k$ suppenemiss√§de on $\rho>0$ ja $x_0 \in \R$, niin funktio
 \[ 
 f(x) = \sum_{k=0}^\infty a_k\,(x-x_0)^k 
 \]
-on m‰‰ritelty ja mielivaltaisen monta kertaa derivoituva v‰lill‰ $(x_0-\rho,x_0+\rho)$ 
-(koko $\R$:ss‰, jos $\rho=\infty$) ja $f$:n derivaatat voidaan laskea derivoimalla sarja 
-termeitt‰in. Kun derivoimispisteeksi valitaan erityisesti $x_0$, saadaan tulos
+on m√§√§ritelty ja mielivaltaisen monta kertaa derivoituva v√§lill√§ $(x_0-\rho,x_0+\rho)$ 
+(koko $\R$:ss√§, jos $\rho=\infty$) ja $f$:n derivaatat voidaan laskea derivoimalla sarja 
+termeitt√§in. Kun derivoimispisteeksi valitaan erityisesti $x_0$, saadaan tulos
 \[
 f^{(k)}(x_0) = k!\,a_k \qekv a_k = \frac{f^{(k)}(x_0)}{k!}, \quad k = 0,1,2, \ldots 
 \]
-Siis $f(x)$ on esitett‰viss‰ muodossa
+Siis $f(x)$ on esitett√§viss√§ muodossa
 \[
 f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}\,(x-x_0)^k.
 \]
 On tultu seuraavaan huomionarvoiseen tulokseen:
-\begin{Lause} Jos sarja $\,\sum_{k=0}^\infty a_k\,(x-x_0)^k\,$ suppenee v‰lill‰ 
-$(x_0-\rho,x_0+\rho)$, $\rho>0$, niin ko.\ sarja = sarjan summana m‰‰ritellyn funktion
-Taylorin sarja pisteess‰ $x_0$.
+\begin{Lause} Jos sarja $\,\sum_{k=0}^\infty a_k\,(x-x_0)^k\,$ suppenee v√§lill√§ 
+$(x_0-\rho,x_0+\rho)$, $\rho>0$, niin ko.\ sarja = sarjan summana m√§√§ritellyn funktion
+Taylorin sarja pisteess√§ $x_0$.
 \end{Lause}
 \begin{Exa} \label{sinx/x}
-Funktion $\,\sin x\,$ Taylorin sarjasta n‰hd‰‰n, ett‰
+Funktion $\,\sin x\,$ Taylorin sarjasta n√§hd√§√§n, ett√§
 \[
 \sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k+1)!} = f(x) = \begin{cases}
                                                         \ \sin x/x\ , \ \ &x\neq 0, \\
                                                         \ 1\ ,            &x=0.
                                                         \end{cases}
 \]
-Koska sarja suppenee $\forall x\in\R$, niin kyseess‰ on sarjan summana m‰‰ritellyn funktion 
+Koska sarja suppenee $\forall x\in\R$, niin kyseess√§ on sarjan summana m√§√§ritellyn funktion 
 Taylorin sarja origossa. Funktio $f$ on siis mielivaltaisen monta kertaa derivoituva
-jokaisessa pisteess‰ $x\in\R$, origo mukaan lukien (!). \loppu
+jokaisessa pisteess√§ $x\in\R$, origo mukaan lukien (!). \loppu
 \end{Exa}
-\begin{Exa} Ratkaise Taylorin sarjoilla alkuarvoteht‰v‰
+\begin{Exa} Ratkaise Taylorin sarjoilla alkuarvoteht√§v√§
 \[ \begin{cases} 
     \,y' = e^{-x^2}, \quad x \in \R, \\
     \,y(0) = 0.
@@ -382,30 +382,30 @@ Kun valitaan
 y(x)\ =\ \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)\,k!}\,x^{2k+1}\ 
       =\ x - \frac{x^3}{18} + \frac{x^5}{600} - \ldots, 
 \]
-niin n‰hd‰‰n termeitt‰in derivoimalla, ett‰ $y'(x)=e^{-x^2},\ x\in\R$. Koska on myˆs $y(0)=0$,
-niin ratkaisu on t‰ss‰. \loppu
+niin n√§hd√§√§n termeitt√§in derivoimalla, ett√§ $y'(x)=e^{-x^2},\ x\in\R$. Koska on my√∂s $y(0)=0$,
+niin ratkaisu on t√§ss√§. \loppu
 
 \subsection*{Taylorin lauseen todistus}
 \index{Taylorin lause|vahv}
 
 Taylorin lauseelle on monia erilaisia todistustapoja. Seuraavassa
-'lyhyen kaavan' mukaisessa todistuksessa p‰‰ttelyn kulmakivi on Rollen lause
+'lyhyen kaavan' mukaisessa todistuksessa p√§√§ttelyn kulmakivi on Rollen lause
 (Lause \ref{Rollen lause}).
 
-Olkoon $x_0<x$ (tapaus $x_0>x$ k‰sitell‰‰n vastaavasti) ja tarkastellaan v‰lill‰ $[x_0,x]$
-funktiota $g(t)$, joka m‰‰ritell‰‰n
+Olkoon $x_0<x$ (tapaus $x_0>x$ k√§sitell√§√§n vastaavasti) ja tarkastellaan v√§lill√§ $[x_0,x]$
+funktiota $g(t)$, joka m√§√§ritell√§√§n
 \[
 g(t) = f(t) - T_n(t,x_0) - H(t-x_0)^{n+1}, \quad H = \frac{f(x)-T_n(x,x_0)}{(x-x_0)^{n+1}}\,. 
 \]
-T‰lle p‰tee $g^{(k)}(x_0)=0,\ k=0 \ldots n$ ja $g(x)=0$. Koska siis $g(x_0)=g(x)=0$, niin
+T√§lle p√§tee $g^{(k)}(x_0)=0,\ k=0 \ldots n$ ja $g(x)=0$. Koska siis $g(x_0)=g(x)=0$, niin
 Rollen lauseen mukaan on $g'(\xi_1)=0$ jollakin $\xi_1 \in (x_0,x)\subset(a,b)$. Jos $n \ge 1$,
-on myˆs $g'(x_0)=0$, jolloin saman lauseen mukaan on $g''(\xi_2)=0$ jollakin
-$\xi_2 \in (x_0,\xi_1)$. Jos edelleen $n \ge 2$, on myˆs $g''(x_0)=0$, joten saman lauseen
-mukaan on $g'''(\xi_2)=0$ jollakin $\xi_2\in(x_0,\xi_1)$. Jatkamalla samalla tavoin p‰‰tell‰‰n,
-ett‰ yleisesti on $g^{(n)}(x_0)=g^{(n)}(\xi_n)=0$ jollakin $\xi_n \in (x_0,\xi_{n-1})$, jolloin
+on my√∂s $g'(x_0)=0$, jolloin saman lauseen mukaan on $g''(\xi_2)=0$ jollakin
+$\xi_2 \in (x_0,\xi_1)$. Jos edelleen $n \ge 2$, on my√∂s $g''(x_0)=0$, joten saman lauseen
+mukaan on $g'''(\xi_2)=0$ jollakin $\xi_2\in(x_0,\xi_1)$. Jatkamalla samalla tavoin p√§√§tell√§√§n,
+ett√§ yleisesti on $g^{(n)}(x_0)=g^{(n)}(\xi_n)=0$ jollakin $\xi_n \in (x_0,\xi_{n-1})$, jolloin
 Rollen lauseen mukaan on $g^{(n+1)}(\xi_{n+1})=0$ jollakin 
 $\xi_{n+1} \in (x_0,\xi_n) \subset (x_0,x) \subset (a,b)$. Mutta 
-$g^{(n+1)}(t) = f^{(n+1)}(t)-H(n+1)!$ --- Siis $f^{(n+1)}(\xi_{n+1})-H(n+1)!=0\ \impl$ v‰ite.
+$g^{(n+1)}(t) = f^{(n+1)}(t)-H(n+1)!$ --- Siis $f^{(n+1)}(\xi_{n+1})-H(n+1)!=0\ \impl$ v√§ite.
 \loppu
 
 \Harj
@@ -413,16 +413,16 @@ $g^{(n+1)}(t) = f^{(n+1)}(t)-H(n+1)!$ --- Siis $f^{(n+1)}(\xi_{n+1})-H(n+1)!=0\ 
 
 \item
 Laske funktion $\,f(x)=x^4+3x^3+x^2+2x+8,$ kaikki Taylorin polynomit $T_n(x,2),\ n=0,1,2,\ldots$
-ja saata ne polynomin perusmuotoon ($x$:n potenssien mukaan). Piirr‰ ko.\ polynomien kuvaajat
+ja saata ne polynomin perusmuotoon ($x$:n potenssien mukaan). Piirr√§ ko.\ polynomien kuvaajat
 ja vertaa funktioon $f$.
 
 \item
-Laske funktion $f(x)=(x-1)/(x-2)$ Taylorin polynomi $T_3(x,0)$ ja piirr‰ funktion, Taylorin
-polynomin ja j‰‰nnˆstermin kuvaajat.
+Laske funktion $f(x)=(x-1)/(x-2)$ Taylorin polynomi $T_3(x,0)$ ja piirr√§ funktion, Taylorin
+polynomin ja j√§√§nn√∂stermin kuvaajat.
  
 \item
-M‰‰rit‰ seuraaville funktioille Taylorin polynomi $T_n(x,0)$ annettua astetta $n$ ja arvioi 
-j‰‰nnˆstermin Lagrangen muodosta mahdollisimman tarkasti luku 
+M√§√§rit√§ seuraaville funktioille Taylorin polynomi $T_n(x,0)$ annettua astetta $n$ ja arvioi 
+j√§√§nn√∂stermin Lagrangen muodosta mahdollisimman tarkasti luku 
 $\displaystyle{r_n=\max_{x\in[-1,1]}\abs{R_n(x)}}$\,: \newline
 a) \ $f(x)=\cosh x,\,\ n=4\qquad\qquad\quad\,$ b) \ $f(x)=e^{-0.2x},\,\ n=3$ \newline
 c) \ $f(x)=\sqrt{5+x},\,\ n=3\qquad\qquad\ \ $ d) \ $f(x)=\sqrt[5]{5-x},\,\ n=3$ \newline
@@ -431,9 +431,9 @@ g) \ $f(x)=\cot(x+\pi/3),\,\ n=4\qquad$ \      h) \ $f(x)=\sin x-1/\cos x,\,\ n=
 
 \item
 a) Funktioiden $\cosh x$ ja $\sinh x$ Taylorin polynomit $T_n(x,0)$ voidaan laskea joko suoraan
-m‰‰ritelm‰st‰ tai funktioiden $e^x$ ja $e^{-x}$ Taylorin polynomien avulla. Varmista, ett‰
+m√§√§ritelm√§st√§ tai funktioiden $e^x$ ja $e^{-x}$ Taylorin polynomien avulla. Varmista, ett√§
 kummallakin tavalla tulos on sama. \vspace{1mm}\newline
-b) N‰yt‰, ett‰ parillisen (vastaavasti parittoman) funktion Taylorin polynomissa $T_n(x,0)$ on
+b) N√§yt√§, ett√§ parillisen (vastaavasti parittoman) funktion Taylorin polynomissa $T_n(x,0)$ on
 vain parillisia (parittomia) potensseja.
 
 \item
@@ -442,18 +442,18 @@ Todista Taylorin lauseen avulla:
 1-\frac{1}{2}x^2\,\le\,\cos x\,\le\,1-\frac{1}{2}x^2+\frac{1}{24}x^4\,, \quad
                                  \text{kun}\ x\in\left[-\frac{\pi}{2}\,,\,\frac{\pi}{2}\right].
 \]
-Ovatko n‰m‰ ep‰yht‰lˆt tosia myˆs v‰lin $[-\pi/2,\,\pi/2]$ ulkopuolella?
+Ovatko n√§m√§ ep√§yht√§l√∂t tosia my√∂s v√§lin $[-\pi/2,\,\pi/2]$ ulkopuolella?
 
 \item
-Harjoitusteht‰v‰ss‰ \ref{‰‰riarvot}:\ref{H-V-5: jatkaminen polynomeilla}b oletetaan, ett‰
-funktio $f$ on $m$ kertaa jatkuvasti derivoituva v‰lill‰ $[a,b]$. N‰yt‰, ett‰ teht‰v‰n
-ratkaisu on $p_1(x)=T_m^+(a,x)$, $p_2(x)=T_m^-(b,x)$, miss‰ $T_m^+(a,x)$ ja
+Harjoitusteht√§v√§ss√§ \ref{√§√§riarvot}:\ref{H-V-5: jatkaminen polynomeilla}b oletetaan, ett√§
+funktio $f$ on $m$ kertaa jatkuvasti derivoituva v√§lill√§ $[a,b]$. N√§yt√§, ett√§ teht√§v√§n
+ratkaisu on $p_1(x)=T_m^+(a,x)$, $p_2(x)=T_m^-(b,x)$, miss√§ $T_m^+(a,x)$ ja
 $T_m^-(b,x)$ ovat toispuolisten derivaattojen $\dif_+^kf(a)$ ja $\dif_-^kf(b)$ avulla
-m‰‰ritellyt $f$:n Taylorin polynomit.
+m√§√§ritellyt $f$:n Taylorin polynomit.
 
 \item
-Laske seuraavien funktioiden Taylorin polynomi $T_n(x,0)$ annettua astetta k‰ytt‰en 
-mahdollisimman nopeita oikoteit‰:
+Laske seuraavien funktioiden Taylorin polynomi $T_n(x,0)$ annettua astetta k√§ytt√§en 
+mahdollisimman nopeita oikoteit√§:
 \begin{align*}
 &\text{a)}\ \ f(x)=2/(4+x^3), \quad n=12 \qquad
  \text{b)}\ \ f(x)=\cos x^4, \quad n=16 \\
@@ -462,7 +462,7 @@ mahdollisimman nopeita oikoteit‰:
 \end{align*}
 
 \item
-Laske seuraavat derivaatat k‰ytt‰en hyv‰ksi Taylorin polynomeja:
+Laske seuraavat derivaatat k√§ytt√§en hyv√§ksi Taylorin polynomeja:
 \newline
 a) \ $f(x)=\sin x^8,\,\ f^{(40)}(0)\qquad\qquad\quad$ 
 b) \ $f(x)=e^{-x^4},\,\ f^{(20)}(0)$ \newline
@@ -472,13 +472,13 @@ e) \ $f(x)=e^{x^3}/(1+e^{x^3}),\,\ f^{(9)}(0)\qquad\ $
 f) \ $f(x)=\cos(x^2\sin^2 x),\,\ f^{(12)}(0)$ 
 
 \item
-Seuraavilla k‰yrill‰ on k‰‰ntymispiste (vrt.\ edellisen luvun Esimerkki \ref{evoluutta})
-annetussa pisteess‰ $P$. Mihin suuntaan k‰yr‰ l‰htee pisteest‰ $P$? \vspace{1mm}\newline
+Seuraavilla k√§yrill√§ on k√§√§ntymispiste (vrt.\ edellisen luvun Esimerkki \ref{evoluutta})
+annetussa pisteess√§ $P$. Mihin suuntaan k√§yr√§ l√§htee pisteest√§ $P$? \vspace{1mm}\newline
 a)\ $x(t)=4t+1/t,\ y(t)=t^2+16/t,\ \ P=(17/2,12)$ \newline
 b)\ $\vec r(t) = t^4\vec i + (2-2\cos t - t^2)\vec j + (t^2-t\sinh t)\vec k,\ \ P=(0,0,0)$
 
 \item
-Mik‰ on sarjan
+Mik√§ on sarjan
 \[
 \text{a)}\,\ 1+4+\frac{16}{2!}+\frac{64}{3!}+\frac{256}{4!}+ \ldots \quad\
 \text{b)}\,\ 1+\frac{4}{3!}+\frac{16}{5!}+\frac{64}{7!}+ \ldots  
@@ -486,8 +486,8 @@ Mik‰ on sarjan
 summa?
 
 \item
-Esit‰ seuraavien funktioiden funktioiden Taylorin sarjat
-pisteess‰ $x_0=0\,$: \vspace{1mm}\newline
+Esit√§ seuraavien funktioiden funktioiden Taylorin sarjat
+pisteess√§ $x_0=0\,$: \vspace{1mm}\newline
 a) \ $e^{3x+1}\quad$ 
 b) \ $\cos(2x^3)\quad$ 
 c) \ $\sin(x-\frac{\pi}{4})\quad$ 
@@ -499,8 +499,8 @@ h) \ $\ln(2+x^2)\quad$
 i) \ $x^2\ln(1+x)$
 
 \item
-M‰‰rit‰ seuraavien funktioiden Taylorin sarja annetussa pisteess‰ sek‰ sarjan
-suppenemisv‰li: \vspace{1mm}\newline
+M√§√§rit√§ seuraavien funktioiden Taylorin sarja annetussa pisteess√§ sek√§ sarjan
+suppenemisv√§li: \vspace{1mm}\newline
 a) \ $e^{-2x},\,\ x_0=-1 \qquad$
 b) \ $\sin x,\,\ x_0=\tfrac{\pi}{2} \qquad\,\ $
 c) \ $\ln x,\,\ x_0=1$ \newline
@@ -515,13 +515,13 @@ f(x)= \begin{cases}
       \dfrac{2\cos x-2}{x^2}\,, &\text{kun}\ x \neq 0, \\[2mm] -1, &\text{kun}\ x=0.
       \end{cases}
 \]
-Laske $f'(0)$ ja $f''(0)$ \ a) suoraan derivaatan m‰‰ritelm‰st‰, \ b) $f$:n Taylorin sarjan
+Laske $f'(0)$ ja $f''(0)$ \ a) suoraan derivaatan m√§√§ritelm√§st√§, \ b) $f$:n Taylorin sarjan
 avulla.
 
 \item
-Seuraavat funktiot $f$ m‰‰ritell‰‰n kukin jatkuvaksi pisteess‰ $x=0$, jolloin funktiot ovat
-t‰ss‰ pisteess‰ (ja siis koko $\R$:ss‰) mielivaltaisen monta kertaa derivoituvia. M‰‰rit‰
-funktioiden Taylorin sarjat pistees‰ $x_0=0$ ja n‰iden avulla $f(0)$, $f'(0)$ ja $f''(0)$.
+Seuraavat funktiot $f$ m√§√§ritell√§√§n kukin jatkuvaksi pisteess√§ $x=0$, jolloin funktiot ovat
+t√§ss√§ pisteess√§ (ja siis koko $\R$:ss√§) mielivaltaisen monta kertaa derivoituvia. M√§√§rit√§
+funktioiden Taylorin sarjat pistees√§ $x_0=0$ ja n√§iden avulla $f(0)$, $f'(0)$ ja $f''(0)$.
 \begin{align*}
 &\text{a)}\ \ \frac{e^x-1}{x} \qquad 
  \text{b)}\ \ \frac{e^{-2x}-1+2x-2x^2}{x^3} \qquad
@@ -531,21 +531,21 @@ funktioiden Taylorin sarjat pistees‰ $x_0=0$ ja n‰iden avulla $f(0)$, $f'(0)$ ja
 \end{align*}
 
 \item
-Tiedet‰‰n, ett‰
+Tiedet√§√§n, ett√§
 \[
 \sum_{k=0}^\infty a_k(x+\pi)^k\,=\,x\cos x, \quad x\in\R.
 \]
 Laske sarjan kertoimet $a_0$, $a_1$ ja $a_2$.
 
 \item (*) \label{H-dif-4: Newtonin konvergenssi}
-Todista Taylorin lauseen avulla Newtonin menetelm‰n konvergenssia koskeva Lause
+Todista Taylorin lauseen avulla Newtonin menetelm√§n konvergenssia koskeva Lause
 \ref{Newtonin konvergenssi} .
 
-\item (*) Potenssisarja $\sum_{k=0}^\infty a_k (x+1)^k$ suppenee pisteen $x=-1$ l‰hell‰,
+\item (*) Potenssisarja $\sum_{k=0}^\infty a_k (x+1)^k$ suppenee pisteen $x=-1$ l√§hell√§,
 jolloin sarjan summa on
 \[
 \sum_{k=0}^\infty a_k (x+1)^k\,=\,\frac{x+2}{x^2+2x+3}\,.
 \]
-Mitk‰ ovat kertoimien $a_0$, $a_1$ ja $a_2$ arvot ja mik‰ on sarjan suppenemisv‰li?
+Mitk√§ ovat kertoimien $a_0$, $a_1$ ja $a_2$ arvot ja mik√§ on sarjan suppenemisv√§li?
 
 \end{enumerate}

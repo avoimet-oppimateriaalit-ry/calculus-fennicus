@@ -10,8 +10,8 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(5484,2586)(2341,-2815)
-\put(6076,-2761){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}ei yhdesti yhtenäinen}}}
-\put(2836,-2761){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}yhdesti yhtenäinen}}}
+\put(6076,-2761){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}ei yhdesti yhtenÃ¤inen}}}
+\put(2836,-2761){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}yhdesti yhtenÃ¤inen}}}
 \put(3376,-1366){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$A$}}}
 \put(6031,-961){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$A$}}}
 \end{picture}

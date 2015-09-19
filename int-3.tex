@@ -1,35 +1,35 @@
-\section{Osamurtokehitelm‰t. Sarjamenetelm‰} \label{osamurtokehitelm‰t}
+\section{Osamurtokehitelm√§t. Sarjamenetelm√§} \label{osamurtokehitelm√§t}
 \alku
-\index{osamurtokehitelm‰|vahv}
+\index{osamurtokehitelm√§|vahv}
 
-Yleisen rationaalifunktion integraalifunktio on lˆydett‰viss‰ k‰ytt‰en nk. 
-\kor{osamurtokehitelm‰‰} yhdess‰ edellisen luvun tekniikoiden kanssa. Tarkastellaan yleist‰
+Yleisen rationaalifunktion integraalifunktio on l√∂ydett√§viss√§ k√§ytt√§en nk. 
+\kor{osamurtokehitelm√§√§} yhdess√§ edellisen luvun tekniikoiden kanssa. Tarkastellaan yleist√§
 (reaalikertoimista) rationaalifunktiota
 \[
 f(x)=\frac{p(x)}{q(x)}=\frac{a_mx^m+\cdots +a_0}{b_nx^n+\cdots b_0},
 \]
-miss‰ $m\geq 0$, $n\geq 1$ ja $a_m,b_n\neq 0$. Jos $m\geq n$, suoritetaan ensiksi jakolasku:
+miss√§ $m\geq 0$, $n\geq 1$ ja $a_m,b_n\neq 0$. Jos $m\geq n$, suoritetaan ensiksi jakolasku:
 \[
 \frac{p(x)}{q(x)}=p_0(x)+\frac{p_1(x)}{q(x)}\,,
 \]
-miss‰ $p_0$ on polynomi astetta $m-n$,
+miss√§ $p_0$ on polynomi astetta $m-n$,
 \[
 p_0(x)=c_{m-n}x^{m-n}+\cdots +c_0,
 \]
-ja jakoj‰‰nnˆksen $p_1(x)$ aste on $n-1$:
+ja jakoj√§√§nn√∂ksen $p_1(x)$ aste on $n-1$:
 \[
 p_1(x)=d_{n-1}x^{n-1}+\cdots +d_0.
 \]
 Jakolasku on suoritettavissa esimerkiksi yksinkertaisesti identifioimalla polynomien kertoimet
-yht‰lˆss‰
+yht√§l√∂ss√§
 \[
 p(x)=p_0(x)q(x)+p_1(x),
 \]
 jolloin tuntemattomille kertoimille $c_{m-n},\ldots,c_0$ ja $d_{n-1},\ldots,d_0$ saadaan
-(ratkeava) lineaarinen yht‰lˆryhm‰. Seuraavassa esimerkiss‰ k‰ytet‰‰n vaihtoehtoista
+(ratkeava) lineaarinen yht√§l√∂ryhm√§. Seuraavassa esimerkiss√§ k√§ytet√§√§n vaihtoehtoista
 \index{jakoalgoritmi (polynomien)} \index{polynomien jakoalgoritmi}%
-(myˆs yleisp‰tev‰‰) menetelm‰‰, \kor{polynomien jakoalgoritmia}, joka on etenkin k‰sinlaskussa
-k‰tev‰. Algoritmin yleisperiaate on esimerkist‰ arvattavissa.
+(my√∂s yleisp√§tev√§√§) menetelm√§√§, \kor{polynomien jakoalgoritmia}, joka on etenkin k√§sinlaskussa
+k√§tev√§. Algoritmin yleisperiaate on esimerkist√§ arvattavissa.
 \begin{Exa} Laske $p_0$ ja $p_1$, kun $\,\D{f(x)=\frac{x^3+2x^2}{x^2-2x+3}}\,$.
 \end{Exa}
 \ratk
@@ -46,35 +46,35 @@ Kun jakolasku on suoritettu, saadaan integraalin lineaarisuuden nojalla
 \[
 \int\frac{p(x)}{q(x)}\, dx=\int p_0(x)\, dx+\int\frac{p_1(x)}{q(x)}\, dx.
 \]
-T‰ss‰ polynomiosan integraalifunktio on heti m‰‰r‰tt‰viss‰ (polynomina), joten jatkossa
-voidaan rajoittua tutkimaan j‰lkimm‰ist‰ termi‰, jossa osoittajan aste on pienempi kuin
-nimitt‰j‰n aste. Oletetaan, ett‰ tunnetaan kaikki†$q$:n (reaaliset ja kompleksiset)
-nollakohdat --- n‰m‰h‰n ovat ainakin numeerisesti laskettavissa. Jos nollakohdat
-$x_1\ldots x_n$ ovat kaikki reaalisia ja yksinkertaisia, niin saadaan osamurtokehitelm‰
+T√§ss√§ polynomiosan integraalifunktio on heti m√§√§r√§tt√§viss√§ (polynomina), joten jatkossa
+voidaan rajoittua tutkimaan j√§lkimm√§ist√§ termi√§, jossa osoittajan aste on pienempi kuin
+nimitt√§j√§n aste. Oletetaan, ett√§ tunnetaan kaikki¬†$q$:n (reaaliset ja kompleksiset)
+nollakohdat --- n√§m√§h√§n ovat ainakin numeerisesti laskettavissa. Jos nollakohdat
+$x_1\ldots x_n$ ovat kaikki reaalisia ja yksinkertaisia, niin saadaan osamurtokehitelm√§
 (ks.\ Lause \ref{osamurtolause} alla)
 \[
 \frac{p_1(x)}{q(x)}=\frac{A_1}{x-x_1}+\cdots +\frac{A_n}{x-x_n}\,.
 \]
-Kertoimet $A_i$ voidaan m‰‰r‰t‰ lineaarisesta yht‰lˆryhm‰st‰, joka syntyy, kun t‰m‰ yht‰lˆ
-kerrotaan puolittian $q(x)$:ll‰ ja identifioidaan polynomien kertoimet vasemmalla ja oikealla.
+Kertoimet $A_i$ voidaan m√§√§r√§t√§ lineaarisesta yht√§l√∂ryhm√§st√§, joka syntyy, kun t√§m√§ yht√§l√∂
+kerrotaan puolittian $q(x)$:ll√§ ja identifioidaan polynomien kertoimet vasemmalla ja oikealla.
 Helpommin kertoimet kuitenkin lasketaan kirjoittamalla $q(x)=(x-x_i)q_i(x)$, jolloin
-kertomalla yht‰lˆ puolittain $(x-x_i)$:ll‰ seuraa
+kertomalla yht√§l√∂ puolittain $(x-x_i)$:ll√§ seuraa
 \[
 A_i=\lim_{x\kohti x_i} \left[(x-x_i)\frac{p_1(x)}{q(x)}\right] =\, \frac{p(x_i)}{q_i(x_i)}\,.
 \]
-Jos $q(x)$:ll‰ on tekij‰n‰ $(x-a)^k$ vastaten $k$-kertaista reaalijuurta $x_i=a$, niin
-osamurtokehitelm‰ss‰ t‰t‰ tekij‰‰ vastaavat yleisemmin termit
+Jos $q(x)$:ll√§ on tekij√§n√§ $(x-a)^k$ vastaten $k$-kertaista reaalijuurta $x_i=a$, niin
+osamurtokehitelm√§ss√§ t√§t√§ tekij√§√§ vastaavat yleisemmin termit
 \[
 (x-a)^k\ \ext\ \frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\cdots +\frac{A_k}{(x-a)^k}\,.
 \]
-N‰ist‰ kukin termi on suoraan integroitavissa. Jos lopuksi $q(x)$:ll‰ on tekij‰n‰
+N√§ist√§ kukin termi on suoraan integroitavissa. Jos lopuksi $q(x)$:ll√§ on tekij√§n√§
 $(x^2+ax+b)^k$ vastaten $k$-kertaista kompleksista konjugaattijuuriparia 
-(jolloin on $b-a^2/4>0$), niin t‰m‰ tekij‰ tuottaa osamurtokehitelm‰‰n termit
+(jolloin on $b-a^2/4>0$), niin t√§m√§ tekij√§ tuottaa osamurtokehitelm√§√§n termit
 \[
 (x^2+ax+b)^k\ \ext\ \frac{B_1 x+C_1}{x^2+ax+b}
              +\frac{B_2 x+C_2}{(x^2+ax+b)^2}+\cdots + \frac{B_k x+C_k}{(x^2+ax+b)^k}\,.
 \]
-N‰iden integroimiseksi huomataan ensinn‰kin, ett‰
+N√§iden integroimiseksi huomataan ensinn√§kin, ett√§
 \[
 \frac{Ax+B}{(x^2+ax+b)^l}\,
           =\,\frac{A}{2}\,\frac{2x+a}{(x^2+ax+b)^l}+\frac{B-\frac{1}{2}\,aA}{(x^2+ax+b)^l}\,,
@@ -88,7 +88,7 @@ joten
                             \end{cases} \\
         &+\,(B-\frac{1}{2}\,aA)\int\frac{1}{(x^2+ax+b)^l}\ dx.
 \end{align*}
-T‰ss‰ j‰ljelle j‰‰nyt integraali on k‰sitelt‰viss‰ edellisen luvun menetelmin, sill‰ kun
+T√§ss√§ j√§ljelle j√§√§nyt integraali on k√§sitelt√§viss√§ edellisen luvun menetelmin, sill√§ kun
 kirjoitetaan
 \[
 x^2+ax+b = \left(x+\frac{a}{2}\right)^2 + D^2, \quad D=\sqrt{b-\frac{a^2}{4}}\,,
@@ -103,29 +103,29 @@ saadaan
         = D^{-2l+1}\int \frac{1}{(t^2+1)^l}\,dt, \quad t=D^{-1}\left(x+\frac{a}{2}\right).
 \]
 
-Kun em.\ tulokset yhdistet‰‰n ja huomioidaan edellisen luvun tulokset, voidaan p‰‰tell‰, ett‰
+Kun em.\ tulokset yhdistet√§√§n ja huomioidaan edellisen luvun tulokset, voidaan p√§√§tell√§, ett√§
 jokaisen rationaalifunktion integraalifunktio on muotoa
 \[
 \int \frac{p(x)}{q(x)}\, dx=R(x)+\sum A_iF_i(x)+C,
 \]
-miss‰ $R$ on rationaalifunktio (tai polynomi), kertoimet $A_i$ ovat reaalilukuja ja kukin
-$F_i$ (enint‰‰n $n$ kpl, $n=q$:n aste) on jokin seuraavista funktiomuodoista:
+miss√§ $R$ on rationaalifunktio (tai polynomi), kertoimet $A_i$ ovat reaalilukuja ja kukin
+$F_i$ (enint√§√§n $n$ kpl, $n=q$:n aste) on jokin seuraavista funktiomuodoista:
 \[
 \ln\abs{x+a_i},\quad\ln(x^2+a_ix+b_i),\quad\Arctan(a_ix+b_i).
 \]
 
-On siis p‰‰telty, ett‰ rationaalifunktio voidaan aina integroida suljetussa muodossa, kun
-nimitt‰j‰polynomin kaikki nollakohdat (kertalukuineen) tunnetaan. P‰‰telm‰ perustui
-oletukseen, ett‰ osamurtokehitelm‰ edell‰ kuvatulla tavalla on aina mahdollinen, ts. ett‰
-p‰tee
+On siis p√§√§telty, ett√§ rationaalifunktio voidaan aina integroida suljetussa muodossa, kun
+nimitt√§j√§polynomin kaikki nollakohdat (kertalukuineen) tunnetaan. P√§√§telm√§ perustui
+oletukseen, ett√§ osamurtokehitelm√§ edell√§ kuvatulla tavalla on aina mahdollinen, ts. ett√§
+p√§tee
 \begin{Lause} (\vahv{Rationaalifunktion osamurtohajotelma}) \label{osamurtolause}
 \index{rationaalifunktio!a@osamurtohajotelma|emph}
 Olkoon $f(x)=p(x)/q(x)$ reaalinen rationaalifunktio, jossa osoittajapolynomin $p$ aste
-$<q$:n aste. Olkoon nimitt‰j‰polynomin $q$ reaalijuuret $x_i,\ i=1 \ldots n_1$ ja
+$<q$:n aste. Olkoon nimitt√§j√§polynomin $q$ reaalijuuret $x_i,\ i=1 \ldots n_1$ ja
 kompleksijuuret $c_j=a_j \pm ib_j,\ j=1 \ldots n_2\,$ ($a_j,b_j\in\R,\ b_j \neq 0$). Edelleen
-olkoon n‰iden juurien kertaluvut $m_i$, $i=1 \ldots n_1$ ja $\nu_j$, $j=1 \ldots n_2$.
-T‰llˆin on olemassa kertoimet $A_{ik},B_{jk},C_{jk}\in\R$ siten, ett‰ jokaisella $x\in\DF_f$
-p‰tee
+olkoon n√§iden juurien kertaluvut $m_i$, $i=1 \ldots n_1$ ja $\nu_j$, $j=1 \ldots n_2$.
+T√§ll√∂in on olemassa kertoimet $A_{ik},B_{jk},C_{jk}\in\R$ siten, ett√§ jokaisella $x\in\DF_f$
+p√§tee
 \[
 f(x) = \sum_{i=1}^{n_1}\sum_{k=1}^{m_i} \frac{A_{ik}}{(x-x_i)^k}
      + \sum_{j=1}^{n_2}\sum_{k=1}^{\nu_j} \frac{B_{jk}x+C_{jk}}{[(x-a_j)^2+b_j^2]^k}\,.
@@ -135,13 +135,13 @@ f(x) = \sum_{i=1}^{n_1}\sum_{k=1}^{m_i} \frac{A_{ik}}{(x-x_i)^k}
 \begin{Exa}
 $\D\int\frac{x^2}{x^3+x^2+x-3}\, dx\ =\ ?$
 \end{Exa}
-\ratk Nimitt‰j‰polynomin er‰s juuri on $x_1=1:\ q(x)=x^3+x^2+x-3=(x-1)(x^2+2x+3)$. Muut kaksi
-juurta ovat kompleksisia (konjugaattipari), joten osamurtokehitelm‰ on muotoa
+\ratk Nimitt√§j√§polynomin er√§s juuri on $x_1=1:\ q(x)=x^3+x^2+x-3=(x-1)(x^2+2x+3)$. Muut kaksi
+juurta ovat kompleksisia (konjugaattipari), joten osamurtokehitelm√§ on muotoa
 \[
 \frac{x^2}{x^3+x^2+x-3}=\frac{A}{x-1}+\frac{Bx+C}{x^2+2x+3}\,.
 \]
-Kertomalla t‰ss‰ molemmat puolet $q(x)$:ll‰ saadaan ensin m‰‰r‰tyksi kertoimet $A,B,C$, mink‰
-j‰lkeen integrointi onnistuu:
+Kertomalla t√§ss√§ molemmat puolet $q(x)$:ll√§ saadaan ensin m√§√§r√§tyksi kertoimet $A,B,C$, mink√§
+j√§lkeen integrointi onnistuu:
 \begin{align*}
 &\qquad\qquad x^2= A(x^2+2x+3)+(Bx+C)(x-1)\quad\forall x\in\R \\
 &\qekv       (A+B-1)x^2+(2A-B+C)x+(3A-C)=0\quad\forall x\in\R \\
@@ -156,7 +156,7 @@ j‰lkeen integrointi onnistuu:
 &\qquad\qquad=\,\underline{\underline{\frac{1}{6}\ln\abs{x-1}+\frac{5}{12}\ln(x^2+2x+3)
                             -\frac{\sqrt{2}}{6}\Arctan\left(\frac{x+1}{\sqrt{2}}\right)+C}}.
 \end{align*}
-Kerroin $A$ olisi voitu m‰‰r‰t‰ myˆs suoremmin laskemalla
+Kerroin $A$ olisi voitu m√§√§r√§t√§ my√∂s suoremmin laskemalla
 \[
 A\ =\ \lim_{x\kohti 1}\left[(x-1)\frac{x^2}{x^3+x^2+x-3}\right]\ 
    =\ \lim_{x\kohti 1}\frac{x^2}{x^2+2x+3}\ =\ \frac{1}{6}\,. \loppu
@@ -173,7 +173,7 @@ palautettavissa rationaalisiksi sopivilla sijoituksilla:
 \item[] f)\ $\int R(x,\sqrt[m]{ax+b}\,)\,dx \quad (a\neq 0,\ m \in \N).$
 \end{itemize}
 
-\underline{Tapaus a)}\ \ T‰ss‰ toimii trigonometrinen 'gurusijoitus' 
+\underline{Tapaus a)}\ \ T√§ss√§ toimii trigonometrinen 'gurusijoitus' 
 (vrt.\ Luku \ref{trigonometriset funktiot})
 \begin{align*}
 \tan\frac{1}{2}x=t \qimpl &\begin{cases}
@@ -186,7 +186,7 @@ palautettavissa rationaalisiksi sopivilla sijoituksilla:
                                                                    \frac{2}{1+t^2}\,dt \\
                           &=\, \int Q(t)\, dt,
 \end{align*}
-miss‰ $Q$ on rationaalifunktio.
+miss√§ $Q$ on rationaalifunktio.
 
 \underline{Tapaus b)}\ \ Sijoituksella (vrt.\ edellisen luvun Esimerkki 
 \ref{rat-palautuva integraali 1})
@@ -197,18 +197,18 @@ saadaan integraali muotoon
 \[
 \int R(e^x)\,dx \,=\, \int R(t)\frac{1}{t}\,dt \,=\, \int Q(t)\,dt,
 \]
-miss‰ $Q$ on j‰lleen rationaalifunktio. \\[5mm]
-\underline{Tapaus c)}\ \ T‰m‰ palautuu tapaukseen a) sijoituksilla
+miss√§ $Q$ on j√§lleen rationaalifunktio. \\[5mm]
+\underline{Tapaus c)}\ \ T√§m√§ palautuu tapaukseen a) sijoituksilla
 \[
 x=\cos t \quad \text{tai} \quad x=\sin t.
 \]
 
-\underline{Tapaukset d) ja e)}\ \ N‰m‰ palautuvat tapaukseen b) sijoituksilla
+\underline{Tapaukset d) ja e)}\ \ N√§m√§ palautuvat tapaukseen b) sijoituksilla
 \[
 \text{d)}\ x=\sinh t, \qquad \text{e)}\ x=\cosh t.
 \]
 
-\underline{Tapaus f)}\ \ T‰ss‰ toimii sijoitus 
+\underline{Tapaus f)}\ \ T√§ss√§ toimii sijoitus 
 (vrt.\ edellisen luvun Esimerkki \ref{rat-palautuva integraali 2}) 
 \begin{align*}
 &\sqrt[m]{ax+b}=t \qimpl x = \frac{1}{a}(t^m-b),\quad dx = \frac{m}{a}\,t^{m-1}\, dt \\[3mm]
@@ -228,7 +228,7 @@ $\D\int\frac{1}{\sin x}\, dx\ =\ ?$
 \end{align*}
 \begin{Exa} $\D\int\frac{\sqrt{x^2+1}}{x}\,dx\ =\ ?$
 \end{Exa}
-\ratk Tehd‰‰n ensin sijoitus
+\ratk Tehd√§√§n ensin sijoitus
 \[
 x=\sinh t,\quad dx=\cosh t\, dt,\quad \sqrt{x^2+1}=\cosh t
 \]
@@ -237,7 +237,7 @@ x=\sinh t,\quad dx=\cosh t\, dt,\quad \sqrt{x^2+1}=\cosh t
      &= \int\frac{\cosh^2 t}{\sinh t}\,dt = \int\frac{\sinh^2 t + 1}{\sinh t}\,dt \\
      &= \int \sinh t\,dt + \int\frac{1}{\sinh t}\,dt = \cosh t + \int \frac{2}{e^t-e^{-t}}\,dt.
 \end{align*}
-Tehd‰‰n uusi sijoitus 
+Tehd√§√§n uusi sijoitus 
 \[
 e^{t}=u,\quad t=\ln u,\quad \, dt=\frac{1}{u}\,du
 \]
@@ -246,13 +246,13 @@ e^{t}=u,\quad t=\ln u,\quad \, dt=\frac{1}{u}\,du
                &= \int\frac{2}{u-u^{-1}}\cdot\frac{1}{u}\,du = \int\frac{2}{u^2-1}\,du \\
                &= \ln\left|\frac{u-1}{u+1}\right|+C = \ln\left|\frac{e^t-1}{e^t+1}\right|+C.
 \end{align*}
-Koska $\,x=\sinh t\ \ekv\ e^t = x+\sqrt{x^2+1}\,$, niin todetaan, ett‰
+Koska $\,x=\sinh t\ \ekv\ e^t = x+\sqrt{x^2+1}\,$, niin todetaan, ett√§
 \[
 \int\frac{\sqrt{x^2+1}}{x}\,dx 
           = \sqrt{x^2+1}+\ln\left|\frac{x-1+\sqrt{x^2+1}}{x+1+\sqrt{x^2+1}}\right|+C.
 \]
-Huomioimalla viel‰, ett‰
-(vrt.\ Harj.teht.\,\ref{jatkuvuuden k‰site}:\ref{H-V-1: pelkistyv‰ funktio})
+Huomioimalla viel√§, ett√§
+(vrt.\ Harj.teht.\,\ref{jatkuvuuden k√§site}:\ref{H-V-1: pelkistyv√§ funktio})
 \[
 \frac{x-1+\sqrt{x^2+1}}{x+1+\sqrt{x^2+1}} \,=\, \frac{x}{1+\sqrt{x^2+1}}\,, \quad x\in\R,
 \]
@@ -262,23 +262,23 @@ saadaan lopputulokselle hiukan sievempi muoto:
           = \underline{\underline{\sqrt{x^2+1}+\ln\frac{|x|}{1+\sqrt{x^2+1}}+C}}. \loppu
 \]
 
-\subsection*{Integroinnin sarjamenetelm‰}
-\index{sarjamenetelm‰ (integroinnin)|vahv}
+\subsection*{Integroinnin sarjamenetelm√§}
+\index{sarjamenetelm√§ (integroinnin)|vahv}
 
-Silloin kun funktio on esitett‰viss‰ suppenevan potenssisarjan (Taylorin sarjan, ks.\ Luku
-\ref{taylorin lause}) summana, voidaan myˆs integraalifunktio esitt‰‰ t‰ss‰ muodossa.
-Oletetaan, ett‰
+Silloin kun funktio on esitett√§viss√§ suppenevan potenssisarjan (Taylorin sarjan, ks.\ Luku
+\ref{taylorin lause}) summana, voidaan my√∂s integraalifunktio esitt√§√§ t√§ss√§ muodossa.
+Oletetaan, ett√§
 \[
 f(x)=\sum_{k=0}^\infty a_k(x-x_0)^k,\quad \abs{x-x_0}<\rho \quad (\rho>0).
 \]
-T‰llˆin myˆs sarja
+T√§ll√∂in my√∂s sarja
 \[
 F(x)=\sum_{k=0}^\infty \frac{a_k}{k+1}\,(x-x_0)^{k+1}
 \]
-suppenee, kun $\abs{x-x_0}<\rho$ (Lause \ref{potenssisarjan skaalaus}) ja sarja termeitt‰in 
-derivoimalla (mik‰ Lauseen \ref{potenssisarja on derivoituva} mukaan on sallittua) todetaan,
-ett‰
-$F$ on $f$:n integraalifunktio v‰lill‰ $(x_0-\rho,x_0+\rho)$.
+suppenee, kun $\abs{x-x_0}<\rho$ (Lause \ref{potenssisarjan skaalaus}) ja sarja termeitt√§in 
+derivoimalla (mik√§ Lauseen \ref{potenssisarja on derivoituva} mukaan on sallittua) todetaan,
+ett√§
+$F$ on $f$:n integraalifunktio v√§lill√§ $(x_0-\rho,x_0+\rho)$.
 \begin{Exa}
 $\D\int e^{x^2}\, dx\ =\ ?$
 \end{Exa}
@@ -292,13 +292,13 @@ joten
       &= \sum_{k=0}^\infty \frac{1}{(2k+1)k!}\,x^{2k+1}+C \\
       &= C+x+\frac{1}{3}\,x^3+\frac{1}{10}\,x^5+\frac{1}{42}\,x^7+..\,,\quad x\in\R. \loppu
 \end{align*}
-\begin{Exa} M‰‰rit‰ sarjoja hyv‰ksi k‰ytt‰en
+\begin{Exa} M√§√§rit√§ sarjoja hyv√§ksi k√§ytt√§en
 \[
 \text{a)}\ \int \frac{e^{-x}}{x}\,dx, \qquad
 \text{b)}\ \int \frac{\sin x}{x^4}\,dx.
 \]
 \end{Exa} 
-\ratk L‰htien Taylorin sarjoista
+\ratk L√§htien Taylorin sarjoista
 \[
 e^{-x} = \sum_{k=0}^\infty \frac{(-1)^k}{k!}\,x^k, \quad\
 \sin x = \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}\,x^{2k+1}
@@ -320,7 +320,7 @@ saadaan
   &= -\frac{1}{2x^2}-\frac{1}{6}\ln\abs{x}+C
                     +\sum_{k=1}^\infty \frac{(-1)^{k+1}}{2k(2k+3)!}\,x^{2k}.
 \end{align*}
-Molemmat tulokset ovat p‰tevi‰ v‰leill‰ $(-\infty,0)$ ja $(0,\infty)$. \loppu
+Molemmat tulokset ovat p√§tevi√§ v√§leill√§ $(-\infty,0)$ ja $(0,\infty)$. \loppu
 
 \Harj
 \begin{enumerate}
@@ -380,7 +380,7 @@ integraali
 \[
 \int R\left(x,\sqrt[m]{\frac{x+a}{x+b}}\right)dx, \quad m\in\N,\ m \ge 2,\ \ a,b\in\R
 \]
-muuntuu rationaaliseksi? Laske t‰ll‰ tavoin $\D\int\frac{1}{x}\sqrt{\frac{x+1}{x-1}}\,dx$.
+muuntuu rationaaliseksi? Laske t√§ll√§ tavoin $\D\int\frac{1}{x}\sqrt{\frac{x+1}{x-1}}\,dx$.
 
 
 \item
@@ -397,8 +397,8 @@ Laske seuraavien funktioiden integraalifunktiot potenssisarjojen avulla:
 \end{align*}
 
 \item (*)
-Esit‰ alkeisfunktioina (jos mahdollista) tai potenssisarjoina funktiot $F$ ja $G$ siten,
-ett‰ p‰tee
+Esit√§ alkeisfunktioina (jos mahdollista) tai potenssisarjoina funktiot $F$ ja $G$ siten,
+ett√§ p√§tee
 \begin{align*}
 &\text{a)}\ \ \int e^x\ln x\,dx = F(x)\ln x + G(x)+C, \quad x\in(0,\infty), \\
 &\text{b)}\ \ \int \frac{1}{\sqrt{x}}\,\ln x\,\sin x\,dx
@@ -409,43 +409,43 @@ ett‰ p‰tee
 
 \item (*) \label{H-int-3: osamurtohajotelma} \index{rationaalifunktio!a@osamurtohajotelma}
 Lauseen \ref{osamurtolause} todistamiseksi tarkastellaan kompleksimuuttujan
-rationaalifunktiota $f(z)=p(z)/q(z)$, miss‰ $q$ on reaalikertoiminen polynomi astetta
+rationaalifunktiota $f(z)=p(z)/q(z)$, miss√§ $q$ on reaalikertoiminen polynomi astetta
 $n\in\N$ ja $p$ on reaalikertoiminen polynomi astetta $\le n-1$. \vspace{1mm}\newline
 a) Olkoon $c\in\C$ polynomin $q$ yksinkertainen nollakohta ja olkoon 
-$q(z)=(z-c)\,q_1(z)$ ja $g(z)=p(z)/q_1(z)$. N‰yt‰, ett‰
+$q(z)=(z-c)\,q_1(z)$ ja $g(z)=p(z)/q_1(z)$. N√§yt√§, ett√§
 \[
 f(z) \,=\, \frac{g(c)}{z-c}+\frac{r(z)}{q_1(z)}\,, \quad z\in\DF_f,
 \]
-miss‰ $r$ on polynomi astetta $\le n-2$. P‰‰ttele, ett‰ jos $c=a\in\R$, niin $r$ on
+miss√§ $r$ on polynomi astetta $\le n-2$. P√§√§ttele, ett√§ jos $c=a\in\R$, niin $r$ on
 reaalikertoiminen. \newline
 b) Olkoon $c=a+ib$ ja $\overline{c}=a-ib$ polynomin $q$ yksinkertaiset kompleksijuuret
-($a,b\in\R,\ b \neq 0$) ja kirjoitetaan $q(z)=(z-c)(z-\overline{c})\,q_1(z)$. N‰yt‰, ett‰ on
-olemassa $A\in\C$ ja $B,C\in\R$ siten, ett‰ p‰tee
+($a,b\in\R,\ b \neq 0$) ja kirjoitetaan $q(z)=(z-c)(z-\overline{c})\,q_1(z)$. N√§yt√§, ett√§ on
+olemassa $A\in\C$ ja $B,C\in\R$ siten, ett√§ p√§tee
 \[
 f(z) \ =\ \frac{A}{z-c}+\frac{\overline{A}}{z-\overline{c}} +\frac{r(z)}{q_1(z)}
      \ =\ \frac{Bz+C}{(z-a)^2+b^2}+\frac{r(z)}{p_1(z)}, \quad z\in\DF_f,
 \]
-miss‰ $r$ on reaalikertoiminen polynomi astetta $\le n-3$. \newline
+miss√§ $r$ on reaalikertoiminen polynomi astetta $\le n-3$. \newline
 c) Olkoon $c\in\C$ $q$:n $m$-kertainen juuri ja olkoon $q(z)=(z-c)^mq_1(z)$ ja
-$g(z)=p(z)/q_1(z)$. N‰yt‰, ett‰ p‰tee
+$g(z)=p(z)/q_1(z)$. N√§yt√§, ett√§ p√§tee
 \[
 f(z) \,=\, \sum_{k=1}^m \frac{A_k}{(z-c)^k}+\frac{r(z)}{p_1(z)}, \quad z\in\DF_f,
 \]
-miss‰ $A_k=g^{(m-k)}(c)/(m-k)!$ ja $r$ on polynomi astetta $\le n-m-1$. P‰‰ttele, ett‰ jos
+miss√§ $A_k=g^{(m-k)}(c)/(m-k)!$ ja $r$ on polynomi astetta $\le n-m-1$. P√§√§ttele, ett√§ jos
 $c=a\in\R$, niin kertoimet $A_k$ ovat reaaliset ja $r$ on reaalikertoiminen. \newline
 d) Olkoon $c=a+ib$ ja $\overline{c}=a-ib$ polynomin $q$ $m$-kertaiset kompleksijuuret
-($a,b\in\R,\ b \neq 0$) ja kirjoitetaan $q(z)=(z-c)^m(z-\overline{c})^mq_1(z)$. N‰yt‰, ett‰
-on olemassa kertoimet $A_k\in\C$ ja $B_k,C_k\in\R$ siten, ett‰ p‰tee
+($a,b\in\R,\ b \neq 0$) ja kirjoitetaan $q(z)=(z-c)^m(z-\overline{c})^mq_1(z)$. N√§yt√§, ett√§
+on olemassa kertoimet $A_k\in\C$ ja $B_k,C_k\in\R$ siten, ett√§ p√§tee
 \begin{align*}
 f(z) \,&=\, \sum_{k=1}^m \frac{A_k}{(z-c)^k}
            +\sum_{k=1}^m \frac{\overline{A}_k}{(z-\overline{c})^k}+\frac{r(z)}{q_1(z)} \\
        &=\, \sum_{k=1}^m \frac{B_kz+C_k}{[(z-a)^2+b^2]^k}+\frac{r(z)}{q_1(z)}, \quad z\in\DF_f,
 \end{align*}
-miss‰ $r$ on reaalikertoiminen polynomi astetta $\le n-2m-1$. \newline
+miss√§ $r$ on reaalikertoiminen polynomi astetta $\le n-2m-1$. \newline
 e) Perustuen kohtien a) ja b) tuloksiin ja Algebran peruslauseeseen, johda Lauseen
-\ref{osamurtolause} v‰itt‰m‰ siin‰ tapauksessa, ett‰ $q$:n kaikki juuret ovat
+\ref{osamurtolause} v√§itt√§m√§ siin√§ tapauksessa, ett√§ $q$:n kaikki juuret ovat
 yksinkertaisia. \newline
-f) Todista Lause \ref{osamurtolause} yleisess‰ tapauksessa perustuen kohtien c) ja d)
+f) Todista Lause \ref{osamurtolause} yleisess√§ tapauksessa perustuen kohtien c) ja d)
 tuloksiin ja Algebran peruslauseeseen.
 
 

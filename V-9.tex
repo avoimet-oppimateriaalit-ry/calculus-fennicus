@@ -1,53 +1,53 @@
 \section{*Jatkuvuuden logiikka} \label{jatkuvuuden logiikka}
 \alku
 
-T‰ss‰ luvussa todistetaan Luvussa \ref{jatkuvuuden k‰site} esitetyt kaksi jatkuvien
-funktioiden p‰‰lausetta, Weierstrassin lause (Lause \ref{Weierstrassin peruslause}) ja
-k‰‰nteisfunktion jatkuvuutta koskeva Lause \ref{k‰‰nteisfunktion jatkuvuus}. Todistukset
+T√§ss√§ luvussa todistetaan Luvussa \ref{jatkuvuuden k√§site} esitetyt kaksi jatkuvien
+funktioiden p√§√§lausetta, Weierstrassin lause (Lause \ref{Weierstrassin peruslause}) ja
+k√§√§nteisfunktion jatkuvuutta koskeva Lause \ref{k√§√§nteisfunktion jatkuvuus}. Todistukset
 perustuvat Luvussa \ref{Cauchyn jonot} esitettyyn osajonojen teoriaan, ja ne ovat melko
 vaativia. Erityisesti rajoitettuja reaalilukujonoja koskeva Bolzanon--Weierstrassin lause
-(Lause \ref{B-W}) on todistuksissa ahkerassa k‰ytˆss‰. Weierstrassin lauseen todistuksen
-jatkoksi n‰ytet‰‰n, ett‰ sama todistustekniikka, yhdistettyn‰ er‰isiin polynomeja koskeviin
-teknisempiin v‰itt‰miin, johtaa jopa Algebran peruslauseen todistukseen. Luvun lopussa
-m‰‰ritell‰‰n viel‰ k‰site \kor{tasainen jatkuvuus}, jota voi pit‰‰ Lipschitz-jatkuvuuden
-minimalistisena vastineena. Tasaisen jatkuvuuteen liittyen todistetaan er‰s reaalianalyysin
-h‰mm‰stytt‰vimmist‰ lauseista.
+(Lause \ref{B-W}) on todistuksissa ahkerassa k√§yt√∂ss√§. Weierstrassin lauseen todistuksen
+jatkoksi n√§ytet√§√§n, ett√§ sama todistustekniikka, yhdistettyn√§ er√§isiin polynomeja koskeviin
+teknisempiin v√§itt√§miin, johtaa jopa Algebran peruslauseen todistukseen. Luvun lopussa
+m√§√§ritell√§√§n viel√§ k√§site \kor{tasainen jatkuvuus}, jota voi pit√§√§ Lipschitz-jatkuvuuden
+minimalistisena vastineena. Tasaisen jatkuvuuteen liittyen todistetaan er√§s reaalianalyysin
+h√§mm√§stytt√§vimmist√§ lauseista.
 
 Koska tarkoituksena on todistaa Lauseet \ref{Weierstrassin peruslause} ja 
-\ref{k‰‰nteisfunktion jatkuvuus} hieman yleisemm‰ss‰ muodossa, m‰‰ritell‰‰n aluksi
-suljettua v‰li‰ yleisempi \kor{kompaktin} joukon k‰site. Asiayhteyden vuoksi esitell‰‰n
-samalla muitakin $\R$:n nk.\ \kor{topologisia} perusk‰sitteit‰.
+\ref{k√§√§nteisfunktion jatkuvuus} hieman yleisemm√§ss√§ muodossa, m√§√§ritell√§√§n aluksi
+suljettua v√§li√§ yleisempi \kor{kompaktin} joukon k√§site. Asiayhteyden vuoksi esitell√§√§n
+samalla muitakin $\R$:n nk.\ \kor{topologisia} perusk√§sitteit√§.
  
 \subsection*{Avoimet, suljetut ja kompaktit joukot}
 
-Avointa v‰li‰
+Avointa v√§li√§
 \[ 
 U_{\delta}(x) = (x-\delta,x+\delta) \quad (\delta>0)
 \] 
-\index{ympzy@($\delta$-)ymp‰ristˆ}%
-sanotaan pisteen $x \in \R$ (avoimeksi) \kor{ymp‰ristˆksi} (tai tarkemmin 
-$\delta$-ymp‰ristˆksi, engl.\ $\delta$-neighbourhood; vrt.\ vastaava kompleksitason k‰site
-M‰‰ritelm‰ss‰ \ref{analyyttinen funktio}).
+\index{ympzy@($\delta$-)ymp√§rist√∂}%
+sanotaan pisteen $x \in \R$ (avoimeksi) \kor{ymp√§rist√∂ksi} (tai tarkemmin 
+$\delta$-ymp√§rist√∂ksi, engl.\ $\delta$-neighbourhood; vrt.\ vastaava kompleksitason k√§site
+M√§√§ritelm√§ss√§ \ref{analyyttinen funktio}).
 \begin{Def} \label{avoimet ym. joukot}
 \index{avoin joukko|emph} \index{suljettu joukko|emph} \index{rajoitettu!b@joukko|emph}
 \index{kompakti joukko|emph}
 Joukko $A\subset\R$ on
 \begin{itemize}
-\item[-] \kor{avoin}, jos $\forall x \in A$ p‰tee
+\item[-] \kor{avoin}, jos $\forall x \in A$ p√§tee
          $\,(x-\delta,x+\delta)\subset A\,\ \text{jollakin}\ \delta>0$,
-\item[-] \kor{suljettu}, jos kaikille reaalilukujonoille $\seq{x_n}$ p‰tee: \newline
+\item[-] \kor{suljettu}, jos kaikille reaalilukujonoille $\seq{x_n}$ p√§tee: \newline
          $\,x_n \in A\ \forall n\ \ja\ x_n\kohti x\in\R\ \impl\ x\in A$,
-\item[-] \kor{rajoitettu}, jos $\exists C\in\R_+$ siten, ett‰ 
+\item[-] \kor{rajoitettu}, jos $\exists C\in\R_+$ siten, ett√§ 
          $\,\abs{x} \le C\ \forall x \in A$,
 \item[-] \kor{kompakti}, jos $A$ on suljettu ja rajoitettu.
 \end{itemize}
 \end{Def}
-\begin{Exa} Avoin v‰li $(a,b)$ on avoin joukko, sill‰ jos $x\in(a,b)$, nii
-$U_\delta(x)\subset(a,b)$, kun $0<\delta\le\min\{x-a,b-x\}$. Suljettu v‰li on vastaavasti
-suljettu joukko, sill‰ jos $x_n\in[a,b]\ \forall n$ ja $x_n \kohti x\in\R$, niin
-$a \le x \le b$ (Lause \ref{jonotuloksia} [V1]) eli $x\in[a,b]$. Koska suljettu v‰li on myˆs
+\begin{Exa} Avoin v√§li $(a,b)$ on avoin joukko, sill√§ jos $x\in(a,b)$, nii
+$U_\delta(x)\subset(a,b)$, kun $0<\delta\le\min\{x-a,b-x\}$. Suljettu v√§li on vastaavasti
+suljettu joukko, sill√§ jos $x_n\in[a,b]\ \forall n$ ja $x_n \kohti x\in\R$, niin
+$a \le x \le b$ (Lause \ref{jonotuloksia} [V1]) eli $x\in[a,b]$. Koska suljettu v√§li on my√∂s
 rajoitettu ($\abs{x} \le C = \max\{\abs{a},\abs{b}\}\ \forall x\in[a,b]$), niin suljettu
-v‰li on kompakti joukko. \loppu
+v√§li on kompakti joukko. \loppu
 \end{Exa}
 \begin{Exa}
 \[
@@ -55,40 +55,40 @@ v‰li on kompakti joukko. \loppu
 \left[0,1\right] \cup [2,3]   &\text{on kompakti (ei avoin)}, \\[1mm]
 (0,1) \cup (2,3)              &\text{on avoin ja rajoitettu (ei suljettu)}, \\[1mm]
 \R                            &\text{on avoin ja suljettu (ei rajoitettu)}, \\[1mm]
-[0,1)                         &\text{on rajoitettu (ei avoin eik‰ suljettu)}, \\[1mm]
-\left[0,\infty\right)         &\text{on suljettu (ei avoin eik‰ rajoitettu)}, \\[1mm]
-(0,\infty)                    &\text{on avoin (ei suljettu eik‰ rajoitettu)}, \\[1mm]
-\Q                            &\text{ei avoin, ei suljettu eik‰ rajoitettu}, \\[1mm]
-\emptyset                     &\text{(tyhj‰) on avoin ja kompakti}. \qquad\quad\loppu
+[0,1)                         &\text{on rajoitettu (ei avoin eik√§ suljettu)}, \\[1mm]
+\left[0,\infty\right)         &\text{on suljettu (ei avoin eik√§ rajoitettu)}, \\[1mm]
+(0,\infty)                    &\text{on avoin (ei suljettu eik√§ rajoitettu)}, \\[1mm]
+\Q                            &\text{ei avoin, ei suljettu eik√§ rajoitettu}, \\[1mm]
+\emptyset                     &\text{(tyhj√§) on avoin ja kompakti}. \qquad\quad\loppu
 \end{array}
 \]
 \end{Exa}
 
 \begin{Def}
 \index{komplementti (joukon)|emph} \index{sulkeuma (joukon)|emph}
-\index{reuna (joukon, alueen)|emph} \index{siszy@sis‰piste|emph}
+\index{reuna (joukon, alueen)|emph} \index{siszy@sis√§piste|emph}
 Joukon $A\subset\R$
 \begin{itemize}
 \item[-] \kor{komplementti} on $\ \complement(A)=\{x\in\R \mid x\notin A\}$.
 \item[-] \kor{sulkeuma} (engl. closure) on 
 \[
-\overline{A}=\{x\in\R \mid \exists\ \text{jono}\ \{x_n\}\ \text{siten, ett‰}\ 
+\overline{A}=\{x\in\R \mid \exists\ \text{jono}\ \{x_n\}\ \text{siten, ett√§}\ 
                                      x_n\in A\ \forall n\,\ \ja\,\ x_n \kohti x\}.
 \]
 \item[-] \kor{reuna} (engl. boundary) on 
          $\ \partial A=\overline{A}\cap \overline{\complement(A)}$.
-\item[-] \kor{sis‰pisteiden joukko} on $\ A_0 = \complement(\,\overline{\complement(A)}\,)$.
+\item[-] \kor{sis√§pisteiden joukko} on $\ A_0 = \complement(\,\overline{\complement(A)}\,)$.
 \end{itemize}
 \end{Def}
-Joukon sulkeuma on nimens‰ mukaisesti suljettu joukko, ja toinen m‰‰ritelm‰ onkin:
-$\overline{A}$ on pienin suljettu joukko, joka sis‰lt‰‰ $A$:n. Sis‰pisteiden joukko $A_0$ on
-avoin (ks.\ Lause \ref{avoin vs suljettu} j‰ljemp‰n‰); t‰m‰n vaihtoehtoisia m‰‰ritelmi‰ ovat:
+Joukon sulkeuma on nimens√§ mukaisesti suljettu joukko, ja toinen m√§√§ritelm√§ onkin:
+$\overline{A}$ on pienin suljettu joukko, joka sis√§lt√§√§ $A$:n. Sis√§pisteiden joukko $A_0$ on
+avoin (ks.\ Lause \ref{avoin vs suljettu} j√§ljemp√§n√§); t√§m√§n vaihtoehtoisia m√§√§ritelmi√§ ovat:
 $A_0$ on suurin $A$:n avoin osajoukko, tai
 \[ 
 A_0 = \{x \in A \mid x \not\in \partial A\}. 
 \]
-P‰tee myˆs $\,\overline{A} = A_0 \cup \partial A,\ A_0 \cap \partial A = \emptyset$, samoin
-p‰tee
+P√§tee my√∂s $\,\overline{A} = A_0 \cup \partial A,\ A_0 \cap \partial A = \emptyset$, samoin
+p√§tee
 \[ 
 A\ \text{suljettu}\ \ekv\ A = \overline{A}\ \ekv\ \partial A \subset A.
 \]
@@ -97,7 +97,7 @@ Joukkojen
 \[
 A=(0,1],\quad B=(-1,0)\cup (0,1),\quad C=\Q
 \]
-sulkeumat, reunat ja sis‰pisteiden joukot ovat
+sulkeumat, reunat ja sis√§pisteiden joukot ovat
 \[
 \begin{array}{rclrclrcl}
 \overline{A} &=& [0,1],\   & \overline{B} &=& [-1,1],\      & \overline{C} &=& \R, \\
@@ -107,38 +107,38 @@ sulkeumat, reunat ja sis‰pisteiden joukot ovat
 \end{array}
 \]
 \end{Exa}
-Haluttaessa selvitt‰‰, onko annettu joukko avoin, suljettu tai kompakti, helpottuu teht‰v‰
-usein huomattavasti seuraavia loogisia v‰itt‰mi‰ hyˆdynt‰m‰ll‰. V‰itt‰mist‰ ensimm‰isen voi
-tulkita myˆs suljetun tai avoimen joukon m‰‰ritelm‰ksi, jos vain toinen k‰sitteist‰ on
-m‰‰ritelty erikseen. 
-\begin{Lause} \label{avoin vs suljettu} P‰tee
+Haluttaessa selvitt√§√§, onko annettu joukko avoin, suljettu tai kompakti, helpottuu teht√§v√§
+usein huomattavasti seuraavia loogisia v√§itt√§mi√§ hy√∂dynt√§m√§ll√§. V√§itt√§mist√§ ensimm√§isen voi
+tulkita my√∂s suljetun tai avoimen joukon m√§√§ritelm√§ksi, jos vain toinen k√§sitteist√§ on
+m√§√§ritelty erikseen. 
+\begin{Lause} \label{avoin vs suljettu} P√§tee
 \[ 
 A\,\text{ avoin }\ \ekv\ \complement(A)\,\text{ suljettu}, \qquad 
 A\,\text{ suljettu }\ \ekv\ \complement(A)\,\text{ avoin}. 
 \]
 \end{Lause}
-\begin{Lause} \label{unionit ja leikkaukset} P‰tee
+\begin{Lause} \label{unionit ja leikkaukset} P√§tee
 \begin{align*}
 &A,B\,\text{ avoimia/suljettuja/kompakteja } \\
 & \ \impl\ A\cup B\,\text{ ja } A\cap B\text{ avoimia/suljettuja/kompakteja}.
 \end{align*}
 \end{Lause}
-\tod V‰itt‰miin sis‰ltyy yhteens‰ kymmenen implikaatiov‰itt‰m‰‰, joiden todistukset ovat
-kaikki melko lyhyit‰. Todistetaan esimerkkin‰ ainoastaan v‰itt‰m‰
+\tod V√§itt√§miin sis√§ltyy yhteens√§ kymmenen implikaatiov√§itt√§m√§√§, joiden todistukset ovat
+kaikki melko lyhyit√§. Todistetaan esimerkkin√§ ainoastaan v√§itt√§m√§
 $\,A$ avoin $\impl\ \complement (A)$ suljettu\, eli: Jos $A$ on avoin, niin jokaiselle
-reaalilukujonolle $\seq{x_n}$ p‰tee
+reaalilukujonolle $\seq{x_n}$ p√§tee
 \[ 
 x_n \in \complement(A)\ \forall n\,\ \ja\,\ x_n \kohti x \qimpl x \in \complement (A). 
 \]
-Tehd‰‰n vastaoletus: $x\not\in\complement (A)\ \ekv\ x \in A$. T‰llˆin 
-$(x-\delta,x+\delta) \subset A$ jollakin $\delta>0$, koska $A$ oli avoin. T‰llˆin koska
+Tehd√§√§n vastaoletus: $x\not\in\complement (A)\ \ekv\ x \in A$. T√§ll√∂in 
+$(x-\delta,x+\delta) \subset A$ jollakin $\delta>0$, koska $A$ oli avoin. T√§ll√∂in koska
 $x_n\in\complement(A)\ \forall n$, on oltava
 \[ 
 \abs{x_n-x} \ge \delta\ \ \forall n \qimpl x_n \not\kohti x.
 \]
-T‰m‰ on looginen ristiriita, koska oletettiin, ett‰ $x_n \kohti x$. \loppu
+T√§m√§ on looginen ristiriita, koska oletettiin, ett√§ $x_n \kohti x$. \loppu
 \begin{Exa} Joukko $A=(-\infty,a)\cup(b,\infty)$ on Lauseen \ref{unionit ja leikkaukset}
-(tai suoraan M‰‰ritelm‰n \ref{avoimet ym. joukot}) mukaan avoin. Lauseen
+(tai suoraan M√§√§ritelm√§n \ref{avoimet ym. joukot}) mukaan avoin. Lauseen
 \ref{avoin vs suljettu} mukaisesti komplementti
 \[
 \complement (A) = \begin{cases} 
@@ -149,180 +149,180 @@ T‰m‰ on looginen ristiriita, koska oletettiin, ett‰ $x_n \kohti x$. \loppu
 \]
 on suljettu. \loppu
 \end{Exa}
-\begin{Exa} Yhden alkion sis‰lt‰v‰ joukko $A=\{a\}$ on M‰‰ritelm‰n \ref{avoimet ym. joukot}
+\begin{Exa} Yhden alkion sis√§lt√§v√§ joukko $A=\{a\}$ on M√§√§ritelm√§n \ref{avoimet ym. joukot}
 mukaan kompakti, joten Lauseen \ref{unionit ja leikkaukset} mukaan samoin on jokainen kahden,
-kolmen, jne.\ alkion joukko. Siis jokainen ‰‰rellinen joukko on kompakti. \loppu
+kolmen, jne.\ alkion joukko. Siis jokainen √§√§rellinen joukko on kompakti. \loppu
 \end{Exa}
-\begin{Exa} Rationaalifunktion $f(x)=p(x)/q(x)$ ($p$ ja $q$ polynomeja) m‰‰rittelyjoukko on
-$\DF_f = \complement (A)$, miss‰ $A = \{q\text{:n nollakohdat}\}$. ƒ‰rellisen‰ joukkona $A$
+\begin{Exa} Rationaalifunktion $f(x)=p(x)/q(x)$ ($p$ ja $q$ polynomeja) m√§√§rittelyjoukko on
+$\DF_f = \complement (A)$, miss√§ $A = \{q\text{:n nollakohdat}\}$. √Ñ√§rellisen√§ joukkona $A$
 on suljettu (jopa kompakti), joten Lauseen \ref{avoin vs suljettu} mukaan $\DF_f$ on avoin.
 \loppu \end{Exa} 
 
 \subsection*{Weierstrassin lause}
 \index{Weierstrassin lause|vahv}
 
-Funktion $f$ jatkuvuus suljetulla v‰lill‰ $[a,b]\subset\DF_f$ tarkoitti M‰‰ritelm‰n
-\ref{jatkuvuus v‰lill‰} mukaisesti jatkuvuutta 'sis‰lt‰ p‰in' ko.\ v‰lill‰. Asetetaan
-vastaavalla tavalla yleisempi m‰‰ritelm‰.
+Funktion $f$ jatkuvuus suljetulla v√§lill√§ $[a,b]\subset\DF_f$ tarkoitti M√§√§ritelm√§n
+\ref{jatkuvuus v√§lill√§} mukaisesti jatkuvuutta 'sis√§lt√§ p√§in' ko.\ v√§lill√§. Asetetaan
+vastaavalla tavalla yleisempi m√§√§ritelm√§.
 \begin{Def} \label{jatkuvuus kompaktissa joukossa}
 \index{jatkuvuus (yhden muuttujan)!g@kompaktissa joukossa|emph}
 Reaaliunktio $f$ on \kor{jatkuva kompaktissa joukossa} $K\subset\DF_f$, jos jokaiselle
-reaalilukujonolle $\seq{x_n}$ p‰tee
+reaalilukujonolle $\seq{x_n}$ p√§tee
 \[
 x_n \in K\ \forall n\,\ \ja\,\ x_n \kohti x\,\ 
                                \impl\,\ f(x_n) \kohti f(x).\footnote[2]{Huomautettakoon,
-ett‰ m‰‰ritelm‰n ehto toteutuu mille tahansa reaalifunktiolle $f$, jos $K\subset\DF_f$ on
-‰‰rellinen (ja siis kompakti) joukko. Vrt.\ alkuper‰inen jatkuvuuden m‰‰ritelm‰
-(M‰‰ritelm‰ \ref{funktion jatkuvuus}), jonka mukaan funktio on jatkuva m‰‰rittelyjoukkonsa
-eristetyiss‰ pisteiss‰.}
+ett√§ m√§√§ritelm√§n ehto toteutuu mille tahansa reaalifunktiolle $f$, jos $K\subset\DF_f$ on
+√§√§rellinen (ja siis kompakti) joukko. Vrt.\ alkuper√§inen jatkuvuuden m√§√§ritelm√§
+(M√§√§ritelm√§ \ref{funktion jatkuvuus}), jonka mukaan funktio on jatkuva m√§√§rittelyjoukkonsa
+eristetyiss√§ pisteiss√§.}
 \]
 \end{Def}
 \begin{*Lause} \label{kompaktissa joukossa jatkuva funktio on rajoitettu}
 Jos $f$ on jatkuva kompaktissa joukossa $K\subset\DF_f$, niin $f(K)$ on rajoitettu joukko.
 \end{*Lause}
-\tod K‰ytet‰‰n ep‰suoraa todistustapaa, eli tehd‰‰n vastaoletus: $f(K)$ ei ole rajoitettu.
-T‰llˆin on olemassa jono $\seq{x_n}$ siten, ett‰
+\tod K√§ytet√§√§n ep√§suoraa todistustapaa, eli tehd√§√§n vastaoletus: $f(K)$ ei ole rajoitettu.
+T√§ll√∂in on olemassa jono $\seq{x_n}$ siten, ett√§
 \[
 x_n \in K\ \forall n\,\ \ja\,\ \abs{f(x_n)}\kohti\infty.
 \]
-Koska $A$ on (kompaktina joukkona) rajoitettu, on jono $\seq{x_n}$ rajoitettu. T‰llˆin
+Koska $A$ on (kompaktina joukkona) rajoitettu, on jono $\seq{x_n}$ rajoitettu. T√§ll√∂in
 jonolla on Bolzanon--Weierstrassin lauseen (Lauseen \ref{B-W}) mukaan suppeneva osa\-jono. Kun
-indeksoidaan t‰m‰ osajono jonoksi $\seq{x_k}$, niin p‰tee siis $x_k \kohti x\in\R$. Koska $K$
-on (kompaktina joukkona) suljettu, on oltava $x \in K$. On siis lˆydetty jono $\seq{x_k}$,
-jolle p‰tee $x_k \in K\ \forall k$ ja $x_k \kohti x \in K$. T‰llˆin jatkuvuusoletuksen ja
-M‰‰ritelm‰n \ref{jatkuvuus kompaktissa joukossa} mukaan on oltava $f(x_k) \kohti f(x)$.
-Toisaalta koska alkuper‰iselle jonolle $\seq{f(x_n)}$ p‰tee $\abs{f(x_n)}\kohti\infty$, niin
-myˆs $\abs{f(x_k)}\kohti\infty$. Oletuksista ja vastaoletuksesta seurasi siis, ett‰ on
-olemassa jono $\seq{x_k}$, jolle p‰tee sek‰ $f(x_k) \kohti f(x)\in\R$ ett‰
-$\abs{f(x_k)}\kohti\infty$. T‰m‰ on looginen ristiriita, joten lause on todistettu. \loppu
+indeksoidaan t√§m√§ osajono jonoksi $\seq{x_k}$, niin p√§tee siis $x_k \kohti x\in\R$. Koska $K$
+on (kompaktina joukkona) suljettu, on oltava $x \in K$. On siis l√∂ydetty jono $\seq{x_k}$,
+jolle p√§tee $x_k \in K\ \forall k$ ja $x_k \kohti x \in K$. T√§ll√∂in jatkuvuusoletuksen ja
+M√§√§ritelm√§n \ref{jatkuvuus kompaktissa joukossa} mukaan on oltava $f(x_k) \kohti f(x)$.
+Toisaalta koska alkuper√§iselle jonolle $\seq{f(x_n)}$ p√§tee $\abs{f(x_n)}\kohti\infty$, niin
+my√∂s $\abs{f(x_k)}\kohti\infty$. Oletuksista ja vastaoletuksesta seurasi siis, ett√§ on
+olemassa jono $\seq{x_k}$, jolle p√§tee sek√§ $f(x_k) \kohti f(x)\in\R$ ett√§
+$\abs{f(x_k)}\kohti\infty$. T√§m√§ on looginen ristiriita, joten lause on todistettu. \loppu
  
-Seuraava tulos sis‰lt‰‰ erikoistapauksena Weierstrassin lauseen
+Seuraava tulos sis√§lt√§√§ erikoistapauksena Weierstrassin lauseen
 \ref{Weierstrassin peruslause}.
 \begin{*Lause} \label{weierstrass} Jos reaalifunktio $f$ on jatkuva kompaktissa joukossa
-$K\subset\DF_f$, niin $f$ saavuttaa $K$:ssa pienimm‰n ja suurimman arvonsa. 
+$K\subset\DF_f$, niin $f$ saavuttaa $K$:ssa pienimm√§n ja suurimman arvonsa. 
 \end{*Lause}
 \tod Koska $f(K)$ on Lauseen \ref{kompaktissa joukossa jatkuva funktio on rajoitettu} mukaan
-rajoitettu, niin Lauseen \ref{supremum-lause} mukaan t‰ll‰ joukolla on supremum:
-$\,\sup f(K) = y\in\R$. Supremumin m‰‰ritelm‰n (ks.\ Luku \ref{reaalilukujen ominaisuuksia})
-mukaisesti on olemassa jono $\seq{y_n}$, jolle p‰tee $\,y_n \in f(K)\ \forall n$ ja
+rajoitettu, niin Lauseen \ref{supremum-lause} mukaan t√§ll√§ joukolla on supremum:
+$\,\sup f(K) = y\in\R$. Supremumin m√§√§ritelm√§n (ks.\ Luku \ref{reaalilukujen ominaisuuksia})
+mukaisesti on olemassa jono $\seq{y_n}$, jolle p√§tee $\,y_n \in f(K)\ \forall n$ ja
 $y_n \kohti y$. Koska $y_n \in f(K)$, on $f(x_n) = y_n$ jollakin $x_n \in K$. Koska $K$ on
-(kompaktina joukkona) rajoitettu, on jono $\seq{x_n}$ on rajoitettu, joten sill‰ on Lauseen
-\ref{B-W} mukaan suppeneva osajono. Indeksoidaan t‰m‰ uudelleen jonoksi $\seq{x_k}$, jolloin
-p‰tee $x_k \kohti x\in\R$. Koska $K$ on (kompaktina joukkona) suljettu, niin on oltava
-$x \in K$. T‰llˆin oletuksen ja M‰‰ritelm‰n \ref{jatkuvuus kompaktissa joukossa} mukaan
-$f(x_k) \kohti f(x)$. Mutta jono $\seq{f(x_k)}$ on alkuper‰isen jonon $\seq{f(x_n)}$ osajono,
-joten p‰tee myˆs $f(x_k) \kohti y$ (Lause \ref{suppenevat osajonot}). Siis $f(x)=y$ 
-(koska lukujonon raja-arvo on yksik‰sitteinen). Koska $y$ on $f(K)$:n yl‰raja, on 
+(kompaktina joukkona) rajoitettu, on jono $\seq{x_n}$ on rajoitettu, joten sill√§ on Lauseen
+\ref{B-W} mukaan suppeneva osajono. Indeksoidaan t√§m√§ uudelleen jonoksi $\seq{x_k}$, jolloin
+p√§tee $x_k \kohti x\in\R$. Koska $K$ on (kompaktina joukkona) suljettu, niin on oltava
+$x \in K$. T√§ll√∂in oletuksen ja M√§√§ritelm√§n \ref{jatkuvuus kompaktissa joukossa} mukaan
+$f(x_k) \kohti f(x)$. Mutta jono $\seq{f(x_k)}$ on alkuper√§isen jonon $\seq{f(x_n)}$ osajono,
+joten p√§tee my√∂s $f(x_k) \kohti y$ (Lause \ref{suppenevat osajonot}). Siis $f(x)=y$ 
+(koska lukujonon raja-arvo on yksik√§sitteinen). Koska $y$ on $f(K)$:n yl√§raja, on 
 $f(t) \le y\,\ \forall t \in K$ --- siis $f$ saavuttaa joukossa $K$ suurimman arvonsa
-pisteess‰ $x$. Lause on n‰in todistettu maksimiarvon osalta. Minimiarvon osalta lause
-todistetaan joko vastaavalla p‰‰ttelyll‰ tai soveltamlla jo todistettua v‰itt‰m‰‰ funktioon
+pisteess√§ $x$. Lause on n√§in todistettu maksimiarvon osalta. Minimiarvon osalta lause
+todistetaan joko vastaavalla p√§√§ttelyll√§ tai soveltamlla jo todistettua v√§itt√§m√§√§ funktioon
 $-f$. \loppu
 \begin{Exa} Funktio 
 \[ f(x)= \begin{cases} \,1/x,\,\ &\text{kun}\ x>0, \\ \,0, &\text{kun}\ x=0 
-         \end{cases} \]on jatkuva (kompaktissa) joukossa $K=[a,b]$, jos $0<a<b$. T‰llˆin $f$:n maksimimiarvo $K$:ssa
-$= f(a)$ ja minimiarvo $= f(b)$. Kompaktilla v‰lill‰ $[0,1]\subset\DF_f$ ei $f$ ole 
-M‰‰ritelm‰n \ref{jatkuvuus kompaktissa joukossa} mukaisesti jatkuva, eik‰ $f$ myˆsk‰‰n saavuta
-maksimiarvoaan t‰ll‰ v‰lill‰ (minimiarvo $=0$). V‰lin $A=(0,1]$ (rajoitettu, ei suljettu)
-jokaisessa pisteess‰ $f$ on jatkuva, mutta $f$ ei saavuta $A$:ssa maksimiarvoaan
-(minimiarvo $=1$). V‰lill‰ A=(1,2) (rajoitettu, ei suljettu) $f$ ei saavuta kumpaakaan
-‰‰riarvoaan. V‰lill‰ $A=[1,\infty)$ (suljettu, ei rajoitettu) $f$ on jatkuva jokaisessa
-pisteess‰, mutta $f$ ei saavuta $A$:ssa minimiarvoaan (maksimiarvo $=1$). \loppu
+         \end{cases} \]on jatkuva (kompaktissa) joukossa $K=[a,b]$, jos $0<a<b$. T√§ll√∂in $f$:n maksimimiarvo $K$:ssa
+$= f(a)$ ja minimiarvo $= f(b)$. Kompaktilla v√§lill√§ $[0,1]\subset\DF_f$ ei $f$ ole 
+M√§√§ritelm√§n \ref{jatkuvuus kompaktissa joukossa} mukaisesti jatkuva, eik√§ $f$ my√∂sk√§√§n saavuta
+maksimiarvoaan t√§ll√§ v√§lill√§ (minimiarvo $=0$). V√§lin $A=(0,1]$ (rajoitettu, ei suljettu)
+jokaisessa pisteess√§ $f$ on jatkuva, mutta $f$ ei saavuta $A$:ssa maksimiarvoaan
+(minimiarvo $=1$). V√§lill√§ A=(1,2) (rajoitettu, ei suljettu) $f$ ei saavuta kumpaakaan
+√§√§riarvoaan. V√§lill√§ $A=[1,\infty)$ (suljettu, ei rajoitettu) $f$ on jatkuva jokaisessa
+pisteess√§, mutta $f$ ei saavuta $A$:ssa minimiarvoaan (maksimiarvo $=1$). \loppu
 \end{Exa}
 
 \subsection*{Algebran peruslause}
 \index{Algebran peruslause|vahv}
 
-K‰sitteet avoin, suljettu ja kompakti joukko m‰‰ritell‰‰n kompleksitasossa aivan samalla
-tavoin kuin $\R$:ss‰. Erona on ainoastaan, ett‰ avoimen joukon m‰‰rittelyss‰ tarvittava
-ymp‰ristˆ on $\C$:ss‰ kiekon muotoinen: $\,U_\delta(c)=\{z\in\C \mid \abs{z-c}<\delta\}$
-(M‰‰ritelm‰ \ref{analyyttinen funktio}). Lauseet \ref{avoin vs suljettu} ja
-\ref{unionit ja leikkaukset} p‰tev‰t myˆs kompleksitasossa.
+K√§sitteet avoin, suljettu ja kompakti joukko m√§√§ritell√§√§n kompleksitasossa aivan samalla
+tavoin kuin $\R$:ss√§. Erona on ainoastaan, ett√§ avoimen joukon m√§√§rittelyss√§ tarvittava
+ymp√§rist√∂ on $\C$:ss√§ kiekon muotoinen: $\,U_\delta(c)=\{z\in\C \mid \abs{z-c}<\delta\}$
+(M√§√§ritelm√§ \ref{analyyttinen funktio}). Lauseet \ref{avoin vs suljettu} ja
+\ref{unionit ja leikkaukset} p√§tev√§t my√∂s kompleksitasossa.
 \begin{Exa} Kiekko $K=\{z\in\C \mid \abs{z} \le R\}$ on suljettu, ts.\ jokaiselle
-kompleksilukujonolle $\seq{z_n}$ p‰tee: 
-$z_n \in K\,\forall n\,\ja\,z_n \kohti z\ \impl\ z \in K$. $K$ on myˆs rajoitettu
+kompleksilukujonolle $\seq{z_n}$ p√§tee: 
+$z_n \in K\,\forall n\,\ja\,z_n \kohti z\ \impl\ z \in K$. $K$ on my√∂s rajoitettu
 ($\abs{z} \le C=R\ \forall z \in K$), joten $K$ on kompakti joukko. Komplementti
 $\complement(K)=\{z\in\C \mid \abs{z}>R\}$ on avoin joukko. \loppu
 \end{Exa}
-Kompleksifunktion jatkuvuus m‰‰riteltiin edellisess‰ luvussa vastaavalla tavalla kuin
-reaalifunktioille, ja myˆs jatkuvuus kompaktissa joukossa (M‰‰ritelm‰ 
+Kompleksifunktion jatkuvuus m√§√§riteltiin edellisess√§ luvussa vastaavalla tavalla kuin
+reaalifunktioille, ja my√∂s jatkuvuus kompaktissa joukossa (M√§√§ritelm√§ 
 \ref{jatkuvuus kompaktissa joukossa}) yleistyy vastaavasti koskemaan kompleksifunktioita.
-Weierstrassin lauseen vastine kompleksifunktioille on seuraava v‰itt‰m‰, jonka todistus
+Weierstrassin lauseen vastine kompleksifunktioille on seuraava v√§itt√§m√§, jonka todistus
 noudattaa hyvin tarkoin Lauseen \ref{weierstrass} todistuksen logiikkaa.
 (Todistus sivuutetaan.)
 \begin{*Lause} \label{weierstrass kompleksifunktioille}
 Jos $f$ on kompaktissa joukossa $K\subset\C$ jatkuva kompleksiarvoinen funktio, niin
-$\abs{f}$ saavuttaa $K$:ssa pienimm‰n ja suurimman arvonsa.
+$\abs{f}$ saavuttaa $K$:ssa pienimm√§n ja suurimman arvonsa.
 \end{*Lause}
-Algebran peruslauseen (Lause \ref{algebran peruslause}) todistus voidaan perustaa t‰h‰n
-tulokseen sek‰ Luvun \ref{III-3} tarkasteluihin: Olkoon $p(z)$ polynomi astetta $n \ge 1$
-(ei vakio). T‰llˆin $\abs{p(z)}$ saavuttaa Lauseen \ref{weierstrass kompleksifunktioille}
+Algebran peruslauseen (Lause \ref{algebran peruslause}) todistus voidaan perustaa t√§h√§n
+tulokseen sek√§ Luvun \ref{III-3} tarkasteluihin: Olkoon $p(z)$ polynomi astetta $n \ge 1$
+(ei vakio). T√§ll√∂in $\abs{p(z)}$ saavuttaa Lauseen \ref{weierstrass kompleksifunktioille}
 mukaan minimiarvonsa kompaktissa joukossa
 \[
 K=\{z\in\C \ | \ \abs{z}\leq R\}
 \]
 jokaisella $R \in \R_+$. Koska $\abs{p(z)} \sim \abs{z}^n$, kun $\abs{z}\kohti\infty$ 
-(ks.\ Propositio \ref{polynomin kasvu}), niin p‰‰tell‰‰n, ett‰ $R$:n ollessa riitt‰v‰n suuri
-on $\abs{p}$:n minimikohta $K$:ssa samalla $\abs{p}$:n absoluuttinen minimikohta $\C$:ss‰. Siis 
-$\abs{p}$ saavuttaa jossakin pisteess‰ $c \in \C$ absoluuttisen minimiarvonsa. T‰llˆin on
-seuraavan v‰itt‰m‰n mukaan oltava $p(c)=0$, jolloin Algebran peruslause on todistettu.
+(ks.\ Propositio \ref{polynomin kasvu}), niin p√§√§tell√§√§n, ett√§ $R$:n ollessa riitt√§v√§n suuri
+on $\abs{p}$:n minimikohta $K$:ssa samalla $\abs{p}$:n absoluuttinen minimikohta $\C$:ss√§. Siis 
+$\abs{p}$ saavuttaa jossakin pisteess√§ $c \in \C$ absoluuttisen minimiarvonsa. T√§ll√∂in on
+seuraavan v√§itt√§m√§n mukaan oltava $p(c)=0$, jolloin Algebran peruslause on todistettu.
 \begin{Lause} \label{polynomitulos} Jos kompleksimuuttujan polynomi $p$ ei ole vakio, niin 
-$p(c)=0$ jokaisessa pisteess‰ $c \in \C$, jossa $\abs{p}$:ll‰ on paikallinen minimi. 
+$p(c)=0$ jokaisessa pisteess√§ $c \in \C$, jossa $\abs{p}$:ll√§ on paikallinen minimi. 
 \end{Lause}
 \tod Ks. Harj.teht.\,\ref{III-3}:\ref{H-III-3: avaintulos}. \loppu
 
-\subsection*{K‰‰nteisfunktion jatkuvuus}
-\index{jatkuvuus (yhden muuttujan)!e@k‰‰nteisfunktion|vahv}
+\subsection*{K√§√§nteisfunktion jatkuvuus}
+\index{jatkuvuus (yhden muuttujan)!e@k√§√§nteisfunktion|vahv}
 
-Seuraava k‰‰nteisfunktion jatkuvuuden takaava lause on yleistys Lauseesta 
-\ref{k‰‰nteisfunktion jatkuvuus}. Todistuksessa on Bolzanon--Weierstrassin lause j‰lleen
-keskeisess‰ roolissa.
-\begin{*Lause} \label{R:n k‰‰nteisfunktiolause} Jos $f$ on jatkuva kompaktissa joukossa
+Seuraava k√§√§nteisfunktion jatkuvuuden takaava lause on yleistys Lauseesta 
+\ref{k√§√§nteisfunktion jatkuvuus}. Todistuksessa on Bolzanon--Weierstrassin lause j√§lleen
+keskeisess√§ roolissa.
+\begin{*Lause} \label{R:n k√§√§nteisfunktiolause} Jos $f$ on jatkuva kompaktissa joukossa
 $A\subset\DF_f$ ja $f:\,A \kohti B$ on bijektio, niin $B$ on kompakti ja
 $\inv{f}:\,B \kohti A$ on samoin jatkuva kompaktissa joukossa $B$.
 \end{*Lause}
-\tod  N‰ytet‰‰n ensin, ett‰ $B$ on kompakti joukko. Lauseen
+\tod  N√§ytet√§√§n ensin, ett√§ $B$ on kompakti joukko. Lauseen
 \ref{kompaktissa joukossa jatkuva funktio on rajoitettu} mukaan $B$ on rajoitettu, joten 
-riitt‰‰ osoittaa, ett‰ $B$ on suljettu. Oletetaan siis, ett‰ $y_n \in B\ \forall n$ ja 
-ett‰ $y_n \kohti y\in\R$. Koska $y_n \in B=f(A)$, niin jokaisella $n$ on $y_n=f(x_n)$ jollakin
+riitt√§√§ osoittaa, ett√§ $B$ on suljettu. Oletetaan siis, ett√§ $y_n \in B\ \forall n$ ja 
+ett√§ $y_n \kohti y\in\R$. Koska $y_n \in B=f(A)$, niin jokaisella $n$ on $y_n=f(x_n)$ jollakin
 $x_n \in A$. Koska $A$ on (kompaktina joukkona) rajoitettu, niin jono $\seq{x_n}$ on
-rajoitettu, jolloin t‰ll‰ jonolla on osajono $\seq{x_k}$, joka suppenee: $x_k \kohti x\in\R$
-(Lause \ref{B-W}). Koska $A$ on (kompaktina joukkona) suljettu, niin $x \in A$. T‰llˆin koska
-$f$ on $x$:ss‰ jatkuva M‰‰ritelm‰n \ref{jatkuvuus kompaktissa joukossa} mukaisesti, niin
+rajoitettu, jolloin t√§ll√§ jonolla on osajono $\seq{x_k}$, joka suppenee: $x_k \kohti x\in\R$
+(Lause \ref{B-W}). Koska $A$ on (kompaktina joukkona) suljettu, niin $x \in A$. T√§ll√∂in koska
+$f$ on $x$:ss√§ jatkuva M√§√§ritelm√§n \ref{jatkuvuus kompaktissa joukossa} mukaisesti, niin
  $f(x_k) \kohti f(x)$. Mutta $\seq{f(x_k)}=\seq{y_k}$ on jonon $\seq{y_n}$ osajono, joten
-$f(x_k)=y_k \kohti y$. Lukujonon raja-arvon yksik‰sitteisyyden perusteella on silloin
-$f(x)=y$, joten $y \in f(A)=B$. On n‰ytetty, ett‰ jokaiselle lukujonolle $\seq{y_n}$ p‰tee: 
+$f(x_k)=y_k \kohti y$. Lukujonon raja-arvon yksik√§sitteisyyden perusteella on silloin
+$f(x)=y$, joten $y \in f(A)=B$. On n√§ytetty, ett√§ jokaiselle lukujonolle $\seq{y_n}$ p√§tee: 
 $y_n \in B\ \forall n\,\ \ja\,\ y_n \kohti y\ \impl\ y \in B$. Siis $B$ on suljettu.
 
-K‰‰nteisfunktion $\inv{f}$ v‰itetyn jatkuvuuden osoittamiseksi on n‰ytett‰v‰: Jos
-$y_n \in B,\ n=1,2,\ldots\,$ ja $f(x_n)=y_n\,,\ x_n \in A$, niin p‰tee
+K√§√§nteisfunktion $\inv{f}$ v√§itetyn jatkuvuuden osoittamiseksi on n√§ytett√§v√§: Jos
+$y_n \in B,\ n=1,2,\ldots\,$ ja $f(x_n)=y_n\,,\ x_n \in A$, niin p√§tee
 \[
 y_n\kohti y \in B \qimpl x_n\kohti x\in A \ \ja \ x=f^{-1}(y).
 \]
 Koska $x_n \in A$ ja $A$ on kompakti, niin jono $\seq{x_n}$ on rajoitettu, joten jonolla on
 suppeneva osajono $\seq{x_k}:\ x_k \kohti x \in \R$. Koska $A$ on kompakti, niin $x \in A$,
 jolloin $f$:n jatkuvuuden nojalla $f(x_k) \kohti f(x)$. Mutta jono $\seq{f(x_k)}$ on jonon 
-$\seq{f(x_n)} = \seq{y_n}$ osajono, joten oletuksen $y_n \kohti y$ mukaan on oltava myˆs 
-$f(x_k) \kohti y$. Siis $f(x)=y\ \ekv\ x=f^{-1}(y)$. On p‰‰telty, ett‰ jonolla $\seq{x_n}$
-on ainakin osajono $\seq{x_k}$, jolle p‰tee $x_k \kohti x \in A$ ja $x = f^{-1}(y)$. N‰ytet‰‰n
-nyt, ett‰ myˆs alkuper‰iselle jonolle p‰tee $x_n \kohti x$, jolloin lause on todistettu. 
-Tehd‰‰n vastaoletus: $x_n \not\kohti x$. T‰llˆin Lauseen \ref{negaatioperiaate}
-mukaan on olemassa toinen osajono $\{x_l\}$ ja $\eps>0$ siten, ett‰ p‰tee
+$\seq{f(x_n)} = \seq{y_n}$ osajono, joten oletuksen $y_n \kohti y$ mukaan on oltava my√∂s 
+$f(x_k) \kohti y$. Siis $f(x)=y\ \ekv\ x=f^{-1}(y)$. On p√§√§telty, ett√§ jonolla $\seq{x_n}$
+on ainakin osajono $\seq{x_k}$, jolle p√§tee $x_k \kohti x \in A$ ja $x = f^{-1}(y)$. N√§ytet√§√§n
+nyt, ett√§ my√∂s alkuper√§iselle jonolle p√§tee $x_n \kohti x$, jolloin lause on todistettu. 
+Tehd√§√§n vastaoletus: $x_n \not\kohti x$. T√§ll√∂in Lauseen \ref{negaatioperiaate}
+mukaan on olemassa toinen osajono $\{x_l\}$ ja $\eps>0$ siten, ett√§ p√§tee
 \[
 \abs{x_l-x}\geq\eps\quad\forall l\in\N.
 \]
-T‰ll‰kin osajonolla on kuitenkin suppeneva osajono $\{x_\nu\}$, jolle siis p‰tee 
-$x_\nu\kohti x'\neq x$ kun $\nu\kohti\infty$. T‰llˆin on j‰lleen $x'\in A$, koska $A$ on
+T√§ll√§kin osajonolla on kuitenkin suppeneva osajono $\{x_\nu\}$, jolle siis p√§tee 
+$x_\nu\kohti x'\neq x$ kun $\nu\kohti\infty$. T√§ll√∂in on j√§lleen $x'\in A$, koska $A$ on
 suljettu, joten $f$:n jatkuvuuden perusteella $f(x_\nu)\kohti f(x')$. Toisaalta koska jono
-$\seq{f(x_\nu)}$ on edelleen alkuper‰isen jonon $\seq{f(x_n)} = \seq{y_n}$ osajono, niin
-oletuksesta $y_n \kohti y$ seuraa, ett‰ myˆs $f(x_\nu) \kohti y$. Siis p‰tee sek‰ 
-$f(x_\nu) \kohti f(x')$ ett‰ $f(x_\nu) \kohti y$, jolloin on oltava $f(x')=y=f(x)$.
-Oletuksista ja vastaoletuksesta on n‰in johdettu p‰‰telm‰: On olemassa $x \in A$ ja 
-$x' \in A$ siten, ett‰ $x \neq x'$ ja $f(x)=f(x')$. Mutta (toistaiseksi k‰ytt‰m‰ttˆm‰n)
+$\seq{f(x_\nu)}$ on edelleen alkuper√§isen jonon $\seq{f(x_n)} = \seq{y_n}$ osajono, niin
+oletuksesta $y_n \kohti y$ seuraa, ett√§ my√∂s $f(x_\nu) \kohti y$. Siis p√§tee sek√§ 
+$f(x_\nu) \kohti f(x')$ ett√§ $f(x_\nu) \kohti y$, jolloin on oltava $f(x')=y=f(x)$.
+Oletuksista ja vastaoletuksesta on n√§in johdettu p√§√§telm√§: On olemassa $x \in A$ ja 
+$x' \in A$ siten, ett√§ $x \neq x'$ ja $f(x)=f(x')$. Mutta (toistaiseksi k√§ytt√§m√§tt√∂m√§n)
 oletuksen mukaan $f$ on injektio, joten  $x \neq x'\ \impl\ f(x) \neq f(x')$. Siis
  $f(x)=f(x')$ ja $f(x) \neq f(x')$ --- looginen ristiriita, joka osoittaa tehdyn
-vastaoletuksen v‰‰r‰ksi. Siis $x_n \kohti x=f^{-1}(y)$. \loppu
+vastaoletuksen v√§√§r√§ksi. Siis $x_n \kohti x=f^{-1}(y)$. \loppu
 \begin{Exa}
-M‰‰ritell‰‰n funktio $f$ joukossa
+M√§√§ritell√§√§n funktio $f$ joukossa
 \begin{multicols}{2} \raggedcolumns
 \[
 D_f=A=[-1,0]\cup (1,2]
@@ -348,95 +348,95 @@ x-1 \ &, \text{ kun } x\in (1,2]
 \end{center}
 \end{figure}
 \end{multicols}
-T‰llˆin $f$ on koko m‰‰rittelyjoukossaan jatkuva ja $f:A \kohti [-1,1]$ on bijektio, joten myˆs 
-$\inv{f}:[-1,1] \kohti A$ on bijektio (vrt. Luku \ref{k‰‰nteisfunktio}). Mutta \inv{f} ei ole 
-jatkuva pisteess‰ $x=0$. \loppu
+T√§ll√∂in $f$ on koko m√§√§rittelyjoukossaan jatkuva ja $f:A \kohti [-1,1]$ on bijektio, joten my√∂s 
+$\inv{f}:[-1,1] \kohti A$ on bijektio (vrt. Luku \ref{k√§√§nteisfunktio}). Mutta \inv{f} ei ole 
+jatkuva pisteess√§ $x=0$. \loppu
 \end{Exa}
-Esimerkiss‰ on k‰‰nteisfunktion jatkuvuuden kannalta ongelmana, ett‰ m‰‰rittelyjoukon osav‰li 
-$(1,2]$ ei ole suljettu. Ongelmaa ei voi poistaa ottamalla $x=1$ mukaan m‰‰rittelyjoukkoon,
-sill‰ jos asetetaan $f(1)=0$, niin $f(0)=f(1)$, jolloin $f$ ei ole injektio, ja jos asetetaan 
-$f(1)=c \neq 0$, niin $f$ ei ole (oikealta) jatkuva pisteess‰ $x=1$.
+Esimerkiss√§ on k√§√§nteisfunktion jatkuvuuden kannalta ongelmana, ett√§ m√§√§rittelyjoukon osav√§li 
+$(1,2]$ ei ole suljettu. Ongelmaa ei voi poistaa ottamalla $x=1$ mukaan m√§√§rittelyjoukkoon,
+sill√§ jos asetetaan $f(1)=0$, niin $f(0)=f(1)$, jolloin $f$ ei ole injektio, ja jos asetetaan 
+$f(1)=c \neq 0$, niin $f$ ei ole (oikealta) jatkuva pisteess√§ $x=1$.
 
 \subsection*{Tasainen jatkuvuus}
 \index{tasainen jatkuvuus|vahv} \index{jatkuvuus (yhden muuttujan)!h@tasainen|vahv}
 
-Tarkastellaan viel‰ uutta jatkuvuuden k‰sitett‰, jota voi pit‰‰ Luvussa 
-\ref{v‰liarvolause 2} m‰‰ritellyn Lipschitz-jatkuvuuden minimalistisena vastineena 
-(vrt.\ M‰‰ritelm‰ \ref{funktion l-jatkuvuus} ja Lause \ref{tasaisen jatkuvuuden k‰site} alla).
+Tarkastellaan viel√§ uutta jatkuvuuden k√§sitett√§, jota voi pit√§√§ Luvussa 
+\ref{v√§liarvolause 2} m√§√§ritellyn Lipschitz-jatkuvuuden minimalistisena vastineena 
+(vrt.\ M√§√§ritelm√§ \ref{funktion l-jatkuvuus} ja Lause \ref{tasaisen jatkuvuuden k√§site} alla).
 \begin{Def} Reaalifunktio $f$ on joukossa $A\subset\DF_f$ \kor{tasaisesti jatkuva} 
-(engl. uniformly continuous), jos kaikille reaalilukujonoille $\seq{x_n}$ ja $\seq{t_n}$ p‰tee
+(engl. uniformly continuous), jos kaikille reaalilukujonoille $\seq{x_n}$ ja $\seq{t_n}$ p√§tee
 \[
 x_n,t_n\in A \ \ja \ x_n-t_n\kohti 0 \ \impl \ f(x_n)-f(t_n)\kohti 0.
 \]
 \end{Def}
-Jos $f$ on tasaisesti jatkuva v‰lill‰ $(c-\delta,c+\delta)$, $\delta>0$, niin valitsemalla 
-$y_n=c$ ym.\ m‰‰ritelm‰ss‰ n‰hd‰‰n, ett‰ $f$ on jatkuva pisteess‰ $c$. Tasainen jatkuvuus 
-on siis t‰ss‰ mieless‰ vahvempi ominaisuus kuin M‰‰ritelm‰n \ref{funktion jatkuvuus} mukainen
-\index{pisteitt‰inen jatkuvuus}%
-jatkuvuus, jota myˆs tavataan sanoa \kor{pisteitt‰iseksi} (engl. pointwise).
+Jos $f$ on tasaisesti jatkuva v√§lill√§ $(c-\delta,c+\delta)$, $\delta>0$, niin valitsemalla 
+$y_n=c$ ym.\ m√§√§ritelm√§ss√§ n√§hd√§√§n, ett√§ $f$ on jatkuva pisteess√§ $c$. Tasainen jatkuvuus 
+on siis t√§ss√§ mieless√§ vahvempi ominaisuus kuin M√§√§ritelm√§n \ref{funktion jatkuvuus} mukainen
+\index{pisteitt√§inen jatkuvuus}%
+jatkuvuus, jota my√∂s tavataan sanoa \kor{pisteitt√§iseksi} (engl. pointwise).
 \begin{Exa}
-$f(x)=1/x$ on koko m‰‰rittelyjoukossaan (pisteitt‰in) jatkuva, mutta ei tasaisesti jatkuva: 
+$f(x)=1/x$ on koko m√§√§rittelyjoukossaan (pisteitt√§in) jatkuva, mutta ei tasaisesti jatkuva: 
 Esim.\ jos $x_n=1/n$ ja $t_n=2/n$, niin $x_n-t_n \kohti 0$, mutta 
 $f(x_n)-f(t_n) = n/2 \not\kohti 0$.
 \end{Exa}
-Tasaisen jatkuvuuden merkitys n‰kyy selvemmin seuraavasta tuloksesta, jota voi myˆs pit‰‰ 
-tasaisen jatkuvuuden vaihtoehtoisena m‰‰ritelm‰n‰, vrt. Lause \ref{approksimaatiolause}.
+Tasaisen jatkuvuuden merkitys n√§kyy selvemmin seuraavasta tuloksesta, jota voi my√∂s pit√§√§ 
+tasaisen jatkuvuuden vaihtoehtoisena m√§√§ritelm√§n√§, vrt. Lause \ref{approksimaatiolause}.
 Todistus (joka sivuutetaan) on idealtaan sama kuin Lauseen
-\ref{jatkuvuuskriteerien yht‰pit‰vyys} todistus.
-\begin{*Lause} \label{tasaisen jatkuvuuden k‰site}
+\ref{jatkuvuuskriteerien yht√§pit√§vyys} todistus.
+\begin{*Lause} \label{tasaisen jatkuvuuden k√§site}
 Funktio $f:\DF_f\kohti\R$, $\DF_f\subset\R$, on joukossa $A\subset\DF_f$ tasaisesti jatkuva 
-t‰sm‰lleen kun jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett‰ $\forall x_1,x_2\in\R$
-p‰tee
+t√§sm√§lleen kun jokaisella $\eps>0$ on olemassa $\delta>0$ siten, ett√§ $\forall x_1,x_2\in\R$
+p√§tee
 \[
 x_1,x_2\in A \ \ja \ \abs{x_1-x_2}<\delta \ \impl \ \abs{f(x_1)-f(x_2)}<\eps.
 \]
 \end{*Lause}
-\begin{Exa} Suljetulla v‰lill‰ $A=[a,b]$ Lipschitz-jatkuva funktio (M‰‰ritelm‰
-\ref{funktion l-jatkuvuus}) on ko.\ v‰lill‰ myˆs tasaisesti jatkuva, sill‰ Lauseen
-\ref{tasaisen jatkuvuuden k‰site} ehto toteutuu jokaisella $\eps>0$, kun valitaan
-$\delta=\eps/L$, miss‰ $L=$ Lipschitz-vakio. \loppu
+\begin{Exa} Suljetulla v√§lill√§ $A=[a,b]$ Lipschitz-jatkuva funktio (M√§√§ritelm√§
+\ref{funktion l-jatkuvuus}) on ko.\ v√§lill√§ my√∂s tasaisesti jatkuva, sill√§ Lauseen
+\ref{tasaisen jatkuvuuden k√§site} ehto toteutuu jokaisella $\eps>0$, kun valitaan
+$\delta=\eps/L$, miss√§ $L=$ Lipschitz-vakio. \loppu
 \end{Exa}
-Seuraava lause --- joka j‰lleen nojaa Bolzanon--Weierstrassin lauseeseen --- kuuluu
-tavanomaisen reaalianalyysin h‰mm‰stytt‰vimpiin tuloksiin.
+Seuraava lause --- joka j√§lleen nojaa Bolzanon--Weierstrassin lauseeseen --- kuuluu
+tavanomaisen reaalianalyysin h√§mm√§stytt√§vimpiin tuloksiin.
 \begin{*Lause} \label{kompaktissa joukossa jatkuva on tasaisesti jatkuva}
 Jos reaalifunktio $f$ on jatkuva kompaktissa joukossa $K\subset\DF_f$, niin $f$ on
 $K$:ssa tasaisesti jatkuva.
 \end{*Lause}
-\tod Tehd‰‰n vastaoletus: $f$ ei ole $K$:ssa tasaisesti jatkuva. T‰llˆin on olemassa jonot 
-$\{x_n\}$ ja $\{t_n\}$ siten, ett‰
+\tod Tehd√§√§n vastaoletus: $f$ ei ole $K$:ssa tasaisesti jatkuva. T√§ll√∂in on olemassa jonot 
+$\{x_n\}$ ja $\{t_n\}$ siten, ett√§
 \[
 x_n,t_n\in K\ \forall n\,\ \ja\,\ x_n-t_n\kohti 0\,\ \ja\,\ f(x_n)-f(t_n) \not\kohti 0.
 \]
 Koska $f(x_n)-f(t_n) \not\kohti 0$, niin jonolla $\{f(x_n)-f(t_n)\}$ on Lauseen 
-\ref{negaatioperiaate} mukaan osajono $\{f(x_k)-f(t_k)\}$ siten, ett‰ jollakin $\eps>0$ p‰tee
+\ref{negaatioperiaate} mukaan osajono $\{f(x_k)-f(t_k)\}$ siten, ett√§ jollakin $\eps>0$ p√§tee
 \[
 \abs{f(x_k)-f(t_k)} \ge \eps \quad\forall k\in\N.
 \]
 Mutta jonot $\seq{x_k}$ ja $\seq{t_k}$ ovat rajoitettuja (koska $x_k,t_k \in K$ ja $K$ on
-rajoitettu), joten ensinn‰kin jonolla $\seq{x_k}$ on suppeneva osajono $\seq{x_l}$
-(Lause \ref{B-W}). Kun nyt siirryt‰‰n tarkastelemaan jonon $\seq{t_k}$ vastaavaa osajonoa
-$\seq{t_l}$, niin t‰ll‰ on edelleen suppeneva osajono $\seq{t_\nu}$. Mutta t‰llˆin
-vastaava jonon $\seq{x_l}$ osajono $\seq{x_\nu}$ suppenee myˆs (koska on suppenevan jonon
-osajono). N‰in on lˆydetty lukuparien $(x_k,t_k)$ muodostamasta jonosta osajono
-$\seq{(x_\nu,t_\nu)}$, jossa p‰tee:  
+rajoitettu), joten ensinn√§kin jonolla $\seq{x_k}$ on suppeneva osajono $\seq{x_l}$
+(Lause \ref{B-W}). Kun nyt siirryt√§√§n tarkastelemaan jonon $\seq{t_k}$ vastaavaa osajonoa
+$\seq{t_l}$, niin t√§ll√§ on edelleen suppeneva osajono $\seq{t_\nu}$. Mutta t√§ll√∂in
+vastaava jonon $\seq{x_l}$ osajono $\seq{x_\nu}$ suppenee my√∂s (koska on suppenevan jonon
+osajono). N√§in on l√∂ydetty lukuparien $(x_k,t_k)$ muodostamasta jonosta osajono
+$\seq{(x_\nu,t_\nu)}$, jossa p√§tee:  
 \[
 x_\nu \kohti x\in \R\,\ \ja\,\ t_\nu \kohti t\in\R.
 \]
-T‰ss‰ on oltava $x,t \in K$, koska $K$ on suljettu, ja on myˆs oltava $x=t$, koska 
+T√§ss√§ on oltava $x,t \in K$, koska $K$ on suljettu, ja on my√∂s oltava $x=t$, koska 
 $x_n-t_n \kohti 0\ \impl\ x_\nu-t_\nu \kohti 0$. Koska siis $x_\nu \kohti x$ ja 
 $t_\nu \kohti x$, $x \in K$, niin $f$:n jatkuvuuden perusteella
 \[
 f(x_\nu)-f(t_\nu) \kohti f(x)-f(x) = 0.
 \]
-On siis p‰‰telty, ett‰ $f(x_\nu)-f(t_\nu) \kohti 0$, ja toisaalta 
-$\abs{f(x_\nu)-f(t_\nu)}\ge\eps>0\ \forall \nu$. T‰m‰ on  looginen ristiriita, joten
-vastaoletus on v‰‰r‰ ja lause siis todistettu. \loppu
+On siis p√§√§telty, ett√§ $f(x_\nu)-f(t_\nu) \kohti 0$, ja toisaalta 
+$\abs{f(x_\nu)-f(t_\nu)}\ge\eps>0\ \forall \nu$. T√§m√§ on  looginen ristiriita, joten
+vastaoletus on v√§√§r√§ ja lause siis todistettu. \loppu
 
 \Harj
 \begin{enumerate}
 
 \item
-Mit‰ ominaisuuksista (avoin, suljettu, rajoitettu, kompakti) on seuraavilla 
+Mit√§ ominaisuuksista (avoin, suljettu, rajoitettu, kompakti) on seuraavilla 
 $\R$:n osajoukoilla:
 \newline
 a) \ $A=(0,1) \cup \{\pi\}$ \newline
@@ -449,57 +449,57 @@ g) \ $A=(-\infty,\,3]$ \newline
 h) \ $A=\{\frac{1}{n} \mid n\in\N\}\cup[-1,0]$
 
 \item
-N‰yt‰, ett‰ jos $A\subset\R$, niin p‰tee
+N√§yt√§, ett√§ jos $A\subset\R$, niin p√§tee
 \[
 A\ \text{kompakti} \qimpl \sup A=\max A\,\ \ja\ \inf A=\min A.
 \]
-N‰yt‰ vastaesimerkill‰, ett‰ implikaatio ei p‰de k‰‰nt‰en.
+N√§yt√§ vastaesimerkill√§, ett√§ implikaatio ei p√§de k√§√§nt√§en.
 
 \item
 Todista seuraavat Lauseiden \ref{avoin vs suljettu} ja \ref{unionit ja leikkaukset}
-osav‰itt‰m‰t: \vspace{1mm}\newline
+osav√§itt√§m√§t: \vspace{1mm}\newline
 a) \ $A$ suljettu $\impl$ $\complement(A)$ avoin \newline
 b) \ $A$ ja $B$ avoimia $\impl$ $A \cap B$ avoin \newline
 c) \ $A$ ja $B$ suljettuja $\impl$ $A \cup B$ suljettu
 
 \item
-M‰‰rittele seuraavien joukkojen reuna $\partial A\,$: \vspace{1mm}\newline
+M√§√§rittele seuraavien joukkojen reuna $\partial A\,$: \vspace{1mm}\newline
 a) \ $A=\{1,3,7\} \quad$ 
 b) \ $A=\{\frac{1}{n} \mid n\in\N\} \quad$ 
 c) \ $A=(0,1)\cap\Q$
 
 \item
-N‰yt‰, ett‰ jos $f$ on $\R$:ss‰ jatkuva funktio ja $B\subset\R$ on suljettu joukko, niin
-myˆs $A=\{x\in\R \mid f(x) \in B\}$ on suljettu. P‰‰ttele, ett‰ erityisesti $f$:n
+N√§yt√§, ett√§ jos $f$ on $\R$:ss√§ jatkuva funktio ja $B\subset\R$ on suljettu joukko, niin
+my√∂s $A=\{x\in\R \mid f(x) \in B\}$ on suljettu. P√§√§ttele, ett√§ erityisesti $f$:n
 nollakohtien joukko on suljettu.
 
 \item
-N‰yt‰, ett‰ yht‰lˆ
+N√§yt√§, ett√§ yht√§l√∂
 \[
 8-63y^5+90y^7-35y^9=x
 \]
-m‰‰rittelee v‰lill‰ $[0,8]$ funktion $y=f(x)$ ja ett‰ $f:\ [0,8] \kohti [0,a]$ on jatkuva
-bijektio er‰‰ll‰ --- mill‰? --- $a$:n arvolla.
+m√§√§rittelee v√§lill√§ $[0,8]$ funktion $y=f(x)$ ja ett√§ $f:\ [0,8] \kohti [0,a]$ on jatkuva
+bijektio er√§√§ll√§ --- mill√§? --- $a$:n arvolla.
 
-\item \index{Hzz@Hˆlder-jatkuvuus}
-Funktio $f$ on v‰lill‰ $[a,b]$ \kor{Hˆlder--jatkuva indeksill‰} $\alpha$,
-$\alpha\in(0,1]\cap\Q$, jos jollakin $C\in\R_+$ p‰tee
+\item \index{Hzz@H√∂lder-jatkuvuus}
+Funktio $f$ on v√§lill√§ $[a,b]$ \kor{H√∂lder--jatkuva indeksill√§} $\alpha$,
+$\alpha\in(0,1]\cap\Q$, jos jollakin $C\in\R_+$ p√§tee
 \[
 |f(x_1)-f(x_2)| \,\le\, C|x_1-x_2|^\alpha, \quad x_1,x_2\in[a,b].
 \]
-a) N‰yt‰, ett‰ v‰lill‰ $[a,b]$ Hˆlder--jatkuva funktio
-on ko.\ v‰lill‰ tasaisesti jatkuva. \ b) N‰yt‰, ett‰ funktio $f(x)=\sqrt[n]{x},\ n\in\N$ on
-v‰lill‰ $[0,1]$ Hˆlder--jatkuva t‰sm‰lleen indekseill‰ $0 < \alpha \le 1/n$.
+a) N√§yt√§, ett√§ v√§lill√§ $[a,b]$ H√∂lder--jatkuva funktio
+on ko.\ v√§lill√§ tasaisesti jatkuva. \ b) N√§yt√§, ett√§ funktio $f(x)=\sqrt[n]{x},\ n\in\N$ on
+v√§lill√§ $[0,1]$ H√∂lder--jatkuva t√§sm√§lleen indekseill√§ $0 < \alpha \le 1/n$.
 
 \item (*)
-Olkoon $f$ jatkuva v‰lill‰ $[0,1]$ ja muodostetaan lukujono $\seq{y_n}$ seuraavasti:
+Olkoon $f$ jatkuva v√§lill√§ $[0,1]$ ja muodostetaan lukujono $\seq{y_n}$ seuraavasti:
 \[
 y_n = \max_i\{f(i/2^n),\ i=0 \ldots 2^n\}, \quad n=0,1,\ldots
 \]
-N‰yt‰, ett‰ $\seq{y_n}$ on monotonisesti kasvava lukujono ja ett‰
+N√§yt√§, ett√§ $\seq{y_n}$ on monotonisesti kasvava lukujono ja ett√§
 \[
 \max_{x\in[0,1]}f(x)=\lim_n y_n\,.
 \]
-Lˆytyykˆ myˆs $f$:n maksimikohta t‰ll‰ tavoin (algoritmisesti)\,?
+L√∂ytyyk√∂ my√∂s $f$:n maksimikohta t√§ll√§ tavoin (algoritmisesti)\,?
 
 \end{enumerate}

@@ -2,12 +2,12 @@
 \alku
 \index{osittaisintegrointi|vahv}
 
-Integroimistekniikan, eli integraalifunktioiden etsimisen, kaksi keskeisint‰ yleist‰ metodia
+Integroimistekniikan, eli integraalifunktioiden etsimisen, kaksi keskeisint√§ yleist√§ metodia
 ovat \kor{osittaisintegrointi} (engl. integration by parts, partial integration) ja 
-\kor{sijoitus}(menettely) (engl.\ substitution). N‰ill‰ menetelmill‰ on 'matematiikan kaavoina'
-yleisemp‰‰kin k‰yttˆ‰.
+\kor{sijoitus}(menettely) (engl.\ substitution). N√§ill√§ menetelmill√§ on 'matematiikan kaavoina'
+yleisemp√§√§kin k√§ytt√∂√§.
 
-Osittaisintegroinnin kaava on yksinkertaisesti tulon derivoimiss‰‰ntˆ toisin kirjoitettuna:
+Osittaisintegroinnin kaava on yksinkertaisesti tulon derivoimiss√§√§nt√∂ toisin kirjoitettuna:
 \[
 \frac{d}{dx}(fg)=f'g+fg' \qekv f'g = \frac{d}{dx}(fg)-fg'
 \]
@@ -29,14 +29,14 @@ F(x)        &= \int e^x\sin x\, dx=e^x\sin x-\int e^x\cos x\, dx \\
             &=e^x(\sin x -\cos x)-F(x) \\[2mm]
 \impl \ F(x)&=\underline{\underline{\frac{1}{2}\,e^x(\sin x-\cos x)+C}}. \loppu
 \end{align*}
-\begin{Exa} \label{paha integraali} M‰‰rit‰ integraalifunktio 
+\begin{Exa} \label{paha integraali} M√§√§rit√§ integraalifunktio 
 $\displaystyle{\int \sqrt{a^2+x^2}\,dx}$, \ kun $a>0$. 
 \end{Exa}
 \ratk Osittain integroimalla \,($f'(x)=1,\ g(x)=\sqrt{a^2+x^2}$\,)\, saadaan ensin
 \[
 \int \sqrt{a^2+x^2}\,dx = x\sqrt{a^2+x^2} - \int \frac{x^2}{\sqrt{a^2+x^2}}\,dx.
 \]
-T‰ss‰ on
+T√§ss√§ on
 \begin{align*}
 -\int\frac{x^2}{\sqrt{a^2+x^2}}\,dx\ 
                &=\ -\int\frac{(x^2+a^2)-a^2}{\sqrt{a^2+x^2}}\,dx \\
@@ -47,8 +47,8 @@ joten seuraa (ks.\ edellisen luvun kaavat (9) ja (I-2))
 2\int \sqrt{a^2+x^2}\,dx\ &=\ x\sqrt{a^2+x^2} + \int \frac{a}{\sqrt{(x/a)^2+1}}\,dx \\
                           &=\ x\sqrt{a^2+x^2} + a^2\ln\bigl[(x/a)+\sqrt{(x/a)^2+1}\,\bigr]+C.
 \end{align*}
-Kun t‰ss‰ kirjoitettaan vakion $C$ tilalle $a^2\ln a+C$ (mahdollista, koska $C$ on joka 
-tapauksessa m‰‰r‰‰m‰tˆn), saadaan tulos muotoon
+Kun t√§ss√§ kirjoitettaan vakion $C$ tilalle $a^2\ln a+C$ (mahdollista, koska $C$ on joka 
+tapauksessa m√§√§r√§√§m√§t√∂n), saadaan tulos muotoon
 \[
 \int \sqrt{a^2+x^2}\,dx\ 
   =\ \underline{\underline{\frac{1}{2}\bigl[x\sqrt{a^2+x^2} 
@@ -59,14 +59,14 @@ tapauksessa m‰‰r‰‰m‰tˆn), saadaan tulos muotoon
 \index{reduktiokaavat (integraalien)|vahv}
 
 Osittain integroimalla voidaan johtaa \kor{reduktiokaavoja} (palautuskaavoja) koko joukolle
-integraaleja, joissa on kokonaislukuparametri. Esimerkiksi seuraavat integraalit saadaan t‰ll‰
+integraaleja, joissa on kokonaislukuparametri. Esimerkiksi seuraavat integraalit saadaan t√§ll√§
 tavoin lasketuksi suljetussa muodossa:
 \begin{align*}
 &\int x^ne^x\,dx,\quad \int x^n\cos x\,dx,\quad x^n\sin x\,dx,\quad
  \int (1+x^2)^{-n}\, dx,\quad n\in\N, \\
 &\int \cos^n x\, dx,\quad \int\sin^n x\, dx,\quad n\in\Z. \\
 \end{align*}
-Tarkastellaan esimerkkin‰ integraalia 
+Tarkastellaan esimerkkin√§ integraalia 
 \[
 I_n(x)=\int \cos^n x\,dx.
 \]
@@ -77,18 +77,18 @@ I_n(x) &= \int \cos x\cdot \cos^{n-1} x\, dx \qquad[\,f'(x)=\cos x,\ g(x)=\cos^{
 &=\sin x\cos^{n-1} x + (n-1)\int(1-\cos^2 x)\cos^{n-2}x\,dx \\[1mm]
 &=\sin x\cos^{n-1} x + (n-1)I_{n-2}(x)-(n-1)I_n(x).
 \end{align*}
-T‰m‰n perusteella integraalille $I_n(x)$ p‰tee reduktiokaava
+T√§m√§n perusteella integraalille $I_n(x)$ p√§tee reduktiokaava
 \begin{equation} \label{reduktio 1}
 nI_n(x)-(n-1)I_{n-2}(x)=\sin x\cos^{n-1} x.
 \end{equation}
-Kaava p‰tee itse asiassa kun $n\hookrightarrow\alpha$, $\alpha\in\R$, mutta siit‰ on hyˆty‰
-l‰hinn‰ kun $n\in\Z$, jolloin $I_n$ voidaan palauttaa kaavan avulla tapauksiin $n=0,\pm 1$ ja
-n‰in ollen integroida suljetussa muodossa (tapaukseen $n=-1$ soveltuu edellisen luvun 
+Kaava p√§tee itse asiassa kun $n\hookrightarrow\alpha$, $\alpha\in\R$, mutta siit√§ on hy√∂ty√§
+l√§hinn√§ kun $n\in\Z$, jolloin $I_n$ voidaan palauttaa kaavan avulla tapauksiin $n=0,\pm 1$ ja
+n√§in ollen integroida suljetussa muodossa (tapaukseen $n=-1$ soveltuu edellisen luvun 
 taulukkokaava (14)).
 \begin{Exa}
 $\text{a)}\ \D\int\cos^3 x\, dx=\,? \quad\text{b)}\ \int\cos^{-3} x\, dx=\,?$
 \end{Exa}
-\ratk Indekseill‰ $n=3$ ja $n=-1$ reduktioaava \eqref{reduktio 1} antaa
+\ratk Indekseill√§ $n=3$ ja $n=-1$ reduktioaava \eqref{reduktio 1} antaa
 \begin{align*}
 I_3(x)    &= \frac{1}{3}\sin x\cos^2 x + \frac{2}{3}I_1(x), \\
 I_{-3}(x) &= \frac{1}{2}\sin x\cos^{-2} x + \frac{1}{2}I_{-1}(x),
@@ -105,17 +105,17 @@ joten (vrt.\ edellisen luvun Esimerkki \ref{cos-integraaleja})
               \frac{\cos x}{1-\sin x}\right|+ \frac{1}{2}\,\frac{\sin x}{\cos^2 x}+C}}. \loppu
 \end{align*}
 
-Toisena esimerkkin‰ tarkasteltakoon integraalia
+Toisena esimerkkin√§ tarkasteltakoon integraalia
 \[
 I_n(x)=\int\frac{1}{(1+x^2)^n}\,dx,\quad n \ge 2.
 \]
-Pyrit‰‰n palauttamaan t‰m‰ tapaukseen $n=1$, jossa integraalifunktio tunnetaan (edellisen
+Pyrit√§√§n palauttamaan t√§m√§ tapaukseen $n=1$, jossa integraalifunktio tunnetaan (edellisen
 luvun taulukkokaava (11)). Valitaan $f'(x)=1,\ g(x)=(1+x^2)^{-n}$ ja integroidaan osittain:
 \begin{align*}
 I_n(x) &= \frac{x}{(1+x^2)^n}+2n\int\frac{x^2}{(1+x^2)^{n+1}}\, dx \quad [x^2=(x^2+1)-1] \\
 &= \frac{x}{(1+x^2)^n}+2n I_n(x) - 2n I_{n+1}(x).
 \end{align*}
-Kirjoittamalla $n$:n tilalle $n-1$ p‰‰dyt‰‰n reduktiokaavaan
+Kirjoittamalla $n$:n tilalle $n-1$ p√§√§dyt√§√§n reduktiokaavaan
 \begin{equation} \label{reduktio 2}
 I_n(x)=\frac{1}{2n-2}\,\frac{x}{(1+x^2)^{n-1}}+\frac{2n-3}{2n-2}\,I_{n-1}(x).
 \end{equation}
@@ -137,37 +137,37 @@ Kaavaa \eqref{reduktio 2} kahdesti soveltamalla saadaan
 Sijoituksella tarkoitetaan integroinnissa \pain{muuttu}j\pain{an} \pain{vaihtoa}
 (kuten raja-arvoja laskettaessa, vrt.\ Luku \ref{funktion raja-arvo}). Integroinnin 
 sijoitusmenettely perustuu seuraavaan tulokseen, joka puolestaan perustuu yhdistetyn funktion
-ja k‰‰nteisfunktion derivoimiss‰‰ntˆihin.
+ja k√§√§nteisfunktion derivoimiss√§√§nt√∂ihin.
 \begin{Prop} \label{sijoituspropositio}
-Olkoon $u:(c,d)\Kohti (a,b)$ bijektio ja olkoon $u$ derivoituva v‰lill‰ $(c,d)$ ja
-k‰‰nteisfunktio $v=\inv{u}$ derivoituva v‰lill‰ $(a,b)$. T‰llˆin, jos $G(t)$ on funktion
-$g(t)=f(u(t))u'(t)$ integraalifunktio v‰lill‰ $(c,d)$, ts.\
+Olkoon $u:(c,d)\Kohti (a,b)$ bijektio ja olkoon $u$ derivoituva v√§lill√§ $(c,d)$ ja
+k√§√§nteisfunktio $v=\inv{u}$ derivoituva v√§lill√§ $(a,b)$. T√§ll√∂in, jos $G(t)$ on funktion
+$g(t)=f(u(t))u'(t)$ integraalifunktio v√§lill√§ $(c,d)$, ts.\
 \[
 \int f(u(t))u'(t)\, dt=G(t)+C,\quad t\in (c,d),
 \]
-niin funktion $f(x)$ integraalifunktio v‰lill‰ $(a,b)$ on
+niin funktion $f(x)$ integraalifunktio v√§lill√§ $(a,b)$ on
 \[
 \int f(x)\, dx=G(v(x))+C,\quad x\in (a,b).
 \]
 \end{Prop}
-\tod Jos $x\in (a,b)$ ja $t=v(x) \ \ekv \ x=u(t)$, niin yhdistetyn funktion derivoimiss‰‰nnˆn
+\tod Jos $x\in (a,b)$ ja $t=v(x) \ \ekv \ x=u(t)$, niin yhdistetyn funktion derivoimiss√§√§nn√∂n
 ja oletuksien perusteella
 \begin{align*}
 \frac{d}{dx}G(v(x)) &= G'(v(x))v'(x)=G'(t)v'(x) \\
 &= f(u(t))u'(t)v'(x).
 \end{align*}
-T‰ss‰ on $u(t)=x$, joten $f(u(t))=f(x)$ ja k‰‰nteisfunktion derivoimiss‰‰nnˆn
+T√§ss√§ on $u(t)=x$, joten $f(u(t))=f(x)$ ja k√§√§nteisfunktion derivoimiss√§√§nn√∂n
 (Luku \ref{derivaatta}, kaava \eqref{D5}) mukaan
 \[ 
-u'(t)v'(x)=1 \qimpl \text{v‰ite}. \loppu 
+u'(t)v'(x)=1 \qimpl \text{v√§ite}. \loppu 
 \]
 
-Sovelluksissa sijoitus tehd‰‰n usein (ehk‰ useammin) muodossa $v(x)=t$. Mekaanisesti
+Sovelluksissa sijoitus tehd√§√§n usein (ehk√§ useammin) muodossa $v(x)=t$. Mekaanisesti
 sijoitusmenettely toimii siis seuraavalla tavalla:
 
 \kor{Ongelma:} $\quad \D\int f(x)\,dx=\,?$
 \begin{enumerate}
-\item Tehd‰‰n sijoitus: $\quad x=u(t) \quad \text{tai} \quad v(x)=t$.
+\item Tehd√§√§n sijoitus: $\quad x=u(t) \quad \text{tai} \quad v(x)=t$.
 \item Ratkaistaan
       \[
       x=u(t)\ \impl\ t=v(x) \quad \text{tai} \quad v(x)=t \ \impl \ x=u(t).
@@ -181,27 +181,27 @@ sijoitusmenettely toimii siis seuraavalla tavalla:
       \[
       \int g(t)\,dt = G(t)+C.
       \]
-\item Sijoitetaan ratkaisuun $t=v(x)$, jolloin saadaan alkuper‰isen ongelman ratkaisu:
+\item Sijoitetaan ratkaisuun $t=v(x)$, jolloin saadaan alkuper√§isen ongelman ratkaisu:
       \[
       \int f(x)\, dx=G(v(x))+C.
       \]
 \end{enumerate}
-Vaiheessa 2 ei haittaa, vaikka k‰‰nteisfunktio $v=\inv{u}$ tai $u=\inv{v}$ olisi monihaarainen
-(yht‰lˆn $u(t)=x$ tai $v(x)=t$ ratkaisu monik‰sitteinen), kunhan Proposition
-\ref{sijoituspropositio} oletukset toteutuvat valitulla haaralla. On ainoastaan pidett‰v‰
-huolta, ettei laskun eri vaiheissa hypell‰ haaralta toiselle.
+Vaiheessa 2 ei haittaa, vaikka k√§√§nteisfunktio $v=\inv{u}$ tai $u=\inv{v}$ olisi monihaarainen
+(yht√§l√∂n $u(t)=x$ tai $v(x)=t$ ratkaisu monik√§sitteinen), kunhan Proposition
+\ref{sijoituspropositio} oletukset toteutuvat valitulla haaralla. On ainoastaan pidett√§v√§
+huolta, ettei laskun eri vaiheissa hypell√§ haaralta toiselle.
 \begin{Exa} $\displaystyle{\int \frac{1}{\sqrt{x}+1}\, dx=\,?}$ 
 \end{Exa}
-\ratk T‰ss‰ on $(a,b) = (0,\infty)$.
+\ratk T√§ss√§ on $(a,b) = (0,\infty)$.
 \begin{enumerate}
-\item Tehd‰‰n sijoitus: $\quad v(x) = \sqrt{x} = t \in (0,\infty)$.
+\item Tehd√§√§n sijoitus: $\quad v(x) = \sqrt{x} = t \in (0,\infty)$.
 \item Ratkaistaan: $\quad \sqrt{x}=t\ \impl\ x=u(t)=t^2$.
 \item Sijoitetaan integraaliin: $\quad \sqrt{x}=t,\ dx=2t\,dt$.
 \item Ratkaistaan muunnettu ongelma:
 \[
 \int \frac{2t}{t+1}\,dt \,=\, \int \left(2-\frac{2}{t+1}\right)dt \,=\, 2t - 2\ln(t+1) + C.
 \]
-\item Alkuper‰isen ongelman ratkaisu sijoituksella $t=\sqrt{x}\,$:
+\item Alkuper√§isen ongelman ratkaisu sijoituksella $t=\sqrt{x}\,$:
 \[
 \int \frac{1}{\sqrt{x}+1}\,dx \,=\, \underline{\underline{2\sqrt{x} - 2\ln(\sqrt{x}+1) + C}}.
 \]
@@ -223,7 +223,7 @@ $\D\int\frac{1}{e^x+1}\, dx=\,?$
 \begin{Exa}
 $\D\int\frac{1}{(1+x^2)^2}\,dx=\,?$
 \end{Exa}
-\ratk T‰m‰n voi laskea reduktiokaavalla \eqref{reduktio 2}. Toinen vaihtoehto on
+\ratk T√§m√§n voi laskea reduktiokaavalla \eqref{reduktio 2}. Toinen vaihtoehto on
 trigonometrinen sijoitus
 \[
 x=\tan t, \quad dx=\,\frac{1}{\cos^2 t}\,dt, \quad t\in (-\pi/2,\pi/2).
@@ -244,7 +244,7 @@ saadaan tulos
 \int\frac{1}{(1+x^2)^2}\, dx
         =\underline{\underline{\frac{1}{2}\left(\Arctan x + \frac{x}{1+x^2}\right) + C}}.
 \]
-\underline{Vertailu}: Reduktiokaava \eqref{reduktio 2} on menetelm‰n‰ suoraviivaisempi. \loppu
+\underline{Vertailu}: Reduktiokaava \eqref{reduktio 2} on menetelm√§n√§ suoraviivaisempi. \loppu
 \begin{Exa} \label{rat-palautuva integraali 2} $\D\int\frac{1}{x+1+\sqrt[3]{x+1}}\, dx=\,?$ 
 \end{Exa}
 \ratk Sijoituksella
@@ -257,18 +257,18 @@ saadaan tulos
                      &=\frac{3}{2}\ln (t^2+1)+C \\
                      &=\underline{\underline{\frac{3}{2}\ln[(x+1)^{2/3}+1]+C}}.
 \end{align*}
-Jos v‰lill‰ $x\in(-\infty,-1)$ tulkitaan $\sqrt[3]{x+1}=-\sqrt[3]{\abs{x+1}}$, niin tulos on
-p‰tev‰ myˆs t‰ll‰ v‰lill‰. \loppu
+Jos v√§lill√§ $x\in(-\infty,-1)$ tulkitaan $\sqrt[3]{x+1}=-\sqrt[3]{\abs{x+1}}$, niin tulos on
+p√§tev√§ my√∂s t√§ll√§ v√§lill√§. \loppu
 
 \begin{Exa}
 $\D\int \frac{e^x}{\sqrt{x}}\,dx\ =\ ?$ 
 \end{Exa}
-\ratk Sijoituksella $\ \D{\sqrt{x} = t,\ x = t^2,\ dx = 2t\,dt}\ $ teht‰v‰ muuntuu muotoon
+\ratk Sijoituksella $\ \D{\sqrt{x} = t,\ x = t^2,\ dx = 2t\,dt}\ $ teht√§v√§ muuntuu muotoon
 \[ 
 \int 2e^{t^2}\,dt\ =\ ? 
 \]
-T‰ll‰ ei ole alkeisfunktioratkaisua (ainoastaan sarjaratkaisu, ks. seuraava luku), joten 
-tyydyt‰‰n tulokseen
+T√§ll√§ ei ole alkeisfunktioratkaisua (ainoastaan sarjaratkaisu, ks. seuraava luku), joten 
+tyydyt√§√§n tulokseen
 \[ 
 \int \frac{e^x}{\sqrt{x}}\,dx = 2G(\sqrt{x}), \quad G(t) = \int e^{t^2}\,dt. \loppu 
 \]
@@ -302,7 +302,7 @@ g) \ $\int (x^2-1)^{n-1/2}\,dx,\ n\in\Z,\ \ n=-1,2$. \newline
 h) \ $\int (1-x^2)^{n-1/2}\,dx,\ n\in\Z,\ \ n=-1,2$.
 
 \item
-Laske annettua sijoitusta k‰ytt‰en:
+Laske annettua sijoitusta k√§ytt√§en:
 \begin{align*}
 &\text{a)}\ \ \int \frac{1}{\sqrt{5-x^2}}\,dx,\ \ x=\sqrt{5}\,t \qquad
  \text{b)}\ \ \int \frac{1}{x^2+2x+3}\,dx,\ \ x+1=\sqrt{2}\,t \\
@@ -322,8 +322,8 @@ Muunna seuraavat integraalit toiseen muotoon annetulla sijoituksella.
 \item
 Funktioiden $x^\alpha\sin\beta x,\ x^\alpha\cos\beta x,\ x^\alpha e^{\beta x}$
 ($\alpha,\beta\in\R$) integraalifunktiot ovat alkeisfunktioita vain kun joko $\beta=0$ tai 
-$\alpha\in\N\cup\{0\}$. Mitk‰ seuraavista ovat t‰m‰n tiedon perusteella alkeisfunktioita ja 
-mitk‰ eiv‰t?
+$\alpha\in\N\cup\{0\}$. Mitk√§ seuraavista ovat t√§m√§n tiedon perusteella alkeisfunktioita ja 
+mitk√§ eiv√§t?
 \begin{align*}
 &\text{a)}\ \ \int \cos(x^2)\,dx \qquad
  \text{b)}\ \ \int x^{13}\sqrt{x}\cos\sqrt{x}\,dx \qquad

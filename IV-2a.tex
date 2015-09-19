@@ -1,23 +1,23 @@
-%Joukko-opillinen k‰‰nteisfunktio
-Reaalifunktioiden algebran operaatioista on edellisess‰ luvussa esitelty funktioiden
-'ketjutus' yhdistetyksi funktioksi sek‰ yhdistely laskuoperaatioiden avulla. Kolmas
-keskeinen reaalifunktioiden algebran operaatio on funktion 'k‰‰nt‰minen' eli
-\kor{k‰‰nteisfunktion} (engl.\ inverse function) muodostaminen. Tarkastellaan
-k‰‰nteisfunktion k‰sitett‰ aluksi yleisemm‰ss‰ joukko-opillisessa yhteydess‰.
+%Joukko-opillinen k√§√§nteisfunktio
+Reaalifunktioiden algebran operaatioista on edellisess√§ luvussa esitelty funktioiden
+'ketjutus' yhdistetyksi funktioksi sek√§ yhdistely laskuoperaatioiden avulla. Kolmas
+keskeinen reaalifunktioiden algebran operaatio on funktion 'k√§√§nt√§minen' eli
+\kor{k√§√§nteisfunktion} (engl.\ inverse function) muodostaminen. Tarkastellaan
+k√§√§nteisfunktion k√§sitett√§ aluksi yleisemm√§ss√§ joukko-opillisessa yhteydess√§.
 
 Olkoon $A$ ja $B$ joukkoja ja $f:\ A \kohti B$ on funktio, ts.\ jokaiseen $x \in A$ liittyy
-yksik‰sitteinen $f(x)=y \in B$ ($A=\DF_f=$ m‰‰rittelyjoukko, $B=$ maalijoukko, vrt.\
-Luku \ref{trigonometriset funktiot}). Sanotaan, ett‰ $f$ on 1-1 ('yksi yhteen', engl.\
-one to one) eli \kor{k‰‰ntyv‰} (engl.\ invertible) eli \kor{injektio} (injektiivinen),
-jos p‰tee
+yksik√§sitteinen $f(x)=y \in B$ ($A=\DF_f=$ m√§√§rittelyjoukko, $B=$ maalijoukko, vrt.\
+Luku \ref{trigonometriset funktiot}). Sanotaan, ett√§ $f$ on 1-1 ('yksi yhteen', engl.\
+one to one) eli \kor{k√§√§ntyv√§} (engl.\ invertible) eli \kor{injektio} (injektiivinen),
+jos p√§tee
 \[
 \forall x_1,x_2 \in A\ [\,x_1 \neq x_2\ \impl\ f(x_1) \neq f(x_2)\,].
 \]
-T‰ll‰ ehdolla jokaiseen $y \in f(A)=\RF_f$ liittyy y\pain{ksik‰sitteinen} $x \in A$ siten,
-ett‰ $f(x)=y$. Kun liittyminen merkit‰‰n $y \map x$, niin kyseess‰ on siis funktio, jonka
-m‰‰rittelyjoukko on $f(A)=\RF_f$ ja arvojoukko on $A=\DF_f$. T‰t‰ sanotaan $f$:n 
-k‰‰nteisfunktioksi, merkit‰‰n $\inv{f}$ ja luetaan '$f$ miinus 1' (engl $f$ inverse). 
-K‰‰nteisfunktio m‰‰ritell‰‰n siis laskus‰‰nnˆll‰ (liitt‰miss‰nnˆll‰) 
+T√§ll√§ ehdolla jokaiseen $y \in f(A)=\RF_f$ liittyy y\pain{ksik√§sitteinen} $x \in A$ siten,
+ett√§ $f(x)=y$. Kun liittyminen merkit√§√§n $y \map x$, niin kyseess√§ on siis funktio, jonka
+m√§√§rittelyjoukko on $f(A)=\RF_f$ ja arvojoukko on $A=\DF_f$. T√§t√§ sanotaan $f$:n 
+k√§√§nteisfunktioksi, merkit√§√§n $\inv{f}$ ja luetaan '$f$ miinus 1' (engl $f$ inverse). 
+K√§√§nteisfunktio m√§√§ritell√§√§n siis laskus√§√§nn√∂ll√§ (liitt√§miss√§nn√∂ll√§) 
 \[ 
 x=\inv{f}(y)\,\ \ekv\,\ y=f(x) \quad (y \in f(A)).
 \]  
@@ -26,12 +26,12 @@ x=\inv{f}(y)\,\ \ekv\,\ y=f(x) \quad (y \in f(A)).
 \import{kuvat/}{kuvaII-5.pstex_t}
 \end{center}
 \end{figure}
-\begin{Exa} Olkoon $A=\{1,2,3\}\subset\N$ ja $B=\{4,5,6\}\subset\N$ ja m‰‰ritell‰‰n funktio 
+\begin{Exa} Olkoon $A=\{1,2,3\}\subset\N$ ja $B=\{4,5,6\}\subset\N$ ja m√§√§ritell√§√§n funktio 
 $f:\ A \kohti B$ asettamalla
 \[
 f(1)=6, \quad f(2)=4, \quad f(3)=5.
 \]
-T‰llˆin $f$ on k‰‰ntyv‰ ja
+T√§ll√∂in $f$ on k√§√§ntyv√§ ja
 \[
 \inv{f}(4)=2, \quad \inv{f}(5)=3, \quad \inv{f}(6)=1.
 \]
@@ -41,11 +41,11 @@ f\       &=\ \{(1,6),(2,4),(3,5)\}\ \subset\ A \times B \\
 \inv{f}\ &=\ \{(6,1),(4,2),(5,3)\}\ =\ \{(4,2),(5,3),(6,1)\}\ \subset\ B \times A \loppu
 \end{align*}
 \end{Exa}
-\jatko \begin{Exa} (jatko) Jos $f: A \kohti B$ m‰‰ritell‰‰n asettamalla
+\jatko \begin{Exa} (jatko) Jos $f: A \kohti B$ m√§√§ritell√§√§n asettamalla
 \[
 f(1)=4, \quad f(2)=5, \quad f(3)=4,
 \]
-niin $f$ ei ole k‰‰ntyv‰, koska $f(1)=f(3)$. T‰ss‰ tapauksessa k‰‰nteisfunktiota ei siis ole.
+niin $f$ ei ole k√§√§ntyv√§, koska $f(1)=f(3)$. T√§ss√§ tapauksessa k√§√§nteisfunktiota ei siis ole.
 \loppu \end{Exa}
 \begin{figure}[H]
 \begin{center}
@@ -53,21 +53,21 @@ niin $f$ ei ole k‰‰ntyv‰, koska $f(1)=f(3)$. T‰ss‰ tapauksessa k‰‰nteisfunktiota
 \end{center}
 \end{figure}
 \begin{Exa} Luonnollisia lukuja koskevien Peanon aksioomien (ks.\ alaviite Luvussa
-\ref{ratluvut}) mukaan jokaiseen $x\in\N$ on liitett‰viss‰ nk.\ seuraaja $x'\in\N$.
-T‰ss‰ on itse asiassa kyseess‰ funktio (seuraajafunktio), sill‰ jos merkit‰‰n $x'=f(x)$, niin
+\ref{ratluvut}) mukaan jokaiseen $x\in\N$ on liitett√§viss√§ nk.\ seuraaja $x'\in\N$.
+T√§ss√§ on itse asiassa kyseess√§ funktio (seuraajafunktio), sill√§ jos merkit√§√§n $x'=f(x)$, niin
 aksioomat (P2)--(P2) (ks.\ Luku \ref{ratluvut}) voidaan tulkita seuraavasti: (P2) $f$ on
-funktio (seuraaja yksik‰sitteinen) ja $\DF_f=\N$ (jokaisella $x\in\N$ on seuraaja).
-(P3) $1\not\in\RF_f$ ($1$ ei ole mink‰‰n $x\in\N$ seuraaja). (P4) $f$ on 1-1. 
-Aksiooman (P4) mukaan siis seuraajafunktiolla on k‰‰nteisfunktio. T‰t‰ voisi kutsua
-'edelt‰j‰funktioksi'. \loppu
+funktio (seuraaja yksik√§sitteinen) ja $\DF_f=\N$ (jokaisella $x\in\N$ on seuraaja).
+(P3) $1\not\in\RF_f$ ($1$ ei ole mink√§√§n $x\in\N$ seuraaja). (P4) $f$ on 1-1. 
+Aksiooman (P4) mukaan siis seuraajafunktiolla on k√§√§nteisfunktio. T√§t√§ voisi kutsua
+'edelt√§j√§funktioksi'. \loppu
 \end{Exa}
 
-\subsection*{K‰‰nt‰en yksik‰sitteinen vastaavuus}
+\subsection*{K√§√§nt√§en yksik√§sitteinen vastaavuus}
 
-Jos $f: A \kohti B$ on 1-1 ja $\RF_f=B$, niin sanotaan, ett‰ $f$ luo \kor{k‰‰nt‰en 
-yksik‰sitteisen vastaavuuden} $A$:n ja $B$:n v‰lille. T‰ll‰ tarkoitetaan yksinkertaisesti,
-ett‰ jokaista $x \in A$ vastaa yksik‰sitteinen $y \in B$, kun asetetaan $y=f(x)$, ja k‰‰nt‰en,
-jokaista $y \in B$ vastaa yksik‰sitteinen $x \in A$, kun asetetaan $x=\inv{f}(y)$. T‰llaista
-vastaavuutta on merkitty aiemmin ueassa yhteydess‰ symbolilla '$\vast$'
-(esim.\ $\Ekaksi \vast \Rkaksi$) tai yksitt‰isten alkioiden tapauksessa symbolilla '$\vastaa$'
+Jos $f: A \kohti B$ on 1-1 ja $\RF_f=B$, niin sanotaan, ett√§ $f$ luo \kor{k√§√§nt√§en 
+yksik√§sitteisen vastaavuuden} $A$:n ja $B$:n v√§lille. T√§ll√§ tarkoitetaan yksinkertaisesti,
+ett√§ jokaista $x \in A$ vastaa yksik√§sitteinen $y \in B$, kun asetetaan $y=f(x)$, ja k√§√§nt√§en,
+jokaista $y \in B$ vastaa yksik√§sitteinen $x \in A$, kun asetetaan $x=\inv{f}(y)$. T√§llaista
+vastaavuutta on merkitty aiemmin ueassa yhteydess√§ symbolilla '$\vast$'
+(esim.\ $\Ekaksi \vast \Rkaksi$) tai yksitt√§isten alkioiden tapauksessa symbolilla '$\vastaa$'
 (esim.\ $P\in\Ekaksi\,\vastaa\,\vec r=\Vect{OP} \in V$). 

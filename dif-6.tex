@@ -2,70 +2,70 @@
 \alku
 \index{interpolaatiopolynomi|vahv}
 
-Tavallisessa \kor{polynomi-interpolaatiossa} on l‰htˆajatuksena, ett‰ funktiosta $f$ tunnetaan
-vain ‰‰rellinen m‰‰r‰ pistearvoja:
+Tavallisessa \kor{polynomi-interpolaatiossa} on l√§ht√∂ajatuksena, ett√§ funktiosta $f$ tunnetaan
+vain √§√§rellinen m√§√§r√§ pistearvoja:
 \[
 f(x_i)=f_i,\quad i=0 \ldots n.
 \]
-N‰iden tietojen perusteella halutaan esitt‰‰ $f$ likim‰‰rin polynomina muuallakin kuin
-pisteiss‰ $x_i$, esim.\ jollakin v‰lill‰. Interpolaatio on kyseess‰ erityisesti silloin, kun
-$f(x)$ halutaan laskea 'v‰lipisteiss‰' $x \in [\min\{x_i\},\max\{x_i\}]$, muussa tapauksessa
-(eli kun $x < \min\{x_i\}$ tai $x > \max\{x_i\}$) sanotaan, ett‰ kyseess‰ on
+N√§iden tietojen perusteella halutaan esitt√§√§ $f$ likim√§√§rin polynomina muuallakin kuin
+pisteiss√§ $x_i$, esim.\ jollakin v√§lill√§. Interpolaatio on kyseess√§ erityisesti silloin, kun
+$f(x)$ halutaan laskea 'v√§lipisteiss√§' $x \in [\min\{x_i\},\max\{x_i\}]$, muussa tapauksessa
+(eli kun $x < \min\{x_i\}$ tai $x > \max\{x_i\}$) sanotaan, ett√§ kyseess√§ on
 \kor{ekstrapolaatio}. Annetut tiedot voivat olla esim.\ mitattua 'dataa'. Toinen yleinen
-sovellustilanne on sellainen, jossa funktio $f$ tunnetaan ep‰suorasti, esim.\
-differentiaaliyht‰lˆn ratkaisuna, ja halutaan laskea arvot $f_i$ valituissa pisteiss‰ $x_i$.
-T‰llˆin polynomi-interpolaatioista on hyˆty‰ itse laskenta-algoritmin suunnittelussa.
+sovellustilanne on sellainen, jossa funktio $f$ tunnetaan ep√§suorasti, esim.\
+differentiaaliyht√§l√∂n ratkaisuna, ja halutaan laskea arvot $f_i$ valituissa pisteiss√§ $x_i$.
+T√§ll√∂in polynomi-interpolaatioista on hy√∂ty√§ itse laskenta-algoritmin suunnittelussa.
 
-Funktion polynomiapproksimaatiossa on yleens‰ perusoletuksena (tai ainakin toivomuksena), ett‰
-funktio on riitt‰v‰n s‰‰nnˆllinen, jolloin Taylorin lauseen perusteella tiedet‰‰n, ett‰ 
-funktiota voi (ainakin lyhyell‰ v‰lill‰) approksimoida hyvin polynomilla, nimitt‰in Taylorin
-polynomilla. Koska itse Taylorin polynomia ei ym.\ tiedoista voi suoraan m‰‰r‰t‰, on luontevaa
+Funktion polynomiapproksimaatiossa on yleens√§ perusoletuksena (tai ainakin toivomuksena), ett√§
+funktio on riitt√§v√§n s√§√§nn√∂llinen, jolloin Taylorin lauseen perusteella tiedet√§√§n, ett√§ 
+funktiota voi (ainakin lyhyell√§ v√§lill√§) approksimoida hyvin polynomilla, nimitt√§in Taylorin
+polynomilla. Koska itse Taylorin polynomia ei ym.\ tiedoista voi suoraan m√§√§r√§t√§, on luontevaa
 valita approksimoivaksi polynomiksi $p$ sellainen, joka sopii annettuihin tietoihin, eli
 toteuttaa
 \begin{equation} \label{interpolaatioehdot}
 p(x_i)=f(x_i),\quad i=0 \ldots n.
 \end{equation}
-Koska t‰ss‰ on ehtoja $n+1$ kpl, on edelleen luonnollista valita $p$:n asteluvuksi $n$, jolloin
-$p$:ss‰ on vapaita kertoimia myˆskin $n+1$ kpl. N‰in m‰‰ritelty‰ polynomia $p$ sanotaan $f$:n 
+Koska t√§ss√§ on ehtoja $n+1$ kpl, on edelleen luonnollista valita $p$:n asteluvuksi $n$, jolloin
+$p$:ss√§ on vapaita kertoimia my√∂skin $n+1$ kpl. N√§in m√§√§ritelty√§ polynomia $p$ sanotaan $f$:n 
 \index{interpolaatiopolynomi!a@Lagrangen} \index{Lagrangen!b@interpolaatio(polynomi)}%
-\kor{Lagrangen interpolaatiopolynomiksi} pisteiss‰ $x_i$. Pisteit‰ $x_i$ sanotaan t‰ss‰ 
-yhteydess‰ \kor{interpolaatiopisteiksi} ja ehtoja \eqref{interpolaatioehdot} 
-\kor{interpolaatioehdoiksi}. N‰m‰  ehdot todella m‰‰rittelev‰t yksik‰sitteisen polynomin
+\kor{Lagrangen interpolaatiopolynomiksi} pisteiss√§ $x_i$. Pisteit√§ $x_i$ sanotaan t√§ss√§ 
+yhteydess√§ \kor{interpolaatiopisteiksi} ja ehtoja \eqref{interpolaatioehdot} 
+\kor{interpolaatioehdoiksi}. N√§m√§  ehdot todella m√§√§rittelev√§t yksik√§sitteisen polynomin
 astetta $n$:
-\begin{Prop} \label{interpolaatiopolynomin yksik‰sitteisyys}
-Lagrangen interpolaatiopolynomi on yksik‰sitteinen.
+\begin{Prop} \label{interpolaatiopolynomin yksik√§sitteisyys}
+Lagrangen interpolaatiopolynomi on yksik√§sitteinen.
 \end{Prop}
 \tod Ehdot \eqref{interpolaatioehdot} toteuttavan interpolaatiopolynomin olemassaolo seuraa 
-j‰ljemp‰n‰ esitett‰v‰st‰ laskukaavasta \eqref{Lagrangen interpolaatiokaava}, joten riitt‰‰
-n‰ytt‰‰ yksik‰sitteisyys. Olkoot siis $p_1$ ja $p_2$ molemmat ehdot \eqref{interpolaatioehdot}
-t‰ytt‰vi‰ polynomeja astetta $n$. T‰llˆin $q(x)=p_1(x)-p_2(x)$ on polynomi enint‰‰n astetta $n$
-ja p‰tee
+j√§ljemp√§n√§ esitett√§v√§st√§ laskukaavasta \eqref{Lagrangen interpolaatiokaava}, joten riitt√§√§
+n√§ytt√§√§ yksik√§sitteisyys. Olkoot siis $p_1$ ja $p_2$ molemmat ehdot \eqref{interpolaatioehdot}
+t√§ytt√§vi√§ polynomeja astetta $n$. T√§ll√∂in $q(x)=p_1(x)-p_2(x)$ on polynomi enint√§√§n astetta $n$
+ja p√§tee
 \[
 q(x_i)=0, \quad i=0 \ldots n,
 \]
-eli $q$:lla on $n+1$ reaalista nollakohtaa. Algebran peruslauseen mukaan on t‰llˆin oltava
-$q=0$. Siis $p_1=p_2$, eli ehdot \eqref{interpolaatioehdot} t‰ytt‰v‰ polynomi (sik‰li kuin
-olemassa) on yksik‰sitteinen. \loppu
+eli $q$:lla on $n+1$ reaalista nollakohtaa. Algebran peruslauseen mukaan on t√§ll√∂in oltava
+$q=0$. Siis $p_1=p_2$, eli ehdot \eqref{interpolaatioehdot} t√§ytt√§v√§ polynomi (sik√§li kuin
+olemassa) on yksik√§sitteinen. \loppu
 
-Lagrangen interpolaatiopolynomin approksimaatiovirheelle p‰tee seuraava tulos, joka muistuttaa 
-Taylorin polynomien virhekaavaa (Lause \ref{Taylor}). J‰ljemp‰n‰ n‰hd‰‰nkin
-(Lause \ref{usean pisteen Taylor}), ett‰ n‰m‰ kaksi tulosta ovat erikoistapauksia yleisemm‰st‰
-interpolaatiopolynomien virhekaavasta. Jatkossa sanotaan ‰‰rellisen pisteistˆn $X$ 
-\index{viritt‰‰ (v‰li)}%
-\kor{viritt‰m‰ksi} v‰liksi suljettua v‰li‰ $[a,b]$, miss‰ $a = \min \{x \mid x \in X\}$ ja 
+Lagrangen interpolaatiopolynomin approksimaatiovirheelle p√§tee seuraava tulos, joka muistuttaa 
+Taylorin polynomien virhekaavaa (Lause \ref{Taylor}). J√§ljemp√§n√§ n√§hd√§√§nkin
+(Lause \ref{usean pisteen Taylor}), ett√§ n√§m√§ kaksi tulosta ovat erikoistapauksia yleisemm√§st√§
+interpolaatiopolynomien virhekaavasta. Jatkossa sanotaan √§√§rellisen pisteist√∂n $X$ 
+\index{viritt√§√§ (v√§li)}%
+\kor{viritt√§m√§ksi} v√§liksi suljettua v√§li√§ $[a,b]$, miss√§ $a = \min \{x \mid x \in X\}$ ja 
 $b = \max \{x \mid x \in X\}$.
 \begin{Lause} \label{Lagrangen interpolaatiovirhe}
-Olkoon $f\,$ jatkuva v‰lill‰ $[a,b]$ ja $n+1$ kertaa derivoituva v‰lill‰ $(a,b)$, miss‰ $[a,b]$
-on pisteen $x$ ja erillisten pisteiden $x_0,\ldots,x_n$ viritt‰m‰ v‰li, $n\in\N$. T‰llˆin jos
-$p$ on $f$:n Lagrangen interpolaatiopolynomi pisteiss‰ $x_0,\ldots,x_n$, niin jollakin
-$\xi \in (a,b)$ p‰tee virhekaava
+Olkoon $f\,$ jatkuva v√§lill√§ $[a,b]$ ja $n+1$ kertaa derivoituva v√§lill√§ $(a,b)$, miss√§ $[a,b]$
+on pisteen $x$ ja erillisten pisteiden $x_0,\ldots,x_n$ viritt√§m√§ v√§li, $n\in\N$. T√§ll√∂in jos
+$p$ on $f$:n Lagrangen interpolaatiopolynomi pisteiss√§ $x_0,\ldots,x_n$, niin jollakin
+$\xi \in (a,b)$ p√§tee virhekaava
 \[
 f(x)-p(x)=\frac{1}{(n+1)!}\,f^{(n+1)}(\xi) \prod_{i=0}^n (x-x_i).
 \]
 \end{Lause}
 \tod perustuu samaan ideaan kuin Taylorin lauseen todistus Luvussa \ref{taylorin lause}.
-Ensinn‰kin jos $x\in\{x_0,\ldots,x_n\}$, on v‰itt‰m‰ tosi jokaisella $\xi \in (a,b)$, joten
-voidaan olettaa, ett‰ $x\notin\{x_0,\ldots,x_n\}$. Merkit‰‰n
+Ensinn√§kin jos $x\in\{x_0,\ldots,x_n\}$, on v√§itt√§m√§ tosi jokaisella $\xi \in (a,b)$, joten
+voidaan olettaa, ett√§ $x\notin\{x_0,\ldots,x_n\}$. Merkit√§√§n
 \[
 w(t)=\prod_{i=0}^n (t-x_i)
 \]
@@ -73,11 +73,11 @@ ja tutkitaan funktiota
 \[
 g(t)=f(t)-p(t)- Hw(t),\quad H=[f(x)-p(x)]/w(x).
 \]
-Funktion $g$ nollakohtia ovat interpolointipisteet $x_0,\ldots,x_n$ ja lis‰ksi piste $x$. Koska
-nollakohtia v‰lill‰ $[a,b]$ on siis ainakin $n+2$ kpl, ja koska n‰iden v‰liss‰ on aina 
-derivaatan nollakohta (Lause \ref{Rollen lause}), on $g'(t)$:ll‰ ainakin $n+1$ nollakohtaa
-avoimella v‰lill‰ $(a,b)$. T‰llˆin $g''$:lla on ainakin $n$ nollakohtaa t‰ll‰ v‰lill‰, ja
-lopulta $g^{(n+1)}$:lla ainakin yksi nollakohta $\xi\in (a,b)$. Mutta t‰llˆin
+Funktion $g$ nollakohtia ovat interpolointipisteet $x_0,\ldots,x_n$ ja lis√§ksi piste $x$. Koska
+nollakohtia v√§lill√§ $[a,b]$ on siis ainakin $n+2$ kpl, ja koska n√§iden v√§liss√§ on aina 
+derivaatan nollakohta (Lause \ref{Rollen lause}), on $g'(t)$:ll√§ ainakin $n+1$ nollakohtaa
+avoimella v√§lill√§ $(a,b)$. T√§ll√∂in $g''$:lla on ainakin $n$ nollakohtaa t√§ll√§ v√§lill√§, ja
+lopulta $g^{(n+1)}$:lla ainakin yksi nollakohta $\xi\in (a,b)$. Mutta t√§ll√∂in
 \begin{align*}
 0 = g^{(n+1)}(\xi) &= f^{(n+1)}(\xi)-p^{(n+1)}(\xi)-H w^{(n+1)}(\xi) \\
                    &= f^{(n+1)}(\xi)-H (n+1)! \\[2mm]
@@ -87,8 +87,8 @@ lopulta $g^{(n+1)}$:lla ainakin yksi nollakohta $\xi\in (a,b)$. Mutta t‰llˆin
 Interpolaatioperiaatteista on astelukuun $n=1$ perustuva
 \index{lineaarinen interpolaatio}%
 \kor{lineaarinen interpolaatio} 
-yksinkertaisuutensa vuoksi hyvin yleisesti k‰ytetty. Esimerkiksi k‰yr‰n $y=f(x)$ approksimointi
-pisteiden $(x_i,f(x_i))$ kautta kulkevalla murtoviivalla (vaikkapa kuvan piirt‰miseksi tai
+yksinkertaisuutensa vuoksi hyvin yleisesti k√§ytetty. Esimerkiksi k√§yr√§n $y=f(x)$ approksimointi
+pisteiden $(x_i,f(x_i))$ kautta kulkevalla murtoviivalla (vaikkapa kuvan piirt√§miseksi tai
 kaarenpituuden arvioimiseksi) tarkoittaa $f$:n \kor{paloittain lineaarista}
 interpolaatiota.
 \begin{figure}[H]
@@ -96,48 +96,48 @@ interpolaatiota.
 \import{kuvat/}{kuvaipol-1.pstex_t}
 \end{center}
 \end{figure}
-Jos $f$ on kahdesti jatkuvasti derivoituva interpolointiv‰lill‰ $[x_0,x_1]$, niin lineaarisen
-interpolaation virhe ko.\ v‰lill‰ on Lauseen \ref{Lagrangen interpolaatiovirhe} mukaan enint‰‰n
+Jos $f$ on kahdesti jatkuvasti derivoituva interpolointiv√§lill√§ $[x_0,x_1]$, niin lineaarisen
+interpolaation virhe ko.\ v√§lill√§ on Lauseen \ref{Lagrangen interpolaatiovirhe} mukaan enint√§√§n
 \begin{align*}
 \max_{x\in [x_0,x_1]} \abs{f(x)-p(x)} 
          &\le \max_{x\in[x_0,x_1]} \left|\frac{1}{2}(x-x_0)(x-x_1)\right|
               \max_{\xi\in[x_0,x_1]}\abs{f''(\xi)} \\
          &= \frac{1}{8}\,(x_1-x_0)^2\max_{x\in [x_0,x_1]} \abs{f''(x)}.
 \end{align*}
-Jos interpolointi tapahtuu paloittain v‰lill‰ $[a,b]$ ja interpolointipisteiden v‰li on
-enint‰‰n $h$, niin ko.\ approksimaation maksimivirhe on siis enint‰‰n
+Jos interpolointi tapahtuu paloittain v√§lill√§ $[a,b]$ ja interpolointipisteiden v√§li on
+enint√§√§n $h$, niin ko.\ approksimaation maksimivirhe on siis enint√§√§n
 \[
 \max_{x\in [a,b]} \abs{f(x)-\tilde{f}(x)}\leq\frac{1}{8}\,h^2\max_{x\in [a,b]} \abs{f''(x)}.
 \]
-T‰m‰ arvio ei ole parannettavissa, sill‰ jos $f''(x)=$ vakio (eli $f$ on toisen asteen
-polynomi) ja interpolointipisteet ovat tasav‰liset, niin virhearvion yl‰raja totetuu
-per‰kk‰isten interpolointipisteiden puoliv‰liss‰.
+T√§m√§ arvio ei ole parannettavissa, sill√§ jos $f''(x)=$ vakio (eli $f$ on toisen asteen
+polynomi) ja interpolointipisteet ovat tasav√§liset, niin virhearvion yl√§raja totetuu
+per√§kk√§isten interpolointipisteiden puoliv√§liss√§.
 
 \index{kvadraattinen!b@interpolaatio}%
 Jos \kor{kvadraattisessa} (= toisen asteen) interpolaatiossa pisteet $x_0,x_1,x_2$ ovat 
-tasav‰lein ja v‰li $=h$, niin
+tasav√§lein ja v√§li $=h$, niin
 \[
 \max_{x\in [x_0,x_2]} \abs{(x-x_0)(x-x_1)(x-x_2)}
      = \max_{x\in [-h,h]} \abs{x}(h^2-x^2)=\frac{2}{3\sqrt{3}}\,h^3,
 \]
-joten kvadraattinen interpolaatiovirhe on tasav‰listen interpolointipisteiden viritt‰m‰ll‰ 
-v‰lill‰ enint‰‰n
+joten kvadraattinen interpolaatiovirhe on tasav√§listen interpolointipisteiden viritt√§m√§ll√§ 
+v√§lill√§ enint√§√§n
 \[
 \max_{x\in [x_0,x_2]} \abs{f(x)-p(x)}
    \le \frac{1}{9\sqrt{3}}\,h^3\max_{x\in [x_0,x_2]} \abs{f'''(x)} \quad (h=x_1-x_0=x_2-x_1).
 \]
 \begin{Exa}
-V‰lill‰ $(0,\infty)$ m‰‰ritelty funktio $E$ toteuttaa ehdot
+V√§lill√§ $(0,\infty)$ m√§√§ritelty funktio $E$ toteuttaa ehdot
 \[
 E'(x) = -\frac{e^{-x}}{x}\,, \quad x>0, \qquad \lim_{x\kohti\infty} E(x)=0.\footnote[2]{Funktio
-on nimelt‰‰n \kor{eksponentiaali-integraalifunktio}.
+on nimelt√§√§n \kor{eksponentiaali-integraalifunktio}.
 \index{eksponentiaali-integraalifunktio|av}}
 \]
-Halutaan m‰‰ritt‰‰ $E$:n arvot likim‰‰rin v‰lill‰ $[1,2]$ laskemalla ensin $E$ pisteiss‰ 
-$x_i=1+(i-1)h,\ i=0\ldots n,\ h=1/n$ (oletetetaan, ett‰ t‰m‰ onnistuu hyvin tarkasti) ja 
-k‰ytt‰m‰ll‰ interpolaatiota muissa pisteiss‰. Kuinka suuri on $n$:n oltava, jos k‰ytet‰‰n \ 
-a) lineaarista, \ b) kvadraattista interpolaatiota ja halutaan, ett‰ interpolaatiovirhe on 
-enint‰‰n $5\cdot 10^{-9}$\,?
+Halutaan m√§√§ritt√§√§ $E$:n arvot likim√§√§rin v√§lill√§ $[1,2]$ laskemalla ensin $E$ pisteiss√§ 
+$x_i=1+(i-1)h,\ i=0\ldots n,\ h=1/n$ (oletetetaan, ett√§ t√§m√§ onnistuu hyvin tarkasti) ja 
+k√§ytt√§m√§ll√§ interpolaatiota muissa pisteiss√§. Kuinka suuri on $n$:n oltava, jos k√§ytet√§√§n \ 
+a) lineaarista, \ b) kvadraattista interpolaatiota ja halutaan, ett√§ interpolaatiovirhe on 
+enint√§√§n $5\cdot 10^{-9}$\,?
 \end{Exa} 
 \ratk Koska $E'(x) = -e^{-x}/x,\ x>0$, niin
 \begin{align*}
@@ -146,7 +146,7 @@ E''(x)  &= e^{-x}(\tfrac{1}{x}+\tfrac{1}{x^2})
 E'''(x) &= -e^{-x}(\tfrac{1}{x}+\tfrac{2}{x^2}+\tfrac{2}{x^3}) 
               \qimpl \abs{E'''(x)}\leq 5/e,\quad x\in [1,2].
 \end{align*}
-N‰in ollen riitt‰‰ valita $N=n+1$ siten, ett‰ p‰tee
+N√§in ollen riitt√§√§ valita $N=n+1$ siten, ett√§ p√§tee
 \begin{align*}
 &\text{a)} \quad \frac{1}{8}\cdot\frac{2}{e}\cdot\left(\frac{1}{N-1}\right)^2
                 \le 5\cdot 10^{-9} \qekv \underline{\underline{N \ge 4290}}, \\
@@ -161,22 +161,22 @@ N‰in ollen riitt‰‰ valita $N=n+1$ siten, ett‰ p‰tee
 \index{polynomisovitus}%
 Korkeampiasteisissa polynomi-interpolaatioissa on usein kyse \kor{polynomisovituksesta} 
 pisteisiin $(x_i,f(x_i))$, jolloin arvot $f(x_i)$ voivat olla esimerkiksi mitattuja. 
-Kehittyneiss‰ numeerisen ja symbolisen analyysin ohjelmistoissa on t‰h‰n teht‰v‰‰n omat 
-komentonsa (esim.\ Mathematica: \verb|Fit|, Matlab: \verb|Polyfit|). K‰sin laskettaessa, tai
+Kehittyneiss√§ numeerisen ja symbolisen analyysin ohjelmistoissa on t√§h√§n teht√§v√§√§n omat 
+komentonsa (esim.\ Mathematica: \verb|Fit|, Matlab: \verb|Polyfit|). K√§sin laskettaessa, tai
 etenkin haluttaessa tutkia interpolaatiopolynomin ominaisuuksia teoreettiselta kannalta,
-voidaan k‰ytt‰‰ esitysmuotoa
+voidaan k√§ytt√§√§ esitysmuotoa
 \begin{equation} \label{Lagrangen interpolaatiokaava}
 p(x)=\sum_{i=0}^n f(x_i)L_i(x),
 \end{equation}
 \index{kantapolynomi (Lagrangen)}%
-miss‰ nk.\ (Lagrangen) \kor{kantapolynomit} $L_i(x)$ (astetta $n$) m‰‰r‰ytyv‰t 
+miss√§ nk.\ (Lagrangen) \kor{kantapolynomit} $L_i(x)$ (astetta $n$) m√§√§r√§ytyv√§t 
 interpolaatioehdoista
 \begin{equation} \label{Lagrangen kantaehdot}
 L_i(x_j)=\begin{cases} 
          1, &\text{kun}\  j=i, \\ 0, &\text{kun}\ j\neq i \quad (j \in \{0, \ldots, n\}). 
          \end{cases}
 \end{equation}
-Helposti on tarkistettavissa, ett‰ n‰m‰ ehdot toteuttava polynomi on (vrt.\ kuvio)
+Helposti on tarkistettavissa, ett√§ n√§m√§ ehdot toteuttava polynomi on (vrt.\ kuvio)
 \[
 L_i(x) \,=\, \frac{(x-x_0)\,\cdots\,(x-x_{i-1})(x-x_{i+1})\,\cdots\,(x-x_n)}
                {\,(x_i-x_0)\,\cdots\,(x_i-x_{i-1})(x_i-x_{i+1})\,\cdots\,(x_i-x_n)}
@@ -187,45 +187,45 @@ L_i(x) \,=\, \frac{(x-x_0)\,\cdots\,(x-x_{i-1})(x-x_{i+1})\,\cdots\,(x-x_n)}
 \import{kuvat/}{kuvaipol-2.pstex_t}
 \end{center}
 \end{figure}
-Ehdoista \eqref{Lagrangen kantaehdot} n‰hd‰‰n myˆs v‰littˆm‰sti, ett‰ polynomi 
-\eqref{Lagrangen interpolaatiokaava} t‰ytt‰‰ asetetut interpolaatioehdot 
-\eqref{interpolaatioehdot}. Lagrangen interpolaatio-ongelman ratkeavuus on siis n‰in tullut 
+Ehdoista \eqref{Lagrangen kantaehdot} n√§hd√§√§n my√∂s v√§litt√∂m√§sti, ett√§ polynomi 
+\eqref{Lagrangen interpolaatiokaava} t√§ytt√§√§ asetetut interpolaatioehdot 
+\eqref{interpolaatioehdot}. Lagrangen interpolaatio-ongelman ratkeavuus on siis n√§in tullut 
 todetuksi.
 \begin{Exa} \label{interpolaatioesimerkki}
-S‰‰nnˆllisest‰ funktiosta tiedet‰‰n mittaustuloksina
+S√§√§nn√∂llisest√§ funktiosta tiedet√§√§n mittaustuloksina
 \[
 f_1=f(0.1)=1.4491,\quad f_2=f(0.2)=1.4832,\quad f_3=f(0.3)=1.5166.
 \]
 Arvioi $f(0)$.
 \end{Exa}
 \ratk Sovitetaan mittaustuloksiin toisen asteen Lagrangen interpolaatiopolynomi $p$ ja
-arvioidaan $f(0)\approx p(0)$. T‰ss‰ on $\{x_0,x_1,x_2\}=\{0.1,0.2,0.3\}$, joten
+arvioidaan $f(0)\approx p(0)$. T√§ss√§ on $\{x_0,x_1,x_2\}=\{0.1,0.2,0.3\}$, joten
 \begin{align*}
 p(0) &= 1.4491\cdot\frac{(0-0.2)\cdot (0-0.3)}{(0.1-0.2)\cdot (0.1-0.3)} \\
 &+ 1.4832\cdot\frac{(0-0.1)\cdot (0-0.3)}{(0.2-0.1)\cdot (0.2-0.3)} \\
 &+ 1.5166\cdot\frac{(0-0.1)\cdot (0-0.2)}{(0.3-0.1)\cdot (0.3-0.2)} \\
 &= 3\cdot 1.4491-3\cdot 1.4832+1\cdot 1.5166=\underline{\underline{1.4143}}.
 \end{align*}
-T‰ss‰ 'mittaustulokset' on itse asiassa saatu funktiosta $f(x)=\sqrt{2+x}$, jolle $f(0)=1.4142$.
+T√§ss√§ 'mittaustulokset' on itse asiassa saatu funktiosta $f(x)=\sqrt{2+x}$, jolle $f(0)=1.4142$.
 \loppu
 
 Kantapolynomeihin perustuva esitysmuoto \eqref{Lagrangen interpolaatiokaava} on erityisen
-k‰tev‰ silloin, kun halutaan arvioida funktion \pain{evaluoinnin} \pain{virheiden} 
-(esim.\ mittausvirheiden) vaikutus interpolointitulokseen. Nimitt‰in jos virheellisten arvojen
+k√§tev√§ silloin, kun halutaan arvioida funktion \pain{evaluoinnin} \pain{virheiden} 
+(esim.\ mittausvirheiden) vaikutus interpolointitulokseen. Nimitt√§in jos virheellisten arvojen
 $\tilde{f}_i$ (oikea arvo $=f_i$) perusteella lasketaan interpolaatiopolynomi $\tilde{p}$, niin
 kaavan \eqref{Lagrangen interpolaatiokaava} mukaan
 \[ 
 p(x)-\tilde{p}(x) = \sum_{i=0}^n (f_i-\tilde{f}_i) L_i(x). 
 \]
-Jos erityisesti tiedet‰‰n, ett‰ $\abs{f_i-\tilde{f}_i} \le \delta,\ i=0,\ldots n$, niin
+Jos erityisesti tiedet√§√§n, ett√§ $\abs{f_i-\tilde{f}_i} \le \delta,\ i=0,\ldots n$, niin
 \[ 
 \abs{p(x)-\tilde{p}(x)} \le \delta \sum_{i=0}^n \abs{L_i(x)} = \delta K(x). 
 \]
-T‰ss‰ m‰‰ritelty virheen vahvistuskerroin $K(x)=\sum_{i=0}^n \abs{L_i(x)}$ siis kertoo, kuinka
-paljon evaluointivirheet voivat pahimmillaan vahvistua pisteess‰ $x$.
-\jatko \begin{Exa} (jatko) Esimerkiss‰ on $L_1(0)=3$, $L_2(0)=-3$ ja $L_3(0)=1$. Siis
-$K(0)=3+3+1=7$, eli virheiden vaikutus pisteess‰ $x=0$ on pahimmassa tapauksessa $7$-kertainen
-yksitt‰isiin evaluointivirheisiin verrattuna. Jos oletetaan, ett‰ virheet ovat enint‰‰n
+T√§ss√§ m√§√§ritelty virheen vahvistuskerroin $K(x)=\sum_{i=0}^n \abs{L_i(x)}$ siis kertoo, kuinka
+paljon evaluointivirheet voivat pahimmillaan vahvistua pisteess√§ $x$.
+\jatko \begin{Exa} (jatko) Esimerkiss√§ on $L_1(0)=3$, $L_2(0)=-3$ ja $L_3(0)=1$. Siis
+$K(0)=3+3+1=7$, eli virheiden vaikutus pisteess√§ $x=0$ on pahimmassa tapauksessa $7$-kertainen
+yksitt√§isiin evaluointivirheisiin verrattuna. Jos oletetaan, ett√§ virheet ovat enint√§√§n
 $10^{-4}$ itseisarvoltaan, niin pahin vaihtoehto toteutuu, kun
 $f_1-\tilde{f}_1=-(f_2-\tilde{f}_2)=f_3-\tilde{f}_3=\pm 10^{-4}$. \loppu
 %\[ 
@@ -236,23 +236,23 @@ $f_1-\tilde{f}_1=-(f_2-\tilde{f}_2)=f_3-\tilde{f}_3=\pm 10^{-4}$. \loppu
 \subsection*{Ekstrapolaatio}
 \index{ekstrapolaatio|vahv}
 
-Esimerkiss‰ \ref{interpolaatioesimerkki} funktiota approksimoitiin interpolaatiopisteiden 
-viritt‰m‰n v‰lin ulkopuolella, jolloin sanotaan ett‰ kyse on \kor{ekstrapolaatiosta}. 
-Ekstrapolaatio on vanhastaan hyvin suosittu ja melko yleisp‰tev‰ tapa parantaa numeeristen 
-laskujen tarkkuutta. Ekstrapolaatiota voidaan k‰ytt‰‰ aina, kun laskettavan suureen voidaan 
-otaksua riippuva s‰‰nnˆllisell‰ (eli sile‰ll‰) tavalla jostakin laskentaan liittyv‰st‰ 
-parametrista. Olkoon esimerkiksi laskettava suure reaaliluku $a$, joka m‰‰r‰ytyy raja-arvona
+Esimerkiss√§ \ref{interpolaatioesimerkki} funktiota approksimoitiin interpolaatiopisteiden 
+viritt√§m√§n v√§lin ulkopuolella, jolloin sanotaan ett√§ kyse on \kor{ekstrapolaatiosta}. 
+Ekstrapolaatio on vanhastaan hyvin suosittu ja melko yleisp√§tev√§ tapa parantaa numeeristen 
+laskujen tarkkuutta. Ekstrapolaatiota voidaan k√§ytt√§√§ aina, kun laskettavan suureen voidaan 
+otaksua riippuva s√§√§nn√∂llisell√§ (eli sile√§ll√§) tavalla jostakin laskentaan liittyv√§st√§ 
+parametrista. Olkoon esimerkiksi laskettava suure reaaliluku $a$, joka m√§√§r√§ytyy raja-arvona
 \[
 a=\lim_{h\kohti 0^+} f(h),
 \]
-miss‰ jokainen $f(h)$, $h>0$, on laskettavissa, mutta laskenta tulee yh‰ tyˆl‰‰mm‰ksi $h$:n 
-pienetess‰. Jos nyt voidaan olettaa, ett‰ funktio $f(x)$ on s‰‰nnˆllinen jollakin v‰lill‰ 
+miss√§ jokainen $f(h)$, $h>0$, on laskettavissa, mutta laskenta tulee yh√§ ty√∂l√§√§mm√§ksi $h$:n 
+pienetess√§. Jos nyt voidaan olettaa, ett√§ funktio $f(x)$ on s√§√§nn√∂llinen jollakin v√§lill√§ 
 $[0,b]$, $b>0$, voidaan numeerisen algoritmin antamia approksimaatioita
 \[
 a\approx a_n=f(x_n),\quad n=1,2,\ldots\quad (x_n\kohti 0^+)
 \]
-parantaa ekstrapolaatiolla. N‰in syntyy nk.\ \kor{ekstrapolaatiotaulukko}, jossa laskettuihin 
-tuloksiin sovitetaan yh‰ korkeampiasteisia polynomeja $p(x)$, ja arvioidaan kunkin polynomin
+parantaa ekstrapolaatiolla. N√§in syntyy nk.\ \kor{ekstrapolaatiotaulukko}, jossa laskettuihin 
+tuloksiin sovitetaan yh√§ korkeampiasteisia polynomeja $p(x)$, ja arvioidaan kunkin polynomin
 avulla $a\approx p(0)$\,:
 
 \begin{center}
@@ -264,22 +264,22 @@ $x_3$ & $f(x_3)$ & $p^{(2,3)}(0)$ & $p^{(1,3)}(0)$ \\
 $x_4$ & $f(x_4)$ & $p^{(3,4)}(0)$ & $p^{(2,4)}(0)$ & $p^{(1,4)}(0)$
 \end{tabular}
 \end{center}
-T‰ss‰ $p^{(i,j)}(x)$ tarkoittaa pisteisiin $\,x_i\ldots x_j\,$ sovitettua interpolaatiopolynomia
-astetta $j-i$ ($p^{(i,i)}(x)=f(x_i)=$ vakio). Osoittautuu, ett‰ taulukon sarakkeet m‰‰r‰ytyv‰t
-palautuvasti edellisen sarakkeen avulla. Nimitt‰in
+T√§ss√§ $p^{(i,j)}(x)$ tarkoittaa pisteisiin $\,x_i\ldots x_j\,$ sovitettua interpolaatiopolynomia
+astetta $j-i$ ($p^{(i,i)}(x)=f(x_i)=$ vakio). Osoittautuu, ett√§ taulukon sarakkeet m√§√§r√§ytyv√§t
+palautuvasti edellisen sarakkeen avulla. Nimitt√§in
 \begin{equation} \label{Nevillen kaava}
 \boxed{\ p^{(i,j)}(x)=\frac{(x_j-x)p^{(i,j-1)}(x)+(x-x_i)p^{(i+1,j)}(x)}{x_j-x_i}\,. \quad}
 \end{equation}
-T‰m‰ palautuskaava (perustelu induktiolla: Harj.teht.\,\ref{H-dif-6: Nevillen kaava}) helpottaa
+T√§m√§ palautuskaava (perustelu induktiolla: Harj.teht.\,\ref{H-dif-6: Nevillen kaava}) helpottaa
 taulukon muodostamista huomattavasti.\footnote[2]{Kaavaan \eqref{Nevillen kaava} perustuvaa
 ekstrapolaatiotaulukkoa sanotaan \kor{Nevillen kaavioksi}. Ennen tietokoneiden aikaa
-t‰llaisilla (k‰sinlaskua helpottavilla) algoritmisilla keksinnˆill‰ oli huomattava k‰yt‰nnˆn
+t√§llaisilla (k√§sinlaskua helpottavilla) algoritmisilla keksinn√∂ill√§ oli huomattava k√§yt√§nn√∂n
 merkitys. \index{Nevillen kaavio|av}} 
 Seuraavassa esimerkki kaavaan \eqref{Nevillen kaava} perustuvasta 'laskemisen taiteesta'.
 \begin{Exa} \label{Neville} \index{Stirlingin kaava}
 \kor{Stirlingin kaavan} mukaan $\phi(n)=n!/(\sqrt{2\pi n}\,e^{-n}n^n) \approx 1$ suurilla $n$:n
-arvoilla. Ekstrapoloi $\phi(100)$ arvoista $\phi(n)$, $n=5\ldots 9$, kun tiedet‰‰n lis‰ksi,
-ett‰ $\phi(n)=f(1/n)$, miss‰ $f(x)$ on sile‰ funktio v‰lill‰ $[0,1]$.
+arvoilla. Ekstrapoloi $\phi(100)$ arvoista $\phi(n)$, $n=5\ldots 9$, kun tiedet√§√§n lis√§ksi,
+ett√§ $\phi(n)=f(1/n)$, miss√§ $f(x)$ on sile√§ funktio v√§lill√§ $[0,1]$.
 \end{Exa}
 \ratk Muodostetaan ekstrapolaatiotaulukko
 
@@ -293,11 +293,11 @@ $1/8$  & $1.0104..$ & $1.00079..$ & $1.000827..$ & $1.000833565..$ \\
 $1/9$  & $1.0092..$ & $1.00080..$ & $1.000830..$ & $1.000833632..$ & $1.000833708..$ \\
 \end{tabular}
 \end{center}
-Oletettavasti nelj‰nnen asteen interpolaatio antaa tarkimman tuloksen, joten
+Oletettavasti nelj√§nnen asteen interpolaatio antaa tarkimman tuloksen, joten
 $\phi(100)\approx\underline{\underline{1.00083371}}$. (Oikea arvo on on $1.000833677..\,$)
 \loppu
 
-Esimerkiss‰ olennaista oli lis‰tieto, joka mahdollisti oikean muuttujan valinnan ($x_i=1/n_i$)
+Esimerkiss√§ olennaista oli lis√§tieto, joka mahdollisti oikean muuttujan valinnan ($x_i=1/n_i$)
 ekstrapoloinnissa.
 
 \subsection*{*Yleistetty polynomi-interpolaatio}
@@ -307,82 +307,82 @@ Jos $p$ on polynomi astetta $n$ ja toteuttaa ehdot
 \begin{equation} \label{yleiset interpolaatioehdot} 
 \begin{aligned}
 p^{(k)}(x_i)&= f^{(k)}(x_i),\quad k=0\ldots\nu_i-1,\ \ i=1\ldots m, \\ 
-           &\qquad\ \text{miss‰}\quad \nu_i \in \N \quad \text{ja} \quad \sum_{i=1}^m \nu_i=n+1,
+           &\qquad\ \text{miss√§}\quad \nu_i \in \N \quad \text{ja} \quad \sum_{i=1}^m \nu_i=n+1,
 \end{aligned} \end{equation}
-niin sanotaan, ett‰ $p$ on funktion $f$ \kor{yleistetty interpolaatiopolynomi} pisteiss‰
-$x_i$. T‰ss‰ ja jatkossa oletetaan, ett‰ ehdoissa \eqref{yleiset interpolaatioehdot}
-esiintyv‰t $f$:n derivaatat (jos $\nu_i \ge 2$) ovat olemassa pisteiss‰ $x_i$. Ehtojen
-\eqref{yleiset interpolaatioehdot} mukaisesti interpolaatiopisteiden lukum‰‰r‰ $m$ voi
-yleistetyss‰ polynomi-interpolaatiossa astetta $n$ olla mik‰ tahansa v‰lill‰ $1 \le m \le n+1$.
-Tapauksessa $m=n+1$ on oltava $\nu_i=1\ \forall i$, jolloin kyseess‰ on Lagrangen
-interpolaatio. Toisessa ‰‰rip‰‰ss‰ ($m=1$) on taas oltava $\nu_1=n+1$, jolloin $p(x)=f$:n
+niin sanotaan, ett√§ $p$ on funktion $f$ \kor{yleistetty interpolaatiopolynomi} pisteiss√§
+$x_i$. T√§ss√§ ja jatkossa oletetaan, ett√§ ehdoissa \eqref{yleiset interpolaatioehdot}
+esiintyv√§t $f$:n derivaatat (jos $\nu_i \ge 2$) ovat olemassa pisteiss√§ $x_i$. Ehtojen
+\eqref{yleiset interpolaatioehdot} mukaisesti interpolaatiopisteiden lukum√§√§r√§ $m$ voi
+yleistetyss√§ polynomi-interpolaatiossa astetta $n$ olla mik√§ tahansa v√§lill√§ $1 \le m \le n+1$.
+Tapauksessa $m=n+1$ on oltava $\nu_i=1\ \forall i$, jolloin kyseess√§ on Lagrangen
+interpolaatio. Toisessa √§√§rip√§√§ss√§ ($m=1$) on taas oltava $\nu_1=n+1$, jolloin $p(x)=f$:n
 Taylorin polynomi $T_n(x,x_1)$.
-\begin{Prop} Jos $p$ on polynomi astetta $n$, niin $p$ m‰‰r‰ytyy ehdoista 
-\eqref{yleiset interpolaatioehdot} yksik‰sitteisesti. 
+\begin{Prop} Jos $p$ on polynomi astetta $n$, niin $p$ m√§√§r√§ytyy ehdoista 
+\eqref{yleiset interpolaatioehdot} yksik√§sitteisesti. 
 \end{Prop}
 \tod Interpolaatio-ongelman \eqref{yleiset interpolaatioehdot} ratkeavuus voidaan todeta
 samaan tapaan kuin Lagrangen interpolaation tapauksessa, ks.\
-Harj.teht.\,\ref{H-dif-6: yleinen interpolaatio-ongelma}. Yksik‰sitteisyyden toteamiseksi
-riitt‰‰ osoittaa, ett‰ jos $f^{(k)}(x_i)=0\ \forall i,k$, niin on oltava $p=0$
-(vrt.\ Proposition \ref{interpolaatiopolynomin yksik‰sitteisyys} todistus). T‰ss‰ tapauksessa
+Harj.teht.\,\ref{H-dif-6: yleinen interpolaatio-ongelma}. Yksik√§sitteisyyden toteamiseksi
+riitt√§√§ osoittaa, ett√§ jos $f^{(k)}(x_i)=0\ \forall i,k$, niin on oltava $p=0$
+(vrt.\ Proposition \ref{interpolaatiopolynomin yksik√§sitteisyys} todistus). T√§ss√§ tapauksessa
 on $x_i$  polynomin $p$ $\,\nu_i$-kertainen nollakohta interpolaatioehtojen
 \eqref{yleiset interpolaatioehdot} mukaan, joten on oltava
 \[ 
 p(x) = q(x)\,\prod_{i=1}^m (x-x_i)^{\nu_i} = q(x)\,w(x), 
 \]
-miss‰ $q$ on polynomi. Mutta $p$ on astetta $n$, ja ehtojen \eqref{yleiset interpolaatioehdot}
-perusteella $w$ on astetta $n+1$, joten ainoa mahdollisuus on $q=0$, jolloin myˆs $p=0$.
+miss√§ $q$ on polynomi. Mutta $p$ on astetta $n$, ja ehtojen \eqref{yleiset interpolaatioehdot}
+perusteella $w$ on astetta $n+1$, joten ainoa mahdollisuus on $q=0$, jolloin my√∂s $p=0$.
 \loppu
 
-Seuraava yleinen polynomiapproksimaatiotulos, jonka t‰ydellist‰ todistusta ei esitet‰,
-sis‰lt‰‰ erikoistapauksina sek‰ Lauseen \ref{Lagrangen interpolaatiovirhe} ett‰ Taylorin
+Seuraava yleinen polynomiapproksimaatiotulos, jonka t√§ydellist√§ todistusta ei esitet√§,
+sis√§lt√§√§ erikoistapauksina sek√§ Lauseen \ref{Lagrangen interpolaatiovirhe} ett√§ Taylorin
 lauseen \ref{Taylor}.
 \begin{Lause} \label{usean pisteen Taylor} \vahv{(Usean pisteen Taylorin lause)} 
 \index{Taylorin lause!b@usean pisteen|emph}
-Olkoon $f$ jatkuva v‰lill‰ $[a,b]$ ja $n+1$ kertaa derivoituva v‰lill‰ $(a,b)$, miss‰ $[a,b]$
-on pisteen $x$ ja erillisten pisteiden $x_0,\ldots,x_m$ viritt‰m‰ v‰li. T‰llˆin jos $p$ on
-ehdoilla \eqref{yleiset interpolaatioehdot} m‰‰ritelty yleistetty interpolaatiopolynomi
-astetta $n$, niin jollakin $\xi \in (a,b)$ p‰tee virhekaava
+Olkoon $f$ jatkuva v√§lill√§ $[a,b]$ ja $n+1$ kertaa derivoituva v√§lill√§ $(a,b)$, miss√§ $[a,b]$
+on pisteen $x$ ja erillisten pisteiden $x_0,\ldots,x_m$ viritt√§m√§ v√§li. T√§ll√∂in jos $p$ on
+ehdoilla \eqref{yleiset interpolaatioehdot} m√§√§ritelty yleistetty interpolaatiopolynomi
+astetta $n$, niin jollakin $\xi \in (a,b)$ p√§tee virhekaava
 \[
 f(x)-p(x) = \frac{1}{(n+1)!}\,f^{(n+1)}(\xi)\,\prod_{i=1}^m (x-x_i)^{\nu_i}.
 \]
 \end{Lause}
-\tod (idea) Jos $x \in \{x_1,\ldots, x_m\}$, on v‰ite tosi $\forall\xi$. Olkoon siis 
+\tod (idea) Jos $x \in \{x_1,\ldots, x_m\}$, on v√§ite tosi $\forall\xi$. Olkoon siis 
 $x \neq x_i\ \forall i$, ja otetaan tarkastelun kohteeksi funktio 
 \[
 g(t)=f(t)-p(t)- Hw(t), \quad H=[f(x)-p(x)]/w(x), \quad w(x)=\prod_{i=1}^m (x-x_i)^{\nu_i}.
 \]
 Koska $w(t)=t^{n+1}+(\text{polynomi astetta}\ n)$, niin $w^{(n+1)}(t)=(n+1)!\ \forall t$, joten
-virhekaava v‰itt‰‰, ett‰ $g^{(n+1)}(\xi)=0$ jollakin $\xi \in (a,b)$. Aiemmin t‰m‰ on osoitettu
+virhekaava v√§itt√§√§, ett√§ $g^{(n+1)}(\xi)=0$ jollakin $\xi \in (a,b)$. Aiemmin t√§m√§ on osoitettu
 tapauksissa $m=1,\ \nu_1=n+1$  (Taylorin lause) ja $m=n+1,\ \nu_i=1$
-(Lause \ref{Lagrangen interpolaatiovirhe}). Yleisemm‰ss‰kin tapauksessa on p‰‰ttely vastaava.
+(Lause \ref{Lagrangen interpolaatiovirhe}). Yleisemm√§ss√§kin tapauksessa on p√§√§ttely vastaava.
 Esimerkiksi olkoon 
 \[ 
 \nu_i=2,\ i=1\ldots m, \quad m \ge 2, \quad n=2m-1. 
 \]
-T‰llˆin koska $g(x_i)=0,\ i=1\ldots m$, ja $g(x)=0$, on pisteiden $x$ ja $x_i,\ i=1\ldots m$,
-v‰lisill‰ avoimilla v‰leill‰ kullakin $g'$:n nollakohta (yhteens‰ $m$ kpl). Toisaalta on myˆs 
-$g'(x_i)=0,\ i=1\ldots m$, joten $g'$:lla on v‰lill‰ $[a,b]$ ainakin $2m$ nollakohtaa. T‰st‰ 
-seuraa (vrt.\ Lauseen \ref{Lagrangen interpolaatiovirhe} todistus), ett‰ ainakin yhdess‰
-pisteess‰ $\xi \in (a,b)$ on $g^{(2m)}(\xi)=g^{(n+1)}(\xi)=0$, eli v‰ite on tosi oletetussa
+T√§ll√∂in koska $g(x_i)=0,\ i=1\ldots m$, ja $g(x)=0$, on pisteiden $x$ ja $x_i,\ i=1\ldots m$,
+v√§lisill√§ avoimilla v√§leill√§ kullakin $g'$:n nollakohta (yhteens√§ $m$ kpl). Toisaalta on my√∂s 
+$g'(x_i)=0,\ i=1\ldots m$, joten $g'$:lla on v√§lill√§ $[a,b]$ ainakin $2m$ nollakohtaa. T√§st√§ 
+seuraa (vrt.\ Lauseen \ref{Lagrangen interpolaatiovirhe} todistus), ett√§ ainakin yhdess√§
+pisteess√§ $\xi \in (a,b)$ on $g^{(2m)}(\xi)=g^{(n+1)}(\xi)=0$, eli v√§ite on tosi oletetussa
 tapauksessa. (Yleinen tapaus sivuutetaan.) \loppu
 
-Edell‰ tarkastellussa tapauksessa, jossa $\nu_i=2,\ i=1\ldots m$, sanotaan polynomia $p$ 
+Edell√§ tarkastellussa tapauksessa, jossa $\nu_i=2,\ i=1\ldots m$, sanotaan polynomia $p$ 
 funktion $f$
 \index{interpolaatiopolynomi!c@Hermiten} \index{Hermiten!b@interpolaatio(polynomi)}%
-\kor{Hermiten} interpolaatiopolynomiksi pisteiss‰ $x_i$.
+\kor{Hermiten} interpolaatiopolynomiksi pisteiss√§ $x_i$.
 \setcounter{Exa}{0}
-\begin{Exa} (jatko) Montako tasav‰list‰ jakopistett‰ $x_i$ tarvitaan, jos pisteiden v‰liss‰
-k‰ytet‰‰n kolmannen asteen Hermiten interpolaatiota?
+\begin{Exa} (jatko) Montako tasav√§list√§ jakopistett√§ $x_i$ tarvitaan, jos pisteiden v√§liss√§
+k√§ytet√§√§n kolmannen asteen Hermiten interpolaatiota?
 \end{Exa}
-\ratk Lauseen \ref{usean pisteen Taylor} mukaan interpolaatiovirhe v‰lill‰ $[x_i,x_{i+1}]$ on 
-enint‰‰n
+\ratk Lauseen \ref{usean pisteen Taylor} mukaan interpolaatiovirhe v√§lill√§ $[x_i,x_{i+1}]$ on 
+enint√§√§n
 \begin{align*}
 \abs{E(x)-p(x)} &\leq \max_{x\in [x_i,x_{i+1}]} \frac{1}{4!} (x-x_i)^2(x-x_{i+1})^2
                       \max_{\xi\in[x_i,x_{i+1}]}\abs{E^{(4)}(\xi)} \\
                 &=    \frac{1}{384}\,h^4\max_{x\in[x_i,x_{i+1}]}\abs{E^{(4)}(x)}.
 \end{align*}
-V‰lill‰ $[1,2]$ on $\abs{E^{(4)}(x)} \le 16/e$, joten vaadittuun tarkkuuteen riitt‰‰:
+V√§lill√§ $[1,2]$ on $\abs{E^{(4)}(x)} \le 16/e$, joten vaadittuun tarkkuuteen riitt√§√§:
 \[
 \frac{1}{384}\cdot\frac{16}{e}\cdot\left(\frac{1}{N-1}\right)^4\leq 5\cdot 10^{-9} 
            \qekv \underline{\underline{N\geq 43}}. \loppu
@@ -392,42 +392,42 @@ V‰lill‰ $[1,2]$ on $\abs{E^{(4)}(x)} \le 16/e$, joten vaadittuun tarkkuuteen rii
 \begin{enumerate}
 
 \item
-Funktiosta $f(x)$ tiedet‰‰n: $f(-0.1)=1.70 \pm 0.05$, $f(0.2)=1.80 \pm 0.03$ ja
-$-1 \le f''(x) \le 0$ v‰lill‰ $[-0.1,\,0.2]$. M‰‰rit‰ mahdollisimman ahdas v‰li, jolla $f(0)$
+Funktiosta $f(x)$ tiedet√§√§n: $f(-0.1)=1.70 \pm 0.05$, $f(0.2)=1.80 \pm 0.03$ ja
+$-1 \le f''(x) \le 0$ v√§lill√§ $[-0.1,\,0.2]$. M√§√§rit√§ mahdollisimman ahdas v√§li, jolla $f(0)$
 varmasti sijaitsee.
 
 \item
-Funktion $e^x$ arvot on laskettu viiden merkitsev‰n numeron tarkkuudella (normaalipyˆristys)
-v‰lin $[0,2]$ pisteiss‰ $x_i=i/100,\ i=0 \ldots 200$. Arvioi, kuinka suuri on n‰ist‰
-arvoista lasketun a) lineaarisen,\ b) kvadraattisen interpolaation virhe enint‰‰n v‰lill‰ 
-$[0,2]$. Arvioi erikseen pyˆristysvirheiden vaikutus.
+Funktion $e^x$ arvot on laskettu viiden merkitsev√§n numeron tarkkuudella (normaalipy√∂ristys)
+v√§lin $[0,2]$ pisteiss√§ $x_i=i/100,\ i=0 \ldots 200$. Arvioi, kuinka suuri on n√§ist√§
+arvoista lasketun a) lineaarisen,\ b) kvadraattisen interpolaation virhe enint√§√§n v√§lill√§ 
+$[0,2]$. Arvioi erikseen py√∂ristysvirheiden vaikutus.
 
 \item
-Er‰‰st‰ v‰lill‰ $(0,\infty)$ m‰‰ritellyst‰, s‰‰nnˆllisest‰ funktiosta $F$ tiedet‰‰n, ett‰
-$F$ saavuttaa absoluuttisen minimiarvonsa v‰lill‰ $[1,2]$. Lis‰ksi tiedet‰‰n, ett‰
+Er√§√§st√§ v√§lill√§ $(0,\infty)$ m√§√§ritellyst√§, s√§√§nn√∂llisest√§ funktiosta $F$ tiedet√§√§n, ett√§
+$F$ saavuttaa absoluuttisen minimiarvonsa v√§lill√§ $[1,2]$. Lis√§ksi tiedet√§√§n, ett√§
 $F(0.5)=\sqrt{\pi}$, $F(1)=1$, $F(1.5)=\frac{1}{2}\sqrt{\pi}$ ja $F(2)=1$. Laske $F$:n
-minimikohta ja -arvo likim‰‰rin k‰ytt‰en a) kvadraattista interpolaatiota pisteiss‰
-$\{0.5,1,1.5\}$, \ b) kvadraaattista interpolaatiota pisteiss‰ $\{1,1.5,2\}$, \ c) kolmannen
-asteen interpolaatiota kaikissa nelj‰ss‰ pisteess‰. (Oletukset t‰ytt‰‰ $\Gamma$-funktio, ks.\
+minimikohta ja -arvo likim√§√§rin k√§ytt√§en a) kvadraattista interpolaatiota pisteiss√§
+$\{0.5,1,1.5\}$, \ b) kvadraaattista interpolaatiota pisteiss√§ $\{1,1.5,2\}$, \ c) kolmannen
+asteen interpolaatiota kaikissa nelj√§ss√§ pisteess√§. (Oletukset t√§ytt√§√§ $\Gamma$-funktio, ks.\
 Harj.teht.\,\ref{integraalin laajennuksia}:\ref{H-int-7: Gamma} ja Propositio \ref{Gamma(1/2)}.)
 
 \item
-Parametrista k‰yr‰‰ $\vec r=\vec u(t)=x(t)\vec i+y(t)\vec j,\ t\in[a,b]$, approksimoidaan
+Parametrista k√§yr√§√§ $\vec r=\vec u(t)=x(t)\vec i+y(t)\vec j,\ t\in[a,b]$, approksimoidaan
 pisteiden $(x(t_i),y(t_i)),\ i=0 \ldots n$ kautta kulkevalla murtoviivalla
 $\vec r = \vec v(t)=\hat{x}(t)\vec i+\hat{y}(t)\vec j\ (a=t_0 < t_1 < \cdots < t_n = b)$. 
-Jos $x(t)$ ja $y(t)$ ovat v‰lill‰ $[a,b]$ kahdesti jatkuvasti derivoituvia, 
+Jos $x(t)$ ja $y(t)$ ovat v√§lill√§ $[a,b]$ kahdesti jatkuvasti derivoituvia, 
 $\abs{x''(t)} \le M$, $\abs{y''(t)} \le M$ ja $t_i-t_{i-1} \le h$, niin kuinka suuri on
-enint‰‰n $\delta_h=\max_{t\in[a,b]}\abs{\vec u(t)-\vec v(t)}$\,? Vertaa arviota todellisuuteen 
+enint√§√§n $\delta_h=\max_{t\in[a,b]}\abs{\vec u(t)-\vec v(t)}$\,? Vertaa arviota todellisuuteen 
 tapauksessa $x(t)=R\cos t,\ y(t)=R\sin t,\ t\in[0,\pi]$.
 
 \item %\index{zzb@\nim!Rukkaus}
-Heilurilla varustettu sein‰kello j‰t‰tt‰‰ vuorokaudessa $5$ min $24$ s. Kelloa
-rukataan kiert‰m‰ll‰ heilurin p‰‰ss‰ olevaa ruuvia kiinni $5$ t‰ytt‰ kierrosta (jolloin
-heilurin varsi hieman lyhenee). Rukkauksen j‰lkeen havaitaan kellon edist‰v‰n $3$ min $36$ s
+Heilurilla varustettu sein√§kello j√§t√§tt√§√§ vuorokaudessa $5$ min $24$ s. Kelloa
+rukataan kiert√§m√§ll√§ heilurin p√§√§ss√§ olevaa ruuvia kiinni $5$ t√§ytt√§ kierrosta (jolloin
+heilurin varsi hieman lyhenee). Rukkauksen j√§lkeen havaitaan kellon edist√§v√§n $3$ min $36$ s
 vuorokaudessa. \ a) Miten kelloa kannattaa seuraavaksi rukata? \ b) Olkoon kellon suhteellinen
-edist‰m‰ vuorokaudessa $f(x)$, miss‰ $x=$ ruuvin kiertym‰ (kierroksina) oikeasta s‰‰tˆasennosta
-kiinni p‰in. Arvioi, montako sekuntia kello edist‰‰ tai j‰t‰tt‰‰ vuorokaudessa a-kohdan
-rukkauksen j‰lkeen, jos oletetaan, ett‰ $f''(0)=+2 \cdot 10^{-5}$.
+edist√§m√§ vuorokaudessa $f(x)$, miss√§ $x=$ ruuvin kiertym√§ (kierroksina) oikeasta s√§√§t√∂asennosta
+kiinni p√§in. Arvioi, montako sekuntia kello edist√§√§ tai j√§t√§tt√§√§ vuorokaudessa a-kohdan
+rukkauksen j√§lkeen, jos oletetaan, ett√§ $f''(0)=+2 \cdot 10^{-5}$.
 
 \item
 Ekstrapoloi luvuista $7! \ldots 10!$ raja-arvo $\,a=\lim_{n\kohti\infty} n!e^nn^{-n-\frac{1}{2}}$
@@ -437,46 +437,46 @@ ja vertaa tarkkaan arvoon $a=\sqrt{2\pi}$. (Vrt.\ Esimerkki \ref{Neville}.)
 Todista Lause \ref{usean pisteen Taylor} tapauksessa $m=n=3,\ \nu_1=\nu_3=1,\ \nu_2=2$.
 
 \item
-Funktioiden $\sin x$ ja $\cos x$ arvot halutaan m‰‰r‰t‰ v‰lill‰ $[0,\pi/4]$ siten, ett‰
-funktioiden arvot lasketaan ensin riitt‰v‰n tarkasti ko.\ v‰lin tasav‰lisess‰ pisteistˆss‰ ja
-sen j‰lkeen k‰ytet‰‰n kolmannen asteen Hermiten interpolaatiota pisteiden v‰lill‰. Montako
-interpolointipistett‰ tarvitaan, jos virheen sallitaan olevan enint‰‰n $5 \cdot 10^{-9}$\,?
+Funktioiden $\sin x$ ja $\cos x$ arvot halutaan m√§√§r√§t√§ v√§lill√§ $[0,\pi/4]$ siten, ett√§
+funktioiden arvot lasketaan ensin riitt√§v√§n tarkasti ko.\ v√§lin tasav√§lisess√§ pisteist√∂ss√§ ja
+sen j√§lkeen k√§ytet√§√§n kolmannen asteen Hermiten interpolaatiota pisteiden v√§lill√§. Montako
+interpolointipistett√§ tarvitaan, jos virheen sallitaan olevan enint√§√§n $5 \cdot 10^{-9}$\,?
 
 \pagebreak
 
 \item \label{H-dif-6: interpolaatiot ja differessikaavat}
 Halutaan laskea numeerisesti funktion $f$ derivaatta $f^{(k)}(a)$ approksimaatiolla
-$f^{(k)}(a) \approx p^{(k)}(a)$, miss‰ $p(x)$ on $f$:n interpolaatiopolynomi. N‰yt‰, ett‰
+$f^{(k)}(a) \approx p^{(k)}(a)$, miss√§ $p(x)$ on $f$:n interpolaatiopolynomi. N√§yt√§, ett√§
 seuraavissa tapauksissa vaihtoehtoiset interpolaatiot johtavat samaan
 differenssiapproksimaatioon --- millaiseen? (Vrt.\ edellinen luku.) \vspace{1mm}\newline
-a) $k=1$: Lineaarinen interpolaatio pisteiss‰ $a \pm h$ tai kvadraattinen interpolaatio
-pisteiss‰ $a$ ja $a \pm h$. \newline
-b) $k=2$: Kvadraattinen interpolaatio pisteiss‰ $a$ ja $a \pm h$ tai yleistetty kolmannen
-asteen interpolaatio samoissa pisteiss‰ lis‰ehdolla $p'(a)=f'(a)$. 
+a) $k=1$: Lineaarinen interpolaatio pisteiss√§ $a \pm h$ tai kvadraattinen interpolaatio
+pisteiss√§ $a$ ja $a \pm h$. \newline
+b) $k=2$: Kvadraattinen interpolaatio pisteiss√§ $a$ ja $a \pm h$ tai yleistetty kolmannen
+asteen interpolaatio samoissa pisteiss√§ lis√§ehdolla $p'(a)=f'(a)$. 
 
 \item (*) \label{H-dif-6: Nevillen kaava}
 Todista palautuskaava \eqref{Nevillen kaava} induktiolla.
 
 \item (*) \index{zzb@\nim!Rajatieto}
-(Rajatieto) Lukujonosta $\seq{a_n}$, miss‰ $a_n = \sum_{k=1}^n k^{-5/4},\ n=1,2, \ldots\,$
-tiedet‰‰n, ett‰ on olemassa (tuntemattomat) $a,b,c\in\R$ siten, ett‰ suurilla $n$:n arvoilla
-p‰tee
+(Rajatieto) Lukujonosta $\seq{a_n}$, miss√§ $a_n = \sum_{k=1}^n k^{-5/4},\ n=1,2, \ldots\,$
+tiedet√§√§n, ett√§ on olemassa (tuntemattomat) $a,b,c\in\R$ siten, ett√§ suurilla $n$:n arvoilla
+p√§tee
 \[
 a_n=a+n^{-1/4}(b+c n^{-1})+\Ord{n^{-9/4}}. 
 \]
-Ekstrapoloi raja-arvo $\lim_n a_n=a$ t‰m‰n tiedon perusteella mahdollisimman tarkasti tuloksista
+Ekstrapoloi raja-arvo $\lim_n a_n=a$ t√§m√§n tiedon perusteella mahdollisimman tarkasti tuloksista
 $a_{100}=3.331779$, $a_{200}=3.532117$, $a_{400}=3.700964$. (Tarkka arvo kuudella
 desimaalilla: $a=4.595112$.)
 
 \item (*)  \label{H-dif-6: yleinen interpolaatio-ongelma}
-N‰yt‰, ett‰ jos interpolaatio-ongelmassa \eqref{yleiset interpolaatioehdot} on
+N√§yt√§, ett√§ jos interpolaatio-ongelmassa \eqref{yleiset interpolaatioehdot} on
 $f^{(k)}(x_i)=1$ kun $i=j$ ja $k=l$ $(1 \le j \le m,\ 0 \le l \le \nu_j-1)$ ja
 $f^{(k)}(x_i)=0$ muulloin, niin ongelmalla on ratkaisu
 \[
 p(x) = L_{j,l}(x) = q(x) \prod_{\substack{i=1 \\ i \neq j}}^m (x-x_i)^{\nu_i},
 \]
-miss‰ $q$ on polynomi muotoa $q(x)=\sum_{r=l}^{\nu_j-1} c_r (x-x_j)^r$. P‰‰ttele edelleen, ett‰
-interpolaatio-ongelman \eqref{yleiset interpolaatioehdot} ratkaisu yleisess‰ tapauksessa on
+miss√§ $q$ on polynomi muotoa $q(x)=\sum_{r=l}^{\nu_j-1} c_r (x-x_j)^r$. P√§√§ttele edelleen, ett√§
+interpolaatio-ongelman \eqref{yleiset interpolaatioehdot} ratkaisu yleisess√§ tapauksessa on
 \[
 p(x) = \sum_{i=1}^m \sum_{k=0}^{\nu_i-1} f^{(k)}(x_i) L_{i,k}(x).
 \] 

@@ -1,34 +1,34 @@
-\section{K‰yr‰n kaarevuus} \label{k‰yr‰n kaarevuus}
+\section{K√§yr√§n kaarevuus} \label{k√§yr√§n kaarevuus}
 \alku
-\index{kaarevuus (k‰yr‰n)|vahv}
-\index{kzyyrzy@k‰yr‰|vahv}
-\index{parametrinen k‰yr‰|vahv}
+\index{kaarevuus (k√§yr√§n)|vahv}
+\index{kzyyrzy@k√§yr√§|vahv}
+\index{parametrinen k√§yr√§|vahv}
 
-Tarkastellaan tason tai avaruuden (parametrisoitua) k‰yr‰‰
+Tarkastellaan tason tai avaruuden (parametrisoitua) k√§yr√§√§
 \[
 S=\{P(t) \in \R^d \mid P(t) \vastaa \vec r\,(t),\,\ t\in [a,b]\},
 \]
-miss‰
+miss√§
 \[
 \vec r\,(t) = \begin{cases}
 x(t)\vec i + y(t)\vec j, &(\Rkaksi) \\
 x(t)\vec i + y(t)\vec j + z(t)\vec k. &(\Rkolme)
 \end{cases}
 \]
-Jatkossa oletetaan, ett‰ $x(t)$, $y(t)$ ja $z(t)$ ovat kahdesti jatkuvasti derivoituvia
-v‰lill‰ $[a,b]$. Merkit‰‰n lis‰ksi $\,\abs{\dvr(t)}=v(t)\,$ ja asetetaan 'pys‰htymiskielto'
+Jatkossa oletetaan, ett√§ $x(t)$, $y(t)$ ja $z(t)$ ovat kahdesti jatkuvasti derivoituvia
+v√§lill√§ $[a,b]$. Merkit√§√§n lis√§ksi $\,\abs{\dvr(t)}=v(t)\,$ ja asetetaan 'pys√§htymiskielto'
 (vrt.\ edellinen luku)
 \begin{equation} \label{derivaattaehto}
 v(t)=\abs{\dvr(t)}>0 \quad\forall t\in [a,b].
 \end{equation}
-K‰yttˆˆn tulevat myˆs seuraavat derivoimiss‰‰nnˆt vektoriarvoisille funktioille.
-\begin{Prop} \label{vektorifunktioiden tulon derivointi} Jos $f$ on derivoituva pisteess‰
+K√§ytt√∂√∂n tulevat my√∂s seuraavat derivoimiss√§√§nn√∂t vektoriarvoisille funktioille.
+\begin{Prop} \label{vektorifunktioiden tulon derivointi} Jos $f$ on derivoituva pisteess√§
 $t$ ja
 \[ 
 \vec u(t) = u_1(t)\vec i + u_2(t)\vec j + u_3(t)\vec k, \quad 
 \vec v(t) = v_1(t)\vec i + v_2(t)\vec j + v_3(t)\vec k, 
 \]
-miss‰ funktiot $u_i$ ja $v_i$ ovat derivoituvia pisteess‰ $t$, niin p‰tee
+miss√§ funktiot $u_i$ ja $v_i$ ovat derivoituvia pisteess√§ $t$, niin p√§tee
 \[ \boxed{ \begin{aligned}
 \quad \frac{\ykehys d}{dt}\left[f(t)\vec u(t)\right] \quad\, 
             &=\,f'(t)\,\vec u(t) + f(t)\,\vec u\,'(t), \\
@@ -38,8 +38,8 @@ miss‰ funktiot $u_i$ ja $v_i$ ovat derivoituvia pisteess‰ $t$, niin p‰tee
             &=\,\vec u\,'(t)\times\vec v(t) + \vec u(t)\times\vec v\,'(t). \quad
 \end{aligned} } \]
 \end{Prop}
-\tod Kyse on tulon derivoimiss‰‰nnˆn (Luku \ref{derivaatta}) yleistyksist‰. Esimerkkin‰
-johdettakoon s‰‰nnˆist‰ toinen (muut perustellaan vastaavalla tavalla):
+\tod Kyse on tulon derivoimiss√§√§nn√∂n (Luku \ref{derivaatta}) yleistyksist√§. Esimerkkin√§
+johdettakoon s√§√§nn√∂ist√§ toinen (muut perustellaan vastaavalla tavalla):
 \begin{align*} 
 \frac{d}{dt}\,\vec u(t)\cdot\vec v(t)\ 
                &=\ \frac{d}{dt}\,\sum_{i=1}^3 u_i(t)\,v_i(t)\ 
@@ -49,34 +49,34 @@ johdettakoon s‰‰nnˆist‰ toinen (muut perustellaan vastaavalla tavalla):
                 =\ \vec u\,'(t)\cdot\vec v(t) + \vec u(t)\cdot\vec v\,'(t). \loppu
 \end{align*}
 
-Kerrattakoon edellisest‰ luvusta, ett‰ kun merkit‰‰n
+Kerrattakoon edellisest√§ luvusta, ett√§ kun merkit√§√§n
 \[
 \Delta\vec r=\vec r\,(t+\Delta t)-\vec r\,(t) \approx \dvr(t)\Delta t,
 \]
-niin ehdon \eqref{derivaattaehto} ollessa voimassa voidaan k‰yr‰n $S$ yksikkˆtangenttivektori
-$\tv(t)$ pisteess‰ $t \in [a,b]$ m‰‰r‰t‰ toispuolisina raja-arvoina
+niin ehdon \eqref{derivaattaehto} ollessa voimassa voidaan k√§yr√§n $S$ yksikk√∂tangenttivektori
+$\tv(t)$ pisteess√§ $t \in [a,b]$ m√§√§r√§t√§ toispuolisina raja-arvoina
 \[
 \tv_\pm = \lim_{\Delta t\kohti 0^\pm} \frac{\Delta\vec r}{\abs{\Delta\vec r\,}}, 
                                                              \quad t \in [a,b].
 \]
-(V‰lin p‰‰tepisteiss‰ on vain toinen raja-arvoista mahdollinen.) Funktion $t \map \vec r\,(t)$ 
-ollessa kahdesti jatkuvasti derivoituva v‰lill‰ $[a,b]$ voidaan edelleen laskea 
-yksikkˆtangenttivektorin derivaatta $\tv\,'(t)$, kun $t \in [a,b]$ (toispuolinen derivaatta
-v‰lin p‰‰tepisteiss‰). Jos k‰yr‰ $S$ on jana, niin $\tv(t)$ on vakio, jolloin 
+(V√§lin p√§√§tepisteiss√§ on vain toinen raja-arvoista mahdollinen.) Funktion $t \map \vec r\,(t)$ 
+ollessa kahdesti jatkuvasti derivoituva v√§lill√§ $[a,b]$ voidaan edelleen laskea 
+yksikk√∂tangenttivektorin derivaatta $\tv\,'(t)$, kun $t \in [a,b]$ (toispuolinen derivaatta
+v√§lin p√§√§tepisteiss√§). Jos k√§yr√§ $S$ on jana, niin $\tv(t)$ on vakio, jolloin 
 $\tv\,'(t) = \vec 0,\ t \in [a,b]$. Yleisemmin itseisarvo $\abs{d\tv/dt}$ kertoo, kuinka
-\pain{kaareva} k‰yr‰ on ko.\ pisteess‰. Kun tangenttivektorin $\tv$  muutosta merkit‰‰n
+\pain{kaareva} k√§yr√§ on ko.\ pisteess√§. Kun tangenttivektorin $\tv$  muutosta merkit√§√§n
 \[
 \Delta\tv=\tv(t+\Delta t)-\tv(t),
 \]
-niin k‰yr‰n \kor{kaarevuus} (engl.\ curvature) m‰‰ritell‰‰n raja-arvona
+niin k√§yr√§n \kor{kaarevuus} (engl.\ curvature) m√§√§ritell√§√§n raja-arvona
 \begin{equation} \label{kaarevuuden peruskaava} \boxed{
 \quad \kappa(t)=\frac{\ykehys 1}{\akehys R(t)}
                =\lim_{\Delta t\kohti 0} \frac{\abs{\Delta\tv\,}}{\abs{\Delta\vec r\,}}
                =\frac{1}{v(t)} \left|\frac{d\tv}{dt}\right| \quad \text{(kaarevuus).} \quad }
 \end{equation}
-T‰ss‰ siis $\,v(t)=\abs{\dvr(t)}$, ja $\,R=1/\kappa\,$ on nimelt‰‰n 
-\index{kaarevuuss‰de}%
-\kor{kaarevuuss‰de} (engl.\ radius of curvature).
+T√§ss√§ siis $\,v(t)=\abs{\dvr(t)}$, ja $\,R=1/\kappa\,$ on nimelt√§√§n 
+\index{kaarevuuss√§de}%
+\kor{kaarevuuss√§de} (engl.\ radius of curvature).
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -98,135 +98,135 @@ T‰ss‰ siis $\,v(t)=\abs{\dvr(t)}$, ja $\,R=1/\kappa\,$ on nimelt‰‰n
 \end{center}
 \end{figure}
 %\end{multicols}
-Samoin kuin yksikkˆtangenttivektori, myˆs kaarevuus on vain k‰yr‰n geometriasta, ei 
+Samoin kuin yksikk√∂tangenttivektori, my√∂s kaarevuus on vain k√§yr√§n geometriasta, ei 
 parametrisoinnista riippuva.
-\begin{Exa} Partikkeli liikkuu tasossa pitkin origokeskist‰ $R$-s‰teist‰ ympyr‰rataa siten, 
-ett‰ napakulma hetkell‰ $t$ on $\varphi(t)$. M‰‰rit‰ liikeradan kaarevuus pisteess‰ 
+\begin{Exa} Partikkeli liikkuu tasossa pitkin origokeskist√§ $R$-s√§teist√§ ympyr√§rataa siten, 
+ett√§ napakulma hetkell√§ $t$ on $\varphi(t)$. M√§√§rit√§ liikeradan kaarevuus pisteess√§ 
 $P(t) \vastaa \vec r\,(t)$, jossa $\varphi'(t) \neq 0$. \end{Exa}
-\ratk T‰ss‰ on (vrt.\ Esimerkki \ref{ympyr‰liike} edellisess‰ luvussa)
+\ratk T√§ss√§ on (vrt.\ Esimerkki \ref{ympyr√§liike} edellisess√§ luvussa)
 \[ 
 \vec r\,(t) = R[\cos\varphi(t)\vec i + \sin\varphi(t)\vec j\,], \quad  
 \tv(t) = \pm[-\sin\varphi(t)\vec i + \cos\varphi(t)\vec j\,], 
 \]
 joten $v(t)=\abs{\dvr(t)}=R\abs{\varphi'(t)}$ ja $\abs{d\tv/dt}=\abs{\varphi'(t)}$. Kaavan
-\eqref{kaarevuuden peruskaava} mukaan kaarevuus on $\kappa(t)=1/R=$ vakio, ja kaarevuuss‰de
+\eqref{kaarevuuden peruskaava} mukaan kaarevuus on $\kappa(t)=1/R=$ vakio, ja kaarevuuss√§de
 siis $=R$, kuten odottaa sopikin. \loppu
 
-Vektorin $d\tv/dt$ suuntaista yksikkˆvektoria $\vec n$ sanotaan k‰yr‰n 
-\index{pzyzy@p‰‰normaalivektori}%
-\kor{p‰‰normaalivektoriksi}. T‰m‰ on todella k‰yr‰n normaalivektori, eli tangenttivektoria 
-vastaan kohtisuora. Nimitt‰in koska $\abs{\tv(t)} = 1\ \forall t$, niin 
-Proposition \ref{vektorifunktioiden tulon derivointi} s‰‰nnˆill‰ p‰‰tell‰‰n
+Vektorin $d\tv/dt$ suuntaista yksikk√∂vektoria $\vec n$ sanotaan k√§yr√§n 
+\index{pzyzy@p√§√§normaalivektori}%
+\kor{p√§√§normaalivektoriksi}. T√§m√§ on todella k√§yr√§n normaalivektori, eli tangenttivektoria 
+vastaan kohtisuora. Nimitt√§in koska $\abs{\tv(t)} = 1\ \forall t$, niin 
+Proposition \ref{vektorifunktioiden tulon derivointi} s√§√§nn√∂ill√§ p√§√§tell√§√§n
 \[ 
 \tv(t)\cdot\tv(t) = 1 \qimpl \frac{d}{dt}\,\tv(t)\cdot\tv(t) 
                               = 2\,\tv(t)\cdot\tv\,'(t) = \frac{d}{dt}\,1 = 0. 
 \]
-(Yleisemmin on y\pain{ksikkˆvektorin} derivaatta aina vektoria vastaan kohtisuora.) Kaava 
-\eqref{kaarevuuden peruskaava} huomioiden on siis p‰‰dytty vektorimuotoiseen kaarevuuden
-m‰‰ritelm‰‰n
+(Yleisemmin on y\pain{ksikk√∂vektorin} derivaatta aina vektoria vastaan kohtisuora.) Kaava 
+\eqref{kaarevuuden peruskaava} huomioiden on siis p√§√§dytty vektorimuotoiseen kaarevuuden
+m√§√§ritelm√§√§n
 \begin{equation} \label{kaarevuuskaava a}
 \boxed{\quad \frac{\ykehys 1}{\akehys v(t)}\frac{d\tv}{dt}
               =\frac{1}{R}\vec n,\qquad \begin{cases} 
                                        \,1/R=\text{kaarevuus}, \\
-                                       \,\vec n=\text{p‰‰normaalivektori}. \quad 
+                                       \,\vec n=\text{p√§√§normaalivektori}. \quad 
                                        \end{cases}}
 \end{equation}
-\jatko\begin{Exa} (jatko) T‰ss‰ saadaan kaavasta \eqref{kaarevuuskaava a} odotusten
+\jatko\begin{Exa} (jatko) T√§ss√§ saadaan kaavasta \eqref{kaarevuuskaava a} odotusten
 mukaisesti
 \[
 \vec n(t) = \frac{R}{v(t)}\frac{d\tv}{dt} 
           = -\cos\varphi(t)\vec i-\sin\varphi(t)\vec j = -\vec r\,(t)/R. \loppu
 \]
 \end{Exa}
-P‰‰normaalivektori $\vec n$ on siis k‰yr‰n normaalivektoreista (kaksi vaihtoehtoa!) se, joka
-osoittaa k‰yr‰n kaareutumissuuntaan. Kun derivoidaan puolittain yht‰lˆt
+P√§√§normaalivektori $\vec n$ on siis k√§yr√§n normaalivektoreista (kaksi vaihtoehtoa!) se, joka
+osoittaa k√§yr√§n kaareutumissuuntaan. Kun derivoidaan puolittain yht√§l√∂t
 $\vec n(t)\cdot\vec n(t)=1$ ja $\vec n(t)\cdot\tv(t)=0$ ja sovelletaan kavaa
 \eqref{kaarevuuskaava a}, niin seuraa
 \[
 \frac{d\vec n(t)}{dt}\cdot\vec n(t)=0, \quad
 \frac{d\vec n(t)}{dt}\cdot\tv(t) = -\vec n(t)\cdot\frac{d\tv(t)}{dt}=-\frac{v(t)}{R}\,.
 \]
-T‰m‰n mukaan kaarevuuden m‰‰ritelm‰n \eqref{kaarevuuskaava a} voi esitt‰‰ myˆs muodossa
+T√§m√§n mukaan kaarevuuden m√§√§ritelm√§n \eqref{kaarevuuskaava a} voi esitt√§√§ my√∂s muodossa
 \begin{equation} \label{kaarevuuskaava b}
 \boxed{\quad \frac{\ykehys 1}{\akehys v(t)}\frac{d\vec n}{dt}
               =-\frac{1}{R}\tv. \quad }
 \end{equation}
-Johdetaan viel‰ kaarevuudelle lauseke, jonka arvo m‰‰r‰ytyy suoraan derivaatoista $\dvr$ ja 
-$\ddvr$. M‰‰ritelm‰n ja Proposition \ref{vektorifunktioiden tulon derivointi} ensimm‰isen
-s‰‰nnˆn mukaan on
+Johdetaan viel√§ kaarevuudelle lauseke, jonka arvo m√§√§r√§ytyy suoraan derivaatoista $\dvr$ ja 
+$\ddvr$. M√§√§ritelm√§n ja Proposition \ref{vektorifunktioiden tulon derivointi} ensimm√§isen
+s√§√§nn√∂n mukaan on
 \[
 \frac{1}{R}\vec n\ =\ \frac{1}{\abs{\dvr}}\frac{d}{dt}\left(\frac{1}{\abs{\dvr}}\,\dvr\right)\
              =\ \frac{1}{\abs{\dvr}^2}\,\ddvr+\frac{d}{dt}\left(\frac{1}{\abs{\dvr}}\right)\tv.
 \]
-Kertomalla t‰m‰ ristiin vektorilla $\tv$ ja ottamalla puolittain itseiarvot saadaan
+Kertomalla t√§m√§ ristiin vektorilla $\tv$ ja ottamalla puolittain itseiarvot saadaan
 \[
 \frac{1}{R}\ =\ \frac{\abs{\ddvr\times\tv\,}}{\abs{\dvr}^2}\,.
 \]
-Kun t‰h‰n viel‰ sijoitetaan $\tv=\dvr/\abs{\dvr}$, tulee laskukaavaksi
+Kun t√§h√§n viel√§ sijoitetaan $\tv=\dvr/\abs{\dvr}$, tulee laskukaavaksi
 \begin{equation} \label{kaarevuuden laskukaava}
 \boxed{\quad \kappa = \frac{\ykehys 1}{\akehys R}
                     =\frac{\abs{\dvr\times\ddvr}}{\abs{\dvr}^3}\,. \quad}
 \end{equation}
-Tulkitaan t‰m‰ viel‰ tasok‰yr‰lle $y=f(x)$. Kun parametrina on $t=x$, niin
+Tulkitaan t√§m√§ viel√§ tasok√§yr√§lle $y=f(x)$. Kun parametrina on $t=x$, niin
 $\,\vec r\,(x) = x\vec i + f(x)\vec j$, $\,\dvr = \vec i + f'(x)\vec j$,
-$\,\ddvr=f''(x)\vec j$, joten $\,\dvr\times\ddvr=f''(x)\vec k$. Sijoittamalla t‰m‰ kaavaan
-\eqref{kaarevuuden laskukaava} todetaan, ett‰ tasok‰yr‰n kaarevuus pisteess‰ $(x,f(x))$ on
-\begin{equation} \label{tasok‰yr‰n kaarevuus}
+$\,\ddvr=f''(x)\vec j$, joten $\,\dvr\times\ddvr=f''(x)\vec k$. Sijoittamalla t√§m√§ kaavaan
+\eqref{kaarevuuden laskukaava} todetaan, ett√§ tasok√§yr√§n kaarevuus pisteess√§ $(x,f(x))$ on
+\begin{equation} \label{tasok√§yr√§n kaarevuus}
 \boxed{\quad \kappa=\frac{\ykehys 1}{\akehys R}
-     =\frac{\abs{f''(x)}}{[1+(f'(x))^2\,]^{3/2}} \quad (\text{tasok‰yr‰ $y=f(x)$}). \quad}
+     =\frac{\abs{f''(x)}}{[1+(f'(x))^2\,]^{3/2}} \quad (\text{tasok√§yr√§ $y=f(x)$}). \quad}
 \end{equation}
 \index{merkkinen kaarevuus}%
-Ilman itseisarvomerkkej‰ t‰t‰ sanotaan \kor{merkkiseksi} kaarevuudeksi.
-\begin{Exa} K‰yr‰n $S:\ y = x^2$ kaarevuuss‰de pisteess‰ $(x,x^2)$ on kaavan 
-\eqref{tasok‰yr‰n kaarevuus} mukaan
+Ilman itseisarvomerkkej√§ t√§t√§ sanotaan \kor{merkkiseksi} kaarevuudeksi.
+\begin{Exa} K√§yr√§n $S:\ y = x^2$ kaarevuuss√§de pisteess√§ $(x,x^2)$ on kaavan 
+\eqref{tasok√§yr√§n kaarevuus} mukaan
 \[ R(x) = \frac{1}{2}\,(1+4x^2)^{3/2}. \loppu \]
 \end{Exa}
 
-\subsection*{Kaarevuuskeskiˆ. Evoluutta}
-\index{kaarevuuskeskiˆ|vahv} \index{evoluutta|vahv}
+\subsection*{Kaarevuuskeski√∂. Evoluutta}
+\index{kaarevuuskeski√∂|vahv} \index{evoluutta|vahv}
 
-Kun parametrisen k‰yr‰n pisteest‰ $P(t)\vastaa\vec r\,(t)$ kuljetaan kaarevuuss‰teen $R$
-pituinen matka p‰‰normaalivektorin $\vec n$ suuntaan, tullaan \kor{kaarevuuskeskiˆˆn}. T‰m‰n
+Kun parametrisen k√§yr√§n pisteest√§ $P(t)\vastaa\vec r\,(t)$ kuljetaan kaarevuuss√§teen $R$
+pituinen matka p√§√§normaalivektorin $\vec n$ suuntaan, tullaan \kor{kaarevuuskeski√∂√∂n}. T√§m√§n
 paikkavektori on siis
 \[
-\boxed{\kehys\quad \vec r_0(t)=\vec r\,(t)+R(t)\vec n(t) \quad\text{(kaarevuuskeskiˆ)}. \quad}
+\boxed{\kehys\quad \vec r_0(t)=\vec r\,(t)+R(t)\vec n(t) \quad\text{(kaarevuuskeski√∂)}. \quad}
 \]
-Geometrisesti voidaan tulkita niin, ett‰ pisteen $P(t)\vastaa\vec r\,(t)$ ymp‰ristˆss‰ k‰yr‰ 
-on likimain ympyr‰viiva, jonka s‰de $=\text{kaarevuuss‰de}\ R$ ja keskipiste =
-kaarevuuskeskiˆ. Lis‰ksi t‰m‰ nk.\
-\index{kaarevuusympyr‰}%
-\kor{kaarevuusympyr‰} on tasossa, jonka suuntavektoreina
-ovat $\tv$ ja $\vec n$. Kaarevuusympyr‰n 'vieriess‰' pitkin k‰yr‰‰ piirt‰‰ kaarevuuskeskiˆ
-toisen k‰yr‰n, jota sanotaan alkuper‰isen k‰yr‰n \kor{evoluutaksi}.
-\begin{Exa} \label{evoluutta} M‰‰rit‰ k‰yr‰n $\,y=1/x$, $x>0\,$ evoluutta.
+Geometrisesti voidaan tulkita niin, ett√§ pisteen $P(t)\vastaa\vec r\,(t)$ ymp√§rist√∂ss√§ k√§yr√§ 
+on likimain ympyr√§viiva, jonka s√§de $=\text{kaarevuuss√§de}\ R$ ja keskipiste =
+kaarevuuskeski√∂. Lis√§ksi t√§m√§ nk.\
+\index{kaarevuusympyr√§}%
+\kor{kaarevuusympyr√§} on tasossa, jonka suuntavektoreina
+ovat $\tv$ ja $\vec n$. Kaarevuusympyr√§n 'vieriess√§' pitkin k√§yr√§√§ piirt√§√§ kaarevuuskeski√∂
+toisen k√§yr√§n, jota sanotaan alkuper√§isen k√§yr√§n \kor{evoluutaksi}.
+\begin{Exa} \label{evoluutta} M√§√§rit√§ k√§yr√§n $\,y=1/x$, $x>0\,$ evoluutta.
 \end{Exa}
-\ratk Koska $f'(x)=-1/x^2$, niin k‰yr‰n (p‰‰)normaalivektori pisteess‰ $(x,1/x)$ on
+\ratk Koska $f'(x)=-1/x^2$, niin k√§yr√§n (p√§√§)normaalivektori pisteess√§ $(x,1/x)$ on
 \[
 \vec n \,=\, (1+x^{-4})^{-1/2}(x^{-2}\vec i + \vec j)
        \,=\, (x^4+1)^{-1/2}(\vec i + x^2\vec j).
 \]
-Kaarevuus ko. pisteess‰ on
+Kaarevuus ko. pisteess√§ on
 \[
 \frac{1}{R}=\frac{2x^{-3}}{(1+x^{-4})^{3/2}}=\frac{2x^3}{(x^4+1)^{3/2}}.
 \]
-K‰yr‰n pistett‰ $(t,1/t)$ vastaava kaarevuuskeskiˆ $(x(t),y(t))$ on n‰in ollen
+K√§yr√§n pistett√§ $(t,1/t)$ vastaava kaarevuuskeski√∂ $(x(t),y(t))$ on n√§in ollen
 \begin{align*}
 x(t) &\,=\, t+\frac{(t^4+1)^{3/2}}{2t^3}\cdot (t^4+1)^{-1/2} 
       \,=\, \frac{1}{2}(3t+t^{-3}), \\
 y(t) &\,=\, t^{-1}+\frac{(t^4+1)^{3/2}}{2t^3}\cdot t^2(t^4+1)^{-1/2} 
       \,=\,\frac{1}{2}(3t^{-1}+t^3).
 \end{align*}
-T‰m‰ on evoluutan parametriesitys ($t>0$). Suurilla ja pienill‰ $t$:n arvoilla on likimain
+T√§m√§ on evoluutan parametriesitys ($t>0$). Suurilla ja pienill√§ $t$:n arvoilla on likimain
 \[ 
 \begin{cases}
 \,t\gg 1\ \impl\ y\approx\frac{4}{27}x^3, \\
 \,t\ll 1\ \impl\ x\approx\frac{4}{27}y^3.
 \end{cases}
 \]
-Pisteess‰ $(x,y)=(2,2)$ ($t=1$) evoluutalla on nk.\
-\index{kzyzy@k‰‰ntymispiste}%
-\kor{k‰‰ntymispiste} (engl.\ turn\-ing point). K‰‰ntymispisteess‰ on $x'(t)=y'(t)=0$, joten
-kyseess‰ on myˆs 'pys‰htymispiste'. \loppu
+Pisteess√§ $(x,y)=(2,2)$ ($t=1$) evoluutalla on nk.\
+\index{kzyzy@k√§√§ntymispiste}%
+\kor{k√§√§ntymispiste} (engl.\ turn\-ing point). K√§√§ntymispisteess√§ on $x'(t)=y'(t)=0$, joten
+kyseess√§ on my√∂s 'pys√§htymispiste'. \loppu
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -299,84 +299,84 @@ kyseess‰ on myˆs 'pys‰htymispiste'. \loppu
 \subsection*{Kaarevuus fysiikassa: kiihtyvyys}
 \index{kiihtyvyys|vahv}
 
-Kun parametrisessa k‰yr‰ss‰ on kyse liikkuvan pisteen $P(t) \vastaa \vec r(t)$ paikasta ajan 
-funktiona, niin $\vec v(t)=\dvr\,(t)=$ nopeusvektori. T‰llˆin vektoria
+Kun parametrisessa k√§yr√§ss√§ on kyse liikkuvan pisteen $P(t) \vastaa \vec r(t)$ paikasta ajan 
+funktiona, niin $\vec v(t)=\dvr\,(t)=$ nopeusvektori. T√§ll√∂in vektoria
 \[ 
 \vec a(t) = \vec v\,'(t) = \ddvr(t) = x''(t)\vec i + y''(t)\vec j + z''(t)\vec k 
 \]
-sanotaan \pain{kiiht}y\pain{v}yy\pain{deksi} hetkell‰ $t$. Kiihtyvyysvektori voidaan kaartuvalla
-ratak‰yr‰ll‰ aina esitt‰‰ muodossa
+sanotaan \pain{kiiht}y\pain{v}yy\pain{deksi} hetkell√§ $t$. Kiihtyvyysvektori voidaan kaartuvalla
+ratak√§yr√§ll√§ aina esitt√§√§ muodossa
 \[ 
 \vec a(t) = a_\tau\,\tv + a_n\,\vec n, 
 \]
-miss‰ $a_\tau$ on liikeradan suuntainen \pain{tan}g\pain{entiaalikiiht}y\pain{v}yy\pain{s} ja $a_n$
-on p‰‰normaalivektorin suuntainen \pain{normaalikiiht}y\pain{v}yy\pain{s}. T‰h‰n tulokseen 
-p‰‰dyt‰‰n, kun kirjoitetaan
+miss√§ $a_\tau$ on liikeradan suuntainen \pain{tan}g\pain{entiaalikiiht}y\pain{v}yy\pain{s} ja $a_n$
+on p√§√§normaalivektorin suuntainen \pain{normaalikiiht}y\pain{v}yy\pain{s}. T√§h√§n tulokseen 
+p√§√§dyt√§√§n, kun kirjoitetaan
 \[
 \vec v(t)=v(t)\,\tv(t),\quad v(t)=\abs{\vec v(t)}=\abs{\dvr(t)}
 \]
-ja k‰ytet‰‰n Proposition \ref{vektorifunktioiden tulon derivointi} ensimm‰ist‰ s‰‰ntˆ‰ sek‰
+ja k√§ytet√§√§n Proposition \ref{vektorifunktioiden tulon derivointi} ensimm√§ist√§ s√§√§nt√∂√§ sek√§
 kaavaa \eqref{kaarevuuskaava a}\,:
 \begin{align*}
 \vec a(t) &= v'(t)\,\tv(t)+v(t)\,\frac{d\tv}{dt} \\
           &=v'(t)\,\tv(t)+\frac{[v(t)]^2}{R}\,\vec n(t).
 \end{align*}
-T‰m‰n mukaisesti on siis
+T√§m√§n mukaisesti on siis
 \[ \boxed{\kehys\quad a_\tau(t) 
           = v'(t), \quad a_n(t) 
           = \frac{[v(t)]^2}{R} \quad \text{(tangentiaali- ja normaalikiihtyvyys)}. \quad} 
 \]
-Kiihtyvyyden kannalta voidaan siis liike ajatella hetkellisesti ympyr‰liikkeeksi, jossa 
-liikerata yhtyy kaarevuusympyr‰‰n.
+Kiihtyvyyden kannalta voidaan siis liike ajatella hetkellisesti ympyr√§liikkeeksi, jossa 
+liikerata yhtyy kaarevuusympyr√§√§n.
 \index{zza@\sov!Vapaa putoamisliike}%
-\begin{Exa}:\ \vahv{Vapaa putoamisliike}. Maan vetovoimakent‰ss‰ hetkell‰ $t=0$ k‰ynnistyv‰n
-vapaan putoamisliikkeen (Newtonin) liikeyht‰lˆ on
+\begin{Exa}:\ \vahv{Vapaa putoamisliike}. Maan vetovoimakent√§ss√§ hetkell√§ $t=0$ k√§ynnistyv√§n
+vapaan putoamisliikkeen (Newtonin) liikeyht√§l√∂ on
 \[ 
 \vec a(t) = \ddvr(t) = -g\vec k, \quad t>0, 
 \]
-miss‰ $g \approx 9.81$ m/s$^2$. Yht‰lˆ sis‰lt‰‰ kolme skalaarista differentiaaliyht‰lˆ‰:
+miss√§ $g \approx 9.81$ m/s$^2$. Yht√§l√∂ sis√§lt√§√§ kolme skalaarista differentiaaliyht√§l√∂√§:
 \[ 
 x''(t) = 0, \quad y''(t) = 0, \quad z''(t) = -g. 
 \]
-N‰iden mukaisesti on ensinn‰kin oltava
+N√§iden mukaisesti on ensinn√§kin oltava
 \[ 
 x'(t) = \alpha, \quad y'(t) = \beta, \quad z'(t) = -gt + \gamma, 
 \]
-miss‰ $\alpha,\beta,\gamma$ ovat (m‰‰r‰‰m‰ttˆmi‰) vakioita. T‰st‰ n‰hd‰‰n, ett‰ on edelleen
-oltava (vrt.\ Luku \ref{v‰liarvolause 2})
+miss√§ $\alpha,\beta,\gamma$ ovat (m√§√§r√§√§m√§tt√∂mi√§) vakioita. T√§st√§ n√§hd√§√§n, ett√§ on edelleen
+oltava (vrt.\ Luku \ref{v√§liarvolause 2})
 \[ 
 x(t) = \alpha\,t + x_0, \quad y(t) = \beta\,t + y_0, \quad 
                               z(t) = -\tfrac{1}{2}\,gt^2 + \gamma\,t + z_0, 
 \]
-miss‰ $x_0,y_0,z_0$ ovat j‰lleen m‰‰r‰‰m‰ttˆmi‰ vakioita. Siis
+miss√§ $x_0,y_0,z_0$ ovat j√§lleen m√§√§r√§√§m√§tt√∂mi√§ vakioita. Siis
 \begin{align*}
-\vec r\,(t)&= \vr_0 + \vec v_0\,t - \tfrac{1}{2}\,gt^2\,\vec k, \quad t>0, \quad \text{miss‰} \\
+\vec r\,(t)&= \vr_0 + \vec v_0\,t - \tfrac{1}{2}\,gt^2\,\vec k, \quad t>0, \quad \text{miss√§} \\
 \vec r_0   &= x_0\vec i + y_0\vec j + z_0\vec k = \vr(0^+), \quad 
    \vec v_0 = \alpha\vec i + \beta\vec j + \gamma\vec k = \dvr(0^+) = \vec v(0^+). 
 \end{align*}
 Jos raja-arvot $\vec r\,(0^+)=\vr_0$ ja $\vec v(0^+) = \vec v_0$ tunnetaan alkuehtoina, on
-$\vec r\,(t)$ yksik‰sitteisesti m‰‰r‰tty, kun $t \ge 0$. Ratak‰yr‰ on t‰llˆin paraabeli
+$\vec r\,(t)$ yksik√§sitteisesti m√§√§r√§tty, kun $t \ge 0$. Ratak√§yr√§ on t√§ll√∂in paraabeli
 avaruustasossa, jonka suuntavektorit ovat $\vec v_0$ ja $\vec k$
-(vrt.\ Esimerkki \ref{parametriset k‰yr‰t}:\,\ref{heittoparaabeli}). \loppu 
+(vrt.\ Esimerkki \ref{parametriset k√§yr√§t}:\,\ref{heittoparaabeli}). \loppu 
 \end{Exa}
 \index{zza@\sov!Irtoaminen}%
 \begin{Exa}:\ \vahv{Irtoaminen}. Kappale, johon vaikuttaa painovoima
 \[
 \vec G=-mg\vec j \quad (\text{$m=$ massa, $g=$ maan vetovoiman kiihtyvyys})
 \]
-on levossa origossa ja l‰htee siit‰ kitkattomaan liukuun pitkin k‰yr‰‰ 
+on levossa origossa ja l√§htee siit√§ kitkattomaan liukuun pitkin k√§yr√§√§ 
 \[
 y=-\frac{1}{3}\,x^3,\quad x\geq 0.
 \]
-M‰‰rit‰ kappaleen liikerata muodossa $y=f(x),\ x\ge0$.
+M√§√§rit√§ kappaleen liikerata muodossa $y=f(x),\ x\ge0$.
 \end{Exa}
-\ratk Rata noudattaa aluksi k‰yr‰‰ $y=-x^3/3$, mutta irtoaa siit‰, kun t‰m‰n radan mukainen 
-normaalikiihtyvyys ylitt‰‰ maan vetovoiman kiihtyvyyden normaalin suunnalla. Irtoamisehto on 
+\ratk Rata noudattaa aluksi k√§yr√§√§ $y=-x^3/3$, mutta irtoaa siit√§, kun t√§m√§n radan mukainen 
+normaalikiihtyvyys ylitt√§√§ maan vetovoiman kiihtyvyyden normaalin suunnalla. Irtoamisehto on 
 siis
 \[
 \frac{v^2}{R}=-g\vec j\cdot\vec n,
 \]
-miss‰ $\vec n$ on (p‰‰)normaalivektori
+miss√§ $\vec n$ on (p√§√§)normaalivektori
 \[
 \vec n=-\frac{1}{\sqrt{1+x^4}}(x^2\vec i + \vec j).
 \]
@@ -384,7 +384,7 @@ Energiaperiaatteen mukaan on
 \[
 \frac{1}{2}m[v(x)]^2 = mg\cdot \frac{1}{3}\,x^3,
 \]
-ja kaarevuus pisteess‰ $x$ on
+ja kaarevuus pisteess√§ $x$ on
 \[
 \frac{1}{R}=\frac{2x}{(1+x^4)^{3/2}}\,,
 \]
@@ -393,7 +393,7 @@ joten irtoaminen tapahtuu, kun
 \frac{2x}{(1+x^4)^{3/2}}\cdot\frac{2}{3}gx^3 &= \frac{g}{(1+x^4)^{1/2}} \\
 \ekv \ x^4=3 \ &\ekv \ \underline{\underline{x=\sqrt[4]{3}=1.316074..}}
 \end{align*}
-Irtoamisen j‰lkeen lentorata on paraabeli (vapaa putoamisliike), joten koko liikerata on
+Irtoamisen j√§lkeen lentorata on paraabeli (vapaa putoamisliike), joten koko liikerata on
 muotoa
 \[
 y=f(x)=\begin{cases}
@@ -401,23 +401,23 @@ y=f(x)=\begin{cases}
 Ax^2+Bx+C,  &\text{kun}\ x>\sqrt[4]{3}.
 \end{cases}
 \]
-Irtoamiskohdassa on maan vetovoima ainoa kappaleeseen vaikuttava ulkoinen voima. Koska t‰m‰ 
-voima on jatkuva, ja myˆs kappaleeseen vaikuttavan tukivoiman voi olettaa olevan jatkuva 
-irtoamiskohdassa (irtoamisesta eteenp‰in tukivoima $=0$), niin p‰‰tell‰‰n, ett‰ 
-kiihtyvyysvektori on jatkuva. T‰m‰ merkitsee, ett‰ funktio $f$ on kahdesti jatkuvasti 
-derivoituva myˆs irtoamiskohdassa, eli on oltava
+Irtoamiskohdassa on maan vetovoima ainoa kappaleeseen vaikuttava ulkoinen voima. Koska t√§m√§ 
+voima on jatkuva, ja my√∂s kappaleeseen vaikuttavan tukivoiman voi olettaa olevan jatkuva 
+irtoamiskohdassa (irtoamisesta eteenp√§in tukivoima $=0$), niin p√§√§tell√§√§n, ett√§ 
+kiihtyvyysvektori on jatkuva. T√§m√§ merkitsee, ett√§ funktio $f$ on kahdesti jatkuvasti 
+derivoituva my√∂s irtoamiskohdassa, eli on oltava
 \[
 f^{(k)}(x_0^+)=f^{(k)}(x_0^-),\quad k=0,1,2 \ , \ x_0=\sqrt[4]{3}.
 \]
-N‰ist‰ ehdoista voidaan ratkaista vakiot $A,B,C$. Tulos (liikerata) on
+N√§ist√§ ehdoista voidaan ratkaista vakiot $A,B,C$. Tulos (liikerata) on
 \[
 y=f(x)=\begin{cases}
 -x^3/3,                                         &x\in [0,\sqrt[4]{3}], \\
 -\sqrt[4]{3}\,x^2+\sqrt{3}\,x-1/\sqrt[4]{3},\ \ &x\in (\sqrt[4]{3},\infty).
 \end{cases}
 \]
-Kuvassa liuku/lentorata on piirretty yhten‰isell‰ viivalla. Toisen asteen k‰yr‰ ennen
-irtoamiskohtaa ja k‰yr‰ $y=-x^3/3$ irtoamiskohdan j‰lkeen on merkitty katkoviivalla. \loppu
+Kuvassa liuku/lentorata on piirretty yhten√§isell√§ viivalla. Toisen asteen k√§yr√§ ennen
+irtoamiskohtaa ja k√§yr√§ $y=-x^3/3$ irtoamiskohdan j√§lkeen on merkitty katkoviivalla. \loppu
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -484,8 +484,8 @@ a) \ $\vec u(t)\ ||\ \vec v(t)\ \forall t \,\qimpl \vec u\,'\times\vec v=\vec v\
 b) \ $\vec u(t) \perp \vec v(t)\ \forall t  \qimpl \vec u\,'\cdot\vec v=-\vec v\,'\cdot\vec u$
  
 \item
-M‰‰rit‰ seuraavien tasok‰yrien karevuusympyr‰ (s‰de $R$ sek‰ kaarevuuskeskiˆ) annetussa
-k‰yr‰n pisteess‰ $P$: \newline
+M√§√§rit√§ seuraavien tasok√§yrien karevuusympyr√§ (s√§de $R$ sek√§ kaarevuuskeski√∂) annetussa
+k√§yr√§n pisteess√§ $P$: \newline
 a) \ $y=x^2,\quad P=(1,1)$ \newline
 b) \ $y=x^3-2x^2,\quad P=(2,0)$ \newline
 c) \ $y=e^x,\quad P=(0,1)$ \newline
@@ -496,34 +496,34 @@ g) \ $x^3-y^3+y^2-3x+2=0,\quad P=(2,2)$ \newline
 h) \ $r=e^\varphi,\quad P=(r,\varphi)=(1,0)$
 
 \item
-M‰‰rit‰ seuraavien avaruusk‰yrien kaarevuusss‰de k‰yr‰n pisteess‰, joka vastaa annettua
-parametrin arvoa. M‰‰rit‰ myˆs sen avaruustason yht‰lˆ, jossa kaarevuusympyr‰ sijaitsee, sek‰
-kaarevuuskeskiˆ. \newline
+M√§√§rit√§ seuraavien avaruusk√§yrien kaarevuusss√§de k√§yr√§n pisteess√§, joka vastaa annettua
+parametrin arvoa. M√§√§rit√§ my√∂s sen avaruustason yht√§l√∂, jossa kaarevuusympyr√§ sijaitsee, sek√§
+kaarevuuskeski√∂. \newline
 a) \ $\vec r=t\,\vec i+t^2\,\vec j+t^3\,\vec k,\quad t=1$ \newline
 b) \ $x=\cos t,\ y=\sin t,\ z=(4/\pi)\,t,\quad t=\pi/4$ \newline
 c) \ $x=e^t\cos t,\ y=e^t\sin t,\ z=e^t,\quad t=0$
 
-\item \index{oskuloivat k‰yr‰t}
-Sanotaan, ett‰ tasok‰yr‰t $S_1$ ja $S_2$ \kor{oskuloivat} (suom.\ suutelevat) pisteess‰ 
-$(x_0,y_0)$, jos k‰yrill‰ on yhteinen kaarevuusympyr‰ ko.\ pisteess‰. \ a) P‰‰ttele, ett‰ jos 
-k‰yrien yht‰lˆt ovat $S_1: y=f(x)$ ja $S_2: y=g(x)$, niin oskulointiehdot ovat
+\item \index{oskuloivat k√§yr√§t}
+Sanotaan, ett√§ tasok√§yr√§t $S_1$ ja $S_2$ \kor{oskuloivat} (suom.\ suutelevat) pisteess√§ 
+$(x_0,y_0)$, jos k√§yrill√§ on yhteinen kaarevuusympyr√§ ko.\ pisteess√§. \ a) P√§√§ttele, ett√§ jos 
+k√§yrien yht√§l√∂t ovat $S_1: y=f(x)$ ja $S_2: y=g(x)$, niin oskulointiehdot ovat
 \[
 f(x_0)=g(x_0)=y_0\,, \quad f^{(k)}(x_0)=g^{(k)}(x_0),\,\ k=1,2.
 \]
-b) Etsi sellainen toisen asteen polynomik‰yr‰ $S_1:\ y=ax^2+bx+c$, joka oskuloi k‰yr‰‰
-$S_2:\ 2x^3+6y^3+xy=0$ pisteess‰ $(3,-2)$.
+b) Etsi sellainen toisen asteen polynomik√§yr√§ $S_1:\ y=ax^2+bx+c$, joka oskuloi k√§yr√§√§
+$S_2:\ 2x^3+6y^3+xy=0$ pisteess√§ $(3,-2)$.
 
 \item
-M‰‰rit‰ k‰yr‰n $y=x^2$ evoluutta. Piirr‰ kuva!
+M√§√§rit√§ k√§yr√§n $y=x^2$ evoluutta. Piirr√§ kuva!
 
 \item
-Pistem‰inen kappale liikkuu pitkin ruuviviivaa
+Pistem√§inen kappale liikkuu pitkin ruuviviivaa
 \[
 x=\cos \varphi,\ \ y=\sin \varphi,\ \ z=\varphi, \quad\varphi \in [0,\infty),
 \]
-siten, ett‰ sen ratanopeus (vauhti) on vakio $v_0$. M‰‰rit‰ kappaleen nopeus
-$\vec{v}$ ja kiihtyvyys $\vec{a}$ ajan $t$ funktiona ($t\geq 0$), kun kappale on pisteess‰ 
-$(1,0,0)$ hetkell‰ $t=0$. M‰‰rit‰ myˆs radan kaarevuuss‰de $R$ ja tarkista, ett‰ p‰tee:
+siten, ett√§ sen ratanopeus (vauhti) on vakio $v_0$. M√§√§rit√§ kappaleen nopeus
+$\vec{v}$ ja kiihtyvyys $\vec{a}$ ajan $t$ funktiona ($t\geq 0$), kun kappale on pisteess√§ 
+$(1,0,0)$ hetkell√§ $t=0$. M√§√§rit√§ my√∂s radan kaarevuuss√§de $R$ ja tarkista, ett√§ p√§tee:
 $|\vec{a}|=|\vec{v}|^2/R$.
 
 \item
@@ -531,49 +531,49 @@ Maaston korkeusprofiili tunturimaastossa on
 \[
 h(x,y)=40-0.005xy,
 \]
-miss‰ pituusyksikkˆ = m. Retkeilij‰ heitt‰‰ pisteess‰ $(x,y)=(0,0)$ olevasta leiripaikastaan
-pilaantuneen tomaatin siten, ett‰ tomaatin l‰htˆnopeus on 
+miss√§ pituusyksikk√∂ = m. Retkeilij√§ heitt√§√§ pisteess√§ $(x,y)=(0,0)$ olevasta leiripaikastaan
+pilaantuneen tomaatin siten, ett√§ tomaatin l√§ht√∂nopeus on 
 \[
 \vec v_0=(10\,\text{m}/\text{s})(\vec i-2\vec j+2\vec k).
 \]
-Miss‰ pisteess‰ tomaatti tˆrm‰‰ maahan ja mik‰ on t‰llˆin sen vauhti? 
-(Oletetaan $\,g=10\text{m}/\text{s}^2$, ei ilmanvastusta eik‰ tuulikorjausta.)
+Miss√§ pisteess√§ tomaatti t√∂rm√§√§ maahan ja mik√§ on t√§ll√∂in sen vauhti? 
+(Oletetaan $\,g=10\text{m}/\text{s}^2$, ei ilmanvastusta eik√§ tuulikorjausta.)
 
 \item (*)
-N‰yt‰, ett‰ sykloidin $S: x=R(t-\sin t),\ y=R(1-\cos t),\ t\in\R$ evoluutta on toinen, $S$:n
-kanssa yhtenev‰ sykloidi, joka saadaan siirt‰m‰ll‰ $S\,$ vektorin
+N√§yt√§, ett√§ sykloidin $S: x=R(t-\sin t),\ y=R(1-\cos t),\ t\in\R$ evoluutta on toinen, $S$:n
+kanssa yhtenev√§ sykloidi, joka saadaan siirt√§m√§ll√§ $S\,$ vektorin
 $-\pi R\vec i-2R\vec j$ verran. Kuva!
 
 \item (*)
-Origossa oleva kappale l‰htee levosta liukumaan kitkattomasti pitkin k‰yr‰‰ 
-$y=1-\cosh x,\ x \ge 0$, painovoiman vaikuttaessa suunnassa $-\vec j$. M‰‰rit‰ kappaleen 
+Origossa oleva kappale l√§htee levosta liukumaan kitkattomasti pitkin k√§yr√§√§ 
+$y=1-\cosh x,\ x \ge 0$, painovoiman vaikuttaessa suunnassa $-\vec j$. M√§√§rit√§ kappaleen 
 liikerata.
 
 \item (*) \label{H-dif-3: kierevyys}
-\index{Frenet'n kanta} \index{kierevyys (k‰yr‰n)} \index{sivunormaalivektori}
-Avaruusk‰yr‰n pisteeseen $P(t)\vastaa\vec r\,(t)$ liittyv‰ \kor{Frenet'n kanta} on
-vektorisysteemi $\{\tv,\vec n,\vec\nu\}$, miss‰ $\tv$ ja $\vec n$ ovat yksikkˆ\-tangentti- ja 
-p‰‰normaalivektorit ko.\ pisteess‰ ja $\vec\nu=\tv\times\vec n$ on \kor{sivunormaalivektori}. 
-Avaruusk‰yr‰n \kor{kierevyys} $\omega$ (engl.\ torsion) m‰‰ritell‰‰n t‰llˆin kaavalla
+\index{Frenet'n kanta} \index{kierevyys (k√§yr√§n)} \index{sivunormaalivektori}
+Avaruusk√§yr√§n pisteeseen $P(t)\vastaa\vec r\,(t)$ liittyv√§ \kor{Frenet'n kanta} on
+vektorisysteemi $\{\tv,\vec n,\vec\nu\}$, miss√§ $\tv$ ja $\vec n$ ovat yksikk√∂\-tangentti- ja 
+p√§√§normaalivektorit ko.\ pisteess√§ ja $\vec\nu=\tv\times\vec n$ on \kor{sivunormaalivektori}. 
+Avaruusk√§yr√§n \kor{kierevyys} $\omega$ (engl.\ torsion) m√§√§ritell√§√§n t√§ll√∂in kaavalla
 \[
 \frac{1}{v(t)}\frac{d\vec\nu}{dt}=-\omega(t)\vec n, \quad v(t)=\abs{\dvr(t)}.
 \]
-a) N‰yt‰, ett‰ $d\vec\nu/dt$ todella on p‰‰normaalivektorin suuntainen. \newline
-b) P‰‰ttele, ett‰ jos avaruusk‰yr‰ on tasok‰yr‰ jollakin avaruustasolla, niin sen kierevyys 
+a) N√§yt√§, ett√§ $d\vec\nu/dt$ todella on p√§√§normaalivektorin suuntainen. \newline
+b) P√§√§ttele, ett√§ jos avaruusk√§yr√§ on tasok√§yr√§ jollakin avaruustasolla, niin sen kierevyys 
 $=0$. \newline
-c) Laske ruuviviivan $S:\ x=a\cos t,\ y=a\sin t,\ z=bt$ kierevyys k‰yr‰n pisteess‰ $P(t)$.
+c) Laske ruuviviivan $S:\ x=a\cos t,\ y=a\sin t,\ z=bt$ kierevyys k√§yr√§n pisteess√§ $P(t)$.
 
 \item (*) \index{zzb@\nim!Sotaharjoitus 2}
-(Sotaharjoitus 2) Tykinammus laukaistaan origosta l‰htˆnopeudella 
+(Sotaharjoitus 2) Tykinammus laukaistaan origosta l√§ht√∂nopeudella 
 $\vec v_0=(150\,\text{m}/\text{s})(\vec i+2\vec j+\vec k)$. Lentoradalla ammukseen vaikuttaa 
-painovoiman lis‰ksi tuuli ja nopeuteen verrannollinen vastusvoima siten, ett‰ liikeyht‰lˆt
+painovoiman lis√§ksi tuuli ja nopeuteen verrannollinen vastusvoima siten, ett√§ liikeyht√§l√∂t
 ovat
 \[
 \vec v\,'=c\vec i-g\vec k-k\vec v, \quad \dvr=\vec v,
 \]
-miss‰ $\vec r\,(t)$ ja $\vec v(t)$ ovat ammuksen paikka- ja nopeusvektorit hetkell‰ $t$,
+miss√§ $\vec r\,(t)$ ja $\vec v(t)$ ovat ammuksen paikka- ja nopeusvektorit hetkell√§ $t$,
 $\,g=10$ m/s$^2$, $k=0.01$ s$^{-1}$ ja $c=0.10$ m/s$^2$. Laske, mihin $xy$-tason pisteeseen
-($10$ metrin tarkkuus!) ammus putoaa. \kor{Vihje}: Ratkaise liikeyht‰lˆt erikseen suunnissa
+($10$ metrin tarkkuus!) ammus putoaa. \kor{Vihje}: Ratkaise liikeyht√§l√∂t erikseen suunnissa
 $\vec i,\,\vec j,\,\vec k$ (ensin $\vec v$, sitten $\vec r\,$). Aloita pystysuunnasta lentoajan
 selville saamiseksi! 
 

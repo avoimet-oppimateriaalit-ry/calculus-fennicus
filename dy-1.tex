@@ -1,73 +1,73 @@
-\section{Differentiaaliyhtälöiden peruskäsitteet} \label{DY-käsitteet}
+\section{DifferentiaaliyhtÃ¤lÃ¶iden peruskÃ¤sitteet} \label{DY-kÃ¤sitteet}
 \alku
 
-\kor{Differentiaaliyhtälön} (jatkossa lyhennys DY), tai tarkemmin 
-\kor{tavallisen differentiaaliyhtälön} (engl.\ ordinary differential equation eli ODE) yleinen
-muoto on \index{differentiaaliyhtälö!d@yleinen}
+\kor{DifferentiaaliyhtÃ¤lÃ¶n} (jatkossa lyhennys DY), tai tarkemmin 
+\kor{tavallisen differentiaaliyhtÃ¤lÃ¶n} (engl.\ ordinary differential equation eli ODE) yleinen
+muoto on \index{differentiaaliyhtÃ¤lÃ¶!d@yleinen}
 \[
 F(x,y,y',\ldots,y^{(n)})=0,
 \]
-missä $x$ on reaalimuuttuja, $y=y(x)$ on tuntematon reaaliarvoinen funktio, ja $F$ jokin
-(tunnettu) $n+2$ reaalimuuttujan lauseke (kyseessä on funktio tyyppiä $F:\R^{n+2}\kohti\R$, 
-vrt.\ Luku \ref{kahden ja kolmen muuttujan funktiot}). Kun yhtälö kirjoitetaan tarkemmin
+missÃ¤ $x$ on reaalimuuttuja, $y=y(x)$ on tuntematon reaaliarvoinen funktio, ja $F$ jokin
+(tunnettu) $n+2$ reaalimuuttujan lauseke (kyseessÃ¤ on funktio tyyppiÃ¤ $F:\R^{n+2}\kohti\R$, 
+vrt.\ Luku \ref{kahden ja kolmen muuttujan funktiot}). Kun yhtÃ¤lÃ¶ kirjoitetaan tarkemmin
 muodossa
 \[
 F(x,y(x),y'(x),\ldots,y^{(n)}(x))=0,
 \]
-niin nähdään selvemmin, että yhtälössä on vain yksi vapaa muuttuja ($x$). Nimitys 'tavallinen'
-DY tulee juuri tästä ominaisuudesta. ('Epätavallisista' differentiaaliyhtälöistä ei
+niin nÃ¤hdÃ¤Ã¤n selvemmin, ettÃ¤ yhtÃ¤lÃ¶ssÃ¤ on vain yksi vapaa muuttuja ($x$). Nimitys 'tavallinen'
+DY tulee juuri tÃ¤stÃ¤ ominaisuudesta. ('EpÃ¤tavallisista' differentiaaliyhtÃ¤lÃ¶istÃ¤ ei
 toistaiseksi puhuta.)
 
-Ym.\ differentiaaliyhtälössä indeksi $n\in\N$ on yhtälön
-\index{kertaluku!c@differentiaaliyhtälön}%
+Ym.\ differentiaaliyhtÃ¤lÃ¶ssÃ¤ indeksi $n\in\N$ on yhtÃ¤lÃ¶n
+\index{kertaluku!c@differentiaaliyhtÃ¤lÃ¶n}%
 \kor{kertaluku} (engl.\ order). Jos 
-yhtälö kirjoitetaan muotoon
+yhtÃ¤lÃ¶ kirjoitetaan muotoon
 \[
 y^{(n)}=f(x,y,\ldots,y^{(n-1)}),
 \]
-niin tällaista muotoa sanotaan differentiaaliyhtälön
-\index{differentiaaliyhtälön!a@normaalimuoto} \index{normaalimuoto!a@DY:n, DY-systeemin}%
-\kor{normaalimuodoksi}. Ensimmäisen
-kertaluvun differentiaaliyhtälön normaalimuoto on siis
+niin tÃ¤llaista muotoa sanotaan differentiaaliyhtÃ¤lÃ¶n
+\index{differentiaaliyhtÃ¤lÃ¶n!a@normaalimuoto} \index{normaalimuoto!a@DY:n, DY-systeemin}%
+\kor{normaalimuodoksi}. EnsimmÃ¤isen
+kertaluvun differentiaaliyhtÃ¤lÃ¶n normaalimuoto on siis
 \[
 y'=f(x,y).
 \]
-Normaalimuoto on matemaattisen teorian kannalta sikäli edullinen, että siihen perustuen voidaan
-differentiaaliyhtälön ratkeavuusehdot asettaa paljon helpommin kuin yleisemmässä muodossa.
+Normaalimuoto on matemaattisen teorian kannalta sikÃ¤li edullinen, ettÃ¤ siihen perustuen voidaan
+differentiaaliyhtÃ¤lÃ¶n ratkeavuusehdot asettaa paljon helpommin kuin yleisemmÃ¤ssÃ¤ muodossa.
 
-\subsection*{Yksittäisratkaisu.  Yleinen ratkaisu}
-\index{differentiaaliyhtälön!b@yksittäisratkaisu, yleinen ratk.|vahv}
-\index{yksittäisratkaisu (DY:n)|vahv}
+\subsection*{YksittÃ¤isratkaisu.  Yleinen ratkaisu}
+\index{differentiaaliyhtÃ¤lÃ¶n!b@yksittÃ¤isratkaisu, yleinen ratk.|vahv}
+\index{yksittÃ¤isratkaisu (DY:n)|vahv}
 \index{yleinen ratkaisu (DY:n)|vahv}
 
-Jos differentiaaliyhtälön kertaluku on $n$, niin sen ratkaisu, tarkemmin 
-\kor{yksittäisratkaisu}, on jokainen funktio $y(x)$, joka on jollakin \pain{avoimella}
-\pain{välillä} $(a,b)$ (voi olla $\,a=-\infty\,$ ja/tai $\,b=\infty\,$) \pain{$n$} \pain{kertaa} \pain{derivoituva} ja 
-toteuttaa yhtälön ko.\ välillä. Differentiaaliyhtälön \kor{yleisellä ratkaisulla} tarkoitetaan
-sellaista \pain{funktio}j\pain{oukkoa}, joka sisältää kaikki (tai 'melkein kaikki', ks.\
-huomatukset jäljempänä) ratkaisut. Jos yhtälön kertaluku on $n$, niin yleinen ratkaisu on
-pääsääntöisesti muotoa
+Jos differentiaaliyhtÃ¤lÃ¶n kertaluku on $n$, niin sen ratkaisu, tarkemmin 
+\kor{yksittÃ¤isratkaisu}, on jokainen funktio $y(x)$, joka on jollakin \pain{avoimella}
+\pain{vÃ¤lillÃ¤} $(a,b)$ (voi olla $\,a=-\infty\,$ ja/tai $\,b=\infty\,$) \pain{$n$} \pain{kertaa} \pain{derivoituva} ja 
+toteuttaa yhtÃ¤lÃ¶n ko.\ vÃ¤lillÃ¤. DifferentiaaliyhtÃ¤lÃ¶n \kor{yleisellÃ¤ ratkaisulla} tarkoitetaan
+sellaista \pain{funktio}j\pain{oukkoa}, joka sisÃ¤ltÃ¤Ã¤ kaikki (tai 'melkein kaikki', ks.\
+huomatukset jÃ¤ljempÃ¤nÃ¤) ratkaisut. Jos yhtÃ¤lÃ¶n kertaluku on $n$, niin yleinen ratkaisu on
+pÃ¤Ã¤sÃ¤Ã¤ntÃ¶isesti muotoa
 \[
 y=Y(x,C_1,\ldots,C_n),
 \]
-missä $C_1,\ldots,C_n$ ovat vapaasti (tai esim.\ joiltakin väleiltä vapaasti) valittavia 
-\kor{vakioita}, ja $Y$ on jokin $n+1$:n muuttujan funktio. Sikäli kuin vakiot ovat täysin
+missÃ¤ $C_1,\ldots,C_n$ ovat vapaasti (tai esim.\ joiltakin vÃ¤leiltÃ¤ vapaasti) valittavia 
+\kor{vakioita}, ja $Y$ on jokin $n+1$:n muuttujan funktio. SikÃ¤li kuin vakiot ovat tÃ¤ysin
 vapaasti valittavissa, yleinen ratkaisu on siis funktiojoukko
 \[
 \mathcal{Y}=\{\,y(x)=Y(x,C_1,\ldots,C_n) \ | \ C_1,\ldots,C_n\in\R\,\}.
 \]
-Differentiaaliyhtälön 'ratkaisemisella' tarkoitetaan yleensä yleisen ratkaisun määrittämistä. 
+DifferentiaaliyhtÃ¤lÃ¶n 'ratkaisemisella' tarkoitetaan yleensÃ¤ yleisen ratkaisun mÃ¤Ã¤rittÃ¤mistÃ¤. 
 \begin{Exa}
-Differentiaaliyhtälöiden
+DifferentiaaliyhtÃ¤lÃ¶iden
 \begin{itemize}
 \item[a)] $y'=e^{2x}$, $\quad\ \text{b)}\,\ y'=2y$
 \end{itemize}
-yleiset ratkaisut $\R$:ssä (välillä $(-\infty,\infty)$) ovat
+yleiset ratkaisut $\R$:ssÃ¤ (vÃ¤lillÃ¤ $(-\infty,\infty)$) ovat
 \begin{itemize}
 \item[a)] $y(x)=\frac{1}{2}\,e^{2x}+C\,\ (C\in\R)$,
           $\quad\ \text{b)}\,\ y(x)=Ce^{2x}\,\ (C\in\R)$. \loppu
 \end{itemize}
-%Tässä $C\in\R$ on vapaasti valittavissa ja ratkaisut ovat voimassa koko $\R$:ssä.
+%TÃ¤ssÃ¤ $C\in\R$ on vapaasti valittavissa ja ratkaisut ovat voimassa koko $\R$:ssÃ¤.
 \end{Exa}
 
 \begin{Exa} Ratkaise: \ a) \ $y'''=0$, \ \ b) \ $y'''+2y''=0$.
@@ -77,14 +77,14 @@ yleiset ratkaisut $\R$:ssä (välillä $(-\infty,\infty)$) ovat
                            &\qimpl y' = C_1 x + C_2 \\
                            &\qimpl y(x) = \frac{1}{2}C_1 x^2 + C_2 x + C_3.
 \end{align*}
-Tässä voidaan $C_1$:n tilalle yhtä hyvin kirjoittaa $2C_1$, jolloin yleiselle ratkaisulle 
+TÃ¤ssÃ¤ voidaan $C_1$:n tilalle yhtÃ¤ hyvin kirjoittaa $2C_1$, jolloin yleiselle ratkaisulle 
 saadaan luontevampi muoto
 \[ 
 y(x) = C_1 x^2 + C_2 x + C_3 \quad (C_1,C_2,C_3 \in \R). 
 \]
 
-b) Ratkaisu voidaan tässä keksiä kirjoittamalla ensin $y''(x)=u(x)$, jolloin yhtälö 
-yksinkertaistuu muotoon $\,u'+2u=0$. Tämän yleinen ratkaisu on $\,u(x)=C_1e^{-2x}$. Koska 
+b) Ratkaisu voidaan tÃ¤ssÃ¤ keksiÃ¤ kirjoittamalla ensin $y''(x)=u(x)$, jolloin yhtÃ¤lÃ¶ 
+yksinkertaistuu muotoon $\,u'+2u=0$. TÃ¤mÃ¤n yleinen ratkaisu on $\,u(x)=C_1e^{-2x}$. Koska 
 $u=y''$, niin integroimalla seuraa
 \begin{align*}
 y''(x) = C_1 e^{-2x} &\qimpl y'(x)=\int C_1 e^{-2x}\,dx=-\frac{1}{2}C_1e^{-2x}+C_2 \\
@@ -96,15 +96,15 @@ y(x)=C_1e^{-2x}+C_2x+C_3 \quad (C_1,C_2,C_3 \in \R). \loppu
 \]
 
 \subsection*{Erikoisratkaisut}
-\index{differentiaaliyhtälön!c@erikoisratkaisu|vahv}
+\index{differentiaaliyhtÃ¤lÃ¶n!c@erikoisratkaisu|vahv}
 \index{erikoisratkaisu (DY:n)|vahv}
 
-Jos differentiaaliyhtälöllä on muitakin ratkaisuja kuin yleiseen ratkaisulausekkeeseen 
-$y=Y(x,C_1,\ldots,C_n)$ sisältyvät, niin tällaisia 'yllätysratkaisuja' sanotaan 
+Jos differentiaaliyhtÃ¤lÃ¶llÃ¤ on muitakin ratkaisuja kuin yleiseen ratkaisulausekkeeseen 
+$y=Y(x,C_1,\ldots,C_n)$ sisÃ¤ltyvÃ¤t, niin tÃ¤llaisia 'yllÃ¤tysratkaisuja' sanotaan 
 \kor{erikoisratkaisuiksi}. Milloin ratkaisu on 'erikoinen' ja milloin ei, voi riippua
 yleisen ratkaisun esitysmuodosta.
 \begin{Exa} \label{erikoinen dy}
-Differentiaaliyhtälöiden
+DifferentiaaliyhtÃ¤lÃ¶iden
 \begin{itemize}
 \item[a)] $y'=y^2,\quad \text{b)}\,\ (y')^2=y$
 \end{itemize}
@@ -112,18 +112,18 @@ yleiset ratkaisut ovat
 \begin{itemize}
 \item[a)] $y(x)=\dfrac{1}{C-x}\,,\quad \text{b)}\,\ y(x)=\dfrac{1}{4}(x-C)^2$,
 \end{itemize}
-kuten saatetaan helposti tarkistaa ($C\in\R$). Yhtälöillä on myös ilmeinen ratkaisu,
-jota ei saada yleisen ratkaisun lausekkeesta, nimittäin
+kuten saatetaan helposti tarkistaa ($C\in\R$). YhtÃ¤lÃ¶illÃ¤ on myÃ¶s ilmeinen ratkaisu,
+jota ei saada yleisen ratkaisun lausekkeesta, nimittÃ¤in
 \[
 y(x)=0.
 \]
-Tätä on siis pidettävä erikoisratkaisuna. Tapauksessa a) voi kuitenkin yleisen ratkaisun
-esittää myös muodossa
+TÃ¤tÃ¤ on siis pidettÃ¤vÃ¤ erikoisratkaisuna. Tapauksessa a) voi kuitenkin yleisen ratkaisun
+esittÃ¤Ã¤ myÃ¶s muodossa
 \begin{itemize}
 \item[a)] $y(x)=\dfrac{C}{1-Cx}$
 \end{itemize}
-(aiemmassa ratkaisussa kirjoitettu $C$:n tilalle $1/C$), jolloin $y(x)=0$ sisältyy tähän
-($C=0$). Tapauksessa b) vieläkin 'erikoisempi' ratkaisu on
+(aiemmassa ratkaisussa kirjoitettu $C$:n tilalle $1/C$), jolloin $y(x)=0$ sisÃ¤ltyy tÃ¤hÃ¤n
+($C=0$). Tapauksessa b) vielÃ¤kin 'erikoisempi' ratkaisu on
 \[
 y(x)=\begin{cases}
 \,0,                  &\text{ kun } x\leq C, \\
@@ -132,32 +132,32 @@ y(x)=\begin{cases}
 \]
 \end{Exa}
 %\begin{Exa}
-%Differentiaaliyhtälön
+%DifferentiaaliyhtÃ¤lÃ¶n
 %\[
 %y'=\sqrt[3]{y^3+1}
 %\]
-%yleinen ratkaisu koostuu funktioista, jotka eivät ole alkeisfunktiota. Yksi 
-%alkeisfunktioratkaisu on kuitenkin keksittävissä: $y(x)=-1$. Tätä on syytä epäillä
+%yleinen ratkaisu koostuu funktioista, jotka eivÃ¤t ole alkeisfunktiota. Yksi 
+%alkeisfunktioratkaisu on kuitenkin keksittÃ¤vissÃ¤: $y(x)=-1$. TÃ¤tÃ¤ on syytÃ¤ epÃ¤illÃ¤
 %erikoisratkaisuksi. \loppu
 %\end{Exa}
 
-\subsection*{Käyräparven differentiaaliyhtälö}
-\index{differentiaaliyhtälö!e@käyräparven|vahv}
-\index{kzyyrzy@käyräparvi|vahv}
+\subsection*{KÃ¤yrÃ¤parven differentiaaliyhtÃ¤lÃ¶}
+\index{differentiaaliyhtÃ¤lÃ¶!e@kÃ¤yrÃ¤parven|vahv}
+\index{kzyyrzy@kÃ¤yrÃ¤parvi|vahv}
 
-Differentiaaliyhtälön yleinen ratkaisu voidaan tulkita geometrisesti \kor{käyräparveksi} 
-(eli käyrien joukoksi). Jos tunnetaan käyräparvi, niin sen differentiaaliyhtälö on 
-johdettavissa derivoimalla. Nimittäin jos käyräparven funktiot ovat muotoa 
-$y=Y(x,C_1,\ldots,C_n)$, niin derivoimalla $n$ kertaa saadaan $n+1$:n yhtälön ryhmä, josta 
-vakiot $C_1,\ldots,C_n$ ovat (ainakin periaatteessa) eliminoitavissa. Tällöin saadaan ko.\ 
-käyräparvelle differentiaaliyhtälö kertalukua $n$.
+DifferentiaaliyhtÃ¤lÃ¶n yleinen ratkaisu voidaan tulkita geometrisesti \kor{kÃ¤yrÃ¤parveksi} 
+(eli kÃ¤yrien joukoksi). Jos tunnetaan kÃ¤yrÃ¤parvi, niin sen differentiaaliyhtÃ¤lÃ¶ on 
+johdettavissa derivoimalla. NimittÃ¤in jos kÃ¤yrÃ¤parven funktiot ovat muotoa 
+$y=Y(x,C_1,\ldots,C_n)$, niin derivoimalla $n$ kertaa saadaan $n+1$:n yhtÃ¤lÃ¶n ryhmÃ¤, josta 
+vakiot $C_1,\ldots,C_n$ ovat (ainakin periaatteessa) eliminoitavissa. TÃ¤llÃ¶in saadaan ko.\ 
+kÃ¤yrÃ¤parvelle differentiaaliyhtÃ¤lÃ¶ kertalukua $n$.
 \begin{Exa}
-Minkä differentiaaliyhtälön yleinen ratkaisu on 
+MinkÃ¤ differentiaaliyhtÃ¤lÃ¶n yleinen ratkaisu on 
 \[ 
 \text{a)}\ \ y=(C+x)e^x, \quad\ \text{b)}\ \ y=\frac{C_1}{x+C_2}\ ? 
 \]
 \end{Exa}
-\ratk a) \ Derivoimalla kerran saadaan yhtälöryhmä
+\ratk a) \ Derivoimalla kerran saadaan yhtÃ¤lÃ¶ryhmÃ¤
 \[
 \left\{
 \begin{aligned}
@@ -166,7 +166,7 @@ y'&=Ce^x+xe^x+e^x
 \end{aligned}
 \right.
 \]
-Vähennyslaskulla saadaan differentiaaliyhtälöksi
+VÃ¤hennyslaskulla saadaan differentiaaliyhtÃ¤lÃ¶ksi
 \[
 y'-y=e^x.
 \]
@@ -178,32 +178,32 @@ b) \ Derivoidaan kahdesti:
 \,y'' =2C_1(x+C_2)^{-3}
 \end{cases}
 \]
-Eliminoimalla $C_1$ ja $C_2$ saadaan differentiaaliyhtälöksi
+Eliminoimalla $C_1$ ja $C_2$ saadaan differentiaaliyhtÃ¤lÃ¶ksi
 \[
 yy''=2(y')^2. \loppu
 \]
 
 \subsection*{Kohtisuorat leikkaajat}
-\index{differentiaaliyhtälö!f@kohtisuorien leikkaajien|vahv}
-\index{kzyyrzy@käyräparvi|vahv}
-\index{kohtisuora leikkaus!b@käyräparvien|vahv}
+\index{differentiaaliyhtÃ¤lÃ¶!f@kohtisuorien leikkaajien|vahv}
+\index{kzyyrzy@kÃ¤yrÃ¤parvi|vahv}
+\index{kohtisuora leikkaus!b@kÃ¤yrÃ¤parvien|vahv}
 
-Jos yksiparametrisen käyräparven $y=Y(x,C)$ differentiaaliyhtälö on 
+Jos yksiparametrisen kÃ¤yrÃ¤parven $y=Y(x,C)$ differentiaaliyhtÃ¤lÃ¶ on 
 \[ 
 y'=f(x,y), 
 \] 
-niin ratkaisemalla differentiaaliyhtälö
+niin ratkaisemalla differentiaaliyhtÃ¤lÃ¶
 \[ 
 y'=-\frac{1}{f(x,y)} 
 \]
-löydetään käyräparven \kor{kohtisuorat leikkaajat}
+lÃ¶ydetÃ¤Ã¤n kÃ¤yrÃ¤parven \kor{kohtisuorat leikkaajat}
 (vrt.\ Esimerkki \ref{derivaatta geometriassa}:\ref{kohtisuora leikkaus}).
 \begin{Exa}
-Ympyräparven $\,x^2+y^2=C^2\,$ differentiaaliyhtälöksi saadaan implisiittisesti derivoimalla
+YmpyrÃ¤parven $\,x^2+y^2=C^2\,$ differentiaaliyhtÃ¤lÃ¶ksi saadaan implisiittisesti derivoimalla
 \[
 x+yy'=0.
 \]
-Kohtisuorien leikkaajien differentiaaliyhtälön
+Kohtisuorien leikkaajien differentiaaliyhtÃ¤lÃ¶n
 \[
 x-y/y'=0
 \]
@@ -214,17 +214,17 @@ yleinen ratkaisu on $y=Cx$, kuten saattoi (geometrisesti) arvata. \loppu
 \index{alkuehto (DY:n)|vahv}
 \index{reunaehto|vahv}
 
-Koska differentiaaliyhtälön ratkaisu sisältää määräämättömiä vakioita, tarvitaan 
-sovellustilanteissa lisäehtoja, jotta ratkaisu olisi yksikäsitteinen. Lisäehdot on pääteltävä 
+Koska differentiaaliyhtÃ¤lÃ¶n ratkaisu sisÃ¤ltÃ¤Ã¤ mÃ¤Ã¤rÃ¤Ã¤mÃ¤ttÃ¶miÃ¤ vakioita, tarvitaan 
+sovellustilanteissa lisÃ¤ehtoja, jotta ratkaisu olisi yksikÃ¤sitteinen. LisÃ¤ehdot on pÃ¤Ã¤teltÃ¤vÃ¤ 
 sovellustilanteesta, eli ne kuuluvat matemaattiseen malliin samoin kuin itse
-differentiaaliyhtälökin.
+differentiaaliyhtÃ¤lÃ¶kin.
 
-Jos differentiaaliyhtälön kertaluku on $n$, niin ratkaisussa on yleensä $n$ määrämätöntä 
-vakiota, jolloin tarvitaan $n$ lisäehtoa. Yksinkertaisin tapa asettaa
-lisäehdot on kiinnittää jossakin pisteessä $x_0$ derivaattojen $y^{(k)}(x_0)$ arvot, kun
-$k=0\ldots n-1$. Näin saadaan
-\index{differentiaaliyhtälön!d@alkuarvotehtävä} \index{alkuarvotehtävä}%
-\kor{alkuarvotehtävä} (engl.\ initial value problem)
+Jos differentiaaliyhtÃ¤lÃ¶n kertaluku on $n$, niin ratkaisussa on yleensÃ¤ $n$ mÃ¤Ã¤rÃ¤mÃ¤tÃ¶ntÃ¤ 
+vakiota, jolloin tarvitaan $n$ lisÃ¤ehtoa. Yksinkertaisin tapa asettaa
+lisÃ¤ehdot on kiinnittÃ¤Ã¤ jossakin pisteessÃ¤ $x_0$ derivaattojen $y^{(k)}(x_0)$ arvot, kun
+$k=0\ldots n-1$. NÃ¤in saadaan
+\index{differentiaaliyhtÃ¤lÃ¶n!d@alkuarvotehtÃ¤vÃ¤} \index{alkuarvotehtÃ¤vÃ¤}%
+\kor{alkuarvotehtÃ¤vÃ¤} (engl.\ initial value problem)
 \[
 \left\{
 \begin{aligned}
@@ -235,14 +235,14 @@ $k=0\ldots n-1$. Näin saadaan
 \end{aligned}
 \right.
 \]
-Tässä voi olla $x_0\in(a,b)$ tai myös $x_0=a$ tai $x_0=b$. Jos $x_0$ on välin päätepiste, niin 
+TÃ¤ssÃ¤ voi olla $x_0\in(a,b)$ tai myÃ¶s $x_0=a$ tai $x_0=b$. Jos $x_0$ on vÃ¤lin pÃ¤Ã¤tepiste, niin 
 alkuehdot on tulkittava derivaattojen $y^{(k)}(x)$ \pain{tois}p\pain{uolisina} 
 \pain{ra}j\pain{a-arvoina} (tai toispuolisina derivaattoina) kun $x\kohti a^+$ ($x_0=a$) tai 
-$x\kohti b^-$ ($x_0=b$). Edellytys on tällöin, että differentiaaliyhtälön ratkaisuille nämä ovat
+$x\kohti b^-$ ($x_0=b$). Edellytys on tÃ¤llÃ¶in, ettÃ¤ differentiaaliyhtÃ¤lÃ¶n ratkaisuille nÃ¤mÃ¤ ovat
 olemassa.
 \begin{Exa}
-Jos kappale (massa $=m$) on hetkellä $t=0$ levossa pisteessä $x_0$, ja kappaleeseen vaikuttaa 
-voima $f(t)$ kun $t>0$, niin kappaleen sijainti $x(t)$ hetkellä $t$ saadaan selville 
+Jos kappale (massa $=m$) on hetkellÃ¤ $t=0$ levossa pisteessÃ¤ $x_0$, ja kappaleeseen vaikuttaa 
+voima $f(t)$ kun $t>0$, niin kappaleen sijainti $x(t)$ hetkellÃ¤ $t$ saadaan selville 
 ratkaisemalla alkuarvoprobleema
 \[
 \left\{ \begin{aligned}
@@ -251,22 +251,22 @@ ratkaisemalla alkuarvoprobleema
 &x'(0)  = 0.
 \end{aligned} \right.
 \]
-Alkuehdot voi asettaa täsmällisemmin muodossa $x(0^+)=x_0,\ D_+ x(0)=0$. \loppu
+Alkuehdot voi asettaa tÃ¤smÃ¤llisemmin muodossa $x(0^+)=x_0,\ D_+ x(0)=0$. \loppu
 \end{Exa}
-Lisäehtoja voidaan myös asettaa useammassa pisteessä. Alkuarvotehtävän ohella tyypillisin on
-\index{differentiaaliyhtälön!e@reuna-arvotehtävä} \index{reuna-arvotehtävä}%
-\kor{kahden pisteen reuna-arvotehtävä} (engl. two-point boundary value problem), jossa ehdot
-asetetaan tarkasteltavan välin päätepisteissä. Jos $n=2$, niin kahden pisteen reuna-arvotehtävän
+LisÃ¤ehtoja voidaan myÃ¶s asettaa useammassa pisteessÃ¤. AlkuarvotehtÃ¤vÃ¤n ohella tyypillisin on
+\index{differentiaaliyhtÃ¤lÃ¶n!e@reuna-arvotehtÃ¤vÃ¤} \index{reuna-arvotehtÃ¤vÃ¤}%
+\kor{kahden pisteen reuna-arvotehtÃ¤vÃ¤} (engl. two-point boundary value problem), jossa ehdot
+asetetaan tarkasteltavan vÃ¤lin pÃ¤Ã¤tepisteissÃ¤. Jos $n=2$, niin kahden pisteen reuna-arvotehtÃ¤vÃ¤n
 normaalimuoto on
 \[ \left\{ \begin{aligned}
 &y'' =f(x,y,y'),\quad x\in(a,b), \\
 &y(a)=A, \ y(b)=B.
 \end{aligned} \right. \]
-Reunaehtojen asettelussa on tässä oletettava, että ratkaisu on oikealta jatkuva $a$:ssa ja
-vasemmalta jatkuva $b$:ssä. Koska ratkaisu on joka tapauksesa (kahdestikin) derivoituvana
-jatkuva välillä $(a,b)$, niin lisäoletukset tarkoittavat samaa kuin jatkuvuus välillä $[a,b]$.
+Reunaehtojen asettelussa on tÃ¤ssÃ¤ oletettava, ettÃ¤ ratkaisu on oikealta jatkuva $a$:ssa ja
+vasemmalta jatkuva $b$:ssÃ¤. Koska ratkaisu on joka tapauksesa (kahdestikin) derivoituvana
+jatkuva vÃ¤lillÃ¤ $(a,b)$, niin lisÃ¤oletukset tarkoittavat samaa kuin jatkuvuus vÃ¤lillÃ¤ $[a,b]$.
 \begin{Exa}
-Ratkaise kahden pisteen reuna-arvotehtävä
+Ratkaise kahden pisteen reuna-arvotehtÃ¤vÃ¤
 \[
 \left\{ \begin{aligned}
 &y'''+2y''=0,\quad x\in (0,1), \\
@@ -278,7 +278,7 @@ Ratkaise kahden pisteen reuna-arvotehtävä
 \[
 y(x)=C_1e^{-2x}+C_2x+C_3,
 \]
-joten saadaan yhtälöryhmä
+joten saadaan yhtÃ¤lÃ¶ryhmÃ¤
 \[ \left\{ \begin{array}{rrrrrrrrr}  y(0)&=&        C_1& &   &+&C_3&=& 1 \\
                                     y'(0)&=&    -2\,C_1&+&C_2& &   &=&-1 \\
                                      y(1)&=&e^{-2}\,C_1&+&C_2&+&C_3&=& 0
@@ -286,13 +286,13 @@ joten saadaan yhtälöryhmä
    \qimpl \left\{ \begin{aligned} C_1&=\ 0 \\ C_2&=-1 \\ C_3&=\ 1 \end{aligned} \right. \] 
 Ratkaisu on siis $\,y(x)=-x+1$. \loppu 
 
-\subsection*{Differentiaaliyhtälösysteemit}
-\index{differentiaaliyhtälö!g@--systeemi|vahv}
+\subsection*{DifferentiaaliyhtÃ¤lÃ¶systeemit}
+\index{differentiaaliyhtÃ¤lÃ¶!g@--systeemi|vahv}
 
-\kor{Differentiaaliyhtälösysteemillä} tarkoitetaan useamman differentiaaliyhtälön muodostamaa
-yhtälöryhmää. 
-\index{differentiaaliyhtälön!a@normaalimuoto} \index{normaalimuoto!a@DY:n, DY-systeemin}%
-\kor{Normaalimuotoinen} tavallinen differentiaaliyhtälösysteemi on jollakin
+\kor{DifferentiaaliyhtÃ¤lÃ¶systeemillÃ¤} tarkoitetaan useamman differentiaaliyhtÃ¤lÃ¶n muodostamaa
+yhtÃ¤lÃ¶ryhmÃ¤Ã¤. 
+\index{differentiaaliyhtÃ¤lÃ¶n!a@normaalimuoto} \index{normaalimuoto!a@DY:n, DY-systeemin}%
+\kor{Normaalimuotoinen} tavallinen differentiaaliyhtÃ¤lÃ¶systeemi on jollakin
 $n\in\N,\ n \ge 2$ muotoa
 \[
  \left\{ \begin{aligned} 
@@ -302,32 +302,32 @@ $n\in\N,\ n \ge 2$ muotoa
          y'_n &= f_n(x,y_1, \ldots, y_n).
          \end{aligned} \right.
 \]
-Tässä $x$ on riippumaton muuttuja ja funktiot $y_i(x),\ i=1 \ldots n,$ ovat tuntemattomia.
-Ratkaisu (yksittäinen tai yleinen) on ko.\ systeemin jollakin avoimella välillä toteuttavien
-funktioiden $y_i$ muodostama (järjestetty) joukko
+TÃ¤ssÃ¤ $x$ on riippumaton muuttuja ja funktiot $y_i(x),\ i=1 \ldots n,$ ovat tuntemattomia.
+Ratkaisu (yksittÃ¤inen tai yleinen) on ko.\ systeemin jollakin avoimella vÃ¤lillÃ¤ toteuttavien
+funktioiden $y_i$ muodostama (jÃ¤rjestetty) joukko
 \[
 \my(x)=(y_1(x), \ldots y_n(x)).
 \]
-Tämä on itse asiassa funktioiden muodostama \pain{vektori} eli vektoriarvoinen funktio.
+TÃ¤mÃ¤ on itse asiassa funktioiden muodostama \pain{vektori} eli vektoriarvoinen funktio.
 Tapauksissa $n=2,3$ ratkaisu on haluttaessa tulkittavissa tason tai avaruuden parametriseksi 
-käyräksi (parametrina tässä $x$, vrt.\ Luku \ref{parametriset käyrät}).
-\index{alkuarvotehtävä}%
-\kor{Alkuarvotehtävässä} vaaditaan, että ratkaisu toteuttaa differentiaaliyhtälöiden lisäksi
-$n$ lisäehtoa muotoa
+kÃ¤yrÃ¤ksi (parametrina tÃ¤ssÃ¤ $x$, vrt.\ Luku \ref{parametriset kÃ¤yrÃ¤t}).
+\index{alkuarvotehtÃ¤vÃ¤}%
+\kor{AlkuarvotehtÃ¤vÃ¤ssÃ¤} vaaditaan, ettÃ¤ ratkaisu toteuttaa differentiaaliyhtÃ¤lÃ¶iden lisÃ¤ksi
+$n$ lisÃ¤ehtoa muotoa
 \[ 
 y_i(x_0) = A_i, \quad i = 1 \ldots n.
 \]
 
-Normaalimuotoinen korkeamman kertaluvun differentiaaliyhtälö
+Normaalimuotoinen korkeamman kertaluvun differentiaaliyhtÃ¤lÃ¶
 \[
 y^{(n)}=f(x,y',\ldots,y^{(n-1)})
 \]
-voidaan aina kirjoittaa normaalimuotoiseksi differentiaaliyhtälösysteemiksi. Nimittäin kun 
+voidaan aina kirjoittaa normaalimuotoiseksi differentiaaliyhtÃ¤lÃ¶systeemiksi. NimittÃ¤in kun 
 kirjoitetaan
 \[
 y_1=y,\ y_2=y',\ \ldots,\ y_n=y^{(n-1)},
 \]
-niin nämä yhtälöt yhdessä differentiaaliyhtälön kanssa muodostavat systeemin
+niin nÃ¤mÃ¤ yhtÃ¤lÃ¶t yhdessÃ¤ differentiaaliyhtÃ¤lÃ¶n kanssa muodostavat systeemin
 \[
  \left\{ \begin{aligned} 
          y'_1 \quad  &= y_2, \\
@@ -336,8 +336,8 @@ niin nämä yhtälöt yhdessä differentiaaliyhtälön kanssa muodostavat systeemin
          y'_n \quad  &= f(x,y_1, \ldots y_n).
          \end{aligned} \right.
 \]
-Tämä on em.\ normaalimuotoa.
-\begin{Exa} Differentiaaliyhtälön $\,y'''=x^2y^3+x(y')^2+y''\,$ systeemimuoto on
+TÃ¤mÃ¤ on em.\ normaalimuotoa.
+\begin{Exa} DifferentiaaliyhtÃ¤lÃ¶n $\,y'''=x^2y^3+x(y')^2+y''\,$ systeemimuoto on
 \[
  \left\{ \begin{aligned} 
          y'_1 &= y_2, \\
@@ -347,61 +347,61 @@ Tämä on em.\ normaalimuotoa.
 \]
 \end{Exa}
 
-Korkeamman kertaluvun differentiaaliyhtälön kirjoittaminen systeemimuotoon auttaa sekä 
-teoreettisissa tarkasteluissa että numeerisissa ratkaisumenetelmissä (ks.\ Luvut 
-\ref{vakikertoimiset ja Eulerin DYt}, \ref{DYn numeeriset menetelmät},
-\ref{Picard-Lindelöfin lause}). Joskus systeemimuoto on edullinen myös klassisissa
-ratkaisumenetelmissä (ks.\ Luku \ref{toisen kertaluvun dy}).
+Korkeamman kertaluvun differentiaaliyhtÃ¤lÃ¶n kirjoittaminen systeemimuotoon auttaa sekÃ¤ 
+teoreettisissa tarkasteluissa ettÃ¤ numeerisissa ratkaisumenetelmissÃ¤ (ks.\ Luvut 
+\ref{vakikertoimiset ja Eulerin DYt}, \ref{DYn numeeriset menetelmÃ¤t},
+\ref{Picard-LindelÃ¶fin lause}). Joskus systeemimuoto on edullinen myÃ¶s klassisissa
+ratkaisumenetelmissÃ¤ (ks.\ Luku \ref{toisen kertaluvun dy}).
 
-\subsection*{Ratkaisujen säännöllisyys}
-\index{differentiaaliyhtälön!f@ratkaisun säännöllisyys|vahv}
+\subsection*{Ratkaisujen sÃ¤Ã¤nnÃ¶llisyys}
+\index{differentiaaliyhtÃ¤lÃ¶n!f@ratkaisun sÃ¤Ã¤nnÃ¶llisyys|vahv}
 
-Alkuarvotehtävää voi pitää implisiittisenä funktion $y(x)$ määritelmänä, jolloin implisiittisen
+AlkuarvotehtÃ¤vÃ¤Ã¤ voi pitÃ¤Ã¤ implisiittisenÃ¤ funktion $y(x)$ mÃ¤Ã¤ritelmÃ¤nÃ¤, jolloin implisiittisen
 derivoinnin avulla on mahdollista laskea ratkaisufunktion korkeampia derivaattoja 
-alkuarvopisteessä $x_0$. Tällä tavoin voidaan usein myös selvittää, kuinka säännöllinen ratkaisu
-on sellaisella välillä, jolla se on ($n$ kertaa derivoituvana) olemassa.
-\begin{Exa} \label{Airyn DY} Olkoon $a>0$ ja tarkastellaan alkuarvotehtävää
+alkuarvopisteessÃ¤ $x_0$. TÃ¤llÃ¤ tavoin voidaan usein myÃ¶s selvittÃ¤Ã¤, kuinka sÃ¤Ã¤nnÃ¶llinen ratkaisu
+on sellaisella vÃ¤lillÃ¤, jolla se on ($n$ kertaa derivoituvana) olemassa.
+\begin{Exa} \label{Airyn DY} Olkoon $a>0$ ja tarkastellaan alkuarvotehtÃ¤vÃ¤Ã¤
 \[
 \begin{cases} \,y'=x+y^2, \quad x\in(-a,a), \\ \,y(0)=0. \end{cases}
 \]
 
-Jos oletetaan tehtävä ratkeavaksi (kysymystä tarkastellaan myöhemmin Luvussa 
-\ref{Picard-Lindelöfin lause}), niin differentiaaliyhtälöstä voi päätellä, että ratkaisu on 
-ko.\ välillä mielivaltaisen monta kertaa derivoituva (sileä). Nimittäin ensinnäkin, koska
-ratkaisu $y(x)$ on välillä $(-a,a)$ derivoituva (perusoletus), niin differentiaaliyhtälön
-mukaan se on myös kahdesti derivoituva:
+Jos oletetaan tehtÃ¤vÃ¤ ratkeavaksi (kysymystÃ¤ tarkastellaan myÃ¶hemmin Luvussa 
+\ref{Picard-LindelÃ¶fin lause}), niin differentiaaliyhtÃ¤lÃ¶stÃ¤ voi pÃ¤Ã¤tellÃ¤, ettÃ¤ ratkaisu on 
+ko.\ vÃ¤lillÃ¤ mielivaltaisen monta kertaa derivoituva (sileÃ¤). NimittÃ¤in ensinnÃ¤kin, koska
+ratkaisu $y(x)$ on vÃ¤lillÃ¤ $(-a,a)$ derivoituva (perusoletus), niin differentiaaliyhtÃ¤lÃ¶n
+mukaan se on myÃ¶s kahdesti derivoituva:
 \[ 
 y''(x) = \frac{d}{dx}[x+(y(x))^2] 
        = 1 + 2y(x)y'(x) = 1+2y(x)[x+(y(x))^2], \quad x \in (-a,a). 
 \]
-Tämän mukaan $y''$ on edelleen derivoituva välillä $(-a,a)$, eli $y$ on kolmesti derivoituva,
-jne. Päätellään, että $y(x)$ on mielivaltaisen monta kertaa derivoituva välillä $(-a,a)$.
-Ratkaisufunktion derivaatat alkuarvopisteessä $x=0$ ovat myös suoraan laskettavissa, sillä
-koska $y(0)=0$ (alkuehto), niin differentiaaliyhtälön mukaan on oltava $y'(0)=0$, jolloin em.\
-lauseke $y''(x)$:lle antaa $y''(0)=1$. Jatkamalla implisiittistä derivointia nähdään, että 
-ratkaisufunktion \pain{kaikki} derivaatat pisteessä $x=0$ määräytyvät yksikäsitteisesti (!).
+TÃ¤mÃ¤n mukaan $y''$ on edelleen derivoituva vÃ¤lillÃ¤ $(-a,a)$, eli $y$ on kolmesti derivoituva,
+jne. PÃ¤Ã¤tellÃ¤Ã¤n, ettÃ¤ $y(x)$ on mielivaltaisen monta kertaa derivoituva vÃ¤lillÃ¤ $(-a,a)$.
+Ratkaisufunktion derivaatat alkuarvopisteessÃ¤ $x=0$ ovat myÃ¶s suoraan laskettavissa, sillÃ¤
+koska $y(0)=0$ (alkuehto), niin differentiaaliyhtÃ¤lÃ¶n mukaan on oltava $y'(0)=0$, jolloin em.\
+lauseke $y''(x)$:lle antaa $y''(0)=1$. Jatkamalla implisiittistÃ¤ derivointia nÃ¤hdÃ¤Ã¤n, ettÃ¤ 
+ratkaisufunktion \pain{kaikki} derivaatat pisteessÃ¤ $x=0$ mÃ¤Ã¤rÃ¤ytyvÃ¤t yksikÃ¤sitteisesti (!).
 \loppu
 \end{Exa}
 
 \subsection*{Ratkaiseminen kvadratuureilla}
-\index{differentiaaliyhtälön!g@ratkaiseminen kvadratuureilla|vahv}
+\index{differentiaaliyhtÃ¤lÃ¶n!g@ratkaiseminen kvadratuureilla|vahv}
 
-Jatkossa tarkastellaan lähinnä sellaisia diferentiaaliyhtälöiden erkoistapauksia, joille on
-mahdollista laskea 'tarkka' ratkaisu palauttamalla tehtävä tunnettujen funktioiden
-integraalifunktioiden etsimiseksi. Sanotaan tällöin, että differentiaaliyhtälö ratkeaa 
+Jatkossa tarkastellaan lÃ¤hinnÃ¤ sellaisia diferentiaaliyhtÃ¤lÃ¶iden erkoistapauksia, joille on
+mahdollista laskea 'tarkka' ratkaisu palauttamalla tehtÃ¤vÃ¤ tunnettujen funktioiden
+integraalifunktioiden etsimiseksi. Sanotaan tÃ¤llÃ¶in, ettÃ¤ differentiaaliyhtÃ¤lÃ¶ ratkeaa 
 \index{kvadratuuri}%
 \kor{kvadratuureilla} eli 'integroimisilla'. (Kvadratuuri tarkoittaa sananmukaisesti
-'neliöimistä', vrt.\ alaviite Luvussa \ref{numeerinen integrointi}.) Ratkeaminen kvadratuureilla
-\pain{ei} edellytä, että integraalifunktiot ovat alkeisfunktioita.
+'neliÃ¶imistÃ¤', vrt.\ alaviite Luvussa \ref{numeerinen integrointi}.) Ratkeaminen kvadratuureilla
+\pain{ei} edellytÃ¤, ettÃ¤ integraalifunktiot ovat alkeisfunktioita.
 \begin{Exa}
-Alkuarvotehtävä
+AlkuarvotehtÃ¤vÃ¤
 \[
 \left\{ \begin{aligned}
 &\,y''' = \sin x/x=1-\frac{x^2}{6}+\frac{x^4}{120}-\ldots,\quad x>0, \\
 &\,y(0) =1,\ y'(0)=y''(0)=0
 \end{aligned} \right.
 \]
-ratkeaa kolmella peräkkeisellä kvadratuurilla:
+ratkeaa kolmella perÃ¤kkeisellÃ¤ kvadratuurilla:
 \begin{align*}
 y''(x) &= y''(x)-y''(0) =\int_0^x y'''(t)dt =\int_0^x (\sin t / t)dt \\
        &= x-\frac{x^3}{18}+\frac{x^5}{600}-\ldots \\[1mm]
@@ -413,27 +413,27 @@ y(x)   &= y(0)+[y(x)-y(0)] = y(0) + \int_0^x y'(t)dt \\
        &= 1+\frac{x^3}{6}-\frac{x^5}{360}+\frac{x^7}{25200}-\ldots \quad\loppu
 \end{align*}
 \end{Exa}
-\jatko\jatko \begin{Exa} (jatko) Esimerkin differentiaaliyhtälö $\,y'=x+y^2\,$ ei ratkea
+\jatko\jatko \begin{Exa} (jatko) Esimerkin differentiaaliyhtÃ¤lÃ¶ $\,y'=x+y^2\,$ ei ratkea
 kvadratuureilla.
-\index{Riccatin differentiaaliyhtälö} \index{differentiaaliyhtälö!q@Riccatin}%
-(Yhtälö on \kor{Riccatin} tyyppiä,
+\index{Riccatin differentiaaliyhtÃ¤lÃ¶} \index{differentiaaliyhtÃ¤lÃ¶!q@Riccatin}%
+(YhtÃ¤lÃ¶ on \kor{Riccatin} tyyppiÃ¤,
 ks.\ Harj.teht.\,\ref{lineaarinen 1. kertaluvun DY}:\ref{H-dy-4: Riccatin DY}.) \loppu
 \end{Exa}
-Viimeisessä esimerkissä ei tarkoiteta, ettei ratkaisuja ole, vaan ainoastaan, että
-ratkaiseminen ei palaudu 'integroimisiin'. Ratkaisu on tällöin määrättävä muilla keinoin.
-Esim.\ jos alkuarvo $y(x_0)$ on tunnettu, voidaan käyttää alkuarvotehtävien numeerisia
-ratkaisumenetelmiä (ks.\ Luku \ref{DYn numeeriset menetelmät}). Myös Taylorin polynomit 
-antavat likimääräistä tietoa ratkaisun kulusta (vrt.\ Harj.teht.\,\ref{H-dy-1: DY ja Taylor}).
+ViimeisessÃ¤ esimerkissÃ¤ ei tarkoiteta, ettei ratkaisuja ole, vaan ainoastaan, ettÃ¤
+ratkaiseminen ei palaudu 'integroimisiin'. Ratkaisu on tÃ¤llÃ¶in mÃ¤Ã¤rÃ¤ttÃ¤vÃ¤ muilla keinoin.
+Esim.\ jos alkuarvo $y(x_0)$ on tunnettu, voidaan kÃ¤yttÃ¤Ã¤ alkuarvotehtÃ¤vien numeerisia
+ratkaisumenetelmiÃ¤ (ks.\ Luku \ref{DYn numeeriset menetelmÃ¤t}). MyÃ¶s Taylorin polynomit 
+antavat likimÃ¤Ã¤rÃ¤istÃ¤ tietoa ratkaisun kulusta (vrt.\ Harj.teht.\,\ref{H-dy-1: DY ja Taylor}).
 
 \Harj
 \begin{enumerate}
 
 \item
-Tarkista, että $y=2x+Ce^{x}$ on differentiaaliyhtälön $y'=y+2(1-x)$ yleinen ratkaisu. Piirrä
-pisteiden $(0,1)$ ja $(0,-1)$ kautta kulkevat ratkaisukäyrät.
+Tarkista, ettÃ¤ $y=2x+Ce^{x}$ on differentiaaliyhtÃ¤lÃ¶n $y'=y+2(1-x)$ yleinen ratkaisu. PiirrÃ¤
+pisteiden $(0,1)$ ja $(0,-1)$ kautta kulkevat ratkaisukÃ¤yrÃ¤t.
 
 \item
-Ratkaise kvadratuureilla (yleinen ratkaisu tai alkuarvotehtävän ratkaisu):
+Ratkaise kvadratuureilla (yleinen ratkaisu tai alkuarvotehtÃ¤vÃ¤n ratkaisu):
 \begin{align*}
 &\text{a)}\ \ y''=\sin x \qquad
  \text{b)}\ \ y'''=24x+\cos x \qquad
@@ -442,8 +442,8 @@ Ratkaise kvadratuureilla (yleinen ratkaisu tai alkuarvotehtävän ratkaisu):
 &\text{e)}\ \ y''=\frac{1}{x^2-2x}\,,\,\ x\in(0,2),\,\ y(1)=y'(1)=0
 \end{align*}
 
-\item Määritä seuraavien differentiaaliyhtälöiden yleiset ratkaisut palauttamalla yhtälöt
-ensimmäiseen kertalukuun (sijoitus $u(x)=y^{(k)}(x)$).
+\item MÃ¤Ã¤ritÃ¤ seuraavien differentiaaliyhtÃ¤lÃ¶iden yleiset ratkaisut palauttamalla yhtÃ¤lÃ¶t
+ensimmÃ¤iseen kertalukuun (sijoitus $u(x)=y^{(k)}(x)$).
 \[
 \text{a)}\ \ y''-y'=0 \qquad
 \text{b)}\ \ 2y'''+3y''=0 \qquad
@@ -451,27 +451,27 @@ ensimmäiseen kertalukuun (sijoitus $u(x)=y^{(k)}(x)$).
 \]
 
 \item
-Määritä seuraavien käyräparvien differentiaaliyhtälöt
+MÃ¤Ã¤ritÃ¤ seuraavien kÃ¤yrÃ¤parvien differentiaaliyhtÃ¤lÃ¶t
 \begin{align*}
 &\text{a)}\ \ y=\sin(x+C) \qquad
  \text{b)}\ \ y=C_1+C_2\ln\abs{x} \qquad
  \text{c)}\ \ y=C_1+\frac{1}{x+C_2} \\
 &\text{d)}\ \ y=(1+C_1)\ln\abs{x+C_2}-C_1 x+C_2 \qquad
  \text{e)}\ \ x=C_1e^y+C_2e^{-y}+3 \\[2mm]
-&\text{f)}\ \ \text{$x$-kaselia sivuavat ympyrät} \qquad
- \text{g)}\ \ \text{suoraa $\,y=x\,$ sivuavat ympyrät}
+&\text{f)}\ \ \text{$x$-kaselia sivuavat ympyrÃ¤t} \qquad
+ \text{g)}\ \ \text{suoraa $\,y=x\,$ sivuavat ympyrÃ¤t}
 \end{align*}
 
 \item 
-Käyrän $y=F(x)$ liukuessa pitkin $y$-akselia muodostuu käyräparvi. Määritä ko.\ parven
+KÃ¤yrÃ¤n $y=F(x)$ liukuessa pitkin $y$-akselia muodostuu kÃ¤yrÃ¤parvi. MÃ¤Ã¤ritÃ¤ ko.\ parven
 kohtisuorat leikkaajat, kun a) $F(x)=e^x$, b) $F(x)=\ln\abs{x}$.
 
 \item
-Käyrä $y=u(x)$ leikkaa kohtisuorasti differentiaaliyhtälön $y'=x+y^2$ ratkaisukäyrät.
-Minkä differentialiyhtälön ratkaisu $u$ on?
+KÃ¤yrÃ¤ $y=u(x)$ leikkaa kohtisuorasti differentiaaliyhtÃ¤lÃ¶n $y'=x+y^2$ ratkaisukÃ¤yrÃ¤t.
+MinkÃ¤ differentialiyhtÃ¤lÃ¶n ratkaisu $u$ on?
 
 \item
-Esitä normaalimuotoisena differentiaaliyhtälösysteeminä:
+EsitÃ¤ normaalimuotoisena differentiaaliyhtÃ¤lÃ¶systeeminÃ¤:
 \begin{align*}
 &\text{a)}\ \ yy''+xy'=0 \qquad
  \text{b)}\ \ y''=(x+y')^2+y''' \qquad
@@ -482,20 +482,20 @@ Esitä normaalimuotoisena differentiaaliyhtälösysteeminä:
 \end{align*}
 
 \item
-Alkuarvotehtävällä
+AlkuarvotehtÃ¤vÃ¤llÃ¤
 \[
 \begin{cases} \,y'=xy+\sin y, \quad x\in\R, \\ \,y(x_0)=y_0 \end{cases}
 \]
-on yksikäsitteinen ratkaisu jokaisella $(x_0,y_0)\in\Rkaksi$. \ a) Päättele, että ratkaisu
-on $\R$:ssä mielivaltaisen monta kertaa derivoituva (sileä). \ b) Näytä, että ratkaisukäyrä
-joko sivuaa $x$-akselia tai ei kosketa sitä lainkaan.
+on yksikÃ¤sitteinen ratkaisu jokaisella $(x_0,y_0)\in\Rkaksi$. \ a) PÃ¤Ã¤ttele, ettÃ¤ ratkaisu
+on $\R$:ssÃ¤ mielivaltaisen monta kertaa derivoituva (sileÃ¤). \ b) NÃ¤ytÃ¤, ettÃ¤ ratkaisukÃ¤yrÃ¤
+joko sivuaa $x$-akselia tai ei kosketa sitÃ¤ lainkaan.
 
 \item
-Alkuarvotehtävä $xy'=x+y,\ y(1)=1$ määrittelee pisteen $P=(1,1)$ kauttaa kulkevan käyrän $S$.
-Määritä $S$:n kaarevuuskeskiö pisteessä $P$.
+AlkuarvotehtÃ¤vÃ¤ $xy'=x+y,\ y(1)=1$ mÃ¤Ã¤rittelee pisteen $P=(1,1)$ kauttaa kulkevan kÃ¤yrÃ¤n $S$.
+MÃ¤Ã¤ritÃ¤ $S$:n kaarevuuskeskiÃ¶ pisteessÃ¤ $P$.
 
 \item \label{H-dy-1: DY ja Taylor}
-Määritä alkuarvotehtävän ratkaisufunktion $y(x)$ Taylorin polynomi $T_n(x,0)$ yleisellä tai 
+MÃ¤Ã¤ritÃ¤ alkuarvotehtÃ¤vÃ¤n ratkaisufunktion $y(x)$ Taylorin polynomi $T_n(x,0)$ yleisellÃ¤ tai 
 annetulla $n$:n arvolla: \newline
 a) \ $y''=y,\ y(0)=y'(0)=1$ \newline
 b) \ $y''=-y,\ y(0)=1,\ y'(0)=0$ \newline
@@ -504,21 +504,21 @@ d) \ $y'=xy+\sin y,\ y(0)=1;\ n=3$ \newline
 e) \ $yy''+y'+y=0,\ y(0)=1,\ y'(0)=0;\ n=4$ \newline
 f) \ $y''=yy'-x^2,\ y(0)=y'(0)=1;\ n=4$
 
-\item (*) \index{zzb@\nim!Koirakäyrä}
-(Koirakäyrä) Rekan perävaunu on kiinnitetty vetoautoon akselitapilla, joka on origossa.
-Vetoauton nokka osoittaa postiivisen $y$-akselin suuntaan. Perävaunun keskiviiva on
-$x$-akselilla, ja perävaunun akselin (siis sen jolla pyörät ovat) keskipiste on pisteessä
-$(a,0),\, a > 0$. Vetoauton liikkuessa pitkin positiivista $y$-akselia piirtää perävaunun
-akselikeskiö erään käyrän $y=y(x)$ välillä $0<x\le a$. Johda tälle ''koirakäyrälle''
-differentiaaliyhtälö
+\item (*) \index{zzb@\nim!KoirakÃ¤yrÃ¤}
+(KoirakÃ¤yrÃ¤) Rekan perÃ¤vaunu on kiinnitetty vetoautoon akselitapilla, joka on origossa.
+Vetoauton nokka osoittaa postiivisen $y$-akselin suuntaan. PerÃ¤vaunun keskiviiva on
+$x$-akselilla, ja perÃ¤vaunun akselin (siis sen jolla pyÃ¶rÃ¤t ovat) keskipiste on pisteessÃ¤
+$(a,0),\, a > 0$. Vetoauton liikkuessa pitkin positiivista $y$-akselia piirtÃ¤Ã¤ perÃ¤vaunun
+akselikeskiÃ¶ erÃ¤Ã¤n kÃ¤yrÃ¤n $y=y(x)$ vÃ¤lillÃ¤ $0<x\le a$. Johda tÃ¤lle ''koirakÃ¤yrÃ¤lle''
+differentiaaliyhtÃ¤lÃ¶
 \[
 y'=-\frac{\sqrt{a^2-x^2}}{x},
 \]
-ja määritä käyrä $y=y(x)$ tämän ratkaisuna. Huomioi myös alkuehto.
+ja mÃ¤Ã¤ritÃ¤ kÃ¤yrÃ¤ $y=y(x)$ tÃ¤mÃ¤n ratkaisuna. Huomioi myÃ¶s alkuehto.
 
 \item (*)
-Seuraavat käyräparvet on annettu joko parametrimuodossa tai napakoordinaattien avulla.
-Johda käyräparvien ja niiden kohtisuorien leikkaajien differentiaaliyhtälöt normaalimuodossa
+Seuraavat kÃ¤yrÃ¤parvet on annettu joko parametrimuodossa tai napakoordinaattien avulla.
+Johda kÃ¤yrÃ¤parvien ja niiden kohtisuorien leikkaajien differentiaaliyhtÃ¤lÃ¶t normaalimuodossa
 $y'=f(x,y)$.
 \begin{align*}
 &\text{a)}\ \ \begin{cases} \,x=t+\cos t+C, \\ \,y=1+\sin t \end{cases} \qquad
@@ -528,28 +528,28 @@ $y'=f(x,y)$.
  \text{e)}\ \ r=Ce^\varphi
 \end{align*}
 
-\item (*) \index{verhokäyrä}
-Käyrää $S:\,y=y_0(x)$ sanotaan yksiparametrisen käyräparven $y=Y(x,C)$ \kor{verhokäyräksi}
+\item (*) \index{verhokÃ¤yrÃ¤}
+KÃ¤yrÃ¤Ã¤ $S:\,y=y_0(x)$ sanotaan yksiparametrisen kÃ¤yrÃ¤parven $y=Y(x,C)$ \kor{verhokÃ¤yrÃ¤ksi}
 (engl.\ envelope),
-jos $S$ sivuaa jokaista parven käyrää (eli $S$:llä ja jokaisella parven käyrällä on yhteinen
-piste ja siinä yhteinen tangentti). \vspace{1mm}\newline
-a) Näytä, että jos käyräparven differentiaaliyhtälö on $F(x,y,y')=0$, niin myös $y=y_0(x)$ on
-tämän differentiaaliyhtälön (erikois)ratkaisu. \newline
-b) Suoraparvella $y=Cx+2C^2,\ C\in\R$ on verhokäyränä eräs toisen asteen polynomikäyrä
-(paraabeli). Määritä tämä ja varmista piirtämällä kuvio! 
+jos $S$ sivuaa jokaista parven kÃ¤yrÃ¤Ã¤ (eli $S$:llÃ¤ ja jokaisella parven kÃ¤yrÃ¤llÃ¤ on yhteinen
+piste ja siinÃ¤ yhteinen tangentti). \vspace{1mm}\newline
+a) NÃ¤ytÃ¤, ettÃ¤ jos kÃ¤yrÃ¤parven differentiaaliyhtÃ¤lÃ¶ on $F(x,y,y')=0$, niin myÃ¶s $y=y_0(x)$ on
+tÃ¤mÃ¤n differentiaaliyhtÃ¤lÃ¶n (erikois)ratkaisu. \newline
+b) Suoraparvella $y=Cx+2C^2,\ C\in\R$ on verhokÃ¤yrÃ¤nÃ¤ erÃ¤s toisen asteen polynomikÃ¤yrÃ¤
+(paraabeli). MÃ¤Ã¤ritÃ¤ tÃ¤mÃ¤ ja varmista piirtÃ¤mÃ¤llÃ¤ kuvio! 
 
 \item (*) \index{zzb@\nim!Sotaharjoitus 3}
-(Sotaharjoitus 3) Tykinkuulan lentorata on parametrinen käyrä $\vec r=\vec r(t)$ ($t=$ aika).
-Lentoradan pisteessä $(x,y,z) \vastaa \vec r\,$ kuulaan vaikuttavat voimat ovat
+(Sotaharjoitus 3) Tykinkuulan lentorata on parametrinen kÃ¤yrÃ¤ $\vec r=\vec r(t)$ ($t=$ aika).
+Lentoradan pisteessÃ¤ $(x,y,z) \vastaa \vec r\,$ kuulaan vaikuttavat voimat ovat
 \begin{align*}
 \vec G &= -mg\vec k, \\
 \vec T &= T_1(x,y,z,t)\vec i+T_2(x,y,z,t)\vec j, \\
 \vec F &= -k\abs{\vec v}\vec v,
 \end{align*}
-missä $\vec G$ on painovoima ($m=$ massa, $g=$ maan vetovoiman kiihtyvyys), $\vec T$ edustaa
-tuulta ja $\vec F$ vauhdin neliöön verrannollista ilmanvastusvoimaa ($\vec v=\dvr,\ k=$ vakio).
-Esitä ammuksen liikeyhtälö $\,m\vec r\,''=\vec G+\vec T+\vec F$ normaalimuotoisena 
-differentiaaliyhtälösysteeminä kokoa $n=6$ kirjoittamalla
+missÃ¤ $\vec G$ on painovoima ($m=$ massa, $g=$ maan vetovoiman kiihtyvyys), $\vec T$ edustaa
+tuulta ja $\vec F$ vauhdin neliÃ¶Ã¶n verrannollista ilmanvastusvoimaa ($\vec v=\dvr,\ k=$ vakio).
+EsitÃ¤ ammuksen liikeyhtÃ¤lÃ¶ $\,m\vec r\,''=\vec G+\vec T+\vec F$ normaalimuotoisena 
+differentiaaliyhtÃ¤lÃ¶systeeminÃ¤ kokoa $n=6$ kirjoittamalla
 \[
 (x,y,z,x',y',z') = (y_1, \ldots , y_6).
 \]

@@ -2,69 +2,69 @@
 \alku
 \index{numeerinen integrointi|vahv}
 
-\kor{Numeerisella integroinnilla} tarkoitetaan m‰‰r‰tyn integraalin, eli reaaliluvun
+\kor{Numeerisella integroinnilla} tarkoitetaan m√§√§r√§tyn integraalin, eli reaaliluvun
 \[
 I(f,a,b)=\int_a^b f(x)\,dx
 \]
-laskemista numeerisin keinoin (likim‰‰rin). Jatkossa integroitavalle funktiolle $f$ asetetaan
-melko voimakkaita s‰‰nnˆllisyysvaatimuksia. V‰himm‰isvaatimus on, ett‰ $f$ jatkuva v‰lill‰
-$[a,b]$, jolloin $f$ on ko.\ v‰lill‰ myˆs Riemann-integroituva
+laskemista numeerisin keinoin (likim√§√§rin). Jatkossa integroitavalle funktiolle $f$ asetetaan
+melko voimakkaita s√§√§nn√∂llisyysvaatimuksia. V√§himm√§isvaatimus on, ett√§ $f$ jatkuva v√§lill√§
+$[a,b]$, jolloin $f$ on ko.\ v√§lill√§ my√∂s Riemann-integroituva
 (Lause \ref{Analyysin peruslause}).
 
-Numeerisen integroinnin menetelm‰t ovat yleens‰ nk.\
+Numeerisen integroinnin menetelm√§t ovat yleens√§ nk.\
 \index{kvadratuuri!numeerinen} \index{numeerinen kvadratuuri}%
 \kor{numeerisia kvadratuureja}
-(tai kvadratuuris‰‰ntˆj‰, engl.\ quadrature rule)\footnote[2]{Kvadratuuri tarkoittaa
-kirjaimellisesti 'neliˆimist‰'. Termi viittaa integraalin ja pinta-alan v‰liseen yhteyteen.},
-joissa integraalia approksimoidaan ‰‰rellisen‰ summana muotoa
+(tai kvadratuuris√§√§nt√∂j√§, engl.\ quadrature rule)\footnote[2]{Kvadratuuri tarkoittaa
+kirjaimellisesti 'neli√∂imist√§'. Termi viittaa integraalin ja pinta-alan v√§liseen yhteyteen.},
+joissa integraalia approksimoidaan √§√§rellisen√§ summana muotoa
 \begin{equation} \label{yleinen kvadratuuri}
 \int_a^b f(x)\,dx\approx\sum_{i=1}^N w_i f(x_i).
 \end{equation}
 \index{kvadratuuripiste, -paino}%
-T‰ss‰ pisteit‰ $x_i,\ i=1 \ldots N$ (yleens‰ $x_i\in[a,b]$) sanotaan \kor{kvadratuuripisteiksi}
-ja lukuja $w_i$ \kor{kvadratuuripainoiksi}. Kvadratuuripisteit‰ ja -painoja valittaessa 
-integroimisv‰li jaetaan usein ensin osav‰leihin $[x_{k-1},x_k],\ k=1 \ldots n\,$ 
-(kuten m‰‰r‰tyn integraalin m‰‰rittelyss‰ alunperin). T‰llˆin integraalin additiivisuuden
+T√§ss√§ pisteit√§ $x_i,\ i=1 \ldots N$ (yleens√§ $x_i\in[a,b]$) sanotaan \kor{kvadratuuripisteiksi}
+ja lukuja $w_i$ \kor{kvadratuuripainoiksi}. Kvadratuuripisteit√§ ja -painoja valittaessa 
+integroimisv√§li jaetaan usein ensin osav√§leihin $[x_{k-1},x_k],\ k=1 \ldots n\,$ 
+(kuten m√§√§r√§tyn integraalin m√§√§rittelyss√§ alunperin). T√§ll√∂in integraalin additiivisuuden
 nojalla on
 \begin{equation} \label{integraalin hajotelma}
 I(f,a,b)=\int_a^b f(x)\,dx = \sum_{k=1}^n \int_{x_{k-1}}^{x_k} f(x)\,dx = \sum_{k=1}^n I_k\,.
 \end{equation}
-Jos integroitava funktio on s‰‰nnˆllinen ja osav‰lit $[x_{k-1},x_k]$ riitt‰v‰n lyhyit‰, voidaan
+Jos integroitava funktio on s√§√§nn√∂llinen ja osav√§lit $[x_{k-1},x_k]$ riitt√§v√§n lyhyit√§, voidaan
 osaintegraalit
 \[
 I_k=\int_{x_{k-1}}^{x_k} f(x)\,dx
 \]
-laskea likim‰‰rin k‰ytt‰m‰ll‰ suhteellisen yksinkertaista kvadratuuria muotoa 
-\eqref{yleinen kvadratuuri}, miss‰ $a=x_{k-1}$ ja $b=x_{k}$. Perustana kvadratuurin
-yksinkertaistumiselle lyhyell‰ v‰lill‰ on Taylorin lause, jonka mukaan s‰‰nnˆllinen funktio on
-likimain (matala-asteinen) polynomi lyhyell‰ v‰lill‰ (ks.\ Luku \ref{taylorin lause}). 
-Numeerisen integroinnin virheanalyysin l‰htˆajatuksena onkin juuri vertailu polynomeihin.
+laskea likim√§√§rin k√§ytt√§m√§ll√§ suhteellisen yksinkertaista kvadratuuria muotoa 
+\eqref{yleinen kvadratuuri}, miss√§ $a=x_{k-1}$ ja $b=x_{k}$. Perustana kvadratuurin
+yksinkertaistumiselle lyhyell√§ v√§lill√§ on Taylorin lause, jonka mukaan s√§√§nn√∂llinen funktio on
+likimain (matala-asteinen) polynomi lyhyell√§ v√§lill√§ (ks.\ Luku \ref{taylorin lause}). 
+Numeerisen integroinnin virheanalyysin l√§ht√∂ajatuksena onkin juuri vertailu polynomeihin.
 
-Jatkossa ajatellaan v‰li $[a,b]$ alkuper‰isen integroimisv‰lin lyhyeksi osav‰liksi ja $f$ ko.\
-v‰lill‰ (riitt‰v‰n) s‰‰nnˆlliseksi. T‰llaisten l‰htˆoletusten vallitessa yksinkertaisimmat
+Jatkossa ajatellaan v√§li $[a,b]$ alkuper√§isen integroimisv√§lin lyhyeksi osav√§liksi ja $f$ ko.\
+v√§lill√§ (riitt√§v√§n) s√§√§nn√∂lliseksi. T√§llaisten l√§ht√∂oletusten vallitessa yksinkertaisimmat
 numeeriset kvadratuurit ovat:
 
 \vspace{3mm}
 
 \begin{tabular}{ll}
-\kor{Keskipistes‰‰ntˆ}: \index{keskipistes‰‰ntˆ}
+\kor{Keskipistes√§√§nt√∂}: \index{keskipistes√§√§nt√∂}
         \quad & $\displaystyle{\int_a^b f(x)\,dx\approx (b-a)f(\frac{a+b}{2})}$. \\ \\
-\kor{Puolisuunnikass‰‰ntˆ}: \index{puolisuunnikass‰‰ntˆ}
+\kor{Puolisuunnikass√§√§nt√∂}: \index{puolisuunnikass√§√§nt√∂}
         \quad & $\displaystyle{\int_a^b f(x)\,dx\approx \frac{1}{2}(b-a)[f(a)+f(b)]}$. \\ \\
-\kor{Simpsonin s‰‰ntˆ}: \index{Simpsonin s‰‰ntˆ}
+\kor{Simpsonin s√§√§nt√∂}: \index{Simpsonin s√§√§nt√∂}
         \quad & $\displaystyle{\int_a^b f(x)\,dx\approx 
                          \frac{1}{6}(b-a)\left[f(a)+4f(\frac{a+b}{2})+f(b)\right]}$.
 \end{tabular}
 
 \vspace{4mm}
 
-N‰ist‰ etenkin Simpsonin s‰‰ntˆ (osav‰leill‰ k‰ytettyn‰) on laskinten ja tietokoneiden
-yleisesti k‰ytt‰m‰ numeerisen integroinnin menetelm‰.\footnote[2]{Simpsonin s‰‰ntˆ on
-numeerisen integroinnin klassikko, jota on aikanaan k‰ytetty paljon k‰sinlaskussakin. S‰‰nnˆn
+N√§ist√§ etenkin Simpsonin s√§√§nt√∂ (osav√§leill√§ k√§ytettyn√§) on laskinten ja tietokoneiden
+yleisesti k√§ytt√§m√§ numeerisen integroinnin menetelm√§.\footnote[2]{Simpsonin s√§√§nt√∂ on
+numeerisen integroinnin klassikko, jota on aikanaan k√§ytetty paljon k√§sinlaskussakin. S√§√§nn√∂n
 keksi englantilainen matemaatikko \hist{Thomas Simpson} (1710-1761). \index{Simpson, T.|av}}
-Puolisuunnikass‰‰ntˆˆn viitataan usein myˆs nimell‰
+Puolisuunnikass√§√§nt√∂√∂n viitataan usein my√∂s nimell√§
 \index{trapetsi}%
-\kor{Trapetsi}. Nimens‰ mukaisesti s‰‰ntˆ
+\kor{Trapetsi}. Nimens√§ mukaisesti s√§√§nt√∂
 antaa integraalin arvoksi \kor{puolisuunnikkaan} (trapetsin) pinta-alan:
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -98,105 +98,105 @@ antaa integraalin arvoksi \kor{puolisuunnikkaan} (trapetsin) pinta-alan:
 \end{center}
 \end{figure}
 
-Kun ym.\ s‰‰ntˆj‰ k‰ytet‰‰n osav‰leill‰ hajotelmassa \eqref{integraalin hajotelma}, niin
-tuloksena on alkuper‰isen integraalin approksimaatio muotoa \eqref{yleinen kvadratuuri}.
+Kun ym.\ s√§√§nt√∂j√§ k√§ytet√§√§n osav√§leill√§ hajotelmassa \eqref{integraalin hajotelma}, niin
+tuloksena on alkuper√§isen integraalin approksimaatio muotoa \eqref{yleinen kvadratuuri}.
 
-Sanotaan t‰llˆin, ett‰ kyseess‰ on \kor{yhdistetty} (engl. composite) kvadratuuri.
-\index{yhdistetty!a@keskipistes‰‰ntˆ}%
-Esimerkiksi \kor{yhdistetty keskipistes‰‰ntˆ} on kvadratuuri muotoa \eqref{yleinen kvadratuuri},
-miss‰ valitaan
+Sanotaan t√§ll√∂in, ett√§ kyseess√§ on \kor{yhdistetty} (engl. composite) kvadratuuri.
+\index{yhdistetty!a@keskipistes√§√§nt√∂}%
+Esimerkiksi \kor{yhdistetty keskipistes√§√§nt√∂} on kvadratuuri muotoa \eqref{yleinen kvadratuuri},
+miss√§ valitaan
 \[
 x_i=\frac{1}{2}(x_{i-1}+x_i), \quad w_i=x_{i}-x_{i-1}\,, \quad i=1 \ldots n=N.
 \]
-Yhdistetty keskipistes‰‰ntˆ on siis er‰s integraalia approksimoivista Riemannin summista.
-Suoraan Riemannin summiin perustuvista approksimaatioista t‰m‰ on yleens‰ tarkin 
-(ks.\ virhearviot j‰ljemp‰n‰).
+Yhdistetty keskipistes√§√§nt√∂ on siis er√§s integraalia approksimoivista Riemannin summista.
+Suoraan Riemannin summiin perustuvista approksimaatioista t√§m√§ on yleens√§ tarkin 
+(ks.\ virhearviot j√§ljemp√§n√§).
 
-Jos hajotelmassa \eqref{integraalin hajotelma} jako on tasav‰linen ja vastaavassa yhdistetyss‰
-kvadratuurissa \eqref{yleinen kvadratuuri} merkit‰‰n $\,h=x_i-x_{i-1}$ (= per‰kk‰isten
-kvadratuuripisteiden v‰li) ja $f_i=f(x_i)$, niin \kor{yhdistetty trapetsi} saa muodon
+Jos hajotelmassa \eqref{integraalin hajotelma} jako on tasav√§linen ja vastaavassa yhdistetyss√§
+kvadratuurissa \eqref{yleinen kvadratuuri} merkit√§√§n $\,h=x_i-x_{i-1}$ (= per√§kk√§isten
+kvadratuuripisteiden v√§li) ja $f_i=f(x_i)$, niin \kor{yhdistetty trapetsi} saa muodon
 \index{yhdistetty!b@trapetsi, Simpson}%
 \[
 \int_a^b f(x)\,dx\approx h\left[\frac{1}{2}f_0+f_1+\cdots + f_{n-1}+\frac{1}{2}f_n\right]
 \]
-ja \kor{yhdistetty Simpsonin s‰‰ntˆ} muodon
+ja \kor{yhdistetty Simpsonin s√§√§nt√∂} muodon
 \[
 \int_a^b f(x)\,dx
        \approx \frac{h}{3}\left[\,f_0+4f_1+2f_2+\cdots +2f_{2n-2}+ 4f_{2n-1}+f_{2n}\,\right].
 \]
-Yhdistetyss‰ Simpsonin s‰‰nnˆss‰ joka toinen kvadratuuripiste on osav‰lijaon jakopiste ja joka
-toinen (suurimmalla painokertoimella varustettu) on osav‰lin keskipiste. 
+Yhdistetyss√§ Simpsonin s√§√§nn√∂ss√§ joka toinen kvadratuuripiste on osav√§lijaon jakopiste ja joka
+toinen (suurimmalla painokertoimella varustettu) on osav√§lin keskipiste. 
 
 \begin{Exa} \label{Trapetsi vastaan Simpson 1}
 Kun integraalia
 \[
 \int_0^1 xe^{-x^2}/(x+1)\,dx
 \]
-approksimoidaan k‰ytt‰en tasav‰list‰ yhdistetty‰ trapetsia ja Simpsonia, saadaan seuraavat
+approksimoidaan k√§ytt√§en tasav√§list√§ yhdistetty√§ trapetsia ja Simpsonia, saadaan seuraavat
 tulokset:
 \begin{center}
 \begin{tabular}{lll}
-pisteit‰ & Trapetsi & Simpson \\ \hline \\
+pisteit√§ & Trapetsi & Simpson \\ \hline \\
 3 & 0.17578506065833 & 0.20372346078015 \\
 21 & 0.20230210857337 & 0.20256800959472 \\
 201 & 0.20256528212086 & 0.20256794027440 \\
 2001 \quad & 0.20256791368608 \quad & 0.20256794026753
 \end{tabular}
 \end{center}
-T‰ss‰ Simpson on Trapetsia selv‰sti nopeampi. T‰m‰ on odotettavissa, koska integroitava funktio
-on sile‰, ks.\ virhearviot j‰ljemp‰n‰. \loppu
+T√§ss√§ Simpson on Trapetsia selv√§sti nopeampi. T√§m√§ on odotettavissa, koska integroitava funktio
+on sile√§, ks.\ virhearviot j√§ljemp√§n√§. \loppu
 \end{Exa}
 \begin{Exa} \label{Trapetsi vastaan Simpson 2}
-Sama vertailuasetelma kuin edellisess‰ esimerkiss‰. Lasketaan
+Sama vertailuasetelma kuin edellisess√§ esimerkiss√§. Lasketaan
 \[
 \int_0^1 e^{-x}/(\sqrt{x}+1)\,dx.
 \]
-Tulokset ovat t‰ss‰ tapauksessa:
+Tulokset ovat t√§ss√§ tapauksessa:
 \begin{center}
 \begin{tabular}{lll}
-pisteit‰ & Trapetsi & Simpson \\ \hline \\
+pisteit√§ & Trapetsi & Simpson \\ \hline \\
 3 & 0.47363365 & 0.43418824 \\
 21 & 0.40741212 & 0.40604377 \\
 201 & 0.40520890 & 0.40516458 \\
 2001 \quad & 0.40513820 \quad & 0.40513679
 \end{tabular}
 \end{center}
-Konvergenssi on nyt selv‰sti hitaampaa kuin edellisess‰ esimerkiss‰, eik‰ eri menetelmill‰
-ole t‰ss‰ merkitt‰v‰‰ eroa. Syyn‰ on ilmeisesti se, ett‰ integroitava funktio on v‰hemm‰n
-s‰‰nnˆllinen kuin edellisess‰ esimerkiss‰ (jatkuva, mutta ei jatkuvasti derivoituva
-integroimisv‰lill‰). \loppu
+Konvergenssi on nyt selv√§sti hitaampaa kuin edellisess√§ esimerkiss√§, eik√§ eri menetelmill√§
+ole t√§ss√§ merkitt√§v√§√§ eroa. Syyn√§ on ilmeisesti se, ett√§ integroitava funktio on v√§hemm√§n
+s√§√§nn√∂llinen kuin edellisess√§ esimerkiss√§ (jatkuva, mutta ei jatkuvasti derivoituva
+integroimisv√§lill√§). \loppu
 \end{Exa}
-Em.\ esimerkeiss‰ on merkille pantavaa, ett‰ kun Esimerkin 2 integraalissa tehd‰‰n sijoitus
+Em.\ esimerkeiss√§ on merkille pantavaa, ett√§ kun Esimerkin 2 integraalissa tehd√§√§n sijoitus
 $\sqrt{x}=t$, on tuloksena Esimerkin 1 integraali (kertoimella 2). Sijoitus siis kannattaa
-t‰ss‰ tehd‰, vaikka se ei muuten (suljetussa muodossa integroimisen kannalta) tee teht‰v‰‰ 
-helpommaksi. Myˆs osittaisintegroinnilla, sarjakehitelmill‰ ym. voi usein manipuloida teht‰v‰‰
-niin, ett‰ integroitavasta funktiosta tulee s‰‰nnˆllisempi, jolloin numeeriset kvadratuurit
+t√§ss√§ tehd√§, vaikka se ei muuten (suljetussa muodossa integroimisen kannalta) tee teht√§v√§√§ 
+helpommaksi. My√∂s osittaisintegroinnilla, sarjakehitelmill√§ ym. voi usein manipuloida teht√§v√§√§
+niin, ett√§ integroitavasta funktiosta tulee s√§√§nn√∂llisempi, jolloin numeeriset kvadratuurit
 toimivat paremmin.
 
 \subsection*{Virhearvioista}
 
-Osav‰lijakoon perustuvan yhdistetyn kvadratuurin virhe arvioidaan ensin erikseen kullakin
-osav‰lill‰. Tarkastellaan jatkossa edell‰ esitetty‰ kolmea esimerkki‰: Keskipistes‰‰ntˆ, 
+Osav√§lijakoon perustuvan yhdistetyn kvadratuurin virhe arvioidaan ensin erikseen kullakin
+osav√§lill√§. Tarkastellaan jatkossa edell√§ esitetty√§ kolmea esimerkki√§: Keskipistes√§√§nt√∂, 
 Trapetsi ja Simpson.
 
-Arvioitaessa virhett‰ yksitt‰isell‰ osav‰lill‰ on ensimm‰isen‰ teht‰v‰n‰ tutkia, \pain{kuinka} 
+Arvioitaessa virhett√§ yksitt√§isell√§ osav√§lill√§ on ensimm√§isen√§ teht√§v√§n√§ tutkia, \pain{kuinka} 
 \pain{korkea-asteisille} p\pain{ol}y\pain{nomeille} \pain{kvadratuuri} \pain{on} 
-\pain{tarkka}, ts. on m‰‰r‰tt‰v‰ indeksi $m$ siten, ett‰ kvadratuuri on tarkka polynomille
+\pain{tarkka}, ts. on m√§√§r√§tt√§v√§ indeksi $m$ siten, ett√§ kvadratuuri on tarkka polynomille
 astetta $m$ mutta ei astetta $m+1$. Mainituissa esimerkkitapauksissa on tulos seuraava:
 \begin{center}
 \begin{tabular}{ll}
-S‰‰ntˆ & \hspace{2mm} Tarkka polynomeille astetta \\ \hline \\
-Keskipistes‰‰ntˆ & $\quad m=1$ \\ Trapetsi & $\quad m=1$ \\ Simpson & $\quad m=3$
+S√§√§nt√∂ & \hspace{2mm} Tarkka polynomeille astetta \\ \hline \\
+Keskipistes√§√§nt√∂ & $\quad m=1$ \\ Trapetsi & $\quad m=1$ \\ Simpson & $\quad m=3$
 \end{tabular}
 \end{center}
 
-Aloitetaan keskipistes‰‰nnˆst‰. Oletetetaan, ett‰ funktio $f$ on tarkasteltavalla (osa)v‰lill‰
-$[a,b]$ kahdesti jatkuvasti derivoituva. Merkit‰‰n $c=(a+b)/2$ ja k‰ytet‰‰n
+Aloitetaan keskipistes√§√§nn√∂st√§. Oletetetaan, ett√§ funktio $f$ on tarkasteltavalla (osa)v√§lill√§
+$[a,b]$ kahdesti jatkuvasti derivoituva. Merkit√§√§n $c=(a+b)/2$ ja k√§ytet√§√§n
 integroimisvirheelle symbolia $E(f)\,$:
 \[ 
 E(f) = \int_a^b f(x)\,dx - (b-a)f(c). 
 \]
-Integroimisvirheen arvioiminen perustuu kahteen perushavaintoon: Ensinn‰kin n‰hd‰‰n, ett‰ p‰tee
+Integroimisvirheen arvioiminen perustuu kahteen perushavaintoon: Ensinn√§kin n√§hd√§√§n, ett√§ p√§tee
 \begin{equation} \label{havainto 1}
 E(f+g) = E(f)+E(g). \tag{a} 
 \end{equation}
@@ -206,11 +206,11 @@ perushavainto on em.\ taulukkoon perustuva:
 \begin{equation} \label{havainto 2}
 f(x) = A + Bx \quad (A,B \in \R) \qimpl E(f)=0. \tag{b}
 \end{equation}
-Olkoon nyt $p(x)=f$:n Taylorin polynomi astetta $n=1$ pisteess‰ $c$, eli
+Olkoon nyt $p(x)=f$:n Taylorin polynomi astetta $n=1$ pisteess√§ $c$, eli
 \[ 
 p(x) = f(c) + f'(c)(x-c). 
 \]
-T‰llˆin on havaintojen \eqref{havainto 1}--\eqref{havainto 2} perusteella, ja koska
+T√§ll√∂in on havaintojen \eqref{havainto 1}--\eqref{havainto 2} perusteella, ja koska
 $(f-p)(c)=0$,
 \[
 E(f) = E(f-p+p) = E(f-p) + E(p) = E(f-p) = \int_a^b (f-p)(x)\,dx.
@@ -219,11 +219,11 @@ Taylorin lauseen (Lause \ref{Taylor}) perusteella on
 \[ 
 f(x)-p(x) = \frac{1}{2}f''(\xi)(x-c)^2 = f''(\xi)\,\omega(x), \quad x \in [a,b], 
 \]
-miss‰ $\xi = \xi(x) \in (a,b)$ ja $\,\omega(x)=\tfrac{1}{2}(x-c)^2 \ge 0$. N‰in ollen jos
+miss√§ $\xi = \xi(x) \in (a,b)$ ja $\,\omega(x)=\tfrac{1}{2}(x-c)^2 \ge 0$. N√§in ollen jos
 \[ 
 M_1 = \min_{x\in[a,b]} f''(x), \quad M_2 = \max_{x\in[a,b]} f''(x), 
 \]
-niin voidaan p‰‰tell‰
+niin voidaan p√§√§tell√§
 \begin{align*}
 &M_1\,\omega(x) \,\le\, (f-p)(x) \,\le\, M_2\,\omega(x), \quad x \in [a,b] \\[1mm]
 &\impl\quad M_1\,\int_a^b \omega(x)\,dx 
@@ -231,22 +231,22 @@ niin voidaan p‰‰tell‰
 &\ekv\quad \frac{1}{24}\,M_1\,(b-a)^3    
                 \,\le\, \int_a^b (f-p)(x)\,dx \,\le\, \frac{1}{24}\,M_2\,(b-a)^3.
 \end{align*}
-Siis jollakin $\eta \in [M_1,M_2]$ p‰tee
+Siis jollakin $\eta \in [M_1,M_2]$ p√§tee
 \[ 
 E(f) = \frac{\eta}{24}\,(b-a)^3. 
 \]
-Koska $f''$ on jatkuva v‰lill‰ $[a,b]$, niin $M_1=f''(x_1)$ ja $M_2=f''(x_2)$ joillakin
+Koska $f''$ on jatkuva v√§lill√§ $[a,b]$, niin $M_1=f''(x_1)$ ja $M_2=f''(x_2)$ joillakin
 $x_1,x_2\in[a,b]$ (Lause \ref{Weierstrassin peruslause}), jolloin $\eta = f''(\xi)$ jollakin 
-$\xi \in [a,b]$ (Lause \ref{ensimm‰inen v‰liarvolause}). Keskipistes‰‰nnˆlle on n‰in johdettu
+$\xi \in [a,b]$ (Lause \ref{ensimm√§inen v√§liarvolause}). Keskipistes√§√§nn√∂lle on n√§in johdettu
 virhekaava
 \[
 \boxed{\quad E(f) = \frac{1}{24}\,(b-a)^3 f''(\xi), \quad \xi \in [a,b]
-                                     \quad\text{(Keskipistes‰‰ntˆ)}. \quad}
+                                     \quad\text{(Keskipistes√§√§nt√∂)}. \quad}
 \]
 
-Trapetsille voidaan johtaa virhekaava vastaavaan tapaan. T‰ss‰ tapauksessa on
-vertailupolynomiksi $p$ kuitenkin syyt‰ valita Taylorin polynomin sijasta ensimm‰isen asteen
-interpolaatiopolypainnomi, jolle p‰tee $p(a)=f(a)$ ja $p(b)=f(b)$
+Trapetsille voidaan johtaa virhekaava vastaavaan tapaan. T√§ss√§ tapauksessa on
+vertailupolynomiksi $p$ kuitenkin syyt√§ valita Taylorin polynomin sijasta ensimm√§isen asteen
+interpolaatiopolypainnomi, jolle p√§tee $p(a)=f(a)$ ja $p(b)=f(b)$
 (ks.\ Luku \ref{interpolaatiopolynomit}). Virhekaavaksi saadaan
 (Harj.teht.\,\ref{H-int-9: Trapetsin virhekaava})
 \[
@@ -254,10 +254,10 @@ interpolaatiopolypainnomi, jolle p‰tee $p(a)=f(a)$ ja $p(b)=f(b)$
                                       \quad \text{(Trapetsi)}. \quad}
 \]
 
-Keskipistes‰‰nnˆn ja trapetsin virhekaavoista n‰hd‰‰n, ett‰ jos $f$ on ylˆsp‰in kaareutuva
-($f''(x)>0$ v‰lill‰ $[a,b$]), niin keskipistes‰‰ntˆ antaa integraalille liian pienen ja 
-Trapetsi liian suuren arvon. Em.\ virheanalyysiin liittyen ilmiˆn voi selitt‰‰ niin, ett‰ 
-keskipistes‰‰ntˆ integroi oikein $f$:n Taylorin polynomin $T_1(x,c)$, kun taas Trapetsi
+Keskipistes√§√§nn√∂n ja trapetsin virhekaavoista n√§hd√§√§n, ett√§ jos $f$ on yl√∂sp√§in kaareutuva
+($f''(x)>0$ v√§lill√§ $[a,b$]), niin keskipistes√§√§nt√∂ antaa integraalille liian pienen ja 
+Trapetsi liian suuren arvon. Em.\ virheanalyysiin liittyen ilmi√∂n voi selitt√§√§ niin, ett√§ 
+keskipistes√§√§nt√∂ integroi oikein $f$:n Taylorin polynomin $T_1(x,c)$, kun taas Trapetsi
 integroi oikein $f$:n interpolaatiopolynomin, vrt. kuvio.
 %\begin{figure}[H]
 %\begin{center}
@@ -273,7 +273,7 @@ integroi oikein $f$:n interpolaatiopolynomin, vrt. kuvio.
 \dashline{0.1}(4.0,1.8)(7.0,2.3179) \dashline{0.1}(4.0,1.1306)(7.0,1.7)
 \put(4,0){\line(0,1){0.1}} \put(5.5,0){\line(0,1){0.1}} \put(7,0){\line(0,1){0.1}}
 \put(3.9,-0.5){$a$} \put(6.9,-0.5){$b$} \put(5.4,-0.5){$c$} 
-\put(7.2,1.652){$\scriptstyle{\text{Keskipistes‰‰ntˆ}}$}
+\put(7.2,1.652){$\scriptstyle{\text{Keskipistes√§√§nt√∂}}$}
 \put(7.2,2.316){$\scriptstyle{\text{Trapetsi}}$}
 \curve(
     4.0000,    1.8000,
@@ -286,8 +286,8 @@ integroi oikein $f$:n interpolaatiopolynomin, vrt. kuvio.
 \end{picture}
 \end{center}
 \end{figure}
-Myˆs Simpsonin s‰‰nnˆlle voidaan johtaa virhekaava samantyyppisell‰ p‰‰ttelyll‰ kuin edell‰.
-Olettaen, ett‰ $f$ on nelj‰ kertaa jatkuvasti derivoituva v‰lill‰ $[a,b]$, saadaan
+My√∂s Simpsonin s√§√§nn√∂lle voidaan johtaa virhekaava samantyyppisell√§ p√§√§ttelyll√§ kuin edell√§.
+Olettaen, ett√§ $f$ on nelj√§ kertaa jatkuvasti derivoituva v√§lill√§ $[a,b]$, saadaan
 virhekaavaksi (Harj.teht.\,\ref{H-int-9: Simpsonin 2})
 \[
 \boxed{\quad E(f) = - \frac{1}{90}\,h^5 f^{(4)}(\xi), 
@@ -295,70 +295,70 @@ virhekaavaksi (Harj.teht.\,\ref{H-int-9: Simpsonin 2})
 \]
 
 Em.\ virhekaavoista voidaan edelleen johtaa virhearvioita yhdistetyille kvadratuureille.
-Tarkastellaan j‰lleen esimerkkin‰ keskipistes‰‰ntˆ‰, rajoittuen tasav‰liseen jakoon eli
-olettaen v‰li $[a,b]$ jaetuksi osav‰leihin $[x_{k-1},x_k],\ k=1\ldots n$, miss‰
+Tarkastellaan j√§lleen esimerkkin√§ keskipistes√§√§nt√∂√§, rajoittuen tasav√§liseen jakoon eli
+olettaen v√§li $[a,b]$ jaetuksi osav√§leihin $[x_{k-1},x_k],\ k=1\ldots n$, miss√§
 $x_k-x_{k-1}=h=(b-a)/n\ \forall k$. Olkoon funktio $f$ kahdesti jatkuvasti
-derivoituva v‰lill‰ $[a,b]$, ja olkoon $M_1$ ja $M_2$ $f''$:n minimi- ja maksimiarvot v‰lill‰
-$[a,b]$. T‰llˆin jos $E_k(f) =$ keskipistes‰‰nnˆn integrointivirhe osav‰lill‰ $[x_{k-1},x_k]$,
+derivoituva v√§lill√§ $[a,b]$, ja olkoon $M_1$ ja $M_2$ $f''$:n minimi- ja maksimiarvot v√§lill√§
+$[a,b]$. T√§ll√∂in jos $E_k(f) =$ keskipistes√§√§nn√∂n integrointivirhe osav√§lill√§ $[x_{k-1},x_k]$,
 niin em.\ virhekaavan perusteella
 \[ 
 \frac{1}{24}\,M_1 h^3 \le E_k(f) \le \frac{1}{24}\,M_2 h^3. 
 \]
-Summaamalla yli $k$:n ja huomioimalla, ett‰ $\,nh=b-a\,$ saadaan kokonaisvirheelle 
+Summaamalla yli $k$:n ja huomioimalla, ett√§ $\,nh=b-a\,$ saadaan kokonaisvirheelle 
 $E(f) = \sum_{k=1}^n E_k(f)$ arviot
 \[ 
 \frac{1}{24}\,(b-a)M_1 h^2 \le E(f) \le \frac{1}{24}\,(b-a)M_2 h^2. 
 \]
-T‰ss‰ on $M_1=f(x_1),\ M_2=f(x_2)\,$ joillakin $x_1,x_2 \in [a,b]$, joten p‰‰dyt‰‰n 
-v‰liarvomuotoiseen virhekaavaan kuten edell‰. Tasav‰lisen trapetsin ja Simpsonin tapauksessa
-menetell‰‰n vastaavasti, jolloin tuloksena ovat seuraavat virhekaavat:
+T√§ss√§ on $M_1=f(x_1),\ M_2=f(x_2)\,$ joillakin $x_1,x_2 \in [a,b]$, joten p√§√§dyt√§√§n 
+v√§liarvomuotoiseen virhekaavaan kuten edell√§. Tasav√§lisen trapetsin ja Simpsonin tapauksessa
+menetell√§√§n vastaavasti, jolloin tuloksena ovat seuraavat virhekaavat:
 \begin{center}
 \fbox{\begin{tabular}{ll}
-Tasav‰linen, yhdistetty kp.-s‰‰ntˆ:    & $E(f)=\ \frac{1}{24}(b-a)f''(\xi)\,h^2$ \ykehys\\ \\
-Tasav‰linen, yhdistetty trapetsi:      & $E(f)=-\frac{1}{12}(b-a)f''(\xi)\,h^2$ \\ \\
-Tasav‰linen, yhdistetty Simpson:       & $E(f)=-\frac{1}{180}(b-a)f^{(4)}(\xi)\,h^4 \ $ \akehys
+Tasav√§linen, yhdistetty kp.-s√§√§nt√∂:    & $E(f)=\ \frac{1}{24}(b-a)f''(\xi)\,h^2$ \ykehys\\ \\
+Tasav√§linen, yhdistetty trapetsi:      & $E(f)=-\frac{1}{12}(b-a)f''(\xi)\,h^2$ \\ \\
+Tasav√§linen, yhdistetty Simpson:       & $E(f)=-\frac{1}{180}(b-a)f^{(4)}(\xi)\,h^4 \ $ \akehys
 \end{tabular}}
 \end{center}
-T‰ss‰ on kaikissa tapauksissa $\xi \in [a,b]$, ja $h$ on l‰himpien kvadratuuripisteiden v‰li,
-eli joko $h=$ osav‰lin pituus (Keskipistes‰‰ntˆ, Trapetsi), tai $h=$ puolet osav‰lin
+T√§ss√§ on kaikissa tapauksissa $\xi \in [a,b]$, ja $h$ on l√§himpien kvadratuuripisteiden v√§li,
+eli joko $h=$ osav√§lin pituus (Keskipistes√§√§nt√∂, Trapetsi), tai $h=$ puolet osav√§lin
 pituudesta (Simpson).
 
-Muun kuin tasav‰lisen jaon tapauksessa voidaan em.\ yhdistettyjen kvadratuurien virhe arvioida
-muodossa $\abs{E(f)} \le \ldots\,$, miss‰ oikealla puolella on $\pm f^{(k)}(\xi)$:n sijasta
-$\abs{f^{(k)}(x)}$:n maksimiarvo v‰lill‰ $[a,b]$ ja $h$ on per‰kk‰isten kvadratuuripisteiden
-\pain{suurin} v‰li. Yleisesti jos osav‰lijakoon perustuvan yhdistetyn numeerisen kvadratuurin
-virhe on suuruusluokkaa $\ordoO{h^r}$ (integroitavan funktion $f$ ollessa riitt‰v‰n
-s‰‰nnˆllinen), mutta ei luokkaa $\ordoO{h^{r+1}}$ (vaikka $f$ olisi kuinka s‰‰nnˆllinen), niin
-sanotaan, ett‰ ko. menetelm‰n (tarkkuuden)
+Muun kuin tasav√§lisen jaon tapauksessa voidaan em.\ yhdistettyjen kvadratuurien virhe arvioida
+muodossa $\abs{E(f)} \le \ldots\,$, miss√§ oikealla puolella on $\pm f^{(k)}(\xi)$:n sijasta
+$\abs{f^{(k)}(x)}$:n maksimiarvo v√§lill√§ $[a,b]$ ja $h$ on per√§kk√§isten kvadratuuripisteiden
+\pain{suurin} v√§li. Yleisesti jos osav√§lijakoon perustuvan yhdistetyn numeerisen kvadratuurin
+virhe on suuruusluokkaa $\ordoO{h^r}$ (integroitavan funktion $f$ ollessa riitt√§v√§n
+s√§√§nn√∂llinen), mutta ei luokkaa $\ordoO{h^{r+1}}$ (vaikka $f$ olisi kuinka s√§√§nn√∂llinen), niin
+sanotaan, ett√§ ko. menetelm√§n (tarkkuuden)
 \index{kertaluku!b@tarkkuuden}%
 \kor{kertaluku} (engl.\ order of accuracy) on $r$.
-Kuten em.\ virhetarkastelusta voi p‰‰tell‰, on yleisesti $r=m+1$, jos numeerinen kvadratuuri
-integroi osav‰leill‰ tarkasti polynomin astetta $m$ mutta ei polynomia astetta $m+1$.
-Yhdistetty keskipistes‰‰ntˆ ja trapetsi ovat siis toisen kertaluvun menetelmi‰, ja yhdistetyn
-Simpsonin kertaluku on $r=4$. Esimerkkej‰ ensimm‰isen kertaluvun menetelmist‰ ovat Riemannin
-summakaavat, joissa kvadratuuripisteet (eli v‰lipisteet $\xi_k$, vrt.\ Luku
-\ref{m‰‰r‰tty integraali}) eiv‰t ole osav‰lien keskipisteit‰
+Kuten em.\ virhetarkastelusta voi p√§√§tell√§, on yleisesti $r=m+1$, jos numeerinen kvadratuuri
+integroi osav√§leill√§ tarkasti polynomin astetta $m$ mutta ei polynomia astetta $m+1$.
+Yhdistetty keskipistes√§√§nt√∂ ja trapetsi ovat siis toisen kertaluvun menetelmi√§, ja yhdistetyn
+Simpsonin kertaluku on $r=4$. Esimerkkej√§ ensimm√§isen kertaluvun menetelmist√§ ovat Riemannin
+summakaavat, joissa kvadratuuripisteet (eli v√§lipisteet $\xi_k$, vrt.\ Luku
+\ref{m√§√§r√§tty integraali}) eiv√§t ole osav√§lien keskipisteit√§
 (ks.\ Harj.teht\,\ref{H-int-9: Riemannin summa}). Riemannin summiin perustuvista
-approksimaatioista yhdistetty keskipistes‰‰ntˆ on siis tarkkuutensa puolesta omassa luokassaan.
+approksimaatioista yhdistetty keskipistes√§√§nt√∂ on siis tarkkuutensa puolesta omassa luokassaan.
 
 \subsection*{Sovellusesimerkki: Adaptiivinen Simpson}
 \index{adaptiivinen Simpson|vahv}
 \index{zza@\sov!Adaptiivinen Simpson|vahv}
 
 Laskimissa ja numeeris--symbolisissa tietokoneohjelmistoissa numeerisen integroinnin komentojen
-(esim. Mathematica: \verb|NIntegrate|) takana on usein yhdistetty Simpson, mahdollisesti myˆs
-korkeamman kertaluvun yhdistettyj‰ kvadratuureja. Jakoa osav‰leihin ei n‰iss‰ ohjelmissa
-yleens‰ suoriteta tasav‰lisesti, vaan integroitavaan funktioon sopeutuen \kor{adaptiivisesti}. 
-Adaptiivisen Simpsonin menetelm‰n ideana on selvitt‰‰ 'nuuskimalla', kuinka suuri on 
-integroitavan funktion nelj‰s derivaatta $f^{(4)}(x)$ tarkasteltavalla osav‰lill‰ 
-$[x_{k-1},x_k]$. Perusajatus on yksinkertainen: Jos osav‰li on lyhyt (niinkuin laskun kuluessa
-ennen pitk‰‰ on), niin voidaan olettaa, ett‰ $f^{(4)}(x)$ on ko.\ v‰lill‰ likimain vakio $=M_k$.
-T‰llˆin vakio $M_k$ saadaan selville tulkitsemalla itse algoritmin antamia tuloksia 
+(esim. Mathematica: \verb|NIntegrate|) takana on usein yhdistetty Simpson, mahdollisesti my√∂s
+korkeamman kertaluvun yhdistettyj√§ kvadratuureja. Jakoa osav√§leihin ei n√§iss√§ ohjelmissa
+yleens√§ suoriteta tasav√§lisesti, vaan integroitavaan funktioon sopeutuen \kor{adaptiivisesti}. 
+Adaptiivisen Simpsonin menetelm√§n ideana on selvitt√§√§ 'nuuskimalla', kuinka suuri on 
+integroitavan funktion nelj√§s derivaatta $f^{(4)}(x)$ tarkasteltavalla osav√§lill√§ 
+$[x_{k-1},x_k]$. Perusajatus on yksinkertainen: Jos osav√§li on lyhyt (niinkuin laskun kuluessa
+ennen pitk√§√§ on), niin voidaan olettaa, ett√§ $f^{(4)}(x)$ on ko.\ v√§lill√§ likimain vakio $=M_k$.
+T√§ll√∂in vakio $M_k$ saadaan selville tulkitsemalla itse algoritmin antamia tuloksia 
 \index{a posteriori}%
-\kor{a posteriori} (eli laskemisen j‰lkeen) seuraavasti: Sovelletaan ensin Simpsonin s‰‰ntˆ‰
-v‰lill‰ $[x_{k-1},x_k]$ -- tulos $I_1$. Jaetaan sitten v‰li puoliksi ja sovelletaan Simpsonin
-s‰‰ntˆ‰ kummallakin osav‰lill‰ erikseen -- tulos $I_2$. Jos nyt integraalin tarkka arvo $=I$ 
-v‰lill‰ $[x_{k-1},x_k]$, niin Simpsonin virhekaavan mukaan
+\kor{a posteriori} (eli laskemisen j√§lkeen) seuraavasti: Sovelletaan ensin Simpsonin s√§√§nt√∂√§
+v√§lill√§ $[x_{k-1},x_k]$ -- tulos $I_1$. Jaetaan sitten v√§li puoliksi ja sovelletaan Simpsonin
+s√§√§nt√∂√§ kummallakin osav√§lill√§ erikseen -- tulos $I_2$. Jos nyt integraalin tarkka arvo $=I$ 
+v√§lill√§ $[x_{k-1},x_k]$, niin Simpsonin virhekaavan mukaan
 \[
 \begin{cases} 
  I-I_1=-\frac{1}{90}M_kh^5, \\ 
@@ -366,35 +366,35 @@ v‰lill‰ $[x_{k-1},x_k]$, niin Simpsonin virhekaavan mukaan
 \end{cases}
 \impl\ M_k=96h^{-5}(I_1-I_2), \quad h=\tfrac{1}{2}(x_k-x_{k-1}).
 \]
-Todellisuudessa $f^{(4)}$ ei ole aivan vakio edes lyhyell‰ v‰lill‰ (jos olisi, saataisiin myˆs
-integraalin tarkka arvo $I$ selville!), mutta saatu arvio on yleens‰ adaptiivisiin 
-tarkoituksiin riitt‰v‰: Sen avulla voidaan ohjata algoritmia tihent‰m‰‰n jakoa siell‰, miss‰ 
-laskun antama luku $M_k$ on itseisarvoltaan suuri. Algoritmi pyrkii tarkemmin tihent‰m‰‰n jakoa
-niin, ett‰ \pain{virhetihe}y\pain{s}, eli integroimisvirhe osav‰lill‰ jaettuna osav‰lin 
-pituudella, on suunnilleen sama jokaisella osav‰lill‰. (T‰llainen jako on osoitettavissa 
-laskutyˆn kannalta optimaaliseksi.) 
+Todellisuudessa $f^{(4)}$ ei ole aivan vakio edes lyhyell√§ v√§lill√§ (jos olisi, saataisiin my√∂s
+integraalin tarkka arvo $I$ selville!), mutta saatu arvio on yleens√§ adaptiivisiin 
+tarkoituksiin riitt√§v√§: Sen avulla voidaan ohjata algoritmia tihent√§m√§√§n jakoa siell√§, miss√§ 
+laskun antama luku $M_k$ on itseisarvoltaan suuri. Algoritmi pyrkii tarkemmin tihent√§m√§√§n jakoa
+niin, ett√§ \pain{virhetihe}y\pain{s}, eli integroimisvirhe osav√§lill√§ jaettuna osav√§lin 
+pituudella, on suunnilleen sama jokaisella osav√§lill√§. (T√§llainen jako on osoitettavissa 
+laskuty√∂n kannalta optimaaliseksi.) 
 
-Adaptiivinen algoritmi toimii k‰yt‰nnˆss‰ h‰mm‰stytt‰v‰n hyvin myˆs useimmissa sellaisissa
-tilanteissa, joissa funktio ei ole lainkaan niin s‰‰nnˆllinen kuin em.\ laskussa oletetaan
-(eli nelj‰ kertaa jatkuvasti derivoituva). N‰in k‰y vaikkapa Esimerkin 
-\ref{Trapetsi vastaan Simpson 2} integroimisteht‰v‰ss‰, jossa integroitava funktio ei ole
-edes jatkuvasti derivoituva ($f(x) \approx 1-\sqrt{x}$ pisteen $x=0$ l‰hell‰). Laskemalla
-lukuja $M_k$ ym.\ tavalla algoritmi p‰‰tyy tihent‰m‰‰n jakoa voimakkaasti origon l‰hell‰
-ja pystyy t‰m‰n 'kone‰lyn' ansiosta laskemaan integraalin arvon vaaditulla tarkkuudella l‰hes
-yht‰ nopeasti kuin Esimerkin \ref{Trapetsi vastaan Simpson 1} tilanteessa 
+Adaptiivinen algoritmi toimii k√§yt√§nn√∂ss√§ h√§mm√§stytt√§v√§n hyvin my√∂s useimmissa sellaisissa
+tilanteissa, joissa funktio ei ole lainkaan niin s√§√§nn√∂llinen kuin em.\ laskussa oletetaan
+(eli nelj√§ kertaa jatkuvasti derivoituva). N√§in k√§y vaikkapa Esimerkin 
+\ref{Trapetsi vastaan Simpson 2} integroimisteht√§v√§ss√§, jossa integroitava funktio ei ole
+edes jatkuvasti derivoituva ($f(x) \approx 1-\sqrt{x}$ pisteen $x=0$ l√§hell√§). Laskemalla
+lukuja $M_k$ ym.\ tavalla algoritmi p√§√§tyy tihent√§m√§√§n jakoa voimakkaasti origon l√§hell√§
+ja pystyy t√§m√§n 'kone√§lyn' ansiosta laskemaan integraalin arvon vaaditulla tarkkuudella l√§hes
+yht√§ nopeasti kuin Esimerkin \ref{Trapetsi vastaan Simpson 1} tilanteessa 
 (ks.\ Harj.teht.\,\ref{H-int-9: sqrt-integraali}c).
 
 \Harj
 \begin{enumerate}
 
 \item
-Integraali $\int_0^1 f(x)\,dx$ lasketaan tasav‰lisell‰, yhdistetyll‰ Trapetsilla jakamalla
-integroimisv‰li $n$ osav‰liin. Laske n‰in saadun likiarvon virhe tarkasti, kun \
+Integraali $\int_0^1 f(x)\,dx$ lasketaan tasav√§lisell√§, yhdistetyll√§ Trapetsilla jakamalla
+integroimisv√§li $n$ osav√§liin. Laske n√§in saadun likiarvon virhe tarkasti, kun \
 a) $f(x)=x(1-x)$, \ b) $f(x)=e^x$.
 
 \item
-Laske seuraaville integraalille likiarvot k‰ytt‰m‰ll‰ $11$ pisteen tasav‰list‰, yhdistetty‰
-Trapetsia ($10$ osav‰li‰) ja Simpsonin s‰‰ntˆ‰ ($5$ osav‰li‰) ja vertaa tarkkaan arvoon.
+Laske seuraaville integraalille likiarvot k√§ytt√§m√§ll√§ $11$ pisteen tasav√§list√§, yhdistetty√§
+Trapetsia ($10$ osav√§li√§) ja Simpsonin s√§√§nt√∂√§ ($5$ osav√§li√§) ja vertaa tarkkaan arvoon.
 \[
 \text{a)}\,\ \int_0^1 \frac{1}{1+x^2}\,dx \qquad
 \text{b)}\,\ \int_0^1 \frac{4x^3}{1+x}\,dx \qquad
@@ -406,56 +406,56 @@ Numeerisen integroinnin nk.\ \kor{korjattu trapetsikaava} on
 \[
 \int_a^b f(x)\,dx \approx \frac{1}{2}(b-a)[f(a)+f(b)]-\frac{1}{12}(b-a)^2[f'(b)-f'(a)].
 \]
-N‰yt‰, ett‰ kaava on tarkka polynomeille astetta $m=3$. Millainen on vastaava yhdistetty
-kvadratuuri, jos jako osav‰leihin on tasav‰linen?
+N√§yt√§, ett√§ kaava on tarkka polynomeille astetta $m=3$. Millainen on vastaava yhdistetty
+kvadratuuri, jos jako osav√§leihin on tasav√§linen?
 
 \item \label{H-int-9: Trapetsin virhekaava}
-Olkoon $f$ kahdesti jatkuvasti derivoituva v‰lill‰ $[a,b]$ ja $g=f-p$, miss‰ $p$ on ensimm‰isen
-asteen (Lagrangen) interpolaatiopolynomi, jolle p‰tee $p(a)=f(a)$ ja $p(b)=f(b)$. N‰yt‰
-osittain integroimalla, ett‰ p‰tee
+Olkoon $f$ kahdesti jatkuvasti derivoituva v√§lill√§ $[a,b]$ ja $g=f-p$, miss√§ $p$ on ensimm√§isen
+asteen (Lagrangen) interpolaatiopolynomi, jolle p√§tee $p(a)=f(a)$ ja $p(b)=f(b)$. N√§yt√§
+osittain integroimalla, ett√§ p√§tee
 \[
 -\frac{1}{2}\int_a^b (x-a)(b-x)g''(x)\,dx = \int_a^b g(x)\,dx.
 \]
-Johda Trapetsin virhekaava t‰st‰ tuloksesta.
+Johda Trapetsin virhekaava t√§st√§ tuloksesta.
 
 \item \label{H-int-9: Simpson 1}
-a) Olkoon $p$ funktion $f$ toisen asteen interpolaatiopolynomi, joka m‰‰ritell‰‰n ehdoilla
-$p(a-h)=f(a-h)$, $p(a)=f(a)$ ja $p(a+h)=f(a+h)$ v‰lill‰ $[a-h,a+h]$. N‰yt‰, ett‰ Simpsonin
-s‰‰ntˆ ko.\ v‰lill‰ on sama kuin approksimaatio
+a) Olkoon $p$ funktion $f$ toisen asteen interpolaatiopolynomi, joka m√§√§ritell√§√§n ehdoilla
+$p(a-h)=f(a-h)$, $p(a)=f(a)$ ja $p(a+h)=f(a+h)$ v√§lill√§ $[a-h,a+h]$. N√§yt√§, ett√§ Simpsonin
+s√§√§nt√∂ ko.\ v√§lill√§ on sama kuin approksimaatio
 \[
 \int_{a-h}^{a+h} f(x)\,dx \approx \int_{a-h}^{a+h} p(x)\,dx.
 \]
-b) Todista Simpsonin s‰‰nnˆn virhekaava siin‰ tapauksessa, ett‰ $f^{(4)}$ on vakio 
-v‰lill‰ $[a-h,a+h]$ (eli $f$ on polynomi astetta $4$).
+b) Todista Simpsonin s√§√§nn√∂n virhekaava siin√§ tapauksessa, ett√§ $f^{(4)}$ on vakio 
+v√§lill√§ $[a-h,a+h]$ (eli $f$ on polynomi astetta $4$).
 
 \item \label{H-int-9: Riemannin summa}
-Integraalin approksimoiminen Riemannin summalla, jossa v‰lipisteiksi osav‰leill‰ $[x_{k-1},x]$
-valitaan $\xi_k=x_{k-1}$, vastaa osav‰leill‰ tehty‰ approksimaatiota
-$\int_a^b f(x)\,dx \approx (b-a)f(a)$. Johda t‰lle virhekaava
+Integraalin approksimoiminen Riemannin summalla, jossa v√§lipisteiksi osav√§leill√§ $[x_{k-1},x]$
+valitaan $\xi_k=x_{k-1}$, vastaa osav√§leill√§ tehty√§ approksimaatiota
+$\int_a^b f(x)\,dx \approx (b-a)f(a)$. Johda t√§lle virhekaava
 \[
 E(f)=\frac{1}{2}(b-a)^2 f'(\xi), \quad \xi\in[a,b].
 \]
-Mik‰ on virhekaava koko v‰lill‰, jos jako osav‰leihin on tasav‰linen?
+Mik√§ on virhekaava koko v√§lill√§, jos jako osav√§leihin on tasav√§linen?
 
 \item(*) \label{H-int-9: Arkhimedes} \index{zzb@\nim!Arkhimedeen algoritmi}
-(Arkhimedeen algoritmi) Suora leikkaa paraabelin $K:\ y=x^2$ pisteiss‰ $(a,a^2)$ ja 
-$(b,b^2)$, jolloin suora erottaa paraabelista segmentin $A$ v‰lill‰ $[a,b]$ ($a<b$). Olkoon 
-$A_n$ segmentin pinta-alan $\mu(A)$ likiarvo, joka saadaan jakamalla v‰li $[a,b]$ tasav‰lisesti
-$2^n$ osav‰liin ($n\in\N$) ja k‰ytt‰m‰ll‰ yhdistetty‰ trapetsia. N‰yt‰ pelkin algebran keinoin,
-ett‰ jono $\seq{A_n}$ on geometrinen sarja. Laske $\mu(A)$ ($=\lim_n A_n$) t‰ll‰ perusteella.
+(Arkhimedeen algoritmi) Suora leikkaa paraabelin $K:\ y=x^2$ pisteiss√§ $(a,a^2)$ ja 
+$(b,b^2)$, jolloin suora erottaa paraabelista segmentin $A$ v√§lill√§ $[a,b]$ ($a<b$). Olkoon 
+$A_n$ segmentin pinta-alan $\mu(A)$ likiarvo, joka saadaan jakamalla v√§li $[a,b]$ tasav√§lisesti
+$2^n$ osav√§liin ($n\in\N$) ja k√§ytt√§m√§ll√§ yhdistetty√§ trapetsia. N√§yt√§ pelkin algebran keinoin,
+ett√§ jono $\seq{A_n}$ on geometrinen sarja. Laske $\mu(A)$ ($=\lim_n A_n$) t√§ll√§ perusteella.
 
 \item (*) \label{H-int-9: Simpsonin 2}
-a) (Vrt.\ Teht‰v‰ \ref{H-int-9: Simpson 1}a.) Olkoon $p$ funktion $f$ yleistetty kolmannen
-asteen interpolaatiopolynomi, joka m‰‰ritell‰‰n ehdoilla $\,p(a-h)=f(a-h)$, $\,p(a+h)=f(a+h)$,
-$\,p(a)=f(a)\,$ ja $\,p'(a)=f'(a)$ v‰lill‰ $[a-h,a+h]$. N‰yt‰, ett‰ Simpsonin s‰‰ntˆ ko.\
-v‰lill‰ on sama kuin approksimaatio
+a) (Vrt.\ Teht√§v√§ \ref{H-int-9: Simpson 1}a.) Olkoon $p$ funktion $f$ yleistetty kolmannen
+asteen interpolaatiopolynomi, joka m√§√§ritell√§√§n ehdoilla $\,p(a-h)=f(a-h)$, $\,p(a+h)=f(a+h)$,
+$\,p(a)=f(a)\,$ ja $\,p'(a)=f'(a)$ v√§lill√§ $[a-h,a+h]$. N√§yt√§, ett√§ Simpsonin s√§√§nt√∂ ko.\
+v√§lill√§ on sama kuin approksimaatio
 \[
 \int_{a-h}^{a+h} f(x)\,dx \approx \int_{a-h}^{a+h} p(x)\,dx.
 \]
 b) Johda Simpsonin virhekaava. \kor{Vihje}: Lause \ref{usean pisteen Taylor}.
 
 \item (*) \label{H-int-9: korjatun trapetsin virhe}
-Olkoon $f$ nelj‰ kertaa jatkuvasti derivoituva v‰lill‰ $[a,b]$. Johda korjatulle
+Olkoon $f$ nelj√§ kertaa jatkuvasti derivoituva v√§lill√§ $[a,b]$. Johda korjatulle
 trapetsikaavalle (Harj.teht.\,\ref{H-int-9: korjattu trapetsi}) virhekaava
 \[
 E(f) = \frac{1}{720}\,(b-a)^5 f^{(4)}(\xi), \quad \xi\in[a,b].
@@ -463,22 +463,22 @@ E(f) = \frac{1}{720}\,(b-a)^5 f^{(4)}(\xi), \quad \xi\in[a,b].
 \kor{Vihje}: Hermiten interpolointi ja Lause \ref{usean pisteen Taylor}!
 
 \item (*) \label{H-int-9: sqrt-integraali}
-Tarkastellaan numeerisen integroinnin virhett‰ laskettaessa integraali $\int_0^1\sqrt{x}\,dx\,$
-yhdistetyill‰ kvadratuureilla, joissa v‰li $[0,1]$ jaetaan eri tavoilla $n$ 
-osav‰liin. \vspace{1mm}\newline
-\ a) N‰yt‰, ett‰ jos jako on tasav‰linen, niin sek‰ yhdistetyn trapetsin ett‰ yhdistetyn
+Tarkastellaan numeerisen integroinnin virhett√§ laskettaessa integraali $\int_0^1\sqrt{x}\,dx\,$
+yhdistetyill√§ kvadratuureilla, joissa v√§li $[0,1]$ jaetaan eri tavoilla $n$ 
+osav√§liin. \vspace{1mm}\newline
+\ a) N√§yt√§, ett√§ jos jako on tasav√§linen, niin sek√§ yhdistetyn trapetsin ett√§ yhdistetyn
 Simpsonin virhe on \ $\sim n^{-3/2}$ suurilla $n$:n arvoilla. \newline 
-b) Valitaan v‰lin $[0,1]$ jakopisteiksi $x_k=(k/n)^{4/3},\ k=0 \ldots n$ ja k‰ytet‰‰n
-yhdistetty‰ trapetsia. N‰yt‰, ett‰ virhe $\,=\mathcal{O}(n^{-2}\ln n)$. \newline
-c) Valitaan v‰lin $[0,1]$ jakopisteiksi $x_k=(k/n)^{8/3},\ k=0 \ldots n$ ja \mbox{k‰ytet‰‰n}
-yhdistetty‰ Simpsonia. N‰yt‰, ett‰ virhe $\,=\mathcal{O}(n^{-4}\ln n)$. (Adaptiivinen Simpsonin
-algoritmi p‰‰tyy likimain t‰h‰n jakoon suurilla $n$:n arvoilla.)
+b) Valitaan v√§lin $[0,1]$ jakopisteiksi $x_k=(k/n)^{4/3},\ k=0 \ldots n$ ja k√§ytet√§√§n
+yhdistetty√§ trapetsia. N√§yt√§, ett√§ virhe $\,=\mathcal{O}(n^{-2}\ln n)$. \newline
+c) Valitaan v√§lin $[0,1]$ jakopisteiksi $x_k=(k/n)^{8/3},\ k=0 \ldots n$ ja \mbox{k√§ytet√§√§n}
+yhdistetty√§ Simpsonia. N√§yt√§, ett√§ virhe $\,=\mathcal{O}(n^{-4}\ln n)$. (Adaptiivinen Simpsonin
+algoritmi p√§√§tyy likimain t√§h√§n jakoon suurilla $n$:n arvoilla.)
  
 \item (*) \label{H-int-9: hidas sarja}
-(Hitaan sarjan kiihdytys) Suppeneva integraali $\int_n^\infty f(x)\,dx$, miss‰ $n\in\N$ on suuri
-luku, voidaan laskea likim‰‰rin k‰ytt‰m‰ll‰ joko a) yhdistetty‰ trapetsia tai b) yhdistetty‰,
-korjattua trapetsia (Harj.teht.\,\ref{H-int-9: korjattu trapetsi}) v‰lin $[n,\infty)$ jaossa
-osav‰leihin $\,[k,k+1]$, $k\in\N$, $k \ge n$. L‰htien n‰ist‰ ajatuksista ja mainittujen
+(Hitaan sarjan kiihdytys) Suppeneva integraali $\int_n^\infty f(x)\,dx$, miss√§ $n\in\N$ on suuri
+luku, voidaan laskea likim√§√§rin k√§ytt√§m√§ll√§ joko a) yhdistetty√§ trapetsia tai b) yhdistetty√§,
+korjattua trapetsia (Harj.teht.\,\ref{H-int-9: korjattu trapetsi}) v√§lin $[n,\infty)$ jaossa
+osav√§leihin $\,[k,k+1]$, $k\in\N$, $k \ge n$. L√§htien n√§ist√§ ajatuksista ja mainittujen
 kvadratuurien virhearvioista 
 (ks.\ Harj.teht.\,\ref{H-int-9: korjatun trapetsin virhe}) johda seuraavat tulokset, kun
 $f(x)=1/x^\alpha,\ \alpha>1$\,:
@@ -490,7 +490,7 @@ $f(x)=1/x^\alpha,\ \alpha>1$\,:
  \sum_{k=1}^n \frac{1}{k^\alpha}+\frac{1}{\alpha-1}\,n^{1-\alpha}-\frac{1}{2}\,n^{-\alpha}
  +\frac{\alpha}{12}\,n^{-\alpha-1}+\Ord{n^{-\alpha-3}}\,.
 \end{align*}
-\kor{Vihje}: Huomioi, ett‰
+\kor{Vihje}: Huomioi, ett√§
 \begin{align*}
 \text{a)}\,\ \sum_{k=n+1}^\infty f(k)
 &\,=\, \sum_{k=n}^\infty \frac{1}{2}\,\bigl[\,f(k)+f(k+1)\,\bigr] - \frac{1}{2}\,f(n), \\

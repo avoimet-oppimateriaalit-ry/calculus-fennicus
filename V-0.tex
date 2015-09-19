@@ -1,31 +1,31 @@
 \chapter{Jatkuvuus ja derivoituvuus}  \label{jatkuvat funktiot}
 
-Funktion \kor{jatkuvuus} ja \kor{derivoituvuus} ovat käsitteellisiä peruslähtökohtia 
-matematiikan suuntauksessa, jota kutsutaan väljästi \kor{analyysiksi}. Jatkuvuudesta, tai 
-yleisemmin funktion \kor{säännöllisyydestä} puhuttaessa on kyse funktion arvojen
+Funktion \kor{jatkuvuus} ja \kor{derivoituvuus} ovat kÃ¤sitteellisiÃ¤ peruslÃ¤htÃ¶kohtia 
+matematiikan suuntauksessa, jota kutsutaan vÃ¤ljÃ¤sti \kor{analyysiksi}. Jatkuvuudesta, tai 
+yleisemmin funktion \kor{sÃ¤Ã¤nnÃ¶llisyydestÃ¤} puhuttaessa on kyse funktion arvojen
 ennustettavuudesta muuttujan (muuttujien) arvojen vaihdellessa. Jatkuvuuden ja derivoituvuuden
-käsitteet tuovat matemaattisten funktioiden teoriaan kokonaan oman 'makunsa' verrattuna
-tähän asti tarkasteltuun funktioiden algebraan.
+kÃ¤sitteet tuovat matemaattisten funktioiden teoriaan kokonaan oman 'makunsa' verrattuna
+tÃ¤hÃ¤n asti tarkasteltuun funktioiden algebraan.
 
-Tässä luvussa tarkastelun kohteena ovat pääosin vain yhden reaalimuuttujan funktiot. Näille
-funktioille määritellään ensin jatkuvuus peruskäsitteenä ja jatkuvuuteen läheisesti liittyvä
-\kor{funktion raja-arvon} käsite. Pelkkää jatkuvuutta vahvempina säännöllisyyden lajeina
-määritellään mm.\ derivoituvuus (Luku \ref{derivaatta}) ja derivoituvuutta vahvemmat 
-\kor{sileyden} lajit (Luku \ref{ääriarvot}). Näiden käsitteiden pohjalta luonnehditaan
-funktioita, mm.\ esitetään kaksi reaalimuuttujan analyysin keskeistä \kor{väliarvolausetta} ja
-tarkastellaan näiden lauseiden seuraamuksia yhtälöiden ja myös yksinkertaisten 
-\kor{differentiaaliyhtälöiden} ratkeavuusteoriassa. 
+TÃ¤ssÃ¤ luvussa tarkastelun kohteena ovat pÃ¤Ã¤osin vain yhden reaalimuuttujan funktiot. NÃ¤ille
+funktioille mÃ¤Ã¤ritellÃ¤Ã¤n ensin jatkuvuus peruskÃ¤sitteenÃ¤ ja jatkuvuuteen lÃ¤heisesti liittyvÃ¤
+\kor{funktion raja-arvon} kÃ¤site. PelkkÃ¤Ã¤ jatkuvuutta vahvempina sÃ¤Ã¤nnÃ¶llisyyden lajeina
+mÃ¤Ã¤ritellÃ¤Ã¤n mm.\ derivoituvuus (Luku \ref{derivaatta}) ja derivoituvuutta vahvemmat 
+\kor{sileyden} lajit (Luku \ref{Ã¤Ã¤riarvot}). NÃ¤iden kÃ¤sitteiden pohjalta luonnehditaan
+funktioita, mm.\ esitetÃ¤Ã¤n kaksi reaalimuuttujan analyysin keskeistÃ¤ \kor{vÃ¤liarvolausetta} ja
+tarkastellaan nÃ¤iden lauseiden seuraamuksia yhtÃ¤lÃ¶iden ja myÃ¶s yksinkertaisten 
+\kor{differentiaaliyhtÃ¤lÃ¶iden} ratkeavuusteoriassa. 
 
-Derivaatta tuo mukanaan myös derivoimissäännöt eli uuden ulottuvuuden funktioalgebraan.
-Luvuissa \ref{derivaatta}--\ref{kaarenpituus} johdetaan kaikki keskeiset derivoimissäännöt,
-mukaanlukien implisiittifunktiot, potenssisarjan summana määritellyt funktiot ja
+Derivaatta tuo mukanaan myÃ¶s derivoimissÃ¤Ã¤nnÃ¶t eli uuden ulottuvuuden funktioalgebraan.
+Luvuissa \ref{derivaatta}--\ref{kaarenpituus} johdetaan kaikki keskeiset derivoimissÃ¤Ã¤nnÃ¶t,
+mukaanlukien implisiittifunktiot, potenssisarjan summana mÃ¤Ã¤ritellyt funktiot ja
 (Luvussa \ref{kaarenpituus} erikseen) trigonometriset funktiot. 
 
-Luvussa \ref{kiintopisteiteraatio} tarkastelun kohteena ovat yhtälöitten likimääräisessä
-ratkaisussa yleisesti käytettävien algoritmien, \kor{kiintopisteiteraatioiden},
+Luvussa \ref{kiintopisteiteraatio} tarkastelun kohteena ovat yhtÃ¤lÃ¶itten likimÃ¤Ã¤rÃ¤isessÃ¤
+ratkaisussa yleisesti kÃ¤ytettÃ¤vien algoritmien, \kor{kiintopisteiteraatioiden},
 toimintaperiaatteet ja suppenevuusteoria. Luvussa \ref{analyyttiset funktiot} tarkastellaan
-lyhyesti jatkuvuuden ja derivoituvuuden käsitteiden laajentamista kompleksifunktioihin ja
-määritellään tähän liittyen \kor{analyyttisen} kompleksifunktion käsite. Viimeisessä
-osaluvussa todistetaan jatkuvien funktioiden teorian keskeisimpiä väittämiä kuten 
-\kor{Weierstrassin lause}. Tässä yhteydessä esitetään myös lyhyesti, miten Algebran peruslause
-on todistettavissa kompleksialgebran ja analyysin tuloksia yhdistelemällä.
+lyhyesti jatkuvuuden ja derivoituvuuden kÃ¤sitteiden laajentamista kompleksifunktioihin ja
+mÃ¤Ã¤ritellÃ¤Ã¤n tÃ¤hÃ¤n liittyen \kor{analyyttisen} kompleksifunktion kÃ¤site. ViimeisessÃ¤
+osaluvussa todistetaan jatkuvien funktioiden teorian keskeisimpiÃ¤ vÃ¤ittÃ¤miÃ¤ kuten 
+\kor{Weierstrassin lause}. TÃ¤ssÃ¤ yhteydessÃ¤ esitetÃ¤Ã¤n myÃ¶s lyhyesti, miten Algebran peruslause
+on todistettavissa kompleksialgebran ja analyysin tuloksia yhdistelemÃ¤llÃ¤.

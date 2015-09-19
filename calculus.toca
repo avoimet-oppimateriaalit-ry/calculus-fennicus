@@ -2,27 +2,27 @@
 \contentsline {chapter}{\numberline {I}Luvut ja lukujonot}{1}
 \contentsline {section}{\numberline {I.1}Katsaus rationaalilukuihin}{2}
 \subcon{Kokonaisluvut $\Z$}{5}
-\subcon{Lukuj‰rjestelm‰t}{6}
+\subcon{Lukuj√§rjestelm√§t}{6}
 \subcon{Rationaaliluvut $\Q$}{8}
-\subcon{$\Q$:n j‰rjestysrelaatio}{9}
-\subcon{Summa- ja tulomerkinn‰t}{11}
+\subcon{$\Q$:n j√§rjestysrelaatio}{9}
+\subcon{Summa- ja tulomerkinn√§t}{11}
 \contentsline {section}{\numberline {I.2}Kunta}{14}
-\subcon{J‰rjestetty kunta}{17}
+\subcon{J√§rjestetty kunta}{17}
 \subcon{Alikunta ja kuntalaajennus}{19}
 \subcon{Juuriluvut ja murtopotenssit}{21}
-\contentsline {section}{\numberline {I.3}Logiikan ja joukko-opin merkinn\"oist\"a}{25}
+\contentsline {section}{\numberline {I.3}Logiikan ja joukko-opin merkinn√∂ist√§}{25}
 \subcon{Implikaatio}{26}
 \subcon{Ekvivalenssi}{27}
 \subcon{Predikaatti ja kvanttorit}{29}
 \subcon{Joukko-oppi}{30}
 \subcon{Ekvivalenssirelaatio}{32}
-\contentsline {section}{\numberline {I.4}Jonon k\"asite}{35}
+\contentsline {section}{\numberline {I.4}Jonon k√§site}{35}
 \subcon{Sarja}{36}
 \subcon{Induktio}{37}
 \subcon{Numeroituvuus, mahtavuus}{40}
-\contentsline {section}{\numberline {I.5}\"A\"arett\"om\"at desimaaliluvut}{43}
+\contentsline {section}{\numberline {I.5}√Ñ√§rett√∂m√§t desimaaliluvut}{43}
 \subcon{Jakokulma-algoritmi}{46}
-\subcon{ƒ‰rettˆm‰t binaariluvut}{48}
+\subcon{√Ñ√§rett√∂m√§t binaariluvut}{48}
 \subcon{Desimaaliluvun skaalaus}{49}
 \subcon{Liukuluvut}{49}
 \contentsline {section}{\numberline {I.6}Lukujonon raja-arvo}{54}
@@ -36,7 +36,7 @@
 \subcon{Neperin luku}{81}
 \contentsline {section}{\numberline {I.9}Reaaliluvut}{86}
 \subcon{$\R$:n laskuoperaatiot}{86}
-\subcon{$\R$:n j\"arjestysrelaatio}{89}
+\subcon{$\R$:n j√§rjestysrelaatio}{89}
 \subcon{Reaaliluvut abstrakteina lukuina}{89}
 \subcon{Kymmenjako- ja puolituskonstruktiot}{90}
 \subcon{Reaalilukujen jonot}{92}
@@ -45,19 +45,19 @@
 \subcon{*Osajonot}{98}
 \subcon{Reaaliluvut Cauchyn jonoina}{102}
 \subcon{*Bolzanon--Weierstrassin lause}{103}
-\subcon{*Ep\"akonstruktiivinen p\"a\"attely}{104}
+\subcon{*Ep√§konstruktiivinen p√§√§ttely}{104}
 \contentsline {section}{\numberline {I.11}Reaalilukujen ominaisuuksia}{106}
 \subcon{Supremum ja infimum}{106}
 \subcon{Aksiomaattiset reaaliluvut}{108}
 \subcon{$\R$ on ylinumeroituva}{109}
-\subcon{Avoin ja suljettu v‰li}{110}
+\subcon{Avoin ja suljettu v√§li}{110}
 \subcon{Algebralliset ja transkendenttiset luvut}{111}
 \contentsline {section}{\numberline {I.12}Klassinen sarjaoppi. Potenssisarja}{113}
 \subcon{Positiiviterminen sarja}{113}
 \subcon{Harmoninen, aliharmoninen ja yliharmoninen sarja}{114}
 \subcon{Vuorotteleva sarja}{116}
 \subcon{Cauchyn kriteeri sarjoille}{117}
-\subcon{Potenssisarja}{118} 
+\subcon{Potenssisarja}{118}
 \contentsline {chapter}{\numberline {II}Vektorit ja analyyttinen geometria}{127}
 \contentsline {section}{\numberline {II.1}Euklidinen taso. Geometriset luvut}{128}
 \subcon{Kulma}{129}
@@ -73,33 +73,33 @@
 \subcon{Ortonormeerattu kanta}{154}
 \contentsline {section}{\numberline {II.4}*Abstrakti skalaaritulo ja normi}{157}
 \subcon{Normi}{159}
-\contentsline {section}{\numberline {II.5}Funktion k\"asite. Trigonometriset funktiot}{162}
-\subcon{Funktion k\"asite}{162}
+\contentsline {section}{\numberline {II.5}Funktion k√§site. Trigonometriset funktiot}{162}
+\subcon{Funktion k√§site}{162}
 \subcon{Funktio joukko-opissa}{163}
 \subcon{Reaalifunktio}{164}
 \subcon{Funktiot kosini ja sini}{166}
 \subcon{Tangentti ja kotangentti}{170}
-\subcon{Sovellusesimerkki: Harmoninen v\"ar\"ahtely}{172}
+\subcon{Sovellusesimerkki: Harmoninen v√§r√§htely}{172}
 \contentsline {section}{\numberline {II.6}Avaruuden vektorit. Ristitulo}{176}
 \subcon{Vektorien ristitulo}{180}
 \subcon{Ristitulon determinanttikaava}{183}
 \subcon{Skalaarikolmitulo $\vec a\times\vec b\cdot\vec c$}{184}
 \subcon{Kolmion pinta-ala. Tetraedrin tilavuus}{185}
-\subcon{Suunnikkaan ala. Suuntaiss‰rmiˆn tilavuus}{187}
+\subcon{Suunnikkaan ala. Suuntaiss√§rmi√∂n tilavuus}{187}
 \subcon{Vektorikolmitulo $\vec a\times(\vec b\times\vec c)$}{187}
 \contentsline {section}{\numberline {II.7}Suorien, tasojen ja pintojen geometriaa}{190}
 \subcon{Suora}{190}
 \subcon{Taso}{194}
-\subcon{Ympyr‰ ja pallo}{197}
-\subcon{Lieriˆ ja kartio}{198}
-\contentsline {section}{\numberline {II.8}K\"ayr\"aviivaiset koordinaatistot}{204}
+\subcon{Ympyr√§ ja pallo}{197}
+\subcon{Lieri√∂ ja kartio}{198}
+\contentsline {section}{\numberline {II.8}K√§yr√§viivaiset koordinaatistot}{204}
 \subcon{Napakoordinaatisto}{205}
-\subcon{Lieriˆkoordinaatisto}{208}
+\subcon{Lieri√∂koordinaatisto}{208}
 \subcon{Pallokoordinaatisto}{209}
 \contentsline {chapter}{\numberline {III}Kompleksiluvut}{215}
 \contentsline {section}{\numberline {III.1}Osoitinkunta}{216}
-\contentsline {section}{\numberline {III.2}Kompleksiluvut ja niill\"a laskeminen}{222}
-\subcon{Kolmioep‰yht‰lˆ $\C$:ss‰}{226}
+\contentsline {section}{\numberline {III.2}Kompleksiluvut ja niill√§ laskeminen}{222}
+\subcon{Kolmioep√§yht√§l√∂ $\C$:ss√§}{226}
 \contentsline {section}{\numberline {III.3}Algebran peruslause}{229}
 \subcon{Kompleksiluvun juuret}{234}
 \contentsline {section}{\numberline {III.4}*Kompleksikertoiminen vektoriavaruus}{238}
@@ -111,28 +111,28 @@
 \subcon{Funktioiden yhdistely laskutoimituksilla}{248}
 \subcon{Parilliset ja parittomat funktiot}{249}
 \subcon{Jaksolliset funktiot}{250}
-\contentsline {section}{\numberline {IV.2}K\"a\"anteisfunktio. Implisiittifunktiot}{253}
+\contentsline {section}{\numberline {IV.2}K√§√§nteisfunktio. Implisiittifunktiot}{253}
 \subcon{Injektio, surjektio ja bijektio}{256}
-\subcon{Trigonometriset k‰‰nteisfunktiot}{256}
+\subcon{Trigonometriset k√§√§nteisfunktiot}{256}
 \subcon{Implisiittifunktio $y(x)$}{259}
 \subcon{Monihaaraiset implisiittifunktiot}{260}
 \subcon{Funktiot $\arcsin$, $\arccos$, $\arctan$}{262}
 \contentsline {section}{\numberline {IV.3}Kahden ja kolmen muuttujan funktiot}{265}
 \subcon{Kolmen muuttujan funktiot}{267}
-\subcon{Funktiot k‰yr‰viivaisissa koordinaatistoissa}{269}
+\subcon{Funktiot k√§yr√§viivaisissa koordinaatistoissa}{269}
 \subcon{Usean muuttujan funktioiden yhdistely}{272}
 \subcon{Kahden muuttujan implisiittifunktiot}{273}
-\contentsline {section}{\numberline {IV.4}Parametriset k\"ayr\"at ja pinnat}{276}
+\contentsline {section}{\numberline {IV.4}Parametriset k√§yr√§t ja pinnat}{276}
 \subcon{Liikerata}{278}
 \subcon{Parametriset pinnat}{281}
-\subcon{Pyˆr‰hdyspinnat}{283}
+\subcon{Py√∂r√§hdyspinnat}{283}
 \subcon{Viivoitinpinnat}{285}
 \contentsline {section}{\numberline {IV.5}*Funktioavaruus}{290}
 \contentsline {chapter}{\numberline {V}Jatkuvuus ja derivoituvuus}{293}
-\contentsline {section}{\numberline {V.1}Jatkuvuuden k\"asite}{294}
+\contentsline {section}{\numberline {V.1}Jatkuvuuden k√§site}{294}
 \subcon{Jatkuvien funktioiden yhdistely}{297}
 \subcon{Funktio $f(x)=\sqrt[m]{x}$}{299}
-\subcon{Jatkuvien funktioiden p‰‰lauseet}{300}
+\subcon{Jatkuvien funktioiden p√§√§lauseet}{300}
 \subcon{*Lauseen \ref{vaihtoehtoinen jatkuvuus} todistus}{303}
 \contentsline {section}{\numberline {V.2}Funktion raja-arvo}{307}
 \subcon{Funktion approksimointi raja-arvolla}{309}
@@ -144,54 +144,54 @@
 \subcon{Asymptootit}{315}
 \contentsline {section}{\numberline {V.3}Derivaatta}{318}
 \subcon{Derivaatta operaattorina}{320}
-\subcon{Derivoimiss‰‰nnˆt}{321}
+\subcon{Derivoimiss√§√§nn√∂t}{321}
 \subcon{Implisiittinen derivointi}{325}
 \subcon{Potenssisarjan derivointi}{326}
 \contentsline {section}{\numberline {V.4}Trigonometristen funktioiden derivointi}{332}
 \subcon{Kaarenpituus}{332}
 \subcon{Trigonometristen funktioiden derivaatat}{337}
-\contentsline {section}{\numberline {V.5}\"A\"ariarvot. Sileys}{340}
-\subcon{Paikalliset ‰‰riarvot}{340}
-\subcon{ƒ‰riarvoteht‰v‰t}{342}
+\contentsline {section}{\numberline {V.5}√Ñ√§riarvot. Sileys}{340}
+\subcon{Paikalliset √§√§riarvot}{340}
+\subcon{√Ñ√§riarvoteht√§v√§t}{342}
 \subcon{Toispuoliset derivaatat}{343}
 \subcon{Sileys}{345}
-\contentsline {section}{\numberline {V.6}Differentiaalilaskun v\"aliarvolause}{350}
+\contentsline {section}{\numberline {V.6}Differentiaalilaskun v√§liarvolause}{350}
 \subcon{Funktion monotonisuus}{351}
 \subcon{Kriittisen pisteen laatu}{352}
-\subcon{Funktion (k‰yr‰n) kaareutuvuus}{353}
+\subcon{Funktion (k√§yr√§n) kaareutuvuus}{353}
 \subcon{Lipschitz-jatkuvuus}{354}
-\subcon{Differentiaaliyht‰lˆ $y'=f(x)$. Integraalifunktio}{355}
-\subcon{l'Hospitalin s‰‰nnˆt}{358}
-\contentsline {section}{\numberline {V.7}Kiintopisteiteraatio. Newtonin menetelm\"a}{363}
+\subcon{Differentiaaliyht√§l√∂ $y'=f(x)$. Integraalifunktio}{355}
+\subcon{l'Hospitalin s√§√§nn√∂t}{358}
+\contentsline {section}{\numberline {V.7}Kiintopisteiteraatio. Newtonin menetelm√§}{363}
 \subcon{Asymptoottinen suppenemisnopeus}{367}
-\subcon{Newtonin menetelm‰}{369}
-\subcon{Sekanttimenetelm‰}{372}
+\subcon{Newtonin menetelm√§}{369}
+\subcon{Sekanttimenetelm√§}{372}
 \contentsline {section}{\numberline {V.8}Analyyttiset kompleksifunktiot}{376}
 \contentsline {section}{\numberline {V.9}*Jatkuvuuden logiikka}{380}
 \subcon{Avoimet, suljetut ja kompaktit joukot}{380}
 \subcon{Weierstrassin lause}{383}
 \subcon{Algebran peruslause}{384}
-\subcon{K‰‰nteisfunktion jatkuvuus}{385}
+\subcon{K√§√§nteisfunktion jatkuvuus}{385}
 \subcon{Tasainen jatkuvuus}{387}
 \contentsline {chapter}{\numberline {VI}Eksponenttifunktio}{391}
 \contentsline {section}{\numberline {VI.1}Yleinen eksponenttifunktio $E(x)$}{392}
 \subcon{*Eksponenttifunktion konstruktio}{395}
 \contentsline {section}{\numberline {VI.2}Funktiot $e^x$ ja $\qopname \relax o{ln}x$}{399}
 \subcon{Logaritmifunktio}{402}
-\contentsline {section}{\numberline {VI.3}Kompleksinen eksponenttifunktio. 
+\contentsline {section}{\numberline {VI.3}Kompleksinen eksponenttifunktio.
 Hyperboliset funktiot}{409}
 \subcon{Hyperboliset funktiot}{412}
 \subcon{Kompleksinen logaritmifunktio}{414}
-\contentsline {section}{\numberline {VI.4}Eksponenttifunktion sovellusesimerkkej\"a}{417}
+\contentsline {section}{\numberline {VI.4}Eksponenttifunktion sovellusesimerkkej√§}{417}
 \contentsline {chapter}{\numberline {VII}Yhden muuttujan differentiaalilaskenta}{421}
 \contentsline {section}{\numberline {VII.1}Differentiaali ja muutosnopeus}{422}
 \subcon{Muutosnopeus}{423}
-\subcon{Differentiaali ja differentiaaliyht‰lˆt}{425}
-\contentsline {section}{\numberline {VII.2}K\"ayr\"an tangentti ja normaali}{430}
-\subcon{Parametrisen k‰yr‰n tangentti}{433}
+\subcon{Differentiaali ja differentiaaliyht√§l√∂t}{425}
+\contentsline {section}{\numberline {VII.2}K√§yr√§n tangentti ja normaali}{430}
+\subcon{Parametrisen k√§yr√§n tangentti}{433}
 \subcon{Nopeusvektori}{435}
-\contentsline {section}{\numberline {VII.3}K\"ayr\"an kaarevuus}{440}
-\subcon{Kaarevuuskeskiˆ. Evoluutta}{443}
+\contentsline {section}{\numberline {VII.3}K√§yr√§n kaarevuus}{440}
+\subcon{Kaarevuuskeski√∂. Evoluutta}{443}
 \subcon{Kaarevuus fysiikassa: kiihtyvyys}{445}
 \contentsline {section}{\numberline {VII.4}Taylorin polynomit ja Taylorin lause}{450}
 \subcon{Taylorin lause}{452}
@@ -200,7 +200,7 @@ Hyperboliset funktiot}{409}
 \subcon{Taylorin lauseen todistus}{459}
 \contentsline {section}{\numberline {VII.5}Taylorin polynomien sovelluksia}{462}
 \subcon{Funktion approksimointi}{463}
-\subcon{Paikalliset ‰‰riarvot}{465}
+\subcon{Paikalliset √§√§riarvot}{465}
 \subcon{Funktio $\tfrac{f(x)}{g(x)}=\tfrac{0}{0}\,$, kun $x=a$}{466}
 \subcon{Differenssiapproksimaatiot}{468}
 \contentsline {section}{\numberline {VII.7}Interpolaatiopolynomit}{473}
@@ -209,26 +209,26 @@ Hyperboliset funktiot}{409}
 \subcon{*Yleistetty polynomi-interpolaatio}{480}
 \contentsline {chapter}{\numberline {VIII}Integraali}{485}
 \contentsline {section}{\numberline {VIII.1}Integraalifunktio}{486}
-\subcon{Kolme yleist‰ integroimiss‰‰ntˆ‰}{490}
+\subcon{Kolme yleist√§ integroimiss√§√§nt√∂√§}{490}
 \contentsline {section}{\numberline {VIII.2}Osittaisintegrointi ja sijoitus}{493}
 \subcon{Reduktiokaavat}{494}
 \subcon{Sijoitusmenettely}{496}
-\contentsline {section}{\numberline {VIII.3}Osamurtokehitelm\"at. Sarjamenetelm\"a}{501}
+\contentsline {section}{\numberline {VIII.3}Osamurtokehitelm√§t. Sarjamenetelm√§}{501}
 \subcon{Rationaalisiksi palautuvia integraaleja}{504}
-\subcon{Integroinnin sarjamenetelm‰}{507}
+\subcon{Integroinnin sarjamenetelm√§}{507}
 \contentsline {section}{\numberline {VIII.4}Integraalifunktion numeerinen laskeminen. \\
-M\"a\"ar\"atty integraali}{511}
-\subcon{M‰‰r‰tty integraali}{516}
+M√§√§r√§tty integraali}{511}
+\subcon{M√§√§r√§tty integraali}{516}
 \subcon{Additiivisuus. Lineaarisuus. Vertailuperiaate}{518}
 \contentsline {section}{\numberline {VIII.5}Riemannin integraali}{523}
-\subcon{*Riemannin yl‰- ja alaintegraalit}{528}
+\subcon{*Riemannin yl√§- ja alaintegraalit}{528}
 \contentsline {section}{\numberline {VIII.6}Analyysin peruslause}{534}
 \subcon{Funktion $\int_{g_1(x)}^{g_2(x)} f(t)\,dt$ derivaatta}{537}
-\subcon{Osittaisintegrointi ja sijoitus m‰‰r‰tyss‰ integraalissa}{538}
-\subcon{Integraalilaskun v‰liarvolause}{540}
+\subcon{Osittaisintegrointi ja sijoitus m√§√§r√§tyss√§ integraalissa}{538}
+\subcon{Integraalilaskun v√§liarvolause}{540}
 \subcon{Taylorin lauseen integraalimuoto}{541}
 \contentsline {section}{\numberline {VIII.7}Riemannin integraalin laajennukset}{544}
-\subcon{Ep‰oleellisten integraalien vertailu}{548}
+\subcon{Ep√§oleellisten integraalien vertailu}{548}
 \subcon{Cauchyn kriteeri integraaleille}{549}
 \subcon{Integraalit ja sarjat}{551}
 \contentsline {section}{\numberline {VIII.8}Pinta-ala ja kaarenpituus}{556}
@@ -236,87 +236,87 @@ M\"a\"ar\"atty integraali}{511}
 \contentsline {section}{\numberline {VIII.9}Numeerinen integrointi}{565}
 \subcon{Virhearvioista}{568}
 \subcon{Sovellusesimerkki: Adaptiivinen Simpson}{571}
-\contentsline {chapter}{\numberline {IX}Differentiaaliyht\"al\"ot}{575}
-\contentsline {section}{\numberline {IX.1}Differentiaaliyht\"al\"oiden perusk\"asitteet}{576}
-\subcon{Yksitt‰isratkaisu. Yleinen ratkaisu}{576}
+\contentsline {chapter}{\numberline {IX}Differentiaaliyht√§l√∂t}{575}
+\contentsline {section}{\numberline {IX.1}Differentiaaliyht√§l√∂iden perusk√§sitteet}{576}
+\subcon{Yksitt√§isratkaisu. Yleinen ratkaisu}{576}
 \subcon{Erikoisratkaisut}{578}
-\subcon{K‰yr‰parven differentiaaliyht‰lˆ}{578}
+\subcon{K√§yr√§parven differentiaaliyht√§l√∂}{578}
 \subcon{Kohtisuorat leikkaajat}{579}
 \subcon{Alku- ja reunaehdot}{580}
-\subcon{Differentiaaliyht‰lˆsysteemit}{581}
-\subcon{Ratkaisujen s‰‰nnˆllisyys}{582}
-\subcon{Ratkaiseminen kvadratuureilla}{583} 
-\contentsline {section}{\numberline {IX.2}Separoituva differentiaaliyht\"al\"o}{587}
-\subcon{Autonominen differentiaaliyht‰lˆ}{591}
-\subcon{Differentiaaliyht‰lˆ $y'=f(y/x)$}{593}
-\subcon{Differentiaaliyht‰lˆ $y'=f(ax+by+c)$}{594}
+\subcon{Differentiaaliyht√§l√∂systeemit}{581}
+\subcon{Ratkaisujen s√§√§nn√∂llisyys}{582}
+\subcon{Ratkaiseminen kvadratuureilla}{583}
+\contentsline {section}{\numberline {IX.2}Separoituva differentiaaliyht√§l√∂}{587}
+\subcon{Autonominen differentiaaliyht√§l√∂}{591}
+\subcon{Differentiaaliyht√§l√∂ $y'=f(y/x)$}{593}
+\subcon{Differentiaaliyht√§l√∂ $y'=f(ax+by+c)$}{594}
 \contentsline {section}{\numberline {IX.3}Palautuvat toisen kertaluvun DY:t}{597}
-\subcon{Differentiaaliyht‰lˆ $y''=f(y,y')$}{597}
-\subcon{Differentiaaliyht‰lˆ $y''=f(y)$}{599}
+\subcon{Differentiaaliyht√§l√∂ $y''=f(y,y')$}{597}
+\subcon{Differentiaaliyht√§l√∂ $y''=f(y)$}{599}
 \subcon{Sovellusesimerkki: Ketjuviiva}{601}
-\contentsline {section}{\numberline {IX.4}Ensimm\"aisen kertaluvun lineaarinen DY}{606}
-\subcon{Integroivan tekij‰n menettely}{609}
-\subcon{Vakiokertoiminen yht‰lˆ}{610}
+\contentsline {section}{\numberline {IX.4}Ensimm√§isen kertaluvun lineaarinen DY}{606}
+\subcon{Integroivan tekij√§n menettely}{609}
+\subcon{Vakiokertoiminen yht√§l√∂}{610}
 \subcon{Jaksolliset ratkaisut}{612}
-\subcon{Sovellusesimerkki: S‰hkˆpiiri RC}{613}
-\contentsline {section}{\numberline {IX.5}Lineaariset, vakiokertoimiset DY:t. \\ 
-Eulerin differentiaaliyht\"al\"o}{617}
-\subcon{T‰ydellinen vakiokertoiminen yht‰lˆ}{619}
+\subcon{Sovellusesimerkki: S√§hk√∂piiri RC}{613}
+\contentsline {section}{\numberline {IX.5}Lineaariset, vakiokertoimiset DY:t. \\
+Eulerin differentiaaliyht√§l√∂}{617}
+\subcon{T√§ydellinen vakiokertoiminen yht√§l√∂}{619}
 \subcon{Kompleksiarvoiset ratkaisut}{621}
-\subcon{Eulerin differentiaaliyht‰lˆ}{623}
+\subcon{Eulerin differentiaaliyht√§l√∂}{623}
 \subcon{Korkeamman kertaluvun vakiokertoimiset DY:t}{625}
 \contentsline {section}{\numberline {IX.6}*Yleinen 2.\ kertaluvun lineaarinen DY}{628}
-\subcon{Homogeeninen yht‰lˆ: Ratkaisuavaruus}{628}
-\subcon{Homogeeninen yht‰lˆ: Ratkaiseminen kvadratuureilla}{629}
-\subcon{Homogeeninen yht‰lˆ: Ratkeavuusteoria}{631}
-\subcon{T‰ydellinen yht‰lˆ: vakioiden variointi}{635}
-\subcon{Tunnettuja differentiaaliyht‰lˆit‰}{636}
+\subcon{Homogeeninen yht√§l√∂: Ratkaisuavaruus}{628}
+\subcon{Homogeeninen yht√§l√∂: Ratkaiseminen kvadratuureilla}{629}
+\subcon{Homogeeninen yht√§l√∂: Ratkeavuusteoria}{631}
+\subcon{T√§ydellinen yht√§l√∂: vakioiden variointi}{635}
+\subcon{Tunnettuja differentiaaliyht√§l√∂it√§}{636}
 \subcon{Sarjaratkaisut}{637}
-\contentsline {section}{\numberline {IX.7}Differentiaaliyht\"al\"oiden numeeriset
-ratkaisumenetelm\"at}{641}
-\subcon{Eulerin menetelm‰}{642}
-\subcon{Eulerin menetelm‰n virhe}{643}
-\subcon{Differentiaaliyht‰lˆsysteemit}{645}
-\subcon{*Muita askelmenetelmi‰}{646}
-\contentsline {section}{\numberline {IX.8}*Picardin--Lindel\"ofin lause}{649}
-\subcon{Differentiaaliyht‰lˆsysteemin ratkeavuus}{654}
+\contentsline {section}{\numberline {IX.7}Differentiaaliyht√§l√∂iden numeeriset
+ratkaisumenetelm√§t}{641}
+\subcon{Eulerin menetelm√§}{642}
+\subcon{Eulerin menetelm√§n virhe}{643}
+\subcon{Differentiaaliyht√§l√∂systeemit}{645}
+\subcon{*Muita askelmenetelmi√§}{646}
+\contentsline {section}{\numberline {IX.8}*Picardin--Lindel√∂fin lause}{649}
+\subcon{Differentiaaliyht√§l√∂systeemin ratkeavuus}{654}
 \contentsline {chapter}{\numberline {X}Matriisit}{657}
 \contentsline {section}{\numberline {X.1}Matriisialgebra}{658}
 \subcon{Matriisitulo}{662}
 \subcon{Matriisin transpoosi}{664}
 \subcon{Vaakavektorit --- euklidinen skalaaritulo ja normi}{665}
 \subcon{Kompleksiset vektorit ja matriisit}{666}
-\contentsline {section}{\numberline {X.2}Neli\"omatriisit. K\"a\"anteismatriisi}{670}
-\subcon{Neliˆmatriisin s‰‰nnˆllisyyskriteerit}{672}
+\contentsline {section}{\numberline {X.2}Neli√∂matriisit. K√§√§nteismatriisi}{670}
+\subcon{Neli√∂matriisin s√§√§nn√∂llisyyskriteerit}{672}
 \subcon{Ortogonaalimatriisit}{674}
 \subcon{Permutaatiomatriisi $\mI_p$}{674}
 \subcon{Kolmiomatriisit}{676}
 \contentsline {section}{\numberline {X.3}Gaussin algoritmi}{681}
-\subcon{Gaussin algoritmin tyˆm‰‰r‰}{686}
-\subcon{Neliˆmatriisin $LU$-hajotelma}{687}
-\subcon{K‰‰nteismatriisin laskeminen}{689}
+\subcon{Gaussin algoritmin ty√∂m√§√§r√§}{686}
+\subcon{Neli√∂matriisin $LU$-hajotelma}{687}
+\subcon{K√§√§nteismatriisin laskeminen}{689}
 \contentsline {section}{\numberline {X.4}Tuettu Gaussin algoritmi. Singulaariset
-yht\"al\"oryhm\"at}{693}
-\subcon{Neliˆmatriisin yleinen tulohajotelma}{696}
-\subcon{S‰‰nnˆllisyysaste}{697}
-\subcon{Yht‰lˆryhm‰ kokoa $m \times n$}{698}
-\subcon{Lauseen \ref{s‰‰nnˆllisyyskriteerit} todistus}{700}
+yht√§l√∂ryhm√§t}{693}
+\subcon{Neli√∂matriisin yleinen tulohajotelma}{696}
+\subcon{S√§√§nn√∂llisyysaste}{697}
+\subcon{Yht√§l√∂ryhm√§ kokoa $m \times n$}{698}
+\subcon{Lauseen \ref{s√§√§nn√∂llisyyskriteerit} todistus}{700}
 \contentsline {section}{\numberline {X.5}Determinantti}{703}
 \subcon{Matriisin determinantti}{705}
 \subcon{Determinantin laskukaavat}{707}
-\subcon{Cramerin s‰‰ntˆ}{711}
+\subcon{Cramerin s√§√§nt√∂}{711}
 \contentsline {section}{\numberline {X.6}Lineaarikuvaukset}{714}
-\subcon{Kannan vaihto $\R^n$:ss‰}{716}
+\subcon{Kannan vaihto $\R^n$:ss√§}{716}
 \subcon{Koordinaatiston kierto}{718}
 \subcon{$\R^n$:n aliavaruudet}{719}
-\subcon{*Ortogonaaliprojektio $\R^n$:ss‰}{721}
+\subcon{*Ortogonaaliprojektio $\R^n$:ss√§}{721}
 \contentsline {section}{\numberline {X.7}Affiinikuvaukset. Geometriset kuvaukset}{726}
 \subcon{Geometriset kuvaukset}{727}
 \subcon{*$\R^n$:n geometriaa}{730}
-\subcon{*Lineaarinen optimointi $\R^n$:ss‰}{732}
-\contentsline {section}{\numberline {X.8}Lineaaristen yht\"al\"oryhmien
-sovellusesimerkkej\"a}{736}
-\subcon{S‰hkˆpiiri: Vastusverkko}{736}
+\subcon{*Lineaarinen optimointi $\R^n$:ss√§}{732}
+\contentsline {section}{\numberline {X.8}Lineaaristen yht√§l√∂ryhmien
+sovellusesimerkkej√§}{736}
+\subcon{S√§hk√∂piiri: Vastusverkko}{736}
 \subcon{Ristikkorakenne}{739}
 \contentsline {chapter}{\numberline {XI}Usean muuttujan differentiaalilaskenta}{745}
 \contentsline {section}{\numberline {XI.1}Usean muuttujan funktiot:
@@ -328,52 +328,52 @@ Jatkuvuus ja raja-arvot}{746}
 \contentsline {section}{\numberline {XI.2}Osittaisderivaatat}{754}
 \subcon{Monen muuttujan osittaisderivaatat}{756}
 \subcon{Osittaisdifferentiaalioperaattorit}{757}
-\subcon{Ketjus‰‰nnˆt}{759}
+\subcon{Ketjus√§√§nn√∂t}{759}
 \subcon{Implisiittinen (osittais)derivointi}{760}
 \subcon{Derivointi integraalin alla}{761}
-\subcon{Osittaisderivoinnin s‰‰ntˆjen perustelut}{762}
+\subcon{Osittaisderivoinnin s√§√§nt√∂jen perustelut}{762}
 \contentsline {section}{\numberline {XI.3}Gradientti}{769}
 \subcon{Monen muuttujan gradientti}{771}
 \subcon{Differentioituvuus}{772}
 \subcon{Suunnatut derivaatat}{774}
 \subcon{Tasa-arvopinnat}{776}
 \subcon{Parametrisen pinnan normaali}{778}
-\contentsline {section}{\numberline {XI.4}Vektorikent\"at: Divergenssi ja roottori}{782}
-\subcon{Gradienttikent‰t}{783}
+\contentsline {section}{\numberline {XI.4}Vektorikent√§t: Divergenssi ja roottori}{782}
+\subcon{Gradienttikent√§t}{783}
 \subcon{Divergenssi ja roottori. Laplacen operaattori}{783}
 \subcon{Operaattorit $\nabla\star$ ja $\vec u\cdot\nabla$}{785}
-\subcon{Vektorikent‰n l‰hde. Poissonin ja Laplacen yht‰lˆt}{785}
-\subcon{Pyˆrrekentt‰. Maxwellin yht‰lˆt}{787}
+\subcon{Vektorikent√§n l√§hde. Poissonin ja Laplacen yht√§l√∂t}{785}
+\subcon{Py√∂rrekentt√§. Maxwellin yht√§l√∂t}{787}
 \subcon{Roottori tasossa}{788}
-\subcon{*Navier--Stokesin virtausyht‰lˆt}{788}
+\subcon{*Navier--Stokesin virtausyht√§l√∂t}{788}
 \contentsline {section}{\numberline {XI.5}Operaattorit grad, div, rot ja $\Delta $ \\
-k\"ayr\"aviivaisissa koordinaatistoissa}{791}
-\contentsline {section}{\numberline {XI.6}Ep\"alineaariset yht\"al\"oryhm\"at:
-Jacobin matriisi \\ ja Newtonin menetelm\"a}{798}
-\subcon{Newtonin menetelm‰ yht‰lˆryhmille}{800}
-\subcon{Suuret yht‰lˆryhm‰t. Jatkamismenettely}{803}
+k√§yr√§viivaisissa koordinaatistoissa}{791}
+\contentsline {section}{\numberline {XI.6}Ep√§lineaariset yht√§l√∂ryhm√§t:
+Jacobin matriisi \\ ja Newtonin menetelm√§}{798}
+\subcon{Newtonin menetelm√§ yht√§l√∂ryhmille}{800}
+\subcon{Suuret yht√§l√∂ryhm√§t. Jatkamismenettely}{803}
 \subcon{Yksinkertaistettu Newtonin iteraatio}{804}
-\contentsline {section}{\numberline {XI.7}K\"a\"anteisfunktiolause. Implisiittifunktiolause. \\
+\contentsline {section}{\numberline {XI.7}K√§√§nteisfunktiolause. Implisiittifunktiolause. \\
 Kontraktiokuvauslause}{808}
-\subcon{Paikallinen k‰‰nteisfunktio. K‰‰nteisfunktiolause}{808}
+\subcon{Paikallinen k√§√§nteisfunktio. K√§√§nteisfunktiolause}{808}
 \subcon{Implisiittifunktiolause}{811}
 \subcon{*Kontraktiokuvauslause}{813}
-\subcon{*K‰‰nteisfunktiolauseen todistus}{815}
-\contentsline {section}{\numberline {XI.8}Usean muuttujan \"a\"ariarvoteht\"av\"at}{821}
+\subcon{*K√§√§nteisfunktiolauseen todistus}{815}
+\contentsline {section}{\numberline {XI.8}Usean muuttujan √§√§riarvoteht√§v√§t}{821}
 \subcon{Rajoitettu optimointi}{822}
-\subcon{Lagrangen kertojien menetelm‰}{825}
+\subcon{Lagrangen kertojien menetelm√§}{825}
 \contentsline {section}{\numberline {XI.9}Usean muuttujan Taylorin polynomit}{834}
 \subcon{Monen muuttujan Taylorin polynomit}{837}
 \subcon{Polynomi $T_2(\mx,\ma)$ -- Hessen matriisi}{838}
-\contentsline {chapter}{\numberline {XII}Matriisin ominaisarvot ja neli\"omuodot}{843}
+\contentsline {chapter}{\numberline {XII}Matriisin ominaisarvot ja neli√∂muodot}{843}
 \contentsline {section}{\numberline {XII.1}Matriisin ominaisarvot}{844}
 \subcon{Symmetrinen matriisi}{850}
 \subcon{Diagonalisoituva matriisi}{851}
-\contentsline {section}{\numberline {XII.2}Neli\"omuotojen luokittelu}{856}
-\subcon{Neliˆmuodon diagonalisointi}{858}
-\subcon{Nelˆmuodon p‰‰akselikoordinaatisto}{859}
+\contentsline {section}{\numberline {XII.2}Neli√∂muotojen luokittelu}{856}
+\subcon{Neli√∂muodon diagonalisointi}{858}
+\subcon{Nel√∂muodon p√§√§akselikoordinaatisto}{859}
 \subcon{Sovellus 1: Funktion kriittisen pisteen luokittelu}{860}
-\subcon{Sovellus 2: Toisen asteen k‰yr‰t ja pinnat}{863} 
+\subcon{Sovellus 2: Toisen asteen k√§yr√§t ja pinnat}{863}
 \contentsline {section}{\numberline {XII.3}Pinnan kaarevuus}{870}
 \contentsline {section}{\numberline {XII.4}*Tensorit, vektorit ja skalaarit}{877}
 \subcon{Vektorit}{879}
@@ -385,49 +385,49 @@ Kontraktiokuvauslause}{808}
 \subcon{Lineaarisuus. Additiivisuus. Vertailuperiaate}{887}
 \subcon{Rajoitetun joukon mitta}{888}
 \subcon{Siirto-, peilaus- ja kiertoinvarianssi}{890}
-\subcon{Keskipistes‰‰ntˆ}{891}
+\subcon{Keskipistes√§√§nt√∂}{891}
 \subcon{$\R$:n pituusmitta}{893}
 \contentsline {section}{\numberline {XIII.2}Tasointegraalien laskutekniikka}{896}
-\subcon{Ep‰oleelliset tasointegraalit}{901}
+\subcon{Ep√§oleelliset tasointegraalit}{901}
 \subcon{Fubinin lause}{904}
 \contentsline {section}{\numberline {XIII.3}Avaruusintegraalit}{908}
-\subcon{Avaruusintegraalit $\R^n$:ss‰}{913}
-\subcon{*Suuntaiss‰rmiˆn $K\subset\R^n$ tilavuus}{914}
+\subcon{Avaruusintegraalit $\R^n$:ss√§}{913}
+\subcon{*Suuntaiss√§rmi√∂n $K\subset\R^n$ tilavuus}{914}
 \contentsline {section}{\numberline {XIII.4}Taso- ja avaruusintegraalien muuntaminen}{917}
 \subcon{Muuntosuhde}{918}
-\subcon{Muuntosuhde $\R$:ss‰}{920}
-\subcon{Muuntosuhde $\R^n$:ss‰}{921}
-\subcon{Integraalit k‰yr‰viivaisissa koordinaatistoissa}{924}
+\subcon{Muuntosuhde $\R$:ss√§}{920}
+\subcon{Muuntosuhde $\R^n$:ss√§}{921}
+\subcon{Integraalit k√§yr√§viivaisissa koordinaatistoissa}{924}
 \contentsline {section}{\numberline {XIII.5}Integraalien sovellukset: Tiheys ja
-kokonaism\"a\"ar\"a}{927}
-\subcon{Tiheys ja kokonaism‰‰r‰}{927}
-\subcon{Kokonaism‰‰r‰n aksioomat}{930}
+kokonaism√§√§r√§}{927}
+\subcon{Tiheys ja kokonaism√§√§r√§}{927}
+\subcon{Kokonaism√§√§r√§n aksioomat}{930}
 \subcon{Momentti}{930}
-\subcon{Painopiste. Keskiˆ}{932}
-\subcon{Pappuksen s‰‰ntˆ}{933}
+\subcon{Painopiste. Keski√∂}{932}
+\subcon{Pappuksen s√§√§nt√∂}{933}
 \subcon{Massamitta. Jordan-mitan yleistykset}{934}
 \subcon{Hitausmomentti}{935}
 \subcon{*Hitaustensori}{936}
-\subcon{*Todenn‰kˆisyysmitta}{938}
+\subcon{*Todenn√§k√∂isyysmitta}{938}
 \contentsline {section}{\numberline {XIII.6}Viivaintegraalit}{942}
 \subcon{Kaarenpituusmitta}{943}
 \subcon{Kaarenpituusparametrisaatio}{944}
 \subcon{Viivaintegraalien laskutekniikka}{945}
-\subcon{Tasok‰yr‰t}{948}
+\subcon{Tasok√§yr√§t}{948}
 \contentsline {section}{\numberline {XIII.7}Pintaintegraalit}{951}
 \subcon{Avaruuskulma}{956}
 \contentsline {chapter}{\numberline {XIV}Gaussin ja Stokesin lauseet}{959}
-\contentsline {section}{\numberline {XIV.1}Vektorikent\"at ja polkuintegraalit}{960}
+\contentsline {section}{\numberline {XIV.1}Vektorikent√§t ja polkuintegraalit}{960}
 \subcon{Polkuintegraali $\int_p \vec F \cdot d\vec r$}{962}
-\subcon{Gradienttikentt‰ ja tyˆintegraali}{964}
+\subcon{Gradienttikentt√§ ja ty√∂integraali}{964}
 \subcon{Vektoriarvoiset polkuintegraalit}{965}
 \contentsline {section}{\numberline {XIV.2}Gaussin lause}{967}
 \subcon{Yleistetty Gaussin lause}{974}
 \contentsline {section}{\numberline {XIV.3}Gaussin lauseen sovelluksia}{976}
-\subcon{Sovellusesimerkki: Massan s‰ilymislaki virtauksessa}{976}
-\subcon{Sovellusesimerkki: L‰mmˆn johtuminen}{978}
-\subcon{*Vektorikenttien ep‰jatkuvuudet}{979}
+\subcon{Sovellusesimerkki: Massan s√§ilymislaki virtauksessa}{976}
+\subcon{Sovellusesimerkki: L√§mm√∂n johtuminen}{978}
+\subcon{*Vektorikenttien ep√§jatkuvuudet}{979}
 \contentsline {section}{\numberline {XIV.4}Stokesin lause}{986}
 \subcon{Yleistetty Stokesin lause}{991}
-\contentsline {section}{\numberline {XIV.5}Py\"orteet\"on vektorikentt\"a}{994}
-\subcon{Avaruuden pyˆrteetˆn vektorikentt‰}{998}
+\contentsline {section}{\numberline {XIV.5}Py√∂rteet√∂n vektorikentt√§}{994}
+\subcon{Avaruuden py√∂rteet√∂n vektorikentt√§}{998}

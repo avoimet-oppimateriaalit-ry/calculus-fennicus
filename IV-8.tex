@@ -1,34 +1,34 @@
 \section{*Funktioavaruus} \label{funktioavaruus}
 \alku
 
-Tarkastellaan \pain{samassa} joukossa $A$ m‰‰riteltyj‰ yhden, kahden tai kolmen reaalimuutujan
-reaaliarvoisia funktioita ja merkit‰‰n n‰iden joukkoa $V$:ll‰:
+Tarkastellaan \pain{samassa} joukossa $A$ m√§√§riteltyj√§ yhden, kahden tai kolmen reaalimuutujan
+reaaliarvoisia funktioita ja merkit√§√§n n√§iden joukkoa $V$:ll√§:
 \[ 
 V\ =\ \{\,\text{funktiot}\ f:\ A \map \R\,\}, 
 \]
-Joukossa $V$ on m‰‰ritelty funktioiden yhteenlasku $f,g \map f+g$ ja skalaarilla kertominen
-$f \map \lambda f$ aiemmin kerrotulla tavalla (M‰‰ritelm‰n \ref{funktioiden yhdistelys‰‰nnˆt}
-s‰‰nnˆt (1) ja (2). kun $A \subset \R$). N‰iden laskuoperaatioiden perusteella $V$ on
-mahdollista tulkita vektoriavaruudeksi. Samassa joukossa m‰‰ritellyt funktiot voidaan siis 
-mielt‰‰ 'vektoreiksi' (!), jolloin puhutaan \kor{funktioavaruudesta} (engl.\ function space). 
-T‰llaisen avaruuden nolla-alkio on nk.\ (algebrallinen) \kor{nollafunktio}, joka m‰‰ritell‰‰n
+Joukossa $V$ on m√§√§ritelty funktioiden yhteenlasku $f,g \map f+g$ ja skalaarilla kertominen
+$f \map \lambda f$ aiemmin kerrotulla tavalla (M√§√§ritelm√§n \ref{funktioiden yhdistelys√§√§nn√∂t}
+s√§√§nn√∂t (1) ja (2). kun $A \subset \R$). N√§iden laskuoperaatioiden perusteella $V$ on
+mahdollista tulkita vektoriavaruudeksi. Samassa joukossa m√§√§ritellyt funktiot voidaan siis 
+mielt√§√§ 'vektoreiksi' (!), jolloin puhutaan \kor{funktioavaruudesta} (engl.\ function space). 
+T√§llaisen avaruuden nolla-alkio on nk.\ (algebrallinen) \kor{nollafunktio}, joka m√§√§ritell√§√§n
 \[ 
 \mathbf{0}(x) = 0\,\ \forall x \in A .
 \]
-ƒ‰rellinen funktiojoukko $\{ f_i,\ i = 1 \ldots n\} \subset V$ on (albegrallisesti) 
-\kor{lineaarisesti riippumaton}, jos p‰tee
+√Ñ√§rellinen funktiojoukko $\{ f_i,\ i = 1 \ldots n\} \subset V$ on (albegrallisesti) 
+\kor{lineaarisesti riippumaton}, jos p√§tee
 \[ 
 \sum_{i=1}^n \lambda_i f_i = \mathbf{0} \qimpl \lambda_i = 0,\ i = 1 \ldots n. 
 \]
-\begin{Exa} Enint‰‰n kolmannen asteen polynomit (m‰‰rittelyjoukko $= \R$) muodostavat 
-funktioiden algebrallisten yhdistelys‰‰ntˆjen perusteella funktioavaruuden
+\begin{Exa} Enint√§√§n kolmannen asteen polynomit (m√§√§rittelyjoukko $= \R$) muodostavat 
+funktioiden algebrallisten yhdistelys√§√§nt√∂jen perusteella funktioavaruuden
 \[
 V\ =\ \{ f = \lambda_1 f_1 + \lambda_2 f_2 + \lambda_3 f_3 + \lambda_4 f_4 
                                                                    \mid \lambda_i \in \R \},
 \]
-miss‰ $f_1(x) = 1$ ('ykkˆsfunktio'), $f_2(x) = x$ (identiteettifunktio), $f_3(x) = x^2$, ja 
-$f_4(x) = x^3$. Algebran peruslauseesta (vrt.\ Luku \ref{III-3}) on helposti p‰‰telt‰viss‰, 
-ett‰ funktiot $f_i$ ovat lineaarisesti riippumattomia, joten $\{f_i,\ i = 1 \ldots 4\}$ on 
+miss√§ $f_1(x) = 1$ ('ykk√∂sfunktio'), $f_2(x) = x$ (identiteettifunktio), $f_3(x) = x^2$, ja 
+$f_4(x) = x^3$. Algebran peruslauseesta (vrt.\ Luku \ref{III-3}) on helposti p√§√§telt√§viss√§, 
+ett√§ funktiot $f_i$ ovat lineaarisesti riippumattomia, joten $\{f_i,\ i = 1 \ldots 4\}$ on 
 $V$:n kanta. Siis $V$ on neliulotteinen vektoriavaruus: dim $V = 4$. \loppu \end{Exa}
 \begin{Exa} Funktiot muotoa $f(x)=c_1\sin x+c_2\cos x,\ c_1,c_2\in\R$ muodostavat 2-ulotteisen
 vektoriavaruuden, luonnollisena kantana $\{\sin x,\cos x\}$. \loppu
@@ -37,29 +37,29 @@ vektoriavaruuden, luonnollisena kantana $\{\sin x,\cos x\}$. \loppu
 \[
 V=\{f(x)=c_1+c_2\cos^2 x+c_3\sin^2 x,\ c_i\in\R\}
 \]
-ei ole 3-ulotteinen, sill‰ funktiosysteemi $\{f_1\,,f_2\,,f_3\}=\{1,\cos^2 x,\sin^2 x\}$ on 
+ei ole 3-ulotteinen, sill√§ funktiosysteemi $\{f_1\,,f_2\,,f_3\}=\{1,\cos^2 x,\sin^2 x\}$ on 
 lineaarisesti riippuva:
 \[
 f_1-f_2-f_3=\mathbf{0}.
 \]
-Mik‰ tahansa pari mainitusta kolmesta funktiosta sen sijaan on lineaarisesti riippumaton,
-joten $V$ on 2-ulotteinen, kantana esim.\ $\{1,\cos^2 x\}$. Er‰s $V$:n 1-ulotteinen aliavaruus
+Mik√§ tahansa pari mainitusta kolmesta funktiosta sen sijaan on lineaarisesti riippumaton,
+joten $V$ on 2-ulotteinen, kantana esim.\ $\{1,\cos^2 x\}$. Er√§s $V$:n 1-ulotteinen aliavaruus
 on
 \[
 W=\{\lambda\cos 2x \mid \lambda\in\R\},
 \]
-sill‰ $\,\cos 2x=2f_2-f_1 \in V$. \loppu
+sill√§ $\,\cos 2x=2f_2-f_1 \in V$. \loppu
 \end{Exa}
 \begin{Exa} \label{polynomiavaruus}
 Funktioavaruus
 \[
 V=\{f(x,y)=c_1+c_2x+c_3y+c_4x^2+c_5xy+c_6y^2,\ c_i\in\R\}
 \]
-koostuu kahden muuttujan polynomeista enint‰‰n astetta $2$ ja t‰m‰n aliavaruus
+koostuu kahden muuttujan polynomeista enint√§√§n astetta $2$ ja t√§m√§n aliavaruus
 \[
 W=\{f(x,y)=c_1+c_2x+c_3y,\ c_i\in\R\}
 \]
-enint‰‰n ensimm‰isen asteen polynomeista. Funktiosysteemi $\{1,x,y,x^2,xy,y^2\}$ on 
+enint√§√§n ensimm√§isen asteen polynomeista. Funktiosysteemi $\{1,x,y,x^2,xy,y^2\}$ on 
 lineaarisesti riippumaton (Harj.teht. \ref{H-IV-8: polynomit}), joten dim $V=6$ ja dim $W=3$.
 \loppu
 \end{Exa} 
@@ -68,31 +68,31 @@ lineaarisesti riippumaton (Harj.teht. \ref{H-IV-8: polynomit}), joten dim $V=6$ 
 \begin{enumerate}
 
 \item
-N‰yt‰, ett‰ funktiot $f_1(x)=x$ ja $f_2(x)=\abs{x}$ ovat lineaarisesti riippumattomat, jos
-m‰‰rittelyjoukkona on v‰li $[-1,1]$ ja lineaarisesti riippuvat, jos m‰‰rittelyjoukko on
-v‰li $[0,1]$.
+N√§yt√§, ett√§ funktiot $f_1(x)=x$ ja $f_2(x)=\abs{x}$ ovat lineaarisesti riippumattomat, jos
+m√§√§rittelyjoukkona on v√§li $[-1,1]$ ja lineaarisesti riippuvat, jos m√§√§rittelyjoukko on
+v√§li $[0,1]$.
 
 \item
-Montako alkiota on joukossa $A\subset\R$ oltava, jotta $A$:ssa m‰‰ritellyt funktiot
+Montako alkiota on joukossa $A\subset\R$ oltava, jotta $A$:ssa m√§√§ritellyt funktiot
 $f_i(x)=x^{i-1},\ i=1 \ldots n$ ovat lineaarisesti riippumattomat?
 
 \item
-a) N‰yt‰, ett‰ $\{1,\sin x,\sin^2 x,\sin^3 x\}$ on er‰‰n 4-ulotteisen funktioavaruuden
-$V$ kanta (funktioiden m‰‰rittelyjoukko $=\R$). \ b) Sik‰li kuin 
-$f(x)=2+\cos 2x-\sin 3x \in V$, m‰‰r‰‰ $f$:n koordinaatit (kertoimet) mainitussa kannassa.
+a) N√§yt√§, ett√§ $\{1,\sin x,\sin^2 x,\sin^3 x\}$ on er√§√§n 4-ulotteisen funktioavaruuden
+$V$ kanta (funktioiden m√§√§rittelyjoukko $=\R$). \ b) Sik√§li kuin 
+$f(x)=2+\cos 2x-\sin 3x \in V$, m√§√§r√§√§ $f$:n koordinaatit (kertoimet) mainitussa kannassa.
 
 \item \label{H-IV-8: polynomit}
-N‰yt‰, ett‰ Esimerkin \ref{polynomiavaruus} polynomiavaruus $V$ on 6-ulotteinen, ts.\ n‰yt‰, ett‰
+N√§yt√§, ett√§ Esimerkin \ref{polynomiavaruus} polynomiavaruus $V$ on 6-ulotteinen, ts.\ n√§yt√§, ett√§
 $c_1+c_2x+c_3y+c_4x^2+c_5xy+c_6y^2=0\,\ \forall\,(x,y)\in\Rkaksi\,\ \impl\,\ c_1 = \ldots 
 =c_6=0$.
 
-\item (*) Olkoon $V=\{f(x)=c_1+c_2x+c_3x^2 \mid c_i\in\R\}$ ja m‰‰ritell‰‰n
+\item (*) Olkoon $V=\{f(x)=c_1+c_2x+c_3x^2 \mid c_i\in\R\}$ ja m√§√§ritell√§√§n
 \[
 \scp{f}{g}=f(0)g(0)+f(1)g(1)+f(2)g(2), \quad f,g \in V.
 \]
-N‰yt‰, ett‰ $f,g \map \scp{f}{g}$ on $V$:n skalaaritulo, ja laske funktion $u(x)=2+3x-2x^2$ 
-ortogonaaliprojektio $w$ (ko.\ skalaaritulon mieless‰) $V$:n aliavaruuteen $W$, jonka kanta
-on $\{1,x\}$. Piirr‰ samaan kuvaan funktioiden $u$ ja $w$ kuvaajat v‰lill‰ $[0,2]$. Tarkista,
-ett‰ $u-w \perp W$, ts.\ $\scp{u-w}{v}=0\ \forall v \in W$.
+N√§yt√§, ett√§ $f,g \map \scp{f}{g}$ on $V$:n skalaaritulo, ja laske funktion $u(x)=2+3x-2x^2$ 
+ortogonaaliprojektio $w$ (ko.\ skalaaritulon mieless√§) $V$:n aliavaruuteen $W$, jonka kanta
+on $\{1,x\}$. Piirr√§ samaan kuvaan funktioiden $u$ ja $w$ kuvaajat v√§lill√§ $[0,2]$. Tarkista,
+ett√§ $u-w \perp W$, ts.\ $\scp{u-w}{v}=0\ \forall v \in W$.
 
 \end{enumerate}

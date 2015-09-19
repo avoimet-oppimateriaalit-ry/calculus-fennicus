@@ -1,19 +1,19 @@
 \section{Operaattorit grad, div, rot ja $\Delta$ \\
-         k‰yr‰viivaisissa koordinaatistoissa}
-\label{div ja rot k‰yr‰viivaisissa}
-\sectionmark{Operaatorit k‰yr‰viivaisissa}
+         k√§yr√§viivaisissa koordinaatistoissa}
+\label{div ja rot k√§yr√§viivaisissa}
+\sectionmark{Operaatorit k√§yr√§viivaisissa}
 \alku
-\index{kzyyrzy@k‰yr‰viivaiset koordinaatistot!c@--differentiaalioperaattorit|vahv}
+\index{kzyyrzy@k√§yr√§viivaiset koordinaatistot!c@--differentiaalioperaattorit|vahv}
 \index{osittaisdifferentiaalioperaattori!vektorioperaattorit|vahv}
 
-Fysikaalisten symmetrioiden vuoksi vektorikentt‰/skaalaarikentt‰ halutaan usein esitt‰‰ 
-k‰yr‰viivaisessa  polaari-, lieriˆ- tai pallokoordinaatistossa. T‰llˆin myˆs
-vektoridifferentiaalioperaattorit on muunnettava karteesisesta ko.\ k‰yr‰viivaiseen 
-koordinaatistoon. Tarkastellaan esimerkkin‰ muunnosta tason polaarikoordinaatistoon.
+Fysikaalisten symmetrioiden vuoksi vektorikentt√§/skaalaarikentt√§ halutaan usein esitt√§√§ 
+k√§yr√§viivaisessa  polaari-, lieri√∂- tai pallokoordinaatistossa. T√§ll√∂in my√∂s
+vektoridifferentiaalioperaattorit on muunnettava karteesisesta ko.\ k√§yr√§viivaiseen 
+koordinaatistoon. Tarkastellaan esimerkkin√§ muunnosta tason polaarikoordinaatistoon.
 
-Ensinn‰kin on tutkittava, miten operaattorit $\partial_x$ ja $\partial_y$ ilmaistaan
+Ensinn√§kin on tutkittava, miten operaattorit $\partial_x$ ja $\partial_y$ ilmaistaan
 polaarikoordinaatiston vastaavien operaattorien $\partial_r$ ja $\partial_\varphi$ avulla.
-L‰htˆkohtana on ketjus‰‰ntˆ (ks.\ Luku \ref{osittaisderivaatat}), jonka mukaan
+L√§ht√∂kohtana on ketjus√§√§nt√∂ (ks.\ Luku \ref{osittaisderivaatat}), jonka mukaan
 \begin{align*}
 &u(x,y)=v(r,\varphi)=v(r(x,y),\varphi(x,y)) \\
 &\impl \ \begin{cases}
@@ -23,12 +23,12 @@ L‰htˆkohtana on ketjus‰‰ntˆ (ks.\ Luku \ref{osittaisderivaatat}), jonka mukaan
             +\dfrac{\partial \varphi}{\partial y}\,\partial_\varphi v.
 \end{cases}
 \end{align*}
-T‰ss‰ on $\,r=r(x,y)=\sqrt{x^2+y^2}\,$, joten
+T√§ss√§ on $\,r=r(x,y)=\sqrt{x^2+y^2}\,$, joten
 \[
 \frac{\partial r}{\partial x}=\frac{x}{r}=\cos\varphi,\quad 
 \frac{\partial r}{\partial y}=\frac{y}{r}=\sin\varphi.
 \]
-Derivoimalla implisiittisesti $x$:n suhteen (implisiittinen osittaisderivointi!) saadaan t‰llˆin
+Derivoimalla implisiittisesti $x$:n suhteen (implisiittinen osittaisderivointi!) saadaan t√§ll√∂in
 \begin{align*}
 x=r\cos\varphi \ &\impl \ 1=\frac{\partial r}{\partial x}\cos\varphi
                            -r\sin\varphi\frac{\partial\varphi}{\partial x} \\
@@ -42,7 +42,7 @@ Vastaavasti derivoimalla $y$:n suhteen saadaan
   \impl \ \frac{\partial\varphi}{\partial y} 
 &= \frac{1}{r}\cos\varphi.
 \end{align*}
-N‰in on saatu muunnoskaavat
+N√§in on saatu muunnoskaavat
 \[
 \boxed{
 \begin{aligned}
@@ -51,8 +51,8 @@ N‰in on saatu muunnoskaavat
 \end{aligned}}
 \]
 \begin{multicols}{2} \raggedcolumns
-Kun n‰iden lis‰ksi huomioidaan kantavektorien $\vec i,\vec j$ ja 
-$\vec e_r,\vec e_\varphi$ v‰liset muunnoskaavat
+Kun n√§iden lis√§ksi huomioidaan kantavektorien $\vec i,\vec j$ ja 
+$\vec e_r,\vec e_\varphi$ v√§liset muunnoskaavat
 \[ \begin{cases}
 \,\vec i = \cos\varphi \, \vec e_r - \sin\varphi \, \vec e_\varphi, \\
 \,\vec j = \sin\varphi \, \vec e_r + \cos\varphi \, \vec e_\varphi,
@@ -82,7 +82,7 @@ niin operaattorille $\nabla$ saadaan ensin esitysmuoto
         &+\ (\sin\varphi \,\vec e_r + \cos\varphi \,\vec e_\varphi)
            (\sin\varphi\, \partial_r+\frac{1}{r}\cos\varphi \, \partial_\varphi)
 \end{align*}
-ja sievennysten j‰lkeen
+ja sievennysten j√§lkeen
 \[
 \boxed{\kehys\quad 
    \nabla = \vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi \quad
@@ -102,12 +102,12 @@ niin em.\ muunnoskaavan mukaan
                 -\frac{1}{r^2}(\cos\varphi\,\vec e_r + \sin\varphi\,\vec e_\varphi)}}. \loppu
 \]
 
-Annetun vektorikent‰n $\vec F$ divergenssin laskemiseksi oletetaan, ett‰ $\vec F$ tunnetaan
+Annetun vektorikent√§n $\vec F$ divergenssin laskemiseksi oletetaan, ett√§ $\vec F$ tunnetaan
 muodossa
 \[
 \vec F = F_r(r,\varphi,z)\,\vec e_r + F_\varphi(r,\varphi,z)\,\vec e_\varphi.
 \]
-T‰llˆin on
+T√§ll√∂in on
 \begin{align*}
 \nabla\cdot\vec F \,
     &=\,\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
@@ -117,8 +117,8 @@ T‰llˆin on
     &+\,\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_r\vec e_r)
      +\,\frac{1}{r}\,(\vec e_\varphi\,\partial_\varphi)\cdot(F_\varphi\vec e_\varphi).
 \end{align*}
-T‰ss‰ on huomioitava, ett‰ vektorit $\vec e_r$ ja $\vec e_\varphi$ eiv‰t ole vakiovektoreita
-vaan riippuvat koordinaatista $\varphi$. Tarvitaan siis myˆs derivaatat 
+T√§ss√§ on huomioitava, ett√§ vektorit $\vec e_r$ ja $\vec e_\varphi$ eiv√§t ole vakiovektoreita
+vaan riippuvat koordinaatista $\varphi$. Tarvitaan siis my√∂s derivaatat 
 $\partial_\varphi\,\vec e_r$ ja $\partial_\varphi\,\vec e_\varphi\,$:
 \begin{align*}
 &\partial_\varphi\,\vec e_r = \partial_\varphi(\cos\varphi\,\vec i+\sin\varphi\,\vec j)
@@ -131,9 +131,9 @@ eli
  \boxed{\kehys\quad \partial_\varphi \vec e_r = \vec e_\varphi, \quad 
                     \partial_\varphi \vec e_\varphi = -\vec e_r. \quad} 
 \]
-K‰ytt‰m‰ll‰ n‰it‰ kaavoja ja tulon derivoimiss‰‰ntˆj‰ 
-(ks.\ Harj.teht.\,\ref{divergenssi ja roottori}:\,\ref{H-udif-4: nablaamiss‰‰ntˆj‰}h)
-saadaan ym.\ lauseke puretuksi termeitt‰in:
+K√§ytt√§m√§ll√§ n√§it√§ kaavoja ja tulon derivoimiss√§√§nt√∂j√§ 
+(ks.\ Harj.teht.\,\ref{divergenssi ja roottori}:\,\ref{H-udif-4: nablaamiss√§√§nt√∂j√§}h)
+saadaan ym.\ lauseke puretuksi termeitt√§in:
 \begin{align*}
 (\vec e_r\,\partial_r)\cdot(F_r\vec e_r)\,
     &=\,\partial_r F_r\,\vec e_r\cdot\vec e_r+F_r\,\vec e_r\cdot\partial_\varphi\vec e_r
@@ -160,26 +160,26 @@ Lopputulos:
                                        + \frac{1}{r}\,\partial_\varphi F_\varphi \quad
                                          \text{(polaarikoordinaatisto)}. \quad}
 \]
-Kaksi ensimm‰ist‰ termi‰ yhdist‰m‰ll‰ saadaa t‰lle vaihtoehtoinen nk.\ \kor{s‰ilymislakimuoto}
+Kaksi ensimm√§ist√§ termi√§ yhdist√§m√§ll√§ saadaa t√§lle vaihtoehtoinen nk.\ \kor{s√§ilymislakimuoto}
 (engl.\ conservation form) 
 \[
 \boxed{\kehys\quad \nabla\cdot\vec F = \dfrac{1}{r}\,\partial_r(rF_r)
                                        +\frac{1}{r}\,\partial_\varphi F_\varphi \quad
-                                        \text{(s‰ilymislakimuoto)}. \quad}
+                                        \text{(s√§ilymislakimuoto)}. \quad}
 \]
-\begin{Exa} Vektorikent‰n $\,\vec F=r^{-1}\,\vec e_r$ divergenssi muualla kuin origossa on
+\begin{Exa} Vektorikent√§n $\,\vec F=r^{-1}\,\vec e_r$ divergenssi muualla kuin origossa on
 \[
 \nabla\cdot\vec F = \frac{1}{r}\,\partial_r\left(r\cdot\frac{1}{r}\right)=0,
 \]
-joten kentt‰ on l‰hteetˆn aluessa $A=\{(x,y)\in\Rkaksi \mid (x,y) \neq (0,0)\}$. \loppu
+joten kentt√§ on l√§hteet√∂n aluessa $A=\{(x,y)\in\Rkaksi \mid (x,y) \neq (0,0)\}$. \loppu
 \end{Exa}
 
-Seuraavassa taulukossa esitet‰‰n koottuna operaattorien $\nabla$, $\nabla\cdot$, $\nabla\times$
-ja $\Delta$ (s‰ilymislakimuotoiset) laskus‰‰nnˆt lieriˆ- ja pallokoordinaatistoissa. 
+Seuraavassa taulukossa esitet√§√§n koottuna operaattorien $\nabla$, $\nabla\cdot$, $\nabla\times$
+ja $\Delta$ (s√§ilymislakimuotoiset) laskus√§√§nn√∂t lieri√∂- ja pallokoordinaatistoissa. 
 \begin{center}
 \begin{tabular}{|ll|}
 \hline & \\
-\multicolumn{2}{|l|}{$\quad$\vahv{Lieriˆkoordinaatisto}}  \\ & \\ $\quad\nabla$ 
+\multicolumn{2}{|l|}{$\quad$\vahv{Lieri√∂koordinaatisto}}  \\ & \\ $\quad\nabla$ 
 &= \quad $\vec e_r\,\partial_r+\dfrac{1}{r}\,\vec e_\varphi\,\partial_\varphi
          +\vec e_z\,\partial_z$ \\ & \\ $\quad\nabla\cdot\vec F$ 
 &= \quad $\dfrac{1}{r}\,\partial_r(rF_r)+\dfrac{1}{r}\,\partial_\varphi F_\varphi
@@ -209,10 +209,10 @@ ja $\Delta$ (s‰ilymislakimuotoiset) laskus‰‰nnˆt lieriˆ- ja pallokoordinaatistoi
 \hline
 \end{tabular}
 \end{center}
-\index{gradientti!d@k‰yr‰v. koordinaateissa}
-\index{divergenssi!a@k‰yr‰v. koordinaateissa}
-\index{roottori!a@k‰yr‰v. koordinaateissa}
-\index{Laplacen operaattori!a@k‰yr‰v. koordinaateissa}
+\index{gradientti!d@k√§yr√§v. koordinaateissa}
+\index{divergenssi!a@k√§yr√§v. koordinaateissa}
+\index{roottori!a@k√§yr√§v. koordinaateissa}
+\index{Laplacen operaattori!a@k√§yr√§v. koordinaateissa}
 \index{differentiaalioperaattori!d@gradientti (nabla $\nabla$)}
 \index{differentiaalioperaattori!e@divergenssi $\nabla\cdot$}
 \index{differentiaalioperaattori!f@roottori $\nabla\times$}
@@ -225,42 +225,42 @@ polaarikoordinaatistoon on
         =\,\frac{1}{r}\,\partial_r(r\partial_r)+\frac{1}{r^2}\,\partial_\varphi^2\,
         =\,\partial_r^2+\frac{1}{r}\,\partial_r+\frac{1}{r^2}\,\partial_\varphi^2.
 \]
-T‰h‰n p‰‰dyt‰‰n sievent‰m‰ll‰ edell‰ kuvatulla tavalla operaattorilauseke
+T√§h√§n p√§√§dyt√§√§n sievent√§m√§ll√§ edell√§ kuvatulla tavalla operaattorilauseke
 \[
 \Delta\,=\,\nabla\cdot\nabla\,
         =\, \left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
            \cdot\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
 \]
 (Harj.teht.\,\ref{H-udif-5: Laplacen operaattori}).
-\begin{Exa} Olkoon kentt‰ $\vec F$ on pallosymmetrinen, eli pallokoordinaatistossa muotoa 
-$\vec F = F(r)\vec e_r$. Millainen on funktio $F(r)$, jos kentt‰ on origon ulkopuolella 
-l‰hteetˆn?
+\begin{Exa} Olkoon kentt√§ $\vec F$ on pallosymmetrinen, eli pallokoordinaatistossa muotoa 
+$\vec F = F(r)\vec e_r$. Millainen on funktio $F(r)$, jos kentt√§ on origon ulkopuolella 
+l√§hteet√∂n?
 \end{Exa}
-\ratk Taulukon mukaan kent‰n divergenssi on $\nabla\cdot\vec F = r^{-2}\partial_r(r^2 F(r))$, 
+\ratk Taulukon mukaan kent√§n divergenssi on $\nabla\cdot\vec F = r^{-2}\partial_r(r^2 F(r))$, 
 joten origon ulkopuolella ($r>0$) on oltava
 \[ 
 \partial_r(r^2 F(r)) = 0 \,\ \impl\,\ r^2 F(r) = A \,\ \impl\,\ F(r) = \frac{A}{r^2}, \quad
                                                  A\in\R. \loppu
 \]
 
-Polaari- tai pallosymmetrisess‰ tilanteessa, jossa l‰hde $\rho$ ja vektorikent‰n potentiaali $u$
-riippuvat vain radiaalikoordinaatista $r$, voidaan Poissonin yht‰lˆ kirjoittaa tavallisena
-differentiaaliyht‰lˆn‰ (vrt.\ taulukko edell‰)\,:
+Polaari- tai pallosymmetrisess√§ tilanteessa, jossa l√§hde $\rho$ ja vektorikent√§n potentiaali $u$
+riippuvat vain radiaalikoordinaatista $r$, voidaan Poissonin yht√§l√∂ kirjoittaa tavallisena
+differentiaaliyht√§l√∂n√§ (vrt.\ taulukko edell√§)\,:
 \begin{align*}
 \text{Polaarisymmetria}:\,\quad &\frac{1}{r}\frac{d}{dr}\left(r\frac{du}{dr}\right)\ \ 
                                                 =\, u''+\frac{1}{r}u'=-\rho(r). \\
 \text{Pallosymmetria}:   \qquad &\frac{1}{r^2}\frac{d}{dr}\left(r^2\frac{du}{dr}\right)
                                                 =\, u''+\frac{2}{r}u'=-\rho(r).
 \end{align*}
-N‰m‰ ovat molemmat Eulerin tyyppi‰ (vrt.\ Luku \ref{vakikertoimiset ja Eulerin DYt}), joten ne
-ovat ratkaistavissa kvadratuureilla. Nopeimmin ratkaiseminen k‰y suoraan s‰ilymislakimuodosta.
+N√§m√§ ovat molemmat Eulerin tyyppi√§ (vrt.\ Luku \ref{vakikertoimiset ja Eulerin DYt}), joten ne
+ovat ratkaistavissa kvadratuureilla. Nopeimmin ratkaiseminen k√§y suoraan s√§ilymislakimuodosta.
 \begin{Exa}
 \begin{multicols}{2} \raggedcolumns
-L‰mpˆtila pyˆre‰n vastuslangan poikkipinnalla toteuttaa yht‰lˆn
+L√§mp√∂tila py√∂re√§n vastuslangan poikkipinnalla toteuttaa yht√§l√∂n
 \[
 -\Delta u=Q=\text{vakio}.
 \]
-M‰‰r‰‰ $u$, kun tiedet‰‰n, ett‰ ulkopinnalla $u(R)=0$.
+M√§√§r√§√§ $u$, kun tiedet√§√§n, ett√§ ulkopinnalla $u(R)=0$.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -275,7 +275,7 @@ M‰‰r‰‰ $u$, kun tiedet‰‰n, ett‰ ulkopinnalla $u(R)=0$.
 \end{figure}
 \end{multicols}
 \end{Exa}
-\ratk \ L‰hdet‰‰n s‰ilymislakimuodosta (polaarisymmetria):
+\ratk \ L√§hdet√§√§n s√§ilymislakimuodosta (polaarisymmetria):
 \begin{align*}
 &-\frac{1}{r}\frac{d}{dr}(ru')=Q \ \impl \ \frac{d}{dr}(ru')=-Qr \\
 &\impl \ ru'=-\frac{1}{2}Qr^2+A \ \impl \ u'=-\frac{1}{2}Qr+\frac{A}{r} \\
@@ -283,18 +283,18 @@ M‰‰r‰‰ $u$, kun tiedet‰‰n, ett‰ ulkopinnalla $u(R)=0$.
 &\impl \ A=0, \ B=\frac{1}{4}QR^2 \\ 
 &\impl \ u(r)=\underline{\underline{\frac{1}{4}\,Q(R^2-r^2)}}.
 \end{align*}
-Karteesisessa koordinaatistossa esitettyn‰ ratkaisu on
+Karteesisessa koordinaatistossa esitettyn√§ ratkaisu on
 \[ 
 u(x,y) = \frac{Q}{4}\,(R^2-x^2-y^2). 
 \]
-Ratkaisusta oli j‰tett‰v‰ pois logaritminen termi $A\ln r = \tfrac{1}{2}A\ln(x^2+y^2)$, syyst‰
-ett‰ yht‰lˆ $-\Delta u=Q$ ei muuten toteutuisi origossa (muualla kyll‰kin). \loppu
+Ratkaisusta oli j√§tett√§v√§ pois logaritminen termi $A\ln r = \tfrac{1}{2}A\ln(x^2+y^2)$, syyst√§
+ett√§ yht√§l√∂ $-\Delta u=Q$ ei muuten toteutuisi origossa (muualla kyll√§kin). \loppu
 
 \Harj
 \begin{enumerate}
 
 \item
-Laske vektorikent‰n
+Laske vektorikent√§n
 \[
 \vec F=(x^2+y^2+z^2)(x\vec i+y\vec j+z\vec k)
 \]
@@ -302,8 +302,8 @@ divergenssi $\nabla\cdot\vec F$ \ a) karteesisessa koordinaatistossa, \ b) muunt
 ensin pallokoordinaatistoon.
 
 \item
-N‰yt‰, ett‰ seuraavat polaari- tai pallokoordinaatistossa m‰‰ritellyt funktiot ovat 
-m‰‰rittelyjoukossaan harmonisia.
+N√§yt√§, ett√§ seuraavat polaari- tai pallokoordinaatistossa m√§√§ritellyt funktiot ovat 
+m√§√§rittelyjoukossaan harmonisia.
 \[
 \text{a)}\ \ u(r,\varphi)=\frac{\cos\varphi}{r} \qquad
 \text{b)}\ \ u(r,\varphi)=\frac{\sin 2\varphi}{r^2} \qquad
@@ -311,15 +311,15 @@ m‰‰rittelyjoukossaan harmonisia.
 \]
 
 \item
-Vektorikent‰st‰ $\vec F=F_1\vec i+F_2\vec j+F_3\vec k$ tiedet‰‰n, ett‰ funktiot $F_i$ ovat
-$\R^3$:ssa differentioituvia ja ett‰ kentt‰ on $\R^3$:ssa pyˆrteetˆn. M‰‰rit‰ kent‰n karteesiset
-komponentit $F_i$, kun tiedet‰‰n lis‰ksi, ett‰ kentt‰ on pallokoordinaatistossa muotoa
+Vektorikent√§st√§ $\vec F=F_1\vec i+F_2\vec j+F_3\vec k$ tiedet√§√§n, ett√§ funktiot $F_i$ ovat
+$\R^3$:ssa differentioituvia ja ett√§ kentt√§ on $\R^3$:ssa py√∂rteet√∂n. M√§√§rit√§ kent√§n karteesiset
+komponentit $F_i$, kun tiedet√§√§n lis√§ksi, ett√§ kentt√§ on pallokoordinaatistossa muotoa
 \[
 \vec F = r^3\sin^2\theta\,\vec e_r + F_\theta(r,\theta,\varphi)\,\vec e_\theta\,.
 \]
 
 \item \label{H-udif-5: Laplacen operaattori}
-Sievenn‰ Lapalacen operaattorin lauseke polaarikoordinaatistossa, ts.\ n‰yt‰, ett‰
+Sievenn√§ Lapalacen operaattorin lauseke polaarikoordinaatistossa, ts.\ n√§yt√§, ett√§
 \[
 \left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
         \cdot\left(\vec e_r\,\partial_r+\frac{1}{r}\,\vec e_\varphi\,\partial_\varphi\right)
@@ -327,18 +327,18 @@ Sievenn‰ Lapalacen operaattorin lauseke polaarikoordinaatistossa, ts.\ n‰yt‰, et
 \]
 
 \item 
-S‰hkˆjohtimessa kulkeva virta, jonka tiheys on $\vec J = J(r)\vec e_z$ (lieriˆkoordinaatisto),
-aiheuttaa magneettikent‰n muotoa $\vec H = H(r)\vec e_\varphi$, miss‰ $H(0) = 0$. M‰‰r‰‰ $H(r)$
-$J(r)$:n avulla Maxwellin yht‰lˆst‰ $\nabla\times\vec H=\vec J$.
+S√§hk√∂johtimessa kulkeva virta, jonka tiheys on $\vec J = J(r)\vec e_z$ (lieri√∂koordinaatisto),
+aiheuttaa magneettikent√§n muotoa $\vec H = H(r)\vec e_\varphi$, miss√§ $H(0) = 0$. M√§√§r√§√§ $H(r)$
+$J(r)$:n avulla Maxwellin yht√§l√∂st√§ $\nabla\times\vec H=\vec J$.
 
 \item 
-Homogeenisesta materiaalista valmistetussa lieriˆn tai lieriˆkuoren muotoisen kappaleen
+Homogeenisesta materiaalista valmistetussa lieri√∂n tai lieri√∂kuoren muotoisen kappaleen
 poikkipinnalla
 \[
 A = \{(x,y)\in\R^2 \mid R_1^2 \le x^2 + y^2 \le R_2^2 \}
 \]
-l‰mpˆtila $u$ toteuttaa $A$:n sis‰pisteiss‰ Poissonin yht‰lˆn $-u_{xx}-u_{yy}=q$, miss‰ $q$ 
-riippuu vain polaarikoordinaatista $r$, sek‰ reunalla $\partial A$ annetut reunaehdot. M‰‰r‰‰
+l√§mp√∂tila $u$ toteuttaa $A$:n sis√§pisteiss√§ Poissonin yht√§l√∂n $-u_{xx}-u_{yy}=q$, miss√§ $q$ 
+riippuu vain polaarikoordinaatista $r$, sek√§ reunalla $\partial A$ annetut reunaehdot. M√§√§r√§√§
 $u$ seuraavissa tapauksissa:
 \vspace{1mm}\newline
 a) \ $R_1=0,\ R_2=R,\ q(r)=Q= $ vakio, $u(R)=u_0$ \newline
@@ -352,9 +352,9 @@ Homogeenisesta materiaalista valmistetussa pallon tai pallokuoren muotoisessa ka
 \[
 A = \{(x,y,z)\in\R^3 \mid R_1^2 \le x^2 + y^2 + z^2 \le R_2^2 \}
 \]
-l‰mpˆtila $u$ toteuttaa $A$:n sis‰pisteiss‰ Poissonin yht‰lˆn $-\Delta u=q$, miss‰ $q$ riippuu
-vain pallokoordinaatista $r$, sek‰ reunalla $\partial A$ annetut reunaehdot. M‰‰r‰‰ $u$ 
-edellisen teht‰v‰n tapauksissa.
+l√§mp√∂tila $u$ toteuttaa $A$:n sis√§pisteiss√§ Poissonin yht√§l√∂n $-\Delta u=q$, miss√§ $q$ riippuu
+vain pallokoordinaatista $r$, sek√§ reunalla $\partial A$ annetut reunaehdot. M√§√§r√§√§ $u$ 
+edellisen teht√§v√§n tapauksissa.
 
 \item (*)
 Johda pallokoordinaatiston kantavektorien derivoimiskaavat
@@ -366,14 +366,14 @@ Johda pallokoordinaatiston kantavektorien derivoimiskaavat
                             \partial_\varphi\vec e_\theta=\cos\theta\vec e_\varphi\,, \quad
                             \partial_\varphi\vec e_\varphi=-\sin\theta\vec e_r-\cos\theta\vec e_\theta 
 \end{align*}
-ja n‰iden avulla gradientin ja Laplacen operaattorin esitysmuodot pallokoordinaatistossa.
+ja n√§iden avulla gradientin ja Laplacen operaattorin esitysmuodot pallokoordinaatistossa.
 
 \item (*) \index{zzb@\nim!Keplerin laki}
-(Keplerin laki) Avaruusalus, jonka massa $=m$, liikkuu tason keskeisvoimakent‰ss‰
-$\vec F=\nabla(k/r)$ ($k=$ vakio, $r=$ et‰isyys origosta) siten, ett‰ aluksen
-polaarikoordinaatit ovat $r(t)$ ja $\varphi(t)$ hetkell‰ $t$. Kirjoita aluksen liikeyht‰lˆ
-$m\vec r\,''=\vec F$ differentiaaliyht‰lˆsysteemin‰ funktioille $r(t)$ ja $\varphi(t)$ ja
-n‰yt‰, ett‰ p‰tee \pain{Ke}p\pain{lerin} \pain{toinen} \pain{laki}
+(Keplerin laki) Avaruusalus, jonka massa $=m$, liikkuu tason keskeisvoimakent√§ss√§
+$\vec F=\nabla(k/r)$ ($k=$ vakio, $r=$ et√§isyys origosta) siten, ett√§ aluksen
+polaarikoordinaatit ovat $r(t)$ ja $\varphi(t)$ hetkell√§ $t$. Kirjoita aluksen liikeyht√§l√∂
+$m\vec r\,''=\vec F$ differentiaaliyht√§l√∂systeemin√§ funktioille $r(t)$ ja $\varphi(t)$ ja
+n√§yt√§, ett√§ p√§tee \pain{Ke}p\pain{lerin} \pain{toinen} \pain{laki}
 \[
 [r(t)]^2\varphi'(t)=\text{vakio}.
 \]

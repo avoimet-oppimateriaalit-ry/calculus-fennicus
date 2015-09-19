@@ -5,104 +5,104 @@ Jos $F$ on kahden reaalimuuttujan funktio, niin Euklidisen tason pistejoukko
 \begin{equation}  \label{joukko S}
 S=\{P \vastaa (x,y) \in \R^2 \mid F(x,y)=0\}
 \end{equation}
-on yleens‰ jokin k‰yr‰. Muitakin mahdollisuuksia on: Joukko $S$ voi myˆs koostua useista 
-erillisist‰ k‰yrist‰ tai k‰yr‰n 'p‰tkist‰'. Se voi myˆs sis‰lt‰‰ eristettyj‰ pisteit‰, tai olla
-pelk‰st‰‰n erillisist‰ pisteist‰ koostuva, tai $S$ voi olla tyhj‰ joukko (vrt.\ k‰yr‰‰ koskeva
-alaviite edellisess‰ luvussa).
+on yleens√§ jokin k√§yr√§. Muitakin mahdollisuuksia on: Joukko $S$ voi my√∂s koostua useista 
+erillisist√§ k√§yrist√§ tai k√§yr√§n 'p√§tkist√§'. Se voi my√∂s sis√§lt√§√§ eristettyj√§ pisteit√§, tai olla
+pelk√§st√§√§n erillisist√§ pisteist√§ koostuva, tai $S$ voi olla tyhj√§ joukko (vrt.\ k√§yr√§√§ koskeva
+alaviite edellisess√§ luvussa).
 \begin{Exa}
 Jos $a \in \R$, niin joukko
 \[ 
 S = \{P \vastaa (x,y) \in R^2 \mid x^2+y^2+a = 0\} 
 \]
-on ympyr‰viiva jos $a<0$, piste jos $a=0$, ja tyhj‰ joukko jos $a>0$. \loppu 
+on ympyr√§viiva jos $a<0$, piste jos $a=0$, ja tyhj√§ joukko jos $a>0$. \loppu 
 \end{Exa}
-Olkoon $S$ m‰‰ritelty kaavalla \eqref{joukko S}. Halutaan selvitt‰‰, millainen $S$ on 
+Olkoon $S$ m√§√§ritelty kaavalla \eqref{joukko S}. Halutaan selvitt√§√§, millainen $S$ on 
 rajoitettuna  euklidisen tason 'viipaleeseen'
 \[
 E_A=\{P \vastaa (x,y) \in \R^2 \mid x \in A\},
 \]
-miss‰ $A \subset \R$ on jokin \pain{v‰li}. Oletetaan ensiksi, ett‰ $S\cap E_A$ on esitett‰viss‰
+miss√§ $A \subset \R$ on jokin \pain{v√§li}. Oletetaan ensiksi, ett√§ $S\cap E_A$ on esitett√§viss√§
 muodossa
 \[
 S\cap E_A =\{P \vastaa (x,y) \in \R^2 \mid x \in A \ \ja \ y=f(x)\},
 \]
-miss‰ $\,f:A \kohti \R$ on (yhden reaalimuuttujan) funktio. Sanotaan t‰llˆin, ett‰ yht‰lˆ 
-$F(x,y)=0$ (tai pistejoukko $S$) m‰‰rittelee v‰lill‰ $A$ \kor{implisiittifunktion} $f$. 
-Implisiittifunktio $f$ on siis m‰‰ritelm‰n mukaan sellainen, ett‰
+miss√§ $\,f:A \kohti \R$ on (yhden reaalimuuttujan) funktio. Sanotaan t√§ll√∂in, ett√§ yht√§l√∂ 
+$F(x,y)=0$ (tai pistejoukko $S$) m√§√§rittelee v√§lill√§ $A$ \kor{implisiittifunktion} $f$. 
+Implisiittifunktio $f$ on siis m√§√§ritelm√§n mukaan sellainen, ett√§
 \[
 F(x,f(x))=0 \ \ \forall x \in A, 
 \]
-ja lis‰ksi p‰tee
+ja lis√§ksi p√§tee
 \[ 
 (x,y) \in A \times \R\ \ja\ F(x,y) = 0 \qimpl y = f(x), 
 \]
-ts.\ yht‰lˆ $F(x,y)=0$ ratkeaa $y$:n suhteen y\pain{ksik‰sitteisesti} muotoon $y = f(x)$, 
+ts.\ yht√§l√∂ $F(x,y)=0$ ratkeaa $y$:n suhteen y\pain{ksik√§sitteisesti} muotoon $y = f(x)$, 
 kun $x\in A$.
 
-Yksinkertainen esimerkki implisiittifunktiosta on Luvussa \ref{k‰‰nteisfunktio} k‰sitelty 
-k‰‰nteisfunktio, jonka m‰‰ritelm‰ voidaan esitt‰‰ muodossa
+Yksinkertainen esimerkki implisiittifunktiosta on Luvussa \ref{k√§√§nteisfunktio} k√§sitelty 
+k√§√§nteisfunktio, jonka m√§√§ritelm√§ voidaan esitt√§√§ muodossa
 \[
 F(x,y)=x-f(y)=0 \ \ekv \ y=\inv{f}(x).
 \]
---- Itse asiassa myˆs tavallinen funktio muuttuu 'implisiittiseksi' (suom.\ 'ep‰suoraksi', 
+--- Itse asiassa my√∂s tavallinen funktio muuttuu 'implisiittiseksi' (suom.\ 'ep√§suoraksi', 
 'peitetyksi'), kun $y=f(x)$ kirjoitetaan muotoon $F(x,y)=f(x)-y=0$.
 \begin{Exa}
-Tason suoran perusmuotoinen yht‰lˆ
+Tason suoran perusmuotoinen yht√§l√∂
 \[
 ax+by+c=0
 \]
-voidaan tulkita implisiittifunktion $y=f(x)$ m‰‰rittelyksi, kun $b\neq 0$. T‰llˆin on siis 
+voidaan tulkita implisiittifunktion $y=f(x)$ m√§√§rittelyksi, kun $b\neq 0$. T√§ll√∂in on siis 
 $f(x) = -(ax+c)/b$, $D_f = R_f = \R$. \loppu
 \end{Exa}
-\begin{Exa} Yht‰lˆ 
+\begin{Exa} Yht√§l√∂ 
 \[
 F(x,y) = \sin x + y + y^5 = 0
 \]
-m‰‰rittelee implisiittifunktion, joka voidaan esitt‰‰ yhdistettyn‰ funktiona
+m√§√§rittelee implisiittifunktion, joka voidaan esitt√§√§ yhdistettyn√§ funktiona
 \[
 y = f(x) = \inv{g} \circ (-\sin)(x) = -\inv{g}(\sin x),
 \]
-miss‰ $g(y) = y^5 + y,\ D_g = \R$ (vrt.\ Esimerkki \ref{algebrallinen k‰‰nteisfunktio} 
-Luvussa \ref{k‰‰nteisfunktio}). Funktion $f$ m‰‰rittelyjoukko on $D_f = \R$ ja arvojoukko on 
-$R_f = [-a,a]$, miss‰ $a = \inv{g}(1)$, ts.\ $\,a^5 + a = 1$. \loppu 
+miss√§ $g(y) = y^5 + y,\ D_g = \R$ (vrt.\ Esimerkki \ref{algebrallinen k√§√§nteisfunktio} 
+Luvussa \ref{k√§√§nteisfunktio}). Funktion $f$ m√§√§rittelyjoukko on $D_f = \R$ ja arvojoukko on 
+$R_f = [-a,a]$, miss√§ $a = \inv{g}(1)$, ts.\ $\,a^5 + a = 1$. \loppu 
 \end{Exa}
 
 \subsection*{Monihaaraiset implisiittifunktiot}
 
-Implisiittifunktion m‰‰rittely-yrityksiss‰ varsin tavallinen on tilanne, ett‰ yht‰lˆ $F(x,y)=0$
-kyll‰ ratkeaa $y$:n suhteen tarkasteltavalla v‰lill‰ $A$, mutta ei yksik‰sitteisesti. Oletaan
-jatkossa t‰llainen tilanne. Oletetaan t‰llˆin edelleen, ett‰ $S\cap E_A$ on purettavissa osiin
+Implisiittifunktion m√§√§rittely-yrityksiss√§ varsin tavallinen on tilanne, ett√§ yht√§l√∂ $F(x,y)=0$
+kyll√§ ratkeaa $y$:n suhteen tarkasteltavalla v√§lill√§ $A$, mutta ei yksik√§sitteisesti. Oletaan
+jatkossa t√§llainen tilanne. Oletetaan t√§ll√∂in edelleen, ett√§ $S\cap E_A$ on purettavissa osiin
 \[
 S\cap E_A = \bigcup_{i\in \Lambda} S_i,
 \]
-miss‰ $\Lambda \subset \N$ (tai $\Lambda \subset \Z$) on jokin indeksijoukko (jossa v‰hint‰‰n
-kaksi alkiota) ja jokainen $S_i,\ i \in \Lambda$, on k‰yr‰ (vrt.\ alaviite edellisess‰ luvussa)
+miss√§ $\Lambda \subset \N$ (tai $\Lambda \subset \Z$) on jokin indeksijoukko (jossa v√§hint√§√§n
+kaksi alkiota) ja jokainen $S_i,\ i \in \Lambda$, on k√§yr√§ (vrt.\ alaviite edellisess√§ luvussa)
 muotoa
 \[
 S_i=\{P \vastaa (x,y) \in \R^2 \mid x \in A \ \ja \ y=f_i(x)\},
 \]
-miss‰ $f_i: A \kohti \R$ on reaalifunktio. Sanotaan t‰llˆin, ett‰ funktioj\pain{oukko}
+miss√§ $f_i: A \kohti \R$ on reaalifunktio. Sanotaan t√§ll√∂in, ett√§ funktioj\pain{oukko}
 \[
 \mathfrak{f}=\{f_i, \ i \in \Lambda \}
 \]
-on yht‰lˆn $F(x,y)=0$ (tai pistejoukon $S$) m‰‰rittelem‰ \kor{monihaarainen} (moniarvoinen)
+on yht√§l√∂n $F(x,y)=0$ (tai pistejoukon $S$) m√§√§rittelem√§ \kor{monihaarainen} (moniarvoinen)
 \kor{implisiittifunktio}. Monihaarainen implisiittifunktio ei siis ole funktio
 
 \pagebreak 
 
 vaan sellaisten joukko. Ko.\ funktiojoukon alkioita $f_i$ sanotaan $\mathfrak{f}$:n 
-\kor{haaroiksi} (engl. branch).\footnote[1]{Monihaarainen funktio $\mathfrak{f}$ voidaan myˆs
-tulkita \kor{joukkoarvoiseksi} m‰‰rittelem‰ll‰
+\kor{haaroiksi} (engl. branch).\footnote[1]{Monihaarainen funktio $\mathfrak{f}$ voidaan my√∂s
+tulkita \kor{joukkoarvoiseksi} m√§√§rittelem√§ll√§
 \[ 
 \mathfrak{f}(x) = \{f_i(x),\ i \in \Lambda\},
 \]
-miss‰ $f_i,\ i \in \Lambda$ ovat $\mathfrak{f}$:n haarat v‰lill‰ $A$. Koska $\mathfrak{f}(x)$
-on (joukkona) yksik‰sitteinen jokaisella $x \in A$, niin $\mathfrak{f}$ on funktio tyyppi‰ 
-$\mathfrak{f}: A \kohti \mathcal{B}$, miss‰ maalijoukko $\mathcal{B}$ on 'joukkojen joukko'
+miss√§ $f_i,\ i \in \Lambda$ ovat $\mathfrak{f}$:n haarat v√§lill√§ $A$. Koska $\mathfrak{f}(x)$
+on (joukkona) yksik√§sitteinen jokaisella $x \in A$, niin $\mathfrak{f}$ on funktio tyyppi√§ 
+$\mathfrak{f}: A \kohti \mathcal{B}$, miss√§ maalijoukko $\mathcal{B}$ on 'joukkojen joukko'
 \[ 
 \mathcal{B} = \{\,\{y_i, \ i \in \Lambda\} \mid y_i \in \R\ \ \forall i \in \Lambda\,\}. 
 \]} 
-Indeksijoukko $\Lambda$ voi olla ‰‰retˆn.
+Indeksijoukko $\Lambda$ voi olla √§√§ret√∂n.
 \begin{figure}[H]
 \begin{center}
 \setlength{\unitlength}{1cm}
@@ -202,58 +202,58 @@ Indeksijoukko $\Lambda$ voi olla ‰‰retˆn.
 \end{figure}
 
 \begin{Exa}
-Yht‰lˆ $x^2+y^2=1$ m‰‰rittelee v‰lill‰ $[-1,1]$ kaksihaaraisen implisiittifunktion
+Yht√§l√∂ $x^2+y^2=1$ m√§√§rittelee v√§lill√§ $[-1,1]$ kaksihaaraisen implisiittifunktion
 \[
 \mathfrak f=\{f_+,f_-\},
 \]
-miss‰
+miss√§
 \[
 f_\pm = \pm \sqrt{1-x^2}. \loppu
 \]
 \end{Exa}
-\begin{Exa} Millaisen monihaaraisen implisiittifunktion m‰‰rittelee yht‰lˆ \newline
+\begin{Exa} Millaisen monihaaraisen implisiittifunktion m√§√§rittelee yht√§l√∂ \newline
 $y^4-2y^2+x^2-x=0$\,?
 \end{Exa}
 \ratk Jos $x\in\R$, niin mahdolliset ratkaisut $y\in\R$ ovat
 \[
 y=\pm\sqrt{1\pm\sqrt{1+x-x^2}}.
 \]
-T‰ss‰ on
+T√§ss√§ on
 \begin{align*}
 1+x-x^2 &\ge 0 \qekv \frac{1}{2}(1-\sqrt{5}) \le x \le \frac{1}{2}(1+\sqrt{5}) \\
 1+x-x^2 &\ge 1 \qekv 0 \le x \le 1
 \end{align*}
-P‰‰tell‰‰n, ett‰ v‰leill‰ $[\tfrac{1}{2}(1-\sqrt{5}),\,0]$ ja $[1,\,\tfrac{1}{2}(1+\sqrt{5})]$
-funktio on kaksihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\}$, miss‰
+P√§√§tell√§√§n, ett√§ v√§leill√§ $[\tfrac{1}{2}(1-\sqrt{5}),\,0]$ ja $[1,\,\tfrac{1}{2}(1+\sqrt{5})]$
+funktio on kaksihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\}$, miss√§
 \[
 f_1(x)=\sqrt{1+\sqrt{1+x-x^2}}\,, \quad f_2(x)=-\sqrt{1+\sqrt{1+x-x^2}}\,.
 \]
-V‰lill‰ $[0,1]$ funktio on nelihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\,,\,f_3\,,\,f_4\}$,
-miss‰ $f_1$ ja $f_2$ ovat samat kuin edell‰ ja
+V√§lill√§ $[0,1]$ funktio on nelihaarainen: $\mathfrak{f}=\{f_1\,,\,f_2\,,\,f_3\,,\,f_4\}$,
+miss√§ $f_1$ ja $f_2$ ovat samat kuin edell√§ ja
 \[
 f_3(x)=\sqrt{1-\sqrt{1+x-x^2}}\,, \quad  f_4(x)=-\sqrt{1-\sqrt{1+x-x^2}}\,.
 \]
 Jos $x\in(-\infty,\,\tfrac{1}{2}(1-\sqrt{5})$ tai $x\in(\tfrac{1}{2}(1+\sqrt{5},\,\infty)$,
-ei yht‰lˆ toteudu mill‰‰n $y\in\R$, joten n‰ill‰ v‰leill‰ yht‰lˆ ei m‰‰rittele mit‰‰n
+ei yht√§l√∂ toteudu mill√§√§n $y\in\R$, joten n√§ill√§ v√§leill√§ yht√§l√∂ ei m√§√§rittele mit√§√§n
 (reaaliarvoista) funktiota. \loppu 
 
 \subsection*{Funktiot $\arcsin$, $\arccos$, $\arctan$}
 
-Funktiomerkinnˆill‰ $\,\arcsin$, $\arccos$ ja $\arctan$ tarkoitetaan yht‰lˆiden $x-\sin y =0$,
-$x-\cos y=0$ ja $x-\tan y=0$ m‰‰rittelemi‰ ‰‰rettˆm‰n monihaaraisia funktioita,
-m‰‰rittelyjoukkona joko v‰li $[-1,1]$ ($\arcsin,\,\arccos$) tai $\R$ ($\arctan$). Esimerkiksi
-$\arctan$ m‰‰ritell‰‰n
+Funktiomerkinn√∂ill√§ $\,\arcsin$, $\arccos$ ja $\arctan$ tarkoitetaan yht√§l√∂iden $x-\sin y =0$,
+$x-\cos y=0$ ja $x-\tan y=0$ m√§√§rittelemi√§ √§√§rett√∂m√§n monihaaraisia funktioita,
+m√§√§rittelyjoukkona joko v√§li $[-1,1]$ ($\arcsin,\,\arccos$) tai $\R$ ($\arctan$). Esimerkiksi
+$\arctan$ m√§√§ritell√§√§n
 \[
 \arctan = \{f_n, \ n\in\Z\},
 \]
-miss‰
+miss√§
 \[
 f_n(x)= \Arctan x + n\pi.
 \]
-T‰ss‰ $f_0(x)=\Arctan x\,$ on implisiittifunktion $\arctan$ \kor{p‰‰haara} 
-(engl.\ principal branch), vrt.\ Luku \ref{k‰‰nteisfunktio}.
+T√§ss√§ $f_0(x)=\Arctan x\,$ on implisiittifunktion $\arctan$ \kor{p√§√§haara} 
+(engl.\ principal branch), vrt.\ Luku \ref{k√§√§nteisfunktio}.
 \begin{Exa} \label{napakulman kaava} Jos $\varphi(x,y)$ on karteesisen koordinaatiston
-pistett‰ $(x,y)$ vastaava napakulma, $\varphi\in[0,2\pi)$, niin funktioriippuvuus 
+pistett√§ $(x,y)$ vastaava napakulma, $\varphi\in[0,2\pi)$, niin funktioriippuvuus 
 $(x,y)\map\varphi(x,y)$ on
 \[
 \varphi(x,y)=
@@ -265,7 +265,7 @@ $(x,y)\map\varphi(x,y)$ on
 3\pi/2,            &\text{jos}\ \ x=0\ \ja\ y<0
 \end{cases}
 \]
-T‰ss‰ tarvittiin siis per‰ti kolmea $\arctan$:n haaraa (!).
+T√§ss√§ tarvittiin siis per√§ti kolmea $\arctan$:n haaraa (!).
 \loppu
 \begin{figure}[H]
 \begin{center}
@@ -276,35 +276,35 @@ T‰ss‰ tarvittiin siis per‰ti kolmea $\arctan$:n haaraa (!).
 
 \subsection*{Kahden muuttujan implisiittifunktiot}
 
-Jos $F$ on kolmen muuttujan funktio ja yht‰lˆ
+Jos $F$ on kolmen muuttujan funktio ja yht√§l√∂
 \[
 F(x,y,z)=0
 \]
-ratkeaa yksik‰sitteisesti $z$:n suhteen, kun $(x,y)\in A\subset\R^2$, tulee m‰‰ritellyksi
+ratkeaa yksik√§sitteisesti $z$:n suhteen, kun $(x,y)\in A\subset\R^2$, tulee m√§√§ritellyksi
 kahden muuttujan implisiittifunktio
 \[
 z=f(x,y), \quad (x,y)\in A.
 \]
-Monihaaraiset tilanteet ovat j‰lleen tavallisia.
+Monihaaraiset tilanteet ovat j√§lleen tavallisia.
 \begin{Exa}
-Yht‰lˆ $x^2+y^2+z^2=R^2$ m‰‰rittelee kaksihaaraisen implisiittifunktion
-$z=\pm\sqrt{R^2-x^2-y^2}\,$ joukossa $A=\{(x,y)\in\R^2 \ |†\ x^2+y^2\leq R^2\}$. \loppu
+Yht√§l√∂ $x^2+y^2+z^2=R^2$ m√§√§rittelee kaksihaaraisen implisiittifunktion
+$z=\pm\sqrt{R^2-x^2-y^2}\,$ joukossa $A=\{(x,y)\in\R^2 \ |¬†\ x^2+y^2\leq R^2\}$. \loppu
 \end{Exa}
-\begin{Exa} Jos $m\in\N,\ m \ge 2$, niin yht‰lˆ
+\begin{Exa} Jos $m\in\N,\ m \ge 2$, niin yht√§l√∂
 \[
 y,z\in\C: \quad y^m=z
 \]
-m‰‰rittelee $m$-haaraisen kompleksifunktion $y=\sqrt[m]{z}$, vrt.\ Luku \ref{III-3}.
+m√§√§rittelee $m$-haaraisen kompleksifunktion $y=\sqrt[m]{z}$, vrt.\ Luku \ref{III-3}.
 Jos kirjoitetaan $z=x+iy$ ja $y=u(x,y)+iv(x,y)$, niin $u$ ja $v$ ovat $m$-haaraisia
-funktioita tyyppi‰ $u,v:\ \Rkaksi\kohti\R$. \loppu
+funktioita tyyppi√§ $u,v:\ \Rkaksi\kohti\R$. \loppu
 \end{Exa}
 
 \Harj
 \begin{enumerate}
 
 \item
-Seuraavassa on m‰‰ritelty implisiittifunktioita, mahdollisesti useampihaaraisia. M‰‰rit‰ n‰iden
-haarat funktioina $y=f(x),\ D_f\subset\R$ (m‰‰rit‰ myˆs $D_f$). Hahmottele funktiot myˆs 
+Seuraavassa on m√§√§ritelty implisiittifunktioita, mahdollisesti useampihaaraisia. M√§√§rit√§ n√§iden
+haarat funktioina $y=f(x),\ D_f\subset\R$ (m√§√§rit√§ my√∂s $D_f$). Hahmottele funktiot my√∂s 
 graafisesti!
 \begin{align*}
 &\text{a)}\ \ x\cos x+y^2=0 \qquad\qquad\quad\,
@@ -314,20 +314,20 @@ graafisesti!
 \end{align*}
 
 \item
-Mitk‰ ovat monihaaraisen funktion $\arccos(\cos x)$ arvot, kun $x=13\pi/4$\,?
+Mitk√§ ovat monihaaraisen funktion $\arccos(\cos x)$ arvot, kun $x=13\pi/4$\,?
 
 \item
-a) M‰‰rittele monihaaraisen funktion $\arcsin=\{f_n\,,\ n\in\Z\}$ haarat p‰‰haaran $f_0$
-avulla. \ b) Ilmaise karteesisen koordinaatiston pisteiden ja napakulman v‰linen riippuvuus
+a) M√§√§rittele monihaaraisen funktion $\arcsin=\{f_n\,,\ n\in\Z\}$ haarat p√§√§haaran $f_0$
+avulla. \ b) Ilmaise karteesisen koordinaatiston pisteiden ja napakulman v√§linen riippuvuus
 $\varphi(x,y)$ funktioiden $f_n$ avulla.
 
 \item
-Yht‰lˆ $x+3xyz^2+z^4=0\ (x,y,z\in\R)$ m‰‰rittelee implisiittifunktion $z=f(x,y)$. \ a) Laske 
-$f$:n arvot pisteiss‰ $(0,0)$, $(2,-1)$ ja $(1,1)$. \ b)  Millaisia ovat $f$:n haarat 
-(m‰‰rittelyjoukot ja laskus‰‰nnˆt) yleisemmin?
+Yht√§l√∂ $x+3xyz^2+z^4=0\ (x,y,z\in\R)$ m√§√§rittelee implisiittifunktion $z=f(x,y)$. \ a) Laske 
+$f$:n arvot pisteiss√§ $(0,0)$, $(2,-1)$ ja $(1,1)$. \ b)  Millaisia ovat $f$:n haarat 
+(m√§√§rittelyjoukot ja laskus√§√§nn√∂t) yleisemmin?
 
 \item (*)
-M‰‰rittele kaksihaaraiset funktiot $u=\{u_1,u_2\}$ ja $v=\{v_1,v_2\}$ siten, ett‰
+M√§√§rittele kaksihaaraiset funktiot $u=\{u_1,u_2\}$ ja $v=\{v_1,v_2\}$ siten, ett√§
 \[
 u(x,y)+iv(x,y)=\sqrt{z}\,, \quad z=x+iy\in\C.
 \]

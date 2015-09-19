@@ -1,36 +1,36 @@
 \section{Gaussin lauseen sovelluksia} \label{Gaussin lauseen sovelluksia}
 \alku
 
-Fysiikassa Gaussin avaruuskaava (Lause \ref{Gaussin lause avaruudessa}) esitet‰‰n usein
+Fysiikassa Gaussin avaruuskaava (Lause \ref{Gaussin lause avaruudessa}) esitet√§√§n usein
 muodossa
 \[
 \int_V \nabla\cdot\vec F\,dV=\int_{\partial V} \vec F\cdot d\vec a,\quad V\subset\R^3,
 \]
-miss‰ on merkitty $dV=dxdydz$. Jos $A \subset S$, miss‰ $S$ on avaruuden pinta, niin
+miss√§ on merkitty $dV=dxdydz$. Jos $A \subset S$, miss√§ $S$ on avaruuden pinta, niin
 pintaintegraali
 \begin{equation} \label{vuokaava}
 \phi=\int_A \vec F\cdot d\vec a = \int_A \vec F\cdot\vec n\,dS \tag{$\star$}
 \end{equation}
 \index{vuo, vuontiheys}%
-on vektorikent‰n $\vec F$ \kor{vuo} (engl. flux) $A$:n l‰pi. Ajatellen t‰t‰ yhteytt‰
-sanotaan itse vektorikentt‰‰ fysikaalisissa sovelluksissa usein \pain{vuontihe}y\pain{deksi}.
-Seuraavassa kahdessa sovellusesimerkiss‰ johdetaan Gaussin kaavan avulla fysikaalista ilmiˆt‰
-kuvaava \pain{s‰il}y\pain{mislaki} osittaisdifferentiaaliyht‰lˆn muodossa. Ensimm‰inen esimerkki
-on virtausmekaniikasta ja toinen l‰mpˆopista.
+on vektorikent√§n $\vec F$ \kor{vuo} (engl. flux) $A$:n l√§pi. Ajatellen t√§t√§ yhteytt√§
+sanotaan itse vektorikentt√§√§ fysikaalisissa sovelluksissa usein \pain{vuontihe}y\pain{deksi}.
+Seuraavassa kahdessa sovellusesimerkiss√§ johdetaan Gaussin kaavan avulla fysikaalista ilmi√∂t√§
+kuvaava \pain{s√§il}y\pain{mislaki} osittaisdifferentiaaliyht√§l√∂n muodossa. Ensimm√§inen esimerkki
+on virtausmekaniikasta ja toinen l√§mp√∂opista.
 
-\subsection*{Sovellusesimerkki: Massan s‰ilymislaki virtauksessa}
-\index{massan s‰ilymislaki|vahv}
-\index{szy@s‰ilymislaki|vahv}
-\index{zza@\sov!Massan s‰ilymislaki virtauksessa|vahv}
+\subsection*{Sovellusesimerkki: Massan s√§ilymislaki virtauksessa}
+\index{massan s√§ilymislaki|vahv}
+\index{szy@s√§ilymislaki|vahv}
+\index{zza@\sov!Massan s√§ilymislaki virtauksessa|vahv}
 
-Tarkastellaan virtaavaa nestett‰ tai kaasua, jonka nopeus hetkell‰ $t$ pisteess‰ $(x,y,z)$ on
-$\vec v = \vec v(t,x,y,z)$ (vektorikentt‰, yksikkˆ m/s) ja tiheys on $\rho=\rho(t,x,y,z)$
-(skalaarikentt‰, yksikkˆ kg/m$^3$). Olkoon $A \subset S$, miss‰ $S$ on avaruuden s‰‰nnˆllinen
-(tai ainakin paloittain s‰‰nnˆllinen) pinta. Tarkastellaan $A$:n pient‰, l‰hes tasomaista palaa
-$\Delta A$, jonka pinta-ala $=\Delta S$. Jos oletetaan, ett‰ $\rho$ ja $\vec v$ ovat
-$\Delta A$:n ymp‰ristˆss‰ l‰hes vakioita (jatkuvuusoletus!), niin voidaan p‰‰tell‰, ett‰
-(lyhyell‰) aikav‰lill‰ $[t,t+\Delta t]$ pinnanpalan $\Delta A$ l‰pi menev‰t ne hiukkaset, jotka
-ovat hetkell‰ $t$ joukossa
+Tarkastellaan virtaavaa nestett√§ tai kaasua, jonka nopeus hetkell√§ $t$ pisteess√§ $(x,y,z)$ on
+$\vec v = \vec v(t,x,y,z)$ (vektorikentt√§, yksikk√∂ m/s) ja tiheys on $\rho=\rho(t,x,y,z)$
+(skalaarikentt√§, yksikk√∂ kg/m$^3$). Olkoon $A \subset S$, miss√§ $S$ on avaruuden s√§√§nn√∂llinen
+(tai ainakin paloittain s√§√§nn√∂llinen) pinta. Tarkastellaan $A$:n pient√§, l√§hes tasomaista palaa
+$\Delta A$, jonka pinta-ala $=\Delta S$. Jos oletetaan, ett√§ $\rho$ ja $\vec v$ ovat
+$\Delta A$:n ymp√§rist√∂ss√§ l√§hes vakioita (jatkuvuusoletus!), niin voidaan p√§√§tell√§, ett√§
+(lyhyell√§) aikav√§lill√§ $[t,t+\Delta t]$ pinnanpalan $\Delta A$ l√§pi menev√§t ne hiukkaset, jotka
+ovat hetkell√§ $t$ joukossa
 \[
 \Delta V 
 = \{\,(x,y,z)\vastaa\vec r \mid \vec r=\vec r_0-\tau\vec v,\ r_0\in A,\ \tau\in[0,\Delta t]\,\}.
@@ -53,165 +53,165 @@ ovat hetkell‰ $t$ joukossa
 \end{picture}
 \end{center}
 \end{figure}
-Olkoon $\vec n$ virtaussuuntaan osoittava $S$:n yksikkˆnormaalivektori, ts.\
+Olkoon $\vec n$ virtaussuuntaan osoittava $S$:n yksikk√∂normaalivektori, ts.\
 $\vec n\cdot\vec v \ge 0$. Jos oletetaan $\vec v$ vakioksi ja samoin $\vec n$ vakioksi
-$\Delta A$:ssa (eli pinta tasoksi), niin $\Delta V$ on n‰ill‰ oletuksilla suuntaiss‰rmiˆ, jonka
+$\Delta A$:ssa (eli pinta tasoksi), niin $\Delta V$ on n√§ill√§ oletuksilla suuntaiss√§rmi√∂, jonka
 poikkipinta-ala virtausta vastaan kohtisuorassa tasossa on
-$\Delta S\,\vec v\cdot\vec n/|\vec v\,|$. Jos edellen myˆs $\rho$
-oletetaan vakioksi, niin $\Delta V$:ss‰ olevan nesteen/kaasun massa on tehdyin oletuksin
+$\Delta S\,\vec v\cdot\vec n/|\vec v\,|$. Jos edellen my√∂s $\rho$
+oletetaan vakioksi, niin $\Delta V$:ss√§ olevan nesteen/kaasun massa on tehdyin oletuksin
 \begin{align*}
 \Delta m &=\rho\mu(\Delta V)=\rho\,[\Delta S\,\vec v\cdot\vec n/|\vec v\,|]\,|\vec v\,|\Delta t
                            = \rho\vec v\cdot\vec n\,\Delta S\Delta t \\
          &\impl\quad \frac{\Delta m}{\Delta S\Delta t} = \rho\vec v\cdot\vec n.
 \end{align*}
-Voidaan olettaa, ett‰ tehdyt likm‰‰r‰istykset ovat voimassa l‰hes kaikissa $A$:n pisteiss‰,
+Voidaan olettaa, ett√§ tehdyt likm√§√§r√§istykset ovat voimassa l√§hes kaikissa $A$:n pisteiss√§,
 lukuun ottamatta mahdollista (pinta-alamitan suhteen) nollamittaista osajoukkoa. Muissa kuin
-n‰iss‰ poikkeuspisteiss‰ voidaan mainittujen oletusten myˆs olettaa toteutuvan tarkasti
-raja-arvoina, kun $\Delta t \kohti 0$ ja $\Delta A$ kutistuu pisteeksi. N‰in olettaen voidaan
-\pain{massavuo} pinnan $A$ l‰pi (yksikkˆ kg/s) laskea integraalikaavalla \eqref{vuokaava},
-miss‰ \pain{massavuon} \pain{tihe}y\pain{s} (yksikkˆ kg/m$^2$/s) m‰‰ritell‰‰n
+n√§iss√§ poikkeuspisteiss√§ voidaan mainittujen oletusten my√∂s olettaa toteutuvan tarkasti
+raja-arvoina, kun $\Delta t \kohti 0$ ja $\Delta A$ kutistuu pisteeksi. N√§in olettaen voidaan
+\pain{massavuo} pinnan $A$ l√§pi (yksikk√∂ kg/s) laskea integraalikaavalla \eqref{vuokaava},
+miss√§ \pain{massavuon} \pain{tihe}y\pain{s} (yksikk√∂ kg/m$^2$/s) m√§√§ritell√§√§n
 \[
 \vec F = \rho\vec v.
 \]
-Oletetaan nyt, ett‰ $S$ on suljettu pinta, joka sulkee sis‰‰ns‰ perusalueen $V\subset\R^3$ 
-($S=\partial V$). T‰llˆin nesteen/kaasun kokonaismassa $V$:ss‰ hetkell‰ $t$ on
+Oletetaan nyt, ett√§ $S$ on suljettu pinta, joka sulkee sis√§√§ns√§ perusalueen $V\subset\R^3$ 
+($S=\partial V$). T√§ll√∂in nesteen/kaasun kokonaismassa $V$:ss√§ hetkell√§ $t$ on
 \[
 m(t) = \int_V \rho(t,x,y,z)\,dV.
 \]
-Oletetaan, ett‰ $m(t)$ voi muuttua vain $V$:n reunapinnan l‰pi tapahtuvan virtauksen vuoksi
-(eli muilla tavoilla massaa ei 'h‰vi‰' tai 'synny'). T‰llˆin on voimassa tasapainolaki
+Oletetaan, ett√§ $m(t)$ voi muuttua vain $V$:n reunapinnan l√§pi tapahtuvan virtauksen vuoksi
+(eli muilla tavoilla massaa ei 'h√§vi√§' tai 'synny'). T√§ll√∂in on voimassa tasapainolaki
 \[
 m'(t) = -\int_{\partial V} \rho\vec v\cdot d\vec a,
 \]
-miss‰ $d\vec a=\vec n dS$ osoittaa $V$:st‰ poisp‰in, eli $\vec n=V$:n ulkonormaali. Kun t‰ss‰
-oikealla k‰yttet‰‰n Gaussin kaavaa ja vasemmalla kirjoitetaan (vrt.\ Luku 
+miss√§ $d\vec a=\vec n dS$ osoittaa $V$:st√§ poisp√§in, eli $\vec n=V$:n ulkonormaali. Kun t√§ss√§
+oikealla k√§yttet√§√§n Gaussin kaavaa ja vasemmalla kirjoitetaan (vrt.\ Luku 
 \ref{osittaisderivaatat})
 \[
 m'(t) = \frac{d}{dt}\int_V \rho(t,x,y,z)\,dV 
       = \int_V \frac{\partial \rho}{\partial t}\,(t,x,y,z)\,dV,
 \]
 niin tasapainolaki saa muodon
-\begin{equation} \label{s‰ilymislaki a}
+\begin{equation} \label{s√§ilymislaki a}
 \int_V \bigl[\rho_t+\nabla\cdot(\rho\vec v)\bigr]\,dV=0. \tag{a}
 \end{equation}
-Olkoon nyt $t\in\R$ kiinte‰ ajanhetki, $(x,y,z)\in\R^3$ kiinte‰ piste, ja oletetaan, ett‰ $\rho$
+Olkoon nyt $t\in\R$ kiinte√§ ajanhetki, $(x,y,z)\in\R^3$ kiinte√§ piste, ja oletetaan, ett√§ $\rho$
 ja $\vec v$ ovat jatkuvasti derivoituvia (osittaisderivaatat jatkuvia) pisteen
-$(t,x,y,z)\in\R^4$ ymp‰ristˆss‰. T‰llˆin jos tasapainolaissa \eqref{s‰ilymislaki a} valitaan
-$V=B_\eps=\eps$-s‰teinen pallo (kuula), jonka keskipiste on $(x,y,z)$, niin
+$(t,x,y,z)\in\R^4$ ymp√§rist√∂ss√§. T√§ll√∂in jos tasapainolaissa \eqref{s√§ilymislaki a} valitaan
+$V=B_\eps=\eps$-s√§teinen pallo (kuula), jonka keskipiste on $(x,y,z)$, niin
 \begin{align*}
 0\ &=\ \int_{B_\eps}\bigl[\rho_t+\nabla\cdot(\rho\vec v)\bigr]\,dV \\
    &=\ \bigl[\rho_t+\nabla\cdot(\rho\vec v)\bigr](t,x,y,z)\,\mu(B_\eps)
          + o(1)\mu(B_\eps), \quad \text{kun}\ \eps \kohti 0.
 \end{align*}
-T‰m‰n mukaan on tarkasteltavassa pisteess‰ $(t,x,y,z)$ oltava voimassa
-\begin{equation} \label{s‰ilymislaki b}
+T√§m√§n mukaan on tarkasteltavassa pisteess√§ $(t,x,y,z)$ oltava voimassa
+\begin{equation} \label{s√§ilymislaki b}
 \boxed{\kehys\quad \rho_t + \nabla\cdot(\rho\vec v)=0. \quad} \tag{b}
 \end{equation}
-T‰m‰ tunnetaan virtausmekaniikan (differentiaalisena) \pain{massan}
-\pain{s‰il}y\pain{mislakina}. --- Huomattakoon, ett‰ koska t‰t‰ johdettaessa tehdyt
-jatkuvuusoletukset eiv‰t ole fysiikan sanelemia, niin s‰ilymislain integraalimuoto
-\eqref{s‰ilymislaki a} (joka p‰tee heikommin s‰‰nnˆllisyysehdoin jokaiselle perusalueelle $V$)
-on luonnonlakina alkuper‰isempi kuin differentiaalinen muoto \eqref{s‰ilymislaki b}.
-Vrt.\ vastaava asetelma Esimerkiss‰ \ref{analyysin peruslause}:\,\ref{liikelaki}.
+T√§m√§ tunnetaan virtausmekaniikan (differentiaalisena) \pain{massan}
+\pain{s√§il}y\pain{mislakina}. --- Huomattakoon, ett√§ koska t√§t√§ johdettaessa tehdyt
+jatkuvuusoletukset eiv√§t ole fysiikan sanelemia, niin s√§ilymislain integraalimuoto
+\eqref{s√§ilymislaki a} (joka p√§tee heikommin s√§√§nn√∂llisyysehdoin jokaiselle perusalueelle $V$)
+on luonnonlakina alkuper√§isempi kuin differentiaalinen muoto \eqref{s√§ilymislaki b}.
+Vrt.\ vastaava asetelma Esimerkiss√§ \ref{analyysin peruslause}:\,\ref{liikelaki}.
 
 
-\subsection*{Sovellusesimerkki: L‰mmˆn johtuminen}
-\index{szy@s‰ilymislaki|vahv}
-\index{zza@\sov!Lzy@L‰mmˆn johtuminen|vahv}
+\subsection*{Sovellusesimerkki: L√§mm√∂n johtuminen}
+\index{szy@s√§ilymislaki|vahv}
+\index{zza@\sov!Lzy@L√§mm√∂n johtuminen|vahv}
 
-Tarkastellaan l‰mmˆn johtumisen ongelmaa, kun avaruuden $\R^3$ t‰ytt‰‰ fysikaalisilta 
-ominaisuuksiltaan tunnettu materiaali. Ongelmaan liittyv‰t perussuureet ovat
-\pain{l‰m}p\pain{ˆtila} $u=u(t,x,y,z)$, \pain{l‰m}p\pain{ˆvuon} \pain{tihe}y\pain{s} 
-$\vec J=\vec J(t,x,y,z)$ (yksikkˆ W/m$^2$), ja \pain{l‰m}p\pain{ˆl‰hteen} \pain{tihe}y\pain{s} 
-$\rho(t,x,y,z)$ (yksikkˆ W/m$^3$). Materiaalikertoimina oletetaan viel‰ tunnetuiksi materiaalin 
-\pain{ominaisl‰m}p\pain{ˆ} $c=c(x,y,z,u)$ ja \pain{l‰mmˆn}j\pain{ohtavuus} 
-$\lambda=\lambda(x,y,z,u)$. (T‰ss‰ oletetaan, ett‰ materiaalikertoimet voivat riippua 
-paikkamuuttujien lis‰ksi l‰mpˆtilasta.)
+Tarkastellaan l√§mm√∂n johtumisen ongelmaa, kun avaruuden $\R^3$ t√§ytt√§√§ fysikaalisilta 
+ominaisuuksiltaan tunnettu materiaali. Ongelmaan liittyv√§t perussuureet ovat
+\pain{l√§m}p\pain{√∂tila} $u=u(t,x,y,z)$, \pain{l√§m}p\pain{√∂vuon} \pain{tihe}y\pain{s} 
+$\vec J=\vec J(t,x,y,z)$ (yksikk√∂ W/m$^2$), ja \pain{l√§m}p\pain{√∂l√§hteen} \pain{tihe}y\pain{s} 
+$\rho(t,x,y,z)$ (yksikk√∂ W/m$^3$). Materiaalikertoimina oletetaan viel√§ tunnetuiksi materiaalin 
+\pain{ominaisl√§m}p\pain{√∂} $c=c(x,y,z,u)$ ja \pain{l√§mm√∂n}j\pain{ohtavuus} 
+$\lambda=\lambda(x,y,z,u)$. (T√§ss√§ oletetaan, ett√§ materiaalikertoimet voivat riippua 
+paikkamuuttujien lis√§ksi l√§mp√∂tilasta.)
 
-Jos $V\subset\R^3$, niin $V$:n sis‰lt‰m‰n \pain{l‰m}p\pain{ˆener}g\pain{ian} kokonaism‰‰r‰
-hetkell‰ $t$ on (ominaisl‰mmˆn m‰‰ritelm‰)
+Jos $V\subset\R^3$, niin $V$:n sis√§lt√§m√§n \pain{l√§m}p\pain{√∂ener}g\pain{ian} kokonaism√§√§r√§
+hetkell√§ $t$ on (ominaisl√§mm√∂n m√§√§ritelm√§)
 \[
 E(t)=\int_V cu\,dV.
 \]
-Jos oletetaan, ett‰ $V$:n energiataseeseen vaikuttavat vain l‰mpˆl‰hde $V$:ss‰ ja l‰mmˆn
-johtuminen $V$:n reunapinnan l‰pi, niin energian tasapainoyht‰lˆ $V$:ss‰ on
+Jos oletetaan, ett√§ $V$:n energiataseeseen vaikuttavat vain l√§mp√∂l√§hde $V$:ss√§ ja l√§mm√∂n
+johtuminen $V$:n reunapinnan l√§pi, niin energian tasapainoyht√§l√∂ $V$:ss√§ on
 \[
 E'(t)= \int_V \rho\,dV - \int_{\partial V} \vec J\cdot d\vec a.
 \]
-Kun t‰ss‰ kirjoitetaan
+Kun t√§ss√§ kirjoitetaan
 \[
 E'(t)=\frac{d}{dt}\int_V cu\,dV = \int_V cu_t\,dV, \qquad
       \int_{\partial V} \vec J\cdot d\vec a = \int_V \nabla\cdot\vec J\,dV,
 \]
-niin tasapainoyht‰lˆ saa muodon
+niin tasapainoyht√§l√∂ saa muodon
 \[
 \int_V (cu_t+\nabla\cdot\vec J-\rho)\,dV = 0.
 \]
-Samanlaisella p‰‰ttelyll‰ (ja oletuksilla) kuin edellisess‰ esimerkiss‰ seuraa t‰st‰ 
-differentiaalinen \pain{ener}g\pain{ian} \pain{s‰il}y\pain{mislaki}
+Samanlaisella p√§√§ttelyll√§ (ja oletuksilla) kuin edellisess√§ esimerkiss√§ seuraa t√§st√§ 
+differentiaalinen \pain{ener}g\pain{ian} \pain{s√§il}y\pain{mislaki}
 \[
 cu_t+\nabla\cdot\vec J = \rho.
 \]
-Jos viel‰ oletetaan l‰mmˆnjohtumisen \pain{Fourier'n} \pain{laki}
+Jos viel√§ oletetaan l√§mm√∂njohtumisen \pain{Fourier'n} \pain{laki}
 \index{Fourierb@Fourier'n laki}%
 \[
 \vec J = -\lambda \nabla u,
 \]
-\index{lzy@l‰mmˆnjohtumisyht‰lˆ}%
-niin energian s‰ilymislaki saa \pain{l‰mmˆn}j\pain{ohtumis}y\pain{ht‰lˆn‰} tunnetun muodon
+\index{lzy@l√§mm√∂njohtumisyht√§l√∂}%
+niin energian s√§ilymislaki saa \pain{l√§mm√∂n}j\pain{ohtumis}y\pain{ht√§l√∂n√§} tunnetun muodon
 \[
 \boxed{\kehys\quad cu_t-\nabla\cdot(\lambda\nabla u)=\rho. \quad}
 \]
-Jos $\rho=0$ ja $c$ ja $\lambda$ ovat vakioita (homogeeninen materiaali, $c$:ll‰ ja
-$\lambda$:lla ei l‰mpˆtilariippuvuutta), niin l‰mmˆnjohtumisyht‰lˆ yksinkertaistuu muotoon
+Jos $\rho=0$ ja $c$ ja $\lambda$ ovat vakioita (homogeeninen materiaali, $c$:ll√§ ja
+$\lambda$:lla ei l√§mp√∂tilariippuvuutta), niin l√§mm√∂njohtumisyht√§l√∂ yksinkertaistuu muotoon
 \[
 u_t=k\Delta u, \quad k=\lambda/c.
 \]
  
-\subsection*{*Vektorikenttien ep‰jatkuvuudet}
-\index{vektorikentt‰!d@ep‰jatkuva|vahv}
-\index{epzy@ep‰jatkuvuus (vektorikent‰n)|vahv}
+\subsection*{*Vektorikenttien ep√§jatkuvuudet}
+\index{vektorikentt√§!d@ep√§jatkuva|vahv}
+\index{epzy@ep√§jatkuvuus (vektorikent√§n)|vahv}
 
-Olkoon vektorikentt‰ $\vec F$ m‰‰ritelty $\R^3$:ssa ja jatkuvasti derivoituva. 
-T‰llˆin kent‰n l‰hde $\rho=\nabla\cdot\vec F$ on $\R^3$:ssa jatkuva, ja Gaussin lauseen mukaan
-p‰tee
-\begin{equation} \label{kentt‰ ja l‰hde}
+Olkoon vektorikentt√§ $\vec F$ m√§√§ritelty $\R^3$:ssa ja jatkuvasti derivoituva. 
+T√§ll√∂in kent√§n l√§hde $\rho=\nabla\cdot\vec F$ on $\R^3$:ssa jatkuva, ja Gaussin lauseen mukaan
+p√§tee
+\begin{equation} \label{kentt√§ ja l√§hde}
 \int_V \rho\,dV = \int_{\partial V}\vec F\cdot d\vec a \quad (V\subset\R^3\,\ \text{perusalue}).
 \end{equation}
-Toisaalta, jos mainittujen s‰‰nnˆllisyysoletusten lis‰ksi oletetaan ainoastaan
-\eqref{kentt‰ ja l‰hde}, niin aiemman p‰‰ttelyn mukaisesti seuraa, ett‰ on oltava
+Toisaalta, jos mainittujen s√§√§nn√∂llisyysoletusten lis√§ksi oletetaan ainoastaan
+\eqref{kentt√§ ja l√§hde}, niin aiemman p√§√§ttelyn mukaisesti seuraa, ett√§ on oltava
 $\nabla\cdot\vec F=\rho$. Siis jos $\vec F$ on $\R^3$:ssa jatkuvasti derivoituva ja $\rho$
-jatkuva, niin p‰tee
+jatkuva, niin p√§tee
 \[
-\text{Ehto \eqref{kentt‰ ja l‰hde} voimassa} \qekv \nabla\cdot\vec F = \rho\ \ \R^3:\text{ssa}.
+\text{Ehto \eqref{kentt√§ ja l√§hde} voimassa} \qekv \nabla\cdot\vec F = \rho\ \ \R^3:\text{ssa}.
 \]
 
-Ent‰ jos $\vec F$ ei ole jatkuvasti derivoituva, tai $\rho$ ei ole jatkuva, mutta $\vec F$:n ja
-$\rho$:n v‰lill‰ on ehdon \eqref{kentt‰ ja l‰hde} mukainen yhteys? --- T‰llˆin on luontevaa
-sopia, ett‰ ehto \eqref{kentt‰ ja l‰hde} \pain{m‰‰rittelee} $\rho$:n kent‰n $\vec F$ l‰hteeksi.
-Fysikaalisissa sovelluksissa ajatellaan t‰llˆin, ett‰ ehto \eqref{kentt‰ ja l‰hde} itse asiassa
-ilmaisee luonnonlain sen alkuper‰isess‰ muodossa (vrt.\ massan s‰ilymislain johto edell‰).
+Ent√§ jos $\vec F$ ei ole jatkuvasti derivoituva, tai $\rho$ ei ole jatkuva, mutta $\vec F$:n ja
+$\rho$:n v√§lill√§ on ehdon \eqref{kentt√§ ja l√§hde} mukainen yhteys? --- T√§ll√∂in on luontevaa
+sopia, ett√§ ehto \eqref{kentt√§ ja l√§hde} \pain{m√§√§rittelee} $\rho$:n kent√§n $\vec F$ l√§hteeksi.
+Fysikaalisissa sovelluksissa ajatellaan t√§ll√∂in, ett√§ ehto \eqref{kentt√§ ja l√§hde} itse asiassa
+ilmaisee luonnonlain sen alkuper√§isess√§ muodossa (vrt.\ massan s√§ilymislain johto edell√§).
 
-Vektorikent‰n ja l‰hteen v‰lisen riippuvuuden esitt‰minen integraalimuotoisena 'Gaussin lakina'
-\eqref{kentt‰ ja l‰hde} on erityisen hyˆdyllist‰ silloin, kun halutaan johtaa fysikaalisten
+Vektorikent√§n ja l√§hteen v√§lisen riippuvuuden esitt√§minen integraalimuotoisena 'Gaussin lakina'
+\eqref{kentt√§ ja l√§hde} on erityisen hy√∂dyllist√§ silloin, kun halutaan johtaa fysikaalisten
 vektorikenttien j\pain{atkuvuusehto}j\pain{a} \pain{materiaalira}j\pain{a}p\pain{innoilla}.
-Tarkastellaan esimerkkin‰ t‰llaisten ehtojen asettamista tasolla (tasomaisella 
+Tarkastellaan esimerkkin√§ t√§llaisten ehtojen asettamista tasolla (tasomaisella 
 materiaalirajapinnalla). Olkoon $T$ avaruustaso, joka jakaa $\R^3$:n kahteen avoimeen osaan 
 $V_1$ ja $V_2$ (eli $\R^3$ jakautuu pistevieraisiin osiin $V_1$, $V_2$ ja $T$), ja olkoon
-$\vec F$ paloittain jatkuvasti derivoituva vektorikentt‰ muotoa
+$\vec F$ paloittain jatkuvasti derivoituva vektorikentt√§ muotoa
 \[
 \vec F(x,y,z) = \begin{cases} \,\vec F_1(x,y,z), \quad \text{kun}\ (x,y,z) \in V_1, \\
                               \,\vec F_2(x,y,z), \quad \text{kun}\ (x,y,z) \in V_2,
                 \end{cases}
 \]
-miss‰ $\vec F_1$ ja $\vec F_2$ ovat molemmat koko $\R^3$:ssa m‰‰riteltyj‰ ja jatkuvasti
+miss√§ $\vec F_1$ ja $\vec F_2$ ovat molemmat koko $\R^3$:ssa m√§√§riteltyj√§ ja jatkuvasti
 derivoituvia. Olkoon vastaavasti $\,\rho\,$ paloittain jatkuva funktio muotoa
 \[
 \rho(x,y,z) = \begin{cases} \,\rho_1(x,y,z), \quad \text{kun}\ (x,y,z) \in V_1, \\
                             \,\rho_2(x,y,z), \quad \text{kun}\ (x,y,z) \in V_2,
                 \end{cases}
 \]
-miss‰ $\,\rho_1$ ja $\,\rho_2$ ovat molemmat koko $\R^3$:ssa m‰‰riteltyj‰ ja jatkuvia.
+miss√§ $\,\rho_1$ ja $\,\rho_2$ ovat molemmat koko $\R^3$:ssa m√§√§riteltyj√§ ja jatkuvia.
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
 \begin{center}
@@ -224,19 +224,19 @@ miss‰ $\,\rho_1$ ja $\,\rho_2$ ovat molemmat koko $\R^3$:ssa m‰‰riteltyj‰ ja jat
 \end{center}
 \end{figure}
 
-Em.\ s‰‰nnˆllisyysoletuksien lis‰ksi oletetaan viel‰, ett‰ kentt‰‰ $\,\vec F\,$ ja funktiota
-$\,\rho\,$ sitoo ehto \eqref{kentt‰ ja l‰hde}, ts.\ $\,\rho\,$ on kent‰n $\,\vec F\,$ l‰hde.
-T‰llˆin jos ko.\ ehdossa valitaan $V \subset V_1$ tai $V \subset V_2$ niin seuraa, ett‰ on 
-oltava $\nabla\cdot\vec F_i=\rho_i$ $\,V_i$:ss‰, $i=1,2$, eli p‰tee
-\begin{equation} \label{l‰hdey-1}
+Em.\ s√§√§nn√∂llisyysoletuksien lis√§ksi oletetaan viel√§, ett√§ kentt√§√§ $\,\vec F\,$ ja funktiota
+$\,\rho\,$ sitoo ehto \eqref{kentt√§ ja l√§hde}, ts.\ $\,\rho\,$ on kent√§n $\,\vec F\,$ l√§hde.
+T√§ll√∂in jos ko.\ ehdossa valitaan $V \subset V_1$ tai $V \subset V_2$ niin seuraa, ett√§ on 
+oltava $\nabla\cdot\vec F_i=\rho_i$ $\,V_i$:ss√§, $i=1,2$, eli p√§tee
+\begin{equation} \label{l√§hdey-1}
  \nabla\cdot\vec F(x,y,z) = \rho(x,y,z), \quad (x,y,z) \in V_1 \cup V_2.
 \end{equation}
-Tutkitaan seuraavaksi, mit‰ ehdosta \eqref{kentt‰ ja l‰hde} seuraa, kun joukko $V$ valitaan
-siten, ett‰ $V \cap\,T \neq \emptyset$. T‰t‰ silm‰ll‰ pit‰en tarkastellaan pistett‰ 
-$(x,y,z) \in T$ ja m‰‰ritell‰‰n t‰t‰ pistett‰ ymp‰rˆiv‰ 'pillerirasia' $B_{h,d}$ ehdoilla:
-(i) $B_{h,d}$ on suorakulmainen s‰rmiˆ, jonka keskipiste $\,=(x,y,z)$ ja kaksi sivutahkoa ovat
-tason $T$ suuntaiset. (ii) $B_{h,d}$:n tasoa $T$ vastaan kohtisuoran s‰rm‰n pituus $\,=d$. 
-(iii) Suorakulmio $T_h = B_{h,d} \cap T$ on $d$:st‰ riippumaton ja $T_h$:n suurimman sivun
+Tutkitaan seuraavaksi, mit√§ ehdosta \eqref{kentt√§ ja l√§hde} seuraa, kun joukko $V$ valitaan
+siten, ett√§ $V \cap\,T \neq \emptyset$. T√§t√§ silm√§ll√§ pit√§en tarkastellaan pistett√§ 
+$(x,y,z) \in T$ ja m√§√§ritell√§√§n t√§t√§ pistett√§ ymp√§r√∂iv√§ 'pillerirasia' $B_{h,d}$ ehdoilla:
+(i) $B_{h,d}$ on suorakulmainen s√§rmi√∂, jonka keskipiste $\,=(x,y,z)$ ja kaksi sivutahkoa ovat
+tason $T$ suuntaiset. (ii) $B_{h,d}$:n tasoa $T$ vastaan kohtisuoran s√§rm√§n pituus $\,=d$. 
+(iii) Suorakulmio $T_h = B_{h,d} \cap T$ on $d$:st√§ riippumaton ja $T_h$:n suurimman sivun
 pituus $=h$. 
 \begin{figure}[H]
 \setlength{\unitlength}{1cm}
@@ -252,110 +252,110 @@ pituus $=h$.
 \end{picture}
 \end{center}
 \end{figure}
-Valitaan ehdossa \eqref{kentt‰ ja l‰hde} $V=B_{h,d}$, miss‰ $T_h = B_{h,d} \cap T$ on kiinte‰ ja
-$d \kohti 0$. T‰llˆin seuraa
+Valitaan ehdossa \eqref{kentt√§ ja l√§hde} $V=B_{h,d}$, miss√§ $T_h = B_{h,d} \cap T$ on kiinte√§ ja
+$d \kohti 0$. T√§ll√∂in seuraa
 \[
 \lim_{d \kohti 0} \int_{\partial B_{h,d}} \vec F\cdot d\vec a
         = \int_{T_h} \vec n\cdot(\vec F_2-\vec F_1)\,d\mu 
         = \lim_{d \kohti 0} \int_{B_{h,d}} \rho\,dV = 0,
 \]
-miss‰ $\mu$ on tason $T$ pinta-alamitta ja $\vec n$ on $T$:n yksikkˆnormaalivektori, joka
-osoittaa osajoukon $V_2$ suuntaan (ks.\ kuviot). Kun t‰ss‰ tuloksessa annetaan edelleen 
-$h$:n l‰hesty‰ $0$:aa ja huomioidaan kenttien $\vec F_1$ ja $\vec F_2$ jatkuvuus pisteess‰
-$(x,y,z)$, niin seuraa, ett‰ on oltava $\vec n\cdot(\vec F_1-\vec F_2)(x,y,z)=0$. T‰m‰ on
-voimassa jokaisessa $T$:n pisteess‰, joten on p‰‰telty, ett‰ tasolla $T$ on voimassa
+miss√§ $\mu$ on tason $T$ pinta-alamitta ja $\vec n$ on $T$:n yksikk√∂normaalivektori, joka
+osoittaa osajoukon $V_2$ suuntaan (ks.\ kuviot). Kun t√§ss√§ tuloksessa annetaan edelleen 
+$h$:n l√§hesty√§ $0$:aa ja huomioidaan kenttien $\vec F_1$ ja $\vec F_2$ jatkuvuus pisteess√§
+$(x,y,z)$, niin seuraa, ett√§ on oltava $\vec n\cdot(\vec F_1-\vec F_2)(x,y,z)=0$. T√§m√§ on
+voimassa jokaisessa $T$:n pisteess√§, joten on p√§√§telty, ett√§ tasolla $T$ on voimassa
 jatkuvuusehto 
-\begin{equation} \label{l‰hdey-2}
+\begin{equation} \label{l√§hdey-2}
 \vec n\cdot\vec F_1(x,y,z) = \vec n\cdot\vec F_2(x,y,z), \quad (x,y,z) \in T.
 \end{equation}
-Sek‰ t‰m‰ ett‰ \eqref{l‰hdey-1} ovat siis ehdon \eqref{kentt‰ ja l‰hde} seurauksia 
-(tehtyjen s‰‰nnˆllisyysoletusten puitteissa).
+Sek√§ t√§m√§ ett√§ \eqref{l√§hdey-1} ovat siis ehdon \eqref{kentt√§ ja l√§hde} seurauksia 
+(tehtyjen s√§√§nn√∂llisyysoletusten puitteissa).
 
-Toisaalta jos l‰hdet‰‰n samoista s‰‰nnˆllisyysoletuksista ja oletetaan lis‰ksi \eqref{l‰hdey-1}
-ja \eqref{l‰hdey-2}, niin n‰ist‰ yhdess‰ seuraa \eqref{kentt‰ ja l‰hde}. Nimitt‰in jos 
-$V$ on perusalue ja $A_i = V \cap V_i \neq \emptyset$, $i=1,2$, niin oletuksen \eqref{l‰hdey-1}
-ja Gaussin lauseen perusteella voidaan p‰‰tell‰
+Toisaalta jos l√§hdet√§√§n samoista s√§√§nn√∂llisyysoletuksista ja oletetaan lis√§ksi \eqref{l√§hdey-1}
+ja \eqref{l√§hdey-2}, niin n√§ist√§ yhdess√§ seuraa \eqref{kentt√§ ja l√§hde}. Nimitt√§in jos 
+$V$ on perusalue ja $A_i = V \cap V_i \neq \emptyset$, $i=1,2$, niin oletuksen \eqref{l√§hdey-1}
+ja Gaussin lauseen perusteella voidaan p√§√§tell√§
 \begin{align*}
-\text{\eqref{l‰hdey-1}} &\qimpl \sum_{i=1}^2 \int_{A_i} \nabla\cdot\vec F_i\,dV 
+\text{\eqref{l√§hdey-1}} &\qimpl \sum_{i=1}^2 \int_{A_i} \nabla\cdot\vec F_i\,dV 
                                      = \sum_{i=1}^2 \int_{A_i} \rho_i\,dV = \int_V \rho\,dV \\
                         &\qimpl \sum_{i=1}^2 \int_{\partial A_i} \vec F_i\cdot d\vec a 
                                      = \int_V \rho\,dV.
 \end{align*}
-Koska t‰ss‰ on
+Koska t√§ss√§ on
 \[ 
 \partial A_1 \cup \partial A_2 = \partial V \cup (\partial A_1 \cap \partial A_2), \quad
 \partial A_1 \cap \partial A_2 \subset T, 
 \]
-niin oletuksen \eqref{l‰hdey-2} perusteella p‰‰tell‰‰n edelleen
+niin oletuksen \eqref{l√§hdey-2} perusteella p√§√§tell√§√§n edelleen
 \[
 \sum_{i=1}^2 \int_{\partial A_i} \vec F_i\cdot d\vec a 
      = \int_{\partial V} \vec F\cdot d\vec a 
            + \int_{\partial A_1 \cap \partial A_2} \vec n\cdot(\vec F_1-\vec F_2)\,d\mu
      = \int_{\partial V} \vec F\cdot d\vec a.
 \]
-Siis ehto \eqref{kentt‰ ja l‰hde} on voimassa. N‰in on p‰‰telty, ett‰ tehtyjen
-s‰‰nnˆllisyysoletusten puitteissa p‰tee
+Siis ehto \eqref{kentt√§ ja l√§hde} on voimassa. N√§in on p√§√§telty, ett√§ tehtyjen
+s√§√§nn√∂llisyysoletusten puitteissa p√§tee
 \[ \boxed{
-\quad \text{Ehto \eqref{kentt‰ ja l‰hde}} \qekv 
+\quad \text{Ehto \eqref{kentt√§ ja l√§hde}} \qekv 
       \begin{cases} 
       \ \nabla\cdot\vec F = \rho \quad          &\text{joukossa}\ V_1 \cup V_2, \quad\ykehys \\
       \ \vec n\cdot(\vec F_1-\vec F_2)= 0 \quad &\text{rajapinnalla}\ T. \quad\akehys
       \end{cases} }
 \]
-Johtop‰‰tˆs on sama myˆs, jos rajapinta $\partial V_1 \cap \partial V_2$ on osa kaarevaa, 
-riitt‰v‰n s‰‰nnˆllist‰ pintaa $S$. Koskien fysikaalisen vektorikent‰n jatkuvuusehtoja
-materiaalirajapinnalla on siis p‰‰telty, ett‰ jos vektorikent‰ll‰ on materiaalirajapinnan
-l‰heisyydess‰ paloittain jatkuva l‰hde, niin \pain{kent‰n} \pain{normaalikom}p\pain{onentti}
-\pain{on} j\pain{atkuva} materiaalirajapinnalla. Sen sijaan kent‰n tangentiaalikomponentin 
+Johtop√§√§t√∂s on sama my√∂s, jos rajapinta $\partial V_1 \cap \partial V_2$ on osa kaarevaa, 
+riitt√§v√§n s√§√§nn√∂llist√§ pintaa $S$. Koskien fysikaalisen vektorikent√§n jatkuvuusehtoja
+materiaalirajapinnalla on siis p√§√§telty, ett√§ jos vektorikent√§ll√§ on materiaalirajapinnan
+l√§heisyydess√§ paloittain jatkuva l√§hde, niin \pain{kent√§n} \pain{normaalikom}p\pain{onentti}
+\pain{on} j\pain{atkuva} materiaalirajapinnalla. Sen sijaan kent√§n tangentiaalikomponentin 
 \pain{ei} tarvitse olla jatkuva.
 
-Samaan tapaan kuin ehdossa \eqref{kentt‰ ja l‰hde} voidaan myˆs vektorikent‰n ja sen 
-pyˆrrekent‰n v‰linen yhteys esitt‰‰ integraalimuotoisena m‰‰ritelm‰n‰. Jos $\vec F$ on 
-jatkuvasti derivoituva $\R^3$:ssa, niin $\vec F$:n pyˆrrekentt‰ on 
-$\vec\omega = \nabla\times\vec F$ (vrt.\ Luku \ref{divergenssi ja roottori}). T‰llˆin p‰tee
+Samaan tapaan kuin ehdossa \eqref{kentt√§ ja l√§hde} voidaan my√∂s vektorikent√§n ja sen 
+py√∂rrekent√§n v√§linen yhteys esitt√§√§ integraalimuotoisena m√§√§ritelm√§n√§. Jos $\vec F$ on 
+jatkuvasti derivoituva $\R^3$:ssa, niin $\vec F$:n py√∂rrekentt√§ on 
+$\vec\omega = \nabla\times\vec F$ (vrt.\ Luku \ref{divergenssi ja roottori}). T√§ll√∂in p√§tee
 yleistetyn Gaussin lauseen perusteella
-\begin{equation} \label{kentt‰ ja pyˆrre}
+\begin{equation} \label{kentt√§ ja py√∂rre}
 \int_V \vec\omega\,dV = \int_{\partial V} d\vec a\times\vec F \quad
                         (V\subset\R^3\,\ \text{perusalue}).
 \end{equation}
 Jos $\vec F$ ei ole koko $\R^3$:ssa jatkuvasti derivoituva, tai $\vec\omega$ ei ole jatkuva,
-niin katsotaan ehto \eqref{kentt‰ ja pyˆrre} pyˆrrekent‰n $\vec\omega$ m‰‰ritelm‰ksi. Jos nyt
-$\vec F$  toteuttaa samat ehdot kuin edell‰ ja oletetaan, ett‰ m‰‰ritelm‰n
-\eqref{kentt‰ ja pyˆrre} mukainen pyˆrrekentt‰ on muotoa 
+niin katsotaan ehto \eqref{kentt√§ ja py√∂rre} py√∂rrekent√§n $\vec\omega$ m√§√§ritelm√§ksi. Jos nyt
+$\vec F$  toteuttaa samat ehdot kuin edell√§ ja oletetaan, ett√§ m√§√§ritelm√§n
+\eqref{kentt√§ ja py√∂rre} mukainen py√∂rrekentt√§ on muotoa 
 \[
 \vec\omega(x,y,z) = \begin{cases} \,\vec\omega_1(x,y,z), \quad \text{kun}\ (x,y,z) \in V_1, \\
                                   \,\vec\omega_2(x,y,z), \quad \text{kun}\ (x,y,z) \in V_2,
                     \end{cases}
 \]
-miss‰ $\,\vec\omega_1$ ja $\,\vec\omega_2$ ovat molemmat koko $\R^3$:ssa m‰‰riteltyj‰ ja 
-jatkuvia, niin samalla tavoin kuin edell‰ p‰‰tell‰‰n, ett‰ p‰tee
+miss√§ $\,\vec\omega_1$ ja $\,\vec\omega_2$ ovat molemmat koko $\R^3$:ssa m√§√§riteltyj√§ ja 
+jatkuvia, niin samalla tavoin kuin edell√§ p√§√§tell√§√§n, ett√§ p√§tee
 \[ \boxed{
-\quad \text{Ehto \eqref{kentt‰ ja pyˆrre}} \qekv 
+\quad \text{Ehto \eqref{kentt√§ ja py√∂rre}} \qekv 
 \begin{cases} 
 \ \nabla\times\vec F = \vec\omega \quad         &\text{joukossa}\ V_1 \cup V_2, \quad\ykehys \\
 \ \vec n\times(\vec F_1-\vec F_2)= \vec 0 \quad &\text{rajapinnalla}\ T. \quad\akehys
 \end{cases} }
 \]
-T‰ss‰ tapauksessa \pain{kent‰n} \pain{tan}g\pain{entiaalikom}p\pain{onentti} \pain{on} 
-j\pain{atkuva} materiaalirajapinnalla, sill‰ tangentiaalikomponentti on (vrt.\ 
+T√§ss√§ tapauksessa \pain{kent√§n} \pain{tan}g\pain{entiaalikom}p\pain{onentti} \pain{on} 
+j\pain{atkuva} materiaalirajapinnalla, sill√§ tangentiaalikomponentti on (vrt.\ 
 Luku \ref{ristitulo})
 \[ 
 \vec F_t = \vec F - (\vec n\cdot\vec F)\,\vec n = - \vec n\times(\vec n\times\vec F). 
 \]
-Kent‰n normaalikomponentin ei tarvitse olla jatkuva.
+Kent√§n normaalikomponentin ei tarvitse olla jatkuva.
 
-\begin{Exa} Staattinen s‰hkˆkentt‰ $\vec E$ ja s‰hkˆvuon tiheys $\vec D$ toteuttavat Maxwellin
-yht‰lˆt (vrt.\ Luku \ref{divergenssi ja roottori})
+\begin{Exa} Staattinen s√§hk√∂kentt√§ $\vec E$ ja s√§hk√∂vuon tiheys $\vec D$ toteuttavat Maxwellin
+yht√§l√∂t (vrt.\ Luku \ref{divergenssi ja roottori})
 \[ 
 \nabla\times\vec E = \vec 0, \quad \nabla\cdot\vec D = \rho, 
 \]
-miss‰ $\,\rho\,$ on varaustiheys. Oletetaan, ett‰ edell‰ $V_1$ ja $V_2$ edustavat kahta eri 
+miss√§ $\,\rho\,$ on varaustiheys. Oletetaan, ett√§ edell√§ $V_1$ ja $V_2$ edustavat kahta eri 
 materiaalia, joissa vallitsevat materiaalilait ovat
 \[ 
-\vec D = \epsilon_i\vec E \quad V_i\,\text{:ss‰}, \quad i=1,2, 
+\vec D = \epsilon_i\vec E \quad V_i\,\text{:ss√§}, \quad i=1,2, 
 \]
-miss‰ $\epsilon_i$ (= materiaalin $i$ s‰hkˆinen permittiivisyys) oletetaan $V_i$:ssa vakioksi.
-Jos oletetaan $\rho$ paloittain jatkuvaksi kuten edell‰, niin jatkuvuusehdot 
+miss√§ $\epsilon_i$ (= materiaalin $i$ s√§hk√∂inen permittiivisyys) oletetaan $V_i$:ssa vakioksi.
+Jos oletetaan $\rho$ paloittain jatkuvaksi kuten edell√§, niin jatkuvuusehdot 
 materiaalirajapinnalla ovat
 \[
 \begin{cases} 
@@ -366,19 +366,19 @@ materiaalirajapinnalla ovat
       \ \epsilon_1\,\vec n\cdot\vec E_1 = \epsilon_2\,\vec n\cdot\vec E_2.
       \end{cases}
 \]
-S‰hkˆkent‰n tangentiaalikomponentti on siis materiaalirajapinnalla jatkuva. Normaalikomponentti
-sen sijaan on ep‰jatkuva, ellei ole joko $\epsilon_1 = \epsilon_2$ tai $\vec n\cdot\vec E_i=0$.
+S√§hk√∂kent√§n tangentiaalikomponentti on siis materiaalirajapinnalla jatkuva. Normaalikomponentti
+sen sijaan on ep√§jatkuva, ellei ole joko $\epsilon_1 = \epsilon_2$ tai $\vec n\cdot\vec E_i=0$.
 \loppu
 \end{Exa}
-\jatko \begin{Exa} (jatko) Esimerkiss‰ olkoon 
+\jatko \begin{Exa} (jatko) Esimerkiss√§ olkoon 
 \[ 
 V_1 = \{(x,y,z) \in \R^3 \mid x+y+z<0\}, \quad V_2 = \{(x,y,z) \in \R^3 \mid x+y+z>0\}, 
 \]
-ja $\,\epsilon_1/\epsilon_2=2$. Laske s‰hkˆkentt‰ $\vec E_2(0,0,0)$, kun tiedet‰‰n, ett‰ 
+ja $\,\epsilon_1/\epsilon_2=2$. Laske s√§hk√∂kentt√§ $\vec E_2(0,0,0)$, kun tiedet√§√§n, ett√§ 
 $\vec E_1(0,0,0)$ $=$ $E(\vec i+2\vec j-\vec k)$.
 \end{Exa}
-\ratk Materiaalirajapinta on taso $T:\ x+y+z=0$. T‰m‰n materiaalia $2$ kohti osoittava 
-yksikkˆnormaalivektori on $\vec n = (\vec i+\vec j+\vec k)/\sqrt{3}$, joten
+\ratk Materiaalirajapinta on taso $T:\ x+y+z=0$. T√§m√§n materiaalia $2$ kohti osoittava 
+yksikk√∂normaalivektori on $\vec n = (\vec i+\vec j+\vec k)/\sqrt{3}$, joten
 \[
 \vec n\cdot\vec E_1(0,0,0) = \frac{2E}{\sqrt{3}}, \quad \vec n\times\vec E_1(0,0,0) 
                            = \frac{E}{\sqrt{3}}(-3\vec i+2\vec j+\vec k).
@@ -403,8 +403,8 @@ joten
 \begin{enumerate}
 
 \item
-Laske vektorikent‰n $\vec F$ vuo origokeskisen, $R$-s‰teisen pallopinnan
-l‰pi: \vspace{1mm}\newline
+Laske vektorikent√§n $\vec F$ vuo origokeskisen, $R$-s√§teisen pallopinnan
+l√§pi: \vspace{1mm}\newline
 a) \ $\vec F=x^2y^4z\vec k \qquad $
 b) \ $\vec F=x\vec i-2y\vec j+4z\vec k \qquad$
 c) \ $\vec F=ye^z\vec i+x^2e^z\vec j+xy\vec k$ \newline
@@ -412,8 +412,8 @@ d) \ $\vec F=(x^2+y^2)\vec i+(y^2-z^2)\vec j+z\vec k \qquad$
 e) \ $\vec F=x^2\vec i+3yz^2\vec j+(3y^2z+x^2)\vec k$
 
 \item
-Laske vektorikent‰n $\vec F=x^2\vec i+y^2\vec j+z^2\vec k$ vuo annetun alueen $V\subset\R^3$
-reunapinnan $\partial V$ l‰pi: \vspace{1mm}\newline
+Laske vektorikent√§n $\vec F=x^2\vec i+y^2\vec j+z^2\vec k$ vuo annetun alueen $V\subset\R^3$
+reunapinnan $\partial V$ l√§pi: \vspace{1mm}\newline
 a) \ $V:\ (x-2)^2+y^2+(z-3)^2 \le 9 \quad\,\ $
 b) \ $V:\ x^2+y^2+4(z-1)^2 \le 4$ \newline
 c) \ $V:\,\ x,y,z \ge 0\,\ja\,x+y+z \le 3 \qquad$
@@ -421,11 +421,11 @@ d) \ $V:\ x^2+y^2 \le 2y\,\ja\,0 \le z \le 4$
 
 \item
 Tetraedrin muotoista aluetta $V\subset\R^3$ rajoittavat tasot $z=0$, $x=2y$, $x=-y$ ja
-$y+z=a$ ($a>0$). Laske vektorikent‰n
+$y+z=a$ ($a>0$). Laske vektorikent√§n
 \[
 \vec F=(3xyz+e^{yz})\vec i+(x^2+y^2z)\vec j+(y^2-2yz^2)\vec k
 \]
-vuo $V$:n reunapinnan $\partial V$ l‰pi sis‰lt‰ ulosp‰in.
+vuo $V$:n reunapinnan $\partial V$ l√§pi sis√§lt√§ ulosp√§in.
 
 \item
 Olkoon $S:\,x^2+y^2+z^2=1$, $B \subset S$ ja
@@ -433,71 +433,71 @@ Olkoon $S:\,x^2+y^2+z^2=1$, $B \subset S$ ja
 V= \{(x,y,z)\in\R^3 \mid (x,y,z)=t(u,v,w),\ t\in[0,R]\,\ja\,(u,v,w) \in B\}.
 \]
 Laske $V$:n tilavuus $\mu(V)$ \ a) pallokoordinaattien avulla, \ b) soveltamalla Gaussin 
-lausetta vektorikentt‰‰n $\vec F=x\vec i+y\vec j+z\vec k$.
+lausetta vektorikentt√§√§n $\vec F=x\vec i+y\vec j+z\vec k$.
 
 \item
-Pyˆriv‰ss‰ virtauskent‰ss‰ massavuon tiheys pisteess‰ $\,(x,y,z) \vastaa \vec r\,$ on 
-$\vec F=Q\,\vec r\times(2\vec i-\vec j+3\vec k)$, miss‰ $Q=24$ kg/m$^3$/s ja $\vec r$:n
-yksikkˆ = m. Olkoon $V$ kuutio, jonka yksi k‰rki on origossa, origosta l‰htev‰t s‰rm‰t ovat 
-positiivisilla koordinaattiakseleilla ja sivun pituus on $a=2$ m. Laske massavuo (yksikkˆ kg/s)
-$V$:n kunkin sivutahkon l‰pi laskettuna positiivisena kuution sis‰lt‰ ulosp‰in.
+Py√∂riv√§ss√§ virtauskent√§ss√§ massavuon tiheys pisteess√§ $\,(x,y,z) \vastaa \vec r\,$ on 
+$\vec F=Q\,\vec r\times(2\vec i-\vec j+3\vec k)$, miss√§ $Q=24$ kg/m$^3$/s ja $\vec r$:n
+yksikk√∂ = m. Olkoon $V$ kuutio, jonka yksi k√§rki on origossa, origosta l√§htev√§t s√§rm√§t ovat 
+positiivisilla koordinaattiakseleilla ja sivun pituus on $a=2$ m. Laske massavuo (yksikk√∂ kg/s)
+$V$:n kunkin sivutahkon l√§pi laskettuna positiivisena kuution sis√§lt√§ ulosp√§in.
 
 \item 
-Vektorikentt‰ $\vec F$ ja sen l‰hde $\rho$ ovat a) pallokoordinaatistossa, 
-b) lieriˆkoordinaatistossa muotoa $\vec F= F(r)\vec e_r$, $\rho = \rho(r)$. Laske $F(r)$ 
-l‰hteen $\rho(r)$ avulla k‰ytt‰m‰ll‰ Gaussin kaavaa sopivasti valitussa alueessa $V$.
+Vektorikentt√§ $\vec F$ ja sen l√§hde $\rho$ ovat a) pallokoordinaatistossa, 
+b) lieri√∂koordinaatistossa muotoa $\vec F= F(r)\vec e_r$, $\rho = \rho(r)$. Laske $F(r)$ 
+l√§hteen $\rho(r)$ avulla k√§ytt√§m√§ll√§ Gaussin kaavaa sopivasti valitussa alueessa $V$.
 
 \item
-Olkoot $u$ ja $v$ s‰‰nnˆllisi‰ funktioita perusalueessa $A\subset\R^2$ tai $V\subset\R^3$.
-Soveltamalla Gaussin lausetta vektorikentt‰‰n $\vec F=u\nabla v-v\nabla u$ n‰yt‰, ett‰
+Olkoot $u$ ja $v$ s√§√§nn√∂llisi√§ funktioita perusalueessa $A\subset\R^2$ tai $V\subset\R^3$.
+Soveltamalla Gaussin lausetta vektorikentt√§√§n $\vec F=u\nabla v-v\nabla u$ n√§yt√§, ett√§
 \begin{align*}
 &\int_A \left(u\Delta v-v\Delta u\right)\,dxdy
                  = \int_{\partial V} \left(u\pder{v}{n}-v\pder{u}{n}\right)ds, \\
 &\int_V \left(u\Delta v-v\Delta u\right)\,dxdydz 
                  = \int_{\partial V} \left(u\pder{v}{n}-v\pder{u}{n}\right)dS,
 \end{align*}
-miss‰ $\partial/\partial n$ tarkoittaa suunnattua derivaattaa $\partial A$:n tai $\partial V$:n
+miss√§ $\partial/\partial n$ tarkoittaa suunnattua derivaattaa $\partial A$:n tai $\partial V$:n
 normaalin suuntaan.
 
-\item \index{zzb@\nim!Autojen s‰ilyminen}
-(Autojen s‰ilyminen) Yksiulotteisessa liikennevirrassa on $\rho(t,x)$ autotiheys tiell‰
-(yksikkˆ autoa/km) ja $v(t,x)$ nopeus (yksikkˆ km/h). \ a) M‰‰rittele autovuo tiell‰ ja johda
-autojen s‰ilymislaki. \ b) Pisteess‰ $x=0$ tie 1 kapenee tieksi 2. Tiell‰ 1 ($x<0$)
-liikennevirta on tasainen: $\rho=26$ autoa/km ja $v=120$ km/h. Myˆs tiell‰ 2 liikennevirta on
-tasainen ($\rho$ ja $v$ vakioita) siten, ett‰ tien maksimikapasiteetti $3000$ autoa/h ei ylity.
-Voiko t‰llaisessa liikennetilanteessa piste $x=0$ olla ruuhkaton? Jos ei, niin monellako
-autolla v‰hint‰‰n ruuhka kasvaa tunnissa?
+\item \index{zzb@\nim!Autojen s√§ilyminen}
+(Autojen s√§ilyminen) Yksiulotteisessa liikennevirrassa on $\rho(t,x)$ autotiheys tiell√§
+(yksikk√∂ autoa/km) ja $v(t,x)$ nopeus (yksikk√∂ km/h). \ a) M√§√§rittele autovuo tiell√§ ja johda
+autojen s√§ilymislaki. \ b) Pisteess√§ $x=0$ tie 1 kapenee tieksi 2. Tiell√§ 1 ($x<0$)
+liikennevirta on tasainen: $\rho=26$ autoa/km ja $v=120$ km/h. My√∂s tiell√§ 2 liikennevirta on
+tasainen ($\rho$ ja $v$ vakioita) siten, ett√§ tien maksimikapasiteetti $3000$ autoa/h ei ylity.
+Voiko t√§llaisessa liikennetilanteessa piste $x=0$ olla ruuhkaton? Jos ei, niin monellako
+autolla v√§hint√§√§n ruuhka kasvaa tunnissa?
 
 \item 
-L‰mmˆnjohtumisen perusyht‰lˆt ovat
+L√§mm√∂njohtumisen perusyht√§l√∂t ovat
 \[
 \nabla\cdot\vec J = \rho, \quad \vec J = - \lambda \nabla u,
 \]
-miss‰ $\vec J$ on l‰mpˆvirran tiheys, $\rho$ l‰mpˆl‰hteen tiheys, $u$ l‰mpˆtila ja 
-$\lambda$ materiaalin l‰mmˆnjohtavuus. Olkoon $\lambda = \lambda_i =$ vakio $V_i$:ssa, 
-$i = 1,2$, miss‰ $\lambda_2 = 3 \lambda_1$ ja
+miss√§ $\vec J$ on l√§mp√∂virran tiheys, $\rho$ l√§mp√∂l√§hteen tiheys, $u$ l√§mp√∂tila ja 
+$\lambda$ materiaalin l√§mm√∂njohtavuus. Olkoon $\lambda = \lambda_i =$ vakio $V_i$:ssa, 
+$i = 1,2$, miss√§ $\lambda_2 = 3 \lambda_1$ ja
 \[
 V_{1, 2} = \{\,(x, y, z) \in \R^3 \mid x+2y+2z \lessgtr 0 \,\}.
 \]
-M‰‰rit‰ l‰mpˆvirtavektorin $\vec J$ raja-arvo $\vec J_2 (0, 0, 0)$ materiaalin 2 ($V_2$) 
-puolelta origoa l‰hestytt‰ess‰, kun tiedet‰‰n, ett‰ ko. raja-arvo materiaalin 1 puolelta on 
-$\vec J_1(0, 0, 0) = J(-\vec i+\vec j+3\vec k)$ ($J$ vakio). L‰hde $\rho$ on kummassakin 
-materiaalissa vakio ja l‰mpˆtila $u$ on materiaalirajapinnalla jatkuva.
+M√§√§rit√§ l√§mp√∂virtavektorin $\vec J$ raja-arvo $\vec J_2 (0, 0, 0)$ materiaalin 2 ($V_2$) 
+puolelta origoa l√§hestytt√§ess√§, kun tiedet√§√§n, ett√§ ko. raja-arvo materiaalin 1 puolelta on 
+$\vec J_1(0, 0, 0) = J(-\vec i+\vec j+3\vec k)$ ($J$ vakio). L√§hde $\rho$ on kummassakin 
+materiaalissa vakio ja l√§mp√∂tila $u$ on materiaalirajapinnalla jatkuva.
 
 \item (*)
-Olkoon $A\subset\R^2$ tai $V\subset\R^3$ perusalue. N‰yt‰, ett‰ jos $u_1$ ja $u_2$ ovat 
-reuna-arvoteht‰v‰n
+Olkoon $A\subset\R^2$ tai $V\subset\R^3$ perusalue. N√§yt√§, ett√§ jos $u_1$ ja $u_2$ ovat 
+reuna-arvoteht√§v√§n
 \[
 \begin{cases} 
-\,\Delta u=\rho &\text{$A$:ssa ($V$:ss‰)}, \\ 
+\,\Delta u=\rho &\text{$A$:ssa ($V$:ss√§)}, \\ 
 \,u=0 &\text{reunalla $\partial A$ (reunalla $\partial V$)}
 \end{cases}
 \] 
-ratkaisuja ja lis‰ksi riitt‰v‰n s‰‰nnˆllisi‰, niin funktiolle $u=u_1-u_2$ p‰tee
+ratkaisuja ja lis√§ksi riitt√§v√§n s√§√§nn√∂llisi√§, niin funktiolle $u=u_1-u_2$ p√§tee
 \[
 \int_A \abs{\nabla u}^2\,dxdy=0 \quad \left(\int_V \abs{\nabla u}^2\,dxdydz=0\right).
 \]
-P‰‰ttele, ett‰ reuna-arvoteht‰v‰n ratkaisu --- sik‰li kuin olemassa ja riitt‰v‰n s‰‰nnˆllinen
---- on yksik‰sitteinen.
+P√§√§ttele, ett√§ reuna-arvoteht√§v√§n ratkaisu --- sik√§li kuin olemassa ja riitt√§v√§n s√§√§nn√∂llinen
+--- on yksik√§sitteinen.
 
 \end{enumerate}

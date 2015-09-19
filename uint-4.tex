@@ -6,7 +6,7 @@ muuntaminen}
 \index{muuttujan vaihto (sijoitus)!b@integraalissa|vahv}
 
 Olkoon $A,B\subset\R^n$, $n\in\N$ ja olkoon $\mpu:B \kohti A$ bijektio (tai 'melkein bijektio',
-ks.\ huomautukset j‰ljemp‰n‰).
+ks.\ huomautukset j√§ljemp√§n√§).
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvaUint-26.pstex_t}
@@ -16,79 +16,79 @@ Halutaan laskea integraali $\int_A f\,d\mu = \int_A f\,dx_1\ldots dx_n$ muunnetu
 \[
 \int_A f\,d\mu=\int_B g\,d\mu', \quad g(\mt)=f(\mpu(\mt)), \quad \mt \in B.
 \]
-T‰ss‰ $g$ on kuvauksen $\mpu$ v‰litt‰m‰ $f$:n vastine $B$:ss‰, ja $\mu'$ on toinen, toistaiseksi
+T√§ss√§ $g$ on kuvauksen $\mpu$ v√§litt√§m√§ $f$:n vastine $B$:ss√§, ja $\mu'$ on toinen, toistaiseksi
 tuntematon $\R^n$:n mitta. Kyse on siis muuttujan vaihdosta eli \pain{si}j\pain{oituksesta}
 \[
 \mx=\mpu(\mt),\quad \mt\in B.
 \]
-Muunnoksessa on ensinn‰kin m‰‰r‰tt‰v‰ funktio $g$. Sik‰li kuin l‰htˆkohtana on
-(niinkuin yleens‰) tunnettu kuvaus $\mpu$, t‰m‰ on suoraviivainen toimenpide. Myˆs mitan
-$\mu'$ formaali m‰‰rittely on helppoa. Nimitt‰in jos $\mpu(\Delta B)=\Delta A \subset A$ ja
+Muunnoksessa on ensinn√§kin m√§√§r√§tt√§v√§ funktio $g$. Sik√§li kuin l√§ht√∂kohtana on
+(niinkuin yleens√§) tunnettu kuvaus $\mpu$, t√§m√§ on suoraviivainen toimenpide. My√∂s mitan
+$\mu'$ formaali m√§√§rittely on helppoa. Nimitt√§in jos $\mpu(\Delta B)=\Delta A \subset A$ ja
 valitaan $f(\mx)=1,\ \mx\in \Delta A$ (jolloin $g(\mt)=1,\ \mt\in \Delta B$), on mitan ja
-integraalin yhteyden (vrt. Luku \ref{tasointegraalit}) ja oletetun integraalien v‰lisen
+integraalin yhteyden (vrt. Luku \ref{tasointegraalit}) ja oletetun integraalien v√§lisen
 yhteyden perusteella
 \[
 \mu'(\Delta B)=\int_{\Delta B} d\mu'=\int_{\Delta A} d\mu=\mu(\Delta A).
 \]
-Siis $\mu'(\Delta B)=\mu(\Delta A)$, eli $\Delta B$:n mitta m‰‰r‰ytyy vastinjoukon
-$\Delta A=\mpu(\Delta B)$ Jordan-mittana. --- T‰ss‰ on huomattava, ett‰ kuvauksen $\mpu$ on
-oltava (ainakin l‰hes) injektio, jotta $\mu'$ olisi todella mitta. Nimitt‰in koska mitta on
+Siis $\mu'(\Delta B)=\mu(\Delta A)$, eli $\Delta B$:n mitta m√§√§r√§ytyy vastinjoukon
+$\Delta A=\mpu(\Delta B)$ Jordan-mittana. --- T√§ss√§ on huomattava, ett√§ kuvauksen $\mpu$ on
+oltava (ainakin l√§hes) injektio, jotta $\mu'$ olisi todella mitta. Nimitt√§in koska mitta on
 additiivinen, niin $B$:n mitallisille osajoukoille on oltava voimassa
 \[
 \Delta B_1\cap\Delta B_2=\emptyset \qimpl
        \mu'(\Delta B_1\cup\Delta B_2)=\mu'(\Delta B_1)+\mu'(\Delta B_2).
 \]
 Jos $\mpu$ ei olisi injektio, niin joillakin $\mx_1,\mx_2 \in B$, $\mx_1\neq\mx_2$ olisi
-$\mpu(\mx_1)=\mpu(\mx_2)$, tai yleisemmin $\mpu(\Delta B_1)=\mpu(\Delta B_2)=\Delta A$, miss‰
-$\Delta B_1,\Delta B_2 \subset B$ ja $\Delta B_1 \cap \Delta B_2 =\emptyset$. T‰llˆin
+$\mpu(\mx_1)=\mpu(\mx_2)$, tai yleisemmin $\mpu(\Delta B_1)=\mpu(\Delta B_2)=\Delta A$, miss√§
+$\Delta B_1,\Delta B_2 \subset B$ ja $\Delta B_1 \cap \Delta B_2 =\emptyset$. T√§ll√∂in
 $\mu'(\Delta B_1\cup\Delta B_2)=\mu(\Delta A)$ ja
 $\mu'(\Delta B_1)+\mu'(\Delta B_2)=2\mu(\Delta A)\neq\mu(\Delta A)$, ellei ole
-$\mu(\Delta A)=0$. P‰‰tell‰‰n siis, ett‰ $\mpu$:n ep‰injektiivisyys voidaan sallia
-\pain{enint‰‰n} (mitan $\mu'$ suhteen) \pain{nollamittaisessa} j\pain{oukossa}.
+$\mu(\Delta A)=0$. P√§√§tell√§√§n siis, ett√§ $\mpu$:n ep√§injektiivisyys voidaan sallia
+\pain{enint√§√§n} (mitan $\mu'$ suhteen) \pain{nollamittaisessa} j\pain{oukossa}.
 
-Sik‰li kuin $\mpu$ on injektio, tai mainitulla tavalla 'melkein', on integraalin
-muuntamiskysymys siis periaatteessa ratkaistu. Toistaiseksi ei kuitenkaan ole selv‰‰,
-mill‰ tavoin mitan $\mu'$ avulla voidaan k‰yt‰nnˆss‰ laskea (muuten kuin palaamalla 
-alkuper‰isiin muuttujiin). T‰m‰ laskutekninen kysymys onkin kaikkein keskeisin, sik‰li 
-kuin muunnoksesta halutaan jotakin hyˆty‰.
+Sik√§li kuin $\mpu$ on injektio, tai mainitulla tavalla 'melkein', on integraalin
+muuntamiskysymys siis periaatteessa ratkaistu. Toistaiseksi ei kuitenkaan ole selv√§√§,
+mill√§ tavoin mitan $\mu'$ avulla voidaan k√§yt√§nn√∂ss√§ laskea (muuten kuin palaamalla 
+alkuper√§isiin muuttujiin). T√§m√§ laskutekninen kysymys onkin kaikkein keskeisin, sik√§li 
+kuin muunnoksesta halutaan jotakin hy√∂ty√§.
 
 \subsection*{Muuntosuhde}
 
-Tutkitaan muunnettua integraalia $\int_B g\,d\mu'$. Oletetaan, ett‰ $B$ on rajoitettu ja
-$g(\mt)$ rajoitettu $B$:ss‰, jolloin on
+Tutkitaan muunnettua integraalia $\int_B g\,d\mu'$. Oletetaan, ett√§ $B$ on rajoitettu ja
+$g(\mt)$ rajoitettu $B$:ss√§, jolloin on
 (vrt.\ Luvut \ref{tasointegraalit} ja \ref{avaruusintegraalit})
-$\int_B g\,d\mu'=\int_T g_0\,d\mu'$, miss‰ $T \supset B$ on $n$-ulotteinen suorakulmainen
-peruss‰rmiˆ ja $g_0=g$:n nollajatko $B$:n ulkopuolelle. Oletetaan jatkossa, ett‰
-$\mpu:\ T \kohti \mpu(T)$ on (l‰hes) injektio ja ett‰ $\mpu(T')$ on Jordan-mitallinen aina
-kun $T' \subset T$ on Jordan-mitallinen. T‰llˆin jos $\mathcal{T}_h=\{T_k\}\,$ on $T$:n jako
-osas‰rmiˆihin, joiden s‰rmien pituus on enint‰‰n $h$, niin vastaavasti kuin Jordan-mitan suhteen
-integroitaessa p‰tee summakaava
+$\int_B g\,d\mu'=\int_T g_0\,d\mu'$, miss√§ $T \supset B$ on $n$-ulotteinen suorakulmainen
+peruss√§rmi√∂ ja $g_0=g$:n nollajatko $B$:n ulkopuolelle. Oletetaan jatkossa, ett√§
+$\mpu:\ T \kohti \mpu(T)$ on (l√§hes) injektio ja ett√§ $\mpu(T')$ on Jordan-mitallinen aina
+kun $T' \subset T$ on Jordan-mitallinen. T√§ll√∂in jos $\mathcal{T}_h=\{T_k\}\,$ on $T$:n jako
+osas√§rmi√∂ihin, joiden s√§rmien pituus on enint√§√§n $h$, niin vastaavasti kuin Jordan-mitan suhteen
+integroitaessa p√§tee summakaava
 \[
 \int_T g_0\,d\mu' \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)\mu'(T_k)
                   \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)\mu(\mpu(T_k)),
 \]
-miss‰ $\mt_k \in T_k$.
+miss√§ $\mt_k \in T_k$.
 \begin{figure}[H]
 \begin{center}
 \import{kuvat/}{kuvaUint-27.pstex_t}
 \end{center}
 \end{figure}
-Oletetaan nyt, ett‰ kuvaukselle $\mpu$ on m‰‰ritelt‰viss‰ $T$:ss‰ jatkuvana funktiona
-$J(\mt)$ nk.\ \kor{muuntosuhde} (mittasuhde, suurennussuhde) siten, ett‰ jokaisella
-$T_k\in\mathcal{T}_h$ ja jokaisella $\mt_k \in T_k$ p‰tee\footnote[2]{Muuntosuhteen
-m‰‰rittely voidaan yleisemmin rajoittaa s‰rmiˆihin, joille p‰tee $T_k \cap U=\emptyset$,
-miss‰ $\mu'(U)=0$. T‰llˆin muuntosuhde ei v‰ltt‰m‰tt‰ ole koko $T$:ss‰ jatkuva tai edes
-m‰‰ritelty.}
+Oletetaan nyt, ett√§ kuvaukselle $\mpu$ on m√§√§ritelt√§viss√§ $T$:ss√§ jatkuvana funktiona
+$J(\mt)$ nk.\ \kor{muuntosuhde} (mittasuhde, suurennussuhde) siten, ett√§ jokaisella
+$T_k\in\mathcal{T}_h$ ja jokaisella $\mt_k \in T_k$ p√§tee\footnote[2]{Muuntosuhteen
+m√§√§rittely voidaan yleisemmin rajoittaa s√§rmi√∂ihin, joille p√§tee $T_k \cap U=\emptyset$,
+miss√§ $\mu'(U)=0$. T√§ll√∂in muuntosuhde ei v√§ltt√§m√§tt√§ ole koko $T$:ss√§ jatkuva tai edes
+m√§√§ritelty.}
 \[
 \left|\frac{\mu(\mpu(T_k))}{\mu(T_k)}-J(\mt_k)\right| \,\le\, \eps(h) \kohti 0 \quad 
                                                              \text{kun}\,\ h \kohti 0,
 \]
-miss‰ $\eps(h)$ riippuu vain tiheysparametrista $h$ (ei $k$:sta eik‰ yleisemmin
+miss√§ $\eps(h)$ riippuu vain tiheysparametrista $h$ (ei $k$:sta eik√§ yleisemmin
 $\mathcal{T}_h$:sta).
 
-T‰m‰n perusteella voidaan em.\ summakaavassa kirjoittaa likim‰‰rin
-$\mu(\mpu(T_k) \approx J(\mt_k)\mu(T_k)$. Olettaen, ett‰ $|g_0(\mt)| \le C,\ \mt \in T$
-($g$ oli rajoitettu), saadaan t‰lle approksimatiolle tehtyjen oletusten perusteella virhearvio
+T√§m√§n perusteella voidaan em.\ summakaavassa kirjoittaa likim√§√§rin
+$\mu(\mpu(T_k) \approx J(\mt_k)\mu(T_k)$. Olettaen, ett√§ $|g_0(\mt)| \le C,\ \mt \in T$
+($g$ oli rajoitettu), saadaan t√§lle approksimatiolle tehtyjen oletusten perusteella virhearvio
 \[
 \left|\sum_k g_0(\mt_k)\mu(\mpu(T_k))-\sum_k g_0(\mt_k)J(\mt_k)\mu(T_k)\right|
 \le C\eps(h)\sum_k\mu(T_k) = C\eps(h)\mu(T).
@@ -100,31 +100,31 @@ soveltaen seuraa
           \,=\, \Lim_{h \kohti 0} \sum_k g_0(\mt_k)J(\mt_k)\mu(T_k)
           \,=\, \int_T g_0(\mt)J(\mt)\,d\mu.
 \]
-T‰ss‰ on edelleen $\int_T g_0(\mt)J(\mt)\,d\mu = \int_B g(\mt)J(\mt)\,d\mu$
-(koska $g_0J=(gJ)_0$), joten on p‰‰telty:
+T√§ss√§ on edelleen $\int_T g_0(\mt)J(\mt)\,d\mu = \int_B g(\mt)J(\mt)\,d\mu$
+(koska $g_0J=(gJ)_0$), joten on p√§√§telty:
 \[
 \int_A f\,d\mu = \int_B g\,d\mu' = \int_B g(\mt)J(\mt)\,d\mu.
 \]
 Integraalia $\int_A f\,d\mu$ muunnettaessa on siis muunnosten $f(\mx)=f(\mpu(\mt))=g(\mt)$
-ja $A \ext B$, $\mpu(B)=A$, lis‰ksi suoritettava paikalliseen muuntosuhteeseen $J(\mt)$
+ja $A \ext B$, $\mpu(B)=A$, lis√§ksi suoritettava paikalliseen muuntosuhteeseen $J(\mt)$
 perustuva \pain{mittamuunnos} $d\mu'=J(\mt)\,d\mu$, eli muunnoskaava on
 \begin{equation} \label{muuntokaava}
 \boxed{\kehys\quad \int_A f(\mx)\,dx_1\ldots dx_n=\int_B g(\mt)J(\mt)\,dt_1\ldots dt_n. \quad}
 \tag{$\star$}
 \end{equation}
-%Siis jos muuntosuhde $J(\mt)$ pystyt‰‰n m‰‰r‰‰m‰‰n (laskutekniikasta j‰ljemp‰n‰), niin
+%Siis jos muuntosuhde $J(\mt)$ pystyt√§√§n m√§√§r√§√§m√§√§n (laskutekniikasta j√§ljemp√§n√§), niin
 %integraali $\int_A f\,d\mu,\ A\subset\R^n$ muunnetaan muodollisesti sijoituksilla
 %\[
 %f(\mx) = f(\mpu(\mt)) = g(\mt), \quad d\mu = J(\mt)\,dt_1\cdots dt_n, \quad 
 %                                      A \ext B, \quad \mpu(B)=A. \Akehys
 %\]
 \begin{Exa} Olkoon $A=\{(x,y)\in\R^2 \mid x\in[1,2]\ \ja\ x \le y \le 2x\}$. Laske
-$\int_A xy\,dxdy\,$ k‰ytt‰en sijoitusta $(x,y)=\mpu(\mt)=\mpu(t,s)=(t,st)$.
+$\int_A xy\,dxdy\,$ k√§ytt√§en sijoitusta $(x,y)=\mpu(\mt)=\mpu(t,s)=(t,st)$.
 \end{Exa}
-\ratk Ensinn‰kin todetaan, ett‰ $\,A=\mpu(B)$, miss‰ $\,B=[1,2]\times[1,2]$, ja ett‰ 
+\ratk Ensinn√§kin todetaan, ett√§ $\,A=\mpu(B)$, miss√§ $\,B=[1,2]\times[1,2]$, ja ett√§ 
 $\mpu:\,B \kohti A$ on bijektio. Muuntosuhteen laskemiseksi tarkastellaan suorakulmiota 
-$\Delta T=[t,t+\Delta t]\times[s,s+\Delta s]$, miss‰ $t,s \ge 1$ ja 
-$0 < \Delta t,\Delta s \le h$. T‰llˆin on
+$\Delta T=[t,t+\Delta t]\times[s,s+\Delta s]$, miss√§ $t,s \ge 1$ ja 
+$0 < \Delta t,\Delta s \le h$. T√§ll√∂in on
 \begin{align*}
 \Delta A\,=\,\mpu(\Delta T)\,
          &=\{(x,y)\in\R^2 \mid t \le x \le t+\Delta t\ \ja\ sx \le y \le (s+\Delta s)x\}\\[1mm]
@@ -135,7 +135,7 @@ $0 < \Delta t,\Delta s \le h$. T‰llˆin on
           =\,t\,\Delta t\Delta s + \frac{1}{2}(\Delta t)^2\Delta s.
 \end{align*}
 Koska $\mu(\Delta A)/\mu(\Delta T)=t+\frac{1}{2}\Delta t = t + \Ord{h}$, niin muuntosuhteen
-m‰‰ritelm‰n perusteella on $J(t,s)=t$. Siis kaavan \eqref{muuntokaava} mukaan
+m√§√§ritelm√§n perusteella on $J(t,s)=t$. Siis kaavan \eqref{muuntokaava} mukaan
 \[
 \int_A f(x,y)\,dxdy = \int_B f(t,st)\,t\,dtds = \int_1^2 t^3\,dt\cdot\int_1^2 s\,ds 
                     = \frac{15}{4}\cdot\frac{3}{2} = \frac{45}{8}\,.
@@ -146,56 +146,56 @@ Tarkistus (ilman muuttujan vaihtoa):
                 = \int_1^2\left[\sijoitus{y=x}{y=2x} \frac{1}{2}xy^2\right]dx
                 = \int_1^2 \frac{3}{2}x^3\,dx = \frac{45}{8}\,. \loppu
 \]
-Kuten esimerkiss‰, integraalin muuntamisen keskeisin laskutekninen ongelma on muuntosuhteen
-m‰‰r‰‰minen. Jatkossa ratkaistaan t‰m‰ ongelma differentiaalilaskennan keinoin. Aloitetaan
+Kuten esimerkiss√§, integraalin muuntamisen keskeisin laskutekninen ongelma on muuntosuhteen
+m√§√§r√§√§minen. Jatkossa ratkaistaan t√§m√§ ongelma differentiaalilaskennan keinoin. Aloitetaan
 yksiulotteisesta integraalista.
 
 
-\subsection*{Muuntosuhde $\R$:ss‰}
-\index{muuntosuhde integraalissa!a@$\R$:ss‰|vahv}
+\subsection*{Muuntosuhde $\R$:ss√§}
+\index{muuntosuhde integraalissa!a@$\R$:ss√§|vahv}
 
-Olkoon $A=[a,b]$ ja $B=[c,d]$ suljettuja v‰lej‰ ja $u:B \kohti A$ bijektio. Oletetaan, ett‰
-$u$ on jatkuvasti derivoituva v‰lill‰ $B$. T‰llˆin jos $T_k=[t_{k-1},t_k]\subset B$, miss‰ 
+Olkoon $A=[a,b]$ ja $B=[c,d]$ suljettuja v√§lej√§ ja $u:B \kohti A$ bijektio. Oletetaan, ett√§
+$u$ on jatkuvasti derivoituva v√§lill√§ $B$. T√§ll√∂in jos $T_k=[t_{k-1},t_k]\subset B$, miss√§ 
 $t_k-t_{k-1} \le h$, niin jollakin $\xi_k\in T_k$ on
-(Lause \ref{toinen v‰liarvolause}).
+(Lause \ref{toinen v√§liarvolause}).
 \[ 
 \mu(u(T_k)) = |u(t_k)-u(t_{k-1})| = |u'(\xi_k)|(t_k-t_{k-1}) = |u'(\xi_k)|\mu(T_k).
 \]
-T‰ss‰ $u'$ (ja n‰in ollen myˆs $|u'|$) on jatkuva, joten $|u'(\xi_k)|-|u'(t)|=\ord{1}$
-$\forall t \in T_k$, kun $h \kohti 0$.\footnote[2]{P‰‰ttely nojaa t‰ss‰ jatkuvuuden
-syv‰llisemp‰‰n logiikkaan: Tehdyin oletuksin $|u'|$ on tasaisesti jatkuva v‰lill‰ $[a,b]$
-(Lause \ref{kompaktissa joukossa jatkuva on tasaisesti jatkuva}, ks.\ myˆs Lause
-\ref{tasaisen jatkuvuuden k‰site}).} N‰in ollen jokaisella $t \in T_k$
+T√§ss√§ $u'$ (ja n√§in ollen my√∂s $|u'|$) on jatkuva, joten $|u'(\xi_k)|-|u'(t)|=\ord{1}$
+$\forall t \in T_k$, kun $h \kohti 0$.\footnote[2]{P√§√§ttely nojaa t√§ss√§ jatkuvuuden
+syv√§llisemp√§√§n logiikkaan: Tehdyin oletuksin $|u'|$ on tasaisesti jatkuva v√§lill√§ $[a,b]$
+(Lause \ref{kompaktissa joukossa jatkuva on tasaisesti jatkuva}, ks.\ my√∂s Lause
+\ref{tasaisen jatkuvuuden k√§site}).} N√§in ollen jokaisella $t \in T_k$
 \[
 \mu(u(T_k)) \,=\, |u'(t)|\mu(T_k)+\ord{1}\mu(T_k), \quad \text{kun}\ h \kohti 0.
 \]
-Muuntosuhteen m‰‰ritelm‰n mukaan on siis $J(t)=\abs{u'(t)}$, jolloin muunnoskaava 
+Muuntosuhteen m√§√§ritelm√§n mukaan on siis $J(t)=\abs{u'(t)}$, jolloin muunnoskaava 
 \eqref{muuntokaava} saa muodon
 \begin{equation} \label{muuntokaava-R1a}
 \int_a^b f(x)\,dx=\int_B f(u(t))\abs{u'(t)}\,dt, \quad u(B)=[a,b]. \tag{a}
 \end{equation}
-Koska oletettiin, ett‰ $u:\ B \kohti [a,b]$ on jatkuva bijektio, niin $u$ on v‰lill‰ $B$ joko
-aidosti kasvava tai aidosti v‰henev‰. T‰llˆin jos $u(\alpha)=a$ ja $u(\beta)=b$, niin
+Koska oletettiin, ett√§ $u:\ B \kohti [a,b]$ on jatkuva bijektio, niin $u$ on v√§lill√§ $B$ joko
+aidosti kasvava tai aidosti v√§henev√§. T√§ll√∂in jos $u(\alpha)=a$ ja $u(\beta)=b$, niin
 \begin{alignat*}{2}
 &u\text{ kasvava } (u'(x)\geq 0) \ &&\impl \ B=[\alpha,\beta], \\
-&u\text{ v‰henev‰ } (u'(x)\leq 0) \ &&\impl \ B=[\beta,\alpha].
+&u\text{ v√§henev√§ } (u'(x)\leq 0) \ &&\impl \ B=[\beta,\alpha].
 \end{alignat*}
 Kummassakin tapauksessa kaava \eqref{muuntokaava-R1a} voidaan kirjoittaa muotoon
 \begin{equation} \label{muuntokaava-R1b}
 \int_a^b f(x)\,dx=\int_B f\bigl(u(t)\bigr)\abs{u'(t)}\,dt=\int_\alpha^\beta f(u(t))u'(t)\,dt.
 \tag{b}
 \end{equation}
-T‰ss‰ (m‰‰r‰tyn integraalin vaihtos‰‰ntˆˆn perustuvassa) laskukaavassa on kyse
-\pain{si}j\pain{oituksesta} \pain{m‰‰r‰t}y\pain{ss‰} \pain{inte}g\pain{raalissa}, vrt.\ Luku
+T√§ss√§ (m√§√§r√§tyn integraalin vaihtos√§√§nt√∂√∂n perustuvassa) laskukaavassa on kyse
+\pain{si}j\pain{oituksesta} \pain{m√§√§r√§t}y\pain{ss√§} \pain{inte}g\pain{raalissa}, vrt.\ Luku
 \ref{analyysin peruslause}.
-Kaava \eqref{muuntokaava-R1b} on (tietyin edellytyksin, ks.\ mainittu luku) p‰tev‰, vaikka $u$
-ei olisikaan bijektio. Sen sijaan kaava \eqref{muuntokaava-R1a} \pain{ei} ole p‰tev‰, jos $u'$
-vaihtaa merkkins‰ v‰lill‰ $B$.
+Kaava \eqref{muuntokaava-R1b} on (tietyin edellytyksin, ks.\ mainittu luku) p√§tev√§, vaikka $u$
+ei olisikaan bijektio. Sen sijaan kaava \eqref{muuntokaava-R1a} \pain{ei} ole p√§tev√§, jos $u'$
+vaihtaa merkkins√§ v√§lill√§ $B$.
 
 \begin{multicols}{2} \raggedcolumns
-\begin{Exa} Jos integraalissa $\int_0^1 x\,dx$ tehd‰‰n sijoitus $x=u(t)=3t-2t^2$,
-niin $u'(t)=3-4t$, $u(0)=0$, $u(1)=1$, ja m‰‰r‰tyn integraalin sijoituskaava
-\eqref{muuntokaava-R1b} on p‰tev‰:
+\begin{Exa} Jos integraalissa $\int_0^1 x\,dx$ tehd√§√§n sijoitus $x=u(t)=3t-2t^2$,
+niin $u'(t)=3-4t$, $u(0)=0$, $u(1)=1$, ja m√§√§r√§tyn integraalin sijoituskaava
+\eqref{muuntokaava-R1b} on p√§tev√§:
 \begin{align*}
 \int_0^1 x\,dx &= \int_0^1 f(u(t))u'(t)\,dt \\
                &= \int_0^1 (9t-18t^2+8t^3)\,dt \\
@@ -217,23 +217,23 @@ niin $u'(t)=3-4t$, $u(0)=0$, $u(1)=1$, ja m‰‰r‰tyn integraalin sijoituskaava
 \end{center}
 \end{figure}
 \end{multicols}
-Sen sijaan kaava \eqref{muuntokaava-R1a} antaa v‰‰r‰n tuloksen:
+Sen sijaan kaava \eqref{muuntokaava-R1a} antaa v√§√§r√§n tuloksen:
 \[
 \int_0^1 f(u(t))\abs{u'(t)}\,dt
      =\int_0^{3/4}(9t-18t^2+8t^3)\,dt - \int_{3/4}^1(9t-18t^2+8t^3)\,dt 
      = \frac{49}{64}\,.
 \]
-Kummallakin tavalla saadaan oikea tulos, jos muunnetuksi integroimisv‰liksi valitaan 
+Kummallakin tavalla saadaan oikea tulos, jos muunnetuksi integroimisv√§liksi valitaan 
 $B=[0,\tfrac{1}{2}]$, jolloin $u:B\kohti[0,1]$ on bijektio (vrt.\ kuvio). \loppu
 
-Esimerkist‰ n‰hd‰‰n, ett‰ m‰‰r‰tyn integraalin muunnoskaava \eqref{muuntokaava} antaa
-yleisesti v‰‰r‰n tuloksen, jos muunnoskuvaus ei ole injektiivinen. Ongelma on hankalampi
-useammassa dimensiossa, miss‰ ep‰injektiivisyytt‰ ei aina ole helppo havaita. Useammassa
-dimensiossa ei ongelman poistamiseksi myˆsk‰‰n ole mit‰‰n yksinkertaista, m‰‰r‰tyn integraalin
-sijoituskaavaan verrattavaa oikotiet‰.
+Esimerkist√§ n√§hd√§√§n, ett√§ m√§√§r√§tyn integraalin muunnoskaava \eqref{muuntokaava} antaa
+yleisesti v√§√§r√§n tuloksen, jos muunnoskuvaus ei ole injektiivinen. Ongelma on hankalampi
+useammassa dimensiossa, miss√§ ep√§injektiivisyytt√§ ei aina ole helppo havaita. Useammassa
+dimensiossa ei ongelman poistamiseksi my√∂sk√§√§n ole mit√§√§n yksinkertaista, m√§√§r√§tyn integraalin
+sijoituskaavaan verrattavaa oikotiet√§.
 
-\subsection*{Muuntosuhde $\R^n$:ss‰}
-\index{muuntosuhde integraalissa!b@$\R^n$:ss‰|vahv}
+\subsection*{Muuntosuhde $\R^n$:ss√§}
+\index{muuntosuhde integraalissa!b@$\R^n$:ss√§|vahv}
 
 Tarkastellaan ensin kaksiulotteista muunnosta
 \[
@@ -242,10 +242,10 @@ Tarkastellaan ensin kaksiulotteista muunnosta
 \,y=v(t,s), &\mt=(t,s)\in T, \ \mpu=(u,v),
 \end{cases}
 \]
-miss‰ $T$ on perussuorakulmio. Oletetaan, ett‰ $u$ ja $v$ ovat jatkuvasti derivoituvia $T$:ss‰
-(osittaisderivaatat olemassa ja jatkuvia $T$:ss‰, M‰‰ritelm‰
-\ref{jatkuvuus kompaktissa joukossa - Rn}). T‰llˆin suorakulmion
-$\Delta T=[t_0+\Delta t]\times [s_0+\Delta s]\subset T$ kuvautumista voi tutkia likim‰‰rin
+miss√§ $T$ on perussuorakulmio. Oletetaan, ett√§ $u$ ja $v$ ovat jatkuvasti derivoituvia $T$:ss√§
+(osittaisderivaatat olemassa ja jatkuvia $T$:ss√§, M√§√§ritelm√§
+\ref{jatkuvuus kompaktissa joukossa - Rn}). T√§ll√∂in suorakulmion
+$\Delta T=[t_0+\Delta t]\times [s_0+\Delta s]\subset T$ kuvautumista voi tutkia likim√§√§rin
 linearisoivalla approksimaatiolla (vrt. Luku \ref{jacobiaani})
 \[
 \begin{cases}
@@ -253,8 +253,8 @@ linearisoivalla approksimaatiolla (vrt. Luku \ref{jacobiaani})
 \,y(t,s)\approx v(t_0,s_0)\,+v_t(t_0,s_0)(t-t_0)+v_s(t_0,s_0)(s-s_0).
 \end{cases}
 \]
-T‰m‰ on affiinikuvaus, jonka mukaisesti suorakulmio kuvautuu suunnikkaaksi. Suunnikkaan
-viritt‰v‰t vektorit
+T√§m√§ on affiinikuvaus, jonka mukaisesti suorakulmio kuvautuu suunnikkaaksi. Suunnikkaan
+viritt√§v√§t vektorit
 \begin{align*}
 \vec a &= \Delta t\bigl[u_t(t_0,s_0)\vec i + v_t(t_0,s_0)\vec j\,\bigr], \\
 \vec b &= \Delta s\bigl[u_s(t_0,s_0)\vec i + v_s(t_0,s_0)\vec j\,\bigr].
@@ -264,16 +264,16 @@ viritt‰v‰t vektorit
 \import{kuvat/}{kuvaUint-28.pstex_t}
 \end{center}
 \end{figure}
-Kun m‰‰ritell‰‰n kuvauksen $\mpu$ Jacobin matriisi (vrt.\ Luku \ref{jacobiaani})
+Kun m√§√§ritell√§√§n kuvauksen $\mpu$ Jacobin matriisi (vrt.\ Luku \ref{jacobiaani})
 \[
 \mJ\mpu(t,s)=\begin{bmatrix} u_t & u_s \\ v_t & v_s \end{bmatrix},
 \]
-niin n‰hd‰‰n, ett‰ suunnikkaan pinta-ala on
+niin n√§hd√§√§n, ett√§ suunnikkaan pinta-ala on
 \[
 \mu(\Delta A)=\abs{\vec a \times \vec b}=\abs{\det[\mJ\mpu(t_0,s_0)]}\,|\Delta t||\Delta s|.
 \]
-Koska $\mu(\Delta T)=|\Delta t||\Delta s|$, niin muuntosuhde on t‰m‰n perusteella
-$J(t,s)=|\det[\mJ\mpu(t,s)]|$. Oletetuin s‰‰nnˆllisyyehdoin t‰m‰ osoittautuu oikeaksi
+Koska $\mu(\Delta T)=|\Delta t||\Delta s|$, niin muuntosuhde on t√§m√§n perusteella
+$J(t,s)=|\det[\mJ\mpu(t,s)]|$. Oletetuin s√§√§nn√∂llisyyehdoin t√§m√§ osoittautuu oikeaksi
 tulokseksi (sivuutetaan tarkemmat perustelut), joten tasointegraalin muuntosuhde saadaan
 \index{Jacobin determinantti}%
 \kor{Jacobin determinantin} $\det[\mJ\mpu(t,s)]$ avulla:
@@ -282,22 +282,22 @@ tulokseksi (sivuutetaan tarkemmat perustelut), joten tasointegraalin muuntosuhde
        \text{Muuntosuhde = kuvauksen $\mpu$ Jacobin determinantin itseisarvo.} \quad}
 \]
 
-Em.\  tulos on p‰tev‰ myˆs yleisemmin $n$-ulotteiselle avaruusintegraalille. Nimitt‰in jos
-$\mpu:\,T \kohti \mpu(T)$ on ep‰lineaarinen kuvaus ($T\subset\R^n$ peruss‰rmiˆ), niin t‰m‰n
-linearisaatio pisteess‰ $\mt$ on $\R^n$:n affiinikuvaus, joka kuvaa suorakulmaisen s‰rmiˆn
-suuntaiss‰rmiˆksi. Ko.\ suuntaiss‰rmiˆn s‰rm‰vektoreista muodostettu determinantti = $\mpu$:n
-Jacobin (matriisin) determinantti pisteess‰ $\mt$. Koska determinantin itseisarvo on s‰rmiˆn
-tilavuus (Propositio \ref{suuntaiss‰rmiˆn tilavuuskaava}), niin ym.\ s‰‰ntˆ on p‰tev‰. Siis
-yleist‰ $n$-ulotteista integraalia muunnettaessa mitan muunnoskaava on
+Em.\  tulos on p√§tev√§ my√∂s yleisemmin $n$-ulotteiselle avaruusintegraalille. Nimitt√§in jos
+$\mpu:\,T \kohti \mpu(T)$ on ep√§lineaarinen kuvaus ($T\subset\R^n$ peruss√§rmi√∂), niin t√§m√§n
+linearisaatio pisteess√§ $\mt$ on $\R^n$:n affiinikuvaus, joka kuvaa suorakulmaisen s√§rmi√∂n
+suuntaiss√§rmi√∂ksi. Ko.\ suuntaiss√§rmi√∂n s√§rm√§vektoreista muodostettu determinantti = $\mpu$:n
+Jacobin (matriisin) determinantti pisteess√§ $\mt$. Koska determinantin itseisarvo on s√§rmi√∂n
+tilavuus (Propositio \ref{suuntaiss√§rmi√∂n tilavuuskaava}), niin ym.\ s√§√§nt√∂ on p√§tev√§. Siis
+yleist√§ $n$-ulotteista integraalia muunnettaessa mitan muunnoskaava on
 \[
 \boxed{\kehys\quad d\mu=\abs{\det(\mJ\mpu)}\,dt_1\cdots dt_n. \quad}
 \]
 \begin{Exa}
-$A=\text{suunnikas}$, jonka k‰rjet ovat $(0,0)$, $(1,0)$, $(2,1)$ ja $(3,1)$. 
+$A=\text{suunnikas}$, jonka k√§rjet ovat $(0,0)$, $(1,0)$, $(2,1)$ ja $(3,1)$. 
 Laske $\,\int_A xy\,dxdy$.
 \end{Exa}
 \begin{multicols}{2} \raggedcolumns
-\ratk Tehd‰‰n muuttujan vaihto
+\ratk Tehd√§√§n muuttujan vaihto
 \[
 \begin{cases}
 \,x=u(t,s)=t+2s, \\
@@ -323,7 +323,7 @@ jolloin $\mpu: B \kohti A$, $B=[0,1]\times [0,1]$ on bijektio ja
          A = \{(x,y,z) \in \R^3 \mid x+y \ge 0\ \ja\ y+z \ge 0\ \ja\ x+z \ge 0\,\}. 
 \]
 \end{Exa}
-\ratk Tehd‰‰n $A$:n muotoon sopiva muuttujan vaihdos
+\ratk Tehd√§√§n $A$:n muotoon sopiva muuttujan vaihdos
 \[
 \begin{cases} \,u = x+y \\ \,v = y+z \\ \,w = x+z \end{cases} 
     \ekv\quad \begin{bmatrix} x\\y\\z \end{bmatrix} =
@@ -337,7 +337,7 @@ J = \left(\frac{1}{2}\right)^3 \begin{detmatrix} 1&-1&1\\1&1&-1\\-1&1&1 \end{det
 \] 
 Kuvaus $(u,v,w) \in B \map (x,y,z) \in A$ on ilmeinen bijektio, kun
 $B = [0,\infty)\times[0,\infty)\times[0,\infty)$, joten muunnoskaavaa \eqref{muuntokaava}
-ja Fubinin s‰‰ntˆ‰ soveltaen on tulos
+ja Fubinin s√§√§nt√∂√§ soveltaen on tulos
 \begin{align*} 
 \int_A &e^{-x-y-z}\,dxdydz = \int_B e^{-\frac{1}{2}(u+v+w)}\,\tfrac{1}{2}\,dudvdw \\ 
        &= \frac{1}{2}\int_0^\infty\int_0^\infty\int_0^\infty 
@@ -346,15 +346,15 @@ ja Fubinin s‰‰ntˆ‰ soveltaen on tulos
         = \underline{\underline{4}}. \loppu
 \end{align*}
 
-\subsection*{Integraalit k‰yr‰viivaisissa koordinaatistoissa}
-\index{tasointegraali!c@k‰yr‰v.\ koordinaateissa|vahv}
-\index{avaruusintegraali!b@k‰yr‰v.\ koordinaateissa|vahv}
-\index{muuntosuhde integraalissa!c@k‰yr‰v.\ koordinaatistoissa|vahv}
-\index{kzyyrzy@k‰yr‰viivaiset koordinaatistot!d@--integraalit|vahv}
+\subsection*{Integraalit k√§yr√§viivaisissa koordinaatistoissa}
+\index{tasointegraali!c@k√§yr√§v.\ koordinaateissa|vahv}
+\index{avaruusintegraali!b@k√§yr√§v.\ koordinaateissa|vahv}
+\index{muuntosuhde integraalissa!c@k√§yr√§v.\ koordinaatistoissa|vahv}
+\index{kzyyrzy@k√§yr√§viivaiset koordinaatistot!d@--integraalit|vahv}
 
-Integraalien muunnoskaavat tulevat fysikaalisissa sovelluksissa k‰yttˆˆn useimmin silloin, kun
-karteesisesta koordinaatistosta halutaan siirty‰ k‰yr‰viivaiseen napa-, lieriˆ- tai 
-pallokoordinaatistoon. Jos tasossa siirryt‰‰n napakoordinaatteihin, niin muunnoksen
+Integraalien muunnoskaavat tulevat fysikaalisissa sovelluksissa k√§ytt√∂√∂n useimmin silloin, kun
+karteesisesta koordinaatistosta halutaan siirty√§ k√§yr√§viivaiseen napa-, lieri√∂- tai 
+pallokoordinaatistoon. Jos tasossa siirryt√§√§n napakoordinaatteihin, niin muunnoksen
 \[
 x=r\cos\varphi=u(r,\varphi), \quad y=r\sin\varphi=v(r,\varphi)
 \]
@@ -362,16 +362,16 @@ Jacobin matriisi on
 \[
 \mJ=\begin{rmatrix} \cos\varphi & -r\sin\varphi \\ \sin\varphi & r\cos\varphi \end{rmatrix}.
 \]
-T‰m‰n determinantin itseisarvo on $J=r$, joten muunnoskaavaksi tulee
+T√§m√§n determinantin itseisarvo on $J=r$, joten muunnoskaavaksi tulee
 \[
 \boxed{\kehys\quad \int_A f(x,y)\,dxdy=\int_B g(r,\varphi)\,rdrd\varphi. \quad}
 \]
-Esimerkiksi jos $A=$ origokeskinen, $R$-s‰teinen kiekko, niin kaava on p‰tev‰, kun 
-$B=[0,R]\times[0,2\pi]$. Muunnoksen liev‰st‰ ep‰injektiivisyydest‰ ei t‰ss‰ ole haittaa, koska
+Esimerkiksi jos $A=$ origokeskinen, $R$-s√§teinen kiekko, niin kaava on p√§tev√§, kun 
+$B=[0,R]\times[0,2\pi]$. Muunnoksen liev√§st√§ ep√§injektiivisyydest√§ ei t√§ss√§ ole haittaa, koska
 se rajoittuu nollamittaiseen osajoukkoon ($r=0$, $\varphi=0$ tai $\varphi=2\pi$).
 \begin{Exa} Laske $\displaystyle{\int_{\R^2} e^{-x^2-y^2}\,dxdy}$.
 \end{Exa}
-\ratk Siirryt‰‰n napkoordinaatistoon. Koordinaattimuunnos $\mpu: B \kohti \R^2$ on (melkein)
+\ratk Siirryt√§√§n napkoordinaatistoon. Koordinaattimuunnos $\mpu: B \kohti \R^2$ on (melkein)
 bijektio, kun valitaan $B=\{(r,\varphi)\in\R^2 \mid r \ge 0,\ 0 \le \varphi \le 2\pi\}$, joten
 \begin{align*}
 \int_{\R^2} e^{-x^2-y^2}\,dxdy 
@@ -390,9 +390,9 @@ Esimerkin integraali laskettuna karteesisessa koordinaatistossa on
 Saatiin siis hauska tulos:
 \begin{Prop} \label{Gamma(1/2)} $\ \int_{-\infty}^\infty e^{-x^2}\,dx=\sqrt{\pi}$.
 \end{Prop}
-Siirrytt‰ess‰ kolmessa dimensiossa lierˆkoordinaatistoon on muuntosuhde sama kuin tasossa
-siirrytt‰ess‰ polaarikoordinaatistoon, eli $J(r,\varphi,z)=r$. Pallokoordinaatistoon
-siirrytt‰ess‰ saadaan muuntosuhteeksi
+Siirrytt√§ess√§ kolmessa dimensiossa lier√∂koordinaatistoon on muuntosuhde sama kuin tasossa
+siirrytt√§ess√§ polaarikoordinaatistoon, eli $J(r,\varphi,z)=r$. Pallokoordinaatistoon
+siirrytt√§ess√§ saadaan muuntosuhteeksi
 \[ 
 J=\abs{\det\mJ\,}=\left|\begin{array}{ccc} 
                   \sin\theta\cos\varphi & r\cos\theta\cos\varphi & -r\sin\theta\sin\varphi \\
@@ -400,10 +400,10 @@ J=\abs{\det\mJ\,}=\left|\begin{array}{ccc}
                   \cos\theta            & -r\sin\theta           & 0
                   \end{array}\right| = r^2\sin\theta. 
 \]
-Integraalin muunnoskaavat lieriˆ- ja pallokoordinaatistoon ovat n‰in ollen                                     
+Integraalin muunnoskaavat lieri√∂- ja pallokoordinaatistoon ovat n√§in ollen                                     
 \[
 \boxed{\begin{aligned}
-\ykehys\quad &\text{Lieriˆkoord.\,:} \qquad 
+\ykehys\quad &\text{Lieri√∂koord.\,:} \qquad 
               \int_A f(x,y,z)\,dxdydz = \int_B g(r,\varphi,z)\,r\,drd\varphi dz \\
              &\text{Pallokoord.\,:} \qquad\    
               \int_A f(x,y,z)\,dxdydz 
@@ -412,12 +412,12 @@ Integraalin muunnoskaavat lieriˆ- ja pallokoordinaatistoon ovat n‰in ollen
 \]
 \begin{Exa} \label{integraali yli pallokuoren} Laske $I=\int_A(x^2+y^2)\,dxdydz$, kun $A$ on
 \index{pallokuori}%
-\kor{pallokuori} eli kahden pallopinnan v‰liin j‰‰v‰ alue:
+\kor{pallokuori} eli kahden pallopinnan v√§liin j√§√§v√§ alue:
 \[
 A=\{\,(x,y,z)\in\R^3\ |\ R_1^2 \le x^2+y^2+z^2 \le R_2^2\,\}.
 \]
 \end{Exa} 
-\ratk Lasku k‰y helpoiten pallokoordinaattien avulla:
+\ratk Lasku k√§y helpoiten pallokoordinaattien avulla:
 \begin{align*}
 I &= \int_0^{2\pi}\left\{\int_0^\pi\left[\int_{R_1}^{R_2}
          r^2\sin^2\theta\cdot r^2\sin\theta\,dr\right]d\theta\right\}d\varphi \\
@@ -430,9 +430,9 @@ I &= \int_0^{2\pi}\left\{\int_0^\pi\left[\int_{R_1}^{R_2}
 \begin{enumerate}
 
 \item
-Muunna integraali $\int_A f(x,y)\,dxdy$ annettua muunnosta $\mpu$ k‰ytt‰en laskemalla ensin 
-tarkasti suhde $\mu(\Delta A)/\mu(\Delta T)$, miss‰ $\Delta T=[t,t+\Delta t,s,s+\Delta s]$ ja
-$\Delta A=\mpu(\Delta T)$, ja muuntosuhde t‰m‰n raja-arvona, kun 
+Muunna integraali $\int_A f(x,y)\,dxdy$ annettua muunnosta $\mpu$ k√§ytt√§en laskemalla ensin 
+tarkasti suhde $\mu(\Delta A)/\mu(\Delta T)$, miss√§ $\Delta T=[t,t+\Delta t,s,s+\Delta s]$ ja
+$\Delta A=\mpu(\Delta T)$, ja muuntosuhde t√§m√§n raja-arvona, kun 
 $\max\{\Delta t,\Delta s\} \kohti 0\,$: 
 a) \ $A:\ x\in[1,2]\ \ja\ -x^2 \le y \le 3x^2,\,\ \mpu(t,s)=(t,st^2)$ \newline
 b) \ $A:\ x\in[1,\infty)\ \ja\ 1/x^2 \le y \le 2/x^2,\,\ \mpu(t,s)=(t,s/t^2)$
@@ -452,20 +452,20 @@ Laske seuraavat integraalit sijoituksella muotoa $x=as\,\cos t,\ y=bs\,\sin t$.
 \end{align*}
 
 \item
-a) Joukko $A\subset\R^2$ sijaitsee koordinaattinelj‰nneksess‰ $x,y>0$ ja rajoittuu k‰yriin
-$y^3=ax^2$, $y^3=bx^2$, $x^4=cy^3$ ja $x^4=dy^3$, miss‰ $0<a<b$ ja $0<c<d$. Laske pinta-ala
+a) Joukko $A\subset\R^2$ sijaitsee koordinaattinelj√§nneksess√§ $x,y>0$ ja rajoittuu k√§yriin
+$y^3=ax^2$, $y^3=bx^2$, $x^4=cy^3$ ja $x^4=dy^3$, miss√§ $0<a<b$ ja $0<c<d$. Laske pinta-ala
 $\mu(A)$ sijoituksella $y^3=ux^2,\ x^4=vy^3$. \vspace{1mm}\newline
 b) Ratkaise Harj.teht.\,\ref{avaruusintegraalit}:\ref{H-uint-3: ellipsoidin tilavuus} muuttujan
 vaihdolla $(x,y,z)=(au,bv,cw)$.
 
 %\item 
-%Kappaletta, jonka tiheys $\rho$ on vakio, rajoittavat $xy$-taso, lieriˆ $x^2+y^2=a^2$ ja 
+%Kappaletta, jonka tiheys $\rho$ on vakio, rajoittavat $xy$-taso, lieri√∂ $x^2+y^2=a^2$ ja 
 %paraboloidi $x^2+y^2=az$ ($a>0$). Laske kappaleen massa ja hitausmomentit koordinaatiakselien 
-%suhteen k‰ytt‰en lieriˆkoordinaatteja.
+%suhteen k√§ytt√§en lieri√∂koordinaatteja.
 
 \item 
-Laske integraali $\int_A f\,dxdydz$ lieriˆ- tai pallokoordinaatteihin
-siirtym‰ll‰: \vspace{1mm}\newline
+Laske integraali $\int_A f\,dxdydz$ lieri√∂- tai pallokoordinaatteihin
+siirtym√§ll√§: \vspace{1mm}\newline
 a)\ \ $A:\ x^2+y^2 \le z \le \sqrt{2-x^2-y^2}, \quad f(x,y,z)=z$ \newline
 b)\ \ $A:\ x^2+y^2+z^2 \le 12,\ z \ge x^2+y^2, \quad f(x,y,z)=1$ \newline
 c)\ \ $A:\ x^2+y^2+z^2 \le R^2,\ x,y,z \ge 0, \quad f(x,y,z)=x$ \newline
@@ -475,11 +475,11 @@ f)\,\ \ $A:\ 4 \le x^2+y^2+z^2 \le 9,\ z \ge 0, \quad f(x,y,z)=z$ \newline
 g)\ \ $A:\ x^2+y^2 \ge R^2,\ x^2+y^2+z^2 \le R^2, \quad f(x,y,z)=x^2+y^2$
 
 \item 
-Puolikartio $z=\sqrt{x^2+y^2}$ jakaa origokeskiset pallot kahteen osaan. Laske n‰iden
+Puolikartio $z=\sqrt{x^2+y^2}$ jakaa origokeskiset pallot kahteen osaan. Laske n√§iden
 osien tilavuuksien suhde pallokoordinaattien avulla.
 
 \item (*)
-Olkoon $f(x,y)=e^{(y-x)/(y+x)}$ ja $A$ kolmio, jonka k‰rjet ovat $(0,0)$, $(1,0)$ ja $(0,1)$.
+Olkoon $f(x,y)=e^{(y-x)/(y+x)}$ ja $A$ kolmio, jonka k√§rjet ovat $(0,0)$, $(1,0)$ ja $(0,1)$.
 Laske integraali $\int_A f\,dxdy$ \ a) polaarikoordinaattien avulla, \linebreak
 b) sijoituksella $u=y-x,\ v=y+x$.
 
@@ -487,14 +487,14 @@ b) sijoituksella $u=y-x,\ v=y+x$.
 Laske tasointegraali $\D \int_0^\infty\left[\int_0^x \frac{e^{-x-2y}}{x+2y}\,dy\right]dx$.
 
 \item (*)
-Laske tilavuus $\mu(A)$, kun $A\subset\R^3$ m‰‰ritell‰‰n ehdoilla
+Laske tilavuus $\mu(A)$, kun $A\subset\R^3$ m√§√§ritell√§√§n ehdoilla
 \[
 \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} \le 1\ \ja\ z+y \ge b \quad (a,b,c>0).
 \]
 
 \item (*)
-Olkoon $K$ suuntaiss‰rmiˆ, jonka yksi k‰rki on origossa ja origosta l‰htevien s‰rmien toiset
-p‰‰tepisteet ovat $(2,1,1)$, $(-1,2,2)$ ja $(0,-2,1)$. Laske $\int_K xye^z\,dxdydz\,$ sopivalla
+Olkoon $K$ suuntaiss√§rmi√∂, jonka yksi k√§rki on origossa ja origosta l√§htevien s√§rmien toiset
+p√§√§tepisteet ovat $(2,1,1)$, $(-1,2,2)$ ja $(0,-2,1)$. Laske $\int_K xye^z\,dxdydz\,$ sopivalla
 muuttujan vaihdolla.
 
 \end{enumerate} 
