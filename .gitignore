@@ -3,6 +3,7 @@
 *.idx
 *.ind
 *.log
+*.pdf
 *.ps
 *.toc
 .DS_Store
